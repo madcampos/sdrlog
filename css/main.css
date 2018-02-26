@@ -1,0 +1,7 @@
+/* Add polyfills */
+@import url('https://unpkg.com/dialog-polyfill@0.4.9/dialog-polyfill.css');
+
+@import url('./vars.css');
+@import url('./base.css');
+@import url('./nav.css');
+@import url('./card.css');

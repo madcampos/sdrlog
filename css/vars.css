@@ -1,0 +1,21 @@
+/* Variables */
+:root {
+	--title-text: 1.2rem;
+	--body-text: calc(0.75 * var(--title-text));
+	--padding: 0.4rem;
+	--border: calc(0.25 * var(--padding));
+	--margin: var(--padding);
+	--card-width: calc(12 * var(--title-text));
+	--card-height: calc(18 * var(--title-text));
+	--thumb-height: calc(13.7 * var(--title-text));
+	--search-width: 15rem;
+
+	--background-color: #1B1B1B;
+	--card-background: #232323;
+
+	--main-color: whitesmoke;
+	--secondary-color: dodgerblue;
+
+	--accent-color: deepskyblue;
+	--secondary-accent-color: lightsteelblue;
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="prefetch" href="./js/data.js">
+		<title>Shadowrun Catalog</title>
+		<link rel="shortcut icon" href="./img/icons/favicon.ico">
+		<meta name="displaydate" content="2017-09-03T00:00:00.000Z">
+
+		<!-- Polyfills -->
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+		<script src="https://unpkg.com/dialog-polyfill@0.4.9/dialog-polyfill.js"></script>
+		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/dialog-polyfill@0.4.9/dialog-polyfill.css" />
+
+		<!-- <link rel="stylesheet" href="./css/main.css"> -->
+		<style id="searchFilterCSS"></style>
+	</head>
+	<body class="notranslate" translate="no">
+		<div id="app">
+			<nav id="navigation" label="Categories">
+				<!-- TODO: rework menu -->
+				<div id="menu">
+					<a href="#menu" id="menuLink" label="Toggle menu" role="presentation">â®</a>
+					<ul>
+						<li><a href="?category=sourcebook">Sourcebooks</a></li>
+						<li><a href="?category=rulebook">Rulebooks</a></li>
+						<li><a href="?category=mission">Adventures & Campaigns</a></li>
+						<li><a href="?category=novel">Novels</a></li>
+						<li><a href="?category=magazine">Magazines</a></li>
+						<li><a href="?category=boardgame">Tabletop</a></li>
+						<li><a href="?category=videogame">Video-games</a></li>
+						<li><a href="?category=misc">Misc.</a></li>
+						<li><a href="?all">All</a></li>
+					</ul>
+				</div>
+				<div>
+					<!-- TODO: rework search -->
+					<label id="search" title="Search">ð<input type="search" role="search"></label>
+					<button id="info-button" title="Information">â¹</button>
+				</div>
+			</nav>
+
+			<dialog id="info">
+				<button id="close-info" title="Close">â</button>
+				<div>
+					<details open>
+						<summary>Collection Organization</summary>
+						<p>The material here presented is organized into the following categories:</p>
+						<dl>
+							<dt>Sourcebooks</dt>
+							<dd>These books are a mix of rules and setting. As such, they contain setting information applicable to any edition of the game, and statistics that may need a little updating.</dd>
+							<dt>Rulebooks</dt>
+							<dd>These books are primarily rules, and tend to be replaced quickly when a new edition of the game is released. They can be difficult to use with other editions.</dd>
+							<dt>Adventures & Campaigns</dt>
+							<dd>Missions, adventures and campaigns including the <em>Shadowrun Missions</em> seasons and the <em>Enhanced Fiction</em> series.</dd>
+							<dt>Novels</dt>
+							<dd>The romances written with the Sixth World as a base.</dd>
+							<dt>Magazines</dt>
+							<dd>Magazines (Official and unofficial) published about the Shadowrun Universe.</dd>
+							<dt>Tabletop</dt>
+							<dd>Tabletop, boardgames, <abbr title="Trade Card Game">TCG</abbr> and other physical games.</dd>
+							<dt>Video-games</dt>
+							<dd>Video-games produced based on the Shadowrun universe.</dd>
+							<dt>Misc. Itens</dt>
+							<dd>Conversion sheets, April's fool jokes and other items that don't go on the other categories.</dd>
+						</dl>
+					</details>
+					<details>
+						<summary>Search Options</summary>
+						<dl>
+							<dt>Category</dt>
+							<dd>To search for categories prepend the keyword with <code>category:</code>.</dd>
+							<dt>SKU</dt>
+							<dd>To search for categories prepend the keyword with <code>sku:</code>.</dd>
+							<dt>Publisher</dt>
+							<dd>To search for categories prepend the keyword with <code>publisher:</code>.</dd>
+							<dt>Release date</dt>
+							<dd>To search for categories prepend the keyword with <code>release:</code>.</dd>
+							<dt>Edition</dt>
+							<dd>To search for categories prepend the keyword with <code>ed:</code>.</dd>
+							<dt>Game date</dt>
+							<dd>To search for categories prepend the keyword with <code>date:</code>.</dd>
+						</dl>
+					</details>
+					<details>
+						<summary>Updates</summary>
+						<p>Last update: <time datetime="2017-09-03">03/09/2017</time></p>
+					</details>
+				</div>
+			</dialog>
+			<main class="hidden" v-once>
+				<ul>
+					<li v-for="item in [...items.values()]" class="item" :data-ed="item.edition" :data-edition="item.edition" :data-sku="item.sku.join()" :data-name="item.name" :data-game-date="item.gameDate" :data-release-date="item.releaseDate ? item.releaseDate.join() : false" :data-category="item.category" :data-type="item.type" :data-publisher="item.publisher.join()" :data-missing="item.missing">
+						<a :href="`#${item.sku[0]}`" @click.stop.prevent="toogleItemDetails(item.sku[0])">
+							<!-- TODO: change to picture with specific image types and fallback to jpg/png/svg -->
+							<img role="presentation" class="thumb" :src="`./img/thumb/${item.image || `${item.sku[0]}.jpg`}`">
+							<h3 class="title">{{item.name}}</h3>
+						</a>
+					</li>
+				</ul>
+			</main>
+			<dialog id="item-details" v-if="selectedItem">
+				<header>
+					<h3 class="title">{{selectedItem.name}}</h3>
+					<h4 class="metadata">
+						<span class="sku">SKU: {{selectedItem.sku.join(', ')}}</span>
+						<span class="edition">Edition: {{selectedItem.edition}}</span>
+						<span class="gameDate">Game date: {{dateFormater.format(selectedItem.gameDate)}}</span>
+					</h4>
+				</header>
+				<article>
+					<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
+					<pre class="description" v-html="selectedItem.description"></pre>
+				</article>
+				<aside>
+					<span class="category">Category: {{selectedItem.category}}</span>
+					<span class="type">Type: {{selectedItem.type}}</span>
+					<span class="releaseDate" v-if="selectedItem.releaseDate">Release date: {{selectedItem.releaseDate.map((date) => dateFormater.format(date)).join(', ')}}</span>
+					<span class="publisher">Publisher: <img v-for="publisher in selectedItem.publisher" :src="`./img/publishers/${publisher}.png`"></span>
+				</aside>
+				<aside class="files" v-if="selectedItem.files">
+					<details>
+						<summary>Files</summary>
+						<ul>
+							<li v-for="file in selectedItem.files">
+								<a :href="file.url || file.path">
+									<img v-if="file.mime" src="file.mime">
+									<span>{{file.name || file.url || file.path}}</span>
+									<span>{{file.size}}</span>
+								</a>
+							</li>
+						</ul>
+					</details>
+				</aside>
+				<button class="item-details-close">â</button>
+			</dialog>
+			<div id="loadOverlay">
+				<progress></progress>
+				<h1>Loading Data...</h1>
+			</div>
+		</div>
+		<!-- <script src="./js/chrome.js" type="module"></script> -->
+		<script src="./js/main.js" type="module"></script>
+	</body>
+</html>
