@@ -4,7 +4,8 @@
 	"description": "List of shadowrun published material (books, tabletop, video games, etc.) ",
 	"main": "index.html",
 	"scripts": {
-	  "start": "http-server --cors"
+		"start": "http-server --cors -s",
+		"datachunk": "node data/chunk.js"
 	},
 	"repository": {
 	  "type": "git",
