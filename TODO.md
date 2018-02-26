@@ -1,8 +1,11 @@
-1. Add beter info
-2. Strip path info from the files
+1. Add better info
+2. Add service worker with cache
+3. Strip path info from the files
 	1. Add path info as secondary info
-3. Fix layout
+4. Fix layout
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
-- https://johnresig.com/blog/javascript-micro-templating/
-- https://tympanus.net/codrops/2017/11/08/expanding-grid-item-animation/
+- https://developers.google.com/web/tools/workbox/
+- https://realfavicongenerator.net/
+- https://developers.google.com/web/fundamentals/primers/service-workers/
+- https://css-tricks.com/serviceworker-for-offline/
+- https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
