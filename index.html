@@ -3,47 +3,33 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<link rel="prefetch" href="./js/data.js">
 		<title>Shadowrun Catalog</title>
 		<link rel="shortcut icon" href="./img/icons/favicon.ico">
 		<meta name="displaydate" content="2017-09-03T00:00:00.000Z">
 
+		<!-- TODO: generate icons and manifest -->
+
 		<!-- Polyfills -->
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-		<script src="https://unpkg.com/dialog-polyfill@0.4.9/dialog-polyfill.js"></script>
+		<script src="https://unpkg.com/dialog-polyfill"></script>
 		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://unpkg.com/dialog-polyfill@0.4.9/dialog-polyfill.css" />
 
-		<!-- <link rel="stylesheet" href="./css/main.css"> -->
-		<style id="searchFilterCSS"></style>
+		<link rel="stylesheet" href="./css/main.css">
+		<style id="filterCSS"></style>
 	</head>
 	<body class="notranslate" translate="no">
-		<div id="app">
-			<nav id="navigation" label="Categories">
-				<!-- TODO: rework menu -->
-				<div id="menu">
-					<a href="#menu" id="menuLink" label="Toggle menu" role="presentation">â®</a>
-					<ul>
-						<li><a href="?category=sourcebook">Sourcebooks</a></li>
-						<li><a href="?category=rulebook">Rulebooks</a></li>
-						<li><a href="?category=mission">Adventures & Campaigns</a></li>
-						<li><a href="?category=novel">Novels</a></li>
-						<li><a href="?category=magazine">Magazines</a></li>
-						<li><a href="?category=boardgame">Tabletop</a></li>
-						<li><a href="?category=videogame">Video-games</a></li>
-						<li><a href="?category=misc">Misc.</a></li>
-						<li><a href="?all">All</a></li>
-					</ul>
-				</div>
-				<div>
-					<!-- TODO: rework search -->
-					<label id="search" title="Search">ð<input type="search" role="search"></label>
-					<button id="info-button" title="Information">â¹</button>
-				</div>
-			</nav>
-
-			<dialog id="info">
-				<button id="close-info" title="Close">â</button>
+		<nav id="chrome" class="hidden">
+			<div id="menu" :class="{open: isMenuOpen}">
+				<a href="#menu" id="menuLink" label="Toggle menu" role="presentation" @click.prevent="isMenuOpen = !isMenuOpen">â®</a>
+				<ul label="Categories">
+					<li v-for="category in categories"><a href="?category={{category.type}}" @click.prevent="navigateToMenu(category.type)">{{category.name}}</a></li>
+					<li><a href="?all" @click.prevent="searchText = ''">All</a></li>
+				</ul>
+			</div>
+			<label id="search" title="Search">ð<input type="search" role="search" @focus="$event.target.select()" v-model.trim="searchText"></label>
+			<button id="info-button" title="Information" @click="toogleInfoModal()">â¹</button>
+			<dialog id="info-box">
+				<button id="close-info" title="Close" @click="toogleInfoModal()">â</button>
 				<div>
 					<details open>
 						<summary>Collection Organization</summary>
@@ -69,19 +55,60 @@
 					</details>
 					<details>
 						<summary>Search Options</summary>
+						<p>The search is done by tags, in the form: <code>tag: term</code>, where tag is one of the listed below with the respective terms if they exist.</p>
+						<p>The default search is by name, so you don't need the tag for it, but if you use more than one tag for searching you will need to specify the <code>name</code> tag to search by name.</p>
+						<h2>Tags</h2>
 						<dl>
-							<dt>Category</dt>
-							<dd>To search for categories prepend the keyword with <code>category:</code>.</dd>
-							<dt>SKU</dt>
-							<dd>To search for categories prepend the keyword with <code>sku:</code>.</dd>
-							<dt>Publisher</dt>
-							<dd>To search for categories prepend the keyword with <code>publisher:</code>.</dd>
-							<dt>Release date</dt>
-							<dd>To search for categories prepend the keyword with <code>release:</code>.</dd>
-							<dt>Edition</dt>
-							<dd>To search for categories prepend the keyword with <code>ed:</code>.</dd>
-							<dt>Game date</dt>
-							<dd>To search for categories prepend the keyword with <code>date:</code>.</dd>
+							<dt>Name (<code>name</code>)</dt>
+							<dd></dd>
+							<dt>Category (<code>category</code> / <code>cat</code>)</dt>
+							<dd>
+								<p>The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books.</p>
+								<p>It may be one of the following:</p>
+								<ul>
+									<li><strong>Rulebook:</strong> A book containing mostly rules that are compatible with only one edition of the game.</li>
+									<li><strong>Sourcebook:</strong> A book containing settings, plot hooks and other stuff that is mostly background information, not rules.</li>
+									<li><strong>Mission:</strong> A book containing information to be used on an adventure or campaign.</li>
+									<li><strong>Magazine:</strong> A magazine publication with assosrted content.</li>
+									<li><strong>Novel:</strong> A fictin book writen based on the Shadowrun universe.</li>
+									<li><strong>Unofficial:</strong> Fan made publication specific for Shadowrun.</li>
+									<li><strong>Videogame:</strong> Digital game setted in the Shadowrun world.</li>
+									<li><strong>TCG:</strong> Trade Card Game based on the Shadowrun universe.</li>
+									<li><strong>Boardgame:</strong> A boardgame or other physical game that is setted in the Shadowrun universe.</li>
+									<li><strong>Miscellaneous (Misc.):</strong> Assorted matterials that don't fit in any of the above categories.</li>
+								</ul>
+							</dd>
+							<dt>SKU (<code>sku</code> / <code>id</code>)</dt>
+							<dd>The <abbr title="Stock Keeper Unit">SKU</abbr> of the item, it's used also as an identifier. Most of them are unique.</dd>
+							<dt>Publisher (<code>publisher</code> / <code>pub</code>)</dt>
+							<dd>The enterprise who published the material.</dd>
+							<dt>Release date (<code>release</code> / <code>rel</code>)</dt>
+							<dd>The date the material was released, it may be more than one if the material was rereleased. If not present the material is considered unreleased.</dd>
+							<dt>Edition (<code>ed</code> / <code>ed</code>)</dt>
+							<dd>The edition of the publication, ranging from <code>1</code> to <code>5</code>.</dd>
+							<dt>Game date (<code>date</code>)</dt>
+							<dd>The in-game date of the material.</dd>
+							<dt>Type (<code>type</code>)</dt>
+							<dd>
+								<p>The availability of the material, based on how it is easily found.</p>
+								<p>It may be one of the following:</p>
+								<ul>
+									<li><strong>Digital:</strong> The material is available in digital format.</li>
+									<li><strong>Print:</strong> The material is available in printed format only.</li>
+									<li><strong>Scan:</strong> The material is a scan of the printed format.</li>
+									<li><strong>OCR:</strong> The material is a OCR scan of the printed format.</li>
+									<li><strong>Physical:</strong> The material is only available in physical format other than a book (TCG, boardgame, etc.).</li>
+								</ul>
+							</dd>
+							<dt>Scope (<code>scope</code>)</dt>
+							<dd>
+								<p>If the material is in the scope of a digital collection.</p>
+								<p>May be one of the following:</p>
+								<ul>
+									<li><strong>Missing:</strong> The item is missing from the collection.</li>
+									<li><strong>Out:</strong> The item is either physical, limited edition or unreleased so it's out of the scope of the collection.</li>
+								</ul>
+							</dd>
 						</dl>
 					</details>
 					<details>
@@ -90,58 +117,70 @@
 					</details>
 				</div>
 			</dialog>
+		</nav>
+
+		<div id="itens">
 			<main class="hidden" v-once>
 				<ul>
-					<li v-for="item in [...items.values()]" class="item" :data-ed="item.edition" :data-edition="item.edition" :data-sku="item.sku.join()" :data-name="item.name" :data-game-date="item.gameDate" :data-release-date="item.releaseDate ? item.releaseDate.join() : false" :data-category="item.category" :data-type="item.type" :data-publisher="item.publisher.join()" :data-missing="item.missing">
-						<a :href="`#${item.sku[0]}`" @click.stop.prevent="toogleItemDetails(item.sku[0])">
-							<!-- TODO: change to picture with specific image types and fallback to jpg/png/svg -->
-							<img role="presentation" class="thumb" :src="`./img/thumb/${item.image || `${item.sku[0]}.jpg`}`">
+					<li v-for="item in [...items.values()]" class="item" :data-ed="item.edition" :data-edition="item.edition" :data-sku="item.sku.join()" :data-name="item.name.toLowerCase()" :data-date="item.gameDate" :data-release="item.releaseDate ? item.releaseDate.join() : false" :data-category="item.category" :data-type="item.type" :data-publisher="item.publisher.join()" :data-missing="item.missing">
+						<a :href="`#${item.sku[0]}`" @click.stop.prevent="toggleItemDetails(item.sku[0])">
+							<picture class="thumb">
+								<source :srcset="`/img/thumb/${item.image ? item.image.replace(/\..+$/, '') : item.sku[0]}.webp`" type="image/webp"/>
+								<source :srcset="`/img/thumb/${item.image ? item.image.replace(/\..+$/, '') : item.sku[0]}.jxr`" type="image/jxr"/>
+								<img :src="`/img/thumb/${item.image || `${item.sku[0]}.jpg`}`"/>
+							</picture>
 							<h3 class="title">{{item.name}}</h3>
 						</a>
 					</li>
 				</ul>
 			</main>
-			<dialog id="item-details" v-if="selectedItem">
-				<header>
-					<h3 class="title">{{selectedItem.name}}</h3>
-					<h4 class="metadata">
-						<span class="sku">SKU: {{selectedItem.sku.join(', ')}}</span>
-						<span class="edition">Edition: {{selectedItem.edition}}</span>
-						<span class="gameDate">Game date: {{dateFormater.format(selectedItem.gameDate)}}</span>
-					</h4>
-				</header>
-				<article>
-					<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
-					<pre class="description" v-html="selectedItem.description"></pre>
-				</article>
-				<aside>
-					<span class="category">Category: {{selectedItem.category}}</span>
-					<span class="type">Type: {{selectedItem.type}}</span>
-					<span class="releaseDate" v-if="selectedItem.releaseDate">Release date: {{selectedItem.releaseDate.map((date) => dateFormater.format(date)).join(', ')}}</span>
-					<span class="publisher">Publisher: <img v-for="publisher in selectedItem.publisher" :src="`./img/publishers/${publisher}.png`"></span>
-				</aside>
-				<aside class="files" v-if="selectedItem.files">
-					<details>
-						<summary>Files</summary>
-						<ul>
-							<li v-for="file in selectedItem.files">
-								<a :href="file.url || file.path">
-									<img v-if="file.mime" src="file.mime">
-									<span>{{file.name || file.url || file.path}}</span>
-									<span>{{file.size}}</span>
-								</a>
-							</li>
-						</ul>
-					</details>
-				</aside>
-				<button class="item-details-close">â</button>
+			<dialog id="item-details">
+				<button class="item-details-close" @click="toggleItemDetails()">â</button>
+				<div v-if="selectedItem">
+					<header>
+						<h3 class="title">{{selectedItem.name}}</h3>
+						<h4 class="metadata">
+							<span class="sku">SKU: {{selectedItem.sku.join(', ')}}</span>
+							<span class="edition">Edition: {{selectedItem.edition}}</span>
+							<span class="gameDate">Game date: {{dateFormater.format(new Date(selectedItem.gameDate))}}</span>
+						</h4>
+					</header>
+					<picture class="image">
+							<source :srcset="`/img/full/${selectedItem.image ? selectedItem.image.replace(/\..+$/, '') : selectedItem.sku[0]}.webp`" type="image/webp"/>
+							<source :srcset="`/img/full/${selectedItem.image ? selectedItem.image.replace(/\..+$/, '') : selectedItem.sku[0]}.jxr`" type="image/jxr"/>
+							<img :src="`/img/full/${selectedItem.image || `${selectedItem.sku[0]}.jpg`}`"/>
+					</picture>
+					<article>
+						<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
+						<pre class="description" v-html="selectedItem.description"></pre>
+					</article>
+					<aside>
+						<span class="category">Category: {{selectedItem.category}}</span>
+						<span class="type">Type: {{selectedItem.type}}</span>
+						<span class="releaseDate" v-if="selectedItem.releaseDate">Release date: {{selectedItem.releaseDate ? selectedItem.releaseDate.map((date) => dateFormater.format(new Date(date))).join(', ') : 'Unreleased'}}</span>
+						<span class="publisher">Publisher: <img v-for="publisher in selectedItem.publisher" :src="`/img/publishers/${publisher}.png`"></span>
+					</aside>
+					<aside class="files" v-if="selectedItem.files">
+						<details>
+							<summary>Files</summary>
+							<ul>
+								<li v-for="file in selectedItem.files">
+									<a :href="file.url || file.path">
+										<img v-if="file.mime" :src="`/img/${file.mime}.svg`">
+										<span>{{file.name || file.url || file.path}}</span>
+										<span>{{file.size}}</span>
+									</a>
+								</li>
+							</ul>
+						</details>
+					</aside>
+				</div>
 			</dialog>
-			<div id="loadOverlay">
+			<div id="load-overlay">
 				<progress></progress>
 				<h1>Loading Data...</h1>
 			</div>
 		</div>
-		<!-- <script src="./js/chrome.js" type="module"></script> -->
 		<script src="./js/main.js" type="module"></script>
 	</body>
 </html>
