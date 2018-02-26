@@ -1,9 +1,14 @@
 //Info box
-dialogPolyfill.registerDialog(document.querySelector('#info'));
+dialogPolyfill.registerDialog(document.querySelector('#info-box'));
 window.addEventListener('keydown', (evt) => {
 	if (evt.ctrlKey && evt.key === 'i') {
 		evt.preventDefault();
-		const info = document.querySelector('#info');
+		const info = document.querySelector('#info-box');
+
+		if (!info.showModal) {
+			dialogPolyfill.forceRegisterDialog(info);
+		}
+
 		if (info.open) {
 			info.close();
 		} else {
@@ -47,7 +52,12 @@ const chrome = new Vue({
 	},
 	methods: {
 		toogleInfoModal(){
-			const info = document.querySelector('#info');
+			const info = document.querySelector('#info-box');
+
+			if (!info.showModal) {
+				dialogPolyfill.forceRegisterDialog(info);
+			}
+
 			if (info.open) {
 				info.close();
 			} else {
