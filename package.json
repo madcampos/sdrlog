@@ -8,23 +8,23 @@
 		"datachunk": "node data/chunk.js"
 	},
 	"repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/madcampos/sdrlog.git"
+		"type": "git",
+		"url": "git+https://github.com/madcampos/sdrlog.git"
 	},
 	"keywords": [
-	  "shadowrun",
-	  "sdr",
-	  "books"
+		"shadowrun",
+		"sdr",
+		"books"
 	],
 	"author": "madcampos<madcampos@outlook.com>",
 	"license": "MIT",
 	"bugs": {
-	  "url": "https://github.com/madcampos/sdrlog/issues"
+		"url": "https://github.com/madcampos/sdrlog/issues"
 	},
 	"homepage": "https://github.com/madcampos/sdrlog#readme",
 	"devDependencies": {
-	  "eslint": "^4.18.1",
-	  "http-server": "^0.11.1"
+		"eslint": "^4.18.1",
+		"http-server": "^0.11.1"
 	},
 	"dependencies": {}
-  }
+}
