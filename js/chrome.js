@@ -74,6 +74,10 @@ const chrome = new Vue({
 	},
 	watch: {
 		searchText(){
+			//TODO: debounce search
+			//https://css-tricks.com/debouncing-throttling-explained-examples/
+			//TODO: add fuzzy search?
+			//https://github.com/krisk/Fuse
 			if (!this.searchText) {
 				return window.requestAnimationFrame(() => {
 					history.replaceState(null, '', '?all');
