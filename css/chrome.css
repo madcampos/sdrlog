@@ -36,7 +36,7 @@
 	transition: all 1s;
 	border-bottom: thin transparent solid;
 	/* webkit fix */
-	width: 0.00001px;
+	width: 0.1px;
 	max-width: var(--searchbar-width);
 	-webkit-appearance: textfield;
 	font-family: inherit;
