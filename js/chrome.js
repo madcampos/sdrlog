@@ -86,7 +86,7 @@ const chrome = new Vue({
 			}
 
 			const searchTerms = this.searchText.toLowerCase();
-			const search = /(name|cat(?:egory)?|sku|ed(?:ition)?|rel(?:ease)?|date|pub(?:lisher)?|type|id|scope)[:=]\s*(.*?)(?=(?:,?\s*(?:name|cat(?:egory)?|sku|ed(?:ition)?|rel(?:ease)?|date|pub(?:lisher)?|type|id|scope)[:=])|$)/gu;
+			const search = /(name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=]\s*(.*?)(?=(?:,?\s*(?:name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=])|$)/gu;
 			let match = search.exec(searchTerms);
 
 			if (match) {
