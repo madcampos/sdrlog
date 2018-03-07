@@ -1,21 +1,33 @@
 /* Variables */
 :root {
-	--title-text: 1.2rem;
-	--body-text: calc(0.75 * var(--title-text));
-	--padding: 0.4rem;
-	--border: calc(0.25 * var(--padding));
-	--margin: var(--padding);
-	--card-width: calc(12 * var(--title-text));
-	--card-height: calc(18 * var(--title-text));
-	--thumb-height: calc(13.7 * var(--title-text));
-	--search-width: 15rem;
+	--body-text: 18px;
+	--size-m: 1rem;
 
-	--background-color: #1B1B1B;
-	--card-background: #232323;
+	--size-s: 0.8rem;
+	--size-xs: 0.64rem;
+	--size-xxs: 0.512rem;
+	--size-xxxs: 0.4096rem;
+	--size-us: 0.32768rem;
 
-	--main-color: whitesmoke;
-	--secondary-color: dodgerblue;
+	--size-l: 1.25rem;
+	--size-xl: 1.5625rem;
+	--size-xxl: 1.953125rem;
+	--size-xxxl: 2.44140625rem;
+	--size-ul: 3.0517578125rem;
 
-	--accent-color: deepskyblue;
-	--secondary-accent-color: lightsteelblue;
+	--dialog-margin: 0;
+
+	--searchbar-width: 12rem;
+
+	--item-width: 15rem;
+	--item-height: 20rem;
+
+	--background-color: #3c3c3c;
+	--background-accent: #616161;
+
+	--main-color: #FFC107;
+	--highlight-color: #FF5722;
+	--highlight-shadow-color: #BF360C;
+	--link-color: #FF6F00;
+	--link-visited-color: #FF5722;
 }
