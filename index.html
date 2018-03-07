@@ -157,7 +157,7 @@
 						<span class="gameDate">Game date: {{dateFormater.format(new Date(selectedItem.gameDate))}}</span>
 						<span class="category">Category: <abbr :title="selectedItem.category.replace(/^\w/, l => l.toUpperCase())">{{categoryMap.get(selectedItem.category)}}</abbr></span>
 						<span class="type">Type: <abbr :title="selectedItem.type.replace(/^\w/, l => l.toUpperCase())">{{typeMap.get(selectedItem.type)}}</abbr></span>
-						<span class="releaseDate" v-if="selectedItem.releaseDate">Release date: {{selectedItem.releaseDate ? selectedItem.releaseDate.map((date) => dateFormater.format(new Date(date))).join(', ') : 'Unreleased'}}</span>
+						<span class="releaseDate">Release date: {{selectedItem.releaseDate ? selectedItem.releaseDate.map((date) => dateFormater.format(new Date(date))).join(', ') : 'Unreleased'}}</span>
 						<span class="publisher">Publisher: <abbr v-for="publisher in selectedItem.publisher" title="publisher.replace(/^\w/, l => l.toUpperCase())"><img :src="`/img/publishers/${publisher}.png`"></abbr></span>
 						<!-- TODO: work on files? -->
 						<!-- <details class="files" v-if="selectedItem.files">
