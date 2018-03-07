@@ -1373,7 +1373,7 @@ module.exports = [
 			name: 'Changeling',
 			releaseDate: ['1992-06', '2003-06'],
 			description: 'Chicago - Peter Clarris was a human boy who changed into a troll. He grows up surviving as a shadowrunner.',
-			gameDate: '2038,2052',
+			gameDate: '2052',
 			edition: 2,
 			publisher: ['fasa', 'catalyst']
 		}
