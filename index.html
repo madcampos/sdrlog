@@ -139,7 +139,9 @@
 		<div id="itens">
 			<main role="list" class="hidden" v-once>
 					<a v-for="item in [...items.values()]" class="item" :data-ed="item.edition" :data-edition="item.edition" :data-sku="item.sku.join()" :data-name="item.name.toLowerCase()" :data-date="item.gameDate" :data-release="item.releaseDate ? item.releaseDate.join() : false" :data-category="item.category" :data-type="item.type" :data-publisher="item.publisher.join()" :data-missing="item.missing" :href="`#${item.sku[0]}`" @click.stop.prevent="toggleItemDetails(item.sku[0])" role="listitem">
-						<img class="thumb" :src="`${thumbsPath}${item.image || `${item.sku[0]}.jpg`}`"/>
+						<figure>
+							<img class="thumb" :src="`${thumbsPath}${item.image || `${item.sku[0]}.jpg`}`"/>
+						</figure>
 						<h4 class="title">{{item.name}}</h4>
 					</a>
 			</main>
@@ -171,9 +173,9 @@
 							</ul>
 						</details> -->
 					</header>
-					<span class="image">
+					<figure class="image">
 						<img :src="`${fullImgPath}${selectedItem.image || `${selectedItem.sku[0]}.jpg`}`"/>
-					</span>
+					</figure>
 					<article class="content">
 						<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
 						<pre class="description" v-html="selectedItem.description"></pre>
