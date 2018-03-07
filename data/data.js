@@ -8309,7 +8309,7 @@ module.exports = [
 		'46095G',
 		{
 			sku: ['46095G', '46096G'],
-			category: 'print',
+			category: 'sourcebook',
 			type: 'digital',
 			name: 'Rhein-Ruhr-Megaplex',
 			releaseDate: ['2011'],

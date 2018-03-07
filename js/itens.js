@@ -5,7 +5,27 @@ const itens = new Vue({
 	data: {
 		items: null,
 		selectedItem: null,
-		dateFormater: new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', month: 'short', year: 'numeric'})
+		dateFormater: new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', month: 'short', year: 'numeric'}),
+		fullImgPath: '/img/full/',
+		thumbsPath: '/img/full/',
+		categoryMap: new Map([
+			['novel', '📚'],
+			['sourcebook', '📜'],
+			['mission', '🗺️'],
+			['rulebook', '📝'],
+			['misc', '🔣'],
+			['magazine', '📰'],
+			['boardgame', '♟️'],
+			['videogame', '🎮'],
+			['tcg', '🃏'],
+			['unofficial', '📓']
+		]),
+		typeMap: new Map([
+			['digital', '💽'],
+			['scan', '📠'],
+			['print', '🖨️'],
+			['physical', '🎲']
+		])
 	},
 	methods: {
 		toggleItemDetails(sku){
