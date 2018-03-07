@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Shadowrun Catalog</title>
 
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
 		<link rel="manifest" href="./site.webmanifest">
 
 		<link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
@@ -30,149 +32,133 @@
 	</head>
 	<body class="notranslate" translate="no">
 		<nav id="chrome" class="hidden">
-			<div id="menu" :class="{open: isMenuOpen}">
-				<a href="#menu" id="menuLink" label="Toggle menu" role="presentation" @click.prevent="isMenuOpen = !isMenuOpen">â®</a>
-				<ul label="Categories">
+			<div id="menu">
+				<a href="#menu" id="menu-link" label="Toggle menu" @click.prevent="isMenuOpen = !isMenuOpen">︙</a>
+				<ul label="Categories" :class="{hidden: !isMenuOpen}">
 					<li v-for="category in categories"><a href="?category={{category.type}}" @click.prevent="navigateToMenu(category.type)">{{category.name}}</a></li>
-					<li><a href="?all" @click.prevent="searchText = ''">All</a></li>
+					<li><a href="?all" @click.prevent="searchText = ''; isMenuOpen = !isMenuOpen">All</a></li>
 				</ul>
 			</div>
-			<label id="search" title="Search">ð<input type="search" role="search" @focus="$event.target.select()" v-model.trim="searchText"></label>
-			<button id="info-button" title="Information" @click="toogleInfoModal()">â¹</button>
-			<dialog id="info-box">
-				<button id="close-info" title="Close" @click="toogleInfoModal()">â</button>
-				<div>
-					<details open>
-						<summary>Collection Organization</summary>
-						<p>The material here presented is organized into the following categories:</p>
-						<dl>
-							<dt>Sourcebooks</dt>
-							<dd>These books are a mix of rules and setting. As such, they contain setting information applicable to any edition of the game, and statistics that may need a little updating.</dd>
-							<dt>Rulebooks</dt>
-							<dd>These books are primarily rules, and tend to be replaced quickly when a new edition of the game is released. They can be difficult to use with other editions.</dd>
-							<dt>Adventures & Campaigns</dt>
-							<dd>Missions, adventures and campaigns including the <em>Shadowrun Missions</em> seasons and the <em>Enhanced Fiction</em> series.</dd>
-							<dt>Novels</dt>
-							<dd>The romances written with the Sixth World as a base.</dd>
-							<dt>Magazines</dt>
-							<dd>Magazines (Official and unofficial) published about the Shadowrun Universe.</dd>
-							<dt>Tabletop</dt>
-							<dd>Tabletop, boardgames, <abbr title="Trade Card Game">TCG</abbr> and other physical games.</dd>
-							<dt>Video-games</dt>
-							<dd>Video-games produced based on the Shadowrun universe.</dd>
-							<dt>Misc. Itens</dt>
-							<dd>Conversion sheets, April's fool jokes and other items that don't go on the other categories.</dd>
-						</dl>
-					</details>
-					<details>
-						<summary>Search Options</summary>
-						<p>The search is done by tags, in the form: <code>tag: term</code>, where tag is one of the listed below with the respective terms if they exist.</p>
-						<p>The default search is by name, so you don't need the tag for it, but if you use more than one tag for searching you will need to specify the <code>name</code> tag to search by name.</p>
-						<h2>Tags</h2>
-						<dl>
-							<dt>Name (<code>name</code>)</dt>
-							<dd></dd>
-							<dt>Category (<code>category</code> / <code>cat</code>)</dt>
-							<dd>
-								<p>The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books.</p>
-								<p>It may be one of the following:</p>
-								<ul>
-									<li><strong>Rulebook:</strong> A book containing mostly rules that are compatible with only one edition of the game.</li>
-									<li><strong>Sourcebook:</strong> A book containing settings, plot hooks and other stuff that is mostly background information, not rules.</li>
-									<li><strong>Mission:</strong> A book containing information to be used on an adventure or campaign.</li>
-									<li><strong>Magazine:</strong> A magazine publication with assosrted content.</li>
-									<li><strong>Novel:</strong> A fictin book writen based on the Shadowrun universe.</li>
-									<li><strong>Unofficial:</strong> Fan made publication specific for Shadowrun.</li>
-									<li><strong>Videogame:</strong> Digital game setted in the Shadowrun world.</li>
-									<li><strong>TCG:</strong> Trade Card Game based on the Shadowrun universe.</li>
-									<li><strong>Boardgame:</strong> A boardgame or other physical game that is setted in the Shadowrun universe.</li>
-									<li><strong>Miscellaneous (Misc.):</strong> Assorted matterials that don't fit in any of the above categories.</li>
-								</ul>
-							</dd>
-							<dt>SKU (<code>sku</code> / <code>id</code>)</dt>
-							<dd>The <abbr title="Stock Keeper Unit">SKU</abbr> of the item, it's used also as an identifier. Most of them are unique.</dd>
-							<dt>Publisher (<code>publisher</code> / <code>pub</code>)</dt>
-							<dd>The enterprise who published the material.</dd>
-							<dt>Release date (<code>release</code> / <code>rel</code>)</dt>
-							<dd>The date the material was released, it may be more than one if the material was rereleased. If not present the material is considered unreleased.</dd>
-							<dt>Edition (<code>ed</code> / <code>ed</code>)</dt>
-							<dd>The edition of the publication, ranging from <code>1</code> to <code>5</code>.</dd>
-							<dt>Game date (<code>date</code>)</dt>
-							<dd>The in-game date of the material.</dd>
-							<dt>Type (<code>type</code>)</dt>
-							<dd>
-								<p>The availability of the material, based on how it is easily found.</p>
-								<p>It may be one of the following:</p>
-								<ul>
-									<li><strong>Digital:</strong> The material is available in digital format.</li>
-									<li><strong>Print:</strong> The material is available in printed format only.</li>
-									<li><strong>Scan:</strong> The material is a scan of the printed format.</li>
-									<li><strong>OCR:</strong> The material is a OCR scan of the printed format.</li>
-									<li><strong>Physical:</strong> The material is only available in physical format other than a book (TCG, boardgame, etc.).</li>
-								</ul>
-							</dd>
-							<dt>Scope (<code>scope</code>)</dt>
-							<dd>
-								<p>If the material is in the scope of a digital collection.</p>
-								<p>May be one of the following:</p>
-								<ul>
-									<li><strong>Missing:</strong> The item is missing from the collection.</li>
-									<li><strong>Out:</strong> The item is either physical, limited edition or unreleased so it's out of the scope of the collection.</li>
-								</ul>
-							</dd>
-						</dl>
-					</details>
-					<details>
-						<summary>Updates</summary>
-						<p>Last update: <time datetime="2017-09-03">03/09/2017</time></p>
-					</details>
-				</div>
-			</dialog>
+			<div id="search-and-info">
+				<label id="search" title="Search">🔍<input type="search" role="search" @focus="$event.target.select()" v-model.trim="searchText"></label>
+				<button id="info-button" title="Information" @click="toogleInfoModal()">ℹ</button>
+				<dialog id="info-box">
+					<header>
+						<button class="back-button" title="Back" @click="toogleInfoModal()">❮ Back</button><h4>Information</h4>
+					</header>
+					<div>
+						<details open>
+							<summary>Collection Organization</summary>
+							<p>The material here presented is organized into the following categories:</p>
+							<dl>
+								<dt>Sourcebooks</dt>
+								<dd>These books are a mix of rules and setting. As such, they contain setting information applicable to any edition of the game, and statistics that may need a little updating.</dd>
+								<dt>Rulebooks</dt>
+								<dd>These books are primarily rules, and tend to be replaced quickly when a new edition of the game is released. They can be difficult to use with other editions.</dd>
+								<dt>Adventures & Campaigns</dt>
+								<dd>Missions, adventures and campaigns including the <em>Shadowrun Missions</em> seasons and the <em>Enhanced Fiction</em> series.</dd>
+								<dt>Novels</dt>
+								<dd>The romances written with the Sixth World as a base.</dd>
+								<dt>Magazines</dt>
+								<dd>Magazines (Official and unofficial) published about the Shadowrun Universe.</dd>
+								<dt>Tabletop</dt>
+								<dd>Tabletop, boardgames, <abbr title="Trade Card Game">TCG</abbr> and other physical games.</dd>
+								<dt>Video-games</dt>
+								<dd>Video-games produced based on the Shadowrun universe.</dd>
+								<dt>Misc. Itens</dt>
+								<dd>Conversion sheets, April's fool jokes and other items that don't go on the other categories.</dd>
+							</dl>
+						</details>
+						<details>
+							<summary>Search Options</summary>
+							<p>The search is done by tags, in the form: <code>tag: term</code>, where tag is one of the listed below with the respective terms if they exist.</p>
+							<p>The default search is by name, so you don't need the tag for it, but if you use more than one tag for searching you will need to specify the <code>name</code> tag to search by name.</p>
+							<h2>Tags</h2>
+							<dl>
+								<dt>Name (<code>name</code>)</dt>
+								<dd>The name of the material.</dd>
+								<dt>Category (<code>category</code> / <code>cat</code>)</dt>
+								<dd>
+									<p>The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books.</p>
+									<p>It may be one of the following:</p>
+									<ul>
+										<li><strong>Rulebook:</strong> A book containing mostly rules that are compatible with only one edition of the game.</li>
+										<li><strong>Sourcebook:</strong> A book containing settings, plot hooks and other stuff that is mostly background information, not rules.</li>
+										<li><strong>Mission:</strong> A book containing information to be used on an adventure or campaign.</li>
+										<li><strong>Magazine:</strong> A magazine publication with assosrted content.</li>
+										<li><strong>Novel:</strong> A fictin book writen based on the Shadowrun universe.</li>
+										<li><strong>Unofficial:</strong> Fan made publication specific for Shadowrun.</li>
+										<li><strong>Videogame:</strong> Digital game setted in the Shadowrun world.</li>
+										<li><strong>TCG:</strong> Trade Card Game based on the Shadowrun universe.</li>
+										<li><strong>Boardgame:</strong> A boardgame or other physical game that is setted in the Shadowrun universe.</li>
+										<li><strong>Miscellaneous (Misc.):</strong> Assorted matterials that don't fit in any of the above categories.</li>
+									</ul>
+								</dd>
+								<dt>SKU (<code>sku</code> / <code>id</code>)</dt>
+								<dd>The <abbr title="Stock Keeping Unit">SKU</abbr> of the item, it's used also as an identifier. Most of them are unique.</dd>
+								<dt>Publisher (<code>publisher</code> / <code>pub</code>)</dt>
+								<dd>The enterprise who published the material.</dd>
+								<dt>Release date (<code>release</code> / <code>rel</code>)</dt>
+								<dd>The date the material was released, it may be more than one if the material was rereleased. If not present the material is considered unreleased.</dd>
+								<dt>Edition (<code>ed</code> / <code>ed</code>)</dt>
+								<dd>The edition of the publication, ranging from <code>1</code> to <code>5</code>.</dd>
+								<dt>Game date (<code>date</code>)</dt>
+								<dd>The in-game date of the material.</dd>
+								<dt>Type (<code>type</code>)</dt>
+								<dd>
+									<p>The availability of the material, based on how it is easily found.</p>
+									<p>It may be one of the following:</p>
+									<ul>
+										<li><strong>Digital:</strong> The material is available in digital format.</li>
+										<li><strong>Print:</strong> The material is available in printed format only.</li>
+										<li><strong>Scan:</strong> The material is a scan of the printed format.</li>
+										<li><strong>OCR:</strong> The material is a OCR scan of the printed format.</li>
+										<li><strong>Physical:</strong> The material is only available in physical format other than a book (TCG, boardgame, etc.).</li>
+									</ul>
+								</dd>
+								<dt>Scope (<code>scope</code>)</dt>
+								<dd>
+									<p>If the material is in the scope of a digital collection.</p>
+									<p>May be one of the following:</p>
+									<ul>
+										<li><strong>Missing:</strong> The item is missing from the collection.</li>
+										<li><strong>Out:</strong> The item is either physical, limited edition or unreleased so it's out of the scope of the collection.</li>
+									</ul>
+								</dd>
+							</dl>
+						</details>
+						<details>
+							<summary>Updates</summary>
+							<p>Last update: <time datetime="2017-09-03">03/09/2017</time></p>
+						</details>
+					</div>
+				</dialog>
+			</div>
 		</nav>
 
 		<div id="itens">
-			<main class="hidden" v-once>
-				<ul>
-					<li v-for="item in [...items.values()]" class="item" :data-ed="item.edition" :data-edition="item.edition" :data-sku="item.sku.join()" :data-name="item.name.toLowerCase()" :data-date="item.gameDate" :data-release="item.releaseDate ? item.releaseDate.join() : false" :data-category="item.category" :data-type="item.type" :data-publisher="item.publisher.join()" :data-missing="item.missing">
-						<a :href="`#${item.sku[0]}`" @click.stop.prevent="toggleItemDetails(item.sku[0])">
-							<picture class="thumb">
-								<source :srcset="`/img/thumb/${item.image ? item.image.replace(/\..+$/, '') : item.sku[0]}.webp`" type="image/webp"/>
-								<source :srcset="`/img/thumb/${item.image ? item.image.replace(/\..+$/, '') : item.sku[0]}.jxr`" type="image/jxr"/>
-								<img :src="`/img/thumb/${item.image || `${item.sku[0]}.jpg`}`"/>
-							</picture>
-							<h3 class="title">{{item.name}}</h3>
-						</a>
-					</li>
-				</ul>
+			<main role="list" class="hidden" v-once>
+					<a v-for="item in [...items.values()]" class="item" :data-ed="item.edition" :data-edition="item.edition" :data-sku="item.sku.join()" :data-name="item.name.toLowerCase()" :data-date="item.gameDate" :data-release="item.releaseDate ? item.releaseDate.join() : false" :data-category="item.category" :data-type="item.type" :data-publisher="item.publisher.join()" :data-missing="item.missing" :href="`#${item.sku[0]}`" @click.stop.prevent="toggleItemDetails(item.sku[0])" role="listitem">
+						<img class="thumb" :src="`${thumbsPath}${item.image || `${item.sku[0]}.jpg`}`"/>
+						<h4 class="title">{{item.name}}</h4>
+					</a>
 			</main>
 			<dialog id="item-details">
-				<button class="item-details-close" @click="toggleItemDetails()">â</button>
-				<div v-if="selectedItem">
-					<header>
-						<h3 class="title">{{selectedItem.name}}</h3>
-						<h4 class="metadata">
-							<span class="sku">SKU: {{selectedItem.sku.join(', ')}}</span>
-							<span class="edition">Edition: {{selectedItem.edition}}</span>
-							<span class="gameDate">Game date: {{dateFormater.format(new Date(selectedItem.gameDate))}}</span>
-						</h4>
-					</header>
-					<picture class="image">
-							<source :srcset="`/img/full/${selectedItem.image ? selectedItem.image.replace(/\..+$/, '') : selectedItem.sku[0]}.webp`" type="image/webp"/>
-							<source :srcset="`/img/full/${selectedItem.image ? selectedItem.image.replace(/\..+$/, '') : selectedItem.sku[0]}.jxr`" type="image/jxr"/>
-							<img :src="`/img/full/${selectedItem.image || `${selectedItem.sku[0]}.jpg`}`"/>
-					</picture>
-					<article>
-						<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
-						<pre class="description" v-html="selectedItem.description"></pre>
-					</article>
-					<aside>
-						<span class="category">Category: {{selectedItem.category}}</span>
-						<span class="type">Type: {{selectedItem.type}}</span>
+				<header v-if="selectedItem">
+					<button class="back-button" title="Back" @click="toggleItemDetails()">❮ Back</button>
+					<h4>{{selectedItem.name}}</h4>
+				</header>
+				<div v-if="selectedItem" id="item-details-content">
+					<header class="metadata">
+						<span class="sku">SKU: {{selectedItem.sku.join(', ')}}</span>
+						<span class="edition">Edition: {{selectedItem.edition}}</span>
+						<span class="gameDate">Game date: {{dateFormater.format(new Date(selectedItem.gameDate))}}</span>
+						<span class="category">Category: <abbr :title="selectedItem.category.replace(/^\w/, l => l.toUpperCase())">{{categoryMap.get(selectedItem.category)}}</abbr></span>
+						<span class="type">Type: <abbr :title="selectedItem.type.replace(/^\w/, l => l.toUpperCase())">{{typeMap.get(selectedItem.type)}}</abbr></span>
 						<span class="releaseDate" v-if="selectedItem.releaseDate">Release date: {{selectedItem.releaseDate ? selectedItem.releaseDate.map((date) => dateFormater.format(new Date(date))).join(', ') : 'Unreleased'}}</span>
-						<span class="publisher">Publisher: <img v-for="publisher in selectedItem.publisher" :src="`/img/publishers/${publisher}.png`"></span>
-					</aside>
-					<aside class="files" v-if="selectedItem.files">
-						<details>
+						<span class="publisher">Publisher: <abbr v-for="publisher in selectedItem.publisher" title="publisher.replace(/^\w/, l => l.toUpperCase())"><img :src="`/img/publishers/${publisher}.png`"></abbr></span>
+						<!-- TODO: work on files? -->
+						<!-- <details class="files" v-if="selectedItem.files">
 							<summary>Files</summary>
 							<ul>
 								<li v-for="file in selectedItem.files">
@@ -183,8 +169,16 @@
 									</a>
 								</li>
 							</ul>
-						</details>
-					</aside>
+						</details> -->
+					</header>
+					<span class="image">
+						<img :src="`${fullImgPath}${selectedItem.image || `${selectedItem.sku[0]}.jpg`}`"/>
+					</span>
+					<article class="content">
+						<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
+						<pre class="description" v-html="selectedItem.description"></pre>
+					</article>
+
 				</div>
 			</dialog>
 			<div id="load-overlay">
