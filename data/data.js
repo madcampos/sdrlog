@@ -2769,7 +2769,7 @@ module.exports = [
 			description: 'Everything about Tokyo in 2054\nFrom the detailed descriptions of each districts, to the Japanese magic and critters.',
 			gameDate: '2053',
 			edition: 2,
-			publisher: ['kadokawashoten'],
+			publisher: ['other'],
 			missing: true,
 			notes: 'This was the sourcebook of Tokyo and Japan Imperial State in 2050, written by Japanese people.'
 		}
@@ -2785,7 +2785,7 @@ module.exports = [
 			description: '',
 			gameDate: '2050',
 			edition: 2,
-			publisher: ['kadokawashoten'],
+			publisher: ['other'],
 			missing: true,
 			notes: 'Japanese translation of the 2nd Edition Shadowrun. Core rules featuring ten additional pages on Tokyo in the shadows. Color pages from the original are included in B/W.'
 		}
@@ -7131,7 +7131,7 @@ module.exports = [
 			description: 'Shadowrun\'s story begins on January 31, 2058 in Seattle, United Canadian and American States. In the wilderness of the newly reclaimed Amerindian lands of the Salish-Shidhe, a small team of shadowrunners is brutally ambushed by unknown forces. The massacre is over quickly, but is captured in video by one of the slain member\'s cybereyes; the video is recovered and made national news. The last man to die in the video was a shadowrunner known as Michael, Joshua\'s brother.\nJoshua spends his last nuyen and flies to Seattle, vowing to avenge his brother\'s death. He arrives at Sea-Tac Airport and traces back Michael\'s last credstick transaction to "Stoker\'s Coffin Motel", in the Redmond Barrens. Joshua travels there to inquire about his brother, only to be told by the owner that Michael never paid his bill and in fact has some belongings being held. He strikes a deal with Joshua, and by beginning to do small shadowruns for a small-time Mr. Johnson, called Gunderson, he gains enough money to pay his brother\'s bills. In Michael\'s belongings, he finds three "holopix": one of a young woman, Tabatha Shale; of an Amerindian, David Owlfeather, and of Seattle General Hospital Dr. Heaversheen. There is also a low grade cyberdeck, along with a credstick containing 500 nuyen, which could have been used to pay off Michael\'s bill (the irony of this is one of the game\'s many humorous points).',
 			gameDate: '2053',
 			edition: 2,
-			publisher: ['sega']
+			publisher: ['other']
 		}
 	],
 	[
@@ -7145,7 +7145,7 @@ module.exports = [
 			description: 'The game has a 1990s manga-based visual style loosely based on a contemporary Japanese manga series which was based on the Shadowrun franchise. Unlike the other Shadowrun video games which are set in Seattle and surrounding areas, this game is set entirely in Japan. In the fictional Shadowrun setting, Japan maintains a practice of exiling all orcs and trolls; thus there are no characters of those races in this game. The combat system is turn-based, and six-sided dice appear rolling on the screen determine the results of combat—the conflict resolution system used in the Shadowrun table-top game.',
 			gameDate: '2053',
 			edition: 2,
-			publisher: ['sega']
+			publisher: ['other']
 		}
 	],
 	[
@@ -7361,7 +7361,7 @@ module.exports = [
 			description: 'HONG KONG. A stable and prosperous port of call in a sea of chaos, warfare, and political turmoil. The Hong Kong Free Enterprise Zone is a land of contradictions - it is one of the most successful centers of business in the Sixth World, and home to one of the world’s most dangerous sprawl sites. A land of bright lights, gleaming towers, and restless spirits where life is cheap and everything is for sale.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['harebained']
+			publisher: ['harebrained']
 		}
 	],
 	[
@@ -7375,7 +7375,7 @@ module.exports = [
 			description: 'Seven and a half million people crammed into about 1,100 square kilometers. Nearly 6,800 people per square kilometer. Not the tightest-packed city in the world, at least not in terms of people, but still up there. But in terms of wealth, secrets, intrigue, and double-crosses? No place in the world is more densely packed. With seven and a half million people, you have seven and a half million personal agendas, and fifteen or twenty million schemes to get ahead in the world, because nobody has just one. Those plans run from the wealthiest corporations jockeying for politically and magically advantageous positions in the city to the poorest of the poor, fighting to avoid being devoured by the horrors that lurk in the Kowloon Walled City. Step into the sprawl and prepare to trip over conflicting agendas, spiraling plots, and secrets nested in secrets.',
 			gameDate: '2055',
 			edition: 5,
-			publisher: ['harebained']
+			publisher: ['harebrained']
 		}
 	],
 	[
@@ -7773,7 +7773,7 @@ module.exports = [
 			description: 'A complete description of France from the world of Shadowrun in 2057, with its history, political system, organization of society, organized crime, most powerful duchies, new creatures, new equipment, new spells, etc.',
 			gameDate: '2057-02',
 			edition: 2,
-			publisher: ['jeuxdes'],
+			publisher: ['other'],
 			missing: 'outOfScope',
 			notes: 'French only. Considered non-cannon.'
 		}
@@ -8410,7 +8410,7 @@ module.exports = [
 			description: 'Capitales des Ombres, le premier supplément géographique de Shadowrun, Quatrième édition, présente aux joueurs trois cancers urbains où règnent les Ombres : Hong Kong, Seattle et Marseille, en exclusivité dans la version française. Chaque ville est décrite en détail du point de vue d’un shadowrunner, dans une perspective couvrant les thèmes essentiels : équilibre des pouvoirs, affaires corporatistes et monde de la pègre, lieux importants, spécifi cités magiques et éléments propres à chaque ville – le tout foisonnant d’idées et d’accroches de scénarios.\nQuatre autres cités chères aux runners sont également présentées : Le Cap, Caracas, Hambourg et Istanbul, le tout accompagné de conseils au meneur de jeu lui permettant de transformer n’importe quelle zone urbaine en paradis pour runners.',
 			gameDate: '2072',
 			edition: 4,
-			publisher: ['blackbookeditions'],
+			publisher: ['other'],
 			missing: true,
 			notes: 'Capitales des ombres is the translation of Runner Havens with an added chapter on Marseilles in the shadows.'
 		}
@@ -8426,7 +8426,7 @@ module.exports = [
 			description: '',
 			gameDate: '2050',
 			edition: 2,
-			publisher: ['beholderkft'],
+			publisher: ['other'],
 			missing: true,
 			notes: 'Shadowrun Hungary sourcebook (Hungarian)'
 		}
