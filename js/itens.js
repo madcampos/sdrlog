@@ -1,4 +1,15 @@
 dialogPolyfill.registerDialog(document.querySelector('#item-details'));
+window.addEventListener('popstate', () => {
+	const details = document.querySelector('#item-details');
+
+	if (!details.showModal) {
+		dialogPolyfill.forceRegisterDialog(details);
+	}
+
+	if (!window.location.hash) {
+		details.close();
+	}
+});
 
 //eslint-disable-next-line no-unused-vars
 const itens = new Vue({
@@ -7,7 +18,7 @@ const itens = new Vue({
 		selectedItem: null,
 		dateFormater: new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', month: 'short', year: 'numeric'}),
 		fullImgPath: '/img/full/',
-		thumbsPath: '/img/full/',
+		thumbsPath: '/img/thumbs/',
 		categoryMap: new Map([
 			['novel', '📚'],
 			['sourcebook', '📜'],
@@ -37,15 +48,31 @@ const itens = new Vue({
 
 			if (itemDetails.open) {
 				itemDetails.close();
+				history.back();
 			} else {
 				this.selectedItem = this.items.get(sku);
 				itemDetails.showModal();
+				history.pushState(history.state, `Shadowrun Catalog | ${sku}: "${this.selectedItem.name}"`, `#${sku}`);
 			}
 		}
 	},
 	async mounted(){
 		document.querySelector('#load-overlay').classList.toggle('hidden');
 		document.querySelector('main').classList.toggle('hidden');
+
+		if (window.location.hash) {
+			this.selectedItem = this.items.get(window.location.hash.replace('#', ''));
+
+			if (this.selectedItem) {
+				const itemDetails = document.querySelector('#item-details');
+
+				if (!itemDetails.showModal) {
+					dialogPolyfill.forceRegisterDialog(itemDetails);
+				}
+
+				itemDetails.showModal();
+			}
+		}
 	}
 });
 
