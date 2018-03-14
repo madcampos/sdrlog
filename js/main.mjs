@@ -1,6 +1,6 @@
-import './chrome.js';
-import './gamepad.js';
-import './itens.js';
+import './chrome.mjs';
+import './gamepad.mjs';
+import './itens.mjs';
 
 if ('serviceWorker' in navigator) {
 	/*eslint-disable no-console*/
