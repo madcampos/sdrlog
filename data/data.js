@@ -6704,15 +6704,14 @@ module.exports = [
 		{
 			sku: ['26860'],
 			category: 'novel',
-			type: 'print',
+			type: 'digital',
 			name: 'Shadows Down Under',
 			releaseDate: ['2016-07-22'],
 			description: 'Someone - or something - is killing nightclub entertainers in Kings Cross, Australia. Striking from the shadows, methodical and heinous, the murderer has wrapped the bawdy, colorful neighborhood in a suffocating blanket of terror.\nNinniniru "Ninn" Tossinn, a troubled private investigator on the run from her past, joins forces with Barega, an elderly Aborigine shaman, to uncover the truth behind the malevolent force - and put themselves on the Cross Slayer\'s list. But can they defeat the darkness, survive Sydney\'s powerful mana storm, and reach the true heart of the evil threatening the city? Their search takes them from gritty alleys filled with gang symbols and worse to beneath the squatter-filled harbor bridge over shark-infested waters.\nAs their investigation deepens, soon the Cross Slayer isn\'t the only foe stalking them. Ninn and Barega have to put all their trust in each other if they\'re going to bring the slayer to justice, uncover the conspiracy behind the murders, and stay alive long enough to do both.',
 			gameDate: '2075',
 			edition: 5,
 			publisher: ['catalyst'],
-			missing: true,
-			notes: 'Print only. No scans found.'
+			missing: true
 		}
 	],
 	[
@@ -7407,9 +7406,9 @@ module.exports = [
 		}
 	],
 	[
-		'n/a',
+		'58XX',
 		{
-			sku: ['n/a'],
+			sku: ['58XX', 'n/a'],
 			category: 'novel',
 			type: 'physical',
 			name: 'Private Agenda',
@@ -7442,7 +7441,6 @@ module.exports = [
 			sku: ['26CMP13-1'],
 			category: 'mission',
 			type: 'physical',
-			image: 'CMP-UNR.png',
 			name: 'Dragon Song Series',
 			description: 'CMP 2013-01 Jailbreak Rock\nIf the payday is high enough, are you willing to bust a dragon out of a Denver jail? Shadowrun 5th Living Campaign. Help a fellow Runner out. A fellow Chummer is locked behind bars in Denver and is looking for help getting out. Brave the Cold and the Dragon to help a Runner.\n\nCMP 2013-02 Berlin Waltz\nEscort an injured Mr. Johnson to Berlin, with a dragon\'s minions on your tail! Shadowrun 5th Living Campaign. Welcome to Deutschland, come for the Schnitzel stay for the Neu-yen. When Mr. Johnson needs a hand moving some valuble items who\'s he gonna call.\n\nCMP 2013-03 Neo-Tokyo Fusion\nThe Ragin\' Gaijin are the hottest indy band in Neo-Tokyo, but now they need to be rescued. Shadowrun 5th Living Campaign. Mr. Johnson\'s favorite Japanese Pop band has gone Missing, help locate the missing Musicians and the Wasabi Rolls are on him, Fail and you may find yourself turning Japanese. \n\nCMP 2013-04 Ballroom Blitz\nThere\'s a party at Underworld 93 and everyone\'s invited. Everyone. Shadowrun 5th Living Campaign. All roads lead to Seattle, Mr Johnson has one last run, to protect his assets from would be Assassins. Enjoy all the fine Dining Downtown has to offer...it may be your last night on the town.',
 			gameDate: '2075',
@@ -7458,7 +7456,6 @@ module.exports = [
 			sku: ['26CMP13-2'],
 			category: 'mission',
 			type: 'physical',
-			image: 'CMP-UNR.png',
 			name: 'Dangerous Games Series',
 			description: 'CMP 2013-05 Rolling the Dice\nWelcome to the Sixth World, shadowrunner. This time, your fixer has you lined up for a job in the California Free State. It\'s a straightforward acquisition from Ares Arms - or at least that\'s what you\'re told.\n\nCMP 2013-06 Double Down\nDeeper into the shadows of San Francisco and CalFree! The shadowrunners must recover a drone shot down in the mountains. Out of the city and into the wilderness - fresh air, fresh challenges, and fresh ways to get fragged...\n\nCMP 2013-07 Full House\nA big part of being a shadowrunner is breaking things for money. This time, Mr. Johnson wants you to break an entire MCT facility. No smash & grab, just smash! But is it really that simple?\n\nCMP 2013-08 Going for Broke\nOne more job in San Francisco, CalFree. A simple bodyguard job, keeping a computer programmer safe. Easy nuyen, right? Sure, chummer, if you say so... Theres a hit out for a software designer, and its your job to keep him alive. Think you can pull it off?',
 			gameDate: '2075',
@@ -7474,7 +7471,6 @@ module.exports = [
 			sku: ['26CMP14'],
 			category: 'mission',
 			type: 'physical',
-			image: 'CMP-UNR.png',
 			name: 'Company Man Series',
 			description: 'CMP 2014-05 Silence is Golden\nMr. Johnson needs a job done quietly, in and out without being seen. Think your team is up to the task? A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed.\n\nCMP 2014-06 A Night’s Work\nSounds like a simple job, but don’t they all? Either way runners get paid for a simple night’s work, right? A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed. Please check out Welcome to the 6th World events to learn the system and make a character...\n\nCMP 2014-07 Run out the Guns\n“Rumor has it that Ares is about to unveil a breakthrough in firearms technology. Would you kindly go steal that for me?” A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed.\n\nCMP 2014-08 Demolition Run\nSometimes the Johnson wants it quiet. Sometimes he wants it loud and noisy. Tonight, he wants the latter. A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed.',
 			gameDate: '2075',
@@ -7490,7 +7486,6 @@ module.exports = [
 			sku: ['26CMP15-1'],
 			category: 'mission',
 			type: 'physical',
-			image: 'CMP-UNR.png',
 			name: 'Tennessee Suite Series',
 			description: 'CMP 2015-01 Copperhead Road\nCMP 2015-02 Rolling on the River\nCMP 2015-03 Cinco de Mayo in Memphis\nCMP 2015-04 Leavin’ Tennessee',
 			gameDate: '2075',
@@ -7506,7 +7501,6 @@ module.exports = [
 			sku: ['26CMP15-2'],
 			category: 'mission',
 			type: 'physical',
-			image: 'CMP-UNR.png',
 			name: 'Deadly Competition Series',
 			description: 'CMP 2015-05 Carrying the Torch\nCMP 2015-06 Opening Ceremonies\nCMP 2015-07 Citius Altius Fortius\nCMP 2015-08 Closing Ceremonies',
 			gameDate: '2075',
@@ -7522,7 +7516,6 @@ module.exports = [
 			sku: ['26CMP13-3'],
 			category: 'mission',
 			type: 'physical',
-			image: 'CMP-UNR.png',
 			name: 'BBQ Bob Series',
 			description: 'CMP 2016-01 Broke Down in KC\nCMP 2016-02 The Midwest Farmer’s Daughter\nCMP 2016-03 Today Isn’t Your Day, Tomorrow Isn’t Looking Good Either',
 			gameDate: '2075',
@@ -7538,7 +7531,6 @@ module.exports = [
 			sku: ['26CMP11'],
 			category: 'mission',
 			type: 'physical',
-			image: 'CMP-UNR.png',
 			name: 'CMP 2011',
 			description: 'CMP 2011-01 Moving Day\nExtracting one person can be tough. Extracting an entire family? That’s on a whole different level. They say “Never deal with a dragon,” but maybe they should add “Never do a job involving grade schoolers and hormonal teens”!\n\nCMP 2011-02 The Prize of Failure\nEvery Johnson promises an easy job, and this one’s no exception. Scare an unwilling scientist into extracting willingly. You don’t even have to do the extraction yourself. How hard could this be?\n\nCMP 2011-03 Threads of the Past\nA rockslide on Mt. Rainier has uncovered an ancient ship embedded in the rock, and a tunnel leading into previously unknown caverns inside the volcanic mountain. Grab some rope, lanterns, and a 3 meter pole, because you’ve just been hired to explore this ancient cavern.\n\nCMP 2011-05 Burn Notice\nNever deal with a dragon? How do you tell him no when Perianwyr calls you to his club in Denver with a job offer? A rogue spy has been causing no end of headache for the Great Dragon Ghostwalker, and he wants this spy burned down. Succeed and you’ll get a great payday. Fail and you could end up lunch.\n\nCMP 2011-06 TRO 2073\nThe new season of Desert Wars are brewing, and Ares has a new toy it wants to unveil: A 30 foot tall mech. It’s unwieldy, ungainly, and totally impracticable for modern warfare, but it makes for one hell of a publicity stunt. Ares needs a team of mercs to pilot and/or escort this so-called battlemech. Can the runners keep it in one piece and survive the opening round of Desert Wars 2073?\n\nCMP 2011-07 Super Brawl Sunday\nIt’s Super Brawl 2073, and the fix is in! When you’re hired to infiltrate and fix the biggest sporting event of the year, can you handle the pressure? And more importantly, will you get a pair of sneakers named after you?\n\nCMP 2011-08 Ain’t That a Kick in the Head?\nBarry Mana, the troll with a voice like Sinatra and dance moves like Astaire, has once again come under death threats from ant-metahuman rights groups. When he narrowly escapes two assassination attempts in one night, he decides it’s time to call in some help. Ring-a-ding-ding, baby. Keep this cat alive while he pulls of the show of his career in the City of Lights, Las Vegas!',
 			gameDate: '2073',
@@ -8461,6 +8453,66 @@ module.exports = [
 			publisher: ['pegasus'],
 			missing: true,
 			notes: 'Winning entry of Pegasus\' 2009 adventure competition for Shadowrun. Subsequently released as a free pdf.'
+		}
+	],
+	[
+		'26056S',
+		{
+			sku: ['26056S'],
+			category: 'mission',
+			type: 'digital',
+			name: 'The Seattle Gambit',
+			releaseDate: ['2017-12'],
+			description: 'Sucked Back In\nFormer shadowrunner Yuri Yehzov has discovered that the shadows have long tendrils. Life pushed him and Soren, his new partner in crime (and everything else), to Seattle, where they’ll have to do what thousands have done before them—figure out how to scrape by and attempt to build a life.\nIf there’s one thing the darker corners of the Sixth World have in common, it’s the tendency to explode into violence at any moment. Yuri will discover that Seattle’s shadows are merciless and unkind, but also full of opportunity for those who can think on their feet and keep flying lead from piercing their skin. Can Yuri move fast enough to stay upright in the worldwide capital of shadowrunning? He’s about to find out.\nThe Seattle Gambit is new Shadowrun fiction that also includes NPC, gear, and other rules that appear in the story. Read the story, then use the rules to dive into the action! The Seattle Gambit’s rules are for use with Shadowrun, Fifth Edition, though the basic concepts and story can also be used with Shadowrun: Anarchy.',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: true
+		}
+	],
+	[
+		'SRM08-01',
+		{
+			sku: ['SRM08-01'],
+			category: 'mission',
+			type: 'digital',
+			name: 'Keep Your Friend Close',
+			releaseDate: ['2017-12'],
+			description: 'Raised Stakes\n\nChicago has been dangerous for a long time. But only the foolish think it can’t get worse. When so many ways to die are concentrated in a single place, sometimes they prey on the innocent, and sometimes they go head to head with each other. Sometimes, they do both.\nIn SRM 08-01 Keep Your Friends Close, the Chicago Missions begin speeding toward their dramatic conclusion as the powers of the Containment Zone mobilize and start causing an even higher-than-normal level of chaos. Whether you’ve seen the twists and turns of the storyline through several Missions or you’re looking to jump in now, this Mission will give your team all the danger they can handle in the race to save lives. Their own being a top priority.',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: true
+		}
+	],
+	[
+		'SRM08-02',
+		{
+			sku: ['SRM08-02'],
+			category: 'mission',
+			type: 'digital',
+			name: 'Can You Dig It?',
+			releaseDate: ['2017-12'],
+			description: 'Smoke Gets In Your Eyes\n\nIn mass combat, you might be blinded by the fog of war. In hand-to-hand combat, you might have to deal with tunnel vision. And when running the shadows of Chicago, you just might have to contend with the fumes from a fire in an abandoned plastics factory that no one can seem to put out.\nWhich is what’s happening when a new job comes your way. This job doesn’t really need anything to make it more difficult—when some people have disappeared, and then the first team that went to find them also vanished, you know something very wrong is lurking ahead. Can the runners find the threat and defeat it, despite the now-omnipresent smoke? Only one way to find out!',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: true
+		}
+	],
+	[
+		'26S057',
+		{
+			sku: ['26S057'],
+			category: 'sourcebook',
+			type: 'digital',
+			name: 'Shadows in Focus: Morocco',
+			releaseDate: ['2018-01'],
+			description: 'A Dream of Shadows\nWhat do you want from a nation you’re going to run in? How about a place with access to cutting-edge technology while also retaining a firm footing in old traditions? How about a population focused on cutting deals and making things happen? How about a system of government that can be appallingly harsh but also, when they can be made to see the benefits, rather forgiving? And how about access to a dragon’s hoard worth of goods flowing into and out of the nation daily?\nIf all this sounds like the shadowrunning haven of your dreams, then you want to run in Morocco. Shadows in Focus: Morocco provides an overview of this nation, with details on how to get in, how to get out, where to go, who to meet, and what to do. It also details some of the ways you might get into trouble and offers some hints on getting out of it.\nWith plenty of tips for running games in this country as well as rules for building Morocco-based characters, Shadows in Focus: Morocco adds a new element to Shadowrun, Fifth Edition games. The setting information can also be used in Shadowrun: Anarchy games. ',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: true
 		}
 	]
 ];
