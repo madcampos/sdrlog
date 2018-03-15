@@ -20,14 +20,12 @@
 		<meta name="msapplication-config" content="/browserconfig.xml">
 		<meta name="theme-color" content="#3c3c3c">
 
-		<meta name="displaydate" content="2017-09-03T00:00:00.000Z">
-
 		<!-- Polyfills -->
 		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 		<script src="https://unpkg.com/dialog-polyfill"></script>
-		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 
-		<link rel="stylesheet" href="./css/main.css">
+		<!-- Critical CSS -->
+		<link rel="stylesheet" href="/css/critical.css">
 		<style id="filterCSS"></style>
 	</head>
 	<body class="notranslate" translate="no">
@@ -35,7 +33,7 @@
 			<div id="menu">
 				<a href="#menu" id="menu-link" label="Toggle menu" @click.prevent="isMenuOpen = !isMenuOpen">︙</a>
 				<ul label="Categories" :class="{hidden: !isMenuOpen}">
-					<li v-for="category in categories"><a href="?category={{category.type}}" @click.prevent="navigateToMenu(category.type)">{{category.name}}</a></li>
+					<li v-for="category in categories" v-once><a :href="`?category=${category.type}`" @click.prevent="navigateToMenu(category.type)">{{category.name}}</a></li>
 					<li><a href="?all" @click.prevent="searchText = ''; isMenuOpen = !isMenuOpen">All</a></li>
 				</ul>
 			</div>
@@ -198,6 +196,6 @@
 				<h1>Loading Data...</h1>
 			</div>
 		</div>
-		<script src="./js/main.mjs" type="module"></script>
+		<script src="/js/critical.mjs" type="module"></script>
 	</body>
 </html>

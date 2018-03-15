@@ -1,3 +1,5 @@
+import {default as Vue} from 'https://unpkg.com/vue/dist/vue.esm.browser.js';
+
 dialogPolyfill.registerDialog(document.querySelector('#item-details'));
 window.addEventListener('popstate', () => {
 	const details = document.querySelector('#item-details');

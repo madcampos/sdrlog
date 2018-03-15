@@ -1,3 +1,5 @@
+import {default as Vue} from 'https://unpkg.com/vue/dist/vue.esm.browser.js';
+
 //Info box
 dialogPolyfill.registerDialog(document.querySelector('#info-box'));
 window.addEventListener('keydown', (evt) => {
