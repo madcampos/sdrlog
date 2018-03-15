@@ -12,7 +12,6 @@ module.exports = {
 		browser: true,
 	},
 	globals:{
-		'Vue': true,
 		'dialogPolyfill': true
 	},
 	'rules': {
