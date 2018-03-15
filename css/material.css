@@ -31,7 +31,7 @@
 	height: 100%;
 	display: grid;
 	grid-template-areas: 'metadata metadata' 'image content';
-	grid-template-rows: calc(var(--size-s) * 5) 1fr;
+	grid-template-rows: calc(var(--size-s) * 6) 1fr;
 	grid-template-columns: minmax(5rem, auto) minmax(min-content, max-content);
 	grid-gap: var(--size-xs);
 }
@@ -81,7 +81,7 @@
 	#item-details-content{
 		grid-template-areas: 'metadata' 'image' 'content';
 		grid-template-columns: 1fr;
-		grid-template-rows: calc(var(--size-s) * 5) minmax(12rem, auto) minmax(12rem, max-content);
+		grid-template-rows: calc(var(--size-s) * 6) minmax(12rem, auto) minmax(12rem, max-content);
 	}
 }
 
