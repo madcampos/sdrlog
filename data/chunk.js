@@ -10,7 +10,7 @@ data.forEach((item, i) => {
 	chunk.push(item);
 
 	if ((i + 1) % CHUNK_SIZE === 0 || i === (data.length - 1)) {
-		writeFileSync(resolve(__dirname, `./data-${Math.ceil((i + 1) / 100)}.json`), JSON.stringify(chunk));
+		writeFileSync(resolve(__dirname, `./data-${Math.ceil((i + 1) / CHUNK_SIZE)}.json`), JSON.stringify(chunk));
 		chunk = [];
 	}
 });
