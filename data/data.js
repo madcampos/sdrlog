@@ -73,7 +73,7 @@ module.exports = [
 		}
 	],
 	[
-		'26004',
+		'26001',
 		{
 			sku: ['26004', '26001'],
 			category: 'rulebook',
@@ -3105,7 +3105,7 @@ module.exports = [
 		}
 	],
 	[
-		'7905',
+		'7905A',
 		{
 			sku: ['7905', '10656', '25010'],
 			category: 'rulebook',
@@ -3133,9 +3133,9 @@ module.exports = [
 		}
 	],
 	[
-		'26100X',
+		'26100A',
 		{
-			sku: ['26100X'],
+			sku: ['26100A'],
 			category: 'misc',
 			type: 'print',
 			name: 'Alphaware 2.0: Weapons, Spells, Gear & Augmentations',
