@@ -1,10 +1,7 @@
-/*eslint-disable no-console*/
-
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js').then(() => {
-		console.log('Service worker registered, initializing app...');
 		const mainJs = document.createElement('script');
-		mainJs.src = '/js/main.mjs';
+		mainJs.src = '/js/main.js';
 		mainJs.type = 'module';
 		document.head.appendChild(mainJs);
 
@@ -13,14 +10,14 @@ if ('serviceWorker' in navigator) {
 		mainCss.rel = 'stylesheet';
 		document.head.appendChild(mainCss);
 	}).catch((err) => {
+		/*eslint-disable no-console*/
 		console.error('Error registering service worker');
 		console.error(err);
+		/*eslint-enable no-console*/
 	});
 } else {
-	console.log('No worker, loading modules without cache...');
-
 	const mainJs = document.createElement('script');
-	mainJs.src = '/js/main.mjs';
+	mainJs.src = '/js/main.js';
 	mainJs.type = 'module';
 	document.head.appendChild(mainJs);
 

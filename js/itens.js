@@ -79,24 +79,37 @@ const itens = new Vue({
 });
 
 (async () => {
-	try {
-		const items = [];
-		const sorter = new Intl.Collator('en-US', {sensitivity: 'accent', numeric: true, caseFirst: 'upper'});
-		for (let i = 1; i > 0; i++) {
-			const res = await fetch(`/data/data-${i}.json`);
+	const data = JSON.parse(localStorage.getItem('data') || '[]');
+	let i = 1;
+	let res;
 
-			if (!res.ok) {
-				break;
-			}
+	if (data.length !== 0) {
+		i = localStorage.getItem('lastDataFile');
+	}
 
-			items.push(...await res.json());
+	for (i; i > 0; i++) {
+		try {
+			res = await fetch(`/data/data-${i}.json`);
+		} catch (err) {
+			//eslint-disable-next-line no-console
+			console.error(err);
+			console.log(res.clone());
 		}
 
-		//eslint-disable-next-line no-unused-vars
-		itens.$data.items = new Map(items.sort(([id1, obj1], [id2, obj2]) => sorter.compare(obj1.name, obj2.name)));
-		itens.$mount('#itens');
-	} catch (err) {
-		//eslint-disable-next-line no-console
-		console.error(err);
+		if (!res || res.type === 'error' || !res.ok) {
+			localStorage.setItem('lastDataFile', i - 1);
+			break;
+		}
+
+		data.push(...await res.json());
 	}
+
+	//TODO: find duplicates before sorting
+	// const sorter = new Intl.Collator('en-US', {sensitivity: 'accent', numeric: true, caseFirst: 'upper'});
+	// //eslint-disable-next-line no-unused-vars
+	// data = data.sort(([id1, obj1], [id2, obj2]) => sorter.compare(obj1.name, obj2.name));
+	localStorage.setItem('data', JSON.stringify(data));
+
+	itens.$data.items = new Map(data);
+	itens.$mount('#itens');
 })();
