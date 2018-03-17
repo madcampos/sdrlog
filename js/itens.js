@@ -53,6 +53,7 @@ const itens = new Vue({
 				history.back();
 			} else {
 				this.selectedItem = this.items.get(sku);
+				this.selectedItem.id = sku;
 				itemDetails.showModal();
 				history.pushState(history.state, `Shadowrun Catalog | ${sku}: "${this.selectedItem.name}"`, `#${sku}`);
 			}
@@ -63,7 +64,9 @@ const itens = new Vue({
 		document.querySelector('main').classList.toggle('hidden');
 
 		if (window.location.hash) {
-			this.selectedItem = this.items.get(window.location.hash.replace('#', ''));
+			const id = window.location.hash.replace('#', '');
+			this.selectedItem = this.items.get(id);
+			this.selectedItem.id = id;
 
 			if (this.selectedItem) {
 				const itemDetails = document.querySelector('#item-details');
@@ -79,11 +82,12 @@ const itens = new Vue({
 });
 
 (async () => {
-	const data = JSON.parse(localStorage.getItem('data') || '[]');
+	const patchData = [];
+	let data = JSON.parse(localStorage.getItem('data') || '[]');
 	let i = 1;
 	let res;
 
-	if (data.length !== 0) {
+	if (data.size !== 0) {
 		i = localStorage.getItem('lastDataFile');
 	}
 
@@ -93,7 +97,6 @@ const itens = new Vue({
 		} catch (err) {
 			//eslint-disable-next-line no-console
 			console.error(err);
-			console.log(res.clone());
 		}
 
 		if (!res || res.type === 'error' || !res.ok) {
@@ -101,13 +104,16 @@ const itens = new Vue({
 			break;
 		}
 
-		data.push(...await res.json());
+		patchData.push(...await res.json());
 	}
 
-	//TODO: find duplicates before sorting
-	// const sorter = new Intl.Collator('en-US', {sensitivity: 'accent', numeric: true, caseFirst: 'upper'});
-	// //eslint-disable-next-line no-unused-vars
-	// data = data.sort(([id1, obj1], [id2, obj2]) => sorter.compare(obj1.name, obj2.name));
+	const sorter = new Intl.Collator('en-US', {sensitivity: 'accent', numeric: true, caseFirst: 'upper'});
+	/*eslint-disable no-unused-vars*/
+	data = data.filter(([id, obj]) => !patchData.find(([patchId, patchObj]) => patchId === id));
+	data = [...data, ...patchData];
+	data = data.sort(([id1, obj1], [id2, obj2]) => sorter.compare(obj1.name, obj2.name));
+	/*eslint-enable no-unused-vars*/
+
 	localStorage.setItem('data', JSON.stringify(data));
 
 	itens.$data.items = new Map(data);
