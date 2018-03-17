@@ -54,7 +54,6 @@ const imagemin = require('imagemin');
 const imJpeg = require('imagemin-mozjpeg');
 const imPng = require('imagemin-pngquant');
 const imSvg = require('imagemin-svgo');
-const imWebp = require('imagemin-webp');
 // const gm = require('gm');
 copySync(resolve(process.cwd(), './favicon.ico'), resolve(DIST_PATH, './favicon.ico'));
 glob('./img/**/*.{pn,jp,sv}g').forEach((imageFile) => {
@@ -62,8 +61,7 @@ glob('./img/**/*.{pn,jp,sv}g').forEach((imageFile) => {
 		plugins: [
 			imJpeg({quality: 80}),
 			imPng({floyd: 0, nofs: true, quality: 80, speed: 1}),
-			imSvg(),
-			imWebp({method: 6})
+			imSvg()
 		]
 	}).then(([res]) => {
 		outputFileSync(resolve(DIST_PATH, imageFile), res.data);
