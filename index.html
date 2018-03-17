@@ -135,7 +135,7 @@
 
 		<div id="itens">
 			<main role="list" class="hidden" v-once>
-					<a v-for="item in [...items.values()]" class="item"
+					<a v-for="[id, item] in [...items.entries()]" class="item"
 					:data-name="item.name.toLowerCase()"
 					:data-category="item.category" :data-cat="item.category"
 					:data-sku="item.sku.join().toLowerCase()" :data-id="item.sku.join().toLowerCase()"
@@ -145,9 +145,9 @@
 					:data-date="item.gameDate"
 					:data-type="item.type"
 					:data-missing="item.missing"
-					:href="`#${item.sku[0]}`" @click.stop.prevent="toggleItemDetails(item.sku[0])" role="listitem">
+					:href="`#${item.sku[0]}`" @click.stop.prevent="toggleItemDetails(id)" role="listitem">
 						<figure>
-							<img class="thumb" :src="`${thumbsPath}${item.image || `${item.sku[0]}.jpg`}`"/>
+							<img class="thumb" :src="`${thumbsPath}${item.image || `${id}.jpg`}`"/>
 						</figure>
 						<h4 class="title">{{item.name}}</h4>
 					</a>
@@ -165,7 +165,7 @@
 						<span class="category">Category: <abbr :title="selectedItem.category.replace(/^\w/, l => l.toUpperCase())">{{categoryMap.get(selectedItem.category)}}</abbr></span>
 						<span class="type">Type: <abbr :title="selectedItem.type.replace(/^\w/, l => l.toUpperCase())">{{typeMap.get(selectedItem.type)}}</abbr></span>
 						<span class="releaseDate">Release date: {{selectedItem.releaseDate ? selectedItem.releaseDate.map((date) => dateFormater.format(new Date(date))).join(', ') : 'Unreleased'}}</span>
-						<span class="publisher">Publisher: <abbr v-for="publisher in selectedItem.publisher" title="publisher.replace(/^\w/, l => l.toUpperCase())"><img :src="`/img/publishers/${publisher}.png`"></abbr></span>
+						<span class="publisher">Publisher: <abbr v-for="publisher in selectedItem.publisher" :title="publisher.replace(/^\w/, l => l.toUpperCase())"><img :src="`/img/publishers/${publisher}.png`"></abbr></span>
 						<!-- TODO: work on files? -->
 						<!-- <details class="files" v-if="selectedItem.files">
 							<summary>Files</summary>
@@ -181,7 +181,9 @@
 						</details> -->
 					</header>
 					<figure class="image">
-						<img :src="`${fullImgPath}${selectedItem.image || `${selectedItem.sku[0]}.jpg`}`"/>
+						<transition name="details-img">
+							<img :src="`${fullImgPath}${selectedItem.image || `${selectedItem.id}.jpg`}`" :key="selectedItem.id"/>
+						</transition>
 					</figure>
 					<article class="content">
 						<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
