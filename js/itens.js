@@ -87,7 +87,7 @@ const itens = new Vue({
 	let i = 1;
 	let res;
 
-	if (data.size !== 0) {
+	if (data.length !== 0) {
 		i = localStorage.getItem('lastDataFile');
 	}
 
