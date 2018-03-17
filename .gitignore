@@ -63,4 +63,6 @@ typings/
 img/full/*
 img/thumbs/*
 
+dist/
+
 *.pem
