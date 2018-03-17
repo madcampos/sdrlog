@@ -15,13 +15,16 @@ body{
 	color: var(--main-color);
 	font-size: var(--body-text);
 	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantrell, "Open Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Firefox Emoji", "Noto Emoji", "Android Emoji";
-	min-width: 540px;
-	min-height: 320px;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body *{
+	box-sizing: inherit;
 }
 
 code{font-family: 'Fira Code', 'Consolas', 'Fira Mono', 'Noto Mono', 'Roboto Mono', 'Droid Sans Mono', 'Menlo', 'Monaco', 'Courier New', 'Courier', monospace;}
@@ -96,7 +99,7 @@ dialog{
 dialog > header{
 	padding: var(--size-us);
 	background: var(--background-color);
-	width: 100%;
+	width: calc(100% + calc(var(--size-m) * 2));
 	display: grid;
 	grid-template: 'back header' 1fr / minmax(auto, max-content) 1fr;
 	margin: calc(var(--size-m) * -1) 0 0 calc(var(--size-m) * -1);
