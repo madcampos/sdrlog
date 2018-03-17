@@ -32,26 +32,26 @@ function convertImgs($img) {
 			ext = '.jpg';
 			name = 'JPEG';
 			params = '-quality 73 -define jpeg:dct-method=float'
-		},
-		@{
-			ext = '.jxr';
-			name = 'JPEG-XR';
-			params = '-quality 63 -define jpeg:dct-method=float'
-		},
-		@{
-			ext = '.webp';
-			name = 'WEBP';
-			params = '-quality 63 -define webp:lossless=false -define webp:image-hint=picture -define webp:auto-filter=true -define webp:method=6'
-		},
-		@{
-			ext = '.jp2';
-			name = 'JPEG 2000';
-			params = '-quality 55 -define jpeg:dct-method=float'
-		},
-		@{
-			ext = '.png';
-			name = 'PNG';
-			params = '-quality 60 -depth 8 -treedepth 6 -dither -define png:compression-filter=8 -define png:compression-level=9 -define png:compression-strategy=3'
+		# },
+		# @{
+		# 	ext = '.jxr';
+		# 	name = 'JPEG-XR';
+		# 	params = '-quality 63 -define jpeg:dct-method=float'
+		# },
+		# @{
+		# 	ext = '.webp';
+		# 	name = 'WEBP';
+		# 	params = '-quality 63 -define webp:lossless=false -define webp:image-hint=picture -define webp:auto-filter=true -define webp:method=6'
+		# },
+		# @{
+		# 	ext = '.jp2';
+		# 	name = 'JPEG 2000';
+		# 	params = '-quality 55 -define jpeg:dct-method=float'
+		# },
+		# @{
+		# 	ext = '.png';
+		# 	name = 'PNG';
+		# 	params = '-quality 60 -depth 8 -treedepth 6 -dither -define png:compression-filter=8 -define png:compression-level=9 -define png:compression-strategy=3'
 		}
 	)
 
