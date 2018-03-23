@@ -97,6 +97,8 @@ const chrome = new Vue({
 			//https://css-tricks.com/debouncing-throttling-explained-examples/
 			//TODO: add fuzzy search?
 			//https://github.com/krisk/Fuse
+			//TODO: move search linsting to js to better work with throttled rendering
+			//Add suggestion query
 			if (!this.searchText) {
 				return window.requestAnimationFrame(() => {
 					history.pushState({}, 'Shadowrun Catalog', '?all');
@@ -138,13 +140,13 @@ const chrome = new Vue({
 				const isNewState = Object.keys(history.state || newState).sort().join() !== Object.keys(newState).sort().join();
 
 				return window.requestAnimationFrame(() => {
-					/* eslint-disable no-unused-vars, id-length */
 					if (isNewState) {
-						history.pushState(newState, `Shadowrun Catalog | ${searchTerms.replace(search, (m, p1, p2) => `${p1.replace(/^\w/, (l) => l.toUpperCase())}: ${p2}`)}`, `?${searchParams.toString()}`);
+						//eslint-disable-next-line no-unused-vars
+						history.pushState(newState, `Shadowrun Catalog | ${searchTerms.replace(search, (fullMatch, match1, match2) => `${match1.replace(/^\w/, (letter) => letter.toUpperCase())}: ${match2}`)}`, `?${searchParams.toString()}`);
 					} else {
-						history.replaceState(newState, `Shadowrun Catalog | ${searchTerms.replace(search, (m, p1, p2) => `${p1.replace(/^\w/, (l) => l.toUpperCase())}: ${p2}`)}`, `?${searchParams.toString()}`);
+						//eslint-disable-next-line no-unused-vars
+						history.replaceState(newState, `Shadowrun Catalog | ${searchTerms.replace(search, (fullMatch, match1, match2) => `${match1.replace(/^\w/, (letter) => letter.toUpperCase())}: ${match2}`)}`, `?${searchParams.toString()}`);
 					}
-					/* eslint-enable no-unused-vars, id-length */
 
 					filterCSS.innerHTML = styleString;
 				});
