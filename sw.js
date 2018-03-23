@@ -1,5 +1,6 @@
-/*eslint-disable no-console, arrow-body-style, require-jsdoc */
-const CACHE_NAME = 'sdrlog-v5';
+/*eslint-env serviceworker*/
+/*eslint-disable no-console*/
+const CACHE_VERSION = 'sdrlog-v5';
 const appShellFiles = [
 	'/',
 	'/js/critical.js',
@@ -12,43 +13,77 @@ const appShellFiles = [
 ];
 
 self.addEventListener('install', (evt) => {
-	evt.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(appShellFiles)).then(() => self.skipWaiting()).catch((err) => console.error(err)));
+	evt.waitUntil(caches.open(CACHE_VERSION).then((cache) => cache.addAll(appShellFiles)).then(() => self.skipWaiting()).catch((err) => {
+		console.error('[⚙️] Error installing worker:');
+		console.error(err);
+	}));
 });
 
 self.addEventListener('activate', (evt) => {
-	evt.waitUntil(self.clients.claim());
+	self.clients.matchAll({includeUncontrolled: true}).then((clientList) => {
+		clientList.forEach((client) => console.log(`[⚙️] Matching client: ${client.url}`));
+	});
+
+	//eslint-disable-next-line arrow-body-style
+	evt.waitUntil(caches.keys().then((cacheNames) => {
+		return Promise.all(cacheNames.map((cacheName) => {
+			if (cacheName !== CACHE_VERSION) {
+				console.log(`[⚙️] Deleting old cache "${cacheName}"`);
+				return caches.delete(cacheName);
+			}
+
+			return Promise.resolve(null);
+		})).then(() => {
+			console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
+			return self.clients.claim();
+		});
+	}));
 });
 
 self.addEventListener('fetch', async (evt) => {
-	evt.respondWith(caches.match(evt.request).then((res) => res || fetch(evt.request).then((netRes) => {
-		const cacheRes = netRes.clone();
-		if (!evt.request.url.endsWith('.json')) {
-			caches.open(CACHE_NAME).then((cache) => {
-				cache.put(evt.request, cacheRes);
-			});
-		}
-		return netRes;
-	}, () => {
-		if (evt.request.url.endsWith('.jpg') || evt.request.url.endsWith('.png')) {
-			return caches.open(CACHE_NAME).then((cache) => {
-				let path = '/img/publishers/fallback.png';
-
-				if (evt.request.url.includes('/thumbs/')) {
-					path = '/img/thumbs/000-fallback.jpg';
-				}
-
-				if (evt.request.url.includes('/full/')) {
-					path = '/img/full/000-fallback.jpg';
-				}
-
-				return cache.match(path);
-			});
+	evt.respondWith(caches.match(evt.request).then((res) => {
+		if (res) {
+			return res;
 		}
 
-		return new Response('<h1>Service Unavailable</h1>', {
-			status: 503,
-			statusText: 'Service Unavailable',
-			headers: new Headers({'Content-Type': 'text/html'})
+		//TODO: don't handle image requests?
+		return fetch(evt.request).then((netRes) => {
+			const cacheRes = netRes.clone();
+
+			if (!evt.request.url.endsWith('.json')) {
+				caches.open(CACHE_VERSION).then((cache) => {
+					cache.put(evt.request, cacheRes);
+				});
+			}
+
+			return netRes;
+		}, () => {
+			console.warn('[⚙️] Network fetch failed, loading fallback...');
+
+			if (evt.request.url.endsWith('.jpg') || evt.request.url.endsWith('.png')) {
+				return caches.open(CACHE_VERSION).then((cache) => {
+					let path = '/img/publishers/fallback.png';
+
+					if (evt.request.url.includes('/thumbs/')) {
+						path = '/img/thumbs/000-fallback.jpg';
+					}
+
+					if (evt.request.url.includes('/full/')) {
+						path = '/img/full/000-fallback.jpg';
+					}
+
+					return cache.match(path);
+				});
+			}
+
+			return new Response('<h1>Service Unavailable</h1>', {
+				status: 503,
+				statusText: 'Service Unavailable',
+				headers: new Headers({'Content-Type': 'text/html'})
+			});
+		}).catch((err) => {
+			console.error('[⚙️] Fetch error:');
+			console.error(err);
 		});
-	})));
+	}));
 });
