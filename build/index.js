@@ -1,8 +1,8 @@
 /*eslint-env node */
-/*eslint-disable no-console*/
+/*eslint-disable no-console, arrow-body-style*/
 const {readFileSync} = require('fs');
 const {outputFileSync, ensureDirSync, copySync, emptyDirSync} = require('fs-extra');
-const {resolve} = require('path');
+const {resolve, basename} = require('path');
 const glob = require('glob').sync;
 
 const DIST_PATH = resolve(process.cwd(), './dist');
@@ -46,24 +46,38 @@ copySync(resolve(process.cwd(), './meta/browserconfig.xml'), resolve(DIST_PATH, 
 console.log('Creating data chunks...');
 const chunkData = require('./chunk');
 const data = require(resolve(process.cwd(), './data/data.js'));
-ensureDirSync(resolve(process.cwd(), './dist/data'));
-chunkData(data, resolve(process.cwd(), './dist/data'));
+ensureDirSync(resolve(DIST_PATH, './data'));
+chunkData(data, resolve(DIST_PATH, './data'));
 
 console.log('Optimize images...');
 const imagemin = require('imagemin');
 const imJpeg = require('imagemin-mozjpeg');
 const imPng = require('imagemin-pngquant');
 const imSvg = require('imagemin-svgo');
-// const gm = require('gm');
+const jimp = require('jimp');
 copySync(resolve(process.cwd(), './favicon.ico'), resolve(DIST_PATH, './favicon.ico'));
-glob('./img/**/*.{pn,jp,sv}g').forEach((imageFile) => {
-	imagemin([imageFile], {
-		plugins: [
-			imJpeg({quality: 80}),
-			imPng({floyd: 0, nofs: true, quality: 80, speed: 1}),
-			imSvg()
-		]
-	}).then(([res]) => {
-		outputFileSync(resolve(DIST_PATH, imageFile), res.data);
+ensureDirSync(resolve(process.cwd(), './img/thumbs'));
+Promise.all(glob('./img/full/*.{pn,jp}g').map((imageFile) => {
+	return jimp.read(imageFile).then((img) => {
+		return img.resize(jimp.AUTO, 256, jimp.RESIZE_BICUBIC).write(resolve('./img/thumbs', basename(imageFile)));
+	}).catch((err) => {
+		console.error(`Error in file: ${imageFile}`);
+		console.error(err);
 	});
-});
+})).then(() => {
+	console.log('Minifying images...');
+	return Promise.all(glob('./img/**/*.{pn,jp,sv}g').map((imageFile) => {
+		return imagemin([imageFile], {
+			plugins: [
+				imJpeg({quality: 55, tune: 'hvs-psnr', dcScanOpt: 2, quantTable: 4, dct: 'float', sample: ['4x2', '2x1'], smooth: 10}),
+				imPng({floyd: 0, nofs: true, quality: 80, speed: 1}),
+				imSvg()
+			]
+		}).then(([result]) => {
+			return outputFileSync(resolve(DIST_PATH, imageFile), result.data);
+		}).catch((err) => {
+			console.error(`Error in file: ${imageFile}`);
+			console.error(err);
+		});
+	}));
+}).then(() => console.log('Done!'));
