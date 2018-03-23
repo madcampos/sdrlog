@@ -6595,8 +6595,7 @@ module.exports = [
 			description: 'Piercing the Night\nYou heard the scream. It’s important to remember that. Sometimes, when it’s late, and you hear something that sounds like a scream echoing through dark alleys, you try to convince yourself that it was something else. An animal. An illusion. Anything but what it sounded like.\nBut it was a scream. You heard it, and you’ll hear it again, because in the Sixth World, the supply of terror is growing. Bug spirits work to devour corporations from within. Shedim claim dead bodies and mobilize to their own dark ends. And the hidden corners of the metaplanes and the Matrix contain creatures that are best not imagined, because to imagine them is to sever ties with reason.\nDark Terrors is a catalog of the horrors lurking under the surface of the Sixth World. With plot updates and hooks, critter stats, and campaign information presented in an immersive style, it’s an invaluable resource for players ready to stay on the edge of their seats. It is for use with Shadowrun, Fifth Edition and Shadowrun: Anarchy.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['catalyst'],
-			missing: true
+			publisher: ['catalyst']
 		}
 	],
 	[
@@ -8481,8 +8480,7 @@ module.exports = [
 			description: 'Raised Stakes\n\nChicago has been dangerous for a long time. But only the foolish think it can’t get worse. When so many ways to die are concentrated in a single place, sometimes they prey on the innocent, and sometimes they go head to head with each other. Sometimes, they do both.\nIn SRM 08-01 Keep Your Friends Close, the Chicago Missions begin speeding toward their dramatic conclusion as the powers of the Containment Zone mobilize and start causing an even higher-than-normal level of chaos. Whether you’ve seen the twists and turns of the storyline through several Missions or you’re looking to jump in now, this Mission will give your team all the danger they can handle in the race to save lives. Their own being a top priority.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['catalyst'],
-			missing: true
+			publisher: ['catalyst']
 		}
 	],
 	[
