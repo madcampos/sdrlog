@@ -108,11 +108,9 @@ const itens = new Vue({
 	}
 
 	const sorter = new Intl.Collator('en-US', {sensitivity: 'accent', numeric: true, caseFirst: 'upper'});
-	/*eslint-disable no-unused-vars*/
-	data = data.filter(([id, obj]) => !patchData.find(([patchId, patchObj]) => patchId === id));
+	data = data.filter(([id]) => !patchData.find(([patchId]) => patchId === id));
 	data = [...data, ...patchData];
-	data = data.sort(([id1, obj1], [id2, obj2]) => sorter.compare(obj1.name, obj2.name));
-	/*eslint-enable no-unused-vars*/
+	data = data.sort(([, obj1], [, obj2]) => sorter.compare(obj1.name, obj2.name));
 
 	localStorage.setItem('data', JSON.stringify(data));
 
