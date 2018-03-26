@@ -115,5 +115,10 @@ const itens = new Vue({
 	localStorage.setItem('data', JSON.stringify(data));
 
 	itens.$data.items = new Map(data);
+	//TODO: throttle data output/rendering
+	//Virtual list?
+	//Timeout/wait previous rendering?
+	//Infinite scrolling?
+	//TODO: lazy load images
 	itens.$mount('#itens');
 })();
