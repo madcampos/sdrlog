@@ -3292,7 +3292,7 @@ module.exports = [
 		'26301',
 		{
 			sku: ['26301'],
-			category: 'sourcebook',
+			category: 'mission',
 			type: 'digital',
 			name: 'emergence',
 			releaseDate: ['2008-08'],
@@ -3334,7 +3334,7 @@ module.exports = [
 		'26302',
 		{
 			sku: ['26302'],
-			category: 'sourcebook',
+			category: 'mission',
 			type: 'digital',
 			name: 'Ghost Cartels',
 			releaseDate: ['2008-10'],
@@ -4470,7 +4470,7 @@ module.exports = [
 			sku: ['7205'],
 			category: 'mission',
 			type: 'scan',
-			name: 'Universal Brotherhood: Unleash Your Inner Abilities/Missing Blood',
+			name: 'Universal Brotherhood: Unleash Your Inner Abilities / Missing Blood',
 			releaseDate: ['1990-10'],
 			description: 'Unlock the potentials of your mind and body. Turn your back on the shallow and mundane - join the Universal Brotherhood and be a part of something wonderful!\n\nWho are the Brotherhood? Possibly the largest humanitarian organization in the world? To the grime-encrusted inhabitants of the sprawl they are a shining ray of hope in an otherwise hopeless world. This is their way out of the darkness, their key to personal fulfillment and understanding. They are on every corner. THey knock on every door. And they want to save you too.\nNow someone has been on the inside of the Brotherhood. The objectives and purpose of the Brotherhood have been exposed. Some of the questions are answered. But the truth is even more chilling....',
 			gameDate: '2050',
