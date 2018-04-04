@@ -1,6 +1,29 @@
+/*global workbox*/
 /*eslint-env serviceworker*/
 /*eslint-disable no-console*/
-const CACHE_VERSION = 'sdrlog-v5';
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js');
+if (workbox) {
+	console.log('Yay! Workbox is loaded 🎉');
+} else {
+	console.log('Boo! Workbox didn\'t load 😬');
+}
+
+workbox.precaching.precacheAndRoute([
+	'/',
+	'/js/critical.js',
+	'/css/critical.css',
+	'/img/full/000-fallback.jpg',
+	'/img/thumbs/000-fallback.jpg',
+	'/img/publishers/fallback.png',
+	'https://unpkg.com/dialog-polyfill'
+]);
+
+workbox.routing.registerRoute(/\.(?:jpg|png|svg)$/, workbox.strategies.cacheFirst());
+workbox.routing.registerRoute(/\.js$/, workbox.strategies.cacheFirst());
+workbox.routing.registerRoute(/\.css$/, workbox.strategies.cacheFirst());
+workbox.routing.registerRoute(/\.json$/, workbox.strategies.networkOnly());
+
+/*const CACHE_VERSION = 'v8';
 const appShellFiles = [
 	'/',
 	'/js/critical.js',
@@ -8,7 +31,6 @@ const appShellFiles = [
 	'/img/full/000-fallback.jpg',
 	'/img/thumbs/000-fallback.jpg',
 	'/img/publishers/fallback.png',
-	'/site.webmanifest',
 	'https://unpkg.com/dialog-polyfill'
 ];
 
@@ -48,9 +70,11 @@ self.addEventListener('fetch', async (evt) => {
 
 		//TODO: don't handle image requests?
 		return fetch(evt.request).then((netRes) => {
+			console.log(`[⚙] Fetching ${evt.request.url}`);
 			const cacheRes = netRes.clone();
 
 			if (!evt.request.url.endsWith('.json')) {
+				console.log(`[⚙] Caching ${evt.request.url}`);
 				caches.open(CACHE_VERSION).then((cache) => {
 					cache.put(evt.request, cacheRes);
 				});
@@ -86,4 +110,4 @@ self.addEventListener('fetch', async (evt) => {
 			console.error(err);
 		});
 	}));
-});
+});*/
