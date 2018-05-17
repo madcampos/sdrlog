@@ -16,3 +16,33 @@
  * 6. add file loader (picker) to get local files
  * 7. rebuild cache of local files and locations
  */
+
+/**
+ * TODO: incorporate ideas of persistent file system
+ * - Request access
+ * - Save files ids/hashes as Symbols
+ * - Get changes list
+ * - Get metadata
+ * - Get actual data
+ */
+
+export const fs = (async () => {
+	let operations = {};
+
+	if (window.Windows) {
+		// WinRT available
+		// Promisify methods
+	}
+
+	if (typeof require === 'function') {
+		const {readFile, readdir} = require('fs');
+	}
+
+	if (window.cordova) {
+		(await new Promise((resolve, reject) => window.addEventListener('deviceready', resolve))).then(() => {
+			// Return file ops
+		});
+	}
+
+	return new Promise((resolve, reject) => resolve(operations));
+})();
