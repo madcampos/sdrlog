@@ -7928,7 +7928,6 @@ module.exports = [
 			gameDate: '2075',
 			edition: 5,
 			publisher: ['pegasus'],
-			missing: true,
 			notes: 'German translation of Parazoology and Parazoology 2 - updated with rules for Shadowrun, 5th Edition.'
 		}
 	],
@@ -7944,7 +7943,6 @@ module.exports = [
 			gameDate: '2075',
 			edition: 5,
 			publisher: ['pegasus'],
-			missing: true,
 			notes: 'German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting.'
 		}
 	],
@@ -7987,12 +7985,12 @@ module.exports = [
 			category: 'mission',
 			type: 'digital',
 			name: 'Toxic Alley',
+			releaseDate: ['2018-05-01'],
 			description: 'Dark plots and darker magic frequently converge in the capital of the UCAS, and those forces are revving up again. Toxic Alley launches plotlines involving toxic mages, shedim, and other dark forces, while building on elements from the Sith World Tarot and Book of the Lost. Runners will have as much as they can handle keeping up with the chaos filling the back alleys of DeeCee!',
 			gameDate: '2075',
 			edition: 5,
 			publisher: ['catalyst'],
-			missing: true,
-			notes: 'Scheduled to ship in July 2017.'
+			missing: true
 		}
 	],
 	[
@@ -8386,8 +8384,7 @@ module.exports = [
 			description: 'Modernste Waffentechnik, uralte Magie, neuste Mode-Trends, Fahrzeugtechnik von Autoduellisten und erwachte Wildnis dies alles kann man in der Allianz Deutscher Länder finden. Und für einen Runner in diesen Breiten ist es überlebenswichtig zu wissen, wo und wann man all dies findet. Denn es macht einen gravierenden Unterschied, ob man in die Mündung der neusten Altmayr-Pistole schaut oder ihren Abzug am Finger hält. Ob die neusten Proteus-Wachcritter Jagd auf einen machen oder man selbst der Jäger ist. Oder ob man beim richtigen Schieber die neuste Drohne kauft, anstatt sich von ihr beim nächsten Run erschießen zu lassen.\nState of the Art ADL ist ein Ausrüstungsbuch für Shadowrun 5, das mit einem großen Haufen Spielzeug für Runner daherkommt. Es bietet neue Waffen, Archetypen, Fahrzeuge, Drohnen, Critter, magische Gruppen und Schutzgeister aus der Allianz Deutscher Länder und beschreibt zudem die wichtigsten Spieler auf den unterschiedlichen Märkten und ihre Schattenseiten in denen sich die Runner mit all dem neuen Kram eindecken können. Oder von ihm auffressen lassen.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
-			missing: true
+			publisher: ['pegasus']
 		}
 	],
 	[
@@ -8494,8 +8491,7 @@ module.exports = [
 			description: 'Smoke Gets In Your Eyes\n\nIn mass combat, you might be blinded by the fog of war. In hand-to-hand combat, you might have to deal with tunnel vision. And when running the shadows of Chicago, you just might have to contend with the fumes from a fire in an abandoned plastics factory that no one can seem to put out.\nWhich is what’s happening when a new job comes your way. This job doesn’t really need anything to make it more difficult—when some people have disappeared, and then the first team that went to find them also vanished, you know something very wrong is lurking ahead. Can the runners find the threat and defeat it, despite the now-omnipresent smoke? Only one way to find out!',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['catalyst'],
-			missing: true
+			publisher: ['catalyst']
 		}
 	],
 	[
@@ -8509,8 +8505,22 @@ module.exports = [
 			description: 'A Dream of Shadows\nWhat do you want from a nation you’re going to run in? How about a place with access to cutting-edge technology while also retaining a firm footing in old traditions? How about a population focused on cutting deals and making things happen? How about a system of government that can be appallingly harsh but also, when they can be made to see the benefits, rather forgiving? And how about access to a dragon’s hoard worth of goods flowing into and out of the nation daily?\nIf all this sounds like the shadowrunning haven of your dreams, then you want to run in Morocco. Shadows in Focus: Morocco provides an overview of this nation, with details on how to get in, how to get out, where to go, who to meet, and what to do. It also details some of the ways you might get into trouble and offers some hints on getting out of it.\nWith plenty of tips for running games in this country as well as rules for building Morocco-based characters, Shadows in Focus: Morocco adds a new element to Shadowrun, Fifth Edition games. The setting information can also be used in Shadowrun: Anarchy games. ',
 			gameDate: '2075',
 			edition: 5,
+			publisher: ['catalyst']
+		}
+	],
+	[
+		'KS001',
+		{
+			sku: ['KS001'],
+			category: 'boardgame',
+			type: 'physical',
+			name: 'Shadowrun: Sprawl Ops',
+			description: 'In Shadowrun: Sprawl Ops, players lead a team of shadowrunners gunning for the big score!\nAlong the way they’ll have the chance to hire more seasoned runners, outfit their team with cutting-edge technology—from the latest weapons to cyberware enhancements—and take on increasingly dangerous contracts on the mean streets of the Seattle Metroplex.\nEach payout increases your chances for a more lethal combination of gear, training, and skill. All leading to that final score as you take on one of the world’s megacorporations. But you’ve got to hit it before another team steals your ticket to the big time—hold off too long to grab that ring, and you’ll lose it all!',
+			gameDate: '2075',
+			edition: 5,
 			publisher: ['catalyst'],
-			missing: true
+			missing: 'outOfScope',
+			notes: 'Announced as a kickstarter campaign. Possible a retake on Hostile Takeover.'
 		}
 	]
 ];
