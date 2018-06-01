@@ -120,5 +120,10 @@ const itens = new Vue({
 	//Timeout/wait previous rendering?
 	//Infinite scrolling?
 	//TODO: lazy load images
+	//Load only a few images at a time
+	//test events: load, loadend, error
+	//test attributes: completed, naturalWidth
+	//test mutation observer
+	//Lazy load with js reuzing image objects
 	itens.$mount('#itens');
 })();

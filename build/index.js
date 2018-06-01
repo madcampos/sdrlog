@@ -66,6 +66,7 @@ Promise.all(glob('./img/full/*.{pn,jp}g').map((imageFile) => {
 	});
 })).then(() => {
 	console.log('Minifying images...');
+	//TODO: work on images minification with cache
 	return Promise.all(glob('./img/**/*.{pn,jp,sv}g').map((imageFile) => {
 		return imagemin([imageFile], {
 			plugins: [
