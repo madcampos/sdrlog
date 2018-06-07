@@ -125,5 +125,6 @@ const itens = new Vue({
 	//test attributes: completed, naturalWidth
 	//test mutation observer
 	//Lazy load with js reuzing image objects
+	//Use facebook technique: https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/
 	itens.$mount('#itens');
 })();
