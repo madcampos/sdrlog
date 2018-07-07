@@ -1,9 +1,0 @@
-body{background-color: #3c3c3c;}
-dialog:not([open]), .hidden{display: none;}
-#load-overlay *{color: inherit;}
-#load-overlay h1{font-size: 2.44140625rem;}
-#load-overlay{
-	text-align: center;
-	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantrell, "Open Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Firefox Emoji", "Noto Emoji", "Android Emoji";
-	color: #FF5722;
-}
