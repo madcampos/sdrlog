@@ -1,42 +1,241 @@
-import {default as Vue} from 'https://unpkg.com/vue/dist/vue.esm.browser.js';
-
-//Info box
 dialogPolyfill.registerDialog(document.querySelector('#info-box'));
-window.addEventListener('keydown', (evt) => {
-	if (evt.ctrlKey && evt.key === 'i') {
-		evt.preventDefault();
-		const info = document.querySelector('#info-box');
+const searchInput = document.querySelector('#search input');
 
-		if (!info.showModal) {
-			dialogPolyfill.forceRegisterDialog(info);
-		}
+/**
+ * The Filter Object and it's properties.
+ * @typedef Object FilterObject
+ * @prop {String} [category] The category.
+ * @prop {String} [type] The type.
+ * @prop {String} [sku] The SKU.
+ * @prop {String} [name] The name.
+ * @prop {String} [edition] The edition.
+ * @prop {String} [publisher] The publisher.
+ * @prop {String} [date] The in game date.
+ * @prop {String} [release] The release date.
+ * @prop {("out"|"missing")} [scope] If it's missing or outo of scope.
+ */
 
-		if (info.open) {
-			info.close();
-			history.back();
+/**
+ * Updates the search suggestion box.
+ * @param {filterObject} filterObject The filter object.
+ * @returns {Number} The RAF ID.
+ */
+function updateSugestionBox(filterObject){
+	return requestAnimationFrame(() => {
+		//TODO
+	});
+}
+
+/**
+ * Updates the search CSS with the given Filter Object.
+ * @param {FilterObject} filterObject The Filter Object.
+ * @returns {Number} The RAF ID.
+ */
+function updateSearchFilter(filterObject){
+	const SEARCH_ITEM_SELECTOR = '.item';
+	const filterCSS = document.querySelector('#filterCSS');
+	let styleString = '';
+
+	if (Object.keys(filterObject).length === 0) {
+		return window.requestAnimationFrame(() => {
+			filterCSS.innerHTML = '';
+		});
+	}
+
+	for (const [tag, value] of Object.entries(filterObject)) {
+		if (tag === 'scope') {
+			if (value === 'missing') {
+				styleString += `${SEARCH_ITEM_SELECTOR}:not([data-missing]){display:none}`;
+			} else {
+				styleString += `${SEARCH_ITEM_SELECTOR}:not([data-missing="outOfScope"]){display:none}`;
+			}
 		} else {
-			info.showModal();
-			history.pushState({info: true}, 'Shadowrun Catalog | Informations', '?info');
+			styleString += `${SEARCH_ITEM_SELECTOR}:not([data-${tag}*="${value}"]){display:none}`;
 		}
 	}
-});
 
-window.addEventListener('popstate', () => {
-	const search = new URLSearchParams(window.location.search);
+	return window.requestAnimationFrame(() => {
+		filterCSS.innerHTML = styleString;
+	});
+}
+
+/**
+ * Updates the browser history with the info passed.
+ * @param {FilterObject} filterObject The filterObject.
+ * @returns {Number} The RAF ID.
+ */
+function updateHistory(filterObject){
+	if (Object.keys(filterObject).length === 0) {
+		return window.requestAnimationFrame(() => {
+			if (history.state) {
+				history.replaceState(filterObject, document.title, '?all');
+			} else {
+				history.pushState(filterObject, document.title, '?all');
+			}
+		});
+	}
+
+	return window.requestAnimationFrame(() => {
+		if (history.state) {
+			history.replaceState(filterObject, document.title, `?${(new URLSearchParams(filterObject)).toString()}`);
+		} else {
+			history.pushState(filterObject, document.title, `?${(new URLSearchParams(filterObject)).toString()}`);
+		}
+	});
+}
+
+/**
+ * Updates the Input text with tags given the Filter Object.
+ * @param {FilterObject} filterObject The Filter Object.
+ * @returns {Number} The RAF ID.
+ */
+function updateTags(filterObject){
+	let tagString = '';
+
+	if (Object.keys(filterObject).length === 0) {
+		return window.requestAnimationFrame(() => {
+			searchInput.value = '';
+		});
+	}
+
+	for (const [tag, value] of Object.entries(filterObject)) {
+		if (tag === 'scope') {
+			if (value === 'missing') {
+				tagString += 'scope: missing';
+			} else {
+				tagString += 'scope: out';
+			}
+		} else {
+			tagString += `${tag}: ${value}`;
+		}
+	}
+
+	return window.requestAnimationFrame(() => {
+		searchInput.value = tagString;
+	});
+}
+
+/**
+ * Transform a URL search part into a Filter Object.
+ * @param {String} [urlSearch=window.location.search] The URL search string to be parsed into tags.
+ * @returns {FilterObject} The Filter Object.
+ */
+function searchURLtoFilter(urlSearch = window.location.search){
+	const search = new URLSearchParams(urlSearch);
+	const filterObject = {};
+
+	if (!search.has('all')) {
+		for (const [tag, value] of search.entries()) {
+			switch (tag) {
+				case 'scope':
+					if (value === 'missing') {
+						filterObject.scope = 'missing';
+					} else if (value === 'out') {
+						filterObject.scope = 'out';
+					}
+					break;
+				case 'id':
+					filterObject.sku = value;
+					break;
+				case 'ed':
+					filterObject.edition = value;
+					break;
+				case 'rel':
+					filterObject.release = value;
+					break;
+				case 'pub':
+					filterObject.publisher = value;
+					break;
+				case 'cat':
+					filterObject.category = value;
+					break;
+				default:
+					filterObject[tag] = value;
+			}
+		}
+	}
+
+	return filterObject;
+}
+
+/**
+ * Transform a string of tags into a Filter Object.
+ * @param {String} [text=searchInput.value] The text to search in.
+ * @returns {FilterObject} The Filter Object.
+ */
+function searchTagsToFilter(text = searchInput.value){
+	const filterObject = {};
+	const search = /(name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=]\s*(.*?)(?=(?:,?\s*(?:name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=])|$)/giu;
+	let match = search.exec(text.toLowerCase());
+
+	if (match) {
+		do {
+			switch (match[1]) {
+				case 'scope':
+					if (match[2] === 'missing') {
+						filterObject.scope = 'missing';
+					} else if (match[2] === 'out') {
+						filterObject.scope = 'out';
+					}
+					break;
+				case 'id':
+					filterObject.sku = match[2];
+					break;
+				case 'ed':
+					filterObject.edition = match[2];
+					break;
+				case 'rel':
+					filterObject.release = match[2];
+					break;
+				case 'pub':
+					filterObject.publisher = match[2];
+					break;
+				case 'cat':
+					filterObject.category = match[2];
+					break;
+				default:
+					filterObject[match[1]] = match[2];
+			}
+
+			match = search.exec(text.toLowerCase());
+		} while (match);
+	}
+
+	return filterObject;
+}
+
+/**
+ * Toggle the Information box modal.
+ * @param {Boolean} forceOpen Force the modal to be open.
+ */
+function toggleInfoModal(forceOpen = false){
 	const info = document.querySelector('#info-box');
 
 	if (!info.showModal) {
 		dialogPolyfill.forceRegisterDialog(info);
 	}
 
-	if (!search.has('info')) {
+	if (!info.open || forceOpen) {
+		info.showModal();
+		history.pushState(null, 'Shadowrun Catalog', '?info');
+	} else {
 		info.close();
+		history.back();
+	}
+}
+
+//Toggle infobox
+document.querySelector('#info-button').addEventListener('click', toggleInfoModal);
+document.querySelector('#info-box .back-button').addEventListener('click', toggleInfoModal);
+window.addEventListener('keydown', (evt) => {
+	if (evt.ctrlKey && evt.key === 'i') {
+		evt.preventDefault();
+		toggleInfoModal();
 	}
 });
 
-//Search box
-const ITEM_SELECTOR = '.item';
-const filterCSS = document.querySelector('#filterCSS');
+//Toggle Search box
+searchInput.addEventListener('focus', (evt) => evt.target.select());
 window.addEventListener('keydown', (evt) => {
 	if (evt.ctrlKey && evt.key === 'f') {
 		evt.preventDefault();
@@ -49,141 +248,44 @@ window.addEventListener('keydown', (evt) => {
 		}
 	}
 });
+searchInput.addEventListener('input', () => {
+	const filterObject = searchTagsToFilter();
+	updateHistory(filterObject);
+	updateSearchFilter(filterObject);
+	updateSugestionBox(filterObject);
+});
 
-//eslint-disable-next-line no-unused-vars
-const chrome = new Vue({
-	el: '#chrome',
-	data: {
-		categories: [
-			{type: 'sourcebook', name: 'Sourcebooks'},
-			{type: 'rulebook', name: 'Rulebooks'},
-			{type: 'mission', name: 'Adventures & Campaigns'},
-			{type: 'novel', name: 'Novels'},
-			{type: 'magazine', name: 'Magazines'},
-			{type: 'boardgame', name: 'Tabletop'},
-			{type: 'videogame', name: 'Video-games'},
-			{type: 'misc', name: 'Misc.'}
-		],
-		searchText: '',
-		isMenuOpen: false
-	},
-	methods: {
-		toogleInfoModal(){
-			const info = document.querySelector('#info-box');
+//Categories
+document.querySelectorAll('#menu .category').forEach((category) => category.addEventListener('click', (evt) => {
+	evt.preventDefault();
 
-			if (!info.showModal) {
-				dialogPolyfill.forceRegisterDialog(info);
-			}
+	const filterObject = {category: (new URLSearchParams(evt.target.href)).get('category')};
+	updateTags(filterObject);
+	updateHistory(filterObject);
+	updateSearchFilter(filterObject);
 
-			if (info.open) {
-				info.close();
-				history.back();
-			} else {
-				info.showModal();
-				history.pushState({info: true}, 'Shadowrun Catalog | Informations', '?info');
-			}
-		},
-		navigateToMenu(category){
-			this.isMenuOpen = !this.isMenuOpen;
-			return window.requestAnimationFrame(() => {
-				history.pushState({category}, `Shadowrun Catalog | Category: ${category}`, `?category=${category}`);
-				this.searchText = `category: ${category}`;
-			});
-		}
-	},
-	watch: {
-		searchText(){
-			//TODO: debounce search
-			//https://css-tricks.com/debouncing-throttling-explained-examples/
-			//TODO: add fuzzy search?
-			//https://github.com/krisk/Fuse
-			//TODO: move search linsting to js to better work with throttled rendering
-			//Add suggestion query
-			if (!this.searchText) {
-				return window.requestAnimationFrame(() => {
-					history.pushState({}, 'Shadowrun Catalog', '?all');
-					filterCSS.innerHTML = '';
-				});
-			}
+	document.querySelector('#menu ul').classList.toggle('hidden');
+}));
 
-			const searchTerms = this.searchText.toLowerCase();
-			const search = /(name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=]\s*(.*?)(?=(?:,?\s*(?:name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=])|$)/giu;
-			let match = search.exec(searchTerms);
+document.querySelector('#menu li:last-child a').addEventListener('click', (evt) => {
+	evt.preventDefault();
 
-			if (match) {
-				const searchParams = new URLSearchParams();
-				let styleString = '';
-				const newState = {};
+	const filterObject = {};
+	updateTags(filterObject);
+	updateHistory(filterObject);
+	updateSearchFilter(filterObject);
 
-				do {
-					if (match[1] === 'scope') {
-						if (match[2] === 'missing') {
-							searchParams.append('scope', 'missing');
-							newState.scope = 'missing';
-							styleString += `${ITEM_SELECTOR}:not([data-missing]){display:none}`;
-						} else if (match[2] === 'out') {
-							searchParams.append('scope', 'out');
-							newState.scope = 'out';
-							styleString += `${ITEM_SELECTOR}:not([data-missing="outOfScope"]){display:none}`;
-						}
-					} else {
-						searchParams.append(match[1], match[2]);
-						newState[match[1]] = match[2];
-						styleString += `${ITEM_SELECTOR}:not([data-${match[1]}*="${match[2]}"]){display:none}`;
-					}
+	document.querySelector('#menu ul').classList.toggle('hidden');
+});
 
-					match = search.exec(searchTerms);
-				} while (match);
+document.addEventListener('DOMContentLoaded', () => {
+	const filterObject = searchURLtoFilter();
+	updateTags(filterObject);
+	updateSearchFilter(filterObject);
 
-				//If state is null, it is probablly a new page.
-				//Instead of pushing the state we force a equal comparison.
-				const isNewState = Object.keys(history.state || newState).sort().join() !== Object.keys(newState).sort().join();
-
-				return window.requestAnimationFrame(() => {
-					if (isNewState) {
-						//eslint-disable-next-line no-unused-vars
-						history.pushState(newState, `Shadowrun Catalog | ${searchTerms.replace(search, (fullMatch, match1, match2) => `${match1.replace(/^\w/, (letter) => letter.toUpperCase())}: ${match2}`)}`, `?${searchParams.toString()}`);
-					} else {
-						//eslint-disable-next-line no-unused-vars
-						history.replaceState(newState, `Shadowrun Catalog | ${searchTerms.replace(search, (fullMatch, match1, match2) => `${match1.replace(/^\w/, (letter) => letter.toUpperCase())}: ${match2}`)}`, `?${searchParams.toString()}`);
-					}
-
-					filterCSS.innerHTML = styleString;
-				});
-			}
-
-			return window.requestAnimationFrame(() => {
-				if (history.state.name) {
-					history.replaceState({name: searchTerms}, `Shadowrun Catalog | Name: ${searchTerms}`, `?name=${searchTerms}`);
-				} else {
-					history.pushState({name: searchTerms}, `Shadowrun Catalog | Name: ${searchTerms}`, `?name=${searchTerms}`);
-				}
-				filterCSS.innerHTML = `${ITEM_SELECTOR}:not([data-name*="${searchTerms}"]){display:none}`;
-			});
-		}
-	},
-	mounted(){
-		const search = new URLSearchParams(window.location.search);
-
-		if (search.has('info') && !window.location.hash) {
-			const info = document.querySelector('#info-box');
-
-			if (!info.showModal) {
-				dialogPolyfill.forceRegisterDialog(info);
-			}
-
-			info.showModal();
-		}
-
-		if (!search.has('all')) {
-			let searchTags = '';
-			for (const [key, value] of search.entries()) {
-				searchTags += `${key}: ${value}`;
-			}
-
-			this.searchText = searchTags;
-		}
-
-		this.$el.classList.toggle('hidden');
+	if ((new URLSearchParams(window.location.search)).has('info')) {
+		toggleInfoModal(true);
 	}
+
+	document.querySelector('#chrome').classList.toggle('hidden');
 });

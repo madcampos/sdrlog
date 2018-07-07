@@ -38,23 +38,42 @@
 
 		<!-- Critical CSS -->
 		<link rel="stylesheet" href="/css/critical.css">
+		<link rel="stylesheet" href="/css/vars.css">
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" href="/css/chrome.css">
+		<link rel="stylesheet" href="/css/material.css">
 		<style id="filterCSS"></style>
 	</head>
 	<body class="notranslate" translate="no">
+		<template id="card-template">
+			<a class="item" role="listitem" data-name="" data-category="" data-sku="" data-publisher="" data-release="" data-edition="" data-date="" data-type="" href="">
+				<figure><img class="thumb" src=""></figure>
+				<h4 class="title"></h4>
+			</a>
+		</template>
 		<nav id="chrome" class="hidden">
 			<div id="menu">
-				<a href="#menu" id="menu-link" label="Toggle menu" @click.prevent="isMenuOpen = !isMenuOpen">︙</a>
-				<ul label="Categories" :class="{hidden: !isMenuOpen}">
-					<li v-for="category in categories" v-once><a :href="`?category=${category.type}`" @click.prevent="navigateToMenu(category.type)">{{category.name}}</a></li>
-					<li><a href="?all" @click.prevent="searchText = ''; isMenuOpen = !isMenuOpen">All</a></li>
+				<a href="#menu" id="menu-link" label="Toggle menu">︙</a>
+				<ul label="Categories" class="hidden">
+					<li><a class="category" href="?category=sourcebook">📜 Sourcebooks</a></li>
+					<li><a class="category" href="?category=rulebook">📝 Rulebooks</a></li>
+					<li><a class="category" href="?category=mission">🗺️ Adventures & Campaigns</a></li>
+					<li><a class="category" href="?category=novel">📚 Novels</a></li>
+					<li><a class="category" href="?category=magazine">📰 Magazines</a></li>
+					<li><a class="category" href="?category=boardgame">♟️ Tabletop</a></li>
+					<li><a class="category" href="?category=tcg">🃏 Trading Card Game</a></li>
+					<li><a class="category" href="?category=videogame">🎮 Video Games</a></li>
+					<li><a class="category" href="?category=unofficial">📓 Unofficial</a></li>
+					<li><a class="category" href="?category=misc">🔣 Misc.</a></li>
+					<li><a href="?all">All</a></li>
 				</ul>
 			</div>
 			<div id="search-and-info">
-				<label id="search" title="Search">🔍<input type="search" role="search" @focus="$event.target.select()" v-model.trim="searchText"></label>
-				<button id="info-button" title="Information" @click="toogleInfoModal()">ℹ</button>
+				<label id="search" title="Search">🔍<input type="search" role="search"></label>
+				<button id="info-button" title="Information">ℹ</button>
 				<dialog id="info-box">
 					<header>
-						<button class="back-button" title="Back" @click="toogleInfoModal()">❮ Back</button><h4>Information</h4>
+						<button class="back-button" title="Back">❮ Back</button><h4>Information</h4>
 					</header>
 					<div>
 						<details open>
@@ -147,60 +166,42 @@
 		</nav>
 
 		<div id="itens">
-			<main role="list" class="hidden" v-once>
-					<a v-for="[id, item] in [...items.entries()]" class="item"
-					:data-name="item.name.toLowerCase()"
-					:data-category="item.category" :data-cat="item.category"
-					:data-sku="item.sku.join().toLowerCase()" :data-id="item.sku.join().toLowerCase()"
-					:data-publisher="item.publisher.join()" :data-pub="item.publisher.join()"
-					:data-release="item.releaseDate ? item.releaseDate.join() : false" :data-rel="item.releaseDate ? item.releaseDate.join() : false"
-					:data-edition="item.edition" :data-ed="item.edition"
-					:data-date="item.gameDate"
-					:data-type="item.type"
-					:data-missing="item.missing"
-					:href="`#${item.sku[0]}`" @click.stop.prevent="toggleItemDetails(id)" role="listitem">
-						<figure>
-							<img class="thumb" :src="`${thumbsPath}${item.image || `${id}.jpg`}`"/>
-						</figure>
-						<h4 class="title">{{item.name}}</h4>
-					</a>
+			<main role="list" class="hidden">
 			</main>
 			<dialog id="item-details">
-				<header v-if="selectedItem">
-					<button class="back-button" title="Back" @click="toggleItemDetails()">❮ Back</button>
-					<h4>{{selectedItem.name}}</h4>
+				<header>
+					<button class="back-button" title="Back">❮ Back</button>
+					<h4 id="item-details-title"></h4>
 				</header>
-				<div v-if="selectedItem" id="item-details-content">
+				<div id="item-details-content">
 					<header class="metadata">
-						<span class="sku">SKU: {{selectedItem.sku.join(', ')}}</span>
-						<span class="edition">Edition: {{selectedItem.edition}}</span>
-						<span class="gameDate">Game date: {{dateFormater.format(new Date(selectedItem.gameDate))}}</span>
-						<span class="category">Category: <abbr :title="selectedItem.category.replace(/^\w/, l => l.toUpperCase())">{{categoryMap.get(selectedItem.category)}}</abbr></span>
-						<span class="type">Type: <abbr :title="selectedItem.type.replace(/^\w/, l => l.toUpperCase())">{{typeMap.get(selectedItem.type)}}</abbr></span>
-						<span class="releaseDate">Release date: {{selectedItem.releaseDate ? selectedItem.releaseDate.map((date) => dateFormater.format(new Date(date))).join(', ') : 'Unreleased'}}</span>
-						<span class="publisher">Publisher: <abbr v-for="publisher in selectedItem.publisher" :title="publisher.replace(/^\w/, l => l.toUpperCase())"><img :src="`/img/publishers/${publisher}.png`"></abbr></span>
+						<span>SKU: <span id="item-details-sku"></span></span>
+						<span>Edition: <span id="item-details-edition"></span></span>
+						<span>Game date: <span id="item-details-gamedate"></span></span>
+						<span id="item-details-category">Category: <abbr title=""></abbr></span>
+						<span id="item-details-type">Type: <abbr title=""></abbr></span>
+						<span>Release date: <span id="item-details-releasedate"></span></span>
+						<span id="item-details-publisher">Publisher: <abbr title=""><img src=""></abbr></span>
 						<!-- TODO: work on files? -->
-						<!-- <details class="files" v-if="selectedItem.files">
+						<!-- <details id="item-details-files">
 							<summary>Files</summary>
 							<ul>
-								<li v-for="file in selectedItem.files">
-									<a :href="file.url || file.path">
-										<img v-if="file.mime" :src="`/img/${file.mime}.svg`">
-										<span>{{file.name || file.url || file.path}}</span>
-										<span>{{file.size}}</span>
+								<li>
+									<a class="item-details-file" href="">
+										<img class="item-details-file-mime" src="">
+										<span class="item-details-file-name"></span>
+										<span class="item-details-file-size"></span>
 									</a>
 								</li>
 							</ul>
 						</details> -->
 					</header>
 					<figure class="image">
-						<transition name="details-img">
-							<img :src="`${fullImgPath}${selectedItem.image || `${selectedItem.id}.jpg`}`" :key="selectedItem.id"/>
-						</transition>
+							<img src="" id="item-details-image"/>
 					</figure>
 					<article class="content">
-						<p class="notes" v-if="selectedItem.notes">{{selectedItem.notes}}</p>
-						<pre class="description" v-html="selectedItem.description"></pre>
+						<p id="item-details-notes"></p>
+						<pre id="item-details-description"></pre>
 					</article>
 
 				</div>
@@ -210,6 +211,10 @@
 				<h1>Loading Data...</h1>
 			</div>
 		</div>
-		<script src="/js/critical.js" type="module"></script>
+		<script src="/js/main.js" type="module"></script>
+		<script src="/js/chrome.js" type="module"></script>
+		<script src="/js/itens.js" type="module"></script>
+		<script src="/js/gamepad.js" type="module"></script>
+		<!-- <script src="/js/file.js" type="module"></script> -->
 	</body>
 </html>
