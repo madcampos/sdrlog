@@ -40,7 +40,7 @@
  * @prop {String} [files.name] A name to the file that will be presented for the URL or the path if present.
  * @prop {String} [files.size] The size in bytes of the file.
  * @prop {String} [files.store] The store in witch the file is available.
- * @prop {Boolean|"outOfScope"} [missing] If the file is missing or is out of the scope of this colection, (for been physical or multi-platform, for example).
+ * @prop {true|"outOfScope"} [missing] If the file is missing or is out of the scope of this colection, (for been physical or multi-platform, for example).
  * @prop {String} [notes] Some notes about the material, useful when it's missing to explain why.
  */
 module.exports = [
