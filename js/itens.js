@@ -1,8 +1,13 @@
 dialogPolyfill.registerDialog(document.querySelector('#item-details'));
+
 const IMAGES_PATH = '/img/full/';
 const PUBLISHER_PATH = '/img/publishers/';
+const DATA_PATH = '/data/';
+
 const dateFormater = new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', month: 'short', year: 'numeric'});
 const sorter = new Intl.Collator('en-US', {sensitivity: 'accent', numeric: true, caseFirst: 'upper'});
+const capitalizeString = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+
 const categories = new Map([
 	['novel', '📚'],
 	['sourcebook', '📜'],
@@ -21,7 +26,8 @@ const types = new Map([
 	['print', '🖨️'],
 	['physical', '🎲']
 ]);
-let items;
+
+const items = new Map();
 
 /**
  * Fills the item details modal with the data provided.
@@ -37,10 +43,10 @@ function fillItemDetails(item){
 	document.querySelector('#item-details-gamedate').textContent = dateFormater.format(new Date(item.gameDate));
 	document.querySelector('#item-details-releasedate').textContent = dateFormater.format(new Date(item.releaseDate));
 	document.querySelector('#item-details-category abbr').textContent = categories.get(item.category);
-	document.querySelector('#item-details-category abbr').title = item.category; //TODO: uppercase
+	document.querySelector('#item-details-category abbr').title = capitalizeString(item.category);
 	document.querySelector('#item-details-type abbr').textContent = types.get(item.type);
-	document.querySelector('#item-details-type abbr').title = item.type; //TODO: uppercase
-	document.querySelector('#item-details-publisher abbr').title = item.publisher; //TODO: uppercase
+	document.querySelector('#item-details-type abbr').title = capitalizeString(item.type);
+	document.querySelector('#item-details-publisher abbr').title = capitalizeString(item.publisher);
 	document.querySelector('#item-details-publisher abbr').src = `${PUBLISHER_PATH}${item.publisher}.png`;
 
 	if (item.notes) {
@@ -54,34 +60,72 @@ function fillItemDetails(item){
  * Fills the item card with the data provided.
  * @param {Object} item The item data.
  */
-function fillItemCard(item){
+function addItemCard(item){
 	const itemCard = document.importNode(document.querySelector('#card-template').content, true);
-	const cardLink = itemCard.querySelector('a').dataset;
+	const cardLinkData = itemCard.querySelector('a').dataset;
 
 	itemCard.querySelector('.thumb').src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
 	itemCard.querySelector('.title').textContent(item.name);
 
-	cardLink.name = item.name;
-	cardLink.category = item.category;
-	cardLink.sku = item.sku;
-	cardLink.publisher = item.publisher;
-	cardLink.release = item.releaseDate;
-	cardLink.edition = item.edition;
-	cardLink.date = item.gameDate;
-	cardLink.type = item.type;
+	cardLinkData.name = item.name;
+	cardLinkData.category = item.category;
+	cardLinkData.sku = item.sku;
+	cardLinkData.publisher = item.publisher;
+	cardLinkData.release = item.releaseDate;
+	cardLinkData.edition = item.edition;
+	cardLinkData.date = item.gameDate;
+	cardLinkData.type = item.type;
 
 	if (item.scope) {
-		cardLink.missing = item.scope;
+		cardLinkData.missing = item.scope;
 	}
 
 	document.querySelector('main').appendChild(itemCard);
 }
 
 /**
- * Loads more items in the main content area.
+ * Fetches the next batch of items from storage or network.
+ * @returns {Array|null} A key-value pair of items or null if there is no new data.
  */
-function loadItems(){
-	//TODO
+async function fetchNextItems(){
+	const lastDataFile = localStorage.getItem('lastDataFile') || 1;
+	const currentDataFile = sessionStorage.getItem('currentDataFile') || 1;
+	let currentData = localStorage.getItem(`data${currentDataFile}`);
+
+	if (!currentData && lastDataFile === currentDataFile) {
+		try {
+			const res = await fetch(`${DATA_PATH}data-${currentDataFile}.json`);
+
+			if (res || res.type !== 'error' || res.ok) {
+				localStorage.setItem('lastDataFile', lastDataFile + 1);
+
+				currentData = await res.json();
+				localStorage.setItem(`data${lastDataFile + 1}`, JSON.stringify(currentData));
+			}
+		} catch (err) {
+			//eslint-disable-next-line no-console
+			console.error(err);
+		}
+	} else {
+		currentData = JSON.parse(currentData);
+	}
+
+	sessionStorage.setItem('currentDataFile', currentDataFile + 1);
+	return currentData || null;
+}
+
+/**
+ * Lazy load images.
+ */
+async function lazyLoadImages(){
+	//TODO: keep record of last fetched thumb/image
+	//Load only a few images at a time
+	//test events: load, loadend, error
+	//test attributes: completed, naturalWidth
+	//test mutation observer
+	//Lazy load with js reuzing image objects
+	//Use facebook technique: https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/
+	//https://www.sitepoint.com/five-techniques-lazy-load-images-website-performance/
 }
 
 /**
@@ -107,63 +151,21 @@ function toggleItemDetails(sku, forceOpen = false){
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-	//TODO: cleanup fetchs and use methods.
-	//check data in storage
-	//split data in storage
-	//fetch last part if available
-	//keep record of last fetched thumb/image
-	//add lazy load of images and data
+	let lastItems = null;
 
-	const patchData = [];
-	let data = JSON.parse(localStorage.getItem('data') || '[]');
-	let i = 1;
-	let res;
-
-	if (data.length !== 0) {
-		i = localStorage.getItem('lastDataFile');
-	}
-
-	for (i; i > 0; i++) {
-		try {
-			res = await fetch(`/data/data-${i}.json`);
-		} catch (err) {
-			//eslint-disable-next-line no-console
-			console.error(err);
-		}
-
-		if (!res || res.type === 'error' || !res.ok) {
-			localStorage.setItem('lastDataFile', i - 1);
-			break;
-		}
-
-		patchData.push(...await res.json());
-	}
-
-	data = data.filter(([id]) => !patchData.find(([patchId]) => patchId === id));
-	data = [...data, ...patchData];
-	data = data.sort(([, obj1], [, obj2]) => sorter.compare(obj1.name, obj2.name));
-
-	localStorage.setItem('data', JSON.stringify(data));
-
-	items = new Map(data);
-	//TODO: throttle data output/rendering
-	//Virtual list?
-	//Timeout/wait previous rendering?
-	//Infinite scrolling?
-	//TODO: lazy load images
-	//Load only a few images at a time
-	//test events: load, loadend, error
-	//test attributes: completed, naturalWidth
-	//test mutation observer
-	//Lazy load with js reuzing image objects
-	//Use facebook technique: https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/
-	// itens.$mount('#itens');
+	do {
+		lastItems = await fetchNextItems();
+		lastItems.forEach(([id, item]) => {
+			items.set(id, item);
+			addItemCard(item);
+		});
+	} while (lastItems);
 
 	if (window.location.hash) {
 		const sku = window.location.hash.replace('#', '');
 		toggleItemDetails(sku, true);
 	}
 
-	document.querySelector('#load-overlay').classList.toggle('hidden');
-	document.querySelector('main').classList.toggle('hidden');
+	document.querySelector('#load-overlay').classList.add('hidden');
+	document.querySelector('main').classList.remove('hidden');
 });
