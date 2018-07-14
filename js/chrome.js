@@ -22,7 +22,23 @@ const searchInput = document.querySelector('#search input');
  */
 function updateSugestionBox(filterObject){
 	return requestAnimationFrame(() => {
-		//TODO
+		//TODO: throttle
+		//1. get current filtered
+		//2. if empty
+		//2.1. set scope to full Map
+		//2.2.
+		//3. get new query
+		//4. if new query contains the current query set scope to current filtered
+		//5. if current query contains new query (step back) set scope to previous filtered (superset)
+		//6. filter scope
+		//7. set previous filtered to current filtered
+		//8. set current query to new query
+		//9. set previous
+
+		//1. Clear datalist options
+		//2. Filter items map for condition
+		//2.1. Keep reperence of one step back and current step so we can rollback and improve the currnt search
+		//3. throttle request for 1 second or it's finished processing
 	});
 }
 
