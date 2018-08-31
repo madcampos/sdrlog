@@ -8522,5 +8522,80 @@ module.exports = [
 			missing: 'outOfScope',
 			notes: 'Announced as a kickstarter campaign. Possible a retake on Hostile Takeover.'
 		}
-	]
+	],
+	[
+		'27705',
+		{
+			sku: ['27705'],
+			category: 'boardgame',
+			type: 'physical',
+			name: 'Shadowrun: Crossfire: Prime Runner Edition',
+			description: 'The shadows of the Sixth World have every kind of danger you can imagine. Ultra-violent gangers, flesh-eating ghouls, mages that summon spirits from toxic waste, backstabbing corporate raiders, hard-nosed police officers, and even dragons. You don’t have much—mainly your guts, your wits, and your friends. But maybe that’s enough. Between you and your teammates, you can sling spells, hack the Matrix, talk a tiger out of his stripes, and bring down a charging ork from a hundred yards away. Will that be enough to face down the worst the mean streets can throw at you? You’re about to find out.\nShadowrun: Crossfire is a deck-building game set in one of the most popular game settings of all time. Crossing cyberpunk with fantasy and plunging players into a world dominated by ruthless megacorporations. Crossfire gives players the chance to dive into the world’s shadows and see if they can survive. The Prime Runner Edition adds new upgrades to make the game even better—with more missions, improved rules, and new character screens, this is the best version of Crossfire ever!\nFeaturing fast, cooperative game play and stacks of dangerous obstacles and opponents to overcome. Shadowrun: Crossfire will launch you into nonstop action. You’ll even have the chance to get stronger the more you play, tackling harder and harder obstacles as you become more dangerous. Leap into the shadows for deck-building adventure like you’ve never experienced!',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: 'outOfScope',
+			notes: 'Announced at GenCon 2018.'
+		}
+	],
+	[
+		'27706',
+		{
+			sku: ['27706'],
+			category: 'boardgame',
+			type: 'physical',
+			name: 'Shadowrun: Crossfire: Prime Runner Refit Kit',
+			description: 'If you have a Shadowrun: Crossfire set, you might have seen the update to the game called the Shadowrun: Crossfire: Prime Runner Edition, and maybe you’re thinking that it would be good to be able to get something that has only the changed materials—the updated rules, the changed cards, the new missions—so that you’d have all the benefits of the latest edition without having to buy everything again.\nYou’re right—it would be good! So here it is! The Prime Runner Refit Kit brings all the changes of the Prime Runner Edition to your Crossfire game, including updated rules, adjusted character stats, newly designed character screens, more missions, and a full range of upgrade stickers, including the set from the High Caliber Ops expansion. With this kit, your game will be ready to roll with any Crossfire game out there!\nNote: The Prime Runner Refit Kit is for use only with the first edition of Shadowrun Crossfire. If you don’t have Shadowrun: Crossfire or if you have the Crossfire: Prime Runner Edition, you do not need this Refit Kit!',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: 'outOfScope',
+			notes: 'Announced at GenCon 2018.'
+		}
+	],
+	[
+		'27013',
+		{
+			sku: ['27013'],
+			category: 'rulebook',
+			type: 'digital',
+			name: 'Kill Code',
+			releaseDate: ['2018-06-27'],
+			description: 'The Matrix is unknowable because it is infinite. There is always one more corner behind which things can hide, one more hole where secrets can be buried. Your job isn’t to know everything about the Matrix—it’s to know more than the people you are hunting. Or who are hunting you.\nKill Code will help give Sixth World hackers the edge they need to stay alive and get ahead. From a guide to Matrix basics and operations to more ways to build ace deckers to dozens of new options for technomancers, the book can help everyone who tries to make their living on the Matrix, providing something to give them an edge when riding the Matrix’s datastreams. They’ll also learn about who their opposition might be—and how they might be attacked. The Matrix is full of kill codes waiting to be executed. Just as with the Sixth World’s many firearms, your job is to make sure they’re pointed in the right direction when they go off.',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: true
+		}
+	],
+	[
+		'27012',
+		{
+			sku: ['27012'],
+			category: 'rulebook',
+			type: 'digital',
+			name: 'Street Lethal',
+			releaseDate: ['2018-06-27'],
+			description: 'Street fighting is only chaotic for amateurs. When you’re a pro, when you know what you’re doing, you’re precise. You know what your opponents might do, and you know ten different ways to respond. The options give you strength. They give you power. They make you dangerous enough that the smart ones on the street will know at a glance that they shouldn’t test you. The dumb ones will suffer.\nStreet Lethal contains the data, tools, and options players need to maximize their characters’ combat skills. With briefings on the security techniques of major corporations, information on major mercenary groups and their operations, and a whole truckload of firearms options, this book has all runners need to make sure they’re the ones left standing at the end of a fight.',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: true
+		}
+	],
+	[
+		'27203',
+		{
+			sku: ['27203'],
+			category: 'novel',
+			type: 'digital',
+			name: 'Better than Bad',
+			description: '',
+			gameDate: '2075',
+			edition: 5,
+			publisher: ['catalyst'],
+			missing: true,
+			notes: 'Unreleased, scheduled to release in April 2018.'
+		}
+	],
 ];
