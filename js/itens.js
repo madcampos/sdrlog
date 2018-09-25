@@ -126,6 +126,7 @@ async function lazyLoadImages(){
 	//Lazy load with js reuzing image objects
 	//Use facebook technique: https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/
 	//https://www.sitepoint.com/five-techniques-lazy-load-images-website-performance/
+	//https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
 }
 
 /**
