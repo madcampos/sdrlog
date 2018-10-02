@@ -2627,11 +2627,14 @@ module.exports = [
 	[
 		'7219',
 		{
-			sku: ['7219'],
+			sku: ['7219', '10756'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Target: Matrix',
-			releaseDate: ['2000'],
+			names: {
+				'de-DE': 'Brennpunkt: Matrix'
+			},
+			releaseDate: ['2000-01', '2002'],
 			description: 'Can you hack it?\nThe Matrix is for everyone; a worldwide computer network made up of pocket universes and virtual realities. You can make deals in virtual bars, sharpen reactions in game simulations or score new gear from an online store. Deckers and non-deckers alike base most of their lives in the Matrix, the place where information lives and breeds, bought and sold like trinkets on a street corner. In shadowy data havens and behind the brain-frying defense in megacorporate data archives, information is power.',
 			gameDate: '2061-08',
 			edition: 3,
@@ -3030,12 +3033,12 @@ module.exports = [
 			type: 'digital',
 			name: 'Brennpunkt: ADL',
 			releaseDate: ['2004'],
-			description: 'Brennpunkt: ADL erlaubt einen Blick hinter die Kulissen der Allianz deutscher Länder, von dem Parteien- und Regierungssystem der Allianz und ihrem Justizapparat über die verschiedenen WWege der Magieund den Jagd- und Domestitzierungsmöglichkeiten bei hiesigen Crittern bis zu den aktuellen Sport- und Medientrends, und gibt Einblickin die wichtigsten Subkuluren der Allianzländer. Diese Informationen füllen den Hintergrund der ADL weiter aus und geben Spielleitern wie Spielern viele neue Möglichkeiten und Ideen an die Hand.',
+			description: 'Willkommen zu Hause, Omae.\n\nDu kennst dich aus in deinem Sprawl? Du weißt, wer bei der Regierung die Fäden zieht? Wie sie dich in den Knast verfrachten können und wie du wieder raus kommst? Du glaubst zu wissen, was Hexen und Magier hier treiben oder was in der Szene läuft, nur weil du Karl Kombatmage guckst? Du weißt, was beim Hoverball wirklich läuft und wer daran verdient, wenn du es dir live im Trideo reinziehst? Und du bist dir sicher, dass der Schatten hinter den Mülltonnen bloß eine Ratte war? Wird Zeit, dass du dein Zuhause wirklich kennen lernst, Chummer!\n\nBrennpunkt: ADL erlaubt einen Blick hinter die Kulissen der Allianz Deutscher Länder, von dem Parteien- und Regierungssystem der Allianz und ihrem Justizapparat über die verschiedenen Wege der Magie und den Jagd und Domestizierungsmöglichkeiten bei hiesigen Crittern bis zu den aktuellen Sport- und Medientrends, und gibt Einblick in die wichtigsten Subkulturen der Allianzländer. Diese Informationen füllen den Hintergrund der ADL weiter aus und geben Spielleitern wie Spielern viele neue Möglichkeiten und Ideen an die Hand.',
 			gameDate: '2063',
 			edition: 3,
 			publisher: ['Fantasy Productions'],
 			originalLanguage: 'de-DE',
-			notes: 'Shadowrun Campaign setting Germany 2063'
+			notes: 'It mainly deals with areas of the ADL society that could not be covered in detail in Deutschland in den Schatten II: politics, police , judiciary and prison system, magic - from the university magician training on the witches and the Theurgen Westphalens to the psionics - as well as the media, professional sports , the neo-anarchists in the east of the re-divided Berlin and various subcultures.'
 		}
 	],
 	[
@@ -3181,11 +3184,14 @@ module.exports = [
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Corporate Download',
-			releaseDate: ['1999-09'],
-			description: 'The corporate war is over, but the corps need the shadows now more than ever as they scramble for position in the new power structure. Fuchi is dead, Novatech has risen from its ashes, and Wuxing and Cross have elbowed their way onto the Corporate Court. The corps have ceased their open conflict, but the guns are still drawn under the table...\nCorporate Download describes the history, power players and business interests of the ten top megacorps. Corporate Download focuses on information that runners need: the latest security trends, secret plans, dirty tricks, people to know and how to use them. Players will learn what working for each corp means for their characters, and gamemasters will find new rules for using and rating the megacorps in their campaigns.',
+			names: {
+				'fr-FR': 'Corporate Download'
+			},
+			releaseDate: ['1999-09', '2001-05'],
+			description: 'Meet\nthe\nNew\nBoss...\n\nThe corporate war is over, but the corps need the shadows now more than ever as they scramble for position in the new power structure. Fuchi is dead, Novatech has risen from its ashes, and Wuxing and Cross have elbowed their way onto the Corporate Court. The corps have ceased their open conflict, but the guns are still drawn under the table...\nCorporate Download describes the history, power players and business interests of the ten top megacorps. Corporate Download focuses on information that runners need: the latest security trends, secret plans, dirty tricks, people to know and how to use them. Players will learn what working for each corp means for their characters, and gamemasters will find new rules for using and rating the megacorps in their campaigns.',
 			gameDate: '2061-02',
 			edition: 3,
-			publisher: ['FASA Corporation'],
+			publisher: ['FASA Corporation', 'Descartes Editeur'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -3254,18 +3260,27 @@ module.exports = [
 		}
 	],
 	[
+		//TODO: split the german edition as it is too different?
 		'7908',
 		{
-			sku: ['7908', '10659'],
+			sku: ['7908', '10659', '10744', 'LFSH005'],
 			category: 'rulebook',
 			type: 'scan',
 			name: 'Cannon Companion',
-			releaseDate: ['2000-07', '2003-12'],
-			description: 'When the shadows are full of flying lead, chummer, you need an edge -- and I got it right here. You want a specialized blade? I can sell you a monosword. You want a gun to make the other guy think twice? How about the new laser pistol? Maybe you want to forge your whole body into a weapon -- I know someone who can train you in Wildcat-style martial arts. The big boys don\'t have all the best toys...',
+			names: {
+				'de-DE': 'Arsenal 2060',
+				'fr-FR': 'Cannon Companion',
+				'es-ES': 'Gran Caliber',
+				'hu-HU': 'Fegyverek kézikönyve'
+			},
+			releaseDate: ['2000-07', '2001-06', '2002', '2003-12'],
+			description: 'More Bang for the Buck...\n\nWhen the shadows are full of flying lead, chummer, you need an edge -- and I got it right here. You want a specialized blade? I can sell you a monosword. You want a gun to make the other guy think twice? How about the new laser pistol? Maybe you want to forge your whole body into a weapon -- I know someone who can train you in Wildcat-style martial arts. The big boys don\'t have all the best toys...',
 			gameDate: '2061',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions'],
-			originalLanguage: 'en-US'
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoriá', 'Beholder Kiadó Bt.', 'Catalyst Game Labs'],
+			originalLanguage: 'en-US',
+			notes: 'The German edition has diffrent equipament, based on German sources.',
+			status: 'badscan'
 		}
 	],
 	[
@@ -3983,16 +3998,20 @@ module.exports = [
 	[
 		'10672',
 		{
-			sku: ['10672', '25003'],
+			sku: ['10672', '25003', '22002'],
 			category: 'sourcebook',
 			type: 'scan',
-			name: 'Mr Johnson\'s Little Black Book',
+			name: 'Mr. Johnson\'s Little Black Book',
+			names: {
+				'de-DE': 'Auftraggeber-Handbuch'
+			},
 			releaseDate: ['2004-08'],
-			description: '"Call me Mr. Johnson. I\'m like a fixer for the corps. I know everybody who\'s anybody from suit-and-tie boardroom predators to bottom-feeder street-level scavengers. I know the best sprawl sites for scoring new talent, exchanging goods without interruption or hiding out from the hit men on your tail. I like to ensure that the people I hire can execute a well-planned black ops job and keep their faces from being splashed all over the screamsheets. My files on you say that you\'re right for what I have in mind. Interested?"',
+			description: '"I\'ve got a job for you."\n\n"Call me Mr. Johnson. I\'m like a fixer for the corps. I know everybody who\'s anybody from suit-and-tie boardroom predators to bottom-feeder street-level scavengers. I know the best sprawl sites for scoring new talent, exchanging goods without interruption or hiding out from the hit men on your tail. I like to ensure that the people I hire can execute a well-planned black ops job and keep their faces from being splashed all over the screamsheets. My files on you say that you\'re right for what I have in mind. Interested?"',
 			gameDate: '2064',
 			edition: 3,
-			publisher: ['Fantasy Productions'],
-			originalLanguage: 'en-US'
+			publisher: ['Fantasy Productions', 'Catalyst Game Labs'],
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
@@ -5245,15 +5264,18 @@ module.exports = [
 	[
 		'7331',
 		{
-			sku: ['7331'],
+			sku: ['7331', '10749'],
 			category: 'mission',
 			type: 'scan',
 			name: 'Brainscan',
+			names: {
+				'de-DE': 'Brainscan'
+			},
 			releaseDate: ['2000'],
 			description: 'Don\'t Mess With My Head!\nWhat if your mind was no longer your?\nWhat if you could no longer distinguish fantasy from reality?\nWhat if your brain had an off switch, and someone else helt the remote?\nBrainscan is a campaign of five linked adventures that drop the characters squarely into the middle of a titanic struggle for identity, control and freedom.',
 			gameDate: '2061',
 			edition: 3,
-			publisher: ['FASA Corporation'],
+			publisher: ['FASA Corporation', 'Fantasy Productions'],
 			originalLanguage: 'en-US'
 		}
 	],
