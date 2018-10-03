@@ -654,15 +654,21 @@ module.exports = [
 	[
 		'7000',
 		{
-			sku: ['7000', '7001', '10660', '25000'],
+			sku: ['7000', '7001', '10660', '25000', 'LFSH001', ' LFSH001L'],
 			category: 'rulebook',
 			type: 'scan',
 			name: 'Shadowrun Third',
-			releaseDate: ['1998-09', '2003-09', '2004-02'],
+			names: {
+				'de-DE': 'Shadowrun version 3.01D',
+				'fr-FR': 'Shadowrun Troisiéme Édition',
+				'hu-HU': 'Shadowrun Szabálykönyv 3. kiadás',
+				'es-ES': 'Shadowrun Tercera Edición'
+			},
+			releaseDate: ['1998-09', '2000-06', '2001', '2004-02'],
 			description: 'Where Man Meets Magic & Machine\nThe year is 2060. Magic is as real as the mean streets of the mega-sprawls. Corporations call the shots while nailing each other through covert operatives in cutthroat competition. Flesh and machines have merged -- the street samurai with his smartguns and impossibly fast reflexes, the decker who can plug his own brain into the worldwide computer network, the rigger who links his mind to his vehicle and takes hairpin turns at fantastic speeds. And you\'re a part of this wired world, where corporate skyscrapers glitter over the dark shadows they cast. You live in those shadows. You\'re a shadowrunner -- a street operative.\nYou may be human or troll, dwarf or elf. You may throw fireballs, pull out your trusty Uzi or slice through computer security with a program as elegant and deadly as a stiletto. No matter what, you get the job done. You\'re a shadowrunner -- a professional. You don\'t just survive in the shadows -- you thrive there ... for now.',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'WizKids Games', 'Beholder Kiadó Bt.', 'Descartes Editeur', 'La Factoriá de Ideas'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -762,13 +768,19 @@ module.exports = [
 			sku: ['7126', '10663', '25001'],
 			category: 'rulebook',
 			type: 'scan',
-			name: 'Man & Machine',
-			releaseDate: ['2000-05', '2004-04'],
-			description: 'Cyberware can increase your speed, enhance your strength and sharpen your reflexes. It can put a computer in your head, armor under your skin and weapons in your arms. There are implants to improve every internal organ and devices that let you interface with machines ... but you\'d better know when to stop. Too much cyberware and you\'re a cyberzombie—more machine than man.',
+			name: 'Man & Machine: Cyberware',
+			names: {
+				'de-DE': 'Mensch und Maschine 3.01D',
+				'fr-FR': 'La Chair & le Chrome',
+				'hu-HU': 'Ember és gép: Kiberver'
+			},
+			releaseDate: ['2000-05', '2003', '2004-04'],
+			description: 'Man... or Monster?\n\nCyberware can increase your speed, enhance your strength and sharpen your reflexes. It can put a computer in your head, armor under your skin and weapons in your arms. There are implants to improve every internal organ and devices that let you interface with machines... but you\'d better know when to stop. Too much cyberware and you\'re a cyberzombie—more machine than man.',
 			gameDate: '2061',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions'],
-			originalLanguage: 'en-US'
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Beholder Kiadó Bt.', 'Descartes Editeur', 'Catalyst Game Labs'],
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
@@ -908,7 +920,7 @@ module.exports = [
 			description: 'With the Shadowrun Quick Start Rules, you need nothing more than a vivid imagination and a handful of dice to jump into the world\'s most popular science-fiction/fantasy universe. An introduction for new players to the Shadowrun, Third Edition game system, the Shadowrun Quick Start Rules provides all the rules you need to start playing. This book features background material, advice for beginners, eight pre-generated characters and a complete adventure so you can learn as you go. The Shadowrun Quick Start Rules lets you dive right into the action. Welcome to the shadows, chummer!',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -2512,11 +2524,15 @@ module.exports = [
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'New Seattle',
-			releaseDate: ['1999-03', '2003', '2005-02'],
+			names: {
+				'de-DE': 'New Seattle',
+				'fr-FR': 'Seattle 2060'
+			},
+			releaseDate: ['1999-03', '2001-02', '2001-07', '2003', '2005-02'],
 			description: 'Seattle\'s got it all: movers and shakers from all of the megacorporations, high-stakes political conflicts and even vicious mob wars--and it\'s surrounded by hostile countries! Every runner and wannabe comes to Seattle to learn their chops, hone their skills and make those big scores.\nNew Seattle takes the players on a tour of the most exciting city in the world of 2060. Each section of Seattle contains information on gangs, corporations, politics, hideouts, major players, criminal organizations and everything else players and gamemasters need to create both straightforward adventures and complex campaigns.',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -3113,16 +3129,20 @@ module.exports = [
 	[
 		'7123',
 		{
-			sku: ['7123'],
+			sku: ['7123', '10750'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Underworld Sourcebook',
+			names: {
+				'de-DE': 'Unterwelt-Quellenbuch'
+			},
 			releaseDate: ['1997-03'],
-			description: 'Honor. Respect. Family.\nThe Underworld Sourcebook describes in detail the "Big Four" international crime syndicates: the Mafia, the Yakuza, the Triads and the Seoulpa Rings. Each syndicate\'s markets, business practices, traditions, histories and secret rituals are revealed, along with loads of informtion on gangs, terorists, assassins and other groups who rule the shadows through no law but their own.\nThe Underworld Sourcebook includes guidelines for building campaigns around organized crime and customizing them for local settings, and alternate campaign rules that allow players to play members of organized crime syndicates. It provides a wealth of adventure hooks, story starters, background information and rules for use in any Shadowrun campaign.',
+			description: 'Honor. Respect. Family.\n\nThe Underworld Sourcebook describes in detail the "Big Four" international crime syndicates: the Mafia, the Yakuza, the Triads and the Seoulpa Rings. Each syndicate\'s markets, business practices, traditions, histories and secret rituals are revealed, along with loads of informtion on gangs, terorists, assassins and other groups who rule the shadows through no law but their own.\nThe Underworld Sourcebook includes guidelines for building campaigns around organized crime and customizing them for local settings, and alternate campaign rules that allow players to play members of organized crime syndicates. It provides a wealth of adventure hooks, story starters, background information and rules for use in any Shadowrun campaign.',
 			gameDate: '2058-01',
 			edition: 2,
-			publisher: ['FASA Corporation'],
-			originalLanguage: 'en-US'
+			publisher: ['FASA Corporation', 'Fantasy Productions'],
+			originalLanguage: 'en-US',
+			notes: 'The German edition has rules updated to the third edition and an aditional chapter about the ADL.'
 		}
 	],
 	[
@@ -3158,22 +3178,7 @@ module.exports = [
 			edition: 2,
 			publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US',
-			status: 'badscan'
-		}
-	],
-	[
-		'22007',
-		{
-			sku: ['22007'],
-			category: 'sourcebook',
-			type: 'ocr',
-			name: 'Portfolio eines Drachen: Dunkelzahns Geheimnisse',
-			releaseDate: ['2004'],
-			description: 'Dunkelzahn Assassinated!\n\nStunned World Awaits Dragon\'s Last Will and Testament\n\nOn Inauguration Night 2057, the newly sworn-in President of the UCAS is assassinated--and the Awakened world will never be the same. Dunkelzahn, the powerful and charismatic great dragon, has been murdered by unknown enemies ... but he left behind a Last Will and Testament, a legacy that will change the world. Some will get rich--others will learn that dealings with the dragon can extend beyond the grave. Will Dunkelzahn\'s legacy be a gift to the world ... or a curse?',
-			gameDate: '2060',
-			edition: 3,
-			publisher: ['Fantasy Productions'],
-			originalLanguage: 'en-US',
+			status: 'badscan',
 			notes: 'German Translation of Portfolio of a Dragon: Dunkelzahn\'s Secrets . The German version was released for Shadowrun 3, eight years after the original publication.'
 		}
 	],
@@ -3247,16 +3252,22 @@ module.exports = [
 	[
 		'7909',
 		{
-			sku: ['7909'],
+			sku: ['7909', '10747', 'LFSH009'],
 			category: 'rulebook',
 			type: 'scan',
 			name: 'Matrix',
-			releaseDate: ['2000-08'],
-			description: 'Can You Hack It?',
+			names: {
+				'de-DE': 'Matrix',
+				'fr-FR': 'La Matrice',
+				'es-ES': 'La Matriz'
+			},
+			releaseDate: ['2000-08', '2001', '2004', '2005'],
+			description: 'REALITY IS FOR THOSE WHO LACK IMAGINATION\n\nConnect to the world-wide net known as the Matrix ® and create a universe of your own. No matter what your status is in the real world Megacorp President Or Synthmeat Street Vendor You Can Imagine The Lord Of All You Can Imagine. Access virtual clubs and test your skills in total-reality games. Ransack massive databases and pillage corporate systems for payday - and try to stay alive long enough to enjoy the results.\n\nMatrix Expands on the basic rules decking provided in Shadowrun, Third Edition , and offers advanced rules for programming, deck construction, system security and Accessing the matrix. Matrix includes rules for information searches and new updates on artificial intelligence and otaku characters .',
 			gameDate: '2061',
 			edition: 3,
-			publisher: ['FASA Corporation'],
-			originalLanguage: 'en-US'
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas'],
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
@@ -3331,12 +3342,12 @@ module.exports = [
 	[
 		'7910',
 		{
-			sku: ['7910', '10662'],
+			sku: ['7910'],
 			category: 'rulebook',
 			type: 'scan',
 			name: 'Rigger 3',
-			releaseDate: ['2001-01', '2003-09-01'],
-			description: 'Living is rigging, omae. Like burning rubber down the highway at 150 klicks and hour with only your brain to guide you. What about making a drone an extension of yourself, or undermining the security of a whole building, manipulating every camera, motion detector or security door. But the biggest kick is blowing up a car full of goons without even jacking out — weapons of destruction at your mental command … now that\'s road rage, my friend.',
+			releaseDate: ['2001-01'],
+			description: 'PLANES,\nDRONES and\nAUTOMOBILES\n\nLiving is rigging, omae. Like burning rubber down the highway at 150 klicks and hour with only your brain to guide you. What about making a drone an extension of yourself, or undermining the security of a whole building, manipulating every camera, motion detector or security door. But the biggest kick is blowing up a car full of goons without even jacking out — weapons of destruction at your mental command … now that\'s road rage, my friend.',
 			gameDate: '2061',
 			edition: 3,
 			publisher: ['FASA Corporation'],
@@ -3346,31 +3357,42 @@ module.exports = [
 	[
 		'10662',
 		{
-			sku: ['10662'],
+			sku: ['10662', '10743'],
 			category: 'rulebook',
 			type: 'scan',
 			name: 'Rigger 3 (Revised)',
-			releaseDate: ['2003-09'],
-			description: 'Living is rigging, omae. Like burning rubber down the highway at 150 klicks and hour with only your brain to guide you. What about making a drone an extension of yourself, or undermining the security of a whole building, manipulating every camera, motion detector or security door. But the biggest kick is blowing up a car full of goons without even jacking out — weapons of destruction at your mental command … now that\'s road rage, my friend.',
+			names: {
+				'de-DE': 'Rigger 3.01D'
+			},
+			releaseDate: ['2003-09', '20013-08-28'],
+			description: 'PLANES,\nDRONES and\nAUTOMOBILES\n\nLiving is rigging, omae. Like burning rubber down the highway at 150 klicks and hour with only your brain to guide you. What about making a drone an extension of yourself, or undermining the security of a whole building, manipulating every camera, motion detector or security door. But the biggest kick is blowing up a car full of goons without even jacking out — weapons of destruction at your mental command … now that\'s road rage, my friend.',
 			gameDate: '2061',
 			edition: 3,
 			publisher: ['Fantasy Productions'],
-			originalLanguage: 'en-US'
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
 		'7907',
 		{
-			sku: ['7907', '10658'],
+			sku: ['7907', '10658', '10742', 'LFSH004'],
 			category: 'rulebook',
 			type: 'scan',
 			name: 'Magic in the Shadows',
-			releaseDate: ['1998-12-16', '2003-06'],
-			description: 'So, You Think You Know Magic?\nChummer, I can write a book on wht you don\'t know. Can you design a spell or enchant a dagger? Can you invoke a great spirit or divine the future? Have you bared your soul to the Dweller on the Threshold during an astral quest? You\'ve got a lot to learn--not even dragons know all there is to know about Magic in the Shadows.',
+			names: {
+				'de-DE': 'Schattenzauber 3.01D',
+				'fr-FR': 'La magic du Sixième moons',
+				'hu-HU': 'Mágia az árnyakban',
+				'es-ES': 'Magia en las Sombras'
+			},
+			releaseDate: ['1998-12-16', '1999', '2001', '2003-06', '2006-10'],
+			description: 'So, You Think You Know Magic?\n\nChummer, I can write a book on wht you don\'t know. Can you design a spell or enchant a dagger? Can you invoke a great spirit or divine the future? Have you bared your soul to the Dweller on the Threshold during an astral quest? You\'ve got a lot to learn--not even dragons know all there is to know about Magic in the Shadows.',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation'],
-			originalLanguage: 'en-US'
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas', 'Beholder Kiadó Bt.', 'Catalyst Game Labs'],
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
@@ -3457,12 +3479,18 @@ module.exports = [
 			category: 'rulebook',
 			type: 'scan',
 			name: 'Shadowrun Companion (Revised)',
-			releaseDate: ['1999-03', '2003-09', '2004-06'],
-			description: 'For Players:\nExpanded character creation rules allow you to customize your character\'s background with Edges and Flaws and play ghouls or shapeshifters. Also includes rules for running, jumping and even being an escape artist!\n\nFor Gamemasters:\nProvides expanded contact rules and introduces Enemies—the evil side of contacts. Plus campaign and scenario creation, prime runners, training rules and security rules for gas traps, trip wires and sensor plates!\n\nFor New Campaigns:\nPlay a street gang or a government covert ops team, a DocWagon high-threat response team or even the cops!',
+			names: {
+				'de-DE': 'Shadowrun Kompendium 3.01D',
+				'hu-HU': 'Árnyvadász kézikönyv',
+				'es-ES': 'Guía de Shadowrun'
+			},
+			releaseDate: ['1999-03', '2001', '2003-09', '2004-06', '2005'],
+			description: 'Been There. Run That.\n\nFor Players:\nExpanded character creation rules allow you to customize your character\'s background with Edges and Flaws and play ghouls or shapeshifters. Also includes rules for running, jumping and even being an escape artist!\n\nFor Gamemasters:\nProvides expanded contact rules and introduces Enemies—the evil side of contacts. Plus campaign and scenario creation, prime runners, training rules and security rules for gas traps, trip wires and sensor plates!\n\nFor New Campaigns:\nPlay a street gang or a government covert ops team, a DocWagon high-threat response team or even the cops!',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions'],
-			originalLanguage: 'en-US'
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Beholder Kiadó Bt.', 'La Factoría de Ideas', 'Catalyst Game Labs'],
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
@@ -3785,16 +3813,20 @@ module.exports = [
 	[
 		'10664',
 		{
-			sku: ['10664', '25013'],
+			sku: ['10664', '25013', '10754'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'State of the Art: 2063',
-			releaseDate: ['2002-08', '2004-09'],
-			description: '"New toys hit the street every week, omae. Wiz new tech to exploit security holes, rapid-assembly weapons disguised as Nerps to sneak past the scanners, wicked new adept fu to kick some major hoop. To keep up with the Johnsons, ya gotta scan what\'s coming down the pipe, otherwise you\'ll end up as the unfortunate example in a field-test report."\nState of the Art: 2064 examines the latest groundbreaking developments in five aspects of the Shadowrun world. It explores the current state of police organization, technology and prisons and details the murky world of spycraft and political espionage. It also delves into both adept characters, discussing new paths, powers and metamagic, and European-specific magical traditions such as street witches. Finally, it provides briefs on the latest trends in mainstream and underground culture, sports and entertainment, with an eye towards shadowrunning opportunities. These sections include a selection of new gear, techniques and rules for both players and gamemasters.',
+			names: {
+				'de-DE': 'State Of The Art 2063.01D'
+			},
+			releaseDate: ['2003'],
+			description: '"In this day and age, things change so nearly did the centrifugal force of progress will shear your head right off. Shadow Runners like us need to keep up with the latest Developments. When you run a B&E, you need to know what nasty new security It\'s the state of the art, chummer - it\'ll make you cred or get you dead. "\n\nState of the art covers groundbreaking Developments in the year 2063 . It details the current state of genetics technology and corporate security, and describes advances in metamagic and mercenary operations. It also provides briefs on the latest trends in mainstream culture, sports and entertainment, with an eye on shadowing opportunities. These sections include a selection of new gear, vehicles, techniques and rules for both players and gamemasters.',
 			gameDate: '2063-01',
 			edition: 3,
 			publisher: ['Fantasy Productions'],
-			originalLanguage: 'en-US'
+			originalLanguage: 'en-US',
+			notes: 'The German edition has an aditional chapter about the ADL.'
 		}
 	],
 	[
@@ -3805,23 +3837,28 @@ module.exports = [
 			type: 'scan',
 			name: 'Shadows of North America',
 			names: {
-				'fr-FR': 'L\'Amérique des Ombres'
+				'fr-FR': 'L\'Amérique des Ombres',
+				'de-DE': 'Nordamerika in den Schatten'
 			},
-			releaseDate: ['2002-07', '2003-05', '2004-08'],
-			description: 'The Map Is Not The Territory There\'s nothing worse than dropping into some backwater sprawl in the country next door to quietly take care of some job, then realizing too late that your sprawl studs and street lingo stick out like a troll\'s thumb. North America ain\'t what it used to be, chummer--every time you cross a border, you enter a different world. Ask an anglophone in Québec, an ork in San Fran, or a mage in the NAN. The rules are different, both in the shadows and in the sunlight, and if you don\'t keep up with the local game, you\'re gonna lose. Shadows of North America tells shadowrunners what they need to know about the 13 countries and city-states of North America, including the Native American Nations and the dragon-ruled city of Denver. Each state is covered in detail, from hot spots to power players, all from a shadowrunner\'s point of view. Designed for Shadowrun, Third Edition, but usable for any edition.',
+			releaseDate: ['2002-07', '2003-05', '2004-08', '2005', '2006'],
+			description: 'The Map Is Not The Territory\n\nThere\'s nothing worse than dropping into some backwater sprawl in the country next door to quietly take care of some job, then realizing too late that your sprawl studs and street lingo stick out like a troll\'s thumb. North America ain\'t what it used to be, chummer--every time you cross a border, you enter a different world. Ask an anglophone in Québec, an ork in San Fran, or a mage in the NAN. The rules are different, both in the shadows and in the sunlight, and if you don\'t keep up with the local game, you\'re gonna lose. Shadows of North America tells shadowrunners what they need to know about the 13 countries and city-states of North America, including the Native American Nations and the dragon-ruled city of Denver. Each state is covered in detail, from hot spots to power players, all from a shadowrunner\'s point of view. Designed for Shadowrun, Third Edition, but usable for any edition.',
 			gameDate: '2062-08',
 			edition: 3,
-			publisher: ['Fantasy Productions', 'Editeur Descartes'],
-			originalLanguage: 'en-US'
+			publisher: ['Fantasy Productions', 'Editeur Descartes', 'Catalyst Game Labs'],
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
 		'10667',
 		{
-			sku: ['10667'],
+			sku: ['10667', '10764'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Sprawl Survival Guide',
+			names: {
+				'de-DE': 'Sprawl Überlebenshandbuch'
+			},
 			releaseDate: ['2004-02'],
 			description: 'Street Smart?\nNew to the sprawl kid? Wise up fast, cuz wiz wires or spell juice alone won\'t save your ass on the hungry streets. You flash your credstick in the wrong alley, drop a name in the wrong company, or flick out a spur at a gunfight and your organs will be next up for auction. Reps are built on etiquette and connections, not just chill attitude and piles of corpses. You need to know when to deal and when to wheel, or you\'re just another skidmark on the streets of the sprawl.',
 			gameDate: '2063-04',
@@ -3833,10 +3870,13 @@ module.exports = [
 	[
 		'10666',
 		{
-			sku: ['10666'],
+			sku: ['10666', '10761'],
 			category: 'sourcebook',
 			type: 'scan',
-			name: 'Dragons Of The Sixth World',
+			name: 'Dragons of The Sixth World',
+			names: {
+				'de-DE': 'Drachen der 6. Welt'
+			},
 			releaseDate: ['2003-10'],
 			description: 'Enter the dragons\n"What\'s that you say? Never deal with a dragon? Chummer, if a wizworm involves you in its intrincate plots, you\'ll either deal or be the next meal."\nDragons of the Sixth World gets under the scales of the world\'s most dangerous and manipulative repitiles. It provides details on the life cycle, biology, magic and culture of dragons, and investigates their servants, allies and pawns. Dossiers are provided on ten of the world\'sforemost great dragons, with shorter bios given on over a dozen others. The Draco Foundation, pursuing the schemes of its ounders, the dead dragon Dunkelzah, is also described.',
 			gameDate: '2063-02',
@@ -3848,12 +3888,15 @@ module.exports = [
 	[
 		'10653',
 		{
-			sku: ['10653'],
+			sku: ['10653', '10758'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Target: Wastelands',
-			releaseDate: ['2002-07'],
-			description: 'Abandon All Hope, Ye Who Enter Here\n"An old fixer once told me that shadowrunning is about going places you\'re not supposed to go. That\'s what gives us the buzz, right? The excitement of traveling to exotic and secret places, meeting intresting people, and extracting or killing them. Belive me, chummer, sometimes shadowrunning takes yuo to places you really don\'t want to go--and that you\'re lucky to get out alive."',
+			names: {
+				'de-DE': 'Niemandsland'
+			},
+			releaseDate: ['2002-07', '2003'],
+			description: 'Abandon All Hope, Ye Who Enter Here\n\n"An old fixer once told me that shadowrunning is about going places you\'re not supposed to go. That\'s what gives us the buzz, right? The excitement of traveling to exotic and secret places, meeting intresting people, and extracting or killing them. Belive me, chummer, sometimes shadowrunning takes yuo to places you really don\'t want to go--and that you\'re lucky to get out alive."',
 			gameDate: '2062-09',
 			edition: 3,
 			publisher: ['Fantasy Productions'],
@@ -3863,15 +3906,19 @@ module.exports = [
 	[
 		'7127',
 		{
-			sku: ['7127', '10650'],
+			sku: ['7127', '10650', '10748', 'S531'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Year of the Comet',
-			releaseDate: ['2000-09', '2003-06'],
-			description: 'The year 2061 marks the return of Halley\'s Comet and the 50th anniversary of the Awakening-do you celebrate or run for cover? Each day brings a new surprise. Will you transform into a genetic changeling or fall prey to a doomsday cult? Will you be in Denver when the dragon runs amok or in Japan when the Ring of Fire deals death to the Empire? Will you fight toxic spirits in the Yucatán or run from the walking dead?',
+			names: {
+				'de-DE': 'Das Jahr des Kometen',
+				'fr-FR': 'L\'Année de la Comête'
+			},
+			releaseDate: ['2000-09', '2001', '2002-02', '2003-06'],
+			description: 'THE SKY IS FALLING!\n\nThe year 2061 marks the return of Halley\'s Comet and the 50th anniversary of the Awakening-do you celebrate or run for cover? Each day brings a new surprise. Will you transform into a genetic changeling or fall prey to a doomsday cult? Will you be in Denver when the dragon runs amok or in Japan when the Ring of Fire deals death to the Empire? Will you fight toxic spirits in the Yucatán or run from the walking dead?',
 			gameDate: '2061-01',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -3897,11 +3944,15 @@ module.exports = [
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Target: Awakened Lands',
-			releaseDate: ['2003-06'],
+			names: {
+				'de-DE': 'Erwachte Länder',
+				'fr-FR': 'Terres d\'Éveil'
+			},
+			releaseDate: ['2001', '2002-04', '2002-06'],
 			description: 'If the mana storms don\'t get you... the bunyips will!\nYou think Bug City was bad? Chummer, you ain\'t seen nothin\' like Australia\'s Outback. Mana storms sneaks up on you, dropping acid or fire or turning your transport into melted slag. You can run for cover, but the cave you hibe in may actually be some astral mirage that doesn\'t really exist. If you\'re lucky, Awakened dingos won\'t eat you and you\'ll crawl back to the sprawl... only to die of thirst when you don\'t have the cred to buy precious drinking water.',
 			gameDate: '2062-06',
 			edition: 3,
-			publisher: ['Fantasy Productions'],
+			publisher: ['Fantasy Productions', 'Descartes Editeur'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -3923,16 +3974,20 @@ module.exports = [
 	[
 		'25014',
 		{
-			sku: ['25014'],
+			sku: ['25014', '22008'],
 			category: 'sourcebook',
 			type: 'digital',
 			name: 'System Failure',
+			names: {
+				'de-DE': 'Systemausfall'
+			},
 			releaseDate: ['2005-09'],
-			description: 'The year is 2064, and all is not well. A struggling megacorp makes a drastic decision to stave off impending doom. A psychopathic artifical intelligence thought to be dead rises again, attempting to take over the entire Matrix. And behind the scenes, apocalyptic terrorists prepare to strike at key points around the world, completing their first steps towards a vision of Armageddon. Across the globe, shadowrunners find themselves caught up in these events - how will their actions impact the Sixth World?',
+			description: 'The End of the Matrix... as We Know It\n\nThe year is 2064, and all is not well. A struggling megacorp makes a drastic decision to stave off impending doom. A psychopathic artifical intelligence thought to be dead again, attempting to take over the entire matrix. And behind the scenes, apocalyptic terrorists prepare to strike at key points around the world, completing their first steps toward a vision of Armageddon. Across the globe, shadowrunners find out more about the Sixth World?\n\nSystem Failure details the events leading up to and following these dramatic, world - shaking events. In addition to in-depth treatments of the three main plotlines and adventure frameworks for each one of them, there are also numerous postshocks and spin-off events. For use with Shadowrun.\n\nSystem Failure is set in 2064, and exposes the events that lead to the technology changes that paved the way for Shadowrun, Fourth Edition.',
 			gameDate: '2064-03',
 			edition: 3,
-			publisher: ['Fantasy Productions'],
-			originalLanguage: 'en-US'
+			publisher: ['Fantasy Productions', 'WizKids Games'],
+			originalLanguage: 'en-US',
+			notes: 'The German edition has an aditional chapter about the ADL.'
 		}
 	],
 	[
@@ -3991,7 +4046,7 @@ module.exports = [
 			description: 'Asia. The East. A land of contrasts, from glittering megacorp skyscrapers to humble sacred temples. Japan, Malaysia and Hong Kong set the world\'s accelerated pace of progress, but next door in Indochina and Indonesia it\'s still last century. It\'s a mystery to most, but if you know your drek, you’ll find it\'s a land of opportunity. Anything you want is here. Cred. Gear. Flesh. Hell, I even heard of a guy finding enlightenment. There’s always a price, of course, whether it\'s selling your soul to the corps or your sister to the slave trade.',
 			gameDate: '2064-04',
 			edition: 3,
-			publisher: ['Fantasy Productions'],
+			publisher: ['Fantasy Productions', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4017,42 +4072,52 @@ module.exports = [
 	[
 		'10668',
 		{
-			sku: ['10668', '25002'],
+			sku: ['10668', '25002', '22001', 'SR04'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'Shadows Of Europe',
-			releaseDate: ['2003-06'],
+			names: {
+				'de-DE': 'Europa in den Schatten',
+				'fr-FR': 'L\'Europe des ombres'
+			},
+			releaseDate: ['2003-06', '2007'],
 			description: 'A new world in the shell of the old.\n"Clashes of cultures. That\'s what Europe is, term. One day you\'re fighting Moroccan pirates on the docks of Lisbon, and the next you\'re hobnobbing with the academic elite of Prague. It\'s a friggin\' maze of people and places, all acting like a big dysfunctional family. The Euro shadows are treacherous to navigate, but believe me, chum, the oportunities are umbelievable."',
 			gameDate: '2063',
 			edition: 3,
-			publisher: ['Fantasy Productions'],
+			publisher: ['Fantasy Productions', 'Black Book Editions'],
 			originalLanguage: 'en-US'
 		}
 	],
 	[
 		'10669',
 		{
-			sku: ['10669', '25006'],
+			sku: ['10669', '25006', '2003'],
 			category: 'sourcebook',
 			type: 'digital',
 			name: 'Loose Alliances',
+			names: {
+				'de-DE': 'Feind meines Feindes'
+			},
 			releaseDate: ['2005-04'],
-			description: 'Corps don\'t give a drek about the runners they hire that\'s why they call us expendable assets. Forget working for the Mob or the Yakuza, too once you\'re in, you\'re part of their family for the rest of your life. Lucky for us, there are swarms of other groups looking to claim their piece of sprawl and who are willing to bypass the law to do it. Policlubs, magical orders, religious factions, black marketers these are just a few of the species struggling for survival in the shadow ecology. Hooking up with such an organization has its advantages resources, steady employment, backup but pick the wrong outfit to run with and you\'ll regret it when they kick you to curb. So what\'s it going to be, chummer? You can\'t roll solo forever.',
+			description: 'Who\'s Got Your Back?\n\nCorps don\'t give a drek about the runners they hire that\'s why they call us expendable assets. Forget working for the Mob or the Yakuza, too once you\'re in, you\'re part of their family for the rest of your life. Lucky for us, there are swarms of other groups looking to claim their piece of sprawl and who are willing to bypass the law to do it. Policlubs, magical orders, religious factions, black marketers these are just a few of the species struggling for survival in the shadow ecology. Hooking up with such an organization has its advantages resources, steady employment, backup but pick the wrong outfit to run with and you\'ll regret it when they kick you to curb. So what\'s it going to be, chummer? You can\'t roll solo forever.',
 			gameDate: '2064-02',
 			edition: 3,
-			publisher: ['Fantasy Productions'],
+			publisher: ['Fantasy Productions', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US'
 		}
 	],
 	[
 		'10671',
 		{
-			sku: ['10671', '25004'],
+			sku: ['10671', '25004', '22006'],
 			category: 'sourcebook',
 			type: 'scan',
 			name: 'State of The Art: 2064',
+			names: {
+				'de-DE': 'State Of The Art 2064.01D'
+			},
 			releaseDate: ['2004-10'],
-			description: 'New toys hit the street every week, omae. Wiz new tech to exploit security holes, rapid-assembly weapons disguised as Nerps to sneak past the scanners, wicked new adept fu to kick some major hoop. To keep up with the Johnsons, ya gotta scan what\'s coming down the pipe, otherwise you\'ll end up as the unfortunate example in a field-test report.',
+			description: 'The Shadows Never Stop\n\nNew toys hit the street every week, omae. Wiz new tech to exploit security holes, rapid-assembly weapons disguised as Nerps to sneak past the scanners, wicked new adept fu to kick some major hoop. To keep up with the Johnsons, ya gotta scan what\'s coming down the pipe, otherwise you\'ll end up as the unfortunate example in a field-test report.',
 			gameDate: '2063-12',
 			edition: 3,
 			publisher: ['Fantasy Productions'],
@@ -5234,30 +5299,39 @@ module.exports = [
 	[
 		'7329',
 		{
-			sku: ['7329'],
+			sku: ['7329', '10741'],
 			category: 'mission',
 			type: 'scan',
 			name: 'First Run',
+			names: {
+				'de-DE': 'First Run',
+				'es-ES': 'Primera Incursión',
+				'fr-FR': 'Premier Run'
+			},
 			releaseDate: ['1999'],
-			description: 'First Run! features three complete adventures that help novice gamemasters and players learn the rules of Shadowrun, Third Edition\nIN THE SHADOWS YOU LEARN OR YOU DIE...\n...while playing. From a basic gun battle to a run against a corporate research facility to smuggling, this product lets players and gamemasters encounter the unique elements of Shadowrun. First Run! offers gamemasters suggestions for overcoming the most difficult aspects of running a game, and provides guidelines for building ongoing campaigns. Each adventure also includes hint for increasing the difficulty to challenge experianced player. For use with Shadowrun, Third Edition.',
+			description: 'In the shadows you learn or you die\n\nFirst Run! features three complete adventures that help novice gamemasters and players learn the rules of Shadowrun, Third Edition\nIN THE SHADOWS YOU LEARN OR YOU DIE...\n...while playing. From a basic gun battle to a run against a corporate research facility to smuggling, this product lets players and gamemasters encounter the unique elements of Shadowrun. First Run! offers gamemasters suggestions for overcoming the most difficult aspects of running a game, and provides guidelines for building ongoing campaigns. Each adventure also includes hint for increasing the difficulty to challenge experianced player. For use with Shadowrun, Third Edition.',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation'],
+			publisher: ['FASA Corporation', 'Descartes Editeur', 'La Factoría de Ideas', 'Fantasy Productions'],
 			originalLanguage: 'en-US'
 		}
 	],
 	[
 		'7328',
 		{
-			sku: ['7328'],
+			sku: ['7328', '10745', 'LFSH104'],
 			category: 'mission',
 			type: 'scan',
 			name: 'Renraku Arcology: Shutdown',
-			releaseDate: ['1998-11'],
-			description: 'You Wanted In--Now You Can\'t Get Out!\nSomething mysterious and terrible has shut down the Renraku Arcology. The doors are sealed, the Matrix is off-line, and 100,000 inhabitants are trapped within. The UCAS Army seals off the site, and not even Renraku knows what\'s really going on.',
+			names: {
+				'de-DE': 'Renraku Arkologie: Shutdown',
+				'es-ES': 'El Colapso de la Arcología Renraku'
+			},
+			releaseDate: ['1998-11', '2000'],
+			description: 'Something mysterious and terrible has shut down the Renraku Arcology . The doors are sealed, the Matrix is off-line, and 100,000 inhabitants are trapped inside. The UCAS Army seals Renraku knows what\'s going on. Renraku Arcology: Shutdown! tells who\'s behind it, and what horrible events are occurring inside. This Shadowrun adventure offers a dark and gritty technological setting complete with new drones, mysterious enemies, and new rules for otaku. It provides everything gamemasters need to take their players in the arcology nightmare, whether extracting trapped relatives, liberating abandoned research, or just getting out alive. Intended for gamemasters and players of all experience levels.',
 			gameDate: '2060-02',
 			edition: 3,
-			publisher: ['FASA Corporation'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'La Factoría de Ideas'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -5447,16 +5521,20 @@ module.exports = [
 	[
 		'7327',
 		{
-			sku: ['7327'],
+			sku: ['7327', '10737'],
 			category: 'mission',
 			type: 'scan',
 			name: 'Blood in the Boardroom',
-			releaseDate: ['1998'],
-			description: 'The boardrooms become war rooms as the movers and shakers shift their fights from the stock exchange to the streets. Using everything from military-scale assaults on ultra-secure company compounds to stealth missions and sabotage, the fat cats have gone to war. Dunkelzahn\'s will made the head of security for Fuchi Industrial Electronics a voting member of Renraku\'s board of directors – and all hell broke loose. Now Fuchi is in a civil war that may destroy the corporation. Renraku is under siege on every front and must turn to an old enemy to survive, as Ares goes on the offensive to purge itself of traitors. Even minor-leaguer Yamatetsu must fight its way out of Japan when a metahuman takes over the helm.\nThe most desired asset in this upheaval isn\'t a stack of stocks or a portfolio of investments, but a professional shadowrun team willing to keep its mouth shut and do the job.',
+			names: {
+				'de-DE': 'Konzernkrieg'
+			},
+			releaseDate: ['1998', '2010-06-06'],
+			description: 'Killing the competition is no longer a figure of speech...\n\nThe boardrooms become war rooms as the movers and shakers shift their fights from the stock exchange to the streets. Using everything from military-scale assaults on ultra-secure company compounds to stealth missions and sabotage, the fat cats have gone to war. Dunkelzahn\'s will made the head of security for Fuchi Industrial Electronics a voting member of Renraku\'s board of directors – and all hell broke loose. Now Fuchi is in a civil war that may destroy the corporation. Renraku is under siege on every front and must turn to an old enemy to survive, as Ares goes on the offensive to purge itself of traitors. Even minor-leaguer Yamatetsu must fight its way out of Japan when a metahuman takes over the helm.\nThe most desired asset in this upheaval isn\'t a stack of stocks or a portfolio of investments, but a professional shadowrun team willing to keep its mouth shut and do the job.',
 			gameDate: '2057-08',
 			edition: 2,
-			publisher: ['FASA Corporation'],
-			originalLanguage: 'en-US'
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
+			originalLanguage: 'en-US',
+			status: 'badscan'
 		}
 	],
 	[
@@ -8063,15 +8141,19 @@ module.exports = [
 	[
 		'7002X',
 		{
-			sku: ['7002X', '25008'],
+			sku: ['7002X', '25008', '10739'],
 			category: 'sourcebook',
 			type: 'digital',
 			name: 'Critters',
-			releaseDate: ['1998-12', '2004-07'],
+			names: {
+				'de-DE': 'Critter',
+				'fr-FR': 'Les Métacréatures'
+			},
+			releaseDate: ['1998-12', '1999', '2000', '2004-07'],
 			description: 'Originally included with the Shadowrun, Third Edition, Gamemaster\'s Screen, this book is a complete catalogue of paranormal critters for Shadowrun. In addition to critter stats and short descriptions, it includes all of the rules you need for using critter powers. 48 Pages.',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -8453,19 +8535,31 @@ module.exports = [
 		}
 	],
 	[
+		'10763A',
+		{
+			sku: ['10763A'],
+			category: 'sourcebook',
+			type: 'digital',
+			name: 'Shockwaves',
+			releaseDate: ['2006'],
+			description: 'Shockwaves (Schockwellen) was first published by FanPro Germany as a German-language product only, and now we have a free summary translation available - 18 pages discussing the history of the elusive megacorp Proteus AG! This free download has tons of plot hooks for the crafty GM, usable with both SR4 and SR3.',
+			gameDate: '2063',
+			edition: 4,
+			publisher: ['Fantasy Productions'],
+			originalLanguage: 'en-US'
+		}
+	],
+	[
 		'10763',
 		{
 			sku: ['10763'],
 			category: 'sourcebook',
 			type: 'digital',
-			name: 'Shockwaves',
-			names: {
-				'de-DE': 'Schockwellen'
-			},
-			releaseDate: ['2006'],
-			description: 'Shockwaves (Schockwellen) was first published by FanPro Germany as a German-language product only, and now we have a free summary translation available - 18 pages discussing the history of the elusive megacorp Proteus AG! This free download has tons of plot hooks for the crafty GM, usable with both SR4 and SR3.',
+			name: 'Schockwellen',
+			releaseDate: ['2003'],
+			description: 'Wer den Wind sät, wird den Sturm ernten! (Hosea, Kapitel 8 , Vers 7)\n\n"Dich kann nichts mehr erschrecken? Du meinst, dein Leben wäre ein endloser Prozess der Wiederholung der gleichen dreckigen Straßen und Städte? Nichts ist, wie es ist, glaub mir! Du hast nur noch nicht für die Großen gearbeitet. Für diejenigen, die das Geschick der Welt mitbestimmen und dich unter ihren Fingern zerquetschen können, wenn du nicht schnell bist - und besser als die anderen. Aber wenn du dich hineinziehen lässt in das große Geschäft, dann pass auf, dass du nicht zwischen die Fronten gerätst. Und dass du dein Geld ausgibst, bevor es dich erwischt, denn im Spiel der Götter kannst du nur verlieren!"\n\nSchockwellen ist ein Kampagnen-Band, der die Runner in den Kampf zweier Giganten hineinzieht und nicht mehr daraus entkommen lässt. Er wird sie in die dunklen Straßenschluchten deutscher Megaplexe führen, an die Strände der Südsee, in die Fjorde der Skandinavischen Union, tief unter die Fluten der toxischen Nordsee und noch viel, viel weiter. Dabei werden sie Geheimnisse erfahren, die sie lieber nicht hätten wissen wollen, und endlich einen entscheidenden Blick hinter die Kulissen des mysteriösen Konzerns aus der Nordsee werfen - nichts wird bleiben, wie es war.\n\nSchockwellen besteht aus zehn zusammenhängenden Abenteuern, die nachhaltig das Schicksal der Proteus AG bestimmen werden und bietet außerdem umfassende Hintergrundinformationen über den Giganten aus der Nordsee und die weiteren Protagonisten der Kampagne. Dabei wird die Storyline der ADL weitergeschrieben.',
 			gameDate: '2063',
-			edition: 4,
+			edition: 3,
 			publisher: ['Fantasy Productions'],
 			originalLanguage: 'de-DE'
 		}
@@ -9125,7 +9219,7 @@ module.exports = [
 			sku: ['45047G'],
 			category: 'sourcebook',
 			type: 'print',
-			name: 'State of the Art ADL',
+			name: 'State of the Art: ADL',
 			releaseDate: ['2017'],
 			description: 'Modernste Waffentechnik, uralte Magie, neuste Mode-Trends, Fahrzeugtechnik von Autoduellisten und erwachte Wildnis dies alles kann man in der Allianz Deutscher Länder finden. Und für einen Runner in diesen Breiten ist es überlebenswichtig zu wissen, wo und wann man all dies findet. Denn es macht einen gravierenden Unterschied, ob man in die Mündung der neusten Altmayr-Pistole schaut oder ihren Abzug am Finger hält. Ob die neusten Proteus-Wachcritter Jagd auf einen machen oder man selbst der Jäger ist. Oder ob man beim richtigen Schieber die neuste Drohne kauft, anstatt sich von ihr beim nächsten Run erschießen zu lassen.\nState of the Art ADL ist ein Ausrüstungsbuch für Shadowrun 5, das mit einem großen Haufen Spielzeug für Runner daherkommt. Es bietet neue Waffen, Archetypen, Fahrzeuge, Drohnen, Critter, magische Gruppen und Schutzgeister aus der Allianz Deutscher Länder und beschreibt zudem die wichtigsten Spieler auf den unterschiedlichen Märkten und ihre Schattenseiten in denen sich die Runner mit all dem neuen Kram eindecken können. Oder von ihm auffressen lassen.',
 			gameDate: '2075',
