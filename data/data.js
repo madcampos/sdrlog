@@ -64,13 +64,13 @@ A Shadowrun novel by Jennifer Brozek.
  * @prop {String} [image] The image name to find, it will be used instead of the sku if present. Note that all images will have it's extension replaced with either jxr or webp to be used with the sources for a `<picture>` element.
  * @prop {String} [gameDate] The in game date of the material.
  * @prop {String[]} [releaseDate] The date the material was released, it is an `Array` if the material was rereleased. If not present the material is considered unreleased.
- * @prop {Object[]} [files] A list of the material files.
- * @prop {String} files.name A name to the file that will be presented for the URL or the path if present.
- * @prop {String} [files.mime] The mime type of the material.
- * @prop {String} [files.size] The size in bytes of the file.
- * @prop {String} [files.path] The path of the file, relative to the root folder of the colection.
- * @prop {String} [files.url] A url to the file if it's hosted somewhere else.
- * @prop {String} [files.store] The store in witch the file is available.
+ * @prop {Object[]} [links] A list of the material files.
+ * @prop {String} links.name A name to the file that will be presented for the URL or the path if present.
+ * @prop {String} [links.mime] The mime type of the material.
+ * @prop {String} [links.size] The size in bytes of the file.
+ * @prop {String} [links.path] The path of the file, relative to the root folder of the colection.
+ * @prop {String} [links.url] A url to the file if it's hosted somewhere else.
+ * @prop {String} [links.store] The store in witch the file is available.
  * @prop {"missing"|"outofscope"|"rummored"|"unreleased"|"upcomming"|"badscan"} [status] The status of the item, one of the following:
  *
  * *Missing*: The item is not present on the archives.
@@ -99,16 +99,22 @@ module.exports = [
 	[
 		'26002A',
 		{
-			sku: ['26002A'],
+			sku: ['26002A', '46010', 'SR08'],
 			category: 'rulebook',
 			type: 'digital',
 			name: 'Augmentation',
-			releaseDate: ['2008-08'],
-			description: 'Augmentation is the advanced medtech rulebook for Shadowrun, Fourth Edition, covering everything you need to know about implants—including new cyberware and bioware and where to score the surgery. It provides detailed overviews of genetics and nanotechnology, from regrowing limbs to lethal cutter swarms. It also previews the bleeding-edge of medtech: bio-drones, cybermancy, and full-body cyborgs. Augmentation contains everything players and gamemasters need for implants and body modification in Shadowrun.',
+			names: {
+				'de-DE': 'BodyTech',
+				'fr-FR': 'Augmentations',
+				'jp-JP': 'ーグメンテーショオン'
+			},
+			releaseDate: ['2008-08-23', '2009-01', '2011'],
+			description: 'Upgrade or Die!\n\nAugmentation is the advanced medtech rulebook for Shadowrun, Fourth Edition, covering everything you need to know about implants—including new cyberware and bioware and where to score the surgery. It provides detailed overviews of genetics and nanotechnology, from regrowing limbs to lethal cutter swarms. It also previews the bleeding-edge of medtech: bio-drones, cybermancy, and full-body cyborgs. Augmentation contains everything players and gamemasters need for implants and body modification in Shadowrun.',
 			gameDate: '2070-08',
 			edition: 4,
-			publisher: ['Catalyst Game Labs'],
-			originalLanguage: 'en-US'
+			publisher: ['Catalyst Game Labs', 'Black Book Editions', '新紀元 社', 'Pegasus Spiele'],
+			originalLanguage: 'en-US',
+			notes: 'The German "Bodytech" contains the latest errata for "augmentation" as well as 5 additional cybersuites (which are twice as many as in the original).'
 		}
 	],
 	[
@@ -324,16 +330,22 @@ module.exports = [
 	[
 		'26003A',
 		{
-			sku: ['26003A'],
+			sku: ['26003', 'SR11'],
 			category: 'rulebook',
 			type: 'digital',
 			name: 'Arsenal',
-			releaseDate: ['2008-08'],
+			names: {
+				'de-DE':'Arsenal 2070',
+				'fr-FR': 'Arsenal',
+				'jp-JP': 'アーセナル'
+			},
+			releaseDate: ['2008-08', '2009', '2011-06', '2013-07-13'],
 			description: 'When corpsec is raining lead down on your position, a wardrobe malfunction will get you dead. To survive against gangs, syndicates, and megacorps, shadowrunners need the best gear they can make, buy, or steal.\nArsenal covers everything a runner team needs, from weapons and armor to advanced electronics and spy toys to the latest state-of-the-art drones. It also covers the intricacies of the black market and drug trade and provides advanced rules for combat and martial arts, mixing your own chemicals and explosives, and modifying your weapons and vehicles.',
 			gameDate: '2071-04',
 			edition: 4,
-			publisher: ['Catalyst Game Labs'],
-			originalLanguage: 'en-US'
+			publisher: ['Catalyst Game Labs', 'Black Book Editions', '新紀元 社', 'Pegasus Spiele'],
+			originalLanguage: 'en-US',
+			notes: 'The German edition has aditional equipamente regarding the ADL.'
 		}
 	],
 	[
@@ -3637,12 +3649,25 @@ module.exports = [
 			category: 'sourcebook',
 			type: 'digital',
 			name: 'Sixth World Almanac',
+			names: {
+				'de-DE': 'Almanach der Sechsten Welt'
+			},
 			releaseDate: ['2010-06'],
-			description: 'What was the VITAS outbreak like for the people who were there? What was Renraku Arcology—and its operating software—like before it became a total nightmare? How does it feel to get off a plane and set foot in the ghoul kingdom of Asamondo? The Sixth World Almanac is the ultimate compendium of Sixth World energy, history, and geography. With the most detailed timeline in Shadowrun’s history and write-ups of nearly forty major nations, this book immerses players and gamemasters in the Sixth World deeper than they have ever been. The Almanac is full of Shadowrun firsts, including the first-ever full-color map of the entire Sixth World and new fiction covering historic eras that have never been detailed in past sourcebooks. Open the Almanac and fall into the Sixth World—let the art, the maps, and the writing bring you more completely into one of the most exciting, enduring role-playing settings of all time!',
+			description: 'THE SIXTH WORLD IS YOURS\n\nWhat was the VITAS outbreak like for the people who were there? What was Renraku Arcology—and its operating software—like before it became a total nightmare? How does it feel to get off a plane and set foot in the ghoul kingdom of Asamondo? The Sixth World Almanac is the ultimate compendium of Sixth World energy, history, and geography. With the most detailed timeline in Shadowrun’s history and write-ups of nearly forty major nations, this book immerses players and gamemasters in the Sixth World deeper than they have ever been. The Almanac is full of Shadowrun firsts, including the first-ever full-color map of the entire Sixth World and new fiction covering historic eras that have never been detailed in past sourcebooks. Open the Almanac and fall into the Sixth World—let the art, the maps, and the writing bring you more completely into one of the most exciting, enduring role-playing settings of all time!',
 			gameDate: '2072-11',
 			edition: 4,
-			publisher: ['Catalyst Game Labs'],
-			originalLanguage: 'en-US'
+			publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+			originalLanguage: 'en-US',
+			links: [
+				{
+					name: 'Errata (Shadowrun Wiki)',
+					url: 'http://shadowrun.wikia.com/wiki/Source:Sixth_World_Almanac/Errata'
+				}
+			],
+			notes: 'The English almanac was riddled with content and formal errors that were removed by Pegasus in consultation with CGL in the German version. These include duplicate or incorrect info boxes, flags in illustrations, which did not exist at the time of the depicted scene, and incorrect coastal and borderlines.'
+			// TODO: get ancient files:
+			// https://www.shadowiki.de/Almanach_der_Sechsten_Welt
+			// http://danvolodar.ru/ancientfiles/
 		}
 	],
 	[
@@ -7409,7 +7434,7 @@ module.exports = [
 			description: 'The Sixth World Tarot Deck for Shadowrun is much more than just a tarot deck. Created by Echo and Lazarus Chernik for Catalyst Game Labs, the deck is a multi-tiered, masterfully illustrated game accessory for Shadowrun, Fifth Edition, and includes hundreds of puzzles, plots, and enigmas that can be at the heart of compelling campaigns. The Sixth World Tarot comes complete with 78 full-color tarot cards and a guidebook. The cards are 2.5\' x 5\' tall, with gilded edges.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['Catalyst Game Labs', 'pegasus'],
+			publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 			originalLanguage: 'en-US',
 			status: 'outofscope',
 			notes: 'Available first only at Gen Con 2016. Now on the creator\'s site. Print only.'
@@ -8711,11 +8736,11 @@ module.exports = [
 			category: 'sourcebook',
 			type: 'digital',
 			name: 'Berlin',
-			releaseDate: ['2011'],
-			description: 'Berlin, Germany:\nA city divided by war, reunited and divided again, this time by anarchism. A city in constant flux. The Mega-Cons say anarchy is dead, but any runner worth his soy-burger knows better.\nThe first independent sourcebook by german Shadowrun publisher Pegasus Spiele sheds a light onto the former capital city of Berlin. The hardcover book, as well as the city, is divided into two parts. On the one hand is the pacified part, now ruled by the big cons that try to hide the truth about the still anarchistic parts of the city. On the other hand are the remnants of anarchy. Some groups still wage war agains the cons, others just want to live their alternative way of life. Others again just want to hide in the shadows.\nThe limited edition of the book features a flip cover so you can read the book from both sides with each side featuring one of the two political parts of Berlin.',
+			releaseDate: ['2010-10', '2012-01-15'],
+			description: 'Die neue Lichtaura der Metropole lässt Berlin wie einen Stern im Dunkel der ADL erscheinen. Hier zeigt es sich, dass die Konzerne für die Metamenschheit sorgen. Du willst Strom, Nahrung, einen Arbeitsplatz? Dann lass dich registrieren, begib dich in die behütenden Arme der neuen Ordnung, und bald schon wirst du feststellen: Auch du hast deinen festen Platz in der Gesellschaft.\n\nlaSS DiCh niCHt vOn Der KonZERnPROPAgaNda täUscHEN! diE AuToNoMe SZEnE isT nichT ToT. DORT WO dIe kiEZE sIch iLleGal aNs sTrOMNeTz HängEN, Wo Der TrOlL mIT dEr sCHrOTFlinTE Im ERDgESChosS DEiN bester FReuNd ISt, Wo Du miT DEn FALSCHen GangfARBeN erSChosSEn WIrst, GILt DaS lEtZte GESETz! Die SChAtteN IN bERLin sind TIEF..., dIE sOzIalen netze EnG – PAsS alsO AuF, Wann du für wen WAS erLedigsT. sonST GEHST du im HaifiSCHbeCKEn UntER.\n\nDas Berlinbuch\n\nDer Führer durch Licht und Schatten des Megaplex. Mit zwei beschriebenen Stadtvierteln, 16 Locations mit Grundrissen, Bezirksbeschreibungen, Konzerndossier, illegalen Machtgruppen, urbane Mythen und weiteren unerlässlichen Informationen über das große B an der Spree.',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German sourcebook about Berlin.'
 		}
@@ -8731,7 +8756,7 @@ module.exports = [
 			description: 'Die Allianz Deutscher Länder – ein Flickenland, eine Region voller Gegensätze, ein tief mit den Schatten verwobenes Land. Hier finden sich Trollrepubliken, Elfenstaaten, toxisch verseuchte Zonen und riesige Megaplexe. Berlin mit seinem ewigen Konflikt zwischen anarchistischen Kiezen und Konzernhochburgen. Hamburg mit seinen überfluteten Straßen und dem Sprungbrett zur verseuchten Nordsee. Der Rhein-Ruhr-Megaplex, ein Schmelztiegel aus Ghettos, Stadtzentren, Industrie und Konzernen – über dem der Drache Lofwyr in Neu-Essen thront. Und gerade weil die ADL so heterogen ist, eine Mischung aus wuchernder Wildnis und wimmelnder Urbanität, entlegenen Fluchtorten und überbauten Städten, Erwachten Mysterien und verseuchten Landstrichen, sollten sich Runner hier gut auskennen. Sonst fressen einen die Schatten schneller, als man die nächste Grenze erreichen kann.\nDatapuls: ADL ist ein Hardcover-Quellenbuch für Shadowrun 5, das einen Überblick über die aktuelle Lage in der Allianz Deutscher Länder im Jahre 2078 präsentiert. Es bietet dabei neue Einblicke, gibt aber auch Zusammenfassungen des schon Bekannten, um neuen wie alten Spielgruppen die ADL zur Heimat für ihre Runs und Runner zu machen. Neben Beschreibungen des Lifestyles, der Konzern- und Staatswelt, von Subkulturen, Magie und Matrix wird ein Fokus auf die drei Plexe Berlin, Hamburg und Rhein-Ruhr-Megaplex gelegt. Aber auch Kurzbeschreibungen der SOX, der Trollrepublik, des Kirchenstaats Westphalen und des Elfenherzogtums Pomorya sind zu finden, genauso wie Einblicke in dunkle Metaplot-Mysterien, neue NSCs und Grundrisse für den direkten Gebrauch am Spieltisch. Immer wieder unterbrochen von Datapuls-Nachrichten der neuesten Ereignisse – denn uninformierte Runner sind tote Runner.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German sourcebook about Germany.'
 		}
@@ -8747,7 +8772,7 @@ module.exports = [
 			description: 'Die Fabeln erwachen!\nDie Sechste Welt dreht sich weiter. Immer neue paranormale Phänomene tauchen auf und wollen von der Metamenschheit erforscht werden. So auch in der Zoologie. Unbekannte Wesen warten an den unterschiedlichsten Orten rund um die erwachte Erde: Von Australien bis in die Alpen, vom Himmel bis in die Tiefen der Ozeane.\nNach dem Standardwerk Wildwechsel präsentiert Parazoologie neue Critter für die Welt von Shadowrun 4. Vom Abramshummer bis zum Wolpertinger - denn ob toxisch oder erwacht: Jeder sollte das Tier kennen, das hinter dem nächsten Strauch auf einen lauert.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German translation of Parazoology and Parazoology 2 - updated with rules for Shadowrun, 5th Edition.'
 		}
@@ -8763,7 +8788,7 @@ module.exports = [
 			description: 'Sturm zieht auf ...\nEs brodelt in den Schatten – schon seit Monaten. Viel ist in der letzten Zeit geschehen, und es lohnt sich, auf dem Laufenden zu bleiben. Sei es in den düsteren Straßenschluchten von Denver, hinter den Konzernschreibtischen von Ares oder sogar in den Gedanken bekannter Deckergrößen wie FastJack: Information ist alles. Immer.\nSturmfront ist ein Metaplotbuch für Shadowrun 5, das aktuelle Erzählstränge von Shadowrun aufgreift, weiterführt, einige beendet, andere neu beginnen lässt. Als zusammengefasste Übersetzung des amerikanischen Stormfront gibt es Einblicke in die heißesten Vorgänge der Sechsten Welt und dient als Übergang zwischen den Editionen. Beleuchtet werden unter anderem: der Drachenkrieg, Denver, Vorkommnisse um Ares, der beendete Krieg in Bogotá und neue Gefahren am Horizont. Sämtliche Plotlinien werden dabei durch Chroniken begleitet, um den maximalen Überblick zu behalten und auch bei Shadowrun 5 tief in die Schatten eintauchen zu können. Denn das nächste große Ding lässt sicherlich nicht lange auf sich warten ...',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting.'
 		}
@@ -8779,7 +8804,7 @@ module.exports = [
 			description: '',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'This item consists of a folio to store notes and character sheets as well as a sturdy cardboard version of the German SR5 character sheet. It was released by Pegasus for Gratisrollenspieltag 2014 (German Free RPG Day).'
@@ -8796,7 +8821,7 @@ module.exports = [
 			description: 'Gefahr in den Schatten\nDunkle Umtriebe längst untergegangen geglaubter Schrecken ziehen durch die Schatten der Smaragdstadt: Die Vergangenheit holt die Zukunft ein – und bringt jemanden mit, den manche Leute nicht gerne wiedersehen wollten. Es ist an den Runnern, das Nötige zu tun, um Menschenleben zu retten.\nTrittbrettfahrer ist ein Abenteuer für Shadowrun 5, das in Seattle spielt. Das PDF enthält ein komplett ausformuliertes Szenario inklusive Grundrisse und NSC-Werten – zum direkten Losspielen am heimatlichen Spieltisch.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German translation of Shadowrun Mission "Carbon Copy" previously released in Sprawl Wilds. This pdf includes only SR5 rules.'
 		}
@@ -8827,7 +8852,7 @@ module.exports = [
 			description: 'Schattenhandbuch 1 (Shadow Handbook 1) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin’s Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch 1 was published in a numbered limited edition with a print run of 3000 books.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing'
 		}
@@ -8843,7 +8868,7 @@ module.exports = [
 			description: 'Limited print edition of various SR5 pdfs.\nThis volume includes:\n\t- Schattenzauber (Shadow Spells)\n\t- Parabotanik 2075 (Parabotany, updated for SR5)\n\t- Parageologie (Parageology, updated for SR5)\n\t- Ätherologie (Aetherology)\n\t- Kugeln & Bandagen (Bullets & Bandages)\n\t- ADL Magie Update',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing'
 		}
@@ -8859,7 +8884,7 @@ module.exports = [
 			description: 'Seattle, die Emerald City, war schon immer einer der wichtigsten Metroplexe in der Welt von Shadowrun. Der Sprawl schwelt, denn er bildet einen Schmelztiegel aus Konzernmächten, politischen Intrigen und krimineller Energie, wie er kaum sonst irgendwo zu finden ist. Ikonen wie die Ancients, die Halloweeners, die Finnigan-Familie, die Skraacha, Dantes Inferno, die Renraku-Arkologie und Big Rhino sind hier zu finden. Und Runner wie Dodger, Sally Tsung, Dirk Montgomery, Jake Armitage, Twist, Kellan Colt und James Kincaid haben sich in den Straßenschluchten ihren Namen verschafft und sind zur Legende geworden. Sie alle haben hier ihr Glück gemacht und ihre Verluste erlitten. Und ihre Heimat stellt auch andere auf die Probe, denn hier können Runner zeigen, ob sie an der Spitze der Nahrungskette stehen oder nur Teil des Buffets sind.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'This is an updated version of the recent Seattle Sprawl box by CGL. Some of the contents have been rearranged and new items added.\nIt includes:\n\t- Smaragd im Schatten (Emerald Shadows, 96 pages)\n\t- Mächte in Seattle (Ruling the Queen City, 52 pages)\n\t- Im Labyrinth (Tangled Threads, 28 pages)\n\t- Doc Wagon 19 (Short Story, 64 pages)\n\t- 24 Character Cards, double sided\n\t- Gang Reference Card, double sided\n\t- 2 Location Reference Cards\n\t- 2 A1 Seattle Maps, one double sided'
 		}
@@ -8875,7 +8900,7 @@ module.exports = [
 			description: 'Es herrscht Krieg in den Straßen - doch nicht um Geld oder Macht, sondern um Punkte. Die Stadtkrieg-Saison hat wieder begonnen, die DeMeKo flutet die Medien mit Werbung für die Mannschaften, und die Fans machen sich auf einen heißen Sommer gefasst. In den Straßen und auf den Plätzen der geräumten Wohngebiete laufen die Stars der Chromlegion Bremen, der Naniten Nürnberg und der Berliner Cybears auf, um den Zuschauern ein Spektakel besonderer Art zu bieten - im blutigen Kampf um zwei Bälle und zwei Torzonen. Wen jucken da noch der jüngste Vereinsskandal oder die vertriebenen Bewohner der Spielareals?\nBlut und Spiele, von Pegasus für die deutsche Spielerschaft produziert, ist ein Abenteuerband für Shadowrun 4, der sich mit Stadtkrieg befasst - einer der brutalsten Sportarten der Sechsten Welt. In vier Abenteuern wird das Thema lose aufgenommen. In einem Zusatzkapitel wird der Sport genauer beleuchtet, die Liga in der Allianz Deutscher Länder beschrieben, hinter die Kulissen der Vereinsstrukturen geschaut. Neben Werten für Spieler und Sportpersonal ist auch die Beschreibung eines besonderen Sportevents enthalten - mit der man die vier Abenteuer im Band zu einer Kampagne der besonderen Art verknüpfen kann. Damit es auch bei den Runnern ankommt: Es ist wieder KRIEG!\nBlut und Spiele, Abenteuerband zu Shadowrun von Pegasus Press; ca. 200 Seiten, Hardcover',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'German 200 page adventure.'
@@ -8892,7 +8917,7 @@ module.exports = [
 			description: 'People in Boston are going crazy! Even crazier than at a Sox game, apparently - in fact, the whole town has been sealed off! It\'s a Yanks fan\'s dream come true.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'A Shadowrun supplement released at Gratisrollenspiltag 2016.'
@@ -8909,7 +8934,7 @@ module.exports = [
 			description: 'Im Schattendschungel\nWenn man lange genug in den Megaplexen der Sechsten Welt wohnt, weiß man: Es gibt dort mehr als Supermärkte und die glitzernden Paläste der Konzerne. In den tiefen Straßenschluchten, unter dem Asphalt, jenseits dunkler Hinterhöfe existieren vergessene Gefahren und urbane Anarchie – gnadenloser als jede Wildnis.\nSeattle, die große Metropole in den UCAS, ist voll von solchen Orten – und mit diesem Abenteuerband hat man die Chance, sie live und hautnah zu erleben. Ob in festungsähnlichen Farmen in den Barrens, in versteckten Kliniken oder tief im Orkuntergrund: Die Runner werden in Bereiche vorstoßen, auf die nur selten ein Licht fällt. Engagierte Aktivisten, brutale Kriminelle, lautlose Killer sind nur einige Hürden, die ihnen im Weg stehen, um ihre Aufträge zu erfüllen – und am Ende entweder mit ihrem verdienten Lohn zurück in die Zivilisation zu treten oder für immer im Dschungel des Plexes zu verschwinden.\nLicht aus der Asche ist eine Sammlung von drei Shadowrun-Abenteuern für Shadowrun 5, die sowohl erfahrenen Runnern als auch Neueinsteigern stundenlangen Spielspaß gewähren. Komplett ausgearbeitet, enthalten die Abenteuer alle notwendigen Grundrisspläne, Spielleiterinformationen und NPC-Werte, damit der Spielleiter mit seinen Spielern direkt eintauchen kann in das urbane Chaos.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'German translation of Sprawl Wilds missing the adventure "Carbon Copy" and limited to the 5th edition of Shadowrun.'
@@ -8926,7 +8951,7 @@ module.exports = [
 			description: 'Chicago. Eine Stadt mit düsterer Geschichte. Hier tobte der letzte Kampf gegen die Universelle Bruderschaft. Hier stellte sich die Metamenschheit der vernichtenden Plage der Insektengeister. Hier griff man zu einer nuklearen Sprengung als letzten Ausweg. Jahrzehnte später hat Chicago sich immer noch nicht erholt. In der Stadt herrscht das Gesetz des Stärkeren. Neue und versteckte Schaben und Wespen-Nester formen sich im Untergrund und in den Ruinen von Downtown. Nuyen zählen auf den Straßen weniger als eine geladene Waffe und ein paar Medikamente zum Tausch. Und in den Außenbezirken etablieren sich die Großkonzerne, um mit ihren geheimen Experimenten den größtmöglichen Profit aus der vergangenen Katastrophe und den unzähmbaren Insektengeistern zu schlagen.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'Collects three Shadowrun Missions adventures (SRM 5A-01 Chasin\' the Wind, SRM 5A-02 Critic\'s Choice, SRM 5A-03 Gone long gone) and a description of the city of Chicago.'
@@ -8943,7 +8968,7 @@ module.exports = [
 			description: 'Chicago. Wespengeister. Schaben in Kleinwagengröße. Brutale Banden und toxische Schamanen. All dies fällt einem ein, wenn man den Namen der einstigen Metropole hört. Aber das ist noch lange nicht alles! In der Nachbarschaft von Medikamentenschiebern und am Rande des Kraters einer nuklearen Explosion gibt es auch die Reichen, die Großkonzerne und die Profiteure der anarchischen Zustände. Die Runner erwartet eine Reise von ganz unten nach ganz oben, eine Achterbahnfahrt durch Chicago: von Forschungsanlagen, über Gang-Territorien bis in die tiefe Vergangenheit der Stadt.\nSchatten über Chicago enthält drei Abenteuer für Shadowrun 5, die in Chicago angesiedelt sind, sowie die Kurzbeschreibung der Stadt samt Übersichtskarte, die auch schon in Mission Chicago enthalten war. Der Band ist unabhängig von seinem Vorgänger spielbar und liefert ausformulierte Abenteuer mit allen relevanten Werten – direkt für den Spieltisch.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'Collects three Shadowrun Missions adventures (SRM05-04: Liberation, SRM05-05: While the City Sleeps, SRM05-06: Take a Chance) and a description of the city of Chicago.'
@@ -8960,7 +8985,7 @@ module.exports = [
 			description: 'DAS KARRENQUARTETT FÜR SHADOWRUN 5\nDieses für 2-5 Personen gedachte Spiel folgt den klassischen Quartett-Regeln: Ihr versucht, komplette Sätze (A-H) zu sammeln. Natürlich könnt ihr mit den zahlreichen auf den Karten aufgelisteten Fahrzeugwerten das Spiel auch als klassisches Stechquartett verwenden.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'Shadowrun Karren Quartett is a set of 32 cards depicting various vehicles of the Shadowrun universe with Shadowrun5 game stats.'
@@ -8977,7 +9002,7 @@ module.exports = [
 			description: 'Waffenpower!\nOb Planung, Intrigen, Infiltration: Echte Runner wissen, dass es Zeiten gibt, in denen das letzte Wort gesprochen wurde. Dann gilt nur noch, wer sich im Kampf behauptet, wer den Schusswechsel überlebt – und wer die größeren Waffen hat.\nDas Wummenquartett für Shadowrun 5 mit seinen großzügigen, vierfarbigen Illustrationen enthält auf 32 Karten bekannte Waffen aus dem Shadowrun-Universum: von der kleinen Pistole bis zum großen Scharfschützengewehr. Neben der Möglichkeit, es als normales Quartett zu spielen, kannst du es dank der angegebenen Waffenwerte auch als Stechquartett nutzen – und sogar im Rollenspiel als Ausrüstungskarten verwenden.\nInklusive eines Freischalt-Codes für Shadowrun Online, der einen exklusiven Ausrüstungsgegenstand verfügbar macht.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'Shadowrun Wummen Quartett is a set of 32 cards depicting various weapons of the Shadowrun universe with Shadowrun5 game stats. It also includes an activation code for Shadowrun Online.'
@@ -8994,7 +9019,7 @@ module.exports = [
 			description: 'Die Gefahr lauert hinter vielen Ecken, auch in Deutschland. Für Runner bietet das Land in seiner ganzen Variabilität einen Hort der Möglichkeiten: um entweder reich und berühmt in den Schatten zu werden oder dort für immer zu verschwinden. Manchmal etwa lassen sich Studenten in dunkle Geheimnisse aus finsteren Kapiteln der Geschichte hineinziehen. Ein anderes Mal zieht das organisierte Verbrechen die Strippen hinter einem eigentlich vergnüglichen Event. Oder es verschlägt die Runner ins Venedig an der Elbe, um im wahrsten Sinne des Wortes im Trüben zu fischen. So oder so wer überlebt, darf die Beute behalten.\nAuf dunklen Pfaden ist der erste Abenteuerband für Shadowrun 5, der komplett in der Allianz Deutscher Länder spielt. Er präsentiert drei komplett ausformulierte Abenteuer inklusive aller Werte und detaillierter Grundrisse der Locations.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'German adventure.'
@@ -9011,7 +9036,7 @@ module.exports = [
 			description: 'Die Karten werden neu gemischt\nDie Karten des Tarot-Spiels können auf sehr unterschiedliche Weise Runner in ihren Bann ziehen und neue Schicksalsfäden in ihr Lebensnetz knüpfen. Nicht nur die Magie ist durch das Erwachen der Sechsten Welt stark geworden und hat dem Tarot neue Tiefe verliehen – auch andere Mächte nutzen die Bilder und Symbole: Was bedeuten die merkwürdigen Nachrichten im Berliner Netz? Welches Geheimnis verbirgt sich hinter der kostbaren Fracht in den verseuchten Gewässern an der norddeutschen Küste? Und wie können die Kräfte des Schicksals durch die Ränkespiele im Schatten des Rhein-Ruhr-Plexes führen? Egal was die Karten sagen werden, jeder Runner hat sein Schicksal selbst in der Hand ... oder nicht?\nIm Bann der Karten ist ein Abenteuerband für Shadowrun 5, der komplett in der Allianz Deutscher Länder spielt. Er präsentiert drei komplett ausformulierte Abenteuer, die sich mit dem Shadowrun-Tarot beschäftigen und Tarot-Karten ins Spiel integrieren. Der Band kann aber auch ohne das Shadowrun-Tarot gespielt werden.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'Three short scenarios for use with the Tarot Deck.'
 		}
@@ -9027,7 +9052,7 @@ module.exports = [
 			description: '',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German Translation of Ghost Cartels by Pegasus. It features additional material on a ghost cartels campaign in the AGS and an additional adventure called Euro Tour. It also contains a CD-ROM with further material and bonus adventures.'
 		}
@@ -9043,7 +9068,7 @@ module.exports = [
 			description: 'Die Wölfe heulen!\nWenn es um neue Drogen geht, verstehen die Kartelle keinen Spaß. Auch nicht, wenn Macht, Geld oder Einfluss zur Debatte stehen.\nIn Die Wölfe von St. Pauli geraten die Runner an das organisierte Verbrechen - und sollten aufpassen, dass sie nicht dessen Spielball werden. Das Gratis-Szenario ist ein komplett ausgearbeitetes Abenteuer für Shadowrun 4, das schon im Rahmen des Geisterkartelle-Metaplots auf der deutschen Beileger-CD zum gleichnamigen Buch erschienen ist. Es kann aber ohne Probleme unabhängig von der Kampagne gespielt werden.',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'This adventure was originally included as bonus on the CD Rom accompanying the German Ghost Cartels book and was later made available as stand-alone pdf.'
@@ -9060,7 +9085,7 @@ module.exports = [
 			description: '',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German translation of the Corporate Guide.\nIt features 30 additional pages on corporations in Germany.'
 		}
@@ -9125,7 +9150,7 @@ module.exports = [
 			description: 'Die Schatten werden größer!\nÜber Hannover und die Machtspiele in der ADL ist noch längst nicht alles gesagt. Und ehe sich große Veränderungen anbahnen, sollte man den Status Quo kennen. Wer verbirgt sich hinter der Daedalus-Gesellschaft? Wer sind die Schockwellenreiter? Und was kann man alles in Hannovers Club Nikita erleben - vor und hinter den Kulissen?\nNetzstücke ist ein frei erhältlicher deutscher Zusatz zum Printbuch Machtspiele - Handbuch für Spione für Shadowrun 4. Neben einflussreichen Gruppen und Nebenakteuren auf dem politischen Parkett bietet es Abenteueraufhänger und eine Reihe neuer Locations für die Allianzhauptstadt der deutschen Länder.\nUnd denk immer daran Chummer - es kostet nichts, aber es ist nie umsonst.',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'Netzstücke is an expansion for the German version of Spy Games (Machtspiele). It features additional material for campaigns in Germany.'
@@ -9142,7 +9167,7 @@ module.exports = [
 			description: 'Rhein-Ruhr-Megaplex (Rhine Ruhr Megaplex) is a German Shadowrun sourcebook that provides detailed information about the Ruhr area and parts of the Rhineland.\nMain Topics of the book are:\n\t- Megaplex overview\n\t- A tour through the Megaplex areas\n\t- Culture\n\t- Saeder-Krupp\n\t- Powers and Organizations\n\t- Points of Interest\n\t- Maps, locations, and adventure hooks',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing'
 		}
@@ -9158,7 +9183,7 @@ module.exports = [
 			description: '',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			notes: 'German sourcebook for Shadowrun detailing various aspcets of shadowrunning in Germany, including organized crime, famous shadowrunners, possible targets and certain interesting regions.'
 		}
@@ -9174,7 +9199,7 @@ module.exports = [
 			description: 'Nie mehr unbewaffnet!\nIn die tiefen Schatten der Sechsten Welt sollte man nie unvorbereitet eintauchen: Eine Waffe ist immer gut. Zwei sind besser. Drei und ein Granatwerfer, ein Magier und ein Hacker – und es kann eigentlich kaum noch etwas schiefgehen.\nSchattenrüstzeug ist die ultimative Box für alle Runner und Spielleiter in Shadowrun. Es ergänzt das Grundregelwerk zu Shadowrun 4 und enthält folgende Komponenten:\n\t· Einen stabilen vierseitigen Spielleiterschirm mit allen spielrelevanten Informationen im Überblick.\n\t· 4 vollfarbige Karten von Orten in den Sprawls der Sechsten Welt.\n\t· Das Abenteuer „Schattenkrieg“, ein Shadowrun-Einführungsabenteuer, das für den Spieleinstieg konzipiert ist, aber auch von Profis gespielt werden kann.\n\t· Das Schattenwerkzeug, das neue Kontakte, Abenteuerbeispiele und –orte beschreibt und vorstellt. Zudem enthält es das CGHS, ein modulares System zur simplen und schnellen Erstellung von Spieler- und Nichtspielercharakteren, sowie Anatomie eines Shadowruns. Letzteres beschreibt einen typischen Shadowrun und bringt dem Spielleiter anhand dieses Runs gleichzeitig die Regeln, die Proben und die Systematik eines Abenteuers nahe.\n\t· 6 vollfarbige Referenzbögen, die dem Spielleiter zusammen mit dem Spielleiterschirm lästiges Blättern zu Kampfregeln und Probeabfolgen ersparen. So wird der Regelteil des Leitens ein Kinderspiel.\n\t· Eine Tabellenzusammenstellung aller Tabellen aus Arsenal 2070, BodyTech, Runnerkompendium, Straßenmagie und Vernetzt – unter anderem die ultimative Einkaufsliste für alle Schattenläufer.\n\t· Den Masterindex, der sämtliche Schlagwörter für Grundregelwerk, Arsenal 2070, BodyTech, Runnerkompendium, Straßenmagie und Vernetzt auflistet.\n\t· Ein Poster mit der Skyline von Seattle.\n\t· 3 Shadowrun-Aufkleber.\nMit dieser Ausrüstung trifft das Schattenrüstzeug tief in das Herz jedes Shadowrunspiels – für flüssigere Abenteuer, coolere Settings, spannendere Plots. Und es unterstützt die Runner im Spiel, damit sie enden wie die Profis: Reich oder tot.',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'The (altered) German version of the Runner\'s Toolkit'
@@ -9207,7 +9232,7 @@ module.exports = [
 			description: 'In den dunklen Straßenschluchten der Megaplexe lockt das Geschäft. Wo sich versteckte Unterschlupfe finden und Schieber illegale Aufträge für ihre Konzerne vermitteln, sind Shadowrunner zuhause. Von hier aus starten sie ihre geheimen Operationen und erleben Abenteuer in der Sechsten Welt.\nSchattenstädte ist ein Hintergrundband für Shadowrun 4, in dem ein paar der wichtigsten Megaplexe beschrieben werden: Seattle, Hamburg, Hongkong und - neu in dieser Auflage - Marseille. Sie alle eignen sich durch ihr einzigartiges Flair besonders gut als Hintergrund für eine klassische Shadowrun-Kampagne. Dieses Buch gibt umfassenden Überblick über verschiedene Stadtteile, interessante Orte und die Machtkämpfe, die zwischen Politik, Konzernen, Syndikaten und Straßengangs toben. Zudem sind Kurzdossiers zu Kapstadt, Caracas und Istanbul enthalten, sowie zahlreiche Abenteuerideen und Tipps, mit deren Hilfe man beliebige andere Städte als Schattenstädte verwenden kann.\nDiese neue Auflage von Schattenstädte ist für die beschriebenen Megaplexe aktualisiert bis zum Jahr 2072',
 			gameDate: '2072',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'Schattenstädte is the translation of Runner Havens with an added chapter on Hamburg in the shadows. The revised 2010 release by Pegasus also includes a translation of the chapter on marseilles from Capitales des ombres by French publisher BBE.'
@@ -9224,7 +9249,7 @@ module.exports = [
 			description: 'Modernste Waffentechnik, uralte Magie, neuste Mode-Trends, Fahrzeugtechnik von Autoduellisten und erwachte Wildnis dies alles kann man in der Allianz Deutscher Länder finden. Und für einen Runner in diesen Breiten ist es überlebenswichtig zu wissen, wo und wann man all dies findet. Denn es macht einen gravierenden Unterschied, ob man in die Mündung der neusten Altmayr-Pistole schaut oder ihren Abzug am Finger hält. Ob die neusten Proteus-Wachcritter Jagd auf einen machen oder man selbst der Jäger ist. Oder ob man beim richtigen Schieber die neuste Drohne kauft, anstatt sich von ihr beim nächsten Run erschießen zu lassen.\nState of the Art ADL ist ein Ausrüstungsbuch für Shadowrun 5, das mit einem großen Haufen Spielzeug für Runner daherkommt. Es bietet neue Waffen, Archetypen, Fahrzeuge, Drohnen, Critter, magische Gruppen und Schutzgeister aus der Allianz Deutscher Länder und beschreibt zudem die wichtigsten Spieler auf den unterschiedlichen Märkten und ihre Schattenseiten in denen sich die Runner mit all dem neuen Kram eindecken können. Oder von ihm auffressen lassen.',
 			gameDate: '2075',
 			edition: 5,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE'
 		}
 	],
@@ -9289,7 +9314,7 @@ module.exports = [
 			description: 'Weihnachten 2070 steht vor der Tür und nicht zum ersten Mal fragt ihr euch, ob die ganze Stadt verrückt geworden ist. Die große Werbeoffensive von DeMeKo hat bereits vor Wochen jedes vernünftige Maß weit hinter sich gelassen und gleicht immer mehr einem wahnsinnigen Gehirnwäschefeldzug. Kitschige Werbejingles donnern an jeder Straßenecke aus den Lautsprechern, unterbrochen nur vom ständigen Ho-Ho-Ho der Weihnachtsmänner. Armeen von Werbe-AROs bombardieren die Horden der Einkaufswütigen mit Schnäppchenangeboten und treiben sie wie hirntote Zombies durch die überfüllten Straßen und Kanäle zu den Konsumtempeln.\nAber Rettung naht: Heiligabend steht kurz bevor. Nur noch wenige Tage, dann werdet ihr friedvolle sechs Monate ohne Weihnachtswerbung durchleben können. Bis der ganze Wahnsinn wieder von vorne beginnt...',
 			gameDate: '2074',
 			edition: 4,
-			publisher: ['pegasus'],
+			publisher: ['Pegasus Spiele'],
 			originalLanguage: 'de-DE',
 			status: 'missing',
 			notes: 'Winning entry of Pegasus\' 2009 adventure competition for Shadowrun. Subsequently released as a free pdf.'
