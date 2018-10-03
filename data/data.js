@@ -1402,7 +1402,7 @@ module.exports = [
 			description: 'In the abandoned factory known as the Crypt, society\'s castoffs have found a place to call home. Some of the Crypt\'s denizens are hiding or on the run; some have nowhere left to go. But the Crypt protects its own, providing care for street kids as well as medical and magical healing for those in need. It also sports an illegal tap into the Matrix, and hosts a coven of some of the most successful shadowrunners around.\nWhen a disgraced corporate mover takes an interest in the Crypt - and in a valuable secret long hidden in its foundations - he doesn\'t intend to let the dregs of Seattle keep him from making the score of a lifetime. But he\'s about to discover that the Crypt\'s inhabitants aren\'t going to be buried so easily....',
 			gameDate: '2063',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -1417,7 +1417,7 @@ module.exports = [
 			description: '[Kellan Colt Trilogy #3] Kellan Colt has come far in her magical training. but all her accomplishments haven\'t satisfied her desire to know the truth about her shadowrunner mother, and to learn the secrets of the amulet she found among her mother\'s possessions. Kellan is determined to find answers - and to earn the respect of her fellow runners in the process.\nLately Kellan has been troubled by disturbing dreams. Something seems to be calling her, but before she can figure out who - or what - she joins a run into the paranoiac elven homeland of Tir Tairngire. Trapped deep inside foreign territory, she suddenly discovers the answers to her questions, but then she must unravel the most difficult riddle of all: Who can she really trust in the shadows?',
 			gameDate: '2063',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -1432,7 +1432,7 @@ module.exports = [
 			description: '[Kellan Colt Trilogy #2] Kellan Colt has been making a name for herself as one of Seattle\'s up-and-coming shadowrunners, and she believes she\'s ready to break out on her own. Opportunity knocks when she learns the location of a secret weapons cache abandoned by the U.S. military. With the right buyer, a score this big has the potential to secure Kellan\'s reputation - and her bank account.\nWith a team of fellow shadowrunners assisting her, Kellan descends deep into the heart of the Awakened wilderness to extract the weapons. But the supernatural entities lurking in the forest beome the least of her worries when a rival facton appears seeking the cache - and the greatest threat to them all is revealed....',
 			gameDate: '2063',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -1447,7 +1447,7 @@ module.exports = [
 			description: 'The troll known as Hood and his fellow Shadowrunners steal some biotechnological agriculture from the Plantech Corporation--only to find themselves framed for murder and tied to an even greater conspiracy.',
 			gameDate: '2063',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -1462,7 +1462,7 @@ module.exports = [
 			description: 'Bannickburn is a burned-out Scottish mage with little power and fewer prospects when he falls into fast company. A notorious crime boss, Bigio family caporegime Quinn Bailey offers him a job that could turn hs life around. Soon Bannickburn is living once again in the style he\'s accustomed to.\nBut then Bannickburn tries to leave the family, Bailey calls in his markers, and Bannickburn must aid the Bigios as they pit themselves against a rival mob in a power struggle that moves from the Seattle sprawl to the elven enclaive of Portland. Leading a handpicked crew of shadowrunners, Bannickburn is about to hit the jackpot - and learn that in every game, winners can turn into losers with the squeeze of a trigger....',
 			gameDate: '2063',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -1627,7 +1627,7 @@ module.exports = [
 			description: '[Kellan Colt Trilogy #1] Seattle Metroplex - Kellan Colt goes to Seattle to learn how to be a professional shadowrunner and discover her past.',
 			gameDate: '2063',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4135,7 +4135,7 @@ module.exports = [
 			description: 'When you’re working the Denver shadows, it’s not just a matter of keeping the names and the faces straight. You need to remember which faction each person is working for. Parliament of Thieves introduces the runners to Denver, and exposes them to a number of the different factions of the city’s underworld.\nThe adventure focuses on a short run from one sector (Pueblo) of Denver to another (UCAS). The characters are sneaking a hardcopy treaty letter from the Koshari to the sottocapo of the Chavez Mafia family. It already bears the signature of the Koshari council, and simply requires the sottocapo’s signature. The characters don’t have to worry about returning it. They were hired because both sides wanted the transport handled by a “neutral third party.” Other elements of the Denver underground will encounter the team, because they want to know the terms of the treaty.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4150,7 +4150,7 @@ module.exports = [
 			description: 'Basic files to Season 2 including a calendar and the karma rollover log.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4165,7 +4165,7 @@ module.exports = [
 			description: 'The runners are hired by Jaron Falcone, a retired fixer, to bring back Jonathan Belenkiy. They are working against the clock, as the ransom for Belenkiy is due in less than twenty four hours. Through investigation of his room, the runners find clues that lead them to the Black Cats. Legwork also turns up that Belenkiy hasn’t been entirely clean with all of his dealings.\nAs the night goes on, the runners can meet with Sioux warriors and Mafia soldiers, on Belenkiy’s trail. HammerJack will get nervous and approach them himself to try and have them turn against Falcone. If they are lucky, the runners will complete their mission without getting trapped in Ares’ internal politics or being placed on the hit list of the Casquilho family.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4180,7 +4180,7 @@ module.exports = [
 			description: 'Griffin Biotechnology has been a revolving door for shadowrunners. Runners from all over the sprawl have had at least one opportunity to scout the place or sneak a peek at what\'s going on inside. Word is that "the big one" has hit the streets - big nuyen to steal one of Griffin\'s hottest prototypes. Will Knight Errant be able to keep out this latest attack against the Everett based firm?',
 			gameDate: '2064',
 			edition: 3,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4195,7 +4195,7 @@ module.exports = [
 			description: 'In the corporate world, fights are not only in boardrooms, but in the streets. What if the future of an entire company were held in the hands of a team of shadowrunners?',
 			gameDate: '2064',
 			edition: 3,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4210,7 +4210,7 @@ module.exports = [
 			description: 'The runners are hired to bring in a known smuggler who has gone to ground after ditching his goods half a klick from the border. Don Casquilho comes across as a nice old man with more grandchildren than hair left on his head and the Don says he just wants to talk.\nMeanwhile the Vory V Zakone are moving heavily into the smuggling business and ensuring that anyone who talks with the Mafia is pushing daisies by the end of the week. The runners will be introduced to Vory thugs, Avtoritey lieutenants, and have to decide which syndicate they are falling in line with. ',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4225,7 +4225,7 @@ module.exports = [
 			description: 'Doc Tico hires the runners to go in and bring back a quantity of the drug that he hopes will bring him more paying customers. He tells them where they can best get the drug in quantity, at the DocWagon PCC facility. Once the runners are in far enough that they can’t back out, the hospital becomes awash with injuries brought in from a prison break attempt at the maximumsecurity detention center that’s roughly a mile away. How much harder the run just got depends on what technique they chose to infiltrate.\nWhen they return to Doc Tico with the drugs they have a strong chance of learning that the doctor has been supplying parts to the Tamanous, though only what would otherwise be considered “medical waste“ and nothing from anyone unwilling. They are then faced with an ethical dilemma: turn the doctor in and put the clinic out of business, or keep hush and let the downtrodden continue to get their low-cost yet decentquality medical care.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4240,7 +4240,7 @@ module.exports = [
 			description: 'Tina, a technomancer, and an independent sprite named Taske, are on a crime spree of attacking corporations that are developing newer security for commlinks and the Matrix. Their weapon is an army of BTL addicts, conditioned to launch agents via an interactive AR program. In their first crime, they pin it on Mafia lieutenant, Dean. The Runners are hired by Don Casquilho, to investigate the crime and bring a little ‘family justice’ to the criminals.\nAfter figuring out how the crimes are committed, the ‘runners then have to deal with Tina and Taske and provide evidence to Don Casquilho of the completed job.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4255,7 +4255,7 @@ module.exports = [
 			description: 'The runners are contacted via commlink by an Asian Ms. Johnson. She informs them that she wishes to hire them to perform a simple extraction. When negotiations are complete, Ms. Johnson produces a photograph of a young girl, approximately age eleven, and a name: Catherine Westmore.\nThis little girl is the target.\nThe assignment is simple: Do some basic legwork to locate the target, determine the best circumstances in which to stage the extraction, retrieve the girl, and deliver her safely (and most importantly, unharmed) to a second team who will be awaiting her arrival at a safe house in the Aurora Warrens. Once the girl is safely delivered into the second team’s care, the remainder of the runners’ fees will be transferred into their accounts.\nThe runners will have to contend in some way with Jack “Frost” McPherson (a highly trained ex-marine who now works as Catherine’s personal bodyguard) and his friends who comprise the whole of local runner team The Trinity.\nOnce the runners have the target in hand, they will find themselves ambushed en route to the Aurora Warrens safehouse by The Trinity, attempting to get the girl back and help save their former comrade-inarms’ reputation and his career.\nWith the final obstacle neutralized, the runners can deliver the girl safely to the Aurora Warrens safehouse, after which they can go on about their business content that their rent is once again paid, and they don’t have to worry about missing any meals. The following morning they will get a rude awakening when they turn on their trids to discover that an innocent little girl by the name of Catherine Westmore died in a ransom drop gone wrong, when Lone Star officials failed to notice the sniper lurking on a nearby rooftop…\nMore humane runners may stop to consider, perhaps for the first time (perhaps not), just how strong an impact their lives can have--for better, or worse. Less humane runners may take a more cynical stance, facing the harsh truth that if they hadn’t done the job someone else would have, and they would instead be the ones falling behind on their bills.\nBut none of that will change the fact that their utilities won’t be cut off this month, their stomachs won’t growl, and a child is dead in the street; and there isn’t one damn thing they can do about it…\nYet.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4270,7 +4270,7 @@ module.exports = [
 			description: 'Mr. Johnson hires the runners to disrupt operations of a facility run by Rocky Mountain Dynamics (RMD), to “encourage” them to sell the property to his company. The runners are left to their own devices to determine how to harass RMD. As the tempo of their activities increase, the plant manager’s connection to the Mafia may complicate the job for the runners. Although the runners are not told how many acts of harassment should occur, their actions will trigger the sale of the facility after two or three successful operations. Unfortunately, although RMD does sell the embattled facility, it is not to the buyer expected.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4435,7 +4435,7 @@ module.exports = [
 			description: 'Harold Benson hires the runners to prevent one of his researchers, Marvin Fitz, from being extracted. Benson knows the extraction is voluntary, but does not disclose this information. He explains that Marvin has a non-working prototype with him that must be kept out of the competition’s hands at all costs.\nBenson suggests that the PCs start at Fitz’s apartment, where they may learn that his extraction was voluntary. From there, they catch up to Marvin in the plaza of the Happy Canyon shopping mall in Chinatown.\nAfter a quick negotiation, the real extraction team, a professional squad working for the Vory, ambushes them. The Vory team knows Fitz has implanted his research project into his own head, and that it works, but they don’t know what it does. The opposing team also knows that the extraction is a scam: Fitz is actually being captured to be sold to the highest bidder.\nFrom there, it’s a matter of safely securing Fitz and deciding what to do with him.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4450,7 +4450,7 @@ module.exports = [
 			description: 'This adventure focuses on gathering information about some non-sanctioned biz in Triad territory. The Golden Triangle has received word that a Johnson has been hiring runners for several months now to smuggle goods through Chinatown. They know that he works out of a local bar/nightclub called Happenstance. Despite the fact that Happenstance is controlled by the Casquilhos, Triad forces attempt to crash Mr. Johnson’s party. The runners are among the witnesses. During the melee, runners see Mr. Johnson and his team. Having seen their faces, the Golden Triangle hires the runners to find out all they can about Mr. Johnson, the meet, and the biz.\nDespite being a simple package delivery, the runners find they are not alone. The Casquilhos, the Koshari, and the Vory are interested in the delivery. Along the way, the package stops at a warehouse, crosses the CAS/UCAS border, and ends in the Aurora Mall. The runners find that the package is destined for Tamanous organleggers. Can they get out with their skins intact?',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4465,7 +4465,7 @@ module.exports = [
 			description: 'The Kirillov Vory have made inroads into the Warrens, rolling street gangs where possible and destroying others. With their growing influence, the Golden Triangle has lost a number of brothels and enforcers. Mikael Petrov has formulated a plan to drive a wedge between the Triad syndicates by specifically targeting the Golden Triangle and not harming the White Lotus.\nIn addition to the wedge Petrov wants to drive between the Triads, he is cleaning up a few loose ends of his own. He is trying to deal with the now defunct Fomin Vory, Tamanous (ghoul organleggers), and the Fronts – a local gang who has become a recurring thorn in his side (see SRM02-10 Twist and Insult). ',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4480,7 +4480,7 @@ module.exports = [
 			description: 'The team is sent to the Yakuza casino on the advice of a trusted fixer. When they arrive, the AR system goes down, and the Yakuza hire the team (with a level of courtesy based on the teaM\'s relationship with the Yakuza) to find out who had done it and bring them to justice – permanently. The team starts to track the phenomenon, and finds a similar occurrence at a local mental health facility. Investigating, they find that a patient named "Mary" was admitted with extreme schizophrenic psychosis, but suddenly recovered and checked herself out. The team tracks her to the University Psychology Department\'s library, where she is working. She avoids questions like a pro, but tries to slip the team a clue when the AR system goes down and Knight Errant is called.\nThe team escapes and is contacted by the Yakuza, who now have security tapes available. The team discovers that Mary was on the scene at the casino. When they track her down, they find that she has holed up in an automated factory that builds drones, vehicles, and display links, among other things. They find that Mary is the unwilling host of Taske, a free sprite from SRM02-05 Through a Rose Colored Display Link. The team has a nasty fight with the factory\'s equipment, and (hopefully) brings the culprit to justice.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4495,7 +4495,7 @@ module.exports = [
 			description: 'It\'s a bad day. The Frog Sorcerer (from ancient Pueblo legends) has come into power and has used it to cause a large mana storm. During the height of the storm, the Frog Sorcerer creates an astral rift and a Displacement Alchera (SM p.115) manifests, but he\'s not powerful enough to "jump ship" and become a free spirit, escaping the planes.\nMeanwhile, the runners find the worst luck following them just trying to get to a job downtown in this weather. When they finally get to the meet, they find Mr. Johnson dead, and no nuyen on him to compensate for the trip to the Hub.\nJust then, another opportunity shows up at the bar where they were to meet the late Mr. Johnson. Aaron Drey has been watching the storm anticipating something. When the Alchera opens, he recognizes the landscape. He believes that, through the alchera, the runners can locate the spirit Yuichotol for him. When the Runners get into the mountains of the Alchera, they unknowingly move through the rift into the metaplane of the ancient Pueblo.\nThe runners get off on the wrong foot as bad luck still lingers around them, but can obtain guidance in their search for Yuichotol. After battling mythical creatures and the Frog Sorcerer himself, the runners search comes up empty as Yuichotol has moved from this metaplane. However, the runners may recover a vessel for Yuichotol.\nAs the runners leave, they find that they’ve exited the metaplane at a different part of the alchera, and wind up in the office building across the street. They have to get out of that building, run back across the street, and present the skull to Aaron, who attempts to "Reverse Engineer" the spirit formula from the Construct in a creative Chaos style of magic.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4510,7 +4510,7 @@ module.exports = [
 			description: 'An item known as The Dragon Stone has been in circulation in the Denver shadows for a bit. While it started out in Yakuza control, the events of SRM02-08 Chasing the Dragon put it in the hands of a Triad lieutenant. During SRM02-24 Hubris and Humility, she lost the item. Now, there’s a mad scramble in Denver’s Underworld to recover the item. The team unwittingly finds that they have the rare artifact. The question that is raised is – to whom will they give it?\nThe various factions of Denver all want a piece of the action. However, Ghostwalker is interested as well. The team must decide the level of risk that they’re willing to undertake to achieve their reward.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4540,7 +4540,7 @@ module.exports = [
 			description: 'Over the last two years, the Vory have made deep inroads into several areas of Denver. They still do not have direct control over any province but have an increasing power base with only a few stumbling blocks in their way. The road to power has had its own set of hardships and now alliances must be reforged or broken. Irina Klavikov has worked her way into Mikael Petrov’s bed and presented a gift that may be enough to buy his loyalty away from the ties of blood and the Kirillov Vory.\nIn SRM 02-13, Irina and Mikael gathered blackmail material on Lin Yao after her attempt to hire shadowrunners to kill An Peng and kidnap another Triad member. Unfortunately, their control over Lin is incomplete. Lin has agreed to complete the task they have approached her on, but plans on having a backdoor. Meanwhile, the Triad has learned about Lin Yao’s indiscretions and takes their own action.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4555,7 +4555,7 @@ module.exports = [
 			description: 'The Chavez family has recently had some setbacks due to Koshari interference with their business operations, in spite of the Lakeside treaty. Deciding that enough was enough, they chose to make an object lesson of a known Koshari Johnson and took his bodyguard captive for leverage to attempt to turn a known corporate fixer to their own services.\nMatt Greyfox, the bodyguard, is a former lover and still close friend of Tabby’s. She is irate that Omar Chavez is attempting to use her friend to blackmail her, but she is also in a bind as the bodyguard is the son of one of Tabby’s corporate contacts. Unhappy about his son’s choice to become a bodyguard in the shadows, but believing that each person must choose their own path, the suit was unwilling to force the issue. Instead, he asked Tabby to strike up an acquaintance with his son and keep an eye on him. She honored that request but it became something more. Tabby now finds herself concerned about how the father may react if he learns about the affair and how his son has become a bargaining chip. She wants the situation resolved quickly. Once she heard about the runners’ plight and discovered where Matt was being held, she contacted the team. She believes they are the perfect people to teach Omar Chavez a lesson that he should take to heart, while maintaining her corporate connections.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4570,7 +4570,7 @@ module.exports = [
 			description: 'As any made-man can tell you, switching sides once you’re in is just asking for a double-tap in the back of the head. But, what if the defector is simply too valuable to the organization? They may know too much or hold a strategic position. The reasons don’t really matter. In the end, they can’t be released nor can they simply be killed. What then?\nThis is the position between the Koshari and Nathaniel Howlingcoyote, aka Alesandro Ibáñez. (see SRM02-14 Wetwork Pure and Simple for more of Nathaniel’s back story.)\nA few weeks ago, through various sources, the Koshari discovered Alesandro’s duplicity. While remaining on the surface at least, a loyal Koshari, he was secretly smuggling certain rare and esoteric materials into Denver through a company called XCR and, in turn, to the Vory. The Vory were moving the materials to a secret Tamanous hideout located underneath the Aurora Mall. They’d made a deal to supply the organleggers with chemicals and apparatus along with ‘raw materials’ for their operation. These chemicals were being used for fetus farming (see SRM02-21 Happenstance and SRM02-15 Critical Care).\nNormally, a Koshari underling found to be working with another crime organization would be loudly and publicly murdered along with any and all accomplices and left as a warning that such behavior would not be tolerated. But Alesandro was a special case. He was the majority shareholder of XCR and its current CEO. Killing him would deprive the Koshari of millions of nuyen, not to mention the inroads with Evo, and the company’s potential utility to the Koshari’s own smuggling operations. Since killing him was out of the question, the only answer left was to bring him back into the fold.\nThe easiest way to do this is to ensure that the Vory have reason for wanting him dead. Then Alesandro will have no choice but to return to the Koshari in the hopes that they will protect him. Since the Vory do not accept excuses nor do they forgive failure, this shouldn’t be too difficult. All it should take is a series of late, lost, or simply stolen deliveries.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4585,7 +4585,7 @@ module.exports = [
 			description: 'With the exodus from Mother Russia, the Avtoritey and Vory have been bringing their families to North America and settling into their old ways. Six months ago, several of these families made their way to Denver. After dividing the city along the national boundaries, each Vor and Avtoritet began to slowly expand through their own means.\nMaria Kirillova, the only daughter of Nikolai Kirillov, began seeing Tony a few months ago.  After realizing that Tony was second in command, she did what any good Vory wife would have done and killed the leader of the gang.  Unfortunately, Tony was distraught over Jonny’s death and so Maria never told him. Now Tony wants to runaway from the gang and Denver, so that he and Maria can get married and live together.\nMeanwhile, Nikolai Kirillov has learnt of the death of the leader of the Three Kings and wants to make his move to absorb the gang before they join someone else. The runners have just completed a run for him so they are immediately at hand when he decides to move.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4600,7 +4600,7 @@ module.exports = [
 			description: 'The runners are hired by Tabby to raid a Yakuza parlor. The 3-story building is situated in the UCAS sector. It’s an old but well maintained beige brick building in a quiet part of town. The Yakuza discreetly run an illegal brothel and casino from there.\nThe first floor serves as a posh welcoming lobby and lounge. Prostitutes and geishas not serving anyone lounge around and are on display for incoming clients. A kitchen also prepares small meals and snacks for customers, whether gamblers or those enjoying the services of the prostitutes. The back rooms serve as security HQ for the operation. Yakuza soldiers monitor camera feeds and other security measures, as well as standing-by in case of trouble.\nThe 2 stories above ground are simply hotel-like rooms where customers enjoy the services of the prostitutes. There are about a half a dozen rooms per floor, so a dozen in total. Yakuza security is discreet here. Nothing much of interest for the runners.\nThe building also has a basement, where the casino is. The usual attractions can be found, ranging from cards to roulette to mah jong. The setting continues to be posh, but security here is more obvious and well armed, reminding customers that cheating is a very bad idea, as well as protecting valuables. There are also a number of customers, employees and waitresses.\nThe runners’ target is a small room connected to this casino. It is protected by additional security measures, and it holds important offline data. The runner team will have to access this server to obtain the paydata they are after. The mainframe will be hackable, especially for a team with a competent hacker or technomancer. An alternate method would be to force a captured Yakuza technician to give them access codes.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4615,7 +4615,7 @@ module.exports = [
 			description: 'The runners are hired by a Ms. Johnson—Junko “Lady Jade” Tetsuya or Donna Westmore, depending—to locate and bring to justice the murderer of 11-year-old Catherine Westmore, whose fate was sealed by the events of SRM02-03: The Grab. Finding Catherine’s killer requires all of the team’s ingenuity and resolve. Eventually, they find Takeshi Modori, former lover of Lady Jade and prime suspect in Catherine’s murder investigations hiding at Mystic Curiosities, a Talismonger\'s shop in CAS.  Takeshi tells them that he witnessed Catherine gunned down by her own father.\nTheir investigation resumes on the trail of Kazuya “The Dragon” Hotomi: an ex-Yakuza assassin. Kazuya has cut a deal with Lin Yao, a White Lotus Triad lieutenant for protection. To bring Kazuya to justice, the runners will have to deal with Lin Yao or infiltrate Klub Karma: a Triad controlled club in the heart of Chinatown. By doing so, they risk earning the enmity of the powerful organization.\nOnce Catherine’s killer is in their hands, they are to take him to an abandoned flophouse in the Aurora Warrens—the very spot where Catherine’s life ended. There, Ms. Johnson exacts her revenge either by using the runners to brutally torture Kazuya or, if the runners were involved in Catherine’s death, by betraying them and attempting to bring their lives to a fitting end.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4630,7 +4630,7 @@ module.exports = [
 			description: 'During the excavation for the foundation of a new building, a forgotten drainage pipe was found. Wuxing, who owns the building site, suspects it leads under the nearby sector border into the neighboring sector. They sent in an exploration team. This team reported some disturbing findings via commlink. Then all communication broke down.\nEnter the runners. Wuxing hires them to explore the drainage system, find the first exploration team and bring them back alive, if possible.\nIt all comes down to a bit of a dungeon crawl with the runners never knowing what horrors lurk around the corner. Along the way, they may find one very disturbed member of the first exploration team.\nThe finale has the runners entering the final chamber where Enrico Trebol, an Aztec Blood Mage, is just finishing a nasty sacrifice ritual on the survivors of the missing team. Trebol is crazed and confused.  He’s spent years living alone in the tunnels, forgotten by the corp when Ghostwalker threw Aztechnology out of Denver. He has spent years transforming the tunnels to accommodate his crazy delusions.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4645,7 +4645,7 @@ module.exports = [
 			description: 'Ardent’s head hurt. He felt bruised all over, like bailing without a parachute. Everything was hazy, he couldn’t remember what happened the last few…hours…days. “Did I crash? Wait, no, I landed”, he thought.\nMemories started coming back. He remembered that he landed, taxied to the hangar, the Koshari met him, and then everything went black; black and painful. The Koshari weren’t pleased that the cargo was missing. He tried to explain that he saw a ZDF plane coming at him and he dumped the cargo. Unfortunately he couldn’t explain why he was so far off course. They thought he sold it to a competitor. Ardent mumbled to himself, “Should have kept flying.” The Koshari don’t like mistakes, and this was Ardent’s second.\nHis first only cost him repayment plus interest. A light sitting on a table pushed the shadows back. Ardent was seated in a chair with his hands tied behind his back. The room was vast beyond the darkness. Even with thermal and lowlight in his cyber eyes, there wasn’t much to make out.\nFootsteps echoed behind Ardent. “Good news, Mr. Ardent, your plane’s logs confirm your statement. You can be on your way. Any further obligations we had with you are terminated as your services are no longer needed,” said a voice from behind him.\nA figure of a man walked just past Ardent. It resembled the Mr. Johnson who hired him, though with the Hopi mask, it was impossible to be sure. The man continued as he put down a case and opened it, “Before you go, there is the matter of payment. Cash isn’t optional.”\nArdent looked up confused. When he saw the man turn around holding a scalpel, he finally understood…',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4660,7 +4660,7 @@ module.exports = [
 			description: 'A DocWagon executive, Brent Fuller, hires the team to investigate a situation regarding patients that are disappearing. They are told that the investigation must be kept absolutely quiet for public relations purposes. He gives them the files on the three missing women.\nLegwork provides the runners with leads on a fake DocWagon ambulance, potential additional victims, and the grunts responsible for the kidnappings.\nEventually, the runners learn about the Farm – a site where metahumans are grown for organ harvesting. To their horror, they discover ghouls run the site. The run concludes as the team fights their way free with the survivors while the ghouls or their associates pursue.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4675,7 +4675,7 @@ module.exports = [
 			description: 'When precious resources are in transit inside Denver, it’s difficult for the various factions to stay idle. And when every faction has a reason to try to get hold of it, that leaves many decisions to the runners about their allegiance.\nIn this adventure, the runners are hired by the Casquilho mafia to retrieve two bioengineered animal specimens on display during an international scientific conference on wildlife preservation. The Yamato Yakuza clan is providing protection for the animals. These highly intelligent animals will follow the runners until their delivery.  Between the retrieval and the delivery, other factions hear about that and make their offers to the runners to get the animals for themselves.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4690,7 +4690,7 @@ module.exports = [
 			description: 'After taking a call to meet at the Splatter Bar, the runners are contracted to collect black mail material on Lin Yao. The Vory want the runners to eliminate another team of runners and take a job from Lin Yao. It is important that they record the meeting, and after completing the secondary run bring one of the participants (Chun Xiang) from that run back to the Vory.\nLin Yao’s job involves kidnapping a woman who is the current lover of a member of the Triad and the former lover of Lin Yao. It’s believed that the recording plus the risk of harm to Chun will give them sufficient leverage on Lin to get what the Vory want. The fact that Chun is also a skilled smuggler is just an additional bonus in Fomin’s mind.\nOnce the team decides who they’re actually willing to work for and how they’ll follow through on the run, they need to deal with at least one of several Johnsons all looking for a double cross.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -4705,7 +4705,7 @@ module.exports = [
 			description: 'This run focuses on an assassination near the town of Leadville. The characters are hired because Mr. Johnson (a Koshari plant) believes that his superiors had his corporate wife murdered and that one of his rivals gave the order.  The runners will have to cross the border into PCC territory, travel through almost 200 km of PCC territory, kill the target, and return.  Mr. Johnson will also stipulate that the run must be completed in three days, the death must appear accidental, and collateral damage must be kept to a minimum.\nOn the way there and back, they will have to deal with tightened security at the borders, getting around a gang turf war, altitude sickness (and other high-altitude problems), and overly curious PuebSec officers.  The target’s residence contains a corp bodyguard team, magic and mundane defenses, and a few surprises.',
 			gameDate: '2070',
 			edition: 4,
-			publisher: ['Catalyst Game Labs', 'wizkids'],
+			publisher: ['Catalyst Game Labs', 'WizKids Games'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -7491,7 +7491,7 @@ module.exports = [
 			description: 'Male human vigilante',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7507,7 +7507,7 @@ module.exports = [
 			description: 'Female Yakuza assassin',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7523,7 +7523,7 @@ module.exports = [
 			description: 'Female elf mage',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7539,7 +7539,7 @@ module.exports = [
 			description: 'Male ork bouncer',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7555,7 +7555,7 @@ module.exports = [
 			description: 'Male troll mage',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7571,7 +7571,7 @@ module.exports = [
 			description: 'Male dwarf rigger',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7587,7 +7587,7 @@ module.exports = [
 			description: 'Female human mage',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7603,7 +7603,7 @@ module.exports = [
 			description: 'Male street samurai',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7619,7 +7619,7 @@ module.exports = [
 			description: 'Female elf cat-burglar',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7635,7 +7635,7 @@ module.exports = [
 			description: 'Male human shaman',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7651,7 +7651,7 @@ module.exports = [
 			description: 'Male ork bodyguard',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7667,7 +7667,7 @@ module.exports = [
 			description: 'Male troll ganger',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
@@ -7683,7 +7683,7 @@ module.exports = [
 			description: 'Male dwarf',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['wizkids'],
+			publisher: ['WizKids Games'],
 			originalLanguage: 'en-US',
 			status: 'outofscope'
 		}
