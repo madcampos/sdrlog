@@ -34,6 +34,7 @@ const items = new Map();
  * @param {Object} item The item data.
  */
 function fillItemDetails(item){
+	//TODO: map terms to canonical decomposition form
 	document.querySelector('#item-details-title').textContent = item.title;
 	document.querySelector('#item-details-image').src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
 	document.querySelector('#item-details-description').textContent = item.description;
