@@ -668,7 +668,7 @@ module.exports = [
 			description: 'Where Man Meets Magic & Machine\nThe year is 2060. Magic is as real as the mean streets of the mega-sprawls. Corporations call the shots while nailing each other through covert operatives in cutthroat competition. Flesh and machines have merged -- the street samurai with his smartguns and impossibly fast reflexes, the decker who can plug his own brain into the worldwide computer network, the rigger who links his mind to his vehicle and takes hairpin turns at fantastic speeds. And you\'re a part of this wired world, where corporate skyscrapers glitter over the dark shadows they cast. You live in those shadows. You\'re a shadowrunner -- a street operative.\nYou may be human or troll, dwarf or elf. You may throw fireballs, pull out your trusty Uzi or slice through computer security with a program as elegant and deadly as a stiletto. No matter what, you get the job done. You\'re a shadowrunner -- a professional. You don\'t just survive in the shadows -- you thrive there ... for now.',
 			gameDate: '2060',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions', 'WizKids Games', 'Beholder Kiadó Bt.', 'Descartes Editeur', 'La Factoriá de Ideas'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'WizKids Games', 'Beholder Kiadó Bt.', 'Descartes Editeur', 'La Factoría de Ideas'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -867,7 +867,7 @@ module.exports = [
 			description: 'The world has changed, some say Awakened.\nMagic has returned to the world and elves, dwarfs, orks and trolls have assumed their true forms. Creatures of the wild have changed as well, becoming things of myth and legend. And technology has changed people, too. No longer mere flesh, many humans have turned to artificial enhancements called cyberware, and become more than human. Modern man is stronger, smarter, and faster.\nIn the world of 2053, when the megacorporations want something done but don\'t want to dirty their hands, it\'sa shadowrun they need, and they come to. Though your existence is not listed in any governmental or corporate database, the demand for your services is high. You might be a decker, sliding through the virtualized databases of giant corporations, spiriting away the only thing of real value--information. Or perhaps you are a street samurai, an enforcer whose combat skills make you the ultimate urban predator. Or perhaps a magician with the ability to wield the magical energies that soround the Earth.\nAnd that\'s exactally the kind of firepower you\'ll need to make a shadowrun...',
 			gameDate: '2053',
 			edition: 2,
-			publisher: ['FASA Corporation', 'Editeur Descartes', 'Fantasy Productions', 'Blackfire Games', 'Beholder Kbt', 'Diseños Orbitales', 'Ediciones Zinco', 'Olive Books of Israel', 'ISA Sp. Zoo', 'Devir', 'Fujimi-shobo'],
+			publisher: ['FASA Corporation', 'Descartes Editeur', 'Fantasy Productions', 'Blackfire Games', 'Beholder Kiadó Bt.', 'Diseños Orbitales', 'Ediciones Zinco', 'Olive Books of Israel', 'ISA Sp. Zoo', 'Devir', '富士 見 書房'],
 			originalLanguage: 'en-US',
 			notes: 'The japanese edition has an aditional 10 pages about the city of Tokyo and the shadows of Japan.'
 		}
@@ -977,7 +977,7 @@ module.exports = [
 			description: 'When the going get tough, the tough go shopping!\nYou\'re the ultimate fighting machine. A predator-for-hire in the savage urban world of Shadowrun. You\'ve devoted your life to honing your combat and martial skills. The tools of your trade are airfoil grenades, form-fitting body armor, and an Ares Crusader machine pistol.\nAn expansion for Shadowrun, the Street Samurai Catalog will let you outfit yourself with the latest equipment available on the black market: retractable hand razors, ultrasonic sights, enhanced reflexes, and maybe a rangefinder for your cybereyes. Whatever you need to get the job done, you can find it here, but it won\'t be cheap. And remember to watch your back before someone decides to make you yesterday\'s news.',
 			gameDate: '2050',
 			edition: 2,
-			publisher: ['FASA Corporation', 'Diseños Orbitales', 'Ediciones Zinco', 'Fantasy Productions', 'Hexagonal', 'Ediouro', 'Catalyst Game Labs', 'PRO Games', 'Beholder Kbt', 'ISA Sp. Zoo'],
+			publisher: ['FASA Corporation', 'Diseños Orbitales', 'Ediciones Zinco', 'Fantasy Productions', 'Hexagonal', 'Ediouro', 'Catalyst Game Labs', 'PRO Games', 'Beholder Kiadó Bt.', 'ISA Sp. Zoo'],
 			originalLanguage: 'en-US',
 			status: 'badscan'
 		}
@@ -2808,7 +2808,7 @@ module.exports = [
 			description: 'The glorious creatures of the mythic past and horrors undreamt of dwell in the Europe of 2054. Gargoyles and goblins stalk the streets of London. Centaurs and satyrs roam the countryside. A mysterious and menacing menagerie of creatures, both fearsome and friendly, now populates the European landscape.\nParanormal Animals of Europe is a field guide to these magically awakened creatures. Detailed de',
 			gameDate: '2053',
 			edition: 2,
-			publisher: ['FASA Corporation', 'Editeur Descartes', 'Ediciones Zinco', 'Catalyst Game Labs'],
+			publisher: ['FASA Corporation', 'Descartes Editeur', 'Ediciones Zinco', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US',
 			status: 'badscan'
 		}
@@ -3121,7 +3121,7 @@ module.exports = [
 			description: 'Visit Beautiful Seattle, An Interesting Place to Live\nA modern frontier town, sandwiched between the Elven nation of Tir Tairngire and the Native American Nations, Seattle is a place where cultures mix—often with explosive results.\nA City of Opportunity\nMegacorps with private armies trade in technology and information. Crime bosses rule the underworld of illegal trade, violence, and extortion. There is always plenty of work for people who are willing to get their hands dirty, because the turnover is…brisk.\nFun, Friendly People\nSeattle is home to over 300,000 squatters who are willing to kill their mother for a pair of shoes. Fortunately, most never knew their mothers.\nSightsee Along Our Breathtaking Waterfront.\nJust don\'t stay out after dark. If the Elven street gangs don\'t get you, the city cops will, and maybe just for target practice.',
 			gameDate: '2051',
 			edition: 1,
-			publisher: ['FASA Corporation', 'Editeur Descartes', 'Fantasy Productions', 'Catalyst Game Labs'],
+			publisher: ['FASA Corporation', 'Descartes Editeur', 'Fantasy Productions', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US',
 			status: 'badscan'
 		}
@@ -3288,7 +3288,7 @@ module.exports = [
 			description: 'More Bang for the Buck...\n\nWhen the shadows are full of flying lead, chummer, you need an edge -- and I got it right here. You want a specialized blade? I can sell you a monosword. You want a gun to make the other guy think twice? How about the new laser pistol? Maybe you want to forge your whole body into a weapon -- I know someone who can train you in Wildcat-style martial arts. The big boys don\'t have all the best toys...',
 			gameDate: '2061',
 			edition: 3,
-			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoriá', 'Beholder Kiadó Bt.', 'Catalyst Game Labs'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas', 'Beholder Kiadó Bt.', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US',
 			notes: 'The German edition has diffrent equipament, based on German sources.',
 			status: 'badscan'
@@ -3411,7 +3411,7 @@ module.exports = [
 			description: '\'There I was, standing next to Joe on the corner, when outta nowhere comes this overgrown troll riding the hugest Harley Scorpion I\'ve ever seen, blastin\' away from all three firmpoints. What really scared teh bejeezus outta me were his arms - coupla big chainsaws, buzzin\' away like a hundred million wasps. He rode right up and sliced through Joe like a hot knife though butter! Joe flickered a bit, his face contorting into a pirmal scream, and disappeared. I hotfooted it back to the squat with the words, \'Buy Mitsuhama\' running through my brain - don\'t ask me why, "Then Joe\'s brother unhooked us from the Matrix...\n...AND THE REAL NIGHTMARE BEGAN."',
 			gameDate: '2055-07',
 			edition: 2,
-			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoriá de Ideas', 'Catalyst Game Labs'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US',
 			status: 'badscan'
 		}
@@ -3468,7 +3468,7 @@ module.exports = [
 			description: 'BEEN THERE. RUN THAT.\n\nIt\'s time to go beyond the shadows and take a look around.\nAnd you\'ll find lots of surprises...\n\nMake the most of your character! Expanded character creation rules let you customize your character with Edges and Flaws.\nA revised Skill Web and new rules for training give your character more bang for the buck in learning and using skills.\nThe flip side of contacts—enemies! New rules let you create foes large and small to keep your characters on their toes.\nWhen you really need Karma, how do you collect? Optional Karma rules offer you new ways to get, keep and use Karma.\nWhy stick with shadowrunning? Play a DocWagon High-Threat Response Team, a street gang, a government covert-operations unit or even a shapeshifter!\n\nThe Shadowrun Companion: Beyond the Shadows is a unique rules expansion for players and gamemasters.\nFrom character creation to retirement, from epic campaigns to one-shot adventures, from streamlined skill rules to options for tailoring the way magic works to best suit your game, The Shadowrun Companion has it all. This book expands and clarifies rules for character creation, skill use and defaults, contacts, Karma, magic and cyberware, and includes new rules for playing metahuman variants and shapeshifters. A guide to creating adventures and campaigns offers step-by-step techniques to help gamemasters get the most out of the Shadowrun universe. The Shadowrun Companion: Beyond the Shadows is compatible with all Shadowrun sourcebooks.',
 			gameDate: '2057',
 			edition: 2,
-			publisher: ['FASA Corporation', 'Fantasy Productions', 'ISA Sp. zoo'],
+			publisher: ['FASA Corporation', 'Fantasy Productions', 'ISA Sp. Zoo'],
 			originalLanguage: 'en-US'
 		}
 	],
@@ -3844,7 +3844,7 @@ module.exports = [
 			description: 'The Map Is Not The Territory\n\nThere\'s nothing worse than dropping into some backwater sprawl in the country next door to quietly take care of some job, then realizing too late that your sprawl studs and street lingo stick out like a troll\'s thumb. North America ain\'t what it used to be, chummer--every time you cross a border, you enter a different world. Ask an anglophone in Québec, an ork in San Fran, or a mage in the NAN. The rules are different, both in the shadows and in the sunlight, and if you don\'t keep up with the local game, you\'re gonna lose. Shadows of North America tells shadowrunners what they need to know about the 13 countries and city-states of North America, including the Native American Nations and the dragon-ruled city of Denver. Each state is covered in detail, from hot spots to power players, all from a shadowrunner\'s point of view. Designed for Shadowrun, Third Edition, but usable for any edition.',
 			gameDate: '2062-08',
 			edition: 3,
-			publisher: ['Fantasy Productions', 'Editeur Descartes', 'Catalyst Game Labs'],
+			publisher: ['Fantasy Productions', 'Descartes Editeur', 'Catalyst Game Labs'],
 			originalLanguage: 'en-US',
 			status: 'badscan'
 		}
@@ -8575,7 +8575,7 @@ module.exports = [
 			description: 'Découvrez la France de \'an 2057!\n\nUn Pays moderne fortement bouleversé par de puissants conflicts ayant conduit à l\'instauration de la domination de quatre grandes familles siégeant au Conseil Oligarchique aux côte d\'un cardinal, d\'un rand druide et d\'un représentant de la famille Villiers.\n\nVisitez les nouvelles régions françaises!\n\nParmi toutes les provinces présentées, n\'hésitez pas à aller explorer la Bretagne dont une partie est restée prisonnière de la Brume, un étrange phénomène inexpliqué ayant ouvert le passage à des Ankous, des êtres humanoïdes cadavériques aux longs cheveux blancs animés des pires intentions. Mais attendez-vous à bien des surprises dans les autres régions et duchés.\n\nAllez faire une virée à Paris!\n\nMais il faut être solide survivre dans une mégalopole d\'un diamètre d\'environ 90 km où sévissent les gangs les plus sauvages, où tant de choses ont changé sous la pression de l\'affluence de populations pas toujours avide d\'honnêteté. Quartier par quartier, secteur par secteur, et même par sous-sol, explorez une ville où toutes les bonnes affaires (et les autres) sont possibles.\n\nSHADOWRUN FRANCE est un supplément pour le jeu de rôle Shadowrun conçu pour permettre la mise en place de véritables campagnes dans la France de années 2057. Bien qu\'il soit plus praticulièrement destiné aux maîtres de jeu, les joueurs peuvent aussi y trouver une foule d\'informations susceptibles de les intéresser directement tant elle seront utiles à leurs shadowrunners. En dehors d\'une description détaillée du fonctionnement économique et politique du pays, d\'une pésentation complète des événements historiques qui ont permis l\'avènement du régime actuel, une foule de renseignements pratiques touchant tous les domaines d\'activité et des règles particulières à la magie de Bretagne accompagnent la description de nouveaux équipments et de métacréatures inédites. Des cartes géographiques originales, la descrition approfondie des plus grandes villes françaises et des illustrations de qualité font de ce supplément une source de renseignements indispensable.',
 			gameDate: '2057-02',
 			edition: 2,
-			publisher: ['other'],
+			publisher: ['Descartes Editeur'],
 			originalLanguage: 'fr-FR',
 			status: 'outofscope',
 			notes: 'A complete description of France from the world of Shadowrun in 2057, with its history, political system, organization of society, organized crime, most powerful duchies, new creatures, new equipment, new spells, etc. French only. Considered semi/non-cannon.'
@@ -9461,7 +9461,7 @@ module.exports = [
 			description: 'Les Nations des Américains d\'Origine est la traduction-compilation de deux suppléments américains (Native American Nations Volume 1 et Native American Nations Volume 2) écrits par FASA, sauf le scénario Peacekeeper tiré du premier volume qui sera traduit séparément sous le titre Alerte Rouge. Il traite donc des nations apparues en Amérique du Nord (Aztlan et Tir Taingire exceptés) à la suite de l\'Éveil et de la révolte des peuples indiens. Ce guide se conclut par un scénario se déroulant dans la nation Tsimshian.',
 			gameDate: '2060',
 			edition: 1,
-			publisher: ['Editeur Descartes'],
+			publisher: ['Descartes Editeur'],
 			originalLanguage: 'fr-FR',
 			status: 'outOfScope',
 			notes: 'A condensed edition with: Native American Nations Volume 1, Native American Nations Volume 2 without the adventure "Peacekeeper".'
@@ -9478,7 +9478,7 @@ module.exports = [
 			description: '',
 			gameDate: '2060',
 			edition: 2,
-			publisher: ['Editeur Descartes'],
+			publisher: ['Descartes Editeur'],
 			originalLanguage: 'fr-FR',
 			status: 'outOfScope',
 			notes: 'A translation of the adventure "Peacekeeper".'
