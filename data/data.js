@@ -1027,11 +1027,24 @@ module.exports = [
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Unfriendly Skies',
-		releaseDate: ['2011-05'],
+		names: {
+			'de-DE': 'Gefahr in den Wolken'
+		},
+		releaseDate: ['2011-05', '2011-11-07'],
 		description: 'It’s a big world, and not all of the work that’s available is sitting right outside your front door. Sometimes you might need to hop across a country, across a continent, or across an ocean. Other times you might look to the air to find a way across a border that’s too tough to cross on the ground. And then there are the times you might need something in the air that can pack a much-needed punch.\nUnfriendly Skies provides descriptions and game information for thirty-two aircraft, including the EuroWars-tested MiG-63, the slow but easy-to-overlook Skyswimmer, and the luxurious Platinum II. The book also includes information on the basics of air travel in 2073, including information on which paths you may or may not follow if you are trying to lay low.',
 		gameDate: '2072-09',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Unfriendly Skies',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=91994'
+			},
+			{
+				name: 'Gefahr in den Wolken',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=96380'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -2053,6 +2066,12 @@ module.exports = [
 		description: 'Everyone knows the score between the Yaks, Mafia, and Triad, but when you get down to it, the ganger on the corner is just as likely to try and kill you. Here is the download on ten mid-sized gangs that are looking to make a name for themselves.\n10 Gangs is a Shadowrun product, designed to supplement any campaign and utilizes the Gang rating system from Vice. Each gang comes with plot hooks and stats for gamemasters and players to use for run ideas, contacts, and keeping an eye on the competition.',
 		gameDate: '2072',
 		edition: 4,
+		links: [
+			{
+				name: '10 Gangs',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=78874'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -3184,15 +3203,28 @@ module.exports = [
 	},
 	{
 		id: '26210',
-		sku: ['26210'],
+		sku: ['26210', '47025'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Hazard Pay',
-		releaseDate: ['2012-05'],
-		description: 'Dark alleys, abandoned buildings, wet streets stabbed with neon light—shadowrunners know all these places. They also know that they aren’t the only places work gets done. A good shadowrunner should be open to anything, to runs that might take them anywhere. From the cold of Antarctica to the heat of the Sahara, from the life-filled dark of the deep oceans to the empty void of outer space, there is work to be had for runners brave and resourceful enough to take it. Of course, there are also dozens of new ways to die, so you should probably see if Mr. Johnson will chip in a little extra pay.',
+		names: {
+			'de-DE': 'Gefahrenzuschlag - Todeszonen der 6. Welt'
+		},
+		releaseDate: ['2012-05', '2012-10'],
+		description: 'The Ends of the Earth And Beyond\n\nDark alleys, abandoned buildings, wet streets stabbed with neon light—shadowrunners know all these places. They also know that they aren’t the only places work gets done. A good shadowrunner should be open to anything, to runs that might take them anywhere. From the cold of Antarctica to the heat of the Sahara, from the life-filled dark of the deep oceans to the empty void of outer space, there is work to be had for runners brave and resourceful enough to take it. Of course, there are also dozens of new ways to die, so you should probably see if Mr. Johnson will chip in a little extra pay.',
 		gameDate: '2074-04',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Gefahrenzuschlag - Todeszonen der 6. Welt',
+				url: 'https://www.drivethrurpg.com/product/107792'
+			},
+			{
+				name: 'Hazard Pay',
+				url: 'https://www.drivethrurpg.com/product/102133/Shadowrun:-Hazard-Pay'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
