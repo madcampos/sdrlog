@@ -85,6 +85,7 @@ A Shadowrun novel by Jennifer Brozek.
  * - *Rummored*: The item is rummored to come out, it is listed or spoken of somewhere.
  * - *Unreleased*: The item has a scheduled/expected release and has been "announced" but is nowhere to be found or has expired the expected release date.
  * - *Upcomming*: The item is scheduled to come out in the future.
+ * @prop {String} [originalLanguage] The original language the material was released.
  * @prop {String} [notes] Some notes about the material, used to explain the status or reasonig for the material.
  */
 
@@ -321,7 +322,7 @@ module.exports = [
 		type: 'digital',
 		name: 'Arsenal',
 		names: {
-			'de-DE':'Arsenal 2070',
+			'de-DE': 'Arsenal 2070',
 			'fr-FR': 'Arsenal',
 			'jp-JP': 'アーセナル'
 		},
@@ -2347,7 +2348,7 @@ module.exports = [
 		type: 'scan',
 		name: 'The Neo-Anarchist\'s Guide to Real Life',
 		names: {
-			'de-DE': 'Real Life - Der Neo-A-Reiseführer ins wahre Leben'
+			'de-DE': 'Real Life: Der Neo-Anarchisten Reiseführer ins wahre Leben'
 		},
 		releaseDate: ['1992-10', '1997', '2005-08-26'],
 		description: 'Grab the kids! Hide the wife! The Neo-Anarchists are back!\nThis time, those fun-loving Anarchists speak out on everything from transorbital travel and security systems to coffin motels and fast food. Nothing is sacred, profanity reigns, and there\'s more data than you can shake a chip at.\nThe Neo-Anarchist\'s Guide to Real Life provides useful information about the Shadowrun world in a fictionalized format along with new, specific game systems for each of the subjects covered.',
@@ -2355,7 +2356,8 @@ module.exports = [
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'badscan'
+		status: 'badscan',
+		notes: 'This is the German translation of the The Neo-Anarchist\'s Guide to Real Life sourcebook for Shadowrun, 2nd Edition. It misses two chapters of the original publication ("One-way Communication" and "Guarding the Till")'
 	},
 	{
 		id: '7211',
@@ -2685,21 +2687,6 @@ module.exports = [
 		notes: 'Combines material of Native American Nations Volumes 1 & 2 as well as the Neo-Anarchists Guide to North America into one volume. Not included are the Native American Nation\'s adventures and the description of California Free State and San Francisco.'
 	},
 	{
-		id: '10723',
-		sku: ['10723'],
-		category: 'sourcebook',
-		type: 'print',
-		name: 'Real-Life: Der Neo-Anarchisten Reiseführer ins wahre Leben',
-		releaseDate: ['1997'],
-		description: '',
-		gameDate: '2053',
-		edition: 2,
-		publisher: ['Fantasy Productions'],
-		originalLanguage: 'de-DE',
-		status: 'missing',
-		notes: 'This is the German translation of the The Neo-Anarchist\'s Guide to Real Life sourcebook for Shadowrun, 2nd Edition. It misses two chapters of the original publication ("One-way Communication" and "Guarding the Till")'
-	},
-	{
 		id: '10730',
 		sku: ['10730'],
 		category: 'mission',
@@ -2827,28 +2814,13 @@ module.exports = [
 		names: {
 			'de-DE': 'Unterwelt-Quellenbuch'
 		},
-		releaseDate: ['1997-03'],
+		releaseDate: ['1997-03', '2000'],
 		description: 'Honor. Respect. Family.\n\nThe Underworld Sourcebook describes in detail the "Big Four" international crime syndicates: the Mafia, the Yakuza, the Triads and the Seoulpa Rings. Each syndicate\'s markets, business practices, traditions, histories and secret rituals are revealed, along with loads of informtion on gangs, terorists, assassins and other groups who rule the shadows through no law but their own.\nThe Underworld Sourcebook includes guidelines for building campaigns around organized crime and customizing them for local settings, and alternate campaign rules that allow players to play members of organized crime syndicates. It provides a wealth of adventure hooks, story starters, background information and rules for use in any Shadowrun campaign.',
 		gameDate: '2058-01',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions'],
 		originalLanguage: 'en-US',
 		notes: 'The German edition has rules updated to the third edition and an aditional chapter about the ADL.'
-	},
-	{
-		id: '10750',
-		sku: ['10750'],
-		category: 'sourcebook',
-		type: 'print',
-		name: 'Unterwelt Quellenbuch',
-		releaseDate: ['2000'],
-		description: 'Ehre. Respekt. Familie.\nOhne diese Werte wäre ich nicht mehr als Drek - ein verdammter Shadowrunner. Ehre und Respekt - das unterscheidet die "Familie" von dem Abschaum, der verlangt, was rechtmäßig uns zusteht. Schmuggel, Schutzgeldringe, Bordelle... unsere Ahnen vergossen ihr Blut, um diese Imperien zu errichten. Und auch mein Blut wird fließen, um die Macht der Familie zu bewahren. Schwäche ist keine Option. Sie entehrt die Familie. Und wer die Familie entehrt, der büßt mit seinem Leben.\nWer uns keinen Respekt erweist oder nimmt, was uns gehört, dem schicken wir eine Botschaft. Erst verletzen wir ihn, dann verletzen wie seine Geschäfte, dann seine Freunde und seine Familie. Und wenn das immer noch nicht reicht... dann töten wir ihn.\nDas Unterwelt-Quellenbuch beschreibt detailliert die "großen vier" internationalen kriminellen Organisationen: die Mafia, die Yakuza, die Triaden und die Seoulpa-Ringe. Es vermittelt dem Spielleiter einen tiefen Einblick in die Märkte, Unternehmungen und Traditionen der Syndikate und enthüllt ihre Vergangenheit und ihre geheimen Rituale. Darüber hinaus enthält es für Spieler wie Spielleiter ausführliche Informationen über Gangs, Terroristen, Assassinen und andere Gruppen, die in den Schatten nach ihren eigenen Gesetzen herrschen.\nDas Unterwelt-Quellenbuch bietet dem Spielleiter Richtlinien für die Entwicklung von Kampagnen rund um die organisierte Kriminalität sowie ihre Anpassung an unterschiedliche Schauplätze. Es gibt ihm umfassende Regeln für alternative Kampagnen an die Hand, in denen die Spielercharaktere großen Syndikaten angehören.\nDas Unterwelt-Quellenbuch bietet eine Fülle von Abenteuer-Vorschlägen, Kampagnen-Ideen, Hintergrundinformationen und viele neue Regeln für alles Shadowrun-Kampagnen. Dieses Quellenbuch ist für die Verwendung mit Shadowrun 3.01D und den Ergänzungsbänden Shadowrun-Kompendium: Jenseits der Schatten sowie Schattenzauber 3.01D gedacht.\nAls besonderen Bonus finden Sie in diesem Buch aktuelle Informationen über die Gangs und Syndikate, die in der Unterwelt der ADL den Ton angeben.',
-		gameDate: '2060',
-		edition: 3,
-		publisher: ['Fantasy Productions'],
-		originalLanguage: 'de-DE',
-		status: 'missing',
-		notes: 'The Unterwelt Quellenbuch is the german version of the Underworld Sourcebook with additional material about the german underworld.'
 	},
 	{
 		id: '7122',
@@ -2945,12 +2917,10 @@ module.exports = [
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas'],
 		originalLanguage: 'en-US',
 		status: 'badscan'
-	}
-],
-[
+	},
 	//TODO: split the german edition as it is too different?
-	'7908',
 	{
+		id: '7908',
 		sku: ['7908', '10659', '10744', 'LFSH005'],
 		category: 'rulebook',
 		type: 'scan',
@@ -7591,6 +7561,7 @@ module.exports = [
 		notes: 'Bundle of 4 novels.'
 	},
 	{
+		//TODO: merge with german edition?
 		id: '10763A',
 		sku: ['10763A'],
 		category: 'sourcebook',
@@ -8220,7 +8191,7 @@ module.exports = [
 		type: 'print',
 		name: 'Árnyék Magyarország',
 		releaseDate: ['1996'],
-		description: '',
+		description: '…Mindezek mellett igaz, hogy az ország a korlátlan lehetőségek hazája. Nem sok különbség van az árnyvadászok és az egyszeri emberek között. Mindenki fegyverrel, lehetőleg páncélozott autókban jár. A megvesztegetés nem különlegesség, az élet része. A hirtelen meggazdagodás könnyű, de nagyon veszélyes. …" – Részlet egy Magyarországról szóló dekás tájékoztatóból – Shadowland, 2056.\n\nKell egy hely, ahol a cégek nem lépnek folyton a nyakadra? Kell egy hely, ahol virágzik az árnyvadász szakma? Ahol el lehet tűnni a balhé után, és ahol nem kérik a RASSZ-odat? Nos, cimbora, ez esetben azt tanácsoljuk, tedd át a székhelyed Magyarországra. Persze, ha idejössz, nem árt, ha néhány dolgot észben tartasz. Tudd, hogy itt csak magadra számíthatsz. Magyarországon tiéd ugyan a pálya – de ugyanez igaz nálad sokkal nagyobb halakra is, akik nem tétováznak, ha félre kell tenni valakit az útból. Ha életben akarsz maradni, tartsd be az utca íratlan játékszabályait. Ja, és még valami: ügyelj rá, hogy ne menj a Fertőzött zónák közelébe.\n\nA Shadowrun szerepjáték a közeli jövőben játszódik, amikor a világot óriási mamutcégek, mindenhová elérő számítógépes hálózat, és mágikusan aktív, „felébredt” teremtmények uralják. Ennek az amerikai játéktervezők által megálmodott világnak a mintájára képzeltük el, milyen lenne Magyarország a Shadowrun fantasztikus utópiája szerint. Az ÁrnyékMagyarország önállóan is élvezhető olvasmány, ha azonban ismered a magyarul is kiadott Shadowrun szerepjátékot, akkor az ÁrnyékMagyarország egyben egy szerepjáték kiegészítő is, amely lehetővé teszi, hogy árnyvadászaitok a jövő Magyarországán kalandozzanak.',
 		gameDate: '2050',
 		edition: 2,
 		publisher: ['other'],
