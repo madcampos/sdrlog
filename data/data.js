@@ -3241,17 +3241,23 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
+		//TODO: http://www.pegasus.de/fileadmin/_downloads/shadowrun/Manhattan-Web.pdf
 		id: '26201',
-		sku: ['26201'],
+		sku: ['26201', '46025', 'SR10'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Corporate Enclaves',
-		releaseDate: ['2008-08'],
-		description: 'Corporate Enclaves shines the spotlight on two very different bastions of corporate power in the Sixth World: Los Angeles and Neo-Tokyo. Controlled and exploited by the iron hand of the megacorps, these sprawls are home to corporate powerhouses, their political minions, powerful crime factions, and plenty of intrigue and opportunities for enterprising and resourceful shadowrunners. The second in an ongoing series of themed setting books for Shadowrun, Fourth Edition, Corporate Enclaves also briefly visits the unique corporate dominions of Dubai, Europort, Manhattan, Nairobi, and Tenochtitlán, and provides guidelines for developing your own corp-controlled settings.',
+		names: {
+			'de-DE': 'Konzernenklaven',
+			'fr-FR': 'Enclaves Corporatistes'
+		},
+		releaseDate: ['2008-08', '2009-05', '2009-10-22', '2012-01-11'],
+		description: 'Are You Ready to Sell Your Soul?\n\nCorporate Enclaves shines the spotlight on two very different bastions of corporate power in the Sixth World: Los Angeles and Neo-Tokyo. Controlled and exploited by the iron hand of the megacorps, these sprawls are home to corporate powerhouses, their political minions, powerful crime factions, and plenty of intrigue and opportunities for enterprising and resourceful shadowrunners. The second in an ongoing series of themed setting books for Shadowrun, Fourth Edition, Corporate Enclaves also briefly visits the unique corporate dominions of Dubai, Europort, Manhattan, Nairobi, and Tenochtitlán, and provides guidelines for developing your own corp-controlled settings.',
 		gameDate: '2071-02',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'Both the German and the French editions have an aditional chapters about Lille (French), Frankfurt (German) and Manhattan (both).'
 	},
 	{
 		id: '26205',
@@ -3430,17 +3436,22 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
+		//TODO: add unused materials: https://www.shadowiki.de/Konzerndossier
 		id: '26221',
-		sku: ['26221'],
+		sku: ['26221', '46075'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Corporate Guide',
-		releaseDate: ['2010-06'],
-		description: 'There is nothing in the Sixth World more powerful than the megacorporations. Even great dragons scratch and claw to get a piece of the power wielded by the Big Ten. If you’re running the shadows, you need to know about the megas, because they deal out the biggest paydays—and, if you cross them, the harshest paybacks.',
+		names: {
+			'de-DE': 'Konzerndossier'
+		},
+		releaseDate: ['2010-06', '2011-03'],
+		description: 'THE CENTERS OF POWER\n\nThere is nothing in the sixth world more powerful than the megacorporations . Even great dragons scratch and claw to the power wielded by the Big Ten . If you\'re running the shadows , you\'ll need to know about the megas, because they\'ll deal with the biggest payday-and, if you cross them, the harshest paybacks.\n\nCorporate Guide helps runners learn what the ten AAA-rated corporations are up to in 2072 and answers questions such as: How is Aztechnology dealing with Amazonia these days? How is Horizon\'s continuing prominence affecting its laid-back culture? How many times can Richard Villiers have one mega rise from the ashes of another?\n\nCorporate Guide offers details on all of the Big Ten megacorporations and briefings on some of the rising powers of the corp world. It therefore provides the basics every shadowrunner should know about how corporations work and what life is like the drones trapped inside them, along with the rules for greater interaction of player characters with monoliths of power.',
 		gameDate: '2072-05',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition has an aditional chapter about the ADL.'
 	},
 	{
 		id: '10664',
