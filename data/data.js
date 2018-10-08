@@ -127,16 +127,22 @@ module.exports = [
 		notes: 'The German "Bodytech" contains the latest errata for "augmentation" as well as 5 additional cybersuites (which are twice as many as in the original).'
 	},
 	{
-		sku: ['26001', '26004'],
+		sku: ['26001', '26004', '23005', '46035', 'SR06'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Street Magic',
-		releaseDate: ['2006-06', '2008-08'],
+		names: {
+			'de-DE': 'Straßenmagie',
+			'fr-FR': 'La Magie des Ombres',
+			'jp-JP': 'ストリート・マジック'
+		},
+		releaseDate: ['2006-06', '2008-08', '2009', '2007-09-05'],
 		description: 'Street Magic is the advanced magic rulebook for Shadowrun, Fourth Edition. It provides background details on everything known to magic in the year 2070, from the nature of mana and astral space to and its effects on society and the Awakened. It also covers a few things that aren\'t known - or at least understood - such as the metaplanes and hostile spirits. It also contains advanced rules for magic traditions and groups, initiation and metamagic, enchanting, and new spells and adept powers.',
 		gameDate: '2070-04',
 		edition: 4,
-		publisher: ['Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Fantasy Productions', 'Catalyst Game Labs', 'Black Book Editions', '新紀元社', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The German 2nd edition has an aditional translation of "Digital Grimoire".'
 	},
 	{
 		sku: ['5839', '27824'],
@@ -199,15 +205,19 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26002X'],
+		sku: ['26002X', '23002X', 'SR02X'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Contacts & Adventures',
-		releaseDate: ['2006-03'],
+		names: {
+			'de-DE': 'Connections & Szenarien',
+			'fr-FR': 'Contacts & aventures‎'
+		},
+		releaseDate: ['2006-03', '2007'],
 		description: 'The 32 page Contacts and Adventures booklet, which features a variety of NPCs with complete stats; over 30 plot hooks covering a wide range of shadowrunning possibilities; the SR3 to SR4 character conversion rules, and two pages of additional tables that we couldn\'t squeeze onto the GM Screen itself.',
 		gameDate: '2070',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Fantasy Productions', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -328,15 +338,19 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26002'],
+		sku: ['26002', '23002', 'SR02'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Game Master\'s Screen 4th Edition',
-		releaseDate: ['2006-03'],
+		names: {
+			'de-DE': 'Spielleiterschirm Vierte Edition',
+			'fr-FR': 'Écran du MJ Quatrième édition'
+		},
+		releaseDate: ['2006-03', '2007'],
 		description: 'The Shadowrun, Fourth Edition Gamemaster\'s Screen & Contacts and Adventures booklet eBook version contains the following documents:\nThe 32 page Contacts and Adventures booklet, which features a variety of NPCs with complete stats; over 30 plot hooks covering a wide range of shadowrunning possibilities; the SR3 to SR4 character conversion rules, and two pages of additional tables that we couldn\'t squeeze onto the GM Screen itself.\nThe full GM Screen, front and back, in one giant 33 by 11 inch file.\nAll four panels of the GM Screen, plus the two pages of tables from the Contacts & Adventures booklet, in easily printed pages formatted for Letter sized paper.',
 		gameDate: '2070',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Fantasy Productions', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1951,11 +1965,24 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'State of the Art: 2073',
-		releaseDate: ['2011-12'],
-		description: 'n this day and age, things change so fast that the centrifugal force of progress will shear your head right off. Shadowrunners like us need to keep up with the latest developments. When you run a B&E, you need to know what nasty new security feature might try to cut you in two as much as you need to know which nova new magic formula is worth snatching. It\'s the state of the art, chummer, it\'ll make you cred or get you dead.',
+		names: {
+			'de-DE': 'State of the Art: 2073'
+		},
+		releaseDate: ['2011-12-20', '2012-05-23'],
+		description: 'The Edge of Now\n\nSome people think that being state-of-the-art means being on the bleeding-edge of technology. That’s part of it, but only a small part. If you really want to be current, if you want to know what’s going on in the world and how it might affect you, you need to know about a lot more than new tech. You need to know about current events—like the speech Hestaby gave to the United Nations that put the dragons of the Sixth World into an uproar. You need to know what you’ll see on the roads, from new vehicles to re-purposed classics. You need to know about the latest research on Awakened plants and the exceedingly creative uses scientists are putting them to.\n\nTake those elements and stir in up-to-date information on important people and places—like cagey intelligence ace Samantha Roth and the tumultuous nation of Thailand—and you have a dossier that can help runners stay current and make sure they know what’s happening now in the Sixth World. Because the runner caught up in yesterday is a runner that’s been left behind.\n\nState of the Art: 2073 is for use with Shadowrun, Twentieth Anniversary Edition.',
 		gameDate: '2073-12',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'State of the Art: 2073 (German)',
+				url: 'https://www.drivethrurpg.com/product/102533/Shadowrun:-State-of-the-Art-2073'
+			},
+			{
+				name: 'State of the Art: 2073 (English)',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=97864'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1964,9 +1991,15 @@ module.exports = [
 		type: 'digital',
 		name: 'Street Legends Supplemental',
 		releaseDate: ['2012-01'],
-		description: 'Ten people. Ten very different people. A pirate who has made himself into one of the most wanted men in the world. A datathief whose skill is only matched by his flair and panache. Two corporate giants whose personalities—and actual physical makeup—couldn’t be more different. A troll whose name has a history much older than herself. And other individuals with stories and secrets of their own.\nSome of them are people you want on your side, and some of them are people who could be very dangerous enemies if you aren’t careful. All of them are people you should know, because all of them have something—money, power, knowledge, or all three—that you can use.\nStreet Legends Supplemental follows the format of the Street Legends book by presenting information on ten characters from the Shadowrun universe, sharing stories about their activities in the Sixth World and also offering complete game information and statistics for them. Each character also comes with plot information gamemasters can use as they develop their campaigns. While it is a companion to Street Legends, Street Legends Supplemental can be enjoyed entirely on its own.',
+		description: 'Unusual Suspects\n\nTen people. Ten very different people. A pirate who has made himself into one of the most wanted men in the world. A datathief whose skill is only matched by his flair and panache. Two corporate giants whose personalities—and actual physical makeup—couldn’t be more different. A troll whose name has a history much older than herself. And other individuals with stories and secrets of their own.\nSome of them are people you want on your side, and some of them are people who could be very dangerous enemies if you aren’t careful. All of them are people you should know, because all of them have something—money, power, knowledge, or all three—that you can use.\nStreet Legends Supplemental follows the format of the Street Legends book by presenting information on ten characters from the Shadowrun universe, sharing stories about their activities in the Sixth World and also offering complete game information and statistics for them. Each character also comes with plot information gamemasters can use as they develop their campaigns. While it is a companion to Street Legends, Street Legends Supplemental can be enjoyed entirely on its own.',
 		gameDate: '2073-12',
 		edition: 4,
+		links: [
+			{
+				name: 'Street Legends Supplemental',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=98146'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2033,10 +2066,16 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Sprawl Sites: High Society and Low Life',
-		releaseDate: ['2013-01'],
-		description: 'If your run the shadows long enough and manage to stay alive, you’ll find your way into all sorts of places—from bank vaults where the wealthy store their most previous possessions to densely packed warrens that pack dozens of the poor into tight spaces. Maybe you’ll need to break a patient out of a tightly guarded hospital, or maybe you’ll need to help your client sneak into an exclusive party on the top floor of a luxurious mansion.\nWherever you’re going, it helps to have a map—and some knowledge of who you might run into while you’re there. Sprawl Sites: High Society and Low Lifeprovides eight full-color maps, including a train station, an airport terminal, an automobile chop shop, and a department store, where shadowrunners might encounter all kinds of challenges. Each map is keyed on one side, while the other provides floor plans that can be given to players clever enough to find them. The book also provides information on who runners are likely to meet at each location, security at those locations, and plot hooks to help gamemasters involve the players at each spot.',
+		releaseDate: ['2013-01-12'],
+		description: 'Find Your Way Into Wealth or Out of Danger\n\nIf your run the shadows long enough and manage to stay alive, you’ll find your way into all sorts of places—from bank vaults where the wealthy store their most previous possessions to densely packed warrens that pack dozens of the poor into tight spaces. Maybe you’ll need to break a patient out of a tightly guarded hospital, or maybe you’ll need to help your client sneak into an exclusive party on the top floor of a luxurious mansion.\nWherever you’re going, it helps to have a map—and some knowledge of who you might run into while you’re there. Sprawl Sites: High Society and Low Lifeprovides eight full-color maps, including a train station, an airport terminal, an automobile chop shop, and a department store, where shadowrunners might encounter all kinds of challenges. Each map is keyed on one side, while the other provides floor plans that can be given to players clever enough to find them. The book also provides information on who runners are likely to meet at each location, security at those locations, and plot hooks to help gamemasters involve the players at each spot.',
 		gameDate: '2074',
 		edition: 4,
+		links: [
+			{
+				name: 'Sprawl Sites: High Society and Low Life',
+				url: 'https://www.drivethrurpg.com/product/110016/Shadowrun:-Sprawl-Sites:-High-Society-and-Low-Life'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2801,10 +2840,16 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Sprawl Sites: North America',
-		releaseDate: ['2012-06'],
-		description: 'The Sixth World is full of dark alleys, twisted corridors, and hidden locations for nefarious activities. Shadowrunners and 16th century explorers both know the same truth—the difference between death and survival when entering a hazardous area may be a good map.\nSprawl Sites: North America presents eight full-color maps that can be used in a variety of sprawls, making it simple for gamemasters to call up a number of different locations when they need it. From a luxury hotel to a collection of blocks in an urban barrens, from a shopping mall to a trideo studio, the collection includes maps that can be used in many different situations. The maps are double-sided, with a key on one side, making them useful as both a guide for players and a reference for gamemasters. The package also includes a booklet providing details on security and other personnel found in the location, along with plot hooks to help involve these spots in your game.',
+		releaseDate: ['2012-06-19'],
+		description: 'Unfold the World\n\nThe Sixth World is full of dark alleys, twisted corridors, and hidden locations for nefarious activities. Shadowrunners and 16th century explorers both know the same truth—the difference between death and survival when entering a hazardous area may be a good map.\nSprawl Sites: North America presents eight full-color maps that can be used in a variety of sprawls, making it simple for gamemasters to call up a number of different locations when they need it. From a luxury hotel to a collection of blocks in an urban barrens, from a shopping mall to a trideo studio, the collection includes maps that can be used in many different situations. The maps are double-sided, with a key on one side, making them useful as both a guide for players and a reference for gamemasters. The package also includes a booklet providing details on security and other personnel found in the location, along with plot hooks to help involve these spots in your game.',
 		gameDate: '2072',
 		edition: 4,
+		links: [
+			{
+				name: 'Sprawl Sites: North America',
+				url: 'https://www.drivethrurpg.com/product/103244/Shadowrun:-Sprawl-Sites:-North-America'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -3109,16 +3154,20 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26209'],
+		sku: ['26209', '47005'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Street Legends',
-		releaseDate: ['2011-08'],
-		description: 'At the end of a run, you’ve either got a good story to tell or you’re dead. Live long enough, and you’ll get enough stories to fill a book, and some of them will be killer. There is a certain class of people out on the streets that runners love to talk about, the people at the center of the stories swapped late at night over a round of wiper-fluid hooch. Some of them are good, some of them are lucky, and some of them are among the most powerful creatures of the Sixth World. All of them, in their own way, are legends.\nStreet Legends profiles more than thirty renowned figures in the Sixth World, including JackPoint stalwarts such as Haze, Rigger X, and Puck; classic runners like Serrin Shamander and Tommy Talon; and powerful behind-the-scenes figures including Lugh Surehand, Nadja Daviar, and the great dragon Lofwyr. Learn about hunting vampires with Martin de Vries, running guns in a war zone with Marcos, and trying to put a face to the elusive Hans Brackhaus.\nStreet Legends contains short fiction bringing these characters to life, as well as text describing each person and what makes them a legend. Also, each and every person profiled has complete game stats. Even the dragons. ',
+		names: {
+			'de-DE': 'Straßenlegenden'
+		},
+		releaseDate: ['2011-08', '2012-02'],
+		description: 'CASTING A LONG SHADOW\n\nAt the end of a run, you’ve either got a good story to tell or you’re dead. Live long enough, and you’ll get enough stories to fill a book, and some of them will be killer. There is a certain class of people out on the streets that runners love to talk about, the people at the center of the stories swapped late at night over a round of wiper-fluid hooch. Some of them are good, some of them are lucky, and some of them are among the most powerful creatures of the Sixth World. All of them, in their own way, are legends.\nStreet Legends profiles more than thirty renowned figures in the Sixth World, including JackPoint stalwarts such as Haze, Rigger X, and Puck; classic runners like Serrin Shamander and Tommy Talon; and powerful behind-the-scenes figures including Lugh Surehand, Nadja Daviar, and the great dragon Lofwyr. Learn about hunting vampires with Martin de Vries, running guns in a war zone with Marcos, and trying to put a face to the elusive Hans Brackhaus.\nStreet Legends contains short fiction bringing these characters to life, as well as text describing each person and what makes them a legend. Also, each and every person profiled has complete game stats. Even the dragons.',
 		gameDate: '2073-08',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition has aditional information about German characters.'
 	},
 	{
 		sku: ['26206', '46090'],
