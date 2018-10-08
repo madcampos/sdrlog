@@ -354,15 +354,20 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26004'],
+		sku: ['26004', '45000', 'SR12'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Unwired',
-		releaseDate: ['2008-08'],
-		description: 'Unwired is the advanced Matrix rulebook for Shadowrun, Fourth Edition. For everyday users, it explains how the Matrix works in easy-to-understand terms, and provides new software, qualities, and gear. For hackers and technomancers, it introduces new hacking tricks, malware, echoes, and sprites. It also covers system security and new Matrix phenomenon, from AIs to the resonance realms.Unwired contains everything players and gamemasters need for exploring the Matrix in Shadowrun.',
+		names: {
+			'de-DE': 'Vernetzt',
+			'fr-FR': 'Unwired - matrice 2.0',
+			'jp-JP': 'アンワイアード'
+		},
+		releaseDate: ['2008-07-29', '2008-06-21', '2009-04', '2010-03', '2014-10-31'],
+		description: 'HACK THE PLANET!\n\nUnwired is the advanced Matrix rulebook for Shadowrun, Fourth Edition. For everyday users, it explains how the Matrix works in easy-to-understand terms, and provides new software, qualities, and gear. For hackers and technomancers, it introduces new hacking tricks, malware, echoes, and sprites. It also covers system security and new Matrix phenomenon, from AIs to the resonance realms.Unwired contains everything players and gamemasters need for exploring the Matrix in Shadowrun.',
 		gameDate: '2071-05',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', '新紀元社'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -954,11 +959,14 @@ module.exports = [
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Deadly Waves',
+		names: {
+			'de-DE': 'Tödliche Wogen'
+		},
 		releaseDate: ['2011-07'],
-		description: 'More than two-thirds of the Earth’s surface is covered by water. That means that two-thirds of the Earth is covered in escape routes, infiltration points, and hiding places that people stuck on land constantly overlook. If you want to know how to use all that blue to your advantage, you need to know the boats that are out there, what they can do, and how your competition is putting them to use.\nDeadly Waves collects information about thirty different watercraft, from the fast and agile Wave Cutter to the luxurious, self-maintaining Zeppelinwerke Elite Cruiser to the hulking yet surprisingly quick Maersk-Jorgenson Fast Freighter. Runners can use this book to gain all sorts of options for taking to the water, whether they’re planning a quick jaunt or embarking on a long voyage.',
+		description: 'Run on Water\n\nMore than two-thirds of the Earth’s surface is covered by water. That means that two-thirds of the Earth is covered in escape routes, infiltration points, and hiding places that people stuck on land constantly overlook. If you want to know how to use all that blue to your advantage, you need to know the boats that are out there, what they can do, and how your competition is putting them to use.\nDeadly Waves collects information about thirty different watercraft, from the fast and agile Wave Cutter to the luxurious, self-maintaining Zeppelinwerke Elite Cruiser to the hulking yet surprisingly quick Maersk-Jorgenson Fast Freighter. Runners can use this book to gain all sorts of options for taking to the water, whether they’re planning a quick jaunt or embarking on a long voyage.',
 		gameDate: '2073-07',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1018,24 +1026,26 @@ module.exports = [
 		category: 'rulebook',
 		type: 'digital',
 		name: 'This Old Drone',
-		releaseDate: ['2012-11'],
+		names: {
+			'de-DE': 'Vertraute Drohnen'
+		},
+		releaseDate: ['2010-10-29', '2011-11-25', '2013-01-19'],
 		description: 'They’re Not Old—They’re Classic We’d all like access to bleeding-edge, state-of-the-art tech, but we can’t always have it. Sometimes your nuyen’s gotta be spent somewhere else, or sometimes you haven’t got any nuyen to spend. And sometimes those old designs that everyone’s written off show up and kick your ass, proving it’s too soon for them to be forgotten. This Old Drone is a Shadowrun supplement containing information on 30 classic drones that appeared in older Shadowrun sourcebooks but haven’t made the transition to Shadowrun, Fourth Edition—until now. From the rail-mounted, wireless-shunning Ares Sentinel “P” Series to the old MQ-8 Fire Scout roto-drone, This Old Drone contains the info, rules, and stats you need to bring classic drones into the modern era of Shadowrun.',
 		gameDate: '2072-07',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
-	},
-	{
-		sku: ['26S001A'],
-		category: 'rulebook',
-		type: 'digital',
-		name: 'This Old Drone (Revised)',
-		releaseDate: ['2012-10-29'],
-		description: 'They’re Not Old—They’re Classic We’d all like access to bleeding-edge, state-of-the-art tech, but we can’t always have it. Sometimes your nuyen’s gotta be spent somewhere else, or sometimes you haven’t got any nuyen to spend. And sometimes those old designs that everyone’s written off show up and kick your ass, proving it’s too soon for them to be forgotten. This Old Drone is a Shadowrun supplement containing information on 30 classic drones that appeared in older Shadowrun sourcebooks but haven’t made the transition to Shadowrun, Fourth Edition—until now. From the rail-mounted, wireless-shunning Ares Sentinel “P” Series to the old MQ-8 Fire Scout roto-drone, This Old Drone contains the info, rules, and stats you need to bring classic drones into the modern era of Shadowrun.',
-		gameDate: '2072-07-30',
-		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		links: [
+			{
+				name: 'This Old Drone (Revised)',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=85311'
+			},
+			{
+				name: 'Vertraute Drohnen',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=97042'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The revised version is the colored version included in "Runner\'s Black Book".'
 	},
 	{
 		sku: ['26S009'],
@@ -2096,7 +2106,7 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Manhattan: The Rotten Apple',
-		releaseDate: ['2009-03'],
+		releaseDate: ['2009-03-22'],
 		description: 'Dominated by the Manhattan Development Consortium (MDC), the City represents the largest contiguous corporate enclave in the Sixth World. This volume grants a look into the neighborhoods of Manhattan, the constant scrutiny of its security, and the activities of the thirteen corporations that oversee its development.\nThis setting is a crucial part of the New York City Shadowrun Missions campaign. This 32-page volume serves as a guide to players so that they can prepare their characters to deal with the finer details of the setting. Gamemasters are also well suited to use this book, as it grants them a deeper insight into the neighborhoods of Manhattan than can be provided in scenarios.',
 		gameDate: '2072-10',
 		edition: 4,
@@ -2184,9 +2194,15 @@ module.exports = [
 		type: 'digital',
 		name: 'The Land of Promise',
 		releaseDate: ['2012-09-05'],
-		description: 'Tír Tairngire has changed. The predominantly elven nation has an ork at its head, and the residents have become more welcoming to outsiders, in the sense that they don’t always immediately threaten to shoot them when they come in sight.\nThere is enough wealth and power in Tír Tairngire to make even the slightest crack in the nation’s façade tempting. Every shadowrunner knows that elves, especially powerful elves, do not rank high on the trustworthiness scale, but that doesn’t have to be a deal breaker.\nAnticipating lies and betrayals from the people runners work with is part of the game. Runners should just be sure to gather critical information about getting in to the Tír, the major cities, and the dominant personalities before they go in, since forewarned is forearmed.',
+		description: 'Tír Tairngire Wants You!\n\nTír Tairngire has changed. The predominantly elven nation has an ork at its head, and the residents have become more welcoming to outsiders, in the sense that they don’t always immediately threaten to shoot them when they come in sight.\nThere is enough wealth and power in Tír Tairngire to make even the slightest crack in the nation’s façade tempting. Every shadowrunner knows that elves, especially powerful elves, do not rank high on the trustworthiness scale, but that doesn’t have to be a deal breaker.\nAnticipating lies and betrayals from the people runners work with is part of the game. Runners should just be sure to gather critical information about getting in to the Tír, the major cities, and the dominant personalities before they go in, since forewarned is forearmed.',
 		gameDate: '2070',
 		edition: 4,
+		links: [
+			{
+				name: 'The Land of Promise',
+				url: 'https://www.drivethrurpg.com/product/105562/'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2195,11 +2211,24 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Used Car Lot',
-		releaseDate: ['2012-06'],
-		description: 'It\'s nice when you can spend the time and the money to pick the exact right vehicle to suit your needs, but time and money are two luxuries shadowrunners don\'t always have. Sometimes you need just two characteristics in a vehicle: It\'s cheap, and it moves.\nUsed Car Lotprovides an assortment of vehicles for Shadowrun so that runners can have plenty of options, from the practical, affordable Ford Americar to the ridiculously luxurious Rolls Royce Phaeton. Motorcycles, sports cars, limousines, and trucks, and more—they\'re all here. A lot of the vehicles here may not be state-of-the-art, but they\'ll get you from point A to point B, they may help you blend in with the rest of the populace, and they\'ll save you a few nuyen while you\'re at it. Because a good shadowrunner knows how to use fancy toys, but a great shadowrunner knows how to be awesome with simpler tools.',
+		names: {
+			'de-DE': 'Vertraute Fahrzeuge'
+		},
+		releaseDate: ['2012-07-13', '2012-09-30'],
+		description: 'Grab Some Wheels and Ride\n\nIt\'s nice when you can spend the time and the money to pick the exact right vehicle to suit your needs, but time and money are two luxuries shadowrunners don\'t always have. Sometimes you need just two characteristics in a vehicle: It\'s cheap, and it moves.\nUsed Car Lotprovides an assortment of vehicles for Shadowrun so that runners can have plenty of options, from the practical, affordable Ford Americar to the ridiculously luxurious Rolls Royce Phaeton. Motorcycles, sports cars, limousines, and trucks, and more—they\'re all here. A lot of the vehicles here may not be state-of-the-art, but they\'ll get you from point A to point B, they may help you blend in with the rest of the populace, and they\'ll save you a few nuyen while you\'re at it. Because a good shadowrunner knows how to use fancy toys, but a great shadowrunner knows how to be awesome with simpler tools.',
 		gameDate: '2074-02',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Used Car Lot',
+				url: 'https://www.drivethrurpg.com/product/103890/Shadowrun:-Used-Car-Lot'
+			},
+			{
+				name: 'Vertraute Fahrzeuge',
+				url: 'https://www.drivethrurpg.com/product/106369/Shadowrun:-Vertraute-Fahrzeuge'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -3105,12 +3134,16 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Conspiracy Theories',
-		releaseDate: ['2011-11'],
-		description: 'War rages in Central America, tensions between dragons are on the rise, and the Watergate Rift has been closed in a display of power that shook the city of DeeCee to its core. To many, the world is becoming more disordered and unpredictable—but there are those who look underneath the surface chaos and see order, or even a plan. They see people and organizations who pull the strings and make the world shake, and they wonder if they can find out what these people are up to before it’s too late.\nConspiracy Theories is a deep dive into the underbelly of the Sixth World, a place filled with crackpot theories and insane ideas that would be laughable if it weren’t for the fact that some of them are most assuredly true. If they want to stay alive, shadowrunners need to know this information to keep them a step ahead of the forces that may be massing against them behind the scenes. If they want to do more than survive—if they want to prosper—they really need to know this data, because any runner worth a damn knows that manipulating people based on what they believe to be true is a great way to make a few nuyen.',
+		names: {
+			'de-DE': 'Verschwörungstheorien'
+		},
+		releaseDate: ['2011-11-20', '2012-05-11'],
+		description: 'The Tangled Web of Truth\n\nWar rages in Central America, tensions between dragons are on the rise, and the Watergate Rift has been closed in a display of power that shook the city of DeeCee to its core. To many, the world is becoming more disordered and unpredictable—but there are those who look underneath the surface chaos and see order, or even a plan. They see people and organizations who pull the strings and make the world shake, and they wonder if they can find out what these people are up to before it’s too late.\nConspiracy Theories is a deep dive into the underbelly of the Sixth World, a place filled with crackpot theories and insane ideas that would be laughable if it weren’t for the fact that some of them are most assuredly true. If they want to stay alive, shadowrunners need to know this information to keep them a step ahead of the forces that may be massing against them behind the scenes. If they want to do more than survive—if they want to prosper—they really need to know this data, because any runner worth a damn knows that manipulating people based on what they believe to be true is a great way to make a few nuyen.\nBringing together plot elements from War!, Spy Games, and the Dawn of the Artifacts series, Conspiracy Theories adds a twisted element to Shadowrun games. Conspiracy Theories is for use with Shadowrun, Twentieth Anniversary Edition.',
 		gameDate: '2073-10',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition has an aditional chapter abotu the ADL.'
 	},
 	{
 		sku: ['26207', '47000'],
@@ -3242,16 +3275,21 @@ module.exports = [
 		notes: 'The English almanac was riddled with content and formal errors that were removed by Pegasus in consultation with CGL in the German version. These include duplicate or incorrect info boxes, flags in illustrations, which did not exist at the time of the depicted scene, and incorrect coastal and borderlines.'
 	},
 	{
-		sku: ['26203'],
+		sku: ['26203', '46060'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Vice',
-		releaseDate: ['2009-12'],
-		description: 'It means you\'re doing something that the government doesn\'t want you to do. You\'d never do anything like that, right? Or would you?\nIt might be that some laws are... Misguided.\nIt\'s civil disobedience and a moral imperative to oppose those laws.\nGandhi taught us that.\nMy friends and I—we\'re here to help you make these difficult moral choices. We\'ll even provide you with a support network, if someone objects to your strong moral compass. And, hey, if everything works out, maybe all of us might come out ahead. Don\'t worry! We’ve got your back.',
+		names: {
+			'de-DE': 'Unterwelten',
+			'fr-FR': 'Vices'
+		},
+		releaseDate: ['2009-12', '2010-06'],
+		description: 'Illegal is a strong word.\n\nIt means you\'re doing something that the government doesn\'t want you to do. You\'d never do anything like that, right? Or would you?\nIt might be that some laws are... Misguided.\nIt\'s civil disobedience and a moral imperative to oppose those laws.\nGandhi taught us that.\nMy friends and I—we\'re here to help you make these difficult moral choices. We\'ll even provide you with a support network, if someone objects to your strong moral compass. And, hey, if everything works out, maybe all of us might come out ahead. Don\'t worry! We’ve got your back.',
 		gameDate: '2072-02',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Black Book Editions', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition has a translation of 10 Gangs and aditional material regarding Germany.'
 	},
 	{
 		sku: ['26211', '47030'],
@@ -3347,16 +3385,20 @@ module.exports = [
 		notes: 'The French edition also contains 2 of the Missions adventures.'
 	},
 	{
-		sku: ['26213'],
+		sku: ['26213', '47000'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Storm Front',
-		releaseDate: ['2013-03'],
+		names: {
+			'de-DE': 'Sturmfront'
+		},
+		releaseDate: ['2013-03', '2014'],
 		description: 'It’s been a tense couple of years (or couple of decades, if we’re being accurate) in the Sixth World. Aztlan and Amazonia have been slugging it out. Great dragons have turned on each other, testing old alliances and forging new ones. Governor Kenneth Brackhaven of Seattle is facing pressure unlike ever he’s ever seen, and scandals seem on the verge of overwhelming him. In Denver, a powerful dragon and an angry elf are set to butt heads in ways that will shake up the whole city—and provide new opportunities for an old enemy. And on top of that, a new plague is spreading through the world, and the denizens of JackPoint aren’t immune to its effects.',
 		gameDate: '2075-01',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting.'
 	},
 	{
 		sku: ['26212'],
@@ -3567,16 +3609,21 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26101'],
+		sku: ['26101', '46050', 'SR16'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Running Wild',
-		releaseDate: ['2009-07'],
-		description: 'Some people like to talk about the peace and tranquility of nature. Their eyes glaze over, and they rave about cool breezes, fresh air, and flittering butterflies.\nThey’re not paying attention, and that makes them easy pickings for any of the predators, including me. The Sixth World’s a place of eating or being eaten. Sometimes the critters are waiting deep in the jungle; other times they’re hiding in your bedroom closet.\nProving you’re the fittest only ends when you aren’t anymore. Know your prey—it’s the only way to catch them. But remember, you just might be something’s prey too.',
+		names: {
+			'de-DE': 'Wildwechsel - Das Critterdossier',
+			'fr-FR': 'Créatures du Sixième Monde'
+		},
+		releaseDate: ['2009-07-18', '2010-03', '2012'],
+		description: 'GO WILD!\n\nSome people like to talk about the peace and tranquility of nature. Their eyes glaze over, and they rave about cool breezes, fresh air, and flittering butterflies.\nThey’re not paying attention, and that makes them easy pickings for any of the predators, including me. The Sixth World’s a place of eating or being eaten. Sometimes the critters are waiting deep in the jungle; other times they’re hiding in your bedroom closet.\nProving you’re the fittest only ends when you aren’t anymore. Know your prey — it’s the only way to catch them. But remember, you just might be something’s prey too.\nRunning Wild is a sourcebook for Shadowrun, Fourth Edition. It presents a detailed overview of the animals, spirits, and other non-metahuman entities that dwell in the Sixth World: from mundane animals that have survived the incursions of mankind, to paranormals that have Awakened, to emergent animals that have found their own ways to embrace the Matrix, to the spirits and feral AIs that may not even acknowledge metahumanity. Game rules and mechanics are provided for these beings and their unusual abilities, but so are rules for characters to interact with, to augment, and to train the critters presented. Every living being is constantly in search of its ecological niche, Running Wild can make a campaign home to hundreds of them.',
 		gameDate: '2072-07',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'The French version has a translation of "Parazoology" and the German version has aditional animals from the ADL.'
 	},
 	{
 		sku: ['26005', '23004', '46045', 'SR05'],
@@ -7427,19 +7474,6 @@ module.exports = [
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		notes: 'German translation of Parazoology and Parazoology 2 - updated with rules for Shadowrun, 5th Edition.'
-	},
-	{
-		sku: ['47000GB'],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Sturmfront',
-		releaseDate: ['2014'],
-		description: 'Sturm zieht auf ...\nEs brodelt in den Schatten – schon seit Monaten. Viel ist in der letzten Zeit geschehen, und es lohnt sich, auf dem Laufenden zu bleiben. Sei es in den düsteren Straßenschluchten von Denver, hinter den Konzernschreibtischen von Ares oder sogar in den Gedanken bekannter Deckergrößen wie FastJack: Information ist alles. Immer.\nSturmfront ist ein Metaplotbuch für Shadowrun 5, das aktuelle Erzählstränge von Shadowrun aufgreift, weiterführt, einige beendet, andere neu beginnen lässt. Als zusammengefasste Übersetzung des amerikanischen Stormfront gibt es Einblicke in die heißesten Vorgänge der Sechsten Welt und dient als Übergang zwischen den Editionen. Beleuchtet werden unter anderem: der Drachenkrieg, Denver, Vorkommnisse um Ares, der beendete Krieg in Bogotá und neue Gefahren am Horizont. Sämtliche Plotlinien werden dabei durch Chroniken begleitet, um den maximalen Überblick zu behalten und auch bei Shadowrun 5 tief in die Schatten eintauchen zu können. Denn das nächste große Ding lässt sicherlich nicht lange auf sich warten ...',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		notes: 'German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting.'
 	},
 	{
 		sku: ['47000GC'],
