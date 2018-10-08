@@ -92,21 +92,24 @@ A Shadowrun novel by Jennifer Brozek.
 /**@type {Material[]} */
 module.exports = [
 	{
-		id: '26000',
-		sku: ['26000', '26001'],
+		sku: ['26000', '26001', '23000', '23000S', 'SR01'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'Shadowrun Fourth Edition',
-		releaseDate: ['2005-10', '2008-02'],
+		name: 'Shadowrun 4th Edition',
+		names: {
+			'de-DE': 'Shadowrun Version 4.01D',
+			'fr-FR': 'Shadowrun Quatrième Édition',
+			'jp-JP': 'シャドウラン 4th Edition'
+		},
+		releaseDate: ['2005-10', '2006-06', '2007-06-04', '2008-02'],
 		description: 'The year is 2072. Magic has returned and creatures of myth and legend walk among us as megacorps bleed the world dry. You’re a shadowrunner—a deniable asset, a corporate pawn—using bleeding-edge science and magic to make your meat body and mind better-than-flesh. Stay on the edge, and you may survive another run on the mean sprawl streets.',
 		gameDate: '2070',
 		edition: 4,
-		publisher: ['Fantasy Productions', 'Catalyst Game Labs'],
+		publisher: ['Fantasy Productions', 'Catalyst Game Labs', 'Black Book Editions', '新紀元社'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26002A',
-		sku: ['26002A', '46010', 'SR08'],
+		sku: ['26002', '46010', 'SR08'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Augmentation',
@@ -116,7 +119,7 @@ module.exports = [
 			'jp-JP': 'ーグメンテーショオン'
 		},
 		releaseDate: ['2008-08-23', '2009-01', '2011'],
-		description: 'Upgrade or Die!\n\nAugmentation is the advanced medtech rulebook for Shadowrun, Fourth Edition, covering everything you need to know about implants—including new cyberware and bioware and where to score the surgery. It provides detailed overviews of genetics and nanotechnology, from regrowing limbs to lethal cutter swarms. It also previews the bleeding-edge of medtech: bio-drones, cybermancy, and full-body cyborgs. Augmentation contains everything players and gamemasters need for implants and body modification in Shadowrun.',
+		description: 'The Shadows Have Evolved\n\nThe year is 2070. The world is not only Awakened—-it\'s wired. Cyber and bioware implants make your meat body better-than-flesh, while the wireless Matrix enhances your perceptions with hyper-real senses. Deals are made in steel and lead more often than gold or nuyen; success and failure live only a razor\'s edge apart. Creatures of myth and legend walk the streets, while the arcane skills of spellslingers are in high demand. Above it all, monolithic megacorps bleed the world dry, sabotaging each other in covert cutthroat competition as they go to war over the bottom line.\n\nYou\'re a shadowrunner, a street operative, scratching out a living on the mean sprawl streets. You may be human, elf, dwarf, ork or troll. From lethal street samurai to well-connected info brokers, spell-slinging mages or code-cracking hackers. No matter what, you\'re a professional corporate pawn or "deniable asset," you get the job done.\n\nShadowrun, Fourth Edition offers a completely new rules system that is simple, integrated and accessible. The state-of-the-art has also been advanced, introducing a new level of augmented reality, new gear, new magical discoveries, and more.\n\nThis hardcover rulebook contains all the rules gamemasters and players need to create characters and ongoing adventures set in the popular Shadowrun universe. Note that the Shadowrun, Fourth Edition will replace the Shadowrun, Third Edition rules set. Source material from previous editions will still be compatible.',
 		gameDate: '2070-08',
 		edition: 4,
 		publisher: ['Catalyst Game Labs', 'Black Book Editions', '新紀元 社', 'Pegasus Spiele'],
@@ -124,8 +127,7 @@ module.exports = [
 		notes: 'The German "Bodytech" contains the latest errata for "augmentation" as well as 5 additional cybersuites (which are twice as many as in the original).'
 	},
 	{
-		id: '26001',
-		sku: ['26004', '26001'],
+		sku: ['26001', '26004'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Street Magic',
@@ -137,7 +139,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5839',
 		sku: ['5839', '27824'],
 		category: 'novel',
 		type: 'digital',
@@ -150,7 +151,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5749',
 		sku: ['5749', '27823'],
 		category: 'novel',
 		type: 'digital',
@@ -163,7 +163,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5742',
 		sku: ['5742', '27818'],
 		category: 'novel',
 		type: 'digital',
@@ -176,7 +175,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5819',
 		sku: ['5819', '27825'],
 		category: 'novel',
 		type: 'digital',
@@ -189,7 +187,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5775',
 		sku: ['5775', '27822'],
 		category: 'novel',
 		type: 'digital',
@@ -202,7 +199,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26002X',
 		sku: ['26002X'],
 		category: 'rulebook',
 		type: 'digital',
@@ -215,11 +211,10 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26100X',
 		sku: ['26100X'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'Gamemaster Screen SR4A',
+		name: 'Game Master\'s Screen - Aniversary Edition',
 		releaseDate: ['2011-08-17'],
 		description: 'All the important Shadowrun info you need, free!\nDon\'t spend time flipping through a book to find the tables you need. When you\'re on a run, time matters, and this PDF version of the Shadowrun GM Screen gets you that info, fast!',
 		gameDate: '2070',
@@ -228,20 +223,37 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '2600A',
-		sku: ['2600A', '2600LE'],
+		sku: ['2600A', '2600LE', 'SRA01', '45000'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Shadowrun 4th Edition - 20th Anniversary Core Book',
-		releaseDate: ['2009-03'],
-		description: 'The year is 2072. Magic has returned and creatures of myth and legend walk among us as megacorps bleed the world dry. You’re a shadowrunner—a deniable asset, a corporate pawn—using bleeding-edge science and magic to make your meat body and mind better-than-flesh. Stay on the edge, and you may survive another run on the mean sprawl streets.',
+		names: {
+			'de-DE': 'Shadowrun Grundregelwerk 4. Edition',
+			'fr-FR': 'Shadowrun Édition 20e anniversaire',
+			'jp-JP': 'シャドウラン 20th Anniversary Edition'
+		},
+		releaseDate: ['2009-03-12', '2009-09-03', '2010', '2012-09-10'],
+		description: 'The year is 2072. Magic has returned and creatures of myth and legend walk among us as megacorps bleed the world dry. You\'re a shadowrunner—a deniable asset, a corporate pawn—using bleeding-edge science and magic to make your meat body and mind better-than-flesh. Stay on the edge, and you may survive another run on the mean sprawl streets.\nShadowrun, Fourth Edition offers a completely new rules system that is simple, integrated, and accessible. The state-of-the-art has also been advanced, introducing a new level of augmented reality, new gear, and new magical discoveries. This full-color rulebook contains all the rules gamemasters and players need to create characters and ongoing adventures set in the popular Shadowrun universe.\nShadowrun, Fourth Edition 20th Anniversary Core Rulebook is fully compatible with all Shadowrun, Fourth Edition books.',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Shadowrun Grundregelwerk 4. Edition',
+				url: 'https://www.drivethrurpg.com/product/95839/Shadowrun-4-Grundregelwerk'
+			},
+			{
+				name: 'Shadowrun Édition 20e anniversaire',
+				url: 'https://www.drivethrurpg.com/product/94212/Shadowrun-4-20-ans'
+			},
+			{
+				name: 'Shadowrun 4th Edition - 20th Anniversary Core Book',
+				url: 'https://www.drivethrurpg.com/product/60553/Shadowrun:-4th-Ed.-20th-Anniversary-Core-Rulebook'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', '新紀元社'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26600',
 		sku: ['26600'],
 		category: 'rulebook',
 		type: 'digital',
@@ -264,37 +276,62 @@ module.exports = [
 		notes: 'The German edition of Street Magic incorporates the translation of Digital Grimoire.'
 	},
 	{
-		id: '26S013',
 		sku: ['26S013'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Safehouses',
-		releaseDate: ['2012-02'],
-		description: 'If it hasn’t happened to you yet, it will. A run will go south. People will be looking for you. Their eyes will be everywhere—your home, your friends’ houses, the places you hang out, even the spots where you buy your soykaf. They’re looking for you, waiting for you, and when they find you, they’re not going to talk. It’ll be a single shot, or a flash of sharp steel, and you’ll be done.\nTo avoid this, you need to lay low. You need a place where no one will look for you, and where you’ll have enough of life’s basics to get you by. Don’t know where to find such a place? You’re in luck, chummer—we’ve got the guide for you. Whether your acquiring and stocking your own bolt hole or engaging professional safehouse managers, we’ve got the info you need to live to fight another day.',
+		names: {
+			'de-DE': 'Safehouses - Wenn der Boden zu heiß wird'
+		},
+		releaseDate: ['2012-02-15', '2012-08-18'],
+		description: 'Hiding from the Heat \n\nIf it hasn’t happened to you yet, it will. A run will go south. People will be looking for you. Their eyes will be everywhere—your home, your friends’ houses, the places you hang out, even the spots where you buy your soykaf. They’re looking for you, waiting for you, and when they find you, they’re not going to talk. It’ll be a single shot, or a flash of sharp steel, and you’ll be done.\nTo avoid this, you need to lay low. You need a place where no one will look for you, and where you’ll have enough of life’s basics to get you by. Don’t know where to find such a place? You’re in luck, chummer—we’ve got the guide for you. Whether your acquiring and stocking your own bolt hole or engaging professional safehouse managers, we’ve got the info you need to live to fight another day.',
 		gameDate: '2074-08',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Safehouses (English)',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=99534'
+			},
+			{
+				name: 'Safehouses (German)',
+				url: 'https://www.drivethrurpg.com/product/104930/Shadowrun:-Safehouses'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26005A',
-		sku: ['26005A'],
+		sku: ['26005', '46030', 'SR13'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Runner\'s Companion',
-		releaseDate: ['2008-08'],
+		names: {
+			'de-DE': 'Runnerkompendium',
+			'fr-FR': 'Le Guide du runner',
+			'jp-JP': 'ランナーズ·コンパニオン'
+		},
+		releaseDate: ['2008-08-20', '2009-10-22', '2015-04-30'],
 		description: 'Life in the shadows has never been as dangerous, and runners need every edge they can get. Runner’s Companion opens up a world of expanded options for Shadowrun players with dozens of New Qualities, Advanced Contact and Lifestyle Rules, and handy tips on running, travelling and smuggling, and operating in a surveillance society.',
 		gameDate: '2071-07',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Runner\'s Companion',
+				url: 'http://drivethrurpg.com/product/57426/Shadowrun-Runners-Companion'
+			},
+			{
+				name: 'Runnerkompendium',
+				url: 'http://drivethrurpg.com/product/95845/Shadowrun-Runnerkompendium'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', '新紀元 社'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26002',
 		sku: ['26002'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'GM\'s screen',
+		name: 'Game Master\'s Screen 4th Edition',
 		releaseDate: ['2006-03'],
 		description: 'The Shadowrun, Fourth Edition Gamemaster\'s Screen & Contacts and Adventures booklet eBook version contains the following documents:\nThe 32 page Contacts and Adventures booklet, which features a variety of NPCs with complete stats; over 30 plot hooks covering a wide range of shadowrunning possibilities; the SR3 to SR4 character conversion rules, and two pages of additional tables that we couldn\'t squeeze onto the GM Screen itself.\nThe full GM Screen, front and back, in one giant 33 by 11 inch file.\nAll four panels of the GM Screen, plus the two pages of tables from the Contacts & Adventures booklet, in easily printed pages formatted for Letter sized paper.',
 		gameDate: '2070',
@@ -303,7 +340,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26004',
 		sku: ['26004'],
 		category: 'rulebook',
 		type: 'digital',
@@ -316,7 +352,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26003A',
 		sku: ['26003', 'SR11'],
 		category: 'rulebook',
 		type: 'digital',
@@ -335,7 +370,6 @@ module.exports = [
 		notes: 'The German edition has aditional equipamente regarding the ADL.'
 	},
 	{
-		id: '5741',
 		sku: ['5741', '27835'],
 		category: 'novel',
 		type: 'digital',
@@ -348,7 +382,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5542',
 		sku: ['5542', '27810'],
 		category: 'novel',
 		type: 'digital',
@@ -361,7 +394,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5540',
 		sku: ['5540', '27834'],
 		category: 'novel',
 		type: 'digital',
@@ -374,7 +406,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5627',
 		sku: ['5627', '27811'],
 		category: 'novel',
 		type: 'digital',
@@ -387,7 +418,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5594',
 		sku: ['5594'],
 		category: 'novel',
 		type: 'digital',
@@ -400,7 +430,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5539',
 		sku: ['5539'],
 		category: 'novel',
 		type: 'digital',
@@ -413,7 +442,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5495',
 		sku: ['5495'],
 		category: 'novel',
 		type: 'digital',
@@ -426,7 +454,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5448',
 		sku: ['5448', '27836'],
 		category: 'novel',
 		type: 'digital',
@@ -439,7 +466,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5537',
 		sku: ['5537', '27809'],
 		category: 'novel',
 		type: 'digital',
@@ -452,7 +478,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5496',
 		sku: ['5496', '27806'],
 		category: 'novel',
 		type: 'digital',
@@ -465,7 +490,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5628',
 		sku: ['5628', '27813'],
 		category: 'novel',
 		type: 'digital',
@@ -478,7 +502,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5712',
 		sku: ['5712'],
 		category: 'novel',
 		type: 'digital',
@@ -491,7 +514,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5711',
 		sku: ['5711', '27815'],
 		category: 'novel',
 		type: 'digital',
@@ -504,7 +526,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5714',
 		sku: ['5714'],
 		category: 'novel',
 		type: 'digital',
@@ -517,7 +538,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5713',
 		sku: ['5713', '27819'],
 		category: 'novel',
 		type: 'digital',
@@ -530,7 +550,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5710',
 		sku: ['5710'],
 		category: 'novel',
 		type: 'digital',
@@ -543,7 +562,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5630',
 		sku: ['5630', '27833'],
 		category: 'novel',
 		type: 'digital',
@@ -556,7 +574,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5629',
 		sku: ['5629', '27814'],
 		category: 'novel',
 		type: 'digital',
@@ -569,7 +586,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5709',
 		sku: ['5709', '27816'],
 		category: 'novel',
 		type: 'digital',
@@ -582,7 +598,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5631',
 		sku: ['5631', '27817'],
 		category: 'novel',
 		type: 'digital',
@@ -595,7 +610,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27S0405',
 		sku: ['27S0405'],
 		category: 'rulebook',
 		type: 'digital',
@@ -608,8 +622,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7000',
-		sku: ['7000', '7001', '10660', '25000', 'LFSH001', ' LFSH001L'],
+		sku: ['7000', '7001', '10660', '25000', 'LFSH001', 'LFSH001L'],
 		category: 'rulebook',
 		type: 'scan',
 		name: 'Shadowrun Third',
@@ -627,7 +640,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27502',
 		sku: ['27502'],
 		category: 'rulebook',
 		type: 'digital',
@@ -640,7 +652,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27010',
 		sku: ['27010'],
 		category: 'rulebook',
 		type: 'digital',
@@ -653,7 +664,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27010X',
 		sku: ['27010X'],
 		category: 'rulebook',
 		type: 'digital',
@@ -666,7 +676,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27500',
 		sku: ['27500'],
 		category: 'rulebook',
 		type: 'digital',
@@ -679,7 +688,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27011',
 		sku: ['27011'],
 		category: 'rulebook',
 		type: 'digital',
@@ -692,11 +700,10 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7002',
 		sku: ['7002', '25008'],
 		category: 'rulebook',
 		type: 'scan',
-		name: 'GM Screen',
+		name: 'Game Master\'s Screen 3rd Edition',
 		releaseDate: ['1998-12', '2004-07'],
 		description: 'This gamemaster\'s aid contains all the charts and tables needed to run Shadowrun in a convenient, easy-to-use format. For use with Shadowrun Third Edition.',
 		gameDate: '2060',
@@ -705,7 +712,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7126',
 		sku: ['7126', '10663', '25001'],
 		category: 'rulebook',
 		type: 'scan',
@@ -724,7 +730,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7108',
 		sku: ['7108', '10717'],
 		category: 'rulebook',
 		type: 'scan',
@@ -741,11 +746,10 @@ module.exports = [
 		notes: 'The german version of Rigger Black Book updated to the rules of the 2nd edition of Shadowrun. It also contains additional vehicles from other sourcebooks that had been published between the original release of the Rigger Black Book and 1996, for example Corporate Security Handbook and Fields of Fire.'
 	},
 	{
-		id: '7902',
 		sku: ['7902', '10701', '5002', 'S11'],
 		category: 'rulebook',
 		type: 'scan',
-		name: 'Game Master\'s Screen Second Edition',
+		name: 'Game Master\'s Screen 2nd Edition',
 		names: {
 			'de-DE': 'Spielleiterschirm (zweite Edition)',
 			'fr-FR': 'Écran deuxième édition',
@@ -762,7 +766,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7902X',
 		sku: ['7902X', 'S11', '92542'],
 		category: 'rulebook',
 		type: 'scan',
@@ -780,7 +783,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7900',
 		sku: ['7900', '7901', '10700', '1273', '4829172398'],
 		category: 'rulebook',
 		type: 'scan',
@@ -805,7 +807,6 @@ module.exports = [
 		notes: 'The japanese edition has an aditional 10 pages about the city of Tokyo and the shadows of Japan.'
 	},
 	{
-		id: '7107',
 		sku: ['7107'],
 		category: 'rulebook',
 		type: 'scan',
@@ -819,7 +820,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7101',
 		sku: ['7100', '7101', '00900', '10700'],
 		category: 'rulebook',
 		type: 'scan',
@@ -838,7 +838,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7003',
 		sku: ['7003'],
 		category: 'rulebook',
 		type: 'digital',
@@ -851,7 +850,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7106',
 		sku: ['7106'],
 		category: 'rulebook',
 		type: 'scan',
@@ -864,7 +862,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7104',
 		sku: ['7104', '10702'],
 		category: 'rulebook',
 		type: 'scan',
@@ -880,8 +877,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7104X',
-		sku: ['7104X', 'S14', '10702', '00100301'],
+		sku: ['7104', 'S14', '10702', '00100301'],
 		category: 'rulebook',
 		type: 'scan',
 		name: 'Street Samurai Catalog (Revised)',
@@ -903,7 +899,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '27007',
 		sku: ['27007'],
 		category: 'rulebook',
 		type: 'digital',
@@ -916,7 +911,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S016',
 		sku: ['26S016'],
 		category: 'rulebook',
 		type: 'digital',
@@ -942,7 +936,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S011',
 		sku: ['26S011'],
 		category: 'rulebook',
 		type: 'digital',
@@ -955,7 +948,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S027',
 		sku: ['26S027'],
 		category: 'rulebook',
 		type: 'digital',
@@ -968,20 +960,31 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S021',
 		sku: ['26S021'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'MilSpec Tech 2',
-		releaseDate: ['2012-07'],
+		names: {
+			'de-DE': 'MilSpec Tech-Katalog 2'
+		},
+		releaseDate: ['2012-07', '2012-10-28'],
 		description: 'Sometimes you look at a catalog to see if there\'s anything in it that you want. And sometimes you look to see what you need to avoid.\nYou\'ll find both types of things in here. The tech heads of the Sixth World remain busy, coming up with more ways to slaughter metahumans with maximum efficiency. And they have plenty of battlegrounds in the world where they can test their toys out. There are things in here that shadowrunners would be exceedingly lucky to get their hands on, and things whose very appearance serves to tell them they’re having a very bad day indeed. From automated strike drones to nearly invisible tactical aircraft, from the ground-clearing Dassault Zeta Bravo to the drone killing Bridgette Tactical Vehicle, Mil Spec Tech 2 has the latest and greatest tools of war – along with a host of missiles to keep anyone in a war zone on their toes.',
 		gameDate: '2074-07',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'MilSpec Tech 2',
+				url: 'https://www.drivethrurpg.com/product/104143/Shadowrun:-Mil-Spec-Tech-2'
+			},
+			{
+				name: 'MilSpec Tech-Katalog 2',
+				url: 'https://www.drivethrurpg.com/product/107465/Shadowrun:-MilSpecTech-Katalog-2'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S010',
 		sku: ['26S010'],
 		category: 'rulebook',
 		type: 'digital',
@@ -997,7 +1000,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S001',
 		sku: ['26S001'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1010,7 +1012,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S001A',
 		sku: ['26S001A'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1023,7 +1024,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S009',
 		sku: ['26S009'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1049,20 +1049,31 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S002',
 		sku: ['26S002'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'MilSpecTech',
-		releaseDate: ['2011-01'],
+		name: 'MilSpec Tech',
+		names: {
+			'de-DE': 'MilSpec Tech-Katalog'
+		},
+		releaseDate: ['2011-01', '2012-09-11'],
 		description: 'The corporations of the Sixth World love a good challenge—as long as it suits them. Ending world hunger? Not interested. Eliminating poverty? There’s no margin in that. Finding creative and more effective ways to blow things up and/or reduce them to rubble? That, they can do.\nWar is raging on the Aztlan-Amazonia border, and there are plenty of other places in the world where people are willing to fork over piles of nuyen to buy that tank or fighter that would help them sleep better at night. There is good demand for military technology, and the corps are stepping up with the supply.',
 		gameDate: '2073-02',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'MilSpec Tech',
+				url: 'https://www.drivethrurpg.com/product_info.php?products_id=87804'
+			},
+			{
+				name: 'MilSpec Tech-Katalog',
+				url: 'https://www.drivethrurpg.com/product/105737/Shadowrun:-MilSpecTech-Katalog'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S035',
 		sku: ['26S035'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1075,7 +1086,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27004',
 		sku: ['27004', '27400S'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1088,7 +1098,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27003',
 		sku: ['27003'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1101,7 +1110,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27003X',
 		sku: ['27003X'],
 		category: 'misc',
 		type: 'print',
@@ -1116,7 +1124,6 @@ module.exports = [
 		notes: 'Set of cards available at Gen Con 2014.'
 	},
 	{
-		id: '27006',
 		sku: ['27006'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1129,7 +1136,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27005',
 		sku: ['27005'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1142,7 +1148,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27002',
 		sku: ['27002'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1155,7 +1160,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27002X',
 		sku: ['27002X'],
 		category: 'misc',
 		type: 'physical',
@@ -1170,7 +1174,6 @@ module.exports = [
 		notes: 'Print only set of gear cards, Available at Gen Con 2014'
 	},
 	{
-		id: '26S040',
 		sku: ['26S040'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1183,7 +1186,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S036',
 		sku: ['26S036'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1196,7 +1198,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27000',
 		sku: ['27000', '27000LE'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1209,7 +1210,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S007',
 		sku: ['26S007'],
 		category: 'rulebook',
 		type: 'digital',
@@ -1225,7 +1225,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5445',
 		sku: ['5445', '27807'],
 		category: 'novel',
 		type: 'digital',
@@ -1238,7 +1237,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5125',
 		sku: ['5125', '27801'],
 		category: 'novel',
 		type: 'digital',
@@ -1251,7 +1249,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5078',
 		sku: ['5078', '27800'],
 		category: 'novel',
 		type: 'digital',
@@ -1264,7 +1261,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5145',
 		sku: ['5145', '27802'],
 		category: 'novel',
 		type: 'digital',
@@ -1277,7 +1273,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5143',
 		sku: ['5143', '7601'],
 		category: 'novel',
 		type: 'digital',
@@ -1290,7 +1285,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '46116-9',
 		sku: ['46116-9', '27832'],
 		category: 'novel',
 		type: 'digital',
@@ -1303,7 +1297,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '46076-6',
 		sku: ['46076-6', '27830'],
 		category: 'novel',
 		type: 'digital',
@@ -1316,8 +1309,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '46063-4',
-		sku: ['46063-4', '27828'],
+		sku: ['46063-4', '27829'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Poison Agendas',
@@ -1329,7 +1321,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '46101-0',
 		sku: ['46101-0', '27828'],
 		category: 'novel',
 		type: 'digital',
@@ -1342,7 +1333,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '46083-9',
 		sku: ['46083-9', '27827'],
 		category: 'novel',
 		type: 'digital',
@@ -1355,7 +1345,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5199',
 		sku: ['5199'],
 		category: 'novel',
 		type: 'digital',
@@ -1368,7 +1357,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5365',
 		sku: ['5365', '27808'],
 		category: 'novel',
 		type: 'digital',
@@ -1381,7 +1369,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5313',
 		sku: ['5313', '27805'],
 		category: 'novel',
 		type: 'digital',
@@ -1394,7 +1381,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5427',
 		sku: ['5427'],
 		category: 'novel',
 		type: 'digital',
@@ -1407,7 +1393,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5367',
 		sku: ['5367'],
 		category: 'novel',
 		type: 'digital',
@@ -1420,7 +1405,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5310',
 		sku: ['5310', '27803'],
 		category: 'novel',
 		type: 'digital',
@@ -1433,7 +1417,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5218',
 		sku: ['5218'],
 		category: 'novel',
 		type: 'digital',
@@ -1446,7 +1429,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5210',
 		sku: ['5210'],
 		category: 'novel',
 		type: 'digital',
@@ -1459,7 +1441,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5302',
 		sku: ['5302'],
 		category: 'novel',
 		type: 'digital',
@@ -1472,7 +1453,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '5220',
 		sku: ['5220', '27804'],
 		category: 'novel',
 		type: 'digital',
@@ -1485,7 +1465,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '46058-8',
 		sku: ['46058-8'],
 		category: 'novel',
 		type: 'digital',
@@ -1498,7 +1477,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26854',
 		sku: ['26854'],
 		category: 'novel',
 		type: 'digital',
@@ -1511,7 +1489,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26853',
 		sku: ['26853'],
 		category: 'novel',
 		type: 'digital',
@@ -1524,7 +1501,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26856',
 		sku: ['26856'],
 		category: 'novel',
 		type: 'digital',
@@ -1537,7 +1513,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26855',
 		sku: ['26855'],
 		category: 'novel',
 		type: 'digital',
@@ -1550,7 +1525,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26852',
 		sku: ['26852'],
 		category: 'novel',
 		type: 'digital',
@@ -1563,7 +1537,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26851',
 		sku: ['26851'],
 		category: 'novel',
 		type: 'digital',
@@ -1576,7 +1549,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26850',
 		sku: ['26850'],
 		category: 'novel',
 		type: 'digital',
@@ -1589,7 +1561,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26858',
 		sku: ['26858'],
 		category: 'novel',
 		type: 'digital',
@@ -1602,7 +1573,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S038',
 		sku: ['26S038'],
 		category: 'novel',
 		type: 'digital',
@@ -1615,7 +1585,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S030',
 		sku: ['26S030'],
 		category: 'novel',
 		type: 'digital',
@@ -1628,7 +1597,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S047',
 		sku: ['26S047'],
 		category: 'novel',
 		type: 'digital',
@@ -1641,7 +1609,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S041',
 		sku: ['26S041'],
 		category: 'novel',
 		type: 'digital',
@@ -1654,7 +1621,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26NV002',
 		sku: ['26NV002'],
 		category: 'novel',
 		type: 'digital',
@@ -1667,7 +1633,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26871',
 		sku: ['26871'],
 		category: 'novel',
 		type: 'digital',
@@ -1680,7 +1645,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26862',
 		sku: ['26862'],
 		category: 'novel',
 		type: 'digital',
@@ -1693,7 +1657,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26NV002A',
 		sku: ['26NV002A'],
 		category: 'novel',
 		type: 'digital',
@@ -1706,7 +1669,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26NV001',
 		sku: ['26NV001'],
 		category: 'novel',
 		type: 'digital',
@@ -1719,7 +1681,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S048',
 		sku: ['26S048'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1732,7 +1693,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S046',
 		sku: ['26S046'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1745,7 +1705,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27008',
 		sku: ['27008'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1758,7 +1717,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S050',
 		sku: ['26S050'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1771,7 +1729,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S044',
 		sku: ['26S044'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1784,7 +1741,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S042',
 		sku: ['26S042'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1797,7 +1753,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S038A',
 		sku: ['26S038A'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1810,7 +1765,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S043A',
 		sku: ['26S043A'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1823,7 +1777,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S043',
 		sku: ['26S043'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1836,7 +1789,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27009',
 		sku: ['27009'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1849,7 +1801,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7105',
 		sku: ['7105', '10713'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -1866,7 +1817,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7103',
 		sku: ['7103', '10704'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -1883,7 +1833,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7110',
 		sku: ['7110', '10714', 'S15'],
 		category: 'rulebook',
 		type: 'scan',
@@ -1902,7 +1851,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7109',
 		sku: ['7109'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -1915,7 +1863,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27451',
 		sku: ['27451'],
 		category: 'mission',
 		type: 'digital',
@@ -1928,7 +1875,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27201',
 		sku: ['27201'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1941,7 +1887,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27200',
 		sku: ['27200'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1954,7 +1899,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27300',
 		sku: ['27300'],
 		category: 'mission',
 		type: 'digital',
@@ -1967,7 +1911,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27202',
 		sku: ['27202'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1980,7 +1923,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S037',
 		sku: ['26S037'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -1993,7 +1935,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S012',
 		sku: ['26S012'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2006,7 +1947,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S006',
 		sku: ['26S006'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2019,7 +1959,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S015',
 		sku: ['26S015'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2032,33 +1971,46 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S014',
 		sku: ['26S014'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Magical Societies',
-		releaseDate: ['2012-06'],
-		description: 'Dear Applicant:\nThank you for applying for membership in our revered magical society. We are certain you understand that we receive more applications than we can accept, due in part to the prestige we enjoy in the Sixth World. We are a group who attracts notice. The mundane citizens of the world look at us with suspicion, while the Awakened look at us with envy, for they believe that we harbor dark secrets and world-changing schemes, and it of course is quite possible that they are right.\nSo we understand why you would seek to join us. We hope you can show us something special. We hope you can show us something new. We hope you can give us a reason why you should associate with our members by showing us what we can gain from having you among us. If you think first about what you can give, then you will have the opportunity to think about what you can get. Of course, if the rumors about us are true, the answer to that last item is simple: the world.\nWe look forward to your trial, and we hope you survive it. Should you wish, you may cancel that ordeal and instead attempt to join one of the other, lesser magical societies in the world. If you believe you can be satisfied with that.\nWe would wish you luck, but if you are skilled, you should not need it.',
+		names: {
+			'de-DE': 'Magische Gesellschaften'
+		},
+		releaseDate: ['2012-06', '2012-10-09'],
+		description: 'Step Up\n\nDear Applicant:\nThank you for applying for membership in our revered magical society. We are certain you understand that we receive more applications than we can accept, due in part to the prestige we enjoy in the Sixth World. We are a group who attracts notice. The mundane citizens of the world look at us with suspicion, while the Awakened look at us with envy, for they believe that we harbor dark secrets and world-changing schemes, and it of course is quite possible that they are right.\nSo we understand why you would seek to join us. We hope you can show us something special. We hope you can show us something new. We hope you can give us a reason why you should associate with our members by showing us what we can gain from having you among us. If you think first about what you can give, then you will have the opportunity to think about what you can get. Of course, if the rumors about us are true, the answer to that last item is simple: the world.\nWe look forward to your trial, and we hope you survive it. Should you wish, you may cancel that ordeal and instead attempt to join one of the other, lesser magical societies in the world. If you believe you can be satisfied with that.\nWe would wish you luck, but if you are skilled, you should not need it.',
 		gameDate: '2074-05',
 		edition: 4,
+		links: [
+			{
+				name: 'Magical Societies',
+				url: 'https://www.drivethrurpg.com/product/103145/Shadowrun:-Magical-Societies'
+			},
+			{
+				name: 'Magische Gesellschaften',
+				url: 'https://www.drivethrurpg.com/product/106637/Shadowrun:-Magische-Gesellschaften'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S003',
 		sku: ['26S003'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Parazoology',
-		releaseDate: ['2011-03'],
+		names: {
+			'de-DE': 'Parazoologie'
+		},
+		releaseDate: ['2011-03', '2011-10-20'],
 		description: 'Beware the Beasts! The Awakening had a dramatic effect on the world, and those effects have not stopped shaking things up. Across the Sixth World, magic and other environmental factors continue to twist and distort all variety of living things, and the results can be deadly—or useful, to those who know how to harness the powers let loose in the animal kingdom. Parazoology brings several critters from earlier editions of Shadowrun into Fourth Edition, while also introducing brand-new beasts. Inside you’ll find the stealthy and predatory cactus cat, the mind-altering stone toad, the horrific sea wolf, and twenty-seven other critters. Complete with full-color illustrations and game statistics for every beast, Parazoology provides a host of challenges, dangers, and potential resources for your Shadowrun game.',
 		gameDate: '2072-08',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26504',
 		sku: ['26504'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2077,7 +2029,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26501',
 		sku: ['26501'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2090,7 +2041,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26651',
 		sku: ['26651'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2103,7 +2053,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26602',
 		sku: ['26602'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2116,7 +2065,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S017',
 		sku: ['26S017'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2132,7 +2080,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S032',
 		sku: ['26S032'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2145,20 +2092,24 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S026',
 		sku: ['26S026'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Montreal 2074',
 		releaseDate: ['2012-12'],
-		description: 'Bikers and go-gangs roam the streets of Montreal in 2074. Organized crime outfits struggle for territory. And neo-anarchists add spice and danger to the streets. All this would seem to be nothing more than lawless chaos except for one thing—money. Cheap real estate and savvy moves by the megacorporations have brought some cash into town, and a new city is being built on the remains of the old. And as every runner knows, when you shine the light of money onto the darkness of a ruined city, you get one thing: shadows.\nMontreal 2074 gives adventurous runners the chance to take their talents to a new locale, doing business on the isle of Montreal. Whether they are dodging the gangs of the West Island or looking to bargain with the Mafiosi of Saint Leonard, runners will find plenty of opportunities in Montreal. They just need to make sure they don’t end up as part of the piles of rubble—and they also need to watch out for the fast, brutal group known as Les Frères Chasseurs.\nMontreal 2074 contains information on neighborhoods, gangs, and activities that bring the city to life in the Sixth World setting. With plot hooks and NPC stats, the book provides everything players and gamemasters need to take a trip to the Great White North.',
+		description: 'Great White Shadows\n\nBikers and go-gangs roam the streets of Montreal in 2074. Organized crime outfits struggle for territory. And neo-anarchists add spice and danger to the streets. All this would seem to be nothing more than lawless chaos except for one thing—money. Cheap real estate and savvy moves by the megacorporations have brought some cash into town, and a new city is being built on the remains of the old. And as every runner knows, when you shine the light of money onto the darkness of a ruined city, you get one thing: shadows.\nMontreal 2074 gives adventurous runners the chance to take their talents to a new locale, doing business on the isle of Montreal. Whether they are dodging the gangs of the West Island or looking to bargain with the Mafiosi of Saint Leonard, runners will find plenty of opportunities in Montreal. They just need to make sure they don’t end up as part of the piles of rubble—and they also need to watch out for the fast, brutal group known as Les Frères Chasseurs.\nMontreal 2074 contains information on neighborhoods, gangs, and activities that bring the city to life in the Sixth World setting. With plot hooks and NPC stats, the book provides everything players and gamemasters need to take a trip to the Great White North.',
 		gameDate: '2074-12',
 		edition: 4,
+		links: [
+			{
+				name: 'Montreal 2074',
+				url: 'https://www.drivethrurpg.com/product/109297/Shadowrun:-Montreal-2074'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S034',
 		sku: ['26S034'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2171,20 +2122,24 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S033',
 		sku: ['26S033'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Parazoology 2',
 		releaseDate: ['2013-08'],
-		description: 'Natural Born Killers!\nSome shadowrunners long to escape the dirt and danger of the Sixth World’s sprawls for the supposed peace and tranquility of nature. Thing is, the ones that actually try it generally find themselves quickly scurrying back to the city once they discover what’s waiting for them out there in the wild. From the sharp-toothed, lightning-fast ammit to the sneaky, venomous greater dancing white lady, nature in the Sixth World is full of ways to kill the unsuspecting and incautious.\nParazoology 2 is here to make sure shadowrunners are prepared for the dangers that lie in wait. With full details on dozens of Sixth World critters as well as firsthand accounts of encounters with mysterious creatures in their natural habitats, Parazoology 2 is a critical book for runners making their way into the wilds—even if that means the dark alleys just down the road.',
+		description: 'Natural Born Killers!\n\nSome shadowrunners long to escape the dirt and danger of the Sixth World’s sprawls for the supposed peace and tranquility of nature. Thing is, the ones that actually try it generally find themselves quickly scurrying back to the city once they discover what’s waiting for them out there in the wild. From the sharp-toothed, lightning-fast ammit to the sneaky, venomous greater dancing white lady, nature in the Sixth World is full of ways to kill the unsuspecting and incautious.\nParazoology 2 is here to make sure shadowrunners are prepared for the dangers that lie in wait. With full details on dozens of Sixth World critters as well as firsthand accounts of encounters with mysterious creatures in their natural habitats, Parazoology 2 is a critical book for runners making their way into the wilds—even if that means the dark alleys just down the road.',
 		gameDate: '2075-08',
 		edition: 4,
+		links: [
+			{
+				name: 'Parazoology 2',
+				url: 'https://www.drivethrurpg.com/product/118468/Shadowrun-Parazoology-2'
+			}
+		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S025',
 		sku: ['26S025'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2197,7 +2152,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S019',
 		sku: ['26S019'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2210,7 +2164,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S018',
 		sku: ['26S018'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2229,7 +2182,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S024',
 		sku: ['26S024'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2242,20 +2194,31 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S020',
 		sku: ['26S020'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Parageology',
-		releaseDate: ['2012-11'],
+		names: {
+			'de-DE': 'Parageologie'
+		},
+		releaseDate: ['2012-11', '2015-02-16'],
 		description: 'When you’re a shadowrunner, you look for every ally you can get, any advantage you can grab. Which means that if the ground beneath your feet can either help you or hurt the other guy, you’re going to find a way to make that happen.\nThe earth is full of magic. Mana lines wriggle and writhe in different locales, and strange elements bubble up from the core of the planet. Some areas boost magic to seemingly impossible heights, while others drain it away, sucking mana into nothingness. There are powers out there, just waiting for you to call on—powers that may also be waiting to swallow you whole.',
 		gameDate: '2074-11',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Parageology',
+				url: 'https://www.drivethrurpg.com/product/108434/Shadowrun-Parageology'
+			},
+			{
+				name: 'Parageologie',
+				url: 'https://www.drivethrurpg.com/product/144638/'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7214',
 		sku: ['7214'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2269,7 +2232,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7213',
 		sku: ['7213'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2283,7 +2245,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7216',
 		sku: ['7216', '10657', '25009'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2300,7 +2261,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7215',
 		sku: ['7215'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2314,7 +2274,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7212',
 		sku: ['7212'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2328,7 +2287,6 @@ module.exports = [
 		notes: 'This is a box set with two books: one for players and another for GMs.'
 	},
 	{
-		id: '7209',
 		sku: ['7209'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2342,7 +2300,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7208',
 		sku: ['7208', '10723'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2360,7 +2317,6 @@ module.exports = [
 		notes: 'This is the German translation of the The Neo-Anarchist\'s Guide to Real Life sourcebook for Shadowrun, 2nd Edition. It misses two chapters of the original publication ("One-way Communication" and "Guarding the Till")'
 	},
 	{
-		id: '7211',
 		sku: ['7211'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2377,7 +2333,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7210',
 		sku: ['7210'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2393,7 +2348,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7219',
 		sku: ['7219', '10756'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2409,7 +2363,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27110',
 		sku: ['27110'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2422,7 +2375,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7207',
 		sku: ['7207'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2436,7 +2388,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7118',
 		sku: ['7118', '10735'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2453,7 +2404,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7117',
 		sku: ['7117'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2466,7 +2416,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7120',
 		sku: ['7120', '10732'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2482,7 +2431,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7119',
 		sku: ['7119', '10722'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2498,7 +2446,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7116',
 		sku: ['7116'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2511,7 +2458,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7113',
 		sku: ['7113', '10724'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2528,7 +2474,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7112',
 		sku: ['7112', 'S16', '2-7408-0145-9'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2546,7 +2491,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7115',
 		sku: ['7115'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2559,7 +2503,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7114',
 		sku: ['7114', '10720'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2576,7 +2519,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7121',
 		sku: ['7121'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2589,7 +2531,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7203',
 		sku: ['7203'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2602,7 +2543,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7202',
 		sku: ['7202'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2616,7 +2556,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7206',
 		sku: ['7206'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2632,7 +2571,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7204',
 		sku: ['7204'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2645,7 +2583,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10708',
 		sku: ['10708'],
 		category: 'sourcebook',
 		type: 'ocr',
@@ -2659,7 +2596,6 @@ module.exports = [
 		notes: 'In the English translation "Germany Sourcebook" the following chapters are missing from the original "Germany in the Shadow":\n\t- "The eyes of the Riggers" - short story / novel excerpt\n\t- "Hamburg: Venice of the North"\n\t- "Connections"\n\t- "Archetypes"\n\t- "Equipment" and\n\t- the map of the ADL\n\nSome of the other chapters are arranged and arranged in completely different order. In addition, the English translation also contains a glossary with pronunciation tips and the chapter "Game Information" In addition, almost all inGame advertising of the German original (including the color pages) was replaced by completely different advertisements, and also replaced part of the original Shadowtalks to certain, particularly bizarre ideas of German authors (such as the " Gore " in Berlin) to relativize.'
 	},
 	{
-		id: '10738',
 		sku: ['10738'],
 		category: 'sourcebook',
 		type: 'ocr',
@@ -2673,7 +2609,6 @@ module.exports = [
 		notes: 'The German version of The Lands of Promisse (Tír Tairngire & Tír na nÓg), contains the elemental parts of the original issues of Tir Tairngire, Tír na nÓg and as a world first publication a view into Pomorya, the german elvenstate.'
 	},
 	{
-		id: '10728',
 		sku: ['10728'],
 		category: 'sourcebook',
 		type: 'ocr',
@@ -2687,7 +2622,6 @@ module.exports = [
 		notes: 'Combines material of Native American Nations Volumes 1 & 2 as well as the Neo-Anarchists Guide to North America into one volume. Not included are the Native American Nation\'s adventures and the description of California Free State and San Francisco.'
 	},
 	{
-		id: '10730',
 		sku: ['10730'],
 		category: 'mission',
 		type: 'print',
@@ -2702,7 +2636,6 @@ module.exports = [
 		notes: 'A German adventure book with 4 short-adventures.'
 	},
 	{
-		id: '10709',
 		sku: ['10709'],
 		category: 'mission',
 		type: 'print',
@@ -2717,7 +2650,6 @@ module.exports = [
 		notes: '"Schlagschatten" (Drop Shadow) is a German Shadowrun adventure collection set in the Germany of 2053. It contains three adventures.'
 	},
 	{
-		id: '10757',
 		sku: ['10757'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2731,7 +2663,6 @@ module.exports = [
 		notes: 'This sourcebook is the German translation of two original Shadowrun titles: Threats and Threats 2'
 	},
 	{
-		id: '22004',
 		sku: ['22004'],
 		category: 'mission',
 		type: 'digital',
@@ -2745,7 +2676,6 @@ module.exports = [
 		notes: 'It mainly deals with areas of the ADL society that could not be covered in detail in Deutschland in den Schatten II: politics, police , judiciary and prison system, magic - from the university magician training on the witches and the Theurgen Westphalens to the psionics - as well as the media, professional sports , the neo-anarchists in the east of the re-divided Berlin and various subcultures.'
 	},
 	{
-		id: '10753',
 		sku: ['10753'],
 		category: 'sourcebook',
 		type: 'ocr',
@@ -2759,7 +2689,6 @@ module.exports = [
 		notes: '"Deutschland in den Schatten II" (Germany in the Shadows II) is the successor to the Germany Sourcebook. It details the German territories in the year 2062.'
 	},
 	{
-		id: '10733',
 		sku: ['10733'],
 		category: 'sourcebook',
 		type: 'ocr',
@@ -2773,7 +2702,6 @@ module.exports = [
 		notes: 'The book is inGame 2058, after Dunkelzahn\'s death, and includes a comprehensive chapter of Austria . In addition, there is a "culture shock" chapter for the ADL that describes life and work, fashion lawmakers, cultural trends and subcultures in the Alliance and was intended as a German equivalent to the American "Neo-Anarchists\' Guide to Real Life". It also contains updates on Proteus AG and the Draco Foundation in the Alliance and on Berlin after the corporate invasion, as well as one chapter for SOX and one for Bremen. Finally, the book is rounded off by a short Switzerland-update.'
 	},
 	{
-		id: '4-8291-7337-8',
 		sku: ['4-8291-7337-8'],
 		category: 'sourcebook',
 		type: 'print',
@@ -2788,7 +2716,6 @@ module.exports = [
 		notes: 'This was the sourcebook of Tokyo and Japan Imperial State in 2050, in Japanese. Non-cannon.'
 	},
 	{
-		id: '7201',
 		sku: ['7201', '10719', '2-7408-0061-4'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2806,7 +2733,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7123',
 		sku: ['7123', '10750'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2823,7 +2749,6 @@ module.exports = [
 		notes: 'The German edition has rules updated to the third edition and an aditional chapter about the ADL.'
 	},
 	{
-		id: '7122',
 		sku: ['7122', '22007'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2841,7 +2766,6 @@ module.exports = [
 		notes: 'German Translation of Portfolio of a Dragon: Dunkelzahn\'s Secrets . The German version was released for Shadowrun 3, eight years after the original publication.'
 	},
 	{
-		id: '7125',
 		sku: ['7125'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2857,7 +2781,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7124',
 		sku: ['7124', '10736'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -2874,7 +2797,6 @@ module.exports = [
 		notes: 'The German translation/publication features 8 additional pages on pirates of the North Seas and additional equipment.'
 	},
 	{
-		id: '26500',
 		sku: ['26500'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -2887,7 +2809,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27100X',
 		sku: ['27100X'],
 		category: 'rulebook',
 		type: 'digital',
@@ -2900,7 +2821,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7909',
 		sku: ['7909', '10747', 'LFSH009'],
 		category: 'rulebook',
 		type: 'scan',
@@ -2920,7 +2840,6 @@ module.exports = [
 	},
 	//TODO: split the german edition as it is too different?
 	{
-		id: '7908',
 		sku: ['7908', '10659', '10744', 'LFSH005'],
 		category: 'rulebook',
 		type: 'scan',
@@ -2941,7 +2860,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: 'SR4QS',
 		sku: ['SR4QS'],
 		category: 'rulebook',
 		type: 'digital',
@@ -2954,7 +2872,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26FRP12',
 		sku: ['26FRP12'],
 		category: 'rulebook',
 		type: 'digital',
@@ -2967,7 +2884,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27QSR',
 		sku: ['27QSR'],
 		category: 'rulebook',
 		type: 'digital',
@@ -2980,7 +2896,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7910',
 		sku: ['7910'],
 		category: 'rulebook',
 		type: 'scan',
@@ -2993,7 +2908,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10662',
 		sku: ['10662', '10743'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3010,7 +2924,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7907',
 		sku: ['7907', '10658', '10742', 'LFSH004'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3030,7 +2943,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7904',
 		sku: ['7904', '10710', 'SH1201'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3049,7 +2961,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7903',
 		sku: ['7903', '10706', 'S12', 'ISA00100302'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3069,7 +2980,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7906',
 		sku: ['7906'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3082,7 +2992,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7905',
 		sku: ['7905', '10731', 'ISA00100303'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3099,7 +3008,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10656',
 		sku: ['10656', '25010'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3118,20 +3026,22 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '26100',
-		sku: ['26100'],
+		sku: ['26100', '45100', 'SR17'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Runner\'s Toolkit',
-		releaseDate: ['2011-08'],
-		description: 'NEVER GO IN UNARMED! When you go into a tight spot, you go in prepared. One gun might be good, but two is better. And two guns and a grenade launcher is better still. Throw in a spellslinger to watch your back, and you\'re on to something. Runner\'s Toolkit is the well-stocked arsenal all runners should have, the ultimate accessory to the Shadowrun, Twentieth Anniversary core rulebook.',
+		names: {
+			'de-DE': 'Schattenrüstzeug',
+			'fr-FR': 'Kit du runner'
+		},
+		releaseDate: ['2011-02-29', '2011', '2012-07'],
+		description: 'NEVER GO IN UNARMED!\n\nWhen you go into a tight spot, you go in prepared. One gun might be good, but two is better. And two guns and a grenade launcher is better still. Throw in a spellslinger to watch your back, and you\'re on to something. Runner\'s Toolkit is the well-stocked arsenal all runners should have, the ultimate accessory to the Shadowrun, Twentieth Anniversary core rulebook. Inside you\'ll find:\n\n\t- A deluxe, four-panel gamemaster\'s screen that puts critical information directly in front of you;\n\t- On the Run , one of Shadowrun\'s most popular introductory adventures;\n\t- Contacts, Adventures and Sprawl Sites, a booklet that gives you the who, what, and where to launch runners on new missions;\n\t- 4 laminated maps of Sprawl Site locations;\n\t- The Pre-generated Auxiliary Character and Kit System, a modular system that makes character and NPC generation simple while keeping characters highly customizable;\n\t- Anatomy of a Shadowrun , a two-column book; one column tells the story of a high-stakes run, while the other details the players and those involved in the run-up encounter, giving gamers a look at how a Shadowrun game flows;\n\t- Six quick-reference sheets, with the gamemaster\'s screen, greatly reduces the time spent flipping through books to find a particular rule;\n\t- A Shadowrun logo sticker;\n\t- A poster of the Sixth World Seattle skyline, and\n\t- A book compiling tables from Arsenal, Street Magic, Augmentation and Unwired - it\'s the ultimate shopping list for runners!\n\nRunner\'s Toolkit is an adrenaline shot to the heart of your Shadowrun game, jolting your runners and keeping them moving up and down. NE SORTEZ PAS SANS LUI!',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26100A',
 		sku: ['26100A'],
 		category: 'misc',
 		type: 'print',
@@ -3146,7 +3056,6 @@ module.exports = [
 		notes: 'Set of cards available at Gen Con 2014.'
 	},
 	{
-		id: '26208',
 		sku: ['26208'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3159,20 +3068,22 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26207',
-		sku: ['26207'],
+		sku: ['26207', '47000'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Spy Games',
-		releaseDate: ['2011-05'],
+		names: {
+			'de-DE': 'Machtspiele: Handbuch für Spione'
+		},
+		releaseDate: ['2011-05', '2012-02'],
 		description: 'Listen to the whispers—they’re all over town. People have secrets, millions of secrets, and some of them are so explosive they could shift the balance of power in the Treaty City of Denver. Normally, the great dragon Ghostwalker’s tight grip would keep the city under control, but some of the whispers moving around town say that Ghostwalker hasn’t been himself lately. The powers of Denver are scrambling, the Treaty is about to be renegotiated, and information is the hottest commodity in town.\nSpy Games brings Shadowrun players to the espionage-filled city of Denver, where secrets are bought and sold, and sometimes the price is paid in blood. Accessing these secrets may mean using cutting-edge surveillance gear or powerful magic, or it could mean turning back the clock and breaking out low-tech cloak-and-dagger approaches that the techheads of the world would never expect. Spy Games provides the setting information, gear statistics, and game rules players need to dive into Sixth World spycraft. ',
 		gameDate: '2073-05',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition has an aditional chapter about the ADL.'
 	},
 	{
-		id: '26210',
 		sku: ['26210', '47025'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3198,7 +3109,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26209',
 		sku: ['26209'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3211,7 +3121,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26206',
 		sku: ['26206', '46090'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3228,21 +3137,23 @@ module.exports = [
 		notes: 'The German edition has aditional content about the Bundeswehr and MET2000 and a translation of the "MilSpec Tech".'
 	},
 	{
-		id: '26202',
-		sku: ['26202'],
+		sku: ['26202', '46055', 'SR15'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Feral Cities',
-		releaseDate: ['2008-12'],
-		description: 'In the decaying urban wilds, war-torn cityscapes, and cancerous megabarrens of these Feral Cities only one thing is certain - they all harbor singular opportunities for those brave and foolhardy enough to explore their dangerous domains, factions and secrets.',
+		names: {
+			'de-DE': 'Krisenzonen',
+			'fr-FR': 'Jungles urbaines'
+		},
+		releaseDate: ['2008-12', '2010', '2011'],
+		description: 'Walk on the Wild Side\n\nIn the decaying urban wilds, war-torn cityscapes, and cancerous megabarrens of these "Feral Cities" are just one thing that is certain - they all have their dangerous domains, factions and secrets.\nSprawls where the usual rules and constants of civilized society do not apply, where the hazards and pay-offs are unique.\nRunners cast out of their comfort zones and dared to challenge the ravaged urban wilderness of Chicago and the darkest heart of Africa, Lagos.\nRuled by lawlessness and survival of the fittest; Bogota, GeMiTo, Geneva, Karavan, and Sarajevo are also profiled.',
 		gameDate: '2071-10',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'The French edition has an aditional chapter about Clermont-Ferrand.'
 	},
 	{
-		//TODO: http://www.pegasus.de/fileadmin/_downloads/shadowrun/Manhattan-Web.pdf
-		id: '26201',
 		sku: ['26201', '46025', 'SR10'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3260,7 +3171,6 @@ module.exports = [
 		notes: 'Both the German and the French editions have an aditional chapters about Lille (French), Frankfurt (German) and Manhattan (both).'
 	},
 	{
-		id: '26205',
 		sku: ['26205'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3281,12 +3191,8 @@ module.exports = [
 			}
 		],
 		notes: 'The English almanac was riddled with content and formal errors that were removed by Pegasus in consultation with CGL in the German version. These include duplicate or incorrect info boxes, flags in illustrations, which did not exist at the time of the depicted scene, and incorrect coastal and borderlines.'
-		// TODO: get ancient files:
-		// https://www.shadowiki.de/Almanach_der_Sechsten_Welt
-		// http://danvolodar.ru/ancientfiles/
 	},
 	{
-		id: '26203',
 		sku: ['26203'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3299,7 +3205,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26211',
 		sku: ['26211', '47030'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3326,7 +3231,6 @@ module.exports = [
 		notes: 'The German edition has some aditions regarding German dragons.'
 	},
 	{
-		id: '26301',
 		sku: ['26301'],
 		category: 'mission',
 		type: 'digital',
@@ -3339,20 +3243,21 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26241',
-		sku: ['26241'],
+		sku: ['26241', '46080'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Attitude',
-		releaseDate: ['2011-03'],
+		names: {
+			'de-DE': 'Lifestyle 2073'
+		},
+		releaseDate: ['2011-03', '2011-09'],
 		description: 'Eat \'em Up, Spit \'em Out! They can have their offices, their paychecks, their 2.2 kids and their robot-trimmed lawns. Screw ‘em. They trudge through life, doing what other people tell them to do, never having an original thought, burying themselves so deep down inside they might never come out. You’re not them. The world’s not giving you anything, so you’re going to take what you can get. You’re on the streets, on your own. Maybe you’re helping an orxploitation band shoot to the top, maybe you’re climbing up the street brawl ladder, or maybe you’re getting famous just for being you. Whatever you do, you’ll do it your way, because dying always beats selling out. Attitude helps shadowrunners live the untethered life by giving them the lowdown on music, entertainment, sports, and other scenes where they can make their mark without selling their soul. A repository of Sixth World culture along with a treasury of new ways to run in the shadows, Attitude is an indispensable resource for all Shadowrun players.',
 		gameDate: '2073-03',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26450',
 		sku: ['26450'],
 		category: 'mission',
 		type: 'digital',
@@ -3365,7 +3270,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26302',
 		sku: ['26302'],
 		category: 'mission',
 		type: 'digital',
@@ -3378,20 +3282,22 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26240',
 		sku: ['26240'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Seattle 2072',
-		releaseDate: ['2009-08'],
-		description: 'It’s a screwed up city. Isolated from the rest of the UCAS, it’s haven for criminals—smugglers, syndicates, gangers. Legal criminals, too—megacorporations, governments, politicians.\nAs beautiful as she is dysfunctional, Seattle is urban sprawl amid rolling hills and forests nestled up to man-made wonders next door to natural and man-made disasters. Whether you’re a native or not, Seattle will draw you in like no other.\nYou can run for a lifetime and never leave Seattle, but some say you can’t run for a lifetime without entering.',
+		names: {
+			'fr-FR': 'Seattle 2072'
+		},
+		releaseDate: ['2009-08-23', '2009-10', '2013'],
+		description: 'Welcome Home\n\nIt’s a screwed up city. Isolated from the rest of the UCAS, it’s haven for criminals—smugglers, syndicates, gangers. Legal criminals, too—megacorporations, governments, politicians.\nAs beautiful as she is dysfunctional, Seattle is urban sprawl amid rolling hills and forests nestled up to man-made wonders next door to natural and man-made disasters. Whether you’re a native or not, Seattle will draw you in like no other.\nYou can run for a lifetime and never leave Seattle, but some say you can’t run for a lifetime without entering.',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'The French edition also contains 2 of the Missions adventures.'
 	},
 	{
-		id: '26213',
 		sku: ['26213'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3404,7 +3310,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26212',
 		sku: ['26212'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3423,7 +3328,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26230',
 		sku: ['26230'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3436,8 +3340,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		//TODO: add unused materials: https://www.shadowiki.de/Konzerndossier
-		id: '26221',
 		sku: ['26221', '46075'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3454,7 +3356,6 @@ module.exports = [
 		notes: 'The German edition has an aditional chapter about the ADL.'
 	},
 	{
-		id: '10664',
 		sku: ['10664', '25013', '10754'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3471,7 +3372,6 @@ module.exports = [
 		notes: 'The German edition has an aditional chapter about the ADL.'
 	},
 	{
-		id: '10655',
 		sku: ['10655', '25015', '2-7408-0231-5'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3489,7 +3389,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '10667',
 		sku: ['10667', '10764'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3505,7 +3404,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10666',
 		sku: ['10666', '10761'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3521,7 +3419,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10653',
 		sku: ['10653', '10758'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3537,7 +3434,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7127',
 		sku: ['7127', '10650', '10748', 'S531'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3554,7 +3450,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7128',
 		sku: ['7128', '10652'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3567,7 +3462,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10651',
 		sku: ['10651'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3584,7 +3478,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10673',
 		sku: ['10673'],
 		category: 'rulebook',
 		type: 'scan',
@@ -3597,7 +3490,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '25014',
 		sku: ['25014', '22008'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3614,7 +3506,6 @@ module.exports = [
 		notes: 'The German edition has an aditional chapter about the ADL.'
 	},
 	{
-		id: '25011',
 		sku: ['25011'],
 		category: 'unofficial',
 		type: 'digital',
@@ -3627,7 +3518,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26101',
 		sku: ['26101'],
 		category: 'rulebook',
 		type: 'digital',
@@ -3640,20 +3530,23 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26005',
-		sku: ['26005'],
+		sku: ['26005', '23004', '46045', 'SR05'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Runner Havens',
-		releaseDate: ['2006-07'],
-		description: 'Runner Havens -- the first core setting book for Shadowrun, Fourth Edition -- introduces the players to two of the world\'s premier shadowrunner sprawls: Seattle and Hong Kong. Each city is described in detail from a shadowrunner\'s point of view, covering key topics such as the balance of power, corporate and underworld affairs, places to see, strange magics, and key features of interest. A wealth of plot hooks are also included. Four other runner-favored cities -- Cape Town, Caracas, Hamburg, and Istanbul -- are also covered, and gamemaster advice is provided for transforming any specific urban locale into a shadow haven.',
+		names: {
+			'de-DE': 'Schattenstädte',
+			'fr-FR': 'Capitales des ombres'
+		},
+		releaseDate: ['2006-08-29', '2006-07-19', '2010-01-11'],
+		description: 'Across the Globe, Biz is Biz!\n\nThis first core setting introduces the players to two of the world\'s premier shadowrunner sprawls: Seattle and Hong Kong . Each city is described in detail for a shadowrunner\'s point-of-view, covering key topics such as the balance of power, corporate and underworld affairs, places to see, strange magics, and key features of interest. A wealth of plot hooks are also included. Four other runner-favored cities - Cape Town , Caracas , Hamburg , and Istanbul - are also covered in lesser detail, and gamemaster advice is provided for any specific urban locale into a shadow hotspot.',
 		gameDate: '2070-02',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Fantasy Productions', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition added a chapter about Hamburg and the French edition a chapter about Marseille. The revised German edition has both chapters.'
 	},
 	{
-		id: '10670',
 		sku: ['10670', '25007'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3666,7 +3559,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10672',
 		sku: ['10672', '25003', '22002'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3683,7 +3575,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '10668',
 		sku: ['10668', '25002', '22001', 'SR04'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3700,7 +3591,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10669',
 		sku: ['10669', '25006', '2003'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -3716,7 +3606,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10671',
 		sku: ['10671', '25004', '22006'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -3732,7 +3621,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-01',
 		sku: ['SRM02-01'],
 		category: 'mission',
 		type: 'digital',
@@ -3745,7 +3633,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-00',
 		sku: ['SRM02-00'],
 		category: 'mission',
 		type: 'digital',
@@ -3758,7 +3645,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-02',
 		sku: ['SRM02-02'],
 		category: 'mission',
 		type: 'digital',
@@ -3771,7 +3657,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-08',
 		sku: ['SRM01-08'],
 		category: 'mission',
 		type: 'digital',
@@ -3784,7 +3669,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-09',
 		sku: ['SRM01-09'],
 		category: 'mission',
 		type: 'digital',
@@ -3797,7 +3681,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-06',
 		sku: ['SRM02-06'],
 		category: 'mission',
 		type: 'digital',
@@ -3810,7 +3693,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-07',
 		sku: ['SRM02-07'],
 		category: 'mission',
 		type: 'digital',
@@ -3823,7 +3705,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-05',
 		sku: ['SRM02-05'],
 		category: 'mission',
 		type: 'digital',
@@ -3836,7 +3717,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-03',
 		sku: ['SRM02-03'],
 		category: 'mission',
 		type: 'digital',
@@ -3849,7 +3729,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-04',
 		sku: ['SRM02-04'],
 		category: 'mission',
 		type: 'digital',
@@ -3862,7 +3741,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-01',
 		sku: ['SRM01-01'],
 		category: 'mission',
 		type: 'digital',
@@ -3875,7 +3753,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-02',
 		sku: ['SRM01-02'],
 		category: 'mission',
 		type: 'digital',
@@ -3888,7 +3765,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM00-05',
 		sku: ['SRM00-05'],
 		category: 'mission',
 		type: 'digital',
@@ -3901,7 +3777,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM00-03',
 		sku: ['SRM00-03'],
 		category: 'mission',
 		type: 'digital',
@@ -3914,7 +3789,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM00-04',
 		sku: ['SRM00-04'],
 		category: 'mission',
 		type: 'digital',
@@ -3927,7 +3801,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-06',
 		sku: ['SRM01-06'],
 		category: 'mission',
 		type: 'digital',
@@ -3940,7 +3813,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-07',
 		sku: ['SRM01-07'],
 		category: 'mission',
 		type: 'digital',
@@ -3953,7 +3825,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-05',
 		sku: ['SRM01-05'],
 		category: 'mission',
 		type: 'digital',
@@ -3966,7 +3837,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-03',
 		sku: ['SRM01-03'],
 		category: 'mission',
 		type: 'digital',
@@ -3979,7 +3849,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM01-04',
 		sku: ['SRM01-04'],
 		category: 'mission',
 		type: 'digital',
@@ -3992,7 +3861,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-20',
 		sku: ['SRM02-20'],
 		category: 'mission',
 		type: 'digital',
@@ -4005,7 +3873,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-21',
 		sku: ['SRM02-21'],
 		category: 'mission',
 		type: 'digital',
@@ -4018,7 +3885,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-19',
 		sku: ['SRM02-19'],
 		category: 'mission',
 		type: 'digital',
@@ -4031,7 +3897,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-17',
 		sku: ['SRM02-17'],
 		category: 'mission',
 		type: 'digital',
@@ -4044,7 +3909,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-18',
 		sku: ['SRM02-18'],
 		category: 'mission',
 		type: 'digital',
@@ -4057,7 +3921,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-25',
 		sku: ['SRM02-25'],
 		category: 'mission',
 		type: 'digital',
@@ -4070,7 +3933,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-00X',
 		sku: ['SRM03-00X'],
 		category: 'mission',
 		type: 'digital',
@@ -4083,7 +3945,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-24',
 		sku: ['SRM02-24'],
 		category: 'mission',
 		type: 'digital',
@@ -4096,7 +3957,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-22',
 		sku: ['SRM02-22'],
 		category: 'mission',
 		type: 'digital',
@@ -4109,7 +3969,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-23',
 		sku: ['SRM02-23'],
 		category: 'mission',
 		type: 'digital',
@@ -4122,7 +3981,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-10',
 		sku: ['SRM02-10'],
 		category: 'mission',
 		type: 'digital',
@@ -4135,7 +3993,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-11',
 		sku: ['SRM02-11'],
 		category: 'mission',
 		type: 'digital',
@@ -4148,7 +4005,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-08',
 		sku: ['SRM02-08'],
 		category: 'mission',
 		type: 'digital',
@@ -4161,7 +4017,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-09',
 		sku: ['SRM02-09'],
 		category: 'mission',
 		type: 'digital',
@@ -4174,7 +4029,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-12',
 		sku: ['SRM02-12'],
 		category: 'mission',
 		type: 'digital',
@@ -4187,7 +4041,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-15',
 		sku: ['SRM02-15'],
 		category: 'mission',
 		type: 'digital',
@@ -4200,7 +4053,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-16',
 		sku: ['SRM02-16'],
 		category: 'mission',
 		type: 'digital',
@@ -4213,7 +4065,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-13',
 		sku: ['SRM02-13'],
 		category: 'mission',
 		type: 'digital',
@@ -4226,7 +4077,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM02-14',
 		sku: ['SRM02-14'],
 		category: 'mission',
 		type: 'digital',
@@ -4239,7 +4089,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27452',
 		sku: ['27452'],
 		category: 'mission',
 		type: 'digital',
@@ -4252,7 +4101,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27450',
 		sku: ['27450'],
 		category: 'mission',
 		type: 'digital',
@@ -4265,7 +4113,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27481',
 		sku: ['27481'],
 		category: 'mission',
 		type: 'digital',
@@ -4278,7 +4125,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27480',
 		sku: ['27480'],
 		category: 'mission',
 		type: 'digital',
@@ -4291,7 +4137,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27409',
 		sku: ['27409'],
 		category: 'mission',
 		type: 'digital',
@@ -4304,7 +4149,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27401',
 		sku: ['27401'],
 		category: 'mission',
 		type: 'digital',
@@ -4317,7 +4161,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27400',
 		sku: ['27400'],
 		category: 'mission',
 		type: 'digital',
@@ -4330,7 +4173,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27403',
 		sku: ['27403'],
 		category: 'mission',
 		type: 'digital',
@@ -4343,7 +4185,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27402',
 		sku: ['27402'],
 		category: 'mission',
 		type: 'digital',
@@ -4356,7 +4197,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27482',
 		sku: ['27482'],
 		category: 'mission',
 		type: 'digital',
@@ -4369,7 +4209,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7304',
 		sku: ['7304'],
 		category: 'mission',
 		type: 'scan',
@@ -4382,7 +4221,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7303',
 		sku: ['7303'],
 		category: 'mission',
 		type: 'scan',
@@ -4395,7 +4233,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7306',
 		sku: ['7306'],
 		category: 'mission',
 		type: 'scan',
@@ -4408,7 +4245,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7305',
 		sku: ['7305', '10707'],
 		category: 'mission',
 		type: 'scan',
@@ -4424,7 +4260,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7302',
 		sku: ['7302', '10705', '1-55560-116-2'],
 		category: 'mission',
 		type: 'scan',
@@ -4437,8 +4272,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7102X',
-		sku: ['7102X', '10701A'],
+		sku: ['7102', '10701'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Silver Angel',
@@ -4454,7 +4288,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27485',
 		sku: ['27485'],
 		category: 'mission',
 		type: 'digital',
@@ -4467,7 +4300,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7301',
 		sku: ['7301', '10703'],
 		category: 'mission',
 		type: 'scan',
@@ -4485,7 +4317,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7205',
 		sku: ['7205', '10716'],
 		category: 'mission',
 		type: 'scan',
@@ -4503,7 +4334,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '26CMP10',
 		sku: ['26CMP10'],
 		category: 'mission',
 		type: 'digital',
@@ -4516,7 +4346,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26400',
 		sku: ['26400'],
 		category: 'mission',
 		type: 'digital',
@@ -4529,7 +4358,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26402',
 		sku: ['26402'],
 		category: 'mission',
 		type: 'digital',
@@ -4542,7 +4370,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26401',
 		sku: ['26401'],
 		category: 'mission',
 		type: 'digital',
@@ -4555,7 +4382,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10654',
 		sku: ['10654'],
 		category: 'mission',
 		type: 'scan',
@@ -4568,20 +4394,22 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26003',
-		sku: ['26003'],
+		sku: ['26003', '23003', 'SR03'],
 		category: 'mission',
 		type: 'digital',
 		name: 'On the Run',
-		releaseDate: ['2006-03'],
+		names: {
+			'de-DE': 'On the Run',
+			'fr-FR': 'En pleine course'
+		},
+		releaseDate: ['2006-06-30'],
 		description: 'This introductory adventure for Shadowrun, Fourth Edition sends the players in pursuit of an archaic media chip with priceless contents, mixing them up with a media legend’s ancient history.\nThis adventure is seeded with helpful advice to immediately acquaint new gamemasters with running Shadowrun and also includes a number of tips that veteran gamemasters will find useful.\nIt is also intentionally designed to familiarize gamemasters and players with various key aspects of the Shadowrun universe. On the Run is perfect as a stand-alone adventure—and is also the first in a continuing series of adventures.',
 		gameDate: '2070',
 		edition: 4,
-		publisher: ['Fantasy Productions'],
+		publisher: ['Fantasy Productions', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '10665',
 		sku: ['10665'],
 		category: 'mission',
 		type: 'scan',
@@ -4594,7 +4422,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26403',
 		sku: ['26403'],
 		category: 'mission',
 		type: 'digital',
@@ -4607,7 +4434,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26452',
 		sku: ['26452'],
 		category: 'mission',
 		type: 'digital',
@@ -4620,7 +4446,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26451',
 		sku: ['26451'],
 		category: 'mission',
 		type: 'digital',
@@ -4633,7 +4458,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26601',
 		sku: ['26601'],
 		category: 'mission',
 		type: 'digital',
@@ -4646,7 +4470,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26463',
 		sku: ['26463'],
 		category: 'mission',
 		type: 'digital',
@@ -4659,7 +4482,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26410',
 		sku: ['26410'],
 		category: 'mission',
 		type: 'digital',
@@ -4672,7 +4494,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26406',
 		sku: ['26406'],
 		category: 'mission',
 		type: 'digital',
@@ -4685,7 +4506,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26405',
 		sku: ['26405'],
 		category: 'mission',
 		type: 'digital',
@@ -4698,7 +4518,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26408',
 		sku: ['26408'],
 		category: 'mission',
 		type: 'digital',
@@ -4711,7 +4530,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26407',
 		sku: ['26407'],
 		category: 'mission',
 		type: 'digital',
@@ -4724,7 +4542,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S022',
 		sku: ['26S022'],
 		category: 'mission',
 		type: 'digital',
@@ -4737,7 +4554,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S005',
 		sku: ['26S005'],
 		category: 'mission',
 		type: 'digital',
@@ -4750,7 +4566,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7329',
 		sku: ['7329', '10741'],
 		category: 'mission',
 		type: 'scan',
@@ -4768,7 +4583,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7328',
 		sku: ['7328', '10745', 'LFSH104'],
 		category: 'mission',
 		type: 'scan',
@@ -4785,7 +4599,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7331',
 		sku: ['7331', '10749'],
 		category: 'mission',
 		type: 'scan',
@@ -4801,7 +4614,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7330',
 		sku: ['7330'],
 		category: 'mission',
 		type: 'scan',
@@ -4814,7 +4626,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM00-01',
 		sku: ['SRM00-01'],
 		category: 'mission',
 		type: 'digital',
@@ -4827,7 +4638,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27PM005',
 		sku: ['27PM005'],
 		category: 'mission',
 		type: 'digital',
@@ -4840,7 +4650,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM00-02',
 		sku: ['SRM00-02'],
 		category: 'mission',
 		type: 'digital',
@@ -4853,7 +4662,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27PM002',
 		sku: ['27PM002'],
 		category: 'mission',
 		type: 'digital',
@@ -4866,7 +4674,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26APR12',
 		sku: ['26APR12'],
 		category: 'mission',
 		type: 'digital',
@@ -4879,7 +4686,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'CMP10-02',
 		sku: ['CMP10-02'],
 		category: 'mission',
 		type: 'digital',
@@ -4892,7 +4698,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27PM001',
 		sku: ['27PM001'],
 		category: 'mission',
 		type: 'digital',
@@ -4905,7 +4710,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SMH201501',
 		sku: ['SMH201501'],
 		category: 'mission',
 		type: 'digital',
@@ -4918,7 +4722,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SMH201601',
 		sku: ['SMH201601'],
 		category: 'mission',
 		type: 'digital',
@@ -4931,7 +4734,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SMH201701',
 		sku: ['SMH201701'],
 		category: 'mission',
 		type: 'digital',
@@ -4944,7 +4746,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7327',
 		sku: ['7327', '10737'],
 		category: 'mission',
 		type: 'scan',
@@ -4961,7 +4762,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7313',
 		sku: ['7313'],
 		category: 'mission',
 		type: 'ocr',
@@ -4974,7 +4774,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7312',
 		sku: ['7312'],
 		category: 'mission',
 		type: 'scan',
@@ -4987,7 +4786,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7315',
 		sku: ['7315'],
 		category: 'mission',
 		type: 'ocr',
@@ -5000,7 +4798,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7314',
 		sku: ['7314'],
 		category: 'mission',
 		type: 'scan',
@@ -5013,7 +4810,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7311',
 		sku: ['7311'],
 		category: 'mission',
 		type: 'scan',
@@ -5035,7 +4831,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7308',
 		sku: ['7308'],
 		category: 'mission',
 		type: 'scan',
@@ -5048,7 +4843,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7307',
 		sku: ['7307'],
 		category: 'mission',
 		type: 'scan',
@@ -5061,7 +4855,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7310',
 		sku: ['7310'],
 		category: 'mission',
 		type: 'scan',
@@ -5074,7 +4867,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7309',
 		sku: ['7309'],
 		category: 'mission',
 		type: 'scan',
@@ -5087,7 +4879,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7316',
 		sku: ['7316'],
 		category: 'mission',
 		type: 'ocr',
@@ -5100,7 +4891,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7324',
 		sku: ['7324'],
 		category: 'mission',
 		type: 'ocr',
@@ -5113,7 +4903,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7323',
 		sku: ['7323'],
 		category: 'mission',
 		type: 'scan',
@@ -5126,7 +4915,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7326',
 		sku: ['7326'],
 		category: 'mission',
 		type: 'scan',
@@ -5139,7 +4927,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7325',
 		sku: ['7325'],
 		category: 'mission',
 		type: 'scan',
@@ -5152,7 +4939,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7322',
 		sku: ['7322'],
 		category: 'mission',
 		type: 'scan',
@@ -5166,7 +4952,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7318',
 		sku: ['7318'],
 		category: 'mission',
 		type: 'ocr',
@@ -5179,7 +4964,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7317',
 		sku: ['7317'],
 		category: 'mission',
 		type: 'ocr',
@@ -5193,7 +4977,6 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		id: '7320',
 		sku: ['7320'],
 		category: 'mission',
 		type: 'scan',
@@ -5206,7 +4989,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7319',
 		sku: ['7319'],
 		category: 'mission',
 		type: 'scan',
@@ -5219,7 +5001,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'BMAPS',
 		sku: ['BMAPS'],
 		category: 'misc',
 		type: 'digital',
@@ -5232,7 +5013,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7401',
 		sku: ['7401'],
 		category: 'misc',
 		type: 'scan',
@@ -5245,7 +5025,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27CCG',
 		sku: ['27CCG'],
 		category: 'misc',
 		type: 'digital',
@@ -5258,7 +5037,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7111',
 		sku: ['7111'],
 		category: 'misc',
 		type: 'scan',
@@ -5271,7 +5049,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '2635A',
 		sku: ['2635A'],
 		category: 'misc',
 		type: 'digital',
@@ -5284,7 +5061,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26CCG',
 		sku: ['26CCG'],
 		category: 'misc',
 		type: 'digital',
@@ -5297,7 +5073,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7701',
 		sku: ['7701'],
 		category: 'misc',
 		type: 'scan',
@@ -5310,7 +5085,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26APR13',
 		sku: ['26APR13'],
 		category: 'misc',
 		type: 'digital',
@@ -5323,7 +5097,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26APR3p',
 		sku: ['26APR3p'],
 		category: 'misc',
 		type: 'digital',
@@ -5336,7 +5109,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-SDT',
 		sku: ['TSS-SDT'],
 		category: 'magazine',
 		type: 'digital',
@@ -5349,7 +5121,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-08',
 		sku: ['SRM04-08'],
 		category: 'mission',
 		type: 'scan',
@@ -5362,7 +5133,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-07',
 		sku: ['SRM04-07'],
 		category: 'mission',
 		type: 'digital',
@@ -5375,7 +5145,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-10',
 		sku: ['SRM04-10'],
 		category: 'mission',
 		type: 'digital',
@@ -5388,7 +5157,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-09',
 		sku: ['SRM04-09'],
 		category: 'mission',
 		type: 'scan',
@@ -5401,7 +5169,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-06',
 		sku: ['SRM04-06'],
 		category: 'mission',
 		type: 'digital',
@@ -5414,7 +5181,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-03',
 		sku: ['SRM04-03'],
 		category: 'mission',
 		type: 'digital',
@@ -5427,7 +5193,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-02',
 		sku: ['SRM04-02'],
 		category: 'mission',
 		type: 'digital',
@@ -5440,7 +5205,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-05',
 		sku: ['SRM04-05'],
 		category: 'mission',
 		type: 'digital',
@@ -5453,7 +5217,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-04',
 		sku: ['SRM04-04'],
 		category: 'mission',
 		type: 'digital',
@@ -5466,7 +5229,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-11',
 		sku: ['SRM04-11'],
 		category: 'mission',
 		type: 'digital',
@@ -5479,7 +5241,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM05-02',
 		sku: ['SRM05-02'],
 		category: 'mission',
 		type: 'digital',
@@ -5492,7 +5253,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM05-01',
 		sku: ['SRM05-01'],
 		category: 'mission',
 		type: 'digital',
@@ -5505,7 +5265,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM05-04',
 		sku: ['SRM05-04'],
 		category: 'mission',
 		type: 'digital',
@@ -5518,7 +5277,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM05-03',
 		sku: ['SRM05-03'],
 		category: 'mission',
 		type: 'digital',
@@ -5531,7 +5289,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM05-00',
 		sku: ['SRM05-00'],
 		category: 'mission',
 		type: 'digital',
@@ -5544,7 +5301,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-12',
 		sku: ['SRM04-12'],
 		category: 'mission',
 		type: 'digital',
@@ -5557,7 +5313,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-01',
 		sku: ['SRM04-01'],
 		category: 'mission',
 		type: 'digital',
@@ -5570,7 +5325,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-04',
 		sku: ['SRM03-04'],
 		category: 'mission',
 		type: 'digital',
@@ -5583,7 +5337,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-03',
 		sku: ['SRM03-03'],
 		category: 'mission',
 		type: 'digital',
@@ -5596,7 +5349,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-06',
 		sku: ['SRM03-06'],
 		category: 'mission',
 		type: 'digital',
@@ -5609,7 +5361,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-05',
 		sku: ['SRM03-05'],
 		category: 'mission',
 		type: 'digital',
@@ -5622,7 +5373,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-02',
 		sku: ['SRM03-02'],
 		category: 'mission',
 		type: 'digital',
@@ -5635,7 +5385,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-01',
 		sku: ['SRM03-01'],
 		category: 'mission',
 		type: 'digital',
@@ -5648,7 +5397,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-00',
 		sku: ['SRM03-00'],
 		category: 'mission',
 		type: 'digital',
@@ -5661,7 +5409,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-07',
 		sku: ['SRM03-07'],
 		category: 'mission',
 		type: 'digital',
@@ -5674,7 +5421,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-00X',
 		sku: ['SRM04-00X'],
 		category: 'mission',
 		type: 'digital',
@@ -5687,7 +5433,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM04-00',
 		sku: ['SRM04-00'],
 		category: 'mission',
 		type: 'digital',
@@ -5700,7 +5445,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-12',
 		sku: ['SRM03-12'],
 		category: 'mission',
 		type: 'digital',
@@ -5713,7 +5457,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-09',
 		sku: ['SRM03-09'],
 		category: 'mission',
 		type: 'digital',
@@ -5726,7 +5469,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-08',
 		sku: ['SRM03-08'],
 		category: 'mission',
 		type: 'digital',
@@ -5739,7 +5481,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-11',
 		sku: ['SRM03-11'],
 		category: 'mission',
 		type: 'digital',
@@ -5752,7 +5493,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM03-10',
 		sku: ['SRM03-10'],
 		category: 'mission',
 		type: 'digital',
@@ -5765,7 +5505,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-08',
 		sku: ['TSS-08'],
 		category: 'magazine',
 		type: 'digital',
@@ -5778,7 +5517,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-07',
 		sku: ['TSS-07'],
 		category: 'magazine',
 		type: 'digital',
@@ -5791,7 +5529,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-10',
 		sku: ['TSS-10'],
 		category: 'magazine',
 		type: 'digital',
@@ -5804,7 +5541,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-09',
 		sku: ['TSS-09'],
 		category: 'magazine',
 		type: 'digital',
@@ -5817,7 +5553,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-06',
 		sku: ['TSS-06'],
 		category: 'magazine',
 		type: 'digital',
@@ -5830,7 +5565,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-03',
 		sku: ['TSS-03'],
 		category: 'magazine',
 		type: 'digital',
@@ -5843,7 +5577,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-02',
 		sku: ['TSS-02'],
 		category: 'magazine',
 		type: 'digital',
@@ -5856,7 +5589,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-05',
 		sku: ['TSS-05'],
 		category: 'magazine',
 		type: 'digital',
@@ -5869,7 +5601,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-04',
 		sku: ['TSS-04'],
 		category: 'magazine',
 		type: 'digital',
@@ -5882,7 +5613,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-11',
 		sku: ['TSS-11'],
 		category: 'magazine',
 		type: 'digital',
@@ -5895,7 +5625,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-17',
 		sku: ['TSS-17'],
 		category: 'magazine',
 		type: 'digital',
@@ -5908,7 +5637,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-16',
 		sku: ['TSS-16'],
 		category: 'magazine',
 		type: 'digital',
@@ -5921,7 +5649,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-BeCKS',
 		sku: ['TSS-BeCKS'],
 		category: 'magazine',
 		type: 'digital',
@@ -5934,7 +5661,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-18',
 		sku: ['TSS-18'],
 		category: 'magazine',
 		type: 'digital',
@@ -5947,7 +5673,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-15',
 		sku: ['TSS-15'],
 		category: 'magazine',
 		type: 'digital',
@@ -5960,7 +5685,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-12',
 		sku: ['TSS-12'],
 		category: 'magazine',
 		type: 'digital',
@@ -5973,7 +5697,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-14',
 		sku: ['TSS-14'],
 		category: 'magazine',
 		type: 'digital',
@@ -5986,7 +5709,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-13',
 		sku: ['TSS-13'],
 		category: 'magazine',
 		type: 'digital',
@@ -5999,7 +5721,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'TSS-01',
 		sku: ['TSS-01'],
 		category: 'magazine',
 		type: 'digital',
@@ -6012,7 +5733,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM06-04',
 		sku: ['SRM06-04'],
 		category: 'mission',
 		type: 'digital',
@@ -6025,7 +5745,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM06-03',
 		sku: ['SRM06-03'],
 		category: 'mission',
 		type: 'digital',
@@ -6038,7 +5757,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM06-06',
 		sku: ['SRM06-06'],
 		category: 'mission',
 		type: 'digital',
@@ -6051,7 +5769,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM06-05',
 		sku: ['SRM06-05'],
 		category: 'mission',
 		type: 'digital',
@@ -6064,7 +5781,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM06-02',
 		sku: ['SRM06-02'],
 		category: 'mission',
 		type: 'digital',
@@ -6077,7 +5793,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM05-06',
 		sku: ['SRM05-06'],
 		category: 'mission',
 		type: 'digital',
@@ -6090,7 +5805,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM05-05',
 		sku: ['SRM05-05'],
 		category: 'mission',
 		type: 'digital',
@@ -6103,7 +5817,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM06-01',
 		sku: ['SRM06-01'],
 		category: 'mission',
 		type: 'digital',
@@ -6116,7 +5829,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM06-00',
 		sku: ['SRM06-00'],
 		category: 'mission',
 		type: 'digital',
@@ -6129,7 +5841,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM07-00',
 		sku: ['SRM07-00'],
 		category: 'mission',
 		type: 'digital',
@@ -6142,7 +5853,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'DDH-02',
 		sku: ['DDH-02'],
 		category: 'magazine',
 		type: 'digital',
@@ -6155,7 +5865,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'DDH-01',
 		sku: ['DDH-01'],
 		category: 'magazine',
 		type: 'digital',
@@ -6168,7 +5877,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SOK201',
 		sku: ['SOK201'],
 		category: 'magazine',
 		type: 'print',
@@ -6182,7 +5890,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SOK202',
 		sku: ['SOK202'],
 		category: 'magazine',
 		type: 'print',
@@ -6196,7 +5903,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SOK203',
 		sku: ['SOK203'],
 		category: 'magazine',
 		type: 'print',
@@ -6210,7 +5916,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SOK204',
 		sku: ['SOK204'],
 		category: 'magazine',
 		type: 'print',
@@ -6224,7 +5929,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SOK205',
 		sku: ['SOK205'],
 		category: 'magazine',
 		type: 'print',
@@ -6238,7 +5942,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SOK206',
 		sku: ['SOK206'],
 		category: 'magazine',
 		type: 'print',
@@ -6252,7 +5955,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SOK207',
 		sku: ['SOK207'],
 		category: 'magazine',
 		type: 'print',
@@ -6266,7 +5968,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-09',
 		sku: ['KAGE-09'],
 		category: 'magazine',
 		type: 'print',
@@ -6280,7 +5981,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-00',
 		sku: ['KAGE-00'],
 		category: 'magazine',
 		type: 'print',
@@ -6294,7 +5994,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-01',
 		sku: ['KAGE-01'],
 		category: 'magazine',
 		type: 'print',
@@ -6308,7 +6007,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-03',
 		sku: ['KAGE-03'],
 		category: 'magazine',
 		type: 'print',
@@ -6322,7 +6020,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-04',
 		sku: ['KAGE-04'],
 		category: 'magazine',
 		type: 'print',
@@ -6336,7 +6033,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-05',
 		sku: ['KAGE-05'],
 		category: 'magazine',
 		type: 'print',
@@ -6350,7 +6046,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-06',
 		sku: ['KAGE-06'],
 		category: 'magazine',
 		type: 'print',
@@ -6364,7 +6059,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-07',
 		sku: ['KAGE-07'],
 		category: 'magazine',
 		type: 'print',
@@ -6378,7 +6072,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-08',
 		sku: ['KAGE-08'],
 		category: 'magazine',
 		type: 'print',
@@ -6392,7 +6085,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-02',
 		sku: ['KAGE-02'],
 		category: 'magazine',
 		type: 'print',
@@ -6406,7 +6098,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-10',
 		sku: ['KAGE-10'],
 		category: 'magazine',
 		type: 'print',
@@ -6420,7 +6111,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-11',
 		sku: ['KAGE-11'],
 		category: 'magazine',
 		type: 'print',
@@ -6434,7 +6124,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'KAGE-12',
 		sku: ['KAGE-12'],
 		category: 'magazine',
 		type: 'print',
@@ -6448,7 +6137,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SRM07-05',
 		sku: ['SRM07-05'],
 		category: 'mission',
 		type: 'digital',
@@ -6461,7 +6149,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM07-06',
 		sku: ['SRM07-06'],
 		category: 'mission',
 		type: 'digital',
@@ -6474,7 +6161,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S051',
 		sku: ['26S051'],
 		category: 'mission',
 		type: 'digital',
@@ -6487,7 +6173,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27231',
 		sku: ['27231'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -6500,7 +6185,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM07-02',
 		sku: ['SRM07-02'],
 		category: 'mission',
 		type: 'digital',
@@ -6513,7 +6197,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM07-01',
 		sku: ['SRM07-01'],
 		category: 'mission',
 		type: 'digital',
@@ -6526,7 +6209,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM07-04',
 		sku: ['SRM07-04'],
 		category: 'mission',
 		type: 'digital',
@@ -6539,7 +6221,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM07-03',
 		sku: ['SRM07-03'],
 		category: 'mission',
 		type: 'digital',
@@ -6552,7 +6233,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27506',
 		sku: ['27506'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -6565,7 +6245,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26NV003',
 		sku: ['26NV003'],
 		category: 'novel',
 		type: 'digital',
@@ -6578,8 +6257,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27511',
-		sku: ['27511', '45049G'],
+		sku: ['27511', '45049'],
 		category: 'misc',
 		type: 'print',
 		name: 'Sixth World Tarot',
@@ -6593,7 +6271,6 @@ module.exports = [
 		notes: 'Available first only at Gen Con 2016. Now on the creator\'s site. Print only.'
 	},
 	{
-		id: '26860',
 		sku: ['26860'],
 		category: 'novel',
 		type: 'digital',
@@ -6607,7 +6284,6 @@ module.exports = [
 		status: 'missing'
 	},
 	{
-		id: '26857',
 		sku: ['26857'],
 		category: 'novel',
 		type: 'print',
@@ -6622,7 +6298,6 @@ module.exports = [
 		notes: 'Print only. No scans found.'
 	},
 	{
-		id: 'TCG01',
 		sku: ['TCG01'],
 		category: 'tcg',
 		type: 'physical',
@@ -6636,7 +6311,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'TCG02',
 		sku: ['TCG02'],
 		category: 'tcg',
 		type: 'physical',
@@ -6650,7 +6324,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6400',
 		sku: ['WZK6400'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6664,7 +6337,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6401',
 		sku: ['WZK6401'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6678,7 +6350,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6402',
 		sku: ['WZK6402'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6692,7 +6363,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6403',
 		sku: ['WZK6403'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6706,7 +6376,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6404',
 		sku: ['WZK6404'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6720,7 +6389,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6405',
 		sku: ['WZK6405'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6734,7 +6402,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6406',
 		sku: ['WZK6406'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6748,7 +6415,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6407',
 		sku: ['WZK6407'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6762,7 +6428,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6408',
 		sku: ['WZK6408'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6776,7 +6441,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6409',
 		sku: ['WZK6409'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6790,7 +6454,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6410',
 		sku: ['WZK6410'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6804,7 +6467,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6411',
 		sku: ['WZK6411'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6818,7 +6480,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'WZK6412',
 		sku: ['WZK6412'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6832,7 +6493,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27700',
 		sku: ['27700'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6846,7 +6506,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27704',
 		sku: ['27704'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6860,7 +6519,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27703',
 		sku: ['27703'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6874,7 +6532,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27700-G16',
 		sku: ['27700-G16'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6888,7 +6545,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27701',
 		sku: ['27701'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6902,7 +6558,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27700-G14',
 		sku: ['27700-G14'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6916,7 +6571,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27700A',
 		sku: ['27700A'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6930,7 +6584,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: '27780',
 		sku: ['27780'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6944,7 +6597,6 @@ module.exports = [
 		notes: 'Announced fo the Year of Shadowrun but never released. Some "developer diary" posts are available on Shadowrun\'s blog.'
 	},
 	{
-		id: '27800',
 		sku: ['27800'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6958,7 +6610,6 @@ module.exports = [
 		notes: 'Announced fo the Year of Shadowrun but never released. Some "developer diary" posts are available on Shadowrun\'s blog.'
 	},
 	{
-		id: '27750',
 		sku: ['27750'],
 		category: 'boardgame',
 		type: 'physical',
@@ -6972,7 +6623,6 @@ module.exports = [
 		status: 'outofscope'
 	},
 	{
-		id: 'SNES',
 		sku: ['SNES'],
 		category: 'videogame',
 		type: 'digital',
@@ -6985,7 +6635,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'GENESIS',
 		sku: ['GENESIS'],
 		category: 'videogame',
 		type: 'digital',
@@ -6998,7 +6647,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SEGA-CD',
 		sku: ['SEGA-CD'],
 		category: 'videogame',
 		type: 'digital',
@@ -7011,7 +6659,6 @@ module.exports = [
 		originalLanguage: 'jp-JP'
 	},
 	{
-		id: 'XBOX',
 		sku: ['XBOX'],
 		category: 'videogame',
 		type: 'digital',
@@ -7024,7 +6671,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'RET-01',
 		sku: ['RET-01'],
 		category: 'videogame',
 		type: 'digital',
@@ -7039,7 +6685,6 @@ module.exports = [
 		notes: 'Not present for beeing multiplatform and huge in size.'
 	},
 	{
-		id: 'RET-02',
 		sku: ['RET-02'],
 		category: 'videogame',
 		type: 'digital',
@@ -7054,7 +6699,6 @@ module.exports = [
 		notes: 'Not present for beeing multiplatform and huge in size.'
 	},
 	{
-		id: 'RET-03',
 		sku: ['RET-03'],
 		category: 'videogame',
 		type: 'digital',
@@ -7069,7 +6713,6 @@ module.exports = [
 		notes: 'Not present for beeing multiplatform and huge in size.'
 	},
 	{
-		id: 'ONLINE',
 		sku: ['ONLINE'],
 		category: 'videogame',
 		type: 'digital',
@@ -7084,7 +6727,6 @@ module.exports = [
 		notes: 'Not present for beeing multiplatform and huge in size.'
 	},
 	{
-		id: '26531',
 		sku: ['26531'],
 		category: 'rulebook',
 		type: 'print',
@@ -7099,7 +6741,6 @@ module.exports = [
 		notes: 'Print only cards.'
 	},
 	{
-		id: '26530',
 		sku: ['26530'],
 		category: 'rulebook',
 		type: 'print',
@@ -7114,37 +6755,67 @@ module.exports = [
 		notes: 'Print only cards.'
 	},
 	{
-		id: '26104',
-		sku: ['26104'],
+		sku: ['26104', '26104LE', '47010', 'SR4A04'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Runner\'s Black Book',
-		releaseDate: ['2011-09'],
-		description: 'You’ve got the talent. You hopefully have lived long enough to collect a decent amount of nuyen. So show it off! Get a better gun. A bigger boat. A zeppelin that can sneak you across borders where no one thinks to look. All these toys are here, and many, many more. Runner’s Black Book is a shopping catalog for the ambitious and successful runner—and it’s a guide to the weapons, drones, and vehicles that the various forces of the Sixth World may send against you as you sneak through the shadows.\nRunner’s Black Book collects material from Shadowrun’s successful PDF line of products, compiling Deadly Waves, Gun Heaven, MilSpecTech, This Old Drone, and Unfriendly Skies in their entirety, along with updated art and information. On top of that, the book includes new pieces of gear developed specifically for this volume, including the punishing Kriss X Submachine Gun and small, smooth TPP light pistol. Each piece of gear is accompanied by a full color illustration providing a look at the item’s complete details and features.',
+		names: {
+			'de-DE': 'Schattenkatalog',
+			'fr-FR': 'Runner\'s Black Book'
+		},
+		releaseDate: ['2011-09-14', '2011-09-28', '2012-05', '2012-10-30', '2016-01-12'],
+		description: 'FLAUNT IT!\n\nYou’ve got the talent. You hopefully have lived long enough to collect a decent amount of nuyen. So show it off! Get a better gun. A bigger boat. A zeppelin that can sneak you across borders where no one thinks to look. All these toys are here, and many, many more. Runner’s Black Book is a shopping catalog for the ambitious and successful runner—and it’s a guide to the weapons, drones, and vehicles that the various forces of the Sixth World may send against you as you sneak through the shadows.\nRunner’s Black Book collects material from Shadowrun’s successful PDF line of products, compiling Deadly Waves, Gun Heaven, MilSpecTech, This Old Drone, and Unfriendly Skies in their entirety, along with updated art and information. On top of that, the book includes new pieces of gear developed specifically for this volume, including the punishing Kriss X Submachine Gun and small, smooth TPP light pistol. Each piece of gear is accompanied by a full color illustration providing a look at the item’s complete details and features.',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Runner\'s Black Book',
+				url: 'http://drivethrurpg.com/product/170867'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US',
 		status: 'missing',
-		notes: 'Originally print only, this book is a compilation of other books with few added material.'
+		notes: 'Originally print only, this book is a compilation of other books with few added material.\nThe German edition has a few items from Germany and the FRench edition has the items from "Used Car Lot" and "Gun Haven 2".'
 	},
 	{
-		id: '26105',
-		sku: ['26105'],
+		sku: ['26105', '47011'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Runner\'s Black Book 2074',
-		releaseDate: ['2016-01-12'],
+		names: {
+			'de-DE': 'Schattenkatalog 2'
+		},
+		releaseDate: ['2012', '2013-02-05', '2016-01-12'],
 		description: 'Asking a shadowrunner if they really need another gun is like asking someone if they need all that oxygen floating around them. Are you ever going to use all that air? Maybe not. But you’re sure as hell not going to be one of those suckers who’s going to be caught short. RUNNER’S BLACK BOOK 2074 is about options, giving runners more choices of guns, weapons, vehicles, and other gear so that they can build a load out that suits them. Whether they want bleeding-edge gear built for those fighting the world’s latest wars or classic vehicles that have stood the test of time—or old crap they can get for cheap—RUNNER’S BLACK BOOK 2074 has what they need. Collecting gear from digital products Gun H(e)aven 2, Used Car Lot, MilSpec Tech 2, and Euro War Antiques along with exclusive material for this book, RUNNER’S BLACK BOOK 2074 contains full-color illustrations, detailed descriptions, and complete game statistics for each item. It’s an essential resource for runners looking to do some shopping—or to learn more about the guns that might be pointed at them in the near future.',
 		gameDate: '2074',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		links: [
+			{
+				name: 'Runner\'s Black Book 2074',
+				url: 'http://drivethrurpg.com/product/170868'
+			}
+		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
 		status: 'missing',
-		notes: 'Originally print only, this book is a compilation of other books with few added material.'
+		notes: 'Originally print only, this book is a compilation of other books with few added material.\nThe German edition have a few itens from Germany.'
 	},
 	{
-		id: '27050',
+		sku: ['47012'],
+		category: 'sourcebook',
+		type: 'print',
+		name: 'Schattenkatalog 3',
+		releaseDate: ['2013-05-23'],
+		description: 'Der Shadowrun Schattenkatalog 3 kommt bald, sprich zur RPC 2013, raus und er wird alle noch nicht auf Papier gedruckten PDFs enthalten, die bisher erschienen sind – allerdings nur die Regel- und Hintergrund-PDFs, nicht die kostenfreien oder Abenteuer-PDFs. Dafür gibt es im Band wieder 10 Seiten ADL-Zusatz – die sich mit Drohnen und deutschen Autobahnen beschäftigen werden.',
+		gameDate: '2074',
+		edition: 4,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'outofscope',
+		notes: 'A print only German compilation of: "Parazoologie", "Parabotanik", "Magische Gesellschaften", "Der Weg des Adepten", "Der Weg des Samurai", "Safehouses" und "State of the Art 2073" and a few extra pages.'
+	},
+	{
 		sku: ['27050'],
 		category: 'rulebook',
 		type: 'print',
@@ -7159,7 +6830,6 @@ module.exports = [
 		notes: 'Print only.'
 	},
 	{
-		id: 'RET-ANT',
 		sku: ['RET-ANT'],
 		category: 'novel',
 		type: 'digital',
@@ -7172,7 +6842,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27760',
 		sku: ['27760'],
 		category: 'boardgame',
 		type: 'physical',
@@ -7186,7 +6855,6 @@ module.exports = [
 		notes: 'Unreleased card game. Announced at Gen Con 2017.'
 	},
 	{
-		id: '26874',
 		sku: ['26874'],
 		category: 'novel',
 		type: 'print',
@@ -7200,7 +6868,6 @@ module.exports = [
 		notes: 'Announced on Gen Con 2017.'
 	},
 	{
-		id: 'RET-NOV',
 		sku: ['RET-NOV'],
 		category: 'novel',
 		type: 'digital',
@@ -7213,7 +6880,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'RET-SBK',
 		sku: ['RET-SBK'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -7226,7 +6892,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7002X',
 		sku: ['7002X', '25008', '10739'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -7243,11 +6908,10 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '7102',
 		sku: ['7102', '10701'],
 		category: 'rulebook',
 		type: 'scan',
-		name: 'Shadowrun GM Screen',
+		name: 'Shadowrun Game Master\'s Screen',
 		names: {
 			'fr-FR': 'L\'Écran première édition',
 			'de-DE': 'Spielleiterschirm Erste Edition'
@@ -7260,7 +6924,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '58XX',
 		sku: ['58XX', 'n/a'],
 		category: 'novel',
 		type: 'physical',
@@ -7274,7 +6937,6 @@ module.exports = [
 		notes: 'This was the last FASA novel, announced but never released. Here for historical reasons.'
 	},
 	{
-		id: '7321',
 		sku: ['7321'],
 		category: 'mission',
 		type: 'physical',
@@ -7288,7 +6950,6 @@ module.exports = [
 		notes: 'An adventure announced by FASA, never released. Here for historical reasons.'
 	},
 	{
-		id: '26CMP13-1',
 		sku: ['26CMP13-1'],
 		category: 'mission',
 		type: 'physical',
@@ -7302,7 +6963,6 @@ module.exports = [
 		notes: 'A series of adventures played at conventions, not relesed afterwards.'
 	},
 	{
-		id: '26CMP13-2',
 		sku: ['26CMP13-2'],
 		category: 'mission',
 		type: 'physical',
@@ -7316,7 +6976,6 @@ module.exports = [
 		notes: 'A series of adventures played at conventions, not relesed afterwards.'
 	},
 	{
-		id: '26CMP14',
 		sku: ['26CMP14'],
 		category: 'mission',
 		type: 'physical',
@@ -7330,7 +6989,6 @@ module.exports = [
 		notes: 'A series of adventures played at conventions, not relesed afterwards.'
 	},
 	{
-		id: '26CMP15-1',
 		sku: ['26CMP15-1'],
 		category: 'mission',
 		type: 'physical',
@@ -7344,7 +7002,6 @@ module.exports = [
 		notes: 'A series of adventures played at conventions, not relesed afterwards.'
 	},
 	{
-		id: '26CMP15-2',
 		sku: ['26CMP15-2'],
 		category: 'mission',
 		type: 'physical',
@@ -7358,7 +7015,6 @@ module.exports = [
 		notes: 'A series of adventures played at conventions, not relesed afterwards.'
 	},
 	{
-		id: '26CMP13-3',
 		sku: ['26CMP13-3'],
 		category: 'mission',
 		type: 'physical',
@@ -7372,7 +7028,6 @@ module.exports = [
 		notes: 'A series of adventures played at conventions, not relesed afterwards.'
 	},
 	{
-		id: '26CMP11',
 		sku: ['26CMP11'],
 		category: 'mission',
 		type: 'physical',
@@ -7386,7 +7041,6 @@ module.exports = [
 		notes: 'A series of adventures played at conventions, not relesed afterwards.'
 	},
 	{
-		id: 'X27PM001',
 		sku: ['X27PM001'],
 		category: 'mission',
 		type: 'physical',
@@ -7400,7 +7054,6 @@ module.exports = [
 		notes: 'An Prime Mission announced for the Year of Shadowrun but never released.'
 	},
 	{
-		id: 'X27PM002',
 		sku: ['X27PM002'],
 		category: 'mission',
 		type: 'physical',
@@ -7414,7 +7067,6 @@ module.exports = [
 		notes: 'An Prime Mission announced for the Year of Shadowrun but never released.'
 	},
 	{
-		id: 'SHPL-02',
 		sku: ['SHPL-02'],
 		category: 'misc',
 		type: 'digital',
@@ -7427,7 +7079,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-03',
 		sku: ['SHPL-03'],
 		category: 'misc',
 		type: 'digital',
@@ -7440,7 +7091,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-04',
 		sku: ['SHPL-04'],
 		category: 'misc',
 		type: 'digital',
@@ -7453,7 +7103,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-09',
 		sku: ['SHPL-09'],
 		category: 'misc',
 		type: 'digital',
@@ -7466,7 +7115,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-01',
 		sku: ['SHPL-01'],
 		category: 'misc',
 		type: 'digital',
@@ -7479,7 +7127,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-05',
 		sku: ['SHPL-05'],
 		category: 'misc',
 		type: 'digital',
@@ -7492,7 +7139,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-06',
 		sku: ['SHPL-06'],
 		category: 'misc',
 		type: 'digital',
@@ -7505,7 +7151,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-08',
 		sku: ['SHPL-08'],
 		category: 'misc',
 		type: 'digital',
@@ -7518,7 +7163,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SHPL-07',
 		sku: ['SHPL-07'],
 		category: 'misc',
 		type: 'digital',
@@ -7531,7 +7175,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'OMAP',
 		sku: ['OMAP'],
 		category: 'misc',
 		type: 'digital',
@@ -7544,7 +7187,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'NAGEE',
 		sku: ['NAGEE'],
 		category: 'magazine',
 		type: 'digital',
@@ -7557,7 +7199,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26404',
 		sku: ['26404'],
 		category: 'novel',
 		type: 'digital',
@@ -7572,26 +7213,14 @@ module.exports = [
 		notes: 'Bundle of 4 novels.'
 	},
 	{
-		//TODO: merge with german edition?
-		id: '10763A',
-		sku: ['10763A'],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Shockwaves',
-		releaseDate: ['2006'],
-		description: 'Shockwaves (Schockwellen) was first published by FanPro Germany as a German-language product only, and now we have a free summary translation available - 18 pages discussing the history of the elusive megacorp Proteus AG! This free download has tons of plot hooks for the crafty GM, usable with both SR4 and SR3.',
-		gameDate: '2063',
-		edition: 4,
-		publisher: ['Fantasy Productions'],
-		originalLanguage: 'en-US'
-	},
-	{
-		id: '10763',
 		sku: ['10763'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Schockwellen',
-		releaseDate: ['2003'],
+		names: {
+			'en-US': 'Shockwaves'
+		},
+		releaseDate: ['2003', '2006'],
 		description: 'Wer den Wind sät, wird den Sturm ernten! (Hosea, Kapitel 8 , Vers 7)\n\n"Dich kann nichts mehr erschrecken? Du meinst, dein Leben wäre ein endloser Prozess der Wiederholung der gleichen dreckigen Straßen und Städte? Nichts ist, wie es ist, glaub mir! Du hast nur noch nicht für die Großen gearbeitet. Für diejenigen, die das Geschick der Welt mitbestimmen und dich unter ihren Fingern zerquetschen können, wenn du nicht schnell bist - und besser als die anderen. Aber wenn du dich hineinziehen lässt in das große Geschäft, dann pass auf, dass du nicht zwischen die Fronten gerätst. Und dass du dein Geld ausgibst, bevor es dich erwischt, denn im Spiel der Götter kannst du nur verlieren!"\n\nSchockwellen ist ein Kampagnen-Band, der die Runner in den Kampf zweier Giganten hineinzieht und nicht mehr daraus entkommen lässt. Er wird sie in die dunklen Straßenschluchten deutscher Megaplexe führen, an die Strände der Südsee, in die Fjorde der Skandinavischen Union, tief unter die Fluten der toxischen Nordsee und noch viel, viel weiter. Dabei werden sie Geheimnisse erfahren, die sie lieber nicht hätten wissen wollen, und endlich einen entscheidenden Blick hinter die Kulissen des mysteriösen Konzerns aus der Nordsee werfen - nichts wird bleiben, wie es war.\n\nSchockwellen besteht aus zehn zusammenhängenden Abenteuern, die nachhaltig das Schicksal der Proteus AG bestimmen werden und bietet außerdem umfassende Hintergrundinformationen über den Giganten aus der Nordsee und die weiteren Protagonisten der Kampagne. Dabei wird die Storyline der ADL weitergeschrieben.',
 		gameDate: '2063',
 		edition: 3,
@@ -7599,7 +7228,6 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		id: 'SRF',
 		sku: ['SRF', '2-7408-0147-5'],
 		category: 'sourcebook',
 		type: 'print',
@@ -7614,7 +7242,6 @@ module.exports = [
 		notes: 'A complete description of France from the world of Shadowrun in 2057, with its history, political system, organization of society, organized crime, most powerful duchies, new creatures, new equipment, new spells, etc. French only. Considered semi/non-cannon.'
 	},
 	{
-		id: '10674',
 		sku: ['10674', '25005'],
 		category: 'mission',
 		type: 'print',
@@ -7628,7 +7255,6 @@ module.exports = [
 		notes: 'Unreleased'
 	},
 	{
-		id: '26859',
 		sku: ['26859'],
 		category: 'novel',
 		type: 'print',
@@ -7642,7 +7268,6 @@ module.exports = [
 		notes: 'Expected in 2017'
 	},
 	{
-		id: '26861',
 		sku: ['26861'],
 		category: 'novel',
 		type: 'print',
@@ -7656,7 +7281,6 @@ module.exports = [
 		notes: 'Expected in 2017'
 	},
 	{
-		id: 'NERPS-01',
 		sku: ['NERPS-01'],
 		category: 'misc',
 		type: 'digital',
@@ -7669,7 +7293,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'NERPS-02',
 		sku: ['NERPS-02'],
 		category: 'misc',
 		type: 'digital',
@@ -7682,7 +7305,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'NERPS-03',
 		sku: ['NERPS-03'],
 		category: 'misc',
 		type: 'digital',
@@ -7695,7 +7317,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'NERPS-04',
 		sku: ['NERPS-04'],
 		category: 'misc',
 		type: 'digital',
@@ -7708,7 +7329,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'NERPS-05',
 		sku: ['NERPS-05'],
 		category: 'misc',
 		type: 'digital',
@@ -7721,8 +7341,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '45201G',
-		sku: ['45201G', '45200G'],
+		sku: ['45201', '45200'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Berlin',
@@ -7735,8 +7354,7 @@ module.exports = [
 		notes: 'German sourcebook about Berlin.'
 	},
 	{
-		id: '47020G',
-		sku: ['47020G'],
+		sku: ['47020'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Datapuls ADL',
@@ -7749,7 +7367,6 @@ module.exports = [
 		notes: 'German sourcebook about Germany.'
 	},
 	{
-		id: '47000GA',
 		sku: ['47000GA'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -7763,7 +7380,6 @@ module.exports = [
 		notes: 'German translation of Parazoology and Parazoology 2 - updated with rules for Shadowrun, 5th Edition.'
 	},
 	{
-		id: '47000GB',
 		sku: ['47000GB'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -7777,7 +7393,6 @@ module.exports = [
 		notes: 'German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting.'
 	},
 	{
-		id: '47000GC',
 		sku: ['47000GC'],
 		category: 'misc',
 		type: 'print',
@@ -7792,7 +7407,6 @@ module.exports = [
 		notes: 'This item consists of a folio to store notes and character sheets as well as a sturdy cardboard version of the German SR5 character sheet. It was released by Pegasus for Gratisrollenspieltag 2014 (German Free RPG Day).'
 	},
 	{
-		id: '47000GD',
 		sku: ['47000GD'],
 		category: 'mission',
 		type: 'digital',
@@ -7806,7 +7420,6 @@ module.exports = [
 		notes: 'German translation of Shadowrun Mission "Carbon Copy" previously released in Sprawl Wilds. This pdf includes only SR5 rules.'
 	},
 	{
-		id: '27405',
 		sku: ['27405'],
 		category: 'mission',
 		type: 'digital',
@@ -7819,8 +7432,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '45019G',
-		sku: ['45019G'],
+		sku: ['45019'],
 		category: 'sourcebook',
 		type: 'print',
 		name: 'Schattenhandbuch 1',
@@ -7833,8 +7445,7 @@ module.exports = [
 		status: 'missing'
 	},
 	{
-		id: '45034G',
-		sku: ['45034G'],
+		sku: ['45034'],
 		category: 'sourcebook',
 		type: 'print',
 		name: 'Schattenhandbuch 2',
@@ -7847,8 +7458,7 @@ module.exports = [
 		status: 'missing'
 	},
 	{
-		id: '45027G',
-		sku: ['45027G'],
+		sku: ['45027'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Seattle: Stadt der Schatten Quellenbox',
@@ -7861,8 +7471,7 @@ module.exports = [
 		notes: 'This is an updated version of the recent Seattle Sprawl box by CGL. Some of the contents have been rearranged and new items added.\nIt includes:\n\t- Smaragd im Schatten (Emerald Shadows, 96 pages)\n\t- Mächte in Seattle (Ruling the Queen City, 52 pages)\n\t- Im Labyrinth (Tangled Threads, 28 pages)\n\t- Doc Wagon 19 (Short Story, 64 pages)\n\t- 24 Character Cards, double sided\n\t- Gang Reference Card, double sided\n\t- 2 Location Reference Cards\n\t- 2 A1 Seattle Maps, one double sided'
 	},
 	{
-		id: '46085G',
-		sku: ['46085G'],
+		sku: ['46085'],
 		category: 'mission',
 		type: 'print',
 		name: 'Blut und Spiele',
@@ -7876,7 +7485,6 @@ module.exports = [
 		notes: 'German 200 page adventure.'
 	},
 	{
-		id: 'GRST-2016',
 		sku: ['GRST-2016'],
 		category: 'mission',
 		type: 'print',
@@ -7891,8 +7499,7 @@ module.exports = [
 		notes: 'A Shadowrun supplement released at Gratisrollenspiltag 2016.'
 	},
 	{
-		id: '45018G',
-		sku: ['45018G'],
+		sku: ['45018'],
 		category: 'mission',
 		type: 'print',
 		name: 'Licht aus der Asche',
@@ -7906,8 +7513,7 @@ module.exports = [
 		notes: 'German translation of Sprawl Wilds missing the adventure "Carbon Copy" and limited to the 5th edition of Shadowrun.'
 	},
 	{
-		id: '45033G',
-		sku: ['45033G'],
+		sku: ['45033'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Mission Chicago',
@@ -7921,8 +7527,7 @@ module.exports = [
 		notes: 'Collects three Shadowrun Missions adventures (SRM 5A-01 Chasin\' the Wind, SRM 5A-02 Critic\'s Choice, SRM 5A-03 Gone long gone) and a description of the city of Chicago.'
 	},
 	{
-		id: '45035G',
-		sku: ['45035G'],
+		sku: ['45035'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Schatten über Chicago',
@@ -7936,8 +7541,7 @@ module.exports = [
 		notes: 'Collects three Shadowrun Missions adventures (SRM05-04: Liberation, SRM05-05: While the City Sleeps, SRM05-06: Take a Chance) and a description of the city of Chicago.'
 	},
 	{
-		id: '45042G',
-		sku: ['45042G'],
+		sku: ['45042'],
 		category: 'misc',
 		type: 'print',
 		name: 'Karren Quartett',
@@ -7951,8 +7555,7 @@ module.exports = [
 		notes: 'Shadowrun Karren Quartett is a set of 32 cards depicting various vehicles of the Shadowrun universe with Shadowrun5 game stats.'
 	},
 	{
-		id: '45020G',
-		sku: ['45020G'],
+		sku: ['45020'],
 		category: 'misc',
 		type: 'print',
 		name: 'Wummen Quartett',
@@ -7966,8 +7569,7 @@ module.exports = [
 		notes: 'Shadowrun Wummen Quartett is a set of 32 cards depicting various weapons of the Shadowrun universe with Shadowrun5 game stats. It also includes an activation code for Shadowrun Online.'
 	},
 	{
-		id: '45046G',
-		sku: ['45046G'],
+		sku: ['45046'],
 		category: 'mission',
 		type: 'print',
 		name: 'Auf dunklen Pfaden',
@@ -7981,8 +7583,7 @@ module.exports = [
 		notes: 'German adventure.'
 	},
 	{
-		id: '45056G',
-		sku: ['45056G'],
+		sku: ['45056'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Im Bann der Karten',
@@ -7995,8 +7596,7 @@ module.exports = [
 		notes: 'Three short scenarios for use with the Tarot Deck.'
 	},
 	{
-		id: '46040G',
-		sku: ['46040G'],
+		sku: ['46040'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Geisterkartelle',
@@ -8009,7 +7609,6 @@ module.exports = [
 		notes: 'German Translation of Ghost Cartels by Pegasus. It features additional material on a ghost cartels campaign in the AGS and an additional adventure called Euro Tour. It also contains a CD-ROM with further material and bonus adventures.'
 	},
 	{
-		id: '46040GX',
 		sku: ['46040GX'],
 		category: 'mission',
 		type: 'digital',
@@ -8024,21 +7623,6 @@ module.exports = [
 		notes: 'This adventure was originally included as bonus on the CD Rom accompanying the German Ghost Cartels book and was later made available as stand-alone pdf.'
 	},
 	{
-		id: '46075G',
-		sku: ['46075G'],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Konzerndossier',
-		releaseDate: ['2011'],
-		description: '',
-		gameDate: '2074',
-		edition: 4,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		notes: 'German translation of the Corporate Guide.\nIt features 30 additional pages on corporations in Germany.'
-	},
-	{
-		id: '23001',
 		sku: ['23001'],
 		category: 'sourcebook',
 		type: 'print',
@@ -8052,7 +7636,6 @@ module.exports = [
 		status: 'missing'
 	},
 	{
-		id: '21008',
 		sku: ['21008'],
 		category: 'misc',
 		type: 'print',
@@ -8067,21 +7650,22 @@ module.exports = [
 		notes: 'This book was poublished in 2005 by Fanpro. It features a comprehensive look at the history, influence and mechanics of Shadowrun from 1989 to date. It includes a collection of articles on Shadowrun-related topics, short stories and a collector\'s guide listing all Shadowrun publications and novels in English and German.'
 	},
 	{
-		id: '23006',
-		sku: ['23006'],
+		sku: ['23006', 'SR09'],
 		category: 'sourcebook',
 		type: 'print',
 		name: 'SOX',
-		releaseDate: ['2007'],
-		description: '',
+		names: {
+			'fr-FR': 'SOX - Ombres Radioactives d\'Europe'
+		},
+		releaseDate: ['2007', '2009', '2011'],
+		description: 'Am Anfang war der GAU. Seitdem ist das Gebiet Saar-Lorraine-Luxemburg das Verheerte Land im Herzen Europas, eine Sonderrechtszone des Kontrollrates, Paradies und Hölle für seine Einwohner, eine offene Wunde am Körper der Mutter Natur. Hier leben strahlenverseuchte Menschen, wildernde Ghule durch die urbanen Wüsten, werden verbotene Experimente von Konzernen durchgeführt, treiben Manaverzerrungen Erwachte in den Wahnsinn. Mutierte Critter jagen durch die Wälder, Strahlensenken bringen den unsichtbaren Tod - und Runner versuchen ihr Glück, denn so manches Geheimnis liegt in den sechzig Jahre alten Trümmern verborgen. Doch pass auf, Fremder: auf deine Gesundheit, auf deinen Rücken, auf deinen Verstand - denn dies ist die SOX - lass alle Hoffnung fahren!',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Fantasy Productions'],
+		publisher: ['Fantasy Productions', 'Black Book Editions'],
 		originalLanguage: 'de-DE',
-		notes: '"SOX" covers a description of the Saar-Lorraine-Luxemburg containment zone and a related adventure ("Hoffnungsstrahlen", Rays of Hope). It is a French-German cooperation.'
+		notes: '"SOX" covers a description of the Saar-Lorraine-Luxemburg containment zone and two related adventures ("Hoffnungsstrahlen" and "Mauvais Présage"). It is a French-German cooperation.'
 	},
 	{
-		id: '47000GX',
 		sku: ['47000GX'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -8096,80 +7680,40 @@ module.exports = [
 		notes: 'Netzstücke is an expansion for the German version of Spy Games (Machtspiele). It features additional material for campaigns in Germany.'
 	},
 	{
-		id: '46095G',
-		sku: ['46095G', '46096G'],
+		sku: ['46095', '46096'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Rhein-Ruhr-Megaplex',
 		releaseDate: ['2011'],
-		description: 'Rhein-Ruhr-Megaplex (Rhine Ruhr Megaplex) is a German Shadowrun sourcebook that provides detailed information about the Ruhr area and parts of the Rhineland.\nMain Topics of the book are:\n\t- Megaplex overview\n\t- A tour through the Megaplex areas\n\t- Culture\n\t- Saeder-Krupp\n\t- Powers and Organizations\n\t- Points of Interest\n\t- Maps, locations, and adventure hooks',
+		description: 'Im Schatten des Drachen\n\nDer Rhein-Ruhr-Megaplex. 25 Millionen Metamenschen. Luxusviertel, extraterritoriale Konzerngelände, Slums, Massenarbeitslosigkeit, Ausbeutung. Nirgendwo in der ADL leben so viele Menschen zusammengedrängt beieinander. Wo zwischen Büdchen und Städtetag kommunale Politik gemacht wird, wo die Grenze zwischen Arbeiterverein und radikaler Sprawlguerilla fließend ist, wo alle Kulturen Europas sich zu einer heterogenen Masse vermischen – dort geht die gute alte Polizei auf Streife, dort hat die italienische Mafia das Heft in der Hand, dort sind die Schatten rußig, rau und blutig. Und dort thront wie ein König in seinem Weltreich der goldene Drache und zieht wie eine Spinne seine Netze zusammen.\n\nRhein-Ruhr-Megaplex beschreibt den größten Sprawl der ADL, der sich von Unna bis Bonn zieht. Neben einem genauen Blick auf Saeder-Krupp und seine Pläne mit Essen werden die trendigsten Orte, die dreckigsten Slums, die toxischsten Zonen für Spieler und Spielleiter beleuchtet. Neben Abenteuerideen, Grundrissen und einer Beschreibung der Saeder-Krupp-Arkologie mit Planausschnitten findet sich auch ein vollfarbiger Werbeprospekt von Saeder-Krupp in diesem Quellenbuch für Shadowrun 4, bei dem es sich um eine weitere deutsche Eigenentwicklung handelt.',
 		gameDate: '2074',
 		edition: 4,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing'
+		status: 'missing',
+		notes: 'Rhein-Ruhr-Megaplex (Rhine Ruhr Megaplex) is a German Shadowrun sourcebook that provides detailed information about the Ruhr area and parts of the Rhineland.\nMain Topics of the book are:\n\t- Megaplex overview\n\t- A tour through the Megaplex areas\n\t- Culture\n\t- Saeder-Krupp\n\t- Powers and Organizations\n\t- Points of Interest\n\t- Maps, locations, and adventure hooks'
 	},
 	{
-		id: '45210G',
-		sku: ['45210G'],
+		sku: ['45210'],
 		category: 'sourcebook',
 		type: 'print',
 		name: 'Reiseführer in die deutschen Schatten',
 		releaseDate: ['2012'],
-		description: '',
+		description: 'Die Allianz Deutscher Länder: ein Flickenteppich.\nUralte magische Orte und hochmoderne Konzernarkologien. Ödes Brachland und überbaute Straßenschluchten. Toxische Piraten und Alpen-Aktivisten. Wicca-Hexen und Universitätsmagier. Man reist durch ein Land, in dem jeder Quadratmeter Geschichte, Gefahren oder neue Möglichkeiten präsentiert. Nirgendwo liegen die Gegensätze so nah aneinander, nirgendwo sind die Gemeinsamkeiten so klar. Und daher sollte man sich auskennen. Nicht nur, um zu überleben, sondern auch, um seine Chancen zu nutzen.\nDer Reiseführer in die deutschen Schatten ist ein Quellenbuch für Shadowrun 4. Er bietet neues Material für das Spiel in der ADL: Beschreibungen von Stuttgart, dem Harz oder Pomorya, Einblicke in Schattenjobs, Besonderheiten der deutschen Runnerszene, berühmte und berüchtigte Personen und eine Vielzahl spannender Locations und Settings – reich bebildert mit Illustrationen, Karten, Grundrissen und insgesamt 24 Farbseiten, darunter eine Übersicht der Proteusarkologie auf Helgoland.\nDie Allianz Deutscher Länder: ein Runner-Spielplatz.',
 		gameDate: '2074',
 		edition: 4,
+		links: [
+			{
+				name: 'Reiseführer in die Deutschen Schatten',
+				url: 'https://www.drivethrurpg.com/product/108383/Shadowrun:-Reisef%C3%BChrer-in-die-deutschen-Schatten'
+			}
+		],
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		notes: 'German sourcebook for Shadowrun detailing various aspcets of shadowrunning in Germany, including organized crime, famous shadowrunners, possible targets and certain interesting regions.'
 	},
 	{
-		id: '45100G',
-		sku: ['45100G'],
-		category: 'rulebook',
-		type: 'digital',
-		name: 'Schattenrüstzeug',
-		releaseDate: ['2011'],
-		description: 'Nie mehr unbewaffnet!\nIn die tiefen Schatten der Sechsten Welt sollte man nie unvorbereitet eintauchen: Eine Waffe ist immer gut. Zwei sind besser. Drei und ein Granatwerfer, ein Magier und ein Hacker – und es kann eigentlich kaum noch etwas schiefgehen.\nSchattenrüstzeug ist die ultimative Box für alle Runner und Spielleiter in Shadowrun. Es ergänzt das Grundregelwerk zu Shadowrun 4 und enthält folgende Komponenten:\n\t· Einen stabilen vierseitigen Spielleiterschirm mit allen spielrelevanten Informationen im Überblick.\n\t· 4 vollfarbige Karten von Orten in den Sprawls der Sechsten Welt.\n\t· Das Abenteuer „Schattenkrieg“, ein Shadowrun-Einführungsabenteuer, das für den Spieleinstieg konzipiert ist, aber auch von Profis gespielt werden kann.\n\t· Das Schattenwerkzeug, das neue Kontakte, Abenteuerbeispiele und –orte beschreibt und vorstellt. Zudem enthält es das CGHS, ein modulares System zur simplen und schnellen Erstellung von Spieler- und Nichtspielercharakteren, sowie Anatomie eines Shadowruns. Letzteres beschreibt einen typischen Shadowrun und bringt dem Spielleiter anhand dieses Runs gleichzeitig die Regeln, die Proben und die Systematik eines Abenteuers nahe.\n\t· 6 vollfarbige Referenzbögen, die dem Spielleiter zusammen mit dem Spielleiterschirm lästiges Blättern zu Kampfregeln und Probeabfolgen ersparen. So wird der Regelteil des Leitens ein Kinderspiel.\n\t· Eine Tabellenzusammenstellung aller Tabellen aus Arsenal 2070, BodyTech, Runnerkompendium, Straßenmagie und Vernetzt – unter anderem die ultimative Einkaufsliste für alle Schattenläufer.\n\t· Den Masterindex, der sämtliche Schlagwörter für Grundregelwerk, Arsenal 2070, BodyTech, Runnerkompendium, Straßenmagie und Vernetzt auflistet.\n\t· Ein Poster mit der Skyline von Seattle.\n\t· 3 Shadowrun-Aufkleber.\nMit dieser Ausrüstung trifft das Schattenrüstzeug tief in das Herz jedes Shadowrunspiels – für flüssigere Abenteuer, coolere Settings, spannendere Plots. Und es unterstützt die Runner im Spiel, damit sie enden wie die Profis: Reich oder tot.',
-		gameDate: '2074',
-		edition: 4,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'missing',
-		notes: 'The (altered) German version of the Runner\'s Toolkit'
-	},
-	{
-		id: '23004',
-		sku: ['23004'],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Schattenstädte',
-		releaseDate: ['2006'],
-		description: 'In den dunklen Straßenschluchten der Megaplexe lockt das Geschäft. Wo sich versteckte Unterschlupfe finden und Schieber illegale Aufträge für ihre Konzerne vermitteln, sind Shadowrunner zuhause. Von hier aus starten sie ihre geheimen Operationen und erleben Abenteuer in der Sechsten Welt.\nSchattenstädte ist ein Hintergrundband für Shadowrun 4, in dem ein paar der wichtigsten Megaplexe beschrieben werden: Seattle, Hamburg und Hongkong. Sie alle eignen sich durch ihr einzigartiges Flair besonders gut als Hintergrund für eine klassische Shadowrun-Kampagne. Dieses Buch gibt umfassenden Überblick über verschiedene Stadtteile, interessante Orte und die Machtkämpfe, die zwischen Politik, Konzernen, Syndikaten und Straßengangs toben. Zudem sind Kurzdossiers zu Kapstadt, Caracas und Istanbul enthalten, sowie zahlreiche Abenteuerideen und Tipps, mit deren Hilfe man beliebige andere Städte als Schattenstädte verwenden kann.',
-		gameDate: '2070',
-		edition: 4,
-		publisher: ['Fantasy Productions'],
-		originalLanguage: 'de-DE',
-		notes: 'Schattenstädte is the translation of Runner Havens with an added chapter on Hamburg in the shadows.'
-	},
-	{
-		id: '46045G',
-		sku: ['46045G'],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Schattenstädte (Revised)',
-		releaseDate: ['2006'],
-		description: 'In den dunklen Straßenschluchten der Megaplexe lockt das Geschäft. Wo sich versteckte Unterschlupfe finden und Schieber illegale Aufträge für ihre Konzerne vermitteln, sind Shadowrunner zuhause. Von hier aus starten sie ihre geheimen Operationen und erleben Abenteuer in der Sechsten Welt.\nSchattenstädte ist ein Hintergrundband für Shadowrun 4, in dem ein paar der wichtigsten Megaplexe beschrieben werden: Seattle, Hamburg, Hongkong und - neu in dieser Auflage - Marseille. Sie alle eignen sich durch ihr einzigartiges Flair besonders gut als Hintergrund für eine klassische Shadowrun-Kampagne. Dieses Buch gibt umfassenden Überblick über verschiedene Stadtteile, interessante Orte und die Machtkämpfe, die zwischen Politik, Konzernen, Syndikaten und Straßengangs toben. Zudem sind Kurzdossiers zu Kapstadt, Caracas und Istanbul enthalten, sowie zahlreiche Abenteuerideen und Tipps, mit deren Hilfe man beliebige andere Städte als Schattenstädte verwenden kann.\nDiese neue Auflage von Schattenstädte ist für die beschriebenen Megaplexe aktualisiert bis zum Jahr 2072',
-		gameDate: '2072',
-		edition: 4,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'missing',
-		notes: 'Schattenstädte is the translation of Runner Havens with an added chapter on Hamburg in the shadows. The revised 2010 release by Pegasus also includes a translation of the chapter on marseilles from Capitales des ombres by French publisher BBE.'
-	},
-	{
-		id: '45047G',
-		sku: ['45047G'],
+		sku: ['45047'],
 		category: 'sourcebook',
 		type: 'print',
 		name: 'State of the Art: ADL',
@@ -8181,22 +7725,6 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		id: 'SR05',
-		sku: ['SR05'],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Capitales des ombres',
-		releaseDate: ['2008'],
-		description: 'Capitales des Ombres, le premier supplément géographique de Shadowrun, Quatrième édition, présente aux joueurs trois cancers urbains où règnent les Ombres : Hong Kong, Seattle et Marseille, en exclusivité dans la version française. Chaque ville est décrite en détail du point de vue d’un shadowrunner, dans une perspective couvrant les thèmes essentiels : équilibre des pouvoirs, affaires corporatistes et monde de la pègre, lieux importants, spécifi cités magiques et éléments propres à chaque ville – le tout foisonnant d’idées et d’accroches de scénarios.\nQuatre autres cités chères aux runners sont également présentées : Le Cap, Caracas, Hambourg et Istanbul, le tout accompagné de conseils au meneur de jeu lui permettant de transformer n’importe quelle zone urbaine en paradis pour runners.',
-		gameDate: '2072',
-		edition: 4,
-		publisher: ['other'],
-		originalLanguage: 'fr-FR',
-		status: 'missing',
-		notes: 'Capitales des ombres is the translation of Runner Havens with an added chapter on Marseilles in the shadows.'
-	},
-	{
-		id: '963-85454-9-6',
 		sku: ['963-85454-9-6'],
 		category: 'sourcebook',
 		type: 'print',
@@ -8211,7 +7739,6 @@ module.exports = [
 		notes: 'Shadowrun Hungary sourcebook (Hungarian)'
 	},
 	{
-		id: '10727',
 		sku: ['10727'],
 		category: 'sourcebook',
 		type: 'scan',
@@ -8225,7 +7752,6 @@ module.exports = [
 		notes: 'Chrom & Dioxin succeeds in making the years 2054-2056 playable for german Runners, too. Filled with lots of information on the latest events and developments in politics, economy and technology, plus a special treat: the Switzerland. With its many paranormal beings and rigid security politics a challenge for every Runner. There are also sections dealing with the Lueneburg Heath in northern Germany and the city of Karlsruhe.'
 	},
 	{
-		id: 'P2009A',
 		sku: ['P2009A'],
 		category: 'mission',
 		type: 'digital',
@@ -8240,7 +7766,6 @@ module.exports = [
 		notes: 'Winning entry of Pegasus\' 2009 adventure competition for Shadowrun. Subsequently released as a free pdf.'
 	},
 	{
-		id: '26056S',
 		sku: ['26056S'],
 		category: 'mission',
 		type: 'digital',
@@ -8254,7 +7779,6 @@ module.exports = [
 		status: 'missing'
 	},
 	{
-		id: 'SRM08-01',
 		sku: ['SRM08-01'],
 		category: 'mission',
 		type: 'digital',
@@ -8267,7 +7791,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'SRM08-02',
 		sku: ['SRM08-02'],
 		category: 'mission',
 		type: 'digital',
@@ -8280,7 +7803,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '26S057',
 		sku: ['26S057'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -8293,7 +7815,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: 'KS001',
 		sku: ['KS001'],
 		category: 'boardgame',
 		type: 'physical',
@@ -8307,7 +7828,6 @@ module.exports = [
 		notes: 'Announced as a kickstarter campaign. Possible a retake on Hostile Takeover.'
 	},
 	{
-		id: '27705',
 		sku: ['27705'],
 		category: 'boardgame',
 		type: 'physical',
@@ -8321,7 +7841,6 @@ module.exports = [
 		notes: 'Announced at GenCon 2018.'
 	},
 	{
-		id: '27706',
 		sku: ['27706'],
 		category: 'boardgame',
 		type: 'physical',
@@ -8335,7 +7854,6 @@ module.exports = [
 		notes: 'Announced at GenCon 2018.'
 	},
 	{
-		id: '27013',
 		sku: ['27013'],
 		category: 'rulebook',
 		type: 'digital',
@@ -8348,7 +7866,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27012',
 		sku: ['27012'],
 		category: 'rulebook',
 		type: 'digital',
@@ -8361,7 +7878,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		id: '27203',
 		sku: ['27203'],
 		category: 'novel',
 		type: 'digital',
@@ -8375,7 +7891,6 @@ module.exports = [
 		notes: 'Scheduled to release in April 2018.'
 	},
 	{
-		id: '2-7408-0105-X',
 		sku: ['2-7408-0105-X'],
 		category: 'sourcebook',
 		type: 'print',
@@ -8390,7 +7905,6 @@ module.exports = [
 		notes: 'A condensed edition with: Native American Nations Volume 1, Native American Nations Volume 2 without the adventure "Peacekeeper".'
 	},
 	{
-		id: '2-7408-0112-2',
 		sku: ['2-7408-0112-2'],
 		category: 'mission',
 		type: 'print',
@@ -8403,5 +7917,18 @@ module.exports = [
 		originalLanguage: 'fr-FR',
 		status: 'outOfScope',
 		notes: 'A translation of the adventure "Peacekeeper".'
+	},
+	{
+		sku: ['45050'],
+		category: 'rulebook',
+		type: 'digital',
+		name: 'Shadowrun Einsteigerregeln',
+		releaseDate: ['2009'],
+		description: 'DIE ERDE IM JAHR 2070\n\nDie Magie ist zurückgekehrt. Unzählige Menschen haben sich in Elfen und Zwerge, Trolle und Orks verwandelt. Drachen und andere Fabelwesen sind aus ihrem Schlummer erwacht. Die Welt, wie wir sie kennen, ist im Chaos versunken. Nur die größten Konzerne haben überdauert und die Macht übernommen. Als Shadowrunner bist du ein Geist: Nirgends registriert, offiziell geleugnet, erledigst du die Drecksjobs für die Konzerne.\nOb du ein bis an die Grenze mit Implantaten aufgerüsteter Straßensamurai bist oder ein machtvolle Zauber webender Magier, ein gedankenschnell das weltweite kabellose Computernetz der "Matrix" durchsurfender Hacker oder ein, mit seinen Maschinen verschmelzender Rigger - Du hast die Zukunft der Welt in der Hand.\nWenn du das Spiel lange genug überlebst.\nSPIEL MIT!',
+		gameDate: '2060',
+		edition: 2,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		notes: 'The German version of the "Start Rules". Contains the adventure "Freier Markt".'
 	}
 ];
