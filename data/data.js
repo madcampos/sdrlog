@@ -3,6 +3,8 @@
 TODO: missing, crossreferences, upcomming, and announced/rummored books
 TODO: add virtual seatle
 TODO: add deutsch books
+TODO: Add Parabotany and Parageology german 5th update?
+
 Sources:
 http://shadowrun.wikia.com/wiki/Main_Page
 https://www.shadowiki.de/Hauptseite
@@ -46,46 +48,56 @@ A Shadowrun novel by Jennifer Brozek.
 /**
  * The format the material on this collection are organized.
  * @typedef {Object} Material
- * @prop {String} id The ID of the material. *Must Be unique!*
- * @prop {("rulebook"|"sourcebook"|"mission"|"magazine"|"novel"|"unofficial"|"videogame"|"tcg"|"boardgame"|"misc")} category The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books.
+ * @prop {("rulebook"|"sourcebook"|"mission"|"magazine"|"novel"|"unofficial"|"videogame"|"tcg"|"boardgame"|"misc")} category The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books. It may be one of the following:
+ * - **Rulebook**: A book containing mostly rules that are compatible with only one edition of the game.
+ * - **Sourcebook**: A book containing settings, plot hooks and other stuff that is mostly background information, not rules.
+ * - **Mission**: A book containing information to be used on an adventure or campaign.
+ * - **Magazine**: A magazine publication with assosrted content.
+ * - **Novel**: A fiction book writen based on the Shadowrun universe.
+ * - **Unofficial**: Fan made publication specific for Shadowrun.
+ * - **Videogame**: Digital game setted in the Shadowrun world.
+ * - **TCG**: Trade Card Game based on the Shadowrun universe.
+ * - **Boardgame**: A boardgame or other physical game that is setted in the Shadowrun universe.
+ * - **Miscellaneous**: Assorted matterials that don't fit in any of the above categories.
  *
- * It may be one of the following:
- * - *Rulebook*: A book containing mostly rules that are compatible with only one edition of the game.
- * - *Sourcebook*: A book containing settings, plot hooks and other stuff that is mostly background information, not rules.
- * - *Mission*: A book containing information to be used on an adventure or campaign.
- * - *Magazine*: A magazine publication with assosrted content.
- * - *Novel*: A fiction book writen based on the Shadowrun universe.
- * - *Unofficial*: Fan made publication specific for Shadowrun.
- * - *Videogame*: Digital game setted in the Shadowrun world.
- * - *TCG*: Trade Card Game based on the Shadowrun universe.
- * - *Boardgame*: A boardgame or other physical game that is setted in the Shadowrun universe.
- * - *Miscellaneous*: Assorted matterials that don't fit in any of the above categories.
- * @prop {("digital"|"print"|"scan"|"ocr"|"physical")} type The type of the material.
+ * @prop {("digital"|"print"|"scan"|"ocr"|"physical")} type The type of the material. It may be one of the following:
+ * - **Digital**: The material is available primarily in digital format.
+ * - **Print**: The material is available in printed format only.
+ * - **Scan**: The material is available as a low quality (non OCR) scan of the printed format.
+ * - **OCR**: The material is a OCR scan of the printed format, usually smaller in size and with better quality.
+ * - **Physical**: The material is only available in a physical format other than a book (Eg.: TCG, boardgame, etc.).
  *
- * It may be one of the following:
- * - *Digital*: The material is available primarily in digital format.
- * - *Print*: The material is available in printed format only.
- * - *Scan*: The material is available as a low quality (non OCR) scan of the printed format.
- * - *OCR*: The material is a OCR scan of the printed format, usually smaller in size and with better quality.
- * - *Physical*: The material is only available in a physical format other than a book (Eg.: TCG, boardgame, etc.).
  * @prop {String[]} sku The numbers that identifies the material within the publishers, some may be infered or unofficial.
- * @prop {String} name The original name of the material.
- * @prop {Object} [names] A list with translated names for the material, in the format: `'<ISO code>': '<name>'` *Note:* Some materials are released in multiple languages but have significant changes from the base material, so they are listed separataly.
- * @prop {String} description A description or synopsis of the material.
- * @prop {Number} edition The edition of the publication, ranging from `1` to `5`.
- * @prop {String[]} publisher The enterprise who published the material.
- * @prop {String[]} [images] A list of image urls representing alternative and translated covers.
- * @prop {String} [gameDate] The in game date of the material.
- * @prop {String[]} [releaseDate] The date the material was released and it's rereleases. If not present the material is considered unreleased.
- * @prop {(MaterialFile|MaterialLink)[]} [links] A list of the material files.
- * @prop {("missing"|"outofscope"|"rummored"|"unreleased"|"upcomming"|"badscan")} [status] The status of the item, one of the following:
  *
- * - *Missing*: The item is not present on the archives.
- * - *Out of Scope*: The item is not available or is really hard to obtain and don't add anything new.
- * - *Rummored*: The item is rummored to come out, it is listed or spoken of somewhere.
- * - *Unreleased*: The item has a scheduled/expected release and has been "announced" but is nowhere to be found or has expired the expected release date.
- * - *Upcomming*: The item is scheduled to come out in the future.
+ * @prop {String} name The original name of the material.
+ *
+ * @prop {Object} [names] A list with translated names for the material, in the format: `'<ISO code>': '<name>'`
+ *
+ * **Note:** Some materials are released in multiple languages but have significant changes from the base material, so they are listed separataly.
+ *
+ * @prop {String} description A description or synopsis of the material.
+ *
+ * @prop {Number} edition The edition of the publication, ranging from `1` to `5`.
+ *
+ * @prop {String[]} publisher A list of enterprises who published the material.
+ *
+ * @prop {String[]} [images] A list of image urls representing alternative and translated covers.
+ *
+ * @prop {String} [gameDate] The in game date of the material.
+ *
+ * @prop {String[]} [releaseDate] The date the material was released and it's rereleases. If not present the material is considered unreleased.
+ *
+ * @prop {(MaterialFile|MaterialLink)[]} [links] A list of links to the actual material, be it the files or online links.
+ *
+ * @prop {("missing"|"outofscope"|"rummored"|"unreleased"|"upcomming"|"badscan")} [status] The status of the item, one of the following:
+ * - **Missing**: The item is not present on the archives.
+ * - **Out of Scope**: The item is not available or is really hard to obtain and don't add anything new.
+ * - **Rummored**: The item is rummored to come out, it is listed or spoken of somewhere.
+ * - **Unreleased**: The item has a scheduled/expected release and has been "announced" but is nowhere to be found or has expired the expected release date.
+ * - **Upcomming**: The item is scheduled to come out in the future.
+ *
  * @prop {String} [originalLanguage] The original language the material was released.
+ *
  * @prop {String} [notes] Some notes about the material, used to explain the status or reasonig for the material.
  */
 
@@ -970,15 +982,20 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26S027'],
+		sku: ['26S027', 'SRL501'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Bullets & Bandages',
-		releaseDate: ['2014-06'],
-		description: 'The only reason shadowrunners have scars to show off during their downtime is that when they got hit, someone had the guts, the skill, and the speed to pull them out of whatever drekstorm they’d gotten themselves into. Maybe it was a DocWagon High Threat Response team who rode in to save the day, or maybe a teammate who’d picked up some handy medical skills in the course of their career in the shadows patched them up enough to keep them moving. Either way, having someone who can pull your hoop out of the fire is handy in any situation. Make sure you thank them and buy ’em a drink—assuming, of course, they made it out with you.',
+		names: {
+			'de-DE': 'Kugeln und Bandagen',
+			'fr-FR': 'Balles & Pansements',
+			'pt-BR': 'Balas e Bandagens'
+		},
+		releaseDate: ['2014-06-03', '2014-11-06', '2016-12-27'],
+		description: 'Sew ’Em Up, Ride ’Em Out\n\nThe only reason shadowrunners have scars to show off during their downtime is that when they got hit, someone had the guts, the skill, and the speed to pull them out of whatever drekstorm they’d gotten themselves into. Maybe it was a DocWagon High Threat Response team who rode in to save the day, or maybe a teammate who’d picked up some handy medical skills in the course of their career in the shadows patched them up enough to keep them moving. Either way, having someone who can pull your hoop out of the fire is handy in any situation. Make sure you thank them and buy ’em a drink—assuming, of course, they made it out with you.',
 		gameDate: '2076-05',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1098,40 +1115,57 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26S035'],
+		sku: ['26S035', 'SRL503'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Coyotes',
-		releaseDate: ['2013-12'],
-		description: 'The Sixth World has been carefully divided and partitioned to keep people in their place, living under the thumbs of those who draw the lines. Shadowrunners, though, have never been good at staying where they’re supposed to be. They\'ve got goods to smuggle, bounties to avoid, and a host of other reasons to cross the walls and borders the rest of the world has put up.\nThese crossings aren’t always easy, and that’s where Coyotes come in—trained professionals with nerves of steel and steady hands who can help you sneak, talk, or just blast your way past almost any border. You may have to dig deep in your pocket to pay their asking price, but it\'ll be worth it when you see the heavily armed checkpoint fading in the rear view mirror.',
+		names: {
+			'de-DE': 'Kojoten',
+			'fr-FR': 'Coyotes',
+			'pt-BR': 'Coiotes'
+		},
+		releaseDate: ['2013-12-14', '2013-03-23', '2016-12-27'],
+		description: 'Over the Edges\n\nThe Sixth World has been carefully divided and partitioned to keep people in their place, living under the thumbs of those who draw the lines. Shadowrunners, though, have never been good at staying where they’re supposed to be. They\'ve got goods to smuggle, bounties to avoid, and a host of other reasons to cross the walls and borders the rest of the world has put up.\nThese crossings aren’t always easy, and that’s where Coyotes come in—trained professionals with nerves of steel and steady hands who can help you sneak, talk, or just blast your way past almost any border. You may have to dig deep in your pocket to pay their asking price, but it\'ll be worth it when you see the heavily armed checkpoint fading in the rear view mirror.',
 		gameDate: '2075-11',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', 'New Order Editora'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition contains aditional material about Europe.'
 	},
 	{
-		sku: ['27004', '27400S'],
+		sku: ['27004', '27400S', '45028', 'SR506'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Run Faster',
-		releaseDate: ['2015-02', '2017-03'],
-		description: 'Every step, every advantage, every millisecond counts. The streets of the Sixth World are mean, and if they want to stay alive, shadowrunners need every advantage they can get to gain a step on the opposition. Fortunately, Run Faster is full of them. With it, you can learn about more metatypes for characters, including hobgoblins, giants, centaurs, and sasquatch; acquire new qualities, such as Disgraced, Hawk Eye, and Lightning Reflexes; and, if you dare, dabble with the dangerous and deadly Infected.',
+		names: {
+			'de-DE': 'Schattenläufer',
+			'fr-FR': 'Run Faster',
+			'pt-BR': 'Run Faster'
+		},
+		releaseDate: ['2014-12-18', '2015-02-18', '2015-07-19', '2015-10-18', '2016-12-17', '2017-03', '2018'],
+		description: 'The Cost of Greatness\n\nEvery step, every advantage, every millisecond counts. The streets of the Sixth World are mean, and if they want to stay alive, shadowrunners need every advantage they can get to gain a step on the opposition. Fortunately, Run Faster is full of them. With it, you can learn about more metatypes for characters, including hobgoblins, giants, centaurs, and sasquatch; acquire new qualities, such as Disgraced, Hawk Eye, and Lightning Reflexes; and, if you dare, dabble with the dangerous and deadly Infected.\n\nRun Faster also has advice on fleshing out characters of different metatypes, expanded contact and lifestyle rules, and alternate character creation methods to help ensure that players can build exactly the character they want.\n\nAll these options make Run Faster a crucial companion to players who want to get the most out of their Shadowrun, Fifth Edition core rulebook.\n\nRun Faster Limited Edition book includes a bonded red leather cover with gold foil stamp and a de-bossed graphic.',
 		gameDate: '2076',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', 'New Order Editora'],
+		originalLanguage: 'en-US',
+		notes: 'The German version has aditional life modules based on the ADL.'
 	},
 	{
-		sku: ['27003'],
+		sku: ['27003', '45023', '45025', 'SR505'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Street Grimoire',
-		releaseDate: ['2014-06'],
-		description: 'Magic can burn your brain and sear your soul. It can inject power into every millimeter of your veins, or leave you a lump of ashes at the end of a dark alley. It’s dangerous, but to spellslingers in the Sixth World, it’s worth it. Because magic is power, and power in the Sixth World needs to be grabbed with both hands.',
+		names: {
+			'de-DE': 'Straßengrimoire',
+			'fr-FR': 'Grimoire des Ombres'
+		},
+		releaseDate: ['2014-06-30', '2015-04-15', '2015-05-23', '2016-02-12', '2017-10-19'],
+		description: 'Paying with Your Soul\n\nMagic can burn your brain and sear your soul. It can inject power into every millimeter of your veins, or leave you a lump of ashes at the end of a dark alley. It’s dangerous, but to spellslingers in the Sixth World, it’s worth it. Because magic is power, and power in the Sixth World needs to be grabbed with both hands.\nSpells, rituals, alchemical preparations, adept powers, metamagics—all of those elements and more can be used to help an Awakened shadowrunner move off the streets and get a taste of the high life. Street Grimoire has more options for Shadowrun players, along with information on magical traditions, magic societies, and the dangers and benefits of living as a spellcaster in a world where "geek the mage first" is a common adage. With more options, deeper rules, deadlier threats, and dozens of way to have fun with magic, Street Grimoire is an essential book for anyone playing Shadowrun, Fifth Edition.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'The German version has aditional spells and traditions.'
 	},
 	{
 		sku: ['27003X'],
@@ -1172,15 +1206,19 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27002'],
+		sku: ['27002', '54021', '45053', 'SR503'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Run & Gun',
-		releaseDate: ['2014-04'],
-		description: 'Guns and ammo cost nuyen. Mastering martial arts takes time. And learning how to use explosives without blowing yourself up takes patience and a steady hand. These weapons and more are out there, waiting for you. You have the chance to use them to become deadlier, faster, more dangerous than the next guy—and more dangerous than you were yesterday. You’ll have to pay the price to get what you want, but this is the Sixth World. Don’t you always?',
+		names: {
+			'de-DE': 'Kreuzfeuer',
+			'fr-FR': 'Run & Gun'
+		},
+		releaseDate: ['2014-04-09', '2014-07-16', '2014-09', '2015-05-03', '2015-07-31', '2017-10-20'],
+		description: 'Bullseye!\n\nGuns and ammo cost nuyen. Mastering martial arts takes time. And learning how to use explosives without blowing yourself up takes patience and a steady hand. These weapons and more are out there, waiting for you. You have the chance to use them to become deadlier, faster, more dangerous than the next guy—and more dangerous than you were yesterday. You’ll have to pay the price to get what you want, but this is the Sixth World. Don’t you always?',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1202,35 +1240,49 @@ module.exports = [
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Gun H[e]aven 3',
-		releaseDate: ['2013-12'],
-		description: 'You\'re not a noob. You\'re not a poseur. You\'re a shadowrunner. When you pick a weapon, it\'s with a purpose, and 99 times out of 100, that purpose is to bring suckers down. You\'re going to choose your weapon carefully, and you know that the more options you have, the better your final choice will be.\nGun H(e)aven 3 is about options. Pistols, rifles, machine guns, even a flamethrower—they\'re all in here, ready to take out to the streets. Take a look, check your options, and then pick a weapon that will stop your enemies in their tracks. Because when the guns come out, you want it ended quick and ended right—with you still in your feet.',
+		names: {
+			'de-DE': 'Feuer und Stahl',
+			'pt-BR': 'Abrigo de Armas 3'
+		},
+		releaseDate: ['2013-12-14', '2014-02-03'],
+		description: 'Lethal Force\n\nYou\'re not a noob. You\'re not a poseur. You\'re a shadowrunner. When you pick a weapon, it\'s with a purpose, and 99 times out of 100, that purpose is to bring suckers down. You\'re going to choose your weapon carefully, and you know that the more options you have, the better your final choice will be.\nGun H(e)aven 3 is about options. Pistols, rifles, machine guns, even a flamethrower—they\'re all in here, ready to take out to the streets. Take a look, check your options, and then pick a weapon that will stop your enemies in their tracks. Because when the guns come out, you want it ended quick and ended right—with you still in your feet.',
 		gameDate: '2075-12',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26S036'],
+		sku: ['26S036', 'SRL502'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'The Assassin\'s Primer',
-		releaseDate: ['2013-10'],
-		description: 'Some people call it wetwork. Others call it murder. A small group calls it justice. It\'s assassination and it\'s one of the jobs shadowrunners might be hired to do. And given that people are, you know, pretty protective about their lives, anyone who takes such a job is going to have to be at the top of their game to pull the job off and collect a payday. Especially if they plan to make it a regular activity.\nThe Assassin\'s Primer is a vital guide for assassins in the Sixth World. With tips on tools to use, techniques to employ, and the different kinds of killers you may meet in the field, this is a critical reference for anyone looking to bring an assassination flavor into their Shadowrun games. And it has a new sniper rifle and a handful of new Qualities for shadowrunners to boot!',
+		names: {
+			'de-DE': 'Assassinen-Handbuch',
+			'fr-FR': 'Manuel de l\'assassin',
+			'pt-BR': 'A norma do Assassino'
+		},
+		releaseDate: ['2013-10-25', '2013-12-11', '2016-12-27'],
+		description: 'The Job of Death\n\nSome people call it wetwork. Others call it murder. A small group calls it justice. It\'s assassination and it\'s one of the jobs shadowrunners might be hired to do. And given that people are, you know, pretty protective about their lives, anyone who takes such a job is going to have to be at the top of their game to pull the job off and collect a payday. Especially if they plan to make it a regular activity.\nThe Assassin\'s Primer is a vital guide for assassins in the Sixth World. With tips on tools to use, techniques to employ, and the different kinds of killers you may meet in the field, this is a critical reference for anyone looking to bring an assassination flavor into their Shadowrun games. And it has a new sniper rifle and a handful of new Qualities for shadowrunners to boot!',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27000', '27000LE'],
+		sku: ['27000', '27000LE', '45010', '45011', 'SR501', 'SR5C02', 'SR5C01', '45013'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'Shadowrun 5th Edition',
-		releaseDate: ['2013-07'],
+		name: 'Shadowrun 5th Edition Core Rulebook',
+		names: {
+			'de-DE': 'Shadowrun Fünfte Edition Grundregelwerk',
+			'fr-FR': 'Shadowrun Livre de Base 5ieme Edition',
+			'pt-BR': 'Shadowrun 5ª Edição - Livro Básico'
+		},
+		releaseDate: ['2013-06-14', '2013-07-11', '2013-08', '2013-10', '2013-12', '2014-05', '2015-07'],
 		description: 'There are cracks in the world. They’re slender, dark, and often cold, but they are the only things that keep you hidden. Keep you alive. They are the shadows of the world, and they are where you live.\nYou are a shadowrunner, thriving in the margins, doing the jobs no one else can. You have no office, no permanent home, no background to check. You are whatever you make yourself. Will you seek justice? Sow seeds of chaos? Sell out to the highest bidder? It’s up to you, but this much is certain: If you do nothing, the streets will eat you alive.\nYou can survive, even flourish, as long as you do what it takes. Sacrifice part of your soul for bleeding-edge gear. Push the limits of your will learning new and dangerous magic. Wire yourself into the Matrix, making your mind one with screaming streams of data. It’ll cost you something—everything does—but you can make it worth the price.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1709,11 +1761,15 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Shadow Spells',
-		releaseDate: ['2014-09'],
-		description: 'Magic cannot be contained or easily defined. It can barely be controlled. It is large, omnipresent, and multi-faceted. It contains multitudes.\nA few of those multitudes are in this book, such as Pierre Dubois, media personality and Psionist researcher; a band of fortune seekers known as Treasure Hunters, Inc.; strange crystalline entities who may be forming a dangerous alliance; a spell to turn an unfortunate victim’s blood into a sludgy mess; and an adept power that temporarily blanks out memory, making an individual immune to interrogation.\nThese and more are here—spells, adept powers, rituals, and a host of magical knowledge. It may be a single meter would compared to the nigh-infinite length of the full scroll of magical knowledge, but as any shadowrunner can tell you, in a pinch a meter can make all the difference in the world.',
+		names: {
+			'de-DE': 'Schattenzauber',
+			'pt-BR': 'Feitiços das Sombras'
+		},
+		releaseDate: ['2014-09-25', '2014-12-10'],
+		description: 'The Universe of Magic\n\nMagic cannot be contained or easily defined. It can barely be controlled. It is large, omnipresent, and multi-faceted. It contains multitudes.\nA few of those multitudes are in this book, such as Pierre Dubois, media personality and Psionist researcher; a band of fortune seekers known as Treasure Hunters, Inc.; strange crystalline entities who may be forming a dangerous alliance; a spell to turn an unfortunate victim’s blood into a sludgy mess; and an adept power that temporarily blanks out memory, making an individual immune to interrogation.\nThese and more are here—spells, adept powers, rituals, and a host of magical knowledge. It may be a single meter would compared to the nigh-infinite length of the full scroll of magical knowledge, but as any shadowrunner can tell you, in a pinch a meter can make all the difference in the world.',
 		gameDate: '2076-09',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1911,16 +1967,21 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27200'],
+		sku: ['27200', '45022', 'SR504'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Stolen Souls',
-		releaseDate: ['2014-05'],
-		description: 'Not all has been right in our shadows of late. Especially in the dark shadows of my mind.\nThose were among FastJack’s parting words to JackPoint when he left, the victim of a condition that divided his mind against itself. And the condition is spreading. Across the Sixth World, people’s minds are in schism, as new personalities emerge and battle the old. The world is in chaos, and there is a dramatically increased demand for extractions, to get infected people out of sensitive positions and to steal the insights of people who might know what’s gone wrong.',
+		names: {
+			'de-DE': 'Gestohlene Seelen',
+			'fr-FR': 'Âmes volées'
+		},
+		releaseDate: ['2014-05-15', '2014-10-10', '2015-05-03'],
+		description: 'Stolen Souls\n\nThose were among FastJack’s parting words to JackPoint when he left, the victim of a condition that divided his mind against itself. He’s not the only one that has been so afflicted. Miles Lanier, formerly of NeoNET, has the same condition. And across the Sixth World, people’s minds are in schism, as new personalities emerge at unpredictable times.\nThis has thrown the world into chaos, and there is a sudden demand for new extractions. Infected people need to be forcibly removed from their positions. People who might understand something about what’s happening need to be removed so they can tell what they know. And people covering secrets need to be removed so that they, and their secrets, can be buried somewhere out of reach.\nStolen Souls is a Deep Shadows sourcebook for Shadowrun that contains plot updates and adventure hooks, as well as information, techniques, and gear to help runners up their game when it comes to extraction jobs. They’ll also get the chance to dig deeper into a new mystery that has torn through the Sixth World—and discover just how deep the conspiracies and cover-ups go.',
 		gameDate: '2076-04',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'The German version has aditional material about the ADL.'
 	},
 	{
 		sku: ['27300'],
@@ -2133,11 +2194,15 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Aetherology',
-		releaseDate: ['2014-11'],
-		description: 'There are waking dreams, there are active hallucinations, there are feverish visions that cannot be classified. And then there are the metaplanes, an adrenaline-fused combination of all of these, and more. Everything you dream of, everything you fear, everything beautiful and everything grotesque can be found out there. If you travel to the planes, you may lose your life, lose your mind, or if you’re lucky, just lose your way. But you may find hidden secrets of magic and perhaps make powerful allies. It’ll be a change from everyday life in the sprawls of the Sixth World, but may well be worth it. Are you ready for something entirely different?',
+		names: {
+			'de-DE': 'Ätherologie',
+			'pt-BR': 'Éterologia'
+		},
+		releaseDate: ['2014-12-01', '2015-02-28', '2018'],
+		description: 'Stretch Your Reality\n\nThere are waking dreams, there are active hallucinations, there are feverish visions that cannot be classified. And then there are the metaplanes, an adrenaline-fused combination of all of these, and more. Everything you dream of, everything you fear, everything beautiful and everything grotesque can be found out there. If you travel to the planes, you may lose your life, lose your mind, or if you’re lucky, just lose your way. But you may find hidden secrets of magic and perhaps make powerful allies. It’ll be a change from everyday life in the sprawls of the Sixth World, but may well be worth it. Are you ready for something entirely different?\nAetherology offers a grand tour of many metaplanes—the wild, the weird, the dangerous, and the everything in between. Prepare for mind-bending journeys to alternate realms of existence and the opportunity to encounter a new host of dangerous spirits and creatures. With rules on astral phemonena and new powers for the critters detailed in the book, Aetherology offers a whole new twist to your Shadowrun games.\nAetherology is dual-statted, meaning the spirits and creatures inside can be used in both Shadowrun, Fifth Edition and Shadowrun, Twentieth Anniversary Edition.',
 		gameDate: '2076-04',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -2886,13 +2951,43 @@ module.exports = [
 		sku: ['27100X'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'Digital Toolbox',
+		name: 'Digital Tools Box',
 		releaseDate: ['2014-01-30'],
 		description: 'The Shadowrun Digital Tools Box is 2 box sets in 1! Whether you\'re just getting into Shadowrun or you\'re a runner that\'s been hitting the streets since the 2050s, you\'ll find useful material here for running any type of game.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['27102'],
+		category: 'rulebook',
+		type: 'print',
+		name: 'Shadowrun Runner\'s Toolkit: Alphaware',
+		releaseDate: ['2014'],
+		description: 'THE RIGHT TOOLS FOR THE NEXT RUN\n\nSCAN THIS, CHUMMERS\n\n\t- Have you tackled the Beginner Box and are ready to move up in the Sixth World\n\t- Are you a gamemaster ready to give Shadowrun a shot, and you want a few extra tools at your disposal from the first toss of your dice?\n\t- Do you play Shadowrun now, and are you looking for a set of tools that\'ll allow you to easily introduce new gamers to your favorite RPG at your local games store or hangout.\nSay yes to any of those, than Runner\'s Toolkit: Alphaware is the box set for you.\n\nDesigned as the perfect stepping-stone between the Shadowrun Beginner Box and Shadowrun, Fifth Edition, this Box can fill a number of roles. Wether you\'re looking for more adventures and options to move beyond the Beginner Box, laying the groundwork for your gaming group to move fully onto Shadowrun, Fifth Edition, or providing adventures, maps and other tools to use in conjunction with the core rulebook, you\'ll find this kit invaluable.\n\nALPHAWARE INCLUDES:\n\n\t- Rules of the Street: A rulebook, designed to be accessible and simple to use.\n\t- The Edge of now gives the flavour and background of the Sixth World\n\t- Plots and Paydata: Adventures and tips for any Shadowrun gamemaster.\n\t- Eight double-sided maps to help the players and GMs track the action.\n\t- Spell, weapon and gear cards for quick reference.\n\t- Pre-generated characters, players can use right away.\n\t- A double-sided poster: North America map and killer art.\n\t- And of course, handfuls of six-sided dice for Shadowrun action.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'outofscope'
+	},
+	{
+		sku: ['27101', 'SR5B01'],
+		category: 'rulebook',
+		type: 'print',
+		name: 'Shadowrun Beginner Box Set',
+		names: {
+			'fr-FR': 'Boite d\'initiation',
+			'pt-BR': 'Shadowrun: Caixa Introdutória'
+		},
+		releaseDate: ['2014', '2018'],
+		description: 'MAN, MAGIC & MACHINE!\n\nWELCOME TO THE SIXTH WORLD!\n\nMegacorporations dominate the world. Dragons prowl the skies -- and corporate boardrooms. Magicans sling fire and lightning, ice and acid. Hackers break in the darkest corners of the Matrix, digging out secrets while risking feedback that could fry their synapses and people on the edge of society, those that have been pushed into the shadows, fight to stay free.\n\nThe Shadowrun Beginner Box is the easiest way to dive into the intrigue, grit and action of one of the most enduring role-playing settings of all time!\n\nTailor-designed for an easy-on-the-credstick entry, the Beginner Box includes the following:\n\t- A Universe Primer: A 24-page exploration of the Shadowrun world.\n\t- Quick-start Rules: Fast rules and a quick adventure to wet your appetite for more.\n\t- A pre-generated character booklet: Allows for a gamemaster and one person to run a solo adventure.\n\t- 4 pre-generated character sheets: Details that\'ll allow up to four players to play with the help of a gamemaster.\n\t- Dice: Never forget your handful of D6s!\n\t- Whether you are new to Shadowrun or new to roleplaying, this package will get you into the fun of hacking, shooting and spellslinging your way to the top!',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs', 'Black Book Editions', 'New Order Editora'],
+		originalLanguage: 'en-US',
+		status: 'outofscope'
 	},
 	{
 		sku: ['7909', '10747', 'LFSH009'],
@@ -2912,7 +3007,6 @@ module.exports = [
 		originalLanguage: 'en-US',
 		status: 'badscan'
 	},
-	//TODO: split the german edition as it is too different?
 	{
 		sku: ['7908', '10659', '10744', 'LFSH005'],
 		category: 'rulebook',
@@ -6915,12 +7009,15 @@ module.exports = [
 		sku: ['27050'],
 		category: 'rulebook',
 		type: 'print',
-		name: 'Fifth Edition Gamemaster Screen',
+		name: 'Shadowrun Game Master\'s Screen 5th Etidion',
+		names: {
+			'de-DE': 'Spielleiterschirm Fünfte Edition'
+		},
 		releaseDate: ['2013-11'],
 		description: 'Every shadowrunner knows the value of good information. The right fact, the perfect piece of data, can be the difference between success and failure on a run, between life and death. And in the right hands, information can be more than valuable-it can be powerful.The Shadowrun Gamemaster Screen provides a collection of useful tables from Shadowrun, Fifth Edition for ease of reference in game play. With range tables, action lists, combat modifiers, social modifiers, and more, this is a critical game aid to make your Shadowrun games faster and more fun. And to provide that all-important secrecy so that the players don\'t know what you\'re up to. This screen is for use with Shadowrun, Fifth Edition.Note: This reprint (with a brand new graphic!)',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
 		status: 'outofscope',
 		notes: 'Print only.'
@@ -7518,14 +7615,15 @@ module.exports = [
 		sku: ['45019'],
 		category: 'sourcebook',
 		type: 'print',
-		name: 'Schattenhandbuch 1',
+		name: 'Schattenhandbuch',
 		releaseDate: ['2014'],
-		description: 'Schattenhandbuch 1 (Shadow Handbook 1) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin’s Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch 1 was published in a numbered limited edition with a print run of 3000 books.',
+		description: 'Tipps für Assassinen, neuste Waffentechnologie, tödliche Paracritter: Das Schattenhandbuch bringt neues Material für Shadowrun 5 an die Spieltische, mit dem Spieler und Spielleiter die Sechste Welt noch näher erfahren können. Ob es um Schmuggel und unerlaubte Grenzübergänge geht, die Moral verdingter Killer, toxische Katzen oder einfach nur die Auswahl des nächsten Einsatzgefährts der Runnertruppe: Hier wird man fündig!\n\nDas Schattenhandbuch setzt die Tradition der Schattenkataloge aus der vorangegangenen Edition für Shadowrun 5 fort. In ihm enthalten sind die PDFs Feuer und Stahl, Kojoten und das Assassinen-Handbuch. Zudem präsentiert es Parazoologie 1 und das bisher noch nie auf deutsch veröffentlichte Parazoologie 2 – beide komplett aufbereitet für Shadowrun 5. Und zu guter Letzt darf auch ein exklusives ADL-AddOn mit brandneuen Vans und Waffen nicht fehlen.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing'
+		status: 'missing',
+		notes: 'Schattenhandbuch (Shadow Handbook) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin’s Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch was published in a numbered limited edition with a print run of 3000 books.',
 	},
 	{
 		sku: ['45034'],
