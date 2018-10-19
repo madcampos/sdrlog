@@ -7623,7 +7623,7 @@ module.exports = [
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		status: 'missing',
-		notes: 'Schattenhandbuch (Shadow Handbook) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin’s Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch was published in a numbered limited edition with a print run of 3000 books.',
+		notes: 'Schattenhandbuch (Shadow Handbook) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin’s Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch was published in a numbered limited edition with a print run of 3000 books.'
 	},
 	{
 		sku: ['45034'],
