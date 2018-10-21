@@ -1825,11 +1825,14 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Shadows in Focus: Sioux Nation',
+		names: {
+			'pt-BR': 'SSombras em Foco: Nação Sioux'
+		},
 		releaseDate: ['2015-01'],
-		description: 'Arcane sites crackling with magical energy. High-stakes corporate maneuvering, complete with draconic influence. Smugglers and shamans, charismatic chiefs and feckless rogues. All this and more waits in the Sioux Nation for runners looking to branch out and run headfirst into new challenges in the unending quest to earn a few nuyen while staying alive and free from corporate detention facilities.\nShadows in Focus: Sioux Nation is the first in a new series of Shadowrun e-books providing a detailed look at geographical spots that have not been covered recently—or at all—in previous books. Starting with an overview of the Sioux Nation—including corporate powers, magical sites, major cities, adventure hooks, and more—the series will continue with spotlights on two major cities, Cheyenne and Butte, adventures set in the Sioux Nation, and an Enhanced Fiction story providing more flavor of what it’s like to run in the Sioux Nation. While the full collection of e-books will provide a detailed look at a nation reconciling old traditions with life on the bleeding edge of magic and technology, the Sioux Nation book has all you need to bring your Shadowrun game into this locale and see if runners can handle the full range of challenges it will throw at them.',
+		description: 'All Kinds of Power\n\nArcane sites crackling with magical energy. High-stakes corporate maneuvering, complete with draconic influence. Smugglers and shamans, charismatic chiefs and feckless rogues. All this and more waits in the Sioux Nation for runners looking to branch out and run headfirst into new challenges in the unending quest to earn a few nuyen while staying alive and free from corporate detention facilities.\nShadows in Focus: Sioux Nation is the first in a new series of Shadowrun e-books providing a detailed look at geographical spots that have not been covered recently—or at all—in previous books. Starting with an overview of the Sioux Nation—including corporate powers, magical sites, major cities, adventure hooks, and more—the series will continue with spotlights on two major cities, Cheyenne and Butte, adventures set in the Sioux Nation, and an Enhanced Fiction story providing more flavor of what it’s like to run in the Sioux Nation. While the full collection of e-books will provide a detailed look at a nation reconciling old traditions with life on the bleeding edge of magic and technology, the Sioux Nation book has all you need to bring your Shadowrun game into this locale and see if runners can handle the full range of challenges it will throw at them.',
 		gameDate: '2076-12',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1860,12 +1863,15 @@ module.exports = [
 		sku: ['26S043'],
 		category: 'sourcebook',
 		type: 'digital',
-		name: 'Shadows in Focus: Cheyenne',
-		releaseDate: ['2015-02'],
-		description: 'The number of ways you can step wrong in Cheyenne are higher than a lot of shadowrunners can count. There are political, ethnic, tribal, and racial divides, and stepping on the wrong side of them can not only end your job prospects, but it can put you in a hastily dug hole in the ground. Move quickly and be agile, though, and you can slip through the snares that trip up lesser runners, accumulating the street rep and nuyen that will put you at the top of the runner heap.',
+		name: 'Shadows in Focus: City by Shadow: Cheyenne',
+		names: {
+			'pt-BR': 'Sombras em Foco: Cidade nas Sombras: Cheyenne'
+		},
+		releaseDate: ['2015-02-17'],
+		description: 'The Minefield of Opportunity\n\nThe number of ways you can step wrong in Cheyenne are higher than a lot of shadowrunners can count. There are political, ethnic, tribal, and racial divides, and stepping on the wrong side of them can not only end your job prospects, but it can put you in a hastily dug hole in the ground. Move quickly and be agile, though, and you can slip through the snares that trip up lesser runners, accumulating the street rep and nuyen that will put you at the top of the runner heap.',
 		gameDate: '2077-02',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1985,15 +1991,20 @@ module.exports = [
 	},
 	{
 		sku: ['27300'],
-		category: 'mission',
+		category: 'sourcebook',
 		type: 'digital',
 		name: 'Lockdown',
+		names: {
+			'de-DE': 'Sperrzone Boston',
+			'fr-FR': 'Lockdown'
+		},
 		releaseDate: ['2015-05'],
 		description: 'The voices are getting louder. Strange voices, dissonant voices, sometimes babbling nonsense, sometimes telling stories too unbelievable to be true. People are falling prey to the voices, losing their identities as someone or something else slips into their skin. It’s affecting people at all levels of society, from squatters in burned-out warehouses to corporate CEOs. It’s spreading, and no one can figure out how to stop it. Boston-based NeoNET is at the center of this storm, and panic is spreading through the streets of the northeastern sprawl. People are scared and people are dying, which means that there are large sums of money to be made by any shadowrunner willing to brave those chaotic streets. Finding work won’t be the problem. Getting out of the sprawl, however, will be.',
 		gameDate: '2076-09',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'The German Edition has an aditional adventure for German characters called "Operation Baybreaker".'
 	},
 	{
 		sku: ['27202'],
@@ -2011,9 +2022,9 @@ module.exports = [
 		sku: ['26S037'],
 		category: 'sourcebook',
 		type: 'digital',
-		name: '10 Terrorists',
+		name: 'Ten Terrorists',
 		releaseDate: ['2015-04'],
-		description: 'There is no way to sugarcoat it—people in the Sixth World spend an awful lot of time coming up with reasons to kill each other. When it comes to moral codes, people don’t think they’re better than others because they don’t kill and others do—they compare the reasons for killing, ranking them, trying to justify the oft-unjustifiable. You can talk to a hundred people and get a hundred different opinions about what’s justified and what’s not, and about which motivations are worse than others, but consistently at the bottom of the list are those who would kill innocents for a cause, who would instill terror in people for political gain, because they see no other recourse.\n10 Terrorists covers ten groups in the Shadowrun setting who add chaos and violence to an already chaotic and violent world to further their own twisted causes. From Seed, a Matrix terrorism group that split off Ex Pacis, to Logos, a group that combines environmental extremism with talislegging, these are groups that can add and danger and plot hooks to Shadowrun campaigns. Whether runners are infiltrating the groups, avoiding them, or dealing with the fallout from the chaos they cause, 10 Terrorists can increase the threat level of any Shadowrun game.',
+		description: 'Causes of Blood\n\nThere is no way to sugarcoat it—people in the Sixth World spend an awful lot of time coming up with reasons to kill each other. When it comes to moral codes, people don’t think they’re better than others because they don’t kill and others do—they compare the reasons for killing, ranking them, trying to justify the oft-unjustifiable. You can talk to a hundred people and get a hundred different opinions about what’s justified and what’s not, and about which motivations are worse than others, but consistently at the bottom of the list are those who would kill innocents for a cause, who would instill terror in people for political gain, because they see no other recourse.\n10 Terrorists covers ten groups in the Shadowrun setting who add chaos and violence to an already chaotic and violent world to further their own twisted causes. From Seed, a Matrix terrorism group that split off Ex Pacis, to Logos, a group that combines environmental extremism with talislegging, these are groups that can add and danger and plot hooks to Shadowrun campaigns. Whether runners are infiltrating the groups, avoiding them, or dealing with the fallout from the chaos they cause, 10 Terrorists can increase the threat level of any Shadowrun game.',
 		gameDate: '2077',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
