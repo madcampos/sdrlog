@@ -3,31 +3,20 @@
 TODO: missing, crossreferences, upcomming, and announced/rummored books
 TODO: add virtual seatle
 TODO: add deutsch books
-TODO: Add Parabotany and Parageology german 5th update?
 
 Sources:
 http://shadowrun.wikia.com/wiki/Main_Page
-https://www.shadowiki.de/Hauptseite
-https://shadowhelix.de/Hauptseite
+https://www.shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenb%C3%A4nde
+https://shadowhelix.de/Kategorie:Quellen_nach_Edition
+https://www.shadowiki.de/Kategorie:Quellen_(Editionen)
+https://www.shadowiki.de/Sixth_World_Tarot
+https://shadowhelix.de/Kategorie:Quellen_(Gratis)
+https://www.shadowiki.de/Kategorie:Quellen_(Online)
+https://www.shadowiki.de/Liste_der_Shadowrun_Romane
 http://shadowrun.tumblr.com/upcoming
 https://forums.shadowruntabletop.com/index.php?topic=254.0
 http://shadowiki.de/Shadowrun_Vintage
 http://www.black-book-editions.fr/catalogue.php?id=150
-
-* 10 AIs
-Profiles on 10 Artificial Intelligence sapients.
-
-* Sprawl Sites: Corporate Hideouts
-8 maps and a plot hook booklet focused on corporate-themed locations to drop into any sprawl.
-
-* Virtual Tribes
-Profiles on underground/shadow world organizations.
-
-* Untitled Technomancer Handbook
-Updated rules and information on Technomancer characters.
-
-* Makeda Red
-A Shadowrun novel by Jennifer Brozek.
 */
 
 /**
@@ -89,12 +78,13 @@ A Shadowrun novel by Jennifer Brozek.
  *
  * @prop {(MaterialFile|MaterialLink)[]} [links] A list of links to the actual material, be it the files or online links.
  *
- * @prop {("missing"|"outofscope"|"rummored"|"unreleased"|"upcomming"|"badscan")} [status] The status of the item, one of the following:
+ * @prop {("missing"|"outofscope"|"rummored"|"unreleased"|"upcomming"|"badscan"|"canceled")} [status] The status of the item, one of the following:
  * - **Missing**: The item is not present on the archives.
  * - **Out of Scope**: The item is not available or is really hard to obtain and don't add anything new.
  * - **Rummored**: The item is rummored to come out, it is listed or spoken of somewhere.
  * - **Unreleased**: The item has a scheduled/expected release and has been "announced" but is nowhere to be found or has expired the expected release date.
  * - **Upcomming**: The item is scheduled to come out in the future.
+ * - **Canceled**: The item was canceled.
  *
  * @prop {String} [originalLanguage] The original language the material was released.
  *
@@ -683,24 +673,27 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27010'],
+		sku: ['27010', '45215', '45216'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'Anarchy',
-		releaseDate: ['2016-09'],
-		description: 'Shadowrun. The Sixth World. Orks in pinstripe suits with uzis; mohawked dwarves jacked into vehicles racing through megasprawls at breakneck speed; humans casting fireballs at corporate-trained paracritters; elves hacking the Matrix for a datasteal of the latest tech or working to topple an upstart corp. It’s where man meets magic and machine.\nDive into a cyberpunk dystopia and become a shadowrunner, a deniable asset who does the jobs no one else can—or will—do. It’s not an easy life, but it beats selling your soul to the megacorps. You’ll break into top-secret labs, stand up to gangs bent on destruction and chaos, encounter dark spirits hiding even darker secrets, and come face to face with some of the infinite dangers the Sixth World can throw at you. And you’ll come out on top—because if you don’t, you don’t get paid.',
+		name: 'Shadowrun: Anarchy',
+		names: {
+			'de-DE': 'Shadowrun: Anarchy'
+		},
+		releaseDate: ['2016-08-04', '2016-09-30', '2016-11-30', '2017-05-29'],
+		description: 'Man. Machine. Magic.\n\nShadowrun. The Sixth World. Orks in pinstripe suits with uzis; mohawked dwarves jacked into vehicles racing through megasprawls at breakneck speed; humans casting fireballs at corporate-trained paracritters; elves hacking the Matrix for a datasteal of the latest tech or working to topple an upstart corp. It’s where man meets magic and machine.\nDive into a cyberpunk dystopia and become a shadowrunner, a deniable asset who does the jobs no one else can—or will—do. It’s not an easy life, but it beats selling your soul to the megacorps. You’ll break into top-secret labs, stand up to gangs bent on destruction and chaos, encounter dark spirits hiding even darker secrets, and come face to face with some of the infinite dangers the Sixth World can throw at you. And you’ll come out on top—because if you don’t, you don’t get paid.\nShadowrun: Anarchy is a new way to get into the best cyberpunk/urban fantasy action around. Based upon the rules-light and easy-to-learn Cue System, Shadowrun: Anarchy is a narrative-focused game experience that has everything you need to quickly grab some gear, load up on spells, and get to throwing the dice. With loads of characters and missions, the book makes it simple to get up and running. Immerse yourselves in the Sixth World!',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['27010X'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'Anarchy (Prototype)',
+		name: 'Shadowrun: Anarchy (Prototype)',
 		releaseDate: ['2016-09'],
-		description: 'Shadowrun. The Sixth World. Orks in pinstripe suits with uzis; mohawked dwarves jacked into vehicles racing through megasprawls at breakneck speed; humans casting fireballs at corporate-trained paracritters; elves hacking the Matrix for a datasteal of the latest tech or working to topple an upstart corp. It’s where man meets magic and machine.\nDive into a cyberpunk dystopia and become a shadowrunner, a deniable asset who does the jobs no one else can—or will—do. It’s not an easy life, but it beats selling your soul to the megacorps. You’ll break into top-secret labs, stand up to gangs bent on destruction and chaos, encounter dark spirits hiding even darker secrets, and come face to face with some of the infinite dangers the Sixth World can throw at you. And you’ll come out on top—because if you don’t, you don’t get paid.\nShadowrun: Anarchy is a new way to get into the best cyberpunk/urban fantasy action around. Based upon the rules-light and easy-to-learn Cue System, Shadowrun: Anarchy is a narrative-focused game experience that has everything you need to quickly grab some gear, load up on spells, and get to throwing the dice. With loads of characters and missions, the book makes it simple to get up and running. Immerse yourselves in the Sixth World!',
+		description: 'Man. Machine. Magic.\n\nShadowrun. The Sixth World. Orks in pinstripe suits with uzis; mohawked dwarves jacked into vehicles racing through megasprawls at breakneck speed; humans casting fireballs at corporate-trained paracritters; elves hacking the Matrix for a datasteal of the latest tech or working to topple an upstart corp. It’s where man meets magic and machine.\nDive into a cyberpunk dystopia and become a shadowrunner, a deniable asset who does the jobs no one else can—or will—do. It’s not an easy life, but it beats selling your soul to the megacorps. You’ll break into top-secret labs, stand up to gangs bent on destruction and chaos, encounter dark spirits hiding even darker secrets, and come face to face with some of the infinite dangers the Sixth World can throw at you. And you’ll come out on top—because if you don’t, you don’t get paid.\nShadowrun: Anarchy is a new way to get into the best cyberpunk/urban fantasy action around. Based upon the rules-light and easy-to-learn Cue System, Shadowrun: Anarchy is a narrative-focused game experience that has everything you need to quickly grab some gear, load up on spells, and get to throwing the dice. With loads of characters and missions, the book makes it simple to get up and running. Immerse yourselves in the Sixth World!',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
@@ -719,15 +712,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27011'],
+		sku: ['27011', '45059'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Forbidden Arcana',
-		releaseDate: ['2017-05'],
-		description: 'Magic is wild. Magic is undisciplined. You can try to impose order and understanding on it, but that’s just surface. Underneath is chaos, an erratic heart beating to a staggering rhythm. You don’t control it, any more than a surfer controls twenty-meter-tall wave; you don’t direct the wave, you ride it, capture a piece of its power, and hope to survive. If you do it right, though, you catch a portion of unimaginable power—power those who control the Sixth World don’t want you to have. All the more reason to push past their boundaries and grab it.',
+		names: {
+			'de-DE': 'Verbotene Künste'
+		},
+		releaseDate: ['2017-05-02', '2017-10-19', '2017-11-05'],
+		description: 'Ride the Crashing Wave\n\nMagic is wild. Magic is undisciplined. You can try to impose order and understanding on it, but that’s just surface. Underneath is chaos, an erratic heart beating to a staggering rhythm. You don’t control it, any more than a surfer controls twenty-meter-tall wave; you don’t direct the wave, you ride it, capture a piece of its power, and hope to survive. If you do it right, though, you catch a portion of unimaginable power—power those who control the Sixth World don’t want you to have. All the more reason to push past their boundaries and grab it.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -934,12 +930,16 @@ module.exports = [
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Rigger 5.0',
-		releaseDate: ['2015-12'],
-		description: 'Spin your wheels over slick sprawl streets while drifting away from hot pursuit. Fly through narrow canyons ahead of missiles twisting their way after you. Shrink down to insect size to get an eye on places outsiders aren’t supposed to see. These are just some of the ways riggers jack up their seemingly unending adrenaline rush, as they show that the hardest shadowrunners to hit are the ones that stay in motion.',
+		names: {
+			'de-DE': 'Asphaltkrieger'
+		},
+		releaseDate: ['2015-12-17', '2016-05-28', '2016-06-16'],
+		description: 'PREMIUM RUSH\n\nSpin your wheels over slick sprawl streets while drifting away from hot pursuit. Fly through narrow canyons ahead of missiles twisting their way after you. Shrink down to insect size to get an eye on places outsiders aren’t supposed to see. These are just some of the ways riggers jack up their seemingly unending adrenaline rush, as they show that the hardest shadowrunners to hit are the ones that stay in motion.\nRigger 5.0 is the ultimate hot-rod, jet plane, speedboat, and more companion for Shadowrun. With dozens of new vehicles and drones, more detailed rules for vehicle chase and combat, and customization rules, this is a book that every rigger needs to get ahead of the competition and stay there. Get the feel of laying down hot rubber in the cold shadows of the Sixth World and a taste for speed, danger, and a good, clean getaway.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'In contrast to the original English version, the German edition contains alternative model names to the individual vehicles and drones in the book. These were created among other things by users of the Pegasus forum.'
 	},
 	{
 		sku: ['26S016'],
@@ -1182,27 +1182,34 @@ module.exports = [
 		notes: 'Set of cards available at Gen Con 2014.'
 	},
 	{
-		sku: ['27006'],
+		sku: ['27006', '45024'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Data Trails',
-		releaseDate: ['2015-05'],
-		description: 'The last great undiscovered country is vast, wild, and weirder than you can possibly imagine. And it’s nearby, waiting, accessible by the press of a button, or a simple gesture, or even just a thought. The Matrix holds a whole lot more than selfies and cat videos—it has artificial intelligences, electronic ghosts of people formerly alive (or perhaps still living), and deep wells of pure data that can swallow you whole. Oh, and a copy of every secret ever recorded electronically. The possible rewards of exploration are great, and the dangers are greater.',
+		names: {
+			'de-DE': 'Datenpfade'
+		},
+		releaseDate: ['2015-05-26', '2015-10-01'],
+		description: 'THE INFINITE FRONTIER\n\nThe last great undiscovered country is vast, wild, and weirder than you can possibly imagine. And it’s nearby, waiting, accessible by the press of a button, or a simple gesture, or even just a thought. The Matrix holds a whole lot more than selfies and cat videos—it has artificial intelligences, electronic ghosts of people formerly alive (or perhaps still living), and deep wells of pure data that can swallow you whole. Oh, and a copy of every secret ever recorded electronically. The possible rewards of exploration are great, and the dangers are greater.',
 		gameDate: '2076',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27005'],
+		sku: ['27005', '45036', 'SR507'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Chrome Flesh',
+		names: {
+			'de-DE': 'Bodyshop',
+			'fr-FR': 'Guide des Augmentations'
+		},
 		releaseDate: ['2015-06'],
-		description: 'Shadowrunners cannot be limited by what their bodies can—or cannot—do. They have to do more, stretch farther, surpass any limits, and accomplish the impossible. Some runners can rely on magic; for everyone else, there are augmentations. From shiny chrome that makes your body into a humanoid semitruck to genetech that alters you at the most fundamental level to drugs and chemicals that give you a quick and dirty boost, Chrome Flesh provides dozens of new ways to alter Shadowrun characters and make them better, stronger, faster, and altogether readier to kick ass and take names on the streets.',
+		description: 'EDGE OF THE POSSIBLE\n\nShadowrunners cannot be limited by what their bodies can—or cannot—do. They have to do more, stretch farther, surpass any limits, and accomplish the impossible. Some runners can rely on magic; for everyone else, there are augmentations. From shiny chrome that makes your body into a humanoid semitruck to genetech that alters you at the most fundamental level to drugs and chemicals that give you a quick and dirty boost, Chrome Flesh provides dozens of new ways to alter Shadowrun characters and make them better, stronger, faster, and altogether readier to kick ass and take names on the streets.',
 		gameDate: '2077',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1785,15 +1792,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27008'],
+		sku: ['27008', '45044'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Howling Shadows',
-		releaseDate: ['2016-05'],
-		description: 'Gangers. Corp security. Mr. Johnson. Organized crime. Other shadowrunners. Running in the Sixth World does not exactly lack for obstacles, but only foolish runners worry solely about metahuman opponents. There are plenty of other ways the world can kill you, from throat-ripping martachoras to blood-sucking chupacabras, from the aggressive gamma spider to the swarming harpy. While most runners would be happy to simply avoid these threats, it’s not always possible. Critters may be used as security, they may swarm in abandoned areas runners must investigate, or they may carry valuable reagents runners need. Some of them may even hold the keys to unlocking the sort of powers runners covet.',
+		names: {
+			'de-DE': 'Critterkompendium'
+		},
+		releaseDate: ['2016-05-16', '2017-01'],
+		description: 'The Wild Calls\n\nGangers. Corp security. Mr. Johnson. Organized crime. Other shadowrunners. Running in the Sixth World does not exactly lack for obstacles, but only foolish runners worry solely about metahuman opponents. There are plenty of other ways the world can kill you, from throat-ripping martachoras to blood-sucking chupacabras, from the aggressive gamma spider to the swarming harpy. While most runners would be happy to simply avoid these threats, it’s not always possible. Critters may be used as security, they may swarm in abandoned areas runners must investigate, or they may carry valuable reagents runners need. Some of them may even hold the keys to unlocking the sort of powers runners covet.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1801,11 +1811,14 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Shadows in Focus: City by Shadow: San Francisco Metroplex',
+		names: {
+			'pt-BR': 'Sombras em Foco: Cidade nas Sombras: São Francisco'
+		},
 		releaseDate: ['2016-01'],
-		description: 'Money? Check. Political turmoil leading to scrambling for power? You bet. Megacorps jockeying for position while working to take their rivals down a notch? Of course! A festering hive of corruption set next to one of the most scenic bays ever colonized by humans? Absolutely! San Francisco has all of the ingredients needed to make a nice, festering stew for shadowrunners. With the former imperialistic fascist General Saito out of power and the entire bay area united as a single sprawl, there is power and money to be had, which means business in the shadows is booming. San Francisco is a shadowrunner’s guide to the people, places, and plots that make up this city, providing the paydata they need to navigate the hilly streets and cruel back roads of a sprawl whose aura of sophistication can’t mask its deadly heart.',
+		description: 'When the Lights Go Down\n\nMoney? Check. Political turmoil leading to scrambling for power? You bet. Megacorps jockeying for position while working to take their rivals down a notch? Of course! A festering hive of corruption set next to one of the most scenic bays ever colonized by humans? Absolutely! San Francisco has all of the ingredients needed to make a nice, festering stew for shadowrunners. With the former imperialistic fascist General Saito out of power and the entire bay area united as a single sprawl, there is power and money to be had, which means business in the shadows is booming. San Francisco is a shadowrunner’s guide to the people, places, and plots that make up this city, providing the paydata they need to navigate the hilly streets and cruel back roads of a sprawl whose aura of sophistication can’t mask its deadly heart.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1836,12 +1849,12 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26S038A'],
+		sku: ['26S038'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Shadows in Focus: City by Shadow: Metrópole',
-		releaseDate: ['2016-10'],
-		description: 'Metrópole was not built with shadowrunners in mind. Or even metahumans, for that matter. In the Awakened country of Amazonia, the great dragon Hualpa reigns, critters walk the streets under full protection of the law, and the people struggle to figure out how they’re supposed to fit into this huge mess.\nAnd huge it is. With many kilometers of coastline, thousands of tangled streets, and millions of residents, the city is packed with power, money, and intrigue—everything shadowrunners need to do their work. Yeah, the job might come with a slightly elevated chance of becoming dragon food—if that worries you, maybe the work down South America way is not for you. But if you have enough courage and an appetite for the strange, Metrópole is a great way to fill it.',
+		releaseDate: ['2016-10-22'],
+		description: 'This Is Not for You\n\nMetrópole was not built with shadowrunners in mind. Or even metahumans, for that matter. In the Awakened country of Amazonia, the great dragon Hualpa reigns, critters walk the streets under full protection of the law, and the people struggle to figure out how they’re supposed to fit into this huge mess.\nAnd huge it is. With many kilometers of coastline, thousands of tangled streets, and millions of residents, the city is packed with power, money, and intrigue—everything shadowrunners need to do their work. Yeah, the job might come with a slightly elevated chance of becoming dragon food—if that worries you, maybe the work down South America way is not for you. But if you have enough courage and an appetite for the strange, Metrópole is a great way to fill it.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
@@ -1852,11 +1865,14 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Shadows in Focus: City by Shadow: Butte',
+		names: {
+			'pt-BR': 'Sombras em Foco: Cidade nas Sombras: Butte'
+		},
 		releaseDate: ['2015-09'],
 		description: 'One of the tricks of shadowrunning in the Sioux Nation is keeping your eye on the things you can’t see. It’s not just the spirits and the unseen magical beings of the world—though that’s part of it—but the dangers underground. The poisons seeping into the earth from abandoned mines, and the vast complex that has been built underground, out of sight of the rest of the population. A spot where money flows and the sun never shines—what more could shadowrunners want?',
 		gameDate: '2077',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1875,15 +1891,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27009'],
+		sku: ['27009', '45055'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Court of Shadows',
+		names: {
+			'de-DE': 'Hof der Feen'
+		},
 		releaseDate: ['2016-07'],
 		description: 'You have seen it. You have felt it. The dream where you are falling, falling, and you cannot see the ground but you know it is there waiting. You may try to brace yourself, you may try to force yourself awake—you do anything to avoid the impact that keeps rushing toward you.\nThe Seelie Court is the realm of the hidden, the rumored, and the unknown. Fairies, spirits, and enchanted creatures mingle there, building alliances, plotting, scheming, toying with the realm of humans—and with each other. The Court has long held a distant attachment to the material plane, influencing it like a dream influences our waking hours. But now a new connection has emerged, allowing humans to infiltrate the courts and influence its proceedings. At a time when magical power is ever in the rise, the mix of human and fae could set both worlds into a calamitous plunge, and no one will want to be awake when they hit bottom.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1949,24 +1968,30 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27451'],
-		category: 'mission',
+		sku: ['27451', '45043'],
+		category: 'sourcebook',
 		type: 'digital',
 		name: 'Market Panic',
-		releaseDate: ['2016-03-02'],
-		description: 'Chaos is horrible for business—unless your business is shadowrunning. The Big Ten megacorporations of the Sixth World are reeling, with scandals, disasters, and crippling attacks coming at them from all angles. NeoNET is scrambling to maintain AAA status, Ares is trying not to let the secret rot at the heart of the corp become public, while Aztechnology, fresh from taking on a dragon in Amazonia, is looking at a facedown with another great dragon. And that’s not all—every corp is a pile of schemes, turmoil, upheaval, and teetering chaos, because that’s how they operate.',
+		names: {
+			'de-DE': 'Megakons 2078'
+		},
+		releaseDate: ['2016-03-02', '2016-05-25'],
+		description: 'PAIN POINTS\n\nChaos is horrible for business—unless your business is shadowrunning. The Big Ten megacorporations of the Sixth World are reeling, with scandals, disasters, and crippling attacks coming at them from all angles. NeoNET is scrambling to maintain AAA status, Ares is trying not to let the secret rot at the heart of the corp become public, while Aztechnology, fresh from taking on a dragon in Amazonia, is looking at a facedown with another great dragon. And that’s not all—every corp is a pile of schemes, turmoil, upheaval, and teetering chaos, because that’s how they operate.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27201'],
+		sku: ['27201', '45040'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Hard Targets',
+		names: {
+			'de-DE': 'Harte Ziele'
+		},
 		releaseDate: ['2015-10'],
-		description: 'It’s thick. Luxurious. Concealing. The cloak of death will make you feared, envied, and maybe even wealthy. It will also smother your soul. The best assassins in the Sixth World can gain untold wealth and make the whole world shake, but they also will be hunted and stalked until the end of their days. Assuming their conscience doesn’t eat them alive.',
+		description: 'THE CLOAK OF DEATH\n\nIt’s thick. Luxurious. Concealing. The cloak of death will make you feared, envied, and maybe even wealthy. It will also smother your soul. The best assassins in the Sixth World can gain untold wealth and make the whole world shake, but they also will be hunted and stalked until the end of their days. Assuming their conscience doesn’t eat them alive.\nHard Targets is a shadow runner’s guide to bringing death, with information on getting into wetwork, tactics for doing the job, and critical gear. It also contains plot details and adventure hooks, including an in-depth look at the city of Havana in the Caribbean League, a political and criminal hotspot that lends itself to all sorts of wetwork jobs. The work is there—if you can deaden your soul enough to take it.',
 		gameDate: '2077-11',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
@@ -2007,16 +2032,20 @@ module.exports = [
 		notes: 'The German Edition has an aditional adventure for German characters called "Operation Baybreaker".'
 	},
 	{
-		sku: ['27202'],
+		sku: ['27202', '45058'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Cutting Aces',
-		releaseDate: ['2016-12'],
-		description: 'The hotel bartender who slips you a guest’s room number because he thinks it will help him get lucky. The security guard who lets a team into a top-secret facility because he thinks he’s pitching in on covert-ops training. The business suit who drops ten thousand nuyen on a project because he thinks it’ll earn him fifty thousand.\nMarks, all of them, and the Sixth World is full of them. Yeah, blasting your way into a well-guarded facility is fun, but talking your way in, smooth and subtle, might be more rewarding. Almost every kind of shadowrun involves at least a little con artistry, and some of them are full-on long cons. That means you need to sharpen your con game. With tips, plot updates, spells, gear, and more to improve characters’ con abilities, Cutting Aces gives players the swagger and skills they need to swindle the world. It also includes information on one of the Sixth World’s hottest spots for running a con—Istanbul, City of the World’s Desire.',
+		names: {
+			'de-DE': 'Mit Tricks und Finesse'
+		},
+		releaseDate: ['2016-12-09', '2017-10-19'],
+		description: 'Hit Your Marks\n\nThe hotel bartender who slips you a guest’s room number because he thinks it will help him get lucky. The security guard who lets a team into a top-secret facility because he thinks he’s pitching in on covert-ops training. The business suit who drops ten thousand nuyen on a project because he thinks it’ll earn him fifty thousand.\nMarks, all of them, and the Sixth World is full of them. Yeah, blasting your way into a well-guarded facility is fun, but talking your way in, smooth and subtle, might be more rewarding. Almost every kind of shadowrun involves at least a little con artistry, and some of them are full-on long cons. That means you need to sharpen your con game. With tips, plot updates, spells, gear, and more to improve characters’ con abilities, Cutting Aces gives players the swagger and skills they need to swindle the world. It also includes information on one of the Sixth World’s hottest spots for running a con—Istanbul, City of the World’s Desire.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		note: 'The German edition has an aditional chapter about Frankfurt.'
 	},
 	{
 		sku: ['26S037'],
@@ -2511,11 +2540,14 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Seattle Sprawl Digital Box Set',
+		names: {
+			'de-DE': 'Seattle Box - Stadt der Schatten'
+		},
 		releaseDate: ['2016-04'],
-		description: 'It’s the shadowrunning capital of the world for a reason. Seattle offers an unparalleled intersection of corporate, political, and criminal powers. This is where icons are made—like the Ancients, the Halloweeners, the Finnigan Crime Family, the Skraacha, Dante’s Inferno, Renraku Arcology, the Big Rhino, and the Alabaster Maiden. And this is where runners like Dodger, Sally Tsung, Dirk Montgomery, Jake Armitage, Twist, Kellan Colt, and James Kincaid made their names, sometimes made their fortunes, and occasionally experienced horrible losses. This is where you go to test your mettle. This is how you show you’re at the top of the heap.',
+		description: 'Infinite Shadows\n\nIt’s the shadowrunning capital of the world for a reason. Seattle offers an unparalleled intersection of corporate, political, and criminal powers. This is where icons are made — like the Ancients, the Halloweeners, the Finnigan Crime Family, the Skraacha, Dante’s Inferno, Renraku Arcology, the Big Rhino, and the Alabaster Maiden. And this is where runners like Dodger, Sally Tsung, Dirk Montgomery, Jake Armitage, Twist, Kellan Colt, and James Kincaid made their names, sometimes made their fortunes, and occasionally experienced horrible losses. This is where you go to test your mettle. This is how you show you’re at the top of the heap.\nA sprawl this big can’t be contained in a single book, so we made a box. Inside you’ll find:\n\t- Emerald Shadows, a book outlining the geography of the sprawl and the notable powers and locations in each district;\n\t- Ruling the Queen City, a deeper examination of the power and history of Seattle, including a look at the people who rule over the city—and the people who control them;\n\t- Tangled Threads, holding plot hooks and adventures to help launch or continue your Seattle-based game;\n\t- Character cards, fully statted out cards of Seattle denizens that can be used as easy-reference NPCs of even pre-generated PCs;\n\t- Modular map cards, a deck of cards showing maps of different types of rooms that can be combined into a never-ender variety of buildings;\n\t- Gang reference card, providing a quick listing of gangs of the sprawl, their colors, and where they operate;\n\t- And a poster-sized map of Seattle like Shadowrun has never seen before.\nAll this will bring the sprawl to lifew while making it easier for players and gamemasters to dive into the shadowy depths that make Seattle legendary—and see if they can keep their head above water.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -2785,7 +2817,7 @@ module.exports = [
 		type: 'print',
 		name: 'Schlagschatten',
 		releaseDate: ['1993'],
-		description: '',
+		description: 'SCHLAGSCHATTEN\n\nErleben Sie die Schattenseiten des zukünftigen Deutschland in drei packenden SHADOWRUN-Abenteuern:\n\t- MurderMedia: Ein Privatsender im Ruhrplex, eine perverse Show, die Yakuza und ein internationaler Medienkonzern - und die Runner wie üblich mittendrin! von Björn Lippold\n\t- Lösegeld für eine Leiche: Wenn der Chef einer renommierten Sicherheitsfirma seinen Sohn bei einem mysteriösen Attentat verliert und die Polizei den Fall zu den Akten legt, ist es Zeit, die Schatten zu kontaktieren. von Stefan Willkofer\n\t- Proemtheus: Hamburg 2053: Was bezweckt der verrückte Wissenschaftler Dr. Surgental mit seiner bizarren Kreuzung aus einem erwachten Wesen und einer Wagenladung Cyberware? von Armin Schmiege!\nEnthält Datenanhänge für alle wichtigen Waffen und Fahrzeuge! Voll kompatibel zu SHADOWRUN 2.01D',
 		gameDate: '2053',
 		edition: 2,
 		publisher: ['Fantasy Productions'],
@@ -4290,15 +4322,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27452'],
+		sku: ['27452', '45048'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Book of the Lost',
+		names: {
+			'de-DE': 'Buch der Verlorenen'
+		},
 		releaseDate: ['2017-03'],
-		description: 'The Bastard, upright. A man in clown makeup stands in a broken skyraker window over another man on the verge of a long plummet. Near the clown’s hand, a white rose. Opportunity, adventure, but also mania and frenzy. 404, upright. A woman crouches on the edge of a rooftop, holding a white rose. In the distance is the image of a woman in a red dress. Destruction, failure, collapse. Queen of coins. A woman in a red dress, lounging amidst luxury. She has material wealth but emptiness of soul. Upright, she is opulence, magnificent. Inverse is suspense, fear.\nOpportunity and adventure abounds. Destruction and failure loom. Will the result be magnificence—or fear?',
+		description: 'No Longer Hidden\n\nThe Bastard, upright. A man in clown makeup stands in a broken skyraker window over another man on the verge of a long plummet. Near the clown’s hand, a white rose. Opportunity, adventure, but also mania and frenzy. 404, upright. A woman crouches on the edge of a rooftop, holding a white rose. In the distance is the image of a woman in a red dress. Destruction, failure, collapse. Queen of coins. A woman in a red dress, lounging amidst luxury. She has material wealth but emptiness of soul. Upright, she is opulence, magnificent. Inverse is suspense, fear.\nOpportunity and adventure abounds. Destruction and failure loom. Will the result be magnificence—or fear?\nBook of the Lost takes the intricate art of the Sixth World Tarot and turns it into stories and campaigns for Shadowrun players. Full of plot hooks and adventure seeds, this book is a treasure trove of ideas, mysteries, and enigmas that can make memorable games. Open it and explore knowledge that had been lost but is now, here, rediscovered. And waiting for you.',
 		gameDate: '2079-02',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4410,39 +4445,52 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['7304'],
+		sku: ['7304', '10712'],
 		category: 'mission',
 		type: 'scan',
-		name: 'Queen Euphoria, A Shadowrun Adventure',
-		releaseDate: ['1990-09-01'],
+		name: 'Queen Euphoria',
+		names: {
+			'de-DE': 'Königin Euphoria',
+			'fr-FR': 'La Reine Euphoria'
+		},
+		releaseDate: ['1990-09-01', '1993', '1994'],
 		description: 'It was a simple job, and the pay was good. Snatch Euphoria, the simsense star, sit on her for a weekend, and let her go. Easy.\nIf you believe that, you\'ve never run the shadows.\nBecause now she\'s been snatched for a second time... and the corps think you did it.\nWhat does all this have to do with - Ambergel, the most popular junk food in Seattle?\nA former Coyote shaman?\nAn evil power so strong it threatens all mankind?\nFind the Queen. Find the answers.\nHURRY!',
 		gameDate: '2050',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['7303'],
+		sku: ['7303', '10701'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Dreamchipper',
-		releaseDate: ['1990-04'],
-		description: 'Ladies of the night are being murdered and butchered with the skill of a surgeon.\nThe Gaslight Ghoul has returned, and he stalks the streets of Seattle!\nIn Shadowrun, the rampant substance of the 19th and 20th centuries are now as archaic as 8-track audio tapes. Now the escape of choice is the BTL, or Better Than Life chip. Plug it in and all physical pleasures, desires, and hopes suddenly pale by comparison. Some "experimental" chips are missing, and you\'ve been hired to find them. But an investigation of simple theft is turning into a grisly trail that seems to have no rhyme or reason. Now you are beginning to wonder … can these chips program someone to be a serial killer?',
+		names: {
+			'de-DE': 'Dreamchipper',
+			'fr-FR': 'Les Voleurs de Narcopuces',
+			'es-ES': 'Chip soñador'
+		},
+		releaseDate: ['1989-04', '1993', '1993', '1995-01', '2011-05'],
+		description: 'The Year is 2050\n\nLadies of the night are being murdered and butchered with the skill of a surgeon. The Gaslight Ghoul has returned, and he stalks the streets of Seattle! in Shadowrun, the rampant substance abuse of the 19th and 20th centuries are now as archaic as 8-track audio tapes. Now the escape of choice is the BTL, or Better Than Life chip. Plug it in and all physical pleasures, desires, and hopes suddenly pale by comparison. Some \'experimental\' chips are missing, and you\'ve been hired to find them. But an investigation of simple theft is turning into a grisly trail that seems to have no rhyme or reason. Now you are beginning to wonder … can these chips program someone to be a serial killer?',
 		gameDate: '2050',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'Diseños Orbitales', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['7306'],
+		sku: ['7306', '10715'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Harlequin',
-		releaseDate: ['1991-01'],
-		description: '"Imagine a hatred that has endured for 5000 years...."\nThe shadowrunners are sent on a string of missions, collecting obscure items, all seemingly unrelated... or are there? From the streets of Seattle to the frigid heights of the Bavarian Alps, from the magical mayhem of Columbia, Missouri to the headwaters of the Amazon, the adventure unfolds.\nWho would go to all this trouble to destroy one man... and why?\n	A datafile\n	An ancient magic tome\n	A Flower\n	A collection of Elven ears\n	The manuscript of a soon-to-be-released bestseller\n	A young woman of mysterious heritage\n	A world-famous Elven social theorist\nAll are pieces to the puzzle.\nFinding them is one thing.\nPutting it all together is another!',
+		names: {
+			'de-DE': 'Harlekin',
+			'es-ES': 'Arlequín'
+		},
+		releaseDate: ['1991-01', '1995', '2002-05', '2005-03-17'],
+		description: '"Imagine a hatred that has endured for 5000 years...."\nThe shadowrunners are sent on a string of missions, collecting obscure items, all seemingly unrelated... or are there? From the streets of Seattle to the frigid heights of the Bavarian Alps, from the magical mayhem of Columbia, Missouri to the headwaters of the Amazon, the adventure unfolds.\nWho would go to all this trouble to destroy one man... and why?\n	A datafile\n\tAn ancient magic tome\n\tA Flower\n\tA collection of Elven ears\n	The manuscript of a soon-to-be-released bestseller\n\tA young woman of mysterious heritage\n\tA world-famous Elven social theorist\nAll are pieces to the puzzle.\nFinding them is one thing.\nPutting it all together is another!',
 		gameDate: '2051',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Fantasy Productions', 'La Factoriá', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4451,13 +4499,15 @@ module.exports = [
 		type: 'scan',
 		name: 'Bottled Demon',
 		names: {
-			'de-DE': 'Flaschendämon'
+			'de-DE': 'Flaschendämon',
+			'fr-FR': 'Le Démon dans la Bouteille',
+			'fi-FI': 'Pullotettu demoni'
 		},
-		releaseDate: ['1990-07-01', '1992'],
+		releaseDate: ['1990-07-01', '1992', '1994-04', '1997', '2012-11'],
 		description: 'Bottle, Bottle, who\'s got the Bottle?\nThe shadowrunners meet a very disturbed man who hires them as bodyguards on a business deal.\nBottle, Bottle, who wants the Bottle?\nNow the man is dead, and they don\'t know why.\nBottle, Bottle — what\'s in the Bottle?\nThe bottle is a mysterious artifact covered with ancient cryptic runes. Why are some people willing to kill for it? Why are some people willing to die for it? And the most sensible advice the runners receive is the one thing they can\'t seem to do — get rid of it.\nNo Deposit! No Return! Please dispose of property!',
 		gameDate: '2050',
 		edition: 1,
-		publisher: ['FASA Corporation', 'Fantasy Productions'],
+		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'PRO Games', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4465,6 +4515,12 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Mercurial',
+		names: {
+			'de-DE': 'Mercurial',
+			'fr-FR': 'Mercurial',
+			'es-ES': 'Mercurial',
+			'he-IL': 'מאריה כספיתי'
+		},
 		releaseDate: ['1990-11', '1991'],
 		description: 'A blast of light punches my eyes as I walk down the ramp from street level. The dance floor is an amorphous beast, writhing with a thousand limbs, and the beat of the music red-lines my pulse into overdrive. On the stage, a nova is dancing.\nSearing beams of the spotlights catch the mirror-bright metal arms, legs, and face, reflecting them back in a dazzling cascade of color and light. The next thing you see is the hair flaring golden in the glare, surrounding her face like a solar corona around a silver moon. While Maria Mercurial dances, nothing else matters.\nOf course, something else does matter - biz. That\'s why you\'re here, chummier, to protect the silver lady with no past. The money\'s good, the job\'s easy; what could go wrong? Except maybe the lady\'s past is catching up with her.',
 		gameDate: '2050',
@@ -4967,30 +5023,33 @@ module.exports = [
 		category: 'mission',
 		type: 'ocr',
 		name: 'Dark Angel',
-		releaseDate: ['1993-12'],
-		description: 'Music worth dying for.\nWhen the only known recording of a late, great street musician appears in the hands of a major record company, it\'s up to the runners to find out the truth.\nJust what was that corp willing to do to get that recording?',
+		releaseDate: ['1993-12', '2012-11-16'],
+		description: 'Dark Angel\nMusic worth dying for.\n\nWhen the only known recording of a late, great street musician appears in the hands of a major record company, it\'s up to the runners to find out the truth.\nJust what was that corp willing to do to get that recording?',
 		gameDate: '2051',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['7312'],
+		sku: ['7312', '4775'],
 		category: 'mission',
 		type: 'scan',
 		name: 'One Stage Before',
-		releaseDate: ['1992'],
-		description: 'One False Step...\n...& the Fat Lady Sings!\nWhen Mr. Johnson hires shadowrunners to discover the brains behind repeated attempts to sabotage a major corporation\'s latest acquisition, their first wrong move could be their last.',
+		names: {
+			'fr-FR': 'Des Pourris et des Ombres'
+		},
+		releaseDate: ['1992', '1996-11'],
+		description: 'One False Step...\n...& the Fat Lady Sings!\n\nWhen Mr. Johnson hires shadowrunners to discover the brains behind repeated attempts to sabotage a major corporation\'s latest acquisition, their first wrong move could be their last.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Descartes Editeur'],
 		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7315'],
 		category: 'mission',
 		type: 'ocr',
-		name: 'Celtic Doublecross',
+		name: 'Celtic Double-Cross',
 		releaseDate: ['1993'],
 		description: 'Renowned as a land of wonders, Tir Na Nog brims with ancient elven art and sophisticated elven nobles, powerful magic and cutting-edge technologies. But beneath this cultured facade lies a dark mix of long-simmering feuds and Machiavellian plots. Now add a dash of good old UCAS politics, and you have a Byzantine brew of betrayal and bloodshed, a Mickey Finn with a lethal kick.',
 		gameDate: '2053',
@@ -5011,24 +5070,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['7311'],
+		sku: ['7311', '2-7408-0103-3'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Ivy & Chrome',
-		transations: {
-			'fr-FR': {
-				sku: ['2-7408-0103-3'],
-				name: 'La Dame de Cœur',
-				publisher: ['Descartes Editeur'],
-				releaseDate: ['1995-04'],
-				description: 'Z\'avez déjà essayé de retrouver quelqu\'un dans la conurb? C\'est un peu comme chercher un coin lisse sur la peau d\'un troll. Il y a purtant quelqu\'un qui a besoin d\'être retrouvé, et vite! Fouiner, fouiller, trouver et récupérer. Vous pensez que c\'est dans vos cordes.'
-			}
+		names: {
+			'fr-FR': 'La Dame de Cœur'
 		},
-		releaseDate: ['1991-05'],
+		releaseDate: ['1991-05', '1995-04'],
 		description: 'Ever try to find someone in the Sprawl?\nSorta like findin\' a smooth spot on a troll.\nNevertheless, someone needs to be found, and fast.\nIt\'s hid and seek, search and destroy.\nThink you can handle it, shummers?',
 		gameDate: '2051',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Descartes Editeur'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -5036,23 +5089,30 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Total Eclipse',
-		releaseDate: ['1991-11'],
+		names: {
+			'fr-FR': 'Eclipse Totale'
+		},
+		releaseDate: ['1991-11', '1993-01'],
 		description: 'The word is out, chummer. If you want blazing rock and roll, there\'s only one band to see: The Elementals. The buzz is they\'re about to become the next local band hit the big time\nThere\'s just one problem. The elementals have broken their recording contract, and in the world of corporate domination, nobody goes solo.\nThe runners\' job? Find the band and bring them home. Alive.',
 		gameDate: '2051',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Descartes Editeur'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['7307'],
+		sku: ['7307', '7441', '10721'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Dragon Hunt',
-		releaseDate: ['1991-03'],
-		description: 'In this Shadowrun adventure, the shadowrunners are hired to find a lost identity. The only problem is that some of the biggest corporations in Seattle don\'t want it found. Hide and seek, cross and double-cross, a dragon\'s deeds and desires… Ah, business as usual in the shadows…',
+		names: {
+			'de-DE': 'Drachenjagd',
+			'fr-FR': 'Tirez sur le Dragon'
+		},
+		releaseDate: ['1991-03', '1993', '1995', '2010-06-07'],
+		description: 'Dragon Hunt\n\nIn this Shadowrun adventure, the shadowrunners are hired to find a lost identity. The only problem is that some of the biggest corporations in Seattle don\'t want it found. Hide and seek, cross and double-cross, a dragon\'s deeds and desires… Ah, business as usual in the shadows…',
 		gameDate: '2051',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -5060,11 +5120,14 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Elven Fire',
-		releaseDate: ['1992'],
-		description: 'Gang violence strikes at the heart of Seattle.\nWhat are they?\nNight after night, senseless violence and destruction turn the metroplex into a war zone.\nWhat do they want?\nBy day, citizens move quickly from place to place, alert for the first signs of danger. By night, they hide where they feel safe, praying that the only death they see before dawn is on the trideo.\nHow can they be stopped?\nTonight, the streets run with blood. Elven Fire is an adventure for Shadowrun.',
+		names: {
+			'fr-FR': 'Elven Fire'
+		},
+		releaseDate: ['1992-01', '1996-01'],
+		description: 'Elven Fire\n\nGang violence strikes at the heart of Seattle.\nWhat are they?\nNight after night, senseless violence and destruction turn the metroplex into a war zone.\nWhat do they want?\nBy day, citizens move quickly from place to place, alert for the first signs of danger. By night, they hide where they feel safe, praying that the only death they see before dawn is on the trideo.\nHow can they be stopped?\nTonight, the streets run with blood. Elven Fire is an adventure for Shadowrun.',
 		gameDate: '2053',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Descartes Editeur'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -5072,11 +5135,11 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Imago',
-		releaseDate: ['1992'],
-		description: 'There\'s bound to be trouble when Seattle-based shadowrunners are imported to take care of business in the United Kingdom. A valuable employee of one of Britain\'s largest megacorporations may be missing, and Transys Neuronet will be damned if they\'re going to let anyone on their side of the pond know about it.\nThe search takes the runners through Scotland, the city of Edinburgh, and to darker corners of the Matrix than they ever dreamed existed. It\'s a complex puzzle of betrayal, friendship, isolation, hatred, blinding love, vengeance, and, in the most bizarre twist of all - life after death.',
+		releaseDate: ['1992', '2011-07-22'],
+		description: 'GREAT BRITAIN AWAITS!\n\nThere\'s bound to be trouble when Seattle-based shadowrunners are imported to take care of business in the United Kingdom. A valuable employee of one of Britain\'s largest megacorporations may be missing, and Transys Neuronet will be damned if they\'re going to let anyone on their side of the pond know about it.\nThe search takes the runners through Scotland, the city of Edinburgh, and to darker corners of the Matrix than they ever dreamed existed. It\'s a complex puzzle of betrayal, friendship, isolation, hatred, blinding love, vengeance, and, in the most bizarre twist of all - life after death.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -5084,7 +5147,10 @@ module.exports = [
 		category: 'mission',
 		type: 'ocr',
 		name: 'Eye Witness',
-		releaseDate: ['1994'],
+		names: {
+			'fr-FR': 'Témoin Oculaire'
+		},
+		releaseDate: ['1994', '1997-07'],
 		description: 'THEY SAY THE EYE RETAINS THE IMAGE OF THE LAST THING IT SEES...\nAccording to some, parts is parts. But when one of those parts contains a motive for murder, betrayal. And corporate espionage, can a shadowrun be far behind?\nEye witness takes a team of shadowrunners on a quest for justice across Deattle, into the boardroom of a corrupt corp, the darkest corners of the sprawl\'s slums, and the noxious depths of Seattle\'s underworld.',
 		gameDate: '2055',
 		edition: 2,
@@ -5178,15 +5244,18 @@ module.exports = [
 		status: 'badscan'
 	},
 	{
-		sku: ['7320'],
+		sku: ['7320', '10729'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Harlequin\'s Back',
-		releaseDate: ['1994-12'],
+		names: {
+			'de-DE': 'Harlekins Rückkehr'
+		},
+		releaseDate: ['1994-12', '1996', '2010-11-24'],
 		description: 'Harlequin\'s Back…\n…and the world may never be the same!\nIt\'s long been said that trouble follows Harlequin around like a loyal dog, but this time he\'s taking the lead and dragging some shadowrunners along on his waking nightmare. It\'s clear that the level of magic is rising in the Sixth World, and bigger magic makes the world a more dangerous place. But the particular danger Harlequin\'s worried about isn\'t supposed to be a problem for another two thousand years…',
 		gameDate: '2055',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -5194,11 +5263,14 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Double Exposure',
-		releaseDate: ['1994-12'],
+		names: {
+			'fr-FR': 'Glow City Blues'
+		},
+		releaseDate: ['1994-12', '1998-09'],
 		description: 'The recently formed organization known as Project Hope has embarked on a seemingly imposible task of restoring life and prosperity to the Glow City region of the Redmond Barrens. To achieve its noble goal, Project Hope uses the resources of a community largely ignored by society: Seattle\'s teeming homeless population. Through a well-orchestred procedure, the homeless and destitute can apply at the Project\'s downtown Seattle office for admission to one of Project Hope\'s ten relief campos. For those down on their luck, the lure of free food and shelter and the chance to join a prospering new comunity far outweight the hard work demanded of them and the risks of living in the Glow City neibrhood.\nOf course, nothing is as it seems. Behind Project Hope\'s benevolent community-work camps and free medical services lies a deception of nightmarish propositions involving Renraku Computer Systems, the Universal Brotherhood, and a powerful Ant Queen.',
 		gameDate: '2055-08',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Descartes Editeur'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -6374,12 +6446,15 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27231'],
+		sku: ['27231', '45063'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Dark Terrors',
-		releaseDate: ['2017-11-26'],
-		description: 'Piercing the Night\nYou heard the scream. It’s important to remember that. Sometimes, when it’s late, and you hear something that sounds like a scream echoing through dark alleys, you try to convince yourself that it was something else. An animal. An illusion. Anything but what it sounded like.\nBut it was a scream. You heard it, and you’ll hear it again, because in the Sixth World, the supply of terror is growing. Bug spirits work to devour corporations from within. Shedim claim dead bodies and mobilize to their own dark ends. And the hidden corners of the metaplanes and the Matrix contain creatures that are best not imagined, because to imagine them is to sever ties with reason.\nDark Terrors is a catalog of the horrors lurking under the surface of the Sixth World. With plot updates and hooks, critter stats, and campaign information presented in an immersive style, it’s an invaluable resource for players ready to stay on the edge of their seats. It is for use with Shadowrun, Fifth Edition and Shadowrun: Anarchy.',
+		names: {
+			'de-DE': 'Im Herz der Dunkelheit'
+		},
+		releaseDate: ['2017-11-26', '2018-03-15'],
+		description: 'Piercing the Night\n\nYou heard the scream. It’s important to remember that. Sometimes, when it’s late, and you hear something that sounds like a scream echoing through dark alleys, you try to convince yourself that it was something else. An animal. An illusion. Anything but what it sounded like.\nBut it was a scream. You heard it, and you’ll hear it again, because in the Sixth World, the supply of terror is growing. Bug spirits work to devour corporations from within. Shedim claim dead bodies and mobilize to their own dark ends. And the hidden corners of the metaplanes and the Matrix contain creatures that are best not imagined, because to imagine them is to sever ties with reason.\nDark Terrors is a catalog of the horrors lurking under the surface of the Sixth World. With plot updates and hooks, critter stats, and campaign information presented in an immersive style, it’s an invaluable resource for players ready to stay on the edge of their seats. It is for use with Shadowrun, Fifth Edition and Shadowrun: Anarchy.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
@@ -6434,15 +6509,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27506'],
+		sku: ['27506', '45062'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'The Complete Trog',
+		names: {
+			'de-DE': 'Mit Hauern und Hörnern - Almanach der Orks und Trolle'
+		},
 		releaseDate: ['2017-07'],
-		description: 'They can call you a trog. Sure they can. Let ’em think it’s smear. Let them show you what they don’t know. Let them ignore history, the great accomplishments orks and trolls have made in every field in the Sixth World, the homes and enclaves they’ve built out of nothing. There’s enough talent in the trog population to punch, hack, rig, charm, or enchant that smug smile right off their face. You know what you are. They’ll learn—fast, if they know what’s good for them.\nThe Complete Trog is the definitive guide for ork and troll characters in Shadowrun. With information on what it’s like to be an ork or troll in dozens of spots across the globe, details on working in corps as a trog (including in ork- and troll-dominated corps) and the heroes and enemies of trog culture, the book helps players add flavor and depth to their characters and the world around them. On top of that, it has gear, qualities, and life modules compatible with both Shadowrun, Fifth Edition and Shadowrun: Anarchy. Plunge into the rich culture of trogs and watch them turn that slur on its head.',
+		description: 'Big, bad, and awesome\n\nThey can call you a trog. Sure they can. Let ’em think it’s smear. Let them show you what they don’t know. Let them ignore history, the great accomplishments orks and trolls have made in every field in the Sixth World, the homes and enclaves they’ve built out of nothing. There’s enough talent in the trog population to punch, hack, rig, charm, or enchant that smug smile right off their face. You know what you are. They’ll learn—fast, if they know what’s good for them.\nThe Complete Trog is the definitive guide for ork and troll characters in Shadowrun. With information on what it’s like to be an ork or troll in dozens of spots across the globe, details on working in corps as a trog (including in ork- and troll-dominated corps) and the heroes and enemies of trog culture, the book helps players add flavor and depth to their characters and the world around them. On top of that, it has gear, qualities, and life modules compatible with both Shadowrun, Fifth Edition and Shadowrun: Anarchy. Plunge into the rich culture of trogs and watch them turn that slur on its head.',
 		gameDate: '2079-08',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -7408,7 +7486,7 @@ module.exports = [
 		type: 'digital',
 		name: 'Nigel Findley Omnibus',
 		releaseDate: ['2010-05-06'],
-		description: 'FOUR CLASSICS. ONE VOLUME. PURE SHADOWRUN\nShadowrun fans know. They love the dark alleys and darker plots of the Sixth World, and they know that Nigel Findley wrote some of the best Shadowrun novels ever. Now, for the first time, his four iconic books are collected in a single volume.\nWhether you’ve loved Shadowrun fiction for years or are just now being introduced to it, the novels of Nigel Findley are a superb place to start. This exclusive edition contains:\n	• 2XS, which introduces private detective Dirk Montgomery and pits him against the mysterious sources of a chip even more addictive than the strongest BTLs;\n	• Shadowplay, featuring a veteran decker and a young shaman who stumble on lost technology that puts them up against one of the world’s largest megacorporations—and the Corporate Court itself;\n	• Lone Wolf, where an undercover Lone Star operative finds himself in the middle of an exploding gang war; and\n	• House of the Sun, which brings back Dirk Montgomery and sends him to Hawai’i, where he runs afoul of the government, a ritual sacrifice, powerful elves, and very unpleasant bugs.\n	This omnibus provides a unique opportunity to dive into the complete novel output of one of Shadowrun’s finest writers. Let Nigel Findley show you what it really feels like to run in the shadows!',
+		description: 'FOUR CLASSICS. ONE VOLUME. PURE SHADOWRUN\nShadowrun fans know. They love the dark alleys and darker plots of the Sixth World, and they know that Nigel Findley wrote some of the best Shadowrun novels ever. Now, for the first time, his four iconic books are collected in a single volume.\nWhether you’ve loved Shadowrun fiction for years or are just now being introduced to it, the novels of Nigel Findley are a superb place to start. This exclusive edition contains:\n\t• 2XS, which introduces private detective Dirk Montgomery and pits him against the mysterious sources of a chip even more addictive than the strongest BTLs;\n\t• Shadowplay, featuring a veteran decker and a young shaman who stumble on lost technology that puts them up against one of the world’s largest megacorporations—and the Corporate Court itself;\n\t• Lone Wolf, where an undercover Lone Star operative finds himself in the middle of an exploding gang war; and\n\t• House of the Sun, which brings back Dirk Montgomery and sends him to Hawai’i, where he runs afoul of the government, a ritual sacrifice, powerful elves, and very unpleasant bugs.\n	This omnibus provides a unique opportunity to dive into the complete novel output of one of Shadowrun’s finest writers. Let Nigel Findley show you what it really feels like to run in the shadows!',
 		gameDate: '2050',
 		edition: 4,
 		publisher: ['Catalyst Game Labs'],
@@ -7558,17 +7636,109 @@ module.exports = [
 		notes: 'German sourcebook about Berlin.'
 	},
 	{
-		sku: ['47020'],
+		sku: ['47020', '47021'],
 		category: 'sourcebook',
 		type: 'digital',
-		name: 'Datapuls ADL',
-		releaseDate: ['2017'],
+		name: 'Datapuls: ADL',
+		releaseDate: ['2016-10-12'],
 		description: 'Die Allianz Deutscher Länder – ein Flickenland, eine Region voller Gegensätze, ein tief mit den Schatten verwobenes Land. Hier finden sich Trollrepubliken, Elfenstaaten, toxisch verseuchte Zonen und riesige Megaplexe. Berlin mit seinem ewigen Konflikt zwischen anarchistischen Kiezen und Konzernhochburgen. Hamburg mit seinen überfluteten Straßen und dem Sprungbrett zur verseuchten Nordsee. Der Rhein-Ruhr-Megaplex, ein Schmelztiegel aus Ghettos, Stadtzentren, Industrie und Konzernen – über dem der Drache Lofwyr in Neu-Essen thront. Und gerade weil die ADL so heterogen ist, eine Mischung aus wuchernder Wildnis und wimmelnder Urbanität, entlegenen Fluchtorten und überbauten Städten, Erwachten Mysterien und verseuchten Landstrichen, sollten sich Runner hier gut auskennen. Sonst fressen einen die Schatten schneller, als man die nächste Grenze erreichen kann.\nDatapuls: ADL ist ein Hardcover-Quellenbuch für Shadowrun 5, das einen Überblick über die aktuelle Lage in der Allianz Deutscher Länder im Jahre 2078 präsentiert. Es bietet dabei neue Einblicke, gibt aber auch Zusammenfassungen des schon Bekannten, um neuen wie alten Spielgruppen die ADL zur Heimat für ihre Runs und Runner zu machen. Neben Beschreibungen des Lifestyles, der Konzern- und Staatswelt, von Subkulturen, Magie und Matrix wird ein Fokus auf die drei Plexe Berlin, Hamburg und Rhein-Ruhr-Megaplex gelegt. Aber auch Kurzbeschreibungen der SOX, der Trollrepublik, des Kirchenstaats Westphalen und des Elfenherzogtums Pomorya sind zu finden, genauso wie Einblicke in dunkle Metaplot-Mysterien, neue NSCs und Grundrisse für den direkten Gebrauch am Spieltisch. Immer wieder unterbrochen von Datapuls-Nachrichten der neuesten Ereignisse – denn uninformierte Runner sind tote Runner.',
-		gameDate: '2075',
+		gameDate: '2078',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		notes: 'German sourcebook about Germany.'
+	},
+	{
+		sku: ['45061'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Hamburg',
+		releaseDate: ['2018-10-07'],
+		description: 'Hamburg – ein Runnerparadies. Der Sprawl bietet einen Ausgangspunkt für diverse Schattenaktivitäten, national und international. Von den Villenvierteln in Lauenburg bis zu den dreckigen Hinterhöfen von Klein-Russland, von den Hafenkaschemmen der Wattsammler bis zu den Hochglanz-AR-Kinos der Musikinsel, von den wilden Vergnügungen der Reeperbahn bis zum täglichen Kampf ums Überleben im Slum Wildost – der Edelstein an der Elbe glänzt in den unterschiedlichste Facetten. Und hinter jedem Glanz lauert Schatten: Medienkonzerne ringen um Marktanteile, Voodoo-Zirkel jagen toxische Magier, Verschwörer nehmen Einfluss auf die Politik, in überschwemmten U-Bahntunneln werden illegale Waren gehandelt, grüne Terroristen wollen die Metamenschheit zerstören. Und in der Unterwelt tobt ein Schattenkrieg zwischen Triaden, Vory und Likedeelern, der selbst die Schattengemeinde zerreißen könnte.\nDatapuls: Hamburg ist ein Quellenbuch für Shadowrun 5. Es bietet detaillierte Hintergrundinformationen zu den einzelnen Stadtteilen, vielen unterschiedlichen Locations, Hotspots wie dem Ohlsdorfer Friedhof oder der Sardinenstadt, Mächtegruppen aus Unterwelt und Politik, einflussreiche Konzerne im Megaplex sowie den Schattenseiten der Elbmetropole. Neben Beschreibungen von Wildost, magischen Gruppen und den Gefahren des Watts und der Nordsee wird auch viel Material für den Spielleiter geboten, um Hamburg zu einer einzigartigen Heimat für Runner zu machen. Abgerundet wird der Rundblick durch große Karten von Hamburg, Wildost und der Neuen Mitte, die dem Buch beiliegen und die mehr als 300 beschriebenen Locations genau verorten.',
+		gameDate: '2078',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['45068'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Hamburg - Zusatzpack',
+		releaseDate: ['2018-10-07'],
+		description: 'Manchmal reicht es nicht, alle Informationen zu besitzen. Manchmal muss es einfach mehr sein. Manchmal muss man mit den Informationen spielen können, sie praktisch nutzen, tiefer in etwas eintauchen. Das gilt nicht nur für die Schatten der Sechsten Welt, es gilt auch für den heimatlichen Spieltisch. Hamburg, der Megaplex an der Elbe, ist ein Spielplatz für Runner, der mehr verlangt und deswegen auch mehr bietet. Damit man noch weiter unter die Oberfläche des dunklen und allgegenwärtigen Wassers des Venedigs an der Elbe vordringen kann.\nDer Zusatzpack zu Hamburg für Shadowrun 5 bietet nicht nur einen speziellen Spielleiterschirm. Es liefert zudem einen Kurzroman zur Stadt, eine Inplay-Werbebroschüre für Runner und andere Schattentouristen, mehr als zwanzig Charaktere aus dem Sprawl mit Bild und Spielwerten auf praktischen Karteiblättern, kleinere Übersichtskarten zu Gangaktivitäten, der Innenstadt und dem öffentlichen Nahverkehr sowie Daten für den Download eines ganz besonderen Soundtracks. So haben Runner Hamburg noch nie erlebt.',
+		gameDate: '2078',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing',
+		notes: 'Complementary material to Datapuls: Hamburg, contains maps, booklets and a GM Screen.'
+	},
+	{
+		sku: ['470D1'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Berlin',
+		releaseDate: ['2018-02-16'],
+		description: 'Urbaner Schmelztiegel\n\nBerlin, Megaplex an der Spree. Für manche Zeichen der Konzernherrschaft. Für andere eine anarchistische Arche Noah. Für viele Bewohner der Ort, mit dem ihr Leben und ihr Schicksal unabänderlich verknüpft sind. Während in den Schatten neue Machtspieler des organisierten Verbrechens aufsteigen, breitet der Berlinkonzern seine Arme wie eine Krake über den Plex.\nDatapuls Berlin beleuchtet diesen Moloch der Sechsten Welt und liefert zusätzliche Informationen zu denen, die schon im Datapuls ADL publiziert wurden: neuste Verwicklungen und Ränkespiele, ein tiefer Blick in die Machtstrukturen der Berlin AG, neue Gangs und Banden in den anarchistischen Vierteln. Zudem werden in diversen Karten Locations und andere wichtige Orte aufgeführt und sowohl das Wedding als auch das Emirat Berlin genauer beschrieben.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		notes: 'German sourcebook about Berlin.'
+	},
+	{
+		sku: ['470D2'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Trollrepublik und Schwarzwald',
+		releaseDate: ['2018-03-11'],
+		description: 'Trolle und Erwachter Wald\n\nDer Schwarzwald, seit dem Erwachen der Sechsten Welt ein Ort voller Gefahren, Geister, wilder Magie und gefährlichen Crittern. Für manche ist es eine lebensfeindliche Umgebung, für andere ist es lukratives, aber tödliches Jagdrevier. Und für die Einwohner der Trollrepublik ist es schlicht ihre Heimat. Doch während die meisten Trolle, Orks und Riesen einfach nur Ruhe und Frieden suchen, braut sich im Inneren und an den Grenzen ein Sturm zusammen.\nDatapuls Trollrepublik und Schwarzwald beleuchtet das Land im Südwesten der ADL und seine hocherwachte Natur mit all ihren Mythen und arkanen Mysterien. Zudem liefert der Datapuls einen Einblick in politische Machtspiele, die Agenda des Trollthings, Unterweltorganisationen sowie verdächtige Konzernaktivitäten in der Republik. Und in die Möglichkeiten, die sich Shadowrunnern in den Schatten der dunklen Tannen bieten – sollten sie es lebend wieder herausschaffen.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		notes: 'German sourcebook about Berlin.'
+	},
+	{
+		sku: ['470D3'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Karlsruhe',
+		releaseDate: ['2018-03-23'],
+		description: 'Magie und Militär\n\nAuf den Straßen regieren die Soldaten. Die Bundeswehr hat die Stadt unter Kontrolle, verhängt Ausgangssperren und sorgt für Sicherheit und Ordnung. Aber hinter diesem Vorhang des Alltäglichen wartet die Bedrohung: In der magischen Fächerstadt erwachen arkane Phänomene. Geomantie und paranormale Erscheinungen werden von den ansässigen Instituten und Konzernen erforscht. Und gefährliche Geheimbünde flechten in den Schatten ihre ganz eigenen, finsteren Verschwörungen.\nDatapuls Karlsruhe wirft ein Licht auf die Sonderverwaltungszone Karlsruhe als Bundeswehr-Stadt und Fokus astraler Energien. Es liefert einen Einblick in Ränkespiele von versteckten Logen, den Alltag der Stadt, die ansässigen Mächtegruppen und bietet zudem eine tiefere Sicht in die Bundeswehr der Allianz Deutscher Länder. Hier können Runner ganz neue Abenteuer erleben – und sich mit Mächten anlegen, denen nur wenige gewachsen sind.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		notes: 'German sourcebook about Berlin.'
+	},
+	{
+		sku: ['470D4'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Österreich',
+		releaseDate: ['2018-04-09'],
+		description: 'Wiener Walzer und wilde Schatten\n\nÖsterreich, das Nachbarland der ADL. Von Kriegen gezeichnet, von einer ganz eigenen Kultur geprägt, durchsetzt von Lebenslust, wilder Natur, Konzernintrigen und seinen Schatten, in denen sich Ausländer erst einmal zurecht finden müssen. Denn wenn Dr. Nowak, der österreichische Herr Schmidt, jemanden anheuert, könnten bald nicht nur die Mozartkugeln fliegen.\nDatapuls Österreich bietet einen neuen und aktuellen Einblick in den Alpenstaat. Vorgestellt wird nicht nur das Leben und die Besonderheiten der einzelnen Regionen, sondern auch die Machtgruppen und die Unterwelt, die Konzerne und die Staatsgewalt. Und natürlich die Schatten. Einen besonderen Fokus erhält Wien, inklusive eigener Stadtkarte. Und natürlich auch die Alpenzone mit ihrer erwachten Fauna. Wer in Österreich in die Schatten möchte, sollte sich also gut informieren – bevor er zwischen Salzburg und Wien verschollen geht.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		notes: 'German sourcebook about Berlin.'
+	},
+	{
+		sku: ['470D5'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: SOX',
+		releaseDate: ['2018-04-09'],
+		description: 'SOX – drei Buchstaben mit großer Bedeutung. Die Sonderzone Saar-Lothringen-Luxemburg entstand nach dem großen Reaktorunfall in Cattenom und ist seit dem ein Mysterium, denn die verseuchte Region bringt Tod und lebt doch. Sie beherbergt irre Sektenpaktierer, verstrahlte Glowpunk-Horden, Aussteiger und abgeschottete Konzernarkologien in einem einzigartigen Landstrich aus urbanen Ruinen, verheertem Ödland, wildwuchernder Natur, gefährlichen und mutierten Crittern und einer völlig unberechenbaren Manasphäre.\nDatapuls SOX beleuchtet dieses Land am Rande der ADL und jenseits der Grenzen der Gesellschaft. Innerhalb der streng überwachten Perimetermauern herrscht der Konzernrat oder es gilt das Recht des Stärkeren. Der Datapuls beschreibt unter anderem Schmuggler, versteckte Kommunen, besondere Orte, neue Critter und Gefahren, dunkle Geheimnisse und toxische Kräfte – Details, die ein Runner kennen sollte, wenn er hier sein Glück machen will. Damit er wenigstens nicht unwissend stirbt.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		notes: 'German sourcebook about Berlin.'
 	},
 	{
 		sku: ['47000GA'],
@@ -7650,17 +7820,18 @@ module.exports = [
 		status: 'missing'
 	},
 	{
-		sku: ['45027'],
+		sku: ['45039'],
 		category: 'sourcebook',
-		type: 'digital',
-		name: 'Seattle: Stadt der Schatten Quellenbox',
-		releaseDate: ['2017'],
-		description: 'Seattle, die Emerald City, war schon immer einer der wichtigsten Metroplexe in der Welt von Shadowrun. Der Sprawl schwelt, denn er bildet einen Schmelztiegel aus Konzernmächten, politischen Intrigen und krimineller Energie, wie er kaum sonst irgendwo zu finden ist. Ikonen wie die Ancients, die Halloweeners, die Finnigan-Familie, die Skraacha, Dantes Inferno, die Renraku-Arkologie und Big Rhino sind hier zu finden. Und Runner wie Dodger, Sally Tsung, Dirk Montgomery, Jake Armitage, Twist, Kellan Colt und James Kincaid haben sich in den Straßenschluchten ihren Namen verschafft und sind zur Legende geworden. Sie alle haben hier ihr Glück gemacht und ihre Verluste erlitten. Und ihre Heimat stellt auch andere auf die Probe, denn hier können Runner zeigen, ob sie an der Spitze der Nahrungskette stehen oder nur Teil des Buffets sind.',
+		type: 'print',
+		name: 'Schattenhandbuch 3',
+		releaseDate: ['2015'],
+		description: 'Das Schattenhandbuch 3 ist der Nachfolger der Schattenhandbücher 1 und 2 – und führt die Reihe damit fort. Auch dieser Band enthält mehrere PDFs von der Plattform www.pegasusdigital.de für Shadowrun 5 in gedruckter Fassung, die sich alle dem deutschsprachigen Raum widmen:\n\t- Datapuls Berlin (ein neuer und tieferer Blick auf das große B an der Spree mit vielen Kiezkarten, Neuigkeiten aus der Unterwelt und Beschreibung des Berlin-Konzerns);\n\t- Datapuls Trollrepublik & Schwarzwald (ein Rundgang durch die Erwachte Welt des Schwarzwalds und durch die neue politische Lage der Trollrepublik);\n\t- Datapuls Karlsruhe (ein Besuch in der Sonderverwaltungszone, in der die Bundeswehr herrscht und deren merkwürdige arkane Phänomene dunkle Logen und Geheimbünde anziehen);\n\t- Datapuls Österreich (zu Gast in den österreichischen Schatten mit einem genaueren Blick auf Wien);\n\t- Datapuls SOX (eine Reise in die toxische Verbotszone, mit all ihren Glowpunks, Manalöchern, Crittern, Ghulstämmen und düsteren Konzernmachenschaften).\nHinzukommt ein kleiner, exklusiver ADL-Zusatz, der sich nur in diesem Buch finden und sich Fahrzeugen aus dem Nahverkehr der ADL widmet.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		notes: 'This is an updated version of the recent Seattle Sprawl box by CGL. Some of the contents have been rearranged and new items added.\nIt includes:\n\t- Smaragd im Schatten (Emerald Shadows, 96 pages)\n\t- Mächte in Seattle (Ruling the Queen City, 52 pages)\n\t- Im Labyrinth (Tangled Threads, 28 pages)\n\t- Doc Wagon 19 (Short Story, 64 pages)\n\t- 24 Character Cards, double sided\n\t- Gang Reference Card, double sided\n\t- 2 Location Reference Cards\n\t- 2 A1 Seattle Maps, one double sided'
+		status: 'missing',
+		notes: 'A German printed edition of the previeously released "Datapuls" series, with public transportation maps as an addition.'
 	},
 	{
 		sku: ['46085'],
@@ -7675,6 +7846,20 @@ module.exports = [
 		originalLanguage: 'de-DE',
 		status: 'missing',
 		notes: 'German 200 page adventure.'
+	},
+	{
+		sku: ['46065'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Mission Sioux Nation',
+		releaseDate: ['2018-04-25'],
+		description: 'Willkommen in Sioux Nation\n\nArkane Orte voller Macht. Megakonzerne mit finsteren Plänen. Schmuggler und Schamanen, Stammeshäuptlinge und rebellische Einzelgänger. All dies erwartet Runner bei einem Besuch in der Sioux Nation – und noch vieles mehr.\n\nMission Sioux Nation enthält einen detaillierten Einblick in die junge nordamerikanische Nation, in der Konzerne, Magie und alte Stammesriten das Schicksal bestimmen. Arkane Stätten voller Macht, gierige Megakons, große Städte und wilde Natur, all dies findet sich in diesem Band für Shadowrun 5, zusätzlich zu zwei großen Abenteuern: In Hungerbringer wandern die Runner auf dem schmalen Grad des Chaos entlang, während sie für Theo Two-Hearts einen wichtigen Job erledigen müssen – und dabei auf eine der stärksten Mächte der Sioux Nation treffen. In Eine strahlende Zukunft müssen die Runner für einen JackPoint-Kontakt nicht nur illegal über die Grenze kommen, sondern sich auch mit der Sioux National Police anlegen.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing',
+		notes: 'A compilation of: "Shadows in Focus: Sioux Nation", "Starving the Masses" and "Counting Coup"'
 	},
 	{
 		sku: ['GRST-2016'],
@@ -7909,7 +8094,7 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'print',
 		name: 'State of the Art: ADL',
-		releaseDate: ['2017'],
+		releaseDate: ['2017-05-29'],
 		description: 'Modernste Waffentechnik, uralte Magie, neuste Mode-Trends, Fahrzeugtechnik von Autoduellisten und erwachte Wildnis dies alles kann man in der Allianz Deutscher Länder finden. Und für einen Runner in diesen Breiten ist es überlebenswichtig zu wissen, wo und wann man all dies findet. Denn es macht einen gravierenden Unterschied, ob man in die Mündung der neusten Altmayr-Pistole schaut oder ihren Abzug am Finger hält. Ob die neusten Proteus-Wachcritter Jagd auf einen machen oder man selbst der Jäger ist. Oder ob man beim richtigen Schieber die neuste Drohne kauft, anstatt sich von ihr beim nächsten Run erschießen zu lassen.\nState of the Art ADL ist ein Ausrüstungsbuch für Shadowrun 5, das mit einem großen Haufen Spielzeug für Runner daherkommt. Es bietet neue Waffen, Archetypen, Fahrzeuge, Drohnen, Critter, magische Gruppen und Schutzgeister aus der Allianz Deutscher Länder und beschreibt zudem die wichtigsten Spieler auf den unterschiedlichen Märkten und ihre Schattenseiten in denen sich die Runner mit all dem neuen Kram eindecken können. Oder von ihm auffressen lassen.',
 		gameDate: '2075',
 		edition: 5,
@@ -7999,8 +8184,8 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Shadows in Focus: Morocco',
-		releaseDate: ['2018-01'],
-		description: 'A Dream of Shadows\nWhat do you want from a nation you’re going to run in? How about a place with access to cutting-edge technology while also retaining a firm footing in old traditions? How about a population focused on cutting deals and making things happen? How about a system of government that can be appallingly harsh but also, when they can be made to see the benefits, rather forgiving? And how about access to a dragon’s hoard worth of goods flowing into and out of the nation daily?\nIf all this sounds like the shadowrunning haven of your dreams, then you want to run in Morocco. Shadows in Focus: Morocco provides an overview of this nation, with details on how to get in, how to get out, where to go, who to meet, and what to do. It also details some of the ways you might get into trouble and offers some hints on getting out of it.\nWith plenty of tips for running games in this country as well as rules for building Morocco-based characters, Shadows in Focus: Morocco adds a new element to Shadowrun, Fifth Edition games. The setting information can also be used in Shadowrun: Anarchy games. ',
+		releaseDate: ['2018-01-27'],
+		description: 'A Dream of Shadows\n\nWhat do you want from a nation you’re going to run in? How about a place with access to cutting-edge technology while also retaining a firm footing in old traditions? How about a population focused on cutting deals and making things happen? How about a system of government that can be appallingly harsh but also, when they can be made to see the benefits, rather forgiving? And how about access to a dragon’s hoard worth of goods flowing into and out of the nation daily?\nIf all this sounds like the shadowrunning haven of your dreams, then you want to run in Morocco. Shadows in Focus: Morocco provides an overview of this nation, with details on how to get in, how to get out, where to go, who to meet, and what to do. It also details some of the ways you might get into trouble and offers some hints on getting out of it.\nWith plenty of tips for running games in this country as well as rules for building Morocco-based characters, Shadows in Focus: Morocco adds a new element to Shadowrun, Fifth Edition games. The setting information can also be used in Shadowrun: Anarchy games. ',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
@@ -8050,23 +8235,29 @@ module.exports = [
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Kill Code',
-		releaseDate: ['2018-06-27'],
+		names: {
+			'de-DE': 'Letaler Code'
+		},
+		releaseDate: ['2018-06-27', '2018-10-07'],
 		description: 'The Matrix is unknowable because it is infinite. There is always one more corner behind which things can hide, one more hole where secrets can be buried. Your job isn’t to know everything about the Matrix—it’s to know more than the people you are hunting. Or who are hunting you.\nKill Code will help give Sixth World hackers the edge they need to stay alive and get ahead. From a guide to Matrix basics and operations to more ways to build ace deckers to dozens of new options for technomancers, the book can help everyone who tries to make their living on the Matrix, providing something to give them an edge when riding the Matrix’s datastreams. They’ll also learn about who their opposition might be—and how they might be attacked. The Matrix is full of kill codes waiting to be executed. Just as with the Sixth World’s many firearms, your job is to make sure they’re pointed in the right direction when they go off.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27012'],
+		sku: ['27012', '45064'],
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Street Lethal',
-		releaseDate: ['2018-06-27'],
+		names: {
+			'de-DE': 'Tödliche Schatten'
+		},
+		releaseDate: ['2018-06-17', '2018-06-26'],
 		description: 'Street fighting is only chaotic for amateurs. When you’re a pro, when you know what you’re doing, you’re precise. You know what your opponents might do, and you know ten different ways to respond. The options give you strength. They give you power. They make you dangerous enough that the smart ones on the street will know at a glance that they shouldn’t test you. The dumb ones will suffer.\nStreet Lethal contains the data, tools, and options players need to maximize their characters’ combat skills. With briefings on the security techniques of major corporations, information on major mercenary groups and their operations, and a whole truckload of firearms options, this book has all runners need to make sure they’re the ones left standing at the end of a fight.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -8102,7 +8293,7 @@ module.exports = [
 		type: 'print',
 		name: 'Alerte Rouge',
 		releaseDate: ['1995-09'],
-		description: '',
+		description: 'Voilà trente ans, la naissance tumultueuse des Nations des Américan d\'Origine ébranlait les États-Unis d\'Amérique et bouleversait les frontières géo-politiques de l\'Amérique du Nord. Aujourd\'hui, quelqu\'un qui n\'apprécie pas cette tournure des événements travaille à un nouveau bouleversement de son cru. Est-ce une venegeance? Ou quelque chose de plus profond? Quoiqu\'il en soit, cette sombre histoire vous entraîne dans une longue traque à travers les nations tribales. Mais si vous êtes les chasseurs, pourquoi cette impression que les mâchoires du piège se referment sur vous?',
 		gameDate: '2060',
 		edition: 2,
 		publisher: ['Descartes Editeur'],
@@ -8122,5 +8313,122 @@ module.exports = [
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		notes: 'The German version of the "Start Rules". Contains the adventure "Freier Markt".'
+	},
+	{
+		sku: [''],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Shadows in Focus: City by Shadow: Casablanca',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Proteus',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'sourcebook',
+		type: 'digital',
+		name: '30 Rides',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'misc',
+		type: 'digital',
+		name: 'Awakened Haunt',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'misc',
+		type: 'digital',
+		name: 'Space Elevator',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'sourcebook',
+		type: 'digital',
+		name: '10 AI',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Virtual Tribes',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'misc',
+		type: 'digital',
+		name: 'Sprawl Sites: Corporate Hideouts',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'novel',
+		type: 'digital',
+		name: 'Makeda Red',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
 	}
 ];
