@@ -6,7 +6,6 @@ TODO: add deutsch books
 
 Sources:
 http://shadowrun.wikia.com/wiki/Main_Page
-https://www.shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenb%C3%A4nde
 https://shadowhelix.de/Kategorie:Quellen_nach_Edition
 https://www.shadowiki.de/Kategorie:Quellen_(Editionen)
 https://www.shadowiki.de/Sixth_World_Tarot
@@ -1360,11 +1359,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Into the Shadows',
+		names: {
+			'de-DE': 'Der Weg in die Schatten'
+		},
 		releaseDate: ['1990-02', '1992-10'],
-		description: 'First Shadowrun fiction-only release. A trade paperback short story anthology set in 2050. The stories loosely interacted with one another.',
+		description: 'The year is 2050\n\nThe blending of technology and human flesh began in the late 20th century. Interfacing the human mind with computers Then came the Awakening . A five-thousand-year zero in the flow of certain energy subsided, and magic returned to the world. Elves , Trolls , and Orcs assume their true form, throwing off their human guise. Dragons awoke from their long sleep and re-emerged into the world.\nWelcome to the world of Shadowrun . A world where technology and magic co-exist. A world filled with only two types of people. The quick on the dead. Your hosts on this run through the shadows are:\n\n\t - Ken St. Andre\n\t - Robert Charette\n\t - Elizabeth T. Danforth\n\t - Tom Dowd\n\t - Paul R. Hume\n\t - Lorelei Shannon\n\t - Nyx Smith\n\t - Michael A. Stackpole\nIn this brainded anthology, a mid-level executive makes his bid for the big time, and when superiors stand in his way, assassination and blackmail are the order of the day. Sorcerers , Yakuza , Street Samurai , The Ancients - on the Elven biker gangway - and the hopelessness of this dark future are the backdrop to this journey Into the Shadows.',
 		gameDate: '2050',
 		edition: 1,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
