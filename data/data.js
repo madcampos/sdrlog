@@ -868,7 +868,7 @@ module.exports = [
 		sku: ['7003'],
 		category: 'rulebook',
 		type: 'digital',
-		name: 'Shadowrun 3rd - Quick Start Rules',
+		name: 'Shadowrun Third Edition: Quick Start Rules',
 		releaseDate: ['1999-08', '2005-02'],
 		description: 'With the Shadowrun Quick Start Rules, you need nothing more than a vivid imagination and a handful of dice to jump into the world\'s most popular science-fiction/fantasy universe. An introduction for new players to the Shadowrun, Third Edition game system, the Shadowrun Quick Start Rules provides all the rules you need to start playing. This book features background material, advice for beginners, eight pre-generated characters and a complete adventure so you can learn as you go. The Shadowrun Quick Start Rules lets you dive right into the action. Welcome to the shadows, chummer!',
 		gameDate: '2060',
@@ -2302,12 +2302,6 @@ module.exports = [
 		description: 'Tír Tairngire Wants You!\n\nTír Tairngire has changed. The predominantly elven nation has an ork at its head, and the residents have become more welcoming to outsiders, in the sense that they don’t always immediately threaten to shoot them when they come in sight.\nThere is enough wealth and power in Tír Tairngire to make even the slightest crack in the nation’s façade tempting. Every shadowrunner knows that elves, especially powerful elves, do not rank high on the trustworthiness scale, but that doesn’t have to be a deal breaker.\nAnticipating lies and betrayals from the people runners work with is part of the game. Runners should just be sure to gather critical information about getting in to the Tír, the major cities, and the dominant personalities before they go in, since forewarned is forearmed.',
 		gameDate: '2070',
 		edition: 4,
-		links: [
-			{
-				name: 'The Land of Promise',
-				url: 'https://www.drivethrurpg.com/product/105562/'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -3455,15 +3449,19 @@ module.exports = [
 		notes: 'The German edition has some aditions regarding German dragons.'
 	},
 	{
-		sku: ['26301'],
+		sku: ['26301', '46015', 'SR07'],
 		category: 'mission',
 		type: 'digital',
-		name: 'emergence',
-		releaseDate: ['2008-08'],
+		name: 'Emergence',
+		names: {
+			'de-DE': 'Emergenz: Digitales Erwachen',
+			'fr-FR': 'Émergence'
+		},
+		releaseDate: ['2008-08', '2009-05'],
 		description: 'The Crash of 2064 ruined the lives of millions. Some died in the Matrix or went insane, many lost everything they owned, and still others found their identities completely erased. A small percentage changed into something altogether different, with the strange and inexplicable ability to affect the new Matrix with their minds. Now, in 2070, the existence of these technomancers becomes frontpage news, leading to widespread paranoia and witch hunts. The Emergence campaign setting involves the runners in a series of pivotal events that may change the way they view the world and the Matrix—and each other.',
 		gameDate: '2070-08',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -3494,16 +3492,21 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['26302'],
+		sku: ['26302', '46040', 'SR14'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Ghost Cartels',
-		releaseDate: ['2008-10'],
-		description: 'The shadows are abuzz about the new drug in the sprawl: tempo. It takes the user on a unique trip, better than anything experienced before. Druggies can’t get enough of the stuff, and even beetleheads are giving it a shot. Tempo’s popularity shifts the balance of power between the syndicates and soon the blood and bullets are flowing.\nGhost Cartels drops the runners into the action, involving them in the drug deals and power plays shaking up Seattle, Los Angeles, and Hong Kong—even taking them all the way to the jungles of South America.',
+		names: {
+			'de-DE': 'Geisterkartelle',
+			'fr-FR': 'Cartels fantômes'
+		},
+		releaseDate: ['2008-10', '2010', '2012-11-09'],
+		description: 'A Bad Beat Rocks the Street\n\nThe shadows are abuzz about the new drug in the sprawl: tempo. It takes the user on a unique trip, better than anything experienced before. Druggies can’t get enough of the stuff, and even beetleheads are giving it a shot. Tempo’s popularity shifts the balance of power between the syndicates and soon the blood and bullets are flowing.\nGhost Cartels drops the runners into the action, involving them in the drug deals and power plays shaking up Seattle, Los Angeles, and Hong Kong—even taking them all the way to the jungles of South America.',
 		gameDate: '2071-11',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
+		originalLanguage: 'en-US',
+		notes: 'Both the German and the French editions have additions based on Europe. The german version includes a CD with aditional material.'
 	},
 	{
 		sku: ['26240'],
@@ -4337,27 +4340,34 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27450'],
+		sku: ['27450', '45037', 'SR509'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Bloody Business',
-		releaseDate: ['2015-05'],
+		names: {
+			'de-DE': 'Blutige Geschäfte',
+			'fr-FR': 'Bloody Business'
+		},
+		releaseDate: ['2015-05', '2016-03', '2018-09'],
 		description: 'A scared megacorporation does not run and hide in the shadows. Instead it lashes out, swiping with sharp claws, not caring who is hit by the blows. Many of the megacorps are currently reeling, hit by multiple harsh wallops. NeoNET and Evo are dealing with the fallout of the CFD virus, Ares has powerful forces eating it away from inside, Horizon backed the losing side of the Aztlan-Amazonia war, and the Japanacorps are rearing back to take on the world—and each other. When the corps get aggressive, shadowrunners get called, and blood gets shed.',
 		gameDate: '2077-02',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27481'],
+		sku: ['27481', '45029'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Firing Line',
-		releaseDate: ['2013-08'],
+		names: {
+			'de-DE': 'Im Fadenkreuz'
+		},
+		releaseDate: ['2013-08-28', '2014-10-16', '2015-05-03'],
 		description: 'Shadowrunning can take you all sorts of different places and give you the chance to have all sorts of different guns pointed at you. Whether you’re exploring mysterious islands off the coast of Seattle, collecting bounties on the tightly guarded streets of Manhattan, or trying to survive the chaos and conflict in Bogotá, you’re likely to find yourself in trouble and in the line of fire. Because that’s where you’re paid to be.\nFiring Line collects four Shadowrun Missions developed especially for the large summer gaming conventions, making them available for the first time to the gaming public. The adventures have all the statistics and game information needed for both Shadowrun, Fourth Edition and Shadowrun, Fifth Edition, meaning that a wide range of shadowrunners will have everything they need to dive into the adventures and get themselves in some high-paying trouble!',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4370,25 +4380,29 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		originalLanguage: 'en-US',
+		notes: 'The German translation is split in two books: "Licht aus der Asche" and "Trittbrettfahrer".'
 	},
 	{
-		sku: ['27409'],
+		sku: ['27409', '45041'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Boardroom Backstabs 3: Battle of Manhattan',
-		releaseDate: ['2015-02'],
+		names: {
+			'de-DE': 'Krieg um Manhattan'
+		},
+		releaseDate: ['2015-02', '2016-05'],
 		description: 'TO: Willing recruits\n\nFROM: The people who can pay you\n\nCome to Manhattan. We will pay.\n\nWe won’t bother with appeals to patriotism, or to your best instincts, or to anything the least bit noble. Come to Manhattan because there is a fight breaking out. Fighting is what you are paid for. Fighting is what you were born for. Come because there is money to be made.\nYou don’t need to pick a side. Sides shift, sides change. In the end, the only consistent thing is that you are the only one you can count on. You fight for yourself. That is something you should be used to. That is how you live.\nCome to Manhattan because the corporations are spoiling for a fight. Most of the time, we’re good at keeping our spats clean and civilized. We lie, we cheat, we steal, but we do not engage in anything as vulgar as open street fighting. Sometimes, though, we can’t help ourselves. Sometimes, the tension gets to be too much, and it breaks, and it bursts into the open.\nThat time is coming.\nBring your skills, bring your wits, and definitely bring your guns. You’ll need everything you got. We are anxious to take advantage of what you have.\nCome to Manhattan. We’re waiting for you.',
 		gameDate: '2076',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['27401'],
 		category: 'mission',
 		type: 'digital',
-		name: 'Serrated Edge',
+		name: 'Serrated Edge (Denver Adventure 1)',
 		releaseDate: ['2016-03'],
 		description: 'The Sixth World is many things, including a stunning series of case studies on the mechanisms of hate. There are some true experts out there, people who know that just walking up to someone or something you don’t like and throwing a solid punch is satisfying, but nowhere near as satisfying as causing destruction that runs deep and lasts forever.\nThe Aurora Warrens of Denver hold a dark secret, as some people trusted to help its residents are instead giving full rein to their darkest impulses. Shadowruuners typically are not heroes riding in to save the day, but in this case the work they’re being offered gives them a chance to dig into these secrets, perhaps fix some of them, and maybe even bring a few people to justice—however they happen to define justice. With dark secrets, double-crosses, and plenty of nuyen flying around, Serrated Edge gives players plenty of chaos to keep up with while launching them into a series of adventures that will shake up the city of spies and maybe bring about a better future. Or curse it to worse.',
 		gameDate: '2075',
@@ -4397,15 +4411,19 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27400'],
+		sku: ['27400', '45016', 'SR502'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Splintered State',
-		releaseDate: ['2013-09'],
+		names: {
+			'de-DE': 'Tödliche Fragmente',
+			'fr-FR': 'Fragmentation'
+		},
+		releaseDate: ['2013-09-30', '2013-12', '2014-07', '2014-11'],
 		description: 'Federal Agent Seth Dietrich has a secret. Actually, multiple secrets. One of them made him go underground, hiding from the people desperate to learn just how much he knows. And the other is keeping him from surfacing, because he’s found he can’t even trust himself.\nIf Dietrich were in his right mind, he’d cover his tracks like a pro, and no one would find him. Especially not shadowrunners getting their feel for life on the streets. But he’s not in his right mind, which means a group of shadowrunners finds themselves in possession of some very valuable information—information the highest powers in Seattle want for themselves. What started as a simple job turns into a scramble for their lives, a scramble that could become profitable if the runners play their cards right.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4433,15 +4451,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27482'],
+		sku: ['27482', '45032'],
 		category: 'mission',
 		type: 'digital',
 		name: 'London Falling',
-		releaseDate: ['2014-11'],
+		names: {
+			'de-DE': 'Mission London'
+		},
+		releaseDate: ['2014-12-01', '2015-04-08'],
 		description: 'Smoke & Shadows\nLondon—where the thick fog (sounds nicer than smog, doesn’t it) makes for some truly deep shadows. Every crooked street, every cramped building holds a secret or two, as well as a person or two who will go to great lengths to ensure those secrets are kept. There is, for instance, the dark secret of a minor noble who has not been seen in Parliament in months. And the researcher who has a startlingly large amount of people interested in his work. The courier who carries one secret in his head and another in his gut. And an explosive secret that has been festering in the West End Underplex for years or even decades.\nSkilled runners have the chance to uncover these secrets and more, but they’d better be ready for the forces of the world that would prefer to keep things covered up. They are tenacious, dangerous, and, perhaps most surprising for England, not at all polite.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4545,16 +4566,20 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27485'],
+		sku: ['27485', '45045'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Boundless Mercy',
-		releaseDate: ['2015-10'],
+		names: {
+			'de-DE': 'Gnade ohne Grenzen'
+		},
+		releaseDate: ['2015-10-16', '2016-12'],
 		description: 'Elizabeth Nunn, a delightful woman who happens to have an odd habit of hanging out in hospitals and abandoned churches, has a grudge. A deep grudge. The kind of grudge that requires professional help to work out, and we’re not talking about a psychotherapist. She needs shadowrunners, and if they’re willing to take on the job, they’ll encounter fierce gangers, wild critters, and members of a secret magical society who fiercely guard their mysteries. If the runners can survive, they can find out just what Nunn is mad about—and how far she is willing to go for her revenge.',
 		gameDate: '2077-08',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		originalLanguage: 'en-US',
+		notes: 'The German edition also has a summary of "Montreal 2074".'
 	},
 	{
 		sku: ['7301', '10703'],
@@ -4607,11 +4632,14 @@ module.exports = [
 		category: 'mission',
 		type: 'digital',
 		name: 'Dawn of the Artifacts 1: Dusk',
-		releaseDate: ['2009-07'],
+		names: {
+			'de-DE': 'Dämmerung - Erster Teil der Artefaktjagd-Kampagne'
+		},
+		releaseDate: ['2009-07', '2012-03-20'],
 		description: 'Sixth World scholars have long hypothesized the cyclical nature of magic. For years corporations, collectors and other factions have spent fortunes hunting down surviving relics of this mythical age. The shadows whisper of lost lore and a secret history to the world. A privileged few have come into possession of ancient items of great power and mysterious purpose, artifacts from before recorded history. Now it’s your turn...\nOn the surface, the job seems simple: escort and assist Ms. Johnson as she follows the trail of a man across the globe. The target? An agent of the Atlantean Foundation tracking a priceless stolen artifact. And the trail? It leads to Lagos, the most dangerous sprawl on earth, where simply surviving the day can be a run in its own right. Add in the biggest black market auction of the century, a powerful African king, and a plethora of the biggest players in the artifacts trade, from the Atlantean Foundation to Aztechnology... well, welcome to the underside of the artifact business. If you survive, there’s more work a-coming… and maybe even some answers to your questions.',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4619,11 +4647,14 @@ module.exports = [
 		category: 'mission',
 		type: 'digital',
 		name: 'Dawn of the Artifacts 3: Darkest Hour',
-		releaseDate: ['2010-08'],
+		names: {
+			'de-DE': 'In Dunkelster Stunde - Dritter Teil der Artefaktjagd-Kampagne'
+		},
+		releaseDate: ['2010-08', '2012-04-19'],
 		description: 'Sixth World scholars have long hypothesized the cyclical nature of magic. For years corporations, collectors and other factions have spent fortunes hunting down surviving relics of this mythical age. The shadows whisper of lost lore and a secret history to the world. A privileged few have come into possession of ancient items of great power and mysterious purpose, artifacts from before recorded history. Now it’s your turn… Eighteen months ago, the Phaistos Disk was stolen from the Herakleion Museum in Athens. Now, Mr. Johnson needs you to find it and bring it back. The hunt will take the runners through the shadows of Europe, and lead to interactions with smugglers, art dealers, and archaeologists. If they survive Interpol, Aztechnology, and an eccentrically violent shadowrunner team, they may just learn who is behind the hunt and why.',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4631,11 +4662,14 @@ module.exports = [
 		category: 'mission',
 		type: 'digital',
 		name: 'Dawn Of The Artifacts 2: Midnight',
-		releaseDate: ['2009-12'],
+		names: {
+			'de-DE': 'Mitternacht - Zweiter Teil der Artefaktjagd-Kampagne'
+		},
+		releaseDate: ['2009-12', '2012-03-31'],
 		description: 'There are deep secrets in the Sixth World, and there are people who will do anything to uncover them. Some secrets reach into the ancient past, but they still have the power to shake the world. What they will do depends on whose hands they fall into...\nDusk was only the beginning. Jane "Frosty" Foster is back and ready to continue her artifact hunt. If they’re game, runners will join her in a chase across North America, from the frozen, bug-filled wastes of Chicago to the political hotbed of Denver to the Deep Lacuna lurking under Los Angeles.',
 		gameDate: '2070',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4643,8 +4677,11 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Wake of the Comet',
-		releaseDate: ['2002-07'],
-		description: 'The megacorp probe race to be the first to reach Halley\'s Comet is in its final rounds. With only a few contenders left, your shadowrunner team can make a difference, deciding who wins and who loses.',
+		names: {
+			'de-DE': 'Schweif des Kometen'
+		},
+		releaseDate: ['2002-07', '2003'],
+		description: 'The megacorp probe race to be the first to reach Halley\'s Comet is in its final rounds. With only a few contenders left, your shadowrunner team can make a difference, deciding who wins and who loses.\nWake of the Comet ™ includes three adventures that wrap the sample race first in Year of the Comet ™ . Time is running out of the shadowrunners are hired to sabotage the competition and ensure that only one corp reaches the comet first. Wake of the Comet is for players and masters of all experience levels.',
 		gameDate: '2061',
 		edition: 3,
 		publisher: ['Fantasy Productions'],
@@ -4667,12 +4704,15 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['10665'],
+		sku: ['10665', '10760'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Survival of the Fittest',
+		names: {
+			'de-DE': 'Fressen oder gefressen werden'
+		},
 		releaseDate: ['2004-05'],
-		description: 'The death of the great dragon Dunkelzahn kicked off a series of events that are only now reaching climax. A challenge is declared as antediluvian customs clash with the methods of modern world. The shadowrunners are involved in a string of unrelated missions that begin to tie themselfs together. From the ruins of Tehran to the jungles of Amazonia, from the towers of Hong Kong to the deep metaplanes, the machinations of a reptilian chess game begin to unfold.',
+		description: 'Ancient Tradition Violated...\n\nA New Order Declared...\n\nThe death of the great dragon Dunkelzahn kicked off a series of events that are only now reaching climax. A challenge is declared as antediluvian customs clash with the methods of the modern world. The shadowrunners are involved in a string of unrelated missions that begin to tie themselves together. From the ruins of Tehran to the jungles of Amazonia, from the towers of Hong Kong to the deep metaplanes, the machinations of a reptilian chess game begin to unfold.\nSurvival of the Fittest is a series of seven adventures that can be played consecutively or interwoven into an existing campaign.',
 		gameDate: '2062-06',
 		edition: 3,
 		publisher: ['Fantasy Productions'],
@@ -4683,11 +4723,14 @@ module.exports = [
 		category: 'mission',
 		type: 'digital',
 		name: 'Dawn Of The Artifacts 4: New Dawn',
-		releaseDate: ['2011-08'],
+		names: {
+			'de-DE': 'Morgengrauen - Vierter Teil der Artefaktjagd-Kampagne'
+		},
+		releaseDate: ['2011-08', '2012-05-01'],
 		description: 'One more artifact. One more chance for a big payday. One more run to distant lands and high seas, racing against time and the wealthy, ruthless powers who want the artifact for themselves. At the end of this, if you succeed, four powerful artifacts will be gathered together, and they will be poised to shake the world.\nTo finish the quest for the artifacts, runners will have to travel to Hong Kong, track down the mobile city of Karavan, penetrate the corp enclave of Neo-Tokyo, and survive an assault on the high seas. The final adventure in the Dawn of the Artifacts series, New Dawn brings the story of the gathering of the artifacts to a rollicking conclusion while setting the stage for the changes the Sixth World will experience once the true power of these artifacts is tapped and unleashed.',
 		gameDate: '2072',
 		edition: 4,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -4875,11 +4918,11 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Corporate Punishment',
-		releaseDate: ['2000'],
+		releaseDate: ['2000', '2006-12-03'],
 		description: 'You\'re a shadowrunner, not some corporate lackey. No 9-to-5 shackles or power-tie chains for you. Every time you take on a run, you sign up to be used and abused. But you\'ve got the smarts to come out on top.\nCorporate Punishment consists of three adventures in which the runners serve as pawns in a brutal corporate power struggle. They use their wits and weapons to take what the corps throw at them and survive with a smile—because the alternative is to hang up their Uzis and get a day job.',
 		gameDate: '2061',
 		edition: 3,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -5174,11 +5217,11 @@ module.exports = [
 		category: 'mission',
 		type: 'scan',
 		name: 'Shadows of the Underworld',
-		releaseDate: ['1996-12'],
-		description: 'You\'ve got a choice — fight back or get out of the way!\nShadows of the Underworld is a collection of five Shadowrun adventures, set against the chaos of the United Canadian and American States Presidential election of 2057. The runners get entangled with everything from political agents to fanatical cults, from a gun fight on the top of New York City\'s most famous building to the secret world of Oakland\'s metahuman underground. Shadows of the Underworld is intended for gamesters and players of all experience levels.',
+		releaseDate: ['1996-12', '2010-07-17'],
+		description: 'You\'ve got a choice —\nfight back or get out of the way!\n\nShadows of the Underworld is a collection of five Shadowrun adventures, set against the chaos of the United Canadian and American States Presidential election of 2057. The runners get entangled with everything from political agents to fanatical cults, from a gun fight on the top of New York City\'s most famous building to the secret world of Oakland\'s metahuman underground. Shadows of the Underworld is intended for gamesters and players of all experience levels.',
 		gameDate: '2057-05',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -5194,15 +5237,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['7325'],
+		sku: ['7325', '00100304'],
 		category: 'mission',
 		type: 'scan',
 		name: 'Missions',
-		releaseDate: ['1996'],
+		names: {
+			'pl-PL': 'Misje'
+		},
+		releaseDate: ['1996', '2000'],
 		description: 'SCUM GO ON SHADOWRUNS - YOU ACCEPT MISSIONS\nFor every shadowrunner in the sprawl, there\'s someone like you working the other side of the shadows. Your kind try to make a difference. As part of a DocWagon High Threat Response team, you\'ve been on the receiving end of a firefight while trying to retrieve a client. You might wear the Lone Star badge, with orders to go undercover into the shadows you\'ve sworn to eliminate. You may owe your loyalty to a corporation, proud to defend its secrets and assets from others who are ready and willing to take you down. As a reporter, you are committed to exposing those same secrets. If you love your country above all else, you may have dedicated your life to work for your government, ready to perform any task required.\nMissions is a collection of four Shadowrun adventures that allow players and gamesters to experiment with the alternate campaigns presented in the Shadowrun Companion: Beyond the Shadows. In these adventures, the players can play a DocWagon High Threat Response team, Lone Star undercover police, corporate security agents, government commandos or even a media investigative team. Missions includes suggestions for translating these adventures into campaigns and for incorporating an existing shadowrun team into these adventures. Missions in intended for gamesters and players of all experience levels.',
 		gameDate: '2058',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'ISA Sp. Zoo'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -7699,7 +7745,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		notes: 'German sourcebook about Berlin.'
+		notes: 'German sourcebook about the ADL.'
 	},
 	{
 		sku: ['470D3'],
@@ -7712,7 +7758,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		notes: 'German sourcebook about Berlin.'
+		notes: 'German sourcebook about the ADL.'
 	},
 	{
 		sku: ['470D4'],
@@ -7725,7 +7771,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		notes: 'German sourcebook about Berlin.'
+		notes: 'German sourcebook about Austria.'
 	},
 	{
 		sku: ['470D5'],
@@ -7738,7 +7784,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		notes: 'German sourcebook about Berlin.'
+		notes: 'German sourcebook about the SOX.'
 	},
 	{
 		sku: ['47000GA'],
@@ -7768,29 +7814,32 @@ module.exports = [
 		notes: 'This item consists of a folio to store notes and character sheets as well as a sturdy cardboard version of the German SR5 character sheet. It was released by Pegasus for Gratisrollenspieltag 2014 (German Free RPG Day).'
 	},
 	{
-		sku: ['47000GD'],
-		category: 'mission',
-		type: 'digital',
-		name: 'Trittbrettfahrer',
-		releaseDate: ['2014'],
-		description: 'Gefahr in den Schatten\nDunkle Umtriebe längst untergegangen geglaubter Schrecken ziehen durch die Schatten der Smaragdstadt: Die Vergangenheit holt die Zukunft ein – und bringt jemanden mit, den manche Leute nicht gerne wiedersehen wollten. Es ist an den Runnern, das Nötige zu tun, um Menschenleben zu retten.\nTrittbrettfahrer ist ein Abenteuer für Shadowrun 5, das in Seattle spielt. Das PDF enthält ein komplett ausformuliertes Szenario inklusive Grundrisse und NSC-Werten – zum direkten Losspielen am heimatlichen Spieltisch.',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		notes: 'German translation of Shadowrun Mission "Carbon Copy" previously released in Sprawl Wilds. This pdf includes only SR5 rules.'
-	},
-	{
 		sku: ['27405'],
 		category: 'mission',
 		type: 'digital',
 		name: 'Toxic Alleys',
-		releaseDate: ['2018-05-01'],
-		description: 'Dark plots and darker magic frequently converge in the capital of the UCAS, and those forces are revving up again. Toxic Alleys launches plotlines involving toxic mages, shedim, and other dark forces, while building on elements from the Sith World Tarot and Book of the Lost. Runners will have as much as they can handle keeping up with the chaos filling the back alleys of DeeCee!',
+		names: {
+			'de-DE': 'Toxische Wege'
+		},
+		releaseDate: ['2018-05-01', '2018-10-07'],
+		description: 'IT’S GOING DOWN\n\nIn any given sprawl, there are a few million people who hate a few million other people in an endless cycle of grudges and hostility. What keeps the peace is that most of the people lack the power to do anything about their anger, so a status quo of simmering tension is maintained. Problem is, if some of the angry parties got their hands on enough power of any kind, those simmering tensions would explode. DeeCee, the UCAS capital, is full of all kinds of power, and enough factions are grabbing for it that the prospect of open fighting or worse is growing.\nThis is especially worrisome since some of the factions have nothing on their mind other than utter destruction. The law firm of Stark, Theissen, and Van Der Mar is making too much money from the status quo to want it to change, and they’re about to discover that shadowrunners might be the only thing that can stop the advancing secret plots from plunging the sprawl into complete disaster.\nToxic Alleys is a complete adventure for use with Shadowrun, Fifth Edition. While it draws on existing plot lines, it stands on its own and can be enjoyed by any team of runners looking for a challenge.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['45067'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Ebbe und Flut',
+		releaseDate: ['2018-10-07'],
+		description: 'Hamburg kennt viele Arten von Wasser. Trübes Wasser, Brackwasser, steigendes und fallendes Wasser. Giftiges Wasser. Und in den wenigsten lauert etwas Gutes. Wer im Sprawl an der Waterkant Runs durchführt und in seinen Schatten Geld verdienen möchte, sollte auf nasse Überraschungen vorbereitet sein: auf dunkle Geheimnisse im Watt und auf Verfolgungsjagden durch die Kanäle von Wildost. Aber auch an Land warten Bedrohungen – selbst hinter den Kulissen der allgegenwärtigen Vergnügungen.\nEbbe und Flut ist ein Abenteuerband mit drei Abenteuern für Shadowrun 5, die in die Schatten Hamburgs führen. Die Runner begleiten Combat-Golfer bei Hole in One, untersuchen merkwürdige Vorkommnisse An der Nordseeküste und erleben Abenteuer Im Schatten der Scheinwerfer. Alle Abenteuer sind komplett spielfertig, inklusive Grundrisszeichnungen und Pläne. Es handelt sich um eine Eigenproduktion von Pegasus Press.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
 	},
 	{
 		sku: ['45019'],
@@ -7838,7 +7887,7 @@ module.exports = [
 		category: 'mission',
 		type: 'print',
 		name: 'Blut und Spiele',
-		releaseDate: ['2011'],
+		releaseDate: ['2011-06'],
 		description: 'Es herrscht Krieg in den Straßen - doch nicht um Geld oder Macht, sondern um Punkte. Die Stadtkrieg-Saison hat wieder begonnen, die DeMeKo flutet die Medien mit Werbung für die Mannschaften, und die Fans machen sich auf einen heißen Sommer gefasst. In den Straßen und auf den Plätzen der geräumten Wohngebiete laufen die Stars der Chromlegion Bremen, der Naniten Nürnberg und der Berliner Cybears auf, um den Zuschauern ein Spektakel besonderer Art zu bieten - im blutigen Kampf um zwei Bälle und zwei Torzonen. Wen jucken da noch der jüngste Vereinsskandal oder die vertriebenen Bewohner der Spielareals?\nBlut und Spiele, von Pegasus für die deutsche Spielerschaft produziert, ist ein Abenteuerband für Shadowrun 4, der sich mit Stadtkrieg befasst - einer der brutalsten Sportarten der Sechsten Welt. In vier Abenteuern wird das Thema lose aufgenommen. In einem Zusatzkapitel wird der Sport genauer beleuchtet, die Liga in der Allianz Deutscher Länder beschrieben, hinter die Kulissen der Vereinsstrukturen geschaut. Neben Werten für Spieler und Sportpersonal ist auch die Beschreibung eines besonderen Sportevents enthalten - mit der man die vier Abenteuer im Band zu einer Kampagne der besonderen Art verknüpfen kann. Damit es auch bei den Runnern ankommt: Es ist wieder KRIEG!\nBlut und Spiele, Abenteuerband zu Shadowrun von Pegasus Press; ca. 200 Seiten, Hardcover',
 		gameDate: '2074',
 		edition: 4,
@@ -7876,20 +7925,6 @@ module.exports = [
 		notes: 'A Shadowrun supplement released at Gratisrollenspiltag 2016.'
 	},
 	{
-		sku: ['45018'],
-		category: 'mission',
-		type: 'print',
-		name: 'Licht aus der Asche',
-		releaseDate: ['2014'],
-		description: 'Im Schattendschungel\nWenn man lange genug in den Megaplexen der Sechsten Welt wohnt, weiß man: Es gibt dort mehr als Supermärkte und die glitzernden Paläste der Konzerne. In den tiefen Straßenschluchten, unter dem Asphalt, jenseits dunkler Hinterhöfe existieren vergessene Gefahren und urbane Anarchie – gnadenloser als jede Wildnis.\nSeattle, die große Metropole in den UCAS, ist voll von solchen Orten – und mit diesem Abenteuerband hat man die Chance, sie live und hautnah zu erleben. Ob in festungsähnlichen Farmen in den Barrens, in versteckten Kliniken oder tief im Orkuntergrund: Die Runner werden in Bereiche vorstoßen, auf die nur selten ein Licht fällt. Engagierte Aktivisten, brutale Kriminelle, lautlose Killer sind nur einige Hürden, die ihnen im Weg stehen, um ihre Aufträge zu erfüllen – und am Ende entweder mit ihrem verdienten Lohn zurück in die Zivilisation zu treten oder für immer im Dschungel des Plexes zu verschwinden.\nLicht aus der Asche ist eine Sammlung von drei Shadowrun-Abenteuern für Shadowrun 5, die sowohl erfahrenen Runnern als auch Neueinsteigern stundenlangen Spielspaß gewähren. Komplett ausgearbeitet, enthalten die Abenteuer alle notwendigen Grundrisspläne, Spielleiterinformationen und NPC-Werte, damit der Spielleiter mit seinen Spielern direkt eintauchen kann in das urbane Chaos.',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'missing',
-		notes: 'German translation of Sprawl Wilds missing the adventure "Carbon Copy" and limited to the 5th edition of Shadowrun.'
-	},
-	{
 		sku: ['45033'],
 		category: 'mission',
 		type: 'digital',
@@ -7902,6 +7937,20 @@ module.exports = [
 		originalLanguage: 'de-DE',
 		status: 'missing',
 		notes: 'Collects three Shadowrun Missions adventures (SRM 5A-01 Chasin\' the Wind, SRM 5A-02 Critic\'s Choice, SRM 5A-03 Gone long gone) and a description of the city of Chicago.'
+	},
+	{
+		sku: ['45060'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Chaos über Denver',
+		releaseDate: ['2017-12-15'],
+		description: 'Denver, die Stadt der Spione. Die Stadt des Großen Drachen Ghostwalker. Ein wichtiger Dreh- und Angelpunkt der Sechsten Welt. In diesem Moloch aus Intrigen und politischen Ränken zieht es die Runner in ein Netz aus Machtkämpfen, dunklen Geheimnissen und Schattenspielen. Es beginnt in den Slums der Aurora Warrens, in denen die Runner tief im Dreck ominöser Machenschaften wühlen und damit das Fundament der Stadt erschüttern. Und die Wellen dieser Erschütterung ziehen sich langsam aber sicher bis zu den Mächtigsten, bis zur Spitze der Nahrungskette. Denver verwandelt sich in einen Kampfplatz von Kräften, die lieber nicht entfesselt werden sollten. Und während die Runner sich mit befleckter Magie, altem Neid und tödlichen Kreaturen auseinandersetzen müssen, droht der ganze Plex zu fallen.\nChaos über Denver bietet eine komplette und abgeschlossene Kampagne mit mehreren Abenteuern in drei Kapiteln für Shadowrun 5. Alle Abenteuer sind komplett spielfertig und bieten spannenden Spielspaß in einer dramatischen Story, gespickt mit Höhepunkten und Action. In den verschiedenen Plots müssen die Shadowrunner all ihr Können und ihre Erfahrung einsetzen, um ihren Job zu erledigen und dabei vielleicht die Stadt vor dem Untergang zu bewahren. Oder sie gehen selbst unter.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing',
+		notes: 'This is a collection of the Denver Adventures'
 	},
 	{
 		sku: ['45035'],
@@ -7957,7 +8006,7 @@ module.exports = [
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		status: 'missing',
-		notes: 'German adventure.'
+		notes: 'German adventure based on the book "Blut & Spiele".'
 	},
 	{
 		sku: ['45056'],
@@ -7971,33 +8020,6 @@ module.exports = [
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		notes: 'Three short scenarios for use with the Tarot Deck.'
-	},
-	{
-		sku: ['46040'],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Geisterkartelle',
-		releaseDate: ['2010'],
-		description: '',
-		gameDate: '2074',
-		edition: 4,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		notes: 'German Translation of Ghost Cartels by Pegasus. It features additional material on a ghost cartels campaign in the AGS and an additional adventure called Euro Tour. It also contains a CD-ROM with further material and bonus adventures.'
-	},
-	{
-		sku: ['46040GX'],
-		category: 'mission',
-		type: 'digital',
-		name: 'Die Wölfe von St. Pauli',
-		releaseDate: ['2012'],
-		description: 'Die Wölfe heulen!\nWenn es um neue Drogen geht, verstehen die Kartelle keinen Spaß. Auch nicht, wenn Macht, Geld oder Einfluss zur Debatte stehen.\nIn Die Wölfe von St. Pauli geraten die Runner an das organisierte Verbrechen - und sollten aufpassen, dass sie nicht dessen Spielball werden. Das Gratis-Szenario ist ein komplett ausgearbeitetes Abenteuer für Shadowrun 4, das schon im Rahmen des Geisterkartelle-Metaplots auf der deutschen Beileger-CD zum gleichnamigen Buch erschienen ist. Es kann aber ohne Probleme unabhängig von der Kampagne gespielt werden.',
-		gameDate: '2074',
-		edition: 4,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'missing',
-		notes: 'This adventure was originally included as bonus on the CD Rom accompanying the German Ghost Cartels book and was later made available as stand-alone pdf.'
 	},
 	{
 		sku: ['23001'],
