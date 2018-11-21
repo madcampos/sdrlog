@@ -1,3 +1,4 @@
+//TODO: Use posthtml (plugins: posthtml-expressions, posthtml-inline-assets, postcss, cssnext, htmlnano, cssnano, autoprefixer, terser)
 /*eslint-env node*/
 const {accessSync, appendFileSync, readFileSync} = require('fs');
 const {resolve} = require('path');
