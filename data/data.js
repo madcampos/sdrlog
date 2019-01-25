@@ -7189,13 +7189,12 @@ module.exports = [
 		category: 'novel',
 		type: 'print',
 		name: 'Sprawl Stories Vol. 1',
-		description: 'The Sixth World is a dangerous place, and nowhere is that more obvious than in Seattle, the so-called Emerald City. Surrounding its neon-drenched heart is kilometer after kilometer of Sprawl, where millions of people scratch out a living among hazardous, slowly decaying neighborhoods and even more dangerous neighbors.\nSprawl Stories contains four Shadowrun novellas that explore Seattle through the eyes of the people who live there every day. A burned-out mage detective tackles a missing person case that quickly threatens to spiral out of control. A reporter goes on the ride-along of her life with a high-octane DocWagon team, and uncovers a conspiracy on live triedeo. A young ex-wagesalve is caught between powerful forces while investigating his uncle’s death. And a shaman must deal with a serious injury that threatens his very way of life–but not before taking vengeance on those who double-crossed him.\nSo take a walk on the true wild side of the Seattle Sprawl If you’re good–and lucky–you might even come back out in one piece…',
+		description: 'MEAN STREETS? YOU HAVE NO IDEA...\n\nThe Sixth World is a dangerous place, and nowhere is that more obvious than in Seattle, the so-called Emerald City. Surrounding its neon-drenched heart is kilometer after kilometer of Sprawl, where millions of people scratch out a living among hazardous, slowly decaying neighborhoods and even more dangerous neighbors.\nSprawl Stories contains four Shadowrun novellas that explore Seattle through the eyes of the people who live there every day. A burned-out mage detective tackles a missing person case that quickly threatens to spiral out of control. A reporter goes on the ride-along of her life with a high-octane DocWagon team, and uncovers a conspiracy on live triedeo. A young ex-wagesalve is caught between powerful forces while investigating his uncle’s death. And a shaman must deal with a serious injury that threatens his very way of life–but not before taking vengeance on those who double-crossed him.\nSo take a walk on the true wild side of the Seattle Sprawl If you’re good–and lucky–you might even come back out in one piece...\n\nSprawl Stories contains the following novellas:\n\t"Neat" by Russell Zimmerman\n\t"DocWagon 19" by Jennifer Brozek\n\t"Big Dreams" by R. L. King\n\t"Blind Magic" by Dylan Birtolo',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'unreleased',
-		notes: 'Announced on Gen Con 2017.'
+		notes: 'A compilation of previously released novels.'
 	},
 	{
 		sku: ['RET-NOV'],
@@ -8289,13 +8288,12 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Better than Bad',
-		description: '',
+		releaseDate: ['2018-11-23'],
+		description: 'Righteous Fire\n\nKill or be killed. Eye for an eye. Get yours while you can. Shadowrunners—and most of the other residents of the Sixth World—are told from birth that those are the principles you must follow to survive. Thinking of others is for suckers. Take care of your own and hope you don’t die early.\n\nBut some runners think that’s no way to live. They know the world is stacked against them, and they’ve decided they like those odds. They choose to fight for what they think is right. They use shadowruns to take from people who don’t deserve what they have and give to those who need it. They seek hidden information that can right wrongs. It’s not easy, and it doesn’t always pay as well as outright theft, but who do they tell stories about centuries later—Robin Hood, or the jerk thief from a few forests away who only thought of himself?\n\nBetter than Bad is a shadowrunners’ guide to hooding, the art of committing crime to help those in need. With plot information, shadowrunning techniques and tactics, and advice to help runners work to bring good into the world, the book is the first definitive guide to shadowrunning with a conscience. It also includes information on a hot spot for working to right wrongs—Pretoria, in the African nation of Azania.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'unreleased',
-		notes: 'Scheduled to release in April 2018.'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['2-7408-0105-X'],
@@ -8339,17 +8337,40 @@ module.exports = [
 		notes: 'The German version of the "Start Rules". Contains the adventure "Freier Markt".'
 	},
 	{
-		sku: [''],
+		sku: ['26057S'],
 		category: 'sourcebook',
 		type: 'digital',
-		name: 'Shadows in Focus: City by Shadow: Casablanca',
-		description: '',
+		name: 'Shadows in Focus: City by Shadow: Casablanca-Rabat',
+		releaseDate: ['2018-11-24'],
+		description: 'Devils in the White City\n\nCasablanca-Rabat is a sprawl with millions of secrets and a willingness—an eagerness, even—to sell them. That means there is plenty of work for shadowrunners, but also a need for care, since revealing the wrong secret at the wrong time can lead to disaster. So get to know the city, get to know the culture, and learn how to play the game. Then take your running to the next level in one of the most vital sprawls of the Sixth World.\n\nShadows in Focus: Casablanca-Rabat follows Shadows in Focus: Morocco to fill in details of Africa’s northwestern shore, and you can either use both books to build in-game knowledge or focus on this one to help you launch shadowruns in a sprawl with a deep history of intrigue.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['27486'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Chicago Chaos',
+		releaseDate: ['2019-01-21'],
+		description: 'CHICAGO CHAOS THE DEEPEST DISORDER\n\nFor years, the heart of Chicago has been a wasteland, but not a barren one. Squatters and scroungers compete with ghouls, insect spirits, and creatures that haven’t even been named yet in the quest to carve out a piece of this inhospitable territory for themselves. That’s all changing, though. Some of the powers of the world have decided there might be things of worth inside Chicago’s Containment Zone, so they’re looking to open it up. The fight for the soul of Chicago is on.\n\nChicago Chaos contains Contract Briefs, characters, and plot information for Shadowrun: Anarchy players, providing the details and resources needed to let players jump into the chaos, fighting bizarre enemies, digging up pieces of the buried past, and seeing what they can make out of a once-broken city. There are also new qualities and Shadow Amps to help players flesh out their Anarchy characters. Chicago Chaos is for use with Shadowrun: Anarchy.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['27453'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'No Future (A Cyberpunk Sourcebook)',
+		releaseDate: ['2019-01-21'],
+		description: 'SCREAM YOUR TRUTH\n\nThe voices will be heard. The powers of the Sixth World want to control everything, keeping the world pacified through bland entertainment and milquetoast messages.\n\nBut they can’t keep everyone quiet. People have ideas screaming to get out and the tools to record and spread them. Whether they’re starting a new band, recording guerrilla trid dramas, or launching a pirate tridcast where someone tells the truth for once, they can grab audiences by the throat and get them to listen.\n\nThey’re out of patience, and everyone else is out of time. No Future is the Shadowrun guide to Sixth World culture, including information on music acts, trid movies and series, media sources, and sports, with a look at some of the voices bubbling up from the underground and demanding attention. With detailed setting information and relevant rules, No Future adds new elements and depth to Sixth World role-playing.\n\nNo Future is a cyberPUNK sourcebook that details the culture and everyday life of the Shadowrun setting and is useful for whatever version of Shadowrun you play!',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: [''],
