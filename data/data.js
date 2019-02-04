@@ -8358,7 +8358,8 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		originalLanguage: 'en-US',
+		status: 'missing'
 	},
 	{
 		sku: ['27453'],
