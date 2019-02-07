@@ -893,7 +893,7 @@ module.exports = [
 		type: 'scan',
 		name: 'Street Samurai Catalog',
 		names: {
-			'de-DE': 'Strassensamurai-Katalog'
+			'de-DE': 'Straßensamurai-Katalog'
 		},
 		releaseDate: ['1989', '1993'],
 		description: 'When the going get tough, the tough go shopping!\nYou\'re the ultimate fighting machine. A predator-for-hire in the savage urban world of Shadowrun. You\'ve devoted your life to honing your combat and martial skills. The tools of your trade are airfoil grenades, form-fitting body armor, and an Ares Crusader machine pistol.\nAn expansion for Shadowrun, the Street Samurai Catalog will let you outfit yourself with the latest equipment available on the black market: retractable hand razors, ultrasonic sights, enhanced reflexes, and maybe a rangefinder for your cybereyes. Whatever you need to get the job done, you can find it here, but it won\'t be cheap. And remember to watch your back before someone decides to make you yesterday\'s news.',
@@ -910,7 +910,7 @@ module.exports = [
 		names: {
 			'es-ES': 'Catálogo del samurái urbano / Catálogo del samurái callejero',
 			'fr-FR': 'Catalog of Samouraï des Rues',
-			'de-DE': 'Strassensamurai Catalog Edition 2053',
+			'de-DE': 'Straßensamurai Catalog Edition 2053',
 			'fi-FI': 'Katusamurai',
 			'pl-PL': 'Catalog Ulicznego Samuraja',
 			'pt-BR': 'Catálogo do Samurai Urbano',
@@ -8052,7 +8052,7 @@ module.exports = [
 	{
 		sku: ['23006', 'SR09'],
 		category: 'sourcebook',
-		type: 'print',
+		type: 'ocr',
 		name: 'SOX',
 		names: {
 			'fr-FR': 'SOX - Ombres Radioactives d\'Europe'
@@ -8096,7 +8096,7 @@ module.exports = [
 	{
 		sku: ['45210'],
 		category: 'sourcebook',
-		type: 'print',
+		type: 'digital',
 		name: 'Reiseführer in die deutschen Schatten',
 		releaseDate: ['2012'],
 		description: 'Die Allianz Deutscher Länder: ein Flickenteppich.\nUralte magische Orte und hochmoderne Konzernarkologien. Ödes Brachland und überbaute Straßenschluchten. Toxische Piraten und Alpen-Aktivisten. Wicca-Hexen und Universitätsmagier. Man reist durch ein Land, in dem jeder Quadratmeter Geschichte, Gefahren oder neue Möglichkeiten präsentiert. Nirgendwo liegen die Gegensätze so nah aneinander, nirgendwo sind die Gemeinsamkeiten so klar. Und daher sollte man sich auskennen. Nicht nur, um zu überleben, sondern auch, um seine Chancen zu nutzen.\nDer Reiseführer in die deutschen Schatten ist ein Quellenbuch für Shadowrun 4. Er bietet neues Material für das Spiel in der ADL: Beschreibungen von Stuttgart, dem Harz oder Pomorya, Einblicke in Schattenjobs, Besonderheiten der deutschen Runnerszene, berühmte und berüchtigte Personen und eine Vielzahl spannender Locations und Settings – reich bebildert mit Illustrationen, Karten, Grundrissen und insgesamt 24 Farbseiten, darunter eine Übersicht der Proteusarkologie auf Helgoland.\nDie Allianz Deutscher Länder: ein Runner-Spielplatz.',
