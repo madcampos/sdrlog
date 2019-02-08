@@ -2235,7 +2235,7 @@ module.exports = [
 		sku: ['26S032'],
 		category: 'sourcebook',
 		type: 'digital',
-		name: 'Aetherology',
+		name: 'Ætherology',
 		names: {
 			'de-DE': 'Ätherologie',
 			'pt-BR': 'Éterologia'
