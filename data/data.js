@@ -2836,7 +2836,7 @@ module.exports = [
 	},
 	{
 		sku: ['22004'],
-		category: 'mission',
+		category: 'sourcebook',
 		type: 'digital',
 		name: 'Brennpunkt: ADL',
 		releaseDate: ['2004'],
@@ -3095,11 +3095,15 @@ module.exports = [
 		category: 'rulebook',
 		type: 'digital',
 		name: 'Shadowrun Fifth Edition: Quick Start Rules',
+		names: {
+			'de-DE': 'Shadowrun Fünfte Edition Schnellstartregeln',
+			'pt-BR': 'Shadowrun Regrás Rapidas'
+		},
 		releaseDate: ['2013-07'],
 		description: 'Shadowrun, Fifth Edition is here and there\'s no better way to dive into the Sixth World than with these Shadowrun Quick-Start Rules. Take on the role of a Combat Adept, Decker, Street Shaman, or Street Samurai in a brawl against fast-food goodfellas using this set of streamlined rules perfect for both those new to Shadowrun or long-time players getting back into the game.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegssus Spiele', 'New Order Editora'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -3263,7 +3267,7 @@ module.exports = [
 		notes: 'Set of cards available at Gen Con 2014.'
 	},
 	{
-		sku: ['26208'],
+		sku: ['26208', '470158'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Conspiracy Theories',
@@ -6634,8 +6638,7 @@ module.exports = [
 		gameDate: '2050',
 		edition: 2,
 		publisher: ['FASA Corporation'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['TCG02'],
@@ -6647,8 +6650,7 @@ module.exports = [
 		gameDate: '2050',
 		edition: 2,
 		publisher: ['FASA Corporation'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['WZK6400'],
@@ -8331,7 +8333,7 @@ module.exports = [
 		releaseDate: ['2009'],
 		description: 'DIE ERDE IM JAHR 2070\n\nDie Magie ist zurückgekehrt. Unzählige Menschen haben sich in Elfen und Zwerge, Trolle und Orks verwandelt. Drachen und andere Fabelwesen sind aus ihrem Schlummer erwacht. Die Welt, wie wir sie kennen, ist im Chaos versunken. Nur die größten Konzerne haben überdauert und die Macht übernommen. Als Shadowrunner bist du ein Geist: Nirgends registriert, offiziell geleugnet, erledigst du die Drecksjobs für die Konzerne.\nOb du ein bis an die Grenze mit Implantaten aufgerüsteter Straßensamurai bist oder ein machtvolle Zauber webender Magier, ein gedankenschnell das weltweite kabellose Computernetz der "Matrix" durchsurfender Hacker oder ein, mit seinen Maschinen verschmelzender Rigger - Du hast die Zukunft der Welt in der Hand.\nWenn du das Spiel lange genug überlebst.\nSPIEL MIT!',
 		gameDate: '2060',
-		edition: 2,
+		edition: 4,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		notes: 'The German version of the "Start Rules". Contains the adventure "Freier Markt".'
