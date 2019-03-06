@@ -1,8 +1,10 @@
 /*eslint-env node */
 /*
-TODO: missing, crossreferences, upcomming, and announced/rummored books
+TODO: check missing, add crossreferences
 TODO: add virtual seatle
-TODO: add deutsch books
+
+https://www.drivethrurpg.com/product/253683
+http://shadowiki.de/Hamburg-Zusatzpack
 
 Sources:
 http://shadowrun.wikia.com/wiki/Main_Page
@@ -150,11 +152,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'The Burning Time',
-		releaseDate: ['2001'],
+		names: {
+			'de-DE': 'Zeit in Flammen'
+		},
+		releaseDate: ['2001', '2002'],
 		description: '[Tommy Talon Series No.#3] Boston Metroplex - Low-level programmer Roy Kilaro wants nothing more but to become a Seraphim, an elite corporation operative, and experience some real live action in the shadow ops between megacorporations. He gets more than he ever wanted when a routine business trip to Boston lands him at ground zero of a running battle for survival. The combatants: a group of hardened \'runners trying to finish a job, the ruthless anti-elven terrorist group known as the Knights of the Red Branch, and a powerful sorceress who wants revenge upon them all...',
 		gameDate: '2061',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -162,11 +167,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'The Forever Drug',
+		names: {
+			'de-DE': 'Das neunte Leben'
+		},
 		releaseDate: ['1999-06', '2004-02'],
 		description: 'There\'s a new "drug" on the streets, promising a phenomenal--and deadly--high. But this time the dealers aren\'t selling a substance. They\'re working with a creature called a "corpse light"--a creature of pure magic that gives the customer a euphoric rush...as it drains the poor sap\'s life away.\nRomulus was the first to see this new scourge in action. As a shapeshifter, he\'s a freelance agent to the Lone Star police department. His wolfish strength and sense of smell keep him useful--and keep from being admitted into the regular force. So when Jane, a beautiful, amnesiac woman, is caught in a dangerous web with the dealers, there\'s no way for Romulus to be assigned to the investigation. But that won\'t stop him from trying to save her, and to discover how she is tied into this case...',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -174,11 +182,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Crossroads',
+		names: {
+			'de-DE': 'Am Kreuzweg'
+		},
 		releaseDate: ['1999-04', '2003-06'],
 		description: '[Tommy Talon Series No.#1] In the magical world of 2060, street mage Tommy Talon has hit the big time. He\'s a member of Assets, Inc., one of the best shadow-teams in the business, but now he\'s drawn back to his home town of Boston by secrets from his past. Secrets that lead him into conflicts with megacorporations, yakuza gangsters, and a powerful spirit that\'s hunting for him.\nTalon must call on all of his magical powers and the abilities of his shadowrunning friends to unravel the mystery. Along the way, he finds out some unexpected things about his past, himself, and his true enemy: someone very close to him indeed...',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -186,11 +197,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Tails You Lose',
+		names: {
+			'de-DE': 'Kopf oder Zahl'
+		},
 		releaseDate: ['2001-02', '2003-06'],
 		description: 'When a shadowrunner managed to extract PCI\'s most vital employee, it was Alma\'s job as security expert to get him back--no matter the cost. But all the evidence pointed to the one person who couldn\'t have done it...herself. Branded a traitor, Alma has one shot at redemption: find the real culprit. But she\'s never faced an enemy like this one.\nThis \'runner not only looks like Alma--she\'s also equipped with Alma\'s top-of-the-line cybernetic implants, and she\'s backed by the powerful magic of the Chinese underworld. Now, the expert in defense must attack--and risk it all to bring down a rival so much like herself that there can be only one shocking explanation...',
 		gameDate: '2062',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -198,11 +212,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Ragnarock',
-		releaseDate: ['2000-02', '2003-06'],
+		names: {
+			'de-DE': 'Ragnarock'
+		},
+		releaseDate: ['2000-02', '2001', '2003-06'],
 		description: '[Tommy Talon Series No.#2] In the twenty-first century, magic brings out the best in people--and the worst. Tommy Talon should know. As head of a successful shadow-running team, it\'s the dark side of people that brings him business. This time he\'s hired to hunt a murderous archaeologist and recover a magical relic. But Talon\'s not hunting alone.\nSomeone else wants the artifact too--someone very powerful. And Talon and his team must outwit the world\'s most potent megacorporation on its own turf if they\'re to have any chance of returning the treasure--or any chance of returning at all...',
 		gameDate: '2061',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -394,11 +411,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Run Hard, Die Fast',
-		releaseDate: ['1999-02', '2003-06'],
+		names: {
+			'de-DE': 'Runner sterben schnell'
+		},
+		releaseDate: ['1999-02', '2001', '2003-06'],
 		description: 'Argent is the best shadowrunner in the biz...with one flaw: he\'s got a conscience. That\'s why he can\'t leave a chummer hanging. Only Andi Sencio is more than just a friend. She\'s his former partner--and lover. And now she\'s in the deepest drekpot of her life. Heading an op on a datasnatch turned bad, she\'s been stranded by the megacorp she works for--and targeted for flatlining by two more. Unless Argent gets to her first...\nRecruiting a top-notch team for the exfiltration shadowrun, Argent is risking it all--his money, his reputation, and his life--for the woman who once walked away from him. It\'s suicide mission through high-caliber hell. But that\'s never stopped the steel-armed, street samurai before...',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -406,11 +426,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Dead Air',
+		names: {
+			'de-DE': 'Funkstille'
+		},
 		releaseDate: ['1996-10'],
 		description: 'Jacked-In, Revved-Up, And Armed To The Teeth\nIt\'s fast and furious inside the Combat Biker maze, where armor-plated hogs and juiced-up rice grinders blast, pound, and pummel each other for points. But it\'s just barely up to speed for Jonathon and Tamara, two elven bikers at the head of the Los Angeles Sabers. With a simsense link between them that allows them to act virtually as one, they\'re been tearing up the league and making headlines.\nBut all that changes when Tamara takes a brutal hit from the cyberspurs of Dougan Rose, lead linebiker for the New Orleans Buzzsaws and the most respected player in the league. When Tamara gets slammed, Jonathon\'s out for revenge. But it isn\'t going to be easy. Because there\'s a lot more to this sabotage than meets the eye - and if the megacorp agents, simsense industry operatives, and hostile mages don\'t kill him, the truth probably will...',
 		gameDate: '2057',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -418,11 +441,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Preying for Keeps',
+		names: {
+			'de-DE': 'Auf Beutezug'
+		},
 		releaseDate: ['1996-07'],
 		description: 'When ace shadowrunner Jack Skater leads his team of commandos in a raid on an elven ocean freighter, things get a little sticky. Yakuza hitmen crash the party, and a Japanese shaman whips up a titanic sea creature just to make sure nobody gets out alive. Now, having escaped with his troops by the skin of their teeth, Skater wants to find out who set him up.\nBut it isn\'t going to be easy. Because the runners are stuck up to their pointy ears in a sinister super-scheme that involves Skater\'s ex-wife, two elven gene corporations, a ruthless mafioso named McKenzie, and stolen data disks containing secrets worth killing for. It\'s a high-tech mega-mess with no way out. And as a ghastly virus hits Seattle, unleashing hordes of homicidal cannibals onto the streets, Skater and company have to bring in some heavy artillery just to stay alive....',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -430,11 +456,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Steel Rain',
+		names: {
+			'de-DE': 'Stahlregen'
+		},
 		releaseDate: ['1997-03'],
 		description: 'Sword Of The Serpent\nMachiko is second-in-command of the Green Serpent Guard, an elite corps of Elven samurai who are sworn to defend the Chairman of Nagato Corporation. But she soon gets a promotion - after her superior is ruthlessly cut down in a slew of attacks aimed at the famous Guard itself.\nOnly the wealthiest can afford assassins with enough muscle to take on the Green Serpent Guard, and Machiko turns up evidence that points ot Nagato\'s biggest rival, Fuchi Corp. It looks like Fuchi has designs on Nagato\'s sensitive research division, where the incredible future of the communications matrix is taking shape.\nWhen magical attacks and sabotage begin taking out more of Nagato\'s personnel, things between the two megacorporations really heat up. But behind the growing hostilities with Fuchi looms a more sinister threat, requiring far more of Machikos talents than her flashing sword. And staying alive may require defeating a high-tech foe with virtually unlimited powers - and absolutely no mercy...',
 		gameDate: '2057',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -442,11 +471,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'The Lucifer Deck',
+		names: {
+			'de-DE': 'Das Luzifer Deck'
+		},
 		releaseDate: ['1997-01'],
 		description: 'In its efforts to control all information in the Shadowrun universe, a giant corporation inadvertently calls up a violent spirit from another dimension, and only a young girl can save the universe from the ensuing havoc.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -454,11 +486,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Black Madonna',
+		names: {
+			'de-DE': 'Schwarze Madonna'
+		},
 		releaseDate: ['1996-04'],
 		description: 'MegaCorp enlists an elite decker, who reunited with old friends from England to try to keep a megacorp from being blackmailed by a super hacker. They come to discover that ancient powers are clashing to prevent a secret from being told. This is the 3rd book with renegade elven mage Serrin Shamander and British Lord Geraint Llanfrechfa.',
 		gameDate: '2057',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -466,11 +501,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'House of the Sun',
+		names: {
+			'de-DE': 'Haus der Sonne'
+		},
 		releaseDate: ['1995-07', '2003-06'],
 		description: 'Venturing to the Kingdom of Hawaii when a megacorporate exec demands payment of an old debt, shadowrunner Dirk Montgomery finds himself having to outrun the corrupt factions battling for control of the island.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -478,11 +516,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Who Hunts the Hunter',
+		names: {
+			'de-DE': 'Jäger und Gejagte'
+		},
 		releaseDate: ['1995-05', '2003-06'],
 		description: 'From the distant forests of Maine comes the deadly Weretiger known as Striper, seeking nature\'s own special justice.\nFrom the shadowed heart of the South Bronx comes the shaman called Bandit, interested only in the pursuit of his arcane arts, and the reconciliation with nature that Raccoon demands.\nFrom the nightmare streets of Newark come Monk and Minx, seeking life itself.\nWho is predator and who is prey? The assassin? The shaman? The kids with the flashing eyes? The Director of Resource for Hurley-Cooper Labs, or HCL\'s dedicated scientist? Or is it the elves? Or the mystery man from the Department of Water and Wastewater Management with a technical rating higher than God\'s?\nBefore they are done, a killer will learn the meaning of mercy, and one who honored life will discover the necessity of ruthless destruction....',
 		gameDate: '2055',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -490,11 +531,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Just Compensation',
+		names: {
+			'de-DE': 'Gerade noch ein Patt'
+		},
 		releaseDate: ['1996-01', '2003-06'],
 		description: 'Andy is happy as a shadowrunner wannabe, but when he accidentally gets involved with real runners, the game of Let\'s Pretend is over. So is his safe corporate life. Andy\'s half brother, UCAS Army Major Tom Rocquette, has some doubts about what he\'s involved with too. Why, for example, is he being ordered to mercilessly massacre the Compensation Army, a group that, like him, only seeks justice?\nAndy and Tom, along with runners Markowitz and Kit, are finding out things that could put many lives in danger and point to a sinister web of dirty politicians, dishonorable officers, and misused tech and magic--a conspiracy that could dismantle the UCAS government! Can Andy and Tom find enough evidence to prove it--and stop it--before the nation\'s capital is buried under a heap of bloody corpses...?',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -502,11 +546,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Worlds Without End',
+		names: {
+			'de-DE': 'Die endlosen Welten'
+		},
 		releaseDate: ['1995-10', '2003-06'],
 		description: 'Spawned in the realm between the worlds, a Horror comes.\nDefeated in battle centuries before by the elven mage Aina, it walks again, seeking vengeance on the mortal lands.\nIf Aina fails to convince the courts of Tir na nOg and Tir Tairngire of the danger, she will have to face the Horror alone once more--or watch the world end.\n<small>NOTE: This story was originally written to conclude the Immortals trilogy; of which the first two parts were <em>Earthdawn</em> novels still unpublished at the time. <strong><em>Scars</em></strong> was published in 2005, and <strong><em>Little Treasures</em></strong> remains unpublished in English.</small>',
 		gameDate: '2056',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -514,11 +561,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Shadowboxer',
+		names: {
+			'de-DE': 'Schattenboxer'
+		},
 		releaseDate: ['1997-05', '2003-06'],
 		description: 'Too Hot To Handle\nFor Two Bears, a dwarf mercenary accustomed to running the shadows, the job sounded like an easy way to make a huge stack of cash: track down and discover the meaning of the word "IronHell." But when the decker he approaches for help gets her brain fried on the Matrix, Two Bears konws he\'s up to his stout little shoulders in drek.\nToo Cool To Give Up\nRealizing that IronHell must be the title of something - or somebody - very powerful, Two Bears looks for some backup to make sure he gets through this job alive. He lines up a street troll called Thumbs, a slick decker named Silver, a suit-wearing samurai called Delphia, and Moonfeather, a magic-wielding disciple of the Cat totem. Together they blast their way through a stream of megacorp] operatives, giant meta-beasts, and high-tech pirates, desperate to unravel the incredible secret of IronHell - before it unravels the world ....',
 		gameDate: '2058',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -526,11 +576,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Wolf & Raven',
+		names: {
+			'de-DE': 'Wolf & Rabe'
+		},
 		releaseDate: ['1998-07', '2003-06'],
 		description: 'The adventures of Wolfgang Kies, soldier of fortune. Together with a group of cyborg bounty hunters and computer wizards, he assists elf lord Dr. Richard Raven in keeping humanity safe from preying monsters—both magical and technological! But crime lord Etienne LaPlante interferes with their vigilantism, preparing to strike at Raven and those who serve him....',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -538,11 +591,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Technobabel',
+		names: {
+			'de-DE': 'Technobabel'
+		},
 		releaseDate: ['1998-05', '2003-06'],
 		description: 'He awoke in a body bag, his brain fried, a black hole where his memory should be. If not for the cool carbon-fiber blade concealed in the bones of his arm, he would\'ve been dead for sure. But Michael Bishop--a.k.a. Babel, messiah of the Matrix--is back in the game.\nRenraku Computer Systems has defied the accords of the Corporate Court. Now they must decipher the secrets of the otaku--and Babel is the technoshaman reborn for the job. But Netwalking in the shadows of the electron jungle means initiation into deadly megacorporate intrigue--and discovering more about Babel\'s own team than he fears he should know.\nAs allies become adversaries, Babel breaks through the dreaded black ice security to find a doorway to the future--and signs of a corp war looming on the horizon--one that could destroy the technoworld and beyond...forever.',
 		gameDate: '2059',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -550,11 +606,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'The Terminus Experiment',
+		names: {
+			'de-DE': 'Das Terminus-Experiment'
+		},
 		releaseDate: ['1999-01', '2003-06'],
 		description: 'Seattle - A conspiracy arrives to spread a plague of vampires. Warren Storey must discover the reason for the plague before time runs out.',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -562,11 +621,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Psychotrope',
+		names: {
+			'de-DE': 'Psychotrop'
+		},
 		releaseDate: ['1998-10', '2003-06'],
 		description: 'It started out as a simple Matrix run, but now five deckers are trapped inside a nightmarish virtual landscape where jacking out is an impossibility--and what waits has all the hallmarks of the afterlife: tunnels of brilliant light, greetings from long-dead friends and family...and the terrifying sense of being juggled between Heaven and Hell. But in this computer-generated netherworld, there is only one thing that can be trusted. And it isn\'t the senses....\n...THE COUNTDOWN BEGINS\nIt\'s the uncommon experience the deckers have in common: a near brush with death. It has brought them together in this hell-raising realm and under the influence of a twisted intelligence with diabolical plans for the unwary travelers in grid-time. Having their minds and souls extinguished before the Matrix-scape crashdown is only the beginning of the puzzle. Discovering why will be the end. A dead end.',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -574,11 +636,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Beyond the Pale: Dragon Heart Saga, Volume 3',
+		names: {
+			'de-DE': 'Bis zum bitteren Ende (Drachenherz-Saga Teil 3)'
+		},
 		releaseDate: ['1998-03', '2003-06'],
 		description: 'The Enemies with unlimited powers, ultimate evil is about to arrive, Ryan Mercury and his runners have only two options left: Victory or Death',
 		gameDate: '2057',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -586,11 +651,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Headhunters',
+		names: {
+			'de-DE': 'Kopfjäger'
+		},
 		releaseDate: ['1997-10', '2003-06'],
 		description: 'Somebody aced the dragon Dunkelzahn, and one of the mysterious links to the assassination is flat on his back in slab city: a double agent with two identities--both out of commission. Now he\'s the most-wanted carcass in Tacoma. Jack Skater\'s mission? Sleaze past the high-tech funeral security, outwit the Knight Errants, cop the stiff, and keep it on ice long enough to get the answer to the shadowrunners\' life-and-death question: what\'s so hot about a stone-cold corpse?\nAnd that isn\'t all that\'s dropped Skater elf-deep in drek--the UCAS Secret Service is also after the dead man\'s secret--and the government blue crews are prepared to liquidate anything in sight to get to it first...',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -598,11 +666,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Stranger Souls: Dragon Heart Saga, Volume 1',
+		names: {
+			'de-DE': 'Fremde Seelen (Drachenherz-Saga Teil 1)'
+		},
 		releaseDate: ['1997-07', '2003-06'],
 		description: 'Dunkelzahn the dragon\'s election as President of the United Canadian American States promised the dawn of a new era. But the hopes of a nation disintegrate with the powerful explosion that assassinates him. On that same fateful evening Dunkelzahn\'s most trusted special agent, Ryan Mercury, is on a secret mission of great urgency involving dangerous magic. And only a miracle can save the world from total destruction...',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -610,11 +681,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Blood Sport',
+		names: {
+			'de-DE': 'Blutige Jagd'
+		},
 		releaseDate: ['1998-01', '2003-06'],
 		description: 'Mama Grande streaked through Leni\'s life like a bad dream. She arrived out of nowhere, claiming to be the ex-Lone Star detective\'s grandmother. She prophesied rivers of blood and an earth in flames. But her murder was even more bizarre: she died at the hands of two Yucatán missionaries hiding a secret of the Gods.\nWith combat biker wannabe Rafael in tow, Leni dives into Mama Grande\'s past... and hurtles into the dark heart of Aztlan - where human sacrifice is all the rage, and where ancient ceremonial games could trigger the end of the world. Are they crazy cultists of true harbingers of doom? The closer Leni and Rafael get to the answer, the nearer they move to the brink of oblivion. Either way, their futures could be cancelled...',
 		gameDate: '2060',
 		edition: 3,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -622,11 +696,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Clockwork Asylum: Dragon Heart Saga, Volume 2',
+		names: {
+			'de-DE': 'Der Cyberzombie (Drachenherz-Saga Teil 2)'
+		},
 		releaseDate: ['1997-11', '2003-06'],
 		description: 'The maelstrom of cyber-magic and political intrigue following President Dunkelzahn\'s assassination rages out of control. Ryan Mercury, Dunkelzahn\'s secret agent, is torn between his duty and his desire to find a killer. But when a spirit wrongly concludes that Ryan is working for the enemy, he anoints a cyberzombie to carry out a hit of its own. Now with an impressive arsenal of allies, weaponry, and the Dragon Heart, Ryan just might pull off the save of the century—if he doesn\'t lose his life first!',
 		gameDate: '2057',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1311,11 +1388,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Burning Bright',
+		names: {
+			'de-DE': 'Nuke City'
+		},
 		releaseDate: ['1994-11', '2003-06'],
 		description: 'status: Mitch Truman, heir apparent to an entertainment megacorporation. He may have fled his parents for the sake of love, but if magic is involved the reason could be darker...\nWEALTHY: Dan Truman, CEO of media giant Truman Technologies, doesn\'t care how much it costs--he wants his son back. He\'ll hire the best to find his heir, even if their motives are suspect...\nEXPERIENCED: Kyle Teller\'s done this job before. He knows the tricks of the trade, and not only because he\'s a mage. He thinks finding the missing boy will be easy. Why shouldn\'t it be?\nBut will money and experience be enough to defeat the terrible power growing beneath the city of Chicago?',
 		gameDate: '2055',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1323,11 +1403,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Choose Your Enemies Carefully: Secrets of Power, Volume 2',
+		names: {
+			'de-DE': 'Wähl deine Feinde mit Bedacht (Trilogie der Macht 2)'
+		},
 		releaseDate: ['1991-02', '2003-06'],
 		description: 'When magic returns, its power calls Sam Verner. As Sam searches for his sister through the slick and scary streets of 2050, his quest leads him across the ocean to England, where druids rule the streets... and the throne. But all is not what it seems, and Sam and his new shadow friends are plunged into a maze of madness on the trail of destruction. Only when Sam accepts his destiny as a shaman can he embrace the power he needs. But what waits for him in the final confrontation of technology and human flesh is a secret much darker than anything he knew waiting in the shadows...',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1335,11 +1418,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Never Deal with a Dragon: Secrets of Power, Volume 1',
+		names: {
+			'de-DE': 'Laß ab von Drachen (Trilogie der Macht 1)'
+		},
 		releaseDate: ['1990-12', '2003-06'],
 		description: 'The year is 2050. The power of magic and the creatures that accompany it have returned to Earth. For Sam Verner, living in the womb of the Renraku conglomerate was easy, until his sister disappeared and reality began to disintegrate. Now Sam wants out, but he must face the world of Shadowrun.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1347,11 +1433,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Find Your Own Truth: Secrets of Power, Volume 3',
+		names: {
+			'de-DE': 'Such deine eigene Wahrheit (Trilogie der Macht 3)'
+		},
 		releaseDate: ['1991-06', '2003-06'],
 		description: 'He was only a "beginner" shaman, but Sam Verner had to find a cure to ward off the curse on his sister. Only something of great magic would do the trick. It was this quest that took him to a mystical citadel in Australia, where, with the aid of his shadowrunner friends, he recovered the strange artifact he hoped would prove helpful. But instead of anything that even remotely resembled help, an unexpected and ancient terror was released—a terror that erupted into a shadow war for dominion over an awakened earth. And while the evil kept growing, inexorably drawing him into battle, the curse\'s power over his sister was also growing, bringing her closer and closer to death. Soon a truly desperate Sam realized that the last and only hope for saving his sister was to find the greatest shaman of the Sixth World, former leader of the Great Ghost Dance—a man who may no longer exist...',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1368,6 +1457,174 @@ module.exports = [
 		edition: 1,
 		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['3-453-07756-3'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Das zerrissene Land (Deutschland in den Schatten 1)',
+		releaseDate: ['1994'],
+		description: 'Mitte des 21. Jahrhunderts: Nach der Rückkehr der Magie in die Welt hat sich auch Europa grundlegend verändert Deutschland ist zu einem losen Staatenbund zerfaller und Schauplatz globaler Machtkämpfe von Konzernen. HighTech-Zentren beherrschen den Süden, anarchistische Projekte dominieren Berlin und Hamburg, Slums wie der riesige Rhein-Ruhr-Sprawl sind chaotische Ballungszentren, daneben Ghettos aller Couleurs, ein Kirchenstaat Westphalen und ein Trollkönigreich im Schwarzwald. Pandur, alias Thor Walez, ist ein Shadowrunner, der als Decker auf eigene Rechnung arbeitet. Im Auftrag meist anonymer Kunden unternimmt er Datenraubzüge. Nicht selten sind es Himmelfahrtskommandos, vor allem, wenn er an einen Unberechenbaren oder gar an einen Irren gerät, der nur Terror machen will und brutale Typen schickt, wenn es ans Bezahlen geht, um alle Spuren zu beseitigen.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-07757-1'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Die Augen des Riggers (Deutschland in den Schatten 2)',
+		releaseDate: ['1994'],
+		description: 'Mitte des 21. Jahrhunderts: Nach der Rückkehr der Magie in die Welt hat sich auch Europa grundlegend verändert. Deutschland ist zu einem losen Staatenbund zerfallen und Schauplatz globaler Machtkämpfe von Konzernen. High-Tech-Zentren beherrschen den Süden, anarchistische Projekte dominieren Berlin und Hamburg, Slums wie der riesige Rhein-Ruhr-Sprawl sind chaotische Ballungszentren, daneben Ghettos aller Couleurs, ein Kirchenstaat Westphalen und ein Trollkönigreich im Schwarzwald. Der Shadowrunner Pandur, alias Thor Walez, ist bei den Hovercraftpiraten der Nordsee untergeschlüpft und glaubt, den geheimnisvollen Mächten entkommen zu sein, die ihn manipuliert und gnadenlos gejagt haben. Aber die Vergangenheit holt ihn ein, als die Piraten vor der Arcologie Bremerhaven auf einen unbekannten Gegner treffen. Pandur sieht keinen anderen Weg, als in die Schatten zurückzukehren, und läßt sich zusammen mit dem Rigger Festus und der Magierin Jessi für einen neuen Run in Hamburg verpflichten. Im Computer der mächtigen AG Chemie stößt er auf brisante Daten, die der Megakon um jeden Preis geheimhalten will. Offenbar stehen die Daten im Zusammenhang mit den virenverseuchten Cyberaugen, die den Rigger in den Wahnsinn treiben. Gehetzt von alten und neuen Feinden, versuchen die Shadowrunner, dem Geheimnis auf die Spur zu kommen.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-07971-X'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Die graue Eminenz (Deutschland in den Schatten 3)',
+		releaseDate: ['1995'],
+		description: 'Mitte des 21. Jahrhunderts: Nach der Rückkehr der Magie in die Welt hat sich auch Europa grundlegend verändert Deutschland ist zu einem losen Staatenbund zerfaller und Schauplatz globaler Machtkämpfe von Konzernen. HighTech-Zentren beherrschen den Süden, anarchistische Projekte dominieren Berlin und Hamburg, Slums wie der riesige Rhein-Ruhr-Sprawl sind chaotische Ballungszentren, daneben Ghettos aller Couleurs, ein Kirchenstaat Westphalen und ein Trollkönigreich im Schwarzwald. Der Shadowrunner Pandur, alias Thor Walez, ist vom Gejagten zum Jäger geworden. Im anarchistischen Berlin gelingt es ihm endlich, den Mächten auf die Spur zu kommen, die sein Leben ruiniert haben. Konzerngardisten, Straßensamurais und Yakuzakiller im Nacken, arbeiten sich Pandur und seine Freunde an das Versteck der geheimnisvollen Grauen Eminenz heran, aber ihr Feind scheint jeden ihrer Züge bereits eingeplant zu haben.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['10555'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Wiener Blei',
+		releaseDate: ['1998'],
+		description: 'Vor einigen Jahren war Donner noch eine große Nummer in den Schatten - inzwischen ist er alt und grau. Als sich jedoch die falsche Person einmal zuviel über ihn lustig macht und ihn dann auch noch fast elendig ertrinken läßt, schwört er Rache. Gemeinsam mit seinem Freund, dem jungen und etwas seltsamen Ork Pepi, macht er sich auf die Jagd. Auf ihrem Weg durch Wien - und schließlich bis tief in die Alpen - stoßen sie nicht nur auf alte Freunde und Feinde, sondern entdecken auch etwas, womit sie niemals gerechnet hätten: Eine merkwürdige Substanz, das Wiener Blei, bedroht die österreichische Hauptstadt und das ganze Land, ein Gift, das eine viel heimtückischere Wirkung hat als seine Opfer einfach nur zu töten...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-21319-X'],
+		category: 'novel',
+		type: 'digital',
+		name: 'TAKC 3000',
+		releaseDate: ['2002'],
+		description: 'Eigentlich wollte sich Sparkplug bei Doktor E.R. nur eine neue Headware implantieren lassen, doch als er aus der Narkose erwacht, liegen der Straßendoc und seine hübsche Assistentin in einer Blutlache am Boden. Rasch wird dem Rigger klar, dass man ihm das Verbrechen anhängen will, und so schleppt er sich mit letzter Kraft zu seinen Riggerfreunden. Sparkplug taucht in den Barrens von Seattle unter, aber nicht nur die Cops, sondern auch mächtige Konzerne sind ihm auf den Fersen. Um seine Unschuld zu beweisen, macht sich Sparkplug auf die Suche nach den Mördern. Wer war der Doc in Wirklichkeit, und wer hatte ein Interesse daran, ihn zu ermorden? Bald stellt sich heraus, dass Doktor E.R. dem Rigger den Prototyp einer neuen und revolutionären Geheimwaffe in den Schädel eingebaut hat. Die Spur führt zu einem geheimen Konzernlabor in Deutschland...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-21320-3'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Nachtstreife',
+		releaseDate: ['1999', '2002'],
+		description: 'Nichts ist ihm geblieben. Keine Erinnerung an sein früheres Leben, nicht einmal ein Name, der ihm sagen könnte, wer er war oder ist. Doch offensichtlich wissen andere Mächte von ihm, denn sie haben sich bereits auf seine Spur gesetzt. Bedroht durch eine elfische Profi-Killerin, verfolgt von einem großen Waffenkonzern und gestrandet in der dunkelsten Ecke des Rhein-Ruhr-Megaplexes, versucht ein Mann ohne Erinnerungen, die Schleier seiner Amnesie zu durchdringen und seine Identität wiederzufinden. Unterstützt wird er auf dieser gefährlichen Suche, die ihn bis in den Kirchenstaat Westphalen führt, von einer Magierin, die selbst die Schatten ihrer eigenen Erinnerungen verdrängen will.\nGefangen zwischen einer verlorenen Vergangenheit und einer unsicheren Zukunft, stellt sich schließlich die Frage, ob er die Antworten auf seine Gedächtnislücken wirklich wissen will und ob der Preis für diese Antworten nicht doch zu hoch ist.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-86322-4'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Gottes Engel',
+		releaseDate: ['2002'],
+		description: 'Eine Serie brutaler Morde im Zweibrücker Milieu versetzt die Bevölkerung in Angst und Schrecken. Die Beamten des Landeskriminalamts ermitteln fieberhaft, um die rätselhaften Verbrechen rasch aufzuklären, und auch Poolitzers berufliche Neugier ist geweckt. Zunächst gehen die Ermittler von einem fanatischen Einzeltäter aus, doch die Präzision der Schüsse, mit denen die Opfer niedergestreckt wurden, sowie die Verwendung einer bislang unbekannten Munition deuten darauf hin, dass ein neuartiges Gefechtsmodul zum Einsatz kam, das von einem der großen Rüstungskonzerne in der hermetisch abgeriegelten Sonderzone entwickelt wurde. Bei seinen Recherchen am Tatort eines neuerlichen Verbrechens stößt Poolitzer auf Gee Gee, die als Einzige das Massaker in dem Nachtclub überlebt hat, und schon bald verfällt der Reporter den Reizen der attraktiven Schauspielerin. Doch Gee Gee, die ihren Freund und Mentor verloren hat, kennt nur ein Ziel: sie will sich an den Verantwortlichen rächen...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-87058-1'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Aeternitas',
+		releaseDate: ['2003-07-01'],
+		description: 'Bei seinen Recherchen in der magischen Szene Thüringens wird Poolitzer auf eine mysteriöse Diebstahlserie aufmerksam: Nahezu identische Kassetten sind aus verschiedenen Sammlungen und Museen verschwunden. Die letzte dieser magisch gesicherten Kassetten wird im Tresor der Weimarer Universitätsbibliothek verwahrt. Doch dann kommt noch eine weitere Kassette zum Vorschein: Das Team der Black Barons hat bei einem Auswärtsspiel in Moskau unter verlustreichen Kämpfen eines der begehrten Stücke erbeutet. Poolitzer reist nach Mainz und taucht ein in die faszinierende Welt der Stadtkriegspieler und ihres gefeierten Stars, der Elfin Tattoo. Und allmählich zeichnet sich ab, wer hinter den Diebstählen steckt: der skrupellose Kunsthändler Zozoria, Chef von Antique Enterprises, der alles daran setzt, Aeternitas, den Schlüssel zum ewigen Leben, in seine Hände zu bekommen, der sich in einer der Kassetten befindet...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-52007-6'],
+		category: 'novel',
+		type: 'digital',
+		name: '05:58',
+		releaseDate: ['2004'],
+		description: 'Eine brutale Verbrechensserie im Großraum Stuttgart versetzt die Bevölkerung in helle Aufregung. Poolitzer wittert eine sensationelle Story, denn der Täter imitiert die Verbrechen von Jack the Ripper und anderen legendären Kriminellen. Zusammen mit seinem Troll-Freund Ultra, der in seine Fußstapfen als Reporter treten will, stellt er eigene Nachforschungen an und stößt auf den Hypnotiseur Ranjit, dessen Auftritt in einem Ludwigsburger Nachtclub in einem Debakel endete. Mitten in einer Hypnose-Vorführung stürmten jugendliche Rabauken um den reichen Schnösel Johann von Boesche die Bühne und richteten ein Chaos an, woraufhin einer der Hypnotisierten spurlos verschwand. Jetzt gilt es, den Unbekannten zu finden und aus seiner Trance zu erwecken, um das Morden zu beenden. Poolitzer wähnt sich fast am Ziel, da stellt sich heraus, dass Ranjit gar nicht der ist, der er zu sein scheint...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-89064-572-0'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Die Anfänger',
+		releaseDate: ['2002', '2005'],
+		description: 'Ihr erster Run sollte eine Art Mutprobe sein. Doch er endet im Chaos, bevor er richtig angefangen hat. Psycho, Rock, Tank und Red Eye wird schnell klar, dass es nicht nur an mangelnder Erfahrung lag. Ihr Schieber - Tommy, der Fuchs - hat sie gelinkt. Jetzt sitzen sie zwischen allen Stühlen und müssen ums nackte Überleben kämpfen - in einer Liga, in der sie, die Anfänger, nicht den Hauch einer Chance haben. Doch es gibt mehr Mitspieler als erwartet, und auch der Schieber muss bald erkennen, dass er nicht am Ende der "Nahrungskette" steht...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-52093-9'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Jede Wette',
+		releaseDate: ['2005'],
+		description: 'Holdo Kraif ist ein begeisterter All-Area-Combat-Golfer, der mit illegalen Wettkämpfen eine Menge Geld verdient. Doch bedauerlicherweise gilt seine Leidenschaft auch dem Glücksspiel und schönen Frauen, und so hat er in den vergangenen Monaten die immense Summe von 100.000 Nuyen Schulden aufgehäuft, die sein Gläubiger, ein Düsseldorfer Yakuza-Gangsterboss, nun binnen weniger Tage zurückhaben will, andernfalls ist Holdo ein toter Mann. Daher kann Holdo seinen jüngsten Sieg, den er mit seiner Buchmacherin Mousse in deren Club feiert, auch nicht richtig genießen. Nach ein paar Flaschen billigem Sekt sieht er nur einen Ausweg aus seiner Misere: Er springt auf die Bühne und präsentiert dem staunenden Publikum die Wette seines Lebens - er wettet, dass er es schafft, eine Woche am Leben zu bleiben, selbst wenn die besten Killer der ADL gegen ihn antreten....',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3-453-52109-9'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Altes Eisen',
+		releaseDate: ['2005-09-02'],
+		description: 'Zehn Jahre ist es her, seit Lulatsch, Clown, Grizzly und Madame Trix ihren letzten Coup gelandet haben. Und ein Jahrzehnt ist in der sechsten Welt eine lange Zeit, vor allem für die kurzlebigen Orks und Trolle. Sie haben die Straßen der ADL hinter sich gelassen, aber wie heißt es so schön: Niemand verlässt die Schatten ganz. So holt die Vergangenheit die Runner ein und lässt sie erkennen, dass sie im Jahr 2064 vor allem eines sind: Altes Eisen...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3811851454'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Pesadillas',
+		releaseDate: ['2001', '2006'],
+		description: 'Der Straßensamurai Jaywalker rettet einen sechsjährigen Jungen vor einem Wahnsinnigen. Er nimmt ihn mit und versucht; mit Hilfe seines Teams herauszufinden, was es mit dem Kind auf sich hat. Doch dann steht plötzlich eine andere Partei quasi vor der Tür. Jaywalker und seinem Team bleibt nichts anderes übrig als unterzutauchen. In der Enge ihres Unterschlupfes kommen die Runner sich näher, als ihnen lieb ist. Alte Spannungen werden plötzlich explosiv und zu allem Überfluss entwickeln sich Gefühle zwischen Jaywalker und der querschnittsgelähmten Deckerin Phoenix, für die in dieser Situation kein Platz ist. Denn ihre Verfolger scheinen jede Bewegung der Runner vorauszusehen.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: [''],
+		category: 'novel',
+		type: 'digital',
+		name: '',
+		releaseDate: [''],
+		description: '',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
 	},
 	{
 		sku: ['46116-9', '27832'],
@@ -1434,11 +1691,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Streets of Blood',
+		names: {
+			'de-DE': 'Blutige Straßen'
+		},
 		releaseDate: ['1992-12'],
 		description: 'Murder, Mystery, Intrigue and Betrayal! A story in foggy old England of 2054, the 1st book with elven mage Serrin Shamander and British Lord Geraint Llanfrechfa.',
 		gameDate: '2054',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1446,11 +1706,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Fade to Black',
+		names: {
+			'de-DE': 'In die Dunkelheit'
+		},
 		releaseDate: ['1994-04', '2003-06'],
 		description: 'In 2055, Newark is an over-crowded urban nightmare populated by hordes of SINless indigents. Millions live in abject poverty. Violence is rampant. Brutal gangs and vicious criminals control many sections of the city like feudal lords.\nAmid this harrowing landscape, Rico gathers his team: Shank, Thorvin, Piper, and the eccentric shaman known as Bandit. The job is to free a man from a corporate contract that is the moral equivalent of slavery, but that is only the beginning. The runners\' diverse skills and talents are swiftly put to the test. Rico\'s challenge is to keep the team alive as they sort through a maze of corporate intrigue and misdirection, but without discarding honor, for without honor a man is nothing.\nHonor alone distinguishes a man from the ravaging dogs that fill the streets, and as the runners soon learn, the price of honor is high.',
 		gameDate: '2054',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1458,11 +1721,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Striper Assassin',
+		names: {
+			'de-DE': 'Die Attentäterin'
+		},
 		releaseDate: ['1993-06', '2003-06'],
 		description: 'Prey for the hunter.\nFor the world of humans knows her as Striper, the deadly Asian assassin and kick-artist. She has come to the City of Brotherly Love seeking revenge and made it her killing ground. But she is not the only predator stalking the dark underbelly of the Philadelphia metroplex. There are other hunters prowling the night, and some possess a power even greater than hers.\nSome may even want her dead.\nWhen the moon rises full and brilliant into the dark pall of the night, the bestial side of her nature battles for dominion, demanding vengeance and death.\nWho will survive?\nWho dares to hunt the hunter?',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1470,11 +1736,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Nosferatu',
+		names: {
+			'de-DE': 'Nosferatu 2055'
+		},
 		releaseDate: ['1994-08', '2003-06'],
 		description: 'Mage and part-time shadowrunner Serrin Shamander and his companions desperately flee a relentless, demonic enemy out to eliminate humankind from the face of the earth. This is the 2nd book with renegade elven mage Serrin Shamander and British Lord Geraint Llanfrechfa.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1482,11 +1751,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Lone Wolf',
+		names: {
+			'de-DE': 'Der Einzelgänger'
+		},
 		releaseDate: ['1994-02', '2003-06'],
 		description: 'With gangs conquering the streets of Seattle, Rick Larson, doing undercover work for Lone Star, Seattle\'s contracted police force, finds himself on the wrong side of the law.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1494,11 +1766,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Night\'s Pawn',
+		names: {
+			'de-DE': 'Spielball der Nacht'
+		},
 		releaseDate: ['1993-04', '2003-06'],
 		description: 'For years, Jason Chase was at the head of the pack, shadowrunning with the best in the business. When time dulled his flesh and cybernetic edge, he knew it was time to get out, or get dead.\nNow, his past has come back to haunt him. To protect a young girl from the terrorists who want her dead, Chase must rely on his years of experience, and whatever his body has left to give. And everything he\'s got, he\'ll need as he comes face-to-face with a part of his life he thought he\'d left behind, and an enemy left for dead.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1506,11 +1781,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Changeling',
+		names: {
+			'de-DE': 'Der Wechselbalg'
+		},
 		releaseDate: ['1992-06', '2003-06'],
 		description: 'Chicago - Peter Clarris was a human boy who changed into a troll. He grows up surviving as a shadowrunner.',
 		gameDate: '2052',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1518,11 +1796,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: '2XS',
+		names: {
+			'de-DE': '2XS'
+		},
 		releaseDate: ['1992-02', '2003-07'],
 		description: 'Private Detective Dirk Montgomery thinks he knows the streets. He watched the change of the world, as magic grows and alter the balance of power, he thinks he understands the deepest shadows and the darkest of hearts. He was wrong….',
 		gameDate: '2052',
 		edition: 2,
-		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
+		publisher: ['FASA Corporation', 'Catalyst Game Labs', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1530,11 +1811,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Shadowplay',
+		names: {
+			'de-DE': 'Schattenspiele'
+		},
 		releaseDate: ['1997-02'],
 		description: 'Sly is a veteran. She\'s run more shadows than she cares to remember, and has the physical and emotional scars to prove it. But no matter how violent it became, it had always been business as usual. Until now. Falcon is a kid. He thinks he hears the call of magic, and the voice of one of the Great Spirits seems to whisper in his hear. He\'s gone to Seattle, the urban jungle, to seek his calling. Thrown together, veteran and novice, Sly and Falcon find themselves embroiled in a deadly confrontation between the world\'s most powerful corporations. If this confrontation is not stopped it could turn into all-out warfare, spilling out of the shadows and onto the streets themselves.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1542,11 +1826,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Never Trust an Elf',
+		names: {
+			'de-DE': 'Trau keinem Elf'
+		},
 		releaseDate: ['1992-08', '2003-06'],
 		description: 'When Kham, an ork living in the Seattle ghetto in the year 2053, is suddenly snatched from his day-to-day existence and thrust into a world of dragons, he learns the hard way whom to trust.',
 		gameDate: '2053',
 		edition: 2,
-		publisher: ['FASA Corporation'],
+		publisher: ['FASA Corporation', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1841,7 +2128,7 @@ module.exports = [
 		type: 'digital',
 		name: 'Shadows in Focus: Sioux Nation',
 		names: {
-			'pt-BR': 'SSombras em Foco: Nação Sioux'
+			'pt-BR': 'Sombras em Foco: Nação Sioux'
 		},
 		releaseDate: ['2015-01'],
 		description: 'All Kinds of Power\n\nArcane sites crackling with magical energy. High-stakes corporate maneuvering, complete with draconic influence. Smugglers and shamans, charismatic chiefs and feckless rogues. All this and more waits in the Sioux Nation for runners looking to branch out and run headfirst into new challenges in the unending quest to earn a few nuyen while staying alive and free from corporate detention facilities.\nShadows in Focus: Sioux Nation is the first in a new series of Shadowrun e-books providing a detailed look at geographical spots that have not been covered recently—or at all—in previous books. Starting with an overview of the Sioux Nation—including corporate powers, magical sites, major cities, adventure hooks, and more—the series will continue with spotlights on two major cities, Cheyenne and Butte, adventures set in the Sioux Nation, and an Enhanced Fiction story providing more flavor of what it’s like to run in the Sioux Nation. While the full collection of e-books will provide a detailed look at a nation reconciling old traditions with life on the bleeding edge of magic and technology, the Sioux Nation book has all you need to bring your Shadowrun game into this locale and see if runners can handle the full range of challenges it will throw at them.',
@@ -8117,7 +8404,7 @@ module.exports = [
 	{
 		sku: ['45047'],
 		category: 'sourcebook',
-		type: 'print',
+		type: 'digital',
 		name: 'State of the Art: ADL',
 		releaseDate: ['2017-05-29'],
 		description: 'Modernste Waffentechnik, uralte Magie, neuste Mode-Trends, Fahrzeugtechnik von Autoduellisten und erwachte Wildnis dies alles kann man in der Allianz Deutscher Länder finden. Und für einen Runner in diesen Breiten ist es überlebenswichtig zu wissen, wo und wann man all dies findet. Denn es macht einen gravierenden Unterschied, ob man in die Mündung der neusten Altmayr-Pistole schaut oder ihren Abzug am Finger hält. Ob die neusten Proteus-Wachcritter Jagd auf einen machen oder man selbst der Jäger ist. Oder ob man beim richtigen Schieber die neuste Drohne kauft, anstatt sich von ihr beim nächsten Run erschießen zu lassen.\nState of the Art ADL ist ein Ausrüstungsbuch für Shadowrun 5, das mit einem großen Haufen Spielzeug für Runner daherkommt. Es bietet neue Waffen, Archetypen, Fahrzeuge, Drohnen, Critter, magische Gruppen und Schutzgeister aus der Allianz Deutscher Länder und beschreibt zudem die wichtigsten Spieler auf den unterschiedlichen Märkten und ihre Schattenseiten in denen sich die Runner mit all dem neuen Kram eindecken können. Oder von ihm auffressen lassen.',
@@ -8290,11 +8577,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Better than Bad',
+		namse: {
+			'de-DE': 'Schattenhelden'
+		},
 		releaseDate: ['2018-11-23'],
 		description: 'Righteous Fire\n\nKill or be killed. Eye for an eye. Get yours while you can. Shadowrunners—and most of the other residents of the Sixth World—are told from birth that those are the principles you must follow to survive. Thinking of others is for suckers. Take care of your own and hope you don’t die early.\n\nBut some runners think that’s no way to live. They know the world is stacked against them, and they’ve decided they like those odds. They choose to fight for what they think is right. They use shadowruns to take from people who don’t deserve what they have and give to those who need it. They seek hidden information that can right wrongs. It’s not easy, and it doesn’t always pay as well as outright theft, but who do they tell stories about centuries later—Robin Hood, or the jerk thief from a few forests away who only thought of himself?\n\nBetter than Bad is a shadowrunners’ guide to hooding, the art of committing crime to help those in need. With plot information, shadowrunning techniques and tactics, and advice to help runners work to bring good into the world, the book is the first definitive guide to shadowrunning with a conscience. It also includes information on a hot spot for working to right wrongs—Pretoria, in the African nation of Azania.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -8380,6 +8670,45 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Datapuls: Proteus',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'mission',
+		type: 'digital',
+		name: 'Ballots of Bullets',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'mission',
+		type: 'digital',
+		name: 'Hunt Black Lodge (Malevolent 1)',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'mission',
+		type: 'digital',
+		name: 'Scalpel\'s Edge (Malevolent 2)',
 		description: '',
 		gameDate: '2075',
 		edition: 5,
@@ -8478,5 +8807,42 @@ module.exports = [
 		originalLanguage: 'en-US',
 		status: 'announced',
 		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Neo-anarchist Encyclopedia',
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'announced',
+		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: ['HWB'],
+		category: 'misc',
+		type: 'digital',
+		name: 'Hamburg-Werbebroschüre',
+		releaseDate: ['2018-10-07'],
+		description: 'A brochure of Hamburg.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: [''],
+		category: 'mission',
+		type: 'digital',
+		name: 'Grimmes Erwachen',
+		releaseDate: ['2019-01-28'],
+		description: 'Märchenhafte Erweckung\n\nEs war einmal, vor langer Zeit: In uralten Fabeln, in Mythen und Sagen erklärten sich früher die Menschen ihre Welt. Sie gaben dunklen Gestalten Form und flüsterten ihren Söhnen und Töchtern Schauergeschichten am Bett zu. Nun aber ist die Magie erwacht. Die Ungeheuer, Feenpakte und Legenden aus diesen vergangenen Zeiten kommen zum Leben und manifestieren sich in der märchenreichen ADL. Kinder werden gejagt, alte Versprechen angemahnt und Mythen fordern ihren Blutzoll. Gut für alle, die noch die Hintergründe und Ursprünge dieser alten Märchen kennen. Wenn sie am Ende nicht sterben wollen.\n\nGrimmes Erwachen ist ein Abenteuerband für Shadowrun 5, der in der Allianz Deutscher Länder spielt. Er präsentiert drei Abenteuer, die sich alle um erwachte Sagen und Märchen drehen. Zudem enthält der Band Hintergründe und Anregungen, um selbst Legenden zu beleben und Shadowrunner tief in diese Mythen abtauchen zu lassen. ',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE'
 	}
 ];
