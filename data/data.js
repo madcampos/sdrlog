@@ -7,16 +7,11 @@ https://www.drivethrurpg.com/product/253683
 http://shadowiki.de/Hamburg-Zusatzpack
 
 Sources:
-http://shadowrun.wikia.com/wiki/Main_Page
 https://shadowhelix.de/Kategorie:Quellen_nach_Edition
 https://www.shadowiki.de/Kategorie:Quellen_(Editionen)
-https://www.shadowiki.de/Sixth_World_Tarot
 https://shadowhelix.de/Kategorie:Quellen_(Gratis)
 https://www.shadowiki.de/Kategorie:Quellen_(Online)
-https://www.shadowiki.de/Liste_der_Shadowrun_Romane
-http://shadowrun.tumblr.com/upcoming
 https://forums.shadowruntabletop.com/index.php?topic=254.0
-http://shadowiki.de/Shadowrun_Vintage
 http://www.black-book-editions.fr/catalogue.php?id=150
 */
 
@@ -1459,7 +1454,7 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['3-453-07756-3'],
+		sku: ['3453077563'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Das zerrissene Land (Deutschland in den Schatten 1)',
@@ -1471,7 +1466,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-07757-1'],
+		sku: ['3453077571'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Die Augen des Riggers (Deutschland in den Schatten 2)',
@@ -1483,7 +1478,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-07971-X'],
+		sku: ['345307971X'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Die graue Eminenz (Deutschland in den Schatten 3)',
@@ -1507,7 +1502,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-21319-X'],
+		sku: ['345321319X'],
 		category: 'novel',
 		type: 'digital',
 		name: 'TAKC 3000',
@@ -1519,7 +1514,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-21320-3'],
+		sku: ['3453213203'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Nachtstreife',
@@ -1531,7 +1526,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-86322-4'],
+		sku: ['3453863224'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Gottes Engel',
@@ -1543,7 +1538,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-87058-1'],
+		sku: ['3453870581'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Aeternitas',
@@ -1555,7 +1550,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-52007-6'],
+		sku: ['3453520076'],
 		category: 'novel',
 		type: 'digital',
 		name: '05:58',
@@ -1567,7 +1562,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-89064-572-0'],
+		sku: ['3890645720'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Die Anfänger',
@@ -1579,7 +1574,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-52093-9'],
+		sku: ['3453520939'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Jede Wette',
@@ -1591,7 +1586,7 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: ['3-453-52109-9'],
+		sku: ['3453521099'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Altes Eisen',
@@ -1615,27 +1610,383 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: [''],
+		sku: ['3890645747'],
 		category: 'novel',
 		type: 'digital',
-		name: '',
-		releaseDate: [''],
-		description: '',
+		name: 'Ash',
+		releaseDate: ['2001', '2007'],
+		description: 'Devil\'s Playground und ihr Sänger Ash stehen kurz vor dem Durchbruch. Ihre Konzerte sind ausverkauft und ihre Fans lieben sie. Auch, oder gerade weil sich die Band in ihren Liedern für Toleranz zwischen Menschen und Metamenschen einsetzen. Ansichten, die einem lokalen Policlub ein Dorn im Auge sind. Ein feiger Anschlag auf Ashs Leben ist eine erste Warnung. Doch wer lässt sich schon einschüchtern, wenn er gerade auf dem Weg nach oben ist? Und da wäre noch Quickshot, der mysteriöse Runner, der gleich einem Geist in den Schatten auftaucht und wieder verschwindet. Doch um in den Schatten zu überleben, braucht man Freunde. Menschen, denen man vertrauen kann. Besonders, wenn auf den eigenen Kopf eine Belohnung ausgesetzt ist.',
 		gameDate: '2050',
 		edition: 2,
 		publisher: ['Heyne Verlag'],
 		originalLanguage: 'de-DE'
 	},
 	{
+		sku: ['3890645801'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Shelley',
+		releaseDate: ['2003', '2007-04-02'],
+		description: 'Walker ist ein vollendeter Gentleman mit eiskaltem Verstand und herausragenden Manieren. Simmons ist ein großschnäuziger Orkdetektiv mit eiskaltem Bier und herausragenden Hauern. Gemeinsam sollen sie im weihnachtlichen Seattle einen brutalen Mord aufklären. Bald stellt sich heraus, dass mehr dahinter steckt - mehr als die beiden sich hätten träumen lassen und vielleicht sogar mehr, als sie ertragen können.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['389064595X'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Quickshot',
+		releaseDate: ['2005', '2007'],
+		description: 'Ein Jahr ist verstrichen, seit Ash aus Seattle fliehen musste. Die Welt hält ihn für tot, und an manchen Tagen wünscht er sich, es wäre auch so. Denn obwohl er einen ganzen Ozean zwischen sich und sein früheres Leben gebracht hat, kann er ihm nicht entkommen. Als er schließlich von Kopfgeldjägern aufgespürt wird, muss er sich der Vergangenheit stellen. Seine Flucht führt ihn zurück nach Seattle. In die Stadt, die ihm mehr Ärger eingebracht hat als jede andere. Leider bleibt Ashs Ankunft nicht unbemerkt. Unerwartet taucht ein alter Bekannter auf und bietet ihm einen Job an. Einen riskanten Run, bei dem einiges schief gehen kann. Doch was tut man nicht alles, um eine offene Rechnung zu begleichen?',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['389064581X'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Vertigo',
+		releaseDate: ['2002-09', '2007-11-01'],
+		description: 'In einem riskanten Balanceakt bewegt sich Vertigo im Grenzbereich zwischen zwei Welten. Dabei ist es wohl hauptsächlich ihrem Glück und ihren guten Beziehungen zuzuschreiben, dass sich die Katzenschamanin zum oberen Mittelfeld der Schattengemeinde zählen kann: Wenn man dem Rigger Silent Glauben schenken will, dann würde sie im Alleingang niemals auch nur einen Run hinbekommen. Doch auf ihren gefährlichen Gratwanderungen zwischen Licht und Dunkel scheint sich immer wieder alles zu ihren Gunsten zu fügen - bis sich ein geheimnisvoller Schatten in ihr Leben drängt und das labile Gleichgewicht ins Wanken bringt. Was harmlos beginnt, gerät bald außer Kontrolle. Doch Vertigo begreift erst viel zu spät, dass das alles kein Spiel mehr ist.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3890645941'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Im Namen des Herrn',
+		releaseDate: ['2004-09', '2007'],
+		description: 'Gottes Wege sind unergründlich.Das muss auch Mark, bekennender Katholik und angehender Mönch, erkennen, als man ihm einen Mord anhängt und er in die Schatten fliehen muss. Ausgerechnet ein für Runs gegen die Kirche bekanntes Runnerteam unter der Führung der Planerin Quiz kommt ihm zur Hilfe. Mark muss mit der rauen Trollsamurai Ferrum, dem Decker Mikropuls und dem Elsternschamanen Glitzer zurechtkommen - und umgekehrt. Bald jedoch erkennt das Team, dass hinter Marks Erlebnissen viel mehr steckt als ein kleiner Machtkampf innerhalb der Kirche. Es steht viel auf dem Spiel, und der Preis, den das Team zahlen muss, ist hoch...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3890645836'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Das Bronzetor / Hand am Hort',
+		releaseDate: ['2003-03', '2008-05-05'],
+		description: 'Wenn es nach ihm gegangen wäre, hätte der Brite Daniel P. Fox seinen verdienten Erholungsurlaub von geheimen Regierungsgeschäften eigentlich ruhiger angehen lassen, doch als sein alter Chummer Oz aus Seattle ihm einen lukrativen Leibwächterjob in Übersee anbietet, kommt alles anders. Die unscheinbare Deckerin Eliza Young hat bei einem Run Daten erbeutet, die es anscheinend wert sind, um jeden Preis wiederbeschafft zu werden. Fox und ein Team von ausgesuchten Schattenläufern tauchen mit ihrer Auftraggeberin unter, bekommen aber bald zu spüren, dass man bei einem Gegner wie dem ihren zwar rennen, sich aber nicht verstecken kann. Bald kommt Fox ein beunruhigender Verdacht - Ist er selbst und nicht Eliza das wirkliche Ziel des übermächtig scheinenden Gegners?',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3890644821'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Der Schattenlehrling',
+		releaseDate: ['2006', '2008'],
+		description: 'Der dreizehnjährige Boris wächst behütet als Sohn eines Konzernangestellten auf und träumt - inspiriert von Trideo und Matrixspielen - von einem abenteuerlichen Leben in den Schatten. Während eines Kurzurlaubs in München brennt er schließlich durch, um sich seinen Traum zu erfüllen: Er will Runner werden! Mit Credsticks, die er seinem Vater geklaut hat, bezahlt er die Runner Theseus, Cinque und Key, damit sie ihn ausbilden. Doch während er Schießen lernt und seinem ersten Job entgegenfiebert, hat sich längst das Team eines skrupellosen Zwergs an seine Fersen geheftet - denn unter den von Boris mitgenommenen Credsticks befindet sich einer, der viel mehr beinhaltet als Geld und den sein einflussreicher Besitzer unter allen Umständen zurückwill. Bald dämmert Boris, dass die realen Schatten viel dunkler sind als die aus dem Trideo.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3811851365'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Auf dem Sprung',
+		releaseDate: ['2000', '2003'],
+		description: 'Der Auftrag sieht voll nach Routine aus: Personenschutz ist angesagt. Aber \'schon bald entwickelt sich die Sache für das Runner-Team Pik Dame zu einem Fiasko ersten Grades. Ein mysteriöser Unbekannter taucht auf und verstrickt die Runner in ein Komplott innerhalb des Big Business. Trotz der Unterstützung illustrer Gestalten aus der Szene schließt sich das Netz um Pik Dame immer enger. Ein Entkommen aus den Klauen der Konzerne scheint unmöglich...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3811851373'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Töne der Unendlichkeit',
+		releaseDate: ['2001', '2003'],
+		description: 'Hamburg mitten im 21. Jahrhundert: Glitzer und Gosse liegen dicht beinander, und in dieser Welt schlägt sich eine Gruppe von Runnern - das Team Pik Dame - von einem Job zum anderen durch. Diesmal erhält sie den Auftrag, Personenschutz für die charismatische Sängerin Eternity zu stellen. Gleichzeitig wird die Hamburger Musikszene von einer Mordserie erschüttert. Stars und einflussreiche Persönlichkeiten fallen unerklärlichen Mental-Attacken zum Opfer, aber auch gedungene Attentäter treiben ihr blutiges Unwesen. Pik Dames zunächst einfach aussehender Auftrag wird zur mittleren Katastrophe, als sich die steife Hamburger Brise zu einem Orkan des Terrors auswächst...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['345387904X'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Sturmvogel',
+		releaseDate: ['2004-07'],
+		description: 'Zunächst hat Poolitzer die AG Chemie Beiersdorf im Verdacht, sie wolle einen Umweltskandal vertuschen. Als jedoch hochmoderne Sharkskin-Powerboote vom Testgelände einer Werft verschwinden und ein Schiff mit atomarem Sondermüll gekapert wird, argwöhnt der Reporter, dass Terroristen im Ostseeraum ihr Unwesen treiben. Steckt etwa sein alter Widersacher, Staatsanwalt Mathias Fröhlich-Eisner, dahinter? Der charismatische Politiker ist der neue Star der einstmals rechtsradikalen Deutschnationalen Partei, und unter dem Deckmantel der Gesetzestreue und Ordnungsliebe steht er kurz davor, einen grandiosen Wahlsieg zu erringen. Poolitzer lässt sich von diesem scheinbaren Gesinnungswandel nicht täuschen und findet heraus, dass Fröhlich-Eisner in Verbindung mit Aktivisten der Nationalen Aktion steht, die Anschläge mit Massenvernichtungswaffen gegen das Elfenreich Herzogtum Pomorya vorbereiten. Doch der Reporter hat seinen Gegner sträflich unterschätzt...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3890645704'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Elementares Wissen',
+		releaseDate: ['2002', '2004'],
+		description: 'Das Runnerteam Pik-Dame existiert nicht mehr. Paul, Pandora, Claw, Zack, Snap und Chet gehen längst ihre eigenen Wege. Doch dann taucht eine alte Bedrohung aus der gemeinsamen Vergangenheit auf und zwingt die Runner, sich wieder zusammenzuschließen. Die Feinde sind heute mächtiger als je zuvor — und es gibt sogar Anzeichen dafür, dass ein Verräter in den eigenen Reihen lauert.\n\nElementares Wissen ist der Abschluss und Höhepunkt von Harri Aßmanns Nordlichter-Trilogie.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['9783453525153'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Cash',
+		releaseDate: ['2009-02'],
+		description: 'Zu viele Köche verderben den Brei, sagt man – und zu viele Shadowrunner, die hinter der gleichen Zielperson her sind, verderben der Schattenläuferin Karo Ass mächtig die Laune. Nicht zuletzt deshalb, weil auch die Zielperson, Österreichs Vizekanzler Hacklhuber, nicht untätig bleibt und verzweifelt versucht, den Kopf aus der Schlinge zu ziehen. Ein dramatischer Wettlauf durch die Schatten beginnt...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['3890645852'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Flynns Weg',
+		releaseDate: ['2003-06'],
+		description: 'Flynn, Straßensamurai aus Seattle, ist nach Hamburg gekommen, um unterzutauchen. Jetzt ist er hier schon wieder auf der Flucht vor zwei unbekannten Runnern. Die etwas von ihm fordern, das er nicht hat. Von dem er nicht einmal weiß, was es ist. Er ist zur falschen Zeit am falschen Ort gewesen. Kann er in der fremden Stadt den Hals aus der Schlinge ziehen? Unfreiwillige Unterstützung erhält er von Wildcard. Die Straßenkämpferin macht jeden Gegenstand zur Waffe und hält Beziehungen für eine Krankheit. Aspen, Wildcards Mechaniker, ein Überlebenskünstler und Träumer, würde alles geben für ein richtiges Abenteuer. Er soll mehr Abenteuer bekommen, als ihm lieb ist.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890645879'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Matrixfeuer',
+		releaseDate: ['2003-12'],
+		description: 'Anthologie mit Shadowrun-Storys deutscher Autoren. Mitherausgeberin Maike Hallmann, selbst Autorin dieser Reihe, hat durch einen Wettbewerb die vielversprechendsten neuen Talente der deutschen Shadowrunszene ermittelt und lässt sie hier kraftvoll zu Wort kommen.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890645933'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Wiedergänger',
+		releaseDate: ['2005-04'],
+		description: 'Was wird aus Rachedurstgelüsten, wenn sie vier Jahre Zeit haben, vor sich hinzugären? Der Straßensamurai Jaywalker macht sich auf, um das herauszufinden. Vier Jahre nach dem Zerfall seines Teams kehrt er nach Seattle zurück. Seine Ankunft löst heilloses Chaos aus. Vor allem Conquistador, der sich längst aus den Schatten zurückgezogen hat, sieht sich mit der Frage konfrontiert, welchen Preis er für seine Rache zu zahlen bereit ist. Doch da ist auch noch der Magier Sokata. Und der hat sehr genaue Vorstellungen davon, wie er mit dem Problem >Jaywalker< verfahren will.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890645437'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Im Fadenkreuz',
+		releaseDate: ['2005-07'],
+		description: 'In einem kleinen Laden soll ein Koffer mit gestohlener High-Tech übergeben werden, doch die Aktion geht schief. Der zufällig anwesende Rabenschamane Spider kriegt das Diebesgut in die Finger - und flüchtet mit seinem Kumpel Ali in den Untergrund. Jade und sein Team werden angeheuert, die beiden ausfindig zu machen und die Ware wiederzubeschaffen. Eine chaotische Suche beginnt, die nicht nur durch Jades persönliche Probleme erschwert wird. Doch nicht nur diese beiden Parteien sind hinter dem Koffer her und bekanntlich heißt es ja: Wenn Zwei sich streiten, freut sich der Dritte.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890645194'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Feuerzauber',
+		releaseDate: ['2005-05'],
+		description: 'Kyon als zynischen Mistkerl zu bezeichnen wäre eine Beleidigung für alle zynischen Mistkerle der sechsten Welt. Der Ex-Agent mit den ätzenden Sprüchen und dem Charme eines erwachten Stinktiers hält sich mit kleinen Gaunereien und Botenjobs über Wasser, bis er wieder einmal für einen ordentlichen Run angeheuert wird. Doch dieser "einfache Datenraub" droht dem Misanthropen über den Kopf zu wachsen...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890644635'],
+		category: 'novel',
+		type: 'digital',
+		name: 'GmbH',
+		releaseDate: ['2006'],
+		description: 'Kaum ist endlich genug Gras über eine Sache gewachsen, kommt irgend ein Esel daher, und frisst es wieder weg.\n\nDas ist besonders ärgerlich, wenn man Spitzenpolitiker ist und es auch bleiben möchte. So ist es dem Vizekanzler Hacklhuber gar nicht recht, dass ausgerechnet zu beginn des Wahlkampfs ein paar pikante Details aus seiner Zeit aus den Eurokriegen an die Öffentlichkeit dringen könnten. Deswegen ist er auch gar nicht gut auf die Schattenläufer Karo Ass, Topolino und Peperoni zu sprechen, aber diese \'Esel\' lassen sich nicht so einfach zum Schweigen bringen, kaum dass sie sich im ersten Band dieses Zweiteilers zu einem schlagkräftigen Team zusammen geschlossen haben...',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890645488'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Kettenhund',
+		releaseDate: ['2005-11'],
+		description: 'Der russische Kommando-Soldat Mischko erhält einen letzen Auftrag, bevor er der Armee den Rücken kehrt: Er soll mit seinem Kameraden Nikita und einem Team deutscher Söldner eine illegale Ladung quer durch die Steppe nach Sibirien bringen. Die beiden russischen Soldaten müssen mit Leuten zusammenarbeiten, die sich selbst als Shadowrunner bezeichnen, weder Ehre noch Pflicht kennen und nur zu willig sind, ihren Auftraggeber über den Tisch zu ziehen. Und dann bricht zwischen den Steppennomaden ein Krieg aus. Mit einer Kurzgeschichte von Martina Noeth.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['389064483X'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Cash Flow',
+		releaseDate: ['2006'],
+		description: 'Zuviele Köche verderben den Brei, so sagt man, und zu viele Shadowrunner, die hinter der gleichen Zielperson herhecheln, verderben Karo Ass die Laune. Jetzt, wo sie ihr Team endlich um sich geschart hat, und bereit ist loszuschlagen, kommt ihr ungebetene Konkurrenz alles andere als gelegen. Nicht zuletzt deshalb, weil auch die Zielperson, Österreichs Vizekanzler Hacklhuber, nicht untätig bleibt und verzweifelt versucht, den Kopf aus der Schlinge zu ziehen, die sich immer enger um seinen Hals zusammenzieht.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890644732'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Böses Erwachen',
+		releaseDate: ['1006'],
+		description: 'Kyon, der Zyniker ("Feuerzauber") und Mark, der Betbruder ("Im Namen des Herrn"), könnten unterschiedlicher nicht sein. Dennoch stehen sie sich näher, als sie ahnen. Jetzt kommen sie zusammen, um - im wahrsten Sinne des Wortes das - Abenteuer ihres Lebens zu bestehen. Zusammen mit ihren Gefährten Quiz, Glitzer, Kl und Marie setzen sie sich auf die Spur eines heimtückischen Mörders mit bekanntem Gesicht und treffen auf alte Feinde in neuem Gewand.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['9783839154137'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Junx: Die Schatten Dresdens',
+		releaseDate: ['2010'],
+		description: 'Dresden 2061: Bei einem Unfall in einer Chemiefabrik, kommen ein Runnerteam und alles beteiligte Sicherheitspersonal bis auf Seth Morgan ums Leben. Er verliert durch die schweren Verletzungen und eine Vergiftung, einen großen Teil seiner Essenz, sowie seine magischen Fähigkeiten komplett. Seth Morgan findet sich zwei Jahre später in der Unterschicht Dresdens wieder. Seine Vergiftung konnte er nicht heilen, aber einen Teil seiner Magie mit einem experimentellen Medikament wieder herstellen. Dieses ist eigentlich als Gift erfunden worden und er ist inzwischen von der Substanz abhängig. Seth muss ständig Geld auftreiben um seine Medikamente zu bezahlen. Ein Fernziel ist es, Geld in die Forschung nach einer endgültigen Heilung stecken zu können. Seine letzte Möglichkeit ist es, sich auf die Seite der ehemaligen Gegner zu schlagen und ein Runner zu werden. Es gibt jedoch einen wichtigen Unterschied: Es geht für Seth nicht um Geld, sondern um Alles.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['9783890641232'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Digitaler Albtraum',
+		releaseDate: ['2008-02'],
+		description: '...Schwere Unwetter fegen über München hinweg und verwandeln den Sprawl in ein Chaos. Der Sturm bricht aber auch im Untergrund los, denn in den Elendsvierteln tobt eine gnadenlose Hexenjagd. Sie droht die aufgehetzte Bevölkerung zu erfassen und die Straßen in Blut und Asche versinken zu lassen. Auf der Suche nach einem unsichtbaren Gegner sind die gejagten Runner vielleicht der entscheidende Faktor, der die Zivilisation, wie wir sie kennen, in den Abgrund stürzen könnte. Ein gefährliches Bündnis mit dem Feind des Feindes scheint die einzige Möglichkeit, den drohenden Kollaps zu verhindern. Immer vorausgesetzt, die manipulierten Marionetten blasen sich vorher nicht gegenseitig das Licht aus.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['9783890644974'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Flammenmeer',
+		releaseDate: ['2007'],
+		description: 'Das Schicksal hat einen merkwürdigen Sinn für Humor, muss der elfische Ki-Adept Renegade feststellen. Es zwingt ihn, den zwergischen Juwelier Stephen zu retten. Vor Verfolgern, einem freien Geist der Flammen und allzu oft vor sich selbst. Ist das silberne Amulett, das Stephen in die Hände gefallen ist und mit dem alle Probleme begannen, all den Ärger wert? Ähnliches fragt sich auch ein ungleiches Paar, die orkische Riggerin Hammer und Cox, seines Zeichens etwas zu emotionaler, menschlicher Magier. Doch während Stephen mit dem Zurückgewinnen seiner bürgerlichen Existenz alle Hände voll zu tun hat, steht für Hammer und Cox mehr auf dem Spiel. Ein mächtiger freier Flammengeist wurde in unsere Welt gerufen und es ist an den beiden, ihn in Vergessenheit und damit allen Sicherheit zu bringen.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3890645131'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Fatimas Tränen',
+		releaseDate: ['2007'],
+		description: 'Jari, ein Schieber in London, nimmt von einem sehr undurchsichtigen Auftraggeber einen hochprofitablen Job an: die Tränen Fatimas zu bergen und an einen sicheren Ort zu bringen. Nur handelt es sich dabei um heilige Artefakte einer muslimischen Sekte, die Tränen gelten als magisch, und der "sichere Ort" befindet sich im Norden Afghanistans. Die Shadowrunner, die den Auftrag erfüllen sollen, sind rasch gefunden: Flechette, die italienisch-deutsche Runnerin, nimmt ihn an, um ihrerseits einen Gefallen einzufordern, Reynard, ein sehr junger Runner aus gutem Haus, will Abenteuer erleben, und der Adlerschamane Voiata hat keine andere Wahl. Aber er hat andere Pläne - und Rechnungen zu begleichen.',
+		gameDate: '2050',
+		edition: 2,
+		publisher: ['Heyne Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['35010'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Der vitruvianische Moment',
+		releaseDate: ['2018-10-19'],
+		description: 'Riggs liebt die einfachen Dinge des Lebens: Actionfilme des letzten Jahrtausends, Aldi-Burger mit extra Röstzwiebelaroma und unkomplizierte Aufträge. Leider meint es das Schicksal nicht besonders gut mit ihm, als es ihn zu einer eigentlich recht unaufregend klingenden Datenextraktion in den Süden der ADL verschlägt. Denn es kommt, wie immer, anders als geplant: Ein kurioser und verlustreicher Run folgt dem nächsten. Bald fühlt sich Riggs wie der Hauptdarsteller in einem Adventure-Trid.\nDoch dann wird er persönlich in das Geflecht aus Schuld, Gewalt und Erbe aus Vergangenheit und Gegenwart verstrickt. Der Weg durch die Schatten wird eine Horrorstory – aus der es vielleicht kein Entrinnen mehr gibt.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['3957891728'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Iwans Weg',
+		releaseDate: ['2018-03-29'],
+		description: '2078. Die Welt hat sich verändert. Einige sagen sie sei erwacht. Seit Jahrzehnten zählen Zwerge, Elfen, Orks und Trolle zur Metamenschheit. Drachen wurden Präsidenten und ermordet. Großkonzerne bestimmen das Geschick der Länder. Wer Geld hat, verbessert sich mit Bio- und Cyberware. Wer Glück hat, kann Magie wirken. Und alle sind in der weltumspannenden Matrix unterwegs, die aus dem letzten Netz-Crash allumfassender erwuchs als je zuvor. Das Ruhrgebiet, Köln und Düsseldorf sind zu einem riesigen Moloch zusammengewuchert – dem Rhein-Ruhr-Megaplex. Während die Arkologien der Megakonzerne in Licht erstrahlen, versinken ganze Stadtgebiete in Schatten und Chaos. Der junge Hacker Iwan stammt aus einem dieser Gebiete, der Dortmunder Nordstadt. Er versucht alles, um einen Weg ans Licht zu finden. Als er scheitert, ist seine letzte Hoffnung die Seelie Mae. Doch ein dunkles Geheimnis umgibt diese Fee. Und sie ist auf der Flucht, verfolgt von skrupellosen Mördern. Der brutalste unter ihnen ist Rhoslyn, der sich in einer Schneise der Zerstörung durch die für ihn neue Welt von Matrix und Maschinen fräst. Auch ein Team Shadowrunner wird zur Jagd auf Mae erpresst. Jäger und Gejagte erzeugen einen Strudel aus Gewalt und Alpträumen, der Iwan für immer zu verschlingen droht.',
+		gameDate: '2078',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['35008'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Orks weinen nicht',
+		releaseDate: ['2018-07'],
+		description: 'Wo niemand deinen Namen kennt\n\nDer Rhein-Ruhr-Megaplex. Eine Verheißung für Schattenläufer. Jedenfalls für die Gewitzten. Gestalt gewordenes Chaos, das volle Taschen oder durchsiebte Körper verspricht. Rex hat es nicht leicht in diesem brodelnden Megaplex. Er führt nicht nur als Ork ein aufstrebendes Runnerteam an, er ist auch nicht bereit, für einen schnellen Euro seine moralischen Grundsätze über Bord zu werfen. Da klingt der Auftrag des Schmidt fast zu gut: Einbruch in eine BuMoNa-Klinik. Gut bezahlt. Das eigene Team im Rücken. Was soll da schon schiefgehen? Doch auf einmal muß Rex alles retten, was ihm lieb und teuer ist: seinen Ruf, seine Familie, sein Team. Und um das zu schaffen, liegt ein schier unmöglicher Run vor ihm.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['35009'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Alter Ego',
+		releaseDate: ['2018-09-21'],
+		description: 'Alles im Alleingang\n\nDer Berliner Großstadtdschungel des Jahres 2076 ist ein Schmelztigel aus skrupellosen Konzernen, der allgegenwärtigen Sprawlguerilla und türkischen Nationalisten. Um sich nicht in dem Gewirr aus Gier, Macht und Digitalen Drogen zu verirren, hat Paul Dante nicht mehr viel aufzubieten. Die Karriere des Privatschnüfflers liegt in Trümmern, seine Magie ist nahezu ausgebrannt, und auf seiner Kontaktliste stehen mehr Feinde als er zählen kann.\n\nAls ihm ein Auftrag aus der Sonnenseite des Metroplexes auf den virtuellen Schreibtisch flattert, zögert er nicht lange. Die Zeta-Imp-Chem Managerin Mailin Nowak auf der Suche nach einem verschwundenen Lokalpolitiker und bereit, dem Privatdetektiv einen großen Batzen Euros zu zahlen, sollte er den Vermissten ausfindig machen. Paul ahnt noch nicht, dass er sich auf die gefährlichste Reise seines Lebens begibt, bei der er weitaus mehr zu verlieren hat, als nur den Verstand.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
 		sku: ['46116-9', '27832'],
 		category: 'novel',
 		type: 'digital',
 		name: 'A Fistful of Data',
+		names: {
+			'de-DE': 'Für eine Handvoll Daten'
+		},
 		releaseDate: ['2006-10'],
 		description: 'In the abandoned factory known as the Crypt, society\'s castoffs have found a place to call home. Some of the Crypt\'s denizens are hiding or on the run; some have nowhere left to go. But the Crypt protects its own, providing care for street kids as well as medical and magical healing for those in need. It also sports an illegal tap into the Matrix, and hosts a coven of some of the most successful shadowrunners around.\nWhen a disgraced corporate mover takes an interest in the Crypt - and in a valuable secret long hidden in its foundations - he doesn\'t intend to let the dregs of Seattle keep him from making the score of a lifetime. But he\'s about to discover that the Crypt\'s inhabitants aren\'t going to be buried so easily....',
 		gameDate: '2063',
 		edition: 3,
-		publisher: ['WizKids Games'],
+		publisher: ['WizKids Games', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1667,11 +2018,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Aftershock',
+		names: {
+			'de-DE': 'Aftershocks'
+		},
 		releaseDate: ['2006-07'],
 		description: 'The troll known as Hood and his fellow Shadowrunners steal some biotechnological agriculture from the Plantech Corporation--only to find themselves framed for murder and tied to an even greater conspiracy.',
 		gameDate: '2063',
 		edition: 3,
-		publisher: ['WizKids Games'],
+		publisher: ['WizKids Games', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1679,11 +2033,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Drops of Corruption',
+		names: {
+			'de-DE': 'Machtgelüste'
+		},
 		releaseDate: ['2006-05'],
 		description: 'Bannickburn is a burned-out Scottish mage with little power and fewer prospects when he falls into fast company. A notorious crime boss, Bigio family caporegime Quinn Bailey offers him a job that could turn hs life around. Soon Bannickburn is living once again in the style he\'s accustomed to.\nBut then Bannickburn tries to leave the family, Bailey calls in his markers, and Bannickburn must aid the Bigios as they pit themselves against a rival mob in a power struggle that moves from the Seattle sprawl to the elven enclaive of Portland. Leading a handpicked crew of shadowrunners, Bannickburn is about to hit the jackpot - and learn that in every game, winners can turn into losers with the squeeze of a trigger....',
 		gameDate: '2063',
 		edition: 3,
-		publisher: ['WizKids Games'],
+		publisher: ['WizKids Games', 'Heyne Verlag'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1853,11 +2210,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Crimson',
+		names: {
+			'de-DE': 'Karmesin'
+		},
 		releaseDate: ['2015-04-01'],
 		description: 'Thanksgiving, 2075. Shadowrunning vampire-mage Rick “Red” Lang used to make his living hunting dangerous insect spirits and twisted mages, but when he awakens after twelve years of involuntary hibernation, he finds the rest of the world has gotten even stranger.\nRed begins piecing together what had happened during his lost time—and who put him under in the first place. But as he journeys through the neon-drenched ruins of Chicago and its augmented facades, Red uncovers an even larger plot involving eldritch forces seeking to invade from beyond our reality. He teams up with the few allies he can trust—Pretty, a beautiful ghoul, and Slim, a hacker extraordinaire—as they head into the middle of multiple schemes and power plays surrounding a dangerous new conflict threatening to shatter the uneasy peace into all-consuming chaos.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1865,11 +2225,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Dark Resonance',
+		names: {
+			'de-DE': 'Dunkle Resonanz'
+		},
 		releaseDate: ['2014-12-28'],
 		description: 'Kazuma Tetsu is a technomancer—one of the rare people who can manipulate the Matrix without technology, using only the power of their mind. But he’s on a more personal mission—he’s searching for his missing sister, Hitori. Following her trail leads him into a tangled web of corp execs, mercenaries, and double-crossing rogues—usually just another day in the Sixth World.\nBut as Kazuma digs deeper, he uncovers a plot that could bring about the end of the world. Upon seeing a simulation of the Resonances Realms accessible to technomancers, an A.I. declares it will use the realms to ascend to a higher plane of consciousness. The intelligence’s goal seems impossible, until an imprisoned and manipulated group of technomancers accesses dissonance to open a gateway to a new realm—possibly the heaven the A.I. seeks. But opening this dissonant hole in the Matrix could trigger global disaster, and it’s up to a team of shadowrunners, including a couple of denizens of the fabled JackPoint, to free the trapped technomancers and stop the Dark Resonance before it destroys the entire Matrix—and worse …',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1877,11 +2240,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Deniable Assets',
+		names: {
+			'de-DE': 'Ein ganz normaler Auftrag'
+		},
 		releaseDate: ['2016-02-06'],
 		description: 'Shadowrunner Katar Hawke knows the score on the streets. Every job is to be executed swiftly and simply—no muss, no fuss, and with as little help as possible. But when an extraction of a seemingly ordinary grad student from a Central American dig goes south in a big way, Hawke has to keep them both alive while he figures out what he’s stumbled into—and how to get out of it in one piece.\nBut nothing about this shadowrun is remotely ordinary. The student, Rachel Gordon, has unearthed an artifact linking the Sixth World and the long gone, magical Second World. The discovery sets off a lethal chain reaction of feuding megacorporations and cold-blooded killers who will do anything to get their hands on her and what she knows.\nCaught in the hardest of hard places, Hawke must break his cardinal rule and assemble his own shadowrunning team to survive what’s coming at him. But in the end, it all comes down to one question: will he sell out Rachel to the highest bidder, or join her on a quest that could change the face of the Sixth World forever?',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1889,11 +2255,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Borrowed Time',
+		names: {
+			'de-DE': 'Geborgte Zeit'
+		},
 		releaseDate: ['2015-05-26'],
 		description: 'JackPointer mage Winterhawk left the shadows at the top of his game: these days he indulges his curiosity about all things mysterious and magical on his own terms. But he’s about to discover that the shadows are hard to leave behind, and old enemies have their ways of drawing him back in.\nDosed with an exotic arcane poison that will kill him in days unless he retrieves a powerful magical artifact, ‘Hawk has to assemble a team fast and think even faster, because he’s not the only one tracking down the prize. His team is hardly the well-oiled machine he’s accustomed to: an old friend with major trust issues, an old rival who hates everything ‘Hawk stands for, a decker who annoys everyone he meets, a samurai who’s only in it for the money, and a gunslinger who may have her own agenda.\nWith his life on the line and the clock ticking fast, ‘Hawk must survive the mean streets of Los Angeles and the magical hells cape of the Australian Outback while keeping his mismatched team from imploding before they finish the job. But when the artifact is revealed to be far more than it seems, Winterhawk is forced to make a choice that could affect the lives of millions—to say nothing of his own.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1913,11 +2282,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Fire & Frost',
+		names: {
+			'de-DE': 'Feuer und Frost'
+		},
 		releaseDate: ['2014-07-02', '2014-08-26'],
 		description: 'Arcano-archaeologist Elijah knows that digging into the past can be its own reward—or peril. When he’s hired to find an ancient map purported to lead to a mysterious location at the bottom of the world, his professional curiosity is more than roused. But his quest to simply get his hands on the map is more dangerous than he expected—even for a shadow runner.\nHe and his own team of runners—including everything from a goblin rigger to a troll street samurai—follow a murky trail that takes them from the ruins of Chicago to the jungles of Amazonia. Along the way, they discover that they’re not the only ones looking for this map—and that it may lead to a treasure even greater than anyone could have known. Elijah and his crew plan to get both the map and to its riches first—assuming they survive the very dangerous road trip to get there…',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1937,11 +2309,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Shaken (No Job Too Small)',
+		names: {
+			'de-DE': 'Für alle Fälle: Kincaid'
+		},
 		releaseDate: ['2015-06-13'],
-		description: 'Most folks see Puyallup as the worst Seattle’s got to offer; a tangled mess of metahumanity and greed, poverty and ghettoes, vice and corruption, where the crime is more organized than the government. They call it a Barrens, an armpit, a cesspool.\nJimmy Kincaid, though, calls it home. Walking the line between the shadows and the desperate light, semi-legit like only a Puyallup brat and former cop can be, he insists Puyallup has a heart and a soul, that it’s a place of life, magic, and starving hope. A former combat mage, now as burnt out as his neighborhood, he does what he can to police the worst excesses of the crime-riddled city he loves.\nIn the darkness of the Seattle Sprawl, what’s one more murder?\nTo Kincaid, it’s everything. He’s got a dead mentor, a hermetic group in need, and a mysterious file that might have been worth killing for. To unlock the data and get a little justice, he’ll face the worst the Sprawl has to offer, wading through blood, darkness, and a murderous web of lies.\nIt’s a good thing he’s got friends—in high and low places…',
+		description: 'Most folks see Puyallup as the worst Seattle’s got to offer; a tangled mess of metahumanity and greed, poverty and ghettoes, vice and corruption, where the crime is more organized than the government. They call it a Barrens, an armpit, a cesspool.\nJimmy Kincaid, though, calls it home. Walking the line between the shadows and the desperate light, semi-legit like only a Puyallup brat and former cop can be, he insists Puyallup has a heart and a soul, that it’s a place of life, magic, and starving hope. A former combat mage, now as burnt out as his neighborhood, he does what he can to police the worst excesses of the crime-riddled city he loves.\nIn the darkness of the Seattle Sprawl, what’s one more murder?\nTo Kincaid, it’s everything. He’s got a dead mentor, a hermetic group in need, and a mysterious file that might have been worth killing for. To unlock the data and get a little justice, he’ll face the worst the Sprawl has to offer, wading through blood, darkness, and a murderous web of lies.\nIt’s a good thing he’s got friends—in high and low places...',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -1997,11 +2372,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'DocWagon 19',
+		names: {
+			'de-DE': 'DocWagon 19'
+		},
 		releaseDate: ['2015-03-19'],
 		description: 'DocWagon—saviors of the needy, rescuers of the desperate. Willing to go anywhere, rescue anyone, as long as that “anyone” has forked out enough advance cash to justify the effort.\nReporter Amelia Hart has embedded herself with a DocWagon team to see what their life is really like, and she’s in for a wild ride. From an OD’ing celebrity to an aggressive team of hackers, from pesky gangs to an extremely rich and powerful client teetering at death’s door, this night will give the team all they can handle. But will they survive long enough to remember that in the Sixth World, nothing is truly random?',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -2009,11 +2387,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Drawing Destiny (Tarot Anthology)',
+		names: {
+			'de-DE': 'Karten des Schicksals (Anthologie)'
+		},
 		releaseDate: ['2016-09-03'],
 		description: 'THE TAROT HAS AWAKENED…\n…And nothing will ever be the same again.\nThe Tarot, a mystical divination deck of cards, has appeared in the Sixth World as a powerful artifact. It works its will on anyone who finds one of its magical cards, from runners surviving on the street to corp executives battling in the boardroom. And not just people’s lives will be changed, for the Awakened Tarot deck is more than just a formidable magic item, it has an agenda all its own, and will seek to use those it comes in contact with to set its plans in motion…',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
 	{
@@ -6879,6 +7260,9 @@ module.exports = [
 		category: 'misc',
 		type: 'print',
 		name: 'Sixth World Tarot',
+		names: {
+			'de-DE': 'Tarot der Sechsten Welt'
+		},
 		releaseDate: ['2016'],
 		description: 'The Sixth World Tarot Deck for Shadowrun is much more than just a tarot deck. Created by Echo and Lazarus Chernik for Catalyst Game Labs, the deck is a multi-tiered, masterfully illustrated game accessory for Shadowrun, Fifth Edition, and includes hundreds of puzzles, plots, and enigmas that can be at the heart of compelling campaigns. The Sixth World Tarot comes complete with 78 full-color tarot cards and a guidebook. The cards are 2.5\' x 5\' tall, with gilded edges.',
 		gameDate: '2075',
@@ -6893,11 +7277,14 @@ module.exports = [
 		category: 'novel',
 		type: 'digital',
 		name: 'Shadows Down Under',
+		names: {
+			'de-DE': 'Schatten Down Under'
+		},
 		releaseDate: ['2016-07-22'],
 		description: 'Someone - or something - is killing nightclub entertainers in Kings Cross, Australia. Striking from the shadows, methodical and heinous, the murderer has wrapped the bawdy, colorful neighborhood in a suffocating blanket of terror.\nNinniniru "Ninn" Tossinn, a troubled private investigator on the run from her past, joins forces with Barega, an elderly Aborigine shaman, to uncover the truth behind the malevolent force - and put themselves on the Cross Slayer\'s list. But can they defeat the darkness, survive Sydney\'s powerful mana storm, and reach the true heart of the evil threatening the city? Their search takes them from gritty alleys filled with gang symbols and worse to beneath the squatter-filled harbor bridge over shark-infested waters.\nAs their investigation deepens, soon the Cross Slayer isn\'t the only foe stalking them. Ninn and Barega have to put all their trust in each other if they\'re going to bring the slayer to justice, uncover the conspiracy behind the murders, and stay alive long enough to do both.',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
 		status: 'missing'
 	},
@@ -8820,6 +9207,32 @@ module.exports = [
 		originalLanguage: 'en-US',
 		status: 'announced',
 		notes: 'Planed and unreleased.'
+	},
+	{
+		sku: [''],
+		category: 'novel',
+		type: 'digital',
+		name: 'Tower of the Scorpion',
+		releaseDate: [''],
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'rummored'
+	},
+	{
+		sku: [''],
+		category: 'novel',
+		type: 'digital',
+		name: 'Zurück im Spiel',
+		releaseDate: [''],
+		description: '',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE',
+		status: 'rummored'
 	},
 	{
 		sku: ['HWB'],
