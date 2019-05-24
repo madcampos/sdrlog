@@ -1,6 +1,8 @@
 dialogPolyfill.registerDialog(document.querySelector('#info-box'));
 const searchInput = document.querySelector('#search input');
 
+//TODO: add element.closest() calls to event listeners.
+
 /**
  * The Filter Object and it's properties.
  * @typedef Object FilterObject
