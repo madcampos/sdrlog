@@ -1,0 +1,1 @@
+Get-ChildItem -Recurse -File '*.pdf' | ForEach-Object { gm.exe convert -resize x1024 -background white "$_[0]" "$(Resolve-Path '~\Downloads\thumbs\')$($_.BaseName -replace '^(.*?) - .*$', '$1').jpg" }
