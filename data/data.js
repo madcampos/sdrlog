@@ -13,6 +13,9 @@ https://shadowhelix.de/Kategorie:Quellen_(Gratis)
 https://www.shadowiki.de/Kategorie:Quellen_(Online)
 https://forums.shadowruntabletop.com/index.php?topic=254.0
 http://www.black-book-editions.fr/catalogue.php?id=150
+https://shadowiki.de/Liste_der_Shadowrun_Romane
+https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
+https://shadowiki.de/Liste_der_Quellen-_und_Regelbücher
 */
 
 /**
