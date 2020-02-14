@@ -3,41 +3,28 @@
 TODO: check missing, add crossreferences
 TODO: add virtual seatle
 
-https://www.drivethrurpg.com/product/253683
 https://www.shadowiki.de/Schattenload
 https://www.shadowiki.de/Novapuls
-https://shadowiki.de/The_Complete_Frame_Job
-https://shadowiki.de/Der_Vitruvianische_Moment
-https://shadowiki.de/The_Johnson_Run
-https://shadowiki.de/Tower_of_the_Scorpion
 https://shadowiki.de/Marlene_Lebt
-https://shadowiki.de/Toxische_Erl%C3%B6sung
-https://shadowiki.de/Adversary
 https://shadowiki.de/Shadow_Dance
-https://shadowiki.de/Between_a_Corp_and_a_Hard_Place
 https://shadowiki.de/N%C3%A9o-R%C3%A9volution
-https://shadowiki.de/Free_Seattle
-https://shadowiki.de/30_Nights
-Split Streams
 https://shadowiki.de/Schattenhandbuch_4
-https://shadowiki.de/Berlin_2080
-Firing Squad
-Collapsing Now
-Character Deck
+https://www.shadowiki.de/Schattentricks
 Runner's Toolkit, Fifth Edition
-30 Rides
-Awakened Haunt
+Rogue’s Gallery NPC cards
+Shadowrun Dice & Edge Tokens
 
-Sources:
-https://shadowhelix.de/Kategorie:Quellen_nach_Edition
-https://www.shadowiki.de/Kategorie:Quellen_(Editionen)
+Sources to check:
 https://shadowhelix.de/Kategorie:Quellen_(Gratis)
 https://www.shadowiki.de/Kategorie:Quellen_(Online)
 https://forums.shadowruntabletop.com/index.php?topic=254.0
-http://www.black-book-editions.fr/catalogue.php?id=150
+http://danvolodar.ru/files/SR/ (check links)
+http://forums.dumpshock.com/index.php?showtopic=40509 (explore)
+
+Sources of new material:
 https://shadowiki.de/Liste_der_Shadowrun_Romane
-https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
 https://shadowiki.de/Liste_der_Quellen-_und_Regelbücher
+https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
 */
 
 /**
@@ -7299,7 +7286,7 @@ module.exports = [
 	{
 		sku: ['26857'],
 		category: 'novel',
-		type: 'print',
+		type: 'digital',
 		name: 'Undershadows',
 		releaseDate: ['2016-06-11'],
 		description: 'Vaquita has had a rough go of it lately. She was doing all right, building a career as a London-based rigger, when something went wrong inside her head. Suddenly the mental space that used to be hers alone was shared as a foreign personality carved out a section of brain for itself. It wasn’t exactly madness, but it sure felt like it.\nIt also made for some tough going for a time, and several lost jobs, but lately Vaquita’s gotten her swagger back. Her life may be a little trickier than the average runner’s, but she’s also got some skills she didn’t have before, not to mention new ways of bringing in the danger. And she has the perfect testing ground for her new abilities—the hulking, abandoned Angel Towers Arcology. Filled with squatters, gangs, vicious critters, and certain areas people only talk about in whispers, Angel Towers has enough danger and hidden caches of tech to keep a dozen teams of shadowrunners busy. And with her small, new team, Vaquita’s going to use it to not only rebuild her rep, but take it to the next level.\nBut the arcology’s secrets and dangers go far deeper than Vaquita realizes, and she’ll have to deal with the perils at every turn—as well as the people who put them there.',
@@ -8651,8 +8638,8 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
-		notes: 'Shadowrun Karren Quartett is a set of 32 cards depicting various vehicles of the Shadowrun universe with Shadowrun5 game stats.'
+		status: 'outofscope',
+		notes: 'Shadowrun Karren Quartett is a set of 32 cards depicting various vehicles of the Shadowrun universe with Shadowrun 5 game stats.'
 	},
 	{
 		sku: ['45020'],
@@ -8665,7 +8652,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
+		status: 'outofscope',
 		notes: 'Shadowrun Wummen Quartett is a set of 32 cards depicting various weapons of the Shadowrun universe with Shadowrun5 game stats. It also includes an activation code for Shadowrun Online.'
 	},
 	{
@@ -9043,6 +9030,65 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
+		sku: ['27454', '45073G'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'The Neo-Anarchist Streetpedia',
+		names: {
+			'de-DE': 'Neoanarchistische Enzyklopädie '
+		},
+		releaseDate: ['2019-06-13', '2019-07-10'],
+		description: 'ALL IN!\n\nThey\'re all here. Everyone of them. The legends, the liars, the betrayers, the winners, the craven, the brave, the powerful, the down-trodden. The people who leaked secrets and got killed for it, and the secrets that no one has discovered yet. The dark bargains, the shady deals, the desperate maneuvers. Everything that makes the Sixth World the high-revving nightmare machine its residents know too well is right here, between these two covers.\n\nThe Neo-Anarchist Streetpedia is your definitive guide to the Shadowrun universe. With hundreds of entries, it covers corporations, shadowrunners, politicians, nations, cities, criminal organizations, and more. Even better, it gets to the point and tells you what you need to know now, so you can hit the streets a little smarter than you were when you woke up this morning.\n\nThe Neo-Anarchist Streetpedia is for use with whatever form of Shadowrun you play. Don\'t play Shadowrun? Read this, learn about the Sixth World, and then find a game to dive into!',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs', 'Pegasus Verlag'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28000', '46100G', '46103G'],
+		category: 'rulebook',
+		type: 'digital',
+		name: 'Shadowrun: Sixth World',
+		names: {
+			'de-DE': 'Shadowrun Grundregelwerk Sechste Edition',
+			'fr-FR': 'Shadowrun Sixième Monde',
+			'it-IT': 'Shadowrun, iI Sesto Mondo!'
+		},
+		releaseDate: ['2019-08-26', '2019-10'],
+		description: 'RISK IT ALL!\n\nThe odds are against you. They always are. The other side has more people, more firepower, more money—more everything. What they don’t have is you—your brains, your guts, and your willingness to put everything on the line to come out on top.\n\nShadowrun, Sixth World is the latest edition of one of the most popular role-playing games of all time. In 2080, the world is controlled by all-powerful megacorps that draw on vast hoards of technology and magic to keep rest of the population under their heels. But some people refuse the seductive lure of corporate safety. These rebels refuse to sell out, and they survive by doing the dirty work no one else will do. They are shadowrunners, and they’re ready for you to join their ranks.\n\nBecome an elf shaman, an ork street samurai, a dwarf rigger, or any of hundreds of other possibilities. Find your skill set and unique expertise and use all of it on wild chances that will keep you alive, that give you one more chance at freedom. So you can survive until the next one.\n\nThe Shadowrun, Sixth World Core Rulebook contains everything you need to play besides six-sided dice. Launch into a dark, thrilling world of gaming fun as your shadowrunner sets out on the road to greatness!',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs', 'Pegasus Verlag', 'Black Book Editions', 'Wyrd Edizioni'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28001'],
+		category: 'rulebook',
+		type: 'digital',
+		name: 'Shadowrun Sixth World: Gamemaster\'s Screen',
+		releaseDate: ['2020-01-22'],
+		description: 'This Shadowrun, Sixth World Gamemaster’s Screen is what you want it to be. How do we know? Because you get to shape it. A player-facing large pocket lets you share scene inserts to change up the players’ visual experience, with many inserts included with the screen. Card pockets on the GM side help them track current NPCs and other game stats, while the GM side also displays commonly used tables. Reference sheets for the players provide easy access to critical information. Finally, and most unique, a series of Reputation/Heat trackers are built directly into the screen, enabling a runner team to track their pressure on them from any rival they face, watching them change as they play. Enclosed stickers let you choose just who is putting the Heat on the players. Make the screen what you want it to be, then use it to make your games awesome.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28010', '28100'],
+		category: 'rulebook',
+		type: 'digital',
+		name: 'Shadowrun: Sixth World: Beginner Box',
+		names: {
+			'de-DE': 'Shadowrun Sechste Edition Starterpaket'
+		},
+		releaseDate: ['2019-06', '2019-07-19'],
+		description: 'Are you ready to risk everything? The Sixth World. One of the most enduring RPG settings ever created, with shadows growing deeper and darker in its latest edition. Dominated by enormous, world-striding megacorporations strangling metahumanity in their clutches, by 2080 most of the planet has surrendered to these corporate overlords. But from the darkest shadows, defiance flickers in people known as shadowrunners. They risk everything—wrestling magical energies, channeling them into power; putting their minds against the electronic void of the Matrix; trading flesh and blood for chrome and steel. Stand up, join them, and dare to risk it all!\nShadowrun: Sixth World builds on Shadowrun’s amazingly successful legacy, becoming easier to learn and play while still providing role-playing depth. Welcome to the marquee event of the game’s 30th Anniversary year! It all starts with the Shadowrun: Sixth World Beginner Box, releasing in June.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs', 'Pegasus Verlag'],
+		originalLanguage: 'en-US'
+	},
+	{
 		sku: ['470D6'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -9103,160 +9149,124 @@ module.exports = [
 		originalLanguage: 'de-DE'
 	},
 	{
-		sku: [''],
-		category: 'mission',
-		type: 'digital',
-		name: 'Ballots of Bullets',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'mission',
-		type: 'digital',
-		name: 'Hunt Black Lodge (Malevolent 1)',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'mission',
-		type: 'digital',
-		name: 'Scalpel\'s Edge (Malevolent 2)',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'sourcebook',
-		type: 'digital',
-		name: '30 Rides',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'misc',
-		type: 'digital',
-		name: 'Awakened Haunt',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'misc',
-		type: 'digital',
-		name: 'Space Elevator',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'sourcebook',
-		type: 'digital',
-		name: '10 AI',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Virtual Tribes',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
-		category: 'misc',
-		type: 'digital',
-		name: 'Sprawl Sites: Corporate Hideouts',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
+		sku: ['26866'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Makeda Red',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
+		description: 'ON A COLLISION COURSE…\nIt was supposed be a simple extraction from the Brussels2Rome party train. With an eclectic crowd, a willing target, and a lot of nuyen at stake, what could go wrong?\nEverything—as Makeda Red discovers the hard way. There’s more than one target on the train, and more than one shadowrunner team in play. When someone sabotages the tracks in the middle of the Swiss Alps, she’s forced to extract her client much earlier than planned.\nTo complicate matters, other survivors are also fleeing the crash for their own reasons. One of them is trying to escape his corporate masters as well, and offers to pay Makeda to escort him to his safe haven.\nA paying client is a paying client, and his corp won’t be looking for three people traveling together. Makeda knows it’s a risk, but one she’s willing to take. In the shadows, however, nothing and no one is what they seem. Before it’s over, this already complicated run may be Makeda’s last...',
+		gameDate: '2080',
+		edition: 6,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
+		status: 'missing'
 	},
 	{
-		sku: [''],
-		category: 'sourcebook',
-		type: 'digital',
-		name: 'Neo-anarchist Encyclopedia',
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
-	},
-	{
-		sku: [''],
+		sku: ['26904NV'],
 		category: 'novel',
 		type: 'digital',
 		name: 'Tower of the Scorpion',
-		releaseDate: [''],
-		description: '',
-		gameDate: '2075',
-		edition: 5,
+		releaseDate: ['2019-10-24'],
+		description: 'BEWARE THE SCORPION\'S STING..\n\nRashida bint Tariq bin Feroze al-Nazari steals through the deadliest shadows in the world: Dubai, in the Caliphate of Arabia. In a merciless land policed by the Caliphate Guard, under a government that exacts harsh penalties against any shadowrunner, Rashida has to break into the Saqr Tower and get out with the intel she’s getting paid to retrieve.\nHired to steal a black op software package from Raqmu Enterprises, Rashida calls on her team of shadowrunners to help with the smash-and-grab. And this run isn’t just for the nuyen. The people behind Raqmu Enterprises killed Rashida\'s family. Failure isn\'t an option.\nBut death doesn\'t scare Rashida. A Scorpion shaman, she fights for her life every day against the spirit that grants her the power to destroy her enemies, but ultimately seeks to consume her very essence. Amid the treacherous desert sands, Rashida must battle enemies within and without if she is going to survive...',
+		gameDate: '2080',
+		edition: 6,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'rummored'
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['26865'],
+		category: 'novel',
+		type: 'digital',
+		name: 'The Johnson Run',
+		releaseDate: ['2019-10-24'],
+		description: 'AGE IS MORE THAN JUST A NUMBER\nKeandra’s been around for a long time, outliving most Shadowrunners twice over. With a legacy of runs under her belt, she has the solid reputation and wisdom that comes with surviving the shadows longer than most.\nLooking for a way to cash in on her street cred, Keandra comes up with a novel idea: Why not set herself up as a Johnson? With her rep, she could take on the high-paying jobs, act as the in-between, and collect payment with no risk? With her rep, she could take on high paying jobs and farm them out to other capable teams, minus a small cut as a finder’s fee. Everyone wins, and no one’s the wiser…unless someone makes the wrong call.\nAnd when a run goes south, Keandra and her team must scramble to salvage more than just their reputations. They are thrust into a situation which could start a new world war, and have to figure out who to trust, and fast…but trust is hard to come by in the shadows…',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28901NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'The Frame Job, Part 1: Yu',
+		releaseDate: ['2019-05-01'],
+		description: 'FIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nIt should have been a simple walk in the corp. Stroll into a mid-level corporation disguised as a nameless mid-level manager in a suit, deliver an unknown data package to an isolated network, and stroll out again.\nBut nothing is ever simple in the shadows.\nNow five shadowrunners are on the run themselves. Framed by their employer, the mysterious Mr. Johnson, and marked for termination by every hired cop, corp security, and fellow shadowrunner in Seattle, the team must find out who set them up, why they did it, and figure out how to deliver payback—without getting killed in the process.\nThe Frame Job, Part 1 is the first in a brand-new, six-novella story set in the gritty, dark future, magic-and-machine world of Shadowrun. This ZIP file contains both the Kindle (.mobi) and the ebook versions of the story.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28902NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'The Frame Job, Part 2: Emu',
+		releaseDate: ['2019-05-01'],
+		description: 'PART TWO OF THE ORIGINAL SHADOWRUN SIXTH WORLD EDITION NOVELLA SERIES!\nFIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nNow that the shadowrunning team knows they\'ve been double-crossed by one of the largest megacorps in the Sixth World, they\'ve got two jobs to do: clear their name and deliver payback with a vengeance.\n\nWhile hiding out on the outskirts of Seattle, Aussie rigger Emu begins taking steps toward that exact plan by trying to find out who set them up with Knight Errant, but she\'s also got other problems; juggling an outstanding mob debt and handling a side courier run for a friend in exchange for intel on the corp Johnson.\nHowever, even the best laid plans can go wrong, and Emu has to find a way to accomplish all all three jobs while staying one step ahead of her enemies...and their bullets.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28903NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'The Frame Job, Part 3: Rude',
+		releaseDate: ['2019-05-01'],
+		description: 'PART THREE OF THE ORIGINAL SHADOWRUN SIXTH WORLD EDITION NOVELLA SERIES!\nFIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nAfter being double-crossed by one of the largest megacorps in the Sixth World, the shadowrunner team sets their own plans in motion: clear their names and deliver payback with a vengeance.\nRude didn\'t have much planned after the Telestrian run...sleep in and wait for his share of the payday. But when Zipfile calls asking him to run stealthy back-up on Yu\'s meet with the Johnson for payment, the troll heads to the warehouse district to keep an eye on things...and finds a lot more than he bargained for.\nNow, after fighting his way through the high-level ambush that nearly killed Yu, Rude hits the streets looking for information on who tried to kill them...and who hired them to do it.\nBut in Seattle, it\'s always good to remember that the streets can hit back...and often do...',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28904NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'The Frame Job, Part 4: Frostburn',
+		releaseDate: ['2019-05-01'],
+		description: 'PART THREE [sic] OF THE ORIGINAL SHADOWRUN SIXTH WORLD EDITION NOVELLA SERIES!\nFIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nAfter being double-crossed by one of the largest megacorps in the Sixth World, the shadowrunner team sets their own plans in motion: clear their names and deliver payback with a vengeance.\nBefore they can put their plans into action, Frostburn needs to check on her family to make sure they haven\'t been targeted by the megacorp for payback. But her complicated relationship with the rest of her family is strained even further when a relative falls under the sway of a charismatic activist who has dark designs on Frostburn and her family...and will go to any lengths to get what he wants—including sacrificing idealistic kids to a doomed run against a corporation.\nBefore the night is over, Frostburn will have to draw on every bit of magic and street smarts she has to both save her relative and survive...',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28905NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'The Frame Job, Part 5: Zipfile',
+		releaseDate: ['2019-05-01'],
+		description: 'PART THREE [sic] OF THE ORIGINAL SHADOWRUN SIXTH WORLD EDITION NOVELLA SERIES!\nFIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nAfter being double-crossed by one of the largest megacorps in the Sixth World, the shadowrunner team sets their own plans in motion: clear their names and deliver payback with a vengeance.\nWhile everyone else is running around in the real world, the team’s resident decker, Zipfile, takes to the Matrix to find out all she can about who set them up and who that Johnson was working for. If she can get those answers, they’ll be one step closer getting their sweet revenge.\nBut the infinite pixels of the Matrix only lead to more questions at first, until the resourceful dwarf approaches their problem from a new angle…that nearly gets her and another team member killed.\nBefore their run is over, Zipfile uncovers even more danger in the neon sprawl of the Matrix…and those bits and bytes of data could prove more deadly than anything in the meat world…',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28906NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'The Frame Job, Part 6: Retribution',
+		releaseDate: ['2019-05-01'],
+		description: 'THE THRILLING CONCLUSION OF THE FRAME JOB SERIES!\nDouble-crossed. Ambushed. One, and possibly two megacorps out for their heads...\nYu, Emu, Rude, Frostburn, and Zipfile have been through a lot in the last few days. Their backs are against the wall. And when that happens, there’s only one thing left to do—come out swinging (or in Rude’s case, shooting).\nTheir recon and data-gathering has all paid off. They know who to hit, where to hit them, and how. Now all they gotta do is infiltrate a heavily secure corp building in a busy business area of Seattle in broad daylight and bring it down…from the inside. And all that stands in their way is Mr. Johnson himself, corp security, and another hundred and one things that could go wrong…\nAnd, assuming they can pull this mission off, there’s still the matter of the second Johnson who hired them…and who might want to ensure there are no loose ends after this job. Will the Frame Job be the team\'s last one, or will they use everything they have to find a way to come out on top?',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['2690ANV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Between a Corp and a Hard Place',
+		releaseDate: ['2020-01'],
+		description: '-',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: [''],
@@ -9289,10 +9299,105 @@ module.exports = [
 		type: 'digital',
 		name: 'Grimmes Erwachen',
 		releaseDate: ['2019-01-28'],
-		description: 'Märchenhafte Erweckung\n\nEs war einmal, vor langer Zeit: In uralten Fabeln, in Mythen und Sagen erklärten sich früher die Menschen ihre Welt. Sie gaben dunklen Gestalten Form und flüsterten ihren Söhnen und Töchtern Schauergeschichten am Bett zu. Nun aber ist die Magie erwacht. Die Ungeheuer, Feenpakte und Legenden aus diesen vergangenen Zeiten kommen zum Leben und manifestieren sich in der märchenreichen ADL. Kinder werden gejagt, alte Versprechen angemahnt und Mythen fordern ihren Blutzoll. Gut für alle, die noch die Hintergründe und Ursprünge dieser alten Märchen kennen. Wenn sie am Ende nicht sterben wollen.\n\nGrimmes Erwachen ist ein Abenteuerband für Shadowrun 5, der in der Allianz Deutscher Länder spielt. Er präsentiert drei Abenteuer, die sich alle um erwachte Sagen und Märchen drehen. Zudem enthält der Band Hintergründe und Anregungen, um selbst Legenden zu beleben und Shadowrunner tief in diese Mythen abtauchen zu lassen. ',
+		description: 'Märchenhafte Erweckung\n\nEs war einmal, vor langer Zeit: In uralten Fabeln, in Mythen und Sagen erklärten sich früher die Menschen ihre Welt. Sie gaben dunklen Gestalten Form und flüsterten ihren Söhnen und Töchtern Schauergeschichten am Bett zu. Nun aber ist die Magie erwacht. Die Ungeheuer, Feenpakte und Legenden aus diesen vergangenen Zeiten kommen zum Leben und manifestieren sich in der märchenreichen ADL. Kinder werden gejagt, alte Versprechen angemahnt und Mythen fordern ihren Blutzoll. Gut für alle, die noch die Hintergründe und Ursprünge dieser alten Märchen kennen. Wenn sie am Ende nicht sterben wollen.\n\nGrimmes Erwachen ist ein Abenteuerband für Shadowrun 5, der in der Allianz Deutscher Länder spielt. Er präsentiert drei Abenteuer, die sich alle um erwachte Sagen und Märchen drehen. Zudem enthält der Band Hintergründe und Anregungen, um selbst Legenden zu beleben und Shadowrunner tief in diese Mythen abtauchen zu lassen.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE'
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['28401'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Free Seattle',
+		releaseDate: ['2019-12-11'],
+		description: 'Power Play\n\nThe Seattle sprawl is an iconic part of the Sixth World, and it\'s about to take the next step in its evolution. Its mother country to the east, the UCAS, is flailing, and pressure is building for Seattle to make its own path and go independent. Lots of power players are trying to force the city\'s hand one way or another, and lots of money is flowing to the shadows to help or hinder those efforts.\nThere is a roster of luminaries descending on the city, and some people want them safe, and some people want them dead. Shadowrunners have lots of chances to make money, and also plenty of chances to get people gunning for them. They\'ll have to navigate the increasingly challenging conditions of the city, dealing with corrupt politicians, enraged gangers, conniving spies, and other runners bent on fouling up their business. All this might lead to a new era for Seattle—or at least, for whatever residents survive to see it.\nFree Seattle is an adventure for Shadowrun, Sixth World, designed to immerse you in this edition and help you learn how the rules work.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28300'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Cutting Black',
+		names: {
+			'de-DE': 'Blackout'
+		},
+		releaseDate: ['2020-02'],
+		description: 'TOTAL DARK\n\nVoice scream in the darkness. Voices of the lost drift through the night. Their sound is despair, sorrow, and terror. The noise grinds at your soul, but only thing worse than listening to the chorus of pain is joining it.\nThe world is changing. Desperate times require desperate measures, and the ground beneath your feet will shake when those measures are meted out. Hold on, buckle up, and try to survive. Parts of the world are cutting to black—so keep your guard up, be prepared, and don’t let the dark consume you.\nCutting Black is a campaign book to help launch players and gamemasters into Shadowrun, Sixth World. With breaking news and world-shaking events, it provides material to carry players through months of games. If they can survive that long.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs', 'Pegasus Verlag'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['26062S'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Adversary',
+		releaseDate: ['2020-01-12'],
+		description: 'A New Shadowrun Short Story!\n\nMost Awakened folks in the Sixth World have Mentor Spirits to help them navigate the vast, often confusing world of magic. Many times, the mage chooses a spirit that compliments them, and can help them out in tough situations.\nAnd then there’s Jimmy Kincaid.\nKincaid’s never been one for taking the easy road, and to say his life is complicated is like saying water’s wet. And when a simple trace job leads to a nest of Humanis thugs that have captured a metahuman hostage, well the voice of his Mentor Spirit isn’t whispering peace and goodwill in the P.I.’s ear.\nBecause Kincaid’s Mentor Spirit is Adversary … and Adversary just wants to see the world burn… Will Jimmy resist his mentor’s siren call of death and destruction… or give in to those darker instincts and just level the entire place?',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['35013G'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Toxische Erlösung',
+		releaseDate: ['2019-11'],
+		description: 'Ein lächerlich einfacher Run, eine unerwartete Begegnung und ein Angebot, das sie nicht ablehnen können: Aydem und Glinda wollen in eine höhere Liga aufsteigen und sehen endlich ihre Chance, sich in den Hamburger Schatten einen Namen zu machen. Der Auftrag scheint simpel, der Ex-Polizist und die Riggerin sollen eine verlorene Tochter finden und in Sicherheit bringen. Doch die Sache hat einen Haken: Die junge Frau steckt längst in den Fängen einer skrupellosen Organisation, die mit ihren Machenschaften die gesamte Hafenstadt bedroht. Schon bald wird die Rettungsaktion zum Kampf ums nackte Überleben, dem sich eine junge Rabenschamanin anschließt – eine dringend notwendige Verstärkung gegen die tödliche Magie der Gegner.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['35010G'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Der vitruvianische Moment',
+		releaseDate: ['2018-10-19'],
+		description: 'Riggs liebt die einfachen Dinge des Lebens: Actionfilme des letzten Jahrtausends, Aldi-Burger mit extra Röstzwiebelaroma und unkomplizierte Aufträge. Leider meint es das Schicksal nicht besonders gut mit ihm, als es ihn zu einer eigentlich recht unaufregend klingenden Datenextraktion in den Süden der ADL verschlägt. Denn es kommt, wie immer, anders als geplant: Ein kurioser und verlustreicher Run folgt dem nächsten. Bald fühlt sich Riggs wie der Hauptdarsteller in einem Adventure-Trid.\nDoch dann wird er persönlich in das Geflecht aus Schuld, Gewalt und Erbe aus Vergangenheit und Gegenwart verstrickt. Der Weg durch die Schatten wird eine Horrorstory – aus der es vielleicht kein Entrinnen mehr gibt. ',
+		gameDate: '2073',
+		edition: 5,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['46110G'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Berlin 2080',
+		releaseDate: ['2019-10'],
+		description: 'Berlin. Kein Sprawl in der ADL ist so berüchtigt und berühmt wie der dystopische Megaplex an der Spree. Die Jahre der Anarchie haben das Stadtbild und die Metamenschen geprägt, die Rückeroberung der Konzerngebiete hat neue Farbe in die Berliner Schatten gebracht. Von den gesicherten Konzernmeilen rund um Tegel und Tempelhof bis zu den düstersten Ecken in Xhain, von den Critter-Farmen in Schönwalde bis zu den Freidenker-Kommunen in Köpenick: Nirgendwo treffen so viele und so scharfe Fronten in Gedanken und an Stadtteilgrenzen aufeinander. Und nirgendwo sind die Gefahren präsenter: Konzernintrigen bedrohen Kieze, Sprawlguerilla bedroht Konzerne, das organisierte Verbrechen bedroht die Freiheit in den anarchistischen Gebieten, und noch dunklere Geheimnisse bedrohen die ganze Stadt. Und mittendrin, zwischen aufgerüsteten Berlinern, Konzerngardisten, Soldaten der Vory und Gangern auf Kamikaze, suchen Runner in den Schatten ihr Glück. Berlin 2080 ist das erste Quellenbuch für Shadowrun 6 und eine deutsche Eigenproduktion. Es bietet detaillierte Hintergrundinformationen zu den einzelnen Stadtvierteln, vielen unterschiedlichen Locations, Hotspots wie der Autonomen Inselfestung Eiswerder oder den Sorben im Spreewald, Mächtegruppen aus der Unterwelt und den Konzernen. Neben Beschreibungen des Dreamland-Sprawls, der Diskordianer und des versteckten Lebens unter der Stadt wird zudem viel Zusatzmaterial geboten: NSC-Werte, Grundrisse, Flairtipps für den Spieltisch, Waffen und Fahrzeuge sowie ein herausnehmbares, großformatiges Poster mit Karten Berlins, der Berliner Mitte und des Dreamlands, auf denen Hunderte Locations genau verortet sind.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: [''],
+		category: 'mission',
+		type: 'digital',
+		name: '30 Nights',
+		names: {
+			'de-DE': '30 Nächte und 3 Tage'
+		},
+		releaseDate: ['2020-02-13'],
+		description: '',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs', 'Pegasus Verlag'],
+		originalLanguage: 'en-US',
+		status: 'missing'
 	}
 ];
