@@ -4,7 +4,29 @@ TODO: check missing, add crossreferences
 TODO: add virtual seatle
 
 https://www.drivethrurpg.com/product/253683
-http://shadowiki.de/Hamburg-Zusatzpack
+https://www.shadowiki.de/Schattenload
+https://www.shadowiki.de/Novapuls
+https://shadowiki.de/The_Complete_Frame_Job
+https://shadowiki.de/Der_Vitruvianische_Moment
+https://shadowiki.de/The_Johnson_Run
+https://shadowiki.de/Tower_of_the_Scorpion
+https://shadowiki.de/Marlene_Lebt
+https://shadowiki.de/Toxische_Erl%C3%B6sung
+https://shadowiki.de/Adversary
+https://shadowiki.de/Shadow_Dance
+https://shadowiki.de/Between_a_Corp_and_a_Hard_Place
+https://shadowiki.de/N%C3%A9o-R%C3%A9volution
+https://shadowiki.de/Free_Seattle
+https://shadowiki.de/30_Nights
+Split Streams
+https://shadowiki.de/Schattenhandbuch_4
+https://shadowiki.de/Berlin_2080
+Firing Squad
+Collapsing Now
+Character Deck
+Runner's Toolkit, Fifth Edition
+30 Rides
+Awakened Haunt
 
 Sources:
 https://shadowhelix.de/Kategorie:Quellen_nach_Edition
@@ -3475,7 +3497,6 @@ module.exports = [
 		edition: 2,
 		publisher: ['Fantasy Productions'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'A German adventure book with 4 short-adventures.'
 	},
 	{
@@ -3489,7 +3510,6 @@ module.exports = [
 		edition: 2,
 		publisher: ['Fantasy Productions'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: '"Schlagschatten" (Drop Shadow) is a German Shadowrun adventure collection set in the Germany of 2053. It contains three adventures.'
 	},
 	{
@@ -3606,7 +3626,7 @@ module.exports = [
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US',
 		status: 'badscan',
-		notes: 'German Translation of Portfolio of a Dragon: Dunkelzahn\'s Secrets . The German version was released for Shadowrun 3, eight years after the original publication.'
+		notes: 'The German version was released for Shadowrun 3, eight years after the original publication.'
 	},
 	{
 		sku: ['7125'],
@@ -3679,8 +3699,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['27101', 'SR5B01'],
@@ -3696,8 +3715,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs', 'Black Book Editions', 'New Order Editora'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7909', '10747', 'LFSH009'],
@@ -6973,8 +6991,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-00'],
@@ -6986,8 +7003,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-01'],
@@ -6999,8 +7015,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-03'],
@@ -7012,8 +7027,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-04'],
@@ -7025,8 +7039,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-05'],
@@ -7038,8 +7051,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-06'],
@@ -7051,8 +7063,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-07'],
@@ -7064,8 +7075,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-08'],
@@ -7077,8 +7087,7 @@ module.exports = [
 		gameDate: '2052',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-02'],
@@ -7090,8 +7099,7 @@ module.exports = [
 		gameDate: '2052',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-10'],
@@ -7103,8 +7111,7 @@ module.exports = [
 		gameDate: '2052',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-11'],
@@ -7116,8 +7123,7 @@ module.exports = [
 		gameDate: '2052',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-12'],
@@ -7129,8 +7135,7 @@ module.exports = [
 		gameDate: '2052',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SRM07-05'],
@@ -7301,9 +7306,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'missing',
-		notes: 'Print only. No scans found.'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['TCG01'],
@@ -7781,8 +7784,8 @@ module.exports = [
 		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US',
-		status: 'missing',
-		notes: 'Originally print only, this book is a compilation of other books with few added material.\nThe German edition has a few items from Germany and the FRench edition has the items from "Used Car Lot" and "Gun Haven 2".'
+		status: 'outofscope',
+		notes: 'Originally print only, this book is a compilation of other books with few added material.\nThe German edition has a few items from Germany and the French edition has the items from "Used Car Lot" and "Gun Haven 2".'
 	},
 	{
 		sku: ['26105', '47011'],
@@ -7804,7 +7807,7 @@ module.exports = [
 		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
-		status: 'missing',
+		status: 'outofscope',
 		notes: 'Originally print only, this book is a compilation of other books with few added material.\nThe German edition have a few itens from Germany.'
 	},
 	{
@@ -7855,13 +7858,14 @@ module.exports = [
 		category: 'boardgame',
 		type: 'physical',
 		name: 'Shadowrun: Zero Day',
+		releaseDate: ['2017'],
 		description: 'You are the contagion. You are the fear. You are the thing that makes the megacorporations of the world tremble. In the world of Shadowrun, the corps think they have everyone and everything under their thumb, but they don\'t have you - the hacker in the Matrix, the fly in the ointment. You know where the world\'s deepest secrets are buried - and you have the weapons needed to fight to bring them out.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
 		status: 'outofscope',
-		notes: 'Unreleased card game. Announced at Gen Con 2017.'
+		notes: 'Physical card game. Announced at Gen Con 2017.'
 	},
 	{
 		sku: ['26874'],
@@ -8058,7 +8062,7 @@ module.exports = [
 		edition: 4,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'unreleased',
 		notes: 'An Prime Mission announced for the Year of Shadowrun but never released.'
 	},
 	{
@@ -8071,7 +8075,7 @@ module.exports = [
 		edition: 4,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'unreleased',
 		notes: 'An Prime Mission announced for the Year of Shadowrun but never released.'
 	},
 	{
@@ -8246,7 +8250,7 @@ module.exports = [
 		edition: 2,
 		publisher: ['Descartes Editeur'],
 		originalLanguage: 'fr-FR',
-		status: 'outofscope',
+		status: 'missing',
 		notes: 'A complete description of France from the world of Shadowrun in 2057, with its history, political system, organization of society, organized crime, most powerful duchies, new creatures, new equipment, new spells, etc. French only. Considered semi/non-cannon.'
 	},
 	{
@@ -8259,8 +8263,8 @@ module.exports = [
 		edition: 3,
 		publisher: ['Fantasy Productions'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
-		notes: 'Unreleased'
+		status: 'unreleased',
+		notes: 'Unreleased adventure.'
 	},
 	{
 		sku: ['26859'],
@@ -8384,8 +8388,7 @@ module.exports = [
 		gameDate: '2078',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'missing'
+		originalLanguage: 'de-DE'
 	},
 	{
 		sku: ['45068'],
@@ -8398,7 +8401,6 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'Complementary material to Datapuls: Hamburg, contains maps, booklets and a GM Screen.'
 	},
 	{
@@ -8518,8 +8520,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'missing'
+		originalLanguage: 'de-DE'
 	},
 	{
 		sku: ['45019'],
@@ -8532,7 +8533,6 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'Schattenhandbuch (Shadow Handbook) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin’s Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch was published in a numbered limited edition with a print run of 3000 books.'
 	},
 	{
@@ -8545,8 +8545,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'missing'
+		originalLanguage: 'de-DE'
 	},
 	{
 		sku: ['45039'],
@@ -8559,21 +8558,19 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'A German printed edition of the previeously released "Datapuls" series, with public transportation maps as an addition.'
 	},
 	{
 		sku: ['46085'],
 		category: 'mission',
 		type: 'print',
-		name: 'Blut und Spiele',
+		name: 'Blut & Spiele',
 		releaseDate: ['2011-06'],
 		description: 'Es herrscht Krieg in den Straßen - doch nicht um Geld oder Macht, sondern um Punkte. Die Stadtkrieg-Saison hat wieder begonnen, die DeMeKo flutet die Medien mit Werbung für die Mannschaften, und die Fans machen sich auf einen heißen Sommer gefasst. In den Straßen und auf den Plätzen der geräumten Wohngebiete laufen die Stars der Chromlegion Bremen, der Naniten Nürnberg und der Berliner Cybears auf, um den Zuschauern ein Spektakel besonderer Art zu bieten - im blutigen Kampf um zwei Bälle und zwei Torzonen. Wen jucken da noch der jüngste Vereinsskandal oder die vertriebenen Bewohner der Spielareals?\nBlut und Spiele, von Pegasus für die deutsche Spielerschaft produziert, ist ein Abenteuerband für Shadowrun 4, der sich mit Stadtkrieg befasst - einer der brutalsten Sportarten der Sechsten Welt. In vier Abenteuern wird das Thema lose aufgenommen. In einem Zusatzkapitel wird der Sport genauer beleuchtet, die Liga in der Allianz Deutscher Länder beschrieben, hinter die Kulissen der Vereinsstrukturen geschaut. Neben Werten für Spieler und Sportpersonal ist auch die Beschreibung eines besonderen Sportevents enthalten - mit der man die vier Abenteuer im Band zu einer Kampagne der besonderen Art verknüpfen kann. Damit es auch bei den Runnern ankommt: Es ist wieder KRIEG!\nBlut und Spiele, Abenteuerband zu Shadowrun von Pegasus Press; ca. 200 Seiten, Hardcover',
 		gameDate: '2074',
 		edition: 4,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'German 200 page adventure.'
 	},
 	{
@@ -8587,7 +8584,6 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'A compilation of: "Shadows in Focus: Sioux Nation", "Starving the Masses" and "Counting Coup"'
 	},
 	{
@@ -8601,7 +8597,6 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'A Shadowrun supplement released at Gratisrollenspiltag 2016.'
 	},
 	{
@@ -8615,7 +8610,6 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'Collects three Shadowrun Missions adventures (SRM 5A-01 Chasin\' the Wind, SRM 5A-02 Critic\'s Choice, SRM 5A-03 Gone long gone) and a description of the city of Chicago.'
 	},
 	{
@@ -8685,7 +8679,6 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'German adventure based on the book "Blut & Spiele".'
 	},
 	{
@@ -8711,8 +8704,7 @@ module.exports = [
 		gameDate: '2074',
 		edition: 4,
 		publisher: ['Fantasy Productions'],
-		originalLanguage: 'de-DE',
-		status: 'missing'
+		originalLanguage: 'de-DE'
 	},
 	{
 		sku: ['21008'],
@@ -8725,7 +8717,6 @@ module.exports = [
 		edition: 4,
 		publisher: ['Fantasy Productions'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'This book was poublished in 2005 by Fanpro. It features a comprehensive look at the history, influence and mechanics of Shadowrun from 1989 to date. It includes a collection of articles on Shadowrun-related topics, short stories and a collector\'s guide listing all Shadowrun publications and novels in English and German.'
 	},
 	{
@@ -8755,7 +8746,6 @@ module.exports = [
 		edition: 4,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'Netzstücke is an expansion for the German version of Spy Games (Machtspiele). It features additional material for campaigns in Germany.'
 	},
 	{
@@ -8769,7 +8759,6 @@ module.exports = [
 		edition: 4,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
 		notes: 'Rhein-Ruhr-Megaplex (Rhine Ruhr Megaplex) is a German Shadowrun sourcebook that provides detailed information about the Ruhr area and parts of the Rhineland.\nMain Topics of the book are:\n\t- Megaplex overview\n\t- A tour through the Megaplex areas\n\t- Culture\n\t- Saeder-Krupp\n\t- Powers and Organizations\n\t- Points of Interest\n\t- Maps, locations, and adventure hooks'
 	},
 	{
@@ -8854,8 +8843,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'missing'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SRM08-01'],
@@ -8903,7 +8891,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'unreleased',
 		notes: 'Announced as a kickstarter campaign. Possible a retake on Hostile Takeover.'
 	},
 	{
@@ -8988,7 +8976,7 @@ module.exports = [
 		edition: 1,
 		publisher: ['Descartes Editeur'],
 		originalLanguage: 'fr-FR',
-		status: 'outOfScope',
+		status: 'outofscope',
 		notes: 'A condensed edition with: Native American Nations Volume 1, Native American Nations Volume 2 without the adventure "Peacekeeper".'
 	},
 	{
@@ -9002,7 +8990,7 @@ module.exports = [
 		edition: 2,
 		publisher: ['Descartes Editeur'],
 		originalLanguage: 'fr-FR',
-		status: 'outOfScope',
+		status: 'outofscope',
 		notes: 'A translation of the adventure "Peacekeeper".'
 	},
 	{
@@ -9040,8 +9028,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'missing'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['27453'],
@@ -9056,17 +9043,64 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: [''],
+		sku: ['470D6'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Datapuls: Proteus',
-		description: '',
+		releaseDate: ['2019-04-29'],
+		description: 'Experimente mit Metamenschen. Dunkle Geheimnisse in toxischen Arkologien. Umweltbeeinflussungen durch Magie und Technik. Genmanipulierte Wachcritter und Verschwörungen: Viel wird vom Nordseekonzern Proteus berichtet und doch ist kaum etwas bekannt. Es ist Zeit, zumindest einen Teil des Schleiers zu lüften ...\nDatapuls Proteus wirft ein Licht auf den AA-Konzern Proteus, dessen Geschichte und Machenschaften die Schatten der ADL schon mehrmals durchgerüttelt und geprägt haben.',
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'announced',
-		notes: 'Planed and unreleased.'
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['470D7'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Schweiz',
+		releaseDate: ['2019-04-29'],
+		description: 'Das Nachbarland der ADL in den Alpen besteht nicht nur aus Schokolade und Käsefondue. Mächtige Banken bestimmen von hier das Geschick der Weltwirtschaft - und in ihren Schließfächern lagern manche dunklen Geheimnisse. Die Erwachte Alpeninterdiktszone ist ein Tummelplatz seltener und wertvoller, aber auch extrem gefährlicher Critter. Und auch in den großen Städten wie Zürich oder Basel sind die Schatten nie still ...\nDatapuls Schweiz wirft ein Licht auf die Eidgenossenschaft im Süden der ADL. Das PDF präsentiert einen Rundblick über die Schweiz: etwa auf Regierung, Konzerne und Unterwelt sowie ein paar der größeren Städte des Landes.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['470D8'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Verschlusssache',
+		releaseDate: ['2019-04-29'],
+		description: 'Nicht nur die großen Konzerne spinnen ihre Netze in den Schatten. Auch die Geheimdienste manipulieren in den Schatten und verfolgen verborgene Ziele ihrer Regierungen ... oder ganz eigene. Diese mächtigen Spieler, frei von Konzernpolitik und Aufsichtsratkontrollen sind Gegner, die Runner lieber nicht aus dem Blick verlieren sollten.\nDatapuls Verschlusssache wirft ein Licht auf die Geheimdienste der ADL - vor allem das Bundestamt für Innere Sicherheit, mächtiges Kontrollwerkzeug der Regierung, und Argus: den Nachrichtendienst der MET2000.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['470D9'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: Frankfurt',
+		releaseDate: ['2019-04-29'],
+		description: 'Während die Reichen und Mächtigen in ihren Glastürmen thronen und die Innenstadt der Mainmetropole mittels modernster Technik kontrollieren, brodelt es in den Schatten des Plexes Groß-Frankfurt. Drogenküchen, Critter im Spessart und im Odenwald, alte Magie in Heidelberg, Verbrechen und Intrigen, all dies findet sich im Fundament des Sprawls, der nur äußerlich strahlt und glänzt. Doch noch schlimmer sind die Ränke der Mächtigen, des FBV und der AG Chemie, die hier ihre Burgen stehen haben.\nDatapuls Frankfurt wirft ein Licht auf den Groß-Frankfurt-Plex: auf seine offenen und versteckten Machthaber, auf die Sicherheitstruppen, auf Städte wie Mannheim, Heidelberg oder Mainz, auf diverse urbane Hotspots und auf das, was hinter der Fassade lauert und Runnern ihr Auskommen sichert.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE'
+	},
+	{
+		sku: ['470D0'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Datapuls: SOTA 2080',
+		releaseDate: ['2019-04-29'],
+		description: 'Viel Tradition existiert in der ADL. Zu alten Zeiten gab es Schwertkampf und Fechtschulen, die heute wieder erstarken und sich der Techniken von damals bedienen. Alte Magie wird wiederentdeckt und von Erwachten genutzt. Aber auch neue Fahrzeuge und Drohnen kommen immer wieder auf den Markt – und des Runners liebstes Spielzeug: Waffen.\nDatapuls SOTA 2080 ist ein Magie- und Ausrüstungs-PDF für Shadowrun. Es behandelt Nahkampfschulen alter Schule, Klingenwaffen und Klappspaten, neue Feuerwaffen wie den Kanonenschlag und Fahrzeuge sowie Drohnen. Zudem liefert es detaillierte Hintergrundinformationen zu einigen, teils neuen ADL-Magietraditionen und neue Schutzgeister. ',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Pegasus Spiele'],
+		originalLanguage: 'de-DE'
 	},
 	{
 		sku: [''],
