@@ -1,8 +1,8 @@
 /*eslint-env node */
 /*
-TODO: check missing, add crossreferences
-TODO: add virtual seatle
 
+Add materials:
+Virtual Seatle
 https://www.shadowiki.de/Schattenload
 https://www.shadowiki.de/Novapuls
 https://shadowiki.de/Marlene_Lebt
@@ -13,6 +13,15 @@ https://www.shadowiki.de/Schattentricks
 Runner's Toolkit, Fifth Edition
 Rogue’s Gallery NPC cards
 Shadowrun Dice & Edge Tokens
+SRM08-03: 10 Block Tango
+Lifestyle 2080
+Battle Royale (?)
+Unterwelt-Quellenbuch
+Verschwörungstheorien
+Parazoologie 2075
+
+Check list of released materials and update data:
+https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 Sources to check:
 https://shadowhelix.de/Kategorie:Quellen_(Gratis)
@@ -20,6 +29,8 @@ https://www.shadowiki.de/Kategorie:Quellen_(Online)
 https://forums.shadowruntabletop.com/index.php?topic=254.0
 http://danvolodar.ru/files/SR/ (check links)
 http://forums.dumpshock.com/index.php?showtopic=40509 (explore)
+***REMOVED***
+***REMOVED***
 
 Sources of new material:
 https://shadowiki.de/Liste_der_Shadowrun_Romane
@@ -271,20 +282,6 @@ module.exports = [
 		description: 'The year is 2072. Magic has returned and creatures of myth and legend walk among us as megacorps bleed the world dry. You\'re a shadowrunner—a deniable asset, a corporate pawn—using bleeding-edge science and magic to make your meat body and mind better-than-flesh. Stay on the edge, and you may survive another run on the mean sprawl streets.\nShadowrun, Fourth Edition offers a completely new rules system that is simple, integrated, and accessible. The state-of-the-art has also been advanced, introducing a new level of augmented reality, new gear, and new magical discoveries. This full-color rulebook contains all the rules gamemasters and players need to create characters and ongoing adventures set in the popular Shadowrun universe.\nShadowrun, Fourth Edition 20th Anniversary Core Rulebook is fully compatible with all Shadowrun, Fourth Edition books.',
 		gameDate: '2072',
 		edition: 4,
-		links: [
-			{
-				name: 'Shadowrun Grundregelwerk 4. Edition',
-				url: 'https://www.drivethrurpg.com/product/95839/Shadowrun-4-Grundregelwerk'
-			},
-			{
-				name: 'Shadowrun Édition 20e anniversaire',
-				url: 'https://www.drivethrurpg.com/product/94212/Shadowrun-4-20-ans'
-			},
-			{
-				name: 'Shadowrun 4th Edition - 20th Anniversary Core Book',
-				url: 'https://www.drivethrurpg.com/product/60553/Shadowrun:-4th-Ed.-20th-Anniversary-Core-Rulebook'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', '新紀元社'],
 		originalLanguage: 'en-US'
 	},
@@ -300,12 +297,6 @@ module.exports = [
 		description: 'Nobody Knows All Magic\n\nDigital Grimoire is the Master\'s Class of Magic--expanding on Street Magic, it details additional traditions, magical groups & threats, spirits, enchanting expansions, and a handful of new spells and adept powers. Traditions: Egyptian, Rastafarian, Psionic Magical Groups: Shrine of the Southern Winds, The Oxford Grand Lodge, Código 515 Magical Threats: Toxic Paths, Shadow Spirits, Insect Spirits Digital Grimoire is 18 pages (including cover): a bite-sized expansion to Shadowrun, Fourth Edition and Street Magic.',
 		gameDate: '2070',
 		edition: 4,
-		links: [
-			{
-				name: 'Digital Grimoire',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=58911&filters=0_0_40050_0'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Black Book Editions'],
 		originalLanguage: 'en-US',
 		notes: 'The German edition of Street Magic incorporates the translation of Digital Grimoire.'
@@ -322,16 +313,6 @@ module.exports = [
 		description: 'Hiding from the Heat \n\nIf it hasn’t happened to you yet, it will. A run will go south. People will be looking for you. Their eyes will be everywhere—your home, your friends’ houses, the places you hang out, even the spots where you buy your soykaf. They’re looking for you, waiting for you, and when they find you, they’re not going to talk. It’ll be a single shot, or a flash of sharp steel, and you’ll be done.\nTo avoid this, you need to lay low. You need a place where no one will look for you, and where you’ll have enough of life’s basics to get you by. Don’t know where to find such a place? You’re in luck, chummer—we’ve got the guide for you. Whether your acquiring and stocking your own bolt hole or engaging professional safehouse managers, we’ve got the info you need to live to fight another day.',
 		gameDate: '2074-08',
 		edition: 4,
-		links: [
-			{
-				name: 'Safehouses (English)',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=99534'
-			},
-			{
-				name: 'Safehouses (German)',
-				url: 'https://www.drivethrurpg.com/product/104930/Shadowrun:-Safehouses'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -349,16 +330,6 @@ module.exports = [
 		description: 'Life in the shadows has never been as dangerous, and runners need every edge they can get. Runner’s Companion opens up a world of expanded options for Shadowrun players with dozens of New Qualities, Advanced Contact and Lifestyle Rules, and handy tips on running, travelling and smuggling, and operating in a surveillance society.',
 		gameDate: '2071-07',
 		edition: 4,
-		links: [
-			{
-				name: 'Runner\'s Companion',
-				url: 'http://drivethrurpg.com/product/57426/Shadowrun-Runners-Companion'
-			},
-			{
-				name: 'Runnerkompendium',
-				url: 'http://drivethrurpg.com/product/95845/Shadowrun-Runnerkompendium'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions', '新紀元 社'],
 		originalLanguage: 'en-US'
 	},
@@ -1036,16 +1007,6 @@ module.exports = [
 		description: 'The only friend you’ll ever need. The last friend you’ll ever have. Your gun is the one thing in your life that should be dependable, that should always make a nice loud bang when you squeeze the trigger, and should always bring down whoever you think should fall. Of course, if your weapon is going to be that important to you, you’ll need one that suits you perfectly. And to find the right match, it’s best if you have a lot of choices.\nWelcome back to Gun Heaven, where your next best friend is waiting for you. Dozens of options await, from the troll-friendly Krime Cannon to the foldable Terracotta Arms Mordred, from the stylish Shiawase Arms K2072 to the true tool of the desperate, the Barrens Special. And on top of that is a new breakthrough in ammo that gives you a better chance to hit your intended target.',
 		gameDate: '2072-11',
 		edition: 4,
-		links: [
-			{
-				name: 'Gun H[e]aven 2',
-				url: 'https://www.drivethrurpg.com/product/102362/Shadowrun:-Gun-Heaven-2'
-			},
-			{
-				name: 'Feuerkraft 2',
-				url: 'https://www.drivethrurpg.com/product/104929/Shadowrun:-Feuerkraft-2'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -1093,16 +1054,6 @@ module.exports = [
 		description: 'Sometimes you look at a catalog to see if there\'s anything in it that you want. And sometimes you look to see what you need to avoid.\nYou\'ll find both types of things in here. The tech heads of the Sixth World remain busy, coming up with more ways to slaughter metahumans with maximum efficiency. And they have plenty of battlegrounds in the world where they can test their toys out. There are things in here that shadowrunners would be exceedingly lucky to get their hands on, and things whose very appearance serves to tell them they’re having a very bad day indeed. From automated strike drones to nearly invisible tactical aircraft, from the ground-clearing Dassault Zeta Bravo to the drone killing Bridgette Tactical Vehicle, Mil Spec Tech 2 has the latest and greatest tools of war – along with a host of missiles to keep anyone in a war zone on their toes.',
 		gameDate: '2074-07',
 		edition: 4,
-		links: [
-			{
-				name: 'MilSpec Tech 2',
-				url: 'https://www.drivethrurpg.com/product/104143/Shadowrun:-Mil-Spec-Tech-2'
-			},
-			{
-				name: 'MilSpec Tech-Katalog 2',
-				url: 'https://www.drivethrurpg.com/product/107465/Shadowrun:-MilSpecTech-Katalog-2'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -1133,16 +1084,6 @@ module.exports = [
 		description: 'They’re Not Old—They’re Classic We’d all like access to bleeding-edge, state-of-the-art tech, but we can’t always have it. Sometimes your nuyen’s gotta be spent somewhere else, or sometimes you haven’t got any nuyen to spend. And sometimes those old designs that everyone’s written off show up and kick your ass, proving it’s too soon for them to be forgotten. This Old Drone is a Shadowrun supplement containing information on 30 classic drones that appeared in older Shadowrun sourcebooks but haven’t made the transition to Shadowrun, Fourth Edition—until now. From the rail-mounted, wireless-shunning Ares Sentinel “P” Series to the old MQ-8 Fire Scout roto-drone, This Old Drone contains the info, rules, and stats you need to bring classic drones into the modern era of Shadowrun.',
 		gameDate: '2072-07',
 		edition: 4,
-		links: [
-			{
-				name: 'This Old Drone (Revised)',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=85311'
-			},
-			{
-				name: 'Vertraute Drohnen',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=97042'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
 		notes: 'The revised version is the colored version included in "Runner\'s Black Book".'
@@ -1159,16 +1100,6 @@ module.exports = [
 		description: 'It’s a big world, and not all of the work that’s available is sitting right outside your front door. Sometimes you might need to hop across a country, across a continent, or across an ocean. Other times you might look to the air to find a way across a border that’s too tough to cross on the ground. And then there are the times you might need something in the air that can pack a much-needed punch.\nUnfriendly Skies provides descriptions and game information for thirty-two aircraft, including the EuroWars-tested MiG-63, the slow but easy-to-overlook Skyswimmer, and the luxurious Platinum II. The book also includes information on the basics of air travel in 2073, including information on which paths you may or may not follow if you are trying to lay low.',
 		gameDate: '2072-09',
 		edition: 4,
-		links: [
-			{
-				name: 'Unfriendly Skies',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=91994'
-			},
-			{
-				name: 'Gefahr in den Wolken',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=96380'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -1184,16 +1115,6 @@ module.exports = [
 		description: 'The corporations of the Sixth World love a good challenge—as long as it suits them. Ending world hunger? Not interested. Eliminating poverty? There’s no margin in that. Finding creative and more effective ways to blow things up and/or reduce them to rubble? That, they can do.\nWar is raging on the Aztlan-Amazonia border, and there are plenty of other places in the world where people are willing to fork over piles of nuyen to buy that tank or fighter that would help them sleep better at night. There is good demand for military technology, and the corps are stepping up with the supply.',
 		gameDate: '2073-02',
 		edition: 4,
-		links: [
-			{
-				name: 'MilSpec Tech',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=87804'
-			},
-			{
-				name: 'MilSpec Tech-Katalog',
-				url: 'https://www.drivethrurpg.com/product/105737/Shadowrun:-MilSpecTech-Katalog'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -2765,16 +2686,6 @@ module.exports = [
 		description: 'The Edge of Now\n\nSome people think that being state-of-the-art means being on the bleeding-edge of technology. That’s part of it, but only a small part. If you really want to be current, if you want to know what’s going on in the world and how it might affect you, you need to know about a lot more than new tech. You need to know about current events—like the speech Hestaby gave to the United Nations that put the dragons of the Sixth World into an uproar. You need to know what you’ll see on the roads, from new vehicles to re-purposed classics. You need to know about the latest research on Awakened plants and the exceedingly creative uses scientists are putting them to.\n\nTake those elements and stir in up-to-date information on important people and places—like cagey intelligence ace Samantha Roth and the tumultuous nation of Thailand—and you have a dossier that can help runners stay current and make sure they know what’s happening now in the Sixth World. Because the runner caught up in yesterday is a runner that’s been left behind.\n\nState of the Art: 2073 is for use with Shadowrun, Twentieth Anniversary Edition.',
 		gameDate: '2073-12',
 		edition: 4,
-		links: [
-			{
-				name: 'State of the Art: 2073 (German)',
-				url: 'https://www.drivethrurpg.com/product/102533/Shadowrun:-State-of-the-Art-2073'
-			},
-			{
-				name: 'State of the Art: 2073 (English)',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=97864'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -2787,12 +2698,6 @@ module.exports = [
 		description: 'Unusual Suspects\n\nTen people. Ten very different people. A pirate who has made himself into one of the most wanted men in the world. A datathief whose skill is only matched by his flair and panache. Two corporate giants whose personalities—and actual physical makeup—couldn’t be more different. A troll whose name has a history much older than herself. And other individuals with stories and secrets of their own.\nSome of them are people you want on your side, and some of them are people who could be very dangerous enemies if you aren’t careful. All of them are people you should know, because all of them have something—money, power, knowledge, or all three—that you can use.\nStreet Legends Supplemental follows the format of the Street Legends book by presenting information on ten characters from the Shadowrun universe, sharing stories about their activities in the Sixth World and also offering complete game information and statistics for them. Each character also comes with plot information gamemasters can use as they develop their campaigns. While it is a companion to Street Legends, Street Legends Supplemental can be enjoyed entirely on its own.',
 		gameDate: '2073-12',
 		edition: 4,
-		links: [
-			{
-				name: 'Street Legends Supplemental',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=98146'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2808,16 +2713,6 @@ module.exports = [
 		description: 'Step Up\n\nDear Applicant:\nThank you for applying for membership in our revered magical society. We are certain you understand that we receive more applications than we can accept, due in part to the prestige we enjoy in the Sixth World. We are a group who attracts notice. The mundane citizens of the world look at us with suspicion, while the Awakened look at us with envy, for they believe that we harbor dark secrets and world-changing schemes, and it of course is quite possible that they are right.\nSo we understand why you would seek to join us. We hope you can show us something special. We hope you can show us something new. We hope you can give us a reason why you should associate with our members by showing us what we can gain from having you among us. If you think first about what you can give, then you will have the opportunity to think about what you can get. Of course, if the rumors about us are true, the answer to that last item is simple: the world.\nWe look forward to your trial, and we hope you survive it. Should you wish, you may cancel that ordeal and instead attempt to join one of the other, lesser magical societies in the world. If you believe you can be satisfied with that.\nWe would wish you luck, but if you are skilled, you should not need it.',
 		gameDate: '2074-05',
 		edition: 4,
-		links: [
-			{
-				name: 'Magical Societies',
-				url: 'https://www.drivethrurpg.com/product/103145/Shadowrun:-Magical-Societies'
-			},
-			{
-				name: 'Magische Gesellschaften',
-				url: 'https://www.drivethrurpg.com/product/106637/Shadowrun:-Magische-Gesellschaften'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2845,12 +2740,6 @@ module.exports = [
 		description: 'Everyone knows the score between the Yaks, Mafia, and Triad, but when you get down to it, the ganger on the corner is just as likely to try and kill you. Here is the download on ten mid-sized gangs that are looking to make a name for themselves.\n10 Gangs is a Shadowrun product, designed to supplement any campaign and utilizes the Gang rating system from Vice. Each gang comes with plot hooks and stats for gamemasters and players to use for run ideas, contacts, and keeping an eye on the competition.',
 		gameDate: '2072',
 		edition: 4,
-		links: [
-			{
-				name: '10 Gangs',
-				url: 'https://www.drivethrurpg.com/product_info.php?products_id=78874'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2863,12 +2752,6 @@ module.exports = [
 		description: 'Find Your Way Into Wealth or Out of Danger\n\nIf your run the shadows long enough and manage to stay alive, you’ll find your way into all sorts of places—from bank vaults where the wealthy store their most previous possessions to densely packed warrens that pack dozens of the poor into tight spaces. Maybe you’ll need to break a patient out of a tightly guarded hospital, or maybe you’ll need to help your client sneak into an exclusive party on the top floor of a luxurious mansion.\nWherever you’re going, it helps to have a map—and some knowledge of who you might run into while you’re there. Sprawl Sites: High Society and Low Lifeprovides eight full-color maps, including a train station, an airport terminal, an automobile chop shop, and a department store, where shadowrunners might encounter all kinds of challenges. Each map is keyed on one side, while the other provides floor plans that can be given to players clever enough to find them. The book also provides information on who runners are likely to meet at each location, security at those locations, and plot hooks to help gamemasters involve the players at each spot.',
 		gameDate: '2074',
 		edition: 4,
-		links: [
-			{
-				name: 'Sprawl Sites: High Society and Low Life',
-				url: 'https://www.drivethrurpg.com/product/110016/Shadowrun:-Sprawl-Sites:-High-Society-and-Low-Life'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2936,12 +2819,6 @@ module.exports = [
 		description: 'Great White Shadows\n\nBikers and go-gangs roam the streets of Montreal in 2074. Organized crime outfits struggle for territory. And neo-anarchists add spice and danger to the streets. All this would seem to be nothing more than lawless chaos except for one thing—money. Cheap real estate and savvy moves by the megacorporations have brought some cash into town, and a new city is being built on the remains of the old. And as every runner knows, when you shine the light of money onto the darkness of a ruined city, you get one thing: shadows.\nMontreal 2074 gives adventurous runners the chance to take their talents to a new locale, doing business on the isle of Montreal. Whether they are dodging the gangs of the West Island or looking to bargain with the Mafiosi of Saint Leonard, runners will find plenty of opportunities in Montreal. They just need to make sure they don’t end up as part of the piles of rubble—and they also need to watch out for the fast, brutal group known as Les Frères Chasseurs.\nMontreal 2074 contains information on neighborhoods, gangs, and activities that bring the city to life in the Sixth World setting. With plot hooks and NPC stats, the book provides everything players and gamemasters need to take a trip to the Great White North.',
 		gameDate: '2074-12',
 		edition: 4,
-		links: [
-			{
-				name: 'Montreal 2074',
-				url: 'https://www.drivethrurpg.com/product/109297/Shadowrun:-Montreal-2074'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2966,12 +2843,6 @@ module.exports = [
 		description: 'Natural Born Killers!\n\nSome shadowrunners long to escape the dirt and danger of the Sixth World’s sprawls for the supposed peace and tranquility of nature. Thing is, the ones that actually try it generally find themselves quickly scurrying back to the city once they discover what’s waiting for them out there in the wild. From the sharp-toothed, lightning-fast ammit to the sneaky, venomous greater dancing white lady, nature in the Sixth World is full of ways to kill the unsuspecting and incautious.\nParazoology 2 is here to make sure shadowrunners are prepared for the dangers that lie in wait. With full details on dozens of Sixth World critters as well as firsthand accounts of encounters with mysterious creatures in their natural habitats, Parazoology 2 is a critical book for runners making their way into the wilds—even if that means the dark alleys just down the road.',
 		gameDate: '2075-08',
 		edition: 4,
-		links: [
-			{
-				name: 'Parazoology 2',
-				url: 'https://www.drivethrurpg.com/product/118468/Shadowrun-Parazoology-2'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -2999,16 +2870,6 @@ module.exports = [
 		description: 'Grab Some Wheels and Ride\n\nIt\'s nice when you can spend the time and the money to pick the exact right vehicle to suit your needs, but time and money are two luxuries shadowrunners don\'t always have. Sometimes you need just two characteristics in a vehicle: It\'s cheap, and it moves.\nUsed Car Lotprovides an assortment of vehicles for Shadowrun so that runners can have plenty of options, from the practical, affordable Ford Americar to the ridiculously luxurious Rolls Royce Phaeton. Motorcycles, sports cars, limousines, and trucks, and more—they\'re all here. A lot of the vehicles here may not be state-of-the-art, but they\'ll get you from point A to point B, they may help you blend in with the rest of the populace, and they\'ll save you a few nuyen while you\'re at it. Because a good shadowrunner knows how to use fancy toys, but a great shadowrunner knows how to be awesome with simpler tools.',
 		gameDate: '2074-02',
 		edition: 4,
-		links: [
-			{
-				name: 'Used Car Lot',
-				url: 'https://www.drivethrurpg.com/product/103890/Shadowrun:-Used-Car-Lot'
-			},
-			{
-				name: 'Vertraute Fahrzeuge',
-				url: 'https://www.drivethrurpg.com/product/106369/Shadowrun:-Vertraute-Fahrzeuge'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -3021,12 +2882,6 @@ module.exports = [
 		description: 'This is the way it works—if you want to know what the main cause of World War II was, look at World War I. If you want to understand the United States of America in the late twentieth century, make sure you understand the Vietnam War and all of its ramifications. The point is this: Even if you didn’t fight in a war, even if you weren’t born when the war started, the conflicts still shape the world you live in. They shape you.\nThe hottest flames of the Euro Wars have faded, but the embers still burn. Whether it’s tanks, missiles, planes, or guns from that conflict that are still in use today, or people in the shadows who carry old grudges and dark secrets, the impact of the Euro Wars remains strong in the Sixth World.',
 		gameDate: '2075-02',
 		edition: 4,
-		links: [
-			{
-				name: 'Euro War Antiques',
-				url: 'https://www.drivethrurpg.com/product/115060/Shadowrun:-Euro-War-Antiques'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -3054,16 +2909,6 @@ module.exports = [
 		description: 'When you’re a shadowrunner, you look for every ally you can get, any advantage you can grab. Which means that if the ground beneath your feet can either help you or hurt the other guy, you’re going to find a way to make that happen.\nThe earth is full of magic. Mana lines wriggle and writhe in different locales, and strange elements bubble up from the core of the planet. Some areas boost magic to seemingly impossible heights, while others drain it away, sucking mana into nothingness. There are powers out there, just waiting for you to call on—powers that may also be waiting to swallow you whole.',
 		gameDate: '2074-11',
 		edition: 4,
-		links: [
-			{
-				name: 'Parageology',
-				url: 'https://www.drivethrurpg.com/product/108434/Shadowrun-Parageology'
-			},
-			{
-				name: 'Parageologie',
-				url: 'https://www.drivethrurpg.com/product/144638/'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -3163,7 +3008,7 @@ module.exports = [
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US',
 		status: 'badscan',
-		notes: 'This is the German translation of the The Neo-Anarchist\'s Guide to Real Life sourcebook for Shadowrun, 2nd Edition. It misses two chapters of the original publication ("One-way Communication" and "Guarding the Till")'
+		notes: 'In the German translation it misses two chapters of the original publication ("One-way Communication" and "Guarding the Till")'
 	},
 	{
 		sku: ['7211'],
@@ -3655,12 +3500,6 @@ module.exports = [
 		description: 'Unfold the World\n\nThe Sixth World is full of dark alleys, twisted corridors, and hidden locations for nefarious activities. Shadowrunners and 16th century explorers both know the same truth—the difference between death and survival when entering a hazardous area may be a good map.\nSprawl Sites: North America presents eight full-color maps that can be used in a variety of sprawls, making it simple for gamemasters to call up a number of different locations when they need it. From a luxury hotel to a collection of blocks in an urban barrens, from a shopping mall to a trideo studio, the collection includes maps that can be used in many different situations. The maps are double-sided, with a key on one side, making them useful as both a guide for players and a reference for gamemasters. The package also includes a booklet providing details on security and other personnel found in the location, along with plot hooks to help involve these spots in your game.',
 		gameDate: '2072',
 		edition: 4,
-		links: [
-			{
-				name: 'Sprawl Sites: North America',
-				url: 'https://www.drivethrurpg.com/product/103244/Shadowrun:-Sprawl-Sites:-North-America'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -3986,16 +3825,6 @@ module.exports = [
 		description: 'The Ends of the Earth And Beyond\n\nDark alleys, abandoned buildings, wet streets stabbed with neon light—shadowrunners know all these places. They also know that they aren’t the only places work gets done. A good shadowrunner should be open to anything, to runs that might take them anywhere. From the cold of Antarctica to the heat of the Sahara, from the life-filled dark of the deep oceans to the empty void of outer space, there is work to be had for runners brave and resourceful enough to take it. Of course, there are also dozens of new ways to die, so you should probably see if Mr. Johnson will chip in a little extra pay.',
 		gameDate: '2074-04',
 		edition: 4,
-		links: [
-			{
-				name: 'Gefahrenzuschlag - Todeszonen der 6. Welt',
-				url: 'https://www.drivethrurpg.com/product/107792'
-			},
-			{
-				name: 'Hazard Pay',
-				url: 'https://www.drivethrurpg.com/product/102133/Shadowrun:-Hazard-Pay'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
 	},
@@ -4079,12 +3908,6 @@ module.exports = [
 		edition: 4,
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
-		links: [
-			{
-				name: 'Errata (Shadowrun Wiki)',
-				url: 'http://shadowrun.wikia.com/wiki/Source:Sixth_World_Almanac/Errata'
-			}
-		],
 		notes: 'The English almanac was riddled with content and formal errors that were removed by Pegasus in consultation with CGL in the German version. These include duplicate or incorrect info boxes, flags in illustrations, which did not exist at the time of the depicted scene, and incorrect coastal and borderlines.'
 	},
 	{
@@ -4116,16 +3939,6 @@ module.exports = [
 		description: 'Claws At Your Throat\n\nNever, ever deal with a dragon. Shadowrunners have heard that dictum so often, they frequently say those words in their sleep. But what the aphorism forgets to tell you is this—what if you don’t have a choice?\nThe tension between dragons has been growing, and the big lizards are throwing every weapon they have at each other, including shadowrunners—especially shadowrunners. Extractions, industrial sabotage, theft, wetwork—there\'s plenty of jobs in all those areas, and dragons are finding ways to get reluctant runners to work for them. Maybe they’ll hide their involvement in the run, or maybe they’ll bribe the runners with large piles of nuyen or blackmail them with their past activities. Or maybe they’ll just tell the runners they have a simple choice of working for them or being eaten.\nWhatever tactics they choose, the dragons are going to be active and aggressive, and if runners want to survive, they better be on their toes. They need to know who the draconic players are, what they’re up to, and what might happen to them if they fall into a dragon’s grip. They need to be ready for anything, because when dragons go at each other, the world shakes, the earth beneath them burns—and far too often, shadowrunners die.',
 		gameDate: '2074-07',
 		edition: 4,
-		links: [
-			{
-				name: 'The Clutch of Dragons',
-				url: 'https://www.drivethrurpg.com/product/104571/Shadowrun:-The-Clutch-of-Dragons'
-			},
-			{
-				name: 'Drachenbrut',
-				url: 'https://www.drivethrurpg.com/product/111845/Shadowrun:-Drachenbrut'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
 		notes: 'The German edition has some aditions regarding German dragons.'
@@ -4231,12 +4044,6 @@ module.exports = [
 		description: 'Digging in the dirt\n\nPolitics is only a dirty word when it\'s not working for you. For shadowrunners, politics aren’t about debates and position papers—they’re about taking some of the money people are throwing around.\nDuring election season, when power is up for grabs, people are willing to do just about anything to get a piece of the pie. If you can help them get what they want, they’ve got a job for you. It may be peeking in the windows of the rich and famous. Or finding dirt on the opposition (or making some up). Or, if things get really desperate, ensuring the other guy doesn’t win because he’s too busy taking a dirt nap.\nHow much money you take in and how dirty your fingers get is up to you and your desire to not see the stars above you when you sleep. You’ll probably have to make some compromises along the way, but since when has life in the Sixth World—or politics—been any different?',
 		gameDate: '2074-11',
 		edition: 4,
-		links: [
-			{
-				name: 'Dirty Tricks',
-				url: 'https://www.drivethrurpg.com/product/107819/Shadowrun:-Dirty-Tricks'
-			}
-		],
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
 	},
@@ -8757,12 +8564,6 @@ module.exports = [
 		description: 'Die Allianz Deutscher Länder: ein Flickenteppich.\nUralte magische Orte und hochmoderne Konzernarkologien. Ödes Brachland und überbaute Straßenschluchten. Toxische Piraten und Alpen-Aktivisten. Wicca-Hexen und Universitätsmagier. Man reist durch ein Land, in dem jeder Quadratmeter Geschichte, Gefahren oder neue Möglichkeiten präsentiert. Nirgendwo liegen die Gegensätze so nah aneinander, nirgendwo sind die Gemeinsamkeiten so klar. Und daher sollte man sich auskennen. Nicht nur, um zu überleben, sondern auch, um seine Chancen zu nutzen.\nDer Reiseführer in die deutschen Schatten ist ein Quellenbuch für Shadowrun 4. Er bietet neues Material für das Spiel in der ADL: Beschreibungen von Stuttgart, dem Harz oder Pomorya, Einblicke in Schattenjobs, Besonderheiten der deutschen Runnerszene, berühmte und berüchtigte Personen und eine Vielzahl spannender Locations und Settings – reich bebildert mit Illustrationen, Karten, Grundrissen und insgesamt 24 Farbseiten, darunter eine Übersicht der Proteusarkologie auf Helgoland.\nDie Allianz Deutscher Länder: ein Runner-Spielplatz.',
 		gameDate: '2074',
 		edition: 4,
-		links: [
-			{
-				name: 'Reiseführer in die Deutschen Schatten',
-				url: 'https://www.drivethrurpg.com/product/108383/Shadowrun:-Reisef%C3%BChrer-in-die-deutschen-Schatten'
-			}
-		],
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
 		notes: 'German sourcebook for Shadowrun detailing various aspcets of shadowrunning in Germany, including organized crime, famous shadowrunners, possible targets and certain interesting regions.'
