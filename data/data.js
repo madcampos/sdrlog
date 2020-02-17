@@ -5,22 +5,16 @@ Add materials:
 Virtual Seatle
 https://www.shadowiki.de/Schattenload
 https://www.shadowiki.de/Novapuls
-https://shadowiki.de/Marlene_Lebt
-https://shadowiki.de/Shadow_Dance
-https://shadowiki.de/N%C3%A9o-R%C3%A9volution
 https://shadowiki.de/Schattenhandbuch_4
 https://www.shadowiki.de/Schattentricks
 Runner's Toolkit, Fifth Edition
 Rogue’s Gallery NPC cards
 Shadowrun Dice & Edge Tokens
-SRM08-03: 10 Block Tango
-Lifestyle 2080
 Battle Royale (?)
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
-https://www.shadowiki.de/Convention_Mission_Pack_2012
 https://www.shadowiki.de/Convention_Mission_Pack_2016
-https://www.shadowiki.de/Convention_Mission_Pack_2011
+https://www.shadowiki.de/Convention_Mission_Pack_2012
 https://www.shadowiki.de/Convention_Mission_Pack_2010
 https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
 https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Seminar
@@ -8680,6 +8674,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
+		sku: ['SRM08-03'],
+		category: 'mission',
+		type: 'digital',
+		name: '10 Block Tango',
+		releaseDate: ['2020-01-21'],
+		description: 'MAXIMUM FLAVOR\n\nPit fighters. Gangers. Insect spirits. Warlords. Broken roads, no Matrix signal, no cops, and plenty of people trying to mess with what you’re doing. They’re all ingredients in the tasty stew that is Sixth World Chicago. Runners are about to dive into the full flavor—and see how spicy it gets. Chicago’s waiting. Go survive it.\nShadowrun Missions 08-03: Cell Block Tango is an adventure for Shadowrun, Fifth Edition.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
 		sku: ['26S057'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -8841,16 +8847,20 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: ['27453'],
+		sku: ['27453', '45071G'],
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'No Future (A Cyberpunk Sourcebook)',
-		releaseDate: ['2019-01-21'],
+		names: {
+			'de-DE': 'Lifestyle 2080'
+		},
+		releaseDate: ['2019-01-21', '2019-03-19'],
 		description: 'SCREAM YOUR TRUTH\n\nThe voices will be heard. The powers of the Sixth World want to control everything, keeping the world pacified through bland entertainment and milquetoast messages.\n\nBut they can’t keep everyone quiet. People have ideas screaming to get out and the tools to record and spread them. Whether they’re starting a new band, recording guerrilla trid dramas, or launching a pirate tridcast where someone tells the truth for once, they can grab audiences by the throat and get them to listen.\n\nThey’re out of patience, and everyone else is out of time. No Future is the Shadowrun guide to Sixth World culture, including information on music acts, trid movies and series, media sources, and sports, with a look at some of the voices bubbling up from the underground and demanding attention. With detailed setting information and relevant rules, No Future adds new elements and depth to Sixth World role-playing.\n\nNo Future is a cyberPUNK sourcebook that details the culture and everyday life of the Shadowrun setting and is useful for whatever version of Shadowrun you play!',
 		gameDate: '2075',
 		edition: 5,
-		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US'
+		publisher: ['Catalyst Game Labs', 'Pegasus Verlag'],
+		originalLanguage: 'en-US',
+		notes: 'The German version has an aditional 20 pages of the life in ADL.'
 	},
 	{
 		sku: ['27454', '45073G'],
@@ -9221,5 +9231,45 @@ module.exports = [
 		publisher: ['Catalyst Game Labs', 'Pegasus Verlag'],
 		originalLanguage: 'en-US',
 		status: 'missing'
+	},
+	{
+		sku: ['26864'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Shadow Dance',
+		releaseDate: ['2020-01-21'],
+		description: 'THE SHADOWS OF A MAN\'S PAST ARE LONG…\n\nCole Danvers is a small-time shadowrunner scratching out a living in the dangerous, divided sprawl of Denver, Colorado. But when a lucrative heist to steal an AmerIndian amulet goes terribly wrong, costing him both his teammates and nearly his life, Cole hits the streets intent on only one thing — vengeance.\nBut as he tracks down the Johnson that sent him on this deadly mission, Cole quickly realizes he’s stumbled onto a plot much bigger than stealing a piece of jewelry — and that it’s somehow connected to his own shadowed past. Soon, he’s sucked into machinations that involve Native Americans, wily shamans, and impossibly, himself. And even sooner, Cole realizes he needs help to take down his enemies — before he gets killed for real this time.\nAssembling a motley crew of shadowrunners using every bit of guile and charisma he possesses, Cole sets out to solve the mystery of who tried to double-cross him and why… and what, if anything it has to do with his own murky background. But the answers may do more than just shock him… before it’s all over, they may just be the death of him…',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'missing'
+	},
+	{
+		sku: ['35012G'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Marlene Lebt',
+		releaseDate: ['2019-07-31'],
+		description: 'Marlene Dietrich erwacht im Rhein-Ruhr-Megaplex des Jahres 2078. Megakonzerne wollen ihre Persönlichkeit, Shadowrunner ihren Körper und Marlene will überleben. In einer Welt in der die Magie erwacht ist, Menschen, Elfen, Zwerge, Orks und Trolle ihren Körper mit Cyberware erweitern und alle in der Matrix unterwegs sind, gerät die Diva, der Vamp, die Legende zwischen alle Fronten; übermächtige Drachen, menschenfressende Guhle, Execs die Angestellte versklaven und zu willenloser Sexarbeit zwingen, gnadenlose Runner und der Abschaum in den Schatten. Wird Marlene die sechste Welt überstehen und das Rätsel ihrer Existenz lösen?',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['BBESR602'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Néo-Révolution',
+		releaseDate: ['2018-07-13'],
+		description: 'Quelque chose de pourri se trame dans l\'Hexagone...\n\nParis, 2076. Le peuple gronde et la VIe République menace de s\'effondrer. Le président, Yohann de Kervelec, sent l\'étau se resserrer. La noblesse veut sa tête pour avoir révélé la Cabale, les corporations veulent qu\'il disparaisse pour avoir les coudées franches et tous ses alliés l\'ont abandonné. Acculé, il tente un dernier coup, qui va plonger un groupe de shadowrunners dans la tourmente qui va s\'emparer dans la France jusqu\'en 2080. Entre rencontres de PNJ français emblématiques et exploration des recoins de la capitale, les PJ mèneront de périlleuses excursions au cœur de la Brume de Bretagne et dans la fange radioactive de la SOX. Au bout du compte, ils seront les seuls à pouvoir révéler les sombres secrets qui se cachent derrière la Néo-Révolution – s\'ils y survivent.\nNéo-Révolution est une campagne en cinq scénarios pour Shadowrun, Cinquième édition et Shadowrun Anarchy, accompagnée d\'un guide détaillé de Paris en 2080. La campagne invite ses joueurs à prendre part aux événements qui mèneront à la Néo-Révolution, un bouleversement politique qui changera à jamais le visage de la France de Shadowrun.',
+		gameDate: '2076',
+		edition: 5,
+		publisher: ['Black Book Editions'],
+		originalLanguage: 'fr-FR',
+		status: 'missing',
+		notes: 'Campaign and sourcebook for France and in particular the capital Paris.'
 	}
 ];
