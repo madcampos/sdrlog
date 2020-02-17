@@ -16,9 +16,26 @@ Shadowrun Dice & Edge Tokens
 SRM08-03: 10 Block Tango
 Lifestyle 2080
 Battle Royale (?)
-Unterwelt-Quellenbuch
-Verschwörungstheorien
-Parazoologie 2075
+https://www.shadowiki.de/Convention_Mission_Pack_2018
+https://www.shadowiki.de/Convention_Mission_Pack_2017
+https://www.shadowiki.de/Convention_Mission_Pack_2012
+https://www.shadowiki.de/Convention_Mission_Pack_2016
+https://www.shadowiki.de/Convention_Mission_Pack_2011
+https://www.shadowiki.de/Convention_Mission_Pack_2010
+https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
+https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Seminar
+
+Add lists:
+https://www.shadowiki.de/Shadowrun_Vintage
+https://www.shadowiki.de/Kategorie:Quellen_(Replays)
+https://www.shadowiki.de/Kategorie:Quellen_(Romane)
+https://www.shadowiki.de/Kategorie:Quellen_(Erg%C3%A4nzungsmaterial)
+https://www.shadowiki.de/Shadowrun:_Missions_-_Hamburg
+
+Articles in magazines:
+https://www.shadowiki.de/Shadowrun-Artikel_in_Magazinen_(englisch)
+https://www.shadowiki.de/WunderWelten
+https://www.shadowiki.de/Mephisto_Magazin
 
 Check list of released materials and update data:
 https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
@@ -31,6 +48,10 @@ http://danvolodar.ru/files/SR/ (check links)
 http://forums.dumpshock.com/index.php?showtopic=40509 (explore)
 ***REMOVED***
 ***REMOVED***
+https://www.shadowiki.de/Kategorie:Quellen_(Kurzgeschichten)
+https://www.shadowiki.de/Kategorie:Quellen_(Abenteuer)
+https://www.shadowiki.de/Kategorie:Quellen_(Kampagnen)
+https://www.shadowiki.de/Kategorie:Quellen_(Erg%C3%A4nzungsmaterial)
 
 Sources of new material:
 https://shadowiki.de/Liste_der_Shadowrun_Romane
@@ -7087,8 +7108,7 @@ module.exports = [
 		gameDate: '2075',
 		edition: 5,
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
-		originalLanguage: 'en-US',
-		status: 'missing'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['26857'],
@@ -7396,7 +7416,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'announced',
 		notes: 'Announced fo the Year of Shadowrun but never released. Some "developer diary" posts are available on Shadowrun\'s blog.'
 	},
 	{
@@ -7409,7 +7429,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'announced',
 		notes: 'Announced fo the Year of Shadowrun but never released. Some "developer diary" posts are available on Shadowrun\'s blog.'
 	},
 	{
@@ -7632,7 +7652,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'missing',
 		notes: 'Print only.'
 	},
 	{
@@ -7671,6 +7691,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
+		status: 'missing',
 		notes: 'A compilation of previously released novels.'
 	},
 	{
@@ -7739,7 +7760,7 @@ module.exports = [
 		edition: 3,
 		publisher: ['FASA Corporation'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'canceled',
 		notes: 'This was the last FASA novel, announced but never released. Here for historical reasons.'
 	},
 	{
@@ -7752,7 +7773,7 @@ module.exports = [
 		edition: 3,
 		publisher: ['FASA Corporation'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
+		status: 'canceled',
 		notes: 'An adventure announced by FASA, never released. Here for historical reasons.'
 	},
 	{
@@ -7856,7 +7877,7 @@ module.exports = [
 		edition: 4,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'unreleased',
+		status: 'canceled',
 		notes: 'An Prime Mission announced for the Year of Shadowrun but never released.'
 	},
 	{
@@ -7869,7 +7890,7 @@ module.exports = [
 		edition: 4,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'unreleased',
+		status: 'canceled',
 		notes: 'An Prime Mission announced for the Year of Shadowrun but never released.'
 	},
 	{
@@ -8057,7 +8078,7 @@ module.exports = [
 		edition: 3,
 		publisher: ['Fantasy Productions'],
 		originalLanguage: 'en-US',
-		status: 'unreleased',
+		status: 'canceled',
 		notes: 'Unreleased adventure.'
 	},
 	{
@@ -8286,7 +8307,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Pegasus Spiele'],
 		originalLanguage: 'de-DE',
-		status: 'missing',
+		status: 'outofscope',
 		notes: 'This item consists of a folio to store notes and character sheets as well as a sturdy cardboard version of the German SR5 character sheet. It was released by Pegasus for Gratisrollenspieltag 2014 (German Free RPG Day).'
 	},
 	{
@@ -8319,7 +8340,7 @@ module.exports = [
 	{
 		sku: ['45019'],
 		category: 'sourcebook',
-		type: 'print',
+		type: 'scan',
 		name: 'Schattenhandbuch',
 		releaseDate: ['2014'],
 		description: 'Tipps für Assassinen, neuste Waffentechnologie, tödliche Paracritter: Das Schattenhandbuch bringt neues Material für Shadowrun 5 an die Spieltische, mit dem Spieler und Spielleiter die Sechste Welt noch näher erfahren können. Ob es um Schmuggel und unerlaubte Grenzübergänge geht, die Moral verdingter Killer, toxische Katzen oder einfach nur die Auswahl des nächsten Einsatzgefährts der Runnertruppe: Hier wird man fündig!\n\nDas Schattenhandbuch setzt die Tradition der Schattenkataloge aus der vorangegangenen Edition für Shadowrun 5 fort. In ihm enthalten sind die PDFs Feuer und Stahl, Kojoten und das Assassinen-Handbuch. Zudem präsentiert es Parazoologie 1 und das bisher noch nie auf deutsch veröffentlichte Parazoologie 2 – beide komplett aufbereitet für Shadowrun 5. Und zu guter Letzt darf auch ein exklusives ADL-AddOn mit brandneuen Vans und Waffen nicht fehlen.',
@@ -8332,7 +8353,7 @@ module.exports = [
 	{
 		sku: ['45034'],
 		category: 'sourcebook',
-		type: 'print',
+		type: 'scan',
 		name: 'Schattenhandbuch 2',
 		releaseDate: ['2015'],
 		description: 'Limited print edition of various SR5 pdfs.\nThis volume includes:\n\t- Schattenzauber (Shadow Spells)\n\t- Parabotanik 2075 (Parabotany, updated for SR5)\n\t- Parageologie (Parageology, updated for SR5)\n\t- Ätherologie (Aetherology)\n\t- Kugeln & Bandagen (Bullets & Bandages)\n\t- ADL Magie Update',
@@ -8344,7 +8365,7 @@ module.exports = [
 	{
 		sku: ['45039'],
 		category: 'sourcebook',
-		type: 'print',
+		type: 'scan',
 		name: 'Schattenhandbuch 3',
 		releaseDate: ['2015'],
 		description: 'Das Schattenhandbuch 3 ist der Nachfolger der Schattenhandbücher 1 und 2 – und führt die Reihe damit fort. Auch dieser Band enthält mehrere PDFs von der Plattform www.pegasusdigital.de für Shadowrun 5 in gedruckter Fassung, die sich alle dem deutschsprachigen Raum widmen:\n\t- Datapuls Berlin (ein neuer und tieferer Blick auf das große B an der Spree mit vielen Kiezkarten, Neuigkeiten aus der Unterwelt und Beschreibung des Berlin-Konzerns);\n\t- Datapuls Trollrepublik & Schwarzwald (ein Rundgang durch die Erwachte Welt des Schwarzwalds und durch die neue politische Lage der Trollrepublik);\n\t- Datapuls Karlsruhe (ein Besuch in der Sonderverwaltungszone, in der die Bundeswehr herrscht und deren merkwürdige arkane Phänomene dunkle Logen und Geheimbünde anziehen);\n\t- Datapuls Österreich (zu Gast in den österreichischen Schatten mit einem genaueren Blick auf Wien);\n\t- Datapuls SOX (eine Reise in die toxische Verbotszone, mit all ihren Glowpunks, Manalöchern, Crittern, Ghulstämmen und düsteren Konzernmachenschaften).\nHinzukommt ein kleiner, exklusiver ADL-Zusatz, der sich nur in diesem Buch finden und sich Fahrzeugen aus dem Nahverkehr der ADL widmet.',
@@ -8357,7 +8378,7 @@ module.exports = [
 	{
 		sku: ['46085'],
 		category: 'mission',
-		type: 'print',
+		type: 'scan',
 		name: 'Blut & Spiele',
 		releaseDate: ['2011-06'],
 		description: 'Es herrscht Krieg in den Straßen - doch nicht um Geld oder Macht, sondern um Punkte. Die Stadtkrieg-Saison hat wieder begonnen, die DeMeKo flutet die Medien mit Werbung für die Mannschaften, und die Fans machen sich auf einen heißen Sommer gefasst. In den Straßen und auf den Plätzen der geräumten Wohngebiete laufen die Stars der Chromlegion Bremen, der Naniten Nürnberg und der Berliner Cybears auf, um den Zuschauern ein Spektakel besonderer Art zu bieten - im blutigen Kampf um zwei Bälle und zwei Torzonen. Wen jucken da noch der jüngste Vereinsskandal oder die vertriebenen Bewohner der Spielareals?\nBlut und Spiele, von Pegasus für die deutsche Spielerschaft produziert, ist ein Abenteuerband für Shadowrun 4, der sich mit Stadtkrieg befasst - einer der brutalsten Sportarten der Sechsten Welt. In vier Abenteuern wird das Thema lose aufgenommen. In einem Zusatzkapitel wird der Sport genauer beleuchtet, die Liga in der Allianz Deutscher Länder beschrieben, hinter die Kulissen der Vereinsstrukturen geschaut. Neben Werten für Spieler und Sportpersonal ist auch die Beschreibung eines besonderen Sportevents enthalten - mit der man die vier Abenteuer im Band zu einer Kampagne der besonderen Art verknüpfen kann. Damit es auch bei den Runnern ankommt: Es ist wieder KRIEG!\nBlut und Spiele, Abenteuerband zu Shadowrun von Pegasus Press; ca. 200 Seiten, Hardcover',
@@ -8383,7 +8404,7 @@ module.exports = [
 	{
 		sku: ['GRST-2016'],
 		category: 'mission',
-		type: 'print',
+		type: 'scan',
 		name: 'Gefahr in Boston',
 		releaseDate: ['2016'],
 		description: 'People in Boston are going crazy! Even crazier than at a Sox game, apparently - in fact, the whole town has been sealed off! It\'s a Yanks fan\'s dream come true.',
@@ -8438,7 +8459,7 @@ module.exports = [
 		sku: ['45042'],
 		category: 'misc',
 		type: 'print',
-		name: 'Karren Quartett',
+		name: 'Karrenquartett',
 		releaseDate: ['2016'],
 		description: 'DAS KARRENQUARTETT FÜR SHADOWRUN 5\nDieses für 2-5 Personen gedachte Spiel folgt den klassischen Quartett-Regeln: Ihr versucht, komplette Sätze (A-H) zu sammeln. Natürlich könnt ihr mit den zahlreichen auf den Karten aufgelisteten Fahrzeugwerten das Spiel auch als klassisches Stechquartett verwenden.',
 		gameDate: '2075',
@@ -8452,7 +8473,7 @@ module.exports = [
 		sku: ['45020'],
 		category: 'misc',
 		type: 'print',
-		name: 'Wummen Quartett',
+		name: 'Wummenquartett',
 		releaseDate: ['2014'],
 		description: 'Waffenpower!\nOb Planung, Intrigen, Infiltration: Echte Runner wissen, dass es Zeiten gibt, in denen das letzte Wort gesprochen wurde. Dann gilt nur noch, wer sich im Kampf behauptet, wer den Schusswechsel überlebt – und wer die größeren Waffen hat.\nDas Wummenquartett für Shadowrun 5 mit seinen großzügigen, vierfarbigen Illustrationen enthält auf 32 Karten bekannte Waffen aus dem Shadowrun-Universum: von der kleinen Pistole bis zum großen Scharfschützengewehr. Neben der Möglichkeit, es als normales Quartett zu spielen, kannst du es dank der angegebenen Waffenwerte auch als Stechquartett nutzen – und sogar im Rollenspiel als Ausrüstungskarten verwenden.\nInklusive eines Freischalt-Codes für Shadowrun Online, der einen exklusiven Ausrüstungsgegenstand verfügbar macht.',
 		gameDate: '2075',
@@ -8511,6 +8532,7 @@ module.exports = [
 		edition: 4,
 		publisher: ['Fantasy Productions'],
 		originalLanguage: 'de-DE',
+		status: 'missing',
 		notes: 'This book was poublished in 2005 by Fanpro. It features a comprehensive look at the history, influence and mechanics of Shadowrun from 1989 to date. It includes a collection of articles on Shadowrun-related topics, short stories and a collector\'s guide listing all Shadowrun publications and novels in English and German.'
 	},
 	{
@@ -8679,7 +8701,7 @@ module.exports = [
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'unreleased',
+		status: 'outofscope',
 		notes: 'Announced as a kickstarter campaign. Possible a retake on Hostile Takeover.'
 	},
 	{
@@ -8958,8 +8980,7 @@ module.exports = [
 		gameDate: '2080',
 		edition: 6,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'missing'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['26904NV'],
