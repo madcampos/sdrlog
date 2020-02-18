@@ -3,15 +3,9 @@
 
 Add materials:
 Virtual Seatle
-https://www.shadowiki.de/Schattenload
 https://www.shadowiki.de/Novapuls
-https://shadowiki.de/Schattenhandbuch_4
-https://www.shadowiki.de/Schattentricks
-Runner's Toolkit, Fifth Edition
-Rogue’s Gallery NPC cards
+Rogue’s Gallery
 Shadowrun Dice & Edge Tokens
-Schattenkrieg
-Schattenwerkzeug
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
 https://www.shadowiki.de/Convention_Mission_Pack_2016
@@ -19,11 +13,8 @@ https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
 https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Seminar
 
 Add lists:
-https://www.shadowiki.de/Shadowrun_Vintage
 https://www.shadowiki.de/Kategorie:Quellen_(Replays)
-https://www.shadowiki.de/Kategorie:Quellen_(Romane)
 https://www.shadowiki.de/Kategorie:Quellen_(Erg%C3%A4nzungsmaterial)
-https://www.shadowiki.de/Shadowrun:_Missions_-_Hamburg
 
 Articles in magazines:
 https://www.shadowiki.de/Shadowrun-Artikel_in_Magazinen_(englisch)
@@ -3783,6 +3774,20 @@ module.exports = [
 		edition: 4,
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['45100G'],
+		category: 'rulebook',
+		type: 'print',
+		name: 'Schattenwerkzeug',
+		releaseDate: ['2011'],
+		description: 'HANDWERKSZEUG FÜR DIE SCHATTEN\n\nSchattenwerkzeug ist ein Zusatzband für Shadowrun 4, der neue Kontakte, Abenteuerbeispiele und -orte beschreibt und vorstellt. Zudem enthält er das CGHS, ein modulares System zur simplen und schnellen Erstellung von Spieler- und Nichtspielercharakteren, sowie die „Anatomie eines Shadowruns“. Letzteres beschreibt einen typischen Shadowrun und bringt dem Spielleiter anhand dieses Runs gleichzeitig die Regeln, die Proben und die Systematik eines Abenteuers nahe.\n\nSchattenwerkzeug ist als Printprodukt Bestandteil der Schattenrüstzeug-Box.',
+		gameDate: '2072',
+		edition: 4,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing',
+		notes: 'A soft cover book containing some of the material from Runner\'s Toolkit German edition and a new adventure.'
 	},
 	{
 		sku: ['26100A'],
@@ -9168,6 +9173,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
+		sku: ['SRM-HAM'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Missions: Hamburg',
+		description: 'Missions - Hamburg was developed by Pegasus Verlag as a street-level campaign in Hamburg, and is offered by the official supporters in game rounds at a number of conventions in Germany such as the "NordCon". Afterwards, the individual missions in Pdf format should be made available for free download on their homepage. - In fact, only the first of the missions was published.',
+		gameDate: '2072',
+		edition: 4,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
 		sku: ['26062S'],
 		category: 'novel',
 		type: 'digital',
@@ -9235,6 +9252,46 @@ module.exports = [
 		status: 'missing'
 	},
 	{
+		sku: [''],
+		category: 'mission',
+		type: 'digital',
+		name: 'Schattentricks',
+		releaseDate: ['2019-10-24'],
+		description: 'Großkonzerne hatten in Berlin immer schon einen schweren Stand. Und so reagieren sie besonders alarmiert, wenn Meinungsmache und Massenmanipulation gegen sie gerichtet wird. Dann aktivieren sie Runner, die tief in den Hexenkessel des Megaplex an der Spree hinabtauchen sollen, um Schattentricks aufzudecken, ohne sich selbst in diesen zu verfangen.\nSchattentricks ist ein Abenteuer für Shadowrun 6 im Berlin des Jahres 2080. Für das Abenteuer ist lediglich das Grundregelwerk für Shadowrun 6 notwendig. Das Quellenbuch Berlin 2080 liefert weiteren Hintergrund und Werkzeuge für Flair und Ambiente.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['DEA001'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Schattenkrieg',
+		releaseDate: ['2011-12-23'],
+		description: 'Bist du stark genug!\n\nWährend die Runner nach einer vermissten Person suchen, ziehen sich die Schatten um sie herum langsam zusammen. Einer Fährte folgend, stoßen sie bald auf ein gefährliches Geheimnis - bei dem sie eine folgenschwere Entscheidung zu treffen haben.\n\nSchattenkrieg ist ein komplett ausgearbeitetes Abenteuer für Shadowrun 4 - inklusive Handouts und Grundrissplänen. Es richtet sich sowohl an erfahrene Runner, wie auch an Neulinge im Sumpf der Sechsten Welt: wegbegleitend mit Tipps und Tricks für Gruppe und Spielleiter. Das Abenteuer ist als Print-Produkt in "Schattenrüstzeug" enthalten.',
+		gameDate: '2070',
+		edition: 4,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['45072G'],
+		category: 'sourcebook',
+		type: 'print',
+		name: 'Schattenhandbuch 4',
+		releaseDate: ['2019-07'],
+		description: 'SCHATTENHANDBUCH VIER\n\nDas Schattenhandbuch 4 ist der Nachfolger der Schattenhandbücher 1-3 – und führt die Reihe damit fort. Auch dieser Band enthält mehrere PDFs von der Plattform www.pegasusdigital.de für Shadowrun 5 in gedruckter Fassung, die sich alle dem deutschsprachigen Raum widmen:\n\n- Im Datapuls: Schweiz wird die Nation im Süden der ADL beleuchtet. Großkonzerne, erwachter Alpenraum und Metamenschen-Vorbehalte prägen das Bild des immer um Neutralität bemühten Staats. - Der Datapuls: Verschlusssache schaut hinter die Vorhänge der deutschen Geheimdienste, ganz besonders von Argus und dem BIS. - Im Datapuls: Frankfurt wird der Großraum Frankfurt mit Heidelberg, Mannheim, Wiesbaden und all den anderen verschluckten Städten beschrieben – das Reich des Frankfurter Bankenvereins und der AG Chemie. - Der Datapuls: Proteus führt tief in die Geheimnisse des Nordseekonzerns und seiner abgeschlossenen Arkologien, um den Antagonisten für den Spieltisch neu aufzupolieren. - Und im Datapuls: SOTA 2080 findet der Runner von Welt deutsche Wertprodukte aus den Bereichen Schusswaffen, Fahrzeugen, Drohnen, sowie Neuigkeiten aus dem Reich der Magie.',
+		gameDate: '2073',
+		edition: 5,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing',
+		notes: 'The book contains the printed version of several "Datapuls" supplements previously only published as eBooks: "Datapuls"-Ergänzungen: "Datapuls: Schweiz", "Datapuls: Verschlusssache", "Datapuls: Frankfurt", "Datapuls: Proteus" and "Datapuls: SOTA 2080" and - as an exclusive addition - "Datapuls: Auf der Jagd" with interesting facts about the federal police authorities of the ADL with a focus on BGS and BKA.'
+	},
+	{
 		sku: ['26864'],
 		category: 'novel',
 		type: 'digital',
@@ -9273,5 +9330,18 @@ module.exports = [
 		originalLanguage: 'fr-FR',
 		status: 'missing',
 		notes: 'Campaign and sourcebook for France and in particular the capital Paris.'
+	},
+	{
+		sku: ['STLD'],
+		category: 'magazine',
+		type: 'digital',
+		name: 'SchattenLoad',
+		description: 'Schattenload is a monthly, free newsletter from Pegasus Verlag, which publishes game material for the German setting. It first appeared on January 27, 2019 as a replacement for the NovaPuls, the release of which - for the time being - has been discontinued because the "InGame Newsfax" in December 2018 was several months ahead of the InGame data of the US publications from Catalyst Games Lab.',
+		gameDate: '2076',
+		edition: 5,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing',
+		notes: 'As it is released monthly, some itens are missing.'
 	}
 ];
