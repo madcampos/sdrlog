@@ -10,12 +10,11 @@ https://www.shadowiki.de/Schattentricks
 Runner's Toolkit, Fifth Edition
 Rogue’s Gallery NPC cards
 Shadowrun Dice & Edge Tokens
-Battle Royale (?)
+Schattenkrieg
+Schattenwerkzeug
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
 https://www.shadowiki.de/Convention_Mission_Pack_2016
-https://www.shadowiki.de/Convention_Mission_Pack_2012
-https://www.shadowiki.de/Convention_Mission_Pack_2010
 https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
 https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Seminar
 
@@ -963,7 +962,7 @@ module.exports = [
 		type: 'scan',
 		name: 'Street Samurai Catalog',
 		names: {
-			'de-DE': 'Straßensamurai-Katalog'
+			'de-DE': 'StraßensamuraiKatalog'
 		},
 		releaseDate: ['1989', '1993'],
 		description: 'When the going get tough, the tough go shopping!\nYou\'re the ultimate fighting machine. A predator-for-hire in the savage urban world of Shadowrun. You\'ve devoted your life to honing your combat and martial skills. The tools of your trade are airfoil grenades, form-fitting body armor, and an Ares Crusader machine pistol.\nAn expansion for Shadowrun, the Street Samurai Catalog will let you outfit yourself with the latest equipment available on the black market: retractable hand razors, ultrasonic sights, enhanced reflexes, and maybe a rangefinder for your cybereyes. Whatever you need to get the job done, you can find it here, but it won\'t be cheap. And remember to watch your back before someone decides to make you yesterday\'s news.',
@@ -1046,7 +1045,7 @@ module.exports = [
 		type: 'digital',
 		name: 'Bullets & Bandages',
 		names: {
-			'de-DE': 'Kugeln und Bandagen',
+			'de-DE': 'Kugeln & Bandagen',
 			'fr-FR': 'Balles & Pansements',
 			'pt-BR': 'Balas e Bandagens'
 		},
@@ -1283,7 +1282,7 @@ module.exports = [
 		type: 'digital',
 		name: 'The Assassin\'s Primer',
 		names: {
-			'de-DE': 'Assassinen-Handbuch',
+			'de-DE': 'Assassinen Handbuch',
 			'fr-FR': 'Manuel de l\'assassin',
 			'pt-BR': 'A norma do Assassino'
 		},
@@ -2682,6 +2681,9 @@ module.exports = [
 		category: 'sourcebook',
 		type: 'digital',
 		name: 'Parabotany',
+		names: {
+			'de-DE': 'Parabotanik'
+		},
 		releaseDate: ['2012-04'],
 		description: 'It’s so easy to forget about plants, especially for sprawl-hardened runners who never have anything underfoot besides plascrete. But you forget about them to your peril. After all, where do you think your deepweed comes from? How about those useful, memory-wiping doses of laés? And what was it about the Brazilian kiwi that made Dunkelzahn so interested in it?\nIgnoring plants means ignoring a possible source of income, and what self-respecting runner would ever do that? Parabotany is the guide runners need to help them locate plants that will enhance their abilities and grow their income, and it also provides useful tips, such as how to avoid plants that might be inclined to devour you.\nAlong with descriptions and full-color art for dozens of plants and a garden full of plot hooks, Parabotany has new rules on creating Awakened flora, gathering reagents, and creating powerful new magical compounds. Unlock the secrets of Sixth World plants, and use your knowledge to give your foes a defeat they’ll never forget—unless, of course, you dose them with laés.',
 		gameDate: '2074-03',
@@ -3324,7 +3326,7 @@ module.exports = [
 		sku: ['10728'],
 		category: 'sourcebook',
 		type: 'ocr',
-		name: 'Nordamerika-Quellenbuch',
+		name: 'Nordamerika Quellenbuch',
 		releaseDate: ['1997'],
 		description: 'In den Fünfziger Jahren des einundzwanzigsten Jahrhunderts sind die Vereinigten Staaten von Amerika nur noch eine Erinnerung, abgelöst von den rivalisierenden Staatsgebilden der amerikanischen Ureinwohner und der weißen Siedler.\nMan könnte sagen: Ein Flickenteppich - aber Minenfeld wäre wohl die korrektere Bezeichnung...\nDas dies das richtige Umfeld für Shadowrunner ist, versteht sich fast von selbst. Ob als Samurai in den Straßenschluchten Manhattans, als Söldner an der Grenze zwischen Texas und Aztlan, als Rigger auf der weiten Prärie der Sioux Nation oder als Decker in den Datenbanken von Washington FDC, überall warten lohnende Aufträge für echte Profis - seid ihr bereit?\nDas Nordamerika-Quellenbuch enthält Informationen zu den United Canadian and American States, den Confederated American States, der Republic of Québec und den Native American Nations sowie den wichtigsten Städten des nordamerikanischen Kontinents.',
 		gameDate: '2053',
@@ -3448,7 +3450,7 @@ module.exports = [
 		type: 'scan',
 		name: 'Underworld Sourcebook',
 		names: {
-			'de-DE': 'Unterwelt-Quellenbuch'
+			'de-DE': 'Unterwelt Quellenbuch'
 		},
 		releaseDate: ['1997-03', '2000'],
 		description: 'Honor. Respect. Family.\n\nThe Underworld Sourcebook describes in detail the "Big Four" international crime syndicates: the Mafia, the Yakuza, the Triads and the Seoulpa Rings. Each syndicate\'s markets, business practices, traditions, histories and secret rituals are revealed, along with loads of informtion on gangs, terorists, assassins and other groups who rule the shadows through no law but their own.\nThe Underworld Sourcebook includes guidelines for building campaigns around organized crime and customizing them for local settings, and alternate campaign rules that allow players to play members of organized crime syndicates. It provides a wealth of adventure hooks, story starters, background information and rules for use in any Shadowrun campaign.',
@@ -3738,7 +3740,7 @@ module.exports = [
 		type: 'scan',
 		name: 'Shadowrun Companion: Beyond the Shadows',
 		names: {
-			'de-DE': 'Shadowrun-Kompendium: Jenseits Der Schatten',
+			'de-DE': 'Shadowrun Kompendium: Jenseits Der Schatten',
 			'pl-PL': 'Shadowrun Kompan: Poza Cieniami'
 		},
 		releaseDate: ['1996-12', '1997', '1999'],
@@ -8868,7 +8870,7 @@ module.exports = [
 		type: 'digital',
 		name: 'The Neo-Anarchist Streetpedia',
 		names: {
-			'de-DE': 'Neoanarchistische Enzyklopädie '
+			'de-DE': 'Neoanarchistische Enzyklopädie'
 		},
 		releaseDate: ['2019-06-13', '2019-07-10'],
 		description: 'ALL IN!\n\nThey\'re all here. Everyone of them. The legends, the liars, the betrayers, the winners, the craven, the brave, the powerful, the down-trodden. The people who leaked secrets and got killed for it, and the secrets that no one has discovered yet. The dark bargains, the shady deals, the desperate maneuvers. Everything that makes the Sixth World the high-revving nightmare machine its residents know too well is right here, between these two covers.\n\nThe Neo-Anarchist Streetpedia is your definitive guide to the Shadowrun universe. With hundreds of entries, it covers corporations, shadowrunners, politicians, nations, cities, criminal organizations, and more. Even better, it gets to the point and tells you what you need to know now, so you can hit the streets a little smarter than you were when you woke up this morning.\n\nThe Neo-Anarchist Streetpedia is for use with whatever form of Shadowrun you play. Don\'t play Shadowrun? Read this, learn about the Sixth World, and then find a game to dive into!',
