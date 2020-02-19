@@ -3,9 +3,6 @@
 
 Add materials:
 Virtual Seatle
-https://www.shadowiki.de/Novapuls
-https://www.shadowiki.de/Mephisto-Magazin
-https://www.drivethrurpg.com/product/281064
 https://www.drivethrurpg.com/product/292478
 Rogue’s Gallery
 Shadowrun Dice & Edge Tokens
@@ -9334,5 +9331,18 @@ module.exports = [
 		originalLanguage: 'de-DE',
 		status: 'missing',
 		notes: 'As it is released monthly, some itens are missing.'
+	},
+	{
+		sku: ['NVP'],
+		category: 'magazine',
+		type: 'digital',
+		name: 'NovaPuls',
+		releaseDate: ['2009'],
+		description: 'NovaPuls is an in-game newsletter from Pegasus games. After initially only three newsletters have been published in Pdf format (one for Nordcon 2009 and two more for Nordcon 2011), the Novapuls has actually been published monthly since December 2012 as originally planned.',
+		gameDate: '2070',
+		edition: 4,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		notes: 'It has been replaced by SchattenLoad.'
 	}
 ];
