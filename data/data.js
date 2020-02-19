@@ -4,22 +4,14 @@
 Add materials:
 Virtual Seatle
 https://www.shadowiki.de/Novapuls
+https://www.shadowiki.de/Mephisto-Magazin
+https://www.drivethrurpg.com/product/281064
+https://www.drivethrurpg.com/product/292478
 Rogue’s Gallery
 Shadowrun Dice & Edge Tokens
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
 https://www.shadowiki.de/Convention_Mission_Pack_2016
-https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
-https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Seminar
-
-Add lists:
-https://www.shadowiki.de/Kategorie:Quellen_(Replays)
-https://www.shadowiki.de/Kategorie:Quellen_(Erg%C3%A4nzungsmaterial)
-
-Articles in magazines:
-https://www.shadowiki.de/Shadowrun-Artikel_in_Magazinen_(englisch)
-https://www.shadowiki.de/WunderWelten
-https://www.shadowiki.de/Mephisto_Magazin
 
 Check list of released materials and update data:
 https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
@@ -35,7 +27,6 @@ http://forums.dumpshock.com/index.php?showtopic=40509 (explore)
 https://www.shadowiki.de/Kategorie:Quellen_(Kurzgeschichten)
 https://www.shadowiki.de/Kategorie:Quellen_(Abenteuer)
 https://www.shadowiki.de/Kategorie:Quellen_(Kampagnen)
-https://www.shadowiki.de/Kategorie:Quellen_(Erg%C3%A4nzungsmaterial)
 
 Sources of new material:
 https://shadowiki.de/Liste_der_Shadowrun_Romane
