@@ -3648,7 +3648,7 @@ module.exports = [
 	{
 		sku: ['7907', '10658', '10742', 'LFSH004'],
 		category: 'rulebook',
-		type: 'scan',
+		type: 'digital',
 		name: 'Magic in the Shadows',
 		names: {
 			'de-DE': 'Schattenzauber 3.01D',
@@ -3661,8 +3661,7 @@ module.exports = [
 		gameDate: '2060',
 		edition: 3,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas', 'Beholder Kiadó Bt.', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7904', '10710', 'SH1201'],
@@ -4121,7 +4120,7 @@ module.exports = [
 	{
 		sku: ['10667', '10764'],
 		category: 'sourcebook',
-		type: 'scan',
+		type: 'digital',
 		name: 'Sprawl Survival Guide',
 		names: {
 			'de-DE': 'Sprawl Überlebenshandbuch'
