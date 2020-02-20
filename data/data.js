@@ -3765,7 +3765,7 @@ module.exports = [
 	{
 		sku: ['45100G'],
 		category: 'rulebook',
-		type: 'print',
+		type: 'digital',
 		name: 'Schattenwerkzeug',
 		releaseDate: ['2011'],
 		description: 'HANDWERKSZEUG FÜR DIE SCHATTEN\n\nSchattenwerkzeug ist ein Zusatzband für Shadowrun 4, der neue Kontakte, Abenteuerbeispiele und -orte beschreibt und vorstellt. Zudem enthält er das CGHS, ein modulares System zur simplen und schnellen Erstellung von Spieler- und Nichtspielercharakteren, sowie die „Anatomie eines Shadowruns“. Letzteres beschreibt einen typischen Shadowrun und bringt dem Spielleiter anhand dieses Runs gleichzeitig die Regeln, die Proben und die Systematik eines Abenteuers nahe.\n\nSchattenwerkzeug ist als Printprodukt Bestandteil der Schattenrüstzeug-Box.',
