@@ -3,9 +3,20 @@
 
 Add materials:
 Virtual Seatle
+
+http://www.shadowruntabletop.com/2020/06/announcing-shadowrun-foil-puzzles-and-foil-posters/
+
 https://www.drivethrurpg.com/product/292478
+https://www.drivethrurpg.com/product/307656/Shadowrun-Sixth-World-Activity-Book
+https://www.drivethrurpg.com/product/315198/Shadowrun-Missions-Final-Countdown-0806
+https://www.drivethrurpg.com/product/315210/Shadowrun-Firing-Squad-Core-Combat-Rulebook
+
+A Kiss to Die For
 Rogue’s Gallery
 Shadowrun Dice & Edge Tokens
+Prime Runner miniatures
+Sledge collectible statue
+
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
 https://www.shadowiki.de/Convention_Mission_Pack_2016
