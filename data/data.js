@@ -1,17 +1,13 @@
-/*eslint-env node */
 /*
-
 Add materials:
 Virtual Seatle
 
-http://www.shadowruntabletop.com/2020/06/announcing-shadowrun-foil-puzzles-and-foil-posters/
+https://www.drivethrurpg.com/product/314191/Shadowrun-Cheat-Sheets-SR6?src=newest&filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/325604/Shadowrun-Gun-Rack-Weapon-Cards?src=newest&filters=1700_0_0_0_0
+https://www.drivethrurpg.com/browse/pub/9110/Shadowplans
+https://shadowiki.de/Schattendossier_1
 
-https://www.drivethrurpg.com/product/292478
-https://www.drivethrurpg.com/product/307656/Shadowrun-Sixth-World-Activity-Book
-https://www.drivethrurpg.com/product/315198/Shadowrun-Missions-Final-Countdown-0806
-https://www.drivethrurpg.com/product/315210/Shadowrun-Firing-Squad-Core-Combat-Rulebook
-
-A Kiss to Die For
+Crossfire
 Rogue’s Gallery
 Shadowrun Dice & Edge Tokens
 Prime Runner miniatures
@@ -43,30 +39,14 @@ https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
 */
 
 /**
- * A link to a material available online.
- * @typedef {Object} MaterialLink
- * @prop {String} name The name of the material.
- * @prop {String} url The URL to the material.
- */
-
-/**
- * A Material File metadata.
- * @typedef {Object} MaterialFile
- * @prop {String} name The name of the file.
- * @prop {String} path The path to the file, relative or absolute.
- * @prop {String} [size] The file size.
- */
-
-/**
  * The format the material on this collection are organized.
  * @typedef {Object} Material
- * @prop {("rulebook"|"sourcebook"|"mission"|"magazine"|"novel"|"unofficial"|"videogame"|"tcg"|"boardgame"|"misc")} category The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books. It may be one of the following:
+ * @prop {("rulebook"|"sourcebook"|"mission"|"magazine"|"novel"|"videogame"|"tcg"|"boardgame"|"misc")} category The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books. It may be one of the following:
  * - **Rulebook**: A book containing mostly rules that are compatible with only one edition of the game.
  * - **Sourcebook**: A book containing settings, plot hooks and other stuff that is mostly background information, not rules.
  * - **Mission**: A book containing information to be used on an adventure or campaign.
  * - **Magazine**: A magazine publication with assosrted content.
  * - **Novel**: A fiction book writen based on the Shadowrun universe.
- * - **Unofficial**: Fan made publication specific for Shadowrun.
  * - **Videogame**: Digital game setted in the Shadowrun world.
  * - **TCG**: Trade Card Game based on the Shadowrun universe.
  * - **Boardgame**: A boardgame or other physical game that is setted in the Shadowrun universe.
@@ -89,24 +69,17 @@ https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
  *
  * @prop {String} description A description or synopsis of the material.
  *
- * @prop {Number} edition The edition of the publication, ranging from `1` to `5`.
+ * @prop {Number} edition The edition of the publication, ranging from `1` to `6`.
  *
  * @prop {String[]} publisher A list of enterprises who published the material.
- *
- * @prop {String[]} [images] A list of image urls representing alternative and translated covers.
  *
  * @prop {String} [gameDate] The in game date of the material.
  *
  * @prop {String[]} [releaseDate] The date the material was released and it's rereleases. If not present the material is considered unreleased.
  *
- * @prop {(MaterialFile|MaterialLink)[]} [links] A list of links to the actual material, be it the files or online links.
- *
- * @prop {("missing"|"outofscope"|"rummored"|"unreleased"|"upcomming"|"badscan"|"canceled")} [status] The status of the item, one of the following:
+ * @prop {("missing"|"outofscope"|"canceled")} [status] The status of the item, one of the following:
  * - **Missing**: The item is not present on the archives.
  * - **Out of Scope**: The item is not available or is really hard to obtain and don't add anything new.
- * - **Rummored**: The item is rummored to come out, it is listed or spoken of somewhere.
- * - **Unreleased**: The item has a scheduled/expected release and has been "announced" but is nowhere to be found or has expired the expected release date.
- * - **Upcomming**: The item is scheduled to come out in the future.
  * - **Canceled**: The item was canceled.
  *
  * @prop {String} [originalLanguage] The original language the material was released.
@@ -115,7 +88,7 @@ https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
  */
 
 /**@type {Material[]} */
-module.exports = [
+export default [
 	{
 		sku: ['26000', '26001', '23000', '23000S', 'SR01'],
 		category: 'rulebook',
@@ -811,8 +784,7 @@ module.exports = [
 		gameDate: '2061',
 		edition: 3,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Beholder Kiadó Bt.', 'Descartes Editeur', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7108', '10717'],
@@ -901,8 +873,7 @@ module.exports = [
 		gameDate: '2051',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7100', '7101', '00900', '10700'],
@@ -919,8 +890,7 @@ module.exports = [
 		gameDate: '2050',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Hexagonal', 'PRO Games', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7003'],
@@ -980,8 +950,7 @@ module.exports = [
 		gameDate: '2050',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Diseños Orbitales', 'Ediciones Zinco', 'Fantasy Productions', 'Hexagonal', 'Ediouro', 'Catalyst Game Labs', 'PRO Games', 'Beholder Kiadó Bt.', 'ISA Sp. Zoo'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['27007'],
@@ -2525,8 +2494,7 @@ module.exports = [
 		gameDate: '2051',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7103', '10704'],
@@ -2559,8 +2527,7 @@ module.exports = [
 		gameDate: '2052',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'Ediciones Zinco', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7109'],
@@ -2929,8 +2896,7 @@ module.exports = [
 		gameDate: '2058-02',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7213'],
@@ -2942,8 +2908,7 @@ module.exports = [
 		gameDate: '2056-05',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7216', '10657', '25009'],
@@ -2971,8 +2936,7 @@ module.exports = [
 		gameDate: '2059-02',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7212'],
@@ -2997,8 +2961,7 @@ module.exports = [
 		gameDate: '2057-01',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7208', '10723'],
@@ -3014,7 +2977,6 @@ module.exports = [
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'badscan',
 		notes: 'In the German translation it misses two chapters of the original publication ("One-way Communication" and "Guarding the Till")'
 	},
 	{
@@ -3030,8 +2992,7 @@ module.exports = [
 		gameDate: '2053',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Descartes Editeur', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7210'],
@@ -3088,8 +3049,7 @@ module.exports = [
 		gameDate: '2051',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7118', '10735'],
@@ -3104,8 +3064,7 @@ module.exports = [
 		gameDate: '2055-09',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7117'],
@@ -3174,8 +3133,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7112', 'S16', '2-7408-0145-9'],
@@ -3191,8 +3149,7 @@ module.exports = [
 		gameDate: '2053',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Descartes Editeur', 'Ediciones Zinco', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7115'],
@@ -3256,8 +3213,7 @@ module.exports = [
 		gameDate: '2051',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7206'],
@@ -3431,8 +3387,7 @@ module.exports = [
 		gameDate: '2051',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Descartes Editeur', 'Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7123', '10750'],
@@ -3464,7 +3419,6 @@ module.exports = [
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'badscan',
 		notes: 'The German version was released for Shadowrun 3, eight years after the original publication.'
 	},
 	{
@@ -3565,8 +3519,7 @@ module.exports = [
 		gameDate: '2061',
 		edition: 3,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7908', '10659', '10744', 'LFSH005'],
@@ -3585,8 +3538,7 @@ module.exports = [
 		edition: 3,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas', 'Beholder Kiadó Bt.', 'Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		notes: 'The German edition has diffrent equipament, based on German sources.',
-		status: 'badscan'
+		notes: 'The German edition has diffrent equipament, based on German sources.'
 	},
 	{
 		sku: ['SR4QS'],
@@ -3653,8 +3605,7 @@ module.exports = [
 		gameDate: '2061',
 		edition: 3,
 		publisher: ['Fantasy Productions'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7907', '10658', '10742', 'LFSH004'],
@@ -3689,8 +3640,7 @@ module.exports = [
 		gameDate: '2055-07',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Descartes Editeur', 'La Factoría de Ideas', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7903', '10706', 'S12', 'ISA00100302'],
@@ -3754,8 +3704,7 @@ module.exports = [
 		gameDate: '2060',
 		edition: 3,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Beholder Kiadó Bt.', 'La Factoría de Ideas', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['26100', '45100', 'SR17'],
@@ -4125,8 +4074,7 @@ module.exports = [
 		gameDate: '2062-08',
 		edition: 3,
 		publisher: ['Fantasy Productions', 'Descartes Editeur', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['10667', '10764'],
@@ -4247,7 +4195,7 @@ module.exports = [
 	},
 	{
 		sku: ['25011'],
-		category: 'unofficial',
+		category: 'sourcebook',
 		type: 'digital',
 		name: 'Shadows of Latin America',
 		releaseDate: ['2011'],
@@ -4316,8 +4264,7 @@ module.exports = [
 		gameDate: '2064',
 		edition: 3,
 		publisher: ['Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['10668', '25002', '22001', 'SR04'],
@@ -5121,8 +5068,7 @@ module.exports = [
 		gameDate: '2050',
 		edition: 1,
 		publisher: ['FASA Corporation', 'Descartes Editeur', 'Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['26CMP10'],
@@ -5567,8 +5513,7 @@ module.exports = [
 		gameDate: '2057-08',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Fantasy Productions', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7313'],
@@ -5770,8 +5715,7 @@ module.exports = [
 		gameDate: '2057-05',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7318'],
@@ -5795,8 +5739,7 @@ module.exports = [
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['FASA Corporation', 'Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'badscan'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['7320', '10729'],
@@ -6707,93 +6650,86 @@ module.exports = [
 	{
 		sku: ['SOK201'],
 		category: 'magazine',
-		type: 'print',
+		type: 'ocr',
 		name: 'Shadowland #1',
 		releaseDate: ['1995'],
 		description: 'Although this is a magazine, the page numbering starts on the first page, excluding the covers.\nCover Art: Bottled Demon by John Zeleznik',
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SOK202'],
 		category: 'magazine',
-		type: 'print',
+		type: 'ocr',
 		name: 'Shadowland #2',
 		releaseDate: ['1995'],
 		description: 'Index:\nCover (John Zeleznik)\nLunatic Fringe (Fiction - Phillip T. Adams)\nDrak\'s Drek (D. L. Knox)\nMcKissack\'s Chameleon (Critter - Andrew Ragland)\nGift Horse (Fiction - Erik Kjerland)\nA Runner\'s Guide to Magic (Background - Linda Naughton)\nThe Gross-Frankfurt Sprawl (city description - Jonathan Szeto)\nLearning and Improving Skills (Skill rules - Linda Naughton)\nPath of the Tiger (Totems - Gabriel Salazar)\nHeadaches: Social Animals (Adventure - Chris Hussey)\nThe Hermetic Lodge (Spells - Chris Hussey)',
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SOK203'],
 		category: 'magazine',
-		type: 'print',
+		type: 'ocr',
 		name: 'Shadowland #3',
 		releaseDate: ['1996'],
 		description: 'Three fiction articles, new gear, new spells, new groups and a new adventure.\nCover Art: Jeff Laubenstein',
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SOK204'],
 		category: 'magazine',
-		type: 'print',
+		type: 'ocr',
 		name: 'Shadowland #4',
 		releaseDate: ['1996'],
 		description: 'Table of Contents\nPg 3: The Shopping Mall (Gear, by Erik Jameson)\nPg 7: The Street Gang Compaign (Campaign suggestion, by Steve Kenson)\nPg 9: Serious Buckshot (Gear, By Kevin Montanaro)\nPg 12: 2056 Harley Davidson Ultra-Glide (Gear, By Kevin Montanaro)\nPg 13: The Ahvaz Diaspora (Magical phenomena, by Erik Jameson)\nPg 20: VatJob (Adventure, by Andrew Ragland)\nPg 46: A star is Dead (Andventure, by Chris Hussey)\nPg 52: Dead Air Novel excerpt, by Jak Koke)',
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SOK205'],
 		category: 'magazine',
-		type: 'print',
+		type: 'ocr',
 		name: 'Shadowland #5',
 		releaseDate: ['1996'],
 		description: 'This is the fifth issue of Shadowland, an official publication devoted to Shadowrun.\nCover: Jeff Laubenstein',
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SOK206'],
 		category: 'magazine',
-		type: 'print',
+		type: 'ocr',
 		name: 'Shadowland #6',
 		releaseDate: ['1997'],
 		description: 'Cover Art: Jeff Laubenstein',
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['SOK207'],
 		category: 'magazine',
-		type: 'print',
+		type: 'ocr',
 		name: 'Shadowland #7',
 		releaseDate: ['1997'],
 		description: 'The cover is not included in the page numbers.\nIndex:\nFront page (Mark Nelson)\n1 Index & Credits\n2 Download (Editorial - Chris Hussey)\n3 Expect the Unexpected (Fiction - Andrew Hamilton)\n6 Getting Physical (Physical Adept powers - Ken Sato)\n7 Friendship & Honor (Fiction - Steven Warnock)\n12 Gen Con Wrap-up\n13 Technobabel (Preview - Steven Kenson)\n15 Cyberpirates Preview\n17 The Knight Shift (Prime Runners - Unknown)\n28 The New Tools of Anti-Social Behavior (Firearms - Brian Downes)\n31 Gotcha! (Hit locations - Ben Zitterkoph, Jason Shockley)\n33 Nature\'s Shadows (Plant Totems - Anonymous)\n37 Nothing Personal - Just Business (Fiction - Jon Szeto)\n46 Shadowrun CCG List (Mike Mulvihill)\n49 High Noon (Fiction - Jay Fugiel)\n50 Way of the hunter (Physical Adept path, skills & powers - Jonathan Szeto)\n52 Hermetic Lodge (Spells - Chris Hussey)\n54 Newsline (News from the Shadowrun universe)\n55 Writer\'s Guidelines\n56 Shadowland Disclosure Form',
 		gameDate: '2054',
 		edition: 2,
 		publisher: ['other'],
-		originalLanguage: 'en-US',
-		status: 'outofscope'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['KAGE-09'],
@@ -7589,12 +7525,6 @@ module.exports = [
 		description: 'FLAUNT IT!\n\nYou’ve got the talent. You hopefully have lived long enough to collect a decent amount of nuyen. So show it off! Get a better gun. A bigger boat. A zeppelin that can sneak you across borders where no one thinks to look. All these toys are here, and many, many more. Runner’s Black Book is a shopping catalog for the ambitious and successful runner—and it’s a guide to the weapons, drones, and vehicles that the various forces of the Sixth World may send against you as you sneak through the shadows.\nRunner’s Black Book collects material from Shadowrun’s successful PDF line of products, compiling Deadly Waves, Gun Heaven, MilSpecTech, This Old Drone, and Unfriendly Skies in their entirety, along with updated art and information. On top of that, the book includes new pieces of gear developed specifically for this volume, including the punishing Kriss X Submachine Gun and small, smooth TPP light pistol. Each piece of gear is accompanied by a full color illustration providing a look at the item’s complete details and features.',
 		gameDate: '2072',
 		edition: 4,
-		links: [
-			{
-				name: 'Runner\'s Black Book',
-				url: 'http://drivethrurpg.com/product/170867'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele', 'Black Book Editions'],
 		originalLanguage: 'en-US',
 		status: 'outofscope',
@@ -7612,15 +7542,8 @@ module.exports = [
 		description: 'Asking a shadowrunner if they really need another gun is like asking someone if they need all that oxygen floating around them. Are you ever going to use all that air? Maybe not. But you’re sure as hell not going to be one of those suckers who’s going to be caught short. RUNNER’S BLACK BOOK 2074 is about options, giving runners more choices of guns, weapons, vehicles, and other gear so that they can build a load out that suits them. Whether they want bleeding-edge gear built for those fighting the world’s latest wars or classic vehicles that have stood the test of time—or old crap they can get for cheap—RUNNER’S BLACK BOOK 2074 has what they need. Collecting gear from digital products Gun H(e)aven 2, Used Car Lot, MilSpec Tech 2, and Euro War Antiques along with exclusive material for this book, RUNNER’S BLACK BOOK 2074 contains full-color illustrations, detailed descriptions, and complete game statistics for each item. It’s an essential resource for runners looking to do some shopping—or to learn more about the guns that might be pointed at them in the near future.',
 		gameDate: '2074',
 		edition: 4,
-		links: [
-			{
-				name: 'Runner\'s Black Book 2074',
-				url: 'http://drivethrurpg.com/product/170868'
-			}
-		],
 		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		originalLanguage: 'en-US',
-		status: 'outofscope',
 		notes: 'Originally print only, this book is a compilation of other books with few added material.\nThe German edition have a few itens from Germany.'
 	},
 	{
@@ -8083,28 +8006,27 @@ module.exports = [
 	{
 		sku: ['26859'],
 		category: 'novel',
-		type: 'print',
+		type: 'digital',
 		name: 'Identity Crisis',
+		releaseDate: ['2020-05-20'],
 		description: 'One morning, Oliver Martin wakes up to find he no longer exists, with no job, SIN, nuyen, or even a place to live. He\'s been completely wiped from the Matrix, with a new identity replacing his. Only this one\'s on Lone Star\'s Most Wanted List, and Oliver\'s usual morning turns into the first run of his life. Boston\'s mean streets hold the keys to Oliver\'s fight to reclaim himself and discover who\'s behind his redacted identity. Falling in with a shadowrun team, he uncovers a conspiracy within MIT&T that could bring down the corporate walls of the city before it\'s through and take him right along with it.',
 		gameDate: '2064',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
-		originalLanguage: 'en-US',
-		status: 'unreleased',
-		notes: 'Expected in 2017'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: ['26861'],
 		category: 'novel',
-		type: 'print',
+		type: 'digital',
 		name: 'Stirred',
+		releaseDate: ['2020-08-21'],
 		description: 'Jimmy Kincaid, burned-out mage and P. I., has a lot on his plate. Gang wars, feuding mobsters, unreliable magical power, and an encrypted data file that\'s already cost him friends, but he can\'t even access. When the troubles of the Seattle sprawl deepen into a bloody conspiracy with ties to neighboring nations and inhuman powers, he knows he\'s on the job of his life. Luckily, he\'s not alone. A man like Jimmy can\'t walk these shadowed streets without making enemies, but he\'s made allies, too.\nHopefully those allies will be able to save Jimmy from the dark, powerful forces converging on him...before it\'s too late for everyone...',
 		gameDate: '2064',
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'unreleased',
-		notes: 'Expected in 2017'
+		status: 'missing'
 	},
 	{
 		sku: ['NERPS-01'],
@@ -8691,6 +8613,18 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
+		sku: ['SRM08-04'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Dirty Laundry',
+		releaseDate: ['2020-02-24'],
+		description: 'Prepare for Everything\n\nChicago’s Containment Zone is the most uncontrolled of environments, where anything can and will be thrown at you. Ferocious gangers, hungry Infected, nefarious corp operatives—they’re just the starters. There’s a full buffet of obstacles waiting for you, and Mr. Johnson is offering a nice sum of money to encourage you to chow down.\n\nThere’s a critical piece of data squirreled away in a lost, offline server, and Mr. Johnson wants it retrieved. Doing so will require running a Containment Zone gauntlet, with an array of dangers that will test any running team. But if it wasn’t hard, Mr. Johnson wouldn’t be paying you to do it, would he?',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
 		sku: ['26S057'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -9106,19 +9040,6 @@ module.exports = [
 		originalLanguage: 'en-US'
 	},
 	{
-		sku: [''],
-		category: 'novel',
-		type: 'digital',
-		name: 'Zurück im Spiel',
-		releaseDate: [''],
-		description: '',
-		gameDate: '2075',
-		edition: 5,
-		publisher: ['Pegasus Spiele'],
-		originalLanguage: 'de-DE',
-		status: 'rummored'
-	},
-	{
 		sku: ['HWB'],
 		category: 'misc',
 		type: 'digital',
@@ -9234,7 +9155,7 @@ module.exports = [
 		status: 'missing'
 	},
 	{
-		sku: [''],
+		sku: ['28400'],
 		category: 'mission',
 		type: 'digital',
 		name: '30 Nights',
@@ -9242,12 +9163,11 @@ module.exports = [
 			'de-DE': '30 Nächte und 3 Tage'
 		},
 		releaseDate: ['2020-02-13'],
-		description: '',
+		description: 'NIGHT FALLS...IT WILL ONLY GET WORSE\n\nThe first night of a citywide blackout usually has rioting and lawlessness. The second night continues the chaos. The third night? Well, whoever heard about a citywide blackout going three nights?\n\nIt’s about to happen, and shadowrunners caught in the middle will have to deal with more than darkness. There will be howling critters roaming free. Strange spirits and twisted metaplanar beings appearing and pursuing unknown goals. And mysterious vans that somehow still have power slowly roaming the streets, sending out some sort of signal.\n\nThe streets will be getting more dangerous, and shadowrunners will be in the middle of it, first trying to survive, then trying to earn some cash, and finally trying to uncover the secrets the blackout was supposed to hide.',
 		gameDate: '2080',
 		edition: 6,
 		publisher: ['Catalyst Game Labs', 'Pegasus Verlag'],
-		originalLanguage: 'en-US',
-		status: 'missing'
+		originalLanguage: 'en-US'
 	},
 	{
 		sku: [''],
@@ -9316,6 +9236,32 @@ module.exports = [
 		status: 'missing'
 	},
 	{
+		sku: ['35014G'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Nachtmeisters Erben',
+		releaseDate: ['2020-05-18'],
+		description: 'Sie sind die härtesten Transportfahrer der ADL: die Männer und Frauen von Überlandexpress, einer Schattenorganisation, die Personen und Waren befördert – schnell, unbemerkt und ohne Fragen zu stellen. In ihren aufgemotzten Fahrzeugen jagen sie über die Bundesstraßen der Allianz. Sie kennen auch die unscheinbarste Nebenroute und die letzte Tankstelle in der Einsamkeit.\n\nCowboy und Nitro sind zwei dieser Fahrer. Als ihnen für eine Tour von Berchtesgaden nach Groß-Frankfurt eine Unsumme geboten wird, ahnen sie, dass sie dabei Ärger bekommen könnten. Hätten sie nur gewusst, wie viel! Denn das Artefakt, das sie befördern, stammt direkt aus dem Hort des ermordeten Drachen Nachtmeister. Und wenn es sein Ziel erreicht, könnte es das Gleichgewicht der Kräfte in der ganzen ADL ins Wanken bringen.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['35015G'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Alter Ratio',
+		releaseDate: ['2020-10-15'],
+		description: 'Berlin, 2079. Etwas ist faul im Sprawl an der Spree. Metamenschen verschwinden, offenkundig sinnfreie Geschäfte werden von Unbekannten getätigt, und jemand scheint die antike Kabelmatrix zu reaktivieren, die seit Jahren unter der Stadt brach liegt. Mächte bringen sich in Stellung, doch niemand erahnt das Gewitter, das am Horizont aufzuziehen droht. Und welches die Stadt in ihren Grundfesten erschüttern könnte.\n\nAggi und Paul Dante, einst unzertrennliche Freunde, haben sich längst nichts mehr zu sagen. Als sie ihn nun herbeiruft, muss er aus seiner anhaltenden Abwärtsspirale ausbrechen, denn nur gemeinsam können sie sich der Bedrohung stellen.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
 		sku: ['BBESR602'],
 		category: 'sourcebook',
 		type: 'digital',
@@ -9354,5 +9300,172 @@ module.exports = [
 		publisher: ['Pegasus Verlag'],
 		originalLanguage: 'de-DE',
 		notes: 'It has been replaced by SchattenLoad.'
+	},
+	{
+		sku: ['28002'],
+		category: 'rulebook',
+		type: 'digital',
+		name: 'Firing Squad',
+		names: {
+			'de-DE': 'Freuer Frei'
+		},
+		releaseDate: ['2020-05-26'],
+		description: 'Someone, somewhere, is about to get hurt.\n\nGuns will come out. Swords will unsheathe. Damage will be done. The same questions are at the center of it all: Who will suffer, and who will survive?\n\nShadowrunners stare violence in the face daily, deciding how much they’ll inflict, figuring out how they’ll remain alive. They know the prices that must be paid—the hard work of training, the challenge of recovery, and the continual effort to live with what you’ve done. Some shadowrunners develop a code to help them know what to do and what to avoid. Others decide to just develop a short memory.\n\nFiring Squad is the book to help shadowrunners pay those costs. It has new weapons, qualities, and techniques to hone shadowrunners’ combat abilities while also looking at how to develop characters based on the codes they follow and the violence they face. Take your character through new twists and turns and experience the shadows in a brand-new way.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['SRM08-05'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Sleeping Giants',
+		releaseDate: ['2020-04-06'],
+		description: 'The Other Shoe\nSome people working on bringing the core of Chicago back to life are brimming with optimism about its future. Others have spent the whole time waiting for the other shoe to drop. Well, it’s about to stomp down—hard. If the runners have ever wondered just how bad things might be in the tunnels under the Containment Zone, they’re about to find out, since that’s where Mr. Johnson wants them to go. What’s waiting for them will shake the foundations of the sprawl—as long as they survive long enough to tell someone what they discover.',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['SRM08-06'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Final Countdown',
+		releaseDate: ['2020-05-26'],
+		description: 'All Over\n\nIs the chaos spreading or concentrating? Either way, it’s increasing, and shadowrunners are sure to be caught in the middle of it. People have been pouring a lot of energy into the core of Chicago, and a final reckoning is about to take place. It’s up to the runners to decide where the pain hits.\n\nFinal Countdown is the grand finale of the Chicago series ofShadowrun Missions. After four seasons of Missions, the climax is here, and it’s going to be a doozy. Buckle up, hold on, and try to survive the ride!',
+		gameDate: '2075',
+		edition: 5,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['26006NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'A Kiss to Die For',
+		releaseDate: ['2020-06-17'],
+		description: 'LOVE VERSUS DUTY…\n\nWhen Sartorial meets Kintsugi at a jabber — an illegal warehouse party — he falls hard and fast for the beautiful human girl. She is everything he didn’t know he wanted — and everything his family hates.\n\nKintsugi is drawn to the handsome elf boy like no other, but her future has already been planned. A future she intends to thwart. But now there’s something worth staying around for, she’s torn over what to do.\n\nUnfortunately, they both have secrets that will not be kept, and powerful families that have their own goals. It seems like the entire world is trying to keep them apart. Can Sartorial and Kintsugi overcome all obstacles to be together — even after their secrets are revealed?',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['26012NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Chaser',
+		releaseDate: ['2020-06-17'],
+		description: 'STREETS ON FIRE…\n\nA vicious magical assault on a street gang isn’t a case paranormal P.I. Jimmy Kincaid would normally pick up. But when a fellow private eye asks him to look into it, and he learns the gang was doing a charity run for a church — a church Jimmy knows quite well — when they were attacked, his professional curiosity is raised. His investigation quickly leads to a tangled maze of clues and dead-ends. Someone — or something — is prowling the streets of Puyallup, looking to incinerate whoever crosses their path. And Jimmy’s got to find them — and stop them — before the entire neighborhood goes up in flames.\n\nBut whoever’s looking to light innocent victims on fire made one mistake — they’re doing it in Kincaid’s backyard. And Jimmy’s never taken kindly to trespassers…',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'missing'
+	},
+	{
+		sku: ['26008NV'],
+		category: 'novel',
+		type: 'digital',
+		name: 'Crocodile Tears',
+		releaseDate: ['2020-06-17'],
+		description: 'FUN—AND FEAR—IN THE SUN…\n\nEverything’s irie in the Caribbean. What could be better than a week of sun, fun, and parties at the bi-annual Caribbean League political conference in Havana, with every shadowrunner, pirate, and low-life in attendance looking for work? What could possibly go wrong?\n\nAnd when the Rastafarian troll shaman T’ing and his crew are approached by an official from Haiti to investigate rumors involving their old enemies, the dark voodoo Kofo cult, it looks like an opportunity for payback and profit combined.\n\nDigging deeper, however, T’ing and his runners discover a genocidal plot that threatens the entire region, possibly even resulting in an all-out shooting war between several major Sixth World players. There’s nothing to do but round up all their badass runner contacts, light up a spliff, and kick some ass. But this run will take them under the sea to a top-secret covert lab where Kofo cultists are hiding a weapon that could change the face of the entire Caribbean…and only T’ing and his hard-partying—and even harder-charging—crew stand in their way...',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'missing'
+	},
+	{
+		sku: ['FOIL'],
+		category: 'misc',
+		type: 'print',
+		name: 'Foil and Puzzles',
+		releaseDate: ['2020-06-12'],
+		description: 'PICKING UP THE PIECES! Pre-order from our first-ever series of jigsaw puzzles for Shadowrun, printed right here in the USA! Five different images, done in high-quality foil and cut to a 500-standard piece puzzle. Each assembled puzzle is 18″ x 24″ and suitable for framing when complete. These puzzles are all limited to foiled print runs of 1000. Once they are gone, that’s it. These are a “while supplies last” offer. If they appear again, they will be in standard paper, not foiled.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'outofscope',
+		notes: 'Print only puzzles and folios of the game. See more at: http://www.shadowruntabletop.com/2020/06/announcing-shadowrun-foil-puzzles-and-foil-posters/'
+	},
+	{
+		sku: ['46114G'],
+		category: 'mission',
+		type: 'digital',
+		name: 'Im Schatten der Drachen',
+		releaseDate: ['2020-05-31', '2020-06-15'],
+		description: 'Erste Schatten\n\nDie Konzernintrige eines neuen AAA-Megakonzerns löst eine Spirale von Ereignissen aus, die einen lange schwelenden Konflikt erneut auflodern lässt. Doch dieser Konflikt ist weit mehr, als nur ein Wirtschaftskrieg: Es geht um Geheimnisse zaubermächtiger Drachen und um grimmige Drachentöter, um alte Schatzkammern und um neuen Hass, um falsche Loyalität und um wohlkalkulierten Verrat. Runner, die Im Schatten der Drachen ihre Jobs erledigen, erleben die Anfänge eines Untergrundkriegs, der die Allianz Deutscher Länder noch lange beschäftigen wird. Und können dabei selbst Geschichte schreiben.\n\nIm Schatten der Drachen ist eine Anthologie für Shadowrun 6 mit vier Einzelabenteuern. Alle Abenteuer sind komplett spielfertig, inklusive Grundrissen und Plänen. Als Kunstdiebe, Leibwächter, Spione und Kopfgeldjäger tauchen die Runner in die Schatten im Süden der Allianz Deutscher Länder ein: Schatten, die sich nach und nach zu einer bedrohlichen Finsternis zusammenziehen.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Pegasus Verlag'],
+		originalLanguage: 'de-DE',
+		status: 'missing'
+	},
+	{
+		sku: ['28507'],
+		category: 'misc',
+		type: 'digital',
+		name: 'Sixth World Activity Book',
+		releaseDate: ['2020-05-25'],
+		description: 'Draw, Chummer!\n\nAnd color. And do puzzles. And bask in the wonders of the mighty Sixth World dystopia! If you need something to pass the time, if you’re feeling a little isolated, or if you just want to soak in the Shadowrun setting for a while, this activity book is for you! It has tons of classic black-and-white art you can bring to glorious, colorful life, word searches, a crossword, and a bunch of other puzzles. Pay whatever you want for the PDF, then dive in and pass the time!',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28301', '46118G'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Slip Streams',
+		names: {
+			'de-DE': 'Schlagschatten'
+		},
+		releaseDate: ['2020-08-24', '2020-10-15'],
+		description: 'NOTHING BUT SHREDS\nNOTHING IS REAL. EVERYTHING IS REAL.\n\nWhat you think is real rips and shreds, and the unreality beneath spills out. Everything you dreamed of. Everything you fear. The past returns, distorted and dark. The future sparks in glimpses and flashes. You see it all at once. You can try to deny it. But it is real. Everything is real. Which is that same as nothing being real.\n\nReality is tearing apart. The holes are everywhere. Dive into them.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28881S'],
+		category: 'rulebook',
+		type: 'digital',
+		name: 'Shadow Stock: Ingentis Athletes',
+		releaseDate: ['2020-07-17'],
+		description: 'Falls from Grace\n\nOnce they were at the top of their field, or on the way there. Pro athletes, looking to make bank through fat contracts and endorsement deals, only to have their careers derailed by serious injuries and maybe a bad choice or two. Once their value on the playing field is done, they’re left high and dry, cut loose by the teams and corps who used to love them.\n\nSo when you’re income is gone but you’ve still got some physical skills, where else do you go to make a living but the shadows? Ingentis Athletes rounds up ten characters, giving their backgrounds and game statistics, with plot hooks that can help them be used in a wide variety of campaigns. On top of that, each character is a troll variant, so the book has information on making troll variant characters, including giants, fomorians, cyclops, and minotaurs. Broaden your game and character options with this book!',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['27002S'],
+		category: 'rulebook',
+		type: 'digital',
+		name: 'Krime Katalog',
+		releaseDate: ['2020-07-08'],
+		description: 'Big Bang Boom\n\nLook, do you want a really nice gun, or do you want something that’s going to do the job? When you’re firing a projectile at high speeds, do you really need frills like blued steel, personalized grips, or a safety? And when you’re a real-sized being—like a troll or an ork, instead of one of the punier things—don’t you want something that was designed from the ground up with you in mind?\n\nAll of this is why Krime exists—to give you what you want. From the beefy Krime Heater handgun to the overstuffed Krime Soldier to the rapid-firing Krime Monster, this catalog includes a full range of weapons, along with vehicles like the barely street legal Krime Wageslave and the abomination known as the Krime DeTruck Sports Truck. Oh, and some ammo and grenades thrown in, because that’s the Krime way!',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['27002S'],
+		category: 'sourcebook',
+		type: 'digital',
+		name: 'Tales from the UCAS: Age of Rust',
+		releaseDate: ['2020-05-01'],
+		description: 'Layers of Power\n\nThe topmost layers of power have been scraped away, some wealth has been removed, but that doesn’t mean the western borders of the UCAS have nothing of worth. Hidden weapons may yet be found. Secret powers may rise. And maneuvering for wealth? What would the Sixth World be without it?\n\nAge of Rust shines a spotlight on a part of the UCAS that is disintegrating but still has plenty of intrigue and shadow-work happening—maybe more than before, since the higher powers who might tamp it down have left town, leaving the layers below to rise up and fight.\n\nTales from the UCAS\n\nCombining immersive materials with spotlights on specific areas of the UCAS, the Tales from the UCAS series provides plot hooks, rules, and other material to add intrigue and excitement to your Shadowrun game while exploring how the changes that hit the UCAS will continue to shape the nation—and how shadowrunners will adapt and exploit what they encounter.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
 	}
 ];
