@@ -7,11 +7,11 @@ https://www.drivethrurpg.com/product/325604/Shadowrun-Gun-Rack-Weapon-Cards?src=
 https://www.drivethrurpg.com/browse/pub/9110/Shadowplans
 https://shadowiki.de/Schattendossier_1
 
-Crossfire
-Rogue’s Gallery (https://forums.shadowruntabletop.com/index.php?topic=30670.0)
-Shadowrun Dice & Edge Tokens
+https://www.boardgamegeek.com/boardgame/253087/shadowrun-sprawl-ops/expansions
+https://www.boardgamegeek.com/boardgameversion/300033/german-edition
+https://www.rpggeek.com/rpgitem/303831/der-almanach-sonderpublikation-zum-gratisrollenspi
+Shadowrun Dice & Edge Tokens (https://www.rpggeek.com/rpgitem/280690/dice-edge-tokens)
 Prime Runner miniatures
-https://play.google.com/store/apps/details?id=com.fireopal.srdiceroller&hl=en_US&__s=sqakip6pyppbm6qckuqq
 
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
@@ -7256,7 +7256,7 @@ export default [
 		sku: ['27700'],
 		category: 'boardgame',
 		type: 'physical',
-		name: 'Shadowrun Crossfire',
+		name: 'Shadowrun: Crossfire',
 		releaseDate: ['2014'],
 		description: 'The shadows of the Sixth World have every kind of danger you can imagine: ultra-violent gangers, flesh-eating ghouls, mages that summon spirits from toxic waste, backstabbing corporate raiders, hard-nosed police officers, and even dragons. You don\'t have much — mainly your guts, your wits, and your friends — but maybe that\'s enough. Between you and your teammates, you can sling spells, hack the Matrix, talk a tiger out of his stripes, and bring down a charging ork from a hundred yards away. Will that be enough to face down the worst the mean streets can throw at you? You\'re about to find out.',
 		gameDate: '2075',
@@ -7353,7 +7353,7 @@ export default [
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'announced',
+		status: 'canceled',
 		notes: 'Announced fo the Year of Shadowrun but never released. Some "developer diary" posts are available on Shadowrun\'s blog.'
 	},
 	{
@@ -7366,7 +7366,7 @@ export default [
 		edition: 5,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US',
-		status: 'announced',
+		status: 'canceled',
 		notes: 'Announced fo the Year of Shadowrun but never released. Some "developer diary" posts are available on Shadowrun\'s blog.'
 	},
 	{
@@ -8643,6 +8643,7 @@ export default [
 		category: 'boardgame',
 		type: 'physical',
 		name: 'Shadowrun: Sprawl Ops',
+		releaseDate: ['2019-06-01'],
 		description: 'In Shadowrun: Sprawl Ops, players lead a team of shadowrunners gunning for the big score!\nAlong the way they’ll have the chance to hire more seasoned runners, outfit their team with cutting-edge technology—from the latest weapons to cyberware enhancements—and take on increasingly dangerous contracts on the mean streets of the Seattle Metroplex.\nEach payout increases your chances for a more lethal combination of gear, training, and skill. All leading to that final score as you take on one of the world’s megacorporations. But you’ve got to hit it before another team steals your ticket to the big time—hold off too long to grab that ring, and you’ll lose it all!',
 		gameDate: '2075',
 		edition: 5,
@@ -9481,5 +9482,31 @@ export default [
 		edition: 6,
 		publisher: ['Catalyst Game Labs'],
 		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['DRA'],
+		category: 'misc',
+		type: 'digital',
+		name: 'Shadowrun Dice roller',
+		releaseDate: ['2019-12-18'],
+		description: 'Keep Shadowrun action moving with cyberpunk style! Whether you’re calculating your dice pools on the fly or using some of your most common rolls, the app features themed dice with individual animations and sounds to make your dice easy to roll and easy to count. Features include:\n\nSpecially designed dice with Shadowrun themes, each with unique animations and sounds.\nStreet samurai dice included, with a sample die of each of the other types included, namely: mage die, adept die, decker die, face die, rigger die, and shaman die. Once you try them all out, you can purchase more of your favorites.\nAutomatic calculation of hits and glitches, while also tallying the total pips rolled for initiative purposes.\nDice pools as small as 1, as large as 40.\nRoll by touching the screen—or by shaking your device.\nWhen you buy dice beyond the free sample die, you get an accompanying piece of Shadowrun art that can be used as an app backdrop.\n\nWorks with any edition of Shadowrun—or any game that includes rolling D6s. Keep the action moving and the dice rolling. And never again worry about whether your hands can hold all the dice you’re going to roll!',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['28500'],
+		category: 'misc',
+		type: 'print',
+		name: 'Rogue\'s Gallery: An NPC Deck',
+		releaseDate: ['2019-12-18'],
+		description: 'Whether on the desperate streets or in the Machiavellian high-rises of the corporate elite, dangerous people lurk in every corner of the Sixth World. And they\'re in here, too, with a quick backstory, a hook, and streamlined game stats. Bring the Shadowrun universe to life by putting these characters at your fingertips and in your game!\n\nContents:\n27 Street NPCs\n5 Elite NPCs\n15 Veteran NPCs\n3 Legendary NPCs\n8 Reference Cards',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US',
+		status: 'missing',
+		notes: 'A deck of printed NPC cards.'
 	}
 ];
