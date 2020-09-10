@@ -8,10 +8,10 @@ https://www.drivethrurpg.com/browse/pub/9110/Shadowplans
 https://shadowiki.de/Schattendossier_1
 
 Crossfire
-Rogue’s Gallery
+Rogue’s Gallery (https://forums.shadowruntabletop.com/index.php?topic=30670.0)
 Shadowrun Dice & Edge Tokens
 Prime Runner miniatures
-Sledge collectible statue
+https://play.google.com/store/apps/details?id=com.fireopal.srdiceroller&hl=en_US&__s=sqakip6pyppbm6qckuqq
 
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
@@ -21,16 +21,18 @@ Check list of released materials and update data:
 https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 Sources to check:
-https://shadowhelix.de/Kategorie:Quellen_(Gratis)
-https://www.shadowiki.de/Kategorie:Quellen_(Online)
+https://www.shadowrunsixthworld.com/
 https://forums.shadowruntabletop.com/index.php?topic=254.0
+
 http://danvolodar.ru/files/SR/ (check links)
-http://forums.dumpshock.com/index.php?showtopic=40509 (explore)
 ***REMOVED***
 ***REMOVED***
+
 https://www.shadowiki.de/Kategorie:Quellen_(Kurzgeschichten)
 https://www.shadowiki.de/Kategorie:Quellen_(Abenteuer)
 https://www.shadowiki.de/Kategorie:Quellen_(Kampagnen)
+https://shadowhelix.de/Kategorie:Quellen_(Gratis)
+https://www.shadowiki.de/Kategorie:Quellen_(Online)
 
 Sources of new material:
 https://shadowiki.de/Liste_der_Shadowrun_Romane
@@ -9463,6 +9465,18 @@ export default [
 		name: 'Tales from the UCAS: Age of Rust',
 		releaseDate: ['2020-05-01'],
 		description: 'Layers of Power\n\nThe topmost layers of power have been scraped away, some wealth has been removed, but that doesn’t mean the western borders of the UCAS have nothing of worth. Hidden weapons may yet be found. Secret powers may rise. And maneuvering for wealth? What would the Sixth World be without it?\n\nAge of Rust shines a spotlight on a part of the UCAS that is disintegrating but still has plenty of intrigue and shadow-work happening—maybe more than before, since the higher powers who might tamp it down have left town, leaving the layers below to rise up and fight.\n\nTales from the UCAS\n\nCombining immersive materials with spotlights on specific areas of the UCAS, the Tales from the UCAS series provides plot hooks, rules, and other material to add intrigue and excitement to your Shadowrun game while exploring how the changes that hit the UCAS will continue to shape the nation—and how shadowrunners will adapt and exploit what they encounter.',
+		gameDate: '2080',
+		edition: 6,
+		publisher: ['Catalyst Game Labs'],
+		originalLanguage: 'en-US'
+	},
+	{
+		sku: ['SLEDGE'],
+		category: 'misc',
+		type: 'physical',
+		name: 'Sledge Limited Edition Statue',
+		releaseDate: ['2020-06-01'],
+		description: 'Yo, Chummer! Ready to bash into the party and get tactical? Ain’t no one you want backing your six more than Sledge. Street Sam. Big gauge. Heavy rep. And he always packs a couple of good cigars for the afterparty at Dante’s!\n\nThis Limited Edition resin statue is 6.5″ high (with base), with a Sprawl-approved master paint scheme. The first of a planned series, Sledge is sure to bring some Sixth World attitude to any collection.\n\nThis is a limited edition item and will not be offered again. Only 750 will be released.',
 		gameDate: '2080',
 		edition: 6,
 		publisher: ['Catalyst Game Labs'],
