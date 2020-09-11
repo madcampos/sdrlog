@@ -1,37 +1,19 @@
-/*global workbox*/
-/*eslint-env serviceworker*/
-/*eslint-disable no-console*/
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js');
-if (workbox) {
-	console.log('Yay! Workbox is loaded 🎉');
-} else {
-	console.log('Boo! Workbox didn\'t load 😬');
-}
+/* eslint-env serviceworker*/
+/* eslint-disable no-console*/
+/**
+ * @file Service worker file.
+ * @author madcampos <madcampos@outlook.com>
+ * @version 1.0.0
+ */
 
-workbox.precaching.precacheAndRoute([
-	'/',
-	'/js/critical.js',
-	'/css/critical.css',
-	'/img/full/000-fallback.jpg',
-	'/img/thumbs/000-fallback.jpg',
-	'/img/publishers/fallback.png',
-	'https://unpkg.com/dialog-polyfill'
-]);
-
-workbox.routing.registerRoute(/\.(?:jpg|png|svg)$/, workbox.strategies.cacheFirst());
-workbox.routing.registerRoute(/\.js$/, workbox.strategies.cacheFirst());
-workbox.routing.registerRoute(/\.css$/, workbox.strategies.cacheFirst());
-workbox.routing.registerRoute(/\.json$/, workbox.strategies.networkOnly());
-
-/*const CACHE_VERSION = 'v8';
+const CACHE_VERSION = 'v8';
 const appShellFiles = [
 	'/',
 	'/js/critical.js',
 	'/css/critical.css',
 	'/img/full/000-fallback.jpg',
 	'/img/thumbs/000-fallback.jpg',
-	'/img/publishers/fallback.png',
-	'https://unpkg.com/dialog-polyfill'
+	'/img/publishers/fallback.png'
 ];
 
 self.addEventListener('install', (evt) => {
@@ -42,33 +24,35 @@ self.addEventListener('install', (evt) => {
 });
 
 self.addEventListener('activate', (evt) => {
-	self.clients.matchAll({includeUncontrolled: true}).then((clientList) => {
+	self.clients.matchAll({ includeUncontrolled: true }).then((clientList) => {
 		clientList.forEach((client) => console.log(`[⚙️] Matching client: ${client.url}`));
 	});
 
-	//eslint-disable-next-line arrow-body-style
+	// eslint-disable-next-line arrow-body-style
 	evt.waitUntil(caches.keys().then((cacheNames) => {
 		return Promise.all(cacheNames.map((cacheName) => {
 			if (cacheName !== CACHE_VERSION) {
 				console.log(`[⚙️] Deleting old cache "${cacheName}"`);
+
 				return caches.delete(cacheName);
 			}
 
 			return Promise.resolve(null);
 		})).then(() => {
 			console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
+
 			return self.clients.claim();
 		});
 	}));
 });
 
-self.addEventListener('fetch', async (evt) => {
+self.addEventListener('fetch', (evt) => {
 	evt.respondWith(caches.match(evt.request).then((res) => {
 		if (res) {
 			return res;
 		}
 
-		//TODO: don't handle image requests?
+		// TODO: don't handle image requests?
 		return fetch(evt.request).then((netRes) => {
 			console.log(`[⚙] Fetching ${evt.request.url}`);
 			const cacheRes = netRes.clone();
@@ -101,13 +85,13 @@ self.addEventListener('fetch', async (evt) => {
 			}
 
 			return new Response('<h1>Service Unavailable</h1>', {
+				headers: new Headers({ 'Content-Type': 'text/html' }),
 				status: 503,
-				statusText: 'Service Unavailable',
-				headers: new Headers({'Content-Type': 'text/html'})
+				statusText: 'Service Unavailable'
 			});
 		}).catch((err) => {
 			console.error('[⚙️] Fetch error:');
 			console.error(err);
 		});
 	}));
-});*/
+});

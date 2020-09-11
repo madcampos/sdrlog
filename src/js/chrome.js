@@ -1,55 +1,65 @@
-dialogPolyfill.registerDialog(document.querySelector('#info-box'));
+/**
+ * @file Basic app chrome.
+ * @author madcampos <madcampos@outlook.com>
+ * @version 1.0.0
+ */
+
 const searchInput = document.querySelector('#search input');
 
-//TODO: add element.closest() calls to event listeners.
+// TODO: add element.closest() calls to event listeners.
 
 /**
  * The Filter Object and it's properties.
- * @typedef Object FilterObject
- * @prop {String} [category] The category.
- * @prop {String} [type] The type.
- * @prop {String} [sku] The SKU.
- * @prop {String} [name] The name.
- * @prop {String} [edition] The edition.
- * @prop {String} [publisher] The publisher.
- * @prop {String} [date] The in game date.
- * @prop {String} [release] The release date.
- * @prop {("out"|"missing")} [scope] If it's missing or outo of scope.
+ *
+ * @typedef FilterObject
+ * @property {string} [category] The category.
+ * @property {string} [type] The type.
+ * @property {string} [sku] The SKU.
+ * @property {string} [name] The name.
+ * @property {string} [edition] The edition.
+ * @property {string} [publisher] The publisher.
+ * @property {string} [date] The in game date.
+ * @property {string} [release] The release date.
+ * @property {("out"|"missing")} [scope] If it's missing or outo of scope.
  */
 
 /**
  * Updates the search suggestion box.
+ *
  * @param {filterObject} filterObject The filter object.
- * @returns {Number} The RAF ID.
+ * @returns {number} The RAF ID.
+ * @example
  */
-function updateSugestionBox(filterObject){
+function updateSugestionBox(filterObject) {
 	return requestAnimationFrame(() => {
-		//TODO: throttle
-		//1. get current filtered
-		//2. if empty
-		//2.1. set scope to full Map
-		//2.2.
-		//3. get new query
-		//4. if new query contains the current query set scope to current filtered
-		//5. if current query contains new query (step back) set scope to previous filtered (superset)
-		//6. filter scope
-		//7. set previous filtered to current filtered
-		//8. set current query to new query
-		//9. set previous
+		// TODO: throttle
+		// 1. get current filtered
+		// 2. if empty
+		// 2.1. set scope to full Map
+		// 2.2.
+		// 3. get new query
+		// 4. if new query contains the current query set scope to current filtered
+		// 5. if current query contains new query (step back) set scope to previous filtered (superset)
+		// 6. filter scope
+		// 7. set previous filtered to current filtered
+		// 8. set current query to new query
+		// 9. set previous
 
-		//1. Clear datalist options
-		//2. Filter items map for condition
-		//2.1. Keep reperence of one step back and current step so we can rollback and improve the currnt search
-		//3. throttle request for 1 second or it's finished processing
+		// 1. Clear datalist options
+		// 2. Filter items map for condition
+		// 2.1. Keep reperence of one step back and current step so we can rollback and improve the currnt search
+		// 3. throttle request for 1 second or it's finished processing
 	});
 }
 
 /**
  * Updates the search CSS with the given Filter Object.
+ *
  * @param {FilterObject} filterObject The Filter Object.
- * @returns {Number} The RAF ID.
+ * @returns {number} The RAF ID.
+ * @example
  */
-function updateSearchFilter(filterObject){
+function updateSearchFilter(filterObject) {
 	const SEARCH_ITEM_SELECTOR = '.item';
 	const filterCSS = document.querySelector('#filterCSS');
 	let styleString = '';
@@ -79,10 +89,12 @@ function updateSearchFilter(filterObject){
 
 /**
  * Updates the browser history with the info passed.
+ *
  * @param {FilterObject} filterObject The filterObject.
- * @returns {Number} The RAF ID.
+ * @returns {number} The RAF ID.
+ * @example
  */
-function updateHistory(filterObject){
+function updateHistory(filterObject) {
 	if (Object.keys(filterObject).length === 0) {
 		return window.requestAnimationFrame(() => {
 			if (history.state) {
@@ -95,19 +107,21 @@ function updateHistory(filterObject){
 
 	return window.requestAnimationFrame(() => {
 		if (history.state) {
-			history.replaceState(filterObject, document.title, `?${(new URLSearchParams(filterObject)).toString()}`);
+			history.replaceState(filterObject, document.title, `?${new URLSearchParams(filterObject).toString()}`);
 		} else {
-			history.pushState(filterObject, document.title, `?${(new URLSearchParams(filterObject)).toString()}`);
+			history.pushState(filterObject, document.title, `?${new URLSearchParams(filterObject).toString()}`);
 		}
 	});
 }
 
 /**
  * Updates the Input text with tags given the Filter Object.
+ *
  * @param {FilterObject} filterObject The Filter Object.
- * @returns {Number} The RAF ID.
+ * @returns {number} The RAF ID.
+ * @example
  */
-function updateTags(filterObject){
+function updateTags(filterObject) {
 	let tagString = '';
 
 	if (Object.keys(filterObject).length === 0) {
@@ -135,10 +149,12 @@ function updateTags(filterObject){
 
 /**
  * Transform a URL search part into a Filter Object.
- * @param {String} [urlSearch=window.location.search] The URL search string to be parsed into tags.
+ *
+ * @param {string} [urlSearch] The URL search string to be parsed into tags.
  * @returns {FilterObject} The Filter Object.
+ * @example
  */
-function searchURLtoFilter(urlSearch = window.location.search){
+function searchURLtoFilter(urlSearch = window.location.search) {
 	const search = new URLSearchParams(urlSearch);
 	const filterObject = {};
 
@@ -152,21 +168,27 @@ function searchURLtoFilter(urlSearch = window.location.search){
 						filterObject.scope = 'out';
 					}
 					break;
+
 				case 'id':
 					filterObject.sku = value;
 					break;
+
 				case 'ed':
 					filterObject.edition = value;
 					break;
+
 				case 'rel':
 					filterObject.release = value;
 					break;
+
 				case 'pub':
 					filterObject.publisher = value;
 					break;
+
 				case 'cat':
 					filterObject.category = value;
 					break;
+
 				default:
 					filterObject[tag] = value;
 			}
@@ -178,10 +200,12 @@ function searchURLtoFilter(urlSearch = window.location.search){
 
 /**
  * Transform a string of tags into a Filter Object.
- * @param {String} [text=searchInput.value] The text to search in.
+ *
+ * @param {string} [text] The text to search in.
  * @returns {FilterObject} The Filter Object.
+ * @example
  */
-function searchTagsToFilter(text = searchInput.value){
+function searchTagsToFilter(text = searchInput.value) {
 	const filterObject = {};
 	const search = /(name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=]\s*(.*?)(?=(?:,?\s*(?:name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=])|$)/giu;
 	let match = search.exec(text.toLowerCase());
@@ -196,21 +220,27 @@ function searchTagsToFilter(text = searchInput.value){
 						filterObject.scope = 'out';
 					}
 					break;
+
 				case 'id':
 					filterObject.sku = match[2];
 					break;
+
 				case 'ed':
 					filterObject.edition = match[2];
 					break;
+
 				case 'rel':
 					filterObject.release = match[2];
 					break;
+
 				case 'pub':
 					filterObject.publisher = match[2];
 					break;
+
 				case 'cat':
 					filterObject.category = match[2];
 					break;
+
 				default:
 					filterObject[match[1]] = match[2];
 			}
@@ -224,14 +254,12 @@ function searchTagsToFilter(text = searchInput.value){
 
 /**
  * Toggle the Information box modal.
- * @param {Boolean} forceOpen Force the modal to be open.
+ *
+ * @param {boolean} forceOpen Force the modal to be open.
+ * @example
  */
-function toggleInfoModal(forceOpen = false){
+function toggleInfoModal(forceOpen = false) {
 	const info = document.querySelector('#info-box');
-
-	if (!info.showModal) {
-		dialogPolyfill.forceRegisterDialog(info);
-	}
 
 	if (!info.open || forceOpen) {
 		info.showModal();
@@ -242,7 +270,7 @@ function toggleInfoModal(forceOpen = false){
 	}
 }
 
-//Toggle infobox
+// Toggle infobox
 document.querySelector('#info-button').addEventListener('click', toggleInfoModal);
 document.querySelector('#info-box .back-button').addEventListener('click', toggleInfoModal);
 window.addEventListener('keydown', (evt) => {
@@ -252,7 +280,7 @@ window.addEventListener('keydown', (evt) => {
 	}
 });
 
-//Toggle Search box
+// Toggle Search box
 searchInput.addEventListener('focus', (evt) => evt.target.select());
 window.addEventListener('keydown', (evt) => {
 	if (evt.ctrlKey && evt.key === 'f') {
@@ -268,16 +296,18 @@ window.addEventListener('keydown', (evt) => {
 });
 searchInput.addEventListener('input', () => {
 	const filterObject = searchTagsToFilter();
+
 	updateHistory(filterObject);
 	updateSearchFilter(filterObject);
 	updateSugestionBox(filterObject);
 });
 
-//Categories
+// Categories
 document.querySelectorAll('#menu .category').forEach((category) => category.addEventListener('click', (evt) => {
 	evt.preventDefault();
 
-	const filterObject = {category: (new URLSearchParams(evt.target.href)).get('category')};
+	const filterObject = { category: new URLSearchParams(evt.target.href).get('category') };
+
 	updateTags(filterObject);
 	updateHistory(filterObject);
 	updateSearchFilter(filterObject);
@@ -289,6 +319,7 @@ document.querySelector('#menu li:last-child a').addEventListener('click', (evt) 
 	evt.preventDefault();
 
 	const filterObject = {};
+
 	updateTags(filterObject);
 	updateHistory(filterObject);
 	updateSearchFilter(filterObject);
@@ -298,10 +329,11 @@ document.querySelector('#menu li:last-child a').addEventListener('click', (evt) 
 
 document.addEventListener('DOMContentLoaded', () => {
 	const filterObject = searchURLtoFilter();
+
 	updateTags(filterObject);
 	updateSearchFilter(filterObject);
 
-	if ((new URLSearchParams(window.location.search)).has('info')) {
+	if (new URLSearchParams(window.location.search).has('info')) {
 		toggleInfoModal(true);
 	}
 

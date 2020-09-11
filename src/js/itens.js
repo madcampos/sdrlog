@@ -1,11 +1,15 @@
-dialogPolyfill.registerDialog(document.querySelector('#item-details'));
+/**
+ * @file Item processing module.
+ * @author madcampos <madcampos@outlook.com>
+ * @version 1.0.0
+ */
 
 const IMAGES_PATH = '/img/full/';
 const PUBLISHER_PATH = '/img/publishers/';
 const DATA_PATH = '/data/';
 
-const dateFormater = new Intl.DateTimeFormat('en-US', {timeZone: 'UTC', month: 'short', year: 'numeric'});
-const sorter = new Intl.Collator('en-US', {sensitivity: 'accent', numeric: true, caseFirst: 'upper'});
+const dateFormater = new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC', year: 'numeric' });
+const sorter = new Intl.Collator('en-US', { caseFirst: 'upper', numeric: true, sensitivity: 'accent' });
 const capitalizeString = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 const categories = new Map([
@@ -31,10 +35,12 @@ const items = new Map();
 
 /**
  * Fills the item details modal with the data provided.
- * @param {Object} item The item data.
+ *
+ * @param {object} item The item data.
+ * @example
  */
-function fillItemDetails(item){
-	//TODO: map terms to canonical decomposition form
+function fillItemDetails(item) {
+	// TODO: map terms to canonical decomposition form
 	document.querySelector('#item-details-title').textContent = item.title;
 	document.querySelector('#item-details-image').src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
 	document.querySelector('#item-details-description').textContent = item.description;
@@ -59,9 +65,11 @@ function fillItemDetails(item){
 
 /**
  * Fills the item card with the data provided.
- * @param {Object} item The item data.
+ *
+ * @param {object} item The item data.
+ * @example
  */
-function addItemCard(item){
+function addItemCard(item) {
 	const itemCard = document.importNode(document.querySelector('#card-template').content, true);
 	const cardLinkData = itemCard.querySelector('a').dataset;
 
@@ -86,9 +94,11 @@ function addItemCard(item){
 
 /**
  * Fetches the next batch of items from storage or network.
+ *
  * @returns {Array|null} A key-value pair of items or null if there is no new data.
+ * @example
  */
-async function fetchNextItems(){
+async function fetchNextItems() {
 	const lastDataFile = localStorage.getItem('lastDataFile') || 1;
 	const currentDataFile = sessionStorage.getItem('currentDataFile') || 1;
 	let currentData = localStorage.getItem(`data${currentDataFile}`);
@@ -104,7 +114,7 @@ async function fetchNextItems(){
 				localStorage.setItem(`data${lastDataFile + 1}`, JSON.stringify(currentData));
 			}
 		} catch (err) {
-			//eslint-disable-next-line no-console
+			// eslint-disable-next-line no-console
 			console.error(err);
 		}
 	} else {
@@ -112,35 +122,19 @@ async function fetchNextItems(){
 	}
 
 	sessionStorage.setItem('currentDataFile', currentDataFile + 1);
+
 	return currentData || null;
 }
 
 /**
- * Lazy load images.
- */
-async function lazyLoadImages(){
-	//TODO: keep record of last fetched thumb/image
-	//Load only a few images at a time
-	//test events: load, loadend, error
-	//test attributes: completed, naturalWidth
-	//test mutation observer
-	//Lazy load with js reuzing image objects
-	//Use facebook technique: https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/
-	//https://www.sitepoint.com/five-techniques-lazy-load-images-website-performance/
-	//https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
-}
-
-/**
  * Shows the item details of the given SKU.
- * @param {String} sku The SKU to show.
- * @param {Boolean} forceOpen Force the modal to be open.
+ *
+ * @param {string} sku The SKU to show.
+ * @param {boolean} forceOpen Force the modal to be open.
+ * @example
  */
-function toggleItemDetails(sku, forceOpen = false){
+function toggleItemDetails(sku, forceOpen = false) {
 	const itemDetails = document.querySelector('#item-details');
-
-	if (!itemDetails.showModal) {
-		dialogPolyfill.forceRegisterDialog(itemDetails);
-	}
 
 	if (!itemDetails.open || forceOpen) {
 		fillItemDetails(items.get(sku));
@@ -156,6 +150,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 	let lastItems = null;
 
 	do {
+		// eslint-disable-next-line no-await-in-loop
 		lastItems = await fetchNextItems();
 		lastItems.forEach(([id, item]) => {
 			items.set(id, item);
@@ -165,6 +160,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 	if (window.location.hash) {
 		const sku = window.location.hash.replace('#', '');
+
 		toggleItemDetails(sku, true);
 	}
 

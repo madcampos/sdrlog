@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Icon</title>
+	<style>
+		:root {
+			--bg-gradient: linear-gradient(to bottom right, lightskyblue, hotpink);
+			--bg-color: white;
+
+			--color-primary: #00B3E6;
+			--color-secondary: #FB07DB;
+		}
+
+		@media(prefers-color-scheme: dark) {
+			:root {
+				--bg-gradient: linear-gradient(to bottom right, darkslategray, black);
+				--bg-color: black;
+			}
+		}
+
+		body {
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 16vmin;
+			overflow: hidden;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: var(--bg-color);
+			background-image: var(--bg-gradient);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		#logo {
+			width: 100%;
+			height: 100%;
+			max-width: 500px;
+			max-height: 500px;
+		}
+
+		#logo-gradient stop:first-child {
+			stop-color: var(--color-primary);
+		}
+
+		#logo-gradient stop:last-child {
+			stop-color: var(--color-secondary);
+		}
+
+		#logo-circle {
+			fill: white;
+		}
+
+		#logo-border {
+			fill: transparent;
+			/* stroke: url('#logo-gradient');
+			stroke-width: 10px; */
+		}
+
+		#logo-fish {
+			fill: var(--color-primary);
+		}
+	</style>
+</head>
+<body>
+	<svg id="logo" viewBox="0 0 1100 1100">
+		<defs>
+			<linearGradient id="logo-gradient">
+				<stop offset="0"/>
+				<stop offset="100%"/>
+			</linearGradient>
+		</defs>
+		<circle id="logo-circle" cx="550" cy="550" r="500"/>
+		<circle id="logo-border" cx="550" cy="550" r="460"/>
+		<path id="logo-fish" d="M176.406,548.262L176.405,548.261C361.707,278.161 679.858,341.485 843.596,522.678C865.27,496.658 883.357,469.259 896.949,441.502L916.664,462.891C903.204,493.039 885.755,521.683 865.074,548.262C885.755,574.841 903.204,603.485 916.664,633.633L896.949,655.022C883.357,627.265 865.27,599.866 843.596,573.847C679.858,755.04 361.707,818.363 176.405,548.263L176.406,548.262ZM820.698,548.262C758.032,482.958 672.978,429.499 581.873,406.274C447.824,372.124 303.833,402.574 200.71,548.262C303.833,693.951 447.824,724.4 581.873,690.252C672.978,667.026 758.032,613.567 820.698,548.262Z"/>
+	</svg>
+</body>
+</html>

@@ -4,9 +4,29 @@
 	"description": "List of shadowrun published material (books, tabletop, video games, etc.) ",
 	"main": "index.html",
 	"scripts": {
-		"start": "ws --https -z",
-		"build": "node build",
-		"dev": "ws --https -z -r \"/data/:json -> /dist/data/:json\""
+		"start": "local-server",
+		"lint": "npm-run-all -p lint:**",
+		"lint:js": "eslint . --fix",
+		"lint:html": "htmlhint ./src/index.html",
+		"lint:css": "",
+		"version": "npm-run-all -s configure:version:** git-add",
+		"configure:version": "npm version minor",
+		"git-add": "git add .",
+		"generate:covers": "pwsh build/extract-pdf-covers.ps1",
+		"generate:thumbs": "node build/generate-thumbs.mjs",
+		"optimize-images": "node build/optimize-covers.mjs",
+		"build:images": "npm-run-all -s generate:covers generate:thumbs optimize-images",
+		"build:browser-assets": "node build/generate-assets.mjs",
+		"build:json-data": "node build/generate-data.mjs",
+		"build:css": "node build/css-files.mjs",
+		"build:html": "html-minifier src/index.html -c .htmlmin.json -o dist/index.html",
+		"build:js": "node build/js-files.mjs",
+		"prebuild": "npm-run-all -s lint",
+		"build": "npm-run-all -p build:**",
+		"postbuild": "npm run publish"
+	},
+	"engines": {
+		"node": ">=14.0.0"
 	},
 	"repository": {
 		"type": "git",
@@ -23,19 +43,38 @@
 		"url": "https://github.com/madcampos/sdrlog/issues"
 	},
 	"homepage": "https://github.com/madcampos/sdrlog#readme",
-	"devDependencies": {
-		"csso": "^3.5.0",
-		"eslint": "^4.18.1",
-		"fs-extra": "^5.0.0",
-		"glob": "^7.1.2",
-		"html-minifier": "^3.5.11",
-		"imagemin": "^5.3.1",
-		"imagemin-mozjpeg": "^7.0.0",
-		"imagemin-pngquant": "^5.1.0",
-		"imagemin-svgo": "^6.0.0",
-		"imagemin-webp": "^4.1.0",
-		"jimp": "^0.2.28",
-		"local-web-server": "^2.5.1",
-		"uglify-es": "^3.3.9"
+	"dependencies": {
+		"@shockpkg/icon-encoder": "^1.1.0",
+		"csso": "^4.0.3",
+		"eslint": "^7.8.1",
+		"eslint-plugin-jsdoc": "^30.4.0",
+		"eslint-plugin-node": "^11.1.0",
+		"fast-glob": "^3.2.4",
+		"html-minifier": "^4.0.0",
+		"htmlhint": "^0.14.1",
+		"husky": "^4.3.0",
+		"imagemin": "^7.0.1",
+		"imagemin-mozjpeg": "^9.0.0",
+		"imagemin-optipng": "^8.0.0",
+		"imagemin-svgo": "^8.0.0",
+		"jimp": "^0.16.1",
+		"lint-staged": "^10.3.0",
+		"live-server": "^1.2.1",
+		"npm-run-all": "^4.1.5",
+		"puppeteer": "^5.2.1",
+		"stylelint": "^13.7.0",
+		"terser": "^5.3.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": "eslint --fix",
+		"*.{png,jpeg,jpg,gif,svg}": [
+			"imagemin-lint-staged",
+			"git add"
+		]
 	}
 }
