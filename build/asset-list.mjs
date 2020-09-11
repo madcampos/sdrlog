@@ -107,7 +107,7 @@ export default [
 				width: 152
 			}
 		],
-		destination: 'public/img/icons',
+		destination: BASE_PATH,
 		platform: 'safari',
 		resource: 'assets/icon-bg.html',
 		type: 'maskable'
@@ -158,5 +158,48 @@ export default [
 		platform: 'windows',
 		resource: 'assets/icon-mono.html',
 		type: 'icon'
+	},
+	{
+		assets: [
+			{
+				fileName: 'apple-launch-1125x2436.png',
+				height: 2436,
+				width: 1125
+			},
+			{
+				fileName: 'apple-launch-750x1334.png',
+				height: 1334,
+				width: 750
+			},
+			{
+				fileName: 'apple-launch-1242x2208.png',
+				height: 2208,
+				width: 1242
+			},
+			{
+				fileName: 'apple-launch-640x1136.png',
+				height: 1136,
+				width: 640
+			},
+			{
+				fileName: 'apple-launch-1536x2048.png',
+				height: 2048,
+				width: 1536
+			},
+			{
+				fileName: 'apple-launch-1668x2224.png',
+				height: 2224,
+				width: 1668
+			},
+			{
+				fileName: 'apple-launch-2048x2732.png',
+				height: 2732,
+				width: 2048
+			}
+		],
+		destination: BASE_PATH,
+		platform: 'ios',
+		resource: 'assets/splash.html',
+		type: 'splash'
 	}
 ];

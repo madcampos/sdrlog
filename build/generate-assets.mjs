@@ -11,9 +11,9 @@ import { extname, join, resolve } from 'path';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import { existsSync } from 'fs';
 
-import { buffer as imagemin } from 'imagemin';
+import { default as imagemin } from 'imagemin';
 
-import { launch } from 'puppeteer';
+import { default as puppeteer } from 'puppeteer';
 
 import mozjpg from 'imagemin-mozjpeg';
 import optipng from 'imagemin-optipng';
@@ -32,7 +32,7 @@ const imageminOptions = {
 };
 
 (async () => {
-	const browser = await launch({
+	const browser = await puppeteer.launch({
 		ignoreHTTPSErrors: true
 	});
 
@@ -113,7 +113,7 @@ const imageminOptions = {
 				}
 
 				if (!extname(asset.fileName) === '.ico') {
-					fileData = await imagemin(fileData, imageminOptions);
+					fileData = await imagemin.buffer(fileData, imageminOptions);
 				}
 
 				writeFile(filePath, fileData);
