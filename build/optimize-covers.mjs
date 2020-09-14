@@ -6,6 +6,7 @@
  */
 
 import { mkdir, readFile, writeFile } from 'fs/promises';
+import { existsSync } from 'fs';
 import { dirname } from 'path';
 
 import { default as imagemin } from 'imagemin';
@@ -16,6 +17,7 @@ import { default as glob } from 'fast-glob';
 const SRC_PATH = './covers';
 const DEST_PATH = './dist/img/full';
 const EXT = '.jpg';
+const FORCE_REGENERATE = false;
 
 const imageminOptions = {
 	plugins: [mozjpg({ progressive: true, quality: 75 })]
@@ -28,9 +30,13 @@ const imageminOptions = {
 
 	for await (const file of files) {
 		const fileName = file.replace(SRC_PATH, DEST_PATH);
-		const fileData = await imagemin.buffer(await readFile(file), imageminOptions);
 
 		await mkdir(dirname(fileName), { recursive: true });
-		await writeFile(fileName, fileData);
+
+		if (!existsSync(file) || FORCE_REGENERATE) {
+			const fileData = await imagemin.buffer(await readFile(file), imageminOptions);
+
+			await writeFile(fileName, fileData);
+		}
 	}
 })();

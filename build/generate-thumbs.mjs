@@ -6,6 +6,7 @@
  */
 
 import { mkdir, writeFile } from 'fs/promises';
+import { existsSync } from 'fs';
 import { dirname } from 'path';
 
 import { default as Jimp } from 'jimp';
@@ -19,6 +20,7 @@ const SRC_PATH = './covers';
 const DEST_PATH = './dist/img/thumbs';
 const EXT = '.jpg';
 const THUMB_SIZE = 256;
+const FORCE_REGENERATE = false;
 
 const imageminOptions = {
 	plugins: [mozjpg({ progressive: true, quality: 75 })]
@@ -34,12 +36,14 @@ const imageminOptions = {
 
 		await mkdir(dirname(fileName), { recursive: true });
 
-		const img = await Jimp.read(file);
+		if (!existsSync(file) || FORCE_REGENERATE) {
+			const img = await Jimp.read(file);
 
-		img.resize(Jimp.AUTO, THUMB_SIZE, Jimp.RESIZE_BICUBIC);
+			img.resize(Jimp.AUTO, THUMB_SIZE, Jimp.RESIZE_BICUBIC);
 
-		const fileData = await imagemin.buffer(await img.getBufferAsync(Jimp.MIME_JPEG), imageminOptions);
+			const fileData = await imagemin.buffer(await img.getBufferAsync(Jimp.MIME_JPEG), imageminOptions);
 
-		await writeFile(fileName, fileData);
+			await writeFile(fileName, fileData);
+		}
 	}
 })();
