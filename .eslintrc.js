@@ -259,7 +259,7 @@ module.exports = {
 			{ blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
 			{ blankLine: 'always', prev: 'directive', next: '*' },
 			{ blankLine: 'any', prev: 'directive', next: 'directive' },
-			{ blankLine: 'always', prev: ['case', 'default'], next: '*' }
+			{ blankLine: 'always', prev: 'break', next: ['case', 'default'] }
 		],
 		'prefer-exponentiation-operator': 'warn',
 		'prefer-object-spread': 'error',

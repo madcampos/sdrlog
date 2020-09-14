@@ -64,5 +64,6 @@ img/full/*
 img/thumbs/*
 
 dist/
+covers/
 
 *.pem
