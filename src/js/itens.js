@@ -27,7 +27,7 @@ const itemDetails = {
 	type: document.querySelector('#item-details-type abbr')
 };
 
-const capitalizeString = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+const capitalizeString = ([first, ...other]) => `${first.toUpperCase()}${other.join('')}`;
 
 const categories = new Map([
 	['novel', '📚'],
