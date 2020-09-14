@@ -195,7 +195,7 @@ module.exports = {
 		'jsx-quotes': 'warn',
 		'key-spacing': 'error',
 		'keyword-spacing': ['error', { before: true, after: true, overrides: { 'function': { after: false } } }],
-		'lines-between-class-members': ['error', 'always'],
+		'lines-between-class-members': 'off',
 		'line-comment-position': ['error', { position: 'above' }],
 		'linebreak-style': 'error',
 		'lines-around-comment': 'warn',
