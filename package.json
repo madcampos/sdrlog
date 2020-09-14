@@ -73,7 +73,7 @@
 		}
 	},
 	"lint-staged": {
-		"*.js": "eslint --fix",
+		"*.{js, mjs}": "eslint --fix",
 		"*.html": "linthtml",
 		"*.{png,jpeg,jpg,gif,svg}": [
 			"imagemin-lint-staged",
