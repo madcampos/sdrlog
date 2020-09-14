@@ -1,12 +1,27 @@
+/* eslint-disable no-fallthrough */
 /**
  * @file Basic app chrome.
  * @author madcampos <madcampos@outlook.com>
  * @version 1.0.0
  */
 
-const searchInput = document.querySelector('#search input');
+const chrome = document.querySelector('#chrome');
 
-// TODO: add element.closest() calls to event listeners.
+const searchBox = document.querySelector('#search input');
+
+const infoBox = document.querySelector('#info-box');
+const infoBoxButton = document.querySelector('#info-button');
+const infoBoxBack = document.querySelector('#info-box .back-button');
+
+const menu = document.querySelector('#menu ul');
+const menuCategories = document.querySelectorAll('#menu .category');
+const allCategories = document.querySelector('#menu li:last-child a');
+
+const filterCSS = document.querySelector('#filterCSS');
+const SEARCH_ITEM_SELECTOR = '.item';
+
+const namedFilters = 'name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope';
+const searchRegexString = `(?<filter>${namedFilters})[:=]\\s*(?<term>.*?)(?=(?:,?\\s*(?:${namedFilters})[:=])|$)`;
 
 /**
  * The Filter Object and it's properties.
@@ -24,35 +39,6 @@ const searchInput = document.querySelector('#search input');
  */
 
 /**
- * Updates the search suggestion box.
- *
- * @param {filterObject} filterObject The filter object.
- * @returns {number} The RAF ID.
- * @example
- */
-function updateSugestionBox(filterObject) {
-	return requestAnimationFrame(() => {
-		// TODO: throttle
-		// 1. get current filtered
-		// 2. if empty
-		// 2.1. set scope to full Map
-		// 2.2.
-		// 3. get new query
-		// 4. if new query contains the current query set scope to current filtered
-		// 5. if current query contains new query (step back) set scope to previous filtered (superset)
-		// 6. filter scope
-		// 7. set previous filtered to current filtered
-		// 8. set current query to new query
-		// 9. set previous
-
-		// 1. Clear datalist options
-		// 2. Filter items map for condition
-		// 2.1. Keep reperence of one step back and current step so we can rollback and improve the currnt search
-		// 3. throttle request for 1 second or it's finished processing
-	});
-}
-
-/**
  * Updates the search CSS with the given Filter Object.
  *
  * @param {FilterObject} filterObject The Filter Object.
@@ -60,8 +46,6 @@ function updateSugestionBox(filterObject) {
  * @example
  */
 function updateSearchFilter(filterObject) {
-	const SEARCH_ITEM_SELECTOR = '.item';
-	const filterCSS = document.querySelector('#filterCSS');
 	let styleString = '';
 
 	if (Object.keys(filterObject).length === 0) {
@@ -126,7 +110,7 @@ function updateTags(filterObject) {
 
 	if (Object.keys(filterObject).length === 0) {
 		return window.requestAnimationFrame(() => {
-			searchInput.value = '';
+			searchBox.value = '';
 		});
 	}
 
@@ -143,7 +127,7 @@ function updateTags(filterObject) {
 	}
 
 	return window.requestAnimationFrame(() => {
-		searchInput.value = tagString;
+		searchBox.value = tagString;
 	});
 }
 
@@ -155,6 +139,7 @@ function updateTags(filterObject) {
  * @example
  */
 function searchURLtoFilter(urlSearch = window.location.search) {
+	// TODO: normalize string
 	const search = new URLSearchParams(urlSearch);
 	const filterObject = {};
 
@@ -205,47 +190,55 @@ function searchURLtoFilter(urlSearch = window.location.search) {
  * @returns {FilterObject} The Filter Object.
  * @example
  */
-function searchTagsToFilter(text = searchInput.value) {
+function searchTagsToFilter(text = searchBox.value) {
 	const filterObject = {};
-	const search = /(name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=]\s*(.*?)(?=(?:,?\s*(?:name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope)[:=])|$)/giu;
-	let match = search.exec(text.toLowerCase());
+	const search = new RegExp(searchRegexString, 'giu');
+
+	//TODO: normalize string
+	const normalizedString = text.toLowerCase();
+
+	let match = search.exec(normalizedString);
 
 	if (match) {
 		do {
-			switch (match[1]) {
+			switch (match.groups?.filter) {
 				case 'scope':
-					if (match[2] === 'missing') {
+					if (match.groups?.term === 'missing') {
 						filterObject.scope = 'missing';
-					} else if (match[2] === 'out') {
+					} else if (match.groups?.term === 'out') {
 						filterObject.scope = 'out';
 					}
 					break;
 
 				case 'id':
-					filterObject.sku = match[2];
+					filterObject.sku = match.groups?.term;
 					break;
 
+				case 'edition':
 				case 'ed':
-					filterObject.edition = match[2];
+					filterObject.edition = match.groups?.term;
 					break;
 
+				case 'release':
 				case 'rel':
-					filterObject.release = match[2];
+					filterObject.release = match.groups?.term;
 					break;
 
+				case 'publisher':
 				case 'pub':
-					filterObject.publisher = match[2];
+					filterObject.publisher = match.groups?.term;
 					break;
 
+				case 'category':
 				case 'cat':
-					filterObject.category = match[2];
+					filterObject.category = match.groups?.term;
 					break;
 
 				default:
-					filterObject[match[1]] = match[2];
+					filterObject[match.groups?.filter] = match.groups?.term;
 			}
 
-			match = search.exec(text.toLowerCase());
+			match = search.exec(normalizedString);
 		} while (match);
 	}
 
@@ -259,20 +252,19 @@ function searchTagsToFilter(text = searchInput.value) {
  * @example
  */
 function toggleInfoModal(forceOpen = false) {
-	const info = document.querySelector('#info-box');
-
-	if (!info.open || forceOpen) {
-		info.showModal();
+	if (!infoBox.open || forceOpen) {
+		infoBox.showModal();
 		history.pushState(null, 'Shadowrun Catalog', '?info');
 	} else {
-		info.close();
+		infoBox.close();
 		history.back();
 	}
 }
 
 // Toggle infobox
-document.querySelector('#info-button').addEventListener('click', toggleInfoModal);
-document.querySelector('#info-box .back-button').addEventListener('click', toggleInfoModal);
+
+infoBoxButton.addEventListener('click', toggleInfoModal);
+infoBoxBack.addEventListener('click', toggleInfoModal);
 window.addEventListener('keydown', (evt) => {
 	if (evt.ctrlKey && evt.key === 'i') {
 		evt.preventDefault();
@@ -281,29 +273,28 @@ window.addEventListener('keydown', (evt) => {
 });
 
 // Toggle Search box
-searchInput.addEventListener('focus', (evt) => evt.target.select());
+searchBox.addEventListener('focus', (evt) => evt.target.select());
 window.addEventListener('keydown', (evt) => {
 	if (evt.ctrlKey && evt.key === 'f') {
 		evt.preventDefault();
-		const searchField = document.querySelector('#search input');
 
-		if (document.activeElement === searchField) {
-			searchField.blur();
+		if (document.activeElement === searchBox) {
+			searchBox.blur();
 		} else {
-			searchField.focus();
+			searchBox.focus();
 		}
 	}
 });
-searchInput.addEventListener('input', () => {
+
+searchBox.addEventListener('input', () => {
 	const filterObject = searchTagsToFilter();
 
 	updateHistory(filterObject);
 	updateSearchFilter(filterObject);
-	updateSugestionBox(filterObject);
 });
 
 // Categories
-document.querySelectorAll('#menu .category').forEach((category) => category.addEventListener('click', (evt) => {
+menuCategories.forEach((category) => category.addEventListener('click', (evt) => {
 	evt.preventDefault();
 
 	const filterObject = { category: new URLSearchParams(evt.target.href).get('category') };
@@ -312,10 +303,10 @@ document.querySelectorAll('#menu .category').forEach((category) => category.addE
 	updateHistory(filterObject);
 	updateSearchFilter(filterObject);
 
-	document.querySelector('#menu ul').classList.toggle('hidden');
+	menu.classList.toggle('hidden');
 }));
 
-document.querySelector('#menu li:last-child a').addEventListener('click', (evt) => {
+allCategories.addEventListener('click', (evt) => {
 	evt.preventDefault();
 
 	const filterObject = {};
@@ -324,7 +315,7 @@ document.querySelector('#menu li:last-child a').addEventListener('click', (evt) 
 	updateHistory(filterObject);
 	updateSearchFilter(filterObject);
 
-	document.querySelector('#menu ul').classList.toggle('hidden');
+	menu.classList.toggle('hidden');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -337,5 +328,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		toggleInfoModal(true);
 	}
 
-	document.querySelector('#chrome').classList.toggle('hidden');
+	chrome.classList.toggle('hidden');
 });

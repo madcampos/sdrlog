@@ -10,6 +10,23 @@ const DATA_PATH = '/data/';
 
 const dateFormater = new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC', year: 'numeric' });
 const sorter = new Intl.Collator('en-US', { caseFirst: 'upper', numeric: true, sensitivity: 'accent' });
+
+const cardTemplate = document.querySelector('#card-template');
+const itemDetails = {
+	category: document.querySelector('#item-details-category abbr'),
+	description: document.querySelector('#item-details-description'),
+	edition: document.querySelector('#item-details-edition'),
+	element: document.querySelector('#item-details'),
+	gameDate: document.querySelector('#item-details-gamedate'),
+	image: document.querySelector('#item-details-image'),
+	notes: document.querySelector('#item-details-notes'),
+	publisher: document.querySelector('#item-details-publisher abbr'),
+	releaseDate: document.querySelector('#item-details-releasedate'),
+	sku: document.querySelector('#item-details-sku'),
+	title: document.querySelector('#item-details-title'),
+	type: document.querySelector('#item-details-type abbr')
+};
+
 const capitalizeString = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 const categories = new Map([
@@ -40,26 +57,25 @@ const items = new Map();
  * @example
  */
 function fillItemDetails(item) {
-	// TODO: map terms to canonical decomposition form
-	document.querySelector('#item-details-title').textContent = item.title;
-	document.querySelector('#item-details-image').src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
-	document.querySelector('#item-details-description').textContent = item.description;
+	itemDetails.title.textContent = item.title;
+	itemDetails.image.src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
+	itemDetails.description.textContent = item.description;
 
-	document.querySelector('#item-details-sku').textContent = item.sku;
-	document.querySelector('#item-details-edition').textContent = item.edition;
-	document.querySelector('#item-details-gamedate').textContent = dateFormater.format(new Date(item.gameDate));
-	document.querySelector('#item-details-releasedate').textContent = dateFormater.format(new Date(item.releaseDate));
-	document.querySelector('#item-details-category abbr').textContent = categories.get(item.category);
-	document.querySelector('#item-details-category abbr').title = capitalizeString(item.category);
-	document.querySelector('#item-details-type abbr').textContent = types.get(item.type);
-	document.querySelector('#item-details-type abbr').title = capitalizeString(item.type);
-	document.querySelector('#item-details-publisher abbr').title = capitalizeString(item.publisher);
-	document.querySelector('#item-details-publisher abbr').src = `${PUBLISHER_PATH}${item.publisher}.png`;
+	itemDetails.sku.textContent = item.sku;
+	itemDetails.edition.textContent = item.edition;
+	itemDetails.gameDate.textContent = dateFormater.format(new Date(item.gameDate));
+	itemDetails.releaseDate.textContent = dateFormater.format(new Date(item.releaseDate));
+	itemDetails.category.textContent = categories.get(item.category);
+	itemDetails.category.title = capitalizeString(item.category);
+	itemDetails.type.textContent = types.get(item.type);
+	itemDetails.type.title = capitalizeString(item.type);
+	itemDetails.publisher.title = capitalizeString(item.publisher);
+	itemDetails.publisher.src = `${PUBLISHER_PATH}${item.publisher}.png`;
 
 	if (item.notes) {
-		document.querySelector('#item-details-notes').textContent = item.notes;
+		itemDetails.notes.textContent = item.notes;
 	} else {
-		document.querySelector('#item-details-notes').classList.toggle('hidden');
+		itemDetails.notes.classList.toggle('hidden');
 	}
 }
 
@@ -70,7 +86,7 @@ function fillItemDetails(item) {
  * @example
  */
 function addItemCard(item) {
-	const itemCard = document.importNode(document.querySelector('#card-template').content, true);
+	const itemCard = document.importNode(cardTemplate.content, true);
 	const cardLinkData = itemCard.querySelector('a').dataset;
 
 	itemCard.querySelector('.thumb').src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
@@ -134,14 +150,12 @@ async function fetchNextItems() {
  * @example
  */
 function toggleItemDetails(sku, forceOpen = false) {
-	const itemDetails = document.querySelector('#item-details');
-
-	if (!itemDetails.open || forceOpen) {
+	if (!itemDetails.element.open || forceOpen) {
 		fillItemDetails(items.get(sku));
-		itemDetails.showModal();
+		itemDetails.element.showModal();
 		history.pushState(history.state, 'Shadowrun Catalog', `#${sku}`);
 	} else {
-		itemDetails.close();
+		itemDetails.element.close();
 		history.back();
 	}
 }
