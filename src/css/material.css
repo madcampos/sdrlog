@@ -1,10 +1,11 @@
 /* Material list */
-#itens{
+
+#itens {
 	height: 100%;
 	overflow: auto;
 }
 
-#itens main{
+#itens main {
 	margin: 0 var(--size-m);
 	text-align: center;
 	display: flex;
@@ -13,7 +14,7 @@
 	align-items: flex-start;
 }
 
-.item{
+.item {
 	width: var(--item-width);
 	height: var(--item-height);
 	display: grid;
@@ -21,12 +22,12 @@
 	text-decoration: none;
 }
 
-.item .title{
+.item .title {
 	margin: var(--size-xs) 0;
 	align-self: end;
 }
 
-#item-details-content{
+#item-details-content {
 	width: 100%;
 	height: 100%;
 	display: grid;
@@ -36,33 +37,31 @@
 	grid-gap: var(--size-xs);
 }
 
-#item-details-content .metadata{
+#item-details-content .metadata {
 	grid-area: metadata;
-	-webkit-columns: 2 calc(var(--size-s) * 10);
-	-webkit-column-gap: var(--size-m);
-	column-gap: var(--size-m);
 	columns: 2 calc(var(--size-s) * 10);
+	column-gap: var(--size-m);
 	font-size: var(--size-s);
 }
 
-#item-details-content .metadata > *{
+#item-details-content .metadata > * {
 	display: block;
 }
 
-#item-details-content .publisher img{
+#item-details-content .publisher img {
 	height: var(--size-s);
 	padding: 0 var(--size-us);
 	display: inline-block;
 	vertical-align: middle;
 }
 
-#item-details-content .image{
+#item-details-content .image {
 	grid-area: image;
 	text-align: center;
 	position: relative;
 }
 
-.details-img-leave-active{
+.details-img-leave-active {
 	position: absolute;
 	z-index: -1;
 	width: 0;
@@ -70,33 +69,36 @@
 	opacity: 0;
 }
 
-#item-details-content .content{
+#item-details-content .content {
 	grid-area: content;
 	overflow: auto;
 }
 
-#item-details-content .notes{
+#item-details-content .notes {
 	color: var(--highlight-color);
 	border: currentColor thin dotted;
 	padding: var(--size-m);
 	margin: var(--size-xxs) 0;
 }
 
-#item-details-content .notes::before{
+#item-details-content .notes::before {
 	content: '⚠';
 	font-size: var(--size-l);
 }
-@media (max-width: 700px) and (orientation: portrait){
-	#item-details-content{
+
+@media (max-width: 700px) and (orientation: portrait) {
+
+	#item-details-content {
 		grid-template-areas: 'metadata' 'image' 'content';
 		grid-template-columns: 1fr;
 		grid-template-rows: calc(var(--size-s) * 6) minmax(12rem, auto) minmax(12rem, max-content);
 	}
 }
 
-@media (max-height: 400px) and (orientation: landscape){
-	.item{
-		height: calc(var(--item-height) * .75);
-		width: calc(var(--item-width) * .75);
+@media (max-height: 400px) and (orientation: landscape) {
+
+	.item {
+		height: calc(var(--item-height) * 0.75);
+		width: calc(var(--item-width) * 0.75);
 	}
 }

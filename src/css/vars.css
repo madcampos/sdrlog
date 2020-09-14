@@ -6,14 +6,15 @@ https://www.colourlovers.com/palettes/search?query=cyberpunk
 https://coolors.co/browser/latest/1
 */
 /* Variables */
+
 :root {
 	/**
 	 * Sizes
 	 * Progression: us < xxxs < xxs < xs < s < m > l > xl > xxl > xxxl > ul
 	 * Base: Main Body text
 	*/
-	--body-text: 18px;
 
+	--body-text: 18px;
 	--size-us: 0.32768rem;
 	--size-xxxs: 0.4096rem;
 	--size-xxs: 0.512rem;
@@ -24,28 +25,33 @@ https://coolors.co/browser/latest/1
 	--size-xl: 1.5625rem;
 	--size-xxl: 1.953125rem;
 	--size-xxxl: 2.44140625rem;
-	--size-ul: 3.0517578125rem;
+	--size-ul: 3.05175781rem;
 
 	/* Dialog */
+
 	--dialog-margin: 0;
 	--dialog-padding: var(--size-l);
 	--dialog-width: 100vw;
 	--dialog-height: 100vh;
 
 	/* Item */
-	--item-base-size: calc(5 & var(--size-m));
+
+	--item-base-size: calc(5 * var(--size-m));
 	--item-width: calc(4 * var(--item-base-size));
 	--item-height: calc(3 * var(--item-base-size));
 
 	/* Input */
+
 	--input-size: calc(5 * var(--size-ul));
 	--input-padding: var(--size-xs);
 	--input-margin: var(--size-s);
 
 	/* Search bar */
+
 	--searchbar-width: calc(12 * var(--size-m));
 
 	/* Headings */
+
 	--h1-size: var(--size-ul);
 	--h2-size: var(--size-xxxl);
 	--h3-size: var(--size-xxl);
@@ -54,9 +60,11 @@ https://coolors.co/browser/latest/1
 	--h6-size: var(--size-m);
 
 	/* Icon */
+
 	--icon-size: var(--size-l);
 
 	/* Menu */
+
 	--menu-padding: var(--size-xs);
 	--menu-margin: var(--size-s);
 
@@ -66,6 +74,7 @@ https://coolors.co/browser/latest/1
 	 * Suffixes: -ish < -ened < light/dark < -er < -est
 	*/
 	/* Grays */
+
 	--theme-gray-darkest: red;
 	--theme-gray-darker: red;
 	--theme-gray-dark: red;
@@ -75,6 +84,7 @@ https://coolors.co/browser/latest/1
 	--theme-grey-lightest: red;
 
 	/* Theme main color */
+
 	--theme-main-darkest: #4d040a;
 	--theme-main-darker: #810b14;
 	--theme-main-dark: #cc0d1d;
@@ -84,6 +94,7 @@ https://coolors.co/browser/latest/1
 	--theme-main-lightest: #f8dbde;
 
 	/* Theme accent color */
+
 	--theme-accent-darkest: red;
 	--theme-accent-darker: red;
 	--theme-accent-dark: red;
@@ -93,6 +104,7 @@ https://coolors.co/browser/latest/1
 	--theme-accent-lightest: red;
 
 	/* Theme accent 2 color */
+
 	--theme-accent2-darkest: #320f01;
 	--theme-accent2-darker: #5a220c;
 	--theme-accent2-dark: #963610;
@@ -102,6 +114,7 @@ https://coolors.co/browser/latest/1
 	--theme-accent2-lightest: #f1a587;
 
 	/* Theme accent 3 color */
+
 	--theme-accent3-darkest: red;
 	--theme-accent3-darker: red;
 	--theme-accent3-dark: red;
@@ -111,44 +124,46 @@ https://coolors.co/browser/latest/1
 	--theme-accent3-lightest: red;
 
 	/* Defaults */
+
 	--background-color: var(--theme-gray-darker);
 	--text-color: var(--theme-accent);
 	--border-color: var(--theme-accent-darker);
 
 	/* Link */
+
 	--link-color: var(--theme-main-darker);
 	--link-visited-color: var(--theme-accent2);
 	--link-active-color: var(--theme-main-light);
 	--link-hover-color: var(--theme-main);
 
 	/* Input */
+
 	--input-border-color: currentColor;
 	--input-text-color: var(--theme-main);
 	--input-placeholder-color: var(--theme-main-lighter);
-
 	--input-hover-text-color: var(--theme-main-light);
 	--input-hover-border-color: currentColor;
-
 	--input-active-text-color: var(--theme-accent);
 	--input-active-border-color: var(--theme-main-light);
 
 	/* Button */
+
 	--button-border-color: currentColor;
 	--button-background-color: transparent;
 	--button-text-color: var(--theme-main);
-
 	--button-border-hover-color: currentColor;
 	--button-background-hover-color: transparent;
 	--button-text-hover-color: var(--theme-main-light);
-
 	--button-border-active-color: currentColor;
 	--button-background-active-color: transparent;
 	--button-text-active-color: var(--theme-main-lightest);
 
 	/* Icon */
+
 	--icon-color: var(--theme-main);
 
 	/* Headings */
+
 	--heading-color: var(--theme-main-light);
 	--title-color: var(--theme-main);
 }

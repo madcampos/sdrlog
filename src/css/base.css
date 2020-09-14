@@ -1,20 +1,23 @@
 /* Main */
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
 	width: var(--size-xxxs);
 	opacity: 0.7;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
 	border-radius: var(--size-xxxs);
 	background: var(--main-color);
 }
-::-webkit-scrollbar:window-inactive{opacity: 0.3;}
+::-webkit-scrollbar:window-inactive { opacity: 0.3; }
 
-html{height: 100%;}
-body{
+html { height: 100%; }
+
+body {
 	background-color: var(--background-color);
 	color: var(--main-color);
 	font-size: var(--body-text);
-	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantrell, "Open Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Firefox Emoji", "Noto Emoji", "Android Emoji";
+	font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -23,60 +26,58 @@ body{
 	margin: 0;
 }
 
-body *{
+body * {
 	box-sizing: inherit;
 }
 
-code{font-family: 'Fira Code', 'Consolas', 'Fira Mono', 'Noto Mono', 'Roboto Mono', 'Droid Sans Mono', 'Menlo', 'Monaco', 'Courier New', 'Courier', monospace;}
+code { font-family: 'Fira Code', Consolas, 'Fira Mono', 'Noto Mono', 'Roboto Mono', 'Droid Sans Mono', Menlo, Monaco, 'Courier New', Courier, monospace; }
 
-h1, h2, h3, h4, h5, h6, progress{color: var(--highlight-color);}
-h1{font-size: var(--size-xxxl);}
-h2{font-size: var(--size-xxl);}
-h3{font-size: var(--size-xl);}
-h4{font-size: var(--size-l);}
-h5{font-size: var(--size-m);}
-h6{font-size: var(--size-s);}
+h1, h2, h3, h4, h5, h6, progress { color: var(--highlight-color); }
+h1 { font-size: var(--size-xxxl); }
+h2 { font-size: var(--size-xxl); }
+h3 { font-size: var(--size-xl); }
+h4 { font-size: var(--size-l); }
+h5 { font-size: var(--size-m); }
+h6 { font-size: var(--size-s); }
 
-summary, dt{
+summary, dt {
 	font-weight: bold;
 	color: var(--highlight-color);
 	font-size: var(--size-l);
 }
 
-a{
+a {
 	color: var(--link-color);
 	transition: all 0.5s;
 }
 
-a:visited{
+a:visited {
 	color: var(--link-visited-color);
 }
 
-summary{
+summary {
 	font-weight: bold;
 }
 
-a:focus, summary:focus, button:focus{
+a:focus, summary:focus, button:focus {
 	outline: none;
 	color: var(--highlight-color);
 	text-shadow: 0 0 var(--size-us) var(--highlight-shadow-color);
 }
 
-pre{
+pre {
 	margin: 0;
 	padding: 0;
 	font-family: inherit;
 	white-space: pre-wrap;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
 	hyphens: auto;
 }
 
-#load-overlay{text-align: center;}
+#load-overlay { text-align: center; }
 
-.hidden{display:none !important;}
+.hidden { display: none !important; }
 
-dialog{
+dialog {
 	color: inherit;
 	background: var(--background-color);
 	border: none;
@@ -84,7 +85,7 @@ dialog{
 	position: absolute;
 	width: calc(100vw - calc(var(--dialog-margin) * 2));
 	height: calc(100vh - calc(var(--dialog-margin) * 2));
-	top: 0 !important;
+	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -96,7 +97,7 @@ dialog{
 	justify-content: space-between;
 }
 
-dialog > header{
+dialog > header {
 	padding: var(--size-us);
 	background: var(--background-color);
 	width: calc(100% + calc(var(--size-m) * 2));
@@ -108,7 +109,7 @@ dialog > header{
 	grid-gap: var(--size-m);
 }
 
-dialog > header .back-button{
+dialog > header .back-button {
 	font-size: var(--size-l);
 	border: none;
 	background: transparent;
@@ -117,36 +118,18 @@ dialog > header .back-button{
 	justify-self: start;
 }
 
-dialog > header > *{
+dialog > header > * {
 	margin: 0;
 	grid-area: header;
 }
 
-dialog > *:not(header){
+dialog > *:not(header) {
 	height: 100%;
 	overflow: auto;
 }
 
-dialog::backdrop{
+dialog::backdrop {
 	background: rgba(0, 0, 0, 0.5);
-}
-
-/* Add polyfills to dialog */
-dialog + .backdrop{
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-._dialog_overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 }
 
 dialog.fixed {
@@ -155,7 +138,7 @@ dialog.fixed {
 	transform: translate(0, -50%);
 }
 
-figure{
+figure {
 	margin: 0;
 	display: inline-flex;
 	justify-content: center;
@@ -163,7 +146,7 @@ figure{
 	overflow: hidden;
 }
 
-figure > img{
+figure > img {
 	max-width: 100%;
 	max-height: 100%;
 	object-fit: contain;

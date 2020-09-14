@@ -1,5 +1,6 @@
 /* Chrome */
-#chrome{
+
+#chrome {
 	background: var(--background-color);
 	display: flex;
 	justify-content: space-between;
@@ -8,11 +9,11 @@
 	font-size: var(--size-l);
 }
 
-#info-box{
+#info-box {
 	font-size: var(--size-m);
 }
 
-#menu ul{
+#menu ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -20,11 +21,11 @@
 	background: var(--background-color);
 }
 
-#menu li{
+#menu li {
 	margin: var(--size-m);
 }
 
-#menu a{
+#menu a {
 	text-decoration: none;
 }
 
@@ -38,7 +39,7 @@
 	/* webkit fix */
 	width: 0.1px;
 	max-width: var(--searchbar-width);
-	-webkit-appearance: textfield;
+	appearance: textfield;
 	font-family: inherit;
 	font-size: inherit;
 }
@@ -50,7 +51,7 @@
 	border-bottom-color: var(--secondary-color);
 }
 
-#info-button{
+#info-button {
 	padding: var(--size-us);
 	border: none;
 	background: transparent;
