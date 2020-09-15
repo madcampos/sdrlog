@@ -74,7 +74,8 @@
 	},
 	"lint-staged": {
 		"*.{js, mjs}": "eslint --fix",
-		"*.html": "linthtml",
+		"*.{css}": "stylelint --fix",
+		"*.{html}": "htmlhint",
 		"*.{png,jpeg,jpg,gif,svg}": [
 			"imagemin-lint-staged",
 			"git add"
