@@ -67,3 +67,5 @@ dist/
 covers/
 
 *.pem
+*.crt
+*.key

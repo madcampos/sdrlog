@@ -310,7 +310,7 @@ module.exports = {
 		'prefer-template': 'warn',
 		'require-yield': 'error',
 		'rest-spread-spacing': 'error',
-		'sort-imports': 'off',
+		'sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
 		'symbol-description': 'error',
 		'template-curly-spacing': 'error',
 		'yield-star-spacing': 'error',
