@@ -7,44 +7,23 @@
 
 /*
 Add materials:
-Virtual Seatle
-
-https://www.drivethrurpg.com/product/314191/Shadowrun-Cheat-Sheets-SR6?src=newest&filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/325604/Shadowrun-Gun-Rack-Weapon-Cards?src=newest&filters=1700_0_0_0_0
-https://www.drivethrurpg.com/browse/pub/9110/Shadowplans
-https://shadowiki.de/Schattendossier_1
-
-https://www.boardgamegeek.com/boardgame/253087/shadowrun-sprawl-ops/expansions
-https://www.boardgamegeek.com/boardgameversion/300033/german-edition
 https://www.rpggeek.com/rpgitem/303831/der-almanach-sonderpublikation-zum-gratisrollenspi
-Shadowrun Dice & Edge Tokens (https://www.rpggeek.com/rpgitem/280690/dice-edge-tokens)
-Prime Runner miniatures
-
 https://www.shadowiki.de/Convention_Mission_Pack_2018
 https://www.shadowiki.de/Convention_Mission_Pack_2017
 https://www.shadowiki.de/Convention_Mission_Pack_2016
 
-Check list of released materials and update data:
-https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
-
 Sources to check:
-https://www.shadowrunsixthworld.com/
-https://forums.shadowruntabletop.com/index.php?topic=254.0
-
-http://danvolodar.ru/files/SR/ (check links)
-***REMOVED***
-***REMOVED***
-
-https://www.shadowiki.de/Kategorie:Quellen_(Kurzgeschichten)
-https://www.shadowiki.de/Kategorie:Quellen_(Abenteuer)
-https://www.shadowiki.de/Kategorie:Quellen_(Kampagnen)
-https://shadowhelix.de/Kategorie:Quellen_(Gratis)
-https://www.shadowiki.de/Kategorie:Quellen_(Online)
-
-Sources of new material:
 https://shadowiki.de/Liste_der_Shadowrun_Romane
 https://shadowiki.de/Liste_der_Quellen-_und_Regelbücher
 https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
+https://www.shadowiki.de/Kategorie:Quellen_(Kurzgeschichten)
+https://shadowhelix.de/Kategorie:Quellen_(Gratis)
+https://www.shadowiki.de/Kategorie:Quellen_(Online)
+https://www.shadowrunsixthworld.com/
+https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
+
+***REMOVED***
+***REMOVED***
 */
 
 /**
@@ -157,7 +136,7 @@ export default [
 			'2011'
 		],
 		sku: [
-			'26002',
+			'26002A',
 			'46010',
 			'SR08'
 		],
@@ -461,7 +440,7 @@ export default [
 			'2015-04-30'
 		],
 		sku: [
-			'26005',
+			'26005A',
 			'46030',
 			'SR13'
 		],
@@ -552,7 +531,7 @@ export default [
 			'2013-07-13'
 		],
 		sku: [
-			'26003',
+			'26003A',
 			'SR11'
 		],
 		type: 'digital'
@@ -1498,7 +1477,7 @@ export default [
 			'2010-03-02'
 		],
 		sku: [
-			'7104',
+			'7104X',
 			'S14',
 			'10702',
 			'00100301'
@@ -3401,7 +3380,7 @@ export default [
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2016-10-22'],
-		sku: ['26S038'],
+		sku: ['26S038A'],
 		type: 'digital'
 	},
 	{
@@ -4198,7 +4177,7 @@ export default [
 			'Pegasus Spiele'
 		],
 		releaseDate: ['2016-04'],
-		sku: ['27110'],
+		sku: ['27110', '45027G'],
 		type: 'digital'
 	},
 	{
@@ -5201,7 +5180,7 @@ export default [
 		names: {
 			'de-DE': 'Verschwörungstheorien'
 		},
-		notes: 'The German edition has an aditional chapter abotu the ADL.',
+		notes: 'The German edition has an aditional chapter about the ADL.',
 		originalLanguage: 'en-US',
 		publisher: [
 			'Catalyst Game Labs',
@@ -6044,21 +6023,6 @@ export default [
 	},
 	{
 		category: 'mission',
-		description: 'Basic files to Season 2 including a calendar and the karma rollover log.',
-		edition: 4,
-		gameDate: '2070',
-		name: 'Missions Season 2',
-		originalLanguage: 'en-US',
-		publisher: [
-			'Catalyst Game Labs',
-			'WizKids Games'
-		],
-		releaseDate: ['2006'],
-		sku: ['SRM02-00'],
-		type: 'digital'
-	},
-	{
-		category: 'mission',
 		description: 'The runners are hired by Jaron Falcone, a retired fixer, to bring back Jonathan Belenkiy. They are working against the clock, as the ransom for Belenkiy is due in less than twenty four hours. Through investigation of his room, the runners find clues that lead them to the Black Cats. Legwork also turns up that Belenkiy hasn’t been entirely clean with all of his dealings.\nAs the night goes on, the runners can meet with Sioux warriors and Mafia soldiers, on Belenkiy’s trail. HammerJack will get nervous and approach them himself to try and have them turn against Falcone. If they are lucky, the runners will complete their mission without getting trapped in Ares’ internal politics or being placed on the hit list of the Casquilho family.',
 		edition: 4,
 		gameDate: '2070',
@@ -6385,18 +6349,6 @@ export default [
 		],
 		releaseDate: ['2007'],
 		sku: ['SRM02-25'],
-		type: 'digital'
-	},
-	{
-		category: 'mission',
-		description: 'Base files for season 3',
-		edition: 4,
-		gameDate: '2070',
-		name: 'Missions Season 3',
-		originalLanguage: 'en-US',
-		publisher: ['Catalyst Game Labs'],
-		releaseDate: ['2009-03'],
-		sku: ['SRM03-00X'],
 		type: 'digital'
 	},
 	{
@@ -6950,7 +6902,7 @@ export default [
 			'1993'
 		],
 		sku: [
-			'7102',
+			'7102X',
 			'10701'
 		],
 		type: 'scan'
@@ -7912,18 +7864,6 @@ export default [
 	},
 	{
 		category: 'misc',
-		description: 'A collection of building maps to be used in game from Blackjack.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'Blackjack Maps',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2010'],
-		sku: ['BMAPS'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
 		description: 'Sprawl Maps contains 8 new, full-color maps of sites in the sprawl, including a monorail/subway station, a warehouse, a park, low- and no-rent apartments, a street, and a nightclub.',
 		edition: 2,
 		gameDate: '2053',
@@ -8016,18 +7956,6 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2012-04'],
 		sku: ['26APR3p'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'The heart and soul of the Metroplex, Seattle’s Downtown is unlike any other city in North America. Tourists can find a wide variety of entertainment in the Downtown shops, restaurants, theaters and museums. Whether you enjoy the sites from one of the many dirigible services that grace Seattle’s skyline, or you choose to take in the sites with a brisk walk, you can be sure that your trip to Seattle will be like no other!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Seattle 2063 Downtown',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2002'],
-		sku: ['TSS-SDT'],
 		type: 'digital'
 	},
 	{
@@ -8200,18 +8128,6 @@ export default [
 	},
 	{
 		category: 'mission',
-		description: 'Visit sunny Chicago!\nSeason 5 of Shadowrun Missions is almost ready to launch! Get ready with this package of preparation file: Season 5 FAQ, Transfer Log, Contacts and Calendar.',
-		edition: 5,
-		gameDate: '2075',
-		name: 'Missions Season 5',
-		originalLanguage: 'en-US',
-		publisher: ['Catalyst Game Labs'],
-		releaseDate: ['2013-09'],
-		sku: ['SRM05-00'],
-		type: 'digital'
-	},
-	{
-		category: 'mission',
 		description: "The players are lined up. The goals are clear. The waiting is over. The ultimate rush is beginning, and it’s going to pull a lot of dangerous elements closer and closer together until they explode.\nThe shadows of Seattle have been heaved this way and that in the Great Seattle Artifact Rush, and a fair number of artifacts have been collected (in exchange for a handful of deaths and a helping of destruction). The powers of the magical world have been alerted, and they ready to get their hands on as many artifacts as possible. This means shadowruns, which means plenty of runners are about to be caught up in one of the worst mana-based drek-storms to hit the city in a long while.\nWhat starts as an investigation into a museum heist rapidly grows into a conflagration that could consume a good part of the sprawl. Clever players will need to see if they can survive, and how much nuyen they can wrangle out of the fight. Hopefully they'll get enough for a nice vacation or significant medical treatment, because chances are that they're going to need both.",
 		edition: 4,
 		gameDate: '2072',
@@ -8332,18 +8248,6 @@ export default [
 	},
 	{
 		category: 'mission',
-		description: 'Get ready to take on Shadowrun Missions: Season Four. Included are a list of Seattle Contacts, a Karma Rollover Log and a calendar to track your adventures.',
-		edition: 4,
-		gameDate: '2072',
-		name: 'Missions Season 4',
-		originalLanguage: 'en-US',
-		publisher: ['Catalyst Game Labs'],
-		releaseDate: ['2011-02'],
-		sku: ['SRM04-00X'],
-		type: 'digital'
-	},
-	{
-		category: 'mission',
 		description: 'It’s a simple job: find a missing girl. Of course, nothing is ever simple in the shadows, and a whole lot of people seem to be interested in this job for one reason or another.\nWelcome to Season Four of the Missions Campaign, which returns home to the Emerald Sprawl, Seattle. Biz is good as a political fight is brewing to determine the fate of the vast Ork Underground, and everyone seems to be fighting over the mysterious artifacts flowing into the city. If you’re going to get through this, remember the basics: Shoot straight, watch your back, and never, ever deal with a dragon. Oh, and collect a hefty payday along the way!',
 		edition: 4,
 		gameDate: '2072',
@@ -8412,234 +8316,6 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2010-09'],
 		sku: ['SRM03-10'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Welcome to issue #8 of The Shadowrun Supplemental! This issue comes out at the worst of times for me – Final Tests. This means between spending time doing that horrible studying stuff and actually attending all my classes, there’s also the end of year and graduation parties.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 08',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1998'],
-		sku: ['TSS-08'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Welcome to issue #7 of The Shadowrun Supplemental! This issue marks the first issue of our second year!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 07',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1998'],
-		sku: ['TSS-07'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Welcome to #10. This is the big one - the giant move up to double digits. Ordinarily that would be cause to celebrate, but this is extra special, because with this issue I’ve taken what will hopefully be the big steps in pushing this magazine to greater heights.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 10',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1999'],
-		sku: ['TSS-10'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: "Welcome to issue #9 of The Shadowrun Supplemental! Yes, it's been a long road from issue #8, and the delays have been annoying, probably more so to me than to you. I truly did not enjoy having what I consider one of my greatest achievements online and being updated.",
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 09',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1998'],
-		sku: ['TSS-09'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Welcome to issues #6 of The Shadowrun Supplemental! This is the on-again off-again Rigger/Vehicle issue, which as you can see, is onagain!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 06',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1998'],
-		sku: ['TSS-06'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Welcome to the third issue of The Shadowrun Supplemental. I would like to thank everyone who has read the first two issues, and hopefully say hi to some new readers.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 03',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1997'],
-		sku: ['TSS-03'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Welcome to the second issue of The Shadowrun Supplemental. I want to thank everyone who has read issue #1, and hopefully welcome some new readers.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 02',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1997'],
-		sku: ['TSS-02'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Welcome to the fifth issue of The Shadowrun Supplemental. Once again, I feel this is an issue of growth for the magazine, adding several “full-time” staff members and also getting a good distribution increase.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 05',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1997-11-15'],
-		sku: ['TSS-05'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Another two months fly by. This is the fourth issue of The Shadowrun Supplemental, so, like usual, thanks for reading, and I hope that I have a few new readers with this issue :) (Judging by the email I keep getting, I do..)',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 04',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1997'],
-		sku: ['TSS-04'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Melee Style, The NARCAR Phenomenom and SwiftOne Speaks. All in this issue of The Shadowrun supplemental!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 11',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1999'],
-		sku: ['TSS-11'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'The Cutthroats, Matrix Gangs, MArtial Arts Styles, and more, only on this issue of The Shadowrun supplemental!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 17',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2002'],
-		sku: ['TSS-17'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: "On the headlines: A Shadowtourist's Guide to Buffalo.",
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 16',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2001'],
-		sku: ['TSS-16'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Issue #15 of The Shadowrun Supplemental saw the debut of Bethyaga’s Complete Karma System, a new method of character creation for Shadowrun. As an alternative to existing systems, BeCKS creates characters using Karma instead of priorities or points (as presented in Shadowrun Third Edition and the Shadowrun Companion respectively).',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: BeCKS v2',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2003'],
-		sku: ['TSS-BeCKS'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Gunslingers, Into the Void, Infected Greetings, and more.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 18',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2002'],
-		sku: ['TSS-18'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Featuring BeCKS!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 15',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2001'],
-		sku: ['TSS-15'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'ShadeTrompers #2, and Berserk!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 12',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2000'],
-		sku: ['TSS-12'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: "What's new in Shadowrun 3rd edition?",
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 14',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2001'],
-		sku: ['TSS-14'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'FASA Closing!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 13',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2000'],
-		sku: ['TSS-13'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'First issue!',
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Shadowrun supplemental: Issue 01',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1997'],
-		sku: ['TSS-01'],
 		type: 'digital'
 	},
 	{
@@ -8736,54 +8412,6 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2015-12'],
 		sku: ['SRM06-01'],
-		type: 'digital'
-	},
-	{
-		category: 'mission',
-		description: 'Tha FAQ for Season Six',
-		edition: 5,
-		gameDate: '2075',
-		name: 'Missions Season 6',
-		originalLanguage: 'en-US',
-		publisher: ['Catalyst Game Labs'],
-		releaseDate: ['2015-12'],
-		sku: ['SRM06-00'],
-		type: 'digital'
-	},
-	{
-		category: 'mission',
-		description: 'The FAQ for Chicago missions, Season 7',
-		edition: 5,
-		gameDate: '2075',
-		name: 'Missions Season 7',
-		originalLanguage: 'en-US',
-		publisher: ['Catalyst Game Labs'],
-		releaseDate: ['2016'],
-		sku: ['SRM07-00'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: "Welcome to the new Dumpshock Datahaven. You're gonna find things you've seen before like The Black Market, The Seattle Newsnet Screamsheet and Prime Runners. You're gonna find a few new columns like The Scan and the Hacker's Node. I've also brought a surfer of the electron-ocean named Ronin to update the interface.",
-		edition: 4,
-		gameDate: '2073',
-		name: 'Dumpshock Datahaven #2',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2011'],
-		sku: ['DDH-02'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: 'Hoi Chummers!\nIf you’re seeing this, that means you got an invitation to the Dumpshock Data Haven Virtual Private Network, and this is your first time logging in. Since you’re new, there are a few things you should know before you head off and start playing with the other kiddies. First off, while DDH is the official name of this place, we like to call it Bull’s Mobile Bar & Grill. If you look around, the architecture of the place should give you a clue as to why we call it a “bar and grill”. And being a VPN, it’s fairly mobile, in a way',
-		edition: 4,
-		gameDate: '2070',
-		name: 'Dumpshock Datahaven #1',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2009'],
-		sku: ['DDH-01'],
 		type: 'digital'
 	},
 	{
@@ -9631,6 +9259,43 @@ export default [
 		type: 'digital'
 	},
 	{
+		category: 'misc',
+		description: 'If you aren’t familiar with Shadowrun, or just want a quick refresher, here’s a document Mike Mulvihill brought to us from the old days. It covers a little bit of everything, and should give you a good idea what the World of Shadowrun world is all about. Enjoy!\n\n(Note that this document is several years old and was originally designed for internal use – in other words, it ain’t proofread folks.)',
+		edition: 4,
+		gameDate: '2060',
+		name: 'World of Shadowrun: A Primer',
+		notes: 'A semi-internal doc about the world of Shadowrun.',
+		originalLanguage: 'en-US',
+		publisher: ['Harebrained Schemes'],
+		releaseDate: ['2011'],
+		sku: ['PRIMER'],
+		type: 'digital'
+	},
+	{
+		category: 'misc',
+		description: 'A list of Jackpoint Users.',
+		edition: 4,
+		gameDate: '2060',
+		name: 'Jackpoint User List',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		sku: ['JUL'],
+		type: 'digital'
+	},
+	{
+		category: 'misc',
+		description: 'December 21st marks the end of the Mayan calendar, which launched the return of magic and the beginning of Shadowrun’s “Sixth World.” In our own world, this date launches The Year of Shadowrun, where we bring you an avalanche of superb games set in the ever-popular and fantastic Shadowrun universe, one of the most dynamic and long-standing fictional settings of all time.',
+		edition: 5,
+		gameDate: '2060',
+		name: 'The Year of Shadowrun',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2012-12-21'],
+		note: 'This is a promo folio containing info about the launch of the 5th edition.',
+		sku: ['PROMO1'],
+		type: 'digital'
+	},
+	{
 		category: 'videogame',
 		description: 'Lead your team of Runners to survive a corrupt megacorporation’s intrigue threatening thousands of lives in this new action-strategy game set in the most popular cyberpunk universe of all times – Shadowrun. Blending X-Com style gameplay with RPG elements in the unique Shadowrun setting and adding an extensive single- and co-op campaign, Shadowrun Chronicles offers the next generation of tactical turn based action games.\nEntrapped in a city plagued by a deadly virus, assaulted by the minions of a megacorporation, attacked by infected and with a dragon on a rampage through the city you have to unearth the secret conspiracy that connects it all.\nAs the leader of your team of Shadowrunners, you will have to use magic, technology and every weapon available to you, to save the lives of thousands in a city at the brink of extinction. Grow you character, plan your missions and control your team in combat or play live co-op with other players to overcome the challenges ahead of you. Meet your fellow runners in the Back Alley or hire henchmen to help you succeed.\nSet in the dystopian near future of our world, where magic has awakened and blends with technology, creatures of myth and legend have returned. Elves, Dwarves, Orks and Trolls walk among the neon-lit streets, while the matrix connects everyone and everything as the corporate towers cast their long shadows across the globe. You are a Shadowrunner - a secret operative on the edge of society, hired for the jobs no one wants to be connected with. A cyberpunk rebel surviving by skill and instinct in the shadows of the corporate towers!\n\nWelcome to the dark side of the future, chummer. It’s going to be a hell of a ride.',
 		edition: 5,
@@ -10026,138 +9691,6 @@ export default [
 		type: 'physical'
 	},
 	{
-		category: 'misc',
-		description: "'Shadowplans - Airfield' is a modern/cyberpunk stylized battle map, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as a drop in location or the setting for an unfolding campaign.\nLarge Map : This map boasts a large playing space, allowing your players the room to strategize.\nBasic, Blueprint & Printer Friendly : This map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs inimmersive style before watching those plans all go wrong on more detailed and stylized floorplans. This map also comes with a high contrast printer friendly version! Pick, choose and print the styles you need.\nGM Security Overlay: To ease the GM’s work, this map come with a basic security overlay. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Airfield',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2016'],
-		sku: ['SHPL-02'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans - Bar' is a modern/cyberpunk stylized battle map, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as a drop in location or the setting for an unfolding campaign.\nLarge Map : This map boasts a large playing space, allowing your players the room to strategize.\nBasic, Blueprint & Printer Friendly : This map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs inimmersive style before watching those plans all go wrong on more detailed and stylized floorplans. This map also comes with a high contrast printer friendly version! Pick, choose and print the styles you need.\nGM Security Overlay: To ease the GM’s work, this map come with a basic security overlay. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Bar',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2016'],
-		sku: ['SHPL-03'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans - Corporate Office' is a pack of 5 modern/cyberpunk stylized battle maps, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as a drop in location or the setting for an unfolding campaign.\nLarge Maps : These maps boast a large playing space, allowing your players the room to strategize.\nBasic, Blueprint & Printer Friendly : Each map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs inimmersive style before watching those plans all go wrong on more detailed and stylized floorplans. This map pack comes with additional high contrast printer friendly versions! Pick, choose and print the styles you need.\nGM Security Overlays: To ease the GM’s work, these maps come with basic security overlays. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Corporate Office',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2016'],
-		sku: ['SHPL-04'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans - Datacenter' is a modern/cyberpunk stylized battle map, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as a drop in location or the setting for an unfolding campaign.\nLarge Map : This map boasts a large playing space, allowing your players the room to strategize.\nBasic, Blueprint & Printer Friendly : This map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs inimmersive style before watching those plans all go wrong on more detailed and stylized floorplans. This map also comes with a high contrast printer friendly version! Pick, choose and print the styles you need.\nGM Security Overlay: To ease the GM’s work, this map comes with a basic security overlay. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Datacenter',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2017'],
-		sku: ['SHPL-09'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans pack #1' is a series of 10 modern/cyberpunk stylized battle maps, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as drop in locations or the setting for an unfolding campaign.\nLarge Maps : The Maps boast large playing spaces, allowing your players the room to strategize.\nBasic & Blueprint : Each map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs in immersive style before watching those plans all go wrong on more detailed and stylized floorplans.\nGM Security Overlays: To ease the GM’s work, these maps come with basic security overlays. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Map Pack 1',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2015'],
-		sku: ['SHPL-01'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans - Mini Mall' is a modern/cyberpunk stylized battle map, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as a drop in location or the setting for an unfolding campaign.\nLarge Map : This map boasts a large playing space, allowing your players the room to strategize.\nBasic, Blueprint & Printer Friendly : This map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs inimmersive style before watching those plans all go wrong on more detailed and stylized floorplans. This map also comes with a high contrast printer friendly version! Pick, choose and print the styles you need.\nGM Security Overlay: To ease the GM’s work, this map come with a basic security overlay. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Mini Mall',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2016'],
-		sku: ['SHPL-05'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans - Subway Station' is a modern/cyberpunk stylized battle map, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as a drop in location or the setting for an unfolding campaign.\nLarge Map : This map boasts a large playing space, allowing your players the room to strategize.\nBasic, Blueprint & Printer Friendly : This map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs inimmersive style before watching those plans all go wrong on more detailed and stylized floorplans. This map also comes with a high contrast printer friendly version! Pick, choose and print the styles you need.\nGM Security Overlay: To ease the GM’s work, this map come with a basic security overlay. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Subway Station',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2016'],
-		sku: ['SHPL-06'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans - Tileset 1' is a pack of tiles for assembling modern/cyberpunk stylized battle maps, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as drop-in locations or the setting for an unfolding campaign.\nAssemble : Featuring 44 pieces of varying types, everything you need to create your own Shadowplans maps.\nExtend : Use alongside existing Shadowplans Products to edit, expand and customize each map to your own tastes.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Tileset 1',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2016'],
-		sku: ['SHPL-08'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "'Shadowplans - Warehouse' is a modern/cyberpunk stylized battle map, suitable for VTT (virtual table top) or printing. Ideal for Shadowrun and other modern / cyberpunk settings. Use as a drop in location or the setting for an unfolding campaign.\nLarge Map : This map boasts a large playing space, allowing your players the room to strategize.\nBasic, Blueprint & Printer Friendly : This map comes in Basic and Blueprint themes, allowing your players to plan out their heists and jobs inimmersive style before watching those plans all go wrong on more detailed and stylized floorplans. This map also comes with a high contrast printer friendly version! Pick, choose and print the styles you need.\nGM Security Overlay: To ease the GM’s work, this map come with a basic security overlay. Icons used to create this overlay are also included for your own needs.\nRoll20/VTT/Printing Ready.",
-		edition: 5,
-		gameDate: '2075',
-		name: 'Shadowplans - Warehouse',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2016'],
-		sku: ['SHPL-07'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: 'Maps from Executive Centre buildings arround the world.',
-		edition: 5,
-		gameDate: '2075',
-		name: 'Executive Centre - Office Maps',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['2017'],
-		sku: ['OMAP'],
-		type: 'digital'
-	},
-	{
-		category: 'magazine',
-		description: "A semi-regular electronically-distributed magazine devoted to FASA's Shadowrun® role-playing game. In the NAGEE, we'll be covering everything else. Everything that our contributors feel should have been covered, but wasn't. And, just things that look nice, 'cause looking good is the only way to go.",
-		edition: 2,
-		gameDate: '2053',
-		name: 'The Neo-Anarchists Guide to Everything Else',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1996'],
-		sku: ['NAGEE'],
-		type: 'digital'
-	},
-	{
 		category: 'novel',
 		description: 'FOUR CLASSICS. ONE VOLUME. PURE SHADOWRUN\nShadowrun fans know. They love the dark alleys and darker plots of the Sixth World, and they know that Nigel Findley wrote some of the best Shadowrun novels ever. Now, for the first time, his four iconic books are collected in a single volume.\nWhether you’ve loved Shadowrun fiction for years or are just now being introduced to it, the novels of Nigel Findley are a superb place to start. This exclusive edition contains:\n\t• 2XS, which introduces private detective Dirk Montgomery and pits him against the mysterious sources of a chip even more addictive than the strongest BTLs;\n\t• Shadowplay, featuring a veteran decker and a young shaman who stumble on lost technology that puts them up against one of the world’s largest megacorporations—and the Corporate Court itself;\n\t• Lone Wolf, where an undercover Lone Star operative finds himself in the middle of an exploding gang war; and\n\t• House of the Sun, which brings back Dirk Montgomery and sends him to Hawai’i, where he runs afoul of the government, a ritual sacrifice, powerful elves, and very unpleasant bugs.\n\tThis omnibus provides a unique opportunity to dive into the complete novel output of one of Shadowrun’s finest writers. Let Nigel Findley show you what it really feels like to run in the shadows!',
 		edition: 4,
@@ -10245,66 +9778,6 @@ export default [
 		releaseDate: ['2020-08-21'],
 		sku: ['26861'],
 		status: 'missing',
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: 'Sections: Races, Magic, Cyberware, Bioware, Matrix, Tech, Behind The Scenes (..., Toxin Exposure, ...).',
-		edition: 2,
-		gameDate: '2053',
-		name: 'N.E.R.P.S.: ShadowLore',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1995-04'],
-		sku: ['NERPS-01'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: 'Sections: Characters, Plotlines, Sprawls, List of Contributors.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'N.E.R.P.S.: Foundations',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1994-08'],
-		sku: ['NERPS-02'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: 'Sections: Introduction, Characters, Appendix A, Appendix B.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'N.E.R.P.S.: Edge Runners',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1996-03'],
-		sku: ['NERPS-03'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: 'Sections: Basement Transactions, Fixing the Fence, Item Encounters, The Arms Bazaar, The Organizatsiya, Better Living Through Biochemistry, Plastic Weapons, Pee Cee Cops, Criminal Gear and Equipment, All That Is Old Is Not Obsolete, Shadow Holdings, Vehicle Accessories, Frequently Asked Questions.',
-		edition: 2,
-		gameDate: '2053',
-		name: 'N.E.R.P.S.: Underworld',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1996-06'],
-		sku: ['NERPS-04'],
-		type: 'digital'
-	},
-	{
-		category: 'misc',
-		description: "Sections: NERPS: Shadows of the Mind (History of NERPS: Shadows of the Mind, History of Psionics in the Sixth World, Short Fiction, Creating the Psionic Character, The World Around a Psi, Psionic Design, Additional Thoughts), NERPS: ShadowLore II (Shadow's Edge Spring Catalog 2056, Bioware & Cyberware, Technology, Melee Combat 3.0, Magic, Target Firearms-Duty Ammunition), NERPS: DragonLore (Dragons, Dragon Guardians, Dragon Worship, When, Where, and What Do Dragons Come From?, ...Something In The Waters, Maybe?, Critters, Bio-Armor, Shadowtalk).",
-		edition: 2,
-		gameDate: '2053',
-		name: 'N.E.R.P.S.: Lost and Found',
-		originalLanguage: 'en-US',
-		publisher: ['unofficial'],
-		releaseDate: ['1997-08'],
-		sku: ['NERPS-05'],
 		type: 'digital'
 	},
 	{
@@ -10701,19 +10174,9 @@ export default [
 		},
 		notes: '"SOX" covers a description of the Saar-Lorraine-Luxemburg containment zone and two related adventures ("Hoffnungsstrahlen" and "Mauvais Présage"). It is a French-German cooperation.',
 		originalLanguage: 'de-DE',
-		publisher: [
-			'Fantasy Productions',
-			'Black Book Editions'
-		],
-		releaseDate: [
-			'2007',
-			'2009',
-			'2011'
-		],
-		sku: [
-			'23006',
-			'SR09'
-		],
+		publisher: ['Fantasy Productions', 'Black Book Editions'],
+		releaseDate: ['2007', '2009', '2011'],
+		sku: ['23006', 'SR09'],
 		type: 'ocr'
 	},
 	{
@@ -10739,10 +10202,7 @@ export default [
 		originalLanguage: 'de-DE',
 		publisher: ['Pegasus Spiele'],
 		releaseDate: ['2011'],
-		sku: [
-			'46095',
-			'46096'
-		],
+		sku: ['46095', '46096'],
 		type: 'digital'
 	},
 	{
@@ -10808,7 +10268,6 @@ export default [
 		publisher: ['Pegasus Spiele'],
 		releaseDate: ['2009'],
 		sku: ['P2009A'],
-		status: 'missing',
 		type: 'digital'
 	},
 	{
@@ -10899,6 +10358,45 @@ export default [
 	},
 	{
 		category: 'boardgame',
+		description: 'Kickstarter extras.',
+		edition: 5,
+		gameDate: '2075',
+		name: 'Shadowrun: Sprawl Ops – Kikstarter extras',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2019-06-01'],
+		sku: ['KS002'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'boardgame',
+		description: 'The Co-Op Expansion introduces a threat that the usually combative teams of shadowrunners within the sprawls of the Sixth World cannot ignore. This turns Shadowrun: Sprawl Ops from a competitive game into a fun cooperative experience where players either work together toward victory or lose together.\n\nFrom the Sprawl Ops KickStarter description: "This is an exclusive product only, which means it will only be available here on Kickstarter, through the pledge manager and through Catalyst or Lynnvander directly and/or at a variety of conventions while supplies last. This is a limited print product."',
+		edition: 5,
+		gameDate: '2075',
+		name: 'Shadowrun: Sprawl Ops – Co-Op Expansion',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2019-06-01'],
+		sku: ['KS003'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'boardgame',
+		description: '5-6 player expansion for the Shadowrun: Sprawl Ops base game.\n\nContents: Rulesheet, 6 Starting Shadowrunner cards, 11 Shadowrunner cards, 10 Gear cards, 15 Upgrade cards, 10 Mission cards, 2 Runner boards, 8 pawns for two unique runner teams.',
+		edition: 5,
+		gameDate: '2075',
+		name: 'Shadowrun: Sprawl Ops – 5-6 Player Expansion',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2019-06-01'],
+		sku: ['KS004'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'boardgame',
 		description: 'The shadows of the Sixth World have every kind of danger you can imagine. Ultra-violent gangers, flesh-eating ghouls, mages that summon spirits from toxic waste, backstabbing corporate raiders, hard-nosed police officers, and even dragons. You don’t have much—mainly your guts, your wits, and your friends. But maybe that’s enough. Between you and your teammates, you can sling spells, hack the Matrix, talk a tiger out of his stripes, and bring down a charging ork from a hundred yards away. Will that be enough to face down the worst the mean streets can throw at you? You’re about to find out.\nShadowrun: Crossfire is a deck-building game set in one of the most popular game settings of all time. Crossing cyberpunk with fantasy and plunging players into a world dominated by ruthless megacorporations. Crossfire gives players the chance to dive into the world’s shadows and see if they can survive. The Prime Runner Edition adds new upgrades to make the game even better—with more missions, improved rules, and new character screens, this is the best version of Crossfire ever!\nFeaturing fast, cooperative game play and stacks of dangerous obstacles and opponents to overcome. Shadowrun: Crossfire will launch you into nonstop action. You’ll even have the chance to get stronger the more you play, tackling harder and harder obstacles as you become more dangerous. Leap into the shadows for deck-building adventure like you’ve never experienced!',
 		edition: 5,
 		gameDate: '2075',
@@ -10933,14 +10431,8 @@ export default [
 			'de-DE': 'Letaler Code'
 		},
 		originalLanguage: 'en-US',
-		publisher: [
-			'Catalyst Game Labs',
-			'Pegasus Spiele'
-		],
-		releaseDate: [
-			'2018-06-27',
-			'2018-10-07'
-		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		releaseDate: ['2018-06-27', '2018-10-07'],
 		sku: ['27013'],
 		type: 'digital'
 	},
@@ -10954,18 +10446,9 @@ export default [
 			'de-DE': 'Tödliche Schatten'
 		},
 		originalLanguage: 'en-US',
-		publisher: [
-			'Catalyst Game Labs',
-			'Pegasus Spiele'
-		],
-		releaseDate: [
-			'2018-06-17',
-			'2018-06-26'
-		],
-		sku: [
-			'27012',
-			'45064'
-		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		releaseDate: ['2018-06-17', '2018-06-26'],
+		sku: ['27012', '45064'],
 		type: 'digital'
 	},
 	{
@@ -10978,10 +10461,7 @@ export default [
 			'de-DE': 'Schattenhelden'
 		},
 		originalLanguage: 'en-US',
-		publisher: [
-			'Catalyst Game Labs',
-			'Pegasus Spiele'
-		],
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		releaseDate: ['2018-11-23'],
 		sku: ['27203'],
 		type: 'digital'
@@ -11365,7 +10845,7 @@ export default [
 		originalLanguage: 'de-DE',
 		publisher: ['Pegasus Spiele'],
 		releaseDate: ['2019-01-28'],
-		sku: [''],
+		sku: ['45070'],
 		status: 'missing',
 		type: 'digital'
 	},
@@ -11408,7 +10888,6 @@ export default [
 		originalLanguage: 'de-DE',
 		publisher: ['Pegasus Verlag'],
 		sku: ['SRM-HAM'],
-		status: 'missing',
 		type: 'digital'
 	},
 	{
@@ -11433,19 +10912,6 @@ export default [
 		publisher: ['Pegasus Verlag'],
 		releaseDate: ['2019-11'],
 		sku: ['35013G'],
-		status: 'missing',
-		type: 'digital'
-	},
-	{
-		category: 'novel',
-		description: 'Riggs liebt die einfachen Dinge des Lebens: Actionfilme des letzten Jahrtausends, Aldi-Burger mit extra Röstzwiebelaroma und unkomplizierte Aufträge. Leider meint es das Schicksal nicht besonders gut mit ihm, als es ihn zu einer eigentlich recht unaufregend klingenden Datenextraktion in den Süden der ADL verschlägt. Denn es kommt, wie immer, anders als geplant: Ein kurioser und verlustreicher Run folgt dem nächsten. Bald fühlt sich Riggs wie der Hauptdarsteller in einem Adventure-Trid.\nDoch dann wird er persönlich in das Geflecht aus Schuld, Gewalt und Erbe aus Vergangenheit und Gegenwart verstrickt. Der Weg durch die Schatten wird eine Horrorstory – aus der es vielleicht kein Entrinnen mehr gibt. ',
-		edition: 5,
-		gameDate: '2073',
-		name: 'Der vitruvianische Moment',
-		originalLanguage: 'de-DE',
-		publisher: ['Pegasus Verlag'],
-		releaseDate: ['2018-10-19'],
-		sku: ['35010G'],
 		status: 'missing',
 		type: 'digital'
 	},
@@ -11489,7 +10955,7 @@ export default [
 		originalLanguage: 'de-DE',
 		publisher: ['Pegasus Verlag'],
 		releaseDate: ['2019-10-24'],
-		sku: [''],
+		sku: ['STTRK'],
 		status: 'missing',
 		type: 'digital'
 	},
@@ -11619,7 +11085,7 @@ export default [
 		gameDate: '2080',
 		name: 'Firing Squad',
 		names: {
-			'de-DE': 'Freuer Frei'
+			'de-DE': 'Feuer Frei'
 		},
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
@@ -11785,7 +11251,7 @@ export default [
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2020-05-01'],
-		sku: ['27002S'],
+		sku: ['28840S'],
 		type: 'digital'
 	},
 	{
@@ -11798,7 +11264,21 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2020-06-01'],
 		sku: ['SLEDGE'],
-		type: 'physical'
+		type: 'physical',
+		status: 'outofscope'
+	},
+	{
+		category: 'misc',
+		description: 'They\'re rough. Tough. Ready for action. And you can fit five of them in your hand. Bring Sledge the ork street samurai, Coydog the elf shaman, Gentry the human decker, Hardpoint the dwarf rigger, and Blanco, the troll weapons specialist to your game table and let them unleash chaos!\n\nWhether you\'re playing Shadowrun (and you should definitely play Shadowrun) or any other game, these cyberpunk-crossed-with-fantasy minis will bring atmosphere and action to your game!',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Prime Runner Miniatures',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2020-06-01'],
+		sku: ['28880'],
+		type: 'physical',
+		status: 'outofscope'
 	},
 	{
 		category: 'misc',
@@ -11825,5 +11305,162 @@ export default [
 		sku: ['28500'],
 		status: 'missing',
 		type: 'print'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Schatten sind alle schwarz? Das stimmt nicht, Chummer. Ihnen mag das Licht fehlen, aber wer in den Schatten der ADL sein Geld verdienen will, der sollte sich gut auskennen. In Westphalen, wo die Kirche regiert und erwachte Theurgen dich jagen. In Pomorya, dem Elfenstaat an der Ostsee mit seinen Adelsgeschlechtern und seiner modernen Öko-Industrie. In München, dem Megaplex der Schwarzen Sheriffs und der Schickeria. An der Nordseeküste, wo Piraten von verlassenen Ölplattformen und im toxischen Watt gegen Giftgeister und Konzerne kämpfen. Und du solltest dabei schauen, dass deine Ausrüstung immer auf dem neuesten Stand bleibt … sonst wird die Dunkelheit der Schatten dich irgendwann verschlingen.\n\nDas Schattendossier I ist der erste Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Westphalen, München, Pomorya, Piraten der Deutschen Bucht und das SOTA 2081 zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Seucheninsel in der Ostsee. Das Schattendossier I ist streng limitiert und die einzelnen Bücher durchnummeriert.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Schattendossier 1',
+		notes: 'A collection of PDFs.',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-06-15'],
+		sku: ['46115'],
+		status: 'outofscope',
+		type: 'print'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Verheißung und Vernichtung\n\nVon Kap Arkona bis Stralsund: das Elfenreich Pomorya war schon immer ein Land der Verheißung. Es verspricht die Rückkehr zur Natur, belebt alte Naturreligionen und verspricht seinen Einwohnern Sicherheit. Aber zu welchen Kosten? Was muss dafür vernichtet werden, was wird dafür unterdrückt? Was lauert – sprichwörtlich – unter der Oberfläche des nach außen so sauber wirkenden Staats? Denn wo viel Licht ist, da lauert auch viel Schatten.\n\nDatapuls Pomorya wirft ein Licht auf den Elfenstaat Pomorya in der Ostseeküste der ADL. Es liefert einen Einblick in Intrigen zwischen den Kurfürsten, den Alltag mit der Natur, die ansässigen Mächtegruppen und bietet zudem eine tiefere Sicht in das Machtgeflecht aus Politik und Wirtschaft. Hier können Runner Abenteuer erleben – in ganz natürlicher Umgebung...',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Datapuls: Pomorya',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-04-23'],
+		sku: ['480D1'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Schickeria und Schwarze Sheriffs\n\nWährend auf der Wiesn Hunderttausende feiern und dem Alltag entfliehen, während die Schickeria in ihrer Bussi-Bussi-Gesellschaft eine heile Welt vorspielt, während Traditionalisten München stabil halten wollen ... währenddessen bleiben die Schatten in der bayerischen Metropole nicht inaktiv. Die Megakonzerne ziehen ihre Strippen, Drachen kämpfen um ihre Pfründe und Runner verdienen in der Medienbranche hinter der Kamera gutes Geld.\n\nDatapuls München wirft ein Licht auf den Metroplex München als größter Plex der ADL im Süden. Es liefert einen Einblick in Ränkespiele von Geheimgesellschaften, den Alltag der Stadt, die ansässigen Mächtegruppen und bietet zudem eine tiefere Sicht in die Politik und die Konzernwelt des Plex. Hier können Runner Abenteuer erleben – im Licht und auch in den Schattenwelten.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Datapuls: München',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-04-23'],
+		sku: ['480D2'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Ausrüstungsudpate\n\nWenn Plan A mal wieder nicht funktioniert, wenn die Kacke in den Ventilator fliegt, wenn die Schwarzen Sheriffs, der Sternschutz und die Konzerntruppen die Kreise um die Runner enger ziehen und mit Waffen, Drohnen und Unterstützung aus dem Astralraum aufmarschieren, dann hilft oft nur noch: die richtige Ausrüstung parat haben für den Plan B. Mehr Waffen. Mehr Drohnen. Mehr Unterstützung aus dem Astralraum.\n\nDatapuls SOTA 2081 präsentiert mehr Ausrüstung für Shadowrun 6. Insgesamt 12 Waffen und 12 Fahrzeuge bzw. Drohnen, die Hälfte davon noch nie in einer Publikation erwähnt, die andere Hälfte mit neuem Flufftext und Werten für Shadowrun 6. Dazu eine Übersicht über die Waffen- und Fahrzeugproduzenten in der ADL, sowie neue Schutzgeister für die magischen Erwachten.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Datapuls: SOTA 2081',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-04-23'],
+		sku: ['480D3'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Im Schatten der Kreuze\n\nWestphalen - eine Enklave des Glaubens und der Segnungen. Ein Landstrich mit hoher Agrarkultur und einer festen Gemeinde deutsch-katholischer Christen unter der theokratischen Führung der Kirche. Doch ist wirklich alles so heilig im gelobten Land? Was geht in den Schatten der Beichtstühle vor und warum ist die Bischofsgarde so gut bewaffnet?\n\nDatapuls Westphalen wirft ein Licht auf den Kirchenstaat Westphalen im Norden Deutschlands. Es liefert einen Einblick in die Kirchenstruktur, in das Leben unter dem Kreuz, in Ordensstrukturen und natürlich auch in die Schatten der Deutsch-Katholischen Kirche. Zwischen gesegneten Technomancern und von Gott mit heiliger Kraft ausgestatteten Theurgen erledigen auch hier Runner die Drecksarbeit.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Datapuls: Westphalen',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-04-23'],
+		sku: ['480D4'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Toxische Wogen\n\nDie Deutsche Bucht - giftige Nordseefluten, agressive Geister, mutierte Critter, versteckte Schätze im Watt, ominöse Küstenbewohner und Piratenverstecke. Und wertvolle Fracht auf den Schiffen der Konzerne. Hier treffen sich Seeräuber und Entermannschaften und planen ihren nächsten großen Coup, rauben Containerriesen aus, verbünden sich mit den Friesen und belagern ganze Bohrplattformen. Immer im Ungewissen, ob am Ende der nächsten Fahrt eine satte Prise oder der Meeresboden wartet.\n\nDatapuls Piraten der Deutschen Bucht wirft ein Licht auf die deutsche Nordsee und die Küstengebiete mit besonderem Fokus auf die Piraten in dieser Region. Es bietet einen tieferen Einblick in die Piratennationen, die Möglichkeiten für Mannschaften auf See und im Watt, beschreibt mystische Orte, Konzernaktivitäten, wichtige Machtspieler. Zudem werden einige Wasserfahrzeuge präsentiert, sowie ein Piratennationbaukasten, ein nautisches Glossar und NSC von der Küste.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Datapuls: Piraten der Deutschen Bucht',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-04-23'],
+		sku: ['480D5'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Übersicht ist alles\n\nHier kommen sie - die Cheat Sheets für die 6. Edition. Um den Überblick in jeder Situation zu behalten, können Spielleiter und Spieler mit diesen Cheat Sheets arbeiten, die für ein noch flüssigeres Spielerlebnis sorgen. Ob im Kampf, bei Beschwörungen oder wenn mal wieder IC das Blut des Deckers in seinen Adern gefrieren lässt - die Cheat Sheets liegen stets zur Seite.\n\nCheat Sheets SR6 sind Übersichtsblätter für Shadowrun 6 für die Bereiche Kampf, Rigging, Matrix, Magie und allgemeine Regeln. Diese Cheat Sheets sind Bestandteil des Spielschirm-Bundles, das es in analoger Form zu kaufen gibt. Dies ist die digitale Version (nur der Cheat Sheets).',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Cheat Sheets SR6',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-05-18'],
+		sku: [''],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Bühne frei\n\nNicht nur Runner müssen sich in den Schatten ständig Gedanken machen, damit sie mit Credsticks in der Tasche und nicht mit Blei im Körper von ihren Aufträgen zurückkehren. Auch die Spieler der Charaktere stehen vor diversen Entscheidungen: Wen will ich spielen, warum und wo? Wie verknüpfe ich meinen jungen Decker mit dem alten Haudegen der Gruppe? Wie kann ich meine Hintergrundgeschichte weiter ausgestalten?\n\nFür spannende Geschichten in der Sechsten Welt bedarf es zudem gut konzipierte Abenteuer, vielleicht sogar ganzer Kampagnen und Settings. Es bedarf vielschichtiger Gegenspieler, interessanter Locations und vielleicht darf es ja auch mal etwas anderes sein als die Schießerei in einer zwielichtigen Gasse.\n\nHinter dem Vorhang ist eine weitere Eigenproduktion und ein Regelband für Shadowrun 6, der kaum Regeln enthält. Neben ein paar optionalen Vorschlägen Veränderungen finden sich vor allem Werkzeuge für Spieler und Spielleiter: Informationen zum Charakterausbau, zur Gruppenzusammenführung, zur Abenteuerplanung, zu alternativen Einstiegen, zu Kampagnen-Konzepten. Du brauchst schnell einen zusammengewürfelten NSC, ein Abenteuer am Rand des eigentlichen Abenteuers, eine Automatenrestaurant-Speisekarte, einen Alltagshost oder willst wissen, was der Wachmann gerade zufällig in der Tasche oder auf dem Kommlink hatte? Hier wirst du fündig.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Hinter dem Vorhang',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-10-15'],
+		sku: ['46117'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'Unerwartete Wettgewinne, merkwürdige Vorgänge im Untergrund, geplünderte Konten und gefährliche BTL-Chips: Berlin droht ein tödliches Gewitter. Und während sich die Wolken zusammenziehen, werden die Runner immer tiefer zwischen die Fronten bewaffneter Kieze, skrupelloser Konzernforscher, dissonanter Technomancer, wütender Vory und einem dunklen Geheimnis aus uralter Technik gezogen. Die Blitzeinschläge kommen näher. Deckung suchen ist keine Option mehr. Und während es um Moral, Gewinn und Überleben geht, kann vielleicht nur noch ein mysteriöser Verbündeter aus Code und Kristall helfen.\n\nNetzgewitter ist ein Kampagnenband für Shadowrun 6, der im Megasprawl an der Spree spielt. In mehreren Kapiteln durchleben die Runner eine spannende Story um alte Verbindungen und neuen Hass, die eng mit dem Metaplot der ADL verknüpft ist. Netzgewitter ist eine deutsche Eigenproduktion und bietet fertige Abenteuer in einer zum Teil modular aufgebauten Handlung. Und an deren Ende wartet ein fulminanter Showdown, der nicht nur über das Schicksal der Runner entscheiden wird.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Netzgewitter',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-10-15'],
+		sku: ['46121'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'boardgame',
+		description: 'Wir schreiben das Jahr 2076. Die Erde hat sich weitergedreht. Orks, Trolle, Elfen und Zwerge bevölkern eine Welt, in der Megakonzerne regieren und modernste Technik sich mit mystischer Magie vermischt. In diesen Zeiten sind sogenannte Shadowrunner gefragte Aktivposten, denn sie erledigen für die Mächtigen die Drecksarbeit in den dunklen Gassen der riesigen Städte. Mit futuristischer Ausrüstung, Zaubersprüchen und Drohnen ziehen sie ins Gefecht.\n\nShadowrun Schattenland ist ein packendes, taktisches Brettspiel mit einem Schwerpunkt auf Erzählung und freie Spielentscheidungen. Angeleitet von einem Spielleiter durchleben die Spieler zahlreiche Szenarien in einer atemberaubenden, dystopischen Zukunft. Mit ihren Charakteren erkunden sie verschiedene Orte und treten gegen gefährliche Gegner an, die ihren Weg zu Ruhm, Geld und neuer Ausrüstung für den nächsten Job versperren. Das eigenständige Brettspiel Schattenland basiert auf der beliebten Rollenspielwelt von Shadowrun und schöpft aus deren faszinierenden Themen. Das macht es zum einem äußerst atmosphärischen Erlebnis, welches jedoch keine Vorkenntnis der Spielwelt erfordert.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Shadowrun: Schattenland',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Verlag'],
+		releaseDate: ['2020-12-15'],
+		sku: ['45015'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'sourcebook',
+		description: 'The Colt Secret Agent. The Ultimax 71. The Izom Artemis. These and many more are in this weapon pack, with each card having game stats and art. Includes weapons from Shadowrun, Sixth World and Firing Squad.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Gun Rack (Weapon Cards)',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2020-08-24'],
+		sku: ['28504'],
+		status: 'missing',
+		type: 'digital'
+	},
+	{
+		category: 'misc',
+		description: 'Tossing a handful of dice to out-maneuver or out-gun your opponent always brings a rush. Especially when you’re spending some Edge to boost your actions. Add more dice to your Shadowrun game, along with a great way to track your Edge!',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Dice & Edge Tokens',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2019'],
+		sku: ['28501'],
+		status: 'outofscope',
+		type: 'digital'
 	}
 ];
