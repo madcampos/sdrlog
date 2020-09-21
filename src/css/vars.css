@@ -75,13 +75,13 @@ https://coolors.co/browser/latest/1
 	*/
 	/* Grays */
 
-	--theme-gray-darkest: red;
-	--theme-gray-darker: red;
-	--theme-gray-dark: red;
-	--theme-gray: red;
-	--theme-gray-light: red;
-	--theme-gray-lighter: red;
-	--theme-grey-lightest: red;
+	--theme-gray-darkest: white;
+	--theme-gray-darker: white;
+	--theme-gray-dark: white;
+	--theme-gray: white;
+	--theme-gray-light: white;
+	--theme-gray-lighter: white;
+	--theme-grey-lightest: white;
 
 	/* Theme main color */
 
@@ -95,13 +95,13 @@ https://coolors.co/browser/latest/1
 
 	/* Theme accent color */
 
-	--theme-accent-darkest: red;
-	--theme-accent-darker: red;
-	--theme-accent-dark: red;
-	--theme-accent: red;
-	--theme-accent-light: red;
-	--theme-accent-lighter: red;
-	--theme-accent-lightest: red;
+	--theme-accent-darkest: white;
+	--theme-accent-darker: white;
+	--theme-accent-dark: white;
+	--theme-accent: white;
+	--theme-accent-light: white;
+	--theme-accent-lighter: white;
+	--theme-accent-lightest: white;
 
 	/* Theme accent 2 color */
 
@@ -115,13 +115,13 @@ https://coolors.co/browser/latest/1
 
 	/* Theme accent 3 color */
 
-	--theme-accent3-darkest: red;
-	--theme-accent3-darker: red;
-	--theme-accent3-dark: red;
-	--theme-accent3: red;
-	--theme-accent3-light: red;
-	--theme-accent3-lighter: red;
-	--theme-accent3-lightest: red;
+	--theme-accent3-darkest: white;
+	--theme-accent3-darker: white;
+	--theme-accent3-dark: white;
+	--theme-accent3: white;
+	--theme-accent3-light: white;
+	--theme-accent3-lighter: white;
+	--theme-accent3-lightest: white;
 
 	/* Defaults */
 
