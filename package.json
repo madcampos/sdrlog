@@ -14,7 +14,7 @@
 		"version": "npm-run-all -s configure:version:** git-add",
 		"configure:version": "npm version minor",
 		"git-add": "git add .",
-		"generate:cert": "openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 2048 -keyout localhost.key -out localhost.crt -subj \"/C=ZW/ST=DEV/L=Dev/O=Development/OU=Dev/CN=localhost:8000/emailAddress=dev@localhost:8000\"",
+		"generate:cert": "pwsh build/generate-cert.ps1",
 		"generate:covers": "pwsh build/extract-covers.ps1",
 		"generate:thumbs": "node build/generate-thumbs.mjs",
 		"optimize-covers": "node build/optimize-covers.mjs",
