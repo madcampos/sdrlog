@@ -8,9 +8,6 @@
 /*
 Add materials:
 https://www.rpggeek.com/rpgitem/303831/der-almanach-sonderpublikation-zum-gratisrollenspi
-https://www.shadowiki.de/Convention_Mission_Pack_2018
-https://www.shadowiki.de/Convention_Mission_Pack_2017
-https://www.shadowiki.de/Convention_Mission_Pack_2016
 
 Sources to check:
 https://shadowiki.de/Liste_der_Shadowrun_Romane
@@ -9578,7 +9575,7 @@ export default [
 		description: "CMP 2013-01 Jailbreak Rock\nIf the payday is high enough, are you willing to bust a dragon out of a Denver jail? Shadowrun 5th Living Campaign. Help a fellow Runner out. A fellow Chummer is locked behind bars in Denver and is looking for help getting out. Brave the Cold and the Dragon to help a Runner.\n\nCMP 2013-02 Berlin Waltz\nEscort an injured Mr. Johnson to Berlin, with a dragon's minions on your tail! Shadowrun 5th Living Campaign. Welcome to Deutschland, come for the Schnitzel stay for the Neu-yen. When Mr. Johnson needs a hand moving some valuble items who's he gonna call.\n\nCMP 2013-03 Neo-Tokyo Fusion\nThe Ragin' Gaijin are the hottest indy band in Neo-Tokyo, but now they need to be rescued. Shadowrun 5th Living Campaign. Mr. Johnson's favorite Japanese Pop band has gone Missing, help locate the missing Musicians and the Wasabi Rolls are on him, Fail and you may find yourself turning Japanese. \n\nCMP 2013-04 Ballroom Blitz\nThere's a party at Underworld 93 and everyone's invited. Everyone. Shadowrun 5th Living Campaign. All roads lead to Seattle, Mr Johnson has one last run, to protect his assets from would be Assassins. Enjoy all the fine Dining Downtown has to offer...it may be your last night on the town.",
 		edition: 5,
 		gameDate: '2075',
-		name: 'Dragon Song Series',
+		name: 'CMP 2013: Dragon Song Series',
 		notes: 'A series of adventures played at conventions, not relesed afterwards.',
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
@@ -9591,7 +9588,7 @@ export default [
 		description: "CMP 2013-05 Rolling the Dice\nWelcome to the Sixth World, shadowrunner. This time, your fixer has you lined up for a job in the California Free State. It's a straightforward acquisition from Ares Arms - or at least that's what you're told.\n\nCMP 2013-06 Double Down\nDeeper into the shadows of San Francisco and CalFree! The shadowrunners must recover a drone shot down in the mountains. Out of the city and into the wilderness - fresh air, fresh challenges, and fresh ways to get fragged...\n\nCMP 2013-07 Full House\nA big part of being a shadowrunner is breaking things for money. This time, Mr. Johnson wants you to break an entire MCT facility. No smash & grab, just smash! But is it really that simple?\n\nCMP 2013-08 Going for Broke\nOne more job in San Francisco, CalFree. A simple bodyguard job, keeping a computer programmer safe. Easy nuyen, right? Sure, chummer, if you say so... Theres a hit out for a software designer, and its your job to keep him alive. Think you can pull it off?",
 		edition: 5,
 		gameDate: '2075',
-		name: 'Dangerous Games Series',
+		name: 'CMP 2013: Dangerous Games Series',
 		notes: 'A series of adventures played at conventions, not relesed afterwards.',
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
@@ -9604,7 +9601,7 @@ export default [
 		description: 'CMP 2014-05 Silence is Golden\nMr. Johnson needs a job done quietly, in and out without being seen. Think your team is up to the task? A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed.\n\nCMP 2014-06 A Night’s Work\nSounds like a simple job, but don’t they all? Either way runners get paid for a simple night’s work, right? A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed. Please check out Welcome to the 6th World events to learn the system and make a character...\n\nCMP 2014-07 Run out the Guns\n“Rumor has it that Ares is about to unveil a breakthrough in firearms technology. Would you kindly go steal that for me?” A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed.\n\nCMP 2014-08 Demolition Run\nSometimes the Johnson wants it quiet. Sometimes he wants it loud and noisy. Tonight, he wants the latter. A Shadowrun Missions Living Campaign adventure. Shadowrun 5th Edition character needed.',
 		edition: 5,
 		gameDate: '2075',
-		name: 'Company Man Series',
+		name: 'CMP 2014: Company Man Series',
 		notes: 'A series of adventures played at conventions, not relesed afterwards.',
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
@@ -9617,7 +9614,7 @@ export default [
 		description: 'CMP 2015-01 Copperhead Road\nCMP 2015-02 Rolling on the River\nCMP 2015-03 Cinco de Mayo in Memphis\nCMP 2015-04 Leavin’ Tennessee',
 		edition: 5,
 		gameDate: '2075',
-		name: 'Tennessee Suite Series',
+		name: 'CMP 2015: Tennessee Suite Series',
 		notes: 'A series of adventures played at conventions, not relesed afterwards.',
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
@@ -9630,7 +9627,7 @@ export default [
 		description: 'CMP 2015-05 Carrying the Torch\nCMP 2015-06 Opening Ceremonies\nCMP 2015-07 Citius Altius Fortius\nCMP 2015-08 Closing Ceremonies',
 		edition: 5,
 		gameDate: '2075',
-		name: 'Deadly Competition Series',
+		name: 'CMP 2015: Deadly Competition Series',
 		notes: 'A series of adventures played at conventions, not relesed afterwards.',
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
@@ -9640,14 +9637,27 @@ export default [
 	},
 	{
 		category: 'mission',
-		description: 'CMP 2016-01 Broke Down in KC\nCMP 2016-02 The Midwest Farmer’s Daughter\nCMP 2016-03 Today Isn’t Your Day, Tomorrow Isn’t Looking Good Either',
+		description: 'CMP 2016-01 - Broke Down in KC\nThe definitive Maria Mecurial tribute singer has gone missing, but why? Engine trouble lands your team in KC. Coincidentally, a local Mr. Johnson has a milk run for you. Quick and easy nuyen, right?\n\nCMP 2016-02 - The Midwest Farmer\'s Daughter\nAllied with the KC Mob, Agri-Seeds, is expanding and everyone sells… or else. A team is hired to protect an executive’s family from aggressive negotiations during an attempted hostile takeover. Simple and easy, right?\n\nCMP 2016-03 - Today Isn\'t Your Day, Tomorrow Isn\'t Looking Good Either\nWhat happens when the hit team becomes the targets?\n\nCMP 2016-04 - Mage Without A Face\nThe mob loves hitters, but they love cleaning up loose ends even more.',
 		edition: 5,
 		gameDate: '2075',
-		name: 'BBQ Bob Series',
+		name: 'CMP 2016: BBQ Bob Series',
 		notes: 'A series of adventures played at conventions, not relesed afterwards.',
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
-		sku: ['26CMP13-3'],
+		sku: ['26CMP16-1'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'mission',
+		description: 'CMP 2016-05 - Casablanca\nAfter a successful run, you have three days to wait in the legendary African port city before your contact shows up with your payment. What could possibly go wrong?\n\nCMP 2016-06 - Cape Town\nMaybe this time you can actually lay low while laying low. With any luck, you won’t run into the same trouble on the southern end of the continent that you did on the northern end.\n\nCMP 2016-07 - Mumbai\nThere’s one problem in hiding needles amidst a stack of needles. Everyone is sharp.\n\nCMP 2016-08 - Singapore\nIn a city locked down by the most prolific police force on the planet, opportunity abounds for the intrepid shadowrunner. The only question being is the job worth the cost?',
+		edition: 5,
+		gameDate: '2075',
+		name: 'CMP 2016: World Tour',
+		notes: 'A series of adventures played at conventions, not relesed afterwards.',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		sku: ['26CMP16-2'],
 		status: 'outofscope',
 		type: 'physical'
 	},
@@ -9661,6 +9671,45 @@ export default [
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
 		sku: ['26CMP11'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'mission',
+		description: 'CMP 2018-01 - Viva Las Vegas: Dead Man\'s Hand\nThe team is called out to Las Vegas to help a gambler out with a goon issue. When the Johnson doesn\'t show up for the meet, they only have so long before their paycheck becomes a mirage.\n\nCMP 2018-02 - Viva Las Vegas: You\'re Nobody till Somebody Loves You\nThe heart wants what it wants, but there are those who don\'t approve of this union. The team is hired to extract a mafia princess from the family, but is it love or leverage Mr. J is looking for?\n\nCMP 2018-03 - Viva Las Vegas: Sin City Sabotage\nA new resort is opening up on the strip, and the VIP weekend is coming up. Mr Johnson wants you to make this a particularly memorable event for all the investors.\n\nCMP 2018-04 - Viva Las Vegas: Ain\'t That a Kick in the Head?\nIn Las Vegas, a single night out can make or break anyone. Mr Johnson decides to let it ride on the runners, in a bid to knock over a casino. The security may be state of the art, but a single pull of the lever can change a life.',
+		edition: 5,
+		gameDate: '2080',
+		name: 'CMP 2018: Viva Las Vegas',
+		notes: 'A series of adventures played at conventions, not relesed afterwards.',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		sku: ['26CMP18-1'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'mission',
+		description: 'CMP 2018-05 - Cerulean Shadows: Letter of Marque\nCargo ships are turning up missing on their way to Metropole, and the owners aren\'t too happy about it. The team is hired to crew a decoy vessel in order to capture the elusive Pirate before they can strike again.\n\nCMP 2018-06 - Cerulean Shadows: Honor Amongst Thieves\nBusiness is business, right? The team gets an interesting offer from someone they just had arrested. A little nuyen goes a long way toward forgiveness.\n\nCMP 2018-07 - Cerulean Shadows: No Prey, No Pay\nAn offer comes in from an independent Johnson looking to turn the screws on some of the shipping corporations operating in the Caribbean, and hopefully fund out why boatloads of people have gone missing. Taking down a cargo ship, the team finds more than they signed on for.\n\nCMP 2018-08 - Cerulean Shadows: X Marks the Spot\nNothing stays hidden forever. Even the best kept secrets eventually come to light. A mysterious private island with a corporate facility, and hundreds of brainwashed prisoners stand between the runners and a real payday.',
+		edition: 5,
+		gameDate: '2080',
+		name: 'CMP 2018: Cerulean Shadows',
+		notes: 'A series of adventures played at conventions, not relesed afterwards.',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		sku: ['26CMP18-2'],
+		status: 'outofscope',
+		type: 'physical'
+	},
+	{
+		category: 'mission',
+		description: 'CMP 2017-01 - Ante Up\nMrs. Johnson needs to extract an executive, but there is always a catch. Can you beat Knight Errant when extracting them from a brothel run by spirits all the while meeting exacting standards?\n\nCMP 2017-02 - Double or Nothing\nMrs. Johnson needs a demolition run on a rival biomedical company to delay production. Will the shadowrunners go in loud & hard or find a subtler approach?\n\nCMP 2017-03 - Let it Ride\nMrs. Johnson has an internal rival that she needs leverage on. All you need to do is find changeling child & prove paternity to disgrace the rival, but is it ever that simple?\n\nCMP 2017-04 - Cash Out\nMrs. Johnson needs a team to raid an underground lab & torch it. What could possibly be in this lab & who is running it... or does that really matter with a paycheck like this?\n\nCMP 2017-05 - The Heart of it All\nYou\'ve been sent to Columbus, Ohio to rescue a wealthy, corporate kid from a gang of Triads. It turns out he is a Yakuza boss\' son. Now, you just have to prevent an all-out war in the shadows. When the son of an international crime lord\'s son goes missing a gang war is ready to erupt out of the shadows; and that would be bad for biz. Perhaps some neutral, outsiders can run the shadows quick enough to keep the peace - such as it is.\n\nCMP 2017-06 - A Friend in Need\nA friend of a friend needs his hoop pulled from the fire. Then, his friends want to send a message to those who run in the shadows by arranging revenge against the one who burned him. The revenge needs to be public and precise. Keep your friends close and well... When a deep, undercover operative is double crossed he needs his hoop pulled from the flames. Then, there is the small matter of dealing with the one who betrayed him.',
+		edition: 5,
+		gameDate: '2080',
+		name: 'CMP 2017',
+		notes: 'A series of adventures played at conventions, not relesed afterwards.',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		sku: ['26CMP17'],
 		status: 'outofscope',
 		type: 'physical'
 	},
