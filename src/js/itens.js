@@ -109,25 +109,20 @@ function addItemCard(item) {
 }
 
 /**
- * Fetches the next batch of items from storage or network.
+ * Finds a batch of itens for a index.
  *
- * @returns {Array|null} A key-value pair of items or null if there is no new data.
- * @example
+ * @param {number} index The index to find a item batch.
+ * @returns {object[]} The list of items.
  */
-async function fetchNextItems() {
-	const lastDataFile = localStorage.getItem('lastDataFile') || 1;
-	const currentDataFile = sessionStorage.getItem('currentDataFile') || 1;
-	let currentData = localStorage.getItem(`data${currentDataFile}`);
+async function fetchItems(index) {
+	let currentData = localStorage.getItem(`data-${index}`);
 
-	if (!currentData && lastDataFile === currentDataFile) {
+	if (!currentData) {
 		try {
-			const res = await fetch(`${DATA_PATH}data-${currentDataFile}.json`);
+			const res = await fetch(`${DATA_PATH}data-${index}.json`);
 
-			if (res || res.type !== 'error' || res.ok) {
-				localStorage.setItem('lastDataFile', lastDataFile + 1);
-
+			if (res.ok) {
 				currentData = await res.json();
-				localStorage.setItem(`data${lastDataFile + 1}`, JSON.stringify(currentData));
 			}
 		} catch (err) {
 			// eslint-disable-next-line no-console
@@ -137,9 +132,35 @@ async function fetchNextItems() {
 		currentData = JSON.parse(currentData);
 	}
 
-	sessionStorage.setItem('currentDataFile', currentDataFile + 1);
+	return currentData ?? [];
+}
 
-	return currentData || null;
+/**
+ * Fetches the next batch of items from storage or network.
+ *
+ * @returns {Array} A key-value pair of items, empty if no new data.
+ */
+async function fetchAllItems() {
+	let currentDataFile = 1;
+
+	let items = [];
+
+	do {
+		// eslint-disable-next-line no-await-in-loop
+		const newItems = await fetchItems(currentDataFile);
+		items.push(...newItems);
+
+		if (newItems.length > 0) {
+			localStorage.setItem(`data-${currentDataFile}`, JSON.stringify(newItems));
+		} else {
+			localStorage.setItem('lastDataFile', currentDataFile);
+			break;
+		}
+
+		currentDataFile++;
+	} while (items.length > 0);
+
+	return items;
 }
 
 /**
@@ -161,16 +182,12 @@ function toggleItemDetails(sku, forceOpen = false) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-	let lastItems = null;
+	const itemsData = await fetchAllItems();
 
-	do {
-		// eslint-disable-next-line no-await-in-loop
-		lastItems = await fetchNextItems();
-		lastItems.forEach(([id, item]) => {
-			items.set(id, item);
-			addItemCard(item);
-		});
-	} while (lastItems);
+	itemsData.forEach((item) => {
+		items.set(item.sku[0], item);
+		addItemCard(item);
+	});
 
 	if (window.location.hash) {
 		const sku = window.location.hash.replace('#', '');
