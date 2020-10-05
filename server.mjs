@@ -36,17 +36,18 @@ for (const [i, item] of data.entries()) {
  * @param {Function} next The next middleware.
  * @returns {ServerResponse} Calls the next middleware or returns a response.
  */
-function dataMiddleware(req, res, next){
+function dataMiddleware(req, res, next) {
 	if (req.url?.match(/data-\d+\.json$/iu)) {
 		console.log(req.url);
 		if (!dataMap.has(req.url)) {
 			res.statusCode = 404;
+
 			return res.end('Data not found.');
 		}
 
 		res.setHeader('Content-Type', 'application/json');
-		return res.end(JSON.stringify(dataMap.get(req.url)));
 
+		return res.end(JSON.stringify(dataMap.get(req.url)));
 	}
 
 	return next();
@@ -63,6 +64,7 @@ function dataMiddleware(req, res, next){
 function serviceWorkerMiddleware(req, res, next) {
 	if (req.url === '/sw.js') {
 		res.setHeader('Content-Type', 'text/javascript');
+
 		return res.end(`// This service worker file is effectively a 'no-op' that will reset any
 // Previous service worker registered for the same host:port combination.
 

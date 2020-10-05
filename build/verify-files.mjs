@@ -13,7 +13,7 @@ import { default as glob } from 'fast-glob';
 
 import data from '../data/data.mjs';
 
-const MATERIAL_PATH = '';
+const MATERIAL_PATH = '***REMOVED***';
 
 (async () => {
 	const sorter = new Intl.Collator('en').compare;

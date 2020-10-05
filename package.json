@@ -77,9 +77,6 @@
 		"*.{js, mjs}": "eslint --fix",
 		"*.{css}": "stylelint --fix",
 		"*.{html}": "htmlhint",
-		"*.{png,jpeg,jpg,gif,svg}": [
-			"imagemin-lint-staged",
-			"git add"
-		]
+		"*.{png,jpeg,jpg,gif,svg}": "imagemin-lint-staged"
 	}
 }
