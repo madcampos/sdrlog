@@ -194,7 +194,7 @@ function searchTagsToFilter(text = searchBox.value) {
 	const filterObject = {};
 	const search = new RegExp(searchRegexString, 'giu');
 
-	//TODO: normalize string
+	// TODO: normalize string
 	const normalizedString = text.toLowerCase();
 
 	let match = search.exec(normalizedString);

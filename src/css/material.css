@@ -87,7 +87,6 @@
 }
 
 @media (max-width: 700px) and (orientation: portrait) {
-
 	#item-details-content {
 		grid-template-areas: 'metadata' 'image' 'content';
 		grid-template-columns: 1fr;
@@ -96,7 +95,6 @@
 }
 
 @media (max-height: 400px) and (orientation: landscape) {
-
 	.item {
 		height: calc(var(--item-height) * 0.75);
 		width: calc(var(--item-width) * 0.75);

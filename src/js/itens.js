@@ -143,12 +143,13 @@ async function fetchItems(index) {
 async function fetchAllItems() {
 	let currentDataFile = 1;
 
-	let items = [];
+	const updateItems = [];
 
 	do {
 		// eslint-disable-next-line no-await-in-loop
 		const newItems = await fetchItems(currentDataFile);
-		items.push(...newItems);
+
+		updateItems.push(...newItems);
 
 		if (newItems.length > 0) {
 			localStorage.setItem(`data-${currentDataFile}`, JSON.stringify(newItems));
@@ -157,10 +158,10 @@ async function fetchAllItems() {
 			break;
 		}
 
-		currentDataFile++;
-	} while (items.length > 0);
+		currentDataFile += 1;
+	} while (updateItems.length > 0);
 
-	return items;
+	return updateItems;
 }
 
 /**
