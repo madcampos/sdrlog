@@ -38,7 +38,6 @@ for (const [i, item] of data.entries()) {
  */
 function dataMiddleware(req, res, next) {
 	if (req.url?.match(/data-\d+\.json$/iu)) {
-		console.log(req.url);
 		if (!dataMap.has(req.url)) {
 			res.statusCode = 404;
 
@@ -90,29 +89,27 @@ self.addEventListener('activate', () => {
 	return next();
 }
 
-(async () => {
-	const params = {
-		file: 'index.html',
-		host: 'localhost',
-		https: {
-			cert: await readFile('./server-cert.pem'),
-			key: await readFile('./server-key.pem'),
-			passphrase: '12345'
-		},
-		logLevel: 2,
-		mount: [
-			['/img/thumbs', './covers'],
-			['/img/full', './covers']
-		],
-		middleware: [
-			serviceWorkerMiddleware,
-			dataMiddleware
-		],
-		open: true,
-		port: 8000,
-		root: './src',
-		wait: 1000
-	};
+const params = {
+	file: 'index.html',
+	host: 'localhost',
+	https: {
+		cert: await readFile('./server-cert.pem'),
+		key: await readFile('./server-key.pem'),
+		passphrase: '12345'
+	},
+	logLevel: 2,
+	mount: [
+		['/img/thumbs', './covers'],
+		['/img/full', './covers']
+	],
+	middleware: [
+		serviceWorkerMiddleware,
+		dataMiddleware
+	],
+	open: true,
+	port: 8000,
+	root: './src',
+	wait: 1000
+};
 
-	server.start(params);
-})();
+server.start(params);
