@@ -1,3 +1,4 @@
+/* eslint-env node */
 /* eslint-disable no-console */
 /**
  * @file Verify files metadata.
@@ -8,86 +9,94 @@
 import { existsSync } from 'fs';
 import { basename } from 'path';
 import { readdir } from 'fs/promises';
+import { createInterface } from 'readline';
 
 import { default as glob } from 'fast-glob';
 
 import data from '../data/data.mjs';
 
-const MATERIAL_PATH = '***REMOVED***';
+const prompt = createInterface({ input: process.stdin, output: process.stdout });
+const MATERIAL_PATH = await new Promise((fulfill) => {
+	prompt.question('Please entre the path to files: ', (response) => {
+		const normalizedResposne = response.trim().replaceAll(/^['"]|['"]$/giu, '').trim();
 
-(async () => {
-	const sorter = new Intl.Collator('en').compare;
+		fulfill(normalizedResposne);
 
-	let newData = data.filter((item) => !existsSync(`./covers/${item.sku[0]}.jpg`));
+		prompt.close();
+	});
+});
 
-	newData = newData.map(({name, sku}) => ({
-		sku: sku[0],
-		name
-	}));
+const sorter = new Intl.Collator('en').compare;
 
-	newData = newData.sort((first, last) => sorter(first.sku, last.sku));
+let newData = data.filter((item) => !existsSync(`./covers/${item.sku[0]}.jpg`));
 
-	const skus = [...new Set(data.map((item) => item.sku[0]))];
+newData = newData.map(({ name, sku }) => ({
+	sku: sku[0],
+	name
+}));
 
-	const covers = await glob('./covers/**');
-	const extraCovers = [];
+newData = newData.sort((first, last) => sorter(first.sku, last.sku));
 
-	for await (const cover of covers) {
-		if (!skus.includes(basename(cover, '.jpg'))) {
-			extraCovers.push(basename(cover));
+const skus = [...new Set(data.map((item) => item.sku[0]))];
+
+const covers = await glob('./covers/**');
+const extraCovers = [];
+
+for await (const cover of covers) {
+	if (!skus.includes(basename(cover, '.jpg'))) {
+		extraCovers.push(basename(cover));
+	}
+}
+
+let files = await readdir(MATERIAL_PATH);
+
+files = files.filter((folder) => folder !== 'Unofficial');
+files = await Promise.all(files.map((folder) => glob(`${MATERIAL_PATH}/${folder}/**`)));
+files = files.flat();
+
+const filesSkus = files.map((file) => basename(file).replace(/^(?<sku>.*?) - .*$/u, '$<sku>'));
+
+const missingMaterial = data.reduce((list, { name, sku, status }) => {
+	if (!status) {
+		if (!filesSkus.includes(sku[0])) {
+			list.push({
+				sku: sku[0],
+				name
+			});
 		}
 	}
 
-	let files = await readdir(MATERIAL_PATH);
-	files = files.filter((folder) => folder !== 'Unofficial');
-	files = files.map(async (folder) => await glob(`${MATERIAL_PATH}/${folder}/**`));
-	files = await Promise.all(files);
-	files = files.flat();
+	return list;
+}, []);
 
-	const filesSkus = files.map((file) => basename(file).replace(/^(.*?) - .*$/, '$1'));
+const extraMaterial = filesSkus.filter((item) => !skus.includes(item));
 
-	const missingMaterial = data.reduce((list, {name, sku, status}) => {
-		if (!status) {
-			if (!filesSkus.includes(sku[0])) {
-				list.push({
-					sku: sku[0],
-					name
-				});
-			}
-		}
+const missing = data.filter((item) => item.status === 'missing').map(({ name, sku }) => ({
+	sku: sku[0],
+	name
+}));
 
-		return list;
-	}, []);
+const canceled = data.filter((item) => item.status === 'canceled').map(({ name, sku }) => ({
+	sku: sku[0],
+	name
+}));
 
-	const extraMaterial = filesSkus.filter((item) => !skus.includes(item));
+const outOfScope = data.filter((item) => item.status === 'outofscope').map(({ name, sku }) => ({
+	sku: sku[0],
+	name
+}));
 
-	const missing = data.filter((item) => item.status === 'missing').map(({name, sku}) => ({
-		sku: sku[0],
-		name
-	}));
-
-	const canceled = data.filter((item) => item.status === 'canceled').map(({name, sku}) => ({
-		sku: sku[0],
-		name
-	}));
-
-	const outOfScope = data.filter((item) => item.status === 'outofscope').map(({name, sku}) => ({
-		sku: sku[0],
-		name
-	}));
-
-	console.log('Missing pdfs:');
-	console.log(missingMaterial);
-	console.log('Extra pdfs:');
-	console.log(extraMaterial);
-	console.log('Missing covers:');
-	console.log(newData);
-	console.log('Extra covers:');
-	console.log(extraCovers);
-	console.log('Missing files:');
-	console.log(missing.sort((first, last) => sorter(first.sku, last.sku)));
-	console.log('Canceled files:');
-	console.log(canceled.sort((first, last) => sorter(first.sku, last.sku)));
-	console.log('"Out of scope" files:');
-	console.log(outOfScope.sort((first, last) => sorter(first.sku, last.sku)));
-})();
+console.log('Missing pdfs:');
+console.log(missingMaterial);
+console.log('Extra pdfs:');
+console.log(extraMaterial);
+console.log('Missing covers:');
+console.log(newData);
+console.log('Extra covers:');
+console.log(extraCovers);
+console.log('Missing files:');
+console.log(missing.sort((first, last) => sorter(first.sku, last.sku)));
+console.log('Canceled files:');
+console.log(canceled.sort((first, last) => sorter(first.sku, last.sku)));
+console.log('"Out of scope" files:');
+console.log(outOfScope.sort((first, last) => sorter(first.sku, last.sku)));

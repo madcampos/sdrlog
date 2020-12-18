@@ -23,20 +23,18 @@ const imageminOptions = {
 	plugins: [mozjpg({ progressive: true, quality: 75 })]
 };
 
-(async () => {
-	await mkdir(DEST_PATH, { recursive: true });
+await mkdir(DEST_PATH, { recursive: true });
 
-	const files = await glob(`${SRC_PATH}/**/*${EXT}`);
+const files = await glob(`${SRC_PATH}/**/*${EXT}`);
 
-	for await (const file of files) {
-		const fileName = file.replace(SRC_PATH, DEST_PATH);
+for await (const file of files) {
+	const fileName = file.replace(SRC_PATH, DEST_PATH);
 
-		await mkdir(dirname(fileName), { recursive: true });
+	await mkdir(dirname(fileName), { recursive: true });
 
-		if (!existsSync(file) || FORCE_REGENERATE) {
-			const fileData = await imagemin.buffer(await readFile(file), imageminOptions);
+	if (!existsSync(file) || FORCE_REGENERATE) {
+		const fileData = await imagemin.buffer(await readFile(file), imageminOptions);
 
-			await writeFile(fileName, fileData);
-		}
+		await writeFile(fileName, fileData);
 	}
-})();
+}

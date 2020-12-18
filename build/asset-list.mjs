@@ -1,3 +1,4 @@
+/* eslint-env node */
 /**
  * @file Assets list to generate.
  * @author madcampos <madcampos@outlook.com>

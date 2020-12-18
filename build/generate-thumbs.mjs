@@ -26,24 +26,22 @@ const imageminOptions = {
 	plugins: [mozjpg({ progressive: true, quality: 75 })]
 };
 
-(async () => {
-	await mkdir(DEST_PATH, { recursive: true });
+await mkdir(DEST_PATH, { recursive: true });
 
-	const files = await glob(`${SRC_PATH}/**/*${EXT}`);
+const files = await glob(`${SRC_PATH}/**/*${EXT}`);
 
-	for await (const file of files) {
-		const fileName = file.replace(SRC_PATH, DEST_PATH);
+for await (const file of files) {
+	const fileName = file.replace(SRC_PATH, DEST_PATH);
 
-		await mkdir(dirname(fileName), { recursive: true });
+	await mkdir(dirname(fileName), { recursive: true });
 
-		if (!existsSync(file) || FORCE_REGENERATE) {
-			const img = await Jimp.read(file);
+	if (!existsSync(file) || FORCE_REGENERATE) {
+		const img = await Jimp.read(file);
 
-			img.resize(Jimp.AUTO, THUMB_SIZE, Jimp.RESIZE_BICUBIC);
+		img.resize(Jimp.AUTO, THUMB_SIZE, Jimp.RESIZE_BICUBIC);
 
-			const fileData = await imagemin.buffer(await img.getBufferAsync(Jimp.MIME_JPEG), imageminOptions);
+		const fileData = await imagemin.buffer(await img.getBufferAsync(Jimp.MIME_JPEG), imageminOptions);
 
-			await writeFile(fileName, fileData);
-		}
+		await writeFile(fileName, fileData);
 	}
-})();
+}

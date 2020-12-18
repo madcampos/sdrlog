@@ -1,3 +1,4 @@
+/* eslint-env node */
 /* eslint-disable no-await-in-loop, no-fallthrough, max-depth, no-console */
 /**
  * @file Generate browser assets (icons and splashes).
@@ -31,95 +32,93 @@ const imageminOptions = {
 	]
 };
 
-(async () => {
-	const browser = await puppeteer.launch({
-		ignoreHTTPSErrors: true
-	});
+const browser = await puppeteer.launch({
+	ignoreHTTPSErrors: true
+});
 
-	const page = await browser.newPage();
+const page = await browser.newPage();
 
-	for (const item of assetList) {
-		const resourcePath = resolve(item.resource);
-		const destinationFolder = resolve(item.destination);
+for (const item of assetList) {
+	const resourcePath = resolve(item.resource);
+	const destinationFolder = resolve(item.destination);
 
-		mkdir(destinationFolder, { recursive: true });
+	mkdir(destinationFolder, { recursive: true });
 
-		for (const asset of item.assets) {
-			const filePath = join(destinationFolder, asset.fileName);
+	for (const asset of item.assets) {
+		const filePath = join(destinationFolder, asset.fileName);
 
-			if (!existsSync(filePath) || FORCE_REGENERATE) {
-				let fileData = null;
+		if (!existsSync(filePath) || FORCE_REGENERATE) {
+			let fileData = null;
 
-				if (item.mode === 'dark') {
-					await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'dark' }]);
-				} else {
-					await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'light' }]);
-				}
-
-				await page.setViewport({
-					height: asset.height,
-					width: asset.width
-				});
-
-				switch (extname(asset.fileName)) {
-					case '.svg':
-						if (extname(item.resource) === '.svg') {
-							fileData = await readFile(resourcePath);
-						} else {
-							console.error('Can\'t convert from html to svg.');
-						}
-						break;
-
-					case '.ico':
-						{
-							const ico = new IconIco();
-
-							// eslint-disable-next-line no-magic-numbers
-							for (const iconSize of [16, 32, 64]) {
-								await page.setViewport({
-									height: iconSize,
-									width: iconSize
-								});
-
-								await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
-
-								const screenshot = await page.screenshot({
-									omitBackground: true,
-									type: 'png'
-								});
-
-								ico.addFromPng(screenshot, null);
-							}
-
-							fileData = ico.encode();
-						}
-						break;
-
-					case '.jpg':
-
-					case '.jpeg':
-
-					case '.png':
-						await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
-
-						fileData = await page.screenshot({
-							omitBackground: true,
-							type: extname(asset.fileName).replace('.', '')
-						});
-						break;
-
-					default:
-						console.error('Invalid file format!');
-				}
-
-				if (!extname(asset.fileName) === '.ico') {
-					fileData = await imagemin.buffer(fileData, imageminOptions);
-				}
-
-				writeFile(filePath, fileData);
+			if (item.mode === 'dark') {
+				await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'dark' }]);
+			} else {
+				await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'light' }]);
 			}
+
+			await page.setViewport({
+				height: asset.height,
+				width: asset.width
+			});
+
+			switch (extname(asset.fileName)) {
+				case '.svg':
+					if (extname(item.resource) === '.svg') {
+						fileData = await readFile(resourcePath);
+					} else {
+						console.error('Can\'t convert from html to svg.');
+					}
+					break;
+
+				case '.ico':
+					{
+						const ico = new IconIco();
+
+						// eslint-disable-next-line no-magic-numbers
+						for (const iconSize of [16, 32, 64]) {
+							await page.setViewport({
+								height: iconSize,
+								width: iconSize
+							});
+
+							await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
+
+							const screenshot = await page.screenshot({
+								omitBackground: true,
+								type: 'png'
+							});
+
+							ico.addFromPng(screenshot, null);
+						}
+
+						fileData = ico.encode();
+					}
+					break;
+
+				case '.jpg':
+
+				case '.jpeg':
+
+				case '.png':
+					await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
+
+					fileData = await page.screenshot({
+						omitBackground: true,
+						type: extname(asset.fileName).replace('.', '')
+					});
+					break;
+
+				default:
+					console.error('Invalid file format!');
+			}
+
+			if (!extname(asset.fileName) === '.ico') {
+				fileData = await imagemin.buffer(fileData, imageminOptions);
+			}
+
+			writeFile(filePath, fileData);
 		}
 	}
+}
 
-	await browser.close();
-})();
+await browser.close();

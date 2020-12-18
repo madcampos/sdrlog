@@ -11,11 +11,11 @@
 		"lint:js": "eslint . --fix",
 		"lint:html": "htmlhint .",
 		"lint:css": "stylelint **/*.css --fix",
-		"version": "npm-run-all -s configure:version:** git-add",
+		"version": "npm-run-all -s configure:version git-add",
 		"configure:version": "npm version minor",
 		"git-add": "git add .",
 		"generate:cert": "pwsh build/generate-cert.ps1",
-		"generate:covers": "pwsh build/extract-covers.ps1",
+		"generate:covers": "node build/extract-covers.mjs",
 		"generate:thumbs": "node build/generate-thumbs.mjs",
 		"optimize-covers": "node build/optimize-covers.mjs",
 		"build:images": "npm-run-all -s generate:covers generate:thumbs optimize-covers",
@@ -26,7 +26,8 @@
 		"build:js": "node build/js-files.mjs",
 		"prebuild": "npm-run-all -s lint",
 		"build": "npm-run-all -p build:**",
-		"postbuild": "npm run publish"
+		"postbuild": "npm run publish",
+		"verify": "node build/verify-files.mjs"
 	},
 	"engines": {
 		"node": ">=14.0.0"
