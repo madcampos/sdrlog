@@ -1,16 +1,20 @@
+/* eslint-env node */
+/* eslint-disable no-magic-numbers */
+
 /**
  * @file Configures eslint.
  * @author madcampos <madcampos@outlook.com>
  * @version 1.0.0
  */
 
-/* eslint-disable no-magic-numbers, sort-keys */
-/* eslint-env node */
-module.exports = {
+ module.exports = {
 	root: true,
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		sourceType: 'module',
-		ecmaVersion: 2020
+		ecmaVersion: 12,
+		lib: ['ESNext'],
+		extraFileExtensions: ['.mjs']
 	},
 	env: {
 		browser: true,
@@ -156,7 +160,7 @@ module.exports = {
 		'no-delete-var': 'error',
 		'no-label-var': 'error',
 		'no-restricted-globals': ['error', 'event'],
-		'no-shadow': ['warn', { builtinGlobals: true, hoist: 'all', allow: ['name'] }],
+		'no-shadow': ['warn', { builtinGlobals: true, hoist: 'all', allow: ['name', 'status', 'event', 'prompt', 'alert'] }],
 		'no-shadow-restricted-names': 'error',
 		'no-undef': ['error', { 'typeof': true }],
 		'no-undef-init': 'warn',
@@ -396,7 +400,11 @@ module.exports = {
 		'node/no-exports-assign': 'error',
 		'node/no-extraneous-import': 'error',
 		'node/no-extraneous-require': 'error',
-		'node/no-missing-import': 'error',
+		'node/no-missing-import': [
+			'off', {
+				// AllowModules: ['fs/promises', 'dns/promises', 'stream/promises', 'timers/promises']
+			}
+		],
 		'node/no-missing-require': 'error',
 		'node/no-new-require': 'error',
 		'node/no-path-concat': 'error',
