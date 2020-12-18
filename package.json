@@ -14,7 +14,6 @@
 		"version": "npm-run-all -s configure:version git-add",
 		"configure:version": "npm version minor",
 		"git-add": "git add .",
-		"generate:cert": "pwsh build/generate-cert.ps1",
 		"generate:covers": "node build/extract-covers.mjs",
 		"generate:thumbs": "node build/generate-thumbs.mjs",
 		"optimize-covers": "node build/optimize-covers.mjs",
