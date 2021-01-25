@@ -95,7 +95,7 @@ const params = {
 	https: {
 		cert: await readFile('./server-cert.pem'),
 		key: await readFile('./server-key.pem'),
-		passphrase: '12345'
+		passphrase: 'password'
 	},
 	logLevel: 2,
 	mount: [
