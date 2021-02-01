@@ -1,4 +1,6 @@
 /* eslint-env node */
+/* eslint-disable no-console */
+
 /**
  * @file Extract covers from pdfs ussing GraphicsMagick.
  * @author madcampos <madcampos@outlook.com>
@@ -25,11 +27,11 @@ try {
 }
 
 const prompt = createInterface({ input: process.stdin, output: process.stdout });
-const SRC_PATH = await new Promise((fulfill) => {
+const SRC_PATH = await new Promise((resolve) => {
 	prompt.question('Please entre the path to files: ', (response) => {
 		const normalizedResposne = response.trim().replaceAll(/^['"]|['"]$/giu, '').trim();
 
-		fulfill(normalizedResposne);
+		resolve(normalizedResposne);
 
 		prompt.close();
 	});
@@ -45,14 +47,11 @@ for await (const item of data) {
 			try {
 				const output = exec(`gm.exe convert -resize x2048 "${resolve(pdfFile)}[0]" "${resolve(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
 
-				// eslint-disable-next-line no-console
 				console.log(output);
 			} catch (err) {
-				// eslint-disable-next-line no-console
 				console.error(err);
 			}
 		} else {
-			// eslint-disable-next-line no-console
 			console.error(`File not found for #${item?.sku?.[0]}: "${item?.name}"`);
 		}
 	}
