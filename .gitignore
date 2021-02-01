@@ -60,6 +60,9 @@ typings/
 # next.js build output
 .next
 
+# VS Code
+.vscode/
+
 img/full/*
 img/thumbs/*
 
