@@ -9826,7 +9826,6 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2020-08-21'],
 		sku: ['26861'],
-		status: 'missing',
 		type: 'digital'
 	},
 	{
@@ -11487,7 +11486,7 @@ export default [
 		type: 'physical'
 	},
 	{
-		category: 'sourcebook',
+		category: 'rulebook',
 		description: 'The Colt Secret Agent. The Ultimax 71. The Izom Artemis. These and many more are in this weapon pack, with each card having game stats and art. Includes weapons from Shadowrun, Sixth World and Firing Squad.',
 		edition: 6,
 		gameDate: '2080',
@@ -11496,7 +11495,6 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2020-08-24'],
 		sku: ['28504'],
-		status: 'missing',
 		type: 'digital'
 	},
 	{
@@ -11510,6 +11508,42 @@ export default [
 		releaseDate: ['2019'],
 		sku: ['28501'],
 		status: 'outofscope',
+		type: 'digital'
+	},
+	{
+		category: 'mission',
+		description: 'Lighting the Electric Town\n\nNeo-Tokyo, where the bright neon makes for some deep shadows. It’s not the easiest place to navigate, but the rewards for learning how it works are high. Want a shot at the big time? Then you have to start somewhere. And there are always openings at the bottom.\n\nThat doesn’t mean life will be either safe or boring. Dedicated runners can be caught in the mayhem of a troll metal concert, look for the right way to shake down a business, show some punks who’s the boss, and give a corp drone what’s coming to him. There may be bigger-paying jobs out there, but getting these jobs right is the first step to getting them.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Started from the Bottom',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2020-11-02'],
+		sku: ['SRM09-01'],
+		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'DO THE COLLAPSE!\n\nSome are careful, others are chaotic. Some are new, others old. Some are ruthlessly calculating and logical, others have only the barest acquaintance with sanity. But they’re all in the shadows, they’re all dangerous, and they’re all things you need to know.\n\nCollapsing Now details ten organizations poised to make an impact on the ever-shifting structures of the Sixth Word—ten organizations shadowrunners could encounter. Maybe they’ll be helpful, maybe harmful, maybe both, but whatever the case, runners need to know what they’re about. Because the last thing a good runner ever wants to be is surprised.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Collapsing Now',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2021-01-08'],
+		sku: ['28450'],
+		type: 'digital'
+	},
+	{
+		category: 'novel',
+		description: 'BLOOD IS THICKER THAN SHADOWS…\n\nJackPointer mage Winterhawk hadn’t planned to accompany the expert team he’d hired to study ley lines in Boston’s Quarantine Zone. But he also hadn’t planned on a shocking and unexpected secret from his past catching up with him either.\n\nWhen the trip inside the Zone goes catastrophically wrong, ’Hawk finds himself alone in hostile territory—but his presence hasn’t gone unnoticed. His only way out is to do something a shadowrunner is never, ever supposed to do: make a deal with a dragon.\n\nFaced with three separate missions to complete and limited time to do them, ’Hawk needs allies fast. He finds them in unexpected places—including his original target, who needs a lot less rescuing than he thought. But she’s also nothing like he expected—and the complications she brings with her jeopardizes their chances of escaping the Zone alive.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Veiled Extraction',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2020-09-28'],
+		sku: ['26863'],
 		type: 'digital'
 	}
 ];
