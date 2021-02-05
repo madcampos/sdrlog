@@ -10,7 +10,7 @@
 import { execSync as exec } from 'child_process';
 import { existsSync } from 'fs';
 import { mkdir } from 'fs/promises';
-import { join, resolve } from 'path';
+import { join, resolve as resolvePath } from 'path';
 import { default as glob } from 'fast-glob';
 import { createInterface } from 'readline';
 
@@ -45,7 +45,7 @@ for await (const item of data) {
 
 		if (pdfFile) {
 			try {
-				const output = exec(`gm.exe convert -resize x2048 "${resolve(pdfFile)}[0]" "${resolve(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
+				const output = exec(`gm.exe convert -resize x2048 "${resolvePath(pdfFile)}[0]" "${resolvePath(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
 
 				console.log(output);
 			} catch (err) {
