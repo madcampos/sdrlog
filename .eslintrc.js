@@ -7,14 +7,14 @@
  * @version 1.0.0
  */
 
- module.exports = {
+module.exports = {
 	root: true,
-	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		sourceType: 'module',
-		ecmaVersion: 12,
-		lib: ['ESNext'],
-		extraFileExtensions: ['.mjs']
+		ecmaVersion: 2021,
+		ecmaFeatures: {
+			impliedStrict: true
+		}
 	},
 	env: {
 		browser: true,
