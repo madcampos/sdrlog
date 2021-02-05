@@ -20,8 +20,6 @@ import mozjpg from 'imagemin-mozjpeg';
 import optipng from 'imagemin-optipng';
 import svgo from 'imagemin-svgo';
 
-import { IconIco } from '@shockpkg/icon-encoder';
-
 import assetList from './asset-list.mjs';
 
 const imageminOptions = {
@@ -32,22 +30,21 @@ const imageminOptions = {
 	]
 };
 
-const browser = await puppeteer.launch({
-	ignoreHTTPSErrors: true
-});
+(async () => {
+	const browser = await puppeteer.launch({
+		ignoreHTTPSErrors: true
+	});
 
-const page = await browser.newPage();
+	const page = await browser.newPage();
 
-for (const item of assetList) {
-	const resourcePath = resolve(item.resource);
-	const destinationFolder = resolve(item.destination);
+	for (const item of assetList) {
+		const resourcePath = resolve(item.resource);
+		const destinationFolder = resolve(item.destination);
 
-	mkdir(destinationFolder, { recursive: true });
+		mkdir(destinationFolder, { recursive: true });
 
-	for (const asset of item.assets) {
-		const filePath = join(destinationFolder, asset.fileName);
-
-		if (!existsSync(filePath) || FORCE_REGENERATE) {
+		for (const asset of item.assets) {
+			const filePath = join(destinationFolder, asset.fileName);
 			let fileData = null;
 
 			if (item.mode === 'dark') {
@@ -61,64 +58,34 @@ for (const item of assetList) {
 				width: asset.width
 			});
 
-			switch (extname(asset.fileName)) {
-				case '.svg':
+			if (!existsSync(filePath) || FORCE_REGENERATE) {
+				if (extname(asset.fileName) === '.svg') {
 					if (extname(item.resource) === '.svg') {
 						fileData = await readFile(resourcePath);
+						fileData = await imagemin.buffer(fileData, imageminOptions);
+						writeFile(filePath, fileData);
 					} else {
 						console.error('Can\'t convert from html to svg.');
 					}
-					break;
 
-				case '.ico':
-					{
-						const ico = new IconIco();
+					// eslint-disable-next-line no-continue
+					continue;
+				}
 
-						// eslint-disable-next-line no-magic-numbers
-						for (const iconSize of [16, 32, 64]) {
-							await page.setViewport({
-								height: iconSize,
-								width: iconSize
-							});
+				// TODO: handle ico files
 
-							await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
+				await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
 
-							const screenshot = await page.screenshot({
-								omitBackground: true,
-								type: 'png'
-							});
+				fileData = await page.screenshot({
+					omitBackground: true,
+					type: extname(asset.fileName).replace('.', '')
+				});
 
-							ico.addFromPng(screenshot, null);
-						}
-
-						fileData = ico.encode();
-					}
-					break;
-
-				case '.jpg':
-
-				case '.jpeg':
-
-				case '.png':
-					await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
-
-					fileData = await page.screenshot({
-						omitBackground: true,
-						type: extname(asset.fileName).replace('.', '')
-					});
-					break;
-
-				default:
-					console.error('Invalid file format!');
-			}
-
-			if (!extname(asset.fileName) === '.ico') {
 				fileData = await imagemin.buffer(fileData, imageminOptions);
+				writeFile(filePath, fileData);
 			}
-
-			writeFile(filePath, fileData);
 		}
 	}
-}
 
-await browser.close();
+	await browser.close();
+})();
