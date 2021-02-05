@@ -6,17 +6,14 @@
 	<title>Icon</title>
 	<style>
 		:root {
-			--bg-gradient: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
 			--bg-color: white;
-			--color-primary: #00b3e6;
-			--color-secondary: #fb07db;
+			--bg-gradient: conic-gradient(goldenrod, peru, orange, sandybrown, gold, goldenrod);
 		}
 
 		@media (prefers-color-scheme: dark) {
 			:root {
-				--color-primary: gold;
-				--color-secondary: orangered;
 				--bg-color: black;
+				--bg-gradient: conic-gradient(darkslateblue, slateblue, blueviolet, purple, darkviolet, indigo, darkslateblue);
 			}
 		}
 
@@ -38,14 +35,13 @@
 		}
 
 		#logo {
+			object-fit: contain;
 			width: 100%;
 			height: 100%;
-			max-width: 500px;
-			max-height: 500px;
 		}
 	</style>
 </head>
 <body>
-	<img id="logo" src="./logo.png" alt="logo"/>
+	<img id="logo" src="./logo.svg" alt="logo"/>
 </body>
 </html>
