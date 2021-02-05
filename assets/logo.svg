@@ -11,6 +11,28 @@
 				--tint-color: gold;
 			}
 		}
+
+		@media (max-width: 128px) {
+			#img-noise {
+				filter: none;
+			}
+		}
+
+		@media (max-width: 96px) {
+			#img-glitch {
+				filter: none;
+			}
+		}
+
+		@media (max-width: 64px) {
+			:root {
+				--tint-color: deeppink;
+			}
+
+			#img-pixel {
+				filter: none;
+			}
+		}
 	</style>
 	<defs>
 		<filter id="sdr-glitch" x="-10%" y="-10%" width="120%" height="120%">
@@ -64,7 +86,7 @@
 			<path d="M84,164.3c0.8-0.1,1.6,0.1,2.2,0.5c0.7,0.4,1.5,1.5,1.6,2.4c0.2,1.1-0.4,2.3-1,2.9c-0.3,0.3-0.7,0.7-1.2,0.9 c-2.6,1-5.3-1.5-4.7-4.1C81.3,165.5,82.4,164.5,84,164.3"/>
 		</g>
 	</defs>
-	<use xlink:href="#logo" filter="url('#sdr-pixelated')"/>
-	<use xlink:href="#logo" filter="url('#sdr-glitch')"/>
-	<use xlink:href="#logo" filter="url('#sdr-noise')"/>
+	<use id="img-pixel" xlink:href="#logo" filter="url('#sdr-pixelated')"/>
+	<use id="img-glitch" xlink:href="#logo" filter="url('#sdr-glitch')"/>
+	<use id="img-noise" xlink:href="#logo" filter="url('#sdr-noise')"/>
 </svg>
