@@ -12,6 +12,8 @@ import { extname, join, resolve } from 'path';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import { existsSync } from 'fs';
 
+import icoEndec from 'ico-endec';
+
 import { default as imagemin } from 'imagemin';
 
 import { default as puppeteer } from 'puppeteer';
@@ -45,7 +47,6 @@ const imageminOptions = {
 
 		for (const asset of item.assets) {
 			const filePath = join(destinationFolder, asset.fileName);
-			let fileData = null;
 
 			if (item.mode === 'dark') {
 				await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'dark' }]);
@@ -61,9 +62,9 @@ const imageminOptions = {
 			if (!existsSync(filePath) || FORCE_REGENERATE) {
 				if (extname(asset.fileName) === '.svg') {
 					if (extname(item.resource) === '.svg') {
-						fileData = await readFile(resourcePath);
-						fileData = await imagemin.buffer(fileData, imageminOptions);
-						writeFile(filePath, fileData);
+						const svgBuffer = await imagemin.buffer(await readFile(resourcePath), imageminOptions);
+
+						writeFile(filePath, svgBuffer);
 					} else {
 						console.error('Can\'t convert from html to svg.');
 					}
@@ -72,17 +73,43 @@ const imageminOptions = {
 					continue;
 				}
 
-				// TODO: handle ico files
+				let imgBuffer = null;
 
-				await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
+				if (extname(asset.fileName) === '.ico') {
+					// eslint-disable-next-line no-magic-numbers
+					const icoSizes = [16, 32];
 
-				fileData = await page.screenshot({
-					omitBackground: true,
-					type: extname(asset.fileName).replace('.', '')
-				});
+					const icoImages = [];
 
-				fileData = await imagemin.buffer(fileData, imageminOptions);
-				writeFile(filePath, fileData);
+					for await (const size of icoSizes) {
+						await page.setViewport({
+							height: size,
+							width: size
+						});
+
+						await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
+
+						const ico = await page.screenshot({
+							omitBackground: true,
+							type: extname(asset.fileName).replace('.', '').replace('ico', 'png')
+						});
+
+						icoImages.push(ico);
+					}
+
+					imgBuffer = icoEndec.encode(icoImages);
+				} else {
+					await page.goto(`file:///${resourcePath}`, { waitUntil: 'load' });
+
+					const screenshot = await page.screenshot({
+						omitBackground: true,
+						type: extname(asset.fileName).replace('.', '').replace('ico', 'png')
+					});
+
+					imgBuffer = await imagemin.buffer(screenshot, imageminOptions);
+				}
+
+				writeFile(filePath, imgBuffer);
 			}
 		}
 	}

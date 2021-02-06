@@ -28,15 +28,24 @@ export default [
 	{
 		assets: [
 			{
+				fileName: 'favicon.ico',
+				height: 32,
+				width: 32
+			}
+		],
+		destination: 'dist',
+		resource: 'assets/logo.svg'
+	},
+	{
+		assets: [
+			{
 				fileName: 'favicon.svg',
 				height: 128,
 				width: 128
 			}
 		],
 		destination: BASE_PATH,
-		platform: 'web',
-		resource: 'assets/logo.svg',
-		type: 'icon'
+		resource: 'assets/logo.svg'
 	},
 	{
 		assets: [
@@ -52,9 +61,7 @@ export default [
 			}
 		],
 		destination: BASE_PATH,
-		platform: 'web',
 		resource: 'assets/icon.html',
-		type: 'icon',
 		mode: 'light'
 	},
 	{
@@ -71,9 +78,7 @@ export default [
 			}
 		],
 		destination: BASE_PATH,
-		platform: 'web',
 		resource: 'assets/icon.html',
-		type: 'icon',
 		mode: 'dark'
 	},
 	{
@@ -90,9 +95,7 @@ export default [
 			}
 		],
 		destination: BASE_PATH,
-		platform: 'web',
 		resource: 'assets/icon-bg.html',
-		type: 'icon',
 		mode: 'light'
 	},
 	{
@@ -109,9 +112,7 @@ export default [
 			}
 		],
 		destination: BASE_PATH,
-		platform: 'web',
 		resource: 'assets/icon-bg.html',
-		type: 'icon',
 		mode: 'dark'
 	}
 ];

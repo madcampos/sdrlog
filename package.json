@@ -55,6 +55,7 @@
 		"html-minifier": "^4.0.0",
 		"htmlhint": "^0.14.2",
 		"husky": "^4.3.8",
+		"ico-endec": "^0.1.6",
 		"imagemin": "^7.0.1",
 		"imagemin-mozjpeg": "^9.0.0",
 		"imagemin-optipng": "^8.0.0",
