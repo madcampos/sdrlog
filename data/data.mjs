@@ -1183,7 +1183,7 @@ export default [
 			'10663',
 			'25001'
 		],
-		type: 'scan'
+		type: 'digital'
 	},
 	{
 		category: 'rulebook',
@@ -4045,7 +4045,7 @@ export default [
 		publisher: ['FASA Corporation'],
 		releaseDate: ['1994-11'],
 		sku: ['7212'],
-		type: 'scan'
+		type: 'digital'
 	},
 	{
 		category: 'sourcebook',
@@ -4063,7 +4063,7 @@ export default [
 			'2010-10-28'
 		],
 		sku: ['7209'],
-		type: 'scan'
+		type: 'digital'
 	},
 	{
 		category: 'sourcebook',
@@ -4885,6 +4885,18 @@ export default [
 	},
 	{
 		category: 'rulebook',
+		description: 'These Quick-Start Rules offer a streamlined rule set along with pregenerated characters, quick-reference sheets and a first adventure: Return to Sender',
+		edition: 4,
+		gameDate: '2075',
+		name: 'Shadowrun 5th Ed.: Quick Start Rules (Free RPG Day 2015)',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2015-07'],
+		sku: ['27FRP15'],
+		type: 'digital'
+	},
+	{
+		category: 'rulebook',
 		description: "Shadowrun, Fifth Edition is here and there's no better way to dive into the Sixth World than with these Shadowrun Quick-Start Rules. Take on the role of a Combat Adept, Decker, Street Shaman, or Street Samurai in a brawl against fast-food goodfellas using this set of streamlined rules perfect for both those new to Shadowrun or long-time players getting back into the game.",
 		edition: 5,
 		gameDate: '2075',
@@ -5111,7 +5123,7 @@ export default [
 			'10656',
 			'25010'
 		],
-		type: 'scan'
+		type: 'digital'
 	},
 	{
 		category: 'rulebook',
@@ -6785,7 +6797,7 @@ export default [
 			'7303',
 			'10701'
 		],
-		type: 'scan'
+		type: 'digital'
 	},
 	{
 		category: 'mission',
@@ -7881,6 +7893,18 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2013-07-16'],
 		sku: ['27CCG'],
+		type: 'digital'
+	},
+	{
+		category: 'misc',
+		description: 'Shadowrun, Sixth Edition introduces some rule tweaks for shadowrunners and this guide will help you move from SR5 to SR6.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Shadowrun 6th: Conversion rules',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2019'],
+		sku: ['28CCG'],
 		type: 'digital'
 	},
 	{
@@ -9304,6 +9328,18 @@ export default [
 		releaseDate: ['2015-04-28'],
 		sku: ['ONLINE'],
 		status: 'outofscope',
+		type: 'digital'
+	},
+	{
+		category: 'mission',
+		description: 'The Boston Lockdown Campaign book companion to the video game.',
+		edition: 5,
+		gameDate: '2075',
+		name: 'Shadowrun Chronicles: Boston Adventues',
+		originalLanguage: 'en-US',
+		publisher: ['Cliffhanger Productions'],
+		releaseDate: ['2015-04-28'],
+		sku: ['SCBA'],
 		type: 'digital'
 	},
 	{
@@ -11544,6 +11580,18 @@ export default [
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2020-09-28'],
 		sku: ['26863'],
+		type: 'digital'
+	},
+	{
+		category: 'mission',
+		description: 'SCHNELLSTART-ABENTEUER FÜR SHADOWRUN 6\n\nBATTLE ROYAL\n\nBattle Royal ist ein Schnellstart-Abenteuer für Shadowrun 6, das für die Schnellstartregeln konzipiert wurde. Tauche ein in die Schatten und lerne die neuste Edition der Sechsten Welt kennen.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Battle Royale',
+		originalLanguage: 'de-DE',
+		publisher: ['Pegasus Spiele'],
+		releaseDate: ['2019-07'],
+		sku: ['QSA6D'],
 		type: 'digital'
 	}
 ];
