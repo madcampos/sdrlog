@@ -29,7 +29,7 @@ const DEST_PATH = './covers';
 
 	const prompt = createInterface({ input: process.stdin, output: process.stdout });
 	const SRC_PATH = await new Promise((resolve) => {
-		prompt.question('Please entre the path to files: ', (response) => {
+		prompt.question('Please enter the path to files: ', (response) => {
 			const normalizedResposne = response.trim().replaceAll(/^['"]|['"]$/giu, '').trim();
 
 			resolve(normalizedResposne);
