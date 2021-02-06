@@ -18,41 +18,43 @@ import data from '../data/data.mjs';
 
 const DEST_PATH = './covers';
 
-await mkdir(DEST_PATH, { recursive: true });
+(async () => {
+	await mkdir(DEST_PATH, { recursive: true });
 
-try {
-	exec('gm.exe -help', { windowsHide: true, encoding: 'utf8' });
-} catch {
-	throw new Error('GraphicsMagick not available');
-}
+	try {
+		exec('gm.exe -help', { windowsHide: true, encoding: 'utf8' });
+	} catch {
+		throw new Error('GraphicsMagick not available');
+	}
 
-const prompt = createInterface({ input: process.stdin, output: process.stdout });
-const SRC_PATH = await new Promise((resolve) => {
-	prompt.question('Please entre the path to files: ', (response) => {
-		const normalizedResposne = response.trim().replaceAll(/^['"]|['"]$/giu, '').trim();
+	const prompt = createInterface({ input: process.stdin, output: process.stdout });
+	const SRC_PATH = await new Promise((resolve) => {
+		prompt.question('Please entre the path to files: ', (response) => {
+			const normalizedResposne = response.trim().replaceAll(/^['"]|['"]$/giu, '').trim();
 
-		resolve(normalizedResposne);
+			resolve(normalizedResposne);
 
-		prompt.close();
+			prompt.close();
+		});
 	});
-});
 
-for await (const item of data) {
-	const fileName = join(DEST_PATH, `${item?.sku?.[0]}.jpg`);
+	for await (const item of data) {
+		const fileName = join(DEST_PATH, `${item?.sku?.[0]}.jpg`);
 
-	if (!existsSync(fileName)) {
-		const [pdfFile] = await glob(`${SRC_PATH}/**/*${item?.sku?.[0]}*.pdf`);
+		if (!existsSync(fileName)) {
+			const [pdfFile] = await glob(`${SRC_PATH}/**/*${item?.sku?.[0]}*.pdf`);
 
-		if (pdfFile) {
-			try {
-				const output = exec(`gm.exe convert -resize x2048 "${resolvePath(pdfFile)}[0]" "${resolvePath(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
+			if (pdfFile) {
+				try {
+					const output = exec(`gm.exe convert -resize x2048 "${resolvePath(pdfFile)}[0]" "${resolvePath(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
 
-				console.log(output);
-			} catch (err) {
-				console.error(err);
+					console.log(output);
+				} catch (err) {
+					console.error(err);
+				}
+			} else {
+				console.error(`File not found for #${item?.sku?.[0]}: "${item?.name}"`);
 			}
-		} else {
-			console.error(`File not found for #${item?.sku?.[0]}: "${item?.name}"`);
 		}
 	}
-}
+})();
