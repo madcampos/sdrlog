@@ -11564,6 +11564,10 @@ export default [
 		edition: 6,
 		gameDate: '2080',
 		name: 'Collapsing Now',
+		languages: {
+			'de-DE': 'Phantome'
+		},
+		notes: 'The german edition has an additional part discussing groups such as the "Disciples of the Cleansing Fire" or the "SiegfriedBund".',
 		originalLanguage: 'en-US',
 		publisher: ['Catalyst Game Labs'],
 		releaseDate: ['2021-01-08'],
@@ -11592,6 +11596,18 @@ export default [
 		publisher: ['Pegasus Spiele'],
 		releaseDate: ['2019-07'],
 		sku: ['QSA6D'],
+		type: 'digital'
+	},
+	{
+		category: 'rulebook',
+		description: 'Power Surge\n\nThe power to shape the world can also tear it apart. The power to summon spirits and gain allies can also conjure enemies and lead to your own destruction. And the power to fill objects with magic is also the ability to make them blow up in your face.\n\nShadowrunners learn about power the hard way—by being on the wrong end of it. That means they often gather it to them however they can, consequences be damned. Street Wyrd is a guide to all sorts of Awakened power, from spells to adept powers to new spirits to enhanced enchanting rules. It also gives runners the power to make their own spells to unleash on their enemies. Because runners know that the power you grab for yourself is the only thing that stays with you.',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Street Wyrd',
+		originalLanguage: 'en-US',
+		publisher: ['Catalyst Game Labs'],
+		releaseDate: ['2021-02-09'],
+		sku: ['28003'],
 		type: 'digital'
 	}
 ];
