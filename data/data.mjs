@@ -3228,6 +3228,7 @@ export default [
 	{
 		category: 'novel',
 		description: 'The Sixth World is a dangerous place, with deadly hazards lurking around every corner. Everywhere shadowrunners go, from the top of the world to the deepest, darkest Sprawl neighborhood, someone’s always looking to make their rep by taking you down.\nWorld of Shadows is the second anthology of original Shadowrun short stories, each one showcasing some of the most far-flung, treacherous locations around the world. From a scientific mission gone wrong in the snowy wilds of Russia to an AR nightclub in Morocco sheltering runners on the lam to a recovering runner drawn into a deadly web of intrigue in the darkest alleys of Hong Kong, these eighteen original short stories explore exotic settings far off the beaten path. Featuring stories by Michael A. Stackpole, Mel Odom, Jean Rabe, Aaron Rosenberg, Phaedra Weldon, Annie Bellet, Chris A. Jackson and many others, find out what happens when shadowrunners have to battle not only with ever-present threat of the corps and Mr. Johnson, but also the dangers of the very land they stand on.',
+		notes: 'In 2021 Catalyst rereleased the antology and the tarot with a new cover and bigger cards.',
 		edition: 5,
 		gameDate: '2075',
 		name: 'World of Shadows',
@@ -8816,6 +8817,7 @@ export default [
 	{
 		category: 'misc',
 		description: "The Sixth World Tarot Deck for Shadowrun is much more than just a tarot deck. Created by Echo and Lazarus Chernik for Catalyst Game Labs, the deck is a multi-tiered, masterfully illustrated game accessory for Shadowrun, Fifth Edition, and includes hundreds of puzzles, plots, and enigmas that can be at the heart of compelling campaigns. The Sixth World Tarot comes complete with 78 full-color tarot cards and a guidebook. The cards are 2.5' x 5' tall, with gilded edges.",
+		notes: 'In 2021 Catalyst rereleased the antology and the tarot with a new cover and bigger cards.',
 		edition: 5,
 		gameDate: '2075',
 		name: 'Sixth World Tarot',
