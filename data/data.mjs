@@ -78,7 +78,7 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
  */
 
 /** @type {Material[]} */
-export default [
+const materials = [
 	{
 		category: 'rulebook',
 		description: 'The year is 2072. Magic has returned and creatures of myth and legend walk among us as megacorps bleed the world dry. You’re a shadowrunner—a deniable asset, a corporate pawn—using bleeding-edge science and magic to make your meat body and mind better-than-flesh. Stay on the edge, and you may survive another run on the mean sprawl streets.',
@@ -11569,7 +11569,7 @@ export default [
 		edition: 6,
 		gameDate: '2080',
 		name: 'Collapsing Now',
-		languages: {
+		names: {
 			'de-DE': 'Phantome'
 		},
 		notes: 'The german edition has an additional part discussing groups such as the "Disciples of the Cleansing Fire" or the "SiegfriedBund".',
@@ -11636,3 +11636,5 @@ export default [
 		status: 'missing'
 	}
 ];
+
+export default materials;
