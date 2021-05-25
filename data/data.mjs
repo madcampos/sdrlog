@@ -11610,9 +11610,29 @@ export default [
 		gameDate: '2080',
 		name: 'Street Wyrd',
 		originalLanguage: 'en-US',
-		publisher: ['Catalyst Game Labs'],
+		names: {
+			'de-DE': 'Arkane Kräfte'
+		},
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
 		releaseDate: ['2021-02-09'],
 		sku: ['28003'],
 		type: 'digital'
+	},
+	{
+		category: 'sourcebook',
+		description: 'CORP REPORT\n\nYou can be proactive, shift paradigms, think outside the box, and set aggressive agendas all you want—the megacorporations of the Sixth World are still going to disturb your plans, ruin your day, and screw up the world. They are shadowrunners’ employees and adversaries, the source of cash and the source of despair. Shadowrunners need to know them—because knowing your enemy is the first step to bringing them down.\n\nPower Plays provides updates on the Big Ten megacorporations of the Sixth World, as well as news on a few other corps. Whether you’re taking a job from one of them or going up against one, this book has what you need to know to survive the job.',
+		notes: 'The German edition has additional information on ADL Mega Corps',
+		edition: 6,
+		gameDate: '2080',
+		name: 'Power Plays',
+		originalLanguage: 'en-US',
+		names: {
+			'de-DE': 'Konzerngewalten'
+		},
+		publisher: ['Catalyst Game Labs', 'Pegasus Spiele'],
+		releaseDate: ['2021-04-23'],
+		sku: ['28451'],
+		type: 'digital',
+		status: 'missing'
 	}
 ];
