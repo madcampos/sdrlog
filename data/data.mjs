@@ -8824,7 +8824,6 @@ export default [
 		names: {
 			'de-DE': 'Tarot der Sechsten Welt'
 		},
-		notes: "Available first only at Gen Con 2016. Now on the creator's site. Print only.",
 		originalLanguage: 'en-US',
 		publisher: [
 			'Catalyst Game Labs',
