@@ -24,6 +24,10 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 */
 
 /**
+ * @typedef {"de-DE" | "fr-FR" | "jp-JP" | "es-ES" | "hu-HU" | "it-IT" | "pt-BR" | "cs-CZ" | "he-IL" | "pl-PL" | "fi-FI" | "en-US"} IsoCode One of the available country codes.
+ */
+
+/**
  * The format the material on this collection are organized.
  *
  * @typedef {object} Material
@@ -49,7 +53,7 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
  *
  * @property {string} name The original name of the material.
  *
- * @property {object} [names] A list with translated names for the material, in the format: `'<ISO code>': '<name>'`.
+ * @property {Record<IsoCode, string>} [names] A list with translated names for the material, in the format: `'<ISO code>': '<name>'`.
  *
  * **Note:** Some materials are released in multiple languages but have significant changes from the base material, so they are listed separataly.
  *
