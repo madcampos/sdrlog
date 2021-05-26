@@ -1,16 +1,28 @@
+/* eslint-disable jsdoc/require-description, jsdoc/valid-types, no-console */
 /* eslint-env node */
+
+// eslint-disable-next-line no-unused-vars
+import { IncomingMessage, ServerResponse } from 'http';
+
 /**
- * @file Configuration for local web server.
- * @author madcampos <madcampos@outlook.com>
- * @version 1.0.0
+ * @callback RequestHandler A request handler
+ *
+ * @param {IncomingMessage} req The Request.
+ * @param {ServerResponse} res The response.
+ * @param {RequestHandler} [next] The next item to call.
+ *
+ * @returns {ServerResponse} Returns a response.
  */
 
-import { readFile } from 'fs/promises';
-import { IncomingMessage, ServerResponse } from 'http';
-import { default as server } from 'live-server';
+import { dirname, resolve as resolvePath } from 'path';
+import polka from 'polka';
+import sirv from 'sirv';
 
 import { default as data } from './data/data.mjs';
 
+const ROOT_FOLDER = resolvePath(dirname(''), 'src');
+const COVERS_PATH = resolvePath(dirname(''), 'covers');
+const SERVER_PORT = 8000;
 const CHUNK_SIZE = 100;
 const dataMap = new Map();
 
@@ -28,43 +40,31 @@ for (const [i, item] of data.entries()) {
 	}
 }
 
-/**
- * Resolve data json files.
- *
- * @param {IncomingMessage} req The Request.
- * @param {ServerResponse} res The response.
- * @param {Function} next The next middleware.
- * @returns {ServerResponse} Calls the next middleware or returns a response.
- */
-function dataMiddleware(req, res, next) {
-	if (req.url?.match(/data-\d+\.json$/iu)) {
-		if (!dataMap.has(req.url)) {
-			res.statusCode = 404;
-
-			return res.end('Data not found.');
-		}
-
-		res.setHeader('Content-Type', 'application/json');
-
-		return res.end(JSON.stringify(dataMap.get(req.url)));
-	}
+/** @type RequestHandler */
+function logRequest(req, res, next) {
+	console.log(req.url);
 
 	return next();
 }
 
-/**
- * Resolve service worker to "dumb" for development process.
- *
- * @param {IncomingMessage} req The Request.
- * @param {ServerResponse} res The response.
- * @param {Function} next The next middleware.
- * @returns {ServerResponse} Calls the next middleware or returns a response.
- */
-function serviceWorkerMiddleware(req, res, next) {
-	if (req.url === '/sw.js') {
-		res.setHeader('Content-Type', 'text/javascript');
+/** @type RequestHandler */
+function handleDataFiles(req, res) {
+	if (!dataMap.has(req.url)) {
+		res.statusCode = 404;
 
-		return res.end(`// This service worker file is effectively a 'no-op' that will reset any
+		return res.end('Data not found.');
+	}
+
+	res.setHeader('Content-Type', 'application/json');
+
+	return res.end(JSON.stringify(dataMap.get(req.url)));
+}
+
+/** @type RequestHandler */
+function handleServiceWorker(req, res) {
+	res.setHeader('Content-Type', 'text/javascript');
+
+	return res.end(`// This service worker file is effectively a 'no-op' that will reset any
 // Previous service worker registered for the same host:port combination.
 
 // It is read and returned by a dev server middleware that is only loaded
@@ -84,32 +84,17 @@ self.addEventListener('activate', () => {
 	});
 });
 `);
-	}
-
-	return next();
 }
 
-const params = {
-	file: 'index.html',
-	host: 'localhost',
-	https: {
-		cert: await readFile('./server-cert.pem'),
-		key: await readFile('./server-key.pem'),
-		passphrase: 'password'
-	},
-	logLevel: 2,
-	mount: [
-		['/img/thumbs', './covers'],
-		['/img/full', './covers']
-	],
-	middleware: [
-		serviceWorkerMiddleware,
-		dataMiddleware
-	],
-	open: true,
-	port: 8000,
-	root: './src',
-	wait: 1000
-};
+const server = polka({});
 
-server.start(params);
+server.use(logRequest);
+server.get('/sw.js', handleServiceWorker);
+server.use(sirv(ROOT_FOLDER, { dev: true }));
+server.use('/img/thumbs/*', sirv(COVERS_PATH, { dev: true }));
+server.use('/img/full/*', sirv(COVERS_PATH, { dev: true }));
+server.get('/data/*', handleDataFiles);
+
+server.listen(SERVER_PORT, () => {
+	console.log(`Server running on port: ${SERVER_PORT}`);
+});
