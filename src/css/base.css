@@ -77,7 +77,7 @@ pre {
 
 .hidden { display: none !important; }
 
-dialog {
+dialog[open] {
 	color: inherit;
 	background: var(--background-color);
 	border: none;
