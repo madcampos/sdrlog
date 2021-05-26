@@ -22,9 +22,9 @@ const DEST_PATH = './covers';
 	await mkdir(DEST_PATH, { recursive: true });
 
 	try {
-		exec('gm.exe -help', { windowsHide: true, encoding: 'utf8' });
+		exec('magick --version', { windowsHide: true, encoding: 'utf8' });
 	} catch {
-		throw new Error('GraphicsMagick not available');
+		throw new Error('ImageMagick not available');
 	}
 
 	const prompt = createInterface({ input: process.stdin, output: process.stdout });
