@@ -50,7 +50,6 @@
 		"csso": "^4.2.0",
 		"eslint": "^7.19.0",
 		"eslint-plugin-jsdoc": "^31.6.0",
-		"eslint-plugin-node": "^11.1.0",
 		"fast-glob": "^3.2.5",
 		"html-minifier": "^4.0.0",
 		"htmlhint": "^0.14.2",

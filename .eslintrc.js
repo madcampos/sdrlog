@@ -165,7 +165,7 @@ module.exports = {
 		'no-undef': ['error', { 'typeof': true }],
 		'no-undef-init': 'warn',
 		'no-undefined': 'error',
-		'no-unused-vars': ['warn', { args: 'all', caughtErrors: 'all' }],
+		'no-unused-vars': ['warn', { args: 'all', caughtErrors: 'all', argsIgnorePattern: '^_' }],
 		'no-use-before-define': 'error',
 
 		// Stylistic rules
@@ -341,43 +341,7 @@ module.exports = {
 		'jsdoc/require-description-complete-sentence': 'warn',
 		'jsdoc/require-description': 'warn',
 		'jsdoc/require-example': 'off',
-		'jsdoc/require-file-overview': [
-			'error', {
-				tags: {
-					file: {
-						initialCommentsOnly: true,
-						mustExist: true,
-						preventDuplicates: true
-					},
-					author: {
-						initialCommentsOnly: true,
-						mustExist: true,
-						preventDuplicates: true
-					},
-					version: {
-						initialCommentsOnly: true,
-						mustExist: true,
-						preventDuplicates: true
-					},
-					copyright: {
-						initialCommentsOnly: true,
-						preventDuplicates: true
-					},
-					license: {
-						initialCommentsOnly: true,
-						preventDuplicates: true
-					},
-					module: {
-						initialCommentsOnly: true,
-						preventDuplicates: true
-					},
-					namespace: {
-						initialCommentsOnly: true,
-						preventDuplicates: true
-					}
-				}
-			}
-		],
+		'jsdoc/require-file-overview': 'off',
 		'jsdoc/require-hyphen-before-param-description': ['warn', 'never'],
 		'jsdoc/require-jsdoc': 'warn',
 		'jsdoc/require-param-description': 'error',
@@ -392,49 +356,6 @@ module.exports = {
 		'jsdoc/require-returns-type': 'error',
 		'jsdoc/require-returns': 'error',
 		'jsdoc/require-throws': 'error',
-		'jsdoc/valid-types': 'error',
-
-		// Plugin node
-		'node/handle-callback-err': 'error',
-		'node/no-callback-literal': 'error',
-		'node/no-exports-assign': 'error',
-		'node/no-extraneous-import': 'error',
-		'node/no-extraneous-require': 'error',
-		'node/no-missing-import': [
-			'off', {
-				// AllowModules: ['fs/promises', 'dns/promises', 'stream/promises', 'timers/promises']
-			}
-		],
-		'node/no-missing-require': 'error',
-		'node/no-new-require': 'error',
-		'node/no-path-concat': 'error',
-		'node/no-process-exit': 'error',
-		'node/no-unpublished-bin': 'error',
-		'node/no-unpublished-import': 'off',
-		'node/no-unpublished-require': 'off',
-		'node/no-unsupported-features/es-builtins': 'warn',
-		'node/no-unsupported-features/es-syntax': 'off',
-		'node/no-unsupported-features/node-builtins': 'warn',
-		'node/process-exit-as-throw': 'error',
-		'node/shebang': 'warn',
-		'node/no-deprecated-api': 'error',
-		'node/callback-return': 'error',
-		'node/exports-style': 'error',
-		'node/file-extension-in-import': 'error',
-		'node/global-require': 'error',
-		'node/no-mixed-requires': ['warn', { grouping: false }],
-		'node/no-process-env': 'error',
-		'node/no-restricted-import': 'off',
-		'node/no-restricted-require': 'off',
-		'node/no-sync': 'error',
-		'node/prefer-global/buffer': 'error',
-		'node/prefer-global/console': 'error',
-		'node/prefer-global/process': 'error',
-		'node/prefer-global/text-decoder': 'error',
-		'node/prefer-global/text-encoder': 'error',
-		'node/prefer-global/url-search-params': 'error',
-		'node/prefer-global/url': 'error',
-		'node/prefer-promises/fs': 'error',
-		'node/prefer-promises/dns': 'error'
+		'jsdoc/valid-types': 'error'
 	}
 };
