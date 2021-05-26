@@ -9,7 +9,7 @@
 		"clean": "node -e \"require('fs').rmdirSync('./dist', { recursive: true })\"",
 		"lint": "npm-run-all -p lint:**",
 		"lint:js": "eslint . --fix",
-		"lint:html": "htmlhint .",
+		"lint:html": "htmlhint ./src",
 		"lint:css": "stylelint **/*.css --fix",
 		"version": "npm-run-all -s configure:version git-add",
 		"configure:version": "npm version minor",

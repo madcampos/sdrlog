@@ -27,12 +27,14 @@
 		<link rel="stylesheet" href="/css/base.css"/>
 		<link rel="stylesheet" href="/css/chrome.css"/>
 		<link rel="stylesheet" href="/css/material.css"/>
-		<style id="filterCSS"></style>
+		<style id="filter-css">
+			/* Filter for items done by CSS */
+		</style>
 	</head>
 	<body class="notranslate" translate="no">
 		<template id="card-template">
 			<a class="item" role="listitem" data-name="" data-category="" data-sku="" data-publisher="" data-release="" data-edition="" data-date="" data-type="" href="">
-				<figure><img class="thumb" src="" decoding="async" loading="lazy" alt=""/></figure>
+				<figure><img class="thumb" decoding="async" loading="lazy" alt=""/></figure>
 				<h4 class="title"></h4>
 			</a>
 		</template>
@@ -166,7 +168,7 @@
 						<span id="item-details-category">Category: <abbr title=""></abbr></span>
 						<span id="item-details-type">Type: <abbr title=""></abbr></span>
 						<span>Release date: <span id="item-details-releasedate"></span></span>
-						<span id="item-details-publisher">Publisher: <abbr title=""><img src="" alt=""/></abbr></span>
+						<span id="item-details-publisher">Publisher: <abbr title=""><img alt=""/></abbr></span>
 						<!-- TODO: work on files? -->
 						<!-- <details id="item-details-files">
 							<summary>Files</summary>
@@ -182,7 +184,7 @@
 						</details> -->
 					</header>
 					<figure class="image">
-							<img src="" alt="" id="item-details-image"/>
+							<img alt="" id="item-details-image"/>
 					</figure>
 					<article class="content">
 						<p id="item-details-notes"></p>

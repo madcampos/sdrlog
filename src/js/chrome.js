@@ -17,7 +17,7 @@ const menu = document.querySelector('#menu ul');
 const menuCategories = document.querySelectorAll('#menu .category');
 const allCategories = document.querySelector('#menu li:last-child a');
 
-const filterCSS = document.querySelector('#filterCSS');
+const filterCSS = document.querySelector('#filter-css');
 const SEARCH_ITEM_SELECTOR = '.item';
 
 const namedFilters = 'name|cat(?:egory)?|sku|id|pub(?:lisher)?|rel(?:ease)?|ed(?:ition)?|date|type|scope';

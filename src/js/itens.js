@@ -90,7 +90,7 @@ function addItemCard(item) {
 	const cardLinkData = itemCard.querySelector('a').dataset;
 
 	itemCard.querySelector('.thumb').src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
-	itemCard.querySelector('.title').textContent(item.name);
+	itemCard.querySelector('.title').textContent = item.name;
 
 	cardLinkData.name = item.name;
 	cardLinkData.category = item.category;
