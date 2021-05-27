@@ -1,6 +1,15 @@
 {
 	"name": "Shadowrun Catalog",
 	"short_name": "SDRlog",
+	"lang": "en-US",
+	"description": "An interactive list of Shadowrun material, with information about the item and can be linked to local files.",
+	"categories": ["entertainment", "utilities", "games"],
+	"start_url": "/",
+	"scope": "./",
+	"display": "standalone",
+	"background_color": "#3c3c3c",
+	"orientation": "portrait",
+	"theme_color": "#3c3c3c",
 	"icons": [
 		{
 			"src": "./img/icons/android-chrome-192x192.png",
@@ -25,10 +34,177 @@
 			"purpose": "maskable"
 		}
 	],
-	"start_url": "https://localhost:8000/",
-	"theme_color": "#3c3c3c",
-	"background_color": "#3c3c3c",
-	"display": "standalone",
-	"scope": "./",
-	"orientation": "portrait"
+	"protocol_handlers": [
+		{
+			"protocol": "web+sdrlog",
+			"url": "/?search=sku:%s"
+		}
+	],
+	"shortcuts" : [
+		{
+			"url": "/?category=sourcebook",
+			"name": "Sourcebooks",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/sourcebook.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/sourcebook-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=rulebook",
+			"name": "Rulebooks",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/rulebook.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/rulebook-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=mission",
+			"name": "Adventures & Campaigns",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/adventure.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/adventure-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=novel",
+			"name": "Novels",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/novel.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/novel-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=magazine",
+			"name": "Magazines",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/magazine.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/magazine-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=boardgame",
+			"name": "Tabletop",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/tabletop.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/tabletop-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=tcg",
+			"name": "Trading Card Game",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/tcg.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/tcg-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=videogame",
+			"name": "Video Games",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/videogame.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/videogame-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=unofficial",
+			"name": "Unofficial",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/unofficial.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/unofficial-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?category=misc",
+			"name": "Misc",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/misc.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/misc-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		},
+		{
+			"url": "/?info",
+			"name": "Info",
+			"icons": [
+				{
+					"src": "./img/icons/shortcuts/info.png",
+					"type": "image/png"
+				},
+				{
+					"src": "./img/icons/shortcuts/info-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable"
+				}
+			]
+		}
+	]
 }
