@@ -9,16 +9,11 @@
 	"display": "standalone",
 	"background_color": "#3c3c3c",
 	"orientation": "portrait",
-	"theme_color": "#3c3c3c",
+	"theme_color": "#ff1493",
 	"icons": [
 		{
 			"src": "./img/icons/android-chrome-192x192.png",
 			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "./img/icons/android-chrome-512x512.png",
-			"sizes": "512x512",
 			"type": "image/png"
 		},
 		{
@@ -28,10 +23,41 @@
 			"purpose": "maskable"
 		},
 		{
+			"src": "./img/icons/android-chrome-192x192-dark.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"color_scheme": "dark"
+		},
+		{
+			"src": "./img/icons/android-chrome-maskable-192x192-dark.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable",
+			"color_scheme": "dark"
+		},
+		{
+			"src": "./img/icons/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
 			"src": "./img/icons/android-chrome-maskable-512x512.png",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "maskable"
+		},
+		{
+			"src": "./img/icons/android-chrome-512x512-dark.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"color_scheme": "dark"
+		},
+		{
+			"src": "./img/icons/android-chrome-maskable-512x512-dark.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable",
+			"color_scheme": "dark"
 		}
 	],
 	"protocol_handlers": [
@@ -53,6 +79,17 @@
 					"src": "./img/icons/shortcuts/sourcebook-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/sourcebook-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/sourcebook-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -68,6 +105,17 @@
 					"src": "./img/icons/shortcuts/rulebook-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/rulebook-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/rulebook-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -83,6 +131,17 @@
 					"src": "./img/icons/shortcuts/adventure-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/adventure-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/adventure-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -98,6 +157,17 @@
 					"src": "./img/icons/shortcuts/novel-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/novel-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/novel-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -113,6 +183,17 @@
 					"src": "./img/icons/shortcuts/magazine-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/magazine-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/magazine-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -128,6 +209,17 @@
 					"src": "./img/icons/shortcuts/tabletop-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/tabletop-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/tabletop-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -143,6 +235,17 @@
 					"src": "./img/icons/shortcuts/tcg-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/tcg-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/tcg-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -158,6 +261,17 @@
 					"src": "./img/icons/shortcuts/videogame-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/videogame-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/videogame-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -173,6 +287,17 @@
 					"src": "./img/icons/shortcuts/unofficial-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/unofficial-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/unofficial-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -188,6 +313,17 @@
 					"src": "./img/icons/shortcuts/misc-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/misc-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/misc-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		},
@@ -203,6 +339,17 @@
 					"src": "./img/icons/shortcuts/info-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
+				},
+				{
+					"src": "./img/icons/shortcuts/info-dark.png",
+					"type": "image/png",
+					"color_scheme": "dark"
+				},
+				{
+					"src": "./img/icons/shortcuts/info-dark-maskable.png",
+					"type": "image/png",
+					"purpose": "maskable",
+					"color_scheme": "dark"
 				}
 			]
 		}
