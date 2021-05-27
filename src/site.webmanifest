@@ -72,21 +72,21 @@
 			"name": "Sourcebooks",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/sourcebook.png",
+					"src": "./img/shortcuts/sourcebook.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/sourcebook-maskable.png",
+					"src": "./img/shortcuts/sourcebook-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/sourcebook-dark.png",
+					"src": "./img/shortcuts/sourcebook-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/sourcebook-dark-maskable.png",
+					"src": "./img/shortcuts/sourcebook-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -98,21 +98,21 @@
 			"name": "Rulebooks",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/rulebook.png",
+					"src": "./img/shortcuts/rulebook.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/rulebook-maskable.png",
+					"src": "./img/shortcuts/rulebook-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/rulebook-dark.png",
+					"src": "./img/shortcuts/rulebook-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/rulebook-dark-maskable.png",
+					"src": "./img/shortcuts/rulebook-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -124,21 +124,21 @@
 			"name": "Adventures & Campaigns",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/adventure.png",
+					"src": "./img/shortcuts/adventure.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/adventure-maskable.png",
+					"src": "./img/shortcuts/adventure-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/adventure-dark.png",
+					"src": "./img/shortcuts/adventure-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/adventure-dark-maskable.png",
+					"src": "./img/shortcuts/adventure-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -150,21 +150,21 @@
 			"name": "Novels",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/novel.png",
+					"src": "./img/shortcuts/novel.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/novel-maskable.png",
+					"src": "./img/shortcuts/novel-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/novel-dark.png",
+					"src": "./img/shortcuts/novel-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/novel-dark-maskable.png",
+					"src": "./img/shortcuts/novel-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -176,21 +176,21 @@
 			"name": "Magazines",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/magazine.png",
+					"src": "./img/shortcuts/magazine.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/magazine-maskable.png",
+					"src": "./img/shortcuts/magazine-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/magazine-dark.png",
+					"src": "./img/shortcuts/magazine-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/magazine-dark-maskable.png",
+					"src": "./img/shortcuts/magazine-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -202,21 +202,21 @@
 			"name": "Tabletop",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/tabletop.png",
+					"src": "./img/shortcuts/tabletop.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/tabletop-maskable.png",
+					"src": "./img/shortcuts/tabletop-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/tabletop-dark.png",
+					"src": "./img/shortcuts/tabletop-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/tabletop-dark-maskable.png",
+					"src": "./img/shortcuts/tabletop-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -228,21 +228,21 @@
 			"name": "Trading Card Game",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/tcg.png",
+					"src": "./img/shortcuts/tcg.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/tcg-maskable.png",
+					"src": "./img/shortcuts/tcg-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/tcg-dark.png",
+					"src": "./img/shortcuts/tcg-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/tcg-dark-maskable.png",
+					"src": "./img/shortcuts/tcg-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -254,21 +254,21 @@
 			"name": "Video Games",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/videogame.png",
+					"src": "./img/shortcuts/videogame.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/videogame-maskable.png",
+					"src": "./img/shortcuts/videogame-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/videogame-dark.png",
+					"src": "./img/shortcuts/videogame-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/videogame-dark-maskable.png",
+					"src": "./img/shortcuts/videogame-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -280,21 +280,21 @@
 			"name": "Unofficial",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/unofficial.png",
+					"src": "./img/shortcuts/unofficial.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/unofficial-maskable.png",
+					"src": "./img/shortcuts/unofficial-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/unofficial-dark.png",
+					"src": "./img/shortcuts/unofficial-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/unofficial-dark-maskable.png",
+					"src": "./img/shortcuts/unofficial-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -306,21 +306,21 @@
 			"name": "Misc",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/misc.png",
+					"src": "./img/shortcuts/misc.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/misc-maskable.png",
+					"src": "./img/shortcuts/misc-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/misc-dark.png",
+					"src": "./img/shortcuts/misc-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/misc-dark-maskable.png",
+					"src": "./img/shortcuts/misc-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -332,21 +332,21 @@
 			"name": "Info",
 			"icons": [
 				{
-					"src": "./img/icons/shortcuts/info.png",
+					"src": "./img/shortcuts/info.png",
 					"type": "image/png"
 				},
 				{
-					"src": "./img/icons/shortcuts/info-maskable.png",
+					"src": "./img/shortcuts/info-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
-					"src": "./img/icons/shortcuts/info-dark.png",
+					"src": "./img/shortcuts/info-dark.png",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
-					"src": "./img/icons/shortcuts/info-dark-maskable.png",
+					"src": "./img/shortcuts/info-dark-maskable.png",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
