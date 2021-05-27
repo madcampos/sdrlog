@@ -1,9 +1,4 @@
 /* eslint-env node */
-/**
- * @file JS minify process.
- * @author madcampos <madcampos@outlook.com>
- * @version 1.0.0
- */
 
 import { mkdir, writeFile } from 'fs/promises';
 import { existsSync } from 'fs';

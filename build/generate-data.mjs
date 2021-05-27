@@ -1,9 +1,5 @@
 /* eslint-env node */
-/**
- * @file Chunk data to smaller pieces.
- * @author madcampos <madcampos@outlook.com>
- * @version 1.0.0
- */
+
 import { resolve } from 'path';
 import { mkdir, writeFile } from 'fs/promises';
 import { default as data } from '../data/data.mjs';

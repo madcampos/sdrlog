@@ -1,10 +1,5 @@
 /* eslint-env node */
 /* eslint-disable no-console */
-/**
- * @file Verify files metadata.
- * @version 0.0.1
- * @author madcampos <madcampos@outlook.com>
- */
 
 import { existsSync } from 'fs';
 import { basename } from 'path';

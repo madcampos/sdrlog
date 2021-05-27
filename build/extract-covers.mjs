@@ -1,22 +1,37 @@
 /* eslint-env node */
 /* eslint-disable no-console */
 
-/**
- * @file Extract covers from pdfs ussing GraphicsMagick.
- * @author madcampos <madcampos@outlook.com>
- * @version 1.0.0
- */
-
 import { execSync as exec } from 'child_process';
 import { existsSync } from 'fs';
-import { mkdir } from 'fs/promises';
+import { mkdir, readdir } from 'fs/promises';
 import { join, resolve as resolvePath } from 'path';
-import { default as glob } from 'fast-glob';
 import { createInterface } from 'readline';
 
 import data from '../data/data.mjs';
 
 const DEST_PATH = './covers';
+
+async function getFilesRecursive(rootPath) {
+	const files = new Map();
+
+	async function readDir(dirPath) {
+		const dir = await readdir(dirPath, { withFileTypes: true });
+
+		for await (const item of dir) {
+			const itemPath = join(dirPath, item.name);
+
+			if (item.isDirectory()) {
+				await readDir(itemPath);
+			} else {
+				files.set(item.name, itemPath);
+			}
+		}
+	}
+
+	await readDir(rootPath);
+
+	return files;
+}
 
 (async () => {
 	await mkdir(DEST_PATH, { recursive: true });
@@ -38,22 +53,25 @@ const DEST_PATH = './covers';
 		});
 	});
 
+	const filePaths = await getFilesRecursive(SRC_PATH);
+	const fileNames = [...filePaths.keys()];
+
 	for await (const item of data) {
 		const fileName = join(DEST_PATH, `${item?.sku?.[0]}.jpg`);
 
 		if (!existsSync(fileName)) {
-			const [pdfFile] = await glob(`${SRC_PATH}/**/*${item?.sku?.[0]}*.pdf`);
+			const pdfFile = fileNames.find((name) => name.startsWith(item.sku[0]) && name.endsWith('.pdf') && !name.includes('Errata') && !name.includes('errata'));
 
 			if (pdfFile) {
 				try {
-					const output = exec(`gm.exe convert -resize x2048 "${resolvePath(pdfFile)}[0]" "${resolvePath(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
+					exec(`magick.exe convert -resize x2048 "${filePaths.get(pdfFile)}[0]" "${resolvePath(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
 
-					console.log(output);
+					console.log(`\x1b[1;32mSuccess: ${pdfFile}\x1b[1;0m`);
 				} catch (err) {
 					console.error(err);
 				}
 			} else {
-				console.error(`File not found for #${item?.sku?.[0]}: "${item?.name}"`);
+				console.error(`\x1b[1;31mFile not found for #${item?.sku?.[0]}: "${item?.name}"\x1b[1;0m`);
 			}
 		}
 	}

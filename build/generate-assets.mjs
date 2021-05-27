@@ -1,10 +1,5 @@
 /* eslint-env node */
 /* eslint-disable no-await-in-loop, no-fallthrough, max-depth, no-console */
-/**
- * @file Generate browser assets (icons and splashes).
- * @author madcampos <madcampos@outlook.com>
- * @version 1.0.0
- */
 
 const FORCE_REGENERATE = false;
 

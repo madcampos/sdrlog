@@ -1,9 +1,3 @@
-/**
- * @file Assets list to generate.
- * @author madcampos <madcampos@outlook.com>
- * @version 1.0.0
- */
-
 const BASE_PATH = 'dist/img/icons';
 
 /**
