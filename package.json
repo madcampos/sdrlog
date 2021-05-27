@@ -39,7 +39,6 @@
 	},
 	"homepage": "https://github.com/madcampos/sdrlog#readme",
 	"devDependencies": {
-		"@snowpack/plugin-run-script": "^2.3.0",
 		"eslint": "^7.27.0",
 		"htmlhint": "^0.14.2",
 		"ico-endec": "^0.1.6",
