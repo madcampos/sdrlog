@@ -25,7 +25,6 @@ module.exports = {
 		worker: true,
 		'shared-node-browser': true
 	},
-	plugins: ['jsdoc', 'node'],
 	rules: {
 		// Possible errors
 		'for-direction': 'error',
@@ -317,45 +316,6 @@ module.exports = {
 		'sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
 		'symbol-description': 'error',
 		'template-curly-spacing': 'error',
-		'yield-star-spacing': 'error',
-
-		// Plugin JSDoc
-		'jsdoc/check-access': 'error',
-		'jsdoc/check-alignment': 'warn',
-		'jsdoc/check-examples': 'warn',
-		'jsdoc/check-indentation': 'warn',
-		'jsdoc/check-param-names': 'error',
-		'jsdoc/check-property-names': 'error',
-		'jsdoc/check-syntax': 'warn',
-		'jsdoc/check-tag-names': 'error',
-		'jsdoc/check-types': 'error',
-		'jsdoc/check-values': 'error',
-		'jsdoc/empty-tags': 'error',
-		'jsdoc/implements-on-classes': 'error',
-		'jsdoc/match-description': 'off',
-		'jsdoc/newline-after-description': 'error',
-		'jsdoc/no-bad-blocks': 'warn',
-		'jsdoc/no-defaults': 'warn',
-		'jsdoc/no-types': 'off',
-		'jsdoc/no-undefined-types': 'warn',
-		'jsdoc/require-description-complete-sentence': 'warn',
-		'jsdoc/require-description': 'warn',
-		'jsdoc/require-example': 'off',
-		'jsdoc/require-file-overview': 'off',
-		'jsdoc/require-hyphen-before-param-description': ['warn', 'never'],
-		'jsdoc/require-jsdoc': 'warn',
-		'jsdoc/require-param-description': 'error',
-		'jsdoc/require-param-name': 'error',
-		'jsdoc/require-param-type': 'error',
-		'jsdoc/require-param': 'error',
-		'jsdoc/require-property-description': 'error',
-		'jsdoc/require-property-name': 'error',
-		'jsdoc/require-property-type': 'error',
-		'jsdoc/require-returns-check': 'error',
-		'jsdoc/require-returns-description': 'error',
-		'jsdoc/require-returns-type': 'error',
-		'jsdoc/require-returns': 'error',
-		'jsdoc/require-throws': 'error',
-		'jsdoc/valid-types': 'error'
+		'yield-star-spacing': 'error'
 	}
 };
