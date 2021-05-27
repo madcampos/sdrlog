@@ -1,8 +1,14 @@
-/* eslint-disable jsdoc/require-description, jsdoc/valid-types, no-console */
+/* eslint-disable no-console */
 /* eslint-env node */
 
 // eslint-disable-next-line no-unused-vars
 import { IncomingMessage, ServerResponse } from 'http';
+import { readFileSync } from 'fs';
+import { resolve as resolvePath } from 'path';
+import polka from 'polka';
+import sirv from 'sirv';
+
+import { default as data } from './data/data.mjs';
 
 /**
  * @callback RequestHandler A request handler
@@ -14,14 +20,10 @@ import { IncomingMessage, ServerResponse } from 'http';
  * @returns {ServerResponse} Returns a response.
  */
 
-import { dirname, resolve as resolvePath } from 'path';
-import polka from 'polka';
-import sirv from 'sirv';
+const ROOT_FOLDER = resolvePath('src');
+const COVERS_FOLDER = resolvePath('covers');
+const DIST_FOLDER = resolvePath('dist');
 
-import { default as data } from './data/data.mjs';
-
-const ROOT_FOLDER = resolvePath(dirname(''), 'src');
-const COVERS_PATH = resolvePath(dirname(''), 'covers');
 const SERVER_PORT = 8000;
 const CHUNK_SIZE = 100;
 const dataMap = new Map();
@@ -41,13 +43,6 @@ for (const [i, item] of data.entries()) {
 }
 
 /** @type RequestHandler */
-function logRequest(req, res, next) {
-	console.log(req.url);
-
-	return next();
-}
-
-/** @type RequestHandler */
 function handleDataFiles(req, res) {
 	if (!dataMap.has(req.url)) {
 		res.statusCode = 404;
@@ -61,7 +56,7 @@ function handleDataFiles(req, res) {
 }
 
 /** @type RequestHandler */
-function handleServiceWorker(req, res) {
+function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
 	return res.end(`// This service worker file is effectively a 'no-op' that will reset any
@@ -86,13 +81,51 @@ self.addEventListener('activate', () => {
 `);
 }
 
-const server = polka({});
+/** @type RequestHandler */
+function handleImage(req, res) {
+	const fileName = req.params.wild;
 
-server.use(logRequest);
+	res.setHeader('Content-Type', 'image/jpeg');
+
+	try {
+		const file = readFileSync(resolvePath(COVERS_FOLDER, fileName));
+
+		res.end(file);
+	} catch {
+		console.log(`IMAGE NOT FOUND: ${fileName}`);
+
+		res.end(readFileSync(resolvePath(ROOT_FOLDER, 'img/full/000-fallback.jpg')));
+	}
+}
+
+/** @type RequestHandler */
+function handleIcons(req, res) {
+	try {
+		const fileExtensionLength = -3;
+		const fileName = req.params.wild;
+		const file = readFileSync(resolvePath(DIST_FOLDER, 'img/icons', fileName));
+
+		const mimes = {
+			jpg: 'image/jpeg',
+			png: 'image/png',
+			svg: 'image/svg+xml'
+		};
+
+		res.setHeader('Content-Type', mimes[fileName.slice(fileExtensionLength)]);
+		res.end(file);
+	} catch {
+		res.statusCode = 404;
+		res.end('Not found');
+	}
+}
+
+const server = polka();
+
 server.get('/sw.js', handleServiceWorker);
 server.use(sirv(ROOT_FOLDER, { dev: true }));
-server.use('/img/thumbs/*', sirv(COVERS_PATH, { dev: true }));
-server.use('/img/full/*', sirv(COVERS_PATH, { dev: true }));
+server.use('/img/thumbs/*', handleImage);
+server.use('/img/full/*', handleImage);
+server.use('/img/icons/*', handleIcons);
 server.get('/data/*', handleDataFiles);
 
 server.listen(SERVER_PORT, () => {
