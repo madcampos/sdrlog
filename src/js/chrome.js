@@ -247,12 +247,9 @@ function searchTagsToFilter(text = searchBox.value) {
 
 /**
  * Toggle the Information box modal.
- *
- * @param {boolean} forceOpen Force the modal to be open.
- * @example
  */
-function toggleInfoModal(forceOpen = false) {
-	if (!infoBox.open || forceOpen) {
+function toggleInfoModal() {
+	if (!infoBox.open) {
 		infoBox.showModal();
 		history.pushState(null, 'Shadowrun Catalog', '?info');
 	} else {
@@ -262,7 +259,6 @@ function toggleInfoModal(forceOpen = false) {
 }
 
 // Toggle infobox
-
 infoBoxButton.addEventListener('click', toggleInfoModal);
 infoBoxBack.addEventListener('click', toggleInfoModal);
 window.addEventListener('keydown', (evt) => {
