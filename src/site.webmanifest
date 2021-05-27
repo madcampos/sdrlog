@@ -73,20 +73,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/sourcebook.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/sourcebook-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/sourcebook-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/sourcebook-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -99,20 +103,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/rulebook.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/rulebook-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/rulebook-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/rulebook-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -125,20 +133,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/adventure.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/adventure-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/adventure-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/adventure-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -151,20 +163,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/novel.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/novel-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/novel-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/novel-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -177,20 +193,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/magazine.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/magazine-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/magazine-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/magazine-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -203,20 +223,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/tabletop.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/tabletop-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/tabletop-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/tabletop-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -229,20 +253,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/tcg.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/tcg-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/tcg-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/tcg-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -255,20 +283,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/videogame.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/videogame-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/videogame-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/videogame-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -281,20 +313,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/unofficial.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/unofficial-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/unofficial-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/unofficial-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -307,20 +343,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/misc.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/misc-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/misc-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/misc-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
@@ -333,20 +373,24 @@
 			"icons": [
 				{
 					"src": "./img/shortcuts/info.png",
+					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
 					"src": "./img/shortcuts/info-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable"
 				},
 				{
 					"src": "./img/shortcuts/info-dark.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"color_scheme": "dark"
 				},
 				{
 					"src": "./img/shortcuts/info-dark-maskable.png",
+					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "maskable",
 					"color_scheme": "dark"
