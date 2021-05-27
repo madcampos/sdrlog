@@ -2,31 +2,23 @@
 	"name": "sdrlog",
 	"version": "1.0.0",
 	"description": "List of shadowrun published material (books, tabletop, video games, etc.) ",
-	"main": "index.html",
+	"main": "./src/index.html",
 	"scripts": {
-		"beforestart": "npm-run-all -s generate:covers",
-		"start": "node ./server.mjs",
-		"clean": "node -e \"require('fs').rmdirSync('./dist', { recursive: true })\"",
-		"lint": "npm-run-all -p lint:**",
+		"prestart": "npm run build:assets",
+		"start": "snowpack dev",
+		"lint": "npm run lint:js && npm run lint:css && npm run lint:html",
 		"lint:js": "eslint . --fix",
 		"lint:html": "htmlhint ./src",
 		"lint:css": "stylelint **/*.css --fix",
-		"version": "npm-run-all -s configure:version git-add",
-		"configure:version": "npm version minor",
-		"git-add": "git add .",
-		"generate:covers": "node build/extract-covers.mjs",
-		"generate:thumbs": "node build/generate-thumbs.mjs",
-		"optimize-covers": "node build/optimize-covers.mjs",
-		"build:images": "npm-run-all -s generate:covers generate:thumbs optimize-covers",
-		"build:browser-assets": "node build/generate-assets.mjs",
-		"build:json-data": "node build/generate-data.mjs",
-		"build:css": "node build/css-files.mjs",
-		"build:html": "html-minifier src/index.html -c .htmlmin.json -o dist/index.html",
-		"build:js": "node build/js-files.mjs",
-		"prebuild": "npm-run-all -s lint",
-		"build": "npm-run-all -p build:**",
-		"postbuild": "npm run publish",
-		"verify": "node build/verify-files.mjs"
+		"generate:browser-assets": "node build/icons/generate-assets.mjs",
+		"generate:json-data": "node build/generate-data.mjs",
+		"build:assets": "npm run generate:json-data && npm run generate:browser-assets",
+		"generate:covers": "node build/images/extract-covers.mjs",
+		"generate:thumbs": "node build/images/generate-thumbs.mjs",
+		"optimize-images": "node build/images/optimize-covers.mjs",
+		"build:images": "npm run generate:covers && npm run generate:thumbs && npm run optimize-images",
+		"prebuild": "npm run build:images",
+		"build": "snowpack build"
 	},
 	"engines": {
 		"node": ">=14.0.0"
@@ -47,35 +39,17 @@
 	},
 	"homepage": "https://github.com/madcampos/sdrlog#readme",
 	"devDependencies": {
-		"csso": "^4.2.0",
+		"@snowpack/plugin-run-script": "^2.3.0",
 		"eslint": "^7.27.0",
-		"fast-glob": "^3.2.5",
-		"html-minifier": "^4.0.0",
 		"htmlhint": "^0.14.2",
-		"husky": "^6.0.0",
 		"ico-endec": "^0.1.6",
 		"imagemin": "^8.0.0",
 		"imagemin-mozjpeg": "^9.0.0",
 		"imagemin-optipng": "^8.0.0",
 		"imagemin-svgo": "^9.0.0",
 		"jimp": "^0.16.1",
-		"lint-staged": "^11.0.0",
-		"npm-run-all": "^4.1.5",
-		"polka": "^0.5.2",
 		"puppeteer": "^9.1.1",
-		"sirv": "^1.0.12",
-		"stylelint": "^13.13.1",
-		"terser": "^5.7.0"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.{js, mjs}": "eslint --fix",
-		"*.{css}": "stylelint --fix",
-		"*.{html}": "htmlhint",
-		"*.{png,jpeg,jpg,gif,svg}": "imagemin-lint-staged"
+		"snowpack": "^3.5.1",
+		"stylelint": "^13.13.1"
 	}
 }
