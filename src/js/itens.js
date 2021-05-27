@@ -86,9 +86,12 @@ function fillItemDetails(item) {
  * @example
  */
 function addItemCard(item) {
+	/** @type HTMLTemplateElement */
 	const itemCard = document.importNode(cardTemplate.content, true);
-	const cardLinkData = itemCard.querySelector('a').dataset;
+	const itemCardLink = itemCard.querySelector('a');
+	const cardLinkData = itemCardLink.dataset;
 
+	itemCardLink.href = `#${item.sku[0]}`;
 	itemCard.querySelector('.thumb').src = `${IMAGES_PATH}${item.image || `${item.sku[0]}.jpg`}`;
 	itemCard.querySelector('.title').textContent = item.name;
 
@@ -104,6 +107,11 @@ function addItemCard(item) {
 	if (item.scope) {
 		cardLinkData.missing = item.scope;
 	}
+
+	itemCardLink.addEventListener('click', (evt) => {
+		evt.stopPropagation();
+		evt.preventDefault();
+	});
 
 	document.querySelector('main').appendChild(itemCard);
 }
