@@ -3,11 +3,9 @@
 
 import { execSync as exec } from 'child_process';
 import { existsSync } from 'fs';
-import { mkdir, readdir } from 'fs/promises';
+import { mkdir, readdir, readFile } from 'fs/promises';
 import { join, resolve as resolvePath } from 'path';
 import { createInterface } from 'readline';
-
-import data from '../data/data.mjs';
 
 const DEST_PATH = './covers';
 
@@ -34,6 +32,8 @@ async function getFilesRecursive(rootPath) {
 }
 
 (async () => {
+	const { items: data } = JSON.parse(await readFile('../../data/data.json'));
+
 	await mkdir(DEST_PATH, { recursive: true });
 
 	try {
@@ -64,7 +64,7 @@ async function getFilesRecursive(rootPath) {
 
 			if (pdfFile) {
 				try {
-					exec(`magick.exe convert -resize x2048 "${filePaths.get(pdfFile)}[0]" "${resolvePath(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
+					exec(`magick.exe convert -resize x2048 -colorspace sRGB -density 300 -background white -alpha remove "${filePaths.get(pdfFile)}[0]" "${resolvePath(fileName)}"`, { windowsHide: true, encoding: 'utf8' });
 
 					console.log(`\x1b[1;32mSuccess: ${pdfFile}\x1b[1;0m`);
 				} catch (err) {
