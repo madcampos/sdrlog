@@ -1,19 +1,24 @@
+/* eslint-disable @typescript-eslint/naming-convention, camelcase */
 export interface MozJPEGOptions {
-  quality?: number;
-  baseline?: boolean;
-  arithmetic?: boolean;
-  progressive?: boolean;
-  optimize_coding?: boolean;
-  smoothing?: number;
-  in_color_space?: number;
-  out_color_space?: number;
-  quant_table?: number;
-  trellis_multipass?: boolean;
-  trellis_opt_zero?: boolean;
-  trellis_opt_table?: boolean;
-  trellis_loops?: number;
-  auto_subsample?: boolean;
-  chroma_subsample?: number;
-  separate_chroma_quality?: boolean;
-  chroma_quality?: number;
+	quality?: number,
+	baseline?: boolean,
+	arithmetic?: boolean,
+	progressive?: boolean,
+	optimize_coding?: boolean,
+	smoothing?: number,
+	in_color_space?: number,
+	out_color_space?: number,
+	quant_table?: number,
+	trellis_multipass?: boolean,
+	trellis_opt_zero?: boolean,
+	trellis_opt_table?: boolean,
+	trellis_loops?: number,
+	auto_subsample?: boolean,
+	chroma_subsample?: number,
+	separate_chroma_quality?: boolean,
+	chroma_quality?: number
 }
+
+declare const defaultMozjpegOptions: MozJPEGOptions;
+
+export default defaultMozjpegOptions;
