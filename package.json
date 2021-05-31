@@ -4,7 +4,6 @@
 	"description": "List of shadowrun published material (books, tabletop, video games, etc.) ",
 	"main": "./src/index.html",
 	"scripts": {
-		"prestart": "npm run build:assets",
 		"start": "snowpack dev",
 		"lint": "npm run lint:js && npm run lint:css && npm run lint:html",
 		"lint:js": "eslint . --fix",
@@ -12,9 +11,6 @@
 		"lint:css": "stylelint **/*.css --fix",
 		"generate:browser-assets": "node build/icons/generate-assets.mjs",
 		"generate:covers": "node build/images/extract-covers.mjs",
-		"generate:thumbs": "node build/images/generate-thumbs.mjs",
-		"optimize-images": "node build/images/optimize-covers.mjs",
-		"build:images": "npm run generate:covers && npm run generate:thumbs && npm run optimize-images",
 		"build": "snowpack build"
 	},
 	"engines": {
