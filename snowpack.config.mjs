@@ -40,22 +40,6 @@ function handleIcons(req, res) {
 }
 
 /** @type RequestHandler */
-function handleDataFiles(req, res) {
-	const fileName = basename(req.url);
-
-	try {
-		const file = readFileSync(resolvePath('dist/data', fileName));
-
-		res.setHeader('Content-Type', 'application/json');
-		res.end(file);
-	} catch {
-		res.statusCode = 404;
-
-		res.end('Data not found.');
-	}
-}
-
-/** @type RequestHandler */
 function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
@@ -105,14 +89,10 @@ export default {
 	root: './src',
 	mount: {
 		src: '/',
-		dist: '/'
+		data: '/data',
+		lib: { url: '/lib', resolve: false, 'static': true }
 	},
 	routes: [
-		{
-			match: 'routes',
-			src: '.*',
-			dest: '/index.html'
-		},
 		{
 			match: 'all',
 			src: '/sw.js',
@@ -132,11 +112,6 @@ export default {
 			match: 'all',
 			src: '/img/icons/.*',
 			dest: handleIcons
-		},
-		{
-			match: 'all',
-			src: '/data/.*',
-			dest: handleDataFiles
 		}
 	],
 	optimize: {
