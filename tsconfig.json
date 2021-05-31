@@ -1,0 +1,16 @@
+{
+	"include": ["./src/**/*", "./data/**/*", "./lib/**/*"],
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"lib": ["ES2020", "DOM"],
+		"module": "ES2020",
+		"noEmit": true,
+		"removeComments": true,
+		"target": "ES2020",
+		"strict": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"sourceMap": true,
+		"newLine": "LF"
+	}
+}
