@@ -26,11 +26,6 @@ class MenuBar extends HTMLElement {
 					<dropdown-menu-item icon="" data-action="all">All</dropdown-menu-item>
 				</dropdown-menu>
 
-				<div id="search-and-info">
-					<label id="search" title="Search">🔍<input type="search" role="search"/></label>
-					<button id="info-button" title="Information">ℹ</button>
-				</div>
-
 				<modal-dialog>
 					<button slot="trigger">ℹ️</button>
 					<h1 slot="title">Information</h1>
