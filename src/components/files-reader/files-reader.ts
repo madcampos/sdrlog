@@ -33,6 +33,8 @@ async function processFiles() {
 	for await (const [name, file] of files.entries()) {
 		await saveFile(name, file);
 
+		// TODO: process metadata
+
 		if (name.endsWith('.pdf')) {
 			const cover = await extractCover(await file.getFile());
 			const coverImg = await encoder.encode(cover.data.buffer, { width: 2048, height: 2048 });
