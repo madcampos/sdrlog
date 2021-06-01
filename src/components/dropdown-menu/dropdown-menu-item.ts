@@ -28,4 +28,4 @@ class DropdownMenuItem extends HTMLElement {
 	}
 }
 
-customElements.define('dropdown-menu', DropdownMenuItem);
+customElements.define('dropdown-menu-item', DropdownMenuItem);
