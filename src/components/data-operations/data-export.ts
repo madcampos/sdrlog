@@ -1,6 +1,6 @@
 import { getMaterials } from './idb-persistence';
 
-export async function exportData() {
+async function exportData() {
 	const items = await getMaterials();
 
 	if (items.length === 0) {
@@ -19,4 +19,13 @@ export async function exportData() {
 		items
 	}));
 	await file.close();
+}
+
+export function createDataExportButton() {
+	const button = document.createElement('button');
+
+	button.innerText = '📤 Export Data';
+	button.addEventListener('click', async () => exportData());
+
+	return button;
 }
