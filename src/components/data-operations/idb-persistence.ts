@@ -27,8 +27,12 @@ async function databaseFactory() {
 				itemsStore.createIndex('gameDate', 'gameDate', { unique: false });
 				itemsStore.createIndex('originalLanguage', 'originalLanguage', { unique: false });
 
+				const fileStore = database.createObjectStore('files');
+
+				fileStore.createIndex('kind', 'kind', { unique: false });
+				fileStore.createIndex('name', 'name', { unique: false });
+
 				database.createObjectStore('covers');
-				database.createObjectStore('files');
 			};
 
 			dbRequest.onsuccess = () => {
