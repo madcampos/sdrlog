@@ -1,4 +1,4 @@
-class ModalDialog extends HTMLElement {
+export class ModalDialog extends HTMLElement {
 	#root: ShadowRoot;
 	#dialog: HTMLDialogElement;
 
@@ -45,6 +45,14 @@ class ModalDialog extends HTMLElement {
 				target.close();
 			}
 		});
+	}
+
+	show() {
+		this.#dialog.showModal();
+	}
+
+	close() {
+		this.#dialog.close();
 	}
 }
 
