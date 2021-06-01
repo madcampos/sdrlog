@@ -155,7 +155,7 @@
 		"no-restricted-globals": ["error", "event"],
 		"no-shadow": "off",
 		"no-shadow-restricted-names": "error",
-		"no-undef": ["error", { "typeof": true }],
+		"no-undef": "off", // Typescript provides better support
 		"no-undef-init": "warn",
 		"no-undefined": "error",
 		"no-unused-vars": "off",
@@ -395,7 +395,7 @@
 			"allowAsThisParameter": true
 		}],
 		"@typescript-eslint/no-misused-new": "error",
-		"@typescript-eslint/no-misused-promises": ["error", { "checksConditionals": true, "checkVoidReturn": true }],
+		"@typescript-eslint/no-misused-promises": "off",
 		"@typescript-eslint/no-namespace": ["error", { "allowDeclarations": false, "allowDefinitionFiles": false }],
 		"@typescript-eslint/no-non-null-asserted-optional-chain": "error",
 		"@typescript-eslint/no-non-null-assertion": "error",
@@ -441,7 +441,9 @@
 			"allowNullish": false
 		}],
 		"@typescript-eslint/sort-type-union-intersection-members": "off",
-		"@typescript-eslint/strict-boolean-expressions": "error",
+		"@typescript-eslint/strict-boolean-expressions": ["error", {
+			"allowNullableString": true
+		}],
 		"@typescript-eslint/switch-exhaustiveness-check": "error",
 		"@typescript-eslint/triple-slash-reference": ["error", { "path": "never", "types": "never", "lib": "never" }],
 		"@typescript-eslint/type-annotation-spacing": "error",
@@ -471,7 +473,7 @@
 		}],
 		"@typescript-eslint/func-call-spacing": ["warn", "never"],
 		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
-		"@typescript-eslint/init-declarations": ["warn", "always"],
+		"@typescript-eslint/init-declarations": ["off"],
 		"@typescript-eslint/keyword-spacing":  ["error", {
 			"before": true,
 			"after": true,
