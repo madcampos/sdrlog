@@ -1,7 +1,9 @@
+import type { ModalDialog } from '../dialog/dialog';
 import infoDialogData from './info-dialog';
 
 class MenuBar extends HTMLElement {
 	#root: ShadowRoot;
+	#infobox: ModalDialog;
 
 	constructor() {
 		super();
@@ -23,6 +25,7 @@ class MenuBar extends HTMLElement {
 					<hr>
 					<dropdown-menu-item icon="" data-action="all">All</dropdown-menu-item>
 				</dropdown-menu>
+
 				<div id="search-and-info">
 					<label id="search" title="Search">🔍<input type="search" role="search"/></label>
 					<button id="info-button" title="Information">ℹ</button>
@@ -35,6 +38,15 @@ class MenuBar extends HTMLElement {
 				</modal-dialog>
 			</nav>
 		`;
+
+		this.#infobox = this.#root.querySelector('modal-dialog') as ModalDialog;
+
+		window.addEventListener('keydown', (evt) => {
+			if (evt.ctrlKey && evt.key === 'i') {
+				evt.preventDefault();
+				this.#infobox.toggle();
+			}
+		});
 	}
 }
 

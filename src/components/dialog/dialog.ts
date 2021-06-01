@@ -1,6 +1,7 @@
 export class ModalDialog extends HTMLElement {
 	#root: ShadowRoot;
 	#dialog: HTMLDialogElement;
+	#isDialogOpen = false;
 
 	constructor() {
 		super();
@@ -48,11 +49,25 @@ export class ModalDialog extends HTMLElement {
 	}
 
 	show() {
+		this.#isDialogOpen = true;
 		this.#dialog.showModal();
 	}
 
 	close() {
+		this.#isDialogOpen = false;
 		this.#dialog.close();
+	}
+
+	toggle() {
+		if (this.#isDialogOpen) {
+			this.#dialog.close();
+		} else {
+			this.#dialog.showModal();
+		}
+	}
+
+	get isDialogOpen() {
+		return this.#isDialogOpen;
 	}
 }
 
