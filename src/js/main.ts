@@ -11,4 +11,6 @@ if ('serviceWorker' in navigator) {
 	console.log('No service worker, falling back to default load...');
 }
 
-// TODO: boot other components
+document.addEventListener('DOMContentLoaded', () => {
+	// TODO: boot components and start processes
+});
