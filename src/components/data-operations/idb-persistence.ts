@@ -2,20 +2,19 @@
 import type { Material } from '../../../data/data';
 
 const IDB_VERSION = 2;
-let database: IDBDatabase;
+let database: IDBDatabase | undefined;
 
 async function databaseFactory() {
 	return new Promise<IDBDatabase>((resolve, reject) => {
 		let dbRequest: IDBOpenDBRequest;
 
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-		if (database === null) {
-			dbRequest = window.indexedDB.open('MyTestDatabase', IDB_VERSION);
+		if (!database) {
+			dbRequest = window.indexedDB.open('SDRLog', IDB_VERSION);
 
-			dbRequest.onupgradeneeded = async () => {
+			dbRequest.onupgradeneeded = () => {
 				database = dbRequest.result;
 
-				const itemsStore = database.createObjectStore('items', { keyPath: 'id', autoIncrement: true });
+				const itemsStore = database.createObjectStore('items');
 
 				itemsStore.createIndex('sku', 'sku', { multiEntry: true, unique: false });
 				itemsStore.createIndex('publisher', 'publisher', { multiEntry: true, unique: false });
@@ -28,20 +27,8 @@ async function databaseFactory() {
 				itemsStore.createIndex('gameDate', 'gameDate', { unique: false });
 				itemsStore.createIndex('originalLanguage', 'originalLanguage', { unique: false });
 
-				const coverStore = database.createObjectStore('covers', { keyPath: 'name' });
-				const files = database.createObjectStore('files', { keyPath: 'name' });
-
-				itemsStore.transaction.oncomplete = async () => Promise.resolve('items created');
-				coverStore.transaction.oncomplete = async () => Promise.resolve('covers created');
-				files.transaction.oncomplete = async () => Promise.resolve('files created');
-
-				await Promise.all([
-					coverStore.transaction.oncomplete,
-					files.transaction.oncomplete,
-					itemsStore.transaction.oncomplete
-				]);
-
-				resolve(database);
+				database.createObjectStore('covers');
+				database.createObjectStore('files');
 			};
 
 			dbRequest.onsuccess = () => {
