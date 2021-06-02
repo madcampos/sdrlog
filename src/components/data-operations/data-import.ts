@@ -90,7 +90,7 @@ export function showImportDialog() {
 
 		await requestDataFileFromUser();
 
-		dialog.close();
+		dialog.remove();
 	});
 
 	document.body.appendChild(dialog);
