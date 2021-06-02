@@ -132,12 +132,20 @@ export async function getFile(name: string) {
 	return getIDBItem<FileSystemHandle>('files', name);
 }
 
+export async function getAllFiles() {
+	return (await getAllIDBItem<FileSystemHandle>('files')).filter((item) => item.kind === 'file' && item.name !== 'data.json') as FileSystemFileHandle[];
+}
+
 export async function saveCover(id: string, cover: File) {
 	return setIDBItem<File>('covers', id, cover);
 }
 
 export async function getCover(id: string) {
 	return getIDBItem<File>('covers', id);
+}
+
+export async function getAllCovers() {
+	return getAllIDBItem<File>('covers');
 }
 
 export async function getMaterial(id: IDBValidKey) {

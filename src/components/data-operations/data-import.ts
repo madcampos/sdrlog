@@ -1,6 +1,6 @@
 import type { SDRLogData } from '../../../data/data';
+import { ProgressOverlay } from '../progress/progress';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
-import type { ModalDialog } from '../dialog/dialog';
 
 async function fetchData() {
 	try {
@@ -11,7 +11,7 @@ async function fetchData() {
 
 			return parsedFile.items;
 		}
-	} catch (err: unknown) {
+	} catch (err) {
 		// eslint-disable-next-line no-console
 		console.error(err);
 	}
@@ -35,7 +35,7 @@ async function readDataFromFile() {
 		const parsedFile = JSON.parse(await content?.text() ?? '{ "items": [] }') as SDRLogData;
 
 		return parsedFile.items;
-	} catch (err: unknown) {
+	} catch (err) {
 		// eslint-disable-next-line no-console
 		console.error(err);
 	}
@@ -62,38 +62,24 @@ export async function fetchItems() {
 }
 
 export async function requestDataFileFromUser() {
-	const [file] = await window.showOpenFilePicker({
-		excludeAcceptAllOption: false,
-		types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
-	});
+	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Read data file' });
 
-	await saveFile('data.json', file);
+	try {
+		const [file] = await window.showOpenFilePicker({
+			excludeAcceptAllOption: false,
+			types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
+		});
 
-	const content = await file.getFile();
-	const parsedFile = JSON.parse(await content.text()) as SDRLogData;
+		await saveFile('data.json', file);
 
-	await saveMaterials(parsedFile.items.map((material) => [material.sku[0], material]));
-}
+		const content = await file.getFile();
+		const parsedFile = JSON.parse(await content.text()) as SDRLogData;
 
-export function showImportDialog() {
-	const dialog = document.createElement('modal-dialog') as ModalDialog;
+		await saveMaterials(parsedFile.items.map((material) => [material.sku[0], material]));
+	} catch (err) {
+		// eslint-disable-next-line no-console
+		console.error(err);
+	}
 
-	dialog.innerHTML = `
-		<h1 slot="title">⚠️ Data not found!</h1>
-		<p>Data not found. Please click on the button below and select a file to import.</p>
-		<button>Import</button>
-	`;
-
-	// eslint-disable-next-line @typescript-eslint/no-misused-promises
-	dialog.querySelector('button')?.addEventListener('click', async () => {
-		dialog.innerHTML = '<progress></progress>';
-
-		await requestDataFileFromUser();
-
-		dialog.remove();
-	});
-
-	document.body.appendChild(dialog);
-
-	dialog.show();
+	progressOverlay.remove();
 }
