@@ -1,8 +1,7 @@
-import { saveFile } from '../data-operations/idb-persistence';
+import { getCover, saveCover, saveFile } from '../data-operations/idb-persistence';
 import { extractCover } from './cover-extractor';
-import { Encoder } from './optimizer';
-
-const encoder = new Encoder();
+import { encode } from './optimizer';
+import { isNameExcluded } from './names-filter-list';
 
 async function readFiles() {
 	const files = new Map<string, FileSystemFileHandle>();
@@ -27,22 +26,69 @@ async function readFiles() {
 	return files;
 }
 
-async function processFiles() {
-	const files = await readFiles();
+function matchFileWithData(name: string) {
+	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+) - (?<title>.+)(?<extension>\.[a-z]+)$/u;
+	const { title, id, extension } = testRegex.exec(name)?.groups ?? {};
 
-	for await (const [name, file] of files.entries()) {
-		await saveFile(name, file);
+	return {
+		name: title,
+		id,
+		extension
+	};
+}
 
-		// TODO: process metadata
+async function processCover(file: FileSystemFileHandle, name: string, id: string) {
+	if (id && name.endsWith('.pdf') && !isNameExcluded(name)) {
+		const savedCover = await getCover(id);
 
-		if (name.endsWith('.pdf')) {
-			const cover = await extractCover(await file.getFile());
-			const coverImg = await encoder.encode(cover.data.buffer, { width: 2048, height: 2048 });
+		if (!savedCover) {
+			const { width, height, data: coverData } = await extractCover(await file.getFile());
+			const optimizedCover = await encode(coverData.buffer, { width, height });
+			const coverName = `${id}.jpg`;
 
-			// TODO: save covers here?
-			console.log(coverImg);
+			const cover = new File([optimizedCover], coverName, {
+				type: 'image/jpeg'
+			});
+
+			await saveCover(id, cover);
 		}
 	}
+}
+
+async function processFiles() {
+	const dialog = document.createElement('dialog');
+
+	dialog.innerHTML = '<h1>Loading Files...</h1><progress></progress><p></p>';
+	document.body.appendChild(dialog);
+	dialog.showModal();
+
+	const progress = dialog.querySelector('progress') as HTMLProgressElement;
+	const description = dialog.querySelector('p') as HTMLParagraphElement;
+	const files = await readFiles();
+	let i = 1;
+
+	progress.max = files.size;
+
+	for await (const [name, file] of files.entries()) {
+		progress.value = i;
+		i += 1;
+		description.textContent = `${i}/${progress.max}`;
+
+		try {
+			const { id } = matchFileWithData(file.name);
+
+			await processCover(file, name, id);
+		} catch (err: unknown) {
+			// eslint-disable-next-line no-console
+			console.error(`Error processing item: ${name}`);
+			// eslint-disable-next-line no-console
+			console.error(err);
+		}
+	}
+
+	dialog.remove();
+
+	return files;
 }
 
 export function createMaterialsImportButton() {
