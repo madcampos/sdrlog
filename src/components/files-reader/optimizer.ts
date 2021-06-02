@@ -5,7 +5,7 @@ import defaultMozjpegOptions from '../../../lib/mozjpeg/options.js';
 
 const IMAGE_CHANNELS = 4;
 
-export async function encode(imageArray: BufferSource, { width, height }: { width: number, height: number }) {
+export async function optimize(imageArray: BufferSource, { width, height }: { width: number, height: number }) {
 	const mozjpeg = await mozjpegModule();
 
 	const result = mozjpeg.encode(imageArray, width, height, IMAGE_CHANNELS, {
