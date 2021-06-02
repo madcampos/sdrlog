@@ -34,5 +34,8 @@ export async function extractCover(file: File) {
 		viewport
 	}).promise;
 
+	// eslint-disable-next-line @typescript-eslint/no-floating-promises
+	pdf.destroy();
+
 	return canvasContext.getImageData(0, 0, canvas.width, canvas.height);
 }
