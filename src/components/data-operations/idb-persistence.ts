@@ -32,7 +32,9 @@ async function databaseFactory() {
 				fileStore.createIndex('kind', 'kind', { unique: false });
 				fileStore.createIndex('name', 'name', { unique: false });
 
-				database.createObjectStore('covers');
+				const coverStore = database.createObjectStore('covers');
+
+				coverStore.createIndex('name', 'name', { unique: false });
 			};
 
 			dbRequest.onsuccess = () => {
@@ -128,6 +130,14 @@ export async function saveFile(name: string, handler: FileSystemHandle) {
 
 export async function getFile(name: string) {
 	return getIDBItem<FileSystemHandle>('files', name);
+}
+
+export async function saveCover(id: string, cover: File) {
+	return setIDBItem<File>('covers', id, cover);
+}
+
+export async function getCover(id: string) {
+	return getIDBItem<File>('covers', id);
 }
 
 export async function getMaterial(id: IDBValidKey) {
