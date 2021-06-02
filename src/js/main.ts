@@ -1,5 +1,6 @@
 /* eslint-disable no-console*/
 import '../components/components';
+import { fetchItems } from '../components/data-operations/data-import';
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js').then(() => {
@@ -11,6 +12,8 @@ if ('serviceWorker' in navigator) {
 	console.log('No service worker, falling back to default load...');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	// TODO: boot components and start processes
+document.addEventListener('DOMContentLoaded', async () => {
+	await fetchItems();
+
+	document.querySelector('#load-overlay')?.remove();
 });
