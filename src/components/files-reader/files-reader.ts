@@ -3,19 +3,17 @@ import { ProgressOverlay } from '../progress/progress';
 import { saveFile } from '../data-operations/idb-persistence';
 
 export async function readFiles() {
-	const files = new Map<string, FileSystemFileHandle>();
 	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Read materials' });
 
 	async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
 		for await (const entry of dirHandle.values()) {
-			if (entry.kind === 'directory') {
-				const dirPath = `${parentPath}/${entry.name}`;
+			const entryPath = `${parentPath}/${entry.name}`;
 
-				await saveFile(dirPath, entry);
-				await readDir(entry, dirPath);
-			} else {
-				files.set(`${parentPath}/${entry.name}`, entry);
+			if (entry.kind === 'directory') {
+				await readDir(entry, entryPath);
 			}
+
+			await saveFile(entryPath, entry);
 		}
 	}
 

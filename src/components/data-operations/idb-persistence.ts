@@ -133,7 +133,9 @@ export async function getFile(name: string) {
 }
 
 export async function getAllFiles() {
-	return (await getAllIDBItem<FileSystemHandle>('files')).filter((item) => item.kind === 'file' && item.name !== 'data.json') as FileSystemFileHandle[];
+	const files = await getAllIDBItem<FileSystemHandle>('files');
+
+	return files.filter((item) => item.kind === 'file' && item.name !== 'data.json') as FileSystemFileHandle[];
 }
 
 export async function saveCover(id: string, cover: File) {
