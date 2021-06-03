@@ -63,7 +63,16 @@ export async function extractCoversFromFiles() {
 				const savedCover = await getCover(id);
 
 				if (!savedCover) {
-					const { width, height, data: coverData } = await extractCover(await file.getFile());
+					const isPermissionGranted = await file.requestPermission({ mode: 'read' }) === 'granted';
+
+					// eslint-disable-next-line max-depth
+					if (!isPermissionGranted) {
+						await file.requestPermission({ mode: 'read' });
+					}
+
+					const itemFile = await file.getFile();
+
+					const { width, height, data: coverData } = await extractCover(itemFile);
 					const optimizedCover = await optimize(coverData.buffer, { width, height });
 					const coverName = `${id}.jpg`;
 

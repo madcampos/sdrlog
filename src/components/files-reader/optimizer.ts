@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention, camelcase */
 
-import mozjpegModule from '../../../lib/mozjpeg/mozjpeg';
-import defaultEncodeOptions from '../../../lib/mozjpeg/options';
+import mozjpegModule from '../../../lib/mozjpeg/mozjpeg.js';
+import defaultEncodeOptions from '../../../lib/mozjpeg/options.js';
 
 const IMAGE_CHANNELS = 4;
 
