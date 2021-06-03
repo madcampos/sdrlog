@@ -31,7 +31,7 @@ class MenuBar extends HTMLElement {
 					<hr>
 					<dropdown-menu-item data-action="all">📚 All</dropdown-menu-item>
 				</dropdown-menu>
-
+				<search-box></search-box>
 				<modal-dialog>
 					<button slot="trigger">ℹ️</button>
 					<h1 slot="title">Information</h1>

@@ -442,7 +442,8 @@
 		}],
 		"@typescript-eslint/sort-type-union-intersection-members": "off",
 		"@typescript-eslint/strict-boolean-expressions": ["error", {
-			"allowNullableString": true
+			"allowNullableString": true,
+			"allowNullableObject": true
 		}],
 		"@typescript-eslint/switch-exhaustiveness-check": "error",
 		"@typescript-eslint/triple-slash-reference": ["error", { "path": "never", "types": "never", "lib": "never" }],
