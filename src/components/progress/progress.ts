@@ -19,7 +19,7 @@ export class ProgressOverlay extends HTMLElement {
 				<h1><slot name="title"></slot></h1>
 				<progress></progress>
 				<p><span></span></p>
-				<p><slot name="info"></slot></p>
+				<slot name="info"></slot>
 			</dialog>
 		`;
 
@@ -56,16 +56,19 @@ export class ProgressOverlay extends HTMLElement {
 	setTotal(total: number) {
 		this.#total = total;
 		this.#progress.max = total;
+		this.#count.hidden = false;
 		this.#count.innerText = `${this.#current} / ${this.#total}`;
 	}
 
 	setValue(value: number) {
 		this.#current = value;
+		this.#progress.value = value;
 		this.#count.innerText = `${this.#current} / ${this.#total}`;
 	}
 
 	increment() {
 		this.#current += 1;
+		this.#progress.value = this.#current;
 		this.#count.innerText = `${this.#current} / ${this.#total}`;
 	}
 
