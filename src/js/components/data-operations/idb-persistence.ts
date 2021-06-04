@@ -1,5 +1,5 @@
 /* eslint-disable id-length */
-import type { Material } from '../../../data/data';
+import type { Material } from '../../../../data/data';
 
 const IDB_VERSION = 2;
 let database: IDBDatabase | undefined;
@@ -87,6 +87,23 @@ async function getAllIDBItem<T = null>(collection: Collections) {
 	});
 }
 
+async function getAllIDBKeys(collection: Collections) {
+	const db = await databaseFactory();
+	const transaction = db.transaction([collection], 'readonly');
+	const store = transaction.objectStore(collection);
+	const request = store.getAllKeys();
+
+	return new Promise<IDBValidKey[]>((resolve, reject) => {
+		request.onsuccess = () => {
+			resolve(request.result);
+		};
+
+		request.onerror = () => {
+			reject(request.error);
+		};
+	});
+}
+
 async function setIDBItem<T = undefined>(collection: Collections, name: IDBValidKey, value: T) {
 	const db = await databaseFactory();
 	const transaction = db.transaction([collection], 'readwrite');
@@ -156,6 +173,10 @@ export async function getMaterial(id: IDBValidKey) {
 
 export async function getMaterials() {
 	return getAllIDBItem<Material>('items');
+}
+
+export async function getMaterialIds() {
+	return getAllIDBKeys('items');
 }
 
 export async function saveMaterial(id: IDBValidKey, material: Material) {

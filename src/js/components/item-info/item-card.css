@@ -1,0 +1,11 @@
+div {
+	border: medium solid black;
+	cursor: pointer;
+	width: 15rem;
+	display: inline-block;
+}
+
+img {
+	width: 100%;
+	object-fit: contain;
+}

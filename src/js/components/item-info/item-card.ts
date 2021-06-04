@@ -1,4 +1,5 @@
 import { getCover, getMaterial } from '../data-operations/idb-persistence';
+import { ItemDetails } from './item-details';
 
 export class ItemCard extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
@@ -14,16 +15,22 @@ export class ItemCard extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<figure>
-				<img
-					class="thumb"
-					decoding="async"
-					loading="lazy"
-					role="presentation"
-					src="/img/covers/fallback.svg"
-				/>
-			</figure>
-			<h4></h4>
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
+			<div>
+				<figure>
+					<img
+						width="200"
+						height="200"
+						decoding="async"
+						loading="lazy"
+						role="presentation"
+						src="/img/covers/fallback.svg"
+					/>
+				</figure>
+				<h4>
+					<progress></progress>
+				</h4>
+			</div>
 		`;
 
 		this.#title = this.#root.querySelector('h4') as HTMLHeadingElement;
@@ -35,13 +42,18 @@ export class ItemCard extends HTMLElement {
 		if (this.getAttribute('id') ?? id) {
 			// eslint-disable-next-line @typescript-eslint/no-floating-promises
 			this.setMaterial(this.getAttribute('id') ?? id ?? '');
-		} else {
-			this.remove();
 		}
+
+		this.addEventListener('click', async () => {
+			console.log('click');
+			await ItemDetails.openMaterialModal(this.getAttribute('id') as string);
+		});
 	}
 
-	async attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {
-		await this.setMaterial(newValue);
+	async attributeChangedCallback(_name: string, oldValue: string, newValue: string) {
+		if (oldValue !== newValue) {
+			await this.setMaterial(newValue);
+		}
 	}
 
 	async setMaterial(id: string) {
@@ -52,6 +64,7 @@ export class ItemCard extends HTMLElement {
 
 			this.#title.innerText = material.name;
 			this.setAttribute('title', material.name);
+			this.setAttribute('id', id);
 
 			if (cover) {
 				this.#thumb.src = URL.createObjectURL(cover);

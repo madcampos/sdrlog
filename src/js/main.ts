@@ -1,6 +1,8 @@
 /* eslint-disable no-console*/
 import './components/components';
 import { fetchItems } from './components/data-operations/data-import';
+import { getMaterialIds } from './components/data-operations/idb-persistence';
+import { ItemCard } from './components/item-info/item-card';
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js').then(() => {
@@ -14,6 +16,14 @@ if ('serviceWorker' in navigator) {
 
 document.addEventListener('DOMContentLoaded', async () => {
 	await fetchItems();
+
+	const materials = await getMaterialIds();
+
+	for (const materialId of materials) {
+		const card = new ItemCard(materialId as string);
+
+		document.body.appendChild(card);
+	}
 
 	document.querySelector('#load-overlay')?.remove();
 });

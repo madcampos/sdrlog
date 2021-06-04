@@ -1,0 +1,21 @@
+div {
+	max-width: 30rem;
+	overflow: auto;
+}
+
+pre {
+	font-size: inherit;
+	font-family: inherit;
+	white-space: pre-wrap;
+}
+
+img {
+	width: 5rem;
+	height: 5rem;
+	object-fit: contain;
+}
+
+#cover {
+	height: 15rem;
+	width: 15rem;
+}
