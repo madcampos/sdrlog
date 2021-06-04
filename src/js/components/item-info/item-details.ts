@@ -152,7 +152,31 @@ export class ItemDetails extends HTMLElement {
 		this.#modal.close();
 	}
 
+	resetMaterial() {
+		// TODO: add skeleton loaders
+		this.#name.innerHTML = '';
+		this.#sku.innerHTML = '';
+		this.#edition.innerHTML = '';
+		this.#gamedate.innerHTML = '';
+		this.#category.innerHTML = '';
+		this.#category.title = '';
+		this.#type.innerHTML = '';
+		this.#type.title = '';
+		this.#language.innerHTML = '';
+		this.#releasedate.innerHTML = '';
+		this.#publisher.innerHTML = '';
+		this.#status.innerHTML = '';
+		this.#names.innerHTML = '';
+		this.#files.innerHTML = '';
+		this.#links.innerHTML = '';
+		this.#cover.src = '/img/covers/fallback.svg';
+		this.#notes.innerHTML = '';
+		this.#description.innerHTML = '';
+	}
+
 	async setMaterial(id: string) {
+		this.resetMaterial();
+
 		const material = await getMaterial(id);
 
 		if (material) {
