@@ -1,6 +1,6 @@
 /* eslint-disable no-console*/
-import '../components/components';
-import { fetchItems } from '../components/data-operations/data-import';
+import './components/components';
+import { fetchItems } from './components/data-operations/data-import';
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js').then(() => {

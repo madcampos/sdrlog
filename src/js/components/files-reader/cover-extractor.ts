@@ -1,4 +1,4 @@
-import type { PDFDocumentProxy } from '../../../lib/pdfjs/pdf.js';
+import type { PDFDocumentProxy } from '../../../../lib/pdfjs/pdf.js';
 
 import { ProgressOverlay } from '../progress/progress';
 import { getAllFiles, getCover, saveCover } from '../data-operations/idb-persistence';
