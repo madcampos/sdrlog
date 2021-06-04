@@ -19,10 +19,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	const materials = await getMaterialIds();
 
-	for (const materialId of materials) {
-		const card = new ItemCard(materialId as string);
+	for await (const materialId of materials) {
+		const card = new ItemCard();
 
-		document.body.appendChild(card);
+		await card.setMaterial(materialId as string);
+		document.querySelector('main')?.appendChild(card);
 	}
 
 	document.querySelector('#load-overlay')?.remove();

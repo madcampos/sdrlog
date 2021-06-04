@@ -60,11 +60,11 @@ export class ItemCard extends HTMLElement {
 		const material = await getMaterial(id);
 
 		if (material) {
-			const cover = await getCover(id);
-
 			this.#title.innerText = material.name;
 			this.setAttribute('title', material.name);
 			this.setAttribute('id', id);
+
+			const cover = await getCover(id);
 
 			if (cover) {
 				this.#thumb.src = URL.createObjectURL(cover);
