@@ -26,7 +26,11 @@ export interface Material {
 	releaseDate?: string[],
 	status?: 'missing'|'outofscope'|'canceled',
 	originalLanguage?: string,
-	notes?: string
+	notes?: string,
+	links?: {
+		title: string,
+		url: string
+	}[]
 }
 
 export interface SDRLogData {
