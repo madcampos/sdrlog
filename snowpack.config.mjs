@@ -1,7 +1,6 @@
-/* eslint-env node */
-// eslint-disable-next-line no-unused-vars
+// @ts-nocheck
+/* eslint-disable */
 import { IncomingMessage, ServerResponse } from 'http';
-import { basename, resolve as resolvePath } from 'path';
 import { readFileSync } from 'fs';
 
 const cert = readFileSync('./snowpack.crt');
@@ -16,28 +15,6 @@ const key = readFileSync('./snowpack.key');
  *
  * @returns {ServerResponse} Returns a response.
  */
-
-/** @type RequestHandler */
-function handleIcons(req, res) {
-	try {
-		const fileExtensionLength = -3;
-		const fileName = basename(req.url);
-
-		const file = readFileSync(resolvePath('dist/img/icons', fileName));
-
-		const mimes = {
-			jpg: 'image/jpeg',
-			png: 'image/png',
-			svg: 'image/svg+xml'
-		};
-
-		res.setHeader('Content-Type', mimes[fileName.slice(fileExtensionLength)]);
-		res.end(file);
-	} catch {
-		res.statusCode = 404;
-		res.end('Not found');
-	}
-}
 
 /** @type RequestHandler */
 function handleServiceWorker(_req, res) {
@@ -65,25 +42,6 @@ self.addEventListener('activate', () => {
 `);
 }
 
-/** @type RequestHandler */
-function handleImage(req, res) {
-	const fileName = basename(req.url);
-
-	res.setHeader('Content-Type', 'image/jpeg');
-
-	try {
-		const file = readFileSync(resolvePath('covers', fileName));
-
-
-		res.end(file);
-	} catch {
-		// eslint-disable-next-line no-console
-		console.log(`IMAGE NOT FOUND: ${fileName}`);
-
-		res.end(readFileSync(resolvePath('src/img/full/000-fallback.jpg')));
-	}
-}
-
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
 	root: './src',
@@ -97,21 +55,6 @@ export default {
 			match: 'all',
 			src: '/sw.js',
 			dest: handleServiceWorker
-		},
-		{
-			match: 'all',
-			src: '/img/thumb/.*',
-			dest: handleImage
-		},
-		{
-			match: 'all',
-			src: '/img/full/.*',
-			dest: handleImage
-		},
-		{
-			match: 'all',
-			src: '/img/icons/.*',
-			dest: handleIcons
 		}
 	],
 	optimize: {
