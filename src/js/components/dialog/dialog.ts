@@ -7,26 +7,21 @@ export class ModalDialog extends HTMLElement {
 		super();
 		this.#root = this.attachShadow({ mode: 'closed' });
 
-		const template = document.createElement('template');
-
-		template.innerHTML = `
+		this.#root.innerHTML = `
 			<slot name="trigger"></slot>
 			<dialog>
-				<form method="dialog">
-					<header>
-						<div>
-							<slot name="title"></slot>
-						</div>
-						<button type="cancel">❌</button>
-					</header>
-					<article>
-						<slot></slot>
-					</article>
-				</form>
+				<header>
+					<div>
+						<slot name="title"></slot>
+					</div>
+					<button id="close" title="Close window">❌</button>
+				</header>
+				<article>
+					<slot></slot>
+				</article>
 			</dialog>
 		`;
 
-		this.#root.appendChild(template.content.cloneNode(true));
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
 		const triggerSlot = this.#root.querySelector('slot[name=trigger]') as HTMLSlotElement;
@@ -37,6 +32,10 @@ export class ModalDialog extends HTMLElement {
 			evt.stopPropagation();
 
 			this.#dialog.showModal();
+		});
+
+		this.#root.querySelector('#close')?.addEventListener('click', () => {
+			this.#dialog.close();
 		});
 
 		this.#dialog.addEventListener('click', (evt) => {
