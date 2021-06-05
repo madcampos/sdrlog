@@ -7,24 +7,24 @@ class DropdownMenuItem extends HTMLElement {
 		super();
 		this.#root = this.attachShadow({ mode: 'closed' });
 
-		const template = document.createElement('template');
-		const icon = this.getAttribute('icon');
-
-		template.innerHTML = `
+		this.#root.innerHTML = `
 			<button>
-				<img src="${icon ?? ''}">
+				<img role="presentation"/>
 				<span>
 					<slot></slot>
 				</span>
 			</button>
 		`;
 
-		this.#root.appendChild(template.content.cloneNode(true));
 		this.#icon = this.#root.querySelector('img') as HTMLImageElement;
 	}
 
 	attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {
 		this.#icon.src = newValue;
+	}
+
+	connectedCallbak() {
+		this.#icon.src = this.getAttribute('icon') ?? '';
 	}
 }
 

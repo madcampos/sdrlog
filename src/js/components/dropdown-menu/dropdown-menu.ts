@@ -8,19 +8,15 @@ class DropdownMenu extends HTMLElement {
 		super();
 		this.#root = this.attachShadow({ mode: 'closed' });
 
-		const template = document.createElement('template');
-		const label = this.getAttribute('label');
-
-		template.innerHTML = `
+		this.#root.innerHTML = `
 			<span>
-				<button>${label ?? ''}</button>
+				<button></button>
 				<dialog>
 					<slot></slot>
 				</dialog>
 			</span>
 		`;
 
-		this.#root.appendChild(template.content.cloneNode(true));
 		this.#button = this.#root.querySelector('button') as HTMLButtonElement;
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
@@ -37,7 +33,11 @@ class DropdownMenu extends HTMLElement {
 	}
 
 	attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {
-		(this.#root.querySelector('button') as HTMLButtonElement).innerHTML = newValue;
+		this.#button.innerHTML = newValue;
+	}
+
+	connectedCallback() {
+		this.#button.innerHTML = this.getAttribute('label') ?? '';
 	}
 }
 
