@@ -6,3 +6,7 @@ import './progress/progress';
 import './search-box/search-box';
 import './item-info/item-card';
 import './item-info/item-details';
+import './skeleton-loader/skeleton-loader';
+import './edit-box/edit-box';
+import './edit-box/edit-select';
+import './edit-box/edit-text';
