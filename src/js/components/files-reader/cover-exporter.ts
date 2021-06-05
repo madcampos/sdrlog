@@ -5,7 +5,10 @@ export async function saveCoversToFolder() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Export covers' });
 
 	try {
-		const coversFolder = await window.showDirectoryPicker();
+		const coversFolder = await window.showDirectoryPicker({
+			id: 'coversFolder',
+			startIn: 'downloads'
+		});
 		const covers = await getAllCovers();
 
 		progressOverlay.setTotal(covers.length);

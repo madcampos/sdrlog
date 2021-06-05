@@ -18,7 +18,10 @@ export async function readFiles() {
 	}
 
 	try {
-		const dir = await window.showDirectoryPicker();
+		const dir = await window.showDirectoryPicker({
+			id: 'filesReader',
+			startIn: 'downloads'
+		});
 
 		await saveFile('/', dir);
 		await readDir(dir, '');

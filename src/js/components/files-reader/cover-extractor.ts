@@ -127,13 +127,18 @@ export async function importCoversFromFolder() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Import covers' });
 
 	try {
-		const dir = await window.showDirectoryPicker();
+		const dir = await window.showDirectoryPicker({
+			id: 'coversFolder',
+			startIn: 'downloads'
+		});
 
 		for await (const entry of dir.values()) {
 			if (entry.kind === 'file') {
 				const file = await entry.getFile();
 
-				await saveCover(file.name.replace('.jpg', ''), file);
+				if (file.type === 'image/jpeg') {
+					await saveCover(file.name.replace('.jpg', ''), file);
+				}
 			}
 		}
 	} catch (err) {

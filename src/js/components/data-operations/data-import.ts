@@ -1,4 +1,4 @@
-import type { SDRLogData } from '../../../data/data';
+import type { SDRLogData } from '../../../../data/data';
 import { ProgressOverlay } from '../progress/progress';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
@@ -66,6 +66,9 @@ export async function requestDataFileFromUser() {
 
 	try {
 		const [file] = await window.showOpenFilePicker({
+			// @ts-expect-error
+			id: 'dataFile',
+			startIn: 'downloads',
 			excludeAcceptAllOption: false,
 			types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
 		});

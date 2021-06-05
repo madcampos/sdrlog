@@ -9,6 +9,10 @@ export async function exportDataFile() {
 
 		if (items.length > 0) {
 			const fileHandler = await window.showSaveFilePicker({
+				// @ts-expect-error
+				id: 'dataFile',
+				startIn: 'downloads',
+				suggestedName: 'data.json',
 				excludeAcceptAllOption: true,
 				types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
 			});
