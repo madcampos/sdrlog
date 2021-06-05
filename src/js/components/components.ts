@@ -10,3 +10,5 @@ import './skeleton-loader/skeleton-loader';
 import './edit-box/edit-box';
 import './edit-box/edit-select';
 import './edit-box/edit-text';
+import './edit-box/edit-list';
+import './edit-box/edit-list-item';
