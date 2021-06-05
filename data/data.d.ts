@@ -25,7 +25,7 @@ export interface Material {
 	gameDate?: string,
 	releaseDate?: string[],
 	status?: 'missing'|'outofscope'|'canceled',
-	originalLanguage?: string,
+	originalLanguage: string,
 	notes?: string,
 	links?: {
 		title: string,

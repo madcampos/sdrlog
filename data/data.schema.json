@@ -10,7 +10,7 @@
 			"items": {
 				"type": "object",
 				"description": "The list of materials.",
-				"required": ["category", "type", "sku", "name", "description", "edition", "publisher"],
+				"required": ["category", "type", "sku", "name", "description", "edition", "publisher", "originalLanguage"],
 				"properties": {
 					"category": {
 						"enum": ["rulebook", "sourcebook", "mission", "magazine", "novel", "videogame", "tcg", "boardgame", "misc"],
