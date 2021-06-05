@@ -397,5 +397,6 @@
 				}
 			]
 		}
-	]
+	],
+	"capture_links": "existing-client-navigate"
 }
