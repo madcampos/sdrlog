@@ -1,7 +1,7 @@
 import type { PDFDocumentProxy } from '../../../../lib/pdfjs/pdf.js';
 
 import { ProgressOverlay } from '../progress/progress';
-import { getAllFiles, getCover, saveCover } from '../data-operations/idb-persistence';
+import { getAllFiles, getCover, saveCover, saveThumb } from '../data-operations/idb-persistence';
 import { optimize } from './optimizer';
 import { isNameExcluded } from './names-filter-list';
 import { extractMetadataFromFileName } from './files-reader';
@@ -19,6 +19,7 @@ const pdfjs = window['pdfjs-dist/build/pdf'] as PDFjsModule;
 pdfjs.GlobalWorkerOptions.workerSrc = '/lib/pdfjs/pdf.worker.js';
 
 const COVER_WIDTH = 2048;
+const THUMB_WIDTH = 256;
 
 const canvas = new OffscreenCanvas(COVER_WIDTH, COVER_WIDTH);
 const canvasContext = canvas.getContext('2d') as OffscreenCanvasRenderingContext2D;
@@ -29,21 +30,40 @@ async function extractCover(file: File) {
 	const pdf = await pdfjs.getDocument({ url: fileURL }).promise;
 	const page = await pdf.getPage(1);
 	const originalViewport = page.getViewport({ scale: 1 });
-	const scale = COVER_WIDTH / originalViewport.width;
-	const viewport = page.getViewport({ scale });
 
-	canvas.height = viewport.height;
-	canvas.width = viewport.width;
+	const coverScale = COVER_WIDTH / originalViewport.width;
+	const coverViewport = page.getViewport({ scale: coverScale });
+
+	canvas.height = coverViewport.height;
+	canvas.width = coverViewport.width;
 
 	await page.render({
 		canvasContext,
-		viewport
+		viewport: coverViewport
 	}).promise;
+
+	const cover = canvasContext.getImageData(0, 0, canvas.width, canvas.height);
+
+	const thumbScale = THUMB_WIDTH / originalViewport.width;
+	const thumbViewport = page.getViewport({ scale: thumbScale });
+
+	canvas.height = thumbViewport.height;
+	canvas.width = thumbViewport.width;
+
+	await page.render({
+		canvasContext,
+		viewport: thumbViewport
+	}).promise;
+
+	const thumb = canvasContext.getImageData(0, 0, canvas.width, canvas.height);
 
 	// eslint-disable-next-line @typescript-eslint/no-floating-promises
 	pdf.destroy();
 
-	return canvasContext.getImageData(0, 0, canvas.width, canvas.height);
+	return {
+		cover,
+		thumb
+	};
 }
 
 export async function extractCoversFromFiles() {
@@ -72,15 +92,26 @@ export async function extractCoversFromFiles() {
 
 					const itemFile = await file.getFile();
 
-					const { width, height, data: coverData } = await extractCover(itemFile);
-					const optimizedCover = await optimize(coverData.buffer, { width, height });
-					const coverName = `${id}.jpg`;
+					const { cover, thumb } = await extractCover(itemFile);
+					const fileName = `${id}.jpg`;
 
-					const cover = new File([optimizedCover], coverName, {
+					const { width: coverWidth, height: coverHeight, data: coverData } = cover;
+					const optimizedCover = await optimize(coverData.buffer, { width: coverWidth, height: coverHeight });
+
+					const coverFile = new File([optimizedCover], fileName, {
 						type: 'image/jpeg'
 					});
 
-					await saveCover(id, cover);
+					await saveCover(id, coverFile);
+
+					const { width: thumbWidth, height: thumbHeight, data: thumbData } = thumb;
+					const optimizedThumb = await optimize(thumbData.buffer, { width: thumbWidth, height: thumbHeight });
+
+					const thumbFile = new File([optimizedThumb], fileName, {
+						type: 'image/jpeg'
+					});
+
+					await saveThumb(id, thumbFile);
 				}
 			}
 		}

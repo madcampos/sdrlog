@@ -1,4 +1,4 @@
-import { getCover, getMaterial } from '../data-operations/idb-persistence';
+import { getMaterial, getThumb } from '../data-operations/idb-persistence';
 import { ItemDetails } from './item-details';
 
 export class ItemCard extends HTMLElement {
@@ -69,7 +69,7 @@ export class ItemCard extends HTMLElement {
 			}
 		}
 
-		const cover = await getCover(id);
+		const cover = await getThumb(id);
 
 		if (cover) {
 			this.#thumb.src = URL.createObjectURL(cover);

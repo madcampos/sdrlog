@@ -29,6 +29,10 @@ async function databaseFactory() {
 				const coverStore = database.createObjectStore('covers');
 
 				coverStore.createIndex('name', 'name', { unique: true });
+
+				const thumbsStore = database.createObjectStore('thumbs');
+
+				thumbsStore.createIndex('name', 'name', { unique: true });
 			};
 
 			dbRequest.onsuccess = () => {
@@ -45,7 +49,7 @@ async function databaseFactory() {
 	});
 }
 
-type Collections = 'items' | 'covers' | 'files';
+type Collections = 'items' | 'covers' | 'thumbs' | 'files';
 
 async function getIDBItem<T = null>(collection: Collections, name: IDBValidKey) {
 	const db = await databaseFactory();
@@ -147,6 +151,14 @@ export async function getAllFiles() {
 	const files = await getAllIDBItem<FileSystemHandle>('files');
 
 	return files.filter((item) => item.kind === 'file' && item.name !== 'data.json') as FileSystemFileHandle[];
+}
+
+export async function saveThumb(id: string, thumb: File) {
+	return setIDBItem<File>('thumbs', id, thumb);
+}
+
+export async function getThumb(id: string) {
+	return getIDBItem<File>('thumbs', id);
 }
 
 export async function saveCover(id: string, cover: File) {
