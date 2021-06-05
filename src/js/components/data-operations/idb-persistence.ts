@@ -17,15 +17,9 @@ async function databaseFactory() {
 				const itemsStore = database.createObjectStore('items');
 
 				itemsStore.createIndex('sku', 'sku', { multiEntry: true, unique: false });
-				itemsStore.createIndex('publisher', 'publisher', { multiEntry: true, unique: false });
-				itemsStore.createIndex('releaseDate', 'releaseDate', { multiEntry: true, unique: false });
 				itemsStore.createIndex('name', 'name', { unique: false });
 				itemsStore.createIndex('category', 'category', { unique: false });
 				itemsStore.createIndex('type', 'type', { unique: false });
-				itemsStore.createIndex('edition', 'edition', { unique: false });
-				itemsStore.createIndex('status', 'status', { unique: false });
-				itemsStore.createIndex('gameDate', 'gameDate', { unique: false });
-				itemsStore.createIndex('originalLanguage', 'originalLanguage', { unique: false });
 
 				const fileStore = database.createObjectStore('files');
 
@@ -34,7 +28,7 @@ async function databaseFactory() {
 
 				const coverStore = database.createObjectStore('covers');
 
-				coverStore.createIndex('name', 'name', { unique: false });
+				coverStore.createIndex('name', 'name', { unique: true });
 			};
 
 			dbRequest.onsuccess = () => {
