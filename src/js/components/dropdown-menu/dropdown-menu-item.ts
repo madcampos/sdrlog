@@ -23,7 +23,7 @@ class DropdownMenuItem extends HTMLElement {
 		this.#icon.src = newValue;
 	}
 
-	connectedCallbak() {
+	connectedCallback() {
 		this.#icon.src = this.getAttribute('icon') ?? '';
 	}
 }

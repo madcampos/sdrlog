@@ -43,7 +43,7 @@ export class SkeletonLoader extends HTMLElement {
 		}
 	}
 
-	connectedCallbak() {
+	connectedCallback() {
 		if (this.getAttribute('loaded')) {
 			this.#content.hidden = false;
 			this.#loader.hidden = true;
