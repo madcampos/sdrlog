@@ -48,6 +48,7 @@ export default {
 	mount: {
 		src: '/',
 		data: '/data',
+		covers: '/covers',
 		lib: { url: '/lib', resolve: false, 'static': true }
 	},
 	routes: [
