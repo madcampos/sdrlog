@@ -65,6 +65,7 @@ export class ItemDetails extends HTMLElement {
 		this.#root.innerHTML = `
 			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<modal-dialog>
+				<button slot="title">✏️ Edit</button>
 				<edit-box id="name" slot="title" placeholder="Item name"></edit-box>
 
 				<header>
@@ -190,6 +191,7 @@ export class ItemDetails extends HTMLElement {
 						<span slot="label">Description</span>
 					</edit-text>
 				</article>
+				<button hidden>💾 Save</button>
 			</modal-dialog>
 		`;
 
