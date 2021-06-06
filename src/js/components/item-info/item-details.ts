@@ -40,6 +40,10 @@ export class ItemDetails extends HTMLElement {
 
 	#root: ShadowRoot;
 	#modal: ModalDialog;
+	#editButton: HTMLButtonElement;
+	#saveButton: HTMLButtonElement;
+
+	#isEditing = false;
 
 	#name: EditBox;
 	#sku: EditList;
@@ -65,7 +69,6 @@ export class ItemDetails extends HTMLElement {
 		this.#root.innerHTML = `
 			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<modal-dialog>
-				<button slot="title">✏️ Edit</button>
 				<edit-box id="name" slot="title" placeholder="Item name"></edit-box>
 
 				<header>
@@ -157,6 +160,22 @@ export class ItemDetails extends HTMLElement {
 				<aside>
 					<edit-list id="names">
 						<span slot="label">Names published</span>
+
+						<select slot="input">
+							<option value="en-US">🇺🇸 English</option>
+							<option value="de-DE">🇩🇪 Deutch</option>
+							<option value="fr-FR">🇫🇷 French</option>
+							<option value="jp-JP">🇯🇵 Japanese</option>
+							<option value="es-ES">🇪🇸 Spanish</option>
+							<option value="hu-HU">🇭🇺 Hungarian</option>
+							<option value="it-IT">🇮🇹 Italian</option>
+							<option value="pt-BR">🇧🇷 Portuguese</option>
+							<option value="cs-CZ">🇨🇿 Czech</option>
+							<option value="he-IL">🇮🇱 Hebrew</option>
+							<option value="pl-PL">🇵🇱 Polish</option>
+							<option value="fi-FI">🇫🇮 Finish</option>
+						</select>
+
 						<input slot="input"/>
 					</edit-list>
 
@@ -191,11 +210,16 @@ export class ItemDetails extends HTMLElement {
 						<span slot="label">Description</span>
 					</edit-text>
 				</article>
-				<button hidden>💾 Save</button>
+				<footer>
+					<button id="edit">✏️ Edit</button>
+					<button hidden id="save">💾 Save</button>
+				</footer>
 			</modal-dialog>
 		`;
 
 		this.#modal = this.#root.querySelector('modal-dialog') as ModalDialog;
+		this.#editButton = this.#root.querySelector('#edit') as HTMLButtonElement;
+		this.#saveButton = this.#root.querySelector('#save') as HTMLButtonElement;
 
 		this.#name = this.#root.querySelector('#name') as EditBox;
 		this.#sku = this.#root.querySelector('#sku') as EditList;
@@ -213,6 +237,22 @@ export class ItemDetails extends HTMLElement {
 		this.#cover = this.#root.querySelector('#cover') as HTMLImageElement;
 		this.#notes = this.#root.querySelector('#notes') as EditText;
 		this.#description = this.#root.querySelector('#description') as EditText;
+
+		this.#editButton.addEventListener('click', () => {
+			this.toggleEdit();
+		});
+
+		this.#saveButton.addEventListener('click', () => {
+			// TODO: save material
+		});
+	}
+
+	get isEditing() {
+		return this.#isEditing;
+	}
+
+	set isEditing(isEditing: boolean) {
+		this.#isEditing = isEditing;
 	}
 
 	attributeChangedCallback() {
@@ -232,6 +272,46 @@ export class ItemDetails extends HTMLElement {
 
 	close() {
 		this.#modal.close();
+	}
+
+	toggleEdit(resetState?: boolean, isNew?: boolean) {
+		const editingStatus = resetState ?? !this.isEditing;
+
+		this.isEditing = editingStatus;
+
+		this.#name.edit = editingStatus;
+		this.#sku.edit = editingStatus;
+		this.#edition.edit = editingStatus;
+		this.#gameDate.edit = editingStatus;
+		this.#category.edit = editingStatus;
+		this.#type.edit = editingStatus;
+		this.#language.edit = editingStatus;
+		this.#releaseDate.edit = editingStatus;
+		this.#publisher.edit = editingStatus;
+		this.#status.edit = editingStatus;
+		this.#names.edit = editingStatus;
+		this.#files.edit = editingStatus;
+		this.#links.edit = editingStatus;
+		this.#notes.edit = editingStatus;
+		this.#description.edit = editingStatus;
+
+		if (this.#status.value === '') {
+			this.#status.hidden = !editingStatus;
+		}
+
+		if (isNew === true) {
+			this.#editButton.hidden = true;
+		} else {
+			this.#editButton.hidden = false;
+		}
+
+		if (this.isEditing) {
+			this.#editButton.innerText = '❌ Cancel edit';
+			this.#saveButton.hidden = false;
+		} else {
+			this.#editButton.innerText = '✏️ Edit Material';
+			this.#saveButton.hidden = true;
+		}
 	}
 
 	resetMaterial() {
@@ -256,6 +336,7 @@ export class ItemDetails extends HTMLElement {
 
 	async setMaterial(id: string) {
 		this.resetMaterial();
+		this.toggleEdit(false);
 
 		const material = await getMaterial(id);
 
@@ -297,9 +378,10 @@ export class ItemDetails extends HTMLElement {
 			});
 
 			if (material.status) {
-				this.#status.value = material.status;
 				this.#status.hidden = false;
 			}
+
+			this.#status.value = material.status ?? '';
 
 			Object.entries(material.names ?? {}).forEach(([lang, name]) => {
 				this.#names.insertAdjacentHTML('beforeend', `
@@ -336,7 +418,7 @@ export class ItemDetails extends HTMLElement {
 		}
 	}
 
-	static async openMaterialModal(id: string) {
+	static async openMaterialModal(id?: string) {
 		let modal = document.querySelector<ItemDetails>('item-details');
 
 		if (!modal) {
@@ -347,7 +429,11 @@ export class ItemDetails extends HTMLElement {
 
 		modal.show();
 
-		await modal.setMaterial(id);
+		if (id) {
+			await modal.setMaterial(id);
+		} else {
+			modal.toggleEdit(true);
+		}
 	}
 }
 

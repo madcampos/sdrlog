@@ -1,4 +1,5 @@
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
+import { EditListItem } from './edit-list-item';
 
 export class EditList extends HTMLElement {
 	static get observedAttributes() { return ['edit', 'open']; }
@@ -115,6 +116,14 @@ export class EditList extends HTMLElement {
 		});
 	}
 
+	updateItems() {
+		const items = this.#items.assignedElements().filter((element) => element instanceof EditListItem) as EditListItem[];
+
+		items.forEach((item) => {
+			item.edit = this.edit;
+		});
+	}
+
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'edit') {
@@ -125,6 +134,8 @@ export class EditList extends HTMLElement {
 				} else {
 					this.#input.hidden = false;
 				}
+
+				this.updateItems();
 			}
 		}
 

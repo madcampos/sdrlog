@@ -5,7 +5,8 @@ const banList = [
 	'slot',
 	'edit',
 	'disabled',
-	'readonly'
+	'readonly',
+	'hidden'
 ];
 
 export class EditBox extends HTMLElement {

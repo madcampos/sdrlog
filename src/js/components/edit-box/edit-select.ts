@@ -4,7 +4,8 @@ const banList = [
 	'id',
 	'slot',
 	'edit',
-	'disabled'
+	'disabled',
+	'hidden'
 ];
 
 export class EditSelect extends HTMLElement {
@@ -26,7 +27,7 @@ export class EditSelect extends HTMLElement {
 				</label>
 				<skeleton-loader>
 					<select id="edit-box" disabled>
-						<option selected disabled hidden>Please select an option...</option>
+						<option selected disabled hidden value="">Please select an option...</option>
 					</select>
 				</skeleton-loader>
 				<div hidden>
