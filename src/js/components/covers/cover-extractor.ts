@@ -3,8 +3,8 @@ import type { PDFDocumentProxy } from '../../../../lib/pdfjs/pdf.js';
 import { ProgressOverlay } from '../progress/progress';
 import { getAllFiles, getCover, getMaterial, saveCover, saveThumb } from '../data-operations/idb-persistence';
 import { optimize } from './optimizer';
-import { isNameExcluded } from './names-filter-list';
-import { extractMetadataFromFileName, getFilePermission } from './files-reader';
+import { isNameExcluded } from '../files-reader/names-filter-list';
+import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
 
 interface PDFjsModule {
 	getDocument({ url }: { url: string }): { promise: Promise<PDFDocumentProxy> },

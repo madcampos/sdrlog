@@ -2,8 +2,8 @@ import type { ModalDialog } from '../dialog/dialog';
 
 import infoDialogData from './info-dialog';
 import { readFiles } from '../files-reader/files-reader';
-import { extractCoversFromFiles, importCoversFromFolder } from '../files-reader/cover-extractor';
-import { saveCoversToFolder } from '../files-reader/cover-exporter';
+import { extractCoversFromFiles, importCoversFromFolder } from '../covers/cover-extractor';
+import { saveCoversToFolder } from '../covers/cover-exporter';
 import { requestDataFileFromUser } from '../data-operations/data-import';
 import { exportDataFile } from '../data-operations/data-export';
 
