@@ -33,6 +33,16 @@ export async function readFiles() {
 	progressOverlay.remove();
 }
 
+export async function getFilePermission(file: FileSystemHandle, mode: 'read' | 'readwrite' = 'read') {
+	const isPermissionGranted = await file.queryPermission({ mode }) === 'granted';
+
+	if (isPermissionGranted) {
+		return true;
+	}
+
+	return await file.requestPermission({ mode }) === 'granted';
+}
+
 export function extractMetadataFromFileName(fileName: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+) - (?<title>.+)(?<extension>\.[a-z]+)$/u;
 	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? {};
