@@ -195,7 +195,7 @@
 		"lines-between-class-members": "off",
 		"line-comment-position": ["error", { "position": "above" }],
 		"linebreak-style": "error",
-		"lines-around-comment": "warn",
+		"lines-around-comment": "off",
 		"max-depth": "warn",
 		"max-len": [
 			"warn",
