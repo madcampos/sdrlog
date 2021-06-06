@@ -2,7 +2,7 @@ import type { ModalDialog } from '../dialog/dialog';
 
 import infoDialogData from './info-dialog';
 import { readFiles } from '../files-reader/files-reader';
-import { extractCoversFromFiles, importCoversFromFolder } from '../covers/cover-extractor';
+import { extractCoversFromFiles, importCoversFromFolder } from '../covers/fetch-covers';
 import { saveCoversToFolder } from '../covers/cover-exporter';
 import { requestDataFileFromUser } from '../data-operations/data-import';
 import { exportDataFile } from '../data-operations/data-export';

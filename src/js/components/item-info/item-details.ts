@@ -1,4 +1,5 @@
-import { getCover, getMaterial } from '../data-operations/idb-persistence';
+import { getMaterial } from '../data-operations/idb-persistence';
+import { fetchCover } from '../covers/fetch-covers';
 import type { ModalDialog } from '../dialog/dialog';
 import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
@@ -407,7 +408,7 @@ export class ItemDetails extends HTMLElement {
 
 			this.#links.loaded = true;
 
-			const cover = await getCover(id);
+			const cover = await fetchCover(id);
 
 			if (cover) {
 				this.#cover.src = URL.createObjectURL(cover);
