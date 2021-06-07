@@ -55,7 +55,7 @@ export async function canExtractCover(fileName: string, forceReplace = false) {
 }
 
 export async function canImportCover(file: File, forceReplace = false) {
-	if (file.type !== 'image/jpeg') {
+	if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
 		return false;
 	}
 
