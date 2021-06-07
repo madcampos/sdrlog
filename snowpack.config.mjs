@@ -1,5 +1,5 @@
 // @ts-nocheck
-/* eslint-disable */
+
 import { IncomingMessage, ServerResponse } from 'http';
 import { readFileSync } from 'fs';
 
@@ -20,26 +20,7 @@ const key = readFileSync('./snowpack.key');
 function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
-	return res.end(`// This service worker file is effectively a 'no-op' that will reset any
-// Previous service worker registered for the same host:port combination.
-
-// It is read and returned by a dev server middleware that is only loaded
-// During development.
-
-// In the production build, this file is replaced with an actual service worker
-// File that will precache your site's local assets.
-
-self.addEventListener('install', () => self.skipWaiting());
-self.addEventListener('activate', () => {
-	self.clients.matchAll({ type: 'window' }).then((windowClients) => {
-		for (const windowClient of windowClients) {
-			// Force open pages to refresh, so that they have a chance to load the
-			// Fresh navigation response from the local dev server.
-			windowClient.navigate(windowClient.url);
-		}
-	});
-});
-`);
+	return res.end("self.addEventListener('install', () => self.skipWaiting()); self.addEventListener('activate', () => self.clients.matchAll({ type: 'window' }).then((clients) => clients.forEach((window) => window.navigate(window.url)))); self.addEventListener('fetch', (evt) => evt.respondWith(fetch(evt.request)));");
 }
 
 /** @type {import("snowpack").SnowpackUserConfig } */
@@ -63,5 +44,8 @@ export default {
 		target: 'es2020'
 	},
 	devOptions: { secure: { key, cert } },
-	buildOptions: { out: 'dist' }
+	buildOptions: {
+		out: 'dist',
+		metaUrlPath: 'meta'
+	}
 };

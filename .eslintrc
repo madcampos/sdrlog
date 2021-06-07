@@ -15,6 +15,7 @@
 		"worker": true,
 		"shared-node-browser": true
 	},
+	"ignorePatterns": ["lib/**", "dist/**", "snowpack.config.mjs"],
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		// Possible errors

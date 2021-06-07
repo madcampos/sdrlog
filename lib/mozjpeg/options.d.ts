@@ -1,6 +1,5 @@
 import type { ColorSpaces } from './colorspaces';
 
-/* eslint-disable @typescript-eslint/naming-convention, camelcase */
 export interface MozJPEGOptions {
 	quality?: number,
 	baseline?: boolean,
