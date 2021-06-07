@@ -22,8 +22,6 @@ export class ItemCard extends HTMLElement {
 					<img
 						width="200"
 						height="200"
-						decoding="async"
-						loading="lazy"
 						role="presentation"
 						src="/img/covers/fallback.svg"
 					/>
