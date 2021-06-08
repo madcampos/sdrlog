@@ -152,6 +152,7 @@ export class ItemDetails extends HTMLElement {
 					<edit-select id="status" hidden>
 						<span slot="label">Status</span>
 
+						<option value="ok">✔️ OK</option>
 						<option value="missing">❌ Missing</option>
 						<option value="outofscope">⛔ Out of scope</option>
 						<option value="canceled">🚫 Canceled</option>
@@ -345,10 +346,9 @@ export class ItemDetails extends HTMLElement {
 			this.#name.value = material.name;
 
 			material.sku.forEach((sku) => {
-				const span = document.createElement('span');
-
-				span.innerText = sku;
-				this.#sku.appendChild(span);
+				this.#sku.insertAdjacentHTML('beforeend', `
+					<edit-list-item>${sku}</edit-list-item>
+				`);
 			});
 
 			this.#edition.value = material.edition.toString();
@@ -382,7 +382,7 @@ export class ItemDetails extends HTMLElement {
 				this.#status.hidden = false;
 			}
 
-			this.#status.value = material.status ?? '';
+			this.#status.value = material.status ?? 'ok';
 
 			Object.entries(material.names ?? {}).forEach(([lang, name]) => {
 				this.#names.insertAdjacentHTML('beforeend', `
