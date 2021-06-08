@@ -4,6 +4,8 @@ import { extractMetadataFromFileName, getFilePermission } from '../files-reader/
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
 
+const TIMEOUT_BEFORE_RELOAD = 3000;
+
 export async function fetchCover(id: string) {
 	let currentCover = await getCover(id);
 
@@ -63,6 +65,10 @@ export async function extractCoversFromFiles() {
 	}
 
 	progressOverlay.remove();
+
+	setTimeout(() => {
+		location.reload();
+	}, TIMEOUT_BEFORE_RELOAD);
 }
 
 export async function importCoversFromFolder() {
@@ -106,4 +112,8 @@ export async function importCoversFromFolder() {
 	}
 
 	progressOverlay.remove();
+
+	setTimeout(() => {
+		location.reload();
+	}, TIMEOUT_BEFORE_RELOAD);
 }
