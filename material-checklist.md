@@ -8,6 +8,8 @@ https://shadowhelix.de/Kategorie:Quellen_(Gratis)
 https://www.shadowiki.de/Kategorie:Quellen_(Online)
 https://www.shadowrunsixthworld.com/
 https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
+https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
+https://store.catalystgamelabs.com/products/shadowrun-high-rollers-shadowrun-corp-dice
 
 # Folders
 ***REMOVED***
