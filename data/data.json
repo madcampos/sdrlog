@@ -10506,247 +10506,19 @@
 		},
 		{
 			"sku": [
-				"WZK6400"
+				"WZK640X"
 			],
-			"name": "Shadowrun: Duels - The Street Deacon",
+			"name": "Shadowrun: Duels",
 			"category": "boardgame",
 			"type": "physical",
 			"originalLanguage": "en-US",
-			"description": "Male human vigilante",
+			"description": "It's 2063. The world of Shadowrun Duels is ruled by magical creatures and cybernetic weaponry. To survive, you'll need the latest laser-guided machine gun and the most arcane magic spells. Every piece of gear you use to customize your figure directly impacts your chances of survival. Game play is fast and deadly. On the mean streets of Shadowrun Duels, life is short — so come armed to the teeth!\n\nShadowrun Duels is a combat-oriented game in which shadowrunners wage battles of magic and technology to become champions of the Megasprawl!\n\nYour Figure\n\nYour shadowrunner is a uniquely painted and sculpted figure that represents one of the many types of shadowrunners that prowl the urban sprawl. Pose it on or off its base and equip it with an array of gear.\n\nYour Figure's Gear\n\nEach figure comes with gear. These pieces of gear can be swapped between characters, allowing you to customize your figure for each game. Each piece of gear has a point cost and a game bonus printed on it. Gear may give your character extra dice, damage protection in the form of shield, or both.\n\nYour Figure’s Base\n\nYour figure comes with a unique base stand, which is also a playing piece in the game. The base and its three combat dials display all your figure’s game information. The base details your figure’s name, the number and kind of dice it gets, its collector’s number, its point value, and its damage bonus.\n\nThe numbers and symbols on your figure’s combat dials represent its abilities in the game. As your figure receives damage, you’ll click its combat dials, changing the numbers that appear.",
 			"edition": 3,
 			"publisher": [
 				"WizKids Games"
 			],
 			"releaseDate": [
 				"2003-06-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6401"
-			],
-			"name": "Shadowrun: Duels - Kyushi",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Female Yakuza assassin",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-06-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6402"
-			],
-			"name": "Shadowrun: Duels - Liada",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Female elf mage",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-06-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6403"
-			],
-			"name": "Shadowrun: Duels - G-Dogg",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male ork bouncer",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-06-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6404"
-			],
-			"name": "Shadowrun: Duels - Lothan the Wise",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male troll mage",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-06-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6405"
-			],
-			"name": "Shadowrun: Duels - Silver Max",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male dwarf rigger",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-06-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6406"
-			],
-			"name": "Shadowrun: Duels - Kellan Colt",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Female human mage",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-10-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6407"
-			],
-			"name": "Shadowrun: Duels - Karkhov",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male street samurai",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-12-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6408"
-			],
-			"name": "Shadowrun: Duels - Midnight",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Female elf cat-burglar",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-12-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6409"
-			],
-			"name": "Shadowrun: Duels - Natokah",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male human shaman",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-12-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6410"
-			],
-			"name": "Shadowrun: Duels - Kross",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male ork bodyguard",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-12-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6411"
-			],
-			"name": "Shadowrun: Duels - Wolf Nev",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male troll ganger",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-12-01"
-			],
-			"gameDate": "2060-01-01",
-			"status": "outofscope"
-		},
-		{
-			"sku": [
-				"WZK6412"
-			],
-			"name": "Shadowrun: Duels - Draven von Drekill",
-			"category": "boardgame",
-			"type": "physical",
-			"originalLanguage": "en-US",
-			"description": "Male dwarf",
-			"edition": 3,
-			"publisher": [
-				"WizKids Games"
-			],
-			"releaseDate": [
-				"2003-12-01"
 			],
 			"gameDate": "2060-01-01",
 			"status": "outofscope"
@@ -11145,7 +10917,7 @@
 			"sku": [
 				"ONLINE2"
 			],
-			"name": "Shadowrun Chronicles: Boston Lockdown - iNFECTED",
+			"name": "Shadowrun Chronicles: Boston Lockdown - INFECTED!",
 			"category": "videogame",
 			"type": "digital",
 			"originalLanguage": "en-US",
@@ -11374,7 +11146,6 @@
 				"Catalyst Game Labs"
 			],
 			"gameDate": "2075-01-01",
-			"status": "missing",
 			"notes": "A compilation of previously released novels."
 		},
 		{
@@ -11738,7 +11509,6 @@
 				"2010-05-06"
 			],
 			"gameDate": "2050-01-01",
-			"status": "outofscope",
 			"notes": "Bundle of 4 novels."
 		},
 		{
@@ -11781,7 +11551,6 @@
 				"1997-01-01"
 			],
 			"gameDate": "2057-02-01",
-			"status": "missing",
 			"notes": "A complete description of France from the world of Shadowrun in 2057, with its history, political system, organization of society, organized crime, most powerful duchies, new creatures, new equipment, new spells, etc. French only. Considered semi/non-cannon."
 		},
 		{
@@ -12497,7 +12266,6 @@
 				"1996-01-01"
 			],
 			"gameDate": "2050-01-01",
-			"status": "missing",
 			"notes": "Shadowrun Hungary sourcebook (Hungarian)"
 		},
 		{
@@ -12809,9 +12577,12 @@
 				"27203"
 			],
 			"name": "Better than Bad",
-			"category": "novel",
+			"category": "sourcebook",
 			"type": "digital",
 			"originalLanguage": "en-US",
+			"names": {
+				"de-DE": "Schattenhelden"
+			},
 			"description": "Righteous Fire\n\nKill or be killed. Eye for an eye. Get yours while you can. Shadowrunners—and most of the other residents of the Sixth World—are told from birth that those are the principles you must follow to survive. Thinking of others is for suckers. Take care of your own and hope you don’t die early.\n\nBut some runners think that’s no way to live. They know the world is stacked against them, and they’ve decided they like those odds. They choose to fight for what they think is right. They use shadowruns to take from people who don’t deserve what they have and give to those who need it. They seek hidden information that can right wrongs. It’s not easy, and it doesn’t always pay as well as outright theft, but who do they tell stories about centuries later—Robin Hood, or the jerk thief from a few forests away who only thought of himself?\n\nBetter than Bad is a shadowrunners’ guide to hooding, the art of committing crime to help those in need. With plot information, shadowrunning techniques and tactics, and advice to help runners work to bring good into the world, the book is the first definitive guide to shadowrunning with a conscience. It also includes information on a hot spot for working to right wrongs—Pretoria, in the African nation of Azania.",
 			"edition": 5,
 			"publisher": [
@@ -12952,7 +12723,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"names": {
-				"de-DE": "Neoanarchistische Enzyklopädie"
+				"de-DE": "Neo-Anarchistische Enzyklopädie"
 			},
 			"originalLanguage": "en-US",
 			"description": "ALL IN!\n\nThey're all here. Everyone of them. The legends, the liars, the betrayers, the winners, the craven, the brave, the powerful, the down-trodden. The people who leaked secrets and got killed for it, and the secrets that no one has discovered yet. The dark bargains, the shady deals, the desperate maneuvers. Everything that makes the Sixth World the high-revving nightmare machine its residents know too well is right here, between these two covers.\n\nThe Neo-Anarchist Streetpedia is your definitive guide to the Shadowrun universe. With hundreds of entries, it covers corporations, shadowrunners, politicians, nations, cities, criminal organizations, and more. Even better, it gets to the point and tells you what you need to know now, so you can hit the streets a little smarter than you were when you woke up this morning.\n\nThe Neo-Anarchist Streetpedia is for use with whatever form of Shadowrun you play. Don't play Shadowrun? Read this, learn about the Sixth World, and then find a game to dive into!",
@@ -13349,13 +13120,18 @@
 			"category": "mission",
 			"type": "digital",
 			"originalLanguage": "en-US",
+			"names": {
+				"de-DE": "Freiheit für Seattle"
+			},
 			"description": "Power Play\n\nThe Seattle sprawl is an iconic part of the Sixth World, and it's about to take the next step in its evolution. Its mother country to the east, the UCAS, is flailing, and pressure is building for Seattle to make its own path and go independent. Lots of power players are trying to force the city's hand one way or another, and lots of money is flowing to the shadows to help or hinder those efforts.\nThere is a roster of luminaries descending on the city, and some people want them safe, and some people want them dead. Shadowrunners have lots of chances to make money, and also plenty of chances to get people gunning for them. They'll have to navigate the increasingly challenging conditions of the city, dealing with corrupt politicians, enraged gangers, conniving spies, and other runners bent on fouling up their business. All this might lead to a new era for Seattle—or at least, for whatever residents survive to see it.\nFree Seattle is an adventure for Shadowrun, Sixth World, designed to immerse you in this edition and help you learn how the rules work.",
 			"edition": 6,
 			"publisher": [
-				"Catalyst Game Labs"
+				"Catalyst Game Labs",
+				"Pegasus Spiele"
 			],
 			"releaseDate": [
-				"2019-12-11"
+				"2019-12-11",
+				"2020-10-15"
 			],
 			"gameDate": "2080-01-01"
 		},
@@ -13490,8 +13266,7 @@
 			"releaseDate": [
 				"2019-10-24"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13774,8 +13549,7 @@
 			"releaseDate": [
 				"2020-06-17"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13970,19 +13744,25 @@
 		},
 		{
 			"sku": [
-				"28500"
+				"28500",
+				"46120"
 			],
 			"name": "Rogue's Gallery: An NPC Deck",
+			"names": {
+				"de-DE": "Schattenspieler"
+			},
 			"category": "misc",
 			"type": "print",
 			"originalLanguage": "en-US",
 			"description": "Whether on the desperate streets or in the Machiavellian high-rises of the corporate elite, dangerous people lurk in every corner of the Sixth World. And they're in here, too, with a quick backstory, a hook, and streamlined game stats. Bring the Shadowrun universe to life by putting these characters at your fingertips and in your game!\n\nContents:\n27 Street NPCs\n5 Elite NPCs\n15 Veteran NPCs\n3 Legendary NPCs\n8 Reference Cards",
 			"edition": 6,
 			"publisher": [
-				"Catalyst Game Labs"
+				"Catalyst Game Labs",
+				"Pegasus Spiele"
 			],
 			"releaseDate": [
-				"2019-12-18"
+				"2019-12-18",
+				"2021-05-15"
 			],
 			"gameDate": "2080-01-01",
 			"status": "missing",
@@ -14218,6 +13998,44 @@
 		},
 		{
 			"sku": [
+				"28505"
+			],
+			"name": "High Rollers Dice Set",
+			"category": "misc",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "Custom dice put all the power you need in your hands to roll and make Shadowrun action happen! Includes Ares, Aztechnology, Mitsuhama, Saeder-Krupp, and Spinrad Global designs.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2019-01-01"
+			],
+			"gameDate": "2080-01-01",
+			"status": "outofscope"
+		},
+		{
+			"sku": [
+				"28506"
+			],
+			"name": "Mobile Grimoire Spell Cards",
+			"category": "misc",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "Pocket Magic\n\nMagic in the Sixth World is not about complex incantations, detailed hand movements, and long scrolls (except when it is). It's about hitting fast, hitting hard, and moving on.\n\nMobile Grimoire provides references to dozens of spells, with game stats and rules, so you can select, cast, and go.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2019-01-01"
+			],
+			"gameDate": "2080-01-01",
+			"status": "outofscope"
+		},
+		{
+			"sku": [
 				"SRM09-01"
 			],
 			"name": "Started from the Bottom",
@@ -14335,8 +14153,207 @@
 				"2021-04-23"
 			],
 			"gameDate": "2080-01-01",
-			"status": "missing",
 			"notes": "The German edition has additional information on ADL Mega Corps"
+		},
+		{
+			"sku": [
+				"26007NV"
+			],
+			"name": "Under Pressure",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "SEARCH AND RECOVER…\n\nIt should have been an easy job for Tycho and his team: Travel to the UCAS state of Montana and investigate what happened to the previous shadowrunning team that had gone up there to check out…something.\n\nBut of course, things are never easy in the shadows, and soon Tycho and his fellow runners are up to their eyeballs in double-crosses and mysterious goings-on—including the seeming complete disappearance of the previous shadowrunning team.\n\nTheir search leads them to the wilds near Yellowstone, where the answers they seek lie deep within the earth…and uncover a secret that, if revealed, could result in the complete destruction of the entire Sixth World…",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-05-31"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"26013NV"
+			],
+			"name": "See How She Runs",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "RUNNING FOR HER LIFE…\n\nRidley Ruiz is an ambitious teenager from a poor family, but she’s got dreams of a bigger, better life. Her courier service, Three Mice Running, is succeeding beyond anyone’s expectations, and she’s able to share her success with her friends.\n\nOne night at a jabber changes all that. Ridley sees something she wasn’t supposed to see, and is given a package she isn’t supposed to have. After she makes the delivery to a dangerous person and receives a handsome reward, chance conspires against her, and this one-time event becomes a deal with the devil.\n\nWith her family and friends on the line, Ridley is forced to go down a dangerous path. Can she save her friends and deliver the package on time before competing forces find her? All while trying to keep this newest delivery from her own family?\n\nRidley doesn’t know if she can, but she knows she has to try…",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-04-20"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"26866"
+			],
+			"name": "Tourist Trapped",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "STRANGER IN A STRANGE LAND…\n\nWhen what should have been a simple hack-and-grab heist in the Dallas metroplex goes terribly wrong, shadowrunner Gilabyte is advised by his Mr. Johnson to lay low for a while, even take a trip out of town. Which is how the technomancer finds himself relaxing in the far wilds of…Toronto.\n\nAt first the enforced vacation is pretty sweet: plush digs, plenty of nuyen, and the entire city available for him to sample. But then the lights go out…and they don’t come back on the next day…or the next…\n\nWithin 3 days of the blackout, it’s every person for themself as Toronto starts to splinter apart. Gilabyte just wants to get back home, but finds himself making new allies—and dubious deals—in order to get safely out of town. Along the way, he uncovers clues to a larger conspiracy that affects him and his sprites directly…and could lead to all technomancers becoming a valuable—and endangered—species if the wrong people get their hands on him…",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-04-20"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"46125"
+			],
+			"name": "Neo-Noir",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Schwärzer als die Schatten\n\nIn einer Welt, die von Megakonzernen kontrolliert wird, entscheiden die Reichen und Mächtigen darüber, was Recht und Gesetz ist. Doch nicht jeder fügt sich in sein Schicksal. Wer keine Antworten auf seine drängenden Fragen nach Gerechtigkeit erhält, der wendet sich bisweilen an Privatermittler: Abgebrühte „Schnüffler“, die sich von Drohungen und Gewalt nicht beeindrucken lassen, um an ihr Ziel zu kommen. Und wer die Wahrheit ans Licht holen möchte, muss bisweilen in die Schatten hinabsteigen...\n\nNeo Noir ist eine Eigenproduktion von Pegasus Press und eine Anthologie für Shadowrun 6 mit drei Einzelabenteuern. Alle Abenteuer sind komplett spielfertig, inklusive Grundrissen und Plänen. In den Fußstapfen großer Privatermittler der Detektivfilme durchstreifen die Runner in Neo Noir die Metroplexe der ADL. Sie lösen dabei Mordfälle, decken Konzernintrigen auf und üben Rache für vergangenes Unrecht.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-05-10"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"481D1"
+			],
+			"name": "Datapuls: Feuerläufer",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "FEUER UND FLAMME\n\nDu denkst, du bist mutig? Weil du in den Schatten läufst und unter dem Mantel eine Kanone trägst? Dann hast du es noch nie mit der Feuerwehr zu tun gehabt. Frauen und Männer aller Metatypen kämpfen mit modernster Ausrüstung jeden Tag gegen die Flammen in den Plexen, damit unsere Welt nicht verbrennt. Mit Drohnen, Feueräxten und Atemschutzgeräten trauen sie sich in jedes Inferno – und manchmal spielen sie sogar Runnern in die Hände.\n\nDatapuls Feuerläufer wirft ein Licht auf die Feuerwehr in der ADL: Der Aufbau, die moderne Brandbekämpfung, neue Ausrüstung, Fahrzeuge, Drohnen und Feuerleute als Charaktere werden präsentiert.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-04-29"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"481D2"
+			],
+			"name": "Datapuls: Magische Orte",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Alte Geister, neue Mächte\n\nWo die Magie zum Leben erwacht und mit ihr die vergessenen Mythen, die dunklen Geheimnisse und die finsteren Kulte der Vergangenheit, da werden friedliche Orte und Touristenziele plötzlich zu magischen Hotspots. In der Sechsten Welt verändert sich alles – und so werden aus alten Gemäuern Spukhäuser, aus Sagengestalten echte Geister und aus alten Geschichten Wahrheiten, die einen Nachts in finsteren Träumen jagen.\n\nDatapuls Magische Orte wirft ein Licht auf unterschiedliche Orte der ADL, die nach Wiederkehren der Magie zu neuem Leben erwacht sind: Naturplätzen wie die Atta-Höhle, alte Ritualorte wie das Ringheiligtum von Pömmelte und Mythen der neueren Geschichte wie die Pfaueninsel. Mehr als zwanzig solcher magischen Plätze in der ADL, Österreich und der Schweiz werden beschrieben – einige mit Grundriss – und können als Schauplatz für Szenen oder ganze Runs dienen.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-02-18"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"481D3"
+			],
+			"name": "Datapuls: Kunstraub",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Schatzjäger der neuen Zeit\n\nNicht nur in Hochsicherheitslaboren und in den Datenspeichern der Großkonzerne wartet auf findige Shadowrunner interessante Beute: Auch in Museen, Galerien und privaten Kunstsammlungen warten wahre Schätze. Ob ein Gemälde von Picasso, eine uralte römische Münze oder eine hochmoderne AR-Installation – wer es zu stehlen weiß und den richtigen Hehler kennt, der kann reich werden. Und wer den Falschen bestiehlt oder nicht aufpasst, wird begraben.\n\nDatapuls Kunstraub wirft ein Licht auf ein großes Feld von Shadowruns: Diebstähle von Kunstobjekten. Es liefert einen Einblick in die unterschiedlichen Strategien, bietet Grundrisse von Museen und Galerien und beschreibt den illegalen Kunstmarkt der ADL. Zudem wird die Preußenstiftung als wichtiger Schattenspieler und Auftraggeber beschrieben.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-02-18"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"481D4"
+			],
+			"name": "Datapuls: FBV (Frankfurter Bankenverein)",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Macht und Moneten\n\nGeführt mit strenger Hand, überschattet von einem dunklen Erbe, tief verwurzelt in die Finanzwelt der Sechsten Welt: Der Frankfurter Bankenverein ist nicht nur eine Größe auf dem internationalen Parkett. Er bestimmt das Schicksal der Allianz Deutscher Länder mit. In den Schatten greifen schon andere Konzerne nach den Aktiva des Konzerns, während seine Lenkerin, Monika Stüeler-Waffenschmidt, neue Besitzerin des Mauritusschwert ist und damit selbst den mächtigsten Drachen der ADL in Schach hält.\n\nDatapuls FBV wirft ein Licht auf den großen Bankkonzern der ADL: Die Machtspieler, die Konzernkultur, Tochterfirmen wie der Sternschutz und Vorgänge hinter den Kulissen werden präsentiert.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-04-24"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"481D5"
+			],
+			"name": "Datapuls: Marienbad",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "AUF WILDEN STRASSEN\n\nVon anarchistischen Tendenzen und Milizkämpfen geprägt, liegt Marienbad im Osten der ADL. Eine kleine Enklave, die unter dem Protektorat des mächtigen Drachen Schwartzkopf steht. Eine Wildnis, in der man nicht alleine mit den Auto unterwegs sein möchte – denn entweder lauern Straßenräuber hinter der nächsten Kurve oder ein Mitglied der Erwachten Fauna rammt das Gefährt vom Asphalt. Marienbad ist immer eine Reise wert.\n\nDatapuls Marienbad wirft ein Licht auf den Marienbad: Die politischen Kräfte, die Erwachten Ressourcen, die Machtspiele hinter dem Vorhang werden präsentiert.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-04-27"
+			],
+			"gameDate": "2080-01-01"
+		},
+		{
+			"sku": [
+				"46115"
+			],
+			"name": "Schattendossier 1",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Schatten sind alle schwarz? Das stimmt nicht, Chummer. Ihnen mag das Licht fehlen, aber wer in den Schatten der ADL sein Geld verdienen will, der sollte sich gut auskennen. In Westphalen, wo die Kirche regiert und erwachte Theurgen dich jagen. In Pomorya, dem Elfenstaat an der Ostsee mit seinen Adelsgeschlechtern und seiner modernen Öko-Industrie. In München, dem Megaplex der Schwarzen Sheriffs und der Schickeria. An der Nordseeküste, wo Piraten von verlassenen Ölplattformen und im toxischen Watt gegen Giftgeister und Konzerne kämpfen. Und du solltest dabei schauen, dass deine Ausrüstung immer auf dem neuesten Stand bleibt … sonst wird die Dunkelheit der Schatten dich irgendwann verschlingen.\n\nDas Schattendossier I ist der erste Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Westphalen, München, Pomorya, Piraten der Deutschen Bucht und das SOTA 2081 zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Seucheninsel in der Ostsee. Das Schattendossier I ist streng limitiert und die einzelnen Bücher durchnummeriert.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-06-15"
+			],
+			"gameDate": "2080-01-01",
+			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: München\", \"Datapuls: Pomorya\", \"Datapuls: SOTA 2081\", \"Datapuls: Westphalen\" und \"Datapuls: Piraten der Deutschen Bucht\""
+		},
+		{
+			"sku": [
+				"46127"
+			],
+			"name": "Schattendossier 2",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Wissen ist Macht – kaum ein Sprichwort trifft im Leben von Shadowrunnern mehr zu. Denn wenn du dich in Gefahr begibst, bist du mit dem richtigen Wissen immer im Vorteil. Du möchtest in den kampfgebeutelten Schatten von Marienbad aktiv werden? Dein nächster Auftrag führt dich in die Konzernwelt des Frankfurter Bankenvereins? Herr Schmidt will etwas für seine private Gemäldesammlung haben, und nun steckst du in den Tiefen des illegalen Kunsthandels? Du unternimmst eine Reise zu den mysteriösesten, magischen Orten der ADL und angrenzenden Ländern? Oder du wolltest schon immer mal zur Feuerwehr? Wissen ist Macht. Oder verlängert zumindest dein Leben.\n\nDas Schattendossier II ist der zweite Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Feuerwehr, magische Orte, Kunstraub, den Frankfurter Bankenverein und Marienbad zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Norddeutschen Seenot-Rettungsgesellschaft. Das Schattendossier II ist streng limitiert und die einzelnen Bücher durchnummeriert.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-06-01"
+			],
+			"gameDate": "2080-01-01",
+			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerwehr\""
 		}
 	]
 }
