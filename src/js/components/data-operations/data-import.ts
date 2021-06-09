@@ -45,9 +45,10 @@ async function readDataFromFile() {
 
 export async function fetchItems() {
 	let currentData = await getMaterials();
+	const onlineData = await fetchData();
 
-	if (currentData.length === 0) {
-		currentData = await fetchData();
+	if (currentData.length < onlineData.length) {
+		currentData = onlineData;
 	}
 
 	if (currentData.length === 0) {

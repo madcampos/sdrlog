@@ -1,20 +1,39 @@
 /* eslint-env serviceworker */
 /* eslint-disable no-console */
-
 // eslint-disable-next-line @typescript-eslint/triple-slash-reference, spaced-comment
 /// <reference lib="webworker" />
+
+import type { UpdateMessage } from './js/components/update-refresh/update-message';
 
 const CACHE_VERSION = 'v8';
 const appShellFiles = ['/'];
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
 
-async function responseHandler(request: Request) {
+async function messageUpdate(response: Response) {
+	const pages = await worker.clients.matchAll();
+
+	for (const page of pages) {
+		const message: UpdateMessage = {
+			type: 'update',
+			url: response.url,
+			updatedAt: response.headers.get('ETag') ?? ''
+		};
+
+		page.postMessage(message);
+	}
+}
+
+async function fetchFromCache(request: Request) {
 	const res = await caches.match(request);
 
 	if (res) {
 		return res;
 	}
 
+	return null;
+}
+
+async function fetchFromNetwork(request: Request) {
 	try {
 		console.log(`[⚙] Fetching ${request.url}`);
 
@@ -78,6 +97,19 @@ worker.addEventListener('activate', async (evt) => {
 	}));
 });
 
-worker.addEventListener('fetch', (evt) => {
-	evt.respondWith(responseHandler(evt.request));
+worker.addEventListener('fetch', async (evt) => {
+	const resFromCache = await fetchFromCache(evt.request);
+
+	if (resFromCache) {
+		evt.respondWith(resFromCache);
+
+		const res = await fetchFromNetwork(evt.request);
+
+		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+		if (res.status <= 200 && res.status >= 299) {
+			await messageUpdate(res);
+		}
+	} else {
+		evt.respondWith(fetchFromNetwork(evt.request));
+	}
 });
