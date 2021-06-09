@@ -103,6 +103,7 @@ worker.addEventListener('fetch', async (evt) => {
 	if (resFromCache) {
 		evt.respondWith(resFromCache);
 
+		// TODO: add condition to only check for some resources, others will alays be cached
 		const res = await fetchFromNetwork(evt.request);
 
 		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
