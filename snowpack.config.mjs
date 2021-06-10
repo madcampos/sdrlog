@@ -1,10 +1,6 @@
 // @ts-nocheck
 
 import { IncomingMessage, ServerResponse } from 'http';
-import { readFileSync } from 'fs';
-
-const cert = readFileSync('./snowpack.crt');
-const key = readFileSync('./snowpack.key');
 
 /**
  * @callback RequestHandler A request handler
@@ -43,7 +39,7 @@ export default {
 		minify: true,
 		target: 'es2020'
 	},
-	devOptions: { secure: { key, cert } },
+	devOptions: { secure: true },
 	buildOptions: {
 		out: 'dist',
 		metaUrlPath: 'meta'
