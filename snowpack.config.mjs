@@ -1,18 +1,5 @@
 // @ts-nocheck
 
-import { IncomingMessage, ServerResponse } from 'http';
-
-/**
- * @callback RequestHandler A request handler
- *
- * @param {IncomingMessage} req The Request.
- * @param {ServerResponse} res The response.
- * @param {RequestHandler} [next] The next item to call.
- *
- * @returns {ServerResponse} Returns a response.
- */
-
-/** @type RequestHandler */
 function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
