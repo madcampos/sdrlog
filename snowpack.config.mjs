@@ -1,5 +1,17 @@
 // @ts-nocheck
 
+import { readFileSync } from 'fs';
+
+const mode = process.env.NODE_ENV;
+let sslOptions = false;
+
+if (mode === 'development') {
+	sslOptions = {
+		cert: readFileSync('./snowpack.crt'),
+		key: readFileSync('./snowpack.key')
+	}
+}
+
 function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
@@ -8,6 +20,7 @@ function handleServiceWorker(_req, res) {
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
+	mode,
 	root: './src',
 	mount: {
 		src: '/',
@@ -26,7 +39,7 @@ export default {
 		minify: true,
 		target: 'es2020'
 	},
-	devOptions: { secure: true },
+	devOptions: { secure: sslOptions },
 	buildOptions: {
 		out: 'dist',
 		metaUrlPath: 'meta'
