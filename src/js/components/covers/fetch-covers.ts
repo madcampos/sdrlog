@@ -10,8 +10,15 @@ export async function fetchCover(id: string) {
 	let currentCover = await getCover(id);
 
 	if (!currentCover) {
-		// TODO: fetch from network
-		// TODO: save new cover
+		const response = await fetch(`/covers/${id}.jpg`);
+
+		if (response.ok) {
+			const responseData = await response.blob();
+
+			currentCover = new File([responseData], `${id}.jpg`, { type: 'image/jpeg' });
+
+			await saveCover(id, currentCover);
+		}
 	}
 
 	return currentCover;
@@ -21,8 +28,13 @@ export async function fetchThumb(id: string) {
 	let currentThumb = await getThumb(id);
 
 	if (!currentThumb) {
-		// TODO: fetch from network
-		// TODO: save new cover
+		const cover = await fetchCover(id);
+
+		if (cover) {
+			currentThumb = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH });
+
+			await saveThumb(id, currentThumb);
+		}
 	}
 
 	return currentThumb;
