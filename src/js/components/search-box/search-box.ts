@@ -1,4 +1,4 @@
-import { updateSearchFilter } from './css-filter';
+import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
 
 class SearchBox extends HTMLElement {
 	#root: ShadowRoot;
@@ -16,12 +16,19 @@ class SearchBox extends HTMLElement {
 
 		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;
 
-		this.#searchBox.addEventListener('change', () => {
-			const search = new URLSearchParams([['search', this.#searchBox.value]]);
+		const initialFilters = getFiltersFromURL();
+		const initialValue = getTagStringFromFilters(initialFilters);
 
-			// @ts-expect-error setter can be a string.
-			document.location = new URL(`?${search.toString()}`, window.location.origin).toString();
-			updateSearchFilter(this.#searchBox.value);
+		this.#searchBox.value = initialValue;
+
+		this.#searchBox.addEventListener('change', () => {
+			if (!this.#searchBox.value) {
+				updateSearchFilter({});
+			} else {
+				const filters = getFiltersFromTagsString(this.#searchBox.value);
+
+				updateSearchFilter(filters);
+			}
 		});
 
 		window.addEventListener('keydown', (evt) => {
@@ -35,10 +42,6 @@ class SearchBox extends HTMLElement {
 				}
 			}
 		});
-
-		const params = new URLSearchParams(window.location.search);
-
-		this.#searchBox.value = params.get('search') ?? '';
 	}
 }
 
