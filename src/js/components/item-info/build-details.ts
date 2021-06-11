@@ -5,9 +5,7 @@ import type { EditList } from '../edit-box/edit-list';
 import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
 
-import { languages, publishers } from './details-template';
-
-const dateFormater = new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC', year: 'numeric' });
+import { formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
 
 interface DetailElementsReferences {
 	name: EditBox,
@@ -49,9 +47,7 @@ export async function setMaterialDetails(material: Material, {
 	name.value = material.name;
 
 	material.sku.forEach((skuValue) => {
-		sku.insertAdjacentHTML('beforeend', `
-			<edit-list-item>${skuValue}</edit-list-item>
-		`);
+		sku.insertAdjacentHTML('beforeend', formatSku(skuValue));
 	});
 
 	edition.value = material.edition.toString();
@@ -61,24 +57,11 @@ export async function setMaterialDetails(material: Material, {
 	language.value = material.originalLanguage;
 
 	material.releaseDate?.forEach((releaseDateValue) => {
-		releaseDate.insertAdjacentHTML('beforeend', `
-			<edit-list-item>
-				${dateFormater.format(new Date(releaseDateValue))}
-			</edit-list-item>
-		`);
+		releaseDate.insertAdjacentHTML('beforeend', formatReleaseDate(releaseDateValue));
 	});
 
 	material.publisher.forEach((publisherValue) => {
-		publisher.insertAdjacentHTML('beforeend', `
-			<edit-list-item>
-				<abbr title="${publisherValue}">
-					<img
-						role="presentation"
-						src="/img/publishers/${publishers.get(publisherValue) ?? 'fallback'}.png"
-					/>
-				</abbr>
-			</edit-list-item>
-		`);
+		publisher.insertAdjacentHTML('beforeend', formatPublisher(publisherValue));
 	});
 
 	if (material.status) {
@@ -88,9 +71,7 @@ export async function setMaterialDetails(material: Material, {
 	status.value = material.status ?? 'ok';
 
 	Object.entries(material.names ?? {}).forEach(([lang, name]) => {
-		names.insertAdjacentHTML('beforeend', `
-			<edit-list-item>${languages.get(lang) ?? ''} → ${name}</edit-list-item>
-		`);
+		names.insertAdjacentHTML('beforeend', formatTranslatedName(lang, name));
 	});
 
 	names.loaded = true;

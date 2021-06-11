@@ -14,7 +14,9 @@ export const publishers = new Map([
 // FIXME: remove comment after this is available/merged: https://github.com/microsoft/TypeScript/pull/44022
 // @ts-expect-error
 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-const getLangName = new Intl.DisplayNames(['en'], { type: 'language' }) as { of(lang: string): string };
+export const getLangName = new Intl.DisplayNames(['en'], { type: 'language' }) as { of(lang: string): string };
+
+export const dateFormater = new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC', year: 'numeric' });
 
 export const languages = new Map([
 	['de-DE', `🇩🇪 ${getLangName.of('de')}`],
@@ -58,6 +60,35 @@ export const status = new Map([
 	['canceled', '🚫 Canceled']
 ]);
 
+export function formatReleaseDate(releaseDate: string) {
+	return `
+		<edit-list-item value="${releaseDate}">
+			${dateFormater.format(new Date(releaseDate))}
+		</edit-list-item>
+	`;
+}
+
+export function formatPublisher(publisher: string) {
+	return `
+		<edit-list-item value="${publisher}">
+			<abbr title="${publisher}">
+				<img
+					role="presentation"
+					src="/img/publishers/${publishers.get(publisher) ?? 'fallback'}.png"
+				/>
+			</abbr>
+		</edit-list-item>
+	`;
+}
+
+export function formatSku(sku: string) {
+	return `<edit-list-item value="${sku}">${sku}</edit-list-item>`;
+}
+
+export function formatTranslatedName(lang: string, name: string) {
+	return `<edit-list-item value="${lang} → ${name}">${languages.get(lang) ?? ''} → ${name}</edit-list-item>`;
+}
+
 export default `
 <modal-dialog>
 	<edit-box id="name" slot="title" placeholder="Item name"></edit-box>
@@ -65,7 +96,7 @@ export default `
 	<header>
 		<edit-list id="sku" open>
 			<span slot="label">SKU</span>
-			<input slot="input"/>
+			<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$"/>
 		</edit-list>
 
 		<edit-box id="edition" type="number" min="1" max="6" step="1">
@@ -128,12 +159,12 @@ export default `
 
 		<edit-list id="files" hidden>
 			<span slot="label">Files</span>
-			<input slot="input"/>
+			<input slot="input" type="file" multiple/>
 		</edit-list>
 
 		<edit-list id="links">
 			<span slot="label">Online links</span>
-			<input slot="input"/>
+			<input slot="input" type="url"/>
 		</edit-list>
 	</aside>
 
