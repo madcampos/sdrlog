@@ -46,16 +46,13 @@ export default `
 				<li><strong>Miscellaneous (Misc.):</strong> Assorted matterials that don't fit in any of the above categories.</li>
 			</ul>
 		</dd>
-		<dt>SKU (<code>sku</code> / <code>id</code>)</dt>
+
+		<dt>SKU (<code>sku</code>)</dt>
 		<dd>The <abbr title="Stock Keeping Unit">SKU</abbr> of the item, it's used also as an identifier. Most of them are unique.</dd>
-		<dt>Publisher (<code>publisher</code> / <code>pub</code>)</dt>
-		<dd>The enterprise who published the material.</dd>
-		<dt>Release date (<code>release</code> / <code>rel</code>)</dt>
-		<dd>The date the material was released, it may be more than one if the material was rereleased. If not present the material is considered unreleased.</dd>
-		<dt>Edition (<code>edition</code> / <code>ed</code>)</dt>
+
+		<dt>Edition (<code>edition</code>)</dt>
 		<dd>The edition of the publication, ranging from <code>1</code> to <code>5</code>.</dd>
-		<dt>Game date (<code>date</code>)</dt>
-		<dd>The in-game date of the material.</dd>
+
 		<dt>Type (<code>type</code>)</dt>
 		<dd>
 			<p>The availability of the material, based on how it is easily found.</p>
@@ -68,13 +65,15 @@ export default `
 				<li><strong>Physical:</strong> The material is only available in physical format other than a book (TCG, boardgame, etc.).</li>
 			</ul>
 		</dd>
-		<dt>Scope (<code>scope</code>)</dt>
+
+		<dt>Status (<code>status</code>)</dt>
 		<dd>
 			<p>If the material is in the scope of a digital collection.</p>
 			<p>May be one of the following:</p>
 			<ul>
-				<li><strong>Missing:</strong> The item is missing from the collection.</li>
-				<li><strong>Out:</strong> The item is either physical, limited edition or unreleased so it's out of the scope of the collection.</li>
+				<li><strong>Missing (<code>missing</code>):</strong> The item is missing from the collection.</li>
+				<li><strong>Out of scope (<code>outofscope</code>):</strong> The item is either physical, limited edition or unreleased so it's out of the scope of the collection.</li>
+				<li><strong>Canceled (<code>canceled</code>):</strong> The item was announced but then canceled.</li>
 			</ul>
 		</dd>
 	</dl>

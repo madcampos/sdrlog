@@ -1,3 +1,4 @@
+import type { Material } from '../../../../data/data';
 import type { ModalDialog } from '../dialog/dialog';
 
 import infoDialogData from './info-dialog';
@@ -6,6 +7,7 @@ import { extractCoversFromFiles, importCoversFromFolder } from '../covers/fetch-
 import { saveCoversToFolder } from '../covers/cover-exporter';
 import { requestDataFileFromUser } from '../data-operations/data-import';
 import { exportDataFile } from '../data-operations/data-export';
+import { updateSearchFilter } from '../search-box/update-filter';
 
 class MenuBar extends HTMLElement {
 	#root: ShadowRoot;
@@ -17,19 +19,19 @@ class MenuBar extends HTMLElement {
 
 		this.#root.innerHTML = `
 			<nav>
-				<dropdown-menu label="︙">
-					<dropdown-menu-item data-action="sourcebook">📜 Sourcebooks</dropdown-menu-item>
-					<dropdown-menu-item data-action="rulebook">📝 Rulebooks</dropdown-menu-item>
-					<dropdown-menu-item data-action="mission">🗺️ Adventures &amp; Campaigns</dropdown-menu-item>
-					<dropdown-menu-item data-action="novel">📚 Novels</dropdown-menu-item>
-					<dropdown-menu-item data-action="magazine">📰 Magazines</dropdown-menu-item>
-					<dropdown-menu-item data-action="boardgame">♟️ Tabletop</dropdown-menu-item>
-					<dropdown-menu-item data-action="tcg">🃏 Trading Card Game</dropdown-menu-item>
-					<dropdown-menu-item data-action="videogame">🎮 Video Games</dropdown-menu-item>
-					<dropdown-menu-item data-action="unofficial">📓 Unofficial</dropdown-menu-item>
-					<dropdown-menu-item data-action="misc">🔣 Misc.</dropdown-menu-item>
+				<dropdown-menu id="filters" label="︙">
+					<dropdown-menu-item action="sourcebook">📜 Sourcebooks</dropdown-menu-item>
+					<dropdown-menu-item action="rulebook">📝 Rulebooks</dropdown-menu-item>
+					<dropdown-menu-item action="mission">🗺️ Adventures &amp; Campaigns</dropdown-menu-item>
+					<dropdown-menu-item action="novel">📚 Novels</dropdown-menu-item>
+					<dropdown-menu-item action="magazine">📰 Magazines</dropdown-menu-item>
+					<dropdown-menu-item action="boardgame">♟️ Tabletop</dropdown-menu-item>
+					<dropdown-menu-item action="tcg">🃏 Trading Card Game</dropdown-menu-item>
+					<dropdown-menu-item action="videogame">🎮 Video Games</dropdown-menu-item>
+					<!-- <dropdown-menu-item action="unofficial">📓 Unofficial</dropdown-menu-item> -->
+					<dropdown-menu-item action="misc">🔣 Misc.</dropdown-menu-item>
 					<hr>
-					<dropdown-menu-item data-action="all">📚 All</dropdown-menu-item>
+					<dropdown-menu-item action="all">📚 All</dropdown-menu-item>
 				</dropdown-menu>
 				<search-box></search-box>
 				<modal-dialog>
@@ -67,6 +69,14 @@ class MenuBar extends HTMLElement {
 
 		this.#root.querySelector('#export-data')?.addEventListener('click', async () => exportDataFile());
 		this.#root.querySelector('#export-covers')?.addEventListener('click', async () => saveCoversToFolder());
+
+		this.#root.querySelectorAll('#filters dropdown-menu-item').forEach((filterButton) => {
+			filterButton.addEventListener('click', () => {
+				const action = filterButton.getAttribute('action') as Material['category'] | 'all';
+
+				updateSearchFilter({ category: action });
+			});
+		});
 	}
 }
 
