@@ -7,6 +7,7 @@ import type { UpdateMessage } from './js/components/update-refresh/update-messag
 
 const CACHE_VERSION = 'v8';
 const appShellFiles = ['/'];
+const skipNetworkRefresh = ['.jpg', '.png', '.svg', '.wasm', '.html'];
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
 
 async function messageUpdate(response: Response) {
@@ -103,12 +104,15 @@ worker.addEventListener('fetch', async (evt) => {
 	if (resFromCache) {
 		evt.respondWith(resFromCache);
 
-		// TODO: add condition to only check for some resources, others will alays be cached
-		const res = await fetchFromNetwork(evt.request);
+		const isSkippedFromNetwork = skipNetworkRefresh.some((ext) => evt.request.url.endsWith(ext));
 
-		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-		if (res.status <= 200 && res.status >= 299) {
-			await messageUpdate(res);
+		if (!isSkippedFromNetwork) {
+			const res = await fetchFromNetwork(evt.request);
+
+			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+			if (res.status <= 200 && res.status >= 299) {
+				await messageUpdate(res);
+			}
 		}
 	} else {
 		evt.respondWith(fetchFromNetwork(evt.request));
