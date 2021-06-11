@@ -2,6 +2,7 @@
 import './components/components';
 import { fetchItems } from './components/data-operations/data-import';
 import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
+import { updateFiltersFromURL } from './components/search-box/update-filter';
 
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js').then(() => {
@@ -23,8 +24,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		itemCard.id = material.id;
 		itemCard.title = material.name;
+		itemCard.dataset.category = material.category;
+		itemCard.dataset.sku = material.sku.join(' ');
+		itemCard.dataset.type = material.type;
+		itemCard.dataset.edition = material.edition.toString();
+		itemCard.dataset.status = material.status ?? '';
 		document.querySelector('main')?.appendChild(itemCard);
 	}
+
+	updateFiltersFromURL();
 
 	document.querySelector('#load-overlay')?.remove();
 });

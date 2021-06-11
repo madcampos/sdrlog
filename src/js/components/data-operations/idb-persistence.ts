@@ -186,7 +186,15 @@ export async function getMaterialIds() {
 }
 
 export async function getMaterialsBasicInfo() {
-	return (await getAllIDBItem<Material>('items')).map(({ name, sku }) => ({ id: sku[0], name }));
+	return (await getAllIDBItem<Material>('items')).map(({ name, sku, category, type, edition, status }) => ({
+		id: sku[0],
+		name,
+		sku,
+		category,
+		type,
+		edition,
+		status
+	}));
 }
 
 export async function saveMaterial(id: IDBValidKey, material: Material) {
