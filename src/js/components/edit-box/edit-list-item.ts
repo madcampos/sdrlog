@@ -1,8 +1,10 @@
 export class EditListItem extends HTMLElement {
-	static get observedAttributes() { return ['edit']; }
+	static get observedAttributes() { return ['edit', 'value']; }
 
 	#root: ShadowRoot;
 	#closeButton: HTMLButtonElement;
+
+	#value = '';
 
 	constructor() {
 		super();
@@ -23,6 +25,14 @@ export class EditListItem extends HTMLElement {
 		});
 	}
 
+	get value() {
+		return this.#value;
+	}
+
+	set value(newValue: string) {
+		this.setAttribute('value', newValue);
+	}
+
 	get edit() {
 		return typeof this.getAttribute('edit') === 'string';
 	}
@@ -35,14 +45,24 @@ export class EditListItem extends HTMLElement {
 		}
 	}
 
-	attributeChangedCallback(_name: string, oldValue: string, newValue: string) {
-		if (oldValue !== newValue) {
-			const edit = this.getAttribute('edit');
+	connectedCallback() {
+		const value = this.getAttribute('value');
 
-			if (edit === null || edit === 'false') {
-				this.#closeButton.hidden = true;
-			} else {
-				this.#closeButton.hidden = false;
+		this.#value = value ?? '';
+	}
+
+	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+		if (oldValue !== newValue) {
+			if (name === 'edit') {
+				const edit = this.getAttribute('edit');
+
+				if (edit === null || edit === 'false') {
+					this.#closeButton.hidden = true;
+				} else {
+					this.#closeButton.hidden = false;
+				}
+			} else if (name === 'value') {
+				this.#value = newValue;
 			}
 		}
 	}

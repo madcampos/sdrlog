@@ -41,11 +41,21 @@ export class EditList extends HTMLElement {
 		this.#addButton = this.#root.querySelector('#add') as HTMLButtonElement;
 
 		this.#addButton.addEventListener('click', () => {
-			this.dispatchEvent(new CustomEvent('change', {
-				bubbles: true,
-				cancelable: true,
-				composed: true
-			}));
+			const [input] = this.#inputSlot.assignedElements() as (HTMLInputElement | HTMLSelectElement | null)[];
+			let validationMessage = '';
+
+			if (this.values.includes(this.value)) {
+				validationMessage = 'Item already exists in the list.';
+			} else {
+				this.dispatchEvent(new CustomEvent('additem', {
+					bubbles: true,
+					cancelable: true,
+					composed: true
+				}));
+			}
+
+			input?.setCustomValidity(validationMessage);
+			input?.reportValidity();
 		});
 
 		this.#root.addEventListener('slotchange', (evt) => {
@@ -104,12 +114,14 @@ export class EditList extends HTMLElement {
 	}
 
 	get values() {
-		return [...this.#items.assignedElements()];
+		return [...this.#items.assignedElements()].map((item) => (item as EditListItem).value);
 	}
 
 	resetValues() {
 		this.#input.hidden = true;
 		this.#loader.loaded = false;
+
+		this.value = '';
 
 		[...this.#items.assignedElements()].forEach((item) => {
 			item.remove();
