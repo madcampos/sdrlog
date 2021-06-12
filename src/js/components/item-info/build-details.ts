@@ -98,6 +98,6 @@ export async function setMaterialDetails(material: Material, {
 	const coverFile = await fetchCover(material.sku[0]);
 
 	if (coverFile) {
-		cover.src = URL.createObjectURL(cover);
+		cover.src = URL.createObjectURL(coverFile);
 	}
 }
