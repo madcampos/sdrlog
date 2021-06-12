@@ -31,6 +31,12 @@ class SearchBox extends HTMLElement {
 			}
 		});
 
+		window.addEventListener('search', () => {
+			const filters = getFiltersFromURL();
+
+			this.#searchBox.value = getTagStringFromFilters(filters);
+		});
+
 		window.addEventListener('keydown', (evt) => {
 			if (evt.ctrlKey && evt.key === 'f') {
 				evt.preventDefault();

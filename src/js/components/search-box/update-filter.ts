@@ -130,4 +130,6 @@ export function updateSearchFilter(searchOptions: FilterOptions | { category?: '
 		updateCSSSearchFilter(searchOptions as FilterOptions);
 		updateUrlSearch(searchOptions as FilterOptions);
 	}
+
+	window.dispatchEvent(new CustomEvent('search', { bubbles: true, composed: true, cancelable: true }));
 }
