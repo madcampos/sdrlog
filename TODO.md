@@ -1,13 +1,16 @@
 # PWA TODO
 
-## Search
-- implement input component
-- parse url
-- write to url
+## Update refresh
+- Add element
+
+## List loading
+- Implement lazy loader
 
 ## New/edit file
-- add to data
-- add file editing
+- add cover handler
+- Implement update to list
 
-## Service worker
-- implement caching of files
+## Material list
+- Implement file connections
+- Mark material that has files available as not missing nor out of scope
+- Create links to open files?
