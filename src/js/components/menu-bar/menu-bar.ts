@@ -8,6 +8,7 @@ import { saveCoversToFolder } from '../covers/cover-exporter';
 import { requestDataFileFromUser } from '../data-operations/data-import';
 import { exportDataFile } from '../data-operations/data-export';
 import { updateSearchFilter } from '../search-box/update-filter';
+import { ItemDetails } from '../item-info/item-details';
 
 class MenuBar extends HTMLElement {
 	#root: ShadowRoot;
@@ -49,6 +50,7 @@ class MenuBar extends HTMLElement {
 					<dropdown-menu-item id="export-data">📤 Export Data</dropdown-menu-item>
 					<dropdown-menu-item id="export-covers">🖼️ Export Covers</dropdown-menu-item>
 				</dropdown-menu>
+				<button id="add-material">➕</button>
 			</nav>
 		`;
 
@@ -77,6 +79,8 @@ class MenuBar extends HTMLElement {
 				updateSearchFilter({ category: action });
 			});
 		});
+
+		this.#root.querySelector('#add-material')?.addEventListener('click', async () => ItemDetails.openMaterialModal());
 	}
 }
 

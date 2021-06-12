@@ -128,7 +128,7 @@ export class EditList extends HTMLElement {
 		});
 	}
 
-	updateItems() {
+	updateEditItems() {
 		const items = this.#items.assignedElements().filter((element) => element instanceof EditListItem) as EditListItem[];
 
 		items.forEach((item) => {
@@ -136,19 +136,17 @@ export class EditList extends HTMLElement {
 		});
 	}
 
-	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-		if (oldValue !== newValue) {
-			if (name === 'edit') {
-				const edit = this.getAttribute('edit');
+	attributeChangedCallback(name: string) {
+		if (name === 'edit') {
+			const edit = this.getAttribute('edit');
 
-				if (edit === null || edit === 'false') {
-					this.#input.hidden = true;
-				} else {
-					this.#input.hidden = false;
-				}
-
-				this.updateItems();
+			if (edit === null || edit === 'false') {
+				this.#input.hidden = true;
+			} else {
+				this.#input.hidden = false;
 			}
+
+			this.updateEditItems();
 		}
 
 		if (name === 'open') {

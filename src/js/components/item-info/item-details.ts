@@ -123,34 +123,42 @@ export class ItemDetails extends HTMLElement {
 		});
 
 		this.#saveButton.addEventListener('click', async () => {
-			let status: Material['status'] | undefined;
-			const names = {};
+			this.#saveButton.disabled = true;
 
-			if (this.#status.value !== 'ok') {
-				status = this.#status.value as Material['status'];
+			const [id] = this.#sku.values;
+
+			if (id) {
+				let status: Material['status'] | undefined;
+				const names = {};
+
+				if (this.#status.value !== 'ok') {
+					status = this.#status.value as Material['status'];
+				}
+
+				this.#names.values.forEach((item) => {
+					const [lang, name] = item.split(' → ');
+
+					names[lang as IsoCode] = name;
+				});
+
+				await saveMaterial(id, {
+					name: this.#name.value,
+					sku: this.#sku.values,
+					edition: Number.parseInt(this.#edition.value),
+					gameDate: this.#gameDate.value,
+					category: this.#category.value as Material['category'],
+					type: this.#type.value as Material['type'],
+					originalLanguage: this.#language.value as Material['originalLanguage'],
+					releaseDate: this.#releaseDate.values,
+					publisher: this.#publisher.values,
+					status,
+					names,
+					notes: this.#notes.value,
+					description: this.#description.value
+				});
 			}
 
-			this.#names.values.forEach((item) => {
-				const [lang, name] = item.split(' → ');
-
-				names[lang as IsoCode] = name;
-			});
-
-			await saveMaterial(this.id, {
-				name: this.#name.value,
-				sku: this.#sku.values,
-				edition: Number.parseInt(this.#edition.value),
-				gameDate: this.#gameDate.value,
-				category: this.#category.value as Material['category'],
-				type: this.#type.value as Material['type'],
-				originalLanguage: this.#language.value as Material['originalLanguage'],
-				releaseDate: this.#releaseDate.values,
-				publisher: this.#publisher.values,
-				status,
-				names,
-				notes: this.#notes.value,
-				description: this.#description.value
-			});
+			this.#saveButton.disabled = false;
 		});
 	}
 
@@ -205,18 +213,33 @@ export class ItemDetails extends HTMLElement {
 			this.#status.hidden = !editingStatus;
 		}
 
-		if (isNew === true) {
-			this.#editButton.hidden = true;
-		} else {
-			this.#editButton.hidden = false;
-		}
+		this.#editButton.hidden = false;
+		this.#saveButton.hidden = true;
 
 		if (this.isEditing) {
 			this.#editButton.innerText = '❌ Cancel edit';
-			this.#saveButton.hidden = false;
 		} else {
 			this.#editButton.innerText = '✏️ Edit Material';
-			this.#saveButton.hidden = true;
+		}
+
+		if (isNew === true) {
+			this.#editButton.hidden = true;
+			this.#saveButton.hidden = false;
+
+			this.#name.loaded = true;
+			this.#sku.loaded = true;
+			this.#edition.loaded = true;
+			this.#gameDate.loaded = true;
+			this.#category.loaded = true;
+			this.#type.loaded = true;
+			this.#language.loaded = true;
+			this.#releaseDate.loaded = true;
+			this.#publisher.loaded = true;
+			this.#status.loaded = true;
+			this.#names.loaded = true;
+			this.#links.loaded = true;
+			this.#notes.loaded = true;
+			this.#description.loaded = true;
 		}
 	}
 
@@ -282,7 +305,8 @@ export class ItemDetails extends HTMLElement {
 		if (id) {
 			await modal.setMaterial(id);
 		} else {
-			modal.toggleEdit(true);
+			modal.resetMaterial();
+			modal.toggleEdit(true, true);
 		}
 	}
 }

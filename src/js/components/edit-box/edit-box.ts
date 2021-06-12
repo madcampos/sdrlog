@@ -67,6 +67,14 @@ export class EditBox extends HTMLElement {
 		}
 	}
 
+	get loaded() {
+		return this.#loader.loaded;
+	}
+
+	set loaded(isLoaded: boolean) {
+		this.#loader.loaded = isLoaded;
+	}
+
 	resetValue() {
 		this.#input.value = '';
 		this.#loader.loaded = false;

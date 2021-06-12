@@ -86,6 +86,14 @@ export class EditSelect extends HTMLElement {
 		}
 	}
 
+	get loaded() {
+		return this.#loader.loaded;
+	}
+
+	set loaded(isLoaded: boolean) {
+		this.#loader.loaded = isLoaded;
+	}
+
 	resetValue() {
 		this.#select.selectedIndex = 0;
 		this.#loader.loaded = false;

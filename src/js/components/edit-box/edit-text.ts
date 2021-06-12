@@ -67,6 +67,14 @@ export class EditText extends HTMLElement {
 		}
 	}
 
+	get loaded() {
+		return this.#loader.loaded;
+	}
+
+	set loaded(isLoaded: boolean) {
+		this.#loader.loaded = isLoaded;
+	}
+
 	resetValue() {
 		this.#textArea.value = '';
 		this.#loader.loaded = false;
