@@ -17,7 +17,8 @@ if ('serviceWorker' in navigator) {
 document.addEventListener('DOMContentLoaded', async () => {
 	await fetchItems();
 
-	const materials = await getMaterialsBasicInfo();
+	const sorter = new Intl.Collator('en-US');
+	const materials = (await getMaterialsBasicInfo()).sort(({ name: nameA }, { name: nameB }) => sorter.compare(nameA, nameB));
 
 	for await (const material of materials) {
 		const itemCard = document.createElement('item-card');
