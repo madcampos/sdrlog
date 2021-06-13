@@ -1,11 +1,12 @@
 import type { Material } from '../../../../data/data';
 import { fetchCover } from '../covers/fetch-covers';
+import { getFilesForMaterial } from '../data-operations/idb-persistence';
 import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
 import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
 
-import { formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
+import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
 
 interface DetailElementsReferences {
 	name: EditBox,
@@ -76,18 +77,8 @@ export async function setMaterialDetails(material: Material, {
 
 	names.loaded = true;
 
-	// TODO: get files for material and link them
-
 	material.links?.forEach((link) => {
-		links.insertAdjacentHTML('beforeend', `
-			<edit-list-item>
-				<a
-					href="${link.url}"
-					target="_blank"
-					rel="noopener"
-				>${link.title}</a>
-			</edit-list-item>
-		`);
+		links.insertAdjacentHTML('beforeend', formatLink(link));
 	});
 
 	links.loaded = true;
@@ -99,5 +90,15 @@ export async function setMaterialDetails(material: Material, {
 
 	if (coverFile) {
 		cover.src = URL.createObjectURL(coverFile);
+	}
+
+	const fileList = await getFilesForMaterial(material.sku[0]) ?? [];
+
+	if (fileList.length > 0) {
+		files.hidden = false;
+	}
+
+	for (const file of fileList) {
+		files.insertAdjacentHTML('beforeend', formatFile(file));
 	}
 }

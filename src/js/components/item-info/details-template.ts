@@ -1,3 +1,5 @@
+import type { FileForMaterial, MaterialLink } from '../../../../data/data';
+
 export const publishers = new Map([
 	['Heyne Verlag', 'heyne'],
 	['Fantasy Productions', 'fanpro'],
@@ -86,7 +88,32 @@ export function formatSku(sku: string) {
 }
 
 export function formatTranslatedName(lang: string, name: string) {
-	return `<edit-list-item value="${lang} → ${name}">${languages.get(lang) ?? ''} → ${name}</edit-list-item>`;
+	return `<edit-list-item value="${encodeURI(JSON.stringify({ lang, name }))}">${languages.get(lang) ?? ''} → ${name}</edit-list-item>`;
+}
+
+export function formatLink({ url, title }: MaterialLink) {
+	return `
+		<edit-list-item value="${encodeURI(JSON.stringify({ title, url }))}">
+			<a
+				href="${url}"
+				target="_blank"
+				rel="noopener"
+			>${title}</a>
+		</edit-list-item>
+	`;
+}
+
+export function formatFile(file: FileForMaterial) {
+	return `
+		<edit-list-item value="${encodeURI(JSON.stringify(file))}">
+			<a
+				class="file-link"
+				href=""
+				target="_blank"
+				rel="noopener"
+			>${file.fileName}</a>
+		</edit-list-item>
+	`;
 }
 
 export default `
