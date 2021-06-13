@@ -7,7 +7,7 @@ async function fetchData() {
 		const res = await fetch('/data/data.json');
 
 		if (res.ok) {
-			const parsedFile = JSON.parse(await res.text()) as SDRLogData;
+			const parsedFile = await res.json() as SDRLogData;
 
 			return parsedFile.items;
 		}
