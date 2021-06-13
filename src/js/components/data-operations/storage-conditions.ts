@@ -13,10 +13,16 @@ export const filterList: string[] = [
 	'FAQ',
 	'Season 5 Contacts',
 
+	// Magazines
+	'NVP',
+	'STLD',
+
 	// Misc
-	'D.M.Z.',
+	'7111',
 	'TCG01',
+	'TCG02',
 	'27700',
+	'WZK640X',
 
 	// Rulebook
 	'26100',
