@@ -16,12 +16,17 @@ export async function saveCoversToFolder() {
 		for await (const cover of covers) {
 			progressOverlay.increment();
 
-			const file = await coversFolder.getFileHandle(cover.name, { create: true });
-			const stream = await file.createWritable({ keepExistingData: false });
+			try {
+				// Will error out if the file doesn't exist
+				await coversFolder.getFileHandle(cover.name, { create: false });
+			} catch {
+				const file = await coversFolder.getFileHandle(cover.name, { create: true });
+				const stream = await file.createWritable({ keepExistingData: false });
 
-			await stream.truncate(0);
-			await stream.write(cover);
-			await stream.close();
+				await stream.truncate(0);
+				await stream.write(cover);
+				await stream.close();
+			}
 		}
 	} catch (err) {
 		// eslint-disable-next-line no-console
