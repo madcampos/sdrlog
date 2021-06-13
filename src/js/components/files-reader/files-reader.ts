@@ -1,6 +1,31 @@
 import { ProgressOverlay } from '../progress/progress';
+import { getMaterial, saveFile, setFileForMaterial } from '../data-operations/idb-persistence';
 
-import { saveFile } from '../data-operations/idb-persistence';
+export function extractMetadataFromFileName(fileName: string) {
+	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+) - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
+	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? {};
+
+	return {
+		name,
+		id,
+		extension
+	};
+}
+
+async function associateFileWithData(fileName: string, path: string) {
+	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: [A-Z])? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
+	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? { name: '', id: '', extension: '' };
+	const material = await getMaterial(id);
+
+	if (material) {
+		await setFileForMaterial({
+			fileName: name,
+			filePath: path,
+			fileExtension: extension,
+			itemId: id
+		});
+	}
+}
 
 export async function readFiles() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Read materials' });
@@ -11,6 +36,8 @@ export async function readFiles() {
 
 			if (entry.kind === 'directory') {
 				await readDir(entry, entryPath);
+			} else {
+				await associateFileWithData(entry.name, entryPath);
 			}
 
 			await saveFile(entryPath, entry);
@@ -41,15 +68,4 @@ export async function getFilePermission(file: FileSystemHandle, mode: 'read' | '
 	}
 
 	return await file.requestPermission({ mode }) === 'granted';
-}
-
-export function extractMetadataFromFileName(fileName: string) {
-	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+) - (?<title>.+)(?<extension>\.[a-z]+)$/u;
-	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? {};
-
-	return {
-		name,
-		id,
-		extension
-	};
 }
