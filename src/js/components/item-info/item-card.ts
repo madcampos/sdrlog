@@ -1,6 +1,18 @@
+import type { Material } from '../../../../data/data';
+
 import { fetchThumb } from '../covers/fetch-covers';
 import { getMaterial } from '../data-operations/idb-persistence';
 import { ItemDetails } from './item-details';
+
+interface CreateCardOptions {
+	name: string,
+	id: string,
+	category: Material['category'],
+	sku: string[],
+	type: Material['type'],
+	edition: Material['edition'],
+	status?: Material['status']
+}
 
 export class ItemCard extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
@@ -73,6 +85,19 @@ export class ItemCard extends HTMLElement {
 		if (cover) {
 			this.#thumb.src = URL.createObjectURL(cover);
 		}
+	}
+
+	static createCard({ id, name, category, sku, type, edition, status }: CreateCardOptions) {
+		const itemCard = document.createElement('item-card');
+
+		itemCard.id = id;
+		itemCard.title = name;
+		itemCard.dataset.category = category;
+		itemCard.dataset.sku = sku.join(' ');
+		itemCard.dataset.type = type;
+		itemCard.dataset.edition = edition.toString();
+		itemCard.dataset.status = status ?? '';
+		document.querySelector('main')?.appendChild(itemCard);
 	}
 }
 
