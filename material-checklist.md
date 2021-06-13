@@ -28,3 +28,5 @@ https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-foil
 # Folders
 ***REMOVED***
 ***REMOVED***
+https://www.shadowrun6.de/index.php/spielhilfen-2/schattenload.html
+https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
