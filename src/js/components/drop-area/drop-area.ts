@@ -114,7 +114,7 @@ class DropArea extends HTMLElement {
 			if (name === 'type' && (newValue === 'file' || newValue === 'directory')) {
 				this.#type = newValue;
 			} else if (name === 'accepts') {
-				this.#accepts = JSON.parse(newValue) as FilePickerAcceptType;
+				this.#accepts = JSON.parse(decodeURI(newValue)) as FilePickerAcceptType;
 			} else if (name === 'show') {
 				const show = this.getAttribute('show');
 
@@ -134,7 +134,7 @@ class DropArea extends HTMLElement {
 			this.#type = type;
 		}
 
-		const accepts = JSON.parse(this.getAttribute('accept') ?? '{ accepts: {} }') as FilePickerAcceptType;
+		const accepts = JSON.parse(decodeURI(this.getAttribute('accept') ?? '{ accepts: {} }')) as FilePickerAcceptType;
 
 		if (Object.keys(accepts.accept).length) {
 			this.#accepts = accepts;
