@@ -128,33 +128,32 @@ export class ItemDetails extends HTMLElement {
 			const [id] = this.#sku.values;
 
 			if (id) {
-				let status: Material['status'] | undefined;
-				const names = {};
-
-				if (this.#status.value !== 'ok') {
-					status = this.#status.value as Material['status'];
-				}
-
-				this.#names.values.forEach((item) => {
-					const [lang, name] = item.split(' → ');
-
-					names[lang as IsoCode] = name;
-				});
-
-				await saveMaterial(id, {
+				await createNewMaterial(id, {
 					name: this.#name.value,
 					sku: this.#sku.values,
-					edition: Number.parseInt(this.#edition.value),
+					edition: this.#edition.value,
 					gameDate: this.#gameDate.value,
-					category: this.#category.value as Material['category'],
-					type: this.#type.value as Material['type'],
-					originalLanguage: this.#language.value as Material['originalLanguage'],
+					category: this.#category.value,
+					type: this.#type.value,
+					originalLanguage: this.#language.value,
 					releaseDate: this.#releaseDate.values,
 					publisher: this.#publisher.values,
-					status,
-					names,
+					status: this.#status.value,
+					names: this.#names.values,
 					notes: this.#notes.value,
-					description: this.#description.value
+					description: this.#description.value,
+					files: this.#files.values,
+					links: this.#links.values
+				});
+
+				ItemCard.createCard({
+					name: this.#name.value,
+					id,
+					sku: this.#sku.values,
+					edition: Number.parseInt(this.#edition.value),
+					category: this.#category.value as Material['category'],
+					type: this.#type.value as Material['type'],
+					status: this.#status.value as Material['status']
 				});
 			}
 
