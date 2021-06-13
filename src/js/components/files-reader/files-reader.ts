@@ -1,5 +1,5 @@
 import { ProgressOverlay } from '../progress/progress';
-import { getMaterial, saveFile, setFileForMaterial } from '../data-operations/idb-persistence';
+import { getMaterial, saveFile, saveMaterial, setFileForMaterial } from '../data-operations/idb-persistence';
 
 export function extractMetadataFromFileName(fileName: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+) - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
@@ -24,6 +24,12 @@ async function associateFileWithData(fileName: string, path: string) {
 			fileExtension: extension,
 			itemId: id
 		});
+
+		if (material.status === 'missing') {
+			delete material.status;
+
+			await saveMaterial(id, material);
+		}
 	}
 }
 
