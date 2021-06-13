@@ -7,7 +7,9 @@ const mimeAllowed = [
 	'image',
 	'video',
 	'audio',
-	'text'
+	'text',
+	'application/epub+zip',
+	'application/pdf'
 ];
 
 export async function openFile(fileInfo: FileForMaterial) {
@@ -20,7 +22,8 @@ export async function openFile(fileInfo: FileForMaterial) {
 
 	if (mimeAllowed.some((mime) => file.type.startsWith(mime))) {
 		window.open(fileURL, '_blank', 'noopener,noreferrer');
+	} else {
+		// eslint-disable-next-line no-alert
+		alert(`Unable to open file "${file.name}"`);
 	}
-
-	// TODO: deal with download or message to open.
 }
