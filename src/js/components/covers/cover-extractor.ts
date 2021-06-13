@@ -86,7 +86,7 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 		throw new Error('Cover would be upscaled!');
 	}
 
-	if (coverScale < 1 || forceProcess) {
+	if (coverScale !== 1 || forceProcess) {
 		const scaledCover = await createImageBitmap(cover, {
 			resizeWidth: cover.width * coverScale,
 			resizeHeight: cover.height * coverScale
