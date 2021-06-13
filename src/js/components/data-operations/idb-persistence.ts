@@ -1,5 +1,5 @@
 /* eslint-disable id-length */
-import type { Material } from '../../../../data/data';
+import type { FileForMaterial, Material } from '../../../../data/data';
 
 type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems';
 
@@ -97,7 +97,25 @@ async function getIDBItem<T = null>(collection: Collections, name: IDBValidKey) 
 	});
 }
 
-async function getAllIDBItem<T = null>(collection: Collections) {
+export async function getIDBItemFromIndex<T>(collection: Collections, indexName: string, name: IDBValidKey) {
+	const db = await databaseFactory();
+	const transaction = db.transaction([collection], 'readonly');
+	const store = transaction.objectStore(collection);
+	const index = store.index(indexName);
+	const request = index.getAll(name);
+
+	return new Promise<T[] | undefined>((resolve, reject) => {
+		request.onsuccess = () => {
+			resolve(request.result as T[]);
+		};
+
+		request.onerror = () => {
+			reject(request.error);
+		};
+	});
+}
+
+async function getAllIDBItem<T>(collection: Collections) {
 	const db = await databaseFactory();
 	const transaction = db.transaction([collection], 'readonly');
 	const store = transaction.objectStore(collection);
@@ -131,7 +149,7 @@ async function getAllIDBKeys(collection: Collections) {
 	});
 }
 
-async function setIDBItem<T = undefined>(collection: Collections, name: IDBValidKey, value: T) {
+async function setIDBItem<T>(collection: Collections, name: IDBValidKey | undefined, value: T) {
 	const db = await databaseFactory();
 	const transaction = db.transaction([collection], 'readwrite');
 	const store = transaction.objectStore(collection);
@@ -148,7 +166,7 @@ async function setIDBItem<T = undefined>(collection: Collections, name: IDBValid
 	});
 }
 
-async function setIDBItems<T = undefined>(collection: Collections, items: [IDBValidKey, T][]) {
+async function setIDBItems<T>(collection: Collections, items: [IDBValidKey, T][]) {
 	const db = await databaseFactory();
 	const transaction = db.transaction([collection], 'readwrite');
 	const store = transaction.objectStore(collection);
@@ -232,4 +250,13 @@ export async function saveMaterial(id: IDBValidKey, material: Material) {
 
 export async function saveMaterials(materials: [IDBValidKey, Material][]) {
 	return setIDBItems<Material>('items', materials);
+}
+
+export async function getFilesForMaterial(itemId: string) {
+	return getIDBItemFromIndex<FileForMaterial>('fileItems', 'itemId', itemId);
+}
+
+export async function setFileForMaterial(fileForMaterial: FileForMaterial) {
+	// eslint-disable-next-line no-undefined
+	return setIDBItem<FileForMaterial>('fileItems', undefined, fileForMaterial);
 }
