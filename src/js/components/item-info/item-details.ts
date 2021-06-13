@@ -3,11 +3,15 @@ import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
 import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
-import type { IsoCode, Material } from '../../../../data/data';
+import type { FileForMaterial, Material } from '../../../../data/data';
+import type { EditListItem } from '../edit-box/edit-list-item';
 
-import detailsTemplate, { formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
+import detailsTemplate, { formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
 import { setMaterialDetails } from './build-details';
-import { getMaterial, saveMaterial } from '../data-operations/idb-persistence';
+import { getMaterial } from '../data-operations/idb-persistence';
+import { ItemCard } from './item-card';
+import { createNewMaterial } from '../data-operations/create-material';
+import { openFile } from '../files-reader/open-file';
 
 export class ItemDetails extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
@@ -113,9 +117,23 @@ export class ItemDetails extends HTMLElement {
 		});
 
 		this.#links.addEventListener('additem', () => {
-			const { value } = this.#linksInput;
+			const url = this.#linksInput.value;
 
-			this.#links.insertAdjacentHTML('beforeend', formatReleaseDate(value));
+			this.#links.insertAdjacentHTML('beforeend', formatLink({ url, title: url }));
+		});
+
+		this.#files.addEventListener('click', async (evt) => {
+			const target = evt.target as HTMLLinkElement;
+
+			if (target.matches('a.file-link')) {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				const targetParent = target.closest('edit-list-item') as EditListItem;
+				const fileInfo = JSON.parse(decodeURI(targetParent.value)) as FileForMaterial;
+
+				await openFile(fileInfo);
+			}
 		});
 
 		this.#editButton.addEventListener('click', () => {
@@ -217,8 +235,10 @@ export class ItemDetails extends HTMLElement {
 
 		if (this.isEditing) {
 			this.#editButton.innerText = '❌ Cancel edit';
+			this.#saveButton.hidden = false;
 		} else {
 			this.#editButton.innerText = '✏️ Edit Material';
+			this.#saveButton.hidden = true;
 		}
 
 		if (isNew === true) {
