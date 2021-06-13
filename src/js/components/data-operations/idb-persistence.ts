@@ -1,8 +1,57 @@
 /* eslint-disable id-length */
 import type { Material } from '../../../../data/data';
 
-const IDB_VERSION = 2;
+type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems';
+
+const IDB_VERSION = 3;
 let database: IDBDatabase | undefined;
+
+const databaseSchema: Record<Collections, { indexes: Record<string, IDBIndexParameters>, storeOptions?: IDBObjectStoreParameters }> = {
+	items: {
+		indexes: {
+			sku: { multiEntry: true, unique: false },
+			name: { unique: false },
+			category: { unique: false },
+			type: { unique: false }
+		}
+	},
+	files: {
+		indexes: {
+			kind: { unique: false },
+			name: { unique: false }
+		}
+	},
+	fileItems: {
+		indexes: {
+			fileName: { unique: false },
+			filePath: { unique: false },
+			itemId: { unique: false }
+		},
+		storeOptions: { autoIncrement: true }
+	},
+	covers: {
+		indexes: {
+			name: { unique: true }
+		}
+	},
+	thumbs: {
+		indexes: {
+			name: { unique: true }
+		}
+	}
+};
+
+function createDatabseSchema(db: IDBDatabase) {
+	[...Object.entries(databaseSchema)].forEach(([store, { indexes, storeOptions }]) => {
+		if (!db.objectStoreNames.contains(store)) {
+			const newStore = db.createObjectStore(store, storeOptions);
+
+			[...Object.entries(indexes)].forEach(([indexName, indexOptions]) => {
+				newStore.createIndex(indexName, indexName, indexOptions);
+			});
+		}
+	});
+}
 
 async function databaseFactory() {
 	return new Promise<IDBDatabase>((resolve, reject) => {
@@ -14,25 +63,7 @@ async function databaseFactory() {
 			dbRequest.onupgradeneeded = () => {
 				database = dbRequest.result;
 
-				const itemsStore = database.createObjectStore('items');
-
-				itemsStore.createIndex('sku', 'sku', { multiEntry: true, unique: false });
-				itemsStore.createIndex('name', 'name', { unique: false });
-				itemsStore.createIndex('category', 'category', { unique: false });
-				itemsStore.createIndex('type', 'type', { unique: false });
-
-				const fileStore = database.createObjectStore('files');
-
-				fileStore.createIndex('kind', 'kind', { unique: false });
-				fileStore.createIndex('name', 'name', { unique: false });
-
-				const coverStore = database.createObjectStore('covers');
-
-				coverStore.createIndex('name', 'name', { unique: true });
-
-				const thumbsStore = database.createObjectStore('thumbs');
-
-				thumbsStore.createIndex('name', 'name', { unique: true });
+				createDatabseSchema(database);
 			};
 
 			dbRequest.onsuccess = () => {
@@ -48,8 +79,6 @@ async function databaseFactory() {
 		}
 	});
 }
-
-type Collections = 'items' | 'covers' | 'thumbs' | 'files';
 
 async function getIDBItem<T = null>(collection: Collections, name: IDBValidKey) {
 	const db = await databaseFactory();
