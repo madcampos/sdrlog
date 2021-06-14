@@ -5,6 +5,7 @@ import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
 import type { FileForMaterial, Material } from '../../../../data/data';
 import type { EditListItem } from '../edit-box/edit-list-item';
+import type { DropArea } from '../drop-area/drop-area';
 
 import detailsTemplate, { formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
 import { setMaterialDetails } from './build-details';
@@ -43,6 +44,8 @@ export class ItemDetails extends HTMLElement {
 	#links: EditList;
 	#linksInput: HTMLInputElement;
 	#cover: HTMLImageElement;
+	#coverDropArea: DropArea;
+	#coverFile: File | undefined;
 	#notes: EditText;
 	#description: EditText;
 
@@ -88,6 +91,8 @@ export class ItemDetails extends HTMLElement {
 		this.#linksInput = this.#root.querySelector('#links') as HTMLInputElement;
 
 		this.#cover = this.#root.querySelector('#cover') as HTMLImageElement;
+		this.#coverDropArea = this.#root.querySelector('#cover-drop-area') as DropArea;
+
 		this.#notes = this.#root.querySelector('#notes') as EditText;
 		this.#description = this.#root.querySelector('#description') as EditText;
 
@@ -136,6 +141,17 @@ export class ItemDetails extends HTMLElement {
 			}
 		});
 
+		this.#coverDropArea.addEventListener('handler', async () => {
+			const file = this.#coverDropArea.file as FileSystemFileHandle;
+
+			this.#coverDropArea.show = false;
+
+			this.#coverFile = await file.getFile();
+			this.#cover.src = URL.createObjectURL(this.#coverFile);
+
+			this.#coverDropArea.show = true;
+		});
+
 		this.#editButton.addEventListener('click', () => {
 			this.toggleEdit();
 		});
@@ -161,7 +177,8 @@ export class ItemDetails extends HTMLElement {
 					notes: this.#notes.value,
 					description: this.#description.value,
 					files: this.#files.values,
-					links: this.#links.values
+					links: this.#links.values,
+					cover: this.#coverFile
 				});
 
 				ItemCard.createCard({
@@ -225,6 +242,7 @@ export class ItemDetails extends HTMLElement {
 		this.#links.edit = editingStatus;
 		this.#notes.edit = editingStatus;
 		this.#description.edit = editingStatus;
+		this.#coverDropArea.show = editingStatus;
 
 		if (this.#status.value === '') {
 			this.#status.hidden = !editingStatus;
@@ -259,6 +277,7 @@ export class ItemDetails extends HTMLElement {
 			this.#links.loaded = true;
 			this.#notes.loaded = true;
 			this.#description.loaded = true;
+			this.#coverDropArea.show = true;
 		}
 	}
 
@@ -278,6 +297,7 @@ export class ItemDetails extends HTMLElement {
 		this.#files.resetValues();
 		this.#links.resetValues();
 		this.#cover.src = '/img/covers/fallback.svg';
+		this.#coverDropArea.show = false;
 		this.#notes.resetValue();
 		this.#description.resetValue();
 	}

@@ -1,6 +1,7 @@
 import type { FileForMaterial, IsoCode, Material, MaterialLink } from '../../../../data/data';
+import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 
-import { saveMaterial, setFileForMaterial } from './idb-persistence';
+import { saveCover, saveMaterial, saveThumb, setFileForMaterial } from './idb-persistence';
 
 interface NewMaterialProperties {
 	name: string,
@@ -17,7 +18,8 @@ interface NewMaterialProperties {
 	notes: string,
 	description: string,
 	links: string[],
-	files: string[]
+	files: string[],
+	cover?: File
 }
 
 export async function createNewMaterial(id: string, {
@@ -35,7 +37,8 @@ export async function createNewMaterial(id: string, {
 	notes,
 	description,
 	links,
-	files
+	files,
+	cover
 }: NewMaterialProperties) {
 	let statusValue: Material['status'] | undefined;
 	const namesValues = {};
@@ -69,5 +72,20 @@ export async function createNewMaterial(id: string, {
 
 	for await (const file of files) {
 		await setFileForMaterial(JSON.parse(decodeURI(file)) as FileForMaterial);
+	}
+
+	if (cover) {
+		try {
+			const coverFile = await processCoverFile(cover);
+
+			await saveCover(id, coverFile);
+
+			const thumbFile = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH });
+
+			await saveThumb(id, thumbFile);
+		} catch (err) {
+			// eslint-disable-next-line no-console
+			console.error(id, err);
+		}
 	}
 }

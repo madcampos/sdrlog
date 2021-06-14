@@ -12,4 +12,5 @@ import './edit-box/edit-select';
 import './edit-box/edit-text';
 import './edit-box/edit-list';
 import './edit-box/edit-list-item';
+import './drop-area/drop-area';
 import './update-refresh/update-refresh';

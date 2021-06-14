@@ -195,16 +195,18 @@ export default `
 		</edit-list>
 	</aside>
 
-	<figure>
-			<img
-				width=""
-				id="cover"
-				decoding="async"
-				loading="lazy"
-				role="presentation"
-				src="/img/covers/fallback.svg"
-			/>
-	</figure>
+	<drop-area id="cover-drop-area" show>
+		<figure>
+				<img
+					width=""
+					id="cover"
+					decoding="async"
+					loading="lazy"
+					role="presentation"
+					src="/img/covers/fallback.svg"
+				/>
+		</figure>
+	</drop-area>
 
 	<article>
 		<edit-text id="notes">

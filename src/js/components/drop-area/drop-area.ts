@@ -1,4 +1,4 @@
-class DropArea extends HTMLElement {
+export class DropArea extends HTMLElement {
 	static get observedAttributes() { return ['type', 'accepts', 'show']; }
 	#root: ShadowRoot;
 	#overlay: HTMLDivElement;
@@ -11,8 +11,9 @@ class DropArea extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<div>
-				<div>
+				<div id="content">
 					<slot></slot>
 				</div>
 				<div id="overlay" hidden>
@@ -27,7 +28,14 @@ class DropArea extends HTMLElement {
 
 		this.#overlay = this.#root.querySelector('#overlay') as HTMLDivElement;
 		this.#type = 'file';
-		this.#accepts = { description: 'JPEG Images', accept: { 'image/jpeg': ['.jpg', '.jpeg'] } };
+		this.#accepts = {
+			description: 'Image Files',
+			accept: {
+				'image/jpeg': ['.jpg', '.jpeg'],
+				'image/png': ['.png'],
+				'image/webp': ['.webp']
+			}
+		};
 
 		this.#overlay.addEventListener('click', async () => {
 			let handle: FileSystemHandle;
@@ -55,37 +63,30 @@ class DropArea extends HTMLElement {
 			evt.preventDefault();
 			evt.stopPropagation();
 
+			if (!this.show) {
+				return;
+			}
+
 			for await (const item of (evt.dataTransfer?.items ?? []) as DataTransferItem[]) {
 				// Drag and drop treats both as files
 				if (item.kind === 'file') {
-					const entry = await item.getAsFileSystemHandle();
+					const fileType = item.type;
 					const mimes = Object.keys(this.#accepts.accept);
 
-					if (entry?.kind === this.#type && mimes.includes(item.type)) {
+					const entry = await item.getAsFileSystemHandle();
+
+					if (entry?.kind === this.#type && mimes.includes(fileType)) {
 						this.#file = entry;
 						this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
 					}
 				}
+
+				this.#overlay.classList.remove('drop');
 			}
 		});
 
-		this.#overlay.addEventListener('dragstart', (evt) => {
-			this.#overlay.classList.add('hint');
-
-			if (evt.dataTransfer) {
-				evt.dataTransfer.effectAllowed = 'link';
-			}
-		});
-
-		this.#overlay.addEventListener('dragend', (evt) => {
-			this.#overlay.classList.remove('hint');
-
-			if (evt.dataTransfer) {
-				evt.dataTransfer.dropEffect = 'link';
-			}
-		});
-
-		this.addEventListener('dragenter', () => {
+		this.addEventListener('dragover', (evt) => {
+			evt.preventDefault();
 			this.#overlay.classList.add('drop');
 		});
 
@@ -134,7 +135,7 @@ class DropArea extends HTMLElement {
 			this.#type = type;
 		}
 
-		const accepts = JSON.parse(decodeURI(this.getAttribute('accept') ?? '{ accepts: {} }')) as FilePickerAcceptType;
+		const accepts = JSON.parse(decodeURI(this.getAttribute('accept') ?? encodeURI('{ "accept": {} }'))) as FilePickerAcceptType;
 
 		if (Object.keys(accepts.accept).length) {
 			this.#accepts = accepts;
