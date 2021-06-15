@@ -33,6 +33,8 @@ button {
 	padding: 0;
 
 	transition: 0.2s ease all;
+
+	font: inherit;
 }
 
 button:focus {

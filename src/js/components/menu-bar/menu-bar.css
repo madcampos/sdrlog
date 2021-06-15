@@ -42,6 +42,8 @@ nav button {
 	padding: 0;
 
 	transition: 0.2s ease all;
+
+	font: inherit;
 }
 
 nav button:focus {

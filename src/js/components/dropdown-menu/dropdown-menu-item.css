@@ -11,6 +11,8 @@ button {
 	text-align: left;
 
 	transition: 0.2s ease all;
+
+	font: inherit;
 }
 
 button:focus {
