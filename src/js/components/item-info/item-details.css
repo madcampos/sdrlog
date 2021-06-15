@@ -1,24 +1,46 @@
-div {
-	max-width: 30rem;
-	overflow: auto;
+#container {
+	display: grid;
+	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
+	grid-template-rows: 5rem 5rem 1fr 5rem;
+	grid-template-areas:
+		'image header'
+		'image files'
+		'image main'
+		'meta main';
+
+	height: 100%;
+	box-sizing: inherit;
 }
 
-pre {
+header {
+	grid-area: header;
+}
+
+#meta {
+	grid-area: meta;
+}
+
+drop-area {
+	grid-area: image;
+	width: 100%;
+	height: 100%;
+}
+
+drop-area figure {
 	margin: 0;
 	padding: 0;
-	font-size: inherit;
-	font-family: inherit;
-	white-space: pre-wrap;
-	hyphens: auto;
 }
 
-img {
-	width: 5rem;
-	height: 5rem;
+drop-area figure img {
+	width: 100%;
+	height: 100%;
 	object-fit: contain;
 }
 
-#cover {
-	height: 15rem;
-	width: 15rem;
+article {
+	grid-area: main;
+}
+
+#files {
+	grid-area: files;
 }

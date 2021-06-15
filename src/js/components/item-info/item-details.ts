@@ -99,32 +99,32 @@ export class ItemDetails extends HTMLElement {
 		this.#sku.addEventListener('additem', () => {
 			const { value } = this.#skuInput;
 
-			this.#sku.insertAdjacentHTML('beforeend', formatSku(value));
+			this.#sku.insertAdjacentHTML('beforeend', formatSku(value, true));
 		});
 
 		this.#releaseDate.addEventListener('additem', () => {
 			const { value } = this.#releaseDateInput;
 
-			this.#releaseDate.insertAdjacentHTML('beforeend', formatReleaseDate(value));
+			this.#releaseDate.insertAdjacentHTML('beforeend', formatReleaseDate(value, true));
 		});
 
 		this.#publisher.addEventListener('additem', () => {
 			const { value } = this.#publisherInput;
 
-			this.#publisher.insertAdjacentHTML('beforeend', formatPublisher(value));
+			this.#publisher.insertAdjacentHTML('beforeend', formatPublisher(value, true));
 		});
 
 		this.#names.addEventListener('additem', () => {
 			const { value: lang } = this.#namesLangInput;
 			const { value: name } = this.#namesValueInput;
 
-			this.#names.insertAdjacentHTML('beforeend', formatTranslatedName(lang, name));
+			this.#names.insertAdjacentHTML('beforeend', formatTranslatedName(lang, name, true));
 		});
 
 		this.#links.addEventListener('additem', () => {
 			const url = this.#linksInput.value;
 
-			this.#links.insertAdjacentHTML('beforeend', formatLink({ url, title: url }));
+			this.#links.insertAdjacentHTML('beforeend', formatLink({ url, title: url }, true));
 		});
 
 		this.#files.addEventListener('click', async (evt) => {

@@ -99,4 +99,6 @@ export async function setMaterialDetails(material: Material, {
 	for (const file of fileList) {
 		files.insertAdjacentHTML('beforeend', formatFile(file));
 	}
+
+	files.loaded = true;
 }

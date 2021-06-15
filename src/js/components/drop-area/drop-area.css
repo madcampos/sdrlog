@@ -1,7 +1,7 @@
 :host {
 	display: grid;
-	grid-template-columns: min-content;
-	grid-template-rows: min-content;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
 
 	--hover-color: var(--secondary-color);
 	--hover-background: var(--theme-color);

@@ -1,3 +1,4 @@
+/* eslint-disable no-ternary */
 import type { FileForMaterial, MaterialLink } from '../../../../data/data';
 
 export const publishers = new Map([
@@ -62,17 +63,17 @@ export const status = new Map([
 	['canceled', '🚫 Canceled']
 ]);
 
-export function formatReleaseDate(releaseDate: string) {
+export function formatReleaseDate(releaseDate: string, isEditing = false) {
 	return `
-		<edit-list-item value="${releaseDate}">
+		<edit-list-item ${isEditing ? 'edit' : ''} value="${releaseDate}">
 			${dateFormater.format(new Date(releaseDate))}
 		</edit-list-item>
 	`;
 }
 
-export function formatPublisher(publisher: string) {
+export function formatPublisher(publisher: string, isEditing = false) {
 	return `
-		<edit-list-item value="${publisher}">
+		<edit-list-item ${isEditing ? 'edit' : ''} value="${publisher}">
 			<abbr title="${publisher}">
 				<img
 					role="presentation"
@@ -83,17 +84,17 @@ export function formatPublisher(publisher: string) {
 	`;
 }
 
-export function formatSku(sku: string) {
-	return `<edit-list-item value="${sku}">${sku}</edit-list-item>`;
+export function formatSku(sku: string, isEditing = false) {
+	return `<edit-list-item ${isEditing ? 'edit' : ''} value="${sku}">${sku}</edit-list-item>`;
 }
 
-export function formatTranslatedName(lang: string, name: string) {
-	return `<edit-list-item value="${encodeURI(JSON.stringify({ lang, name }))}">${languages.get(lang) ?? ''} → ${name}</edit-list-item>`;
+export function formatTranslatedName(lang: string, name: string, isEditing = false) {
+	return `<edit-list-item ${isEditing ? 'edit' : ''} value="${encodeURI(JSON.stringify({ lang, name }))}">${languages.get(lang) ?? ''} → ${name}</edit-list-item>`;
 }
 
-export function formatLink({ url, title }: MaterialLink) {
+export function formatLink({ url, title }: MaterialLink, isEditing = false) {
 	return `
-		<edit-list-item value="${encodeURI(JSON.stringify({ title, url }))}">
+		<edit-list-item ${isEditing ? 'edit' : ''} value="${encodeURI(JSON.stringify({ title, url }))}">
 			<a
 				href="${url}"
 				target="_blank"
@@ -120,103 +121,107 @@ export default `
 <modal-dialog>
 	<edit-box id="name" slot="title" placeholder="Item name"></edit-box>
 
-	<header>
-		<edit-list id="sku" open>
-			<span slot="label">SKU</span>
-			<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$"/>
-		</edit-list>
+	<div id="container">
+		<header>
+			<edit-list id="sku" open>
+				<span slot="label">SKU</span>
+				<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required/>
+			</edit-list>
 
-		<edit-box id="edition" type="number" min="1" max="6" step="1">
-			<span slot="label">Edition</span>
-		</edit-box>
+			<edit-box id="edition" type="number" min="1" max="6" step="1" required>
+				<span slot="label">Edition</span>
+			</edit-box>
 
-		<edit-box type="date" id="gamedate">
-			<span slot="label">Game date</span>
-		</edit-box>
+			<edit-box type="date" id="gamedate" required>
+				<span slot="label">Game date</span>
+			</edit-box>
 
-		<edit-select id="category">
-			<span slot="label">Category</span>
+			<edit-select id="category" required>
+				<span slot="label">Category</span>
 
-			${[...categories.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-		</edit-select>
+				${[...categories.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
+			</edit-select>
 
-		<edit-select id="type">
-			<span slot="label">Type</span>
+			<edit-select id="type" required>
+				<span slot="label">Type</span>
 
-			${[...types.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-		</edit-select>
+				${[...types.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
+			</edit-select>
 
-		<edit-select id="language">
-			<span slot="label">Original Language</span>
+			<edit-select id="language" required>
+				<span slot="label">Original Language</span>
 
-			${[...languages.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-		</edit-select>
-
-		<edit-list id="releasedate" open>
-			<span slot="label">Release date</span>
-			<input slot="input" type="date"/>
-		</edit-list>
-
-		<edit-list id="publisher" open>
-			<span slot="label">Publisher</span>
-
-			<select slot="input">
-
-			${[...publishers.entries()].map(([value]) => `<option>${value}</option>`).join('\n')}
-			</select>
-		</edit-list>
-
-		<edit-select id="status" hidden>
-			<span slot="label">Status</span>
-
-			${[...status.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-		</edit-select>
-	</header>
-
-	<aside>
-		<edit-list id="names">
-			<span slot="label">Names published</span>
-
-			<select slot="input">
 				${[...languages.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-			</select>
+			</edit-select>
 
-			<input slot="input"/>
-		</edit-list>
+			<edit-list id="releasedate" open>
+				<span slot="label">Release date</span>
+				<input slot="input" type="date" required/>
+			</edit-list>
 
-		<edit-list id="files" hidden>
-			<span slot="label">Files</span>
-			<input slot="input" type="file" multiple/>
-		</edit-list>
+			<edit-list id="publisher" open>
+				<span slot="label">Publisher</span>
 
-		<edit-list id="links">
-			<span slot="label">Online links</span>
-			<input slot="input" type="url"/>
-		</edit-list>
-	</aside>
+				<select slot="input" required>
+					${[...publishers.entries()].map(([value]) => `<option>${value}</option>`).join('\n')}
+				</select>
+			</edit-list>
 
-	<drop-area id="cover-drop-area" show>
-		<figure>
-				<img
-					width=""
-					id="cover"
-					decoding="async"
-					loading="lazy"
-					role="presentation"
-					src="/img/covers/fallback.svg"
-				/>
-		</figure>
-	</drop-area>
+			<edit-select id="status" hidden required>
+				<span slot="label">Status</span>
 
-	<article>
-		<edit-text id="notes">
-			<span slot="label">Notes</span>
-		</edit-text>
+				${[...status.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
+			</edit-select>
+		</header>
 
-		<edit-text id="description">
-			<span slot="label">Description</span>
-		</edit-text>
-	</article>
+		<aside id="meta">
+			<edit-list id="names">
+				<span slot="label">Names published</span>
+
+				<select slot="input" required>
+					${[...languages.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
+				</select>
+
+				<input slot="input" required/>
+			</edit-list>
+		</aside>
+
+		<aside id="files">
+			<edit-list id="files" hidden>
+				<span slot="label">Files</span>
+				<input slot="input" type="file" multiple required/>
+			</edit-list>
+
+			<edit-list id="links">
+				<span slot="label">Online links</span>
+				<input slot="input" type="text" required/>
+				<input slot="input" type="url" required/>
+			</edit-list>
+		</aside>
+
+		<drop-area id="cover-drop-area" show>
+			<figure>
+					<img
+						width=""
+						id="cover"
+						decoding="async"
+						loading="lazy"
+						role="presentation"
+						src="/img/covers/fallback.svg"
+					/>
+			</figure>
+		</drop-area>
+
+		<article>
+			<edit-text id="notes">
+				<span slot="label">Notes</span>
+			</edit-text>
+
+			<edit-text id="description" required>
+				<span slot="label">Description</span>
+			</edit-text>
+		</article>
+	</div>
 
 	<button slot="footer" id="edit">✏️ Edit</button>
 	<button slot="footer" hidden id="save">💾 Save</button>
