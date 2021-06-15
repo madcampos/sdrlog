@@ -217,9 +217,8 @@ export default `
 			<span slot="label">Description</span>
 		</edit-text>
 	</article>
-	<footer>
-		<button id="edit">✏️ Edit</button>
-		<button hidden id="save">💾 Save</button>
-	</footer>
+
+	<button slot="footer" id="edit">✏️ Edit</button>
+	<button slot="footer" hidden id="save">💾 Save</button>
 </modal-dialog>
 `;

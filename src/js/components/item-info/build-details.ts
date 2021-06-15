@@ -86,11 +86,9 @@ export async function setMaterialDetails(material: Material, {
 	notes.value = material.notes ?? '';
 	description.value = material.description;
 
-	const coverFile = await fetchCover(material.sku[0]);
-
-	if (coverFile) {
+	void fetchCover(material.sku[0]).then((coverFile) => {
 		cover.src = URL.createObjectURL(coverFile);
-	}
+	});
 
 	const fileList = await getFilesForMaterial(material.sku[0]) ?? [];
 
