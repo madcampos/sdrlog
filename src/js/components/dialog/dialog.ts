@@ -8,14 +8,85 @@ export class ModalDialog extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
+			<style>
+				:host {
+					display: flex;
+					box-sizing: inherit;
+				}
+
+				dialog[open] {
+					display: flex;
+					flex-direction: column;
+					padding: 0;
+					width: clamp(10rem, 80vw, 60rem);
+					height: clamp(15rem, 80vh, 100rem);
+					border: none;
+					border-radius: 0.5rem;
+					background: var(--bg-color);
+				}
+
+				dialog::backdrop {
+					background: rgba(0, 0, 0, 0.5);
+				}
+
+				dialog header {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 1rem;
+					height: 3rem;
+
+					background: var(--accent-color);
+					color: var(--theme-color);
+				}
+
+				dialog header ::slotted(*) {
+					flex-grow: 1;
+					margin-inline-end: 0.5rem;
+				}
+
+				dialog footer:not([hidden]) {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					padding: 0.5rem 1rem;
+					height: 3rem;
+
+					background: var(--bg-color);
+				}
+
+				dialog article {
+					padding: 1rem;
+					flex-grow: 1;
+					overflow: auto;
+				}
+
+				dialog button {
+					background: transparent;
+					border: medium transparent solid;
+					border-radius: 0.3rem;
+					width: var(--button-size);
+					height: var(--button-size);
+					padding: 0;
+
+					transition: 0.2s ease all;
+
+					font: inherit;
+				}
+
+				dialog button:focus {
+					border-color: var(--theme-color);
+					outline: none;
+				}
+
+				dialog button:active {
+					background: var(--secondary-color);
+				}
+			</style>
 			<slot name="trigger"></slot>
 			<dialog>
 				<header>
-					<div>
-						<slot name="title"></slot>
-					</div>
+					<slot name="title"></slot>
 					<button id="close" title="Close window">❌</button>
 				</header>
 				<article>
