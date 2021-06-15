@@ -11,18 +11,17 @@ export class DropArea extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
-			<div>
-				<div id="content">
-					<slot></slot>
-				</div>
-				<div id="overlay" hidden>
-					<slot name="overlay">
-						Click to select a item
-						<br>
-						Or drag the item here...
-					</slot>
-				</div>
+			<style>:host { display: none; }</style>
+			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
+			<div id="content">
+				<slot></slot>
+			</div>
+			<div id="overlay" hidden>
+				<slot name="overlay">
+					Click to select a item
+					<br>
+					Or drag the item here...
+				</slot>
 			</div>
 		`;
 

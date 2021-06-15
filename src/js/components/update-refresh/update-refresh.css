@@ -1,3 +1,5 @@
+:host { display: block; }
+
 aside:not([hidden]) {
 	position: absolute;
 	bottom: 0.5rem;

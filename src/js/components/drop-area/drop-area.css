@@ -1,10 +1,10 @@
-:host > div {
+:host {
 	display: grid;
 	grid-template-columns: min-content;
 	grid-template-rows: min-content;
 
-	--hover-color: hotpink;
-	--hover-background: goldenrod;
+	--hover-color: var(--secondary-color);
+	--hover-background: var(--theme-color);
 }
 
 #content, #overlay {
@@ -12,7 +12,7 @@
 	grid-column: 1 / -1;
 }
 
-#overlay {
+#overlay:not([hidden]) {
 	border: dotted var(--border, transparent) medium;
 	box-sizing: border-box;
 	display: flex;
@@ -23,10 +23,6 @@
 	color: var(--border, currentColor);
 
 	z-index: 1;
-}
-
-#overlay[hidden] {
-	display: none;
 }
 
 .drop {

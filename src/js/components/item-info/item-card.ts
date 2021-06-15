@@ -28,18 +28,17 @@ export class ItemCard extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
-			<div>
-				<figure>
-					<img
-						width="200"
-						height="200"
-						role="presentation"
-						src="/img/covers/fallback.svg"
-					/>
-				</figure>
-				<h4></h4>
-			</div>
+			<style>:host { display: none; }</style>
+			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
+			<figure>
+				<img
+					width="200"
+					height="200"
+					role="presentation"
+					src="/img/covers/fallback.svg"
+				/>
+			</figure>
+			<h4></h4>
 		`;
 
 		this.#title = this.#root.querySelector('h4') as HTMLHeadingElement;

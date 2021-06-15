@@ -1,5 +1,6 @@
 :host {
 	position: absolute;
+	display: block;
 	top: env(titlebar-area-y, 0);
 	height: var(--menubar-height);
 	width: 100%;

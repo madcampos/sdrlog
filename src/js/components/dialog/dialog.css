@@ -25,8 +25,18 @@ dialog header {
 	padding: 0 1rem;
 	height: 3rem;
 
-	background: var(--accent-gradient);
+	background: var(--accent-color);
 	color: var(--theme-color);
+}
+
+dialog footer:not([hidden]) {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0.5rem 1rem;
+	height: 3rem;
+
+	background: var(--bg-color);
 }
 
 dialog article {

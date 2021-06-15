@@ -9,7 +9,8 @@ class DropdownMenu extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
+			<style>:host { display: none; }</style>
+			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
 			<button></button>
 			<dialog>
 				<slot></slot>

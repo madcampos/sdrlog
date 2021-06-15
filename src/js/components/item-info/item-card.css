@@ -1,4 +1,4 @@
-div {
+:host {
 	border: medium solid var(--theme-color);
 	border-radius: 0.3rem;
 	cursor: pointer;

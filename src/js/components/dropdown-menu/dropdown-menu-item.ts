@@ -1,14 +1,15 @@
 class DropdownMenuItem extends HTMLElement {
 	static get observedAttributes() { return ['icon']; }
 	#root: ShadowRoot;
-	#icon: HTMLImageElement;
+	#icon: HTMLImageElement | null | undefined;
 
 	constructor() {
 		super();
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
+			<style>:host { display: none; }</style>
+			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
 			<button>
 				<img role="presentation"/>
 				<span>
@@ -17,15 +18,19 @@ class DropdownMenuItem extends HTMLElement {
 			</button>
 		`;
 
-		this.#icon = this.#root.querySelector('img') as HTMLImageElement;
+		this.#icon = this.#root.querySelector('img');
 	}
 
 	attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {
-		this.#icon.src = newValue;
+		if (this.#icon) {
+			this.#icon.src = newValue;
+		}
 	}
 
 	connectedCallback() {
-		this.#icon.src = this.getAttribute('icon') ?? '';
+		if (this.#icon) {
+			this.#icon.src = this.getAttribute('icon') ?? '';
+		}
 
 		if (typeof this.getAttribute('separator') === 'string') {
 			const divider = document.createElement('hr');

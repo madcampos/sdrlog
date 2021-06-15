@@ -8,7 +8,8 @@ export class ModalDialog extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
+			<style>:host { display: none; }</style>
+			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
 			<slot name="trigger"></slot>
 			<dialog>
 				<header>
@@ -20,13 +21,25 @@ export class ModalDialog extends HTMLElement {
 				<article>
 					<slot></slot>
 				</article>
+				<footer hidden>
+					<slot name="footer"></slot>
+				</footer>
 			</dialog>
 		`;
 
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
-		const triggerSlot = this.#root.querySelector('slot[name=trigger]') as HTMLSlotElement;
+		const triggerSlot = this.#root.querySelector('slot[name="trigger"]') as HTMLSlotElement;
 		const [triggerButton] = triggerSlot.assignedElements() as (HTMLButtonElement | undefined)[];
+
+		this.#root.addEventListener('slotchange', (evt) => {
+			const slot = evt.target as HTMLSlotElement;
+			const slotHasElements = slot.assignedElements().length > 0;
+
+			if (slot.name === 'footer') {
+				(this.#root.querySelector('footer') as HTMLElement).hidden = !slotHasElements;
+			}
+		});
 
 		triggerButton?.addEventListener('click', (evt) => {
 			evt.preventDefault();

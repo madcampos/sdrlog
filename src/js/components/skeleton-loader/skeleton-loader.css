@@ -1,3 +1,5 @@
+:host { display: block; }
+
 #loader {
 	max-width: 20rem;
 	border-radius: 0.5rem;

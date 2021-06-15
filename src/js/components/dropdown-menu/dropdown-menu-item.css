@@ -1,3 +1,5 @@
+:host { display: block; }
+
 button {
 	background: transparent;
 	border: medium transparent solid;
