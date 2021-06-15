@@ -1,11 +1,39 @@
 div {
-	border: medium solid black;
+	border: medium solid var(--theme-color);
+	border-radius: 0.3rem;
 	cursor: pointer;
-	width: 15rem;
-	display: inline-block;
+
+	display: inline-grid;
+	grid-template-columns: 14rem;
+	grid-template-rows: 18rem 5rem;
+	justify-items: center;
+	align-items: start;
+	margin: 0.5rem;
+
+	overflow: hidden;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 }
 
 img {
 	width: 100%;
+	height: 100%;
 	object-fit: contain;
+}
+
+h4 {
+	align-self: center;
+	padding: 0.2rem 0.5rem;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }

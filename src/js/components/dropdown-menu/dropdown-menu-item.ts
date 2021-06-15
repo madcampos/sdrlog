@@ -8,6 +8,7 @@ class DropdownMenuItem extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<button>
 				<img role="presentation"/>
 				<span>
@@ -25,6 +26,12 @@ class DropdownMenuItem extends HTMLElement {
 
 	connectedCallback() {
 		this.#icon.src = this.getAttribute('icon') ?? '';
+
+		if (typeof this.getAttribute('separator') === 'string') {
+			const divider = document.createElement('hr');
+
+			this.#root.querySelector('button')?.replaceWith(divider);
+		}
 	}
 }
 

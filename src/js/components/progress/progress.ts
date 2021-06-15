@@ -15,10 +15,11 @@ export class ProgressOverlay extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<dialog>
 				<h1><slot name="title"></slot></h1>
 				<progress></progress>
-				<p><span></span></p>
+				<p><span id="count"></span></p>
 				<slot name="info"></slot>
 			</dialog>
 		`;

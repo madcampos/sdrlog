@@ -1,0 +1,53 @@
+:host {
+	position: relative;
+	display: flex;
+	box-sizing: inherit;
+}
+
+button {
+	background: transparent;
+	border: medium transparent solid;
+	border-radius: 0.3rem;
+	width: var(--button-size);
+	height: var(--button-size);
+	padding: 0;
+
+	transition: 0.2s ease all;
+}
+
+button:focus {
+	border-color: var(--theme-color);
+	outline: none;
+}
+
+button:active {
+	background: var(--secondary-color);
+}
+
+dialog[open] {
+	position: absolute;
+	left: 0;
+	right: auto;
+	top: 2rem;
+
+	margin: 0;
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+
+	width: max-content;
+	max-width: 15rem;
+	height: min-content;
+	max-height: 80vh;
+
+	border: medium solid var(--theme-color);
+	border-radius: 0.5rem;
+	background: var(--bg-color);
+
+	overflow: auto;
+}
+
+dialog.right {
+	left: auto;
+	right: 0;
+}

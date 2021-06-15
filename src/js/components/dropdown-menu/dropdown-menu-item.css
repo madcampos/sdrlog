@@ -1,0 +1,27 @@
+button {
+	background: transparent;
+	border: medium transparent solid;
+	border-radius: 0.3rem;
+	min-width: min-content;
+	width: 100%;
+	height: var(--button-size);
+	padding: 0;
+	text-align: left;
+
+	transition: 0.2s ease all;
+}
+
+button:focus {
+	border-color: var(--theme-color);
+	outline: none;
+}
+
+button:active {
+	background: var(--secondary-color);
+}
+
+hr {
+	width: max(3rem, 80%);
+	border: none;
+	border-top: solid medium var(--theme-color);
+}

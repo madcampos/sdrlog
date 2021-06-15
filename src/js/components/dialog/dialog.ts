@@ -8,6 +8,7 @@ export class ModalDialog extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<slot name="trigger"></slot>
 			<dialog>
 				<header>

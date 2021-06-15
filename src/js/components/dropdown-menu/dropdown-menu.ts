@@ -9,12 +9,11 @@ class DropdownMenu extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<span>
-				<button></button>
-				<dialog>
-					<slot></slot>
-				</dialog>
-			</span>
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
+			<button></button>
+			<dialog>
+				<slot></slot>
+			</dialog>
 		`;
 
 		this.#button = this.#root.querySelector('button') as HTMLButtonElement;
@@ -25,10 +24,22 @@ class DropdownMenu extends HTMLElement {
 			evt.stopPropagation();
 
 			this.#dialog.show();
+
+			const rect = this.#dialog.getBoundingClientRect();
+
+			if (rect.right > window.innerWidth) {
+				this.#dialog.classList.add('right');
+			}
 		});
 
-		this.#dialog.addEventListener('click', () => {
+		window.addEventListener('click', () => {
 			this.#dialog.close();
+		});
+
+		this.addEventListener('keypress', (evt) => {
+			if (evt.key === 'Escape') {
+				this.#dialog.close();
+			}
 		});
 	}
 

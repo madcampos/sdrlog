@@ -19,6 +19,7 @@ class MenuBar extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<nav>
 				<dropdown-menu id="filters" label="︙">
 					<dropdown-menu-item action="sourcebook">📜 Sourcebooks</dropdown-menu-item>
@@ -31,7 +32,9 @@ class MenuBar extends HTMLElement {
 					<dropdown-menu-item action="videogame">🎮 Video Games</dropdown-menu-item>
 					<!-- <dropdown-menu-item action="unofficial">📓 Unofficial</dropdown-menu-item> -->
 					<dropdown-menu-item action="misc">🔣 Misc.</dropdown-menu-item>
-					<hr>
+
+					<dropdown-menu-item separator></dropdown-menu-item>
+
 					<dropdown-menu-item action="all">📚 All</dropdown-menu-item>
 				</dropdown-menu>
 				<search-box></search-box>
@@ -43,10 +46,14 @@ class MenuBar extends HTMLElement {
 				<dropdown-menu label="⚙️">
 					<dropdown-menu-item id="import-materials">📥 Import Materials</dropdown-menu-item>
 					<dropdown-menu-item id="import-data">📦 Import Data</dropdown-menu-item>
-					<hr>
+
+					<dropdown-menu-item separator></dropdown-menu-item>
+
 					<dropdown-menu-item id="import-covers">📂 Import Covers</dropdown-menu-item>
 					<dropdown-menu-item id="extract-covers">🧩 Extract Covers</dropdown-menu-item>
-					<hr>
+
+					<dropdown-menu-item separator></dropdown-menu-item>
+
 					<dropdown-menu-item id="export-data">📤 Export Data</dropdown-menu-item>
 					<dropdown-menu-item id="export-covers">🖼️ Export Covers</dropdown-menu-item>
 				</dropdown-menu>

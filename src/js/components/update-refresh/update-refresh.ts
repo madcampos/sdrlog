@@ -11,6 +11,7 @@ class UpdateRefresh extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
 			<aside role="status" aria-live="polite" hidden>
 				<p></p>
 				<button>♻️</button>

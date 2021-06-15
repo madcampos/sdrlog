@@ -1,0 +1,53 @@
+:host {
+	position: absolute;
+	top: env(titlebar-area-y, 0);
+	height: var(--menubar-height);
+	width: 100%;
+	background-color: var(--accent-color);
+
+	-webkit-app-region: drag;
+
+	box-sizing: inherit;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	display: flex;
+	user-select: none;
+	height: 100%;
+	left: env(titlebar-area-x, 0);
+	width: env(titlebar-area-width, 100%);
+	padding: calc(var(--menubar-height) * 0.1) calc(var(--menubar-height) * 0.2);
+	box-sizing: inherit;
+	justify-content: center;
+	align-items: center;
+}
+
+nav > * {
+	margin: 0.1rem;
+}
+
+nav search-box {
+	flex-grow: 1;
+}
+
+nav button {
+	background: transparent;
+	border: medium transparent solid;
+	border-radius: 0.3rem;
+	width: var(--button-size);
+	height: var(--button-size);
+	padding: 0;
+
+	transition: 0.2s ease all;
+}
+
+nav button:focus {
+	border-color: var(--theme-color);
+	outline: none;
+}
+
+nav button:active {
+	background: var(--secondary-color);
+}

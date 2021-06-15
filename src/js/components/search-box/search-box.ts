@@ -9,9 +9,8 @@ class SearchBox extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<div>
-				<label title="Search">🔍<input type="search" placeholder="Search items..." role="search"/></label>
-			</div>
+			<style>@import "${import.meta.url.replace(/js$/iu, 'css')}";</style>
+			<label title="Search">🔍<input type="search" placeholder="Search items..." role="search"/></label>
 		`;
 
 		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;

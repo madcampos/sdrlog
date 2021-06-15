@@ -1,0 +1,34 @@
+:host {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: inherit;
+}
+
+label {
+	box-sizing: inherit;
+	display: flex;
+	margin: 0  max(1rem, 10%);
+	width: 100%;
+	max-width: 20rem;
+}
+
+input[type='search'] {
+	flex-grow: 1;
+	width: 100%;
+
+	appearance: none;
+	background: var(--bg-color);
+	outline: none;
+	border: solid medium var(--bg-color);
+	border-radius: 0.3rem;
+
+	transition: 0.2s ease all;
+}
+
+input[type='search']::-webkit-search-cancel-button { display: none; }
+
+input:focus {
+	outline: none;
+	border-bottom-color: var(--theme-color);
+}
