@@ -11,12 +11,9 @@ export class EditListItem extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
 			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<div>
-				<slot></slot>
-				<button hidden>❌</button>
-			</div>
+			<slot></slot>
+			<button hidden>❌</button>
 		`;
 
 		this.#closeButton = this.#root.querySelector('button') as HTMLButtonElement;

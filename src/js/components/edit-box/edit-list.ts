@@ -46,8 +46,10 @@ export class EditList extends HTMLElement {
 			const [input] = this.#inputSlot.assignedElements() as (HTMLInputElement | HTMLSelectElement | null)[];
 			let validationMessage = '';
 
-			if (this.values.includes(this.value)) {
+			if (this.values.includes(input?.value ?? '')) {
 				validationMessage = 'Item already exists in the list.';
+			} else if (!input?.value) {
+				validationMessage = 'Please fill the field.';
 			} else {
 				this.dispatchEvent(new CustomEvent('additem', {
 					bubbles: true,

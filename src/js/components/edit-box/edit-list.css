@@ -61,3 +61,28 @@ details[open] summary::before {
 	padding: 0.3rem;
 	box-sizing: border-box;
 }
+
+button {
+	background: transparent;
+	border: solid var(--border-width) transparent;
+	border-radius: 0.3rem;
+	width: var(--button-size);
+	height: var(--button-size);
+	padding: 0;
+
+	transition: 0.2s ease all;
+
+	font: inherit;
+	font-size: 0.7em;
+
+	margin-inline-start: 0.5rem;
+}
+
+button:focus {
+	border-color: var(--theme-color);
+	outline: none;
+}
+
+button:active {
+	background: var(--secondary-color);
+}
