@@ -65,8 +65,13 @@ function updateCSSSearchFilter(filterOption: FilterOptions) {
 
 export function getTagStringFromFilters(filter: FilterOptions) {
 	const tagStringParts: string[] = [];
+	const filterEntries = Object.entries(filter) as [string, string][];
 
-	Object.entries(filter).forEach(([name, value]: [string, string]) => {
+	if (filterEntries.length === 1 && filterEntries[0][0] === 'name') {
+		return filterEntries[0][1];
+	}
+
+	filterEntries.forEach(([name, value]) => {
 		tagStringParts.push(`${name}: ${value}`);
 	});
 
