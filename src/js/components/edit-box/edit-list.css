@@ -1,0 +1,63 @@
+:host {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-direction: column;
+	box-sizing: inherit;
+	width: 100%;
+	margin-block: 0.5rem;
+}
+
+summary {
+	font-size: 0.75em;
+	display: block;
+	width: fit-content;
+	padding: 0.05rem 0.4rem;
+
+	border-radius: 0.5rem;
+
+	background: var(--border-color);
+	color: var(--text-color);
+
+	z-index: 1;
+	transform: translateY(-100%);
+	transition: 0.2s ease all;
+
+	position: absolute;
+}
+
+details {
+	width: 100%;
+	padding: 0.5rem 0.5rem 0.3rem;
+	margin: 0.5rem 0;
+
+	appearance: none;
+	border: solid var(--border-width) var(--border-color);
+	background: transparent;
+	border-radius: 0.3rem;
+
+	transition: 0.2s ease all;
+
+	font: inherit;
+	box-sizing: border-box;
+
+	position: relative;
+}
+
+summary::before {
+	content: '▷';
+	display: inline-block;
+	transition: inherit;
+}
+
+details[open] summary::before {
+	transform: rotate(90deg);
+}
+
+#input:not([hidden]) {
+	display: block;
+	background: var(--border-color);
+	margin: -0.55rem -0.55rem 0.5rem;
+	padding: 0.3rem;
+	box-sizing: border-box;
+}

@@ -21,16 +21,14 @@ export class EditBox extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
+			<style>label { display: none; }</style>
 			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<div>
-				<label for="edit-box">
-					<slot name="label"></slot>
-				</label>
-				<skeleton-loader>
-					<input id="edit-box" readonly/>
-				</skeleton-loader>
-			</div>
+			<label for="edit-box" hidden>
+				<slot name="label"></slot>
+			</label>
+			<skeleton-loader>
+				<input id="edit-box" readonly/>
+			</skeleton-loader>
 		`;
 
 		this.#input = this.#root.querySelector('input') as HTMLInputElement;
@@ -41,6 +39,15 @@ export class EditBox extends HTMLElement {
 				this.#input.setAttribute(attribute.name, attribute.value);
 			}
 		}
+
+		this.#root.addEventListener('slotchange', (evt) => {
+			const slot = evt.target as HTMLSlotElement;
+			const slotHasElements = slot.assignedElements().length > 0;
+
+			if (slot.name === 'label') {
+				(this.#root.querySelector('label') as HTMLLabelElement).hidden = !slotHasElements;
+			}
+		});
 
 		this.#input.addEventListener('change', () => {
 			this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));

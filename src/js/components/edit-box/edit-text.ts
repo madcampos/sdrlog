@@ -21,16 +21,14 @@ export class EditText extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
+			<style>label { display: none; }</style>
 			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<div>
-				<label for="edit-box">
-					<slot name="label"></slot>
-				</label>
-				<skeleton-loader>
-					<textarea id="edit-box" readonly></textarea>
-				</skeleton-loader>
-			</div>
+			<label for="edit-box">
+				<slot name="label"></slot>
+			</label>
+			<skeleton-loader>
+				<textarea id="edit-box" readonly></textarea>
+			</skeleton-loader>
 		`;
 
 		this.#textArea = this.#root.querySelector('textarea') as HTMLTextAreaElement;

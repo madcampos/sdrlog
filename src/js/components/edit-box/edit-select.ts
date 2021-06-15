@@ -20,20 +20,20 @@ export class EditSelect extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
+			<style>label { display: none; }</style>
 			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<div>
-				<label for="edit-box">
-					<slot name="label"></slot>
-				</label>
-				<skeleton-loader>
-					<select id="edit-box" disabled>
-						<option selected disabled hidden value="">Please select an option...</option>
-					</select>
-				</skeleton-loader>
-				<div hidden>
-					<slot></slot>
-				</div>
+			<label for="edit-box">
+				<slot name="label"></slot>
+			</label>
+
+			<skeleton-loader>
+				<select id="edit-box" disabled>
+					<option selected disabled hidden value="">Please select an option...</option>
+				</select>
+			</skeleton-loader>
+
+			<div hidden>
+				<slot></slot>
 			</div>
 		`;
 

@@ -17,16 +17,17 @@ export class EditList extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 
 		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
+			<style>summary { display: none; }</style>
 			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
 			<details>
 				<summary>
 					<slot name="label"></slot>
-					<div id="input" hidden>
-						<slot name="input"></slot>
-						<button id="add">➕</button>
-					</div>
 				</summary>
+
+				<div id="input" hidden>
+					<slot name="input"></slot>
+					<button id="add">➕</button>
+				</div>
 
 				<skeleton-loader>
 					<slot></slot>
@@ -61,8 +62,9 @@ export class EditList extends HTMLElement {
 
 		this.#root.addEventListener('slotchange', (evt) => {
 			const slot = evt.target as HTMLSlotElement;
+			const slotHasElements = slot.assignedElements().length > 0;
 
-			if (!slot.name) {
+			if (!slot.name && slotHasElements) {
 				this.#loader.loaded = true;
 			}
 		});
