@@ -13,19 +13,19 @@
 }
 
 #overlay:not([hidden]) {
-	border: dotted var(--border, transparent) medium;
+	border: dotted var(--border-width) var(--border-color, transparent);
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	background: radial-gradient(var(--background, transparent), transparent);
-	color: var(--border, currentColor);
+	background: radial-gradient(var(--background, rgba(0, 0, 0, 0.5)), transparent);
+	color: var(--text-color, currentColor);
 
 	z-index: 1;
 }
 
 .drop {
-	--border: var(--hover-color);
+	--border-color: var(--hover-color);
 	--background: var(--hover-background);
 }

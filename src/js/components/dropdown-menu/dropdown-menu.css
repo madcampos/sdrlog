@@ -6,7 +6,7 @@
 
 button {
 	background: transparent;
-	border: medium transparent solid;
+	border: solid var(--border-width) transparent;
 	border-radius: 0.3rem;
 	width: var(--button-size);
 	height: var(--button-size);
@@ -42,7 +42,7 @@ dialog[open] {
 	height: min-content;
 	max-height: 80vh;
 
-	border: medium solid var(--theme-color);
+	border: solid var(--border-width) var(--theme-color);
 	border-radius: 0.5rem;
 	background: var(--bg-color);
 

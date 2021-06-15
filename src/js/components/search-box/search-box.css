@@ -20,7 +20,7 @@ input[type='search'] {
 	appearance: none;
 	background: var(--bg-color);
 	outline: none;
-	border: solid medium var(--bg-color);
+	border: solid var(--border-width) var(--bg-color);
 	border-radius: 0.3rem;
 
 	transition: 0.2s ease all;
