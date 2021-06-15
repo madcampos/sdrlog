@@ -476,7 +476,7 @@
 		"@typescript-eslint/func-call-spacing": ["warn", "never"],
 		"@typescript-eslint/indent": ["error", "tab", { "SwitchCase": 1 }],
 		"@typescript-eslint/init-declarations": ["off"],
-		"@typescript-eslint/keyword-spacing":  ["error", {
+		"@typescript-eslint/keyword-spacing": ["error", {
 			"before": true,
 			"after": true,
 			"overrides": { "function": { "after": false } }
