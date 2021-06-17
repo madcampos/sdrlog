@@ -14,6 +14,20 @@ export class ModalDialog extends HTMLElement {
 					box-sizing: inherit;
 				}
 
+				::-webkit-scrollbar {
+					width: 0.2rem;
+					background-color: rgba(0, 0, 0, 0.2);
+					border-radius: 100vmax;
+
+					transition: 0.2s ease all;
+				}
+
+				::-webkit-scrollbar-thumb {
+					border-radius: 100vmax;
+					background: var(--theme-color);
+					width: 0.5rem;
+				}
+
 				dialog[open] {
 					display: flex;
 					flex-direction: column;

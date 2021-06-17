@@ -1,5 +1,19 @@
 @import './vars.css';
 
+::-webkit-scrollbar {
+	width: 0.2rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 100vmax;
+
+	transition: 0.2s ease all;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 100vmax;
+	background: var(--theme-color);
+	width: 0.5rem;
+}
+
 :not(:defined) { display: none; }
 
 body {
@@ -27,7 +41,7 @@ body *, body *::after, body *::before {
 }
 
 main {
-	overflow: auto;
+	overflow: overlay;
 	margin-top: var(--menubar-height);
 	display: flex;
 	flex-wrap: wrap;

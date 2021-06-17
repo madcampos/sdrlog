@@ -47,11 +47,25 @@ details {
 
 details #container {
 	height: 3rem;
-	overflow: auto;
+	overflow: overlay;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: flex-start;
+}
+
+details #container::-webkit-scrollbar {
+	width: 0.2rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 100vmax;
+
+	transition: 0.2s ease all;
+}
+
+details #container::-webkit-scrollbar-thumb {
+	border-radius: 100vmax;
+	background: var(--theme-color);
+	width: 0.5rem;
 }
 
 summary::before {
@@ -65,11 +79,15 @@ details[open] summary::before {
 }
 
 #input:not([hidden]) {
-	display: block;
 	background: var(--border-color);
 	margin: -0.55rem -0.55rem 0.5rem;
 	padding: 0.3rem;
 	box-sizing: border-box;
+
+	display: flex;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 button {

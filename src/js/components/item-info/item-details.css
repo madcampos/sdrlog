@@ -1,7 +1,21 @@
+::-webkit-scrollbar {
+	width: 0.2rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 100vmax;
+
+	transition: 0.2s ease all;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 100vmax;
+	background: var(--theme-color);
+	width: 0.5rem;
+}
+
 #container {
 	display: grid;
 	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
-	grid-template-rows: auto 1fr auto auto;
+	grid-template-rows: repeat(4, auto);
 	grid-gap: 0.5rem;
 	grid-template-areas:
 		'image header'
@@ -11,7 +25,7 @@
 
 	height: 100%;
 	box-sizing: inherit;
-	overflow: auto;
+	overflow: overlay;
 }
 
 header {
@@ -82,3 +96,91 @@ article {
 article #description { flex-grow: 1; }
 
 #files { grid-area: files; }
+
+input, select {
+	padding: 0.5rem 0.5rem 0.3rem;
+	width: 100%;
+	margin: 0 0.1rem;
+
+	appearance: none;
+	border: solid var(--border-width) transparent;
+	border-radius: 0.3rem;
+
+	background-color: var(--bg-color);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 0.1rem) center;
+	background-size: 1.5rem;
+
+	transition: 0.2s ease all;
+
+	font: inherit;
+	box-sizing: border-box;
+}
+
+input::placeholder {
+	color: var(--text-color);
+	opacity: 0.7;
+}
+
+select {
+	background-image: var(--select-arrow);
+}
+
+input:focus, select:focus {
+	outline: none;
+	border-color: var(--theme-color);
+}
+
+@media (max-width: 450px) {
+	#container {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0.5rem;
+		grid-template-areas:
+			'image header'
+			'main main'
+			'meta meta'
+			'files files';
+	}
+	header {
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas:
+			'sku sku sku edition'
+			'category category type type'
+			'language language language language'
+			'release release release release';
+	}
+	#meta {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			'gamedate status'
+			'names pub';
+	}
+	#description {
+		height: 20rem;
+	}
+}
+
+@media (max-width: 350px) {
+	#container {
+		grid-template-columns: 1fr;
+		grid-gap: 0.5rem;
+		grid-template-areas:
+			'image'
+			'header'
+			'main'
+			'meta'
+			'files';
+	}
+	#meta {
+		grid-template-rows: repeat(4, auto);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'gamedate'
+			'status'
+			'names'
+			'pub';
+	}
+	#description {
+		height: 20rem;
+	}
+}

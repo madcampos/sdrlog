@@ -171,16 +171,18 @@ export default `
 				<span slot="label">Names published</span>
 
 				<select slot="input" required>
+					<option selected disabled hidden value="">Please select an option...</option>
 					${[...languages.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
 				</select>
 
-				<input slot="input" required/>
+				<input slot="input" required placeholder="Name"/>
 			</edit-list>
 
 			<edit-list id="publisher" open>
 				<span slot="label">Publisher</span>
 
 				<select slot="input" required>
+					<option selected disabled hidden value="">Please select an option...</option>
 					${[...publishers.entries()].map(([value]) => `<option>${value}</option>`).join('\n')}
 				</select>
 			</edit-list>
@@ -194,8 +196,8 @@ export default `
 
 			<edit-list id="links">
 				<span slot="label">Online links</span>
-				<input slot="input" type="text" required/>
-				<input slot="input" type="url" required/>
+				<input slot="input" type="text" placeholder="Name" required/>
+				<input slot="input" type="url" placeholder="URL" required/>
 			</edit-list>
 		</aside>
 
