@@ -48,6 +48,20 @@ textarea {
 	white-space: pre-wrap;
 }
 
+textarea::-webkit-scrollbar {
+	width: 0.2rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 100vmax;
+
+	transition: 0.2s ease all;
+}
+
+textarea::-webkit-scrollbar-thumb {
+	border-radius: 100vmax;
+	background: var(--theme-color);
+	width: 0.5rem;
+}
+
 textarea:not(:read-only) {
 	background: var(--bg-color);
 }

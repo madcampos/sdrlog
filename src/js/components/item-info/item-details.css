@@ -31,6 +31,7 @@
 header {
 	grid-area: header;
 	display: grid;
+	grid-gap: 0.1rem;
 	grid-template-rows: repeat(3, auto);
 	grid-template-columns: repeat(4, minmax(min-content, 1fr));
 	grid-template-areas:
@@ -67,6 +68,7 @@ drop-area figure img {
 #meta {
 	grid-area: meta;
 	display: grid;
+	grid-gap: 0.1rem;
 	grid-template-rows: repeat(3, auto);
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-areas:
@@ -131,10 +133,31 @@ input:focus, select:focus {
 	border-color: var(--theme-color);
 }
 
+button {
+	background: transparent;
+	border: solid var(--border-width) transparent;
+	border-radius: 0.3rem;
+	width: fit-content;
+	height: var(--button-size);
+	padding: 0;
+
+	transition: 0.2s ease all;
+
+	font: inherit;
+}
+
+button:focus {
+	border-color: var(--theme-color);
+	outline: none;
+}
+
+button:active {
+	background: var(--secondary-color);
+}
+
 @media (max-width: 450px) {
 	#container {
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 0.5rem;
 		grid-template-areas:
 			'image header'
 			'main main'
