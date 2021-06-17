@@ -309,6 +309,7 @@ export class ItemDetails extends HTMLElement {
 		this.#files.resetValues();
 		this.#files.hidden = true;
 		this.#links.resetValues();
+		this.#links.hidden = true;
 		this.#cover.src = '/img/covers/fallback.svg';
 		this.#coverDropArea.show = false;
 		this.#notes.resetValue();

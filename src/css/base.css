@@ -48,6 +48,7 @@ main {
 	justify-content: center;
 	align-content: flex-start;
 	align-items: flex-start;
+	scroll-snap-type: both proximity;
 }
 
 #load-overlay {
