@@ -85,7 +85,7 @@ export class ItemDetails extends HTMLElement {
 		this.#namesLangInput = this.#root.querySelector('#names select') as HTMLSelectElement;
 		this.#namesValueInput = this.#root.querySelector('#names input') as HTMLInputElement;
 
-		this.#files = this.#root.querySelector('#files') as EditList;
+		this.#files = this.#root.querySelector('#files-list') as EditList;
 
 		this.#links = this.#root.querySelector('#links') as EditList;
 		this.#linksInput = this.#root.querySelector('#links') as HTMLInputElement;
@@ -248,6 +248,18 @@ export class ItemDetails extends HTMLElement {
 			this.#status.hidden = !editingStatus;
 		}
 
+		if (this.#notes.value === '') {
+			this.#notes.hidden = !editingStatus;
+		}
+
+		if (this.#files.values.length < 1) {
+			this.#files.hidden = !editingStatus;
+		}
+
+		if (this.#links.values.length < 1) {
+			this.#links.hidden = !editingStatus;
+		}
+
 		this.#editButton.hidden = false;
 		this.#saveButton.hidden = true;
 
@@ -295,10 +307,12 @@ export class ItemDetails extends HTMLElement {
 		this.#status.hidden = true;
 		this.#names.resetValues();
 		this.#files.resetValues();
+		this.#files.hidden = true;
 		this.#links.resetValues();
 		this.#cover.src = '/img/covers/fallback.svg';
 		this.#coverDropArea.show = false;
 		this.#notes.resetValue();
+		this.#notes.hidden = true;
 		this.#description.resetValue();
 	}
 

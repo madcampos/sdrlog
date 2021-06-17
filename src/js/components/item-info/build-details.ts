@@ -83,7 +83,13 @@ export async function setMaterialDetails(material: Material, {
 
 	links.loaded = true;
 
-	notes.value = material.notes ?? '';
+	if (material.notes) {
+		notes.value = material.notes;
+		notes.hidden = false;
+	}
+
+	notes.loaded = true;
+
 	description.value = material.description;
 
 	void fetchCover(material.sku[0]).then((coverFile) => {

@@ -8,8 +8,8 @@
 label {
 	box-sizing: inherit;
 	display: flex;
-	margin: 0 max(1rem, 10%);
-	width: 100%;
+	margin: 0 var(--searchbox-margin);
+	width: var(--searchbox-width);
 	max-width: 20rem;
 }
 

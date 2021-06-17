@@ -18,11 +18,14 @@ export class ModalDialog extends HTMLElement {
 					display: flex;
 					flex-direction: column;
 					padding: 0;
-					width: clamp(10rem, 80vw, 60rem);
-					height: clamp(15rem, 80vh, 100rem);
+					width: var(--dialog-width);
+					height: var(--dialog-height);
 					border: none;
 					border-radius: 0.5rem;
 					background: var(--bg-color);
+					box-sizing: border-box;
+					max-width: initial;
+					max-height: initial;
 				}
 
 				dialog::backdrop {

@@ -1,24 +1,36 @@
 #container {
 	display: grid;
 	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
-	grid-template-rows: 5rem 5rem 1fr 5rem;
+	grid-template-rows: auto 1fr auto auto;
+	grid-gap: 0.5rem;
 	grid-template-areas:
 		'image header'
-		'image files'
 		'image main'
-		'meta main';
+		'meta main'
+		'files main';
 
 	height: 100%;
 	box-sizing: inherit;
+	overflow: auto;
 }
 
 header {
 	grid-area: header;
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(4, minmax(min-content, 1fr));
+	grid-template-areas:
+		'sku sku sku edition'
+		'category type language language'
+		'release release release .';
 }
 
-#meta {
-	grid-area: meta;
-}
+header #sku { grid-area: sku; }
+header #edition { grid-area: edition; }
+header #category { grid-area: category; }
+header #type { grid-area: type; }
+header #language { grid-area: language; }
+header #releasedate { grid-area: release; }
 
 drop-area {
 	grid-area: image;
@@ -35,12 +47,38 @@ drop-area figure img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+	border-radius: 0.5rem;
+}
+
+#meta {
+	grid-area: meta;
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		'gamedate gamedate status'
+		'names names names'
+		'pub pub pub';
+}
+
+#meta #publisher { grid-area: pub; }
+#meta #names { grid-area: names; }
+#meta #gamedate { grid-area: gamedate; }
+
+#meta #publisher abbr { text-decoration: none; }
+
+#meta #publisher img {
+	height: 1.5rem;
+	max-width: 3rem;
+	object-fit: contain;
 }
 
 article {
 	grid-area: main;
+	display: flex;
+	flex-direction: column;
 }
 
-#files {
-	grid-area: files;
-}
+article #description { flex-grow: 1; }
+
+#files { grid-area: files; }

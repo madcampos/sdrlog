@@ -30,7 +30,9 @@ export class EditList extends HTMLElement {
 				</div>
 
 				<skeleton-loader>
-					<slot></slot>
+					<article id="container">
+						<slot></slot>
+					</article>
 				</skeleton-loader>
 			</details>
 		`;

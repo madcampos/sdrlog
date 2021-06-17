@@ -29,6 +29,11 @@ body *, body *::after, body *::before {
 main {
 	overflow: auto;
 	margin-top: var(--menubar-height);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+	align-items: flex-start;
 }
 
 #load-overlay {

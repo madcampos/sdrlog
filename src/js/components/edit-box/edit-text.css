@@ -1,12 +1,13 @@
 :host {
 	display: flex;
 	align-items: stretch;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	box-sizing: inherit;
 	width: 100%;
-	margin-block: 0.5rem;
 }
+
+:host([hidden]) { display: none; }
 
 label:not([hidden]) {
 	font-size: 0.75em;
@@ -14,6 +15,7 @@ label:not([hidden]) {
 	width: fit-content;
 	padding: 0.05rem 0.4rem;
 	margin-inline-start: 0.5rem;
+	margin-block-start: 0.6rem;
 
 	border-radius: 0.5rem;
 

@@ -132,10 +132,6 @@ export default `
 				<span slot="label">Edition</span>
 			</edit-box>
 
-			<edit-box type="date" id="gamedate" required>
-				<span slot="label">Game date</span>
-			</edit-box>
-
 			<edit-select id="category" required>
 				<span slot="label">Category</span>
 
@@ -158,23 +154,19 @@ export default `
 				<span slot="label">Release date</span>
 				<input slot="input" type="date" required/>
 			</edit-list>
+		</header>
 
-			<edit-list id="publisher" open>
-				<span slot="label">Publisher</span>
-
-				<select slot="input" required>
-					${[...publishers.entries()].map(([value]) => `<option>${value}</option>`).join('\n')}
-				</select>
-			</edit-list>
-
+		<aside id="meta">
 			<edit-select id="status" hidden required>
 				<span slot="label">Status</span>
 
 				${[...status.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
 			</edit-select>
-		</header>
 
-		<aside id="meta">
+			<edit-box type="date" id="gamedate" required>
+				<span slot="label">Game date</span>
+			</edit-box>
+
 			<edit-list id="names">
 				<span slot="label">Names published</span>
 
@@ -184,10 +176,18 @@ export default `
 
 				<input slot="input" required/>
 			</edit-list>
+
+			<edit-list id="publisher" open>
+				<span slot="label">Publisher</span>
+
+				<select slot="input" required>
+					${[...publishers.entries()].map(([value]) => `<option>${value}</option>`).join('\n')}
+				</select>
+			</edit-list>
 		</aside>
 
 		<aside id="files">
-			<edit-list id="files" hidden>
+			<edit-list id="files-list" hidden>
 				<span slot="label">Files</span>
 				<input slot="input" type="file" multiple required/>
 			</edit-list>
@@ -199,7 +199,7 @@ export default `
 			</edit-list>
 		</aside>
 
-		<drop-area id="cover-drop-area" show>
+		<drop-area id="cover-drop-area">
 			<figure>
 					<img
 						width=""
@@ -213,7 +213,7 @@ export default `
 		</drop-area>
 
 		<article>
-			<edit-text id="notes">
+			<edit-text id="notes" hidden>
 				<span slot="label">Notes</span>
 			</edit-text>
 
