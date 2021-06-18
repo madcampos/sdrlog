@@ -46,7 +46,7 @@
 @media (max-width: 800px) {
 	:root {
 		--dialog-width: max(10rem, 100vw);
-		--dialog-height: max(15rem, 100vh);
+		--dialog-height: max(15rem, 100%);
 	}
 }
 
