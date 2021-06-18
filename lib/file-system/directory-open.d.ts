@@ -1,7 +1,3 @@
-export interface FileWithDirectoryHandle extends File {
-	directoryHandle?: FileSystemHandle;
-}
-
 /**
  * Opens a directory from disk using the File System Access API.
  * @returns Contained files.
@@ -27,4 +23,4 @@ export interface FileWithDirectoryHandle extends File {
 	setupLegacyCleanupAndRejection?: (
 		rejectionHandler?: () => void
 	) => (reject: (reason?: any) => void) => void
-}): Promise<FileWithDirectoryHandle[]>;
+}): Promise<File[]>;

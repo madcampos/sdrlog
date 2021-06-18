@@ -3,6 +3,7 @@ import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-o
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
+import directoryOpen from '../../../../lib/file-system/directory-open';
 
 const TIMEOUT_BEFORE_RELOAD = 3000;
 
@@ -87,34 +88,42 @@ export async function importCoversFromFolder() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Import covers' });
 
 	try {
-		const dir = await window.showDirectoryPicker({
-			id: 'coversFolder',
-			startIn: 'downloads'
-		});
+		let files = [];
 
-		for await (const entry of dir.values()) {
-			if (entry.kind === 'file') {
-				await getFilePermission(entry);
+		if ('showDirectoryPicker' in window) {
+			const dir = await window.showDirectoryPicker({
+				id: 'coversFolder',
+				startIn: 'downloads'
+			});
 
-				const file = await entry.getFile();
-				const canSaveCover = await canImportCover(file, true);
+			for await (const entry of dir.values()) {
+				if (entry.kind === 'file') {
+					await getFilePermission(entry);
 
-				if (canSaveCover) {
-					const id = file.name.replace(/\..+$/igu, '');
+					files.push(await entry.getFile());
+				}
+			}
+		} else {
+			files = await directoryOpen();
+		}
 
-					// eslint-disable-next-line max-depth
-					try {
-						const coverFile = await processCoverFile(file);
+		for await (const file of files) {
+			const canSaveCover = await canImportCover(file, true);
 
-						await saveCover(id, coverFile);
+			if (canSaveCover) {
+				const id = file.name.replace(/\..+$/igu, '');
 
-						const thumbFile = await processCoverFile(file, { referenceWidth: THUMB_WIDTH });
+				try {
+					const coverFile = await processCoverFile(file);
 
-						await saveThumb(id, thumbFile);
-					} catch (err) {
-						// eslint-disable-next-line no-console
-						console.error(id, err);
-					}
+					await saveCover(id, coverFile);
+
+					const thumbFile = await processCoverFile(file, { referenceWidth: THUMB_WIDTH });
+
+					await saveThumb(id, thumbFile);
+				} catch (err) {
+					// eslint-disable-next-line no-console
+					console.error(id, err);
 				}
 			}
 		}

@@ -1,10 +1,19 @@
+import fileOpen from '../../../../lib/file-system/file-open';
+
 export class DropArea extends HTMLElement {
-	static get observedAttributes() { return ['type', 'accepts', 'show']; }
+	static get observedAttributes() { return ['multiple', 'accepts', 'show']; }
 	#root: ShadowRoot;
 	#overlay: HTMLDivElement;
-	#type: 'file' | 'directory';
-	#accepts: FilePickerAcceptType;
-	#file: FileSystemHandle | undefined;
+	#multiple = false;
+	#accepts: FilePickerAcceptType = {
+		description: 'Image Files',
+		accept: {
+			'image/jpeg': ['.jpg', '.jpeg'],
+			'image/png': ['.png'],
+			'image/webp': ['.webp']
+		}
+	};
+	#file: File | File[] | undefined;
 
 	constructor() {
 		super();
@@ -26,35 +35,26 @@ export class DropArea extends HTMLElement {
 		`;
 
 		this.#overlay = this.#root.querySelector('#overlay') as HTMLDivElement;
-		this.#type = 'file';
-		this.#accepts = {
-			description: 'Image Files',
-			accept: {
-				'image/jpeg': ['.jpg', '.jpeg'],
-				'image/png': ['.png'],
-				'image/webp': ['.webp']
-			}
-		};
 
 		this.#overlay.addEventListener('click', async () => {
-			let handle: FileSystemHandle;
-
-			if (this.#type === 'file') {
-				[handle] = await window.showOpenFilePicker({
-					// @ts-expect-error
+			if ('showOpenFilePicker' in window) {
+				// @ts-expect-error
+				const [handle] = await window.showOpenFilePicker({
 					id: this.id,
 					startIn: 'downloads',
+					multiple: this.#multiple,
 					excludeAcceptAllOption: false,
 					types: [this.#accepts]
 				});
+
+				this.#file = await handle.getFile();
 			} else {
-				handle = await window.showDirectoryPicker({
-					id: this.id,
-					startIn: 'downloads'
+				this.#file = await fileOpen({
+					mimeTypes: Object.keys(this.#accepts.accept),
+					multiple: this.#multiple
 				});
 			}
 
-			this.#file = handle;
 			this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
 		});
 
@@ -66,18 +66,21 @@ export class DropArea extends HTMLElement {
 				return;
 			}
 
-			for await (const item of (evt.dataTransfer?.items ?? []) as DataTransferItem[]) {
-				// Drag and drop treats both as files
-				if (item.kind === 'file') {
-					const fileType = item.type;
-					const mimes = Object.keys(this.#accepts.accept);
+			let files = Array.from(evt.dataTransfer?.files ?? []);
 
-					const entry = await item.getAsFileSystemHandle();
+			if (!this.#multiple) {
+				const [firstFile] = files;
 
-					if (entry?.kind === this.#type && mimes.includes(fileType)) {
-						this.#file = entry;
-						this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
-					}
+				files = [firstFile];
+			}
+
+			for await (const file of files) {
+				const fileType = file.type;
+				const mimes = Object.keys(this.#accepts.accept);
+
+				if (mimes.includes(fileType)) {
+					this.#file = file;
+					this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
 				}
 
 				this.#overlay.classList.remove('drop');
@@ -111,8 +114,8 @@ export class DropArea extends HTMLElement {
 
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (newValue !== oldValue) {
-			if (name === 'type' && (newValue === 'file' || newValue === 'directory')) {
-				this.#type = newValue;
+			if (name === 'type') {
+				this.#multiple = this.hasAttribute('multiple');
 			} else if (name === 'accepts') {
 				this.#accepts = JSON.parse(decodeURI(newValue)) as FilePickerAcceptType;
 			} else if (name === 'show') {
@@ -128,17 +131,13 @@ export class DropArea extends HTMLElement {
 	}
 
 	connectedCallback() {
-		const type = this.getAttribute('type');
-
-		if (type === 'file' || type === 'directory') {
-			this.#type = type;
-		}
-
 		const accepts = JSON.parse(decodeURI(this.getAttribute('accept') ?? encodeURI('{ "accept": {} }'))) as FilePickerAcceptType;
 
 		if (Object.keys(accepts.accept).length) {
 			this.#accepts = accepts;
 		}
+
+		this.#multiple = this.hasAttribute('multiple');
 	}
 }
 

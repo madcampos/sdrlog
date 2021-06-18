@@ -1,4 +1,5 @@
 import type { SDRLogData } from '../../../../data/data';
+import fileOpen from '../../../../lib/file-system/file-open';
 import { ProgressOverlay } from '../progress/progress';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
@@ -64,20 +65,26 @@ export async function fetchItems() {
 
 export async function requestDataFileFromUser() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Read data file' });
+	let file;
 
 	try {
-		const [file] = await window.showOpenFilePicker({
-			// @ts-expect-error
-			id: 'dataFile',
-			startIn: 'downloads',
-			excludeAcceptAllOption: false,
-			types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
-		});
+		if ('showOpenFilePicker' in window) {
+			const [fileHandle] = await window.showOpenFilePicker({
+				// @ts-expect-error
+				id: 'dataFile',
+				startIn: 'downloads',
+				excludeAcceptAllOption: false,
+				types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
+			});
 
-		await saveFile('data.json', file);
+			await saveFile('data.json', fileHandle);
 
-		const content = await file.getFile();
-		const parsedFile = JSON.parse(await content.text()) as SDRLogData;
+			file = await fileHandle.getFile();
+		} else {
+			file = await fileOpen({ extensions: ['.json'] });
+		}
+
+		const parsedFile = JSON.parse(await file.text()) as SDRLogData;
 
 		await saveMaterials(parsedFile.items.map((material) => [material.sku[0], material]));
 	} catch (err) {
