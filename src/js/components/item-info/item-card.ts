@@ -62,14 +62,14 @@ export class ItemCard extends HTMLElement {
 
 		this.#title.innerText = this.getAttribute('title') ?? '';
 
-		if (this.getAttribute('id')) {
+		if (this.hasAttribute('id')) {
 			// eslint-disable-next-line @typescript-eslint/no-floating-promises
 			this.setMaterial(this.getAttribute('id') as string);
 		}
 	}
 
 	async setMaterial(id: string) {
-		if (!this.getAttribute('title')) {
+		if (!this.hasAttribute('title')) {
 			const material = await getMaterial(id);
 
 			if (material) {

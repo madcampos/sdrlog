@@ -32,7 +32,7 @@ export class EditListItem extends HTMLElement {
 	}
 
 	get edit() {
-		return typeof this.getAttribute('edit') === 'string';
+		return this.hasAttribute('edit');
 	}
 
 	set edit(isEditing: boolean) {
@@ -52,9 +52,9 @@ export class EditListItem extends HTMLElement {
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'edit') {
-				const edit = this.getAttribute('edit');
+				const isEdit = this.hasAttribute('edit');
 
-				if (edit === null || edit === 'false') {
+				if (!isEdit) {
 					this.#closeButton.hidden = true;
 				} else {
 					this.#closeButton.hidden = false;

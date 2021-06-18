@@ -75,7 +75,7 @@ export class EditList extends HTMLElement {
 	}
 
 	get edit() {
-		return typeof this.getAttribute('edit') === 'string';
+		return this.hasAttribute('edit');
 	}
 
 	set edit(isEditing: boolean) {
@@ -95,7 +95,7 @@ export class EditList extends HTMLElement {
 	}
 
 	get open() {
-		return typeof this.getAttribute('open') === 'string';
+		return this.hasAttribute('open');
 	}
 
 	set open(isOpened: boolean) {
@@ -145,9 +145,9 @@ export class EditList extends HTMLElement {
 
 	attributeChangedCallback(name: string) {
 		if (name === 'edit') {
-			const edit = this.getAttribute('edit');
+			const isEdit = this.hasAttribute('edit');
 
-			if (edit === null || edit === 'false') {
+			if (!isEdit) {
 				this.#input.hidden = true;
 			} else {
 				this.#input.hidden = false;
@@ -157,9 +157,9 @@ export class EditList extends HTMLElement {
 		}
 
 		if (name === 'open') {
-			const isOpen = this.getAttribute('open');
+			const isOpen = this.hasAttribute('open');
 
-			if (isOpen === null || isOpen === 'false') {
+			if (!isOpen) {
 				this.#details.removeAttribute('open');
 			} else {
 				this.#details.setAttribute('open', '');
@@ -168,7 +168,7 @@ export class EditList extends HTMLElement {
 	}
 
 	connectedCallback() {
-		const isOpen = typeof this.getAttribute('open') === 'string';
+		const isOpen = this.hasAttribute('open');
 
 		this.open = isOpen;
 	}

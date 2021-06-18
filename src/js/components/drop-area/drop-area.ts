@@ -98,7 +98,7 @@ export class DropArea extends HTMLElement {
 		return this.#file;
 	}
 	get show() {
-		return typeof this.getAttribute('show') === 'string';
+		return this.hasAttribute('show');
 	}
 
 	set show(isShowing: boolean) {
@@ -116,9 +116,9 @@ export class DropArea extends HTMLElement {
 			} else if (name === 'accepts') {
 				this.#accepts = JSON.parse(decodeURI(newValue)) as FilePickerAcceptType;
 			} else if (name === 'show') {
-				const show = this.getAttribute('show');
+				const isShowing = this.hasAttribute('show');
 
-				if (show === null || show === 'false') {
+				if (!isShowing) {
 					this.#overlay.hidden = true;
 				} else {
 					this.#overlay.hidden = false;

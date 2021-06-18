@@ -46,7 +46,7 @@ export class SkeletonLoader extends HTMLElement {
 	}
 
 	get loaded() {
-		return typeof this.getAttribute('loaded') === 'string';
+		return this.hasAttribute('loaded');
 	}
 
 	set loaded(isLoaded: boolean) {
@@ -58,7 +58,7 @@ export class SkeletonLoader extends HTMLElement {
 	}
 
 	attributeChangedCallback() {
-		if (this.getAttribute('loaded') === '') {
+		if (this.hasAttribute('loaded')) {
 			this.#content.hidden = false;
 			this.#loader.hidden = true;
 		} else {
@@ -68,7 +68,7 @@ export class SkeletonLoader extends HTMLElement {
 	}
 
 	connectedCallback() {
-		if (this.getAttribute('loaded')) {
+		if (this.hasAttribute('loaded')) {
 			this.#content.hidden = false;
 			this.#loader.hidden = true;
 		}

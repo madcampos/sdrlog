@@ -32,7 +32,7 @@ class DropdownMenuItem extends HTMLElement {
 			this.#icon.src = this.getAttribute('icon') ?? '';
 		}
 
-		if (typeof this.getAttribute('separator') === 'string') {
+		if (this.hasAttribute('separator')) {
 			const divider = document.createElement('hr');
 
 			this.#root.querySelector('button')?.replaceWith(divider);
