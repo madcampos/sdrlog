@@ -1,3 +1,5 @@
+import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
+
 class DropdownMenu extends HTMLElement {
 	static get observedAttributes() { return ['title']; }
 	#root: ShadowRoot;
@@ -20,6 +22,11 @@ class DropdownMenu extends HTMLElement {
 		this.#button = this.#root.querySelector('button') as HTMLButtonElement;
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/strict-boolean-expressions
+		if (!this.#dialog.showModal) {
+			dialogPolyfill.registerDialog(this.#dialog);
+		}
+
 		this.#button.addEventListener('click', (evt) => {
 			evt.preventDefault();
 			evt.stopPropagation();
@@ -34,11 +41,13 @@ class DropdownMenu extends HTMLElement {
 		});
 
 		window.addEventListener('click', () => {
-			this.#dialog.close();
+			if (this.#dialog.hasAttribute('open')) {
+				this.#dialog.close();
+			}
 		});
 
 		this.addEventListener('keypress', (evt) => {
-			if (evt.key === 'Escape') {
+			if (evt.key === 'Escape' && this.#dialog.hasAttribute('open')) {
 				this.#dialog.close();
 			}
 		});

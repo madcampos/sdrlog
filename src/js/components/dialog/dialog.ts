@@ -1,3 +1,5 @@
+import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
+
 export class ModalDialog extends HTMLElement {
 	#root: ShadowRoot;
 	#dialog: HTMLDialogElement;
@@ -32,6 +34,9 @@ export class ModalDialog extends HTMLElement {
 					display: flex;
 					flex-direction: column;
 					padding: 0;
+					margin-top: env(safe-area-inset-top, 0);
+					margin-bottom: env(safe-area-inset-bottom, 0);
+					margin-inline: auto;
 					width: var(--dialog-width);
 					height: var(--dialog-height);
 					border: none;
@@ -117,6 +122,11 @@ export class ModalDialog extends HTMLElement {
 
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/strict-boolean-expressions
+		if (!this.#dialog.showModal) {
+			dialogPolyfill.registerDialog(this.#dialog);
+		}
+
 		const triggerSlot = this.#root.querySelector('slot[name="trigger"]') as HTMLSlotElement;
 		const [triggerButton] = triggerSlot.assignedElements() as (HTMLButtonElement | undefined)[];
 
@@ -137,13 +147,15 @@ export class ModalDialog extends HTMLElement {
 		});
 
 		this.#root.querySelector('#close')?.addEventListener('click', () => {
-			this.#dialog.close();
+			if (this.#dialog.hasAttribute('open')) {
+				this.#dialog.close();
+			}
 		});
 
 		this.#dialog.addEventListener('click', (evt) => {
 			const target = evt.target as HTMLDialogElement;
 
-			if (target.matches('dialog')) {
+			if (target.matches('dialog') && target.hasAttribute('open')) {
 				target.close();
 			}
 		});

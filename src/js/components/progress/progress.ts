@@ -1,13 +1,14 @@
+import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
+
 export class ProgressOverlay extends HTMLElement {
 	#root: ShadowRoot;
 
 	#progress: HTMLProgressElement;
-
+	#dialog: HTMLDialogElement;
 	#count: HTMLSpanElement;
 
 	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 	#total = 100;
-
 	#current = 0;
 
 	constructor() {
@@ -26,7 +27,13 @@ export class ProgressOverlay extends HTMLElement {
 		`;
 
 		this.#progress = this.#root.querySelector('progress') as HTMLProgressElement;
+		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 		this.#count = this.#root.querySelector('span') as HTMLSpanElement;
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/strict-boolean-expressions
+		if (!this.#dialog.showModal) {
+			dialogPolyfill.registerDialog(this.#dialog);
+		}
 	}
 
 	static createOverlay({ total, title, info }: { total?: number, title?: string, info?: string }) {
@@ -75,11 +82,13 @@ export class ProgressOverlay extends HTMLElement {
 	}
 
 	show() {
-		this.#root.querySelector('dialog')?.showModal();
+		this.#dialog.showModal();
 	}
 
 	close() {
-		this.#root.querySelector('dialog')?.close();
+		if (this.#dialog.hasAttribute('open')) {
+			this.#dialog.close();
+		}
 	}
 }
 
