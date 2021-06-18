@@ -71,6 +71,12 @@ class MenuBar extends HTMLElement {
 			}
 		});
 
+		if (!('showDirectoryPicker' in window)) {
+			(this.#root.querySelector('#import-materials') as HTMLElement).remove();
+			(this.#root.querySelector('#extract-covers') as HTMLElement).remove();
+			(this.#root.querySelector('#export-covers') as HTMLElement).remove();
+		}
+
 		this.#root.querySelector('#import-materials')?.addEventListener('click', async () => readFiles());
 		this.#root.querySelector('#import-data')?.addEventListener('click', async () => requestDataFileFromUser());
 
