@@ -17,8 +17,15 @@ export const COVER_WIDTH = 1024;
 export const THUMB_WIDTH = 256;
 export const MAX_UPSCALE_FACTOR = 1.5;
 
-const canvas = new OffscreenCanvas(COVER_WIDTH, COVER_WIDTH);
-const canvasContext = canvas.getContext('2d') as OffscreenCanvasRenderingContext2D;
+if (!document.querySelector('#cover-canvas')) {
+	document.body.insertAdjacentHTML('afterbegin', '<div hidden><canvas id="cover-canvas" hidden></canvas></div>');
+}
+
+const canvas = document.querySelector('#cover-canvas') as HTMLCanvasElement;
+const canvasContext = canvas.getContext('2d') as CanvasRenderingContext2D;
+
+canvas.width = COVER_WIDTH;
+canvas.height = COVER_WIDTH;
 
 export async function extractCover(file: File) {
 	const fileURL = URL.createObjectURL(file);
@@ -99,7 +106,9 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 		let optimizedCover: Blob | Buffer;
 
 		if (skipOptimize) {
-			optimizedCover = await canvas.convertToBlob({ type: 'image/jpeg', quality: 1 });
+			optimizedCover = (await new Promise((resolve: BlobCallback) => {
+				canvas.toBlob(resolve, 'image/jpeg', 1);
+			})) as Blob;
 		} else {
 			const coverImage = canvasContext.getImageData(0, 0, canvas.width, canvas.height);
 
