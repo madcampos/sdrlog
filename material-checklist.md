@@ -11,7 +11,6 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
 # Materials to add
-https://www.drivethrurpg.com/product/314191/Shadowrun-Cheat-Sheets-SR6?filters=1700_0_0_0_0
 https://store.catalystgamelabs.com/collections/shadowrun/products/battlerun-ii-the-quest-for-the-thing
 
 https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-30th-anniversary-t-shirt-hoodie?variant=15893164818466
@@ -24,6 +23,7 @@ https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-face
 https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-face-mask-shadowrun-s?variant=32263001276450
 https://store.catalystgamelabs.com/collections/shadowrun/products/battletech-limited-edition-foil-jigsaw-puzzles-2020-summer-collection-1?variant=31993256345634
 https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-foil-poster-set-of-5
+https://www.black-book-editions.fr/produit.php?id=10272
 
 # Folders
 ***REMOVED***

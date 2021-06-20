@@ -2756,13 +2756,14 @@
 			"description": "Dresden 2061: Bei einem Unfall in einer Chemiefabrik, kommen ein Runnerteam und alles beteiligte Sicherheitspersonal bis auf Seth Morgan ums Leben. Er verliert durch die schweren Verletzungen und eine Vergiftung, einen großen Teil seiner Essenz, sowie seine magischen Fähigkeiten komplett. Seth Morgan findet sich zwei Jahre später in der Unterschicht Dresdens wieder. Seine Vergiftung konnte er nicht heilen, aber einen Teil seiner Magie mit einem experimentellen Medikament wieder herstellen. Dieses ist eigentlich als Gift erfunden worden und er ist inzwischen von der Substanz abhängig. Seth muss ständig Geld auftreiben um seine Medikamente zu bezahlen. Ein Fernziel ist es, Geld in die Forschung nach einer endgültigen Heilung stecken zu können. Seine letzte Möglichkeit ist es, sich auf die Seite der ehemaligen Gegner zu schlagen und ein Runner zu werden. Es gibt jedoch einen wichtigen Unterschied: Es geht für Seth nicht um Geld, sondern um Alles.",
 			"edition": 2,
 			"publisher": [
-				"Heyne Verlag"
+				"unofficial"
 			],
 			"releaseDate": [
 				"2010-01-01"
 			],
 			"gameDate": "2050-01-01",
-			"status": "missing"
+			"status": "outofscope",
+			"notes": "This is a fan romance published without consent or licensing."
 		},
 		{
 			"sku": [
@@ -12770,7 +12771,7 @@
 			"sku": [
 				"28001"
 			],
-			"name": "Shadowrun Sixth World: Gamemaster's Screen",
+			"name": "Shadowrun Sixth World: Game Master's Screen",
 			"category": "rulebook",
 			"type": "digital",
 			"originalLanguage": "en-US",
@@ -13434,7 +13435,90 @@
 				"Pegasus Spiele"
 			],
 			"releaseDate": [
-				"2009-01-01"
+				"2009-06-06",
+				"2011-06-04",
+				"2011-06-05",
+				"2012-12-21",
+				"2013-01-21",
+				"2013-02-21",
+				"2013-03-20",
+				"2013-04-01",
+				"2013-05-01",
+				"2013-06-01",
+				"2013-07-01",
+				"2013-08-01",
+				"2013-09-01",
+				"2013-10-01",
+				"2013-11-01",
+				"2013-12-01",
+				"2014-01-01",
+				"2014-02-01",
+				"2014-03-01",
+				"2014-04-01",
+				"2014-05-01",
+				"2014-06-01",
+				"2014-07-01",
+				"2014-08-01",
+				"2014-09-01",
+				"2014-10-01",
+				"2014-11-01",
+				"2014-12-01",
+				"2015-01-01",
+				"2015-02-01",
+				"2015-03-01",
+				"2015-04-01",
+				"2015-05-01",
+				"2015-06-01",
+				"2015-07-01",
+				"2015-08-01",
+				"2015-09-01",
+				"2015-10-01",
+				"2015-11-01",
+				"2015-12-01",
+				"2016-01-01",
+				"2016-02-01",
+				"2016-03-01",
+				"2016-04-01",
+				"2016-05-01",
+				"2016-06-01",
+				"2016-07-01",
+				"2016-09-01",
+				"2016-10-01",
+				"2016-11-01",
+				"2016-12-01",
+				"2017-01-01",
+				"2017-02-01",
+				"2017-03-01",
+				"2017-04-01",
+				"2017-05-01",
+				"2017-06-01",
+				"2017-07-01",
+				"2017-08-01",
+				"2017-09-01",
+				"2017-10-01",
+				"2017-11-01",
+				"2017-12-01",
+				"2018-01-01",
+				"2018-02-01",
+				"2018-03-01",
+				"2018-04-01",
+				"2018-05-01",
+				"2018-06-01",
+				"2018-07-01",
+				"2018-08-01",
+				"2018-09-01",
+				"2018-10-01",
+				"2019-10-01",
+				"2020-03-01",
+				"2018-11-01",
+				"2018-12-01",
+				"2020-05-01",
+				"2020-09-01",
+				"2020-11-01",
+				"2020-12-01",
+				"2021-02-01",
+				"2021-04-01",
+				"2021-05-01"
 			],
 			"gameDate": "2070-01-01",
 			"notes": "It has been replaced by SchattenLoad."
@@ -14225,7 +14309,8 @@
 			"releaseDate": [
 				"2021-05-10"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01-01",
+			"status": "missing"
 		},
 		{
 			"sku": [
@@ -14243,7 +14328,8 @@
 			"releaseDate": [
 				"2021-04-29"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01-01",
+			"status": "missing"
 		},
 		{
 			"sku": [
@@ -14261,7 +14347,8 @@
 			"releaseDate": [
 				"2021-02-18"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01-01",
+			"status": "missing"
 		},
 		{
 			"sku": [
@@ -14279,7 +14366,8 @@
 			"releaseDate": [
 				"2021-02-18"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01-01",
+			"status": "missing"
 		},
 		{
 			"sku": [
@@ -14297,7 +14385,8 @@
 			"releaseDate": [
 				"2021-04-24"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01-01",
+			"status": "missing"
 		},
 		{
 			"sku": [
@@ -14315,7 +14404,8 @@
 			"releaseDate": [
 				"2021-04-27"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01-01",
+			"status": "missing"
 		},
 		{
 			"sku": [
@@ -14334,7 +14424,8 @@
 				"2021-06-15"
 			],
 			"gameDate": "2080-01-01",
-			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: München\", \"Datapuls: Pomorya\", \"Datapuls: SOTA 2081\", \"Datapuls: Westphalen\" und \"Datapuls: Piraten der Deutschen Bucht\""
+			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: München\", \"Datapuls: Pomorya\", \"Datapuls: SOTA 2081\", \"Datapuls: Westphalen\" und \"Datapuls: Piraten der Deutschen Bucht\"",
+			"status": "missing"
 		},
 		{
 			"sku": [
@@ -14353,7 +14444,8 @@
 				"2021-06-01"
 			],
 			"gameDate": "2080-01-01",
-			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerwehr\""
+			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerwehr\"",
+			"status": "missing"
 		},
 		{
 			"sku": [
