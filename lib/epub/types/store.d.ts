@@ -1,4 +1,3 @@
-import localForage = require('localforage');
 import Resources from "./resources";
 
 export default class Store {

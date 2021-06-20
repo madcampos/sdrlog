@@ -1,5 +1,3 @@
-import { defer } from "./core";
-
 export interface QueuedTask {
   task: any | Task,
   args: any[],
