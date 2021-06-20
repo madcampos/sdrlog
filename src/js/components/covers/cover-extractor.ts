@@ -103,7 +103,7 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 		canvas.width = scaledCover.width;
 		canvasContext.drawImage(scaledCover, 0, 0);
 
-		let optimizedCover: Blob | Buffer;
+		let optimizedCover: Blob | ArrayBuffer;
 
 		if (skipOptimize) {
 			optimizedCover = (await new Promise((resolve: BlobCallback) => {

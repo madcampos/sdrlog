@@ -8,7 +8,8 @@
 
 	-webkit-app-region: drag;
 
-	box-sizing: inherit;
+	box-sizing: border-box;
+	z-index: 1;
 }
 
 nav {

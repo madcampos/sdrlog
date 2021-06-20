@@ -107,7 +107,11 @@ export async function importCoversFromFolder() {
 			files = await directoryOpen();
 		}
 
+		progressOverlay.setTotal(files.length);
+
 		for await (const file of files) {
+			progressOverlay.increment();
+
 			const canSaveCover = await canImportCover(file, true);
 
 			if (canSaveCover) {

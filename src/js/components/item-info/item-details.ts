@@ -141,12 +141,10 @@ export class ItemDetails extends HTMLElement {
 			}
 		});
 
-		this.#coverDropArea.addEventListener('handler', async () => {
-			const file = this.#coverDropArea.file as FileSystemFileHandle;
-
+		this.#coverDropArea.addEventListener('handler', () => {
 			this.#coverDropArea.show = false;
 
-			this.#coverFile = await file.getFile();
+			this.#coverFile = this.#coverDropArea.file as File;
 			this.#cover.src = URL.createObjectURL(this.#coverFile);
 
 			this.#coverDropArea.show = true;

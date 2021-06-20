@@ -61,6 +61,8 @@ export async function setMaterialDetails(material: Material, {
 		releaseDate.insertAdjacentHTML('beforeend', formatReleaseDate(releaseDateValue));
 	});
 
+	releaseDate.loaded = true;
+
 	material.publisher.forEach((publisherValue) => {
 		publisher.insertAdjacentHTML('beforeend', formatPublisher(publisherValue));
 	});

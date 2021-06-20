@@ -34,9 +34,7 @@ export class ModalDialog extends HTMLElement {
 					display: flex;
 					flex-direction: column;
 					padding: 0;
-					margin-top: env(safe-area-inset-top, 0);
-					margin-bottom: env(safe-area-inset-bottom, 0);
-					margin-inline: auto;
+					margin: auto;
 					width: var(--dialog-width);
 					height: var(--dialog-height);
 					border: none;
