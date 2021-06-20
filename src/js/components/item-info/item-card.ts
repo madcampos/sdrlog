@@ -32,6 +32,8 @@ export class ItemCard extends HTMLElement {
 			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
 			<figure>
 				<img
+					decoding="async"
+					loading="lazy"
 					width="200"
 					height="200"
 					role="presentation"

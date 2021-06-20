@@ -11,6 +11,40 @@
 	margin: 0.5rem;
 
 	overflow: hidden;
+	contain: strict;
+	content-visibility: auto;
+	z-index: auto;
+}
+
+:host([data-status]) figure::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+:host([data-status='missing']) figure::after {
+	backdrop-filter: grayscale(0.6) brightness(50%) contrast(120%);
+	background-image: url('../../../img/covers/missing.svg');
+	mix-blend-mode: overlay;
+}
+
+:host([data-status='outofscope']) figure::after {
+	backdrop-filter: sepia(1) brightness(70%) contrast(110%) blur(2px);
+	background-image: url('../../../img/covers/outofscope.svg');
+	mix-blend-mode: multiply;
+}
+
+:host([data-status='canceled']) figure::after {
+	backdrop-filter: grayscale(1) brightness(50%) contrast(80%) blur(2px);
+	background-image: url('../../../img/covers/canceled.svg');
+	mix-blend-mode: soft-light;
 }
 
 figure {
@@ -18,6 +52,7 @@ figure {
 	padding: 0;
 	width: 100%;
 	height: 100%;
+	position: relative;
 }
 
 img {
