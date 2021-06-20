@@ -1,6 +1,6 @@
 import type { Material } from '../../../../data/data';
 
-import { fetchThumb } from '../covers/fetch-covers';
+import { FALLBACK_COVER, fetchThumb, LOADING_SIMPLE_COVER } from '../covers/fetch-covers';
 import { getMaterial } from '../data-operations/idb-persistence';
 import { ItemDetails } from './item-details';
 
@@ -37,7 +37,7 @@ export class ItemCard extends HTMLElement {
 					width="200"
 					height="200"
 					role="presentation"
-					src="/img/covers/fallback.svg"
+					src="${LOADING_SIMPLE_COVER}"
 				/>
 			</figure>
 			<h4></h4>
@@ -85,6 +85,8 @@ export class ItemCard extends HTMLElement {
 
 		if (cover) {
 			this.#thumb.src = URL.createObjectURL(cover);
+		} else {
+			this.#thumb.src = FALLBACK_COVER;
 		}
 	}
 

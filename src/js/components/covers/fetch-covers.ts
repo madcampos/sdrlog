@@ -7,6 +7,10 @@ import directoryOpen from '../../../../lib/file-system/directory-open';
 
 const TIMEOUT_BEFORE_RELOAD = 3000;
 
+export const FALLBACK_COVER = '/img/covers/fallback.svg';
+export const LOADING_COVER = '/img/covers/loading-anim.svg';
+export const LOADING_SIMPLE_COVER = '/img/covers/loading-simple.svg';
+
 export async function fetchCover(id: string) {
 	let currentCover = await getCover(id);
 

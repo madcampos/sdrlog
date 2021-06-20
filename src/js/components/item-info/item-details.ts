@@ -13,6 +13,7 @@ import { getMaterial } from '../data-operations/idb-persistence';
 import { ItemCard } from './item-card';
 import { createNewMaterial } from '../data-operations/create-material';
 import { openFile } from '../files-reader/open-file';
+import { LOADING_COVER } from '../covers/fetch-covers';
 
 export class ItemDetails extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
@@ -143,6 +144,7 @@ export class ItemDetails extends HTMLElement {
 
 		this.#coverDropArea.addEventListener('handler', () => {
 			this.#coverDropArea.show = false;
+			this.#cover.src = LOADING_COVER;
 
 			this.#coverFile = this.#coverDropArea.file as File;
 			this.#cover.src = URL.createObjectURL(this.#coverFile);
@@ -308,7 +310,7 @@ export class ItemDetails extends HTMLElement {
 		this.#files.hidden = true;
 		this.#links.resetValues();
 		this.#links.hidden = true;
-		this.#cover.src = '/img/covers/fallback.svg';
+		this.#cover.src = LOADING_COVER;
 		this.#coverDropArea.show = false;
 		this.#notes.resetValue();
 		this.#notes.hidden = true;

@@ -1,5 +1,6 @@
 /* eslint-disable no-ternary */
 import type { FileForMaterial, MaterialLink } from '../../../../data/data';
+import { LOADING_COVER } from '../covers/fetch-covers';
 
 export const publishers = new Map([
 	['Heyne Verlag', 'heyne'],
@@ -209,7 +210,7 @@ export default `
 						decoding="async"
 						loading="lazy"
 						role="presentation"
-						src="/img/covers/fallback.svg"
+						src="${LOADING_COVER}"
 					/>
 			</figure>
 		</drop-area>

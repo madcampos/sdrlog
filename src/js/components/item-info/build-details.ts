@@ -1,5 +1,5 @@
 import type { Material } from '../../../../data/data';
-import { fetchCover } from '../covers/fetch-covers';
+import { FALLBACK_COVER, fetchCover } from '../covers/fetch-covers';
 import { getFilesForMaterial } from '../data-operations/idb-persistence';
 import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
@@ -95,7 +95,11 @@ export async function setMaterialDetails(material: Material, {
 	description.value = material.description;
 
 	void fetchCover(material.sku[0]).then((coverFile) => {
-		cover.src = URL.createObjectURL(coverFile);
+		if (coverFile) {
+			cover.src = URL.createObjectURL(coverFile);
+		} else {
+			cover.src = FALLBACK_COVER;
+		}
 	});
 
 	const fileList = await getFilesForMaterial(material.sku[0]) ?? [];
