@@ -12,7 +12,7 @@
 
 export as namespace marked;
 
-export = marked;
+export default marked;
 /**
  * Compiles markdown to HTML synchronously.
  *
