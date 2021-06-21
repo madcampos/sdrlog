@@ -11,7 +11,6 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
 # Materials to add
-https://store.catalystgamelabs.com/collections/shadowrun/products/battlerun-ii-the-quest-for-the-thing
 
 https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-30th-anniversary-t-shirt-hoodie?variant=15893164818466
 https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-30th-anniversary-lapel-pin
@@ -25,8 +24,19 @@ https://store.catalystgamelabs.com/collections/shadowrun/products/battletech-lim
 https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-foil-poster-set-of-5
 https://www.black-book-editions.fr/produit.php?id=10272
 
+https://www.shadowrun6.de/index.php/produkte-2.html
+
 # Folders
 ***REMOVED***
 ***REMOVED***
 https://www.shadowrun6.de/index.php/spielhilfen-2/schattenload.html
 https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
+
+# Japanese materials
+https://www.shadowiki.de/Shadowrun_Manga
+https://fondationdraco.fr/shadowrun-manga-scan-trad/
+https://fondationdraco.fr/shadowrun-au-japon-partie-2/
+https://fondationdraco.fr/2016/05/05/shadowrun-au-japon-entangled-betrayal/
+https://fondationdraco.fr/shadowrun-au-japon-partie-3/tokyo-eye-shot-shadowrun-city-file/
+https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-shikkoku-no-senki/
+https://fondationdraco.fr/shadowrun-au-japon-partie-5/
