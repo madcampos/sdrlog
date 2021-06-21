@@ -15,13 +15,17 @@
 #container {
 	display: grid;
 	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
-	grid-template-rows: repeat(4, auto);
+	grid-template-rows: repeat(4, min-content);
 	grid-gap: 0.5rem;
 	grid-template-areas:
 		'image header'
 		'image main'
 		'meta main'
 		'files main';
+
+	align-items: start;
+	align-content: start;
+	justify-content: center;
 
 	height: 100%;
 	box-sizing: inherit;

@@ -1,3 +1,4 @@
+import { default as marked } from '../../../../lib/marked/marked';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 
 const banList = [
@@ -15,6 +16,8 @@ export class EditText extends HTMLElement {
 	#root: ShadowRoot;
 	#loader: SkeletonLoader;
 	#textArea: HTMLTextAreaElement;
+	#renderedTextArea: HTMLElement;
+	#renderedTextContainer: HTMLDivElement;
 
 	constructor() {
 		super();
@@ -27,10 +30,15 @@ export class EditText extends HTMLElement {
 				<slot name="label"></slot>
 			</label>
 			<skeleton-loader>
-				<textarea id="edit-box" readonly></textarea>
+				<div id="rendered-text">
+					<article></article>
+				</div>
+				<textarea id="edit-box" hidden></textarea>
 			</skeleton-loader>
 		`;
 
+		this.#renderedTextArea = this.#root.querySelector('article') as HTMLElement;
+		this.#renderedTextContainer = this.#root.querySelector('#rendered-text') as HTMLDivElement;
 		this.#textArea = this.#root.querySelector('textarea') as HTMLTextAreaElement;
 		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
 
@@ -41,6 +49,7 @@ export class EditText extends HTMLElement {
 		}
 
 		this.#textArea.addEventListener('change', () => {
+			this.#renderedTextArea.innerHTML = marked(this.#textArea.value);
 			this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 		});
 	}
@@ -51,6 +60,7 @@ export class EditText extends HTMLElement {
 
 	set value(newValue: string) {
 		this.#textArea.value = newValue;
+		this.#renderedTextArea.innerHTML = marked(this.#textArea.value);
 		this.#loader.loaded = true;
 	}
 
@@ -76,6 +86,7 @@ export class EditText extends HTMLElement {
 
 	resetValue() {
 		this.#textArea.value = '';
+		this.#renderedTextArea.innerHTML = '';
 		this.#loader.loaded = false;
 	}
 
@@ -85,9 +96,11 @@ export class EditText extends HTMLElement {
 				const isEdit = this.hasAttribute('edit');
 
 				if (!isEdit) {
-					this.#textArea.readOnly = true;
+					this.#textArea.hidden = true;
+					this.#renderedTextContainer.hidden = false;
 				} else {
-					this.#textArea.readOnly = false;
+					this.#textArea.hidden = false;
+					this.#renderedTextContainer.hidden = true;
 				}
 			} else if (name === 'value') {
 				this.value = newValue;
