@@ -11,7 +11,7 @@ import detailsTemplate, { formatLink, formatPublisher, formatReleaseDate, format
 import { setMaterialDetails } from './build-details';
 import { getMaterial } from '../data-operations/idb-persistence';
 import { ItemCard } from './item-card';
-import { createNewMaterial } from '../data-operations/create-material';
+import { saveNewMaterialInfo } from '../data-operations/create-material';
 import { openFile } from '../files-reader/open-file';
 import { LOADING_COVER } from '../covers/fetch-covers';
 
@@ -24,6 +24,7 @@ export class ItemDetails extends HTMLElement {
 	#saveButton: HTMLButtonElement;
 
 	#isEditing = false;
+	#isEditingExistingMaterial = false;
 
 	#name: EditBox;
 	#sku: EditList;
@@ -162,7 +163,7 @@ export class ItemDetails extends HTMLElement {
 			const [id] = this.#sku.values;
 
 			if (id) {
-				await createNewMaterial(id, {
+				await saveNewMaterialInfo(id, {
 					name: this.#name.value,
 					sku: this.#sku.values,
 					edition: this.#edition.value,
@@ -181,18 +182,23 @@ export class ItemDetails extends HTMLElement {
 					cover: this.#coverFile
 				});
 
-				ItemCard.createCard({
-					name: this.#name.value,
-					id,
-					sku: this.#sku.values,
-					edition: Number.parseInt(this.#edition.value),
-					category: this.#category.value as Material['category'],
-					type: this.#type.value as Material['type'],
-					status: this.#status.value as Material['status']
-				});
+				if (!this.#isEditingExistingMaterial) {
+					ItemCard.createCard({
+						name: this.#name.value,
+						id,
+						sku: this.#sku.values,
+						edition: Number.parseInt(this.#edition.value),
+						category: this.#category.value as Material['category'],
+						type: this.#type.value as Material['type'],
+						status: this.#status.value as Material['status']
+					});
+				}
 			}
 
 			this.#saveButton.disabled = false;
+
+			// eslint-disable-next-line no-alert
+			alert(`Item # ${id} saved successfully.`);
 		});
 	}
 
@@ -294,6 +300,8 @@ export class ItemDetails extends HTMLElement {
 	}
 
 	resetMaterial() {
+		this.#isEditingExistingMaterial = false;
+
 		this.#name.resetValue();
 		this.#sku.resetValues();
 		this.#edition.resetValue();
@@ -324,6 +332,8 @@ export class ItemDetails extends HTMLElement {
 		const material = await getMaterial(id);
 
 		if (material) {
+			this.#isEditingExistingMaterial = true;
+
 			await setMaterialDetails(material, {
 				name: this.#name,
 				sku: this.#sku,

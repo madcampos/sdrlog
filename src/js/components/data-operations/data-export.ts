@@ -27,7 +27,7 @@ export async function exportDataFile() {
 				}));
 				await file.close();
 			} else {
-				const file = new File([JSON.stringify({ $schema: './data.schema.json', items })], 'data.json', { type: 'application/json' });
+				const file = new File([JSON.stringify({ $schema: './data.schema.json', items }, null, '\t')], 'data.json', { type: 'application/json' });
 
 				await saveFile(file, { fileName: 'data.json' });
 			}

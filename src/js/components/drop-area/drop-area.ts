@@ -68,7 +68,7 @@ export class DropArea extends HTMLElement {
 
 			let files = Array.from(evt.dataTransfer?.files ?? []);
 
-			if (!this.#multiple) {
+			if (!this.#multiple && files.length > 0) {
 				const [firstFile] = files;
 
 				files = [firstFile];
@@ -82,9 +82,9 @@ export class DropArea extends HTMLElement {
 					this.#file = file;
 					this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
 				}
-
-				this.#overlay.classList.remove('drop');
 			}
+
+			this.#overlay.classList.remove('drop');
 		});
 
 		this.addEventListener('dragover', (evt) => {

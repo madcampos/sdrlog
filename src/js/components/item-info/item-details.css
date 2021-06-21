@@ -99,7 +99,10 @@ article {
 	flex-direction: column;
 }
 
-article #description { flex-grow: 1; }
+article #description {
+	flex-grow: 1;
+	height: clamp(10rem, 30vh, 20rem);
+}
 
 #files { grid-area: files; }
 
