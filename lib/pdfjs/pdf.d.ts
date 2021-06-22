@@ -305,3 +305,11 @@ export declare const DefaultCMapReaderFactory: Object;
 export declare const build: string;
 
 export declare const version: string;
+
+export interface PDFjsModule {
+	getDocument({ url }: { url: string }): { promise: Promise<PDFDocumentProxy> },
+	// eslint-disable-next-line @typescript-eslint/naming-convention
+	GlobalWorkerOptions: {
+		workerSrc: string
+	}
+}

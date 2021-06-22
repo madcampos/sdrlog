@@ -1,13 +1,5 @@
-import type { PDFDocumentProxy } from '../../../../lib/pdfjs/pdf.js';
+import type { PDFjsModule } from '../../../../lib/pdfjs/pdf.js';
 import { optimize } from './optimizer';
-
-interface PDFjsModule {
-	getDocument({ url }: { url: string }): { promise: Promise<PDFDocumentProxy> },
-	// eslint-disable-next-line @typescript-eslint/naming-convention
-	GlobalWorkerOptions: {
-		workerSrc: string
-	}
-}
 
 const pdfjs = window['pdfjs-dist/build/pdf'] as PDFjsModule;
 
