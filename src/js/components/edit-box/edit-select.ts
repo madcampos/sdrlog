@@ -17,25 +17,11 @@ export class EditSelect extends HTMLElement {
 
 	constructor() {
 		super();
+
+		const template = document.querySelector('#edit-select') as HTMLTemplateElement;
+
 		this.#root = this.attachShadow({ mode: 'closed' });
-
-		this.#root.innerHTML = `
-			<style>label { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<label for="edit-box">
-				<slot name="label"></slot>
-			</label>
-
-			<skeleton-loader>
-				<select id="edit-box" disabled>
-					<option selected disabled hidden value="">Please select an option...</option>
-				</select>
-			</skeleton-loader>
-
-			<div hidden>
-				<slot></slot>
-			</div>
-		`;
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#select = this.#root.querySelector('select') as HTMLSelectElement;
 		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;

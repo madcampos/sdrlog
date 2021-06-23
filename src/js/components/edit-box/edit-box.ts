@@ -18,18 +18,11 @@ export class EditBox extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<style>label { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<label for="edit-box" hidden>
-				<slot name="label"></slot>
-			</label>
-			<skeleton-loader>
-				<input id="edit-box" readonly/>
-			</skeleton-loader>
-		`;
+		const template = document.querySelector('#edit-box') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#input = this.#root.querySelector('input') as HTMLInputElement;
 		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;

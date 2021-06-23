@@ -1,6 +1,5 @@
 /* eslint-disable no-ternary */
 import type { FileForMaterial, MaterialLink } from '../../../../data/data';
-import { LOADING_COVER } from '../covers/fetch-covers';
 
 export const publishers = new Map([
 	['Heyne Verlag', 'heyne'],
@@ -118,115 +117,57 @@ export function formatFile(file: FileForMaterial) {
 	`;
 }
 
-export default `
-<modal-dialog>
-	<edit-box id="name" slot="title" placeholder="Item name"></edit-box>
+export function setCategories(container: HTMLElement) {
+	[...categories.entries()].forEach(([value, name]) => {
+		const option = document.createElement('option');
 
-	<div id="container">
-		<header>
-			<edit-list id="sku" open>
-				<span slot="label">SKU</span>
-				<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required/>
-			</edit-list>
+		option.value = value;
+		option.innerText = name;
 
-			<edit-box id="edition" type="number" min="1" max="6" step="1" required>
-				<span slot="label">Edition</span>
-			</edit-box>
+		container.appendChild(option);
+	});
+}
 
-			<edit-select id="category" required>
-				<span slot="label">Category</span>
+export function setTypes(container: HTMLElement) {
+	[...types.entries()].forEach(([value, name]) => {
+		const option = document.createElement('option');
 
-				${[...categories.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-			</edit-select>
+		option.value = value;
+		option.innerText = name;
 
-			<edit-select id="type" required>
-				<span slot="label">Type</span>
+		container.appendChild(option);
+	});
+}
 
-				${[...types.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-			</edit-select>
+export function setLanguages(container: HTMLElement) {
+	[...languages.entries()].forEach(([value, name]) => {
+		const option = document.createElement('option');
 
-			<edit-select id="language" required>
-				<span slot="label">Original Language</span>
+		option.value = value;
+		option.innerText = name;
 
-				${[...languages.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-			</edit-select>
+		container.appendChild(option);
+	});
+}
 
-			<edit-list id="releasedate" open>
-				<span slot="label">Release date</span>
-				<input slot="input" type="date" required/>
-			</edit-list>
-		</header>
+export function setStatus(container: HTMLElement) {
+	[...status.entries()].forEach(([value, name]) => {
+		const option = document.createElement('option');
 
-		<aside id="meta">
-			<edit-select id="status" hidden required>
-				<span slot="label">Status</span>
+		option.value = value;
+		option.innerText = name;
 
-				${[...status.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-			</edit-select>
+		container.appendChild(option);
+	});
+}
 
-			<edit-box type="date" id="gamedate" required>
-				<span slot="label">Game date</span>
-			</edit-box>
+export function setPublishers(container: HTMLElement) {
+	[...publishers.entries()].forEach(([value, name]) => {
+		const option = document.createElement('option');
 
-			<edit-list id="names">
-				<span slot="label">Names published</span>
+		option.value = value;
+		option.innerText = name;
 
-				<select slot="input" required>
-					<option selected disabled hidden value="">Please select an option...</option>
-					${[...languages.entries()].map(([value, name]) => `<option value="${value}">${name}</option>`).join('\n')}
-				</select>
-
-				<input slot="input" required placeholder="Name"/>
-			</edit-list>
-
-			<edit-list id="publisher" open>
-				<span slot="label">Publisher</span>
-
-				<select slot="input" required>
-					<option selected disabled hidden value="">Please select an option...</option>
-					${[...publishers.entries()].map(([value]) => `<option>${value}</option>`).join('\n')}
-				</select>
-			</edit-list>
-		</aside>
-
-		<aside id="files">
-			<edit-list id="files-list" hidden>
-				<span slot="label">Files</span>
-				<input slot="input" type="file" multiple required/>
-			</edit-list>
-
-			<edit-list id="links">
-				<span slot="label">Online links</span>
-				<input slot="input" type="text" placeholder="Name" required/>
-				<input slot="input" type="url" placeholder="URL" required/>
-			</edit-list>
-		</aside>
-
-		<drop-area id="cover-drop-area">
-			<figure>
-					<img
-						width=""
-						id="cover"
-						decoding="async"
-						loading="lazy"
-						role="presentation"
-						src="${LOADING_COVER}"
-					/>
-			</figure>
-		</drop-area>
-
-		<article>
-			<edit-text id="notes" hidden>
-				<span slot="label">Notes</span>
-			</edit-text>
-
-			<edit-text id="description" required>
-				<span slot="label">Description</span>
-			</edit-text>
-		</article>
-	</div>
-
-	<button slot="footer" id="edit">✏️ Edit</button>
-	<button slot="footer" hidden id="save">💾 Save</button>
-</modal-dialog>
-`;
+		container.appendChild(option);
+	});
+}

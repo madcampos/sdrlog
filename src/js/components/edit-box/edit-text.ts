@@ -21,21 +21,11 @@ export class EditText extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<style>label { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<label for="edit-box">
-				<slot name="label"></slot>
-			</label>
-			<skeleton-loader>
-				<div id="rendered-text">
-					<article></article>
-				</div>
-				<textarea id="edit-box" hidden></textarea>
-			</skeleton-loader>
-		`;
+		const template = document.querySelector('#edit-text') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#renderedTextArea = this.#root.querySelector('article') as HTMLElement;
 		this.#renderedTextContainer = this.#root.querySelector('#rendered-text') as HTMLDivElement;

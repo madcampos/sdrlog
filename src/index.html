@@ -26,10 +26,428 @@
 		<link rel="preload" href="/data/data.json" as="fetch" type="application/json">
 		<link rel="preload" href="./js/main.js" as="script">
 		<link rel="preload" href="/lib/pdfjs/pdf.js" as="script">
+		<link rel="preload" href="./css/components/dialog/dialog.css" as="style">
+		<link rel="preload" href="./css/components/progress/progress.css" as="style">
+		<link rel="preload" href="./css/components/item-info/item-details.css" as="style">
 
 		<link rel="stylesheet" href="./css/base.css"/>
 	</head>
 	<body class="notranslate" translate="no">
+		<!-- Templates -->
+
+		<template id="dialog">
+			<link rel="stylesheet" href="./css/components/dialog/dialog.css"/>
+			<slot name="trigger"></slot>
+			<dialog>
+				<header>
+					<slot name="title"></slot>
+					<button id="close" title="Close window">❌</button>
+				</header>
+				<article>
+					<slot></slot>
+				</article>
+				<footer hidden>
+					<slot name="footer"></slot>
+				</footer>
+			</dialog>
+		</template>
+
+		<template id="drop-area">
+			<link rel="stylesheet" href="./css/components/drop-area/drop-area.css"/>
+			<div id="content">
+				<slot></slot>
+			</div>
+			<div id="overlay" hidden>
+				<slot name="overlay">
+					Click to select a item
+					<br>
+					Or drag the item here...
+				</slot>
+			</div>
+		</template>
+
+		<template id="dropdown-menu">
+			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu.css"/>
+			<button></button>
+			<dialog>
+				<slot></slot>
+			</dialog>
+		</template>
+
+		<template id="dropdown-menu-item">
+			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu-item.css"/>
+			<button>
+				<img role="presentation"/>
+				<span>
+					<slot></slot>
+				</span>
+			</button>
+		</template>
+
+		<template id="edit-box">
+			<link rel="stylesheet" href="./css/components/edit-box/edit-box.css"/>
+			<label for="edit-box-input" hidden>
+				<slot name="label"></slot>
+			</label>
+			<skeleton-loader>
+				<input id="edit-box-input" readonly/>
+			</skeleton-loader>
+		</template>
+
+		<template id="edit-list">
+			<link rel="stylesheet" href="./css/components/edit-box/edit-list.css"/>
+			<details>
+				<summary>
+					<slot name="label"></slot>
+				</summary>
+
+				<div id="input-container" hidden>
+					<slot name="input"></slot>
+					<button id="add-button">➕</button>
+				</div>
+
+				<skeleton-loader>
+					<article id="items-container">
+						<slot></slot>
+					</article>
+				</skeleton-loader>
+			</details>
+		</template>
+
+		<template id="edit-list-item">
+			<link rel="stylesheet" href="./css/components/edit-box/edit-list-item.css"/>
+			<slot></slot>
+			<button hidden>❌</button>
+		</template>
+
+		<template id="edit-select">
+			<link rel="stylesheet" href="./css/components/edit-box/edit-select.css"/>
+			<label for="edit-select-input">
+				<slot name="label"></slot>
+			</label>
+
+			<skeleton-loader>
+				<select id="edit-select-input" disabled>
+					<option selected disabled hidden value="">Please select an option...</option>
+				</select>
+			</skeleton-loader>
+
+			<div hidden>
+				<slot></slot>
+			</div>
+		</template>
+
+		<template id="edit-text">
+			<link rel="stylesheet" href="./css/components/edit-box/edit-text.css"/>
+			<label for="edit-textarea">
+				<slot name="label"></slot>
+			</label>
+			<skeleton-loader>
+				<div id="rendered-text">
+					<article></article>
+				</div>
+				<textarea id="edit-textarea" hidden></textarea>
+			</skeleton-loader>
+		</template>
+
+		<template id="item-details">
+			<link rel="stylesheet" href="./css/components/item-info/item-details.css"/>
+			<modal-dialog>
+				<edit-box id="name" slot="title" placeholder="Item name"></edit-box>
+
+				<div id="item-content">
+					<header>
+						<edit-list id="sku" open>
+							<span slot="label">SKU</span>
+							<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required/>
+						</edit-list>
+
+						<edit-box id="edition" type="number" min="1" max="6" step="1" required>
+							<span slot="label">Edition</span>
+						</edit-box>
+
+						<edit-select id="category" required>
+							<span slot="label">Category</span>
+						</edit-select>
+
+						<edit-select id="type" required>
+							<span slot="label">Type</span>
+						</edit-select>
+
+						<edit-select id="language" required>
+							<span slot="label">Original Language</span>
+						</edit-select>
+
+						<edit-list id="releasedate" open>
+							<span slot="label">Release date</span>
+							<input slot="input" type="date" required/>
+						</edit-list>
+					</header>
+
+					<aside id="meta">
+						<edit-select id="status" hidden required>
+							<span slot="label">Status</span>
+						</edit-select>
+
+						<edit-box type="date" id="gamedate" required>
+							<span slot="label">Game date</span>
+						</edit-box>
+
+						<edit-list id="names">
+							<span slot="label">Names published</span>
+
+							<select slot="input" required>
+								<option selected disabled hidden value="">Please select an option...</option>
+							</select>
+
+							<input slot="input" required placeholder="Name"/>
+						</edit-list>
+
+						<edit-list id="publisher" open>
+							<span slot="label">Publisher</span>
+
+							<select slot="input" required>
+								<option selected disabled hidden value="">Please select an option...</option>
+							</select>
+						</edit-list>
+					</aside>
+
+					<aside id="files">
+						<edit-list id="files-list" hidden>
+							<span slot="label">Files</span>
+							<input slot="input" type="file" multiple required/>
+						</edit-list>
+
+						<edit-list id="links">
+							<span slot="label">Online links</span>
+							<input slot="input" type="text" placeholder="Name" required/>
+							<input slot="input" type="url" placeholder="URL" required/>
+						</edit-list>
+					</aside>
+
+					<drop-area id="cover-drop-area">
+						<figure>
+								<img
+									width="100"
+									height="160"
+									id="cover"
+									decoding="async"
+									loading="lazy"
+									role="presentation"
+									src="./img/covers/loading-anim.svg"
+								/>
+						</figure>
+					</drop-area>
+
+					<article>
+						<edit-text id="notes" hidden>
+							<span slot="label">Notes</span>
+						</edit-text>
+
+						<edit-text id="description" required>
+							<span slot="label">Description</span>
+						</edit-text>
+					</article>
+				</div>
+
+				<button slot="footer" id="edit">✏️ Edit</button>
+				<button slot="footer" hidden id="save">💾 Save</button>
+			</modal-dialog>
+		</template>
+
+		<template id="item-card">
+			<link rel="stylesheet" href="./css/components/item-info/item-card.css"/>
+			<figure>
+				<img
+					decoding="async"
+					loading="lazy"
+					width="100"
+					height="160"
+					role="presentation"
+					src="./img/covers/loading-simple.svg"
+				/>
+			</figure>
+			<h4></h4>
+		</template>
+
+		<template id="menu-bar">
+			<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css"/>
+			<nav>
+				<dropdown-menu id="filters" label="︙">
+					<dropdown-menu-item action="sourcebook">📜 Sourcebooks</dropdown-menu-item>
+					<dropdown-menu-item action="rulebook">📝 Rulebooks</dropdown-menu-item>
+					<dropdown-menu-item action="mission">🗺️ Adventures &amp; Campaigns</dropdown-menu-item>
+					<dropdown-menu-item action="novel">📚 Novels</dropdown-menu-item>
+					<dropdown-menu-item action="magazine">📰 Magazines</dropdown-menu-item>
+					<dropdown-menu-item action="boardgame">♟️ Tabletop</dropdown-menu-item>
+					<dropdown-menu-item action="tcg">🃏 Trading Card Game</dropdown-menu-item>
+					<dropdown-menu-item action="videogame">🎮 Video Games</dropdown-menu-item>
+					<!-- <dropdown-menu-item action="unofficial">📓 Unofficial</dropdown-menu-item> -->
+					<dropdown-menu-item action="misc">🔣 Misc.</dropdown-menu-item>
+
+					<dropdown-menu-item separator></dropdown-menu-item>
+
+					<dropdown-menu-item action="all">📚 All</dropdown-menu-item>
+				</dropdown-menu>
+				<search-box></search-box>
+				<modal-dialog>
+					<button slot="trigger">ℹ️</button>
+					<h1 slot="title">Information</h1>
+					<details open>
+						<summary>Collection Organization</summary>
+						<p>The material here presented is organized into the following categories:</p>
+						<dl>
+							<dt>Sourcebooks</dt>
+							<dd>These books are a mix of rules and setting. As such, they contain setting information applicable to any edition of the game, and statistics that may need a little updating.</dd>
+							<dt>Rulebooks</dt>
+							<dd>These books are primarily rules, and tend to be replaced quickly when a new edition of the game is released. They can be difficult to use with other editions.</dd>
+							<dt>Adventures &amp; Campaigns</dt>
+							<dd>Missions, adventures and campaigns including the <em>Shadowrun Missions</em> seasons and the <em>Enhanced Fiction</em> series.</dd>
+							<dt>Novels</dt>
+							<dd>The romances written with the Sixth World as a base.</dd>
+							<dt>Magazines</dt>
+							<dd>Magazines (Official and unofficial) published about the Shadowrun Universe.</dd>
+							<dt>Tabletop</dt>
+							<dd>Tabletop, boardgames, <abbr title="Trade Card Game">TCG</abbr> and other physical games.</dd>
+							<dt>Video-games</dt>
+							<dd>Video-games produced based on the Shadowrun universe.</dd>
+							<dt>Misc. Itens</dt>
+							<dd>Conversion sheets, April's fool jokes and other items that don't go on the other categories.</dd>
+						</dl>
+					</details>
+					<details>
+						<summary>Search Options</summary>
+						<p>The search is done by tags, in the form: <code>tag: term</code>, where tag is one of the listed below with the respective terms if they exist.</p>
+						<p>The default search is by name, so you don't need the tag for it, but if you use more than one tag for searching you will need to specify the <code>name</code> tag to search by name.</p>
+						<h2>Tags</h2>
+						<dl>
+							<dt>Name (<code>name</code>)</dt>
+							<dd>The name of the material. Also the default search tag, if none is provided it will be used.</dd>
+							<dt>Category (<code>category</code> / <code>cat</code>)</dt>
+							<dd>
+								<p>The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books.</p>
+								<p>It may be one of the following:</p>
+								<ul>
+									<li><strong>Rulebook:</strong> A book containing mostly rules that are compatible with only one edition of the game.</li>
+									<li><strong>Sourcebook:</strong> A book containing settings, plot hooks and other stuff that is mostly background information, not rules.</li>
+									<li><strong>Mission:</strong> A book containing information to be used on an adventure or campaign.</li>
+									<li><strong>Magazine:</strong> A magazine publication with assosrted content.</li>
+									<li><strong>Novel:</strong> A fictin book writen based on the Shadowrun universe.</li>
+									<li><strong>Unofficial:</strong> Fan made publication specific for Shadowrun.</li>
+									<li><strong>Videogame:</strong> Digital game setted in the Shadowrun world.</li>
+									<li><strong>TCG:</strong> Trade Card Game based on the Shadowrun universe.</li>
+									<li><strong>Boardgame:</strong> A boardgame or other physical game that is setted in the Shadowrun universe.</li>
+									<li><strong>Miscellaneous (Misc.):</strong> Assorted matterials that don't fit in any of the above categories.</li>
+								</ul>
+							</dd>
+
+							<dt>SKU (<code>sku</code>)</dt>
+							<dd>The <abbr title="Stock Keeping Unit">SKU</abbr> of the item, it's used also as an identifier. Most of them are unique.</dd>
+
+							<dt>Edition (<code>edition</code>)</dt>
+							<dd>The edition of the publication, ranging from <code>1</code> to <code>5</code>.</dd>
+
+							<dt>Type (<code>type</code>)</dt>
+							<dd>
+								<p>The availability of the material, based on how it is easily found.</p>
+								<p>It may be one of the following:</p>
+								<ul>
+									<li><strong>Digital:</strong> The material is available in digital format.</li>
+									<li><strong>Print:</strong> The material is available in printed format only.</li>
+									<li><strong>Scan:</strong> The material is a scan of the printed format.</li>
+									<li><strong>OCR:</strong> The material is a OCR scan of the printed format.</li>
+									<li><strong>Physical:</strong> The material is only available in physical format other than a book (TCG, boardgame, etc.).</li>
+								</ul>
+							</dd>
+
+							<dt>Status (<code>status</code>)</dt>
+							<dd>
+								<p>If the material is in the scope of a digital collection.</p>
+								<p>May be one of the following:</p>
+								<ul>
+									<li><strong>Missing (<code>missing</code>):</strong> The item is missing from the collection.</li>
+									<li><strong>Out of scope (<code>outofscope</code>):</strong> The item is either physical, limited edition or unreleased so it's out of the scope of the collection.</li>
+									<li><strong>Canceled (<code>canceled</code>):</strong> The item was announced but then canceled.</li>
+								</ul>
+							</dd>
+						</dl>
+					</details>
+				</modal-dialog>
+				<dropdown-menu label="⚙️">
+					<dropdown-menu-item id="import-materials">📥 Import Materials</dropdown-menu-item>
+					<dropdown-menu-item id="import-data">📦 Import Data</dropdown-menu-item>
+
+					<dropdown-menu-item separator></dropdown-menu-item>
+
+					<dropdown-menu-item id="import-covers">📂 Import Covers</dropdown-menu-item>
+					<dropdown-menu-item id="extract-covers">🧩 Extract Covers</dropdown-menu-item>
+
+					<dropdown-menu-item separator></dropdown-menu-item>
+
+					<dropdown-menu-item id="export-data">📤 Export Data</dropdown-menu-item>
+					<dropdown-menu-item id="export-covers">🖼️ Export Covers</dropdown-menu-item>
+				</dropdown-menu>
+				<button id="add-material">➕</button>
+			</nav>
+		</template>
+
+		<template id="progress">
+			<link rel="stylesheet" href="./css/components/progress/progress.css"/>
+			<dialog>
+				<h1><slot name="title"></slot></h1>
+				<progress></progress>
+				<p><span id="count"></span></p>
+				<slot name="info"></slot>
+			</dialog>
+		</template>
+
+		<template id="search-box">
+			<link rel="stylesheet" href="./css/components/search-box/search-box.css"/>
+			<label title="Search">🔍<input type="search" placeholder="Search items..." role="search"/></label>
+		</template>
+
+		<template id="sekeleton-loader">
+			<style>
+				:host { box-sizing: inherit; }
+
+				#loader {
+					max-width: 20rem;
+					border-radius: 0.5rem;
+					background-color: var(--accent-color);
+					background-image: linear-gradient(-60deg, var(--bg-color) 40%, transparent, var(--bg-color) 60%);
+					background-size: 200% 100%;
+					background-position: 100%;
+					color: transparent;
+					user-select: none;
+
+					animation: loader 2s linear infinite;
+					opacity: 0.2;
+				}
+
+				@keyframes loader {
+					from {
+						background-position: 100%;
+					}
+					to {
+						background-position: -100%;
+					}
+				}
+			</style>
+			<div id="loader">
+				Loading...
+			</div>
+			<slot hidden></slot>
+		</template>
+
+		<template id="update-refresh">
+			<link rel="stylesheet" href="./css/components/update-refresh/update-refresh.css"/>
+			<aside role="status" aria-live="polite" hidden>
+				<p></p>
+				<button>♻️</button>
+			</aside>
+		</template>
+
+		<!-- Content -->
 		<menu-bar></menu-bar>
 
 		<main role="list">

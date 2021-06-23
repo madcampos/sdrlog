@@ -1,7 +1,6 @@
 import type { Material } from '../../../../data/data';
 import type { ModalDialog } from '../dialog/dialog';
 
-import infoDialogData from './info-dialog';
 import { readFiles } from '../files-reader/files-reader';
 import { extractCoversFromFiles, importCoversFromFolder } from '../covers/fetch-covers';
 import { saveCoversToFolder } from '../covers/cover-exporter';
@@ -16,51 +15,11 @@ class MenuBar extends HTMLElement {
 
 	constructor() {
 		super();
+
+		const template = document.querySelector('#menu-bar') as HTMLTemplateElement;
+
 		this.#root = this.attachShadow({ mode: 'closed' });
-
-		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<nav>
-				<dropdown-menu id="filters" label="︙">
-					<dropdown-menu-item action="sourcebook">📜 Sourcebooks</dropdown-menu-item>
-					<dropdown-menu-item action="rulebook">📝 Rulebooks</dropdown-menu-item>
-					<dropdown-menu-item action="mission">🗺️ Adventures &amp; Campaigns</dropdown-menu-item>
-					<dropdown-menu-item action="novel">📚 Novels</dropdown-menu-item>
-					<dropdown-menu-item action="magazine">📰 Magazines</dropdown-menu-item>
-					<dropdown-menu-item action="boardgame">♟️ Tabletop</dropdown-menu-item>
-					<dropdown-menu-item action="tcg">🃏 Trading Card Game</dropdown-menu-item>
-					<dropdown-menu-item action="videogame">🎮 Video Games</dropdown-menu-item>
-					<!-- <dropdown-menu-item action="unofficial">📓 Unofficial</dropdown-menu-item> -->
-					<dropdown-menu-item action="misc">🔣 Misc.</dropdown-menu-item>
-
-					<dropdown-menu-item separator></dropdown-menu-item>
-
-					<dropdown-menu-item action="all">📚 All</dropdown-menu-item>
-				</dropdown-menu>
-				<search-box></search-box>
-				<modal-dialog>
-					<button slot="trigger">ℹ️</button>
-					<h1 slot="title">Information</h1>
-					${infoDialogData}
-				</modal-dialog>
-				<dropdown-menu label="⚙️">
-					<dropdown-menu-item id="import-materials">📥 Import Materials</dropdown-menu-item>
-					<dropdown-menu-item id="import-data">📦 Import Data</dropdown-menu-item>
-
-					<dropdown-menu-item separator></dropdown-menu-item>
-
-					<dropdown-menu-item id="import-covers">📂 Import Covers</dropdown-menu-item>
-					<dropdown-menu-item id="extract-covers">🧩 Extract Covers</dropdown-menu-item>
-
-					<dropdown-menu-item separator></dropdown-menu-item>
-
-					<dropdown-menu-item id="export-data">📤 Export Data</dropdown-menu-item>
-					<dropdown-menu-item id="export-covers">🖼️ Export Covers</dropdown-menu-item>
-				</dropdown-menu>
-				<button id="add-material">➕</button>
-			</nav>
-		`;
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#infobox = this.#root.querySelector('modal-dialog') as ModalDialog;
 

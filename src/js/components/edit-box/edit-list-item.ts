@@ -8,13 +8,11 @@ export class EditListItem extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<slot></slot>
-			<button hidden>❌</button>
-		`;
+		const template = document.querySelector('#edit-list-item') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#closeButton = this.#root.querySelector('button') as HTMLButtonElement;
 

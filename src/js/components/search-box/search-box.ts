@@ -6,13 +6,11 @@ class SearchBox extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<label title="Search">🔍<input type="search" placeholder="Search items..." role="search"/></label>
-		`;
+		const template = document.querySelector('#search-box') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;
 

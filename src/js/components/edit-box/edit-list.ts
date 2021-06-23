@@ -14,35 +14,18 @@ export class EditList extends HTMLElement {
 
 	constructor() {
 		super();
+
+		const template = document.querySelector('#edit-list') as HTMLTemplateElement;
+
 		this.#root = this.attachShadow({ mode: 'closed' });
-
-		this.#root.innerHTML = `
-			<style>summary { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<details>
-				<summary>
-					<slot name="label"></slot>
-				</summary>
-
-				<div id="input" hidden>
-					<slot name="input"></slot>
-					<button id="add">➕</button>
-				</div>
-
-				<skeleton-loader>
-					<article id="container">
-						<slot></slot>
-					</article>
-				</skeleton-loader>
-			</details>
-		`;
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
 		this.#details = this.#root.querySelector('details') as HTMLDetailsElement;
-		this.#input = this.#root.querySelector('#input') as HTMLDivElement;
+		this.#input = this.#root.querySelector('#input-container') as HTMLDivElement;
 		this.#inputSlot = this.#root.querySelector('slot[name="input"]') as HTMLSlotElement;
 		this.#items = this.#root.querySelector('slot:not([name])') as HTMLSlotElement;
-		this.#addButton = this.#root.querySelector('#add') as HTMLButtonElement;
+		this.#addButton = this.#root.querySelector('#add-button') as HTMLButtonElement;
 
 		this.#addButton.addEventListener('click', () => {
 			const [input] = this.#inputSlot.assignedElements() as (HTMLInputElement | HTMLSelectElement | null)[];

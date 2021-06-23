@@ -10,6 +10,9 @@
 	align-items: start;
 	margin: 0.5rem;
 
+	width: 14rem;
+	height: 23rem;
+
 	overflow: hidden;
 	contain: strict;
 	content-visibility: auto;

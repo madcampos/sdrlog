@@ -45,7 +45,7 @@ details {
 	position: relative;
 }
 
-details #container {
+details #items-container {
 	height: 3rem;
 	overflow: overlay;
 	display: flex;
@@ -54,7 +54,7 @@ details #container {
 	justify-content: flex-start;
 }
 
-details #container::-webkit-scrollbar {
+details #items-container::-webkit-scrollbar {
 	width: 0.2rem;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 100vmax;
@@ -62,7 +62,7 @@ details #container::-webkit-scrollbar {
 	transition: 0.2s ease all;
 }
 
-details #container::-webkit-scrollbar-thumb {
+details #items-container::-webkit-scrollbar-thumb {
 	border-radius: 100vmax;
 	background: var(--theme-color);
 	width: 0.5rem;

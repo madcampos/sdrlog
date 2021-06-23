@@ -7,7 +7,7 @@ import type { FileForMaterial, Material } from '../../../../data/data';
 import type { EditListItem } from '../edit-box/edit-list-item';
 import type { DropArea } from '../drop-area/drop-area';
 
-import detailsTemplate, { formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
+import { formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName, setCategories, setLanguages, setPublishers, setStatus, setTypes } from './details-template';
 import { setMaterialDetails } from './build-details';
 import { getMaterial } from '../data-operations/idb-persistence';
 import { ItemCard } from './item-card';
@@ -44,7 +44,8 @@ export class ItemDetails extends HTMLElement {
 	#namesValueInput: HTMLInputElement;
 	#files: EditList;
 	#links: EditList;
-	#linksInput: HTMLInputElement;
+	#linksNameInput: HTMLInputElement;
+	#linksUrlInput: HTMLInputElement;
 	#cover: HTMLImageElement;
 	#coverDropArea: DropArea;
 	#coverFile: File | undefined;
@@ -53,12 +54,11 @@ export class ItemDetails extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			${detailsTemplate}
-		`;
+		const template = document.querySelector('#item-details') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#modal = this.#root.querySelector('modal-dialog') as ModalDialog;
 		this.#editButton = this.#root.querySelector('#edit') as HTMLButtonElement;
@@ -71,26 +71,36 @@ export class ItemDetails extends HTMLElement {
 
 		this.#edition = this.#root.querySelector('#edition') as EditBox;
 		this.#gameDate = this.#root.querySelector('#gamedate') as EditBox;
+
 		this.#category = this.#root.querySelector('#category') as EditSelect;
+		setCategories(this.#category);
+
 		this.#type = this.#root.querySelector('#type') as EditSelect;
+		setTypes(this.#type);
+
 		this.#language = this.#root.querySelector('#language') as EditSelect;
+		setLanguages(this.#language);
 
 		this.#releaseDate = this.#root.querySelector('#releasedate') as EditList;
 		this.#releaseDateInput = this.#root.querySelector('#releasedate') as HTMLInputElement;
 
 		this.#publisher = this.#root.querySelector('#publisher') as EditList;
 		this.#publisherInput = this.#root.querySelector('#publisher select') as HTMLSelectElement;
+		setPublishers(this.#publisherInput);
 
 		this.#status = this.#root.querySelector('#status') as EditSelect;
+		setStatus(this.#status);
 
 		this.#names = this.#root.querySelector('#names') as EditList;
 		this.#namesLangInput = this.#root.querySelector('#names select') as HTMLSelectElement;
 		this.#namesValueInput = this.#root.querySelector('#names input') as HTMLInputElement;
+		setLanguages(this.#namesLangInput);
 
 		this.#files = this.#root.querySelector('#files-list') as EditList;
 
 		this.#links = this.#root.querySelector('#links') as EditList;
-		this.#linksInput = this.#root.querySelector('#links') as HTMLInputElement;
+		this.#linksNameInput = this.#root.querySelector('#links input[type="text"]') as HTMLInputElement;
+		this.#linksUrlInput = this.#root.querySelector('#links input[type="text"]') as HTMLInputElement;
 
 		this.#cover = this.#root.querySelector('#cover') as HTMLImageElement;
 		this.#coverDropArea = this.#root.querySelector('#cover-drop-area') as DropArea;
@@ -124,9 +134,10 @@ export class ItemDetails extends HTMLElement {
 		});
 
 		this.#links.addEventListener('additem', () => {
-			const url = this.#linksInput.value;
+			const title = this.#linksNameInput.value;
+			const url = this.#linksUrlInput.value;
 
-			this.#links.insertAdjacentHTML('beforeend', formatLink({ url, title: url }, true));
+			this.#links.insertAdjacentHTML('beforeend', formatLink({ url, title }, true));
 		});
 
 		this.#files.addEventListener('click', async (evt) => {

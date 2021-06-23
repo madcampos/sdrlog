@@ -8,16 +8,12 @@ class UpdateRefresh extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<aside role="status" aria-live="polite" hidden>
-				<p></p>
-				<button>♻️</button>
-			</aside>
-		`;
+		const template = document.querySelector('#update-refresh') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
+
 
 		this.#button = this.#root.querySelector('button') as HTMLButtonElement;
 		this.#message = this.#root.querySelector('p') as HTMLParagraphElement;

@@ -25,23 +25,11 @@ export class ItemCard extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<figure>
-				<img
-					decoding="async"
-					loading="lazy"
-					width="200"
-					height="200"
-					role="presentation"
-					src="${LOADING_SIMPLE_COVER}"
-				/>
-			</figure>
-			<h4></h4>
-		`;
+		const template = document.querySelector('#item-card') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#title = this.#root.querySelector('h4') as HTMLHeadingElement;
 		this.#thumb = this.#root.querySelector('img') as HTMLImageElement;

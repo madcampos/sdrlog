@@ -7,39 +7,12 @@ export class SkeletonLoader extends HTMLElement {
 
 	constructor() {
 		super();
+
+		const template = document.querySelector('#skeleton-loader') as HTMLTemplateElement;
+
 		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
-		this.#root.innerHTML = `
-			<style>
-				:host { box-sizing: inherit; }
-				#loader {
-					max-width: 20rem;
-					border-radius: 0.5rem;
-					background-color: var(--accent-color);
-					background-image: linear-gradient(-60deg, var(--bg-color) 40%, transparent, var(--bg-color) 60%);
-					background-size: 200% 100%;
-					background-position: 100%;
-					color: transparent;
-					user-select: none;
-
-					animation: loader 2s linear infinite;
-					opacity: 0.2;
-				}
-
-				@keyframes loader {
-					from {
-						background-position: 100%;
-					}
-					to {
-						background-position: -100%;
-					}
-				}
-			</style>
-			<div id="loader">
-				Loading...
-			</div>
-			<slot hidden></slot>
-		`;
 
 		this.#content = this.#root.querySelector('slot') as HTMLSlotElement;
 		this.#loader = this.#root.querySelector('#loader') as HTMLDivElement;

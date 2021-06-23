@@ -13,18 +13,11 @@ export class ProgressOverlay extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<dialog>
-				<h1><slot name="title"></slot></h1>
-				<progress></progress>
-				<p><span id="count"></span></p>
-				<slot name="info"></slot>
-			</dialog>
-		`;
+		const template = document.querySelector('#progress') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#progress = this.#root.querySelector('progress') as HTMLProgressElement;
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;

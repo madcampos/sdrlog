@@ -5,18 +5,11 @@ class DropdownMenuItem extends HTMLElement {
 
 	constructor() {
 		super();
-		this.#root = this.attachShadow({ mode: 'closed' });
 
-		this.#root.innerHTML = `
-			<style>:host { display: none; }</style>
-			<link rel="stylesheet" href="${import.meta.url.replace(/js$/iu, 'css')}"/>
-			<button>
-				<img role="presentation"/>
-				<span>
-					<slot></slot>
-				</span>
-			</button>
-		`;
+		const template = document.querySelector('#dropdown-menu-item') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#icon = this.#root.querySelector('img');
 	}
