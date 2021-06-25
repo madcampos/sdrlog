@@ -46,6 +46,9 @@ textarea, #rendered-text {
 
 	resize: none;
 	overflow: auto;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
 }
 
 textarea {
@@ -55,18 +58,19 @@ textarea {
 
 textarea::-webkit-scrollbar,
 #rendered-text::-webkit-scrollbar {
-	width: 0.2rem;
-	background-color: rgba(0, 0, 0, 0.2);
-	border-radius: 100vmax;
+	width: 0.5rem;
+}
 
-	transition: 0.2s ease all;
+textarea::-webkit-scrollbar-track,
+#rendered-text::-webkit-scrollbar-track {
+	border-radius: 100vmax;
+	background-color: var(--scrollbar-bg);
 }
 
 textarea::-webkit-scrollbar-thumb,
 #rendered-text::-webkit-scrollbar-thumb {
 	border-radius: 100vmax;
-	background: var(--theme-color);
-	width: 0.5rem;
+	background-color: var(--theme-color);
 }
 
 textarea:focus {

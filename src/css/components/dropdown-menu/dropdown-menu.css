@@ -47,20 +47,23 @@ dialog[open] {
 	background: var(--bg-color);
 
 	overflow: auto;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
 }
 
 dialog::-webkit-scrollbar {
-	width: 0.2rem;
-	background-color: rgba(0, 0, 0, 0.2);
-	border-radius: 100vmax;
+	width: 0.5rem;
+}
 
-	transition: 0.2s ease all;
+dialog::-webkit-scrollbar-track {
+	border-radius: 100vmax;
+	background-color: var(--scrollbar-bg);
 }
 
 dialog::-webkit-scrollbar-thumb {
 	border-radius: 100vmax;
-	background: var(--theme-color);
-	width: 0.5rem;
+	background-color: var(--theme-color);
 }
 
 dialog.right {
