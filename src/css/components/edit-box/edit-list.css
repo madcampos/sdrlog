@@ -47,7 +47,7 @@ details {
 
 details #items-container {
 	height: 3rem;
-	overflow: overlay;
+	overflow: auto;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;

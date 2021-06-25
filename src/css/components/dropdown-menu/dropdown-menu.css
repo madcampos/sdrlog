@@ -46,7 +46,7 @@ dialog[open] {
 	border-radius: 0.5rem;
 	background: var(--bg-color);
 
-	overflow: overlay;
+	overflow: auto;
 }
 
 dialog::-webkit-scrollbar {

@@ -41,7 +41,7 @@ body *, body *::after, body *::before {
 }
 
 main {
-	overflow: overlay;
+	overflow: auto;
 	margin-top: var(--menubar-height);
 	display: flex;
 	flex-wrap: wrap;
