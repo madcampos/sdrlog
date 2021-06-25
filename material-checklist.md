@@ -10,6 +10,8 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
+http://danvolodar.ru/files/SR/
+
 # Materials to add
 
 https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-30th-anniversary-t-shirt-hoodie?variant=15893164818466
