@@ -1,0 +1,23 @@
+{
+    "snes": {
+        "version":"13",
+        "netplay": 1,
+        "state": 1,
+        "asmjs": 1,
+        "wasm": 1
+    },
+    "segaMD": {
+        "version":"9",
+        "netplay": 1,
+        "state": 1,
+        "asmjs": 1,
+        "wasm": 1
+    },
+    "segaCD": {
+        "version":"9",
+        "netplay": 1,
+        "state": 1,
+        "asmjs": 1,
+        "wasm": 0
+    }
+}

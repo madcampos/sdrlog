@@ -1,0 +1,23 @@
+body {
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	display: block;
+	margin: 0;
+	aspect-ratio: 4 / 3;
+	width: 100%;
+	max-width: 840px;
+	max-height: 680px;
+}
+
+@media (orientation: portrait) {
+	main {
+		transform: rotate(90deg);
+		max-width: 640px;
+		max-height: 840px;
+		width: auto;
+		height: 100%;
+	}
+}
