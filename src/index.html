@@ -3,24 +3,10 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<meta name="referrer" content="no-referrer">
+		<meta name="format-detection" content="telephone=no">
+
 		<title>Shadowrun Catalog</title>
-
-		<!-- App Metadata -->
-		<link rel="manifest" href="/site.webmanifest"/>
-
-		<link rel="icon" href="/img/icons/favicon.svg"/>
-
-		<!-- Social metadata -->
-		<meta name="pinterest" content="nopin"/>
-		<meta name="twitter:card" content="summary"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:image" name="twitter:image" itemprop="image" content="/img/icons/android-chrome-512x512-dark.png"/>
-		<meta property="og:title" name="twitter:title" itemprop="name" content="Shadowrun Catalog"/>
-		<meta property="og:description" name="description" itemprop="description" content="An interactive catalogue of Shadowrun material, sorted by category and with information about the item and can be linked to local files."/>
-		<meta name="keywords" content="Shadowrun, RPG, list of books"/>
-
-		<meta name="google" content="nositelinkssearchbox"/>
-		<meta name="google" content="notranslate"/>
 
 		<!-- Preload -->
 		<link rel="preload" href="/data/data.json" as="fetch" type="application/json">
@@ -30,6 +16,38 @@
 		<link rel="preload" href="./css/components/progress/progress.css" as="style">
 		<link rel="preload" href="./css/components/item-info/item-details.css" as="style">
 
+		<!-- App Metadata -->
+		<link rel="manifest" href="/site.webmanifest"/>
+		<link rel="icon" href="/img/icons/favicon.svg"/>
+		<meta name="theme-color" content="#ff1493">
+
+		<!-- Apple icons -->
+		<link rel="apple-touch-icon" href="/img/icons/android-chrome-maskable-512x512-dark.png">
+		<!-- TODO: <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+		<meta name="apple-mobile-web-app-title" content="Shadowrun Catalog">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<!-- Search -->
+		<link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
+
+		<!-- Social metadata -->
+		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
+
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:dnt" content="on">
+
+		<meta property="og:type" content="website"/>
+		<meta property="og:locale" content="en_US"/>
+		<meta property="og:image" name="twitter:image" itemprop="image" content="/img/icons/android-chrome-512x512-dark.png"/>
+		<meta property="og:title" name="twitter:title" itemprop="name" content="Shadowrun Catalog"/>
+		<meta property="og:description" name="description" itemprop="description" content="An interactive catalogue of Shadowrun material, sorted by category and with information about the item and can be linked to local files."/>
+		<meta name="keywords" content="Shadowrun, RPG, list of books"/>
+
+		<meta name="google" content="nositelinkssearchbox"/>
+		<meta name="google" content="notranslate"/>
+
+		<!-- Styles -->
 		<link rel="stylesheet" href="./css/base.css"/>
 	</head>
 	<body class="notranslate" translate="no">
