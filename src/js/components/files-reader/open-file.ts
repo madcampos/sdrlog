@@ -13,32 +13,16 @@ const mimeAllowed = [
 
 interface AllowedExtension {
 	url: string,
-	id: string | true,
-	params?: Record<string, string>
+	id: string | true
 }
 
 type AllowedExtensions = Record<string, AllowedExtension>;
 
 const itemExtensions: AllowedExtensions = {
-	'.epub': {
-		url: '/reader.html',
-		id: true
-	},
-	'.md': {
-		url: '/emulator.html',
-		id: 'GENESIS',
-		params: { system: 'segaMD' }
-	},
-	'.img': {
-		url: '/emulator.html',
-		id: 'SEGA-CD',
-		params: { system: 'segaCD' }
-	},
-	'.smc': {
-		url: '/emulator.html',
-		id: 'SNES',
-		params: { system: 'snes' }
-	}
+	'.epub': { url: '/reader.html', id: true },
+	'.md': { url: '/emulator.html', id: 'GENESIS' },
+	'.img': { url: '/emulator.html', id: 'SEGA-CD' },
+	'.smc': { url: '/emulator.html', id: 'SNES' }
 };
 
 export async function openFile(fileInfo: FileForMaterial) {
@@ -60,10 +44,6 @@ export async function openFile(fileInfo: FileForMaterial) {
 			const url = new URL(infoForExtension.url, window.location.origin);
 
 			url.searchParams.set('file', fileInfo.filePath);
-			Object.entries(infoForExtension.params ?? {}).forEach(([name, value]) => {
-				url.searchParams.set(name, value);
-			});
-
 			window.open(url.toString(), '_blank', 'noopener,noreferrer');
 		}
 	} else {
