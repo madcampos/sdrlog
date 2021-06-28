@@ -9,12 +9,12 @@
 		<title>Shadowrun Catalog</title>
 
 		<!-- Preload -->
-		<link rel="preload" href="/data/data.json" as="fetch" type="application/json">
-		<link rel="preload" href="./js/main.js" as="script">
-		<link rel="preload" href="/lib/pdfjs/pdf.js" as="script">
-		<link rel="preload" href="./css/components/dialog/dialog.css" as="style">
-		<link rel="preload" href="./css/components/progress/progress.css" as="style">
-		<link rel="preload" href="./css/components/item-info/item-details.css" as="style">
+		<link rel="preload" crossorigin href="/data/data.json" as="fetch" type="application/json">
+		<link rel="preload" crossorigin href="./js/main.js" as="script" type="text/javascript">
+		<link rel="preload" crossorigin href="/lib/pdfjs/pdf.js" as="script" type="text/javascript">
+		<link rel="preload" crossorigin href="./css/components/dialog/dialog.css" as="style" type="text/css">
+		<link rel="preload" crossorigin href="./css/components/progress/progress.css" as="style" type="text/css">
+		<link rel="preload" crossorigin href="./css/components/item-info/item-details.css" as="style" type="text/css">
 
 		<!-- App Metadata -->
 		<link rel="manifest" href="/site.webmanifest"/>
@@ -424,7 +424,7 @@
 			<label title="Search">🔍<input type="search" placeholder="Search items..." role="search"/></label>
 		</template>
 
-		<template id="sekeleton-loader">
+		<template id="skeleton-loader">
 			<style>
 				:host { box-sizing: inherit; }
 
