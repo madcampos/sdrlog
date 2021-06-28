@@ -1,9 +1,9 @@
 /* eslint-disable id-length */
 import type { FileForMaterial, Material } from '../../../../data/data';
 
-type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems';
+type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems' | 'emulator' | 'emulatorSaves' | 'emulatorBios';
 
-const IDB_VERSION = 3;
+const IDB_VERSION = 5;
 let database: IDBDatabase | undefined;
 
 const databaseSchema: Record<Collections, { indexes: Record<string, IDBIndexParameters>, storeOptions?: IDBObjectStoreParameters }> = {
@@ -37,6 +37,21 @@ const databaseSchema: Record<Collections, { indexes: Record<string, IDBIndexPara
 	thumbs: {
 		indexes: {
 			name: { unique: true }
+		}
+	},
+	emulator: {
+		indexes: {
+			name: { unique: false }
+		}
+	},
+	emulatorSaves: {
+		indexes: {
+			name: { unique: false }
+		}
+	},
+	emulatorBios: {
+		indexes: {
+			name: { unique: false }
 		}
 	}
 };
@@ -259,4 +274,44 @@ export async function getFilesForMaterial(itemId: string) {
 export async function setFileForMaterial(fileForMaterial: FileForMaterial) {
 	// eslint-disable-next-line no-undefined
 	return setIDBItem<FileForMaterial>('fileItems', undefined, fileForMaterial);
+}
+
+export async function getBundleFiles() {
+	const files = await getAllIDBItem<File>('emulator');
+	const paths = await getAllIDBKeys('emulator') as string[];
+	const results: Record<string, File> = {};
+
+	for (let i = 0; i < files.length; i++) {
+		results[paths[i]] = files[i];
+	}
+
+	return results;
+}
+
+export async function saveBundleFile(path: string, file: File) {
+	return setIDBItem('emulator', path, file);
+}
+
+export async function getBiosFiles() {
+	const files = await getAllIDBItem<File>('emulatorBios');
+	const paths = await getAllIDBKeys('emulatorBios') as string[];
+	const results: Record<string, File> = {};
+
+	for (let i = 0; i < files.length; i++) {
+		results[paths[i]] = files[i];
+	}
+
+	return results;
+}
+
+export async function saveBiosFile(path: string, file: File) {
+	return setIDBItem('emulatorBios', path, file);
+}
+
+export async function getEmulatorSaveFile(name: string) {
+	return getIDBItem<File>('emulatorSaves', name);
+}
+
+export async function saveEmulatorSaveFile(name: string, file: File) {
+	return setIDBItem('emulatorSaves', name, file);
 }

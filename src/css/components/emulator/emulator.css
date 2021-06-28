@@ -4,13 +4,31 @@ body {
 }
 
 main {
-	display: block;
+	display: grid;
 	margin: 0;
 	aspect-ratio: 4 / 3;
 	width: 100%;
-	max-width: 840px;
-	max-height: 680px;
+	max-width: 100vw;
+	max-height: 100vh;
+	place-items: center;
+	place-content: stretch;
 }
+
+main > * {
+	width: 100%;
+	height: 100%;
+	grid-area: 1 / 1 / -1 / -1;
+}
+
+#start-overlay, #game-overlay {
+	display: grid;
+	place-items: center;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+}
+
+main:not([paused]) #game-overlay { display: none; }
 
 @media (orientation: portrait) {
 	main {
