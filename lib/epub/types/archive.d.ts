@@ -1,4 +1,4 @@
-import * as JSZip from '../../zip/jszip';
+import '../../zip/jszip';
 
 export default class Archive {
   constructor();

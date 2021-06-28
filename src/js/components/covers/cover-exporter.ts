@@ -1,6 +1,6 @@
 import { ProgressOverlay } from '../progress/progress';
 import { getAllCovers } from '../data-operations/idb-persistence';
-import * as JSZip from '../../../../lib/zip/jszip';
+import '../../../../lib/zip/jszip';
 import fileSave from '../../../../lib/file-system/file-save';
 
 export async function saveCoversToFolder() {

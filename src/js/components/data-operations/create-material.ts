@@ -40,21 +40,7 @@ export async function saveNewMaterialInfo(id: string, {
 	files,
 	cover
 }: NewMaterialProperties) {
-	let statusValue: Material['status'] | undefined;
-	const namesValues = {};
-
-	if (status !== 'ok') {
-		statusValue = status as Material['status'];
-	}
-
-	// TODO: fix empty object
-	names.forEach((item) => {
-		const { lang, name } = JSON.parse(decodeURI(item)) as { lang: IsoCode, name: string };
-
-		namesValues[lang] = name;
-	});
-
-	await saveMaterial(id, {
+	const materialToSave: Material = {
 		name,
 		sku,
 		edition: Number.parseInt(edition),
@@ -64,14 +50,34 @@ export async function saveNewMaterialInfo(id: string, {
 		originalLanguage: originalLanguage as Material['originalLanguage'],
 		releaseDate,
 		publisher,
-		status: statusValue,
-		names: namesValues,
-		// TODO: fix empty string
-		notes,
-		description,
-		// TODO: fix link with same text and url
-		links: links.map((link) => JSON.parse(decodeURI(link)) as MaterialLink)
+		description
+	};
+
+	if (links.length > 0) {
+		materialToSave.links = links.map((link) => JSON.parse(decodeURI(link)) as MaterialLink);
+	}
+
+	if (notes && notes !== '') {
+		materialToSave.notes = notes;
+	}
+
+	if (status !== 'ok') {
+		materialToSave.status = status as Material['status'];
+	}
+
+	const namesValues = {};
+
+	names.forEach((item) => {
+		const { lang, name } = JSON.parse(decodeURI(item)) as { lang: IsoCode, name: string };
+
+		namesValues[lang] = name;
 	});
+
+	if (Object.keys(namesValues).length > 0) {
+		materialToSave.names = namesValues;
+	}
+
+	await saveMaterial(id, materialToSave);
 
 	for await (const file of files) {
 		await setFileForMaterial(JSON.parse(decodeURI(file)) as FileForMaterial);
