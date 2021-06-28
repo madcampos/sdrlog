@@ -1,6 +1,7 @@
 import '../../../../lib/zip/jszip';
 import ePub from '../../../../lib/epub/epub';
 
+// TODO: implement reader ui
 document.querySelector('input')?.addEventListener('change', async (evt) => {
 	const input = evt.target as HTMLInputElement;
 	const [file] = Array.from(input.files ?? []);
