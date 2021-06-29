@@ -45,3 +45,7 @@ button:focus {
 button:active {
 	background: var(--secondary-color);
 }
+
+button:hover {
+	border-color: var(--accent-color);
+}

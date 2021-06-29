@@ -55,3 +55,7 @@ nav button:focus {
 nav button:active {
 	background: var(--secondary-color);
 }
+
+nav button:hover {
+	border-color: var(--accent-color);
+}

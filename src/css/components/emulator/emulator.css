@@ -44,6 +44,10 @@ button:active {
 	background: var(--secondary-color);
 }
 
+button:hover {
+	border-color: var(--accent-color);
+}
+
 #game-wrapper {
 	display: grid;
 	margin: 0;

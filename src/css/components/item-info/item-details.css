@@ -165,6 +165,10 @@ button:active {
 	background: var(--secondary-color);
 }
 
+button:hover {
+	border-color: var(--accent-color);
+}
+
 @media (max-width: 450px) {
 	#item-content {
 		grid-template-columns: 1fr 1fr;

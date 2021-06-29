@@ -92,3 +92,7 @@ dialog button:focus {
 dialog button:active {
 	background: var(--secondary-color);
 }
+
+dialog button:hover {
+	border-color: var(--accent-color);
+}

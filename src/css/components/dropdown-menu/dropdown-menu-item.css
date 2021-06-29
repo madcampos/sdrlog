@@ -24,6 +24,10 @@ button:active {
 	background: var(--secondary-color);
 }
 
+button:hover {
+	border-color: var(--accent-color);
+}
+
 hr {
 	width: max(3rem, 80%);
 	border: none;
