@@ -185,7 +185,7 @@
 		"id-denylist": "off",
 		"id-length": [
 			"warn",
-			{ "min": 3, "max": 50, "properties": "never", "exceptions": ["i", "j", "n", "w", "x", "y", "z", "id", "fs", "up"] }
+			{ "min": 3, "max": 50, "properties": "never", "exceptions": ["i", "j", "n", "w", "x", "y", "z", "id", "fs", "up", "_"] }
 		],
 		"id-match": "off",
 		"implicit-arrow-linebreak": "error",
