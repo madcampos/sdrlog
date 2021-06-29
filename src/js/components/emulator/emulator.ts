@@ -5,6 +5,8 @@ import { loadBundle } from './assets-bundle';
 import { loadBios } from './bios-bundle';
 import config from './config';
 
+import './touch-input';
+
 interface EmulatorModule extends EmscriptenModule {
 	canvas: HTMLCanvasElement,
 	_cmd_savefiles(): void,
@@ -80,7 +82,7 @@ function saveState() {
 }
 
 export function adjustCanvasSize() {
-	const mainElement = document.querySelector('main') as HTMLElement;
+	const mainElement = document.querySelector('#game-wrapper') as HTMLElement;
 	const { width, height } = mainElement.getBoundingClientRect();
 
 	Module.setCanvasSize(width, height);

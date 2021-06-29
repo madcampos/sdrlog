@@ -26,16 +26,29 @@
 	<link rel="stylesheet" href="./css/components/emulator/emulator.css"/>
 </head>
 <body class="notranslate" translate="no">
-	<!-- TODO: add touch joystick -->
-	<!-- https://github.com/lrusso/VirtualJoystick -->
 	<main>
-		<div id="start-overlay">
-			<button type="button" id="start-button">▶️</button>
-		</div>
-		<div id="game-overlay">
-			<button type="button" id="pause-button">▶️</button>
-		</div>
-		<canvas id="canvas"></canvas>
+		<aside class="controller" id="left-controller">
+			<button id="button-select">Select</button>
+			<button id="bumper-left">L</button>
+			<div id="dpad"></div>
+		</aside>
+		<article id="game-wrapper">
+			<div id="start-overlay">
+				<button type="button" id="start-button">▶️</button>
+			</div>
+			<div id="game-overlay">
+				<button type="button" id="pause-button">▶️</button>
+			</div>
+			<canvas id="canvas"></canvas>
+		</article>
+		<aside class="controller" id="right-controller">
+			<button id="button-start">Start</button>
+			<button id="bumper-right">R</button>
+			<button id="button-x">X</button>
+			<button id="button-y">Y</button>
+			<button id="button-a">A</button>
+			<button id="button-b">B</button>
+		</aside>
 	</main>
 
 	<script src="./js/components/emulator/emulator.js" type="module"></script>
