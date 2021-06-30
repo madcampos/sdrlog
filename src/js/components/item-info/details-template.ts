@@ -104,6 +104,7 @@ export function formatLink({ url, title }: MaterialLink, isEditing = false) {
 	`;
 }
 
+// TODO: add extension icons
 export function formatFile(file: FileForMaterial) {
 	return `
 		<edit-list-item stretch value="${encodeURI(JSON.stringify(file))}">
@@ -112,7 +113,9 @@ export function formatFile(file: FileForMaterial) {
 				href=""
 				target="_blank"
 				rel="noopener"
-			>${file.fileName}</a>
+			>
+				${file.fileName}
+			</a>
 		</edit-list-item>
 	`;
 }
