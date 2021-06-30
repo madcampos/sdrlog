@@ -54,9 +54,14 @@
 		<!-- Templates -->
 
 		<template id="dialog">
+			<style>
+				:host {
+					display: none;
+				}
+			</style>
 			<link rel="stylesheet" href="./css/components/dialog/dialog.css"/>
 			<slot name="trigger"></slot>
-			<dialog>
+			<dialog tabindex="-1">
 				<header>
 					<slot name="title"></slot>
 					<button id="close" title="Close window">❌</button>
@@ -87,7 +92,7 @@
 		<template id="dropdown-menu">
 			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu.css"/>
 			<button></button>
-			<dialog>
+			<dialog tabindex="-1">
 				<slot></slot>
 			</dialog>
 		</template>
@@ -411,7 +416,7 @@
 
 		<template id="progress">
 			<link rel="stylesheet" href="./css/components/progress/progress.css"/>
-			<dialog>
+			<dialog tabindex="-1">
 				<h1><slot name="title"></slot></h1>
 				<progress></progress>
 				<p><span id="count"></span></p>

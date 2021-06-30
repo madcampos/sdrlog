@@ -27,6 +27,7 @@ class DropdownMenu extends HTMLElement {
 			evt.stopPropagation();
 
 			this.#dialog.show();
+			this.#dialog.focus();
 
 			const rect = this.#dialog.getBoundingClientRect();
 

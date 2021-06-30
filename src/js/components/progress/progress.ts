@@ -76,6 +76,7 @@ export class ProgressOverlay extends HTMLElement {
 
 	show() {
 		this.#dialog.showModal();
+		this.#dialog.focus();
 	}
 
 	close() {

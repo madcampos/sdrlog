@@ -5,7 +5,12 @@
 	color: var(--text-color);
 
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: var(--body-text);
+	font-size: calc(var(--body-text) * 1.5);
+}
+
+:root body:not([hidden]) .dark :is(*, *::after, *::before) {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--text-color);
 }
 
 :root .dark *::first-letter {

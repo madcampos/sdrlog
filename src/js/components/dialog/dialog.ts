@@ -37,6 +37,7 @@ export class ModalDialog extends HTMLElement {
 			evt.stopPropagation();
 
 			this.#dialog.showModal();
+			this.#dialog.focus();
 		});
 
 		this.#root.querySelector('#close')?.addEventListener('click', () => {
@@ -57,6 +58,7 @@ export class ModalDialog extends HTMLElement {
 	show() {
 		this.#isDialogOpen = true;
 		this.#dialog.showModal();
+		this.#dialog.focus();
 	}
 
 	close() {
@@ -69,6 +71,7 @@ export class ModalDialog extends HTMLElement {
 			this.#dialog.close();
 		} else {
 			this.#dialog.showModal();
+			this.#dialog.focus();
 		}
 	}
 
