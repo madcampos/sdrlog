@@ -9,15 +9,19 @@
 	<meta name="google" content="notranslate"/>
 
 	<link rel="stylesheet" href="./css/base.css"/>
+	<link rel="stylesheet" href="./css/components/reader/reader.css"/>
 </head>
 <body>
-	<input type="file">
-	<main id="book"></main>
 	<nav>
 		<button id="prev">⏮️</button>
 		<select name="" id="toc"></select>
 		<button id="next">⏭️</button>
 	</nav>
+	<main id="book">
+		<div id="load-overlay">
+			<button id="open-book">▶️</button>
+		</div>
+	</main>
 	<script src="./js/components/epub/reader.js" type="module"></script>
 </body>
 </html>

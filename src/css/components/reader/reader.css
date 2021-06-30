@@ -1,0 +1,84 @@
+/* stylelint-disable declaration-no-important */
+
+main {
+	height: 100%;
+	width: 100vw;
+	margin-inline: auto;
+	overflow-x: hidden;
+}
+
+main > * {
+	overflow-x: hidden !important;
+	box-sizing: border-box !important;
+	width: 100% !important;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	display: flex;
+	user-select: none;
+	height: 3rem;
+	left: env(titlebar-area-x, 0);
+	width: env(titlebar-area-width, 100%);
+	padding: calc(var(--menubar-height) * 0.1) calc(var(--menubar-height) * 0.2);
+	box-sizing: inherit;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--accent-color);
+}
+
+nav > * {
+	margin: 0.1rem;
+}
+
+button {
+	background: transparent;
+	border: solid var(--border-width) transparent;
+	border-radius: 0.3rem;
+	width: var(--button-size);
+	height: var(--button-size);
+	padding: 0;
+
+	transition: 0.2s ease all;
+
+	font: inherit;
+}
+
+button:focus {
+	border-color: var(--theme-color);
+	outline: none;
+}
+
+button:active {
+	background: var(--secondary-color);
+}
+
+button:hover {
+	border-color: var(--accent-color);
+}
+
+select {
+	width: 100%;
+	padding: 0.3rem 1.7rem 0.1rem 0.3rem;
+
+	appearance: none;
+	border: solid var(--border-width) transparent;
+	border-radius: 0.3rem;
+
+	background-color: var(--bg-color);
+	background-image: var(--select-arrow);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 0.1rem) center;
+	background-size: 1.5rem;
+
+	transition: 0.2s ease all;
+
+	font: inherit;
+	box-sizing: border-box;
+}
+
+select:focus {
+	outline: none;
+	border-color: var(--theme-color);
+}
