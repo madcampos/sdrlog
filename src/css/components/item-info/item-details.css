@@ -12,6 +12,11 @@
 	background-color: var(--theme-color);
 }
 
+::selection {
+	background-color: var(--theme-color);
+	color: var(--bg-color);
+}
+
 #item-content {
 	display: grid;
 	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
@@ -149,11 +154,13 @@ button {
 	border-radius: 0.3rem;
 	width: fit-content;
 	height: var(--button-size);
-	padding: 0;
+	padding: 0.3rem 0.5rem;
 
 	transition: 0.2s ease all;
 
 	font: inherit;
+
+	user-select: none;
 }
 
 button:focus {

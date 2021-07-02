@@ -2,6 +2,7 @@
 	border: solid var(--border-width) var(--theme-color);
 	border-radius: 0.3rem;
 	cursor: pointer;
+	user-select: none;
 
 	display: inline-grid;
 	grid-template-columns: 14rem;

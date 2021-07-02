@@ -2,6 +2,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
+	user-select: none;
 }
 
 main {
@@ -33,6 +34,8 @@ button {
 
 	font: inherit;
 	font-size: 2rem;
+
+	user-select: none;
 }
 
 button:focus {

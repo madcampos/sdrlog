@@ -25,6 +25,8 @@ label:not([hidden]) {
 	z-index: 1;
 	transform: translateY(50%);
 	transition: 0.2s ease all;
+
+	user-select: none;
 }
 
 skeleton-loader { flex-grow: 1; }
@@ -50,6 +52,11 @@ textarea, #rendered-text {
 
 	scrollbar-width: thin;
 	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+}
+
+::selection {
+	background-color: var(--theme-color);
+	color: var(--bg-color);
 }
 
 textarea {

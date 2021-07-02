@@ -24,6 +24,8 @@ label:not([hidden]) {
 	z-index: 1;
 	transform: translateY(50%);
 	transition: 0.2s ease all;
+
+	user-select: none;
 }
 
 select {
@@ -43,6 +45,13 @@ select {
 
 	font: inherit;
 	box-sizing: border-box;
+
+	accent-color: var(--theme-color);
+}
+
+select::selection {
+	background-color: var(--theme-color);
+	color: var(--bg-color);
 }
 
 select:disabled {

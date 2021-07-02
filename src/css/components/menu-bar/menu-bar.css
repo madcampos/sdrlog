@@ -45,6 +45,8 @@ nav button {
 	transition: 0.2s ease all;
 
 	font: inherit;
+
+	user-select: none;
 }
 
 nav button:focus {

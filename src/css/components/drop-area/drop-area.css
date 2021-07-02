@@ -5,6 +5,8 @@
 
 	--hover-color: var(--secondary-color);
 	--hover-background: var(--theme-color);
+
+	user-select: none;
 }
 
 #content, #overlay {

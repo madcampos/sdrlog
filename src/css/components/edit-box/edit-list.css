@@ -1,3 +1,8 @@
+::selection {
+	background-color: var(--theme-color);
+	color: var(--bg-color);
+}
+
 :host {
 	display: flex;
 	align-items: stretch;
@@ -25,6 +30,8 @@ summary {
 	transition: 0.2s ease all;
 
 	position: absolute;
+
+	user-select: none;
 }
 
 details {
@@ -118,6 +125,8 @@ button {
 	font-size: 0.7em;
 
 	margin-inline-start: 0.5rem;
+
+	user-select: none;
 }
 
 button:focus {

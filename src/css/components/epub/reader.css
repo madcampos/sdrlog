@@ -5,6 +5,8 @@ main {
 	width: 100vw;
 	margin-inline: auto;
 	overflow-x: hidden;
+
+	user-select: none;
 }
 
 main > * {
@@ -43,6 +45,8 @@ button {
 	transition: 0.2s ease all;
 
 	font: inherit;
+
+	user-select: none;
 }
 
 button:focus {

@@ -34,3 +34,8 @@ input:focus {
 	outline: none;
 	border-bottom-color: var(--theme-color);
 }
+
+input::selection {
+	background-color: var(--theme-color);
+	color: var(--bg-color);
+}
