@@ -43,7 +43,7 @@ document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
 		const { toc } = await book.loaded.navigation;
 		const rendition = book.renderTo(renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
 
-		rendition.themes.register('dark', './css/components/reader/theme.css');
+		rendition.themes.register('dark', './css/components/epub/theme.css');
 		rendition.themes.select('dark');
 		const appendOptions = (chapter: NavItem) => {
 			const option = document.createElement('option');

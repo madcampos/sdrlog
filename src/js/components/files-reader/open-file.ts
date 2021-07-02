@@ -19,7 +19,8 @@ interface AllowedExtension {
 type AllowedExtensions = Record<string, AllowedExtension>;
 
 const itemExtensions: AllowedExtensions = {
-	'.epub': { url: '/reader.html', id: true },
+	'.epub': { url: '/epub.html', id: true },
+	'.cbz': { url: '/cbz.html', id: true },
 	'.md': { url: '/emulator.html', id: 'GENESIS' },
 	'.img': { url: '/emulator.html', id: 'SEGA-CD' },
 	'.smc': { url: '/emulator.html', id: 'SNES' }
