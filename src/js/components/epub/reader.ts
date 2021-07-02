@@ -1,9 +1,12 @@
+import type { NavItem } from '../../../../lib/epub/types/navigation';
+import type { BookOptions } from '../../../../lib/epub/types/book';
+import type Book from '../../../../lib/epub/types/book';
+import type Section from '../../../../lib/epub/types/section';
+import type { Location as BookLocation } from '../../../../lib/epub/types/rendition';
+
 import '../../../../lib/zip/jszip';
 import '../../../../lib/epub/epub';
 
-import type { BookOptions } from '../../../../lib/epub/types/book';
-import type Book from '../../../../lib/epub/types/book';
-import type { NavItem } from '../../../../lib/epub/types/navigation';
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';
 
@@ -42,7 +45,6 @@ document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
 
 		rendition.themes.register('dark', './css/components/reader/theme.css');
 		rendition.themes.select('dark');
-
 		const appendOptions = (chapter: NavItem) => {
 			const option = document.createElement('option');
 
@@ -64,11 +66,54 @@ document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
 
 		prevButton.addEventListener('click', async () => {
 			await rendition.prev();
-			tocSelect.value = rendition.location.start.href;
 		});
+
 		nextButton.addEventListener('click', async () => {
 			await rendition.next();
-			tocSelect.value = rendition.location.start.href;
+		});
+
+		rendition.on('keyup', async (keyEvt: KeyboardEvent) => {
+			// Left Key
+			if (keyEvt.key === 'ArrowLeft') {
+				await rendition.prev();
+			}
+
+			// Right Key
+			if (keyEvt.key === 'ArrowRight') {
+				await rendition.next();
+			}
+		});
+
+		document.addEventListener('keyup', async (keyEvt) => {
+			// Left Key
+			if (keyEvt.key === 'ArrowLeft') {
+				await rendition.prev();
+			}
+
+			// Right Key
+			if (keyEvt.key === 'ArrowRight') {
+				await rendition.next();
+			}
+		}, false);
+
+		rendition.on('rendered', (section: Section) => {
+			const newIndex = [...tocSelect.options].findIndex((option) => option.value === section.href);
+
+			tocSelect.selectedIndex = newIndex;
+		});
+
+		rendition.on('relocated', (bookLocation: BookLocation) => {
+			if (bookLocation.atEnd) {
+				nextButton.style.visibility = 'hidden';
+			} else {
+				nextButton.style.visibility = 'visible';
+			}
+
+			if (bookLocation.atStart) {
+				prevButton.style.visibility = 'hidden';
+			} else {
+				prevButton.style.visibility = 'visible';
+			}
 		});
 
 		await rendition.display();
