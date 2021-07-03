@@ -176,6 +176,18 @@ button:hover {
 	border-color: var(--accent-color);
 }
 
+a {
+	color: var(--theme-color);
+}
+
+a:focus, a:active {
+	color: var(--accent-color);
+}
+
+a:hover {
+	color: var(--secondary-color);
+}
+
 @media (max-width: 450px) {
 	#item-content {
 		grid-template-columns: 1fr 1fr;

@@ -6,8 +6,8 @@ export interface MaterialLink {
 }
 
 export interface Material {
-	category: 'rulebook'|'sourcebook'|'mission'|'magazine'|'novel'|'videogame'|'tcg'|'boardgame'|'misc',
-	type: 'digital'|'print'|'scan'|'ocr'|'physical',
+	category: 'rulebook' | 'sourcebook' | 'mission' | 'magazine' | 'novel' | 'videogame' | 'tcg' | 'boardgame' | 'misc',
+	type: 'digital' | 'print' | 'scan' | 'ocr' | 'physical',
 	sku: string[],
 	name: string,
 	names?: Partial<Record<IsoCode, string>>,
@@ -16,7 +16,7 @@ export interface Material {
 	publisher: string[],
 	gameDate?: string,
 	releaseDate?: string[],
-	status?: 'missing'|'outofscope'|'canceled',
+	status?: 'missing' | 'outofscope' | 'canceled',
 	originalLanguage: IsoCode,
 	notes?: string,
 	links?: MaterialLink[]
@@ -31,5 +31,6 @@ export interface FileForMaterial {
 	itemId: string,
 	fileName: string,
 	filePath: string,
+	mimeType: string,
 	fileExtension: string
 }

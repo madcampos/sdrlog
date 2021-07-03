@@ -21,22 +21,16 @@ type AllowedExtensions = Record<string, AllowedExtension>;
 const itemExtensions: AllowedExtensions = {
 	'.epub': { url: '/epub.html', id: true },
 	'.cbz': { url: '/cbz.html', id: true },
-	'.md': { url: '/emulator.html', id: 'GENESIS' },
+	'.smd': { url: '/emulator.html', id: 'GENESIS' },
+	'.gen': { url: '/emulator.html', id: 'GENESIS' },
 	'.img': { url: '/emulator.html', id: 'SEGA-CD' },
-	'.smc': { url: '/emulator.html', id: 'SNES' }
+	'.bin': { url: '/emulator.html', id: 'SEGA-CD' },
+	'.smc': { url: '/emulator.html', id: 'SNES' },
+	'.sfc': { url: '/emulator.html', id: 'SNES' }
 };
 
 export async function openFile(fileInfo: FileForMaterial) {
-	const fileHandler = await getFile(fileInfo.filePath) as FileSystemFileHandle;
-
-	await getFilePermission(fileHandler);
-
-	const file = await fileHandler.getFile();
-	const fileURL = URL.createObjectURL(file);
-
-	if (mimeAllowed.some((mime) => file.type.startsWith(mime))) {
-		window.open(fileURL, '_blank', 'noopener,noreferrer');
-	} else if (Object.keys(itemExtensions).includes(fileInfo.fileExtension)) {
+	if (Object.keys(itemExtensions).includes(fileInfo.fileExtension)) {
 		const infoForExtension = itemExtensions[fileInfo.fileExtension];
 		const isSameItemId = fileInfo.itemId === infoForExtension.id;
 		const isExtensionAllowed = infoForExtension.id === true;
@@ -45,10 +39,23 @@ export async function openFile(fileInfo: FileForMaterial) {
 			const url = new URL(infoForExtension.url, window.location.origin);
 
 			url.searchParams.set('file', fileInfo.filePath);
-			window.open(url.toString(), '_blank', 'noopener,noreferrer');
+
+			return window.open(url.toString(), '_blank', 'noopener,noreferrer');
 		}
-	} else {
-		// eslint-disable-next-line no-alert
-		alert(`Unable to open file "${file.name}"`);
 	}
+
+	const fileHandler = await getFile(fileInfo.filePath) as FileSystemFileHandle;
+
+	await getFilePermission(fileHandler);
+
+	const file = await fileHandler.getFile();
+
+	if (!mimeAllowed.some((mime) => file.type.startsWith(mime))) {
+		// eslint-disable-next-line no-alert
+		alert(`File type for "${file.name}" not supported.\nTry opening it on your file explorer.`);
+	}
+
+	const fileURL = URL.createObjectURL(file);
+
+	return window.open(fileURL, '_blank', 'noopener,noreferrer');
 }
