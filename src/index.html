@@ -51,8 +51,20 @@
 		<link rel="stylesheet" href="./css/base.css"/>
 	</head>
 	<body class="notranslate" translate="no">
-		<!-- Templates -->
+		<!-- Content -->
+		<menu-bar></menu-bar>
 
+		<main role="list">
+		</main>
+
+		<div id="load-overlay">
+			<progress></progress>
+			<h1>Loading Data...</h1>
+		</div>
+
+		<update-refresh></update-refresh>
+
+		<!-- Templates -->
 		<template id="dialog">
 			<style>
 				:host {
@@ -470,18 +482,7 @@
 			</aside>
 		</template>
 
-		<!-- Content -->
-		<menu-bar></menu-bar>
-
-		<main role="list">
-		</main>
-
-		<div id="load-overlay">
-			<progress></progress>
-			<h1>Loading Data...</h1>
-		</div>
-
-		<update-refresh></update-refresh>
+		<!-- Scripts -->
 		<script src="/lib/pdfjs/pdf.js"></script>
 		<script src="./js/main.js" type="module"></script>
 	</body>
