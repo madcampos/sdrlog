@@ -58,7 +58,7 @@ export async function saveCoversToFolder() {
 }
 
 export async function saveThumbsToFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Export covers' });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Export thumbnails' });
 
 	try {
 		if ('showDirectoryPicker' in window) {
