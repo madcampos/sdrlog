@@ -1,7 +1,7 @@
 import { ProgressOverlay } from '../progress/progress';
 import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
-import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
+import { extractCover, getFileForImg, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
 import directoryOpen from '../../../../lib/file-system/directory-open';
 
@@ -29,20 +29,20 @@ export async function fetchCover(id: string) {
 	return currentCover;
 }
 
-export async function fetchThumb(id: string) {
-	let currentThumb = await getThumb(id);
+export async function getThumbUrl(id: string) {
+	const currentThumb = await getThumb(id);
 
-	if (!currentThumb) {
-		const cover = await fetchCover(id);
-
-		if (cover) {
-			currentThumb = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH });
-
-			await saveThumb(id, currentThumb);
-		}
+	if (currentThumb) {
+		return URL.createObjectURL(currentThumb);
 	}
 
-	return currentThumb;
+	return `/thumbs/${id}.jpg`;
+}
+
+export async function saveLoadedThumb(id: string, image: HTMLImageElement) {
+	const loadedThumb = await getFileForImg(image, `${id}.jpg`);
+
+	await saveThumb(id, loadedThumb);
 }
 
 export async function extractCoversFromFiles() {

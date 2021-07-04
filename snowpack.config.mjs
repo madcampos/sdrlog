@@ -24,8 +24,9 @@ export default {
 	root: './src',
 	mount: {
 		src: '/',
-		data: '/data',
-		covers: '/covers',
+		data: { url: '/data', resolve: false, static: true },
+		covers: { url: '/covers', resolve: false, static: true },
+		thumbs: { url: '/thumbs', resolve: false, static: true },
 		lib: { url: '/lib', resolve: false, 'static': true }
 	},
 	routes: [

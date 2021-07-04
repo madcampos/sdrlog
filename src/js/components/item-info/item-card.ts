@@ -1,6 +1,6 @@
 import type { Material } from '../../../../data/data';
 
-import { FALLBACK_COVER, fetchThumb, LOADING_SIMPLE_COVER } from '../covers/fetch-covers';
+import { FALLBACK_COVER, getThumbUrl, saveLoadedThumb } from '../covers/fetch-covers';
 import { getMaterial } from '../data-operations/idb-persistence';
 import { ItemDetails } from './item-details';
 
@@ -69,13 +69,22 @@ export class ItemCard extends HTMLElement {
 			}
 		}
 
-		const cover = await fetchThumb(id);
+		const coverUrl = await getThumbUrl(id);
 
-		if (cover) {
-			this.#thumb.src = URL.createObjectURL(cover);
-		} else {
+		this.#thumb.src = coverUrl;
+
+		this.#thumb.addEventListener('load', () => {
+			const isBlobUrl = this.#thumb.src.startsWith('blob:');
+			const isSvgThumb = this.#thumb.src.endsWith('.svg');
+
+			if (!isBlobUrl && !isSvgThumb) {
+				void saveLoadedThumb(id, this.#thumb);
+			}
+		}, { capture: false, passive: true });
+
+		this.#thumb.addEventListener('error', () => {
 			this.#thumb.src = FALLBACK_COVER;
-		}
+		}, { capture: false, once: true, passive: true });
 	}
 
 	static createCard({ id, name, category, sku, type, edition, status }: CreateCardOptions) {
