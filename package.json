@@ -5,9 +5,8 @@
 	"main": "./src/index.html",
 	"scripts": {
 		"start": "snowpack dev",
-		"lint": "npm run lint:js && npm run lint:css && npm run lint:html",
-		"lint:js": "eslint . --fix",
-		"lint:html": "htmlhint ./src",
+		"lint": "npm run lint:js && npm run lint:css",
+		"lint:js": "eslint **/*.ts --fix",
 		"lint:css": "stylelint **/*.css --fix",
 		"generate:browser-assets": "node build/icons/generate-assets.mjs",
 		"generate:covers": "node build/images/extract-covers.mjs",
