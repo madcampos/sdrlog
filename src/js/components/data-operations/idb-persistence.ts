@@ -223,6 +223,10 @@ export async function getThumb(id: string) {
 	return getIDBItem<File>('thumbs', id);
 }
 
+export async function getAllThumbs() {
+	return getAllIDBItem<File>('thumbs');
+}
+
 export async function saveCover(id: string, cover: File) {
 	return setIDBItem<File>('covers', id, cover);
 }

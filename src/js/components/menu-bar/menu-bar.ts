@@ -3,7 +3,7 @@ import type { ModalDialog } from '../dialog/dialog';
 
 import { readFiles } from '../files-reader/files-reader';
 import { extractCoversFromFiles, importCoversFromFolder } from '../covers/fetch-covers';
-import { saveCoversToFolder } from '../covers/cover-exporter';
+import { saveCoversToFolder, saveThumbsToFolder } from '../covers/cover-exporter';
 import { requestDataFileFromUser } from '../data-operations/data-import';
 import { exportDataFile } from '../data-operations/data-export';
 import { updateSearchFilter } from '../search-box/update-filter';
@@ -44,6 +44,7 @@ class MenuBar extends HTMLElement {
 
 		this.#root.querySelector('#export-data')?.addEventListener('click', async () => exportDataFile());
 		this.#root.querySelector('#export-covers')?.addEventListener('click', async () => saveCoversToFolder());
+		this.#root.querySelector('#export-thumbs')?.addEventListener('click', async () => saveThumbsToFolder());
 
 		this.#root.querySelectorAll('#filters dropdown-menu-item').forEach((filterButton) => {
 			filterButton.addEventListener('click', () => {
