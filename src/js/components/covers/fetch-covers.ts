@@ -96,7 +96,7 @@ export async function importCoversFromFolder() {
 
 		if ('showDirectoryPicker' in window) {
 			const dir = await window.showDirectoryPicker({
-				id: 'coversFolder',
+				id: 'originalCoversFolder',
 				startIn: 'downloads'
 			});
 

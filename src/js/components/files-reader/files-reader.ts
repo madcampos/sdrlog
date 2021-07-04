@@ -70,7 +70,7 @@ export async function readFiles() {
 
 	try {
 		const dir = await window.showDirectoryPicker({
-			id: 'filesReader',
+			id: 'filesFolder',
 			startIn: 'downloads'
 		});
 
