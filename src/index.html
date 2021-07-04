@@ -112,7 +112,7 @@
 		<template id="dropdown-menu-item">
 			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu-item.css"/>
 			<button>
-				<img role="presentation"/>
+				<span id="dropdown-menu-icon"></span>
 				<span>
 					<slot></slot>
 				</span>
@@ -309,20 +309,20 @@
 			<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css"/>
 			<nav>
 				<dropdown-menu id="filters" label="︙">
-					<dropdown-menu-item action="sourcebook">📜 Sourcebooks</dropdown-menu-item>
-					<dropdown-menu-item action="rulebook">📝 Rulebooks</dropdown-menu-item>
-					<dropdown-menu-item action="mission">🗺️ Adventures &amp; Campaigns</dropdown-menu-item>
-					<dropdown-menu-item action="novel">📚 Novels</dropdown-menu-item>
-					<dropdown-menu-item action="magazine">📰 Magazines</dropdown-menu-item>
-					<dropdown-menu-item action="boardgame">♟️ Tabletop</dropdown-menu-item>
-					<dropdown-menu-item action="tcg">🃏 Trading Card Game</dropdown-menu-item>
-					<dropdown-menu-item action="videogame">🎮 Video Games</dropdown-menu-item>
-					<!-- <dropdown-menu-item action="unofficial">📓 Unofficial</dropdown-menu-item> -->
-					<dropdown-menu-item action="misc">🔣 Misc.</dropdown-menu-item>
+					<dropdown-menu-item action="sourcebook" icon="📜">Sourcebooks</dropdown-menu-item>
+					<dropdown-menu-item action="rulebook" icon="📝">Rulebooks</dropdown-menu-item>
+					<dropdown-menu-item action="mission" icon="🗺️">Adventures &amp; Campaigns</dropdown-menu-item>
+					<dropdown-menu-item action="novel" icon="📚">Novels</dropdown-menu-item>
+					<dropdown-menu-item action="magazine" icon="📰">Magazines</dropdown-menu-item>
+					<dropdown-menu-item action="boardgame" icon="♟️">Tabletop</dropdown-menu-item>
+					<dropdown-menu-item action="tcg" icon="🃏">Trading Card Game</dropdown-menu-item>
+					<dropdown-menu-item action="videogame" icon="🎮">Video Games</dropdown-menu-item>
+					<!-- <dropdown-menu-item action="unofficial" icon="📓">Unofficial</dropdown-menu-item> -->
+					<dropdown-menu-item action="misc" icon="🔣">Misc.</dropdown-menu-item>
 
 					<dropdown-menu-item separator></dropdown-menu-item>
 
-					<dropdown-menu-item action="all">📚 All</dropdown-menu-item>
+					<dropdown-menu-item action="all" icon="📚">All</dropdown-menu-item>
 				</dropdown-menu>
 				<search-box></search-box>
 				<modal-dialog>
@@ -409,18 +409,18 @@
 					</details>
 				</modal-dialog>
 				<dropdown-menu label="⚙️">
-					<dropdown-menu-item id="import-materials">📥 Import Materials</dropdown-menu-item>
-					<dropdown-menu-item id="import-data">📦 Import Data</dropdown-menu-item>
+					<dropdown-menu-item id="import-materials" icon="📥">Import Materials</dropdown-menu-item>
+					<dropdown-menu-item id="import-data" icon="📦">Import Data</dropdown-menu-item>
 
 					<dropdown-menu-item separator></dropdown-menu-item>
 
-					<dropdown-menu-item id="import-covers">📂 Import Covers</dropdown-menu-item>
-					<dropdown-menu-item id="extract-covers">🧩 Extract Covers</dropdown-menu-item>
+					<dropdown-menu-item id="import-covers" icon="📂">Import Covers</dropdown-menu-item>
+					<dropdown-menu-item id="extract-covers" icon="🧩">Extract Covers</dropdown-menu-item>
 
 					<dropdown-menu-item separator></dropdown-menu-item>
 
-					<dropdown-menu-item id="export-data">📤 Export Data</dropdown-menu-item>
-					<dropdown-menu-item id="export-covers">🖼️ Export Covers</dropdown-menu-item>
+					<dropdown-menu-item id="export-data" icon="📤">Export Data</dropdown-menu-item>
+					<dropdown-menu-item id="export-covers" icon="🖼️">Export Covers</dropdown-menu-item>
 				</dropdown-menu>
 				<button id="add-material">➕</button>
 			</nav>
@@ -438,7 +438,7 @@
 
 		<template id="search-box">
 			<link rel="stylesheet" href="./css/components/search-box/search-box.css"/>
-			<label title="Search">🔍<input type="search" placeholder="Search items..." role="search"/></label>
+			<label title="Search">🔍 <input type="search" placeholder="Search items..." role="search"/></label>
 		</template>
 
 		<template id="skeleton-loader">

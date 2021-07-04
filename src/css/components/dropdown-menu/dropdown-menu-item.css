@@ -33,5 +33,5 @@ button:hover {
 hr {
 	width: max(3rem, 80%);
 	border: none;
-	border-top: solid medium var(--theme-color);
+	border-top: solid var(--border-width) var(--theme-color);
 }

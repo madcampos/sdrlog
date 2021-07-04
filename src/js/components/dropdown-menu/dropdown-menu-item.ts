@@ -1,7 +1,7 @@
 class DropdownMenuItem extends HTMLElement {
 	static get observedAttributes() { return ['icon']; }
 	#root: ShadowRoot;
-	#icon: HTMLImageElement | null | undefined;
+	#icon: HTMLSpanElement;
 
 	constructor() {
 		super();
@@ -11,19 +11,15 @@ class DropdownMenuItem extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(template.content.cloneNode(true));
 
-		this.#icon = this.#root.querySelector('img');
+		this.#icon = this.#root.querySelector('#dropdown-menu-icon') as HTMLSpanElement;
 	}
 
 	attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {
-		if (this.#icon) {
-			this.#icon.src = newValue;
-		}
+		this.#icon.innerText = newValue;
 	}
 
 	connectedCallback() {
-		if (this.#icon) {
-			this.#icon.src = this.getAttribute('icon') ?? '';
-		}
+		this.#icon.innerText = this.getAttribute('icon') ?? '';
 
 		if (this.hasAttribute('separator')) {
 			const divider = document.createElement('hr');
