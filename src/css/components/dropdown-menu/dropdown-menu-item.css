@@ -7,7 +7,7 @@ button {
 	min-width: min-content;
 	width: 100%;
 	height: var(--button-size);
-	padding: 0;
+	padding: 0.3rem 0.5rem;
 	text-align: left;
 
 	transition: 0.2s ease all;

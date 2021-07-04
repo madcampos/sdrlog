@@ -98,3 +98,9 @@ dialog button:active {
 dialog button:hover {
 	border-color: var(--accent-color);
 }
+
+@media (max-width: 450px) {
+	dialog {
+		border-radius: 0;
+	}
+}

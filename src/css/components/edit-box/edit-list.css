@@ -93,6 +93,8 @@ details[open] summary::before {
 #input-container:not([hidden]) {
 	background: var(--border-color);
 	display: flex;
+	align-items: center;
+
 	padding: 1rem 0.5rem 0.5rem;
 	margin: -0.6rem -0.6rem 0.3rem;
 	border-top-left-radius: 0.5rem;
