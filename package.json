@@ -8,8 +8,7 @@
 		"lint": "npm run lint:js && npm run lint:css",
 		"lint:js": "eslint **/*.ts --fix",
 		"lint:css": "stylelint **/*.css --fix",
-		"generate:browser-assets": "node build/icons/generate-assets.mjs",
-		"generate:covers": "node build/images/extract-covers.mjs",
+		"generate:splash": "pwa-asset-generator assets/logo.svg dist/img/splash --padding \"10vh 10vw\" --splash-only --background \"conic-gradient(goldenrod, peru, orange, sandybrown, gold, goldenrod)\" --type \"png\"",
 		"build": "snowpack build --mode production"
 	},
 	"engines": {
@@ -36,6 +35,7 @@
 		"@typescript-eslint/eslint-plugin": "^4.27.0",
 		"@typescript-eslint/parser": "^4.27.0",
 		"eslint": "^7.29.0",
+		"pwa-asset-generator": "^4.1.1",
 		"snowpack": "^3.5.9",
 		"stylelint": "^13.13.1",
 		"typescript": "^4.3.4"
