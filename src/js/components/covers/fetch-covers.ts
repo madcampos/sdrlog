@@ -122,11 +122,11 @@ export async function importCoversFromFolder() {
 				const id = file.name.replace(/\..+$/igu, '');
 
 				try {
-					const coverFile = await processCoverFile(file);
+					const coverFile = await processCoverFile(file, { name: `${id}.jpg` });
 
 					await saveCover(id, coverFile);
 
-					const thumbFile = await processCoverFile(file, { referenceWidth: THUMB_WIDTH });
+					const thumbFile = await processCoverFile(file, { referenceWidth: THUMB_WIDTH, name: `${id}.jpg` });
 
 					await saveThumb(id, thumbFile);
 				} catch (err) {
