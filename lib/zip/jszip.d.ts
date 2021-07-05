@@ -142,6 +142,22 @@ declare namespace JSZip {
         optimizedBinaryString?: boolean;
         createFolders?: boolean;
     }
+
+
+    /**
+     * Deserialize zip file asynchronously
+     *
+     * @param data Serialized zip file
+     * @param options Options for deserializing
+     * @return Returns promise
+     */
+    function loadAsync(data: InputFileFormat, options?: JSZip.JSZipLoadOptions): Promise<JSZip>;
+
+    const support: JSZipSupport;
+    const external: {
+        Promise: PromiseConstructorLike;
+    };
+    const version: string;
 }
 
 declare class JSZip {
