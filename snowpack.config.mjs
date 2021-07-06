@@ -41,6 +41,30 @@ export default {
 		minify: true,
 		target: 'es2020'
 	},
+	plugins: [
+		[
+			'snowpack-plugin-minify-html',
+			{
+				htmlMinifierOptions: {
+					caseSensitive: true,
+					collapseBooleanAttributes: true,
+					collapseInlineTagWhitespace: true,
+					collapseWhitespace: true,
+					conservativeCollapse: true,
+					decodeEntities: true,
+					minifyCSS: true,
+					minifyURLs: true,
+					quoteCharacter: '"',
+					removeComments: true,
+					removeScriptTypeAttributes: true,
+					removeStyleLinkTypeAttributes: true,
+					sortAttributes: true,
+					sortClassName: true,
+					useShortDoctype: true
+				}
+			}
+		]
+	],
 	devOptions: { secure: sslOptions },
 	buildOptions: {
 		out: 'dist',

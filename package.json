@@ -9,7 +9,8 @@
 		"lint:js": "eslint **/*.ts --fix",
 		"lint:css": "stylelint **/*.css --fix",
 		"generate:splash": "pwa-asset-generator build/logo.svg dist/img/splash --padding \"10vh 10vw\" --splash-only --background \"conic-gradient(goldenrod, peru, orange, sandybrown, gold, goldenrod)\" --type \"png\"",
-		"build": "snowpack build --mode production"
+		"build": "snowpack build --mode production",
+		"postbuild": "node build/minify-json.mjs"
 	},
 	"engines": {
 		"node": ">=14.0.0"
@@ -37,6 +38,7 @@
 		"eslint": "^7.29.0",
 		"pwa-asset-generator": "^4.1.1",
 		"snowpack": "^3.5.9",
+		"snowpack-plugin-minify-html": "^0.1.1",
 		"stylelint": "^13.13.1",
 		"typescript": "^4.3.4"
 	}
