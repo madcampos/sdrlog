@@ -1,4 +1,4 @@
-// @ts-nocheck
+/* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access */
 
 import { readFileSync } from 'fs';
 
@@ -9,7 +9,7 @@ if (mode === 'development') {
 	sslOptions = {
 		cert: readFileSync('./snowpack.crt'),
 		key: readFileSync('./snowpack.key')
-	}
+	};
 }
 
 function handleServiceWorker(_req, res) {
@@ -24,11 +24,12 @@ export default {
 	root: './src',
 	mount: {
 		src: '/',
-		data: { url: '/data', resolve: false, static: true },
-		covers: { url: '/covers', resolve: false, static: true },
-		thumbs: { url: '/thumbs', resolve: false, static: true },
-		lib: { url: '/lib', resolve: false, 'static': true }
+		data: '/data',
+		covers: '/covers',
+		thumbs: '/thumbs',
+		lib: '/lib'
 	},
+	exclude: ['**/*.schema.json'],
 	routes: [
 		{
 			match: 'all',

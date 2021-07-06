@@ -1,5 +1,4 @@
 {
-	"include": ["./src/**/*", "./data/**/*", "./lib/**/*"],
 	"exclude": ["./dist/**/*"],
 	"compilerOptions": {
 		"allowJs": true,
