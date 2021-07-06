@@ -61,6 +61,25 @@ async function fetchFromNetwork(request: Request) {
 	});
 }
 
+async function searchSuggestion(request: Request) {
+	const dataRequest = new Request('/data/data.json');
+	const dataResponse = await fetchFromCache(dataRequest) ?? await fetchFromNetwork(dataRequest);
+	let data = {};
+
+	if (dataResponse.ok) {
+		data = dataResponse.json();
+	}
+
+	// TODO: filter data
+	const suggestions = {};
+	const response = new Response(JSON.stringify(suggestions), {
+		// eslint-disable-next-line @typescript-eslint/naming-convention
+		headers: { 'Content-Type': 'application/x-suggestions+json' }
+	});
+
+	return response;
+}
+
 worker.addEventListener('install', async () => {
 	try {
 		const cache = await caches.open(CACHE_VERSION);
@@ -99,6 +118,14 @@ worker.addEventListener('activate', async (evt) => {
 });
 
 worker.addEventListener('fetch', async (evt) => {
+	const contentType = evt.request.headers.get('Content-Type');
+
+	if (contentType === 'application/x-suggestions+json') {
+		evt.respondWith(searchSuggestion(evt.request));
+
+		return;
+	}
+
 	const resFromCache = await fetchFromCache(evt.request);
 
 	if (resFromCache) {
