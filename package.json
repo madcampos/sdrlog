@@ -3,16 +3,17 @@
 	"version": "1.0.0",
 	"description": "List of shadowrun published material (books, tabletop, video games, etc.) ",
 	"main": "./src/index.html",
+	"type": "module",
 	"scripts": {
 		"start": "snowpack dev",
 		"lint": "npm run lint:js && npm run lint:css",
 		"lint:js": "eslint **/*.ts --fix",
 		"lint:css": "stylelint **/*.css --fix",
 		"build": "snowpack build --mode production",
-		"postbuild": "node build/minify-json.mjs"
+		"postbuild": "node build/postprocess-files.mjs"
 	},
 	"engines": {
-		"node": ">=14.0.0"
+		"node": ">=16.0.0"
 	},
 	"repository": {
 		"type": "git",
