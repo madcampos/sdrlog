@@ -282,10 +282,12 @@ export class ItemDetails extends HTMLElement {
 		this.#saveButton.hidden = true;
 
 		if (this.isEditing) {
-			this.#editButton.innerText = '❌ Cancel edit';
+			this.#editButton.innerText = 'Cancel edit';
+			this.#editButton.icon = '❌';
 			this.#saveButton.hidden = false;
 		} else {
-			this.#editButton.innerText = '✏️ Edit Material';
+			this.#editButton.innerText = 'Edit Material';
+			this.#editButton.icon = '✏️';
 			this.#saveButton.hidden = true;
 		}
 

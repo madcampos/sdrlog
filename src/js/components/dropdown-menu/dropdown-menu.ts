@@ -52,7 +52,7 @@ class DropdownMenu extends HTMLElement {
 	}
 
 	attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {
-		this.#button.innerHTML = newValue;
+		this.#button.icon = newValue;
 	}
 
 	connectedCallback() {

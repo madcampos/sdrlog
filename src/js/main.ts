@@ -1,5 +1,6 @@
 /* eslint-disable no-console*/
 import './components/components';
+import './components/menu-bar/main-menu-items';
 import { fetchItems } from './components/data-operations/data-import';
 import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
 import { updateFiltersFromURL } from './components/search-box/update-filter';

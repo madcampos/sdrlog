@@ -24,25 +24,6 @@ img {
 	scroll-snap-stop: always;
 }
 
-nav {
-	position: absolute;
-	top: 0;
-	display: flex;
-	user-select: none;
-	height: 3rem;
-	left: env(titlebar-area-x, 0);
-	width: env(titlebar-area-width, 100%);
-	padding: calc(var(--menubar-height) * 0.1) calc(var(--menubar-height) * 0.2);
-	box-sizing: inherit;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--accent-color);
-}
-
-nav > * {
-	margin: 0.1rem;
-}
-
 select {
 	width: 100%;
 	padding: 0.3rem 1.7rem 0.1rem 0.3rem;

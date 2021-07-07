@@ -98,7 +98,7 @@
 			</dropdown-menu>
 			<search-box></search-box>
 			<modal-dialog>
-				<button slot="trigger">ℹ️</button>
+				<custom-button slot="trigger">ℹ️</custom-button>
 				<h1 slot="title">Information</h1>
 				<details open>
 					<summary>Collection Organization</summary>
@@ -195,7 +195,7 @@
 				<dropdown-menu-item id="export-thumbs" icon="🎴">Export Thumbnails</dropdown-menu-item>
 				<dropdown-menu-item id="export-covers" icon="🖼️">Export Covers</dropdown-menu-item>
 			</dropdown-menu>
-			<button id="add-material">➕</button>
+			<custom-button id="add-material">➕</custom-button>
 		</menu-bar>
 
 		<main role="list">
@@ -210,6 +210,7 @@
 
 		<!-- Templates -->
 		<template id="custom-button">
+			<link rel="stylesheet" href="./css/components/button/button.css"/>
 			<button type="button">
 				<span id="button-icon"></span>
 				<span id="button-text">
@@ -503,9 +504,10 @@
 
 		<template id="search-box">
 			<link rel="stylesheet" href="./css/components/search-box/search-box.css"/>
-			<label title="Search">
-				<input type="search" placeholder="Search items..." role="search"/></label>
+			<label for="search-input" title="Search">
+				<input id="search-input" type="search" placeholder="Search items..." role="search"/>
 				<custom-button icon="🔍"></custom-button>
+			</label>
 		</template>
 
 		<template id="skeleton-loader">

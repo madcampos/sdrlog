@@ -5,7 +5,8 @@ button {
 	min-width: var(--button-size);
 	width: fit-content;
 	height: var(--button-size);
-	padding: 0;
+	padding: 0.3rem 0.5rem;
+	margin: 0.1rem;
 
 	transition: 0.2s ease all;
 
@@ -29,14 +30,18 @@ button:hover {
 
 :host([icon-button]) button {
 	width: var(--button-size);
+	padding: 0.1rem;
 }
 
 :host([small]) button {
-	width: calc(var(--button-size) * 0.5);
-	height: calc(var(--button-size) * 0.5);
+	min-width: unset;
+	width: calc(var(--button-size) * 0.65);
+	height: calc(var(--button-size) * 0.65);
+	font-size: 0.8em;
 }
 
 :host([wide]) button {
 	min-width: min-content;
 	width: 100%;
+	text-align: left;
 }

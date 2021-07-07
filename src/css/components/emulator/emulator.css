@@ -17,7 +17,6 @@ main {
 	width: 100vmax;
 	height: 100vmin;
 
-	margin: 0;
 	padding: 1rem;
 	overflow: hidden;
 }
