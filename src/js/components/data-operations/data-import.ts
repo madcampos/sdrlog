@@ -5,7 +5,7 @@ import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistenc
 
 async function fetchData() {
 	try {
-		const res = await fetch('/data/data.json');
+		const res = await fetch(`${window.location.origin}${window.location.pathname}/data/data.json`);
 
 		if (res.ok) {
 			const parsedFile = await res.json() as SDRLogData;

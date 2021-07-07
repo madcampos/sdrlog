@@ -145,7 +145,7 @@ async function setEmulator() {
 			const { emulator } = materialsFilter.get(id) ?? {};
 			const emulatorScript = document.createElement('script');
 
-			emulatorScript.src = `/lib/webretro/${emulator ?? ''}_libretro.js`;
+			emulatorScript.src = `${window.location.origin}${window.location.pathname}/lib/webretro/${emulator ?? ''}_libretro.js`;
 			document.body.appendChild(emulatorScript);
 		}, { once: true, capture: false });
 

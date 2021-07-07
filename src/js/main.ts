@@ -5,7 +5,7 @@ import { getMaterialsBasicInfo } from './components/data-operations/idb-persiste
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/sw.js').then(() => {
+	navigator.serviceWorker.register(`${window.location.origin}${window.location.pathname}/sw.js`).then(() => {
 		console.log('Service worker registered, loading scripts...');
 	}).catch((err) => {
 		console.error(err);

@@ -3,6 +3,15 @@ import type { FileForMaterial } from '../../../../data/data';
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from './files-reader';
 
+interface AllowedExtension {
+	url: string,
+	id: string | true
+}
+
+type AllowedExtensions = Record<string, AllowedExtension>;
+
+const BASE_URL = `${window.location.origin}${window.location.pathname}`;
+
 const mimeAllowed = [
 	'image',
 	'video',
@@ -11,22 +20,15 @@ const mimeAllowed = [
 	'application/pdf'
 ];
 
-interface AllowedExtension {
-	url: string,
-	id: string | true
-}
-
-type AllowedExtensions = Record<string, AllowedExtension>;
-
 const itemExtensions: AllowedExtensions = {
-	'.epub': { url: '/epub.html', id: true },
-	'.cbz': { url: '/cbz.html', id: true },
-	'.smd': { url: '/emulator.html', id: 'GENESIS' },
-	'.gen': { url: '/emulator.html', id: 'GENESIS' },
-	'.img': { url: '/emulator.html', id: 'SEGA-CD' },
-	'.bin': { url: '/emulator.html', id: 'SEGA-CD' },
-	'.smc': { url: '/emulator.html', id: 'SNES' },
-	'.sfc': { url: '/emulator.html', id: 'SNES' }
+	'.epub': { url: `${BASE_URL}/epub.html`, id: true },
+	'.cbz': { url: `${BASE_URL}/cbz.html`, id: true },
+	'.smd': { url: `${BASE_URL}/emulator.html`, id: 'GENESIS' },
+	'.gen': { url: `${BASE_URL}/emulator.html`, id: 'GENESIS' },
+	'.img': { url: `${BASE_URL}/emulator.html`, id: 'SEGA-CD' },
+	'.bin': { url: `${BASE_URL}/emulator.html`, id: 'SEGA-CD' },
+	'.smc': { url: `${BASE_URL}/emulator.html`, id: 'SNES' },
+	'.sfc': { url: `${BASE_URL}/emulator.html`, id: 'SNES' }
 };
 
 export async function openFile(fileInfo: FileForMaterial) {

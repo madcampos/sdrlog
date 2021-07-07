@@ -6,7 +6,7 @@
 import type { UpdateMessage } from './js/components/update-refresh/update-message';
 
 const CACHE_VERSION = 'v8';
-const appShellFiles = ['/'];
+const appShellFiles = ['./'];
 const skipNetworkRefresh = ['.jpg', '.png', '.svg', '.wasm', '.html'];
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
 
@@ -62,7 +62,7 @@ async function fetchFromNetwork(request: Request) {
 }
 
 async function searchSuggestion(request: Request) {
-	const dataRequest = new Request('/data/data.json');
+	const dataRequest = new Request('./data/data.json');
 	const dataResponse = await fetchFromCache(dataRequest) ?? await fetchFromNetwork(dataRequest);
 	let data = {};
 
