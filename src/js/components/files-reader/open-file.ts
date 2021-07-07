@@ -19,14 +19,14 @@ const mimeAllowed = [
 ];
 
 const itemExtensions: AllowedExtensions = {
-	'.epub': { url: `${import.meta.env.PUBLIC_URL}epub.html`, id: true },
-	'.cbz': { url: `${import.meta.env.PUBLIC_URL}cbz.html`, id: true },
-	'.smd': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'GENESIS' },
-	'.gen': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'GENESIS' },
-	'.img': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
-	'.bin': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
-	'.smc': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SNES' },
-	'.sfc': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SNES' }
+	'.epub': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}epub.html`, id: true },
+	'.cbz': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}cbz.html`, id: true },
+	'.smd': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}emulator.html`, id: 'GENESIS' },
+	'.gen': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}emulator.html`, id: 'GENESIS' },
+	'.img': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
+	'.bin': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
+	'.smc': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}emulator.html`, id: 'SNES' },
+	'.sfc': { url: `${import.meta.env.SNOWPACK_PUBLIC_URL}emulator.html`, id: 'SNES' }
 };
 
 export async function openFile(fileInfo: FileForMaterial) {

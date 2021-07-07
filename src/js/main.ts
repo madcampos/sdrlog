@@ -7,7 +7,7 @@ import { updateFiltersFromURL } from './components/search-box/update-filter';
 document.addEventListener('DOMContentLoaded', async () => {
 	if ('serviceWorker' in navigator) {
 		try {
-			await navigator.serviceWorker.register(`${import.meta.env.PUBLIC_URL}sw.js`);
+			await navigator.serviceWorker.register(`${import.meta.env.SNOWPACK_PUBLIC_URL}sw.js`);
 		} catch (err) {
 			console.error(err);
 		}

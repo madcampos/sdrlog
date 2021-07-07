@@ -107,7 +107,7 @@ export function formatPublisher(publisher: string, isEditing = false) {
 			<abbr title="${publisher}">
 				<img
 					role="presentation"
-					src="${import.meta.env.PUBLIC_URL}img/publishers/${publishers.get(publisher) ?? 'fallback'}.png"
+					src="${import.meta.env.SNOWPACK_PUBLIC_URL}img/publishers/${publishers.get(publisher) ?? 'fallback'}.png"
 				/>
 			</abbr>
 		</edit-list-item>

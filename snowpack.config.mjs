@@ -1,27 +1,13 @@
-/* eslint-disable @typescript-eslint/naming-convention, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access */
-
 import { readFileSync } from 'fs';
 
-const mode = process.env.NODE_ENV;
-let sslOptions = false;
-let publicUrl = 'https://localhost:8080/';
-
-if (mode === 'development') {
-	sslOptions = {
-		cert: readFileSync('./snowpack.crt'),
-		key: readFileSync('./snowpack.key')
-	};
-} else {
-	publicUrl = 'https://madcampos.github.io/sdrlog/';
-}
+const sslOptions = {
+	cert: readFileSync('./snowpack.crt'),
+	key: readFileSync('./snowpack.key')
+};
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
-	mode,
 	root: './src',
-	env: {
-		PUBLIC_URL: publicUrl
-	},
 	mount: {
 		src: '/',
 		data: '/data',
@@ -35,6 +21,7 @@ export default {
 		target: 'es2020'
 	},
 	plugins: [
+		'@snowpack/plugin-dotenv',
 		[
 			'snowpack-plugin-minify-html',
 			{

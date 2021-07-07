@@ -8,7 +8,7 @@ const mimeTypes = new Map([
 ]);
 
 async function fetchBundleFile() {
-	const response = await fetch(`${import.meta.env.PUBLIC_URL}lib/webretro/assets.zip`);
+	const response = await fetch(`${import.meta.env.SNOWPACK_PUBLIC_URL}lib/webretro/assets.zip`);
 	const bundleFile = await response.blob();
 	const file = new File([bundleFile], 'assets.zip', { type: 'application/zip' });
 

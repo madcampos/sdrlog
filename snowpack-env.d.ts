@@ -7,6 +7,6 @@ interface ImportMeta {
 	},
 	env: {
 		MODE: string,
-		PUBLIC_URL: string
+		SNOWPACK_PUBLIC_URL: string
 	}
 }
