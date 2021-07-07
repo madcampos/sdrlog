@@ -5,7 +5,7 @@
 import type { SDRLogData } from '../data/data';
 import type { UpdateMessage } from './js/components/update-refresh/update-message';
 
-const CACHE_VERSION = 'v8';
+const CACHE_VERSION = 'v1';
 const appShellFiles = ['./index.html'];
 const skipNetworkRefresh = ['.jpg', '.png', '.svg', '.wasm', '.html'];
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
@@ -28,8 +28,6 @@ async function fetchFromCache(request: Request) {
 	const res = await caches.match(request);
 
 	if (res) {
-		console.log(`[⚙️] Cache hit! ${request.url}`);
-
 		return res;
 	}
 
@@ -38,13 +36,8 @@ async function fetchFromCache(request: Request) {
 
 async function fetchFromNetwork(request: Request) {
 	try {
-		console.log(`[⚙️] Fetching ${request.url}`);
-
 		const netRes = await fetch(request);
 		const cacheRes = netRes.clone();
-
-		console.log(`[⚙️] Caching ${request.url}`);
-
 		const cache = await caches.open(CACHE_VERSION);
 
 		await cache.put(request, cacheRes);
