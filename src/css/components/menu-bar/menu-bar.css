@@ -1,11 +1,12 @@
 :host {
 	position: absolute;
 	display: block;
-	top: env(titlebar-area-y, 0);
+	top: var(--menubar-top);
 	height: var(--menubar-height);
 	width: 100%;
 	background-color: var(--accent-color);
 
+	app-region: drag;
 	-webkit-app-region: drag;
 
 	box-sizing: border-box;
@@ -28,4 +29,7 @@ nav {
 
 nav > * {
 	margin: 0.1rem;
+
+	app-region: no-drag;
+	-webkit-app-region: no-drag;
 }

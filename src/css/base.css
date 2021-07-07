@@ -46,7 +46,7 @@ body *, body *::after, body *::before {
 
 main {
 	overflow: auto;
-	margin-top: var(--menubar-height);
+	margin-top: calc(var(--menubar-top) + var(--menubar-height));
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
