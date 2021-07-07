@@ -37,10 +37,17 @@ async function fetchFromCache(request: Request) {
 async function fetchFromNetwork(request: Request) {
 	try {
 		const netRes = await fetch(request);
-		const cacheRes = netRes.clone();
-		const cache = await caches.open(CACHE_VERSION);
 
-		await cache.put(request, cacheRes);
+		const STORAGE_TRESHOLD = 0.7;
+		const { quota, usage } = await navigator.storage.estimate();
+		const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
+
+		if (!isReachingQuota) {
+			const cacheRes = netRes.clone();
+			const cache = await caches.open(CACHE_VERSION);
+
+			await cache.put(request, cacheRes);
+		}
 
 		return netRes;
 	} catch (err) {
