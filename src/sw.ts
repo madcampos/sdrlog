@@ -1,6 +1,5 @@
 /* eslint-env serviceworker */
 /* eslint-disable no-console */
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference, spaced-comment
 /// <reference lib="webworker" />
 
 import type { SDRLogData } from '../data/data';
@@ -26,10 +25,12 @@ async function messageUpdate(response: Response) {
 }
 
 async function fetchFromCache(request: Request) {
-	const res = await caches.match(request);
+	if (import.meta.env.MODE !== 'development') {
+		const res = await caches.match(request);
 
-	if (res) {
-		console.log(`[⚙️] Cache hit! ${request.url}`);
+		if (res) {
+			console.log(`[⚙️] Cache hit! ${request.url}`);
+		}
 
 		return res;
 	}
@@ -39,12 +40,16 @@ async function fetchFromCache(request: Request) {
 
 async function fetchFromNetwork(request: Request) {
 	try {
-		console.log(`[⚙️] Fetching ${request.url}`);
+		if (import.meta.env.MODE === 'development') {
+			console.log(`[⚙️] Fetching ${request.url}`);
+		}
 
 		const netRes = await fetch(request);
 		const cacheRes = netRes.clone();
 
-		console.log(`[⚙️] Caching ${request.url}`);
+		if (import.meta.env.MODE === 'development') {
+			console.log(`[⚙️] Caching ${request.url}`);
+		}
 
 		const cache = await caches.open(CACHE_VERSION);
 
@@ -114,21 +119,28 @@ worker.addEventListener('activate', async () => {
 	const clientList = await worker.clients.matchAll({ includeUncontrolled: true });
 
 	clientList.forEach((client) => {
-		console.log(`[⚙️] Matching client: ${client.url}`);
+		if (import.meta.env.MODE === 'development') {
+			console.log(`[⚙️] Matching client: ${client.url}`);
+		}
 	});
 
 	const cacheNames = await caches.keys();
 
 	for await (const cacheName of cacheNames) {
 		if (cacheName !== CACHE_VERSION) {
-			console.log(`[⚙️] Deleting old cache "${cacheName}"`);
+			if (import.meta.env.MODE === 'development') {
+				console.log(`[⚙️] Deleting old cache "${cacheName}"`);
+			}
 
 			await caches.delete(cacheName);
 		}
 
-		console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
+		if (import.meta.env.MODE === 'development') {
+			console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
+		}
 
 		await worker.clients.claim();
+		console.log(`[⚙️] Service worker version ${CACHE_VERSION} active!`);
 	}
 });
 
