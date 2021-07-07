@@ -25,12 +25,10 @@ async function messageUpdate(response: Response) {
 }
 
 async function fetchFromCache(request: Request) {
-	if (import.meta.env.MODE !== 'development') {
-		const res = await caches.match(request);
+	const res = await caches.match(request);
 
-		if (res) {
-			console.log(`[⚙️] Cache hit! ${request.url}`);
-		}
+	if (res) {
+		console.log(`[⚙️] Cache hit! ${request.url}`);
 
 		return res;
 	}
@@ -40,16 +38,12 @@ async function fetchFromCache(request: Request) {
 
 async function fetchFromNetwork(request: Request) {
 	try {
-		if (import.meta.env.MODE === 'development') {
-			console.log(`[⚙️] Fetching ${request.url}`);
-		}
+		console.log(`[⚙️] Fetching ${request.url}`);
 
 		const netRes = await fetch(request);
 		const cacheRes = netRes.clone();
 
-		if (import.meta.env.MODE === 'development') {
-			console.log(`[⚙️] Caching ${request.url}`);
-		}
+		console.log(`[⚙️] Caching ${request.url}`);
 
 		const cache = await caches.open(CACHE_VERSION);
 
@@ -91,8 +85,31 @@ async function searchSuggestion(request: Request) {
 		data = await dataResponse.json() as SDRLogData;
 	}
 
-	// TODO: filter data
-	const suggestions = {};
+	const validations = new Map([
+		['name', (value: string) => value !== ''],
+		['category', (value: string) => ['rulebook', 'sourcebook', 'mission', 'magazine', 'novel', 'videogame', 'tcg', 'boardgame', 'misc'].includes(value)],
+		['type', (value: string) => ['digital', 'print', 'scan', 'ocr', 'physical'].includes(value)],
+		['status', (value: string) => ['outofscope', 'missing', 'canceled'].includes(value)],
+		['sku', (value: string) => (/^[A-Z0-9](?:-?[A-Z0-9])+$/gu).test(value)],
+		['edition', (value: string) => (/^[0-6]$/gu).test(value)]
+	]);
+
+	const url = new URL(request.url);
+	const params = new URLSearchParams(url.search);
+	const allowedFilters = ['name', 'category', 'type', 'status', 'sku', 'edition'];
+	let suggestions = data.items;
+
+	type AllowedFilters = 'name' | 'category' | 'type' | 'status' | 'sku' | 'edition';
+
+	params.forEach((value, name) => {
+		const hasTag = allowedFilters.includes(name);
+		const isValid = validations.get(name)?.(value) ?? false;
+
+		if (hasTag && isValid) {
+			suggestions = suggestions.filter((item) => item[name as AllowedFilters]?.toString().includes(value));
+		}
+	});
+
 	const response = new Response(JSON.stringify(suggestions), {
 		// eslint-disable-next-line @typescript-eslint/naming-convention
 		headers: { 'Content-Type': 'application/x-suggestions+json' }
@@ -119,28 +136,21 @@ worker.addEventListener('activate', async () => {
 	const clientList = await worker.clients.matchAll({ includeUncontrolled: true });
 
 	clientList.forEach((client) => {
-		if (import.meta.env.MODE === 'development') {
-			console.log(`[⚙️] Matching client: ${client.url}`);
-		}
+		console.log(`[⚙️] Matching client: ${client.url}`);
 	});
 
 	const cacheNames = await caches.keys();
 
 	for await (const cacheName of cacheNames) {
 		if (cacheName !== CACHE_VERSION) {
-			if (import.meta.env.MODE === 'development') {
-				console.log(`[⚙️] Deleting old cache "${cacheName}"`);
-			}
+			console.log(`[⚙️] Deleting old cache "${cacheName}"`);
 
 			await caches.delete(cacheName);
 		}
 
-		if (import.meta.env.MODE === 'development') {
-			console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
-		}
+		console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
 
 		await worker.clients.claim();
-		console.log(`[⚙️] Service worker version ${CACHE_VERSION} active!`);
 	}
 });
 
