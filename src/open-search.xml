@@ -2,9 +2,9 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
 	<ShortName>SDRLog</ShortName>
 	<Description>Shadowrun Catalog Search</Description>
-	<Url type="text/html" method="get" template="/?search={searchTerms}"/>
-	<Url type="application/opensearchdescription+xml" rel="self" template="/open-search.xml" />
-	<Image width="16" height="16">/favicon.ico</Image>
+	<Url type="text/html" method="get" template="https://madcampos.github.io/sdrlog/?search={searchTerms}"/>
+	<Url type="application/opensearchdescription+xml" rel="self" template="https://madcampos.github.io/sdrlog/open-search.xml" />
+	<Image width="16" height="16">https://madcampos.github.io/sdrlog/favicon.ico</Image>
 	<InputEncoding>UTF-8</InputEncoding>
-	<moz:SearchForm>/</moz:SearchForm>
+	<moz:SearchForm>https://madcampos.github.io/sdrlog/</moz:SearchForm>
 </OpenSearchDescription>

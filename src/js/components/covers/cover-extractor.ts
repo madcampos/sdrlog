@@ -3,7 +3,7 @@ import { optimize } from './optimizer';
 
 const pdfjs = window['pdfjs-dist/build/pdf'] as PDFjsModule;
 
-pdfjs.GlobalWorkerOptions.workerSrc = '/lib/pdfjs/pdf.worker.js';
+pdfjs.GlobalWorkerOptions.workerSrc = `${window.location.origin}${window.location.pathname}/lib/pdfjs/pdf.worker.js`;
 
 export const COVER_WIDTH = 1024;
 export const THUMB_WIDTH = 256;
