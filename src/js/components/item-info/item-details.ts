@@ -1,3 +1,4 @@
+import type { CustomButton } from '../button/button';
 import type { ModalDialog } from '../dialog/dialog';
 import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
@@ -20,8 +21,8 @@ export class ItemDetails extends HTMLElement {
 
 	#root: ShadowRoot;
 	#modal: ModalDialog;
-	#editButton: HTMLButtonElement;
-	#saveButton: HTMLButtonElement;
+	#editButton: CustomButton;
+	#saveButton: CustomButton;
 
 	#isEditing = false;
 	#isEditingExistingMaterial = false;
@@ -61,8 +62,8 @@ export class ItemDetails extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#modal = this.#root.querySelector('modal-dialog') as ModalDialog;
-		this.#editButton = this.#root.querySelector('#edit') as HTMLButtonElement;
-		this.#saveButton = this.#root.querySelector('#save') as HTMLButtonElement;
+		this.#editButton = this.#root.querySelector('#edit') as CustomButton;
+		this.#saveButton = this.#root.querySelector('#save') as CustomButton;
 
 		this.#name = this.#root.querySelector('#name') as EditBox;
 

@@ -1,9 +1,11 @@
+import type { CustomButton } from '../button/button';
+
 import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
 
 class DropdownMenu extends HTMLElement {
-	static get observedAttributes() { return ['title']; }
+	static get observedAttributes() { return ['icon']; }
 	#root: ShadowRoot;
-	#button: HTMLButtonElement;
+	#button: CustomButton;
 	#dialog: HTMLDialogElement;
 
 	constructor() {
@@ -14,7 +16,7 @@ class DropdownMenu extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(template.content.cloneNode(true));
 
-		this.#button = this.#root.querySelector('button') as HTMLButtonElement;
+		this.#button = this.#root.querySelector('custom-button') as CustomButton;
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/strict-boolean-expressions
@@ -54,7 +56,7 @@ class DropdownMenu extends HTMLElement {
 	}
 
 	connectedCallback() {
-		this.#button.innerHTML = this.getAttribute('label') ?? '';
+		this.#button.icon = this.getAttribute('icon') ?? '';
 	}
 }
 

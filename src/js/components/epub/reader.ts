@@ -1,3 +1,4 @@
+import type { CustomButton } from '../button/button';
 import type { NavItem } from '../../../../lib/epub/types/navigation';
 import type { BookOptions } from '../../../../lib/epub/types/book';
 import type Book from '../../../../lib/epub/types/book';
@@ -13,13 +14,13 @@ import { getFilePermission } from '../files-reader/files-reader';
 declare function ePub(urlOrData: string | ArrayBuffer, options?: BookOptions): Book;
 
 const renderArea = document.querySelector('#book') as HTMLElement;
-const nextButton = document.querySelector('#next') as HTMLButtonElement;
-const prevButton = document.querySelector('#prev') as HTMLButtonElement;
+const nextButton = document.querySelector('#next') as CustomButton;
+const prevButton = document.querySelector('#prev') as CustomButton;
 const tocSelect = document.querySelector('#toc') as HTMLSelectElement;
 
 document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
 	try {
-		(evt.target as HTMLButtonElement).disabled = true;
+		(evt.target as CustomButton).disabled = true;
 
 		const url = new URL(window.location.toString());
 		const params = new URLSearchParams(url.search);

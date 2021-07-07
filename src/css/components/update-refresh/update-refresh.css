@@ -25,31 +25,3 @@ p {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
-button {
-	background: transparent;
-	border: solid var(--border-width) transparent;
-	border-radius: 0.3rem;
-	width: var(--button-size);
-	height: var(--button-size);
-	padding: 0;
-
-	transition: 0.2s ease all;
-
-	font: inherit;
-
-	user-select: none;
-}
-
-button:focus {
-	border-color: var(--theme-color);
-	outline: none;
-}
-
-button:active {
-	background: var(--secondary-color);
-}
-
-button:hover {
-	border-color: var(--accent-color);
-}

@@ -1,8 +1,9 @@
+import type { CustomButton } from '../button/button';
 import type { UpdateMessage } from './update-message';
 
 class UpdateRefresh extends HTMLElement {
 	#root: ShadowRoot;
-	#button: HTMLButtonElement;
+	#button: CustomButton;
 	#message: HTMLParagraphElement;
 	#popup: HTMLElement;
 
@@ -15,7 +16,7 @@ class UpdateRefresh extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 
-		this.#button = this.#root.querySelector('button') as HTMLButtonElement;
+		this.#button = this.#root.querySelector('custom-button') as CustomButton;
 		this.#message = this.#root.querySelector('p') as HTMLParagraphElement;
 		this.#popup = this.#root.querySelector('aside') as HTMLElement;
 

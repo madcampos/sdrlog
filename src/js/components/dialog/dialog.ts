@@ -1,3 +1,5 @@
+import type { CustomButton } from '../button/button';
+
 import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
 
 export class ModalDialog extends HTMLElement {
@@ -21,7 +23,7 @@ export class ModalDialog extends HTMLElement {
 		}
 
 		const triggerSlot = this.#root.querySelector('slot[name="trigger"]') as HTMLSlotElement;
-		const [triggerButton] = triggerSlot.assignedElements() as (HTMLButtonElement | undefined)[];
+		const [triggerButton] = triggerSlot.assignedElements() as (CustomButton | undefined)[];
 
 		this.#root.addEventListener('slotchange', (evt) => {
 			const slot = evt.target as HTMLSlotElement;

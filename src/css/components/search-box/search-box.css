@@ -3,6 +3,8 @@
 	align-items: center;
 	justify-content: center;
 	box-sizing: inherit;
+
+	flex-grow: 1;
 }
 
 label {

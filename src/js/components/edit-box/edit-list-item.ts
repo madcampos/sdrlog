@@ -1,8 +1,10 @@
+import type { CustomButton } from '../button/button';
+
 export class EditListItem extends HTMLElement {
 	static get observedAttributes() { return ['edit', 'value']; }
 
 	#root: ShadowRoot;
-	#closeButton: HTMLButtonElement;
+	#closeButton: CustomButton;
 
 	#value = '';
 
@@ -14,7 +16,7 @@ export class EditListItem extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(template.content.cloneNode(true));
 
-		this.#closeButton = this.#root.querySelector('button') as HTMLButtonElement;
+		this.#closeButton = this.#root.querySelector('custom-button') as CustomButton;
 
 		this.#closeButton.addEventListener('click', () => {
 			this.remove();

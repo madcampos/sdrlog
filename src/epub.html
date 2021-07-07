@@ -36,16 +36,37 @@
 	<link rel="stylesheet" href="./css/components/epub/reader.css"/>
 </head>
 <body>
-	<nav>
-		<button id="prev">⏮️</button>
+	<!-- Templates -->
+	<template id="custom-button">
+		<button type="button">
+			<span id="button-icon"></span>
+			<span id="button-text">
+				<slot></slot>
+			</span>
+		</button>
+	</template>
+
+	<template id="menu-bar">
+		<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css"/>
+		<nav>
+			<slot></slot>
+		</nav>
+	</template>
+
+	<!-- Content -->
+	<menu-bar>
+		<custom-button icon-button id="prev">⏮️</custom-button>
 		<select id="toc"></select>
-		<button id="next">⏭️</button>
-	</nav>
+		<custom-button icon-button id="next">⏭️</custom-button>
+	</menu-bar>
 	<main id="book">
 		<div id="load-overlay">
-			<button id="open-book">▶️</button>
+			<custom-button icon-button id="open-book">▶️</custom-button>
 		</div>
 	</main>
+
+	<script src="./js/components/button/button.js" type="module"></script>
+	<script src="./js/components/menu-bar/menu-bar.js" type="module"></script>
 	<script src="./js/components/epub/reader.js" type="module"></script>
 </body>
 </html>

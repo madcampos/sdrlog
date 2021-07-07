@@ -1,3 +1,5 @@
+import type { CustomButton } from '../button/button';
+
 import '../../../../lib/zip/jszip';
 
 import { getFile } from '../data-operations/idb-persistence';
@@ -12,8 +14,8 @@ interface Page {
 type Pages = Record<string, Page[]>;
 
 const renderArea = document.querySelector('#comic') as HTMLElement;
-const nextButton = document.querySelector('#next') as HTMLButtonElement;
-const prevButton = document.querySelector('#prev') as HTMLButtonElement;
+const nextButton = document.querySelector('#next') as CustomButton;
+const prevButton = document.querySelector('#prev') as CustomButton;
 const tocSelect = document.querySelector('#toc') as HTMLSelectElement;
 
 const comparer = new Intl.Collator('en-US', { ignorePunctuation: true, numeric: true });
@@ -90,7 +92,7 @@ window.addEventListener('wheel', (evt) => {
 
 document.querySelector('#open-comic')?.addEventListener('click', async (evt) => {
 	try {
-		(evt.target as HTMLButtonElement).disabled = true;
+		(evt.target as CustomButton).disabled = true;
 
 		const url = new URL(window.location.toString());
 		const params = new URLSearchParams(url.search);

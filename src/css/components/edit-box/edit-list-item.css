@@ -27,34 +27,3 @@
 	border-color: var(--theme-color);
 	background: var(--border-color);
 }
-
-button {
-	background: transparent;
-	border: solid var(--border-width) transparent;
-	border-radius: 0.3rem;
-	width: calc(var(--button-size) * 0.5);
-	height: calc(var(--button-size) * 0.5);
-	padding: 0;
-
-	transition: 0.2s ease all;
-
-	font: inherit;
-	font-size: 0.7em;
-
-	margin-inline-start: 0.5rem;
-
-	user-select: none;
-}
-
-button:focus {
-	border-color: var(--theme-color);
-	outline: none;
-}
-
-button:active {
-	background: var(--secondary-color);
-}
-
-button:hover {
-	border-color: var(--accent-color);
-}

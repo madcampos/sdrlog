@@ -19,6 +19,8 @@ class SearchBox extends HTMLElement {
 
 		this.#searchBox.value = initialValue;
 
+		// TODO: add button click
+
 		this.#searchBox.addEventListener('change', () => {
 			if (!this.#searchBox.value) {
 				updateSearchFilter({});

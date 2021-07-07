@@ -71,34 +71,6 @@ dialog article {
 	overflow: auto;
 }
 
-dialog button {
-	background: transparent;
-	border: medium transparent solid;
-	border-radius: 0.3rem;
-	width: var(--button-size);
-	height: var(--button-size);
-	padding: 0;
-
-	transition: 0.2s ease all;
-
-	font: inherit;
-
-	user-select: none;
-}
-
-dialog button:focus {
-	border-color: var(--theme-color);
-	outline: none;
-}
-
-dialog button:active {
-	background: var(--secondary-color);
-}
-
-dialog button:hover {
-	border-color: var(--accent-color);
-}
-
 @media (max-width: 450px) {
 	dialog {
 		border-radius: 0;

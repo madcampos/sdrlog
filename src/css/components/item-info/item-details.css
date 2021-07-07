@@ -148,34 +148,6 @@ input:focus, select:focus {
 	border-color: var(--theme-color);
 }
 
-button {
-	background: transparent;
-	border: solid var(--border-width) transparent;
-	border-radius: 0.3rem;
-	width: fit-content;
-	height: var(--button-size);
-	padding: 0.3rem 0.5rem;
-
-	transition: 0.2s ease all;
-
-	font: inherit;
-
-	user-select: none;
-}
-
-button:focus {
-	border-color: var(--theme-color);
-	outline: none;
-}
-
-button:active {
-	background: var(--secondary-color);
-}
-
-button:hover {
-	border-color: var(--accent-color);
-}
-
 a {
 	color: var(--theme-color);
 }
