@@ -1,7 +1,7 @@
 import { ProgressOverlay } from '../progress/progress';
 import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
-import { extractCover, getFileForImg, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
+import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
 import directoryOpen from '../../../../lib/file-system/directory-open';
 
@@ -22,8 +22,6 @@ export async function fetchCover(id: string) {
 			const responseData = await response.blob();
 
 			currentCover = new File([responseData], `${id}.jpg`, { type: 'image/jpeg' });
-
-			await saveCover(id, currentCover);
 		}
 	}
 
@@ -38,12 +36,6 @@ export async function getThumbUrl(id: string) {
 	}
 
 	return `${BASE_URL}thumbs/${id}.jpg`;
-}
-
-export async function saveLoadedThumb(id: string, image: HTMLImageElement) {
-	const loadedThumb = await getFileForImg(image, `${id}.jpg`);
-
-	await saveThumb(id, loadedThumb);
 }
 
 export async function extractCoversFromFiles() {

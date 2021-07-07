@@ -115,19 +115,3 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 
 	return processedCover;
 }
-
-export async function getFileForImg(img: HTMLImageElement, name: string) {
-	const bitmap = await createImageBitmap(img);
-
-	canvas.height = bitmap.height;
-	canvas.width = bitmap.width;
-	canvasContext.drawImage(bitmap, 0, 0);
-
-	const imageBlob = (await new Promise((resolve: BlobCallback) => {
-		canvas.toBlob(resolve, 'image/jpeg', 1);
-	})) as Blob;
-
-	return new File([imageBlob], name, {
-		type: 'image/jpeg'
-	});
-}
