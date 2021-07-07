@@ -3,10 +3,11 @@
 // eslint-disable-next-line @typescript-eslint/triple-slash-reference, spaced-comment
 /// <reference lib="webworker" />
 
+import type { SDRLogData } from '../data/data';
 import type { UpdateMessage } from './js/components/update-refresh/update-message';
 
 const CACHE_VERSION = 'v8';
-const appShellFiles = ['./'];
+const appShellFiles = ['./index.html'];
 const skipNetworkRefresh = ['.jpg', '.png', '.svg', '.wasm', '.html'];
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
 
@@ -28,6 +29,8 @@ async function fetchFromCache(request: Request) {
 	const res = await caches.match(request);
 
 	if (res) {
+		console.log(`[⚙️] Cache hit! ${request.url}`);
+
 		return res;
 	}
 
@@ -36,12 +39,12 @@ async function fetchFromCache(request: Request) {
 
 async function fetchFromNetwork(request: Request) {
 	try {
-		console.log(`[⚙] Fetching ${request.url}`);
+		console.log(`[⚙️] Fetching ${request.url}`);
 
 		const netRes = await fetch(request);
 		const cacheRes = netRes.clone();
 
-		console.log(`[⚙] Caching ${request.url}`);
+		console.log(`[⚙️] Caching ${request.url}`);
 
 		const cache = await caches.open(CACHE_VERSION);
 
@@ -61,13 +64,26 @@ async function fetchFromNetwork(request: Request) {
 	});
 }
 
+async function updateFromNetwork(req: Request) {
+	const isSkippedFromNetwork = skipNetworkRefresh.some((ext) => req.url.endsWith(ext));
+
+	if (!isSkippedFromNetwork) {
+		const res = await fetchFromNetwork(req);
+
+		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+		if (res.status <= 200 && res.status >= 299) {
+			await messageUpdate(res);
+		}
+	}
+}
+
 async function searchSuggestion(request: Request) {
 	const dataRequest = new Request('./data/data.json');
 	const dataResponse = await fetchFromCache(dataRequest) ?? await fetchFromNetwork(dataRequest);
-	let data = {};
+	let data: SDRLogData = { $schema: '', items: [] };
 
 	if (dataResponse.ok) {
-		data = dataResponse.json();
+		data = await dataResponse.json() as SDRLogData;
 	}
 
 	// TODO: filter data
@@ -87,61 +103,50 @@ worker.addEventListener('install', async () => {
 		await cache.addAll(appShellFiles);
 
 		await worker.skipWaiting();
+		console.log(`[⚙️] Service worker installed for version ${CACHE_VERSION}`);
 	} catch (err) {
 		console.error('[⚙️] Error installing worker:');
 		console.error(err);
 	}
 });
 
-worker.addEventListener('activate', async (evt) => {
+worker.addEventListener('activate', async () => {
 	const clientList = await worker.clients.matchAll({ includeUncontrolled: true });
 
 	clientList.forEach((client) => {
 		console.log(`[⚙️] Matching client: ${client.url}`);
 	});
 
-	evt.waitUntil(caches.keys().then(async (cacheNames) => {
-		await Promise.all(cacheNames.map(async (cacheName) => {
-			if (cacheName !== CACHE_VERSION) {
-				console.log(`[⚙️] Deleting old cache "${cacheName}"`);
+	const cacheNames = await caches.keys();
 
-				return caches.delete(cacheName);
-			}
+	for await (const cacheName of cacheNames) {
+		if (cacheName !== CACHE_VERSION) {
+			console.log(`[⚙️] Deleting old cache "${cacheName}"`);
 
-			return Promise.resolve(null);
-		}));
+			await caches.delete(cacheName);
+		}
 
 		console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
 
-		return worker.clients.claim();
-	}));
+		await worker.clients.claim();
+	}
 });
 
 worker.addEventListener('fetch', async (evt) => {
 	const contentType = evt.request.headers.get('Content-Type');
 
 	if (contentType === 'application/x-suggestions+json') {
-		evt.respondWith(searchSuggestion(evt.request));
-
-		return;
+		return searchSuggestion(evt.request);
 	}
 
-	const resFromCache = await fetchFromCache(evt.request);
+	let response = await fetchFromCache(evt.request);
 
-	if (resFromCache) {
-		evt.respondWith(resFromCache);
-
-		const isSkippedFromNetwork = skipNetworkRefresh.some((ext) => evt.request.url.endsWith(ext));
-
-		if (!isSkippedFromNetwork) {
-			const res = await fetchFromNetwork(evt.request);
-
-			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-			if (res.status <= 200 && res.status >= 299) {
-				await messageUpdate(res);
-			}
-		}
+	if (!response) {
+		response = await fetchFromNetwork(evt.request);
 	} else {
-		evt.respondWith(fetchFromNetwork(evt.request));
+		void updateFromNetwork(evt.request);
 	}
+
+
+	return response;
 });
