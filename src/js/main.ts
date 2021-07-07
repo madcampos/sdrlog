@@ -6,10 +6,8 @@ import { updateFiltersFromURL } from './components/search-box/update-filter';
 
 document.addEventListener('DOMContentLoaded', async () => {
 	if ('serviceWorker' in navigator) {
-		const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
-
 		try {
-			await navigator.serviceWorker.register(`${BASE_URL}sw.js`);
+			await navigator.serviceWorker.register(`${import.meta.env.PUBLIC_URL}sw.js`);
 		} catch (err) {
 			console.error(err);
 		}

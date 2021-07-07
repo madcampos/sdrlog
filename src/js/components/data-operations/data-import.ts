@@ -5,8 +5,7 @@ import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistenc
 
 async function fetchData() {
 	try {
-		const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
-		const res = await fetch(`${BASE_URL}data/data.json`);
+		const res = await fetch(`${import.meta.env.PUBLIC_URL}data/data.json`);
 
 		if (res.ok) {
 			const parsedFile = await res.json() as SDRLogData;

@@ -144,9 +144,8 @@ async function setEmulator() {
 			const { id } = extractMetadataFromFileName(romFile.name);
 			const { emulator } = materialsFilter.get(id) ?? {};
 			const emulatorScript = document.createElement('script');
-			const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
 
-			emulatorScript.src = `${BASE_URL}lib/webretro/${emulator ?? ''}_libretro.js`;
+			emulatorScript.src = `${import.meta.env.PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`;
 			document.body.appendChild(emulatorScript);
 		}, { once: true, capture: false });
 

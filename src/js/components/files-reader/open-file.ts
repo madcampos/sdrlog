@@ -10,8 +10,6 @@ interface AllowedExtension {
 
 type AllowedExtensions = Record<string, AllowedExtension>;
 
-const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
-
 const mimeAllowed = [
 	'image',
 	'video',
@@ -21,14 +19,14 @@ const mimeAllowed = [
 ];
 
 const itemExtensions: AllowedExtensions = {
-	'.epub': { url: `${BASE_URL}epub.html`, id: true },
-	'.cbz': { url: `${BASE_URL}cbz.html`, id: true },
-	'.smd': { url: `${BASE_URL}emulator.html`, id: 'GENESIS' },
-	'.gen': { url: `${BASE_URL}emulator.html`, id: 'GENESIS' },
-	'.img': { url: `${BASE_URL}emulator.html`, id: 'SEGA-CD' },
-	'.bin': { url: `${BASE_URL}emulator.html`, id: 'SEGA-CD' },
-	'.smc': { url: `${BASE_URL}emulator.html`, id: 'SNES' },
-	'.sfc': { url: `${BASE_URL}emulator.html`, id: 'SNES' }
+	'.epub': { url: `${import.meta.env.PUBLIC_URL}epub.html`, id: true },
+	'.cbz': { url: `${import.meta.env.PUBLIC_URL}cbz.html`, id: true },
+	'.smd': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'GENESIS' },
+	'.gen': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'GENESIS' },
+	'.img': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
+	'.bin': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
+	'.smc': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SNES' },
+	'.sfc': { url: `${import.meta.env.PUBLIC_URL}emulator.html`, id: 'SNES' }
 };
 
 export async function openFile(fileInfo: FileForMaterial) {

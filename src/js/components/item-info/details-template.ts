@@ -7,7 +7,6 @@ import type { FileForMaterial, MaterialLink } from '../../../../data/data';
 export const getLangName = new Intl.DisplayNames(['en'], { type: 'language' }) as { of(lang: string): string };
 export const dateFormater = new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC', year: 'numeric' });
 
-const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
 const DEFAULT_ICON = '📄';
 
 const mimeIcons = new Map([
@@ -108,7 +107,7 @@ export function formatPublisher(publisher: string, isEditing = false) {
 			<abbr title="${publisher}">
 				<img
 					role="presentation"
-					src="${BASE_URL}img/publishers/${publishers.get(publisher) ?? 'fallback'}.png"
+					src="${import.meta.env.PUBLIC_URL}img/publishers/${publishers.get(publisher) ?? 'fallback'}.png"
 				/>
 			</abbr>
 		</edit-list-item>
