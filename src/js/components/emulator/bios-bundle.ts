@@ -3,7 +3,8 @@ import '../../../../lib/zip/jszip';
 import { getBiosFiles, saveBiosFile } from '../data-operations/idb-persistence';
 
 async function fetchBiosFile() {
-	const response = await fetch(`${window.location.origin}${window.location.pathname}/lib/webretro/bios.zip`);
+	const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
+	const response = await fetch(`${BASE_URL}lib/webretro/bios.zip`);
 	const bundleFile = await response.blob();
 	const file = new File([bundleFile], 'bios.zip', { type: 'application/zip' });
 

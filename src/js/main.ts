@@ -4,17 +4,17 @@ import { fetchItems } from './components/data-operations/data-import';
 import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register(`${window.location.origin}${window.location.pathname}/sw.js`).then(() => {
-		console.log('Service worker registered, loading scripts...');
-	}).catch((err) => {
-		console.error(err);
-	});
-} else {
-	console.log('No service worker, falling back to default load...');
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
+	if ('serviceWorker' in navigator) {
+		const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
+
+		try {
+			await navigator.serviceWorker.register(`${BASE_URL}sw.js`);
+		} catch (err) {
+			console.error(err);
+		}
+	}
+
 	await fetchItems();
 
 	const sorter = new Intl.Collator('en-US');

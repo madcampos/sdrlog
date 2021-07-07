@@ -8,7 +8,8 @@ const mimeTypes = new Map([
 ]);
 
 async function fetchBundleFile() {
-	const response = await fetch(`${window.location.origin}${window.location.pathname}/lib/webretro/assets.zip`);
+	const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
+	const response = await fetch(`${BASE_URL}lib/webretro/assets.zip`);
 	const bundleFile = await response.blob();
 	const file = new File([bundleFile], 'assets.zip', { type: 'application/zip' });
 

@@ -1,9 +1,10 @@
 import type { PDFjsModule } from '../../../../lib/pdfjs/pdf.js';
 import { optimize } from './optimizer';
 
+const BASE_URL = `${window.location.origin}${window.location.pathname.replace(/\/.+?\.html$/igu, '/')}`;
 const pdfjs = window['pdfjs-dist/build/pdf'] as PDFjsModule;
 
-pdfjs.GlobalWorkerOptions.workerSrc = `${window.location.origin}${window.location.pathname}/lib/pdfjs/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `${BASE_URL}lib/pdfjs/pdf.worker.js`;
 
 export const COVER_WIDTH = 1024;
 export const THUMB_WIDTH = 256;
