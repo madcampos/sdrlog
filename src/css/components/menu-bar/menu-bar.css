@@ -19,6 +19,7 @@ nav {
 	display: flex;
 	user-select: none;
 	height: 100%;
+	/* stylelint-disable length-zero-no-unit */
 	left: env(titlebar-area-x, 0px);
 	width: env(titlebar-area-width, 100%);
 	padding: calc(var(--menubar-height) * 0.1) calc(var(--menubar-height) * 0.2);
