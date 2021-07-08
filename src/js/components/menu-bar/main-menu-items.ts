@@ -1,5 +1,6 @@
 import type { Material } from '../../../../data/data';
 import type { ModalDialog } from '../dialog/dialog';
+import type { CustomButton } from '../button/button';
 
 import { readFiles } from '../files-reader/files-reader';
 import { extractCoversFromFiles, importCoversFromFolder } from '../covers/fetch-covers';
@@ -10,13 +11,32 @@ import { updateSearchFilter } from '../search-box/update-filter';
 import { ItemDetails } from '../item-info/item-details';
 
 const infobox = document.querySelector('menu-bar modal-dialog') as ModalDialog;
+const infoboxTrigger = document.querySelector('menu-bar modal-dialog > custom-button') as CustomButton;
+const url = new URL(window.location.toString());
+const params = new URLSearchParams(url.search);
 
-window.addEventListener('keydown', (evt) => {
+if (params.has('info')) {
+	infobox.show();
+	window.history.pushState(null, window.document.title, '/?info');
+}
+
+infoboxTrigger.addEventListener('click', () => {
+	window.history.pushState(null, window.document.title, '/?info');
+});
+
+window.addEventListener('keyup', (evt) => {
 	if (evt.ctrlKey && evt.key === 'i') {
 		evt.preventDefault();
+
 		infobox.toggle();
+
+		if (infobox.isDialogOpen) {
+			window.history.pushState(null, window.document.title, '/?info');
+		} else {
+			window.history.pushState(null, window.document.title, '/');
+		}
 	}
-});
+}, { capture: false });
 
 if (!('showDirectoryPicker' in window)) {
 	(document.querySelector('menu-bar #import-materials') as HTMLElement).remove();

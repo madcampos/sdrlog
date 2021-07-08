@@ -104,12 +104,12 @@ export async function setMaterialDetails(material: Material, {
 
 	const fileList = await getFilesForMaterial(material.sku[0]) ?? [];
 
-	if (fileList.length > 0) {
-		files.hidden = false;
-	}
-
 	for (const file of fileList) {
 		files.insertAdjacentHTML('beforeend', formatFile(file));
+	}
+
+	if (fileList.length > 0) {
+		files.hidden = false;
 	}
 
 	files.loaded = true;

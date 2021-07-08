@@ -70,10 +70,9 @@ export class ModalDialog extends HTMLElement {
 
 	toggle() {
 		if (this.#isDialogOpen) {
-			this.#dialog.close();
+			this.close();
 		} else {
-			this.#dialog.showModal();
-			this.#dialog.focus();
+			this.show();
 		}
 	}
 

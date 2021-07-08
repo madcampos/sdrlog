@@ -180,7 +180,7 @@
 					</dl>
 				</details>
 			</modal-dialog>
-			<dropdown-menu icon="⚙️">
+			<dropdown-menu icon="⚙️" align-right>
 				<dropdown-menu-item id="import-materials" icon="📥">Import Materials</dropdown-menu-item>
 				<dropdown-menu-item id="import-data" icon="📦">Import Data</dropdown-menu-item>
 
@@ -401,7 +401,8 @@
 					<aside id="files">
 						<edit-list id="files-list" hidden>
 							<span slot="label">Files</span>
-							<input slot="input" type="file" multiple required/>
+							<input slot="input" type="hidden" required value="📄"/>
+							<label slot="input">Add a file</label>
 						</edit-list>
 
 						<edit-list id="links">

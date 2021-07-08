@@ -1,8 +1,11 @@
+import type { CustomButton } from '../button/button';
+
 import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
 
 class SearchBox extends HTMLElement {
 	#root: ShadowRoot;
 	#searchBox: HTMLInputElement;
+	#searchButton: CustomButton;
 
 	constructor() {
 		super();
@@ -13,13 +16,16 @@ class SearchBox extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;
+		this.#searchButton = this.#root.querySelector('custom-button') as CustomButton;
 
 		const initialFilters = getFiltersFromURL();
 		const initialValue = getTagStringFromFilters(initialFilters);
 
 		this.#searchBox.value = initialValue;
 
-		// TODO: add button click
+		this.#searchButton.addEventListener('click', () => {
+			this.#searchBox.dispatchEvent(new Event('change'));
+		});
 
 		this.#searchBox.addEventListener('change', () => {
 			if (!this.#searchBox.value) {
@@ -40,7 +46,7 @@ class SearchBox extends HTMLElement {
 			}
 		});
 
-		window.addEventListener('keydown', (evt) => {
+		window.addEventListener('keyup', (evt) => {
 			if (evt.ctrlKey && evt.key === 'f') {
 				evt.preventDefault();
 
@@ -50,7 +56,7 @@ class SearchBox extends HTMLElement {
 					this.#searchBox.focus();
 				}
 			}
-		});
+		}, { capture: false });
 	}
 }
 

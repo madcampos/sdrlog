@@ -8,13 +8,14 @@ import type { FileForMaterial, Material } from '../../../../data/data';
 import type { EditListItem } from '../edit-box/edit-list-item';
 import type { DropArea } from '../drop-area/drop-area';
 
-import { formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName, setCategories, setLanguages, setPublishers, setStatus, setTypes } from './details-template';
+import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName, setCategories, setLanguages, setPublishers, setStatus, setTypes } from './details-template';
 import { setMaterialDetails } from './build-details';
-import { getMaterial } from '../data-operations/idb-persistence';
+import { getMaterial, saveFile } from '../data-operations/idb-persistence';
 import { ItemCard } from './item-card';
 import { saveNewMaterialInfo } from '../data-operations/create-material';
 import { openFile } from '../files-reader/open-file';
 import { LOADING_COVER } from '../covers/fetch-covers';
+import { associateFileWithData } from '../files-reader/files-reader';
 
 export class ItemDetails extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
@@ -155,6 +156,26 @@ export class ItemDetails extends HTMLElement {
 			}
 		});
 
+		this.#files.addEventListener('additem', async () => {
+			if (this.#sku.values.length === 0) {
+				// eslint-disable-next-line no-alert
+				alert('Please add an SKU first before adding a file.');
+			} else {
+				const [handle] = await window.showOpenFilePicker({
+					// @ts-expect-error
+					id: 'newMaterialFile',
+					startIn: 'downloads',
+					excludeAcceptAllOption: false
+				});
+
+				const file = await handle.getFile();
+				const fileForMaterial = await associateFileWithData(handle.name, `/${file.lastModified}/${file.name}`, file.type) as FileForMaterial;
+
+				await saveFile(`/${handle.name}`, handle);
+				this.#files.insertAdjacentHTML('beforeend', formatFile(fileForMaterial));
+			}
+		});
+
 		this.#coverDropArea.addEventListener('handler', () => {
 			this.#coverDropArea.show = false;
 			this.#cover.src = LOADING_COVER;
@@ -258,6 +279,7 @@ export class ItemDetails extends HTMLElement {
 		this.#status.edit = editingStatus;
 		this.#names.edit = editingStatus;
 		this.#links.edit = editingStatus;
+		this.#files.edit = editingStatus;
 		this.#notes.edit = editingStatus;
 		this.#description.edit = editingStatus;
 		this.#coverDropArea.show = editingStatus;
@@ -272,6 +294,10 @@ export class ItemDetails extends HTMLElement {
 
 		if (this.#files.values.length < 1) {
 			this.#files.hidden = !editingStatus;
+		}
+
+		if (!('showDirectoryPicker' in window)) {
+			this.#files.hidden = true;
 		}
 
 		if (this.#links.values.length < 1) {
@@ -330,6 +356,7 @@ export class ItemDetails extends HTMLElement {
 		this.#names.resetValues();
 		this.#files.resetValues();
 		this.#files.hidden = true;
+		this.#files.value = '📄';
 		this.#links.resetValues();
 		this.#links.hidden = true;
 		this.#cover.src = LOADING_COVER;

@@ -12,26 +12,32 @@ export function extractMetadataFromFileName(fileName: string) {
 	};
 }
 
-async function associateFileWithData(fileName: string, path: string, type: string) {
+export async function associateFileWithData(fileName: string, path: string, type: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: [A-Z])? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
 	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? { name: '', id: '', extension: '' };
 	const material = await getMaterial(id);
 
 	if (material) {
-		await setFileForMaterial({
+		const fileForMaterial = {
 			fileName: name,
 			filePath: path,
 			mimeType: type,
 			fileExtension: extension,
 			itemId: id
-		});
+		};
+
+		await setFileForMaterial(fileForMaterial);
 
 		if (material.status === 'missing') {
 			delete material.status;
 
 			await saveMaterial(id, material);
 		}
+
+		return fileForMaterial;
 	}
+
+	return null;
 }
 
 export async function getFilePermission(file: FileSystemHandle, mode: 'read' | 'readwrite' = 'read') {
@@ -77,7 +83,6 @@ export async function readFiles() {
 		await saveFile('/', dir);
 
 		const entries = await readDir(dir, '');
-		const mimes = [];
 
 		progressOverlay.setTotal(entries.length);
 		for await (const { entry, path } of entries) {
@@ -85,8 +90,6 @@ export async function readFiles() {
 
 			if (entry.kind === 'file') {
 				const file = await entry.getFile();
-
-				mimes.push(file.type);
 
 				await associateFileWithData(entry.name, path, file.type);
 			}
