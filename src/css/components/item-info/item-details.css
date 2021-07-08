@@ -68,6 +68,7 @@ drop-area {
 drop-area figure {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
 drop-area figure img {
@@ -109,7 +110,7 @@ article {
 
 article #description {
 	flex-grow: 1;
-	height: clamp(10rem, 30vh, 20rem);
+	height: clamp(13rem, 33vh, 23rem);
 }
 
 #files { grid-area: files; }
@@ -160,7 +161,7 @@ a:hover {
 	color: var(--secondary-color);
 }
 
-@media (max-width: 450px) {
+@media (max-width: 700px) {
 	#item-content {
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas:
@@ -183,14 +184,12 @@ a:hover {
 			'gamedate status'
 			'names pub';
 	}
-	#description {
-		height: 20rem;
-	}
 }
 
-@media (max-width: 350px) {
+@media (max-width: 500px) {
 	#item-content {
 		grid-template-columns: 1fr;
+		grid-template-rows: 20rem repeat(4, auto);
 		grid-gap: 0.5rem;
 		grid-template-areas:
 			'image'
@@ -208,7 +207,7 @@ a:hover {
 			'names'
 			'pub';
 	}
-	#description {
+	drop-area figure {
 		height: 20rem;
 	}
 }

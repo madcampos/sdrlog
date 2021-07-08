@@ -33,8 +33,7 @@ skeleton-loader { flex-grow: 1; }
 
 textarea, #rendered-text {
 	width: 100%;
-	height: 100%;
-	max-height: 20rem;
+	height: clamp(10rem, 30vh, 20rem);
 	padding: 0.5rem 0.5rem 0.3rem;
 
 	appearance: none;
@@ -52,6 +51,14 @@ textarea, #rendered-text {
 
 	scrollbar-width: thin;
 	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+}
+
+#rendered-text article > *:first-child {
+	margin-top: 0;
+}
+
+#rendered-text article > *:last-child {
+	margin-bottom: 0;
 }
 
 ::selection {

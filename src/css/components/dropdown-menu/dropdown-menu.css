@@ -44,6 +44,11 @@ dialog::-webkit-scrollbar-thumb {
 	background-color: var(--theme-color);
 }
 
+:host([align-right]) dialog {
+	left: auto;
+	right: 0;
+}
+
 dialog.right {
 	left: auto;
 	right: 0;

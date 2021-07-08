@@ -6,6 +6,7 @@
 :host {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 
 	width: fit-content;
 	max-height: 3rem;

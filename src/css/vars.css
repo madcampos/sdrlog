@@ -1,7 +1,7 @@
 :root {
 	/* Sizes */
 	--body-text: 16px;
-	--menubar-top: env(titlebar-area-y, 0);
+	--menubar-top: env(titlebar-area-y, 0px);
 	--menubar-height: max(3rem, env(titlebar-area-height, 3rem));
 	--button-size: calc(var(--menubar-height) * 0.8);
 	--border-width: 0.1rem;

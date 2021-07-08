@@ -71,7 +71,7 @@ dialog article {
 	overflow: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 	dialog {
 		border-radius: 0;
 	}
