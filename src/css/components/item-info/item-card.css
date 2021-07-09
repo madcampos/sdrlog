@@ -37,21 +37,18 @@
 }
 
 :host([data-status='missing']) figure::after {
-	backdrop-filter: grayscale(0.6) brightness(50%) contrast(120%);
+	backdrop-filter: grayscale(0.6) brightness(70%) contrast(120%);
 	background-image: url('../../../img/covers/missing.svg');
-	mix-blend-mode: overlay;
 }
 
 :host([data-status='outofscope']) figure::after {
-	backdrop-filter: sepia(1) brightness(70%) contrast(110%) blur(2px);
+	backdrop-filter: sepia(1) brightness(50%) contrast(110%) blur(5px);
 	background-image: url('../../../img/covers/outofscope.svg');
-	mix-blend-mode: multiply;
 }
 
 :host([data-status='canceled']) figure::after {
-	backdrop-filter: grayscale(1) brightness(50%) contrast(80%) blur(2px);
+	backdrop-filter: grayscale(0.8) brightness(80%) contrast(80%) blur(5px);
 	background-image: url('../../../img/covers/canceled.svg');
-	mix-blend-mode: soft-light;
 }
 
 figure {
