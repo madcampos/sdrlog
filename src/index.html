@@ -18,14 +18,14 @@
 		<!-- App Metadata -->
 		<link rel="manifest" href="./site.webmanifest"/>
 		<link rel="icon" href="./img/icons/favicon.svg"/>
-		<meta name="theme-color" content="#ff1493">
+		<meta name="theme-color" content="#%SNOWPACK_THEME_COLOR%">
 
 		<!-- Apple icons -->
 		<meta name="apple-mobile-web-app-title" content="Shadowrun Catalog">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<link rel="apple-touch-icon" href="./img/icons/android-chrome-maskable-512x512-dark.png">
+		<link rel="apple-touch-icon" href="%SNOWPACK_APPLE_ICON%">
 
 		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
 		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
@@ -66,7 +66,7 @@
 		<meta property="og:type" content="website"/>
 		<meta property="og:locale" content="en_US"/>
 		<meta property="og:url" content="%SNOWPACK_PUBLIC_URL%" />
-		<meta property="og:image" name="twitter:image" itemprop="image" content="%SNOWPACK_PUBLIC_URL%img/icons/android-chrome-512x512-dark.png"/>
+		<meta property="og:image" name="twitter:image" itemprop="image" content="%SNOWPACK_PUBLIC_URL%%SNOWPACK_LARGE_ICON%"/>
 		<meta property="og:title" name="twitter:title" itemprop="name" content="Shadowrun Catalog"/>
 		<meta property="og:description" name="description" itemprop="description" content="An interactive catalogue of Shadowrun material, sorted by category and with information about the item and can be linked to local files."/>
 		<meta name="keywords" content="Shadowrun, RPG, list of books"/>
@@ -99,7 +99,7 @@
 			<search-box></search-box>
 			<modal-dialog>
 				<custom-button slot="trigger">ℹ️</custom-button>
-				<h1 slot="title">Information</h1>
+				<span slot="title">Information</span>
 				<details open>
 					<summary>Collection Organization</summary>
 					<p>The material here presented is organized into the following categories:</p>
