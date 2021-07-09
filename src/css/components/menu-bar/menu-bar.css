@@ -4,7 +4,7 @@
 	top: var(--menubar-top);
 	height: var(--menubar-height);
 	width: 100%;
-	background-color: var(--accent-color);
+	background-color: var(--theme-color);
 
 	app-region: drag;
 	-webkit-app-region: drag;
@@ -28,9 +28,6 @@ nav {
 	align-items: center;
 }
 
-nav > * {
+nav ::slotted(*) {
 	margin: 0.1rem;
-
-	app-region: no-drag;
-	-webkit-app-region: no-drag;
 }

@@ -6,17 +6,22 @@
 	--menubar-height: max(3rem, env(titlebar-area-height, 3rem));
 	--button-size: calc(var(--menubar-height) * 0.8);
 	--border-width: 0.1rem;
+	--border-radius: 0.3rem;
 
 	/* Colors */
-	--theme-color: deeppink;
-	--secondary-color: yellow;
+	--theme-color: darkviolet;
+	--secondary-color: deeppink;
 	--accent-color: hotpink;
-	--bg-color: white;
-	--border-color: silver;
-	--text-color: black;
+	--complementary-color: gold;
+	--bg-color: #3c3c3c;
+	--dark-bg-color: #252525;
+	--border-color: #505050;
+	--dark-border-color: #444444;
+	--text-color: whitesmoke;
 	--bg-gradient: conic-gradient(goldenrod, peru, orange, sandybrown, gold, goldenrod);
-	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='deeppink'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
-	--scrollbar-bg: rgba(0, 0, 0, 0.3);
+	--bg-dark-gradient: conic-gradient(darkslateblue, slateblue, blueviolet, purple, darkviolet, indigo, darkslateblue);
+	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
+	--scrollbar-bg: rgba(255, 255, 255, 0.1);
 
 	/* Dialog */
 	--dialog-width: clamp(10rem, 80vw, 60rem);
@@ -26,25 +31,8 @@
 	--searchbox-margin: max(1rem, 10%);
 	--searchbox-width: 100%;
 
-	color-scheme: light;
+	color-scheme: dark light;
 	accent-color: var(--theme-color);
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--theme-color: gold;
-		--secondary-color: hotpink;
-		--accent-color: deeppink;
-		--bg-color: #3c3c3c;
-		--border-color: dimgray;
-		--text-color: white;
-		--bg-gradient: conic-gradient(darkslateblue, slateblue, blueviolet, purple, darkviolet, indigo, darkslateblue);
-		--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='gold'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
-		--scrollbar-bg: rgba(255, 255, 255, 0.2);
-
-		color-scheme: dark;
-		accent-color: var(--theme-color);
-	}
 }
 
 @media (max-width: 800px) {

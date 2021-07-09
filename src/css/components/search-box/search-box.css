@@ -5,6 +5,9 @@
 	box-sizing: inherit;
 
 	flex-grow: 1;
+
+	app-region: inherit;
+	-webkit-app-region: inherit;
 }
 
 label {
@@ -19,6 +22,9 @@ label {
 input[type='search'] {
 	flex-grow: 1;
 	width: 100%;
+	height: 2rem;
+
+	padding: 0.3rem 0.5rem;
 
 	appearance: none;
 	background: var(--bg-color);
@@ -29,16 +35,20 @@ input[type='search'] {
 	transition: 0.2s ease all;
 
 	font: inherit;
+
+	app-region: no-drag;
+	-webkit-app-region: no-drag;
 }
 
 input[type='search']::-webkit-search-cancel-button { display: none; }
 
 input:focus {
 	outline: none;
+	border-color: var(--border-color);
 	border-bottom-color: var(--theme-color);
 }
 
 input::selection {
 	background-color: var(--theme-color);
-	color: var(--bg-color);
+	color: var(--dark-bg-color);
 }

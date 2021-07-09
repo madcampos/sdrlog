@@ -13,10 +13,12 @@ button {
 	font: inherit;
 
 	user-select: none;
+	app-region: no-drag;
+	-webkit-app-region: no-drag;
 }
 
 button:focus {
-	border-color: var(--theme-color);
+	border-color: var(--border-color);
 	outline: none;
 }
 
@@ -25,7 +27,7 @@ button:active {
 }
 
 button:hover {
-	border-color: var(--accent-color);
+	background: var(--accent-color);
 }
 
 :host([icon-button]) button {

@@ -20,7 +20,7 @@ dialog[open] {
 	height: min-content;
 	max-height: 80vh;
 
-	border: solid var(--border-width) var(--theme-color);
+	border: solid var(--border-width) var(--border-color);
 	border-radius: 0.5rem;
 	background: var(--bg-color);
 

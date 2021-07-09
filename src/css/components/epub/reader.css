@@ -37,5 +37,6 @@ select {
 
 select:focus {
 	outline: none;
-	border-color: var(--theme-color);
+	border-color: var(--border-color);
+	border-bottom-color: var(--theme-color);
 }

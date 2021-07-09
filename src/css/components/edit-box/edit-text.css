@@ -63,7 +63,7 @@ textarea, #rendered-text {
 
 ::selection {
 	background-color: var(--theme-color);
-	color: var(--bg-color);
+	color: var(--dark-bg-color);
 }
 
 textarea {

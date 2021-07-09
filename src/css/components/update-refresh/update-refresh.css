@@ -9,8 +9,8 @@ aside:not([hidden]) {
 	border-radius: 0.5rem;
 	padding: 0.5rem;
 
-	border: solid var(--border-width) var(--secondary-color);
-	background: var(--accent-color);
+	border: solid var(--border-width) var(--border-color);
+	background: var(--secondary-color);
 	color: var(--text-color);
 
 	display: flex;

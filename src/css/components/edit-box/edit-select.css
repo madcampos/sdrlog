@@ -51,7 +51,7 @@ select {
 
 select::selection {
 	background-color: var(--theme-color);
-	color: var(--bg-color);
+	color: var(--dark-bg-color);
 }
 
 select:disabled {
@@ -66,5 +66,6 @@ select:not(:disabled) {
 
 select:focus {
 	outline: none;
-	border-color: var(--theme-color);
+	border-color: var(--border-color);
+	border-bottom-color: var(--theme-color);
 }

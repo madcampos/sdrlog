@@ -16,7 +16,7 @@
 	</defs>
 
 	<defs>
-		<g id="logo" fill="purple" opacity="0.5">
+		<g id="logo" fill="darkviolet" opacity="1">
 			<animate attributeName="fill" values="darkslateblue;slateblue;blueviolet;purple;darkviolet;indigo; darkslateblue" dur="30s" repeatCount="indefinite"/>
 			<animate attributeName="opacity" values="0.2;1;0.2" dur="10s" repeatCount="indefinite"/>
 

@@ -13,13 +13,6 @@
 		#img-glitch { filter: var(--glitch-filter); }
 		#img-noise { filter: var(--noise-filter); }
 
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--flood-color: hotpink;
-				--tint-color: gold;
-			}
-		}
-
 		@media (prefers-reduced-motion) {
 			:root {
 				--noise-filter: url('#sdr-noise');

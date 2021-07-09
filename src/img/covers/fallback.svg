@@ -5,13 +5,6 @@
 			--tint-color: deeppink;
 		}
 
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--flood-color: hotpink;
-				--tint-color: gold;
-			}
-		}
-
 		@media (max-width: 128px) {
 			#img-noise {
 				filter: none;

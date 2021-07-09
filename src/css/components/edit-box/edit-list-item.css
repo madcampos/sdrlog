@@ -1,6 +1,6 @@
 ::selection {
 	background-color: var(--theme-color);
-	color: var(--bg-color);
+	color: var(--dark-bg-color);
 }
 
 :host {
@@ -15,7 +15,7 @@
 	padding: 0.3rem 0.5rem;
 
 	background: var(--bg-color);
-	border: solid var(--border-width) transparent;
+	border: solid var(--border-width) var(--border-color);
 
 	box-sizing: inherit;
 }
@@ -27,4 +27,8 @@
 :host([edit]) {
 	border-color: var(--theme-color);
 	background: var(--border-color);
+}
+
+:host:hover {
+	background: var(--accent-color);
 }

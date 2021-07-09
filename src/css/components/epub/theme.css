@@ -1,7 +1,7 @@
 @import url('../../vars.css');
 
 .dark {
-	background: var(--bg-color);
+	background: var(--dark-bg-color);
 	color: var(--text-color);
 
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +12,7 @@
 
 ::selection {
 	background-color: var(--theme-color);
-	color: var(--bg-color);
+	color: var(--dark-bg-color);
 }
 
 :root body:not([hidden]) .dark :is(*, *::after, *::before) {

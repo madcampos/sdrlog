@@ -21,35 +21,6 @@ main {
 	overflow: hidden;
 }
 
-button {
-	background: transparent;
-	border: medium transparent solid;
-	border-radius: 0.3rem;
-	width: calc(var(--button-size) * 1.5);
-	height: calc(var(--button-size) * 1.5);
-	padding: 0;
-
-	transition: 0.2s ease all;
-
-	font: inherit;
-	font-size: 2rem;
-
-	user-select: none;
-}
-
-button:focus {
-	border-color: var(--accent-color);
-	outline: none;
-}
-
-button:active {
-	background: var(--secondary-color);
-}
-
-button:hover {
-	border-color: var(--accent-color);
-}
-
 #game-wrapper {
 	display: grid;
 	margin: 0;
@@ -96,10 +67,25 @@ main:not([paused]) #game-overlay { display: none; }
 }
 
 .controller button {
-	text-align: center;
-	border-color: var(--button-border, transparent);
-	border-radius: 100vmax;
 	background: var(--button-bg, transparent);
+	border: solid var(--border-width) var(--button-border, transparent);
+	border-radius: 100vmax;
+	width: calc(var(--button-size) * 1.5);
+	height: calc(var(--button-size) * 1.5);
+	padding: 0;
+
+	transition: 0.2s ease all;
+
+	font: inherit;
+	font-size: 2rem;
+
+	user-select: none;
+
+	text-align: center;
+}
+
+.controller button:focus {
+	outline: none;
 }
 
 .controller button:active {
