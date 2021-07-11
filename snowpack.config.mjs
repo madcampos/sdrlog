@@ -12,7 +12,7 @@ const env = readFileSync('./.env', { encoding: 'utf8' }).split('\n').filter((lin
 
 	return envMap;
 }, {});
-const manifest = readFileSync('./src/site.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] ?? '');
+const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] ?? '');
 
 function handleManifest(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
@@ -39,7 +39,7 @@ export default {
 	routes: [
 		{
 			match: 'all',
-			src: '/site.webmanifest',
+			src: '/sdrlog.webmanifest',
 			dest: handleManifest
 		},
 		{
