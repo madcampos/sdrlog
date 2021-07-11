@@ -12,13 +12,6 @@ import { ItemDetails } from '../item-info/item-details';
 
 const infobox = document.querySelector('menu-bar modal-dialog') as ModalDialog;
 const infoboxTrigger = document.querySelector('menu-bar modal-dialog > custom-button') as CustomButton;
-const url = new URL(window.location.toString());
-const params = new URLSearchParams(url.search);
-
-if (params.has('info')) {
-	infobox.show();
-	window.history.pushState(null, window.document.title, '/?info');
-}
 
 infoboxTrigger.addEventListener('click', () => {
 	window.history.pushState(null, window.document.title, '/?info');
