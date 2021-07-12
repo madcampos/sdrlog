@@ -32,8 +32,8 @@ typings/
 
 # Build artifacts
 dist/
-/covers/
-/thumbs/
+images/covers/
+images/thumbs/
 
 # server certificates
 *.pem

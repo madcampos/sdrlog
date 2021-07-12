@@ -47,8 +47,8 @@ export default {
 	mount: {
 		src: '/',
 		data: '/data',
-		covers: '/covers',
-		thumbs: '/thumbs',
+		'images/covers': '/covers',
+		'images/thumbs': '/thumbs',
 		lib: '/lib'
 	},
 	routes: [
