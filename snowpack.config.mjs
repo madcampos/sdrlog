@@ -9,6 +9,7 @@ const sslOptions = {
 
 const env = {
 	// INFO: this url needs to be changed before building
+	// PUBLIC_URL: 'https://madcampos.github.io/sdrlog/',
 	PUBLIC_URL: 'https://localhost:8080/',
 
 	THEME_COLOR: '#9400d3',
