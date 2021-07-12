@@ -26,7 +26,7 @@ export class ItemDetails extends HTMLElement {
 	#saveButton: CustomButton;
 
 	#isEditing = false;
-	#isEditingExistingMaterial = false;
+	#isUpdatingExistingMaterial = false;
 
 	#name: EditBox;
 	#sku: EditList;
@@ -215,7 +215,7 @@ export class ItemDetails extends HTMLElement {
 					cover: this.#coverFile
 				});
 
-				if (!this.#isEditingExistingMaterial) {
+				if (!this.#isUpdatingExistingMaterial) {
 					ItemCard.createCard({
 						name: this.#name.value,
 						id,
@@ -230,8 +230,16 @@ export class ItemDetails extends HTMLElement {
 
 			this.#saveButton.disabled = false;
 
+			window.history.pushState(null, `${this.#name.value} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#${id}${window.location.search}`);
+			window.document.title = `${this.#name.value} ● ${import.meta.env.APP_NAME}`;
+
 			// eslint-disable-next-line no-alert
 			alert(`Item # ${id} saved successfully.`);
+		});
+
+		this.#modal.addEventListener('close', () => {
+			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}${window.location.search}`);
+			window.document.title = import.meta.env.APP_NAME;
 		});
 	}
 
@@ -256,6 +264,9 @@ export class ItemDetails extends HTMLElement {
 
 	show() {
 		this.#modal.show();
+
+		window.history.pushState(null, `New Material ● ${import.meta.env.APP_NAME}${window.location.search}`);
+		window.document.title = `New Material ● ${import.meta.env.APP_NAME}`;
 	}
 
 	close() {
@@ -308,11 +319,11 @@ export class ItemDetails extends HTMLElement {
 		this.#saveButton.hidden = true;
 
 		if (this.isEditing) {
-			this.#editButton.innerText = 'Cancel edit';
+			this.#editButton.innerText = 'Cancel';
 			this.#editButton.icon = '❌';
 			this.#saveButton.hidden = false;
 		} else {
-			this.#editButton.innerText = 'Edit Material';
+			this.#editButton.innerText = 'Edit';
 			this.#editButton.icon = '✏️';
 			this.#saveButton.hidden = true;
 		}
@@ -340,7 +351,7 @@ export class ItemDetails extends HTMLElement {
 	}
 
 	resetMaterial() {
-		this.#isEditingExistingMaterial = false;
+		this.#isUpdatingExistingMaterial = false;
 
 		this.#name.resetValue();
 		this.#sku.resetValues();
@@ -373,7 +384,10 @@ export class ItemDetails extends HTMLElement {
 		const material = await getMaterial(id);
 
 		if (material) {
-			this.#isEditingExistingMaterial = true;
+			this.#isUpdatingExistingMaterial = true;
+
+			window.history.pushState(null, `${material.name} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#${id}${window.location.search}`);
+			window.document.title = `${material.name} ● ${import.meta.env.APP_NAME}`;
 
 			await setMaterialDetails(material, {
 				name: this.#name,

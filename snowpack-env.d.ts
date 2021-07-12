@@ -7,9 +7,16 @@ interface ImportMeta {
 	},
 	env: {
 		MODE: string,
+
 		PUBLIC_URL: string,
+
 		THEME_COLOR: string,
 		BACKGROUND_COLOR: string,
+
+		APP_NAME: string,
+		APP_SHORT_NAME: string,
+		APP_DESCRIPTION: string,
+
 		APPLE_ICON: string,
 		SMALL_ICON: string,
 		SMALL_ICON_BG: string,

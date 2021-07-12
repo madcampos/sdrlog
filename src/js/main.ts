@@ -5,6 +5,7 @@ import { fetchItems } from './components/data-operations/data-import';
 import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 import { updateInfoBoxFromURL } from './components/menu-bar/info-box-url';
+import { updateItemModalFromURL } from './components/item-info/item-details-url';
 
 document.addEventListener('DOMContentLoaded', async () => {
 	if ('serviceWorker' in navigator) {
@@ -37,4 +38,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 	updateInfoBoxFromURL();
 
 	document.querySelector('#load-overlay')?.remove();
+
+	await updateItemModalFromURL();
 });

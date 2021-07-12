@@ -45,6 +45,7 @@ export class ModalDialog extends HTMLElement {
 		this.#root.querySelector('#close')?.addEventListener('click', () => {
 			if (this.#dialog.hasAttribute('open')) {
 				this.#dialog.close();
+				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}
 		});
 
@@ -53,6 +54,7 @@ export class ModalDialog extends HTMLElement {
 
 			if (target.matches('dialog') && target.hasAttribute('open')) {
 				target.close();
+				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}
 		});
 	}

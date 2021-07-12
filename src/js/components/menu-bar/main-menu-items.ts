@@ -14,7 +14,8 @@ const infobox = document.querySelector('menu-bar modal-dialog') as ModalDialog;
 const infoboxTrigger = document.querySelector('menu-bar modal-dialog > custom-button') as CustomButton;
 
 infoboxTrigger.addEventListener('click', () => {
-	window.history.pushState(null, window.document.title, `${import.meta.env.PUBLIC_URL}?info`);
+	window.history.pushState(null, `Information ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
+	window.document.title = `Information ● ${import.meta.env.APP_NAME}`;
 });
 
 window.addEventListener('keyup', (evt) => {
@@ -24,9 +25,11 @@ window.addEventListener('keyup', (evt) => {
 		infobox.toggle();
 
 		if (infobox.isDialogOpen) {
-			window.history.pushState(null, window.document.title, `${import.meta.env.PUBLIC_URL}?info`);
+			window.history.pushState(null, `Information ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
+			window.document.title = `Information ● ${import.meta.env.APP_NAME}`;
 		} else {
-			window.history.pushState(null, window.document.title, `${import.meta.env.PUBLIC_URL}`);
+			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
+			window.document.title = import.meta.env.APP_NAME;
 		}
 	}
 }, { capture: false });

@@ -35,7 +35,10 @@ export class ItemCard extends HTMLElement {
 		this.#thumb = this.#root.querySelector('img') as HTMLImageElement;
 
 		this.addEventListener('click', async () => {
-			await ItemDetails.openMaterialModal(this.getAttribute('id') as string);
+			const title = this.getAttribute('title') as string;
+			const id = this.getAttribute('id') as string;
+
+			await ItemDetails.openMaterialModal(id, title);
 		});
 	}
 
