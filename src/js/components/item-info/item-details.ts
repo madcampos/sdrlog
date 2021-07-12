@@ -253,6 +253,21 @@ export class ItemDetails extends HTMLElement {
 			alert(`Item # ${id} saved successfully.`);
 		});
 
+		this.#exportButton.addEventListener('click', async () => {
+			const values = Object.entries(this.#formFields).reduce((inputValues, [name, input]) => {
+				if ('values' in input) {
+					inputValues[name] = input.values;
+				} else {
+					inputValues[name] = input.value;
+				}
+
+				return inputValues;
+			// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+			}, {} as Omit<NewMaterialProperties, 'cover'>);
+
+			await exportDataItem(values);
+		});
+
 		this.#modal.addEventListener('close', () => {
 			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}${window.location.search}`);
 			window.document.title = import.meta.env.APP_NAME;
