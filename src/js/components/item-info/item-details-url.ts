@@ -1,17 +1,15 @@
-import { getMaterial } from '../data-operations/idb-persistence';
 import { ItemDetails } from './item-details';
 
-export async function updateItemModalFromURL() {
-	const url = new URL(window.location.toString());
-
-	if (url.hash === '#information') {
-		return;
+export function checkForMatchingId(idToCheck: string) {
+	if (window.location.hash === '#information') {
+		return false;
 	}
 
-	const id = url.hash.replace('#', '');
-	const material = await getMaterial(id);
+	const id = window.location.hash.replace('#', '');
 
-	if (material) {
-		await ItemDetails.openMaterialModal(id, material.name);
-	}
+	return id === idToCheck;
+}
+
+export function updateItemModalFromURL(id: string) {
+	void ItemDetails.openMaterialModal(id);
 }

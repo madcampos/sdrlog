@@ -27,7 +27,7 @@ interface DetailElementsReferences {
 	description: EditText
 }
 
-export async function setMaterialDetails(material: Material, {
+export function setMaterialDetails(material: Material, {
 	name,
 	sku,
 	edition,
@@ -102,15 +102,17 @@ export async function setMaterialDetails(material: Material, {
 		}
 	});
 
-	const fileList = await getFilesForMaterial(material.sku[0]) ?? [];
+	void getFilesForMaterial(material.sku[0]).then((fileList) => {
+		if (fileList) {
+			for (const file of fileList) {
+				files.insertAdjacentHTML('beforeend', formatFile(file));
+			}
 
-	for (const file of fileList) {
-		files.insertAdjacentHTML('beforeend', formatFile(file));
-	}
+			if (fileList.length > 0) {
+				files.hidden = false;
+			}
+		}
 
-	if (fileList.length > 0) {
-		files.hidden = false;
-	}
-
-	files.loaded = true;
+		files.loaded = true;
+	});
 }

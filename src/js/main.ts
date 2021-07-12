@@ -5,7 +5,7 @@ import { fetchItems } from './components/data-operations/data-import';
 import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 import { updateInfoBoxFromURL } from './components/menu-bar/info-box-url';
-import { updateItemModalFromURL } from './components/item-info/item-details-url';
+import { checkForMatchingId, updateItemModalFromURL } from './components/item-info/item-details-url';
 
 document.addEventListener('DOMContentLoaded', async () => {
 	if ('serviceWorker' in navigator) {
@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	const sorter = new Intl.Collator('en-US');
 	const materials = (await getMaterialsBasicInfo()).sort(({ name: nameA }, { name: nameB }) => sorter.compare(nameA, nameB));
+	let matchedId: string | null = null;
 
-	for await (const material of materials) {
+	for (const material of materials) {
 		const itemCard = document.createElement('item-card');
 
 		itemCard.id = material.id;
@@ -32,12 +33,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 		itemCard.dataset.edition = material.edition.toString();
 		itemCard.dataset.status = material.status ?? '';
 		document.querySelector('main')?.appendChild(itemCard);
+
+		if (checkForMatchingId(material.id)) {
+			matchedId = material.id;
+		}
 	}
 
-	updateFiltersFromURL();
-	updateInfoBoxFromURL();
+	if (matchedId) {
+		updateItemModalFromURL(matchedId);
+	}
 
-	await updateItemModalFromURL();
+	updateInfoBoxFromURL();
+	updateFiltersFromURL();
 
 	document.querySelector('#load-overlay')?.remove();
 });

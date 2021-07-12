@@ -316,10 +316,6 @@ export class ItemDetails extends HTMLElement {
 
 		this.#coverDropArea.show = editingStatus;
 
-		if (this.#formFields.status.value === '') {
-			this.#formFields.status.hidden = !editingStatus;
-		}
-
 		if (this.#formFields.notes.value === '') {
 			this.#formFields.notes.hidden = !editingStatus;
 		}
@@ -391,7 +387,7 @@ export class ItemDetails extends HTMLElement {
 			window.history.pushState(null, `${material.name} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
 			window.document.title = `${material.name} ● ${import.meta.env.APP_NAME}`;
 
-			await setMaterialDetails(material, {
+			setMaterialDetails(material, {
 				cover: this.#cover,
 				...this.#formFields
 			});
