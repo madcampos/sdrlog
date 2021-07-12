@@ -26,7 +26,7 @@ export async function exportDataFile() {
 				await file.write(JSON.stringify({
 					$schema: './data.schema.json',
 					items
-				}));
+				}, null, '\t'));
 				await file.close();
 			} else {
 				const file = new File([JSON.stringify({ $schema: './data.schema.json', items }, null, '\t')], 'data.json', { type: 'application/json' });
@@ -44,15 +44,15 @@ export async function exportDataFile() {
 
 export async function exportDataItem(data: Omit<NewMaterialProperties, 'cover'>) {
 	const filteredData = Object.entries(data).reduce((newData, [name, value]) => {
+		const isAllowed = ['category', 'type', 'sku', 'name', 'description', 'edition', 'publisher', 'originalLanguage'].includes(name);
 		const hasStatus = name === 'status' && value !== 'ok';
 		const hasNotes = name === 'notes' && value !== '';
 		const hasLinks = name === 'links' && value.length > 0;
 		const hasNames = name === 'names' && value.length > 0;
 		const hasGameDate = name === 'gameDate' && value !== '';
 		const hasReleaseDate = name === 'releaseDate' && value.length > 0;
-		const isFiles = name === 'files';
 
-		if (hasStatus || hasNotes || hasLinks || hasNames || hasGameDate || hasReleaseDate || !isFiles) {
+		if (isAllowed || hasStatus || hasNotes || hasLinks || hasNames || hasGameDate || hasReleaseDate) {
 			newData[name] = value;
 		}
 
@@ -71,7 +71,7 @@ export async function exportDataItem(data: Omit<NewMaterialProperties, 'cover'>)
 		const file = await fileHandler.createWritable();
 
 		await file.truncate(0);
-		await file.write(JSON.stringify(filteredData));
+		await file.write(JSON.stringify(filteredData, null, '\t'));
 		await file.close();
 	} else {
 		const file = new File([JSON.stringify(filteredData, null, '\t')], `${data.sku[0]}.json`, { type: 'application/json' });

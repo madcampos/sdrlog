@@ -245,8 +245,9 @@ export class ItemDetails extends HTMLElement {
 			}
 
 			this.#saveButton.disabled = false;
+			this.#exportButton.disabled = false;
 
-			window.history.pushState(null, `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#${id}${window.location.search}`);
+			window.history.pushState(null, `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
 			window.document.title = `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`;
 
 			// eslint-disable-next-line no-alert
@@ -387,13 +388,15 @@ export class ItemDetails extends HTMLElement {
 		if (material) {
 			this.#isUpdatingExistingMaterial = true;
 
-			window.history.pushState(null, `${material.name} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#${id}${window.location.search}`);
+			window.history.pushState(null, `${material.name} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
 			window.document.title = `${material.name} ● ${import.meta.env.APP_NAME}`;
 
 			await setMaterialDetails(material, {
 				cover: this.#cover,
 				...this.#formFields
 			});
+
+			this.#exportButton.disabled = false;
 		}
 	}
 
