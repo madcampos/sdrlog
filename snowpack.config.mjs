@@ -66,7 +66,7 @@ export default {
 	exclude: ['**/*.schema.json'],
 	optimize: {
 		minify: true,
-		target: 'es2020'
+		target: 'esnext'
 	},
 	plugins: [
 		[

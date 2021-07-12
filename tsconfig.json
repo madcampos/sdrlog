@@ -3,14 +3,16 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"lib": ["ES2021", "DOM", "DOM.Iterable"],
 		"module": "ES2020",
 		"noEmit": true,
 		"removeComments": true,
-		"target": "ES2020",
+		"target": "ES2021",
 		"strict": true,
 		"suppressImplicitAnyIndexErrors": true,
-		"sourceMap": true,
+		"sourceMap": false,
+		"isolatedModules": true,
+		"esModuleInterop": true,
 		"newLine": "LF"
 	}
 }
