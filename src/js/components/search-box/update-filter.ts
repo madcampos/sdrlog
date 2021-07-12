@@ -37,7 +37,7 @@ function updateUrlSearch(searchOptions: FilterOptions) {
 		searchString = '';
 	}
 
-	const url = new URL(searchString, window.location.origin).toString();
+	const url = `${import.meta.env.PUBLIC_URL}${searchString}`;
 	const data = {
 		type: 'search',
 		value: searchOptions

@@ -14,7 +14,7 @@ const infobox = document.querySelector('menu-bar modal-dialog') as ModalDialog;
 const infoboxTrigger = document.querySelector('menu-bar modal-dialog > custom-button') as CustomButton;
 
 infoboxTrigger.addEventListener('click', () => {
-	window.history.pushState(null, window.document.title, '/?info');
+	window.history.pushState(null, window.document.title, `${import.meta.env.PUBLIC_URL}?info`);
 });
 
 window.addEventListener('keyup', (evt) => {
@@ -24,9 +24,9 @@ window.addEventListener('keyup', (evt) => {
 		infobox.toggle();
 
 		if (infobox.isDialogOpen) {
-			window.history.pushState(null, window.document.title, '/?info');
+			window.history.pushState(null, window.document.title, `${import.meta.env.PUBLIC_URL}?info`);
 		} else {
-			window.history.pushState(null, window.document.title, '/');
+			window.history.pushState(null, window.document.title, `${import.meta.env.PUBLIC_URL}`);
 		}
 	}
 }, { capture: false });

@@ -7,6 +7,6 @@ export function updateInfoBoxFromURL() {
 
 	if (params.has('info')) {
 		infobox.show();
-		window.history.pushState(null, window.document.title, '/?info');
+		window.history.pushState(null, window.document.title, `${import.meta.env.PUBLIC_URL}?info`);
 	}
 }
