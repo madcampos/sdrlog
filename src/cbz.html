@@ -3,15 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Comic Book Reader | Shadowrun Catalog</title>
+	<title>Comic Book Reader ● %APP_NAME%</title>
 
 	<!-- App Metadata -->
+	<link rel="canonical" href="%PUBLIC_URL%">
 	<link rel="manifest" href="./sdrlog.webmanifest"/>
 	<link rel="icon" href="./img/icons/favicon.svg"/>
-	<meta name="theme-color" content="#%SNOWPACK_THEME_COLOR%">
+	<meta name="theme-color" content="%THEME_COLOR%">
 
 	<!-- Apple icons -->
-	<meta name="apple-mobile-web-app-title" content="Shadowrun Catalog">
+	<meta name="apple-mobile-web-app-title" content="%APP_NAME%">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -23,10 +24,10 @@
 
 	<meta property="og:type" content="website"/>
 	<meta property="og:locale" content="en_US"/>
-	<meta property="og:url" content="%SNOWPACK_PUBLIC_URL%" />
-	<meta property="og:image" name="twitter:image" itemprop="image" content="%SNOWPACK_PUBLIC_URL%%SNOWPACK_LARGE_ICON%"/>
-	<meta property="og:title" name="twitter:title" itemprop="name" content="Shadowrun Catalog"/>
-	<meta property="og:description" name="description" itemprop="description" content="An interactive catalogue of Shadowrun material, sorted by category and with information about the item and can be linked to local files."/>
+	<meta property="og:url" content="%PUBLIC_URL%" />
+	<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
+	<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
+	<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
 	<meta name="keywords" content="Shadowrun, RPG, list of books"/>
 
 	<meta name="google" content="nositelinkssearchbox"/>

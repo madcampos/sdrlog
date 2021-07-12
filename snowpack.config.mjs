@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return, prefer-named-capture-group, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/naming-convention, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return, prefer-named-capture-group, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment */
 
 import { readFileSync } from 'fs';
 
@@ -7,11 +7,24 @@ const sslOptions = {
 	key: readFileSync('./snowpack.key')
 };
 
-const env = readFileSync('./.env', { encoding: 'utf8' }).split('\n').filter((line) => !line.startsWith('#')).map((line) => line.split('=')).reduce((envMap, [name, value]) => {
-	envMap[name] = value;
+const env = {
+	// INFO: this url needs to be changed before building
+	PUBLIC_URL: 'https://localhost:8080/',
 
-	return envMap;
-}, {});
+	THEME_COLOR: '#9400d3',
+	BACKGROUND_COLOR: '#252525',
+
+	APP_NAME: 'Shadowrun Catalog',
+	APP_SHORT_NAME: 'SDRlog',
+	APP_DESCRIPTION: 'An interactive list of Shadowrun material, with information about the item and can be linked to local files.',
+
+	APPLE_ICON: './img/icons/maskable/apple-icon-180.png',
+	SMALL_ICON: './img/icons/transparent/manifest-icon-192.png',
+	SMALL_ICON_BG: './img/icons/maskable/manifest-icon-192.png',
+	LARGE_ICON: './img/icons/transparent/manifest-icon-512.png',
+	LARGE_ICON_BG: './img/icons/maskable/manifest-icon-512.png'
+};
+
 const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] ?? '');
 
 function handleManifest(_req, res) {
@@ -29,6 +42,7 @@ function handleServiceWorker(_req, res) {
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
 	root: './src',
+	env,
 	mount: {
 		src: '/',
 		data: '/data',
@@ -54,7 +68,6 @@ export default {
 		target: 'es2020'
 	},
 	plugins: [
-		'@snowpack/plugin-dotenv',
 		[
 			'snowpack-plugin-minify-html',
 			{

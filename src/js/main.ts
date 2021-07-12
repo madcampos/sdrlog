@@ -9,7 +9,7 @@ import { updateInfoBoxFromURL } from './components/menu-bar/info-box-url';
 document.addEventListener('DOMContentLoaded', async () => {
 	if ('serviceWorker' in navigator) {
 		try {
-			await navigator.serviceWorker.register(`${import.meta.env.SNOWPACK_PUBLIC_URL}sw.js`);
+			await navigator.serviceWorker.register(`${import.meta.env.PUBLIC_URL}sw.js`);
 		} catch (err) {
 			console.error(err);
 		}

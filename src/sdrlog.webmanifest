@@ -1,35 +1,35 @@
 {
-	"name": "Shadowrun Catalog",
-	"short_name": "SDRlog",
+	"name": "%APP_NAME%",
+	"short_name": "%APP_SHORT_NAME%",
 	"lang": "en-US",
-	"description": "An interactive list of Shadowrun material, with information about the item and can be linked to local files.",
+	"description": "%APP_DESCRIPTION%",
 	"categories": ["entertainment", "utilities", "games"],
-	"start_url": "%SNOWPACK_PUBLIC_URL%",
-	"scope": "%SNOWPACK_PUBLIC_URL%",
+	"start_url": "%PUBLIC_URL%",
+	"scope": "%PUBLIC_URL%",
 	"display": "standalone",
 	"display_override": ["window-controls-overlay"],
-	"background_color": "#%SNOWPACK_BACKGROUND_COLOR%",
+	"background_color": "%BACKGROUND_COLOR%",
 	"orientation": "portrait",
-	"theme_color": "#%SNOWPACK_THEME_COLOR%",
+	"theme_color": "%THEME_COLOR%",
 	"icons": [
 		{
-			"src": "%SNOWPACK_SMALL_ICON%",
+			"src": "%SMALL_ICON%",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "%SNOWPACK_SMALL_ICON_BG%",
+			"src": "%SMALL_ICON_BG%",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "maskable any"
 		},
 		{
-			"src": "%SNOWPACK_LARGE_ICON%",
+			"src": "%LARGE_ICON%",
 			"sizes": "512x512",
 			"type": "image/png"
 		},
 		{
-			"src": "%SNOWPACK_LARGE_ICON_BG%",
+			"src": "%LARGE_ICON_BG%",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "maskable any"
@@ -38,7 +38,7 @@
 	"protocol_handlers": [
 		{
 			"protocol": "web+sdrlog",
-			"url": "%SNOWPACK_PUBLIC_URL%?search=sku:%s"
+			"url": "%PUBLIC_URL%?search=sku:%s"
 		}
 	],
 	"capture_links": "existing-client-navigate"

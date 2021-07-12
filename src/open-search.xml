@@ -2,9 +2,9 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
 	<ShortName>SDRLog</ShortName>
 	<Description>Shadowrun Catalog Search</Description>
-	<Url type="text/html" method="get" template="%SNOWPACK_PUBLIC_URL%?search={searchTerms}"/>
-	<Url type="application/opensearchdescription+xml" rel="self" template="%SNOWPACK_PUBLIC_URL%open-search.xml" />
-	<Image width="16" height="16">%SNOWPACK_PUBLIC_URL%favicon.ico</Image>
+	<Url type="text/html" method="get" template="%PUBLIC_URL%?search={searchTerms}"/>
+	<Url type="application/opensearchdescription+xml" rel="self" template="%PUBLIC_URL%open-search.xml" />
+	<Image width="16" height="16">%PUBLIC_URL%favicon.ico</Image>
 	<InputEncoding>UTF-8</InputEncoding>
-	<moz:SearchForm>%SNOWPACK_PUBLIC_URL%</moz:SearchForm>
+	<moz:SearchForm>%PUBLIC_URL%</moz:SearchForm>
 </OpenSearchDescription>

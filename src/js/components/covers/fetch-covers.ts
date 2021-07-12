@@ -7,15 +7,15 @@ import directoryOpen from '../../../../lib/file-system/directory-open';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 
-export const FALLBACK_COVER = `${import.meta.env.SNOWPACK_PUBLIC_URL}img/covers/fallback.svg`;
-export const LOADING_COVER = `${import.meta.env.SNOWPACK_PUBLIC_URL}img/covers/loading-anim.svg`;
-export const LOADING_SIMPLE_COVER = `${import.meta.env.SNOWPACK_PUBLIC_URL}img/covers/loading-simple.svg`;
+export const FALLBACK_COVER = `${import.meta.env.PUBLIC_URL}img/covers/fallback.svg`;
+export const LOADING_COVER = `${import.meta.env.PUBLIC_URL}img/covers/loading-anim.svg`;
+export const LOADING_SIMPLE_COVER = `${import.meta.env.PUBLIC_URL}img/covers/loading-simple.svg`;
 
 export async function fetchCover(id: string) {
 	let currentCover = await getCover(id);
 
 	if (!currentCover) {
-		const response = await fetch(`${import.meta.env.SNOWPACK_PUBLIC_URL}covers/${id}.jpg`);
+		const response = await fetch(`${import.meta.env.PUBLIC_URL}covers/${id}.jpg`);
 
 		if (response.ok) {
 			const responseData = await response.blob();
@@ -34,7 +34,7 @@ export async function getThumbUrl(id: string) {
 		return URL.createObjectURL(currentThumb);
 	}
 
-	return `${import.meta.env.SNOWPACK_PUBLIC_URL}thumbs/${id}.jpg`;
+	return `${import.meta.env.PUBLIC_URL}thumbs/${id}.jpg`;
 }
 
 export async function extractCoversFromFiles() {
