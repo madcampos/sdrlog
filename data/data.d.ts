@@ -5,9 +5,15 @@ export interface MaterialLink {
 	url: string
 }
 
+export type MaterialCategory = 'rulebook' | 'sourcebook' | 'mission' | 'magazine' | 'novel' | 'videogame' | 'tcg' | 'boardgame' | 'misc';
+
+export type MaterialType = 'digital' | 'print' | 'scan' | 'ocr' | 'physical';
+
+export type MaterialStatus = 'missing' | 'outofscope' | 'canceled';
+
 export interface Material {
-	category: 'rulebook' | 'sourcebook' | 'mission' | 'magazine' | 'novel' | 'videogame' | 'tcg' | 'boardgame' | 'misc',
-	type: 'digital' | 'print' | 'scan' | 'ocr' | 'physical',
+	category: MaterialCategory,
+	type: MaterialType,
 	sku: string[],
 	name: string,
 	names?: Partial<Record<IsoCode, string>>,
@@ -16,7 +22,7 @@ export interface Material {
 	publisher: string[],
 	gameDate?: string,
 	releaseDate?: string[],
-	status?: 'missing' | 'outofscope' | 'canceled',
+	status?: MaterialStatus,
 	originalLanguage: IsoCode,
 	notes?: string,
 	links?: MaterialLink[]

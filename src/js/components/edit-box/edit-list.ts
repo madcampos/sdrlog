@@ -108,7 +108,7 @@ export class EditList extends HTMLElement {
 		return [...this.#items.assignedElements()].map((item) => (item as EditListItem).value);
 	}
 
-	resetValues() {
+	resetValue() {
 		this.#input.hidden = true;
 		this.#loader.loaded = false;
 

@@ -7,6 +7,7 @@ import type { EditText } from '../edit-box/edit-text';
 import type { FileForMaterial, Material } from '../../../../data/data';
 import type { EditListItem } from '../edit-box/edit-list-item';
 import type { DropArea } from '../drop-area/drop-area';
+import type { NewMaterialProperties } from '../data-operations/create-material';
 
 import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName, setCategories, setLanguages, setPublishers, setStatus, setTypes } from './details-template';
 import { setMaterialDetails } from './build-details';
@@ -16,43 +17,52 @@ import { saveNewMaterialInfo } from '../data-operations/create-material';
 import { openFile } from '../files-reader/open-file';
 import { LOADING_COVER } from '../covers/fetch-covers';
 import { associateFileWithData } from '../files-reader/files-reader';
+import { exportDataItem } from '../data-operations/data-export';
 
 export class ItemDetails extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
 
 	#root: ShadowRoot;
 	#modal: ModalDialog;
+
 	#editButton: CustomButton;
 	#saveButton: CustomButton;
+	#exportButton: CustomButton;
 
 	#isEditing = false;
 	#isUpdatingExistingMaterial = false;
 
-	#name: EditBox;
-	#sku: EditList;
-	#skuInput: HTMLInputElement;
-	#edition: EditBox;
-	#gameDate: EditBox;
-	#category: EditSelect;
-	#type: EditSelect;
-	#language: EditSelect;
-	#releaseDate: EditList;
-	#releaseDateInput: HTMLInputElement;
-	#publisher: EditList;
-	#publisherInput: HTMLSelectElement;
-	#status: EditSelect;
-	#names: EditList;
-	#namesLangInput: HTMLSelectElement;
-	#namesValueInput: HTMLInputElement;
-	#files: EditList;
-	#links: EditList;
-	#linksNameInput: HTMLInputElement;
-	#linksUrlInput: HTMLInputElement;
+	#formFields: {
+		name: EditBox,
+		sku: EditList,
+		edition: EditBox,
+		gameDate: EditBox,
+		category: EditSelect,
+		type: EditSelect,
+		language: EditSelect,
+		releaseDate: EditList,
+		publisher: EditList,
+		status: EditSelect,
+		names: EditList,
+		files: EditList,
+		links: EditList,
+		notes: EditText,
+		description: EditText
+	};
+
+	#editInputs: {
+		sku: HTMLInputElement,
+		releaseDate: HTMLInputElement,
+		publisher: HTMLSelectElement,
+		namesLang: HTMLSelectElement,
+		namesValue: HTMLInputElement,
+		linksName: HTMLInputElement,
+		linksUrl: HTMLInputElement
+	};
+
 	#cover: HTMLImageElement;
 	#coverDropArea: DropArea;
 	#coverFile: File | undefined;
-	#notes: EditText;
-	#description: EditText;
 
 	constructor() {
 		super();
@@ -63,86 +73,95 @@ export class ItemDetails extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#modal = this.#root.querySelector('modal-dialog') as ModalDialog;
+
 		this.#editButton = this.#root.querySelector('#edit') as CustomButton;
 		this.#saveButton = this.#root.querySelector('#save') as CustomButton;
+		this.#exportButton = this.#root.querySelector('#export') as CustomButton;
 
-		this.#name = this.#root.querySelector('#name') as EditBox;
+		this.#formFields = {
+			name: this.#root.querySelector('#name') as EditBox,
 
-		this.#sku = this.#root.querySelector('#sku') as EditList;
-		this.#skuInput = this.#root.querySelector('#sku input') as HTMLInputElement;
+			sku: this.#root.querySelector('#sku') as EditList,
 
-		this.#edition = this.#root.querySelector('#edition') as EditBox;
-		this.#gameDate = this.#root.querySelector('#gamedate') as EditBox;
+			edition: this.#root.querySelector('#edition') as EditBox,
+			gameDate: this.#root.querySelector('#gamedate') as EditBox,
 
-		this.#category = this.#root.querySelector('#category') as EditSelect;
-		setCategories(this.#category);
+			category: this.#root.querySelector('#category') as EditSelect,
 
-		this.#type = this.#root.querySelector('#type') as EditSelect;
-		setTypes(this.#type);
+			type: this.#root.querySelector('#type') as EditSelect,
 
-		this.#language = this.#root.querySelector('#language') as EditSelect;
-		setLanguages(this.#language);
+			language: this.#root.querySelector('#language') as EditSelect,
 
-		this.#releaseDate = this.#root.querySelector('#releasedate') as EditList;
-		this.#releaseDateInput = this.#root.querySelector('#releasedate') as HTMLInputElement;
+			releaseDate: this.#root.querySelector('#releasedate') as EditList,
 
-		this.#publisher = this.#root.querySelector('#publisher') as EditList;
-		this.#publisherInput = this.#root.querySelector('#publisher select') as HTMLSelectElement;
-		setPublishers(this.#publisherInput);
+			publisher: this.#root.querySelector('#publisher') as EditList,
 
-		this.#status = this.#root.querySelector('#status') as EditSelect;
-		setStatus(this.#status);
+			status: this.#root.querySelector('#status') as EditSelect,
 
-		this.#names = this.#root.querySelector('#names') as EditList;
-		this.#namesLangInput = this.#root.querySelector('#names select') as HTMLSelectElement;
-		this.#namesValueInput = this.#root.querySelector('#names input') as HTMLInputElement;
-		setLanguages(this.#namesLangInput);
+			names: this.#root.querySelector('#names') as EditList,
 
-		this.#files = this.#root.querySelector('#files-list') as EditList;
+			files: this.#root.querySelector('#files-list') as EditList,
 
-		this.#links = this.#root.querySelector('#links') as EditList;
-		this.#linksNameInput = this.#root.querySelector('#links input[type="text"]') as HTMLInputElement;
-		this.#linksUrlInput = this.#root.querySelector('#links input[type="text"]') as HTMLInputElement;
+			links: this.#root.querySelector('#links') as EditList,
+
+			notes: this.#root.querySelector('#notes') as EditText,
+			description: this.#root.querySelector('#description') as EditText
+		};
+
+		this.#editInputs = {
+			sku: this.#root.querySelector('#sku input') as HTMLInputElement,
+			releaseDate: this.#root.querySelector('#releasedate') as HTMLInputElement,
+			publisher: this.#root.querySelector('#publisher select') as HTMLSelectElement,
+			namesLang: this.#root.querySelector('#names select') as HTMLSelectElement,
+			namesValue: this.#root.querySelector('#names input') as HTMLInputElement,
+			linksName: this.#root.querySelector('#links input[type="text"]') as HTMLInputElement,
+			linksUrl: this.#root.querySelector('#links input[type="text"]') as HTMLInputElement
+		};
+
+		setCategories(this.#formFields.category);
+		setTypes(this.#formFields.type);
+		setLanguages(this.#formFields.language);
+		setPublishers(this.#editInputs.publisher);
+		setStatus(this.#formFields.status);
+		setLanguages(this.#editInputs.namesLang);
 
 		this.#cover = this.#root.querySelector('#cover') as HTMLImageElement;
 		this.#coverDropArea = this.#root.querySelector('#cover-drop-area') as DropArea;
 
-		this.#notes = this.#root.querySelector('#notes') as EditText;
-		this.#description = this.#root.querySelector('#description') as EditText;
 
-		this.#sku.addEventListener('additem', () => {
-			const { value } = this.#skuInput;
+		this.#formFields.sku.addEventListener('additem', () => {
+			const { value } = this.#editInputs.sku;
 
-			this.#sku.insertAdjacentHTML('beforeend', formatSku(value, true));
+			this.#formFields.sku.insertAdjacentHTML('beforeend', formatSku(value, true));
 		});
 
-		this.#releaseDate.addEventListener('additem', () => {
-			const { value } = this.#releaseDateInput;
+		this.#formFields.releaseDate.addEventListener('additem', () => {
+			const { value } = this.#editInputs.releaseDate;
 
-			this.#releaseDate.insertAdjacentHTML('beforeend', formatReleaseDate(value, true));
+			this.#formFields.releaseDate.insertAdjacentHTML('beforeend', formatReleaseDate(value, true));
 		});
 
-		this.#publisher.addEventListener('additem', () => {
-			const { value } = this.#publisherInput;
+		this.#formFields.publisher.addEventListener('additem', () => {
+			const { value } = this.#editInputs.publisher;
 
-			this.#publisher.insertAdjacentHTML('beforeend', formatPublisher(value, true));
+			this.#formFields.publisher.insertAdjacentHTML('beforeend', formatPublisher(value, true));
 		});
 
-		this.#names.addEventListener('additem', () => {
-			const { value: lang } = this.#namesLangInput;
-			const { value: name } = this.#namesValueInput;
+		this.#formFields.names.addEventListener('additem', () => {
+			const { value: lang } = this.#editInputs.namesLang;
+			const { value: name } = this.#editInputs.namesValue;
 
-			this.#names.insertAdjacentHTML('beforeend', formatTranslatedName(lang, name, true));
+			this.#formFields.names.insertAdjacentHTML('beforeend', formatTranslatedName(lang, name, true));
 		});
 
-		this.#links.addEventListener('additem', () => {
-			const title = this.#linksNameInput.value;
-			const url = this.#linksUrlInput.value;
+		this.#formFields.links.addEventListener('additem', () => {
+			const title = this.#editInputs.linksName.value;
+			const url = this.#editInputs.linksUrl.value;
 
-			this.#links.insertAdjacentHTML('beforeend', formatLink({ url, title }, true));
+			this.#formFields.links.insertAdjacentHTML('beforeend', formatLink({ url, title }, true));
 		});
 
-		this.#files.addEventListener('click', async (evt) => {
+		this.#formFields.files.addEventListener('click', async (evt) => {
 			const target = evt.target as HTMLLinkElement;
 
 			if (target.matches('a.file-link')) {
@@ -156,8 +175,8 @@ export class ItemDetails extends HTMLElement {
 			}
 		});
 
-		this.#files.addEventListener('additem', async () => {
-			if (this.#sku.values.length === 0) {
+		this.#formFields.files.addEventListener('additem', async () => {
+			if (this.#formFields.sku.values.length === 0) {
 				// eslint-disable-next-line no-alert
 				alert('Please add an SKU first before adding a file.');
 			} else {
@@ -172,7 +191,7 @@ export class ItemDetails extends HTMLElement {
 				const fileForMaterial = await associateFileWithData(handle.name, `/${file.lastModified}/${file.name}`, file.type) as FileForMaterial;
 
 				await saveFile(`/${handle.name}`, handle);
-				this.#files.insertAdjacentHTML('beforeend', formatFile(fileForMaterial));
+				this.#formFields.files.insertAdjacentHTML('beforeend', formatFile(fileForMaterial));
 			}
 		});
 
@@ -193,45 +212,42 @@ export class ItemDetails extends HTMLElement {
 		this.#saveButton.addEventListener('click', async () => {
 			this.#saveButton.disabled = true;
 
-			const [id] = this.#sku.values;
+			const [id] = this.#formFields.sku.values;
 
 			if (id) {
+				const values = Object.entries(this.#formFields).reduce((inputValues, [name, input]) => {
+					if ('values' in input) {
+						inputValues[name] = input.values;
+					} else {
+						inputValues[name] = input.value;
+					}
+
+					return inputValues;
+				// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+				}, {} as Omit<NewMaterialProperties, 'cover'>);
+
 				await saveNewMaterialInfo(id, {
-					name: this.#name.value,
-					sku: this.#sku.values,
-					edition: this.#edition.value,
-					gameDate: this.#gameDate.value,
-					category: this.#category.value,
-					type: this.#type.value,
-					originalLanguage: this.#language.value,
-					releaseDate: this.#releaseDate.values,
-					publisher: this.#publisher.values,
-					status: this.#status.value,
-					names: this.#names.values,
-					notes: this.#notes.value,
-					description: this.#description.value,
-					files: this.#files.values,
-					links: this.#links.values,
+					...values,
 					cover: this.#coverFile
 				});
 
 				if (!this.#isUpdatingExistingMaterial) {
 					ItemCard.createCard({
-						name: this.#name.value,
+						name: this.#formFields.name.value,
 						id,
-						sku: this.#sku.values,
-						edition: Number.parseInt(this.#edition.value),
-						category: this.#category.value as Material['category'],
-						type: this.#type.value as Material['type'],
-						status: this.#status.value as Material['status']
+						sku: this.#formFields.sku.values,
+						edition: Number.parseInt(this.#formFields.edition.value),
+						category: this.#formFields.category.value as Material['category'],
+						type: this.#formFields.type.value as Material['type'],
+						status: this.#formFields.status.value as Material['status']
 					});
 				}
 			}
 
 			this.#saveButton.disabled = false;
 
-			window.history.pushState(null, `${this.#name.value} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#${id}${window.location.search}`);
-			window.document.title = `${this.#name.value} ● ${import.meta.env.APP_NAME}`;
+			window.history.pushState(null, `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#${id}${window.location.search}`);
+			window.document.title = `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`;
 
 			// eslint-disable-next-line no-alert
 			alert(`Item # ${id} saved successfully.`);
@@ -278,41 +294,30 @@ export class ItemDetails extends HTMLElement {
 
 		this.isEditing = editingStatus;
 
-		this.#name.edit = editingStatus;
-		this.#sku.edit = editingStatus;
-		this.#edition.edit = editingStatus;
-		this.#gameDate.edit = editingStatus;
-		this.#category.edit = editingStatus;
-		this.#type.edit = editingStatus;
-		this.#language.edit = editingStatus;
-		this.#releaseDate.edit = editingStatus;
-		this.#publisher.edit = editingStatus;
-		this.#status.edit = editingStatus;
-		this.#names.edit = editingStatus;
-		this.#links.edit = editingStatus;
-		this.#files.edit = editingStatus;
-		this.#notes.edit = editingStatus;
-		this.#description.edit = editingStatus;
+		Object.values(this.#formFields).forEach((field) => {
+			field.edit = editingStatus;
+		});
+
 		this.#coverDropArea.show = editingStatus;
 
-		if (this.#status.value === '') {
-			this.#status.hidden = !editingStatus;
+		if (this.#formFields.status.value === '') {
+			this.#formFields.status.hidden = !editingStatus;
 		}
 
-		if (this.#notes.value === '') {
-			this.#notes.hidden = !editingStatus;
+		if (this.#formFields.notes.value === '') {
+			this.#formFields.notes.hidden = !editingStatus;
 		}
 
-		if (this.#files.values.length < 1) {
-			this.#files.hidden = !editingStatus;
+		if (this.#formFields.files.values.length < 1) {
+			this.#formFields.files.hidden = !editingStatus;
 		}
 
 		if (!('showDirectoryPicker' in window)) {
-			this.#files.hidden = true;
+			this.#formFields.files.hidden = true;
 		}
 
-		if (this.#links.values.length < 1) {
-			this.#links.hidden = !editingStatus;
+		if (this.#formFields.links.values.length < 1) {
+			this.#formFields.links.hidden = !editingStatus;
 		}
 
 		this.#editButton.hidden = false;
@@ -322,30 +327,22 @@ export class ItemDetails extends HTMLElement {
 			this.#editButton.innerText = 'Cancel';
 			this.#editButton.icon = '❌';
 			this.#saveButton.hidden = false;
+			this.#exportButton.hidden = true;
 		} else {
 			this.#editButton.innerText = 'Edit';
 			this.#editButton.icon = '✏️';
 			this.#saveButton.hidden = true;
+			this.#exportButton.hidden = false;
 		}
 
 		if (isNew === true) {
 			this.#editButton.hidden = true;
 			this.#saveButton.hidden = false;
 
-			this.#name.loaded = true;
-			this.#sku.loaded = true;
-			this.#edition.loaded = true;
-			this.#gameDate.loaded = true;
-			this.#category.loaded = true;
-			this.#type.loaded = true;
-			this.#language.loaded = true;
-			this.#releaseDate.loaded = true;
-			this.#publisher.loaded = true;
-			this.#status.loaded = true;
-			this.#names.loaded = true;
-			this.#links.loaded = true;
-			this.#notes.loaded = true;
-			this.#description.loaded = true;
+			Object.values(this.#formFields).forEach((field) => {
+				field.loaded = true;
+			});
+
 			this.#coverDropArea.show = true;
 		}
 	}
@@ -353,28 +350,17 @@ export class ItemDetails extends HTMLElement {
 	resetMaterial() {
 		this.#isUpdatingExistingMaterial = false;
 
-		this.#name.resetValue();
-		this.#sku.resetValues();
-		this.#edition.resetValue();
-		this.#gameDate.resetValue();
-		this.#category.resetValue();
-		this.#type.resetValue();
-		this.#language.resetValue();
-		this.#releaseDate.resetValues();
-		this.#publisher.resetValues();
-		this.#status.resetValue();
-		this.#status.hidden = true;
-		this.#names.resetValues();
-		this.#files.resetValues();
-		this.#files.hidden = true;
-		this.#files.value = '📄';
-		this.#links.resetValues();
-		this.#links.hidden = true;
+		Object.values(this.#formFields).forEach((field) => {
+			field.resetValue();
+		});
+
+		this.#formFields.links.hidden = true;
+		this.#formFields.notes.hidden = true;
+		this.#formFields.files.hidden = true;
+		this.#formFields.files.value = '📄';
+
 		this.#cover.src = LOADING_COVER;
 		this.#coverDropArea.show = false;
-		this.#notes.resetValue();
-		this.#notes.hidden = true;
-		this.#description.resetValue();
 	}
 
 	async setMaterial(id: string) {
@@ -390,22 +376,8 @@ export class ItemDetails extends HTMLElement {
 			window.document.title = `${material.name} ● ${import.meta.env.APP_NAME}`;
 
 			await setMaterialDetails(material, {
-				name: this.#name,
-				sku: this.#sku,
-				edition: this.#edition,
-				gameDate: this.#gameDate,
-				category: this.#category,
-				type: this.#type,
-				language: this.#language,
-				releaseDate: this.#releaseDate,
-				publisher: this.#publisher,
-				status: this.#status,
-				names: this.#names,
-				links: this.#links,
-				files: this.#files,
 				cover: this.#cover,
-				notes: this.#notes,
-				description: this.#description
+				...this.#formFields
 			});
 		}
 	}

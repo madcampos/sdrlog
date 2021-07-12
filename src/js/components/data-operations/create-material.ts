@@ -1,26 +1,16 @@
-import type { FileForMaterial, IsoCode, Material, MaterialLink } from '../../../../data/data';
+import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../../data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 
 import { saveCover, saveMaterial, saveThumb, setFileForMaterial } from './idb-persistence';
 
-interface NewMaterialProperties {
-	name: string,
-	sku: string[],
+export type NewMaterialProperties = Required<Omit<Material, 'edition' | 'names' | 'status' | 'links'>> & {
+	status: 'ok' | MaterialStatus,
 	edition: string,
-	gameDate: string,
-	category: string,
-	type: string,
-	originalLanguage: string,
-	releaseDate: string[],
-	publisher: string[],
-	status: string,
 	names: string[],
-	notes: string,
-	description: string,
 	links: string[],
 	files: string[],
 	cover?: File
-}
+};
 
 export async function saveNewMaterialInfo(id: string, {
 	name,
@@ -45,9 +35,9 @@ export async function saveNewMaterialInfo(id: string, {
 		sku,
 		edition: Number.parseInt(edition),
 		gameDate,
-		category: category as Material['category'],
-		type: type as Material['type'],
-		originalLanguage: originalLanguage as Material['originalLanguage'],
+		category,
+		type,
+		originalLanguage,
 		releaseDate,
 		publisher,
 		description
