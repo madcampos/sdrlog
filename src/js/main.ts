@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	updateFiltersFromURL();
 	updateInfoBoxFromURL();
 
-	document.querySelector('#load-overlay')?.remove();
-
 	await updateItemModalFromURL();
+
+	document.querySelector('#load-overlay')?.remove();
 });
