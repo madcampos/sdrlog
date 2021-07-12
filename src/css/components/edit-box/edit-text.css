@@ -68,6 +68,7 @@ textarea, #rendered-text {
 
 textarea {
 	background: var(--bg-color);
+	border-color: var(--border-color);
 	white-space: pre-wrap;
 }
 

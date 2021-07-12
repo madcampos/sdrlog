@@ -33,7 +33,7 @@ select {
 	padding: 0.5rem 1.7rem 0.3rem 0.5rem;
 
 	appearance: none;
-	border: solid var(--border-width) transparent;
+	border: solid var(--border-width) var(--border-color);
 	border-radius: 0.3rem;
 
 	background-color: transparent;

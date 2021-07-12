@@ -1,24 +1,59 @@
 <svg id="sdr-logo" viewBox="0 0 189 189" color-interpolation-filters="sRGB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<style>
-		@media (max-width: 128px) {
+		#img-pixel {
+			filter: url('#sdr-pixelated');
+			color: yellow;
+			opacity: 0.5;
+		}
+
+		#img-glitch {
+			filter: url('#sdr-glitch');
+			color: darkviolet;
+			opacity: 1;
+		}
+
+		#img-clean {
+			color: deeppink;
+			opacity: 0.6;
+			mix-blend-mode: overlay;
+		}
+
+		#img-noise {
+			filter: url('#sdr-noise');
+			color: hotpink;
+			opacity: 1;
+		}
+
+		@media (max-width: 192px) {
 			#img-noise {
-				filter: none;
+				display: none;
+			}
+			#img-pixel {
+				opacity: 0.3;
+			}
+		}
+
+		@media (max-width: 128px) {
+			#img-clean {
+				opacity: 0.4;
 			}
 		}
 
 		@media (max-width: 96px) {
+			#img-clean {
+				opacity: 0.2;
+			}
 			#img-glitch {
 				filter: none;
 			}
 		}
 
 		@media (max-width: 64px) {
-			:root {
-				--tint-color: deeppink;
-			}
-
 			#img-pixel {
-				filter: none;
+				display: none;
+			}
+			#img-clean {
+				display: none;
 			}
 		}
 	</style>
@@ -72,7 +107,8 @@
 			<path d="M84,164.3c0.8-0.1,1.6,0.1,2.2,0.5c0.7,0.4,1.5,1.5,1.6,2.4c0.2,1.1-0.4,2.3-1,2.9c-0.3,0.3-0.7,0.7-1.2,0.9 c-2.6,1-5.3-1.5-4.7-4.1C81.3,165.5,82.4,164.5,84,164.3"/>
 		</g>
 	</defs>
-	<use id="img-pixel" xlink:href="#logo" color="yellow" filter="url('#sdr-pixelated')"/>
-	<use id="img-glitch" xlink:href="#logo" color="deeppink" filter="url('#sdr-glitch')"/>
-	<use id="img-noise" xlink:href="#logo" filter="url('#sdr-noise')"/>
+	<use id="img-pixel" xlink:href="#logo"/>
+	<use id="img-glitch" xlink:href="#logo"/>
+	<use id="img-clean" xlink:href="#logo"/>
+	<use id="img-noise" xlink:href="#logo"/>
 </svg>

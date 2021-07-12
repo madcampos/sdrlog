@@ -33,7 +33,7 @@ input {
 	padding: 0.5rem 0.5rem 0.3rem;
 
 	appearance: none;
-	border: solid var(--border-width) transparent;
+	border: solid var(--border-width) var(--border-color);
 	background: transparent;
 	border-radius: 0.3rem;
 
@@ -51,7 +51,6 @@ input:not(:read-only) {
 
 input:focus {
 	outline: none;
-	border-color: var(--border-color);
 	border-bottom-color: var(--theme-color);
 }
 

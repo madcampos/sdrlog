@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const sorter = new Intl.Collator('en-US');
 	const materials = (await getMaterialsBasicInfo()).sort(({ name: nameA }, { name: nameB }) => sorter.compare(nameA, nameB));
 	let matchedId: string | null = null;
+	let matchedTitle = '';
 
 	for (const material of materials) {
 		const itemCard = document.createElement('item-card');
@@ -36,11 +37,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		if (checkForMatchingId(material.id)) {
 			matchedId = material.id;
+			matchedTitle = material.name;
 		}
 	}
 
 	if (matchedId) {
-		updateItemModalFromURL(matchedId);
+		updateItemModalFromURL(matchedId, matchedTitle);
 	}
 
 	updateInfoBoxFromURL();

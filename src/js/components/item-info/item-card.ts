@@ -36,8 +36,9 @@ export class ItemCard extends HTMLElement {
 
 		this.addEventListener('click', async () => {
 			const id = this.getAttribute('id') as string;
+			const title = this.getAttribute('title') as string;
 
-			await ItemDetails.openMaterialModal(id);
+			await ItemDetails.openMaterialModal(id, title);
 		});
 	}
 

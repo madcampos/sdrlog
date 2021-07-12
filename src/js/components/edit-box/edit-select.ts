@@ -89,13 +89,7 @@ export class EditSelect extends HTMLElement {
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'edit') {
-				const isEdit = this.hasAttribute('edit');
-
-				if (!isEdit) {
-					this.#select.disabled = true;
-				} else {
-					this.#select.disabled = false;
-				}
+				this.#select.disabled = !this.hasAttribute('edit');
 			} else if (name === 'value') {
 				this.value = newValue;
 			}

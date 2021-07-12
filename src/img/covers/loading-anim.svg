@@ -1,42 +1,79 @@
 <svg id="sdr-logo" viewBox="0 0 189 189" color-interpolation-filters="sRGB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<style>
-		:root {
-			--pixel-filter: url('#sdr-pixelated');
-			--glitch-filter: url('#sdr-glitch-animated');
-			--noise-filter: url('#sdr-noise-animated');
+		#img-pixel {
+			filter: url('#sdr-pixelated');
+			color: yellow;
+			opacity: 0.5;
 		}
 
-		#img-pixel { filter: var(--pixel-filter); }
-		#img-glitch { filter: var(--glitch-filter); }
-		#img-noise { filter: var(--noise-filter); }
+		#img-glitch {
+			filter: url('#sdr-glitch-animated');
+			color: darkviolet;
+			opacity: 1;
+		}
+
+		#img-clean {
+			filter: url('#sdr-blend-animated');
+			color: deeppink;
+			opacity: 0.6;
+		}
+
+		#img-noise {
+			filter: url('#sdr-noise-animated');
+			color: hotpink;
+			opacity: 1;
+		}
 
 		@media (prefers-reduced-motion) {
-			:root {
-				--noise-filter: url('#sdr-noise');
-				--glitch-filter: url('#sdr-glitch');
+			#img-noise {
+				filter: url('#sdr-noise');
+			}
+			#img-glitch {
+				filter: url('#sdr-glitch');
+			}
+			#img-clean {
+				filter: url('#sdr-blend');
+			}
+		}
+
+		@media (max-width: 192px) {
+			#img-noise {
+				display: none;
+			}
+			#img-pixel {
+				opacity: 0.3;
 			}
 		}
 
 		@media (max-width: 128px) {
-			:root {
-				--noise-filter: none;
+			#img-clean {
+				opacity: 0.4;
 			}
 		}
 
 		@media (max-width: 96px) {
-			:root {
-				--glitch-filter: none;
+			#img-clean {
+				opacity: 0.2;
+			}
+			#img-glitch {
+				filter: none;
 			}
 		}
 
 		@media (max-width: 64px) {
-			:root {
-				--tint-color: deeppink;
-				--pixel-filter: none;
+			#img-pixel {
+				display: none;
+			}
+			#img-clean {
+				display: none;
 			}
 		}
 	</style>
 	<defs>
+		<filter id="sdr-blend">
+			<feBlend in="BackgroundImage" in2="SourceGraphic" mode="overlay"/>
+		</filter>
+
 		<filter id="sdr-glitch" x="-10%" y="-10%" width="120%" height="120%">
 			<feTurbulence baseFrequency="0 1.001" numOctaves="32" seed="2"/>
 			<feMorphology operator="dilate" radius="8" result="glitch-lines"/>
@@ -63,6 +100,12 @@
 			<feComponentTransfer>
 				<feFuncA type="linear" slope="0.7"/>
 			</feComponentTransfer>
+		</filter>
+
+		<filter id="sdr-blend-animated">
+			<feBlend in="BackgroundImage" in2="SourceGraphic" mode="overlay">
+				<animate attributeName="mode" values="multiply;screen;overlay;darken;lighten" dur="20s" repeatCount="indefinite"/>
+			</feBlend>
 		</filter>
 
 		<filter id="sdr-glitch-animated" x="-10%" y="-10%" width="120%" height="120%">
@@ -111,7 +154,8 @@
 		</g>
 	</defs>
 
-	<use id="img-pixel" color="yellow" xlink:href="#logo"/>
-	<use id="img-glitch" color="deeppink" xlink:href="#logo"/>
+	<use id="img-pixel" xlink:href="#logo"/>
+	<use id="img-glitch" xlink:href="#logo"/>
+	<use id="img-clean" xlink:href="#logo"/>
 	<use id="img-noise" xlink:href="#logo"/>
 </svg>

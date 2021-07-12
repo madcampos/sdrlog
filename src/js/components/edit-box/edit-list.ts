@@ -119,34 +119,29 @@ export class EditList extends HTMLElement {
 		});
 	}
 
-	updateEditItems() {
+	updateEditItems(isEditing: boolean) {
 		const items = this.#items.assignedElements().filter((element) => element instanceof EditListItem) as EditListItem[];
 
 		items.forEach((item) => {
-			item.edit = this.edit;
+			item.edit = isEditing;
 		});
 	}
 
-	attributeChangedCallback(name: string) {
-		if (name === 'edit') {
-			const isEdit = this.hasAttribute('edit');
-
-			if (!isEdit) {
-				this.#input.hidden = true;
-			} else {
-				this.#input.hidden = false;
+	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+		if (oldValue !== newValue) {
+			if (name === 'edit') {
+				this.#input.hidden = !this.hasAttribute('edit');
+				this.updateEditItems(this.hasAttribute('edit'));
 			}
 
-			this.updateEditItems();
-		}
+			if (name === 'open') {
+				const isOpen = this.hasAttribute('open');
 
-		if (name === 'open') {
-			const isOpen = this.hasAttribute('open');
-
-			if (!isOpen) {
-				this.#details.removeAttribute('open');
-			} else {
-				this.#details.setAttribute('open', '');
+				if (!isOpen) {
+					this.#details.removeAttribute('open');
+				} else {
+					this.#details.setAttribute('open', '');
+				}
 			}
 		}
 	}

@@ -37,6 +37,8 @@ export class CustomButton extends HTMLElement {
 		if (oldValue !== newValue) {
 			if (name === 'icon') {
 				this.#icon.innerText = newValue;
+			} else if (name === 'disabled') {
+				this.disabled = this.hasAttribute('disabled');
 			}
 		}
 	}

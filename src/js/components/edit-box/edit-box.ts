@@ -84,13 +84,7 @@ export class EditBox extends HTMLElement {
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'edit') {
-				const isEdit = this.hasAttribute('edit');
-
-				if (!isEdit) {
-					this.#input.readOnly = true;
-				} else {
-					this.#input.readOnly = false;
-				}
+				this.#input.readOnly = !this.hasAttribute('edit');
 			} else if (name === 'value') {
 				this.value = newValue;
 			}

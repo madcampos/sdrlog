@@ -294,11 +294,17 @@ export class ItemDetails extends HTMLElement {
 		}
 	}
 
-	show() {
+	show(title = 'New Material', id?: string) {
+		let hash = '';
+
+		if (id) {
+			hash = `#${id}`;
+		}
+
 		this.#modal.show();
 
-		window.history.pushState(null, `New Material ● ${import.meta.env.APP_NAME}${window.location.search}`);
-		window.document.title = `New Material ● ${import.meta.env.APP_NAME}`;
+		window.history.pushState(null, `${title} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}${hash}`);
+		window.document.title = `${title} ● ${import.meta.env.APP_NAME}`;
 	}
 
 	close() {
@@ -373,6 +379,9 @@ export class ItemDetails extends HTMLElement {
 
 		this.#cover.src = LOADING_COVER;
 		this.#coverDropArea.show = false;
+
+		this.#editButton.disabled = true;
+		this.#exportButton.disabled = true;
 	}
 
 	async setMaterial(id: string) {
@@ -384,19 +393,17 @@ export class ItemDetails extends HTMLElement {
 		if (material) {
 			this.#isUpdatingExistingMaterial = true;
 
-			window.history.pushState(null, `${material.name} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
-			window.document.title = `${material.name} ● ${import.meta.env.APP_NAME}`;
-
 			setMaterialDetails(material, {
 				cover: this.#cover,
 				...this.#formFields
 			});
 
+			this.#editButton.disabled = false;
 			this.#exportButton.disabled = false;
 		}
 	}
 
-	static async openMaterialModal(id?: string) {
+	static async openMaterialModal(id?: string, title?: string) {
 		let modal = document.querySelector<ItemDetails>('item-details');
 
 		if (!modal) {
@@ -405,7 +412,7 @@ export class ItemDetails extends HTMLElement {
 			document.body.appendChild(modal);
 		}
 
-		modal.show();
+		modal.show(title, id);
 
 		if (id) {
 			await modal.setMaterial(id);

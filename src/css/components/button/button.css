@@ -30,6 +30,11 @@ button:hover {
 	background: var(--accent-color);
 }
 
+button:disabled {
+	background: var(--dark-bg-color);
+	color: var(--border-color);
+}
+
 :host([icon-button]) button {
 	width: var(--button-size);
 	padding: 0.1rem;

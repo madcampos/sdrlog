@@ -10,6 +10,6 @@ export function checkForMatchingId(idToCheck: string) {
 	return id === idToCheck;
 }
 
-export function updateItemModalFromURL(id: string) {
-	void ItemDetails.openMaterialModal(id);
+export function updateItemModalFromURL(id: string, title: string) {
+	void ItemDetails.openMaterialModal(id, title);
 }

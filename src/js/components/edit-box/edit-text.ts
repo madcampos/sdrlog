@@ -83,15 +83,8 @@ export class EditText extends HTMLElement {
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'edit') {
-				const isEdit = this.hasAttribute('edit');
-
-				if (!isEdit) {
-					this.#textArea.hidden = true;
-					this.#renderedTextContainer.hidden = false;
-				} else {
-					this.#textArea.hidden = false;
-					this.#renderedTextContainer.hidden = true;
-				}
+				this.#textArea.hidden = !this.hasAttribute('edit');
+				this.#renderedTextContainer.hidden = this.hasAttribute('edit');
 			} else if (name === 'value') {
 				this.value = newValue;
 			}
