@@ -11,6 +11,10 @@ export type MaterialType = 'digital' | 'print' | 'scan' | 'ocr' | 'physical';
 
 export type MaterialStatus = 'missing' | 'outofscope' | 'canceled';
 
+export type MaterialReleaseDate = `${number}-${number}-${number}`;
+
+export type MaterialGameDate = `${number}-${number}`;
+
 export interface Material {
 	category: MaterialCategory,
 	type: MaterialType,
@@ -20,8 +24,8 @@ export interface Material {
 	description: string,
 	edition: number,
 	publisher: string[],
-	gameDate?: string,
-	releaseDate?: string[],
+	gameDate?: MaterialGameDate,
+	releaseDate?: MaterialReleaseDate[],
 	status?: MaterialStatus,
 	originalLanguage: IsoCode,
 	notes?: string,

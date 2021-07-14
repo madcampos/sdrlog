@@ -13253,16 +13253,21 @@
 		},
 		{
 			"sku": [
-				"STTRK"
+				"STTRK",
+				"BBESR6G04"
 			],
 			"name": "Schattentricks",
 			"category": "mission",
 			"type": "digital",
 			"originalLanguage": "de-DE",
+			"names": {
+				"fr-FR": "Sale Coup à Berlin"
+			},
 			"description": "Großkonzerne hatten in Berlin immer schon einen schweren Stand. Und so reagieren sie besonders alarmiert, wenn Meinungsmache und Massenmanipulation gegen sie gerichtet wird. Dann aktivieren sie Runner, die tief in den Hexenkessel des Megaplex an der Spree hinabtauchen sollen, um Schattentricks aufzudecken, ohne sich selbst in diesen zu verfangen.\nSchattentricks ist ein Abenteuer für Shadowrun 6 im Berlin des Jahres 2080. Für das Abenteuer ist lediglich das Grundregelwerk für Shadowrun 6 notwendig. Das Quellenbuch Berlin 2080 liefert weiteren Hintergrund und Werkzeuge für Flair und Ambiente.",
 			"edition": 6,
 			"publisher": [
-				"Pegasus Spiele"
+				"Pegasus Spiele",
+				 "other"
 			],
 			"releaseDate": [
 				"2019-10-24"
@@ -14493,6 +14498,7 @@
 			"gameDate": "2080-01-01",
 			"category": "novel",
 			"type": "digital",
+			"originalLanguage": "en-US",
 			"releaseDate": [
 				"2021-06-22"
 			],
@@ -14501,6 +14507,159 @@
 			],
 			"status": "missing",
 			"description": "# DARK CLOUDS OF WAR…\n\n…are gathering among the various criminal factions of Seattle, and Ratatosk, 8-ball, Mute, and the rest of their shadowrunning team and allies are caught in the middle almost before they know what’s even going on. A powerful, highly modified assassin duo is killing bosses and setting the various factions against each other, and the team is called on by both Knight Errant and one of the Mafia groups to find a way to stop the bloodshed before the streets truly run red.\n\nBut while locating these assassins is one thing, stopping them is something else entirely. The duo has been modified to within an inch of their lives, swimming in enough magic and cyberware to make them nearly indestructible. Ratatosk and his crew will have to use every bit of cunning and street smarts they know to take these seemingly unstoppable killers down…before the killers get to them."
+		},
+		{
+			"name": "Executive Dice",
+			"sku": [
+				"28D00"
+			],
+			"edition": 6,
+			"gameDate": "2080-01-01",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"releaseDate": [
+				"2021-01-01"
+			],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"status": "outofscope",
+			"description": "# HOW MR. JOHNSON ROLLS!\n\nFor the first time, we are bringing to the Catalyst Store the same Executive Dice set originally offered as convention-only swag. One set of six dice, all precision-edged and crafted from aircraft-grade aluminum. In this Shadowrun set, the \"1\" is replaced with a troll skull, and the classic, totem \"S\" modifies the usual \"5\" and \"6\" faces.\n\nThis Executive set is anodized in color (black, blue, red, green, & purple) then laser-etched for a white face. There are six (6) dice in each set, and an optional case. The optional case is also aircraft-grade aluminum, precision-crafted in a sleek, channel-style form with strong magnetic clasps holding on the lid. The lid is laser-etched with the Shadowrun totem \"S\" logo."
+		},
+		{
+			"name": "Face Mask: Shadowrun \"S\" Symbol",
+			"sku": [
+				"28FM02"
+			],
+			"edition": 6,
+			"gameDate": "2080-01-01",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"releaseDate": [
+				"2021-01-03"
+			],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"status": "outofscope",
+			"description": "# ROCKING THE APOCALYPSE\n\nWhatever your flavor of apocalypse, Shadowrun is the perfect accompaniment. So when you’re out and about, wear your Shadowrun mask proudly to acknowledge the dystopian aspects of the world we live in while also showing you’re going to help keep people safe.\n\nThis is a great, simple, low-profile cotton/spandex blend mask. Great for printing on, washable, and reusable three-ply fabric. Cotton, non-adjustable ear loops."
+		},
+		{
+			"name": "Face Mask: Ancients/Anarchy Symbol",
+			"sku": [
+				"28FM01"
+			],
+			"edition": 6,
+			"gameDate": "2080-01-01",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"releaseDate": [
+				"2021-01-03"
+			],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"status": "outofscope",
+			"description": "# YOU ARE THE DANGER\n\nThis mask emblazoned with the Ancients’ “A” sends a re-assuring message that you’re going to keep people around you safe from viruses—but not necessarily from you. Keep everyone on their toes, be safe, and remain stylish with this custom mask.\n\nThis is a great, simple, low-profile cotton/spandex blend mask. Great for printing on, washable, and reusable three-ply fabric. Cotton, non-adjustable ear loops."
+		},
+		{
+			"name": "Shadowrun 30th Anniversary Lapel Pin",
+			"sku": [
+				"28P00"
+			],
+			"edition": 6,
+			"gameDate": "2080-01-01",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"releaseDate": [
+				"2021-01-01"
+			],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"status": "outofscope",
+			"notes": "This item is a limited time only sale.",
+			"description": "# ACCESSORIZE THIS!\n\nTo celebrate thirty years of Awakened Roleplaying, we commissioned a Shadowrun 30th Anniversary logo that will show up on certain products throughout the year, including this high-quality lapel pin which is good for one free Edge Point! (At participating GMs only!)\n\nEven without the extra Edge, it is a nice lapel pin, and will look good on your jacket, your 30th Anniversary Hoodie, or just set it pin-side-up on the chair being used by your mage. Probably had it coming anyway.\n\nEach lapel pin comes in an acrylic case, and can only be bought online, or as part of one of our special 30th Anniversary promotions throughout the year."
+		},
+		{
+			"name": "Sixth World Totem \"S\" Lapel Pin",
+			"sku": [
+				"28P01"
+			],
+			"edition": 6,
+			"gameDate": "2080-01-01",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"releaseDate": [
+				"2021-01-01"
+			],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"status": "outofscope",
+			"description": "# ACCESSORIZE THIS!\n\nTo celebrate the release of Shadowrun Sixth World RPG, we commissioned a Totem \"S\" lapel pin which is also good for admission to Tuesday \"Troll Night\" at Dante's Inferno.\n\nEach lapel pin comes in an acrylic case, and currently can only be bought online."
+		},
+		{
+			"name": "Shadowrun 30th Anniversary T-Shirt/Hoodie",
+			"sku": [
+				"28T00"
+			],
+			"edition": 6,
+			"gameDate": "2080-01-01",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"releaseDate": [
+				"2021-01-01"
+			],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"status": "outofscope",
+			"notes": "This was a limited time only item.",
+			"description": "# Clothes Make the Meta-Human!\n\nWhether you are on a 'run or just out for ladies night at Dante's Inferno, you should always dress for success. And nothing screams \"SHADOWRUN\" better than our new 30th Anniversary logo! This will appear on select product throughout the anniversary year of 2019, starting right here with a fashion-fit T or warm, athletic hoodie."
+		},
+		{
+			"name": "Sixth World Sprawl Fashion T-Shirt",
+			"sku": [
+				"28T01"
+			],
+			"edition": 6,
+			"gameDate": "2080-10-01",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"releaseDate": [
+				"2021-01-01"
+			],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"status": "outofscope",
+			"description": "# SIXTH WORLD FASHION!\n\nBanned for Casual Fridays by most megacorps, the Sprawl Fashion T celebrates Sixth World culture!\n\nA full, sublimated dye T-shirt, this first selection shows off Benjamin Gilletti's amazing artwork from the upcoming Shadowrun Sixth world cover. Printed on a 100%-poly shirt, the front is full-color and wraps to the back with the same image in a gradient urban gray presentation. Looks great coming and going!"
+		},
+		{
+			"name": "Le doigt dans l'engrenage",
+			"sku": [
+				"BBESR6G03"
+			],
+			"edition": 6,
+			"gameDate": "2080-01-01",
+			"releaseDate": ["2021-01-01"],
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "fr-FR",
+			"publisher": [
+				"other"
+			],
+			"status": "missing",
+			"notes": "This is a French mission based on the \"Neo Revolution\" scenario.",
+			"description": "En plein cœur de Paris, des terroristes du Nouveau Jihad Islamique préparent un attentat pour frapper au cœur de la communauté musulmane de Paris, à l’Institut du monde arabe. Les runners sont plongés dans une course contre la montre pour contrecarrer l’attaque, mais comme toujours, rien n’est ce qui paraît dans les Ombres et derrière cet acte de violence gratuit se cache les fils d’une intrigue tout aussi sordide…\n\nCe scénario est une extension naturelle au supplément Néo-Révolution. Il donne l’occasion de donner un état des lieux de l’Islam dans l’Hexagone dystopique du monde de Shadowrun, mais aussi découvrir deux de ses lieux emblématiques à la capitale : l’Institut du Monde Arabe et la Mosquée de Paris. On y parle aussi « barbouze », évoquant les difficultés des services de renseignements français à l’aube de cette nouvelle et étrange cyber-république, mais aussi des machinations de la nouvelle mégacorporation, GlobalSpin, qui a bien sûr ses vues sur la France…"
 		}
 	]
 }
