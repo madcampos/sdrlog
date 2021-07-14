@@ -1,3 +1,4 @@
+import type { IsoCode, Material } from '../../../../data/data';
 import type { NewMaterialProperties } from './create-material';
 
 import { ProgressOverlay } from '../progress/progress';
@@ -43,21 +44,36 @@ export async function exportDataFile() {
 }
 
 export async function exportDataItem(data: Omit<NewMaterialProperties, 'cover'>) {
-	const filteredData = Object.entries(data).reduce((newData, [name, value]) => {
-		const isAllowed = ['category', 'type', 'sku', 'name', 'description', 'edition', 'publisher', 'originalLanguage'].includes(name);
-		const hasStatus = name === 'status' && value !== 'ok';
-		const hasNotes = name === 'notes' && value !== '';
-		const hasLinks = name === 'links' && value.length > 0;
-		const hasNames = name === 'names' && value.length > 0;
-		const hasGameDate = name === 'gameDate' && value !== '';
-		const hasReleaseDate = name === 'releaseDate' && value.length > 0;
+	const filteredData: Material = {
+		sku: data.sku,
+		name: data.name,
+		category: data.category,
+		type: data.type,
+		originalLanguage: data.originalLanguage,
+		description: data.description,
+		edition: Number.parseInt(data.edition),
+		publisher: data.publisher,
+		releaseDate: data.releaseDate,
+		gameDate: data.gameDate
+	};
 
-		if (isAllowed || hasStatus || hasNotes || hasLinks || hasNames || hasGameDate || hasReleaseDate) {
-			newData[name] = value;
-		}
+	if (data.status !== 'ok') {
+		filteredData.status = data.status;
+	}
 
-		return newData;
-	}, {});
+	if (data.names.length > 0) {
+		filteredData.names = data.names.reduce((names, nameString) => {
+			const { lang, name } = JSON.parse(nameString) as { lang: IsoCode, name: string };
+
+			names[lang] = name;
+
+			return names;
+		}, {});
+	}
+
+	if (data.notes) {
+		filteredData.notes = data.notes;
+	}
 
 	if ('showSaveFilePicker' in window) {
 		const fileHandler = await window.showSaveFilePicker({
