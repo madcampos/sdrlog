@@ -202,10 +202,10 @@ export function setStatus(container: HTMLElement) {
 }
 
 export function setPublishers(container: HTMLElement) {
-	[...publishers.entries()].forEach(([value, name]) => {
+	[...publishers.keys()].forEach((name) => {
 		const option = document.createElement('option');
 
-		option.value = value;
+		option.value = name;
 		option.innerText = name;
 
 		container.appendChild(option);
