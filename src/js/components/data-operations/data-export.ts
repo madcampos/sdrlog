@@ -5,11 +5,46 @@ import { ProgressOverlay } from '../progress/progress';
 import { getMaterials } from './idb-persistence';
 import saveFile from '../../../../lib/file-system/file-save';
 
+function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
+	const filteredData: Material = {
+		sku: data.sku,
+		name: data.name,
+		category: data.category,
+		type: data.type,
+		originalLanguage: data.originalLanguage,
+		description: data.description,
+		edition: Number.parseInt(data.edition),
+		publisher: data.publisher,
+		releaseDate: data.releaseDate,
+		gameDate: data.gameDate
+	};
+
+	if (data.status !== 'ok') {
+		filteredData.status = data.status;
+	}
+
+	if (data.names.length > 0) {
+		filteredData.names = data.names.reduce((names, nameString) => {
+			const { lang, name } = JSON.parse(nameString) as { lang: IsoCode, name: string };
+
+			names[lang] = name;
+
+			return names;
+		}, {});
+	}
+
+	if (data.notes) {
+		filteredData.notes = data.notes;
+	}
+
+	return filteredData;
+}
+
 export async function exportDataFile() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Export data file' });
 
 	try {
-		const items = await getMaterials();
+		const items = (await getMaterials()).map((material) => formatDataItem(material as unknown as NewMaterialProperties));
 
 		if (items.length > 0) {
 			if ('showSaveFilePicker' in window) {
@@ -44,36 +79,7 @@ export async function exportDataFile() {
 }
 
 export async function exportDataItem(data: Omit<NewMaterialProperties, 'cover'>) {
-	const filteredData: Material = {
-		sku: data.sku,
-		name: data.name,
-		category: data.category,
-		type: data.type,
-		originalLanguage: data.originalLanguage,
-		description: data.description,
-		edition: Number.parseInt(data.edition),
-		publisher: data.publisher,
-		releaseDate: data.releaseDate,
-		gameDate: data.gameDate
-	};
-
-	if (data.status !== 'ok') {
-		filteredData.status = data.status;
-	}
-
-	if (data.names.length > 0) {
-		filteredData.names = data.names.reduce((names, nameString) => {
-			const { lang, name } = JSON.parse(nameString) as { lang: IsoCode, name: string };
-
-			names[lang] = name;
-
-			return names;
-		}, {});
-	}
-
-	if (data.notes) {
-		filteredData.notes = data.notes;
-	}
+	const filteredData = formatDataItem(data);
 
 	if ('showSaveFilePicker' in window) {
 		const fileHandler = await window.showSaveFilePicker({
