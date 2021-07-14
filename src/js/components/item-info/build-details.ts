@@ -55,6 +55,7 @@ export function setMaterialDetails(material: Material, {
 	gameDate.value = material.gameDate ?? '';
 	category.value = material.category;
 	type.value = material.type;
+	// TODO: fix original language not showing correctly
 	language.value = material.originalLanguage;
 
 	material.releaseDate?.forEach((releaseDateValue) => {

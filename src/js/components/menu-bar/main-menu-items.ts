@@ -14,6 +14,7 @@ const infobox = document.querySelector('menu-bar modal-dialog') as ModalDialog;
 const infoboxTrigger = document.querySelector('menu-bar modal-dialog > custom-button') as CustomButton;
 
 infoboxTrigger.addEventListener('click', () => {
+	// TODO: resolve infobox not updating url
 	window.history.pushState(null, `Information ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
 	window.document.title = `Information ● ${import.meta.env.APP_NAME}`;
 });

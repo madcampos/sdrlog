@@ -231,6 +231,7 @@ export class ItemDetails extends HTMLElement {
 					cover: this.#coverFile
 				});
 
+				// TODO: resolve card dupplication
 				if (!this.#isUpdatingExistingMaterial) {
 					ItemCard.createCard({
 						name: this.#formFields.name.value,
@@ -243,6 +244,8 @@ export class ItemDetails extends HTMLElement {
 					});
 				}
 			}
+
+			this.#isUpdatingExistingMaterial = true;
 
 			this.#saveButton.disabled = false;
 			this.#exportButton.disabled = false;
