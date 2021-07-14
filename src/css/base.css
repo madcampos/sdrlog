@@ -1,5 +1,7 @@
 @import './vars.css';
 
+@import './font.css';
+
 ::-webkit-scrollbar {
 	width: 0.5rem;
 	height: 0.5rem;
@@ -24,7 +26,7 @@ body {
 	width: 100vw;
 	box-sizing: border-box;
 
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: shadowrun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: var(--body-text);
 
 	display: flex;
