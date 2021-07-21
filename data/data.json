@@ -14192,12 +14192,14 @@
 			"description": "SCHNELLSTART-ABENTEUER FÜR SHADOWRUN 6\n\nBATTLE ROYAL\n\nBattle Royal ist ein Schnellstart-Abenteuer für Shadowrun 6, das für die Schnellstartregeln konzipiert wurde. Tauche ein in die Schatten und lerne die neuste Edition der Sechsten Welt kennen.",
 			"edition": 6,
 			"publisher": [
+				"Catalyst Game Labs",
 				"Pegasus Spiele"
 			],
 			"releaseDate": [
 				"2019-07-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01-01",
+			"notes": "Also released in english as part of the \"Shadowrun: Sixth World Beginner Box\"."
 		},
 		{
 			"sku": [
