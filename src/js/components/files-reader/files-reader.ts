@@ -2,11 +2,19 @@ import { ProgressOverlay } from '../progress/progress';
 import { getMaterial, saveFile, saveMaterial, setFileForMaterial } from '../data-operations/idb-persistence';
 
 export function extractMetadataFromFileName(fileName: string) {
-	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+) - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
-	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? {};
+	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
+	const { name, modifier, id, extension } = testRegex.exec(fileName)?.groups ?? {};
+	const modifierMap = new Map([
+		['A', 'attachement'],
+		['D', 'draft'],
+		['E', 'errata'],
+		['T', 'translation'],
+		['X', 'extra']
+	]);
 
 	return {
 		name,
+		modifier: modifierMap.get(modifier),
 		id,
 		extension
 	};

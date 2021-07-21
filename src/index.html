@@ -174,9 +174,38 @@
 							<ul>
 								<li><strong>Missing (<code>missing</code>):</strong> The item is missing from the collection.</li>
 								<li><strong>Out of scope (<code>outofscope</code>):</strong> The item is either physical, limited edition or unreleased so it's out of the scope of the collection.</li>
-								<li><strong>Canceled (<code>canceled</code>):</strong> The item was announced but then canceled.</li>
+				<details>
+					<summary>Material Files naming convension</summary>
+
+					<p>To have a file associated to an item in the collection when using the <em>"Import Files"</em> option the file name have to be in the following convension:
+					</p>
+
+					<blockquote>
+						<code>sku</code> (<code>modifier</code>) - <code>name</code>.<code>extension</code>
+					</blockquote>
+
+					<dl>
+						<dt><code>sku</code></dt>
+						<dd>The item's first published SKU, it is used as an unique identifier.</dd>
+
+						<dt><code>modifier</code> (optional)</dt>
+						<dd>
+							<p>One optional modifier to diferentiate this file from the "main" file(s) for this item.</p>
+							<p>May be one of the following</p>
+							<ul>
+								<li><strong>A (attechement)</strong>: An attachement like a map, handout or sound file.</li>
+								<li><strong>D (draft)</strong>: An extra draft that is (semi-)official and add content to the main material.</li>
+								<li><strong>E (errata)</strong>: An simple errata or revision of the material.</li>
+								<li><strong>T (translation)</strong>: An important translation with additional content or with significant differences from the main item.</li>
+								<li><strong>X (extra)</strong>: A miscelanious extra to the main item.</li>
 							</ul>
 						</dd>
+
+						<dt><code>name</code></dt>
+						<dd>The item's name.</dd>
+
+						<dt><code>extension</code></dt>
+						<dd>The item's file extension.</dd>
 					</dl>
 				</details>
 			</modal-dialog>

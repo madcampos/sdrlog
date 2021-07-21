@@ -40,9 +40,13 @@ export function isNameExcluded(name: string) {
 }
 
 export async function canExtractCover(fileName: string, forceReplace = false) {
-	const { id } = extractMetadataFromFileName(fileName);
+	const { id, modifier } = extractMetadataFromFileName(fileName);
 
 	if (!id) {
+		return false;
+	}
+
+	if (modifier) {
 		return false;
 	}
 
