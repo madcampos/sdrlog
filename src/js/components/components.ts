@@ -5,6 +5,7 @@ import './dropdown-menu/dropdown-menu-item';
 import './menu-bar/menu-bar';
 import './progress/progress';
 import './search-box/search-box';
+import './info-box/info-box';
 import './item-info/item-card';
 import './item-info/item-details';
 import './skeleton-loader/skeleton-loader';
