@@ -440,7 +440,7 @@
 			"allowNumber": true,
 			"allowBoolean": false,
 			"allowAny": false,
-			"allowNullish": false
+			"allowNullish": true
 		}],
 		"@typescript-eslint/sort-type-union-intersection-members": "off",
 		"@typescript-eslint/strict-boolean-expressions": ["error", {
