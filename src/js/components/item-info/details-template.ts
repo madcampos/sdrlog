@@ -1,11 +1,6 @@
 /* eslint-disable no-ternary */
 import type { FileForMaterial, MaterialLink } from '../../../../data/data';
-
-// FIXME: remove comment after this is available/merged: https://github.com/microsoft/TypeScript/pull/44022
-// @ts-expect-error
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-export const getLangName = new Intl.DisplayNames(['en'], { type: 'language' }) as { of(lang: string): string };
-export const dateFormater = new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC', year: 'numeric' });
+import { formatDate, translateLanguageName } from '../intl/formatting';
 
 const DEFAULT_ICON = '📄';
 
@@ -52,18 +47,18 @@ export const publishers = new Map([
 ]);
 
 export const languages = new Map([
-	['de-DE', `🇩🇪 ${getLangName.of('de')}`],
-	['fr-FR', `🇫🇷 ${getLangName.of('fr')}`],
-	['jp-JP', `🇯🇵 ${getLangName.of('JPN')}`],
-	['es-ES', `🇪🇸 ${getLangName.of('es')}`],
-	['hu-HU', `🇭🇺 ${getLangName.of('hu')}`],
-	['it-IT', `🇮🇹 ${getLangName.of('it')}`],
-	['pt-BR', `🇧🇷 ${getLangName.of('pt')}`],
-	['cs-CZ', `🇨🇿 ${getLangName.of('cs')}`],
-	['he-IL', `🇮🇱 ${getLangName.of('he')}`],
-	['pl-PL', `🇵🇱 ${getLangName.of('pl')}`],
-	['fi-FI', `🇫🇮 ${getLangName.of('fi')}`],
-	['en-US', `🇺🇸 ${getLangName.of('en')}`]
+	['de-DE', `🇩🇪 ${translateLanguageName('de')}`],
+	['fr-FR', `🇫🇷 ${translateLanguageName('fr')}`],
+	['jp-JP', `🇯🇵 ${translateLanguageName('JPN')}`],
+	['es-ES', `🇪🇸 ${translateLanguageName('es')}`],
+	['hu-HU', `🇭🇺 ${translateLanguageName('hu')}`],
+	['it-IT', `🇮🇹 ${translateLanguageName('it')}`],
+	['pt-BR', `🇧🇷 ${translateLanguageName('pt')}`],
+	['cs-CZ', `🇨🇿 ${translateLanguageName('cs')}`],
+	['he-IL', `🇮🇱 ${translateLanguageName('he')}`],
+	['pl-PL', `🇵🇱 ${translateLanguageName('pl')}`],
+	['fi-FI', `🇫🇮 ${translateLanguageName('fi')}`],
+	['en-US', `🇺🇸 ${translateLanguageName('en')}`]
 ]);
 
 export const categories = new Map([
@@ -96,7 +91,7 @@ export const status = new Map([
 export function formatReleaseDate(releaseDate: string, isEditing = false) {
 	return `
 		<edit-list-item ${isEditing ? 'edit' : ''} value="${releaseDate}">
-			${dateFormater.format(new Date(releaseDate))}
+			${formatDate(new Date(releaseDate))}
 		</edit-list-item>
 	`;
 }

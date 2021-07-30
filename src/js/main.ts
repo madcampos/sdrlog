@@ -6,6 +6,7 @@ import { getMaterialsBasicInfo } from './components/data-operations/idb-persiste
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 import { updateInfoBoxFromURL } from './components/menu-bar/info-box-url';
 import { checkForMatchingId, updateItemModalFromURL } from './components/item-info/item-details-url';
+import { createComparer } from './components/intl/formatting';
 
 document.addEventListener('DOMContentLoaded', async () => {
 	if ('serviceWorker' in navigator) {
@@ -18,8 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	await fetchItems();
 
-	const sorter = new Intl.Collator('en-US');
-	const materials = (await getMaterialsBasicInfo()).sort(({ name: nameA }, { name: nameB }) => sorter.compare(nameA, nameB));
+	const sorter = createComparer();
+	const materials = (await getMaterialsBasicInfo()).sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));
 	let matchedId: string | null = null;
 	let matchedTitle = '';
 

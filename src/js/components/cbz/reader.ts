@@ -4,6 +4,7 @@ import '../../../../lib/zip/jszip';
 
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';
+import { createComparer } from '../intl/formatting';
 
 interface Page {
 	name: string,
@@ -18,7 +19,7 @@ const nextButton = document.querySelector('#next') as CustomButton;
 const prevButton = document.querySelector('#prev') as CustomButton;
 const tocSelect = document.querySelector('#toc') as HTMLSelectElement;
 
-const comparer = new Intl.Collator('en-US', { ignorePunctuation: true, numeric: true });
+const comparer = createComparer({ ignorePunctuation: true, numeric: true });
 const DEFAULT_FOLDER_NAME = 'Default section';
 
 const mimeTypes = new Map([
@@ -141,7 +142,7 @@ document.querySelector('#open-comic')?.addEventListener('click', async (evt) => 
 				return 1;
 			}
 
-			return comparer.compare(folderA, folderB);
+			return comparer(folderA, folderB);
 		});
 
 		for (const folder of sortedFolders) {
@@ -151,7 +152,7 @@ document.querySelector('#open-comic')?.addEventListener('click', async (evt) => 
 			tocItem.value = encodeURIComponent(folder);
 			tocSelect.appendChild(tocItem);
 
-			pages[folder] = pages[folder].sort(({ name: aName }, { name: bName }) => comparer.compare(aName, bName));
+			pages[folder] = pages[folder].sort(({ name: aName }, { name: bName }) => comparer(aName, bName));
 
 			for (const page of pages[folder]) {
 				const img = document.createElement('img');
