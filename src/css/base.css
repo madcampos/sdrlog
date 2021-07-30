@@ -25,7 +25,7 @@ body {
 	width: 100vw;
 	box-sizing: border-box;
 
-	font-family: shadowrun, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: shadowrun, system-ui, 'Segoe UI', 'Segoe UI Emoji', emoji, sans-serif;
 	font-size: var(--body-text);
 
 	display: flex;
