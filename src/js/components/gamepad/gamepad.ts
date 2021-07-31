@@ -1,3 +1,5 @@
+export type {};
+
 // TODO: add gamepad navigation
 // Directional: move focus from one card to another based on document.elementFromPoint
 // A: open card
