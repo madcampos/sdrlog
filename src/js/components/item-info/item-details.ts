@@ -69,9 +69,10 @@ export class ItemDetails extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#item-details') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
 
 		this.#modal = this.#root.querySelector('modal-dialog') as ModalDialog;
 

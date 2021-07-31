@@ -1,4 +1,5 @@
 import type { CustomButton } from '../button/button';
+import { I18n } from '../intl/translations';
 
 class DropdownMenuItem extends HTMLElement {
 	static get observedAttributes() { return ['icon']; }
@@ -21,6 +22,7 @@ class DropdownMenuItem extends HTMLElement {
 	}
 
 	connectedCallback() {
+		I18n.translateElementsContent(this);
 		this.#button.icon = this.getAttribute('icon') ?? '';
 
 		if (this.hasAttribute('separator')) {

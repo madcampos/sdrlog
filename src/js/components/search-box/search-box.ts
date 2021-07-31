@@ -1,4 +1,5 @@
 import type { CustomButton } from '../button/button';
+import { I18n } from '../intl/translations';
 
 import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
 
@@ -11,9 +12,10 @@ class SearchBox extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#search-box') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
 
 		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;
 		this.#searchButton = this.#root.querySelector('custom-button') as CustomButton;

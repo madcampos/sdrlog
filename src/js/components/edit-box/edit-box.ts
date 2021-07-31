@@ -1,3 +1,4 @@
+import { I18n } from '../intl/translations';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 
 const banList = [
@@ -79,6 +80,10 @@ export class EditBox extends HTMLElement {
 	resetValue() {
 		this.#input.value = '';
 		this.#loader.loaded = false;
+	}
+
+	connectedCallback() {
+		I18n.translateElementsContent(this);
 	}
 
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {

@@ -1,3 +1,5 @@
+import { I18n } from '../intl/translations';
+
 export class CustomButton extends HTMLElement {
 	static get observedAttributes() { return ['icon', 'disabled']; }
 
@@ -44,6 +46,7 @@ export class CustomButton extends HTMLElement {
 	}
 
 	connectedCallback() {
+		I18n.translateElementsContent(this);
 		this.#icon.innerText = this.getAttribute('icon') ?? '';
 	}
 }

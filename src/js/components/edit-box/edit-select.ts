@@ -1,3 +1,4 @@
+import { I18n } from '../intl/translations';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 
 const banList = [
@@ -19,9 +20,10 @@ export class EditSelect extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#edit-select') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
 
 		this.#select = this.#root.querySelector('select') as HTMLSelectElement;
 		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
@@ -84,6 +86,10 @@ export class EditSelect extends HTMLElement {
 	resetValue() {
 		this.#select.selectedIndex = 0;
 		this.#loader.loaded = false;
+	}
+
+	connectedCallback() {
+		I18n.translateElementsContent(this);
 	}
 
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {

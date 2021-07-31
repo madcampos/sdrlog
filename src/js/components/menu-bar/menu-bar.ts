@@ -1,3 +1,5 @@
+import { I18n } from '../intl/translations';
+
 export type {};
 
 class MenuBar extends HTMLElement {
@@ -7,9 +9,14 @@ class MenuBar extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#menu-bar') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
+	}
+
+	connectedCallback() {
+		I18n.translateElementsContent(this);
 	}
 }
 

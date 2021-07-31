@@ -1,4 +1,5 @@
 import type { CustomButton } from '../button/button';
+import { I18n } from '../intl/translations';
 
 export class EditListItem extends HTMLElement {
 	static get observedAttributes() { return ['edit', 'value']; }
@@ -12,9 +13,10 @@ export class EditListItem extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#edit-list-item') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
 
 		this.#closeButton = this.#root.querySelector('custom-button') as CustomButton;
 
@@ -44,6 +46,7 @@ export class EditListItem extends HTMLElement {
 	}
 
 	connectedCallback() {
+		I18n.translateElementsContent(this);
 		const value = this.getAttribute('value');
 
 		this.#value = value ?? '';

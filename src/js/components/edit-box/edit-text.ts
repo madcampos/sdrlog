@@ -1,4 +1,5 @@
 import { default as marked } from '../../../../lib/marked/marked';
+import { I18n } from '../intl/translations';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 
 const banList = [
@@ -78,6 +79,10 @@ export class EditText extends HTMLElement {
 		this.#textArea.value = '';
 		this.#renderedTextArea.innerHTML = '';
 		this.#loader.loaded = false;
+	}
+
+	connectedCallback() {
+		I18n.translateElementsContent(this);
 	}
 
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {

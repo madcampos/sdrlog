@@ -1,3 +1,5 @@
+import { I18n } from '../intl/translations';
+
 export class SkeletonLoader extends HTMLElement {
 	static get observedAttributes() { return ['loaded']; }
 
@@ -9,9 +11,10 @@ export class SkeletonLoader extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#skeleton-loader') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
 
 
 		this.#content = this.#root.querySelector('slot') as HTMLSlotElement;

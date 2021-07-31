@@ -1,6 +1,5 @@
 /* eslint-disable no-console*/
 import { I18n } from './components/intl/translations';
-const language = I18n.getLanguage();
 
 (document.querySelector('#load-overlay progress') as HTMLProgressElement).max = 11;
 
@@ -27,8 +26,6 @@ import { checkForMatchingId, updateItemModalFromURL } from './components/item-in
 import { createComparer } from './components/intl/formatting';
 
 document.addEventListener('DOMContentLoaded', async () => {
-	await I18n.setLanguage(language);
-
 	if ('serviceWorker' in navigator) {
 		updateLoadStatus(I18n.t`Registering Service Worker.`);
 

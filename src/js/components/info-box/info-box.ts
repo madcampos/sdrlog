@@ -3,6 +3,8 @@ import { I18n } from '../intl/translations';
 
 const infobox = document.querySelector('#info-modal') as ModalDialog;
 
+I18n.translateElementsContent(infobox);
+
 infobox.addEventListener('close', () => {
 	window.history.pushState(null, import.meta.env.APP_NAME, import.meta.env.PUBLIC_URL);
 	window.document.title = import.meta.env.APP_NAME;

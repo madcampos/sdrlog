@@ -18,9 +18,10 @@ export class EditList extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#edit-list') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
 
 		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
 		this.#details = this.#root.querySelector('details') as HTMLDetailsElement;
@@ -148,6 +149,7 @@ export class EditList extends HTMLElement {
 	}
 
 	connectedCallback() {
+		I18n.translateElementsContent(this);
 		const isOpen = this.hasAttribute('open');
 
 		this.open = isOpen;

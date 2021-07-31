@@ -42,7 +42,7 @@ export class I18n {
 		return message;
 	}
 
-	static translateTemplateElements(template: DocumentFragment) {
+	static translateElementsContent(template: Node) {
 		const translateChildren = (baseNode: Node) => {
 			baseNode.childNodes.forEach((node) => {
 				if (node.nodeType === Node.TEXT_NODE) {
@@ -60,5 +60,7 @@ export class I18n {
 		};
 
 		translateChildren(template);
+
+		return template;
 	}
 }

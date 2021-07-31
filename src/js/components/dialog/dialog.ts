@@ -1,6 +1,7 @@
 import type { CustomButton } from '../button/button';
 
 import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
+import { I18n } from '../intl/translations';
 
 export class ModalDialog extends HTMLElement {
 	#root: ShadowRoot;
@@ -11,9 +12,10 @@ export class ModalDialog extends HTMLElement {
 		super();
 
 		const template = document.querySelector('#dialog') as HTMLTemplateElement;
+		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
 
 		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
+		this.#root.appendChild(translatedTemplate);
 
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
@@ -57,6 +59,10 @@ export class ModalDialog extends HTMLElement {
 				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}
 		});
+	}
+
+	connectedCallback() {
+		I18n.translateElementsContent(this);
 	}
 
 	show() {
