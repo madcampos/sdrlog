@@ -1,4 +1,5 @@
 import type { CustomButton } from '../button/button';
+import { I18n } from '../intl/translations';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 import { EditListItem } from './edit-list-item';
 
@@ -33,9 +34,9 @@ export class EditList extends HTMLElement {
 			let validationMessage = '';
 
 			if (this.values.includes(input?.value ?? '')) {
-				validationMessage = 'Item already exists in the list.';
+				validationMessage = I18n.t`Item already exists in the list.`;
 			} else if (!input?.value) {
-				validationMessage = 'Please fill the field.';
+				validationMessage = I18n.t`Please fill the field.`;
 			} else {
 				this.dispatchEvent(new CustomEvent('additem', {
 					bubbles: true,

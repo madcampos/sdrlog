@@ -5,6 +5,7 @@ const ONE_MB = 1048576;
 const STORAGE_TRESHOLD = 0.7;
 const MB_TRESHOLD = 512;
 
+// TODO: re check if this still holds
 export const filterList: string[] = [
 	// Adventures
 	'(Player Aid)',

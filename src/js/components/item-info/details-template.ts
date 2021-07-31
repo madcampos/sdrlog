@@ -1,6 +1,7 @@
 /* eslint-disable no-ternary */
 import type { FileForMaterial, MaterialLink } from '../../../../data/data';
 import { formatDate, translateLanguageName } from '../intl/formatting';
+import { I18n } from '../intl/translations';
 
 const DEFAULT_ICON = '📄';
 
@@ -62,30 +63,30 @@ export const languages = new Map([
 ]);
 
 export const categories = new Map([
-	['novel', '📚 Novel'],
-	['sourcebook', '📜 Sourcebook'],
-	['mission', '🗺️ Mission'],
-	['rulebook', '📝 Rulebook'],
-	['misc', '🔣 Misc.'],
-	['magazine', '📰 Magazine'],
-	['boardgame', '♟️ Boardgame'],
-	['videogame', '🎮 Videogame'],
-	['tcg', '🃏 T.C.G.'],
-	['unofficial', '📓 Unofficial']
+	['novel', `📚 ${I18n.t`Novel`}`],
+	['sourcebook', `📜 ${I18n.t`Sourcebook`}`],
+	['mission', `🗺️ ${I18n.t`Mission`}`],
+	['rulebook', `📝 ${I18n.t`Rulebook`}`],
+	['misc', `🔣 ${I18n.t`Misc.`}`],
+	['magazine', `📰 ${I18n.t`Magazine`}`],
+	['boardgame', `♟️ ${I18n.t`Boardgame`}`],
+	['videogame', `🎮 ${I18n.t`Videogame`}`],
+	['tcg', `🃏 ${I18n.t`T.C.G.`}`],
+	['unofficial', `📓 ${I18n.t`Unofficial`}`]
 ]);
 
 export const types = new Map([
-	['digital', '💽 Digital'],
-	['scan', '📠 Scan'],
-	['print', '🖨️ Print'],
-	['physical', '🎲 Physical']
+	['digital', `💽 ${I18n.t`Digital`}`],
+	['scan', `📠 ${I18n.t`Scan`}`],
+	['print', `🖨️ ${I18n.t`Print`}`],
+	['physical', `🎲 ${I18n.t`Physical`}`]
 ]);
 
 export const status = new Map([
-	['ok', '✔️ OK'],
-	['missing', '❌ Missing'],
-	['outofscope', '⛔ Out of scope'],
-	['canceled', '🚫 Canceled']
+	['ok', `✔️ ${I18n.t`OK`}`],
+	['missing', `❌ ${I18n.t`Missing`}`],
+	['outofscope', `⛔ ${I18n.t`Out of scope`}`],
+	['canceled', `🚫 ${I18n.t`Canceled`}`]
 ]);
 
 export function formatReleaseDate(releaseDate: string, isEditing = false) {

@@ -5,6 +5,7 @@ import '../../../../lib/zip/jszip';
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';
 import { createComparer } from '../intl/formatting';
+import { I18n } from '../intl/translations';
 
 interface Page {
 	name: string,
@@ -20,7 +21,7 @@ const prevButton = document.querySelector('#prev') as CustomButton;
 const tocSelect = document.querySelector('#toc') as HTMLSelectElement;
 
 const comparer = createComparer({ ignorePunctuation: true, numeric: true });
-const DEFAULT_FOLDER_NAME = 'Default section';
+const DEFAULT_FOLDER_NAME = I18n.t`Default section`;
 
 const mimeTypes = new Map([
 	['.png', 'image/png'],
@@ -99,14 +100,14 @@ document.querySelector('#open-comic')?.addEventListener('click', async (evt) => 
 		const params = new URLSearchParams(url.search);
 
 		if (!params.has('file')) {
-			throw new Error('Missing comic file.');
+			throw new Error(I18n.t`Missing comic file.`);
 		}
 
 		const filePath = params.get('file') as string;
 		const handler = await getFile(filePath) as FileSystemFileHandle | undefined;
 
 		if (!handler) {
-			throw new Error('Comic does not exist.');
+			throw new Error(I18n.t`Comic does not exist.`);
 		}
 
 		await getFilePermission(handler);

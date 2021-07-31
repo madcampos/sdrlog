@@ -10,6 +10,7 @@ import '../../../../lib/epub/epub';
 
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';
+import { I18n } from '../intl/translations';
 
 declare function ePub(urlOrData: string | ArrayBuffer, options?: BookOptions): Book;
 
@@ -26,14 +27,14 @@ document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
 		const params = new URLSearchParams(url.search);
 
 		if (!params.has('file')) {
-			throw new Error('Missing book file.');
+			throw new Error(I18n.t`Missing book file.`);
 		}
 
 		const filePath = params.get('file') as string;
 		const handler = await getFile(filePath) as FileSystemFileHandle | undefined;
 
 		if (!handler) {
-			throw new Error('Book does not exist.');
+			throw new Error(I18n.t`Book does not exist.`);
 		}
 
 		await getFilePermission(handler);

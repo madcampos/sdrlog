@@ -2,9 +2,10 @@ import { ProgressOverlay } from '../progress/progress';
 import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
 import '../../../../lib/zip/jszip';
 import fileSave from '../../../../lib/file-system/file-save';
+import { I18n } from '../intl/translations';
 
 export async function saveCoversToFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Export covers' });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export covers` });
 
 	try {
 		if ('showDirectoryPicker' in window) {
@@ -47,7 +48,7 @@ export async function saveCoversToFolder() {
 
 			const zipFile = await zip.generateAsync({ type: 'blob' });
 
-			await fileSave(zipFile, { fileName: 'covers.zip' });
+			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
 		}
 	} catch (err) {
 		// eslint-disable-next-line no-console
@@ -58,7 +59,7 @@ export async function saveCoversToFolder() {
 }
 
 export async function saveThumbsToFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Export thumbnails' });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export thumbnails` });
 
 	try {
 		if ('showDirectoryPicker' in window) {
@@ -101,7 +102,7 @@ export async function saveThumbsToFolder() {
 
 			const zipFile = await zip.generateAsync({ type: 'blob' });
 
-			await fileSave(zipFile, { fileName: 'covers.zip' });
+			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
 		}
 	} catch (err) {
 		// eslint-disable-next-line no-console

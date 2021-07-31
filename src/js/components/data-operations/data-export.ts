@@ -4,6 +4,7 @@ import type { NewMaterialProperties } from './create-material';
 import { ProgressOverlay } from '../progress/progress';
 import { getMaterials } from './idb-persistence';
 import saveFile from '../../../../lib/file-system/file-save';
+import { I18n } from '../intl/translations';
 
 function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 	const filteredData: Material = {
@@ -41,7 +42,7 @@ function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 }
 
 export async function exportDataFile() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Export data file' });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export data file` });
 
 	try {
 		const items = (await getMaterials()).map((material) => formatDataItem(material as unknown as NewMaterialProperties));
@@ -52,9 +53,9 @@ export async function exportDataFile() {
 					// @ts-expect-error
 					id: 'dataFile',
 					startIn: 'downloads',
-					suggestedName: 'data.json',
+					suggestedName: I18n.t`data.json`,
 					excludeAcceptAllOption: true,
-					types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
+					types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
 				});
 				const file = await fileHandler.createWritable();
 
@@ -65,9 +66,9 @@ export async function exportDataFile() {
 				}, null, '\t'));
 				await file.close();
 			} else {
-				const file = new File([JSON.stringify({ $schema: './data.schema.json', items }, null, '\t')], 'data.json', { type: 'application/json' });
+				const file = new File([JSON.stringify({ $schema: './data.schema.json', items }, null, '\t')], I18n.t`data.json`, { type: 'application/json' });
 
-				await saveFile(file, { fileName: 'data.json' });
+				await saveFile(file, { fileName: I18n.t`data.json` });
 			}
 		}
 	} catch (err) {
@@ -88,7 +89,7 @@ export async function exportDataItem(data: Omit<NewMaterialProperties, 'cover'>)
 			startIn: 'downloads',
 			suggestedName: `${data.sku[0]}.json`,
 			excludeAcceptAllOption: true,
-			types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
+			types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
 		});
 		const file = await fileHandler.createWritable();
 

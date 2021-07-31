@@ -1,3 +1,5 @@
+export type {};
+
 class MenuBar extends HTMLElement {
 	#root: ShadowRoot;
 

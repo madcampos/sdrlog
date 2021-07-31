@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention, camelcase, no-underscore-dangle */
 import { getEmulatorSaveFile, getFile, saveEmulatorSaveFile } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
+import { I18n } from '../intl/translations';
 import { loadBundle } from './assets-bundle';
 import { loadBios } from './bios-bundle';
 import config from './config';
@@ -126,14 +127,14 @@ async function setEmulator() {
 		const params = new URLSearchParams(url.search);
 
 		if (!params.has('file')) {
-			throw new Error('Missing ROM file.');
+			throw new Error(I18n.t`Missing ROM file.`);
 		}
 
 		const filePath = params.get('file') as string;
 		const handler = await getFile(filePath) as FileSystemFileHandle | undefined;
 
 		if (!handler) {
-			throw new Error('ROM file does not exist.');
+			throw new Error(I18n.t`ROM file does not exist.`);
 		}
 
 		// Add start handler to have a user action.

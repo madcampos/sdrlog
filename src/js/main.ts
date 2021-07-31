@@ -1,4 +1,7 @@
 /* eslint-disable no-console*/
+import { I18n } from './components/intl/translations';
+const language = I18n.getLanguage();
+
 (document.querySelector('#load-overlay progress') as HTMLProgressElement).max = 11;
 
 function updateLoadStatus(status: string) {
@@ -24,8 +27,10 @@ import { checkForMatchingId, updateItemModalFromURL } from './components/item-in
 import { createComparer } from './components/intl/formatting';
 
 document.addEventListener('DOMContentLoaded', async () => {
+	await I18n.setLanguage(language);
+
 	if ('serviceWorker' in navigator) {
-		updateLoadStatus('Registering Service Worker.');
+		updateLoadStatus(I18n.t`Registering Service Worker.`);
 
 		try {
 			await navigator.serviceWorker.register(`${import.meta.env.PUBLIC_URL}sw.js`);
@@ -34,18 +39,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 		}
 	}
 
-	updateLoadStatus('Fetching items database.');
+	updateLoadStatus(I18n.t`Fetching items database.`);
 
 	await fetchItems();
 
-	updateLoadStatus('Sorting materials.');
+	updateLoadStatus(I18n.t`Sorting materials.`);
 
 	const sorter = createComparer();
 	const materials = (await getMaterialsBasicInfo()).sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));
 	let matchedId: string | null = null;
 	let matchedTitle = '';
 
-	updateLoadStatus('Adding materials to the display.');
+	updateLoadStatus(I18n.t`Adding materials to the display.`);
 
 	for (const material of materials) {
 		const itemCard = document.createElement('item-card');
@@ -66,16 +71,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 	}
 
 	if (matchedId) {
-		updateLoadStatus('Setting modal from URL.');
+		updateLoadStatus(I18n.t`Setting modal from URL.`);
 
 		updateItemModalFromURL(matchedId, matchedTitle);
 	}
 
-	updateLoadStatus('Setting information from URL.');
+	updateLoadStatus(I18n.t`Setting information from URL.`);
 
 	updateInfoBoxFromURL();
 	updateFiltersFromURL();
 
-	updateLoadStatus('Done!');
+	updateLoadStatus(I18n.t`Done!`);
 	document.querySelector('#load-overlay')?.remove();
 });

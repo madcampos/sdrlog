@@ -4,6 +4,7 @@ import { extractMetadataFromFileName, getFilePermission } from '../files-reader/
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
 import directoryOpen from '../../../../lib/file-system/directory-open';
+import { I18n } from '../intl/translations';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 
@@ -38,7 +39,7 @@ export async function getThumbUrl(id: string) {
 }
 
 export async function extractCoversFromFiles() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Extract covers' });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Extract covers` });
 
 	try {
 		const files = await getAllFiles();
@@ -81,7 +82,7 @@ export async function extractCoversFromFiles() {
 }
 
 export async function importCoversFromFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Import covers' });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Import covers` });
 
 	try {
 		let files = [];

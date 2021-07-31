@@ -1,4 +1,5 @@
 import type { CustomButton } from '../button/button';
+import { I18n } from '../intl/translations';
 import type { UpdateMessage } from './update-message';
 
 class UpdateRefresh extends HTMLElement {
@@ -31,7 +32,7 @@ class UpdateRefresh extends HTMLElement {
 			if (message.updatedAt !== lastUpdated) {
 				localStorage.setItem('dataLastUpdated', message.updatedAt);
 
-				this.show('Data updated, please refresh the app.');
+				this.show(I18n.t`Data updated, please refresh the app.`);
 			}
 		});
 	}

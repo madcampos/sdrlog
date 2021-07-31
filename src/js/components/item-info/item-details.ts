@@ -18,6 +18,7 @@ import { openFile } from '../files-reader/open-file';
 import { LOADING_COVER } from '../covers/fetch-covers';
 import { associateFileWithData } from '../files-reader/files-reader';
 import { exportDataItem } from '../data-operations/data-export';
+import { I18n } from '../intl/translations';
 
 export class ItemDetails extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
@@ -178,7 +179,7 @@ export class ItemDetails extends HTMLElement {
 		this.#formFields.files.addEventListener('additem', async () => {
 			if (this.#formFields.sku.values.length === 0) {
 				// eslint-disable-next-line no-alert
-				alert('Please add an SKU first before adding a file.');
+				alert(I18n.t`Please add an SKU first before adding a file.`);
 			} else {
 				const [handle] = await window.showOpenFilePicker({
 					// @ts-expect-error
@@ -254,7 +255,7 @@ export class ItemDetails extends HTMLElement {
 			window.document.title = `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`;
 
 			// eslint-disable-next-line no-alert
-			alert(`Item # ${id} saved successfully.`);
+			alert(`${I18n.t`Item # `}${id}${I18n.t` saved successfully.`}`);
 		});
 
 		this.#exportButton.addEventListener('click', async () => {
@@ -297,7 +298,7 @@ export class ItemDetails extends HTMLElement {
 		}
 	}
 
-	show(title = 'New Material', id?: string) {
+	show(title = I18n.t`New Material`, id?: string) {
 		let hash = '';
 
 		if (id) {
@@ -345,12 +346,12 @@ export class ItemDetails extends HTMLElement {
 		this.#saveButton.hidden = true;
 
 		if (this.isEditing) {
-			this.#editButton.innerText = 'Cancel';
+			this.#editButton.innerText = I18n.t`Cancel`;
 			this.#editButton.icon = '❌';
 			this.#saveButton.hidden = false;
 			this.#exportButton.hidden = true;
 		} else {
-			this.#editButton.innerText = 'Edit';
+			this.#editButton.innerText = I18n.t`Edit`;
 			this.#editButton.icon = '✏️';
 			this.#saveButton.hidden = true;
 			this.#exportButton.hidden = false;

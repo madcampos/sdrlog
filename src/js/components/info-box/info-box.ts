@@ -1,4 +1,5 @@
 import type { ModalDialog } from '../dialog/dialog';
+import { I18n } from '../intl/translations';
 
 const infobox = document.querySelector('#info-modal') as ModalDialog;
 
@@ -14,8 +15,8 @@ window.addEventListener('keyup', (evt) => {
 		infobox.toggle();
 
 		if (infobox.isDialogOpen) {
-			window.history.pushState(null, `Information ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
-			window.document.title = `Information ● ${import.meta.env.APP_NAME}`;
+			window.history.pushState(null, `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
+			window.document.title = `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`;
 		} else {
 			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
 			window.document.title = import.meta.env.APP_NAME;
@@ -24,8 +25,8 @@ window.addEventListener('keyup', (evt) => {
 }, { capture: false });
 
 export function openInfoModal() {
-	window.history.pushState(null, `Information ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
-	window.document.title = `Information ● ${import.meta.env.APP_NAME}`;
+	window.history.pushState(null, `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
+	window.document.title = `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`;
 
 	infobox.show();
 }
@@ -35,7 +36,7 @@ export function updateInfoBoxFromURL() {
 
 	if (url.hash === '#information') {
 		infobox.show();
-		window.history.replaceState(null, `Information ● ${import.meta.env.APP_NAME}`);
-		window.document.title = `Information ● ${import.meta.env.APP_NAME}`;
+		window.history.replaceState(null, `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`);
+		window.document.title = `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`;
 	}
 }

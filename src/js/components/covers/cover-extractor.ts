@@ -1,4 +1,5 @@
 import type { PDFjsModule } from '../../../../lib/pdfjs/pdf.js';
+import { I18n } from '../intl/translations';
 import { optimize } from './optimizer';
 
 const pdfjs = window['pdfjs-dist/build/pdf'] as PDFjsModule;
@@ -82,7 +83,7 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 	const coverScale = referenceWidth / cover.width;
 
 	if (coverScale > MAX_UPSCALE_FACTOR && !forceProcess) {
-		throw new Error('Cover would be upscaled!');
+		throw new Error(I18n.t`Cover would be upscaled!`);
 	}
 
 	if (coverScale !== 1 || forceProcess) {

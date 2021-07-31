@@ -1,4 +1,5 @@
 import fileOpen from '../../../../lib/file-system/file-open';
+import { I18n } from '../intl/translations';
 
 export class DropArea extends HTMLElement {
 	static get observedAttributes() { return ['multiple', 'accepts', 'show']; }
@@ -6,7 +7,7 @@ export class DropArea extends HTMLElement {
 	#overlay: HTMLDivElement;
 	#multiple = false;
 	#accepts: FilePickerAcceptType = {
-		description: 'Image Files',
+		description: I18n.t`Image Files`,
 		accept: {
 			'image/jpeg': ['.jpg', '.jpeg'],
 			'image/png': ['.png'],

@@ -1,5 +1,6 @@
 import type { SDRLogData } from '../../../../data/data';
 import fileOpen from '../../../../lib/file-system/file-open';
+import { I18n } from '../intl/translations';
 import { ProgressOverlay } from '../progress/progress';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
@@ -64,7 +65,7 @@ export async function fetchItems() {
 }
 
 export async function requestDataFileFromUser() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: 'Read data file' });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Read data file` });
 	let file;
 
 	try {
@@ -74,7 +75,7 @@ export async function requestDataFileFromUser() {
 				id: 'dataFile',
 				startIn: 'downloads',
 				excludeAcceptAllOption: false,
-				types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
+				types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
 			});
 
 			await saveFile('data.json', fileHandle);
