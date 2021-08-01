@@ -30,10 +30,19 @@ export function translateLanguageName(nameToTranslate: string, language: string 
 
 const dateFormaters: Partial<Record<string, Intl.DateTimeFormat>> = {};
 
-export function formatDate(dateToFormat: Date | number, language: string = navigator.language, options: Intl.DateTimeFormatOptions = { month: 'short', timeZone: 'UTC', year: 'numeric' }) {
+export function formatFullDate(dateToFormat: Date | number, language: string = navigator.language, options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', timeZone: 'UTC', year: 'numeric' }) {
 	if (!dateFormaters[language]) {
 		dateFormaters[language] = new Intl.DateTimeFormat(language, options);
 	}
 
 	return (dateFormaters[language] as Intl.DateTimeFormat).format(dateToFormat);
+}
+
+export function formatMonth(dateToFormat: Date | number | string) {
+	const date = new Date(dateToFormat);
+	const year = date.getUTCFullYear();
+	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+	const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+
+	return `${year}-${month}`;
 }

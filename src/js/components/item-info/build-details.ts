@@ -5,6 +5,7 @@ import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
 import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
+import { formatMonth } from '../intl/formatting';
 
 import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
 
@@ -52,10 +53,9 @@ export function setMaterialDetails(material: Material, {
 	});
 
 	edition.value = material.edition.toString();
-	gameDate.value = material.gameDate ?? '';
+	gameDate.value = formatMonth(material.gameDate ?? '');
 	category.value = material.category;
 	type.value = material.type;
-	// TODO: fix original language not showing correctly
 	language.value = material.originalLanguage;
 
 	material.releaseDate?.forEach((releaseDateValue) => {

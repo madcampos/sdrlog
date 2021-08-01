@@ -1,6 +1,6 @@
 /* eslint-disable no-ternary */
 import type { FileForMaterial, MaterialLink } from '../../../../data/data';
-import { formatDate, translateLanguageName } from '../intl/formatting';
+import { formatFullDate, translateLanguageName } from '../intl/formatting';
 import { I18n } from '../intl/translations';
 
 const DEFAULT_ICON = '📄';
@@ -92,7 +92,7 @@ export const status = new Map([
 export function formatReleaseDate(releaseDate: string, isEditing = false) {
 	return `
 		<edit-list-item ${isEditing ? 'edit' : ''} value="${releaseDate}">
-			${formatDate(new Date(releaseDate))}
+			${formatFullDate(new Date(releaseDate))}
 		</edit-list-item>
 	`;
 }
