@@ -1,13 +1,4 @@
-import type { Material } from '../../../../data/data';
-
-interface FilterOptions {
-	name?: string,
-	category?: Material['category'],
-	type?: Material['type'],
-	status?: Material['status'],
-	sku?: string,
-	edition?: '1' | '2' | '3' | '4' | '5' | '6'
-}
+type FilterOptions = Partial<Record<'name' | 'category' | 'type' | 'status' | 'sku' | 'edition', string>>;
 
 let filterElement: HTMLStyleElement | undefined;
 
@@ -65,7 +56,7 @@ function updateCSSSearchFilter(filterOption: FilterOptions) {
 
 export function getTagStringFromFilters(filter: FilterOptions) {
 	const tagStringParts: string[] = [];
-	const filterEntries = Object.entries(filter) as [string, string][];
+	const filterEntries = Object.entries(filter);
 
 	if (filterEntries.length === 1 && filterEntries[0][0] === 'name') {
 		return filterEntries[0][1];
@@ -78,7 +69,7 @@ export function getTagStringFromFilters(filter: FilterOptions) {
 	return tagStringParts.join(' ');
 }
 
-export function getFiltersFromTagsString(tagString: string) {
+export function getFiltersFromTagsString(tagString: string, allowEmptyTags = false) {
 	// eslint-disable-next-line prefer-named-capture-group
 	const tagsRegex = /(sku|type|category|edition|status|name):\s?/igu;
 	const [untaggedString, ...values] = tagString.split(tagsRegex);
@@ -93,7 +84,8 @@ export function getFiltersFromTagsString(tagString: string) {
 	for (let i = 0; i < values.length; i += 2) {
 		const tag = values[i];
 		const value = values[i + 1].trim();
-		const isValid = validations.get(tag)?.(value) ?? false;
+		// eslint-disable-next-line @typescript-eslint/no-extra-parens
+		const isValid = (allowEmptyTags && value === '') || (validations.get(tag)?.(value) ?? false);
 
 		if (isValid) {
 			filters[tag] = value;
@@ -127,14 +119,12 @@ export function updateFiltersFromURL() {
 	updateCSSSearchFilter(filters);
 }
 
-export function updateSearchFilter(searchOptions: FilterOptions | { category?: 'all' }) {
+export function updateSearchFilter(searchOptions: FilterOptions) {
 	if (searchOptions.category === 'all') {
 		updateCSSSearchFilter({});
 		updateUrlSearch({});
 	} else {
-		updateCSSSearchFilter(searchOptions as FilterOptions);
-		updateUrlSearch(searchOptions as FilterOptions);
+		updateCSSSearchFilter(searchOptions);
+		updateUrlSearch(searchOptions);
 	}
-
-	window.dispatchEvent(new CustomEvent('search', { bubbles: true, composed: true, cancelable: true }));
 }

@@ -1,11 +1,13 @@
 import type { CustomButton } from '../button/button';
 import { I18n } from '../intl/translations';
+import { getSuggestions } from './search-suggestions';
 
 import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
 
-class SearchBox extends HTMLElement {
+export class SearchBox extends HTMLElement {
 	#root: ShadowRoot;
 	#searchBox: HTMLInputElement;
+	#datalist: HTMLDataListElement;
 	#searchButton: CustomButton;
 
 	constructor() {
@@ -19,6 +21,7 @@ class SearchBox extends HTMLElement {
 
 		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;
 		this.#searchButton = this.#root.querySelector('custom-button') as CustomButton;
+		this.#datalist = this.#root.querySelector('datalist') as HTMLDataListElement;
 
 		const initialFilters = getFiltersFromURL();
 		const initialValue = getTagStringFromFilters(initialFilters);
@@ -29,6 +32,10 @@ class SearchBox extends HTMLElement {
 			this.#searchBox.dispatchEvent(new Event('change'));
 		});
 
+		this.#searchBox.addEventListener('input', () => {
+			void this.updateSuggestions();
+		});
+
 		this.#searchBox.addEventListener('change', () => {
 			if (!this.#searchBox.value) {
 				updateSearchFilter({});
@@ -36,15 +43,6 @@ class SearchBox extends HTMLElement {
 				const filters = getFiltersFromTagsString(this.#searchBox.value);
 
 				updateSearchFilter(filters);
-			}
-		});
-
-		window.addEventListener('search', () => {
-			const filters = getFiltersFromURL();
-			const tagString = getTagStringFromFilters(filters);
-
-			if (this.#searchBox.value !== tagString) {
-				this.#searchBox.value = tagString;
 			}
 		});
 
@@ -59,6 +57,16 @@ class SearchBox extends HTMLElement {
 				}
 			}
 		}, { capture: false });
+	}
+
+	// eslint-disable-next-line @typescript-eslint/require-await
+	async updateSuggestions() {
+		window.requestAnimationFrame(() => {
+			const suggestions = getSuggestions(this.#searchBox.value);
+
+			this.#datalist.innerHTML = '';
+			this.#datalist.append(...suggestions);
+		});
 	}
 }
 

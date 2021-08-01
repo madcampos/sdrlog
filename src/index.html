@@ -554,7 +554,8 @@
 		<template id="search-box">
 			<link rel="stylesheet" href="./css/components/search-box/search-box.css"/>
 			<label for="search-input" title="t('Search')">
-				<input id="search-input" type="search" placeholder="t('Search items...')" role="search"/>
+				<input id="search-input" type="search" list="search-suggestions" placeholder="t('Search items...')" role="search"/>
+				<datalist id="search-suggestions"></datalist>
 				<custom-button icon="🔍"></custom-button>
 			</label>
 		</template>

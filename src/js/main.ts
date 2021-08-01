@@ -1,4 +1,6 @@
 /* eslint-disable no-console*/
+import type { SearchBox } from './components/search-box/search-box';
+
 import { I18n } from './components/intl/translations';
 
 (document.querySelector('#load-overlay progress') as HTMLProgressElement).max = 11;
@@ -77,6 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	updateInfoBoxFromURL();
 	updateFiltersFromURL();
+	document.querySelector<SearchBox>('search-box')?.updateSuggestions();
 
 	updateLoadStatus(I18n.t`Done!`);
 	document.querySelector('#load-overlay')?.remove();
