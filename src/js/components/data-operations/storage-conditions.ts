@@ -5,20 +5,15 @@ const ONE_MB = 1048576;
 const STORAGE_TRESHOLD = 0.7;
 const MB_TRESHOLD = 512;
 
-// TODO: re check if this still holds
 export const filterList: string[] = [
-	// Adventures
-	'(Player Aid)',
-	'Calendar',
-	'Transfer Log',
-	'FAQ',
-	'Season 5 Contacts',
-
 	// Magazines
 	'NVP',
 	'STLD',
 
 	// Misc
+	'7701',
+
+	// Tabletop
 	'7111',
 	'TCG01',
 	'TCG02',
@@ -28,7 +23,6 @@ export const filterList: string[] = [
 	// Rulebook
 	'26100',
 	'27100X',
-	'Errata',
 	'28010',
 
 	// Sourcebooks
