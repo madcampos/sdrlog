@@ -16,7 +16,7 @@ const rulesMap = new Map([
 	['category', (value: string) => `item-card:not([data-category="${value}" i]){ display:none; }`],
 	['type', (value: string) => `item-card:not([data-type="${value}" i]){ display:none; }`],
 	['status', (value: string) => `item-card:not([data-status="${value}" i]){ display:none; }`],
-	['sku', (value: string) => `item-card:not([data-sku~="${value}" i]){ display:none; }`],
+	['sku', (value: string) => `item-card:not([data-sku*="${value}" i]){ display:none; }`],
 	['edition', (value: string) => `item-card:not([data-edition="${value}" i]){ display:none; }`]
 ]);
 
@@ -25,7 +25,7 @@ const validations = new Map([
 	['category', (value: string) => ['rulebook', 'sourcebook', 'mission', 'magazine', 'novel', 'videogame', 'tcg', 'boardgame', 'misc'].includes(value)],
 	['type', (value: string) => ['digital', 'print', 'scan', 'ocr', 'physical'].includes(value)],
 	['status', (value: string) => ['outofscope', 'missing', 'canceled'].includes(value)],
-	['sku', (value: string) => (/^[A-Z0-9](?:-?[A-Z0-9])+$/gu).test(value)],
+	['sku', (value: string) => (/^[A-Z0-9](?:-?[A-Z0-9])+$/giu).test(value)],
 	['edition', (value: string) => (/^[0-6]$/gu).test(value)]
 ]);
 
