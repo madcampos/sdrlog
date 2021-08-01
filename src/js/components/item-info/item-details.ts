@@ -31,7 +31,6 @@ export class ItemDetails extends HTMLElement {
 	#exportButton: CustomButton;
 
 	#isEditing = false;
-	#isUpdatingExistingMaterial = false;
 
 	#formFields: {
 		name: EditBox,
@@ -233,8 +232,7 @@ export class ItemDetails extends HTMLElement {
 					cover: this.#coverFile
 				});
 
-				// TODO: resolve card dupplication
-				if (!this.#isUpdatingExistingMaterial) {
+				if (!document.querySelector(`item-card#${id}`)) {
 					ItemCard.createCard({
 						name: this.#formFields.name.value,
 						id,
@@ -246,8 +244,6 @@ export class ItemDetails extends HTMLElement {
 					});
 				}
 			}
-
-			this.#isUpdatingExistingMaterial = true;
 
 			this.#saveButton.disabled = false;
 			this.#exportButton.disabled = false;
@@ -371,8 +367,6 @@ export class ItemDetails extends HTMLElement {
 	}
 
 	resetMaterial() {
-		this.#isUpdatingExistingMaterial = false;
-
 		Object.values(this.#formFields).forEach((field) => {
 			field.resetValue();
 		});
@@ -396,8 +390,6 @@ export class ItemDetails extends HTMLElement {
 		const material = await getMaterial(id);
 
 		if (material) {
-			this.#isUpdatingExistingMaterial = true;
-
 			setMaterialDetails(material, {
 				cover: this.#cover,
 				...this.#formFields
