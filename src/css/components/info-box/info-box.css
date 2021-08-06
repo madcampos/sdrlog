@@ -1,0 +1,7 @@
+#info-modal summary h2 {
+	display: inline;
+	margin-inline-start: 0.5rem;
+}
+
+#info-modal dt { font-weight: bold; }
+#info-modal code { font-family: ui-monospace, monospace; }

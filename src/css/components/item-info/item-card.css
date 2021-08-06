@@ -21,6 +21,14 @@
 	contain: strict;
 	content-visibility: auto;
 	z-index: auto;
+
+	box-shadow: var(--light-shadow);
+}
+
+:host(:focus) {
+	outline: none;
+	border-color: var(--theme-color);
+	background-color: var(--accent-color);
 }
 
 :host([data-status]) figure::after {

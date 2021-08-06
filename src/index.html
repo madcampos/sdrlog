@@ -76,6 +76,7 @@
 
 		<!-- Styles -->
 		<link rel="stylesheet" href="./css/base.css"/>
+		<link rel="stylesheet" href="./css/components/info-box/info-box.css"/>
 	</head>
 	<body class="notranslate" translate="no">
 		<!-- Content -->
@@ -129,7 +130,7 @@
 			<span slot="title">t("Information")</span>
 
 			<details open>
-				<summary>t("Collection Organization")</summary>
+				<summary><h2>t("Collection Organization")</h2></summary>
 				<p>t("The material here presented is organized into the following categories:")</p>
 				<dl>
 					<dt>t("Sourcebooks")</dt>
@@ -165,7 +166,7 @@
 			</details>
 
 			<details>
-				<summary>t("Search Options")</summary>
+				<summary><h2>t("Search Options")</h2></summary>
 				<p>t("The search is done by tags, which follow the format: ")<code>t("tag: term")</code>t(", where tag is one of the listed below.")</p>
 				<p>t("The default search is by name, so you don't need the tag for it, but if you use more than one tag for searching you will need to specify the ")<code>name</code>t(" tag to search by name.")</p>
 
@@ -210,7 +211,7 @@
 			</details>
 
 			<details>
-				<summary>t("Material Files naming convension")</summary>
+				<summary><h2>t("Material Files naming convension")</h2></summary>
 
 				<p>t("To have a file associated to an item in the collection when using the ")<em>t('"Import Files"')</em>t(" option the file name have to be in the following convension:")
 				</p>
@@ -276,7 +277,7 @@
 			<slot name="trigger"></slot>
 			<dialog tabindex="-1">
 				<header>
-					<slot name="title"></slot>
+					<h2><slot name="title"></slot></h2>
 					<custom-button icon-button id="close" title="t('Close window')">❌</custom-button>
 				</header>
 				<article>

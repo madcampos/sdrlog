@@ -4,7 +4,7 @@
 	box-sizing: inherit;
 }
 
-dialog[open] {
+dialog {
 	position: absolute;
 	left: 0;
 	right: auto;
@@ -28,6 +28,16 @@ dialog[open] {
 
 	scrollbar-width: thin;
 	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+
+	transform: scaleY(0);
+	transform-origin: center top;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+dialog[open] {
+	transform: scaleY(100%);
+	opacity: 1;
 }
 
 dialog::-webkit-scrollbar {

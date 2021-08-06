@@ -11,6 +11,8 @@
 
 	box-sizing: border-box;
 	z-index: 1;
+
+	box-shadow: var(--deep-shadow);
 }
 
 nav {

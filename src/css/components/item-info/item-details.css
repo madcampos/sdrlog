@@ -59,6 +59,11 @@ header #type { grid-area: type; }
 header #language { grid-area: language; }
 header #releasedate { grid-area: release; }
 
+#name {
+	--border-color: transparent;
+	--theme-color: var(--accent-color);
+}
+
 drop-area {
 	grid-area: image;
 	width: 100%;
@@ -171,6 +176,7 @@ a:hover {
 			'meta meta'
 			'files files';
 	}
+
 	header {
 		grid-template-rows: repeat(4, auto);
 		grid-template-areas:
@@ -179,6 +185,7 @@ a:hover {
 			'language language language language'
 			'release release release release';
 	}
+
 	#meta {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
@@ -199,6 +206,7 @@ a:hover {
 			'meta'
 			'files';
 	}
+
 	#meta {
 		grid-template-rows: repeat(4, auto);
 		grid-template-columns: 1fr;
@@ -208,6 +216,7 @@ a:hover {
 			'names'
 			'pub';
 	}
+
 	drop-area figure {
 		height: 20rem;
 	}

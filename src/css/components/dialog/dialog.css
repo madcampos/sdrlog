@@ -20,20 +20,30 @@
 	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
 }
 
-dialog[open] {
-	display: flex;
+dialog {
+	display: none;
+	box-sizing: border-box;
+
 	flex-direction: column;
+
 	padding: 0;
 	margin: auto;
+
 	width: var(--dialog-width);
+	max-width: initial;
 	height: var(--dialog-height);
+	max-height: initial;
+
+	background: var(--bg-color);
 	border: none;
 	border-radius: var(--dialog-border-radius);
-	background: var(--bg-color);
-	box-sizing: border-box;
-	max-width: initial;
-	max-height: initial;
+
+	box-shadow: var(--shadow-deepest);
 }
+
+dialog[open] { display: flex; }
+
+dialog:focus { outline: none; }
 
 dialog::backdrop {
 	background: rgba(0, 0, 0, 0.5);
