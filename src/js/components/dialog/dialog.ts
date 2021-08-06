@@ -69,6 +69,7 @@ export class ModalDialog extends HTMLElement {
 		this.#isDialogOpen = true;
 		this.#dialog.showModal();
 		this.#dialog.focus();
+		this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 	}
 
 	close() {
