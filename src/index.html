@@ -102,8 +102,7 @@
 			<search-box></search-box>
 			<dropdown-menu icon="⚙️" align-right>
 				<dropdown-menu-item id="tool-info" icon="ℹ️">t("Tool Information")</dropdown-menu-item>
-				<dropdown-menu-item id="lang-settings" icon="💬">t("Language settings")</dropdown-menu-item>
-				<!-- <dropdown-menu-item id="theme-settings" icon="🌚">t("Theme (Dark)")</dropdown-menu-item> -->
+				<dropdown-menu-item id="lang-settings" icon="💬">t("Language Settings")</dropdown-menu-item>
 
 				<dropdown-menu-item separator></dropdown-menu-item>
 
@@ -246,6 +245,21 @@
 			</details>
 		</modal-dialog>
 
+		<modal-dialog id="language-modal">
+			<span slot="title">t("Language Settings")</span>
+
+			<p>t("Set the language for the application:")</p>
+			<p><small><strong>t("Note:")</strong> t("The page will reload after changing the app language.")</small></p>
+
+			<edit-select id="language-select" edit>
+				<span slot="label">t("App Language")</span>
+
+				<option value="en">t("English")</option>
+				<option value="fr">t("French")</option>
+				<option value="es">t("Spanish")</option>
+				<option value="pt-BR">t("Brazilian Portuguese")</option>
+			</edit-select>
+		</modal-dialog>
 		<div id="load-overlay">
 			<progress></progress>
 			<h1>Loading Data...</h1>

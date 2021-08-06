@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-confusing-void-expression */
 import type { Material } from '../../../../data/data';
 
 import { readFiles } from '../files-reader/files-reader';
@@ -8,6 +9,7 @@ import { exportDataFile } from '../data-operations/data-export';
 import { updateSearchFilter } from '../search-box/update-filter';
 import { ItemDetails } from '../item-info/item-details';
 import { openInfoModal } from '../info-box/info-box';
+import { openLanguageModal } from '../intl/language-info';
 
 if (!('showDirectoryPicker' in window)) {
 	(document.querySelector('menu-bar #import-materials') as HTMLElement).remove();
@@ -15,9 +17,8 @@ if (!('showDirectoryPicker' in window)) {
 	(document.querySelector('menu-bar #export-covers') as HTMLElement).remove();
 }
 
-document.querySelector('menu-bar #tool-info')?.addEventListener('click', () => {
-	openInfoModal();
-});
+document.querySelector('menu-bar #tool-info')?.addEventListener('click', () => openInfoModal());
+document.querySelector('menu-bar #lang-settings')?.addEventListener('click', () => openLanguageModal());
 
 document.querySelector('menu-bar #import-materials')?.addEventListener('click', async () => readFiles());
 document.querySelector('menu-bar #import-data')?.addEventListener('click', async () => requestDataFileFromUser());

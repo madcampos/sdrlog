@@ -24,6 +24,7 @@ import { fetchItems } from './components/data-operations/data-import';
 import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 import { updateInfoBoxFromURL } from './components/info-box/info-box';
+import { updateLanguageBoxFromURL } from './components/intl/language-info';
 import { checkForMatchingId, updateItemModalFromURL } from './components/item-info/item-details-url';
 import { createComparer } from './components/intl/formatting';
 
@@ -78,6 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	updateLoadStatus(I18n.t`Setting information from URL.`);
 
 	updateInfoBoxFromURL();
+	updateLanguageBoxFromURL();
 	updateFiltersFromURL();
 	document.querySelector<SearchBox>('search-box')?.updateSuggestions();
 

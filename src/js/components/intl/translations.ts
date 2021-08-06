@@ -1,4 +1,4 @@
-const availableLanguages = ['en', 'fr', 'pt-BR'];
+const availableLanguages = ['en', 'fr', 'es', 'pt-BR'];
 
 let loadedTranslations: Map<string, string>;
 
@@ -13,14 +13,11 @@ export class I18n {
 		return localStorage.getItem('appLanguage') ?? navigator.language;
 	}
 
-	static getTranslationLanguage() {
-		return localStorage.getItem('translationLanguage') ?? 'en';
-	}
-
 	static async setLanguage(language: string) {
 		const translationLanguage = availableLanguages.find((lang) => language.startsWith(lang)) ?? 'en';
 
-		localStorage.setItem('appLanguage', language);
+		(document.querySelector('html') as HTMLHtmlElement).lang = translationLanguage;
+		localStorage.setItem('appLanguage', translationLanguage);
 		localStorage.setItem('translationLanguage', translationLanguage);
 
 		try {
@@ -35,9 +32,9 @@ export class I18n {
 
 	// eslint-disable-next-line id-length
 	static t(strings: TemplateStringsArray | string[]) {
-		// eslint-disable-next-line no-template-curly-in-string
 		const [messageKey] = strings;
-		const message = loadedTranslations.get(messageKey) ?? messageKey;
+		// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+		const message = loadedTranslations.get(messageKey) || messageKey;
 
 		return message;
 	}
