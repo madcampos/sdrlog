@@ -7,18 +7,21 @@
 	--border-width: 0.1rem;
 	--border-radius: 0.3rem;
 
-	/* Colors */
+	/* Theme colors */
 	--theme-color: darkviolet;
 	--secondary-color: deeppink;
 	--accent-color: hotpink;
-	--complementary-color: gold;
-	--bg-color: #3c3c3c;
-	--dark-bg-color: #252525;
-	--border-color: #505050;
+	--complementary-color: goldenrod;
+
+	/* Base colors */
+	--bg-color: lightgray;
+	--dark-bg-color: whitesmoke;
+	--border-color: silver;
 	--dark-border-color: #444444;
-	--text-color: whitesmoke;
-	--bg-gradient: conic-gradient(goldenrod, peru, orange, sandybrown, gold, goldenrod);
-	--bg-dark-gradient: conic-gradient(darkslateblue, slateblue, blueviolet, purple, darkviolet, indigo, darkslateblue);
+	--text-color: black;
+	--scrollbar-bg: rgba(255, 255, 255, 0.1);
+
+	/* Select arrow SVG */
 	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
 
 	/* Shadows */
@@ -36,8 +39,50 @@
 	--searchbox-margin: max(1rem, 10%);
 	--searchbox-width: 100%;
 
-	color-scheme: dark light;
+	color-scheme: light;
 	accent-color: var(--theme-color);
+}
+
+.theme-dark {
+	/* Theme colors */
+	--theme-color: darkviolet;
+	--secondary-color: deeppink;
+	--accent-color: hotpink;
+	--complementary-color: gold;
+
+	/* Base colors */
+	--bg-color: #3c3c3c;
+	--dark-bg-color: #252525;
+	--border-color: #505050;
+	--dark-border-color: #444444;
+	--text-color: whitesmoke;
+	--scrollbar-bg: rgba(255, 255, 255, 0.1);
+
+	/* Select arrow SVG */
+	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
+
+	color-scheme: dark;
+}
+
+.theme-light {
+	/* Theme colors */
+	--theme-color: darkviolet;
+	--secondary-color: deeppink;
+	--accent-color: hotpink;
+	--complementary-color: goldenrod;
+
+	/* Base colors */
+	--bg-color: lightgray;
+	--dark-bg-color: whitesmoke;
+	--border-color: silver;
+	--dark-border-color: #444444;
+	--text-color: black;
+	--scrollbar-bg: rgba(255, 255, 255, 0.1);
+
+	/* Select arrow SVG */
+	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
+
+	color-scheme: light;
 }
 
 @media (max-width: 800px) {
@@ -52,5 +97,28 @@
 	:root {
 		--searchbox-margin: 0;
 		--searchbox-width: 100%;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Theme colors */
+		--theme-color: darkviolet;
+		--secondary-color: deeppink;
+		--accent-color: hotpink;
+		--complementary-color: gold;
+
+		/* Base colors */
+		--bg-color: #3c3c3c;
+		--dark-bg-color: #252525;
+		--border-color: #505050;
+		--dark-border-color: #444444;
+		--text-color: whitesmoke;
+		--scrollbar-bg: rgba(255, 255, 255, 0.1);
+
+		/* Select arrow SVG */
+		--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
+
+		color-scheme: dark;
 	}
 }

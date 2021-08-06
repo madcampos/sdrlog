@@ -28,13 +28,17 @@ class DropdownMenu extends HTMLElement {
 			evt.preventDefault();
 			evt.stopPropagation();
 
-			this.#dialog.show();
-			this.#dialog.focus();
+			if (this.#dialog.hasAttribute('open')) {
+				this.#dialog.close();
+			} else {
+				this.#dialog.show();
+				this.#dialog.focus();
 
-			const rect = this.#dialog.getBoundingClientRect();
+				const rect = this.#dialog.getBoundingClientRect();
 
-			if (rect.right > window.innerWidth) {
-				this.#dialog.classList.add('right');
+				if (rect.right > window.innerWidth) {
+					this.#dialog.classList.add('right');
+				}
 			}
 		});
 

@@ -103,6 +103,7 @@
 			<dropdown-menu icon="⚙️" align-right>
 				<dropdown-menu-item id="tool-info" icon="ℹ️">t("Tool Information")</dropdown-menu-item>
 				<dropdown-menu-item id="lang-settings" icon="💬">t("Language Settings")</dropdown-menu-item>
+				<dropdown-menu-item id="theme-settings" icon="🌓">t("Theme Settings")</dropdown-menu-item>
 
 				<dropdown-menu-item separator></dropdown-menu-item>
 
@@ -260,6 +261,28 @@
 				<option value="pt-BR">t("Brazilian Portuguese")</option>
 			</edit-select>
 		</modal-dialog>
+
+		<modal-dialog id="theme-modal">
+			<span slot="title">t("Theme Settings")</span>
+
+			<p>t("Set the theme for the application:")</p>
+
+			<radio-group>
+				<radio-item icon="🌓" value="system">
+					<span slot="title">t("System Theme")</span>
+					<span>t("Follows the system defined theme.")</span>
+				</radio-item>
+				<radio-item icon="🌞" value="light">
+					<span slot="title">t("Light Theme")</span>
+					<span>t("Always use a light theme.")</span>
+				</radio-item>
+				<radio-item icon="🌚" value="dark">
+					<span slot="title">t("Dark Theme")</span>
+					<span>t("Always use a dark theme.")</span>
+				</radio-item>
+			</radio-group>
+		</modal-dialog>
+
 		<div id="load-overlay">
 			<progress></progress>
 			<h1>Loading Data...</h1>

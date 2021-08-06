@@ -10,6 +10,7 @@ import { updateSearchFilter } from '../search-box/update-filter';
 import { ItemDetails } from '../item-info/item-details';
 import { openInfoModal } from '../info-box/info-box';
 import { openLanguageModal } from '../intl/language-info';
+import { openThemeModal } from '../theme-box/theme-box';
 
 if (!('showDirectoryPicker' in window)) {
 	(document.querySelector('menu-bar #import-materials') as HTMLElement).remove();
@@ -19,6 +20,7 @@ if (!('showDirectoryPicker' in window)) {
 
 document.querySelector('menu-bar #tool-info')?.addEventListener('click', () => openInfoModal());
 document.querySelector('menu-bar #lang-settings')?.addEventListener('click', () => openLanguageModal());
+document.querySelector('menu-bar #theme-settings')?.addEventListener('click', () => openThemeModal());
 
 document.querySelector('menu-bar #import-materials')?.addEventListener('click', async () => readFiles());
 document.querySelector('menu-bar #import-data')?.addEventListener('click', async () => requestDataFileFromUser());

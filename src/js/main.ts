@@ -13,6 +13,14 @@ function updateLoadStatus(status: string) {
 	progress.value += 1;
 }
 
+function updateAppTheme() {
+	const theme = localStorage.getItem('appTheme') ?? 'system';
+
+	document.body.classList.add(`theme-${theme}`);
+}
+
+updateAppTheme();
+
 updateLoadStatus('Loading components.');
 import './components/components';
 
@@ -24,6 +32,7 @@ import { fetchItems } from './components/data-operations/data-import';
 import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 import { updateInfoBoxFromURL } from './components/info-box/info-box';
+import { updateThemeBoxFromURL } from './components/theme-box/theme-box';
 import { updateLanguageBoxFromURL } from './components/intl/language-info';
 import { checkForMatchingId, updateItemModalFromURL } from './components/item-info/item-details-url';
 import { createComparer } from './components/intl/formatting';
@@ -79,6 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	updateLoadStatus(I18n.t`Setting information from URL.`);
 
 	updateInfoBoxFromURL();
+	updateThemeBoxFromURL();
 	updateLanguageBoxFromURL();
 	updateFiltersFromURL();
 	document.querySelector<SearchBox>('search-box')?.updateSuggestions();
