@@ -566,6 +566,19 @@
 			</dialog>
 		</template>
 
+		<template id="radio-item">
+			<link rel="stylesheet" href="./css/components/radio/radio-item.css"/>
+			<span id="radio-icon"></span>
+			<h4><slot name="title"></slot></h4>
+			<p><slot></slot></p>
+		</template>
+
+		<template id="radio-group">
+			<link rel="stylesheet" href="./css/components/radio/radio-group.css"/>
+			<div id="radio-container"></div>
+			<slot></slot>
+		</template>
+
 		<template id="search-box">
 			<link rel="stylesheet" href="./css/components/search-box/search-box.css"/>
 			<label for="search-input" title="t('Search')">

@@ -1,0 +1,25 @@
+#radio-container {
+	display: flex;
+	justify-content: center;
+}
+
+input {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	transform: scale(0);
+}
+
+input:focus { outline: none; }
+
+input:focus ~ radio-item {
+	border-color: var(--theme-color);
+}
+
+input:checked ~ radio-item {
+	background-color: var(--theme-color);
+}
+
+input:hover ~ radio-item {
+	background: var(--accent-color);
+}
