@@ -23,6 +23,7 @@ updateAppTheme();
 
 updateLoadStatus('Loading components.');
 import './components/components';
+import './components/gamepad/gamepad-navigation';
 
 updateLoadStatus('Adding menu bar.');
 import './components/menu-bar/main-menu-items';
