@@ -25,13 +25,20 @@ themeSelector.addEventListener('change', () => {
 	document.body.classList.add(`theme-${themeSelector.value}`);
 });
 
+window.addEventListener('keydown', (evt) => {
+	if (evt.ctrlKey && evt.key === 't') {
+		evt.preventDefault();
+		evt.stopPropagation();
+	}
+});
+
 window.addEventListener('keyup', (evt) => {
 	if (evt.ctrlKey && evt.key === 't') {
 		evt.preventDefault();
 
 		themeBox.toggle();
 
-		if (themeBox.isDialogOpen) {
+		if (themeBox.hasAttribute('open')) {
 			window.history.pushState(null, `${I18n.t`Theme Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#theme`);
 			window.document.title = `${I18n.t`Theme Settings`} ● ${import.meta.env.APP_NAME}`;
 		} else {

@@ -4,6 +4,7 @@ import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
 import { I18n } from '../intl/translations';
 
 export class ModalDialog extends HTMLElement {
+	static get observedAttributes() { return ['open']; }
 	#root: ShadowRoot;
 	#dialog: HTMLDialogElement;
 	#isDialogOpen = false;
@@ -45,48 +46,72 @@ export class ModalDialog extends HTMLElement {
 		});
 
 		this.#root.querySelector('#close')?.addEventListener('click', () => {
-			if (this.#dialog.hasAttribute('open')) {
-				this.#dialog.close();
-				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
-			}
+			this.close();
 		});
 
 		this.#dialog.addEventListener('click', (evt) => {
 			const target = evt.target as HTMLDialogElement;
 
-			if (target.matches('dialog') && target.hasAttribute('open')) {
-				target.close();
-				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
+			if (target === this.#dialog && this.open) {
+				this.close();
+			}
+		});
+
+		window.addEventListener('keydown', (evt) => {
+			if (evt.key === 'Escape' && this.open) {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				this.close();
 			}
 		});
 	}
+	get open() {
+		return this.hasAttribute('open');
+	}
 
-	connectedCallback() {
-		I18n.translateElementsContent(this);
+	set open(isOpen: boolean) {
+		if (isOpen) {
+			this.setAttribute('open', '');
+		} else {
+			this.removeAttribute('open');
+		}
 	}
 
 	show() {
-		this.#isDialogOpen = true;
-		this.#dialog.showModal();
-		this.#dialog.focus();
-		this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
+		this.open = true;
 	}
 
 	close() {
-		this.#isDialogOpen = false;
-		this.#dialog.close();
+		this.open = false;
 	}
 
 	toggle() {
-		if (this.#isDialogOpen) {
+		if (this.open) {
 			this.close();
 		} else {
 			this.show();
 		}
 	}
 
-	get isDialogOpen() {
-		return this.#isDialogOpen;
+	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+		if (oldValue !== newValue) {
+			if (name === 'open') {
+				if (this.hasAttribute('open')) {
+					this.#dialog.showModal();
+					this.#dialog.focus();
+					this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
+				} else {
+					this.#dialog.close();
+					this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
+				}
+			}
+		}
+	}
+
+	connectedCallback() {
+		this.open = this.hasAttribute('open');
+		I18n.translateElementsContent(this);
 	}
 }
 

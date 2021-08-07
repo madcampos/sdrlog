@@ -35,6 +35,10 @@ export class CustomButton extends HTMLElement {
 		this.#icon.innerText = newValue;
 	}
 
+	focus() {
+		this.#button.focus();
+	}
+
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'icon') {

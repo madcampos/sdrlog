@@ -1,7 +1,7 @@
 import type { CustomButton } from '../button/button';
 import { I18n } from '../intl/translations';
 
-class DropdownMenuItem extends HTMLElement {
+export class DropdownMenuItem extends HTMLElement {
 	static get observedAttributes() { return ['icon']; }
 	#root: ShadowRoot;
 	#button: CustomButton;
@@ -15,6 +15,10 @@ class DropdownMenuItem extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#button = this.#root.querySelector('custom-button') as CustomButton;
+	}
+
+	focus() {
+		this.#button.focus();
 	}
 
 	attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {

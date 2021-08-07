@@ -303,6 +303,7 @@ export class ItemDetails extends HTMLElement {
 		}
 
 		this.#modal.show();
+		this.setAttribute('open', '');
 
 		window.history.pushState(null, `${title} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}${hash}`);
 		window.document.title = `${title} ● ${import.meta.env.APP_NAME}`;
@@ -310,6 +311,7 @@ export class ItemDetails extends HTMLElement {
 
 	close() {
 		this.#modal.close();
+		this.removeAttribute('open');
 	}
 
 	toggleEdit(resetState?: boolean, isNew?: boolean) {

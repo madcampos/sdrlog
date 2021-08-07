@@ -46,6 +46,13 @@ export class SearchBox extends HTMLElement {
 			}
 		});
 
+		window.addEventListener('keydown', (evt) => {
+			if (evt.ctrlKey && evt.key === 'f') {
+				evt.preventDefault();
+				evt.stopPropagation();
+			}
+		});
+
 		window.addEventListener('keyup', (evt) => {
 			if (evt.ctrlKey && evt.key === 'f') {
 				evt.preventDefault();
@@ -57,6 +64,10 @@ export class SearchBox extends HTMLElement {
 				}
 			}
 		}, { capture: false });
+	}
+
+	focus() {
+		this.#searchBox.focus();
 	}
 
 	// eslint-disable-next-line @typescript-eslint/require-await

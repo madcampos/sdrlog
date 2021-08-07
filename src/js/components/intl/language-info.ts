@@ -26,13 +26,20 @@ languageBox.addEventListener('close', () => {
 	window.document.title = import.meta.env.APP_NAME;
 }, { capture: false });
 
+window.addEventListener('keydown', (evt) => {
+	if (evt.ctrlKey && evt.key === 'l') {
+		evt.preventDefault();
+		evt.stopPropagation();
+	}
+});
+
 window.addEventListener('keyup', (evt) => {
 	if (evt.ctrlKey && evt.key === 'l') {
 		evt.preventDefault();
 
 		languageBox.toggle();
 
-		if (languageBox.isDialogOpen) {
+		if (languageBox.hasAttribute('open')) {
 			window.history.pushState(null, `${I18n.t`Language Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#language`);
 			window.document.title = `${I18n.t`Language Settings`} ● ${import.meta.env.APP_NAME}`;
 		} else {

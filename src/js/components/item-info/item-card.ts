@@ -41,7 +41,7 @@ export class ItemCard extends HTMLElement {
 			await ItemDetails.openMaterialModal(id, title);
 		});
 
-		this.addEventListener('keypress', (evt) => {
+		this.addEventListener('keyup', (evt) => {
 			if (evt.code === 'Space' || evt.code === 'Enter') {
 				evt.preventDefault();
 				evt.stopPropagation();

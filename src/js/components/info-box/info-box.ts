@@ -10,13 +10,20 @@ infobox.addEventListener('close', () => {
 	window.document.title = import.meta.env.APP_NAME;
 }, { capture: false });
 
+window.addEventListener('keydown', (evt) => {
+	if (evt.ctrlKey && evt.key === 'i') {
+		evt.preventDefault();
+		evt.stopPropagation();
+	}
+});
+
 window.addEventListener('keyup', (evt) => {
 	if (evt.ctrlKey && evt.key === 'i') {
 		evt.preventDefault();
 
 		infobox.toggle();
 
-		if (infobox.isDialogOpen) {
+		if (infobox.hasAttribute('open')) {
 			window.history.pushState(null, `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
 			window.document.title = `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`;
 		} else {
