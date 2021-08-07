@@ -185,6 +185,8 @@ function closeCardDetails() {
 	}
 }
 
+// TODO: navigate modals, scroll, navigate item-details
+
 window.addEventListener('buttondown', (evt) => {
 	// eslint-disable-next-line default-case, @typescript-eslint/switch-exhaustiveness-check
 	switch (evt.button) {
@@ -250,6 +252,13 @@ window.addEventListener('buttonpress', (evt) => {
 			break;
 		case 'start':
 			openMenu('#app-menu');
+			break;
+		case 'select':
+			closeCardDetails();
+			closeModal();
+			closeMenu();
+			exitSearch();
+			resetFocus();
 			break;
 	}
 });

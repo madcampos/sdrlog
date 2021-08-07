@@ -142,7 +142,7 @@ export class GamepadEventNormalizer extends EventTarget {
 
 			(Object.keys(this.#buttonsPressed) as ButtonNames[]).forEach((buttonName, i) => {
 				const wasButtonDown = this.#buttonsPressed[buttonName];
-				const isButtonDown = gamepad.buttons[i].pressed;
+				const isButtonDown = gamepad.buttons[i]?.pressed;
 
 				if (isButtonDown) {
 					console.log(`[🎮] Gamepad button down: ${buttonName}.`);
