@@ -18,7 +18,7 @@ button {
 }
 
 button:focus {
-	border-color: var(--border-color);
+	border-color: var(--accent-color);
 	outline: none;
 }
 
