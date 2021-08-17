@@ -5,7 +5,7 @@
 import type { SDRLogData } from '../data/data';
 import type { UpdateMessage } from './js/components/update-refresh/update-message';
 
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const appShellFiles = ['./index.html'];
 const skipNetworkRefresh = ['.jpg', '.png', '.svg', '.wasm', '.html'];
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
