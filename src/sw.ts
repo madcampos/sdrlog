@@ -51,7 +51,7 @@ async function fetchFromNetwork(request: Request) {
 
 		return netRes;
 	} catch (err) {
-		console.error('[⚙️] Network fetch failed!');
+		console.error(`[⚙️] Network fetch failed for url: "${request.url}"`);
 		console.error(err);
 	}
 
