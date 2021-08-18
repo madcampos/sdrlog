@@ -1,4 +1,3 @@
-/* eslint-disable no-console*/
 import type { SearchBox } from './components/search-box/search-box';
 
 import { I18n } from './components/intl/translations';
@@ -38,17 +37,7 @@ import { updateLanguageBoxFromURL } from './components/intl/language-info';
 import { checkForMatchingId, updateItemModalFromURL } from './components/item-info/item-details-url';
 import { createComparer } from './components/intl/formatting';
 
-document.addEventListener('DOMContentLoaded', async () => {
-	if ('serviceWorker' in navigator) {
-		updateLoadStatus(I18n.t`Registering Service Worker.`);
-
-		try {
-			await navigator.serviceWorker.register(`${import.meta.env.PUBLIC_URL}sw.js`);
-		} catch (err) {
-			console.error(err);
-		}
-	}
-
+(async () => {
 	updateLoadStatus(I18n.t`Fetching items database.`);
 
 	await fetchItems();
@@ -96,4 +85,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	updateLoadStatus(I18n.t`Done!`);
 	document.querySelector('#load-overlay')?.remove();
-});
+})();

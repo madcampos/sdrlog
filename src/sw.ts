@@ -2,13 +2,43 @@
 /* eslint-disable no-console */
 /// <reference lib="webworker" />
 
-import type { SDRLogData } from '../data/data';
-import type { UpdateMessage } from './js/components/update-refresh/update-message';
+const isDebug = false;
 
-const CACHE_VERSION = 'v2';
-const appShellFiles = ['./index.html'];
-const skipNetworkRefresh = ['.jpg', '.png', '.svg', '.wasm', '.html'];
+import type { SDRLogData } from '../data/data';
+import type { UpdateMessage, WorkerReadyMessage } from './js/rpc-messages';
+
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
+const REQUEST_TIMEOUT = 20000;
+const CACHE_VERSION = 'v3';
+const skipNetworkRefresh = ['.jpg', '.png', '.svg', '.wasm'];
+const preCacheFiles = [
+	// Base files
+	'./',
+	'./sdrlog.webmanifest',
+	'./img/icons/favicon.svg',
+	'./data/data.json',
+
+	// JS
+	'./lib/pdfjs/pdf.js',
+	'./meta/env.js',
+	'./js/loader.js',
+	'./js/main.js',
+
+	// CSS
+	'./css/base.css',
+	'./css/font.css',
+	'./css/vars.css',
+	'./css/components/item-info/item-details.css',
+	'./css/components/info-box/info-box.css',
+	'./css/components/dialog/dialog.css'
+];
+
+function logger(message: string) {
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+	if (isDebug) {
+		console.log(message);
+	}
+}
 
 async function messageUpdate(response: Response) {
 	const pages = await worker.clients.matchAll();
@@ -24,7 +54,73 @@ async function messageUpdate(response: Response) {
 	}
 }
 
+async function messageWorkerReady(status: 'success' | 'fail') {
+	const pages = await worker.clients.matchAll();
+
+	for (const page of pages) {
+		const message: WorkerReadyMessage = {
+			type: 'worker-ready',
+			status
+		};
+
+		page.postMessage(message);
+	}
+}
+
+async function installWorker() {
+	try {
+		await worker.skipWaiting();
+		logger(`[⚙️][✔️] Service worker installed for version ${CACHE_VERSION}.`);
+	} catch (err) {
+		console.error('[⚙️][❌] Error installing service worker.');
+		console.error(err);
+		await messageWorkerReady('fail');
+	}
+}
+
+worker.addEventListener('install', (evt) => evt.waitUntil(installWorker()));
+
+async function workerActivation() {
+	const clientList = await worker.clients.matchAll({ includeUncontrolled: true });
+
+	clientList.forEach((client) => {
+		logger(`[⚙️][🔎] Matching client: ${client.url}`);
+	});
+
+	const cacheNames = await caches.keys();
+
+	for await (const cacheName of cacheNames) {
+		if (cacheName !== CACHE_VERSION) {
+			logger(`[⚙️][♻️] Deleting old cache "${cacheName}".`);
+
+			await caches.delete(cacheName);
+		}
+	}
+
+	logger(`[⚙️][😎] Claming clients for version: ${CACHE_VERSION}.`);
+
+	await worker.clients.claim();
+
+	try {
+		const cache = await caches.open(CACHE_VERSION);
+
+		logger(`[⚙️][🗃️] Pre caching files: ${JSON.stringify(preCacheFiles)}.`);
+		await cache.addAll(preCacheFiles);
+
+		logger('[⚙️][🟢] Service worker ready.');
+		await messageWorkerReady('success');
+	} catch (err) {
+		console.error('[⚙️][❌] Error activating service worker.');
+		console.error(err);
+		await messageWorkerReady('fail');
+	}
+}
+
+worker.addEventListener('activate', (evt) => evt.waitUntil(workerActivation()));
+
 async function fetchFromCache(request: Request) {
+	logger(`[⚙️][🗃️] Getting from cache: "${request.url}"`);
+
 	const res = await caches.match(request);
 
 	if (res) {
@@ -34,40 +130,55 @@ async function fetchFromCache(request: Request) {
 	return null;
 }
 
-async function fetchFromNetwork(request: Request) {
-	try {
-		const netRes = await fetch(request);
+async function fetchFromNetwork(request: Request, timeout = REQUEST_TIMEOUT) {
+	logger(`[⚙️][📶] Fetching: "${request.url}".`);
 
-		const STORAGE_TRESHOLD = 0.7;
-		const { quota, usage } = await navigator.storage.estimate();
-		const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
+	return new Promise<Response>((resolve) => {
+		const fallbackResponse = new Response('Service Unavailable', {
+			// eslint-disable-next-line @typescript-eslint/naming-convention
+			headers: new Headers({ 'Content-Type': 'text/plain' }),
+			status: 503,
+			statusText: 'Service Unavailable'
+		});
 
-		if (!isReachingQuota) {
-			const cacheRes = netRes.clone();
-			const cache = await caches.open(CACHE_VERSION);
+		const timeoutId = setTimeout(() => {
+			console.error(`[⚙️][❌] Network fetch timed out for url: "${request.url}"`);
+			void resolve(fallbackResponse);
+		}, timeout);
 
-			await cache.put(request, cacheRes);
-		}
+		fetch(request).then(async (response) => {
+			clearTimeout(timeoutId);
 
-		return netRes;
-	} catch (err) {
-		console.error(`[⚙️] Network fetch failed for url: "${request.url}"`);
-		console.error(err);
-	}
+			logger('[⚙️][✔️] Fetch succedded.');
 
-	return new Response('Service Unavailable', {
-		// eslint-disable-next-line @typescript-eslint/naming-convention
-		headers: new Headers({ 'Content-Type': 'text/plain' }),
-		status: 503,
-		statusText: 'Service Unavailable'
+			const STORAGE_TRESHOLD = 0.7;
+			const { quota, usage } = await navigator.storage.estimate();
+			const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
+
+			if (!isReachingQuota) {
+				const cacheRes = response.clone();
+				const cache = await caches.open(CACHE_VERSION);
+
+				await cache.put(request, cacheRes);
+			}
+
+			resolve(response);
+		}, (err) => {
+			console.error(`[⚙️][❌] Network fetch failed for url: "${request.url}".`);
+			console.error(err);
+
+			resolve(fallbackResponse);
+		});
 	});
 }
 
-async function updateFromNetwork(req: Request) {
-	const isSkippedFromNetwork = skipNetworkRefresh.some((ext) => req.url.endsWith(ext));
+async function updateFromNetwork(request: Request) {
+	const isSkippedFromNetwork = skipNetworkRefresh.some((ext) => request.url.endsWith(ext));
 
 	if (!isSkippedFromNetwork) {
-		const res = await fetchFromNetwork(req);
+		logger(`[⚙️][♻️] Updating from network: "${request.url}"`);
+
+		const res = await fetchFromNetwork(request);
 
 		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 		if (res.status <= 200 && res.status >= 299) {
@@ -118,57 +229,23 @@ async function searchSuggestion(request: Request) {
 	return response;
 }
 
-worker.addEventListener('install', async () => {
-	try {
-		const cache = await caches.open(CACHE_VERSION);
-
-		await cache.addAll(appShellFiles);
-
-		await worker.skipWaiting();
-		console.log(`[⚙️] Service worker installed for version ${CACHE_VERSION}`);
-	} catch (err) {
-		console.error('[⚙️] Error installing worker:');
-		console.error(err);
-	}
-});
-
-worker.addEventListener('activate', async () => {
-	const clientList = await worker.clients.matchAll({ includeUncontrolled: true });
-
-	clientList.forEach((client) => {
-		console.log(`[⚙️] Matching client: ${client.url}`);
-	});
-
-	const cacheNames = await caches.keys();
-
-	for await (const cacheName of cacheNames) {
-		if (cacheName !== CACHE_VERSION) {
-			console.log(`[⚙️] Deleting old cache "${cacheName}"`);
-
-			await caches.delete(cacheName);
-		}
-
-		console.log(`[⚙️] Claming clients for version: ${CACHE_VERSION}`);
-
-		await worker.clients.claim();
-	}
-});
-
-worker.addEventListener('fetch', async (evt) => {
-	const contentType = evt.request.headers.get('Content-Type');
+async function handleFetchRequest(request: Request) {
+	const contentType = request.headers.get('Content-Type');
 
 	if (contentType === 'application/x-suggestions+json') {
-		return searchSuggestion(evt.request);
+		return searchSuggestion(request);
 	}
 
-	let response = await fetchFromCache(evt.request);
+	let response = await fetchFromCache(request);
 
 	if (!response) {
-		response = await fetchFromNetwork(evt.request);
+		response = await fetchFromNetwork(request);
 	} else {
-		void updateFromNetwork(evt.request);
+		void updateFromNetwork(request);
 	}
 
 
 	return response;
-});
+}
+
+worker.addEventListener('fetch', (evt) => evt.respondWith(handleFetchRequest(evt.request)));

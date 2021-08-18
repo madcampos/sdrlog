@@ -1,6 +1,6 @@
 import type { CustomButton } from '../button/button';
 import { I18n } from '../intl/translations';
-import type { UpdateMessage } from './update-message';
+import type { UpdateMessage } from '../../rpc-messages';
 
 class UpdateRefresh extends HTMLElement {
 	#root: ShadowRoot;
@@ -27,12 +27,16 @@ class UpdateRefresh extends HTMLElement {
 
 		navigator.serviceWorker.addEventListener('message', (evt) => {
 			const message = evt.data as UpdateMessage;
-			const lastUpdated = localStorage.getItem('dataLastUpdated');
 
-			if (message.updatedAt !== lastUpdated) {
-				localStorage.setItem('dataLastUpdated', message.updatedAt);
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+			if (message.type === 'update') {
+				const lastUpdated = localStorage.getItem('dataLastUpdated');
 
-				this.show(I18n.t`Data updated, please refresh the app.`);
+				if (message.updatedAt !== lastUpdated) {
+					localStorage.setItem('dataLastUpdated', message.updatedAt);
+
+					this.show(I18n.t`Data updated, please refresh the app.`);
+				}
 			}
 		});
 	}
