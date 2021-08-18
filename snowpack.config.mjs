@@ -8,8 +8,6 @@ const sslOptions = {
 };
 
 const env = {
-	// INFO: this url needs to be changed before building
-	// PUBLIC_URL: 'https://madcampos.github.io/sdrlog/',
 	PUBLIC_URL: 'https://localhost:8080/',
 
 	THEME_COLOR: '#9400d3',
@@ -28,7 +26,7 @@ const env = {
 
 const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] ?? '');
 
-function handleManifest(_req, res) {
+export function handleManifest(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
 	return res.end(manifest);

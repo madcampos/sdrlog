@@ -6,10 +6,11 @@
 	"type": "module",
 	"scripts": {
 		"start": "snowpack dev",
+		"start:sw": "snowpack dev --config snowpack.config.serviceworker.mjs",
 		"lint": "npm run lint:js && npm run lint:css",
 		"lint:js": "eslint **/*.ts --fix",
 		"lint:css": "stylelint **/*.css --fix",
-		"build": "snowpack build --mode production",
+		"build": "snowpack build --mode production --config snowpack.config.build.mjs",
 		"postbuild": "node build/postprocess-files.mjs",
 		"build:assets": "npm run build:icons-transparent && npm run build:icons-maskable && npm run build:splash",
 		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --icon-only --scrape false --dark-mode --opaque false src/img/icons/transparent",
