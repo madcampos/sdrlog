@@ -6,7 +6,7 @@ const availableLanguages = {
 	pt: 'pt-BR'
 };
 
-let loadedTranslations: Map<string, string>;
+let loadedTranslations: Map<string, string> = new Map();
 
 function translateHtmlText(text: string) {
 	// eslint-disable-next-line prefer-named-capture-group, @typescript-eslint/no-use-before-define
