@@ -232,7 +232,7 @@ export class ItemDetails extends HTMLElement {
 					cover: this.#coverFile
 				});
 
-				if (!document.querySelector(`item-card#${id}`)) {
+				if (!document.querySelector(`item-card[id="${id}"]`)) {
 					ItemCard.createCard({
 						name: this.#formFields.name.value,
 						id,
