@@ -16,6 +16,9 @@ https://www.shadowrunsixthworld.com/2021/05/whats-up-with-shadowrun/
 
 https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
+https://store.catalystgamelabs.com/collections/shadowrun-new-arrivals/products/shadowrun-johnson-dex
+https://www.shadowiki.de/Vollgas
+
 # Japanese materials
 https://www.shadowiki.de/Shadowrun_Manga
 https://fondationdraco.fr/shadowrun-manga-scan-trad/

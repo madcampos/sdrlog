@@ -11592,19 +11592,24 @@
 		},
 		{
 			"sku": [
-				"26861"
+				"26861",
+				"35016G"
 			],
 			"name": "Stirred",
 			"category": "novel",
 			"type": "digital",
 			"originalLanguage": "en-US",
+			"names": {
+				"de-DE": "Wer erschoss Kincaid?"
+			},
 			"description": "Jimmy Kincaid, burned-out mage and P. I., has a lot on his plate. Gang wars, feuding mobsters, unreliable magical power, and an encrypted data file that's already cost him friends, but he can't even access. When the troubles of the Seattle sprawl deepen into a bloody conspiracy with ties to neighboring nations and inhuman powers, he knows he's on the job of his life. Luckily, he's not alone. A man like Jimmy can't walk these shadowed streets without making enemies, but he's made allies, too.\nHopefully those allies will be able to save Jimmy from the dark, powerful forces converging on him...before it's too late for everyone...",
 			"edition": 5,
 			"publisher": [
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
-				"2020-08-21"
+				"2020-08-21",
+				"2021-07-30"
 			],
 			"gameDate": "2064-01-01"
 		},
@@ -14662,6 +14667,115 @@
 			"status": "missing",
 			"notes": "This is a French mission based on the \"Neo Revolution\" scenario.",
 			"description": "En plein cœur de Paris, des terroristes du Nouveau Jihad Islamique préparent un attentat pour frapper au cœur de la communauté musulmane de Paris, à l’Institut du monde arabe. Les runners sont plongés dans une course contre la montre pour contrecarrer l’attaque, mais comme toujours, rien n’est ce qui paraît dans les Ombres et derrière cet acte de violence gratuit se cache les fils d’une intrigue tout aussi sordide…\n\nCe scénario est une extension naturelle au supplément Néo-Révolution. Il donne l’occasion de donner un état des lieux de l’Islam dans l’Hexagone dystopique du monde de Shadowrun, mais aussi découvrir deux de ses lieux emblématiques à la capitale : l’Institut du Monde Arabe et la Mosquée de Paris. On y parle aussi « barbouze », évoquant les difficultés des services de renseignements français à l’aube de cette nouvelle et étrange cyber-république, mais aussi des machinations de la nouvelle mégacorporation, GlobalSpin, qui a bien sûr ses vues sur la France…"
+		},
+		{
+			"sku": [
+				"28053",
+				"28402"
+			],
+			"name": "Assassin's Night",
+			"category": "mission",
+			"type": "digital",
+			"description": "# EXECUTE.\nAuthorization granted.\n\nManeuver AF2B9.\n\nGo dark.\n\nEliminate.\n\nThose words set a plan in motion, but what plan? Something’s about to go down in Barcelona. Someone is marked for death. But who’s the target, and who’s pulling trigger?",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-08-17"
+			],
+			"gameDate": "2064-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"46124"
+			],
+			"name": "Revierbericht 2082",
+			"category": "sourcebook",
+			"type": "digital",
+			"description": "Der Rhein-Ruhr-Megaplex. Eine riesige Fusion unterschiedlichster Städte und sozialer Schichten, die zusammen einen Schmelztiegel der Kulturen und Subkulturen bilden. Ein Moloch, eine von der Metamenschheit selbst erbaute Hölle für die einen. Ein Paradies des Ausbeutens, der Schatten und der Machtspiele für andere. Und für manche ist es nur der Vorgarten ihres internationalen Imperiums. Von den japanischen Restaurants in Düsseldorf über die Schwarzmärkte in Köln, die toxischen Brachen Oberhausens, die anarchistischen Zonen in Recklinghausen, die Hochsicherheitsenklaven in Neu-Essen bis in die tiefsten Kellergeschosse des überbauten Wuppertals: Die Grautöne dieses gigantischen Metroplex sind so vielfältig wie seine Einwohner und seine Gefahren. Wo Unterweltkriege toben, Konzerngewalten aufeinander prallen, Autoduellisten die nächtlichen Straßen unsicher machen und Critter durch Kleingartenvereine schleichen, da können Runner Glück und Reichtum finden – oder einen schnellen Tod.\n\nDer Revierbericht 2082 ist eine Eigenproduktion von Pegasus Press und ein Quellenbuch für Shadowrun 6. Es bietet detaillierte Hintergrundinformationen zu den einzelnen Städten des Rhein-Ruhrplex, zu vielen Orten, Hotspots wie der Düsseldorfer Innenstadt oder Wuppertal und einen tiefen Einblick in die Machtstrukturen zwischen Gangs, Unterwelt und Konzernen. Neben Beschreibungen zu der Kultur an der Ruhr, den Vorgängen in alten Bergwerken und der anarchischen Sonderrechtszone Recklinghausen wird zudem viel Zusatzmaterial geboten: NSC-Werte, Grundrisse, Flairtipps für den Spieltisch, Ausrüstung sowie große Karten des gesamten Plex und ausgewählter Stadtteile mit verorteten Locations.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-10-01"
+			],
+			"gameDate": "2064-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"26009NV"
+			],
+			"name": "Kill Penalty",
+			"category": "novel",
+			"type": "digital",
+			"description": "# THE RULES ARE SIMPLE…\nRedburn is a rising star in the brutal sport of Urban Combat, where teams of armed combatants try to score points against their opponents while shooting it out amid Seattle’s decaying urban landscape. Managed by his mother, a legendary Urban Brawl player until her forced retirement, and fitted with top-line cyberware that makes him better than human, Redburn is on the fast-track to super-stardom—until it all comes crashing down around him.\n\n# WIN OR DIE…\nAfter sabotage takes him out of the major leagues, Redburn finds himself on the streets for real, alone for the first time ever. But the lure of Urban Brawl is too seductive to ignore, and when his mother lines up another opportunity for him, all her son has to do is go against every instinct he has… Will he sacrifice his one shot back to the majors for the scrappy team that adopted him when he had nowhere else to go, or will Redburn pull the ultimate ambush play on his own teammates?",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-08-03"
+			],
+			"gameDate": "2064-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"26878"
+			],
+			"name": "On the Rocks",
+			"category": "novel",
+			"type": "digital",
+			"description": "# THE STREETS ARE ABOUT TO EXPLODE…\n\nAnd Puyallup’s local paranormal investigator Jimmy Kincaid is caught right in the middle of it. The neighborhood’s criminal syndicates are on the brink of all-out war, and if they go at it, the streets will run red—literally.\n\nBut Jimmy’s got more problems besides trying to keep the peace between feuding mobsters. Someone’s sending him a very particular message by sending him severed limbs. And then there’s the pairs of hitmen coming after him. Last but certainly not least, he’s got to broker a deal between the biggest elven street gang in Seattle and a vicious Triad gang—and not get himself killed in the bargain.\n\nAnd when an old enemy comes to town for revenge, Jimmy finds his already fairly chaotic life completely upended—and never to be the same again. To settle the score, he’ll have to face off against the deadliest assassin ever to stalk the Seattle streets—and use every bit of skill, guile, and luck he has to survive…",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-09-01"
+			],
+			"gameDate": "2064-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"46128"
+			],
+			"name": "Vendetta",
+			"category": "mission",
+			"type": "digital",
+			"description": "Überfälle auf offener Straße, Entführungen, Attentate, explodierende Restaurants: Die deutsch-italienische Mafia ist in einem Familienkrieg gefangen, und die Blutrache wurde geschworen. Vater und Tochter kämpfen um Ehre, Tradition und die Führung des organisierten Verbrechens. Mitten in den Vorbereitungen zu den Stadtkriegsweltmeisterschaften zieht der Konflikt die Aufmerksamkeit der Obrigkeit und anderer Mächte auf sich. Wird die Mafia diesen Krieg überleben? Werden es die Runner? Und kann eine Partie Stadtkrieg die Lösung bringen?\n\nVendetta ist eine Eigenproduktion von Pegasus Press und ein Kampagnenband für Shadowrun 6, der im Rhein-Ruhr-Plex spielt. In vier Akten werden die Runner in den Krieg zwischen den Generationen innerhalb der Mafia hineingezogen und können erleben, wie sich dieser lang schwelende Konflikt gewaltsam löst. Wer wird am Ende das Rennen machen? Welchen Zug wird die Gegenseite als nächstes planen? In vollständig ausgearbeiteten Runs, mit etlichen Sandboxen und Hintergrundinfos kannst du am eigenen Spieltisch deinen Runnern das Schicksal der deutsch-italienischen Mafia in der ADL in die Hände legen.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-10-01"
+			],
+			"gameDate": "2064-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"46130"
+			],
+			"name": "Budenzauber",
+			"category": "mission",
+			"type": "digital",
+			"description": "Im Rhein-Ruhr-Plex regieren die Mächtigen der Unterwelt und der Konzerne. Trotzdem gibt es in dem riesigen Moloch auch in den Hinterhöfen und den schattigen Seitengassen viel zu tun für Runner. Oft steht dabei der Kiosk im Zentrum des Geschehens: Das Büdchen, das als soziales Auffangnetz, Versorgungsquelle und illegaler Umschlagsplatz dient. Ob es um verschollene Critter, geraubtes Bier oder um verirrte Konzernsprösslinge geht – an diesen Buden hinter der nächsten Ecke kommt kaum jemand vorbei.\n\nBudenzauber ist eine Eigenproduktion von Pegasus Press und eine Anthologie für Shadowrun 6 mit drei Einzelabenteuern. Alle Abenteuer sind komplett spielfertig. Im Schatten der Büdchen des Rhein-Ruhr-Plex zieht es die Runner dabei in merkwürdige Vorkommnisse innerhalb der Nachbarschaft, die sich als gefährlicher herausstellen, als es irgendjemand ahnen könnte.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-10-01"
+			],
+			"gameDate": "2064-01",
+			"status": "missing"
 		}
 	]
 }
