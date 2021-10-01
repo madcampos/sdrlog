@@ -1,4 +1,88 @@
 :root {
+	/**
+	 * Colors
+	 *
+	 * Palette from:
+	 * https://accessiblepalette.com/?lightness=97,92,85,76.2,67.4,57.8,48,40.2,31.8,24.9&ff4500=1,5&daa520=0,-20&00ff7f=1,40&1e90ff=1,0&9400d3=1,-5&ff1493=1,-5&252525=0,0
+	*/
+
+	--red-50: #fff4ef;
+	--red-100: #ffe3d5;
+	--red-200: #fec9af;
+	--red-300: #fea77f;
+	--red-400: #fd824b;
+	--red-500: #fb4d00;
+	--red-600: #cd4200;
+	--red-700: #a93901;
+	--red-800: #843006;
+	--red-900: #672808;
+
+	--yellow-50: #fcf6e9;
+	--yellow-100: #f8e6c4;
+	--yellow-200: #f3d090;
+	--yellow-300: #edb14f;
+	--yellow-400: #de9529;
+	--yellow-500: #bf7d24;
+	--yellow-600: #9f651f;
+	--yellow-700: #86531b;
+	--yellow-800: #6c4116;
+	--yellow-900: #563312;
+
+	--green-50: #dbffe5;
+	--green-100: #7dffbc;
+	--green-200: #00f79b;
+	--green-300: #00db93;
+	--green-400: #00c089;
+	--green-500: #00a27c;
+	--green-600: #00856c;
+	--green-700: #006f5e;
+	--green-800: #00574e;
+	--green-900: #004540;
+
+	--blue-50: #f3f6ff;
+	--blue-100: #e0e8ff;
+	--blue-200: #c3d4ff;
+	--blue-300: #9cbcff;
+	--blue-400: #6da5ff;
+	--blue-500: #208cf7;
+	--blue-600: #2673c9;
+	--blue-700: #275fa5;
+	--blue-800: #254b80;
+	--blue-900: #213b63;
+
+	--purple-50: #fbf4fd;
+	--purple-100: #f3e2fa;
+	--purple-200: #e8caf6;
+	--purple-300: #d9abf1;
+	--purple-400: #c78cec;
+	--purple-500: #b36be7;
+	--purple-600: #9b46e1;
+	--purple-700: #8523dc;
+	--purple-800: #6820ad;
+	--purple-900: #511e86;
+
+	--pink-50: #fff4f8;
+	--pink-100: #ffe0ec;
+	--pink-200: #fec4dc;
+	--pink-300: #fea0c8;
+	--pink-400: #fd76b5;
+	--pink-500: #fd349f;
+	--pink-600: #d52084;
+	--pink-700: #af226e;
+	--pink-800: #882157;
+	--pink-900: #691e45;
+
+	--gray-50: #f6f6f6;
+	--gray-100: #e8e8e8;
+	--gray-200: #d4d4d4;
+	--gray-300: #bcbcbc;
+	--gray-400: #a4a4a4;
+	--gray-500: #8b8b8b;
+	--gray-600: #727272;
+	--gray-700: #5f5f5f;
+	--gray-800: #4b4b4b;
+	--gray-900: #3b3b3b;
+
 	/* Sizes */
 	--body-text: 16px;
 	--menubar-top: env(titlebar-area-y, 0px);
