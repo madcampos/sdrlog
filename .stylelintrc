@@ -116,7 +116,7 @@
 		"value-list-comma-space-after": "always-single-line",
 		"value-list-comma-space-before": "never",
 		"value-list-max-empty-lines": 0,
-		"custom-property-empty-line-before": ["always", { "except": ["after-comment", "after-custom-property", "first-nested"] }],
+		"custom-property-empty-line-before": null,
 		"property-case": "lower",
 		"declaration-bang-space-after": "never",
 		"declaration-bang-space-before": "always",
