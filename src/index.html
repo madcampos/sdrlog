@@ -653,6 +653,20 @@
 			</aside>
 		</template>
 
+		<template id="cbz-reader">
+			<link rel="stylesheet" href="./css/components/cbz/reader.css"/>
+			<menu-bar>
+				<custom-button icon-button id="prev">⏮️</custom-button>
+				<select id="toc"></select>
+				<custom-button icon-button id="next">⏭️</custom-button>
+			</menu-bar>
+			<article id="comic">
+			</article>
+			<div id="comic-load-overlay">
+				<custom-button icon-button id="open-comic">▶️</custom-button>
+			</div>
+		</template>
+
 		<!-- Scripts -->
 		<script src="./lib/pdfjs/pdf.js"></script>
 		<script src="./js/loader.js" type="module"></script>

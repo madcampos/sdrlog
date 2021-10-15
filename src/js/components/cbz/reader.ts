@@ -57,7 +57,7 @@ export class ComicBookReader extends HTMLElement {
 		this.#nextButton = this.#root.querySelector('#next') as CustomButton;
 		this.#prevButton = this.#root.querySelector('#prev') as CustomButton;
 		this.#tocSelect = this.#root.querySelector('#toc') as HTMLSelectElement;
-		this.#loadOverlay = this.#root.querySelector('#load-overlay') as HTMLDivElement;
+		this.#loadOverlay = this.#root.querySelector('#comic-load-overlay') as HTMLDivElement;
 
 		this.#prevButton.addEventListener('click', () => this.showPreviousPage());
 		this.#nextButton.addEventListener('click', () => this.showNextPage());
