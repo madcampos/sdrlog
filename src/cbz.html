@@ -34,7 +34,6 @@
 	<meta name="google" content="notranslate"/>
 
 	<link rel="stylesheet" href="./css/base.css"/>
-	<link rel="stylesheet" href="./css/components/cbz/reader.css"/>
 </head>
 <body>
 	<!-- Templates -->
@@ -54,17 +53,22 @@
 		</nav>
 	</template>
 
-	<!-- Content -->
-	<menu-bar>
-		<custom-button icon-button id="prev">⏮️</custom-button>
-		<select id="toc"></select>
-		<custom-button icon-button id="next">⏭️</custom-button>
-	</menu-bar>
-	<main id="comic">
+	<template id="cbz-reader">
+		<link rel="stylesheet" href="./css/components/cbz/reader.css"/>
+		<menu-bar>
+			<custom-button icon-button id="prev">⏮️</custom-button>
+			<select id="toc"></select>
+			<custom-button icon-button id="next">⏭️</custom-button>
+		</menu-bar>
+		<article id="comic">
+		</article>
 		<div id="load-overlay">
 			<custom-button icon-button id="open-comic">▶️</custom-button>
 		</div>
-	</main>
+	</template>
+
+	<!-- Content -->
+	<cbz-reader></cbz-reader>
 
 	<script src="./js/components/intl/bootstrap.js" type="module"></script>
 	<script src="./js/components/button/button.js" type="module"></script>

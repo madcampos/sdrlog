@@ -15,11 +15,6 @@ interface Page {
 
 type Pages = Record<string, Page[]>;
 
-const renderArea = document.querySelector('#comic') as HTMLElement;
-const nextButton = document.querySelector('#next') as CustomButton;
-const prevButton = document.querySelector('#prev') as CustomButton;
-const tocSelect = document.querySelector('#toc') as HTMLSelectElement;
-
 const comparer = createComparer({ ignorePunctuation: true, numeric: true });
 const DEFAULT_FOLDER_NAME = I18n.t`Default section`;
 
@@ -37,82 +32,119 @@ const mimeTypes = new Map([
 	['.gif', 'image/gif']
 ]);
 
-let currentVisibleImage: HTMLImageElement | undefined;
+export class ComicBookReader extends HTMLElement {
+	static get observedAttributes() { return ['file']; }
 
-function updateVisibleImage([entry]: IntersectionObserverEntry[]) {
-	currentVisibleImage = entry.target as HTMLImageElement;
+	#filePath = '';
 
-	if (!currentVisibleImage.previousElementSibling) {
-		prevButton.style.visibility = 'hidden';
-	} else {
-		prevButton.style.visibility = 'visible';
+	#root: ShadowRoot;
+	#renderArea: HTMLElement;
+	#nextButton: CustomButton;
+	#prevButton: CustomButton;
+	#tocSelect: HTMLSelectElement;
+	#loadOverlay: HTMLDivElement;
+	#currentVisibleImage: HTMLImageElement | undefined;
+
+	constructor() {
+		super();
+
+		const template = document.querySelector('#cbz-reader') as HTMLTemplateElement;
+
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
+
+		this.#renderArea = this.#root.querySelector('#comic') as HTMLElement;
+		this.#nextButton = this.#root.querySelector('#next') as CustomButton;
+		this.#prevButton = this.#root.querySelector('#prev') as CustomButton;
+		this.#tocSelect = this.#root.querySelector('#toc') as HTMLSelectElement;
+		this.#loadOverlay = this.#root.querySelector('#load-overlay') as HTMLDivElement;
+
+		this.#prevButton.addEventListener('click', () => this.showPreviousPage());
+		this.#nextButton.addEventListener('click', () => this.showNextPage());
+
+		this.#tocSelect.addEventListener('change', () => {
+			this.#root.querySelector(`[data-folder="${this.#tocSelect.value}"]`)?.scrollIntoView();
+		});
+
+		document.addEventListener('keyup', (keyEvt) => {
+			// Left Key
+			if (keyEvt.key === 'ArrowLeft') {
+				this.showPreviousPage();
+			}
+
+			// Right Key
+			if (keyEvt.key === 'ArrowRight') {
+				this.showNextPage();
+			}
+		}, false);
+
+		window.addEventListener('wheel', (evt) => {
+			if (!evt.shiftKey) {
+				evt.preventDefault();
+
+				this.#renderArea.scrollBy({ left: evt.deltaY, behavior: 'smooth' });
+			}
+		}, { capture: false, passive: false });
+
+		this.#root.querySelector('#open-comic')?.addEventListener('click', async () => this.#loadComicBook());
 	}
 
-	if (!currentVisibleImage.nextElementSibling) {
-		nextButton.style.visibility = 'hidden';
-	} else {
-		nextButton.style.visibility = 'visible';
+	#hideLoadOverlay() {
+		this.#loadOverlay.hidden = true;
 	}
 
-	const currentValue = currentVisibleImage.dataset.folder;
-	const newIndex = [...tocSelect.options].findIndex((option) => option.value === currentValue);
-
-	tocSelect.selectedIndex = newIndex;
-}
-
-tocSelect.addEventListener('change', () => {
-	document.querySelector(`[data-folder="${tocSelect.value}"]`)?.scrollIntoView();
-});
-
-prevButton.addEventListener('click', () => {
-	currentVisibleImage?.previousElementSibling?.scrollIntoView();
-});
-
-nextButton.addEventListener('click', () => {
-	currentVisibleImage?.nextElementSibling?.scrollIntoView();
-});
-
-document.addEventListener('keyup', (keyEvt) => {
-	// Left Key
-	if (keyEvt.key === 'ArrowLeft') {
-		currentVisibleImage?.previousElementSibling?.scrollIntoView();
+	#resetLoadOverlay() {
+		this.#loadOverlay.hidden = false;
 	}
 
-	// Right Key
-	if (keyEvt.key === 'ArrowRight') {
-		currentVisibleImage?.nextElementSibling?.scrollIntoView();
-	}
-}, false);
+	#updateVisibleImage([entry]: IntersectionObserverEntry[]) {
+		this.#currentVisibleImage = entry.target as HTMLImageElement;
 
-window.addEventListener('wheel', (evt) => {
-	if (!evt.shiftKey) {
-		evt.preventDefault();
-
-		renderArea.scrollBy({ left: evt.deltaY, behavior: 'smooth' });
-	}
-}, { capture: false, passive: false });
-
-document.querySelector('#open-comic')?.addEventListener('click', async (evt) => {
-	try {
-		(evt.target as CustomButton).disabled = true;
-
-		const url = new URL(window.location.toString());
-		const params = new URLSearchParams(url.search);
-
-		if (!params.has('file')) {
-			throw new Error(I18n.t`Missing comic file.`);
+		if (!this.#currentVisibleImage.previousElementSibling) {
+			this.#prevButton.style.visibility = 'hidden';
+		} else {
+			this.#prevButton.style.visibility = 'visible';
 		}
 
-		const filePath = params.get('file') as string;
-		const handler = await getFile(filePath) as FileSystemFileHandle | undefined;
-
-		if (!handler) {
-			throw new Error(I18n.t`Comic does not exist.`);
+		if (!this.#currentVisibleImage.nextElementSibling) {
+			this.#nextButton.style.visibility = 'hidden';
+		} else {
+			this.#nextButton.style.visibility = 'visible';
 		}
 
-		await getFilePermission(handler);
+		const currentValue = this.#currentVisibleImage.dataset.folder;
+		const newIndex = [...this.#tocSelect.options].findIndex((option) => option.value === currentValue);
 
-		const file = await handler.getFile();
+		this.#tocSelect.selectedIndex = newIndex;
+	}
+
+	// eslint-disable-next-line consistent-return
+	async #loadComicBookFile() {
+		try {
+			if (!this.#filePath) {
+				throw new Error(I18n.t`Missing comic file.`);
+			}
+
+			const handler = await getFile(this.#filePath) as FileSystemFileHandle | undefined;
+
+			if (!handler) {
+				throw new Error(I18n.t`Comic does not exist.`);
+			}
+
+			await getFilePermission(handler);
+
+			return await handler.getFile();
+		} catch (err) {
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+			(document.querySelector('main') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
+		}
+	}
+
+	async #parseZipFileImages(file?: File) {
+		if (!file) {
+			return {};
+		}
+
 		const zip = await JSZip.loadAsync(file);
 		const pages: Pages = {};
 
@@ -124,7 +156,6 @@ document.querySelector('#open-comic')?.addEventListener('click', async (evt) => 
 				const { extension } = testRegex.exec(name)?.groups ?? {};
 
 				if (mimeTypes.has(extension)) {
-					// eslint-disable-next-line max-depth
 					if (!(folder in pages)) {
 						pages[folder] = [];
 					}
@@ -138,6 +169,10 @@ document.querySelector('#open-comic')?.addEventListener('click', async (evt) => 
 			}
 		}
 
+		return pages;
+	}
+
+	#fillToc(pages: Pages) {
 		const sortedFolders = Object.keys(pages).sort((folderA, folderB) => {
 			if (folderB === DEFAULT_FOLDER_NAME) {
 				return 1;
@@ -151,13 +186,14 @@ document.querySelector('#open-comic')?.addEventListener('click', async (evt) => 
 
 			tocItem.innerText = folder;
 			tocItem.value = encodeURIComponent(folder);
-			tocSelect.appendChild(tocItem);
+			this.#tocSelect.appendChild(tocItem);
 
 			pages[folder] = pages[folder].sort(({ name: aName }, { name: bName }) => comparer(aName, bName));
 
 			for (const page of pages[folder]) {
 				const img = document.createElement('img');
-				const observer = new IntersectionObserver(updateVisibleImage, { threshold: 1 });
+				// eslint-disable-next-line @typescript-eslint/unbound-method
+				const observer = new IntersectionObserver(this.#updateVisibleImage, { threshold: 1 });
 
 				img.dataset.folder = encodeURIComponent(page.folder);
 				img.src = page.url;
@@ -167,17 +203,54 @@ document.querySelector('#open-comic')?.addEventListener('click', async (evt) => 
 					observer.observe(img);
 				});
 
-				renderArea.appendChild(img);
+				this.#renderArea.appendChild(img);
 			}
 		}
+	}
+
+	async #loadComicBook() {
+		const file = await this.#loadComicBookFile();
+		const pages = await this.#parseZipFileImages(file);
+
+		this.#fillToc(pages);
 
 		// Force start at the begining
-		tocSelect.selectedIndex = 0;
-		document.querySelector('main > img:first-child')?.scrollIntoView();
+		this.#tocSelect.selectedIndex = 0;
+		this.#renderArea.querySelector('img:first-child')?.scrollIntoView();
 
-		document.querySelector('#load-overlay')?.remove();
-	} catch (err) {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-		(document.querySelector('main') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
+		this.#hideLoadOverlay();
 	}
-});
+
+	get file() {
+		return this.#filePath;
+	}
+
+	set file(newValue: string) {
+		this.#filePath = newValue;
+		this.#resetLoadOverlay();
+	}
+
+	showNextPage() {
+		this.#currentVisibleImage?.nextElementSibling?.scrollIntoView();
+	}
+
+	showPreviousPage() {
+		this.#currentVisibleImage?.previousElementSibling?.scrollIntoView();
+	}
+
+	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+		if (oldValue !== newValue) {
+			if (name === 'file') {
+				this.file = this.getAttribute('file') ?? '';
+			}
+		}
+	}
+
+	connectedCallback() {
+		if (this.hasAttribute('file')) {
+			this.file = this.getAttribute('file') ?? '';
+		}
+	}
+}
+
+customElements.define('cbz-reader', ComicBookReader);
