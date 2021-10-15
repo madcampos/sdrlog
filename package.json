@@ -38,20 +38,20 @@
 	"homepage": "https://github.com/madcampos/sdrlog#readme",
 	"devDependencies": {
 		"@snowpack/web-test-runner-plugin": "^0.2.2",
-		"@types/chai": "^4.2.21",
+		"@types/chai": "^4.2.22",
 		"@types/emscripten": "^1.39.5",
 		"@types/mocha": "^9.0.0",
 		"@types/wicg-file-system-access": "^2020.9.4",
-		"@typescript-eslint/eslint-plugin": "^4.31.2",
-		"@typescript-eslint/parser": "^4.31.2",
-		"@web/test-runner": "0.13.17",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"@web/test-runner": "0.13.19",
 		"@web/test-runner-playwright": "^0.8.8",
 		"chai": "^4.3.4",
-		"eslint": "^7.32.0",
-		"pwa-asset-generator": "^4.3.6",
+		"eslint": "^8.0.1",
+		"pwa-asset-generator": "^5.0.0",
 		"snowpack": "^3.8.8",
 		"snowpack-plugin-minify-html": "^0.1.1",
 		"stylelint": "^13.13.1",
-		"typescript": "^4.4.3"
+		"typescript": "^4.4.4"
 	}
 }

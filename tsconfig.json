@@ -10,6 +10,7 @@
 		"target": "ES2021",
 		"strict": true,
 		"suppressImplicitAnyIndexErrors": true,
+		"useUnknownInCatchVariables": false,
 		"sourceMap": false,
 		"isolatedModules": true,
 		"esModuleInterop": true,
