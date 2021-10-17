@@ -37,7 +37,7 @@
 	<link rel="stylesheet" href="./css/components/emulator/emulator.css"/>
 </head>
 <body class="notranslate" translate="no">
-	<main>
+	<template id="rom-emulator">
 		<aside class="controller" id="left-controller">
 			<button id="button-select">Select</button>
 			<button id="button-start">Start</button>
@@ -60,6 +60,10 @@
 			<button id="button-a">A</button>
 			<button id="button-b">B</button>
 		</aside>
+	</template>
+
+	<main>
+		<rom-emulator></rom-emulator>
 	</main>
 
 	<script src="./js/components/intl/bootstrap.js" type="module"></script>

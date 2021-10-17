@@ -1,4 +1,7 @@
-/* eslint-disable @typescript-eslint/naming-convention, camelcase, no-underscore-dangle */
+/* eslint-disable no-underscore-dangle */
+
+import type { EmulatorInitializerFunction, EmulatorModule } from '../../../../lib/webretro/webretro';
+
 import { getEmulatorSaveFile, getFile, saveEmulatorSaveFile } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
 import { I18n } from '../intl/translations';
@@ -8,29 +11,11 @@ import config from './config';
 
 import './touch-input';
 
-interface EmulatorModule extends EmscriptenModule {
-	canvas: HTMLCanvasElement,
-	_cmd_savefiles(): void,
-	_cmd_save_state(): void,
-	_cmd_load_state(): void,
-	_cmd_toggle_menu(): void,
-	_cmd_undo_save_state(): void,
-	_cmd_undo_load_state(): void,
-	setCanvasSize(width: number, height: number): void,
-	pauseMainLoop(): void,
-	resumeMainLoop(): void,
-	callMain(args: string[]): void
-}
-
-declare const Module: EmulatorModule;
-
 const materialsFilter = new Map([
 	['GENESIS', { emulator: 'genesis_plus_gx' }],
 	['SEGA-CD', { emulator: 'genesis_plus_gx' }],
 	['SNES', { emulator: 'snes9x' }]
 ]);
-
-let romFile: File | undefined;
 
 function mkdirTree(path: string) {
 	// @ts-expect-error
@@ -38,223 +23,278 @@ function mkdirTree(path: string) {
 	FS.createPath('/', path, true, true);
 }
 
-function togglePause() {
-	const mainElement = document.querySelector('main') as HTMLElement;
-	const isPaused = mainElement.hasAttribute('paused');
+export class Emulator extends HTMLElement {
+	static get observedAttributes() { return ['file', 'paused', 'loaded']; }
 
-	if (isPaused) {
-		mainElement.removeAttribute('paused');
-		Module.resumeMainLoop();
-	} else {
-		mainElement.setAttribute('paused', '');
-		Module.pauseMainLoop();
-	}
-}
+	#filePath = '';
+	#emulator: EmulatorModule | null = null;
 
-function loadState() {
-	Module._cmd_load_state();
-}
+	#root: ShadowRoot;
+	#canvas: HTMLCanvasElement;
+	#gameWrapper: HTMLElement;
+	#loadOverlay: HTMLDivElement;
+	#pauseButton: HTMLButtonElement;
 
-function saveState() {
-	const WAIT_BEFORE_SAVE = 1000;
+	constructor() {
+		super();
 
-	Module._cmd_savefiles();
-	Module._cmd_save_state();
+		const template = document.querySelector('#rom-emulator') as HTMLTemplateElement;
 
-	window.setTimeout(async () => {
-		const memoryStats = FS.stat('/home/web_user/retroarch/userdata/saves/rom.srm') as { size: number };
-		const saveStats = FS.stat('/home/web_user/retroarch/userdata/states/rom.state') as { size: number };
+		this.#root = this.attachShadow({ mode: 'closed' });
+		this.#root.appendChild(template.content.cloneNode(true));
 
-		if (memoryStats.size > 0 && saveStats.size > 0) {
-			Module.pauseMainLoop();
+		this.#canvas = this.#root.querySelector('canvas') as HTMLCanvasElement;
+		this.#gameWrapper = this.#root.querySelector('#game-wrapper') as HTMLElement;
+		this.#loadOverlay = this.#root.querySelector('#emulator-load-overlay') as HTMLDivElement;
+		this.#pauseButton = this.#root.querySelector('#pause-button') as HTMLButtonElement;
 
-			const stateBuffer = FS.readFile('/home/web_user/retroarch/userdata/saves/rom.srm');
-			const stateFile = new File([stateBuffer], `state_${romFile?.name ?? ''}`);
-
-			const saveBuffer = FS.readFile('/home/web_user/retroarch/userdata/saves/rom.state');
-			const saveFile = new File([saveBuffer], `save_${romFile?.name ?? ''}`);
-
-			await saveEmulatorSaveFile(`state_${romFile?.name ?? ''}`, stateFile);
-			await saveEmulatorSaveFile(`save_${romFile?.name ?? ''}`, saveFile);
-
-			Module.resumeMainLoop();
-		}
-	}, WAIT_BEFORE_SAVE);
-}
-
-export function adjustCanvasSize() {
-	const mainElement = document.querySelector('#game-wrapper') as HTMLElement;
-	const { width, height } = mainElement.getBoundingClientRect();
-
-	Module.setCanvasSize(width, height);
-}
-
-async function startGame() {
-	adjustCanvasSize();
-
-	const romData = await (romFile as File).arrayBuffer();
-
-	FS.writeFile('/rom.bin', new Uint8Array(romData));
-
-	const saveFile = await getEmulatorSaveFile(`save_${romFile?.name ?? ''}`);
-
-	if (saveFile) {
-		const saveData = await saveFile.arrayBuffer();
-
-		mkdirTree('/home/web_user/retroarch/userdata/saves');
-		FS.writeFile('/home/web_user/retroarch/userdata/saves/rom.srm', new Uint8Array(saveData));
-	}
-
-	const gameState = await getEmulatorSaveFile(`state_${romFile?.name ?? ''}`);
-
-	if (gameState) {
-		const stateData = await gameState.arrayBuffer();
-
-		mkdirTree('/home/web_user/retroarch/userdata/states');
-		FS.writeFile('/home/web_user/retroarch/userdata/states/rom.state', new Uint8Array(stateData));
-	}
-
-	mkdirTree('/home/web_user/retroarch/userdata');
-	FS.writeFile('/home/web_user/retroarch/userdata/retroarch.cfg', config);
-
-	Module.callMain(Module.arguments);
-	adjustCanvasSize();
-}
-
-async function setEmulator() {
-	try {
-		const url = new URL(window.location.toString());
-		const params = new URLSearchParams(url.search);
-
-		if (!params.has('file')) {
-			throw new Error(I18n.t`Missing ROM file.`);
-		}
-
-		const filePath = params.get('file') as string;
-		const handler = await getFile(filePath) as FileSystemFileHandle | undefined;
-
-		if (!handler) {
-			throw new Error(I18n.t`ROM file does not exist.`);
-		}
-
-		// Add start handler to have a user action.
-		document.querySelector('#start-button')?.addEventListener('click', async () => {
-			await getFilePermission(handler);
-			romFile = await handler.getFile();
-
-			const { id } = extractMetadataFromFileName(romFile.name);
-			const { emulator } = materialsFilter.get(id) ?? {};
-			const emulatorScript = document.createElement('script');
-
-			emulatorScript.src = `${import.meta.env.PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`;
-			document.body.appendChild(emulatorScript);
-		}, { once: true, capture: false });
-
-		// Add resize handler.
-		window.addEventListener('resize', () => {
-			const isLoaded = document.querySelector('main')?.hasAttribute('loaded') ?? false;
-
-			if (isLoaded) {
-				adjustCanvasSize();
-			}
-		}, false);
+		this.#root.querySelector('#start-button')?.addEventListener('click', async () => this.#loadGame());
 
 		// Avoid unwanted key presses to exit the game.
 		document.addEventListener('keydown', (evt) => {
-			const isLoaded = document.querySelector('main')?.hasAttribute('loaded') ?? false;
 			const pdKeys = ['8', '9', '13', '19', '27', '32', '33', '34', '35', '36', '42', '44', '45', '91', '92', '93', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124', '125', '126', '127', '128', '129', '130', '131', '132', '133', '134', '135'];
 
-			if (isLoaded && pdKeys.includes(evt.code)) {
+			if (this.loaded && pdKeys.includes(evt.code)) {
 				evt.preventDefault();
 			}
-		}, false);
+		}, { capture: false, passive: true });
 
 		// Save game on F2.
 		document.addEventListener('keydown', (evt) => {
-			const isLoaded = document.querySelector('main')?.hasAttribute('loaded') ?? false;
-
-			if (isLoaded && evt.key === 'F2') {
-				saveState();
+			if (this.loaded && evt.key === 'F2') {
+				this.#saveState();
 			}
-		}, false);
+		}, { capture: false, passive: true });
 
 		// Load state on F3.
 		document.addEventListener('keydown', (evt) => {
-			const isLoaded = document.querySelector('main')?.hasAttribute('loaded') ?? false;
-
-			if (isLoaded && evt.key === 'F3') {
-				loadState();
+			if (this.loaded && evt.key === 'F3') {
+				this.#loadState();
 			}
-		}, false);
+		}, { capture: false, passive: true });
 
 		// Toggle retroarch menu on F4.
 		document.addEventListener('keydown', (evt) => {
-			const isLoaded = document.querySelector('main')?.hasAttribute('loaded') ?? false;
-
-			if (isLoaded && evt.key === 'F4') {
-				Module._cmd_toggle_menu();
+			if (this.loaded && evt.key === 'F4') {
+				this.#emulator?._cmd_toggle_menu();
 			}
-		}, false);
+		}, { capture: false, passive: true });
 
 		// Add pause toggle
-		document.querySelector('#pause-button')?.addEventListener('click', () => {
-			togglePause();
+		this.#pauseButton.addEventListener('click', () => {
+			this.#togglePause();
 		});
 
 		document.addEventListener('keydown', (evt) => {
-			const isLoaded = document.querySelector('main')?.hasAttribute('loaded') ?? false;
-
-			if (isLoaded && evt.key === 'Escape') {
-				togglePause();
+			if (this.loaded && evt.key === 'Escape') {
+				this.#togglePause();
 			}
 		});
 
 		document.addEventListener('visibilitychange', () => {
 			const isVisible = document.visibilityState === 'visible';
 			const isHidden = document.visibilityState === 'hidden';
-			const isLoaded = document.querySelector('main')?.hasAttribute('loaded') ?? false;
-			const isPaused = document.querySelector('main')?.hasAttribute('paused') ?? false;
 
-			if (isLoaded && isHidden && !isPaused) {
-				togglePause();
+			if (this.loaded && isHidden && !this.paused) {
+				this.#togglePause();
 			}
 
-			if (isLoaded && isVisible && isPaused) {
-				togglePause();
+			if (this.loaded && isVisible && this.paused) {
+				this.#togglePause();
 			}
 		}, false);
-	} catch (err) {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-		(document.querySelector('main') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
+	}
+
+	get paused() {
+		return this.hasAttribute('paused');
+	}
+
+	set paused(newValue: boolean) {
+		if (newValue) {
+			this.removeAttribute('paused');
+			this.#emulator?.resumeMainLoop();
+		} else {
+			this.setAttribute('paused', '');
+			this.#emulator?.pauseMainLoop();
+		}
+	}
+
+	get loaded() {
+		return this.hasAttribute('loaded');
+	}
+
+	set loaded(newValue: boolean) {
+		if (newValue) {
+			this.removeAttribute('loaded');
+		} else {
+			this.setAttribute('loaded', '');
+		}
+	}
+
+	#hideLoadOverlay() {
+		this.#loadOverlay.hidden = true;
+	}
+
+	#resetLoadOverlay() {
+		this.#loadOverlay.hidden = false;
+	}
+
+	#adjustCanvasSize() {
+		const { width, height } = this.#gameWrapper.getBoundingClientRect();
+
+		this.#emulator?.setCanvasSize(width, height);
+	}
+
+	async #startGame(romFile: File) {
+		this.#adjustCanvasSize();
+
+		const romData = await romFile.arrayBuffer();
+
+		FS.writeFile('/rom.bin', new Uint8Array(romData));
+
+		const saveFile = await getEmulatorSaveFile(`save_${romFile.name}`);
+
+		if (saveFile) {
+			const saveData = await saveFile.arrayBuffer();
+
+			mkdirTree('/home/web_user/retroarch/userdata/saves');
+			FS.writeFile('/home/web_user/retroarch/userdata/saves/rom.srm', new Uint8Array(saveData));
+		}
+
+		const gameState = await getEmulatorSaveFile(`state_${romFile.name}`);
+
+		if (gameState) {
+			const stateData = await gameState.arrayBuffer();
+
+			mkdirTree('/home/web_user/retroarch/userdata/states');
+			FS.writeFile('/home/web_user/retroarch/userdata/states/rom.state', new Uint8Array(stateData));
+		}
+
+		mkdirTree('/home/web_user/retroarch/userdata');
+		FS.writeFile('/home/web_user/retroarch/userdata/retroarch.cfg', config);
+
+		this.#emulator?.callMain(this.#emulator.arguments);
+		this.#adjustCanvasSize();
+	}
+
+	// eslint-disable-next-line consistent-return
+	async #loadGameFile() {
+		try {
+			if (!this.#filePath) {
+				throw new Error(I18n.t`Missing ROM file.`);
+			}
+
+			const handler = await getFile(this.#filePath) as FileSystemFileHandle | undefined;
+
+			if (!handler) {
+				throw new Error(I18n.t`ROM file does not exist.`);
+			}
+
+			await getFilePermission(handler);
+
+			return await handler.getFile();
+		} catch (err) {
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+			this.#gameWrapper.innerText = err?.message ?? err ?? 'Error';
+		}
+	}
+
+	async #loadEmulatorScript(romFile: File) {
+		const { id } = extractMetadataFromFileName(romFile.name);
+		const { emulator } = materialsFilter.get(id) ?? {};
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+		const { 'default': emulatorInit } = (await import(`${import.meta.env.PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`)) as { default: EmulatorInitializerFunction };
+
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
+		this.#emulator = emulatorInit({
+			canvas: this.#canvas,
+			onRuntimeInitialized: async () => {
+				mkdirTree('/home/web_user/retroarch/bundle');
+				await loadBundle();
+
+				mkdirTree('/home/web_user/retroarch/userdata/system');
+				await loadBios();
+
+				await this.#startGame(romFile);
+
+				this.setAttribute('loaded', '');
+				this.#hideLoadOverlay();
+			}
+		});
+	}
+
+	async #loadGame() {
+		const romFile = await this.#loadGameFile();
+
+		if (romFile) {
+			await this.#loadEmulatorScript(romFile);
+		}
+	}
+
+	#togglePause() {
+		const isPaused = this.hasAttribute('paused');
+
+		if (isPaused) {
+			this.removeAttribute('paused');
+		} else {
+			this.setAttribute('paused', '');
+		}
+	}
+
+	#loadState() {
+		this.#emulator?._cmd_load_state();
+	}
+
+	#saveState() {
+		const WAIT_BEFORE_SAVE = 1000;
+
+		this.#emulator?._cmd_savefiles();
+		this.#emulator?._cmd_save_state();
+
+		window.setTimeout(async () => {
+			const memoryStats = FS.stat('/home/web_user/retroarch/userdata/saves/rom.srm') as { size: number };
+			const saveStats = FS.stat('/home/web_user/retroarch/userdata/states/rom.state') as { size: number };
+
+			if (memoryStats.size > 0 && saveStats.size > 0) {
+				this.#emulator?.pauseMainLoop();
+
+				const stateBuffer = FS.readFile('/home/web_user/retroarch/userdata/saves/rom.srm');
+				const stateFile = new File([stateBuffer], 'emulator_state');
+
+				const saveBuffer = FS.readFile('/home/web_user/retroarch/userdata/saves/rom.state');
+				const saveFile = new File([saveBuffer], 'emulator_save');
+
+				await saveEmulatorSaveFile('emulator_state', stateFile);
+				await saveEmulatorSaveFile('emulator_save', saveFile);
+
+				this.#emulator?.resumeMainLoop();
+			}
+		}, WAIT_BEFORE_SAVE);
+	}
+
+	#resetEmulator(newFilePath: string) {
+		this.#emulator = null;
+		this.#filePath = newFilePath;
+		this.loaded = false;
+		this.paused = false;
+		this.#resetLoadOverlay();
+	}
+
+	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+		if (oldValue !== newValue) {
+			if (name === 'file') {
+				this.#resetEmulator(newValue);
+			} else if (name === 'paused') {
+				this.paused = this.hasAttribute('paused');
+			} else if (name === 'loaded') {
+				this.paused = this.hasAttribute('loaded');
+			}
+		}
+	}
+
+	connectedCallback() {
+		this.#filePath = this.getAttribute('file') ?? '';
 	}
 }
 
-// @ts-expect-error
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-globalThis.Module = {
-	canvas: document.querySelector('canvas') as HTMLCanvasElement,
-	noInitialRun: true,
-	arguments: ['/rom.bin', '--verbose'],
-	async onRuntimeInitialized() {
-		mkdirTree('/home/web_user/retroarch/bundle');
-		await loadBundle();
-
-		mkdirTree('/home/web_user/retroarch/userdata/system');
-		await loadBios();
-
-		await startGame();
-
-		document.querySelector('main')?.setAttribute('loaded', '');
-		document.querySelector('#start-overlay')?.remove();
-	},
-	print(text: string) {
-		// eslint-disable-next-line no-console
-		console.log(`stdout: ${text}`);
-	},
-	printErr(text: string) {
-		// eslint-disable-next-line no-console
-		console.log(`stderr: ${text}`);
-	}
-} as Partial<EmulatorModule>;
-
-void setEmulator();
+customElements.define('rom-emulator', Emulator);

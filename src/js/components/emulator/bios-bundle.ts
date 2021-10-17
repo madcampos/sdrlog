@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import '../../../../lib/zip/jszip';
 import { getBiosFiles, saveBiosFile } from '../data-operations/idb-persistence';
 
