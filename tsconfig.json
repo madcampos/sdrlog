@@ -1,9 +1,10 @@
 {
-	"exclude": ["./dist/**/*"],
+	"exclude": ["./node_modules/**/*", "./dist/**/*"],
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
 		"lib": ["ES2021", "DOM", "DOM.Iterable"],
+		"skipDefaultLibCheck": true,
 		"module": "ES2020",
 		"noEmit": true,
 		"removeComments": true,
