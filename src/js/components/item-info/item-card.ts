@@ -81,12 +81,10 @@ export class ItemCard extends HTMLElement {
 			}
 		}
 
-		const coverUrl = await getThumbUrl(id);
+		this.#thumb.src = `${import.meta.env.PUBLIC_URL}thumbs/${id}.jpg`;
 
-		this.#thumb.src = coverUrl;
-
-		this.#thumb.addEventListener('error', () => {
-			this.#thumb.src = FALLBACK_COVER;
+		this.#thumb.addEventListener('error', async () => {
+			this.#thumb.src = await getThumbUrl(id) || FALLBACK_COVER;
 		}, { capture: false, once: true, passive: true });
 	}
 

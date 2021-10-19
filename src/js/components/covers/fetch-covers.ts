@@ -35,7 +35,7 @@ export async function getThumbUrl(id: string) {
 		return URL.createObjectURL(currentThumb);
 	}
 
-	return `${import.meta.env.PUBLIC_URL}thumbs/${id}.jpg`;
+	return '';
 }
 
 export async function extractCoversFromFiles() {
