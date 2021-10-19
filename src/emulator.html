@@ -36,6 +36,17 @@
 	<link rel="stylesheet" href="./css/base.css"/>
 </head>
 <body class="notranslate fullsize" translate="no">
+	<!-- Templates -->
+	<template id="custom-button">
+		<link rel="stylesheet" href="./css/components/button/button.css"/>
+		<button type="button">
+			<span id="button-icon"></span>
+			<span id="button-text">
+				<slot></slot>
+			</span>
+		</button>
+	</template>
+
 	<template id="rom-emulator">
 		<link rel="stylesheet" href="./css/components/emulator/emulator.css"/>
 		<aside class="controller" id="left-controller">
@@ -45,10 +56,10 @@
 		</aside>
 		<article id="game-wrapper">
 			<div id="start-overlay">
-				<button type="button" id="start-button">▶️</button>
+				<custom-button icon-button id="start-button">▶️</custom-button>
 			</div>
 			<div id="game-overlay">
-				<button type="button" id="pause-button">▶️</button>
+				<custom-button icon-button id="pause-button">▶️</custom-button>
 			</div>
 			<slot></slot>
 		</article>
@@ -62,10 +73,14 @@
 		</aside>
 	</template>
 
+
+	<!-- Content -->
 	<main>
 		<rom-emulator></rom-emulator>
 	</main>
 
+	<script src="./js/components/button/button.js" type="module"></script>
+	<script src="./js/components/menu-bar/menu-bar.js" type="module"></script>
 	<script src="./js/components/emulator/init.js" type="module"></script>
 </body>
 </html>

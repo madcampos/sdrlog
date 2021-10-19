@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import type { EmulatorInitializerFunction, EmulatorModule } from '../../../../lib/webretro/webretro';
+import type { CustomButton } from '../button/button';
 
 import '../../../../lib/nipplejs/nipplejs';
 
@@ -54,8 +55,8 @@ export class Emulator extends HTMLElement {
 	#root: ShadowRoot;
 	#canvas: HTMLCanvasElement;
 	#gameWrapper: HTMLElement;
-	#loadOverlay: HTMLDivElement;
-	#pauseButton: HTMLButtonElement;
+	#loadButton: CustomButton;
+	#pauseButton: CustomButton;
 
 	#selectButton: HTMLButtonElement;
 	#startButton: HTMLButtonElement;
@@ -74,8 +75,8 @@ export class Emulator extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(template.content.cloneNode(true));
 		this.#gameWrapper = this.#root.querySelector('#game-wrapper') as HTMLElement;
-		this.#loadOverlay = this.#root.querySelector('#start-overlay') as HTMLDivElement;
-		this.#pauseButton = this.#root.querySelector('#pause-button') as HTMLButtonElement;
+		this.#loadButton = this.#root.querySelector('#start-buttom') as CustomButton;
+		this.#pauseButton = this.#root.querySelector('#pause-button') as CustomButton;
 
 		this.#selectButton = this.#root.querySelector('#button-select') as HTMLButtonElement;
 		this.#startButton = this.#root.querySelector('#button-start') as HTMLButtonElement;
