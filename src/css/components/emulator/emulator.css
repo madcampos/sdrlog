@@ -1,12 +1,7 @@
-body {
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	user-select: none;
-}
-
-main {
-	--controller-size: calc(var(--button-size) * 2 * 1.5);
+:host {
+	--gap-size: 1rem;
+	--controller-size: calc(var(--button-size) * 2 * 1.5 + var(--gap-size));
+	--padding-size: 1rem;
 
 	display: grid;
 	grid-template-columns: var(--controller-size) 1fr var(--controller-size);
@@ -17,29 +12,38 @@ main {
 	width: 100vmax;
 	height: 100vmin;
 
-	padding: 1rem;
+	position: relative;
+
+	padding: var(--padding-size);
 	overflow: hidden;
+}
+
+::slotted(canvas) {
+	position: absolute;
+	z-index: -1;
 }
 
 #game-wrapper {
 	display: grid;
 	margin: 0;
 	aspect-ratio: 4 / 3;
-	width: auto;
-	height: 100%;
-	max-height: 100vmin;
-	max-width: calc(100vmax - (var(--controller-size) * 2));
+	width: calc(100% - (var(--padding-size) * 2));
+	height: auto;
+	max-height: calc(100vmin - (var(--padding-size) * 2));
+	max-width: calc(100vmax - (var(--controller-size) * 2) - (var(--padding-size) * 4));
 	place-items: center;
 	place-content: stretch;
 	grid-area: game;
 	align-self: center;
 	justify-self: center;
+	position: relative;
 }
 
 #game-wrapper > * {
 	width: 100%;
 	height: 100%;
 	grid-area: 1 / 1 / -1 / -1;
+	position: absolute;
 }
 
 #game-wrapper canvas {
@@ -49,21 +53,24 @@ main {
 }
 
 #start-overlay, #game-overlay {
-	display: grid;
+	display: none;
 	place-items: center;
 
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(5px);
 }
 
-main:not([paused]) #game-overlay { display: none; }
+:host(:not([loaded])) #start-overlay { display: grid; }
+
+:host([paused]) #game-overlay { display: grid; }
 
 .controller {
 	display: none;
 	justify-content: end;
 	align-items: center;
-	grid-gap: 1rem;
+	grid-gap: var(--gap-size);
 	box-sizing: border-box;
+	width: 100%;
 }
 
 .controller button {
@@ -179,7 +186,7 @@ main:not([paused]) #game-overlay { display: none; }
 }
 
 @media (orientation: portrait) {
-	main {
+	:host {
 		transform: rotate(90deg);
 	}
 }

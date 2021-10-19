@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
-
 import type { EmulatorInitializerFunction, EmulatorModule } from '../../../../lib/webretro/webretro';
+
+import '../../../../lib/nipplejs/nipplejs';
 
 import { getEmulatorSaveFile, getFile, saveEmulatorSaveFile } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
@@ -9,7 +10,26 @@ import { loadBundle } from './assets-bundle';
 import { loadBios } from './bios-bundle';
 import config from './config';
 
-import './touch-input';
+interface KeyData {
+	key: string,
+	code: string,
+	keyCode: number
+}
+
+const keyMap: Record<string, KeyData> = {
+	select: { key: 'Enter', code: 'Enter', keyCode: 13 },
+	start: { key: ' ', code: 'Space', keyCode: 32 },
+	leftBumber: { key: 'E', code: 'KeyE', keyCode: 69 },
+	rightBumber: { key: 'P', code: 'KeyP', keyCode: 32 },
+	up: { key: 'ArrowUp', code: 'ArrowUp', keyCode: 38 },
+	down: { key: 'ArrowDown', code: 'ArrowDown', keyCode: 40 },
+	left: { key: 'ArrowLeft', code: 'ArrowLeft', keyCode: 37 },
+	right: { key: 'ArrowRight', code: 'ArrowRight', keyCode: 39 },
+	a: { key: 'H', code: 'KeyH', keyCode: 72 },
+	b: { key: 'G', code: 'KeyG', keyCode: 71 },
+	x: { key: 'Y', code: 'KeyY', keyCode: 89 },
+	y: { key: 'T', code: 'KeyT', keyCode: 84 }
+};
 
 const materialsFilter = new Map([
 	['GENESIS', { emulator: 'genesis_plus_gx' }],
@@ -17,10 +37,12 @@ const materialsFilter = new Map([
 	['SNES', { emulator: 'snes9x' }]
 ]);
 
-function mkdirTree(path: string) {
-	// @ts-expect-error
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-	FS.createPath('/', path, true, true);
+function mkdirTree(fileSystem: typeof FS | undefined, path: string) {
+	if (fileSystem) {
+		// @ts-expect-error
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+		fileSystem.createPath('/', path, true, true);
+	}
 }
 
 export class Emulator extends HTMLElement {
@@ -35,6 +57,15 @@ export class Emulator extends HTMLElement {
 	#loadOverlay: HTMLDivElement;
 	#pauseButton: HTMLButtonElement;
 
+	#selectButton: HTMLButtonElement;
+	#startButton: HTMLButtonElement;
+	#bumperLeft: HTMLButtonElement;
+	#bumperRight: HTMLButtonElement;
+	#aButton: HTMLButtonElement;
+	#bButton: HTMLButtonElement;
+	#xButton: HTMLButtonElement;
+	#yButton: HTMLButtonElement;
+
 	constructor() {
 		super();
 
@@ -42,11 +73,22 @@ export class Emulator extends HTMLElement {
 
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(template.content.cloneNode(true));
-
-		this.#canvas = this.#root.querySelector('canvas') as HTMLCanvasElement;
 		this.#gameWrapper = this.#root.querySelector('#game-wrapper') as HTMLElement;
-		this.#loadOverlay = this.#root.querySelector('#emulator-load-overlay') as HTMLDivElement;
+		this.#loadOverlay = this.#root.querySelector('#start-overlay') as HTMLDivElement;
 		this.#pauseButton = this.#root.querySelector('#pause-button') as HTMLButtonElement;
+
+		this.#selectButton = this.#root.querySelector('#button-select') as HTMLButtonElement;
+		this.#startButton = this.#root.querySelector('#button-start') as HTMLButtonElement;
+		this.#bumperLeft = this.#root.querySelector('#bumper-left') as HTMLButtonElement;
+		this.#bumperRight = this.#root.querySelector('#bumper-right') as HTMLButtonElement;
+		this.#aButton = this.#root.querySelector('#button-a') as HTMLButtonElement;
+		this.#bButton = this.#root.querySelector('#button-b') as HTMLButtonElement;
+		this.#xButton = this.#root.querySelector('#button-x') as HTMLButtonElement;
+		this.#yButton = this.#root.querySelector('#button-y') as HTMLButtonElement;
+
+		this.#canvas = document.createElement('canvas');
+		this.#canvas.id = 'canvas';
+		this.appendChild(this.#canvas);
 
 		this.#root.querySelector('#start-button')?.addEventListener('click', async () => this.#loadGame());
 
@@ -103,6 +145,31 @@ export class Emulator extends HTMLElement {
 				this.#togglePause();
 			}
 		}, false);
+
+		// Gamepad buttons
+		this.#selectButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'select'));
+		this.#selectButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'select'));
+
+		this.#startButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'start'));
+		this.#startButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'start'));
+
+		this.#bumperLeft.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'leftBumber'));
+		this.#bumperLeft.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'leftBumber'));
+
+		this.#bumperRight.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'rightBumper'));
+		this.#bumperRight.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'rightBumper'));
+
+		this.#aButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'a'));
+		this.#aButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'a'));
+
+		this.#bButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'b'));
+		this.#bButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'b'));
+
+		this.#xButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'x'));
+		this.#xButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'x'));
+
+		this.#yButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'y'));
+		this.#yButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'y'));
 	}
 
 	get paused() {
@@ -111,11 +178,11 @@ export class Emulator extends HTMLElement {
 
 	set paused(newValue: boolean) {
 		if (newValue) {
-			this.removeAttribute('paused');
-			this.#emulator?.resumeMainLoop();
-		} else {
 			this.setAttribute('paused', '');
 			this.#emulator?.pauseMainLoop();
+		} else {
+			this.removeAttribute('paused');
+			this.#emulator?.resumeMainLoop();
 		}
 	}
 
@@ -125,18 +192,29 @@ export class Emulator extends HTMLElement {
 
 	set loaded(newValue: boolean) {
 		if (newValue) {
-			this.removeAttribute('loaded');
-		} else {
 			this.setAttribute('loaded', '');
+		} else {
+			this.removeAttribute('loaded');
 		}
 	}
 
-	#hideLoadOverlay() {
-		this.#loadOverlay.hidden = true;
+	get file() {
+		return this.getAttribute('file') ?? '';
 	}
 
-	#resetLoadOverlay() {
-		this.#loadOverlay.hidden = false;
+	set file(newValue: string) {
+		this.#resetEmulator(newValue);
+	}
+
+	#sendKeyEvent(type: 'keydown' | 'keyup', key: keyof typeof keyMap) {
+		this.#canvas.dispatchEvent(new KeyboardEvent(type, {
+			bubbles: true,
+			cancelable: false,
+			shiftKey: false,
+			ctrlKey: false,
+			altKey: false,
+			...keyMap[key]
+		}));
 	}
 
 	#adjustCanvasSize() {
@@ -150,15 +228,15 @@ export class Emulator extends HTMLElement {
 
 		const romData = await romFile.arrayBuffer();
 
-		FS.writeFile('/rom.bin', new Uint8Array(romData));
+		this.#emulator?.FS.writeFile('/rom.bin', new Uint8Array(romData));
 
 		const saveFile = await getEmulatorSaveFile(`save_${romFile.name}`);
 
 		if (saveFile) {
 			const saveData = await saveFile.arrayBuffer();
 
-			mkdirTree('/home/web_user/retroarch/userdata/saves');
-			FS.writeFile('/home/web_user/retroarch/userdata/saves/rom.srm', new Uint8Array(saveData));
+			mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/saves');
+			this.#emulator?.FS.writeFile('/home/web_user/retroarch/userdata/saves/rom.srm', new Uint8Array(saveData));
 		}
 
 		const gameState = await getEmulatorSaveFile(`state_${romFile.name}`);
@@ -166,12 +244,12 @@ export class Emulator extends HTMLElement {
 		if (gameState) {
 			const stateData = await gameState.arrayBuffer();
 
-			mkdirTree('/home/web_user/retroarch/userdata/states');
-			FS.writeFile('/home/web_user/retroarch/userdata/states/rom.state', new Uint8Array(stateData));
+			mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/states');
+			this.#emulator?.FS.writeFile('/home/web_user/retroarch/userdata/states/rom.state', new Uint8Array(stateData));
 		}
 
-		mkdirTree('/home/web_user/retroarch/userdata');
-		FS.writeFile('/home/web_user/retroarch/userdata/retroarch.cfg', config);
+		mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata');
+		this.#emulator?.FS.writeFile('/home/web_user/retroarch/userdata/retroarch.cfg', config);
 
 		this.#emulator?.callMain(this.#emulator.arguments);
 		this.#adjustCanvasSize();
@@ -209,16 +287,15 @@ export class Emulator extends HTMLElement {
 		this.#emulator = emulatorInit({
 			canvas: this.#canvas,
 			onRuntimeInitialized: async () => {
-				mkdirTree('/home/web_user/retroarch/bundle');
-				await loadBundle();
+				mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/bundle');
+				await loadBundle(this.#emulator?.FS);
 
-				mkdirTree('/home/web_user/retroarch/userdata/system');
-				await loadBios();
+				mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/system');
+				await loadBios(this.#emulator?.FS);
 
 				await this.#startGame(romFile);
 
-				this.setAttribute('loaded', '');
-				this.#hideLoadOverlay();
+				this.loaded = true;
 			}
 		});
 	}
@@ -232,13 +309,7 @@ export class Emulator extends HTMLElement {
 	}
 
 	#togglePause() {
-		const isPaused = this.hasAttribute('paused');
-
-		if (isPaused) {
-			this.removeAttribute('paused');
-		} else {
-			this.setAttribute('paused', '');
-		}
+		this.paused = !this.paused;
 	}
 
 	#loadState() {
@@ -252,16 +323,16 @@ export class Emulator extends HTMLElement {
 		this.#emulator?._cmd_save_state();
 
 		window.setTimeout(async () => {
-			const memoryStats = FS.stat('/home/web_user/retroarch/userdata/saves/rom.srm') as { size: number };
-			const saveStats = FS.stat('/home/web_user/retroarch/userdata/states/rom.state') as { size: number };
+			const memoryStats = this.#emulator?.FS.stat('/home/web_user/retroarch/userdata/saves/rom.srm') as { size: number };
+			const saveStats = this.#emulator?.FS.stat('/home/web_user/retroarch/userdata/states/rom.state') as { size: number };
 
 			if (memoryStats.size > 0 && saveStats.size > 0) {
 				this.#emulator?.pauseMainLoop();
 
-				const stateBuffer = FS.readFile('/home/web_user/retroarch/userdata/saves/rom.srm');
+				const stateBuffer = this.#emulator?.FS.readFile('/home/web_user/retroarch/userdata/saves/rom.srm') ?? new Uint8Array();
 				const stateFile = new File([stateBuffer], 'emulator_state');
 
-				const saveBuffer = FS.readFile('/home/web_user/retroarch/userdata/saves/rom.state');
+				const saveBuffer = this.#emulator?.FS.readFile('/home/web_user/retroarch/userdata/saves/rom.state') ?? new Uint8Array();
 				const saveFile = new File([saveBuffer], 'emulator_save');
 
 				await saveEmulatorSaveFile('emulator_state', stateFile);
@@ -277,23 +348,50 @@ export class Emulator extends HTMLElement {
 		this.#filePath = newFilePath;
 		this.loaded = false;
 		this.paused = false;
-		this.#resetLoadOverlay();
 	}
 
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'file') {
-				this.#resetEmulator(newValue);
+				this.file = newValue;
 			} else if (name === 'paused') {
 				this.paused = this.hasAttribute('paused');
 			} else if (name === 'loaded') {
-				this.paused = this.hasAttribute('loaded');
+				this.loaded = this.hasAttribute('loaded');
 			}
 		}
 	}
 
 	connectedCallback() {
-		this.#filePath = this.getAttribute('file') ?? '';
+		const dpad = nipplejs.create({
+			zone: this.#root.querySelector('#dpad') as HTMLDivElement,
+			color: 'white',
+			multitouch: false,
+			position: { left: '50%', top: '50%' },
+			mode: 'static',
+			restJoystick: true,
+			shape: 'circle',
+			follow: false
+		});
+
+		let dpadDirection: string | null = null;
+
+		dpad.on('move', (_, { direction }) => {
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+			dpadDirection = direction?.angle ?? null;
+
+			if (dpadDirection) {
+				this.#sendKeyEvent('keydown', dpadDirection);
+			}
+		});
+
+		dpad.on('end', () => {
+			if (dpadDirection) {
+				this.#sendKeyEvent('keyup', dpadDirection);
+			}
+		});
+
+		this.#resetEmulator(this.getAttribute('file') ?? '');
 	}
 }
 

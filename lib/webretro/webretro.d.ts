@@ -9,7 +9,8 @@ export interface EmulatorModule extends EmscriptenModule {
 	setCanvasSize(width: number, height: number): void,
 	pauseMainLoop(): void,
 	resumeMainLoop(): void,
-	callMain(args: string[]): void
+	callMain(args: string[]): void,
+	FS: typeof FS
 }
 
 export interface EmulatorInitializer {

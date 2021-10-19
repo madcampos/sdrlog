@@ -40,7 +40,7 @@ async function getBios() {
 	return files;
 }
 
-export async function loadBios() {
+export async function loadBios(fileSystem: typeof FS | undefined) {
 	try {
 		const folderPath = '/home/web_user/retroarch/userdata/system/';
 		const files = await getBios();
@@ -51,9 +51,9 @@ export async function loadBios() {
 			if (file.type === 'application/x+directory') {
 				// @ts-expect-error
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-				FS.createPath('/', `${folderPath}${file.name}`, true, true);
+				fileSystem?.createPath('/', `${folderPath}${file.name}`, true, true);
 			} else {
-				FS.writeFile(`${folderPath}${path}`, new Uint8Array(buffer));
+				fileSystem?.writeFile(`${folderPath}${path}`, new Uint8Array(buffer));
 			}
 		}
 	} catch (err) {

@@ -47,7 +47,7 @@ async function getBundle() {
 	return files;
 }
 
-export async function loadBundle() {
+export async function loadBundle(fileSystem: typeof FS | undefined) {
 	try {
 		const folderPath = '/home/web_user/retroarch/bundle/assets/';
 		const files = await getBundle();
@@ -58,9 +58,9 @@ export async function loadBundle() {
 			if (file.type === 'application/x+directory') {
 				// @ts-expect-error
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-				FS.createPath('/', `${folderPath}${file.name}`, true, true);
+				fileSystem?.createPath('/', `${folderPath}${file.name}`, true, true);
 			} else {
-				FS.writeFile(`${folderPath}${path}`, new Uint8Array(buffer));
+				fileSystem?.writeFile(`${folderPath}${path}`, new Uint8Array(buffer));
 			}
 		}
 	} catch (err) {
