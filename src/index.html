@@ -668,6 +668,7 @@
 		</template>
 
 		<template id="rom-emulator">
+			<link rel="stylesheet" href="./css/components/emulator/emulator.css"/>
 			<aside class="controller" id="left-controller">
 				<button id="button-select">Select</button>
 				<button id="button-start">Start</button>
@@ -680,7 +681,7 @@
 				<div id="game-overlay">
 					<button type="button" id="pause-button">▶️</button>
 				</div>
-				<canvas id="canvas"></canvas>
+				<slot></slot>
 			</article>
 			<aside class="controller" id="right-controller">
 				<button id="bumper-left">L</button>
