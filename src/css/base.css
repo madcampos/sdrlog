@@ -54,6 +54,19 @@ main {
 	align-content: flex-start;
 	align-items: flex-start;
 	scroll-snap-type: both proximity;
+	width: 100vw;
+	height: calc(100vh - (var(--menubar-top) + var(--menubar-height)));
+}
+
+.fullsize main {
+	margin-top: calc(var(--titlebar-top) + var(--titlebar-height));
+	height: calc(100vh - (var(--titlebar-top) + var(--titlebar-height)));
+	display: grid;
+	align-items: stretch;
+	justify-items: stretch;
+	align-content: center;
+	justify-content: center;
+	overflow: hidden;
 }
 
 #load-overlay {
