@@ -18,6 +18,8 @@ https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
 https://store.catalystgamelabs.com/collections/shadowrun-new-arrivals/products/shadowrun-johnson-dex
 https://www.shadowiki.de/Vollgas
+https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-rides?variant=39716714971170
+https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-double-clutch-core-rigger-rulebook
 
 # Japanese materials
 https://www.shadowiki.de/Shadowrun_Manga
@@ -46,7 +48,6 @@ https://shadowhelix.de/Quelle,_de:_Untersch%C3%A4tzt
 https://www.shadowiki.de/Conspiracy_Theories_Outtakes
 
 https://www.shadowiki.de/Ein_Blick_in_den_Kreis
-https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
 https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
 https://www.shadowiki.de/Geisterstunde
 
