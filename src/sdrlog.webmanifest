@@ -39,7 +39,7 @@
 	"protocol_handlers": [
 		{
 			"protocol": "web+sdrlog",
-			"url": "%PUBLIC_URL%?search=sku:%s"
+			"url": "%PUBLIC_URL%?search=%s"
 		}
 	],
 	"capture_links": "existing-client-navigate"
