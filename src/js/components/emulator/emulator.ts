@@ -66,6 +66,7 @@ export class Emulator extends HTMLElement {
 	#bButton: HTMLButtonElement;
 	#xButton: HTMLButtonElement;
 	#yButton: HTMLButtonElement;
+	#dpad: HTMLDivElement;
 
 	constructor() {
 		super();
@@ -86,6 +87,7 @@ export class Emulator extends HTMLElement {
 		this.#bButton = this.#root.querySelector('#button-b') as HTMLButtonElement;
 		this.#xButton = this.#root.querySelector('#button-x') as HTMLButtonElement;
 		this.#yButton = this.#root.querySelector('#button-y') as HTMLButtonElement;
+		this.#dpad = this.#root.querySelector('#dpad') as HTMLDivElement;
 
 		this.#canvas = document.createElement('canvas');
 		this.#canvas.id = 'canvas';
@@ -309,6 +311,14 @@ export class Emulator extends HTMLElement {
 		}
 	}
 
+	async #toggleFullScreen() {
+		if (document.fullscreenElement) {
+			await document.exitFullscreen();
+		} else {
+			await this.requestFullscreen({ navigationUI: 'hide' });
+		}
+	}
+
 	#togglePause() {
 		this.paused = !this.paused;
 	}
@@ -364,35 +374,42 @@ export class Emulator extends HTMLElement {
 	}
 
 	connectedCallback() {
-		const dpad = nipplejs.create({
-			zone: this.#root.querySelector('#dpad') as HTMLDivElement,
-			color: 'white',
-			multitouch: false,
-			position: { left: '50%', top: '50%' },
-			mode: 'static',
-			restJoystick: true,
-			shape: 'circle',
-			follow: false
-		});
-
-		let dpadDirection: string | null = null;
-
-		dpad.on('move', (_, { direction }) => {
-			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-			dpadDirection = direction?.angle ?? null;
-
-			if (dpadDirection) {
-				this.#sendKeyEvent('keydown', dpadDirection);
-			}
-		});
-
-		dpad.on('end', () => {
-			if (dpadDirection) {
-				this.#sendKeyEvent('keyup', dpadDirection);
-			}
-		});
+		const DPAD_LOAD_TIMEOUT = 200;
 
 		this.#resetEmulator(this.getAttribute('file') ?? '');
+
+		setTimeout(() => {
+			const { top, left, width, height } = this.#dpad.getBoundingClientRect();
+			const dpad = nipplejs.create({
+				zone: this.#dpad,
+				color: 'white',
+				multitouch: false,
+				// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+				position: { top: `${top + (height / 2)}px`, left: `${left + (width / 2)}px` },
+				mode: 'static',
+				restJoystick: true,
+				shape: 'circle',
+				follow: false,
+				dynamicPage: true
+			});
+
+			let dpadDirection: string | null = null;
+
+			dpad.on('move', (_, { direction }) => {
+				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+				dpadDirection = direction?.angle ?? null;
+
+				if (dpadDirection) {
+					this.#sendKeyEvent('keydown', dpadDirection);
+				}
+			});
+
+			dpad.on('end', () => {
+				if (dpadDirection) {
+					this.#sendKeyEvent('keyup', dpadDirection);
+				}
+			});
+		}, DPAD_LOAD_TIMEOUT);
 	}
 }
 
