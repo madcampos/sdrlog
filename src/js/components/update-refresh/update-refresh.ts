@@ -1,6 +1,6 @@
 import type { CustomButton } from '../button/button';
 import { I18n } from '../intl/translations';
-import type { UpdateMessage } from '../../rpc-messages';
+import type { WorkerMessage } from '../../rpc-messages';
 
 class UpdateRefresh extends HTMLElement {
 	#root: ShadowRoot;
@@ -26,9 +26,8 @@ class UpdateRefresh extends HTMLElement {
 		});
 
 		navigator.serviceWorker.addEventListener('message', (evt) => {
-			const message = evt.data as UpdateMessage;
+			const message = evt.data as WorkerMessage;
 
-			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 			if (message.type === 'update') {
 				const lastUpdated = localStorage.getItem('dataLastUpdated');
 

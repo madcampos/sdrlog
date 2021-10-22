@@ -8,3 +8,5 @@ export interface WorkerReadyMessage {
 	type: 'worker-ready',
 	status: 'success' | 'fail' | 'offline'
 }
+
+export type WorkerMessage = UpdateMessage | WorkerReadyMessage;

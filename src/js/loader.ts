@@ -1,4 +1,4 @@
-import type { WorkerReadyMessage } from './rpc-messages';
+import type { WorkerMessage } from './rpc-messages';
 
 async function loadModules() {
 	await import('./components/intl/bootstrap');
@@ -18,9 +18,8 @@ window.addEventListener('load', async () => {
 }, { once: true });
 
 navigator.serviceWorker.addEventListener('message', async (evt) => {
-	const message = evt.data as WorkerReadyMessage;
+	const message = evt.data as WorkerMessage;
 
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 	if (message.type === 'worker-ready') {
 		await loadModules();
 	}
