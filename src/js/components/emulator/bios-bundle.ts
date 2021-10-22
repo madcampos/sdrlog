@@ -57,7 +57,6 @@ export async function loadBios(fileSystem: typeof FS | undefined) {
 			}
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 }

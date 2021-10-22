@@ -53,8 +53,7 @@ export async function extractCover(file: File) {
 
 	const thumb = canvasContext.getImageData(0, 0, canvas.width, canvas.height);
 
-	// eslint-disable-next-line @typescript-eslint/no-floating-promises
-	pdf.destroy();
+	void pdf.destroy();
 
 	return {
 		cover,

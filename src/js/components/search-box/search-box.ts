@@ -70,8 +70,7 @@ export class SearchBox extends HTMLElement {
 		this.#searchBox.focus();
 	}
 
-	// eslint-disable-next-line @typescript-eslint/require-await
-	async updateSuggestions() {
+	updateSuggestions() {
 		window.requestAnimationFrame(() => {
 			const suggestions = getSuggestions(this.#searchBox.value);
 

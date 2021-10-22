@@ -70,7 +70,6 @@ export async function extractCoversFromFiles() {
 			}
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 
@@ -123,13 +122,11 @@ export async function importCoversFromFolder() {
 
 					await saveThumb(id, thumbFile);
 				} catch (err) {
-					// eslint-disable-next-line no-console
 					console.error(id, err);
 				}
 			}
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 

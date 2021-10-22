@@ -1,4 +1,3 @@
-/* eslint-disable no-console*/
 import type { WorkerReadyMessage } from './rpc-messages';
 
 async function loadModules() {

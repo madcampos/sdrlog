@@ -115,10 +115,10 @@ function selectCardUp() {
 		const MAX_SEARCH_INDEX = 20;
 		const cardsToSearch = cards.slice(Math.max(currentCardIndex - MAX_SEARCH_INDEX, 0), currentCardIndex);
 
-		/* eslint-disable @typescript-eslint/no-magic-numbers, @typescript-eslint/no-extra-parens */
+		/* eslint-disable @typescript-eslint/no-magic-numbers */
 		const x = currentLeft + (currentWidth / 2);
 		const y = currentTop - (currentHeight / 2);
-		/* eslint-enable @typescript-eslint/no-magic-numbers, @typescript-eslint/no-extra-parens */
+		/* eslint-enable @typescript-eslint/no-magic-numbers */
 
 		const elementUp = cardsToSearch.find((card) => {
 			const { top, right, bottom, left } = card.getBoundingClientRect();
@@ -147,10 +147,10 @@ function selectCardDown() {
 		const MAX_SEARCH_INDEX = 20;
 		const cardsToSearch = cards.slice(currentCardIndex, Math.min(currentCardIndex + MAX_SEARCH_INDEX, cards.length - 1));
 
-		/* eslint-disable @typescript-eslint/no-magic-numbers, @typescript-eslint/no-extra-parens */
+		/* eslint-disable @typescript-eslint/no-magic-numbers */
 		const x = currentLeft + (currentWidth / 2);
 		const y = currentBottom + (currentHeight / 2);
-		/* eslint-enable @typescript-eslint/no-magic-numbers, @typescript-eslint/no-extra-parens */
+		/* eslint-enable @typescript-eslint/no-magic-numbers */
 
 		const elementDown = cardsToSearch.find((card) => {
 			const { top, right, bottom, left } = card.getBoundingClientRect();

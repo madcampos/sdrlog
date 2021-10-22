@@ -83,7 +83,6 @@ export async function saveNewMaterialInfo(id: string, {
 
 			await saveThumb(id, thumbFile);
 		} catch (err) {
-			// eslint-disable-next-line no-console
 			console.error(id, err);
 		}
 	}

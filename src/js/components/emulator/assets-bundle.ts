@@ -64,7 +64,6 @@ export async function loadBundle(fileSystem: typeof FS | undefined) {
 			}
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 }

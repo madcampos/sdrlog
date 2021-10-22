@@ -53,8 +53,7 @@ export class ItemCard extends HTMLElement {
 
 	attributeChangedCallback(_name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
-			// eslint-disable-next-line @typescript-eslint/no-floating-promises
-			this.setMaterial(newValue);
+			void this.setMaterial(newValue);
 		}
 	}
 
@@ -65,8 +64,7 @@ export class ItemCard extends HTMLElement {
 		this.#title.innerText = this.getAttribute('title') ?? '';
 
 		if (this.hasAttribute('id')) {
-			// eslint-disable-next-line @typescript-eslint/no-floating-promises
-			this.setMaterial(this.getAttribute('id') as string);
+			void this.setMaterial(this.getAttribute('id') as string);
 		}
 	}
 

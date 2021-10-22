@@ -1,4 +1,3 @@
-/* eslint-disable id-length */
 import type { FileForMaterial, Material } from '../../../../data/data';
 
 type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems' | 'emulator' | 'emulatorSaves' | 'emulatorBios';
@@ -56,10 +55,10 @@ const databaseSchema: Record<Collections, { indexes: Record<string, IDBIndexPara
 	}
 };
 
-function createDatabseSchema(db: IDBDatabase) {
+function createDatabseSchema(idb: IDBDatabase) {
 	[...Object.entries(databaseSchema)].forEach(([store, { indexes, storeOptions }]) => {
-		if (!db.objectStoreNames.contains(store)) {
-			const newStore = db.createObjectStore(store, storeOptions);
+		if (!idb.objectStoreNames.contains(store)) {
+			const newStore = idb.createObjectStore(store, storeOptions);
 
 			[...Object.entries(indexes)].forEach(([indexName, indexOptions]) => {
 				newStore.createIndex(indexName, indexName, indexOptions);
@@ -96,8 +95,8 @@ async function databaseFactory() {
 }
 
 async function getIDBItem<T = null>(collection: Collections, name: IDBValidKey) {
-	const db = await databaseFactory();
-	const transaction = db.transaction([collection], 'readonly');
+	const idb = await databaseFactory();
+	const transaction = idb.transaction([collection], 'readonly');
 	const store = transaction.objectStore(collection);
 	const request = store.get(name);
 
@@ -113,8 +112,8 @@ async function getIDBItem<T = null>(collection: Collections, name: IDBValidKey) 
 }
 
 export async function getIDBItemFromIndex<T>(collection: Collections, indexName: string, name: IDBValidKey) {
-	const db = await databaseFactory();
-	const transaction = db.transaction([collection], 'readonly');
+	const idb = await databaseFactory();
+	const transaction = idb.transaction([collection], 'readonly');
 	const store = transaction.objectStore(collection);
 	const index = store.index(indexName);
 	const request = index.getAll(name);
@@ -131,8 +130,8 @@ export async function getIDBItemFromIndex<T>(collection: Collections, indexName:
 }
 
 async function getAllIDBItem<T>(collection: Collections) {
-	const db = await databaseFactory();
-	const transaction = db.transaction([collection], 'readonly');
+	const idb = await databaseFactory();
+	const transaction = idb.transaction([collection], 'readonly');
 	const store = transaction.objectStore(collection);
 	const request = store.getAll();
 
@@ -148,8 +147,8 @@ async function getAllIDBItem<T>(collection: Collections) {
 }
 
 async function getAllIDBKeys(collection: Collections) {
-	const db = await databaseFactory();
-	const transaction = db.transaction([collection], 'readonly');
+	const idb = await databaseFactory();
+	const transaction = idb.transaction([collection], 'readonly');
 	const store = transaction.objectStore(collection);
 	const request = store.getAllKeys();
 
@@ -165,8 +164,8 @@ async function getAllIDBKeys(collection: Collections) {
 }
 
 async function setIDBItem<T>(collection: Collections, name: IDBValidKey | undefined, value: T) {
-	const db = await databaseFactory();
-	const transaction = db.transaction([collection], 'readwrite');
+	const idb = await databaseFactory();
+	const transaction = idb.transaction([collection], 'readwrite');
 	const store = transaction.objectStore(collection);
 	const request = store.put(value, name);
 
@@ -182,8 +181,8 @@ async function setIDBItem<T>(collection: Collections, name: IDBValidKey | undefi
 }
 
 async function setIDBItems<T>(collection: Collections, items: [IDBValidKey, T][]) {
-	const db = await databaseFactory();
-	const transaction = db.transaction([collection], 'readwrite');
+	const idb = await databaseFactory();
+	const transaction = idb.transaction([collection], 'readwrite');
 	const store = transaction.objectStore(collection);
 
 	items.forEach(([key, value]) => {
@@ -276,7 +275,6 @@ export async function getFilesForMaterial(itemId: string) {
 }
 
 export async function setFileForMaterial(fileForMaterial: FileForMaterial) {
-	// eslint-disable-next-line no-undefined
 	return setIDBItem<FileForMaterial>('fileItems', undefined, fileForMaterial);
 }
 

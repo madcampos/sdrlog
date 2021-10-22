@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-duplicate-imports */
 /* eslint-env mocha */
+/* eslint-disable @typescript-eslint/no-duplicate-imports */
 
 import { assert } from 'chai';
 import { CustomButton } from './button';

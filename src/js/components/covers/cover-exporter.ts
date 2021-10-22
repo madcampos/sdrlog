@@ -51,7 +51,6 @@ export async function saveCoversToFolder() {
 			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 
@@ -105,7 +104,6 @@ export async function saveThumbsToFolder() {
 			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 

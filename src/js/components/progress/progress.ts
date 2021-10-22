@@ -23,7 +23,6 @@ export class ProgressOverlay extends HTMLElement {
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 		this.#count = this.#root.querySelector('span') as HTMLSpanElement;
 
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/strict-boolean-expressions
 		if (!this.#dialog.showModal) {
 			dialogPolyfill.registerDialog(this.#dialog);
 		}
@@ -37,8 +36,7 @@ export class ProgressOverlay extends HTMLElement {
 			<span slot="info">${info ?? ''}</span>
 		`;
 
-		// eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-		if (total) {
+		if (typeof total === 'number') {
 			overlay.setTotal(total);
 		} else {
 			overlay.setIndefinite();
@@ -75,13 +73,13 @@ export class ProgressOverlay extends HTMLElement {
 	}
 
 	show() {
-		this.#dialog.showModal();
+		this.#dialog.showModal?.();
 		this.#dialog.focus();
 	}
 
 	close() {
 		if (this.#dialog.hasAttribute('open')) {
-			this.#dialog.close();
+			this.#dialog.close?.();
 		}
 	}
 }

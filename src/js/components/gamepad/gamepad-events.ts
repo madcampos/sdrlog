@@ -69,13 +69,10 @@ export class GamepadEventNormalizer extends EventTarget {
 		this.#updateLoop();
 	}
 
-	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 	vibrate(time = 100, weakIntensity = 0.4, strongIntentisy = 0) {
 		const [gamepad] = navigator.getGamepads();
 
 		console.log(`[🎮] Vibrate gamepad for ${time}ms with ${weakIntensity}/${strongIntentisy} intensity.`);
-		// @ts-expect-error
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
 		gamepad?.vibrationActuator?.playEffect('dual-rumble', {
 			startDelay: 0,
 			duration: time,

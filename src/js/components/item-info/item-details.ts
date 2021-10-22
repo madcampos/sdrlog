@@ -288,8 +288,7 @@ export class ItemDetails extends HTMLElement {
 		const id = this.getAttribute('id');
 
 		if (id) {
-			// eslint-disable-next-line @typescript-eslint/no-floating-promises
-			this.setMaterial(id);
+			void this.setMaterial(id);
 		} else {
 			this.resetMaterial();
 		}

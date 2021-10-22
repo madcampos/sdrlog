@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention, camelcase */
-
 import mozjpegModule from '../../../../lib/mozjpeg/mozjpeg.js';
 import defaultEncodeOptions from '../../../../lib/mozjpeg/options.js';
 

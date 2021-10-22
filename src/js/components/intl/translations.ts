@@ -1,4 +1,3 @@
-/* eslint-disable max-classes-per-file */
 const availableLanguages = {
 	en: 'en-US',
 	fr: 'fr-FR',
@@ -13,23 +12,13 @@ function translateHtmlText(text: string) {
 	return text.replaceAll(/\bt\(['"`](.+?)['"`]\)/gu, (_, original: string) => I18n.t([original]));
 }
 
-
-// FIXME: remove comment after this is available/merged: https://github.com/microsoft/TypeScript/pull/39664
-declare class Locale {
-	constructor(tag: string);
-	language: string;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class I18n {
 	static getLanguage() {
 		return localStorage.getItem('appLanguage') ?? navigator.language;
 	}
 
 	static async setLanguage(language: string) {
-		// @ts-expect-error
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-		const locale = new Intl.Locale(language) as Locale;
+		const locale = new Intl.Locale(language);
 		const [, translationLanguage] = Object.entries(availableLanguages).find(([lang]) => locale.language.startsWith(lang)) ?? [null, 'en-US'];
 
 		(document.querySelector('html') as HTMLHtmlElement).lang = translationLanguage;

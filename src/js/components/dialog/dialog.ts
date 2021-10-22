@@ -20,7 +20,6 @@ export class ModalDialog extends HTMLElement {
 
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/strict-boolean-expressions
 		if (!this.#dialog.showModal) {
 			dialogPolyfill.registerDialog(this.#dialog);
 		}
@@ -41,7 +40,7 @@ export class ModalDialog extends HTMLElement {
 			evt.preventDefault();
 			evt.stopPropagation();
 
-			this.#dialog.showModal();
+			this.#dialog.showModal?.();
 			this.#dialog.focus();
 		});
 
@@ -98,11 +97,11 @@ export class ModalDialog extends HTMLElement {
 		if (oldValue !== newValue) {
 			if (name === 'open') {
 				if (this.hasAttribute('open')) {
-					this.#dialog.showModal();
+					this.#dialog.showModal?.();
 					this.#dialog.focus();
 					this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 				} else {
-					this.#dialog.close();
+					this.#dialog.close?.();
 					this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 				}
 			}

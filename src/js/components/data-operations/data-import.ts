@@ -14,7 +14,6 @@ async function fetchData() {
 			return parsedFile.items;
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 
@@ -38,7 +37,6 @@ async function readDataFromFile() {
 
 		return parsedFile.items;
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 
@@ -89,7 +87,6 @@ export async function requestDataFileFromUser() {
 
 		await saveMaterials(parsedFile.items.map((material) => [material.sku[0], material]));
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 

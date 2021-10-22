@@ -258,7 +258,6 @@ export class Emulator extends HTMLElement {
 		this.#adjustCanvasSize();
 	}
 
-	// eslint-disable-next-line consistent-return
 	async #loadGameFile() {
 		try {
 			if (!this.#filePath) {
@@ -275,6 +274,7 @@ export class Emulator extends HTMLElement {
 
 			return await handler.getFile();
 		} catch (err) {
+			console.error(err);
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 			this.#gameWrapper.innerText = err?.message ?? err ?? 'Error';
 		}

@@ -110,7 +110,6 @@ export class ComicBookReader extends HTMLElement {
 		this.#tocSelect.selectedIndex = newIndex;
 	}
 
-	// eslint-disable-next-line consistent-return
 	async #loadComicBookFile() {
 		try {
 			if (!this.#filePath) {
@@ -184,7 +183,6 @@ export class ComicBookReader extends HTMLElement {
 
 			for (const page of pages[folder]) {
 				const img = document.createElement('img');
-				// eslint-disable-next-line @typescript-eslint/unbound-method
 				const observer = new IntersectionObserver((entries) => this.#updateVisibleImage(entries), { threshold: 1 });
 
 				img.dataset.folder = encodeURIComponent(page.folder);

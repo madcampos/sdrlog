@@ -84,7 +84,6 @@ export function getFiltersFromTagsString(tagString: string, allowEmptyTags = fal
 	for (let i = 0; i < values.length; i += 2) {
 		const tag = values[i];
 		const value = values[i + 1].trim();
-		// eslint-disable-next-line @typescript-eslint/no-extra-parens
 		const isValid = (allowEmptyTags && value === '') || (validations.get(tag)?.(value) ?? false);
 
 		if (isValid) {

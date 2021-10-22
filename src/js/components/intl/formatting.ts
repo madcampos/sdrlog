@@ -10,22 +10,14 @@ export function createComparer(options: Intl.CollatorOptions = {}, language: str
 	return (x: string, y: string) => (sorters[sorterKey] as Intl.Collator).compare(x, y);
 }
 
-
-// FIXME: remove comment after this is available/merged: https://github.com/microsoft/TypeScript/pull/44022
-interface DisplayNames {
-	of(lang: string): string
-}
-
-const langNames: Partial<Record<string, DisplayNames>> = {};
+const langNames: Partial<Record<string, Intl.DisplayNames>> = {};
 
 export function translateLanguageName(nameToTranslate: string, language: string = navigator.language) {
 	if (!langNames[language]) {
-		// @ts-expect-error
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-		langNames[language] = new Intl.DisplayNames([language], { type: 'language' }) as DisplayNames;
+		langNames[language] = new Intl.DisplayNames([language], { type: 'language' });
 	}
 
-	return (langNames[language] as DisplayNames).of(nameToTranslate);
+	return (langNames[language] as Intl.DisplayNames).of(nameToTranslate);
 }
 
 const dateFormaters: Partial<Record<string, Intl.DateTimeFormat>> = {};

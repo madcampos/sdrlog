@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-confusing-void-expression */
 import type { Material } from '../../../../data/data';
 
 import { readFiles } from '../files-reader/files-reader';

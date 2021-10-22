@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/naming-convention, @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/naming-convention */
 
 interface ImportMeta {
 	hot: {

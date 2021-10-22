@@ -20,7 +20,6 @@ export class DropdownMenu extends HTMLElement {
 		this.#button = this.#root.querySelector('custom-button') as CustomButton;
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/strict-boolean-expressions
 		if (!this.#dialog.showModal) {
 			dialogPolyfill.registerDialog(this.#dialog);
 		}
@@ -59,7 +58,7 @@ export class DropdownMenu extends HTMLElement {
 	}
 
 	close() {
-		this.#dialog.close();
+		this.#dialog.close?.();
 
 		(document.activeElement as HTMLElement | undefined)?.blur();
 
@@ -70,7 +69,7 @@ export class DropdownMenu extends HTMLElement {
 		// Close all other menus
 		document.body.click();
 
-		this.#dialog.show();
+		this.#dialog.show?.();
 
 		const rect = this.#dialog.getBoundingClientRect();
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-case-declarations */
 import { I18n } from '../intl/translations';
 import type { ItemCard } from '../item-info/item-card';
 import { getFiltersFromTagsString } from './update-filter';
@@ -64,10 +63,8 @@ function getSuggestionListForTag(tag: string, value: string) {
 			break;
 
 		default:
-			const namedCards = document.querySelectorAll<ItemCard>(`item-card[title*="${value}" i]`);
-
-			namedCards.forEach((card) => {
-				suggestionList.push([`name: ${card.getAttribute('title') as string}`, card.getAttribute('title') as string]);
+			document.querySelectorAll<ItemCard>(`item-card[title*="${value}" i]`).forEach((card) => {
+				suggestionList.push([`name: ${card.getAttribute('title') ?? ''}`, card.getAttribute('title') ?? '']);
 			});
 			break;
 	}

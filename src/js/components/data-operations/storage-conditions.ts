@@ -49,7 +49,6 @@ export async function canExtractCover(fileName: string, forceReplace = false) {
 		return false;
 	}
 
-	// eslint-disable-next-line no-undefined
 	const hasSavedCover = await getCover(id) !== undefined;
 	const { quota, usage } = await navigator.storage.estimate();
 	const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
@@ -71,7 +70,6 @@ export async function canImportCover(file: File, forceReplace = false) {
 		return false;
 	}
 
-	// eslint-disable-next-line no-undefined
 	const hasSavedCover = await getCover(id) !== undefined;
 	const { quota, usage } = await navigator.storage.estimate();
 	const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;

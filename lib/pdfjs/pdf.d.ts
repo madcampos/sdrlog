@@ -78,7 +78,7 @@ interface PageViewport {
 }
 
 interface RenderParameters {
-	canvasContext: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null,
+	canvasContext: CanvasRenderingContext2D | null,
 	viewport: PageViewport,
 	intent?: string,
 	renderInteractiveForms?: boolean,
@@ -130,13 +130,11 @@ interface DocumentInitParameters {
 	length?: number,
 	range?: PDFDataRangeTransport,
 	rangeChunkSize?: number,
-	// eslint-disable-next-line @typescript-eslint/no-use-before-define
 	worker: PDFWorker,
 	verbosity?: number,
 	docBaseUrl?: string,
 	cMapUrl?: string,
 	cMapPacked?: boolean,
-	// eslint-disable-next-line @typescript-eslint/naming-convention
 	CMapRenderFactory?: Object,
 	stopAtErrors?: boolean,
 	maxImageSize?: number,
@@ -157,7 +155,6 @@ interface PDFDocumentLoadingTask {
 	onPassword(cd: Function, reason: string): unknown,
 	onProgress({ loaded, total }: { loaded: number, total: number }): unknown,
 	onUnsuportedFeature(unsuportedFeatures: unknown): unknown,
-	// eslint-disable-next-line @typescript-eslint/no-use-before-define
 	promise: Promise<PDFDocumentProxy>,
 	destroy(): Promise<void>
 }
@@ -185,11 +182,8 @@ interface OutlineNode {
 }
 
 interface MarkInfo {
-	// eslint-disable-next-line @typescript-eslint/naming-convention
 	Marked: boolean,
-	// eslint-disable-next-line @typescript-eslint/naming-convention
 	UserProperties: boolean,
-	// eslint-disable-next-line @typescript-eslint/naming-convention
 	Suspects: boolean
 }
 
@@ -296,10 +290,7 @@ interface RenderTask {
 	cancel(): void
 }
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export declare const DefaultCanvasFactory: Object;
-
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export declare const DefaultCMapReaderFactory: Object;
 
 export declare const build: string;
@@ -308,7 +299,6 @@ export declare const version: string;
 
 export interface PDFjsModule {
 	getDocument({ url }: { url: string }): { promise: Promise<PDFDocumentProxy> },
-	// eslint-disable-next-line @typescript-eslint/naming-convention
 	GlobalWorkerOptions: {
 		workerSrc: string
 	}

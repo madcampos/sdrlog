@@ -16,7 +16,6 @@ export class RadioGroup extends HTMLElement {
 
 		this.#itemsContainer = this.#root.querySelector('#radio-container') as HTMLDivElement;
 
-		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 		this.#id = Math.trunc(Math.random() * 1000000).toString(16);
 
 		this.#root.addEventListener('slotchange', (evt) => {
@@ -29,7 +28,6 @@ export class RadioGroup extends HTMLElement {
 				radio.type = 'radio';
 				radio.value = element.value;
 				radio.name = this.#id;
-				// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 				radio.id = Math.trunc(Math.random() * 1000000).toString(16);
 
 				label.setAttribute('for', radio.id);

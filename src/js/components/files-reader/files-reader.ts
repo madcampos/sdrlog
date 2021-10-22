@@ -106,7 +106,6 @@ export async function readFiles() {
 			await saveFile(path, entry);
 		}
 	} catch (err) {
-		// eslint-disable-next-line no-console
 		console.error(err);
 	}
 
