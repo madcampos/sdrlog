@@ -33,7 +33,7 @@ const mimeTypes = new Map([
 ]);
 
 export class ComicBookReader extends HTMLElement {
-	static get observedAttributes() { return ['file']; }
+	static get observedAttributes() { return ['file', 'loaded']; }
 
 	#filePath = '';
 
@@ -87,14 +87,6 @@ export class ComicBookReader extends HTMLElement {
 		}, { capture: false, passive: false });
 
 		this.#root.querySelector('#open-comic')?.addEventListener('click', async () => this.#loadComicBook());
-	}
-
-	#hideLoadOverlay() {
-		this.#loadOverlay.hidden = true;
-	}
-
-	#resetLoadOverlay() {
-		this.#loadOverlay.hidden = false;
 	}
 
 	#updateVisibleImage([entry]: IntersectionObserverEntry[]) {
@@ -193,7 +185,7 @@ export class ComicBookReader extends HTMLElement {
 			for (const page of pages[folder]) {
 				const img = document.createElement('img');
 				// eslint-disable-next-line @typescript-eslint/unbound-method
-				const observer = new IntersectionObserver(this.#updateVisibleImage, { threshold: 1 });
+				const observer = new IntersectionObserver((entries) => this.#updateVisibleImage(entries), { threshold: 1 });
 
 				img.dataset.folder = encodeURIComponent(page.folder);
 				img.src = page.url;
@@ -209,6 +201,8 @@ export class ComicBookReader extends HTMLElement {
 	}
 
 	async #loadComicBook() {
+		this.loaded = true;
+
 		const file = await this.#loadComicBookFile();
 		const pages = await this.#parseZipFileImages(file);
 
@@ -217,8 +211,10 @@ export class ComicBookReader extends HTMLElement {
 		// Force start at the begining
 		this.#tocSelect.selectedIndex = 0;
 		this.#renderArea.querySelector('img:first-child')?.scrollIntoView();
+	}
 
-		this.#hideLoadOverlay();
+	#resetComicBook() {
+		[...this.#renderArea.querySelectorAll('img')].forEach((img) => img.remove());
 	}
 
 	get file() {
@@ -227,7 +223,20 @@ export class ComicBookReader extends HTMLElement {
 
 	set file(newValue: string) {
 		this.#filePath = newValue;
-		this.#resetLoadOverlay();
+		this.loaded = false;
+		this.#resetComicBook();
+	}
+
+	get loaded() {
+		return this.hasAttribute('loaded');
+	}
+
+	set loaded(newValue: boolean) {
+		if (newValue) {
+			this.setAttribute('loaded', '');
+		} else {
+			this.removeAttribute('loaded');
+		}
 	}
 
 	showNextPage() {
@@ -241,7 +250,9 @@ export class ComicBookReader extends HTMLElement {
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if (oldValue !== newValue) {
 			if (name === 'file') {
-				this.file = this.getAttribute('file') ?? '';
+				this.file = newValue;
+			} else if (name === 'loaded') {
+				this.loaded = this.hasAttribute('loaded');
 			}
 		}
 	}

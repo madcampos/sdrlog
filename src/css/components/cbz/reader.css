@@ -2,14 +2,14 @@
 	position: relative;
 }
 
-#load-overlay {
+#comic-book-overlay {
 	position: absolute;
 	z-index: 1;
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	display: grid;
+	display: none;
 	place-items: center;
 	align-content: center;
 
@@ -17,6 +17,8 @@
 	color: var(--theme-color);
 	accent-color: var(--theme-color);
 }
+
+:host(:not([loaded])) #comic-book-overlay { display: grid; }
 
 #comic {
 	display: grid;
@@ -31,13 +33,25 @@
 	height: calc(100vh - var(--menubar-height));
 
 	overflow-x: auto;
+	overflow-y: hidden;
 	scroll-snap-type: both mandatory;
 	scroll-behavior: smooth;
 	overscroll-behavior: contain;
+
+	margin-top: calc(var(--menubar-top) + var(--menubar-height));
 }
 
+#comic #comic-loading {
+	display: none;
+	height: calc(100vh - 2rem - var(--menubar-height));
+	width: 100vw;
+	place-items: center;
+}
+
+#comic #comic-loading:only-child { display: grid; }
+
 img {
-	height: calc(100vh - 1rem - var(--menubar-height));
+	height: calc(100vh - 2rem - var(--menubar-height));
 	width: 100vw;
 	object-fit: contain;
 	scroll-snap-align: center;

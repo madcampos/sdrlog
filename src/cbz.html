@@ -62,8 +62,11 @@
 			<custom-button icon-button id="next">⏭️</custom-button>
 		</menu-bar>
 		<article id="comic">
+			<div id="comic-loading">
+				<progress></progress>
+			</div>
 		</article>
-		<div id="comic-load-overlay">
+		<div id="comic-book-overlay">
 			<custom-button icon-button id="open-comic">▶️</custom-button>
 		</div>
 	</template>
@@ -71,9 +74,6 @@
 	<!-- Content -->
 	<cbz-reader></cbz-reader>
 
-	<script src="./js/components/intl/bootstrap.js" type="module"></script>
-	<script src="./js/components/button/button.js" type="module"></script>
-	<script src="./js/components/menu-bar/menu-bar.js" type="module"></script>
-	<script src="./js/components/cbz/reader.js" type="module"></script>
+	<script src="./js/components/cbz/init.js" type="module"></script>
 </body>
 </html>
