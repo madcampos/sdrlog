@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/naming-convention, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return, prefer-named-capture-group, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/naming-convention */
 
 import { readFileSync } from 'fs';
 
@@ -7,6 +7,8 @@ const sslOptions = {
 	key: readFileSync('./snowpack.key')
 };
 
+
+/** @type {Record<Uppercase<string>, string>} */
 const env = {
 	PUBLIC_URL: 'https://localhost:8080/',
 
@@ -24,14 +26,26 @@ const env = {
 	LARGE_ICON_BG: './img/icons/maskable/manifest-icon-512.png'
 };
 
+// eslint-disable-next-line prefer-named-capture-group
 const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] ?? '');
 
+
+/**
+ * @param {Request} _req
+ * @param {Response} res
+ * @returns {Response}
+ */
 export function handleManifest(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
 	return res.end(manifest);
 }
 
+/**
+ * @param {Request} _req
+ * @param {Response} res
+ * @returns {Response}
+ */
 function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 

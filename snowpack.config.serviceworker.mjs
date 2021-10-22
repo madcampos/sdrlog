@@ -1,12 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access, @typescript-eslint/naming-convention, @typescript-eslint/no-unsafe-assignment */
 import { default as baseConfig, handleManifest } from './snowpack.config.mjs';
 
+/** @type {import("snowpack").SnowpackUserConfig["devOptions"]} */
 const devOptions = {
 	...baseConfig.devOptions,
 	hmr: false
 };
 
-/** @type {import("snowpack").SnowpackUserConfig } */
+/** @type {import("snowpack").SnowpackUserConfig} */
 export default {
 	...baseConfig,
 	devOptions,

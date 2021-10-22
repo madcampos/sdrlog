@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/restrict-template-expressions, @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-return */
-
 import { readdir, stat } from 'fs/promises';
 import { extname, resolve } from 'path';
 
@@ -20,6 +18,7 @@ const postprocessing = [
  * @returns {Promise<string[]>}
  */
 async function readDirRecursive(dirPath) {
+	/** @type {string[]} */
 	const entries = [];
 	const dirEntries = await readdir(dirPath);
 
