@@ -42,9 +42,8 @@ async function readDirRecursive(dirPath) {
 	for await (const file of files) {
 		const extension = extname(file);
 
-		// eslint-disable-next-line @typescript-eslint/no-loop-func
-		await Promise.all(postprocessing.map(async (callback) => {
-			await callback(file, extension, env);
-		}));
+		for await (const processCallback of postprocessing) {
+			await processCallback(file, extension, env);
+		}
 	}
 })();

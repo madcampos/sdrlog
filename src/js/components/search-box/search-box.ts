@@ -33,7 +33,7 @@ export class SearchBox extends HTMLElement {
 		});
 
 		this.#searchBox.addEventListener('input', () => {
-			void this.updateSuggestions();
+			this.updateSuggestions();
 		});
 
 		this.#searchBox.addEventListener('change', () => {

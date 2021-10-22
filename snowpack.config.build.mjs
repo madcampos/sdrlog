@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 import { default as baseConfig } from './snowpack.config.mjs';
 
 
@@ -10,7 +8,9 @@ const env = {
 };
 
 /** @type {import("snowpack").SnowpackUserConfig} */
-export default {
+const config = {
 	...baseConfig,
 	env
 };
+
+export default config;

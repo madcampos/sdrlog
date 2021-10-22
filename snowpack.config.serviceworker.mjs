@@ -7,7 +7,7 @@ const devOptions = {
 };
 
 /** @type {import("snowpack").SnowpackUserConfig} */
-export default {
+const config = {
 	...baseConfig,
 	devOptions,
 	routes: [
@@ -18,3 +18,5 @@ export default {
 		}
 	]
 };
+
+export default config;

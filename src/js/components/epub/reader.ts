@@ -121,7 +121,6 @@ document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
 		await rendition.display();
 		document.querySelector('#load-overlay')?.remove();
 	} catch (err) {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 		(document.querySelector('main') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
 	}
 });

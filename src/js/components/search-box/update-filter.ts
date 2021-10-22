@@ -70,7 +70,6 @@ export function getTagStringFromFilters(filter: FilterOptions) {
 }
 
 export function getFiltersFromTagsString(tagString: string, allowEmptyTags = false) {
-	// eslint-disable-next-line prefer-named-capture-group
 	const tagsRegex = /(sku|type|category|edition|status|name):\s?/igu;
 	const [untaggedString, ...values] = tagString.split(tagsRegex);
 

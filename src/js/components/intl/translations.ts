@@ -8,7 +8,7 @@ const availableLanguages = {
 let loadedTranslations: Map<string, string> = new Map();
 
 function translateHtmlText(text: string) {
-	// eslint-disable-next-line prefer-named-capture-group, @typescript-eslint/no-use-before-define
+	// eslint-disable-next-line @typescript-eslint/no-use-before-define
 	return text.replaceAll(/\bt\(['"`](.+?)['"`]\)/gu, (_, original: string) => I18n.t([original]));
 }
 

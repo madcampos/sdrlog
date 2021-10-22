@@ -1,5 +1,4 @@
 /* eslint-env serviceworker */
-/* eslint-disable no-console */
 /// <reference lib="webworker" />
 
 const isDebug = false;
@@ -36,6 +35,7 @@ const preCacheFiles = [
 function logger(message: string) {
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 	if (isDebug) {
+		// eslint-disable-next-line no-console
 		console.log(message);
 	}
 }
@@ -135,7 +135,6 @@ async function fetchFromNetwork(request: Request, timeout = REQUEST_TIMEOUT) {
 
 	return new Promise<Response>((resolve) => {
 		const fallbackResponse = new Response('Service Unavailable', {
-			// eslint-disable-next-line @typescript-eslint/naming-convention
 			headers: new Headers({ 'Content-Type': 'text/plain' }),
 			status: 503,
 			statusText: 'Service Unavailable'
@@ -143,7 +142,7 @@ async function fetchFromNetwork(request: Request, timeout = REQUEST_TIMEOUT) {
 
 		const timeoutId = setTimeout(() => {
 			console.error(`[⚙️][❌] Network fetch timed out for url: "${request.url}"`);
-			void resolve(fallbackResponse);
+			resolve(fallbackResponse);
 		}, timeout);
 
 		fetch(request).then(async (response) => {
@@ -222,7 +221,6 @@ async function searchSuggestion(request: Request) {
 	});
 
 	const response = new Response(JSON.stringify(suggestions), {
-		// eslint-disable-next-line @typescript-eslint/naming-convention
 		headers: { 'Content-Type': 'application/x-suggestions+json' }
 	});
 

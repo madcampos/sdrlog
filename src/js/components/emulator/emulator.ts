@@ -41,7 +41,6 @@ const materialsFilter = new Map([
 function mkdirTree(fileSystem: typeof FS | undefined, path: string) {
 	if (fileSystem) {
 		// @ts-expect-error
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 		fileSystem.createPath('/', path, true, true);
 	}
 }
@@ -275,7 +274,6 @@ export class Emulator extends HTMLElement {
 			return await handler.getFile();
 		} catch (err) {
 			console.error(err);
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 			this.#gameWrapper.innerText = err?.message ?? err ?? 'Error';
 		}
 	}

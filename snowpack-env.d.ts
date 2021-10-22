@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 interface ImportMeta {
 	hot: {
 		accept: Function,

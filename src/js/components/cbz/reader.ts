@@ -126,7 +126,6 @@ export class ComicBookReader extends HTMLElement {
 
 			return await handler.getFile();
 		} catch (err) {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
 		}
 	}

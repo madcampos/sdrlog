@@ -50,7 +50,6 @@ export async function loadBios(fileSystem: typeof FS | undefined) {
 
 			if (file.type === 'application/x+directory') {
 				// @ts-expect-error
-				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 				fileSystem?.createPath('/', `${folderPath}${file.name}`, true, true);
 			} else {
 				fileSystem?.writeFile(`${folderPath}${path}`, new Uint8Array(buffer));

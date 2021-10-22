@@ -1,4 +1,4 @@
-/* eslint-disable max-classes-per-file, @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/no-shadow */
 
 interface HTMLDialogElement {
 	showModal?: VoidFunction,

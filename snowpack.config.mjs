@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 import { readFileSync } from 'fs';
 
 const sslOptions = {
@@ -26,14 +24,13 @@ const env = {
 	LARGE_ICON_BG: './img/icons/maskable/manifest-icon-512.png'
 };
 
-// eslint-disable-next-line prefer-named-capture-group
 const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] ?? '');
 
 
 /**
- * @param {Request} _req
- * @param {Response} res
- * @returns {Response}
+ * @param {import("http").IncomingMessage} _req
+ * @param {import("http").ServerResponse} res
+ * @returns {void}
  */
 export function handleManifest(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
@@ -42,9 +39,9 @@ export function handleManifest(_req, res) {
 }
 
 /**
- * @param {Request} _req
- * @param {Response} res
- * @returns {Response}
+ * @param {import("http").IncomingMessage} _req
+ * @param {import("http").ServerResponse} res
+ * @returns {void}
  */
 function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
@@ -53,7 +50,7 @@ function handleServiceWorker(_req, res) {
 }
 
 /** @type {import("snowpack").SnowpackUserConfig } */
-export default {
+const config = {
 	root: './src',
 	env,
 	mount: {
@@ -110,3 +107,5 @@ export default {
 		metaUrlPath: 'meta'
 	}
 };
+
+export default config;
