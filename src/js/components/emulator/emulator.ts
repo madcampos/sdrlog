@@ -283,24 +283,27 @@ export class Emulator extends HTMLElement {
 	async #loadEmulatorScript(romFile: File) {
 		const { id } = extractMetadataFromFileName(romFile.name);
 		const { emulator } = materialsFilter.get(id) ?? {};
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-		const { 'default': emulatorInit } = (await import(`${import.meta.env.PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`)) as { default: EmulatorInitializerFunction };
 
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
-		this.#emulator = emulatorInit({
-			canvas: this.#canvas,
-			onRuntimeInitialized: async () => {
-				mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/bundle');
-				await loadBundle(this.#emulator?.FS);
+		try {
+			const { 'default': emulatorInit } = (await import(`${import.meta.env.PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`)) as { default: EmulatorInitializerFunction };
 
-				mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/system');
-				await loadBios(this.#emulator?.FS);
+			this.#emulator = emulatorInit({
+				canvas: this.#canvas,
+				onRuntimeInitialized: async () => {
+					mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/bundle');
+					await loadBundle(this.#emulator?.FS);
 
-				await this.#startGame(romFile);
+					mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/system');
+					await loadBios(this.#emulator?.FS);
 
-				this.loaded = true;
-			}
-		});
+					await this.#startGame(romFile);
+
+					this.loaded = true;
+				}
+			});
+		} catch {
+			throw new Error(I18n.t`Unable to load emulator.`);
+		}
 	}
 
 	async #loadGame() {
