@@ -7,7 +7,8 @@
 	"scripts": {
 		"start": "snowpack dev",
 		"start:sw": "snowpack dev --config snowpack.config.serviceworker.mjs",
-		"lint": "npm run lint:js && npm run lint:css",
+		"check": "tsc --noEmit",
+		"lint": "npm run lint:js && npm run check && npm run lint:css",
 		"lint:js": "eslint **/*.ts --fix",
 		"lint:css": "stylelint **/*.css --fix",
 		"build": "snowpack build --mode production --config snowpack.config.build.mjs",
@@ -16,10 +17,11 @@
 		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --icon-only --scrape false --dark-mode --opaque false src/img/icons/transparent",
 		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --icon-only src/img/icons/maskable",
 		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only src/img/splash",
+		"clean": "node -e \"require('fs').rmSync('./dist', { force: true, recursive: true})\"",
 		"test": "wtr"
 	},
 	"engines": {
-		"node": ">=16.0.0"
+		"node": ">=17.0.0"
 	},
 	"repository": {
 		"type": "git",
@@ -38,20 +40,20 @@
 	"homepage": "https://github.com/madcampos/sdrlog#readme",
 	"devDependencies": {
 		"@snowpack/web-test-runner-plugin": "^0.2.2",
-		"@types/chai": "^4.2.22",
-		"@types/emscripten": "^1.39.5",
+		"@types/chai": "^4.3.0",
+		"@types/emscripten": "^1.39.6",
 		"@types/mocha": "^9.0.0",
 		"@types/wicg-file-system-access": "^2020.9.4",
-		"@typescript-eslint/eslint-plugin": "^5.1.0",
-		"@typescript-eslint/parser": "^5.1.0",
-		"@web/test-runner": "0.13.20",
+		"@typescript-eslint/eslint-plugin": "^5.7.0",
+		"@typescript-eslint/parser": "^5.7.0",
+		"@web/test-runner": "0.13.22",
 		"@web/test-runner-playwright": "^0.8.8",
 		"chai": "^4.3.4",
-		"eslint": "^8.0.1",
-		"pwa-asset-generator": "^5.0.0",
+		"eslint": "^8.4.1",
+		"pwa-asset-generator": "^6.0.5",
 		"snowpack": "^3.8.8",
 		"snowpack-plugin-minify-html": "^0.1.1",
-		"stylelint": "^14.0.0",
-		"typescript": "^4.4.4"
+		"stylelint": "^14.1.0",
+		"typescript": "^4.5.4"
 	}
 }
