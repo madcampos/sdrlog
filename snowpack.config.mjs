@@ -24,7 +24,7 @@ const env = {
 	LARGE_ICON_BG: './img/icons/maskable/manifest-icon-512.png'
 };
 
-const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] ?? '');
+const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] || '');
 
 
 /**
@@ -35,7 +35,7 @@ const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).
 export function handleManifest(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
-	return res.end(manifest);
+	res.end(manifest);
 }
 
 /**
@@ -46,7 +46,7 @@ export function handleManifest(_req, res) {
 function handleServiceWorker(_req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
-	return res.end("self.addEventListener('install', () => self.skipWaiting()); self.addEventListener('activate', () => self.clients.matchAll({ type: 'window' }).then((clients) => clients.forEach((window) => window.navigate(window.url)))); self.addEventListener('fetch', (evt) => evt.respondWith(fetch(evt.request)));");
+	res.end("self.addEventListener('install', () => self.skipWaiting()); self.addEventListener('activate', () => self.clients.matchAll({ type: 'window' }).then((clients) => clients.forEach((window) => {window.navigate(window.url); window.postMessage({ type: 'worker-ready', status: 'success' }); }))); self.addEventListener('fetch', (evt) => evt.respondWith(fetch(evt.request)));");
 }
 
 /** @type {import("snowpack").SnowpackUserConfig } */
@@ -75,7 +75,7 @@ const config = {
 	exclude: ['**/*.schema.json'],
 	optimize: {
 		minify: true,
-		target: 'esnext'
+		target: 'es2020'
 	},
 	plugins: [
 		[

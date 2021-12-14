@@ -1,6 +1,8 @@
 import { readdir, stat } from 'fs/promises';
 import { extname, resolve } from 'path';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/prefer-ts-expect-error
+// @ts-ignore - May error out if the project is not built yet
 import * as env from '../dist/meta/env.js';
 
 import { default as minifyJson } from './minify-json.mjs';

@@ -19,7 +19,7 @@ export class I18n {
 
 	static async setLanguage(language: string) {
 		const locale = new Intl.Locale(language);
-		const [, translationLanguage] = Object.entries(availableLanguages).find(([lang]) => locale.language.startsWith(lang)) ?? [null, 'en-US'];
+		const [, translationLanguage] = Object.entries(availableLanguages).find(([lang]) => locale.language?.startsWith(lang) ?? false) ?? [null, 'en-US'];
 
 		(document.querySelector('html') as HTMLHtmlElement).lang = translationLanguage;
 		localStorage.setItem('appLanguage', translationLanguage);
