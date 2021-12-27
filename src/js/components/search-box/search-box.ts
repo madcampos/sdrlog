@@ -1,5 +1,6 @@
 import type { CustomButton } from '../button/button';
 import { I18n } from '../intl/translations';
+import { registerShortcut } from '../keyboard/keyboard';
 import { getSuggestions } from './search-suggestions';
 
 import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
@@ -46,24 +47,13 @@ export class SearchBox extends HTMLElement {
 			}
 		});
 
-		window.addEventListener('keydown', (evt) => {
-			if (evt.ctrlKey && evt.key === 'f') {
-				evt.preventDefault();
-				evt.stopPropagation();
+		registerShortcut('f', () => {
+			if (document.activeElement === this) {
+				this.#searchBox.blur();
+			} else {
+				this.#searchBox.focus();
 			}
 		});
-
-		window.addEventListener('keyup', (evt) => {
-			if (evt.ctrlKey && evt.key === 'f') {
-				evt.preventDefault();
-
-				if (document.activeElement === this) {
-					this.#searchBox.blur();
-				} else {
-					this.#searchBox.focus();
-				}
-			}
-		}, { capture: false });
 	}
 
 	focus() {

@@ -1,6 +1,7 @@
 import type { ModalDialog } from '../dialog/dialog';
 import type { RadioGroup } from '../radio/radio-group';
 import { I18n } from '../intl/translations';
+import { registerShortcut } from '../keyboard/keyboard';
 
 const themeBox = document.querySelector('#theme-modal') as ModalDialog;
 const themeSelector = document.querySelector('#theme-modal radio-group') as RadioGroup;
@@ -25,28 +26,17 @@ themeSelector.addEventListener('change', () => {
 	document.body.classList.add(`theme-${themeSelector.value}`);
 });
 
-window.addEventListener('keydown', (evt) => {
-	if (evt.ctrlKey && evt.key === 't') {
-		evt.preventDefault();
-		evt.stopPropagation();
+registerShortcut('t', () => {
+	themeBox.toggle();
+
+	if (themeBox.hasAttribute('open')) {
+		window.history.pushState(null, `${I18n.t`Theme Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#theme`);
+		window.document.title = `${I18n.t`Theme Settings`} ● ${import.meta.env.APP_NAME}`;
+	} else {
+		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
+		window.document.title = import.meta.env.APP_NAME;
 	}
 });
-
-window.addEventListener('keyup', (evt) => {
-	if (evt.ctrlKey && evt.key === 't') {
-		evt.preventDefault();
-
-		themeBox.toggle();
-
-		if (themeBox.hasAttribute('open')) {
-			window.history.pushState(null, `${I18n.t`Theme Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#theme`);
-			window.document.title = `${I18n.t`Theme Settings`} ● ${import.meta.env.APP_NAME}`;
-		} else {
-			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
-			window.document.title = import.meta.env.APP_NAME;
-		}
-	}
-}, { capture: false });
 
 export function openThemeModal() {
 	window.history.pushState(null, `${I18n.t`Theme Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#theme`);

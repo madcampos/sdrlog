@@ -1,6 +1,7 @@
 import type { ModalDialog } from '../dialog/dialog';
 import type { EditSelect } from '../edit-box/edit-select';
 import { I18n } from '../intl/translations';
+import { registerShortcut } from '../keyboard/keyboard';
 
 const languageBox = document.querySelector('#language-modal') as ModalDialog;
 const languageSelect = document.querySelector('#language-select') as EditSelect;
@@ -26,28 +27,17 @@ languageBox.addEventListener('close', () => {
 	window.document.title = import.meta.env.APP_NAME;
 }, { capture: false });
 
-window.addEventListener('keydown', (evt) => {
-	if (evt.ctrlKey && evt.key === 'l') {
-		evt.preventDefault();
-		evt.stopPropagation();
+registerShortcut('l', () => {
+	languageBox.toggle();
+
+	if (languageBox.hasAttribute('open')) {
+		window.history.pushState(null, `${I18n.t`Language Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#language`);
+		window.document.title = `${I18n.t`Language Settings`} ● ${import.meta.env.APP_NAME}`;
+	} else {
+		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
+		window.document.title = import.meta.env.APP_NAME;
 	}
 });
-
-window.addEventListener('keyup', (evt) => {
-	if (evt.ctrlKey && evt.key === 'l') {
-		evt.preventDefault();
-
-		languageBox.toggle();
-
-		if (languageBox.hasAttribute('open')) {
-			window.history.pushState(null, `${I18n.t`Language Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#language`);
-			window.document.title = `${I18n.t`Language Settings`} ● ${import.meta.env.APP_NAME}`;
-		} else {
-			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
-			window.document.title = import.meta.env.APP_NAME;
-		}
-	}
-}, { capture: false });
 
 export function openLanguageModal() {
 	window.history.pushState(null, `${I18n.t`Language Settings`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#language`);
