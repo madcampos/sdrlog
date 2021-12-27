@@ -214,6 +214,7 @@ export class Emulator extends HTMLElement {
 			cancelable: false,
 			shiftKey: false,
 			ctrlKey: false,
+			metaKey: false,
 			altKey: false,
 			...keyMap[key]
 		}));
