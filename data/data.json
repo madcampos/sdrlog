@@ -233,7 +233,7 @@
 			"type": "digital",
 			"names": {
 				"de-DE": "Connections & Szenarien",
-				"fr-FR": "Contacts & aventures‎"
+				"fr-FR": "Contacts & aventures"
 			},
 			"originalLanguage": "en-US",
 			"description": "The 32 page Contacts and Adventures booklet, which features a variety of NPCs with complete stats; over 30 plot hooks covering a wide range of shadowrunning possibilities; the SR3 to SR4 character conversion rules, and two pages of additional tables that we couldn't squeeze onto the GM Screen itself.",
@@ -14782,6 +14782,30 @@
 			],
 			"gameDate": "2064-01",
 			"status": "missing"
+		},
+		{
+			"sku": [
+				"28004",
+				"46129"
+			],
+			"name": "Double Clutch",
+			"category": "rulebook",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Jump In\nIn the Sixth World, you can go from home to work to stores and back home again without touching a steering wheel or pushing a pedal, letting your vehicle and the networks it is hooked into do all your driving for you.\n\nBut why would you want to do that?\n\nThe accelerating jump of a vehicle when the clutch engages at just the right point, the smell of burning rubber, the sound of a thrumming engine that you can feel in the back of your sternum—those are the sort of things riggers live for—the sort of things they get when jump in to the right vehicle, tuned exactly the way they want it.\n\nDouble Clutch gives riggers a host of new options, including all sorts of vehicles and drones, as well as rules for customizing vehicles, making their own vehicles, and customizing their character to be the best rigger around. Everything they want is here.\n\nDouble Clutch is the core rigging rulebook for Shadowrun, Sixth World.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs",
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-10-04",
+				"2021-09-23"
+			],
+			"gameDate": "2080-01",
+			"names": {
+				"de-DE": "Vollgas"
+			}
 		}
 	]
 }
