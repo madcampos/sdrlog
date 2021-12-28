@@ -115,7 +115,7 @@ export function formatSku(sku: string, isEditing = false) {
 }
 
 export function formatTranslatedName(lang: string, name: string, isEditing = false) {
-	return `<edit-list-item stretch ${isEditing ? 'edit' : ''} value="${encodeURI(JSON.stringify({ lang, name }))}">${languages.get(lang) ?? ''} ⏵ ${name}</edit-list-item>`;
+	return `<edit-list-item stretch ${isEditing ? 'edit' : ''} value="${encodeURI(JSON.stringify({ lang, name }))}">${languages.get(lang) ?? ''}: ${name}</edit-list-item>`;
 }
 
 export function formatLink({ url, title }: MaterialLink, isEditing = false) {

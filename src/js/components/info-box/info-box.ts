@@ -15,8 +15,8 @@ registerShortcut('i', () => {
 	infobox.toggle();
 
 	if (infobox.hasAttribute('open')) {
-		window.history.pushState(null, `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
-		window.document.title = `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`;
+		window.history.pushState(null, `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
+		window.document.title = `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`;
 	} else {
 		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
 		window.document.title = import.meta.env.APP_NAME;
@@ -24,8 +24,8 @@ registerShortcut('i', () => {
 });
 
 export function openInfoModal() {
-	window.history.pushState(null, `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
-	window.document.title = `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`;
+	window.history.pushState(null, `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#information`);
+	window.document.title = `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`;
 
 	infobox.show();
 }
@@ -35,7 +35,7 @@ export function updateInfoBoxFromURL() {
 
 	if (url.hash === '#information') {
 		infobox.show();
-		window.history.replaceState(null, `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`);
-		window.document.title = `${I18n.t`Information`} ● ${import.meta.env.APP_NAME}`;
+		window.history.replaceState(null, `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`);
+		window.document.title = `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`;
 	}
 }
