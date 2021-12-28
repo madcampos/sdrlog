@@ -39,7 +39,7 @@ export class ItemDetails extends HTMLElement {
 		gameDate: EditBox,
 		category: EditSelect,
 		type: EditSelect,
-		language: EditSelect,
+		originalLanguage: EditSelect,
 		releaseDate: EditList,
 		publisher: EditList,
 		status: EditSelect,
@@ -91,7 +91,7 @@ export class ItemDetails extends HTMLElement {
 
 			type: this.#root.querySelector('#type') as EditSelect,
 
-			language: this.#root.querySelector('#language') as EditSelect,
+			originalLanguage: this.#root.querySelector('#language') as EditSelect,
 
 			releaseDate: this.#root.querySelector('#releasedate') as EditList,
 
@@ -121,7 +121,7 @@ export class ItemDetails extends HTMLElement {
 
 		setCategories(this.#formFields.category);
 		setTypes(this.#formFields.type);
-		setLanguages(this.#formFields.language);
+		setLanguages(this.#formFields.originalLanguage);
 		setPublishers(this.#editInputs.publisher);
 		setStatus(this.#formFields.status);
 		setLanguages(this.#editInputs.namesLang);
@@ -248,8 +248,8 @@ export class ItemDetails extends HTMLElement {
 			this.#saveButton.disabled = false;
 			this.#exportButton.disabled = false;
 
-			window.history.pushState(null, `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
-			window.document.title = `${this.#formFields.name.value} ● ${import.meta.env.APP_NAME}`;
+			window.history.pushState(null, `${this.#formFields.name.value} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
+			window.document.title = `${this.#formFields.name.value} · ${import.meta.env.APP_NAME}`;
 
 			// eslint-disable-next-line no-alert
 			alert(`${I18n.t`Item # `}${id}${I18n.t` saved successfully.`}`);
@@ -259,6 +259,10 @@ export class ItemDetails extends HTMLElement {
 			const values = Object.entries(this.#formFields).reduce((inputValues, [name, input]) => {
 				if ('values' in input) {
 					inputValues[name] = input.values;
+
+					if (['links', 'files', 'names'].includes(name)) {
+						inputValues[name] = input.values.map((value) => decodeURI(value));
+					}
 				} else {
 					inputValues[name] = input.value;
 				}
@@ -304,8 +308,8 @@ export class ItemDetails extends HTMLElement {
 		this.#modal.show();
 		this.setAttribute('open', '');
 
-		window.history.pushState(null, `${title} ● ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}${hash}`);
-		window.document.title = `${title} ● ${import.meta.env.APP_NAME}`;
+		window.history.pushState(null, `${title} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}${hash}`);
+		window.document.title = `${title} · ${import.meta.env.APP_NAME}`;
 	}
 
 	close() {

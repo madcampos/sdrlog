@@ -16,7 +16,7 @@ interface DetailElementsReferences {
 	gameDate: EditBox,
 	category: EditSelect,
 	type: EditSelect,
-	language: EditSelect,
+	originalLanguage: EditSelect,
 	releaseDate: EditList,
 	publisher: EditList,
 	status: EditSelect,
@@ -35,7 +35,7 @@ export function setMaterialDetails(material: Material, {
 	gameDate,
 	category,
 	type,
-	language,
+	originalLanguage,
 	releaseDate,
 	publisher,
 	status,
@@ -58,7 +58,7 @@ export function setMaterialDetails(material: Material, {
 
 	type.value = material.type;
 
-	language.value = material.originalLanguage;
+	originalLanguage.value = material.originalLanguage;
 
 	material.releaseDate?.forEach((releaseDateValue) => {
 		releaseDate.insertAdjacentHTML('beforeend', formatReleaseDate(releaseDateValue));
