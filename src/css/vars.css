@@ -108,7 +108,7 @@
 	--scrollbar-bg: rgba(255, 255, 255, 0.1);
 
 	/* Select arrow SVG */
-	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' color='darkviolet'%3E%3Cpolygon fill='currentColor' stroke='currentColor' stroke-linejoin='round' points='2,2 8,2 5,8'/%3E%3C/svg%3E");
+	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
 
 	/* Shadows */
 	--light-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.13), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.11);
@@ -145,7 +145,7 @@
 	--scrollbar-bg: rgba(255, 255, 255, 0.1);
 
 	/* Select arrow SVG */
-	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' color='darkviolet'%3E%3Cpolygon fill='currentColor' stroke='currentColor' stroke-linejoin='round' points='2,2 8,2 5,8'/%3E%3C/svg%3E");
+	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
 
 	color-scheme: dark;
 }
@@ -166,7 +166,7 @@
 	--scrollbar-bg: rgba(255, 255, 255, 0.1);
 
 	/* Select arrow SVG */
-	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' color='darkviolet'%3E%3Cpolygon fill='currentColor' stroke='currentColor' stroke-linejoin='round' points='2,2 8,2 5,8'/%3E%3C/svg%3E");
+	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
 
 	color-scheme: light;
 }
@@ -203,7 +203,7 @@
 		--scrollbar-bg: rgba(255, 255, 255, 0.1);
 
 		/* Select arrow SVG */
-		--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E⛛%3C/text%3E%3C/g%3E%3C/svg%3E");
+		--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
 
 		color-scheme: dark;
 	}
