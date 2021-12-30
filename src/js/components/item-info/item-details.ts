@@ -251,6 +251,8 @@ export class ItemDetails extends HTMLElement {
 			window.history.pushState(null, `${this.#formFields.name.value} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
 			window.document.title = `${this.#formFields.name.value} · ${import.meta.env.APP_NAME}`;
 
+			this.toggleEdit(false, false);
+
 			// eslint-disable-next-line no-alert
 			alert(`${I18n.t`Item # `}${id}${I18n.t` saved successfully.`}`);
 		});
@@ -343,6 +345,10 @@ export class ItemDetails extends HTMLElement {
 		if (this.#formFields.links.values.length < 1) {
 			this.#formFields.links.hidden = !editingStatus;
 		}
+
+		this.#editButton.disabled = false;
+		this.#saveButton.disabled = false;
+		this.#exportButton.disabled = false;
 
 		this.#editButton.hidden = false;
 		this.#saveButton.hidden = true;
