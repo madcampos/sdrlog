@@ -14685,8 +14685,7 @@
 			"releaseDate": [
 				"2021-08-17"
 			],
-			"gameDate": "2064-01",
-			"status": "missing"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -14806,6 +14805,118 @@
 			"names": {
 				"de-DE": "Vollgas"
 			}
+		},
+		{
+			"sku": [
+				"27487"
+			],
+			"name": "Anarchy 2050",
+			"category": "rulebook",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Play the Hits\n\nHarlequin. Maria Mercurial. Jetblack. Dunkelzahn. The Universal Brotherhood.\n\nThese are some of the defining names of Shadowrunlore, the classics that shaped an enduring game universe. Now, for the first time, they’ve been brought to the fast-moving game rules of Shadowrun: Anarchy. With new character archetypes, shadow amps, world information, and a whole bunch of contract briefs, Anarchy 2050 gives you what you need to play classic adventures in a new way. Get ready to get caught in the middle of intrigue, deception, gang warfare, political assassinations, and more as your team of runners tries to survive and maybe bring a little light into the shadows.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-12-14"
+			],
+			"gameDate": "2081-01"
+		},
+		{
+			"sku": [
+				"26879"
+			],
+			"name": "Imposter",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# MIRROR IMAGE…\n\nNero is a mage with a murky past, working with a tight-knit crew out of Amsterdam. When a Johnson hires the team to extract her to see what they can do, she surprises them even further with the real mission: infiltrate a high-level business meeting and make sure the pending asset sale goes to the Johnson herself.\nAnd there’s one more twist to this run: Nero will have to pose as the man who put the entire deal together — his twin brother Enzo … who left him for dead when they were teenagers years ago.\nGhosts from Nero’s past clash with danger in his present, as he must now walk a tightrope between the shadowrunning world and the corporate world, an entire universe he knows nothing about, and one that works by its own intricate systems. But when the run goes wrong, Nero is suddenly placed in mortal peril, and it’s up to his team to get him out of a place where one wrong move can leave all of them very, very dead…",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-11-12"
+			],
+			"gameDate": "2081-12",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"28508"
+			],
+			"name": "Johnson Dex",
+			"category": "misc",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Power Players\n\nYou love them, you hate them. They hire you, they try to kill you. Shadowrunners have a complicated relationship with the Mr. Johnsons of the Sixth World. Knowing their quirks, their methods, and what they can do for you can make the job smoother, and this deck has the info with you need—profiles of almost 20 Mr. Johnsons, with stats, background, plot hooks, and more!",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-10-04"
+			],
+			"gameDate": "2081-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"28509"
+			],
+			"name": "Rides",
+			"category": "misc",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# ROLL OUT!\n\nDo you need a new ride? Maybe a motorcycle? A sports truck? How about a tankette? Or maybe you could use something on the water, ranging from a lifeboat to a container vessel. Or you could move to the skies in a t-bird, ’copter, or your own badass personal jetpack. And drones? They’re here, too, from tunnel crawlers to lethal flyers.\n\nThis card deck gives players and gamemasters alike the rundown on dozens of vehicles and drones, providing easy access to critical information.\n\nRides Deck is a card deck with images and game stats for vehicles and drones for use with Shadowrun, Sixth World.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-10-04"
+			],
+			"gameDate": "2081-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"35017G"
+			],
+			"name": "Wendigos Warhheit",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Die zwergische Privatermittlerin Hermine Wendigo nimmt den Auftrag an, die Mörder einer ehemaligen Mafiasoldatin aus dem Rhein-Ruhr-Megaplex zu finden. Die \"Familie\" scheint nicht interessiert an einer Aufklärung. Die Polizei noch weniger. Je weiter Wendigo der mörderischen Spur in die Schatten folgt, desto tiefer versinkt sie in einen Krieg der Mafia, in dem alles in Gefahr gerät: ihre Überzeugungen, ihre Loyalitäten und ihr Überleben.\n\nRunner können die Ereignisse im Rollenspiel-Kampagnenband Vendetta hautnah am Spieltisch miterleben. Wendigos Wahrheit spielt vor den Ereignissen dieses Kampagnenbands.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2021-10-15"
+			],
+			"gameDate": "2081-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"SRM09-02"
+			],
+			"name": "Finders Keepers",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# THE HUNT IS ON\n\nWhat’s more fun than a treasure hunt? When a man with Yakuza connections needs to recover an important family heirloom, he turns to the shadows for help, and runners will have to put some effort into following the item’s trail. It won’t be a simple job—when is it ever?—but runners have the chance to bound across Neo-Tokyo to make sure they find the needed object—and try to get it to end up in the right hands.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-12-14"
+			],
+			"gameDate": "2081-01"
 		}
 	]
 }

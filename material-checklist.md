@@ -16,11 +16,6 @@ https://www.shadowrunsixthworld.com/2021/05/whats-up-with-shadowrun/
 
 https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
-https://store.catalystgamelabs.com/collections/shadowrun-new-arrivals/products/shadowrun-johnson-dex
-https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-rides?variant=39716714971170
-https://www.drivethrurpg.com/product/374410/Shadowrun-eBook--Wendigos-Wahrheit?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/380725/Shadowrun-Missions-Finders-Keepers-0902?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/380727/Shadowrun-Anarchy-2050?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/380729/Shadowrun-The-Kechibi-Code-Plot-Sourcebook?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 
