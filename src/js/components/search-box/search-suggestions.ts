@@ -108,7 +108,7 @@ export function getSuggestions(tagString: string) {
 			}).join(' ');
 
 			option.value = value;
-			option.text = `${tagString} ⏵ "${card.getAttribute('title') as string}"`;
+			option.text = `${tagString} ▸ "${card.getAttribute('title') as string}"`;
 			optionsList.push(option);
 		});
 	} else if (firstTag === 'name' || firstTag === 'sku') {
@@ -118,7 +118,7 @@ export function getSuggestions(tagString: string) {
 				const [value, text] = suggestion;
 
 				option.value = value;
-				option.text = `${tagString} ⏵ "${text}"`;
+				option.text = `${tagString} ▸ "${text}"`;
 				optionsList.push(option);
 			});
 		}
@@ -128,7 +128,7 @@ export function getSuggestions(tagString: string) {
 			const [value, text] = suggestion;
 
 			option.value = value;
-			option.text = `${tagString} ⏵ "${text}"`;
+			option.text = `${tagString} ▸ "${text}"`;
 			optionsList.push(option);
 		});
 	}
