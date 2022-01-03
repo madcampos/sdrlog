@@ -14917,6 +14917,24 @@
 				"2021-12-14"
 			],
 			"gameDate": "2081-01"
+		},
+		{
+			"sku": [
+				"28302"
+			],
+			"name": "The Kechibi Code",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# WHAT WILL YOU DO?\nThe power to shake cities, nations, even corporations is out there, contained in a compact code. What would you do if you could control it? Wield it? Or destroy it? Where would you direct the power? Who would you save, and who would you doom?\n\nShadowrunners are used to reacting and surviving. The larger choices, things like the flow of billions of nuyen, or shifts in the highest levels of power, are usually out of their grasp.\n\nBut not this time. What will you do if you finally manage to grab it?",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2021-12-14"
+			],
+			"gameDate": "2081-01"
 		}
 	]
 }

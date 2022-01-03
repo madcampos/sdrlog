@@ -16,7 +16,6 @@ https://www.shadowrunsixthworld.com/2021/05/whats-up-with-shadowrun/
 
 https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
-https://www.drivethrurpg.com/product/380729/Shadowrun-The-Kechibi-Code-Plot-Sourcebook?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 
 # Japanese materials
