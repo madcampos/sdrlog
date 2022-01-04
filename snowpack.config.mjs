@@ -75,7 +75,8 @@ const config = {
 	exclude: ['**/*.schema.json'],
 	optimize: {
 		minify: true,
-		target: 'es2020'
+		// @ts-expect-error - For some reason linting doesn't allow this.
+		target: 'esnext'
 	},
 	plugins: [
 		[
