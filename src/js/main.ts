@@ -29,7 +29,6 @@ import './components/menu-bar/main-menu-items';
 
 updateLoadStatus('Importing helper functions.');
 import { fetchItems } from './components/data-operations/data-import';
-import { getMaterialsBasicInfo } from './components/data-operations/idb-persistence';
 import { updateFiltersFromURL } from './components/search-box/update-filter';
 import { updateInfoBoxFromURL } from './components/info-box/info-box';
 import { updateThemeBoxFromURL } from './components/theme-box/theme-box';
@@ -40,21 +39,22 @@ import { createComparer } from './components/intl/formatting';
 (async () => {
 	updateLoadStatus(I18n.t`Fetching items database.`);
 
-	await fetchItems();
+	const materials = await fetchItems();
 
 	updateLoadStatus(I18n.t`Sorting materials.`);
 
 	const sorter = createComparer();
-	const materials = (await getMaterialsBasicInfo()).sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));
+	const sortedMaterials = materials.sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));
 	let matchedId: string | null = null;
 	let matchedTitle = '';
 
 	updateLoadStatus(I18n.t`Adding materials to the display.`);
 
-	for (const material of materials) {
+	for (const material of sortedMaterials) {
 		const itemCard = document.createElement('item-card');
+		const [materialId] = material.sku;
 
-		itemCard.id = material.id;
+		itemCard.id = materialId;
 		itemCard.title = material.name;
 		itemCard.dataset.category = material.category;
 		itemCard.dataset.sku = material.sku.join(' ');
@@ -63,8 +63,8 @@ import { createComparer } from './components/intl/formatting';
 		itemCard.dataset.status = material.status ?? '';
 		document.querySelector('main')?.appendChild(itemCard);
 
-		if (checkForMatchingId(material.id)) {
-			matchedId = material.id;
+		if (checkForMatchingId(materialId)) {
+			matchedId = materialId;
 			matchedTitle = material.name;
 		}
 	}
