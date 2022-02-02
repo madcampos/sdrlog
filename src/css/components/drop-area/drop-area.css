@@ -22,7 +22,7 @@
 	justify-content: center;
 
 	background: radial-gradient(var(--background, rgba(0, 0, 0, 0.5)), transparent);
-	color: var(--text-color, currentColor);
+	color: var(--text-color, currentcolor);
 
 	z-index: 1;
 }

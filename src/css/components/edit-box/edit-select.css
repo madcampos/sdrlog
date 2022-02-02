@@ -56,7 +56,7 @@ select::selection {
 
 select:disabled {
 	opacity: 1;
-	color: currentColor;
+	color: currentcolor;
 }
 
 select:not(:disabled) {
