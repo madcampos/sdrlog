@@ -5,12 +5,16 @@
 	"main": "./src/index.html",
 	"type": "module",
 	"scripts": {
+		"postinstall": "husky install",
+		"prepublishOnly": "pinst --disable",
+		"postpublish": "pinst --enable",
 		"start": "snowpack dev",
 		"start:sw": "snowpack dev --config snowpack.config.serviceworker.mjs",
 		"check": "tsc --noEmit",
 		"lint": "npm run lint:js && npm run check && npm run lint:css",
-		"lint:js": "eslint **/*.ts --fix",
-		"lint:css": "stylelint **/*.css --fix",
+		"lint:js": "eslint **/*.ts",
+		"lint:css": "stylelint **/*.css",
+		"lint-staged": "lint-staged",
 		"build": "snowpack build --mode production --config snowpack.config.build.mjs",
 		"postbuild": "node build/postprocess-files.mjs",
 		"build:assets": "npm run build:icons-transparent && npm run build:icons-maskable && npm run build:splash",
@@ -39,22 +43,36 @@
 	},
 	"homepage": "https://github.com/madcampos/sdrlog#readme",
 	"devDependencies": {
+		"@commitlint/cli": "^16.1.0",
+		"@commitlint/config-conventional": "^16.0.0",
 		"@snowpack/web-test-runner-plugin": "^0.2.2",
 		"@types/chai": "^4.3.0",
 		"@types/emscripten": "^1.39.6",
-		"@types/mocha": "^9.0.0",
-		"@types/wicg-file-system-access": "^2020.9.4",
-		"@typescript-eslint/eslint-plugin": "^5.8.0",
-		"@typescript-eslint/parser": "^5.8.0",
-		"@web/test-runner": "^0.13.23",
+		"@types/mocha": "^9.1.0",
+		"@types/wicg-file-system-access": "^2020.9.5",
+		"@typescript-eslint/eslint-plugin": "^5.10.1",
+		"@typescript-eslint/parser": "^5.10.1",
+		"@web/test-runner": "^0.13.26",
 		"@web/test-runner-playwright": "^0.8.8",
-		"chai": "^4.3.4",
-		"eslint": "^8.5.0",
-		"pwa-asset-generator": "^6.0.5",
+		"chai": "^4.3.6",
+		"eslint": "^8.8.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.3",
+		"pinst": "^2.1.6",
+		"pwa-asset-generator": "^6.0.6",
 		"snowpack": "^3.8.8",
 		"snowpack-plugin-minify-html": "^0.1.1",
-		"stylelint": "^14.2.0",
-		"typescript": "^4.5.4"
+		"stylelint": "^14.3.0",
+		"typescript": "^4.5.5"
+	},
+	"lint-staged": {
+		"*.ts": "eslint --ext .ts --ext .js --fix",
+		"*.css": "stylelint --fix"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
 	},
 	"volta": {
 		"node": "17.3.0"
