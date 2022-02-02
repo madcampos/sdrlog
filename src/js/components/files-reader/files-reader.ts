@@ -98,7 +98,7 @@ export async function readFiles() {
 			progressOverlay.increment();
 
 			if (entry.kind === 'file') {
-				const file = await entry.getFile();
+				const file = await (entry as FileSystemFileHandle).getFile();
 
 				await associateFileWithData(entry.name, path, file.type);
 			}
