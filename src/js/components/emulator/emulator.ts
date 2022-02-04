@@ -10,6 +10,7 @@ import { I18n } from '../intl/translations';
 import { loadBundle } from './assets-bundle';
 import { loadBios } from './bios-bundle';
 import config from './config';
+import { Logger } from '../logger/logger';
 
 interface KeyData {
 	key: string,
@@ -274,7 +275,7 @@ export class Emulator extends HTMLElement {
 
 			return await handler.getFile();
 		} catch (err) {
-			console.error(err);
+			Logger.error('Failed to load game file.', err);
 			this.#gameWrapper.innerText = err?.message ?? err ?? 'Error';
 		}
 	}

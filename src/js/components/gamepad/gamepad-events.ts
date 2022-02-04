@@ -1,3 +1,5 @@
+import { Logger } from '../logger/logger';
+
 /* eslint-disable no-console */
 type ButtonNames = 'a' | 'b' | 'x' | 'y' | 'leftBumper' | 'rightBumper' | 'leftTrigger' | 'rightTrigger' | 'select' | 'start' | 'leftStick' | 'rightStick' | 'up' | 'down' | 'left' | 'right' | 'logo';
 
@@ -48,7 +50,7 @@ export class GamepadEventNormalizer extends EventTarget {
 		super();
 
 		window.addEventListener('gamepadconnected', () => {
-			console.log('[🎮] Gamepad connected.');
+			Logger.log('Gamepad connected.', '🎮');
 
 			this.#startEventLoop();
 			callback?.();
@@ -64,7 +66,7 @@ export class GamepadEventNormalizer extends EventTarget {
 	}
 
 	#startEventLoop() {
-		console.log('[🎮] Gamepad update loop initialized.');
+		Logger.log('Gamepad update loop initialized.', '🎮');
 		this.#timestamp = performance.now();
 
 		this.#updateLoop();
@@ -73,7 +75,7 @@ export class GamepadEventNormalizer extends EventTarget {
 	vibrate(time = 100, weakIntensity = 0.4, strongIntentisy = 0) {
 		const [gamepad] = navigator.getGamepads();
 
-		console.log(`[🎮] Vibrate gamepad for ${time}ms with ${weakIntensity}/${strongIntentisy} intensity.`);
+		Logger.log(`Vibrate gamepad for ${time}ms with ${weakIntensity}/${strongIntentisy} intensity.`, '🎮');
 		gamepad?.vibrationActuator?.playEffect('dual-rumble', {
 			startDelay: 0,
 			duration: time,
@@ -95,7 +97,7 @@ export class GamepadEventNormalizer extends EventTarget {
 			const [leftX, leftY] = gamepad.axes;
 
 			if (leftX < -DEADZONE_TRESHOLD) {
-				console.log('[🎮] Gamepad stick move: left.');
+				Logger.log('Gamepad stick move: left.', '🎮');
 				// @ts-expect-error
 				const stickEvent: StickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
 
@@ -106,7 +108,7 @@ export class GamepadEventNormalizer extends EventTarget {
 			}
 
 			if (leftX > DEADZONE_TRESHOLD) {
-				console.log('[🎮] Gamepad stick move: right.');
+				Logger.log('Gamepad stick move: right.', '🎮');
 				// @ts-expect-error
 				const stickEvent: StickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
 
@@ -117,7 +119,7 @@ export class GamepadEventNormalizer extends EventTarget {
 			}
 
 			if (leftY < -DEADZONE_TRESHOLD) {
-				console.log('[🎮] Gamepad stick move: up.');
+				Logger.log('Gamepad stick move: up.', '🎮');
 				// @ts-expect-error
 				const stickEvent: StickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
 
@@ -128,7 +130,7 @@ export class GamepadEventNormalizer extends EventTarget {
 			}
 
 			if (leftY > DEADZONE_TRESHOLD) {
-				console.log('[🎮] Gamepad stick move: down.');
+				Logger.log('Gamepad stick move: down.', '🎮');
 				// @ts-expect-error
 				const stickEvent: StickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
 
@@ -143,7 +145,7 @@ export class GamepadEventNormalizer extends EventTarget {
 				const isButtonDown = gamepad.buttons[i]?.pressed;
 
 				if (isButtonDown) {
-					console.log(`[🎮] Gamepad button down: ${buttonName}.`);
+					Logger.log(`Gamepad button down: ${buttonName}.`, '🎮');
 					this.#buttonsPressed[buttonName] = true;
 
 					// @ts-expect-error
@@ -155,8 +157,8 @@ export class GamepadEventNormalizer extends EventTarget {
 				}
 
 				if (wasButtonDown && !isButtonDown) {
-					console.log(`[🎮] Gamepad button up: ${buttonName}.`);
-					console.log(`[🎮] Gamepad button press: ${buttonName}.`);
+					Logger.log(`Gamepad button up: ${buttonName}.`, '🎮');
+					Logger.log(`Gamepad button press: ${buttonName}.`, '🎮');
 					this.#buttonsPressed[buttonName] = false;
 
 					// @ts-expect-error

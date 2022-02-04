@@ -1,6 +1,7 @@
 import { ProgressOverlay } from '../progress/progress';
 import { getMaterial, saveFile, saveMaterial, setFileForMaterial } from '../data-operations/idb-persistence';
 import { I18n } from '../intl/translations';
+import { Logger } from '../logger/logger';
 
 export function extractMetadataFromFileName(fileName: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
@@ -106,7 +107,7 @@ export async function readFiles() {
 			await saveFile(path, entry);
 		}
 	} catch (err) {
-		console.error(err);
+		Logger.error('Failed to read materials.', err);
 	}
 
 	progressOverlay.remove();

@@ -1,5 +1,6 @@
 import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../../data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
+import { Logger } from '../logger/logger';
 
 import { saveCover, saveMaterial, saveThumb, setFileForMaterial } from './idb-persistence';
 
@@ -83,7 +84,7 @@ export async function saveNewMaterialInfo(id: string, {
 
 			await saveThumb(id, thumbFile);
 		} catch (err) {
-			console.error(id, err);
+			Logger.error(`Failed to save material for id "${id}".`, err);
 		}
 	}
 }

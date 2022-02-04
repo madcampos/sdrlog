@@ -5,6 +5,7 @@ import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './co
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
 import directoryOpen from '../../../../lib/file-system/directory-open';
 import { I18n } from '../intl/translations';
+import { Logger } from '../logger/logger';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 
@@ -70,7 +71,7 @@ export async function extractCoversFromFiles() {
 			}
 		}
 	} catch (err) {
-		console.error(err);
+		Logger.error('Error extracting covers from files.', err);
 	}
 
 	progressOverlay.remove();
@@ -122,12 +123,12 @@ export async function importCoversFromFolder() {
 
 					await saveThumb(id, thumbFile);
 				} catch (err) {
-					console.error(id, err);
+					Logger.error(`Failed to import cover "${id}" from file.`, err);
 				}
 			}
 		}
 	} catch (err) {
-		console.error(err);
+		Logger.error('Failed to import covers from folder.', err);
 	}
 
 	progressOverlay.remove();

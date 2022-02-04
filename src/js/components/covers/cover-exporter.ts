@@ -3,6 +3,7 @@ import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
 import '../../../../lib/zip/jszip';
 import fileSave from '../../../../lib/file-system/file-save';
 import { I18n } from '../intl/translations';
+import { Logger } from '../logger/logger';
 
 export async function saveCoversToFolder() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export covers` });
@@ -51,7 +52,7 @@ export async function saveCoversToFolder() {
 			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
 		}
 	} catch (err) {
-		console.error(err);
+		Logger.error('Failed to save covers.', err);
 	}
 
 	progressOverlay.remove();
@@ -104,7 +105,7 @@ export async function saveThumbsToFolder() {
 			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
 		}
 	} catch (err) {
-		console.error(err);
+		Logger.error('Failed to save thmbs.', err);
 	}
 
 	progressOverlay.remove();

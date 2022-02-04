@@ -1,5 +1,6 @@
 import '../../../../lib/zip/jszip';
 import { getBundleFiles, saveBundleFile } from '../data-operations/idb-persistence';
+import { Logger } from '../logger/logger';
 
 const mimeTypes = new Map([
 	['.png', 'image/png'],
@@ -63,6 +64,6 @@ export async function loadBundle(fileSystem: typeof FS | undefined) {
 			}
 		}
 	} catch (err) {
-		console.error(err);
+		Logger.error('Failed to load emulator bundle file.', err);
 	}
 }

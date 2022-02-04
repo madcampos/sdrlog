@@ -3,7 +3,7 @@ const isDebug = import.meta.env.MODE !== 'production';
 type ConsoleMethods = 'log' | 'warn' | 'error' | 'info';
 
 export class Logger {
-	static log(message: string | Error, method: ConsoleMethods = 'log', symbol = '⏺️') {
+	static #writeLogMessage(message: string | Error, symbol = '⏺️', method: ConsoleMethods = 'log') {
 		if (method === 'error') {
 			if (message instanceof Error) {
 				console.error(`[💾][${symbol}] ${message.name}`);
@@ -21,27 +21,31 @@ export class Logger {
 		}
 	}
 
+	static log(message: string, symbol = '⏺️') {
+		Logger.#writeLogMessage(message, symbol, 'log');
+	}
+
 	static error(message: string, error?: Error) {
-		Logger.log(message, 'error', '❌');
+		Logger.#writeLogMessage(message, '❌', 'error');
 
 		if (error) {
-			Logger.log(error, 'error', '❌');
+			Logger.#writeLogMessage(error, '❌', 'error');
 		}
 	}
 
 	static warn(message: string, symbol = '⚠️') {
-		Logger.log(message, 'warn', symbol);
+		Logger.#writeLogMessage(message, symbol, 'warn');
 	}
 
 	static info(message: string, symbol = 'ℹ️') {
-		Logger.log(message, 'info', symbol);
+		Logger.#writeLogMessage(message, symbol, 'info');
 	}
 
 	static success(message: string, symbol = '✅') {
-		Logger.log(message, 'log', symbol);
+		Logger.#writeLogMessage(message, symbol, 'log');
 	}
 
 	static appInfo() {
-		Logger.log(`${import.meta.env.APP_NAME} v${import.meta.env.APP_VERSION} (${import.meta.env.MODE})`);
+		Logger.#writeLogMessage(`${import.meta.env.APP_NAME} v${import.meta.env.APP_VERSION} (${import.meta.env.MODE})`);
 	}
 }

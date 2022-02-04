@@ -1,5 +1,6 @@
 import '../../../../lib/zip/jszip';
 import { getBiosFiles, saveBiosFile } from '../data-operations/idb-persistence';
+import { Logger } from '../logger/logger';
 
 async function fetchBiosFile() {
 	const response = await fetch(`${import.meta.env.PUBLIC_URL}lib/webretro/bios.zip`);
@@ -56,6 +57,6 @@ export async function loadBios(fileSystem: typeof FS | undefined) {
 			}
 		}
 	} catch (err) {
-		console.error(err);
+		Logger.error('Failed to load emulator bios file.', err);
 	}
 }
