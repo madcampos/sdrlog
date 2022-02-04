@@ -1,21 +1,21 @@
 import { readFileSync } from 'fs';
 
-const sslOptions = {
-	cert: readFileSync('./snowpack.crt'),
-	key: readFileSync('./snowpack.key')
-};
+const packageJson = JSON.parse(readFileSync('./package.json', { encoding: 'utf8' }));
 
-
-/** @type {Record<Uppercase<string>, string>} */
+/** @type {ImportMeta['env']} */
 const env = {
-	PUBLIC_URL: 'https://localhost:8080/',
+	MODE: 'production',
+	PUBLIC_URL: packageJson.homepage,
+
+	APP_NAME: packageJson.displayName,
+	APP_SHORT_NAME: packageJson.shortName,
+	APP_DESCRIPTION: packageJson.description,
+	APP_KEYWORDS: packageJson.keywords.join(', '),
+	APP_AUTHOR: packageJson.author.name,
+	APP_VERSION: packageJson.version,
 
 	THEME_COLOR: '#9400d3',
 	BACKGROUND_COLOR: '#252525',
-
-	APP_NAME: 'Shadowrun Catalog',
-	APP_SHORT_NAME: 'SDRlog',
-	APP_DESCRIPTION: 'An interactive list of Shadowrun material, with information about the item and can be linked to local files.',
 
 	APPLE_ICON: './img/icons/maskable/apple-icon-180.png',
 	SMALL_ICON: './img/icons/transparent/manifest-icon-192.png',
@@ -23,31 +23,6 @@ const env = {
 	LARGE_ICON: './img/icons/transparent/manifest-icon-512.png',
 	LARGE_ICON_BG: './img/icons/maskable/manifest-icon-512.png'
 };
-
-const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => env[match] || '');
-
-
-/**
- * @param {import("http").IncomingMessage} _req
- * @param {import("http").ServerResponse} res
- * @returns {void}
- */
-export function handleManifest(_req, res) {
-	res.setHeader('Content-Type', 'text/javascript');
-
-	res.end(manifest);
-}
-
-/**
- * @param {import("http").IncomingMessage} _req
- * @param {import("http").ServerResponse} res
- * @returns {void}
- */
-function handleServiceWorker(_req, res) {
-	res.setHeader('Content-Type', 'text/javascript');
-
-	res.end("self.addEventListener('install', () => self.skipWaiting()); self.addEventListener('activate', () => self.clients.matchAll({ type: 'window' }).then((clients) => clients.forEach((window) => {window.navigate(window.url); window.postMessage({ type: 'worker-ready', status: 'success' }); }))); self.addEventListener('fetch', (evt) => evt.respondWith(fetch(evt.request)));");
-}
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 const config = {
@@ -60,18 +35,6 @@ const config = {
 		'images/thumbs': '/thumbs',
 		lib: '/lib'
 	},
-	routes: [
-		{
-			match: 'all',
-			src: '/sdrlog.webmanifest',
-			dest: handleManifest
-		},
-		{
-			match: 'all',
-			src: '/sw.js',
-			dest: handleServiceWorker
-		}
-	],
 	exclude: ['**/*.schema.json'],
 	optimize: {
 		minify: true,
@@ -102,7 +65,6 @@ const config = {
 			}
 		]
 	],
-	devOptions: { secure: sslOptions },
 	buildOptions: {
 		out: 'dist',
 		metaUrlPath: 'meta'

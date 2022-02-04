@@ -1,22 +1,13 @@
-import { default as baseConfig, handleManifest } from './snowpack.config.mjs';
-
-/** @type {import("snowpack").SnowpackUserConfig["devOptions"]} */
-const devOptions = {
-	...baseConfig.devOptions,
-	hmr: false
-};
+import baseConfig from './snowpack.config.dev.mjs';
 
 /** @type {import("snowpack").SnowpackUserConfig} */
 const config = {
 	...baseConfig,
-	devOptions,
-	routes: [
-		{
-			match: 'all',
-			src: '/sdrlog.webmanifest',
-			dest: handleManifest
-		}
-	]
+	devOptions: {
+		...baseConfig.devOptions,
+		hmr: false
+	},
+	routes: baseConfig.routes?.filter((route) => route.src !== '/sw.js')
 };
 
 export default config;
