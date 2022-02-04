@@ -2,11 +2,11 @@ import type { SearchBox } from './components/search-box/search-box';
 
 import { I18n } from './components/intl/translations';
 
-(document.querySelector('#load-overlay progress') as HTMLProgressElement).max = 11;
+(document.querySelector('#load-progress') as HTMLProgressElement).max = 8;
 
 function updateLoadStatus(status: string) {
-	const text = document.querySelector('#load-overlay h1') as HTMLHeadingElement;
-	const progress = document.querySelector('#load-overlay progress') as HTMLProgressElement;
+	const text = document.querySelector('#load-text') as HTMLHeadingElement;
+	const progress = document.querySelector('#load-progress') as HTMLProgressElement;
 
 	text.innerText = status;
 	progress.value += 1;
