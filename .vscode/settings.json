@@ -1,0 +1,7 @@
+{
+	"i18n-ally.localesPaths": [
+		"src/_locales"
+	],
+	"i18n-ally.pathMatcher": "{locale}/messages.json",
+	"i18n-ally.disablePathParsing": true
+}
