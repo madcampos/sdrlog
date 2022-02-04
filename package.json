@@ -43,9 +43,9 @@
 		"build": "snowpack build --mode production",
 		"postbuild": "node build/postprocess-files.mjs",
 		"build:assets": "npm run build:icons-transparent && npm run build:icons-maskable && npm run build:splash",
-		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --icon-only --scrape false --dark-mode --opaque false src/img/icons/transparent",
-		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --icon-only src/img/icons/maskable",
-		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only src/img/splash",
+		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --scrape false --dark-mode --opaque false --log false src/img/icons/transparent",
+		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --log false src/img/icons/maskable",
+		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only --log false src/img/splash",
 		"clean": "node -e \"require('fs').rmSync('./dist', { force: true, recursive: true})\"",
 		"test": "wtr"
 	},

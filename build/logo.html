@@ -6,6 +6,9 @@
 	<title>Logo/Splash generator</title>
 	<style>
 		body {
+			--logo-spacing: 16vmin;
+			--logo-size: 100vmin;
+
 			background: #252525;
 			width: 100vw;
 			height: 100vh;
@@ -15,13 +18,16 @@
 			box-sizing: border-box;
 			display: grid;
 			place-items: center;
+			align-content: center;
 		}
 
 		#logo {
-			--logo-size: calc(100vmin - (16vmin * 2));
+			box-sizing: border-box;
 
 			width: var(--logo-size);
 			height: var(--logo-size);
+			padding: var(--logo-spacing);
+			padding-bottom: calc(var(--logo-spacing) * 2);
 		}
 
 		img {
@@ -38,6 +44,12 @@
 
 			svg {
 				filter: drop-shadow(0 0.5vmin 0.5vmin rgba(0, 0, 0, 0.5));
+			}
+		}
+
+		@media (-webkit-device-pixel-ratio: 1) {
+			body {
+				--logo-spacing: 0;
 			}
 		}
 	</style>
