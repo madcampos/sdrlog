@@ -4,7 +4,7 @@ interface ImportMeta {
 		dispose: Function
 	},
 	env: {
-		MODE: string,
+		MODE: 'development' | 'production',
 
 		PUBLIC_URL: string,
 

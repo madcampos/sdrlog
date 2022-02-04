@@ -1,7 +1,8 @@
 /* eslint-env serviceworker */
 /// <reference lib="webworker" />
 
-const isDebug = false;
+// eslint-disable-next-line @typescript-eslint/no-inferrable-types
+const isDebug: boolean = false;
 
 import type { SDRLogData } from '../data/data';
 import type { UpdateMessage, WorkerReadyMessage } from './js/rpc-messages';
@@ -32,11 +33,45 @@ const preCacheFiles = [
 	'./css/components/dialog/dialog.css'
 ];
 
-function logger(message: string) {
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-	if (isDebug) {
-		// eslint-disable-next-line no-console
-		console.log(message);
+type ConsoleMethods = 'log' | 'warn' | 'error' | 'info';
+
+class Logger {
+	static log(message: string | Error, method: ConsoleMethods = 'log', symbol = '⏺️') {
+		if (method === 'error') {
+			if (message instanceof Error) {
+				console.error(`[⚙️][${symbol}] ${message.name}`);
+				console.error(message.message);
+				console.error(message.stack);
+
+				// eslint-disable-next-line no-console
+				console.trace();
+			} else {
+				console.error(`[⚙️][${symbol}] ${message}`);
+			}
+		} else if (isDebug) {
+			// eslint-disable-next-line no-console
+			console[method](`[⚙️][${symbol}] ${message as string}`);
+		}
+	}
+
+	static error(message: string, error?: Error) {
+		Logger.log(message, 'error', '❌');
+
+		if (error) {
+			Logger.log(error, 'error', '❌');
+		}
+	}
+
+	static warn(message: string, symbol = '⚠️') {
+		Logger.log(message, 'warn', symbol);
+	}
+
+	static info(message: string, symbol = 'ℹ️') {
+		Logger.log(message, 'info', symbol);
+	}
+
+	static success(message: string, symbol = '✅') {
+		Logger.log(message, 'log', symbol);
 	}
 }
 
@@ -70,10 +105,9 @@ async function messageWorkerReady(status: 'success' | 'fail') {
 async function installWorker() {
 	try {
 		await worker.skipWaiting();
-		logger(`[⚙️][✔️] Service worker installed for version ${CACHE_VERSION}.`);
+		Logger.success(`Service worker installed for version ${CACHE_VERSION}.`);
 	} catch (err) {
-		console.error('[⚙️][❌] Error installing service worker.');
-		console.error(err);
+		Logger.error('Error installing service worker.', err);
 		await messageWorkerReady('fail');
 	}
 }
@@ -84,34 +118,33 @@ async function workerActivation() {
 	const clientList = await worker.clients.matchAll({ includeUncontrolled: true });
 
 	clientList.forEach((client) => {
-		logger(`[⚙️][🔎] Matching client: ${client.url}`);
+		Logger.info(`Matching client: ${client.url}`, '🔎');
 	});
 
 	const cacheNames = await caches.keys();
 
 	for await (const cacheName of cacheNames) {
 		if (cacheName !== CACHE_VERSION) {
-			logger(`[⚙️][♻️] Deleting old cache "${cacheName}".`);
+			Logger.info(`Deleting old cache "${cacheName}".`, '♻️');
 
 			await caches.delete(cacheName);
 		}
 	}
 
-	logger(`[⚙️][😎] Claming clients for version: ${CACHE_VERSION}.`);
+	Logger.info(`Claming clients for version: ${CACHE_VERSION}.`, '😎');
 
 	await worker.clients.claim();
 
 	try {
 		const cache = await caches.open(CACHE_VERSION);
 
-		logger(`[⚙️][🗃️] Pre caching files: ${JSON.stringify(preCacheFiles)}.`);
+		Logger.info(`Pre caching files: ${JSON.stringify(preCacheFiles)}.`, '🗃️');
 		await cache.addAll(preCacheFiles);
 
-		logger('[⚙️][🟢] Service worker ready.');
+		Logger.success('Service worker ready.', '🟢');
 		await messageWorkerReady('success');
 	} catch (err) {
-		console.error('[⚙️][❌] Error activating service worker.');
-		console.error(err);
+		Logger.error('Error activating service worker.', err);
 		await messageWorkerReady('fail');
 	}
 }
@@ -119,7 +152,7 @@ async function workerActivation() {
 worker.addEventListener('activate', (evt) => evt.waitUntil(workerActivation()));
 
 async function fetchFromCache(request: Request) {
-	logger(`[⚙️][🗃️] Getting from cache: "${request.url}"`);
+	Logger.info(`Getting from cache: "${request.url}"`, '🗃️');
 
 	const res = await caches.match(request);
 
@@ -131,7 +164,7 @@ async function fetchFromCache(request: Request) {
 }
 
 async function fetchFromNetwork(request: Request, timeout = REQUEST_TIMEOUT) {
-	logger(`[⚙️][📶] Fetching: "${request.url}".`);
+	Logger.info(`Fetching: "${request.url}".`, '📶');
 
 	return new Promise<Response>((resolve) => {
 		const fallbackResponse = new Response('Service Unavailable', {
@@ -141,14 +174,14 @@ async function fetchFromNetwork(request: Request, timeout = REQUEST_TIMEOUT) {
 		});
 
 		const timeoutId = setTimeout(() => {
-			console.error(`[⚙️][❌] Network fetch timed out for url: "${request.url}"`);
+			Logger.error(`Network fetch timed out for url: "${request.url}"`);
 			resolve(fallbackResponse);
 		}, timeout);
 
 		fetch(request).then(async (response) => {
 			clearTimeout(timeoutId);
 
-			logger('[⚙️][✔️] Fetch succedded.');
+			Logger.success('Fetch succedded.');
 
 			const STORAGE_TRESHOLD = 0.7;
 			const { quota, usage } = await navigator.storage.estimate();
@@ -163,8 +196,7 @@ async function fetchFromNetwork(request: Request, timeout = REQUEST_TIMEOUT) {
 
 			resolve(response);
 		}, (err) => {
-			console.error(`[⚙️][❌] Network fetch failed for url: "${request.url}".`);
-			console.error(err);
+			Logger.error(`Network fetch failed for url: "${request.url}".`, err);
 
 			resolve(fallbackResponse);
 		});
@@ -175,7 +207,7 @@ async function updateFromNetwork(request: Request) {
 	const isSkippedFromNetwork = skipNetworkRefresh.some((ext) => request.url.endsWith(ext));
 
 	if (!isSkippedFromNetwork) {
-		logger(`[⚙️][♻️] Updating from network: "${request.url}"`);
+		Logger.info(`Updating from network: "${request.url}"`, '♻️');
 
 		const res = await fetchFromNetwork(request);
 
