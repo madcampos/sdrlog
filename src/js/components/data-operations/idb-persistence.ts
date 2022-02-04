@@ -2,7 +2,7 @@ import type { FileForMaterial, Material } from '../../../../data/data';
 
 type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems' | 'emulator' | 'emulatorSaves' | 'emulatorBios';
 
-const IDB_VERSION = 5;
+const IDB_VERSION = Number.parseInt(import.meta.env.APP_VERSION.replaceAll('.', ''));
 let database: IDBDatabase | undefined;
 
 const databaseSchema: Record<Collections, { indexes: Record<string, IDBIndexParameters>, storeOptions?: IDBObjectStoreParameters }> = {
