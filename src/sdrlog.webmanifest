@@ -5,8 +5,8 @@
 	"lang": "en-US",
 	"description": "%APP_DESCRIPTION%",
 	"categories": ["entertainment", "utilities", "games"],
-	"start_url": "%PUBLIC_URL%",
-	"scope": "%PUBLIC_URL%",
+	"start_url": "./",
+	"scope": "./",
 	"display": "standalone",
 	"display_override": ["window-controls-overlay"],
 	"background_color": "%BACKGROUND_COLOR%",
@@ -41,7 +41,7 @@
 	"protocol_handlers": [
 		{
 			"protocol": "web+sdrlog",
-			"url": "%PUBLIC_URL%?search=%s"
+			"url": "./?search=%s"
 		}
 	],
 	"capture_links": "existing-client-navigate"
