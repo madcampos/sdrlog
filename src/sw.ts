@@ -182,15 +182,17 @@ async function fetchFromNetwork(request: Request, timeout = REQUEST_TIMEOUT) {
 
 			Logger.success('Fetch succedded.');
 
-			const STORAGE_TRESHOLD = 0.7;
-			const { quota, usage } = await navigator.storage.estimate();
-			const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
+			if (request.url.startsWith('http')) {
+				const STORAGE_TRESHOLD = 0.7;
+				const { quota, usage } = await navigator.storage.estimate();
+				const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
 
-			if (!isReachingQuota) {
-				const cacheRes = response.clone();
-				const cache = await caches.open(CACHE_VERSION);
+				if (!isReachingQuota) {
+					const cacheRes = response.clone();
+					const cache = await caches.open(CACHE_VERSION);
 
-				await cache.put(request, cacheRes);
+					await cache.put(request, cacheRes);
+				}
 			}
 
 			resolve(response);
