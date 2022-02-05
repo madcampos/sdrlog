@@ -53,7 +53,7 @@ export async function openFile(fileInfo: FileForMaterial) {
 
 	if (!mimeAllowed.some((mime) => file.type.startsWith(mime))) {
 		// eslint-disable-next-line no-alert
-		alert(`${I18n.t`File type for "`}${file.name}${I18n.t`" not supported.\nTry opening it on your file explorer.`}`);
+		alert(`${I18n.t`File type for`} "${file.name}" ${I18n.t`not supported.\nTry opening it on your file explorer.`}`);
 	}
 
 	const fileURL = URL.createObjectURL(file);
