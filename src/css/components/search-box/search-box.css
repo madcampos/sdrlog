@@ -24,15 +24,15 @@ input[type='search'] {
 	width: 100%;
 	height: 2rem;
 
-	padding: 0.3rem 0.5rem;
+	padding: var(--padding-block) var(--padding-inline);
 
 	appearance: none;
 	background: var(--bg-color);
 	outline: none;
 	border: solid var(--border-width) var(--bg-color);
-	border-radius: 0.3rem;
+	border-radius: var(--border-radius);
 
-	transition: 0.2s ease all;
+	transition: var(--transition);
 
 	font: inherit;
 

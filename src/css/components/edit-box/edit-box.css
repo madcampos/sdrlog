@@ -10,34 +10,35 @@
 :host([hidden]) { display: none; }
 
 label:not([hidden]) {
-	font-size: 0.75em;
+	font-size: var(--small-text);
 	display: block;
 	width: fit-content;
-	padding: 0.05rem 0.4rem;
-	margin-inline-start: 0.5rem;
+	padding: var(--padding-small) var(--padding-inline);
+	margin-inline-start: var(--label-recess);
 
-	border-radius: 0.5rem;
+	border-radius: var(--pill-border-radius);
 
 	background: var(--border-color);
 	color: var(--text-color);
 
 	z-index: 1;
 	transform: translateY(50%);
-	transition: 0.2s ease all;
+	transition: var(--transition);
 
 	user-select: none;
 }
 
 input {
 	width: 100%;
-	padding: 0.5rem 0.5rem 0.3rem;
+	padding: var(--padding-block) var(--padding-inline);
+	padding-block-start: var(--small-text);
 
 	appearance: none;
 	border: solid var(--border-width) var(--border-color);
 	background: transparent;
-	border-radius: 0.3rem;
+	border-radius: var(--border-radius);
 
-	transition: 0.2s ease all;
+	transition: var(--transition);
 
 	font: inherit;
 	box-sizing: border-box;

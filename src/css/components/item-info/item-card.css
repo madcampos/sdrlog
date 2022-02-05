@@ -8,14 +8,14 @@
 	user-select: none;
 
 	display: inline-grid;
-	grid-template-columns: 14rem;
-	grid-template-rows: 18rem 5rem;
+	grid-template-columns: var(--thumbnail-width);
+	grid-template-rows: var(--thumbnail-height) var(--card-title-height);
 	justify-items: center;
 	align-items: start;
-	margin: 0.5rem;
+	margin: var(--margin-block);
 
-	width: 14rem;
-	height: 23rem;
+	width: var(--card-width);
+	height: var(--card-height);
 
 	overflow: hidden;
 	contain: strict;
@@ -45,23 +45,23 @@
 }
 
 :host([data-status='missing']) figure::after {
-	backdrop-filter: grayscale(0.6) brightness(70%) contrast(120%);
-	background-image: url('../../../img/covers/missing.svg');
+	backdrop-filter: var(--thumb-missing-filter);
+	background-image: var(--thumb-missing-image);
 }
 
 :host([data-status='outofscope']) figure::after {
-	backdrop-filter: sepia(1) brightness(50%) contrast(110%) blur(5px);
-	background-image: url('../../../img/covers/outofscope.svg');
+	backdrop-filter: var(--thumb-outofscope-filter);
+	background-image: var(--thumb-outofscope-image);
 }
 
 :host([data-status='canceled']) figure::after {
-	backdrop-filter: grayscale(0.8) brightness(80%) contrast(80%) blur(5px);
-	background-image: url('../../../img/covers/canceled.svg');
+	backdrop-filter: var(--thumb-canceled-filter);
+	background-image: var(--thumb-canceled-image);
 }
 
 figure {
 	margin: 0;
-	padding: 0;
+	padding: var(--padding-inline);
 	width: 100%;
 	height: 100%;
 	text-align: center;
@@ -70,20 +70,19 @@ figure {
 }
 
 img {
-	height: calc(100% - 1rem);
+	height: 100%;
 	width: auto;
-	max-width: calc(100% - 1rem);
-	max-height: calc(100% - 1rem);
+	max-width: 100%;
+	max-height: 100%;
 	object-fit: contain;
 	border-radius: calc(var(--border-radius) * 2);
 	box-sizing: border-box;
-	margin: 0.5rem;
 	overflow: hidden;
 }
 
 h4 {
 	align-self: center;
-	padding: 0.2rem 0.5rem;
+	padding: var(--padding-block) var(--padding-inline);
 	margin: 0;
 	overflow: hidden;
 	text-overflow: ellipsis;

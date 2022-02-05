@@ -78,12 +78,12 @@
 .controller button {
 	background: var(--button-bg, transparent);
 	border: solid var(--border-width) var(--button-border, transparent);
-	border-radius: 100vmax;
+	border-radius: var(--pill-border-radius);
 	width: var(--gamepad-button-size);
 	height: var(--gamepad-button-size);
 	padding: 0;
 
-	transition: 0.2s ease all;
+	transition: var(--transition);
 
 	font: inherit;
 	font-size: 2rem;

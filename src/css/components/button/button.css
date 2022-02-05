@@ -1,14 +1,14 @@
 button {
 	background: transparent;
 	border: solid var(--border-width) transparent;
-	border-radius: 0.3rem;
+	border-radius: var(--border-radius);
 	min-width: var(--button-size);
 	width: fit-content;
 	height: var(--button-size);
-	padding: 0.3rem 0.5rem;
-	margin: 0.1rem;
+	padding: var(--padding-block) var(--padding-inline);
+	margin: var(--margin-small);
 
-	transition: all 0.2s ease;
+	transition: var(--transition);
 
 	font: inherit;
 
@@ -37,14 +37,14 @@ button:disabled {
 
 :host([icon-button]) button {
 	width: var(--button-size);
-	padding: 0.1rem;
+	padding: var(--padding-small);
 }
 
 :host([small]) button {
 	min-width: unset;
 	width: calc(var(--button-size) * 0.65);
 	height: calc(var(--button-size) * 0.65);
-	font-size: 0.8em;
+	font-size: var(--small-text);
 }
 
 :host([wide]) button {

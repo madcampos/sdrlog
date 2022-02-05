@@ -1,6 +1,6 @@
 #info-modal summary h2 {
 	display: inline;
-	margin-inline-start: 0.5rem;
+	margin-inline-start: var(--margin-inline);
 }
 
 #info-modal dt { font-weight: bold; }

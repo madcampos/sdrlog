@@ -1,14 +1,14 @@
 ::-webkit-scrollbar {
-	width: 0.5rem;
+	width: var(--scrollbar-size);
 }
 
 ::-webkit-scrollbar-track {
-	border-radius: 100vmax;
+	border-radius: var(--pill-border-radius);
 	background-color: var(--scrollbar-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 100vmax;
+	border-radius: var(--pill-border-radius);
 	background-color: var(--theme-color);
 }
 
@@ -80,7 +80,7 @@ drop-area figure img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	border-radius: 0.5rem;
+	border-radius: var(--border-radius);
 }
 
 #meta {
@@ -127,14 +127,14 @@ input, select {
 
 	appearance: none;
 	border: solid var(--border-width) transparent;
-	border-radius: 0.3rem;
+	border-radius: var(--border-radius);
 
 	background-color: var(--bg-color);
 	background-repeat: no-repeat;
 	background-position: calc(100% - 0.1rem) center;
 	background-size: 1.5rem;
 
-	transition: 0.2s ease all;
+	transition: var(--transition);
 
 	font: inherit;
 	box-sizing: border-box;

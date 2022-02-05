@@ -306,14 +306,7 @@
 		</template>
 
 		<template id="dialog">
-			<style>
-				dialog { display: none; }
-
-				dialog::backdrop {
-					background: rgba(0, 0, 0, 0.8);
-					backdrop-filter: blur(10px);
-				}
-			</style>
+			<style>dialog { display: none; }</style>
 			<link rel="stylesheet" href="./css/components/dialog/dialog.css"/>
 			<slot name="trigger"></slot>
 			<dialog tabindex="-1">
@@ -560,10 +553,10 @@
 
 				dialog[open] {
 					padding: 0;
-					width: clamp(10rem, 40vw, 60rem);
-					height: clamp(15rem, 30vh, 100rem);
+					width: var(--dialog-width);
+					height: var(--dialog-height);
 					border: none;
-					border-radius: 0.5rem;
+					border-radius: var(--dialog-border-radius);
 					background: var(--bg-color);
 					accent-color: var(--theme-color);
 
@@ -577,8 +570,8 @@
 				}
 
 				dialog::backdrop {
-					background: rgba(0, 0, 0, 0.7);
-					backdrop-filter: blur(0.3rem);
+					background: var(--dialog-backdrop-color);
+					backdrop-filter: var(--dialog-backdrop-filter);
 				}
 
 				h1 {
@@ -621,7 +614,7 @@
 
 				#loader {
 					max-width: 20rem;
-					border-radius: 0.5rem;
+					border-radius: var(--border-radius);
 					background-color: var(--theme-color);
 					background-image: linear-gradient(-60deg, var(--bg-color) 40%, transparent, var(--bg-color) 60%);
 					background-size: 200% 100%;

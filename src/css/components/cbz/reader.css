@@ -64,7 +64,7 @@ select {
 
 	appearance: none;
 	border: solid var(--border-width) transparent;
-	border-radius: 0.3rem;
+	border-radius: var(--border-radius);
 
 	background-color: var(--bg-color);
 	background-image: var(--select-arrow);
@@ -72,7 +72,7 @@ select {
 	background-position: calc(100% - 0.1rem) center;
 	background-size: 1.5rem;
 
-	transition: 0.2s ease all;
+	transition: var(--transition);
 
 	font: inherit;
 	box-sizing: border-box;

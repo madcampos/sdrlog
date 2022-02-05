@@ -1,188 +1,7 @@
-/* stylelint-disable length-zero-no-unit */
-
-@property --body-size {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 16px;
-}
-
-@property --bound-top {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --bound-right {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --bound-bottom {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --bound-left {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --titlebar-height {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --titlebar-top {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --menubar-top {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --menubar-left {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0px;
-}
-
-@property --menubar-width {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 100vw;
-}
-
-@property --menubar-height {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 3rem;
-}
-
-@property --button-size {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 1rem;
-}
-
-@property --border-width {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0.1rem;
-}
-
-@property --border-radius {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0.3rem;
-}
-
-@property --theme-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: darkviolet;
-}
-
-@property --secondary-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: deeppink;
-}
-
-@property --accent-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: hotpink;
-}
-
-@property --complementary-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: goldenrod;
-}
-
-@property --bg-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: lightgray;
-}
-
-@property --dark-bg-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: whitesmoke;
-}
-
-@property --border-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: silver;
-}
-
-@property --dark-border-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: #444444;
-}
-
-@property --text-color {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: black;
-}
-
-@property --scrollbar-bg {
-	syntax: '<color>';
-	inherits: true;
-	initial-value: rgba(255, 255, 255, 0.1);
-}
-
-@property --select-arrow {
-	syntax: '<url>';
-	inherits: true;
-	initial-value: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
-}
-
-@property --dialog-width {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 10rem;
-}
-
-@property --dialog-height {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 15rem;
-}
-
-@property --dialog-border-radius {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 0.3rem;
-}
-
-@property --searchbor-margin {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 1rem;
-}
-
-@property --searchbor-width {
-	syntax: '<length>';
-	inherits: true;
-	initial-value: 100%;
-}
-
 :root {
 	/* Sizes */
 	--body-text: 16px;
+	--small-text: 0.8rem;
 
 	--bound-top: env(safe-area-inset-top, 0px);
 	--bound-right: env(safe-area-inset-right, 0px);
@@ -200,6 +19,21 @@
 	--button-size: calc(var(--menubar-height) * 0.8);
 	--border-width: 0.1rem;
 	--border-radius: 0.3rem;
+	--pill-border-radius: 100vmax;
+
+	--scrollbar-size: 0.5rem;
+
+	--label-recess: 0.5rem;
+
+	/* Padding */
+	--padding-inline: 0.5rem;
+	--padding-block: 0.3rem;
+	--padding-small: 0.1rem;
+
+	/* Margin */
+	--margin-inline: 0.5rem;
+	--margin-block: 0.3rem;
+	--margin-small: 0.1rem;
 
 	/* Theme colors */
 	--theme-color: darkviolet;
@@ -217,6 +51,8 @@
 
 	/* Select arrow SVG */
 	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
+	--select-arrow-size: 1.5rem;
+	--select-arrow-spacing: calc(var(--select-arrow-size) + (var(--margin-inline) * 2));
 
 	/* Shadows */
 	--light-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.13), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.11);
@@ -224,14 +60,48 @@
 	--deep-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.13), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.11);
 	--deepest-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, 0.22), 0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
 
+	/* Animations */
+	--transition: all 0.2s ease;
+
 	/* Dialog */
 	--dialog-width: clamp(10rem, 80vw, 60rem);
 	--dialog-height: clamp(15rem, 80vh, 100rem);
 	--dialog-border-radius: var(--border-radius);
+	--dialog-backdrop-color: rgba(0, 0, 0, 0.7);
+	--dialog-backdrop-filter: blur(0.3rem);
+
+	/* Dropdown */
+	--dropdown-width: 15rem;
+	--dropdown-height: 80vh;
+	--dropdown-top: 2rem;
+
+	/* Radio button */
+	--radio-size: 10rem;
+	--radio-icon-size: 5rem;
+
+	/* Edit list */
+	--list-item-size: 3rem;
 
 	/* Search box */
 	--searchbox-margin: max(1rem, 10%);
 	--searchbox-width: 100%;
+
+	/* Thumbnail Card */
+	--thumbnail-height: 18rem;
+	--thumbnail-width: 14rem;
+	--card-title-height: 5rem;
+
+	--card-width: var(--thumbnail-width);
+	--card-height: calc(var(--thumbnail-height) + var(--card-title-height));
+
+	--thumb-missing-image: url('../../../img/covers/missing.svg');
+	--thumb-missing-filter: grayscale(0.6) brightness(70%) contrast(120%);
+
+	--thumb-outofscope-image: url('../../../img/covers/outofscope.svg');
+	--thumb-outofscope-filter: sepia(1) brightness(50%) contrast(110%) blur(5px);
+
+	--thumb-canceled-image: url('../../../img/covers/canceled.svg');
+	--thumb-canceled-filter: grayscale(0.8) brightness(80%) contrast(80%) blur(5px);
 
 	color-scheme: light;
 	accent-color: var(--theme-color);

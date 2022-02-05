@@ -2,17 +2,17 @@
 @import './font.css';
 
 ::-webkit-scrollbar {
-	width: 0.5rem;
-	height: 0.5rem;
+	width: var(--scrollbar-size);
+	height: var(--scrollbar-size);
 }
 
 ::-webkit-scrollbar-track {
-	border-radius: 100vmax;
+	border-radius: var(--pill-border-radius);
 	background-color: var(--scrollbar-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 100vmax;
+	border-radius: var(--pill-border-radius);
 	background-color: var(--theme-color);
 }
 
@@ -120,8 +120,8 @@ main {
 	hyphens: auto;
 	word-wrap: break-word;
 	overflow: auto;
-	margin: 0.5rem 0 0;
-	font-size: 1rem;
+	margin: var(--margin-block) 0 0;
+	font-size: var(--small-text);
 	flex-grow: 1;
 }
 

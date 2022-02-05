@@ -17,19 +17,20 @@ main > * {
 
 select {
 	width: 100%;
-	padding: 0.3rem 1.7rem 0.1rem 0.3rem;
+	padding: var(--padding-block) var(--padding-inline);
+	padding-inline-end: var(--select-arrow-spacing);
 
 	appearance: none;
 	border: solid var(--border-width) transparent;
-	border-radius: 0.3rem;
+	border-radius: var(--border-radius);
 
 	background-color: var(--bg-color);
 	background-image: var(--select-arrow);
 	background-repeat: no-repeat;
-	background-position: calc(100% - 0.1rem) center;
-	background-size: 1.5rem;
+	background-position: calc(100% - var(--margin-inline)) center;
+	background-size: var(--select-arrow-size);
 
-	transition: 0.2s ease all;
+	transition: var(--transition);
 
 	font: inherit;
 	box-sizing: border-box;

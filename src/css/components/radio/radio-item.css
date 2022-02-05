@@ -12,13 +12,13 @@
 
 	cursor: pointer;
 	user-select: none;
-	margin: 0.2rem;
+	margin: var(--margin-block);
 
-	width: 10rem;
+	width: var(--radio-size);
 
-	transition: all 0.2s ease;
+	transition: var(--transition);
 }
 
-#radio-icon { font-size: 5em; }
+#radio-icon { font-size: var(--radio-icon-size); }
 
 h4 { margin-bottom: 0; }

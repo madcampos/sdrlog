@@ -8,20 +8,20 @@ dialog {
 	position: absolute;
 	left: 0;
 	right: auto;
-	top: 2rem;
+	top: var(--dropdown-top);
 
 	margin: 0;
-	padding: 0.5rem;
+	padding: var(--padding-inline);
 	display: flex;
 	flex-direction: column;
 
 	width: max-content;
-	max-width: 15rem;
+	max-width: var(--dropdown-width);
 	height: min-content;
-	max-height: 80vh;
+	max-height: var(--dropdown-height);
 
 	border: solid var(--border-width) var(--border-color);
-	border-radius: 0.5rem;
+	border-radius: var(--border-radius);
 	background: var(--bg-color);
 
 	overflow: auto;
@@ -32,7 +32,7 @@ dialog {
 	transform: scaleY(0);
 	transform-origin: center top;
 	opacity: 0;
-	transition: all 0.2s ease;
+	transition: var(--transition);
 }
 
 dialog[open] {
@@ -41,16 +41,16 @@ dialog[open] {
 }
 
 dialog::-webkit-scrollbar {
-	width: 0.5rem;
+	width: var(--scrollbar-width);
 }
 
 dialog::-webkit-scrollbar-track {
-	border-radius: 100vmax;
+	border-radius: var(--pill-border-radius);
 	background-color: var(--scrollbar-bg);
 }
 
 dialog::-webkit-scrollbar-thumb {
-	border-radius: 100vmax;
+	border-radius: var(--pill-border-radius);
 	background-color: var(--theme-color);
 }
 
