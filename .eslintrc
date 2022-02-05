@@ -345,7 +345,11 @@
 				"selector": "default",
 				"format": ["camelCase"],
 				"leadingUnderscore": "allow",
-				"trailingUnderscore": "forbid"
+				"trailingUnderscore": "forbid",
+				"filter": {
+					"regex": "^(_id|__v)$",
+					"match": false
+				}
 			},
 			{
 				"selector": "enumMember",
@@ -355,9 +359,13 @@
 			},
 			{
 				"selector": "variable",
-				"format": ["camelCase", "UPPER_CASE"],
+				"format": ["PascalCase", "camelCase", "UPPER_CASE"],
 				"leadingUnderscore": "forbid",
-				"trailingUnderscore": "forbid"
+				"trailingUnderscore": "forbid",
+				"filter": {
+					"regex": "^(_id|__v)$",
+					"match": false
+				}
 			},
 			{
 				"selector": "variable",
@@ -370,13 +378,21 @@
 				"selector": "objectLiteralProperty",
 				"format": null,
 				"leadingUnderscore": "forbid",
-				"trailingUnderscore": "forbid"
+				"trailingUnderscore": "forbid",
+				"filter": {
+					"regex": "^(_id|__v)$",
+					"match": false
+				}
 			},
 			{
 				"selector": "typeProperty",
 				"format": null,
 				"leadingUnderscore": "forbid",
-				"trailingUnderscore": "forbid"
+				"trailingUnderscore": "forbid",
+				"filter": {
+					"regex": "^(_id|__v)$",
+					"match": false
+				}
 			},
 			{
 				"selector": "typeLike",
