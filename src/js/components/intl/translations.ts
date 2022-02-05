@@ -1,9 +1,9 @@
-const availableLanguages = {
-	en: 'en-US',
-	fr: 'fr-FR',
-	es: 'es-ES',
-	pt: 'pt-BR'
-};
+const availableLocales = [
+	new Intl.Locale('en-US'),
+	new Intl.Locale('pt-BR'),
+	new Intl.Locale('es-ES'),
+	new Intl.Locale('fr-FR')
+];
 
 let loadedTranslations: Map<string, string> = new Map();
 
@@ -19,7 +19,8 @@ export class I18n {
 
 	static async setLanguage(language: string) {
 		const locale = new Intl.Locale(language);
-		const [, translationLanguage] = Object.entries(availableLanguages).find(([lang]) => locale.language?.startsWith(lang) ?? false) ?? [null, 'en-US'];
+		const translationLocale = availableLocales.find((availableLocale) => availableLocale.language === locale.language) ?? availableLocales[0];
+		const translationLanguage = `${translationLocale.language}-${translationLocale.region}`;
 
 		(document.querySelector('html') as HTMLHtmlElement).lang = translationLanguage;
 		localStorage.setItem('appLanguage', translationLanguage);

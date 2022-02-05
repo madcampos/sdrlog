@@ -1,8 +1,5 @@
 import type { SearchBox } from './components/search-box/search-box';
-
-import { I18n } from './components/intl/translations';
-
-(document.querySelector('#load-progress') as HTMLProgressElement).max = 8;
+import type { WorkerMessage } from './rpc-messages';
 
 function updateLoadStatus(status: string) {
 	const text = document.querySelector('#load-text') as HTMLHeadingElement;
@@ -18,25 +15,32 @@ function updateAppTheme() {
 	document.body.classList.add(`theme-${theme}`);
 }
 
-updateAppTheme();
+async function init() {
+	const { I18n } = await import('./components/intl/translations');
+	const progressLoader = document.querySelector('#load-progress') as HTMLProgressElement;
 
-updateLoadStatus('Loading components.');
-import './components/components';
-import './components/gamepad/gamepad-navigation';
+	await I18n.setLanguage(I18n.getLanguage());
 
-updateLoadStatus('Adding menu bar.');
-import './components/menu-bar/main-menu-items';
+	updateAppTheme();
 
-updateLoadStatus('Importing helper functions.');
-import { fetchItems } from './components/data-operations/data-import';
-import { updateFiltersFromURL } from './components/search-box/update-filter';
-import { updateInfoBoxFromURL } from './components/info-box/info-box';
-import { updateThemeBoxFromURL } from './components/theme-box/theme-box';
-import { updateLanguageBoxFromURL } from './components/intl/language-info';
-import { checkForMatchingId, updateItemModalFromURL } from './components/item-info/item-details-url';
-import { createComparer } from './components/intl/formatting';
+	progressLoader.max = 8;
 
-(async () => {
+	updateLoadStatus(I18n.t`Loading components.`);
+	await import('./components/components');
+	await import('./components/gamepad/gamepad-navigation');
+
+	updateLoadStatus(I18n.t`Adding menu bar.`);
+	await import('./components/menu-bar/main-menu-items');
+
+	updateLoadStatus(I18n.t`Importing helper functions.`);
+	const { fetchItems } = await import('./components/data-operations/data-import');
+	const { updateFiltersFromURL } = await import('./components/search-box/update-filter');
+	const { updateInfoBoxFromURL } = await import('./components/info-box/info-box');
+	const { updateThemeBoxFromURL } = await import('./components/theme-box/theme-box');
+	const { updateLanguageBoxFromURL } = await import('./components/intl/language-info');
+	const { checkForMatchingId, updateItemModalFromURL } = await import('./components/item-info/item-details-url');
+	const { createComparer } = await import('./components/intl/formatting');
+
 	updateLoadStatus(I18n.t`Fetching items database.`);
 
 	const materials = await fetchItems();
@@ -49,6 +53,8 @@ import { createComparer } from './components/intl/formatting';
 	let matchedTitle = '';
 
 	updateLoadStatus(I18n.t`Adding materials to the display.`);
+	progressLoader.max = sortedMaterials.length;
+	progressLoader.value = 0;
 
 	for (const material of sortedMaterials) {
 		const itemCard = document.createElement('item-card');
@@ -62,6 +68,8 @@ import { createComparer } from './components/intl/formatting';
 		itemCard.dataset.edition = material.edition.toString();
 		itemCard.dataset.status = material.status ?? '';
 		document.querySelector('main')?.appendChild(itemCard);
+
+		progressLoader.value += 1;
 
 		if (checkForMatchingId(materialId)) {
 			matchedId = materialId;
@@ -85,4 +93,24 @@ import { createComparer } from './components/intl/formatting';
 
 	updateLoadStatus(I18n.t`Done!`);
 	document.querySelector('#load-overlay')?.remove();
-})();
+}
+
+window.addEventListener('load', async () => {
+	try {
+		const workerRegistration = await navigator.serviceWorker.register(`${import.meta.env.PUBLIC_URL}sw.js`);
+
+		if (workerRegistration.active) {
+			await init();
+		}
+	} catch (err) {
+		console.error(err);
+	}
+}, { once: true });
+
+navigator.serviceWorker.addEventListener('message', async (evt) => {
+	const message = evt.data as WorkerMessage;
+
+	if (message.type === 'worker-ready') {
+		await init();
+	}
+}, { once: true });

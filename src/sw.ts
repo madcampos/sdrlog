@@ -21,7 +21,6 @@ const preCacheFiles = [
 	// JS
 	'./lib/pdfjs/pdf.js',
 	'./meta/env.js',
-	'./js/loader.js',
 	'./js/main.js',
 
 	// CSS

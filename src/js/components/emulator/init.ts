@@ -1,12 +1,17 @@
 import type { Emulator } from './emulator';
-import '../intl/bootstrap';
+
+import { I18n } from '../intl/translations';
 import './emulator';
 
-const url = new URL(window.location.toString());
-const params = new URLSearchParams(url.search);
+(async () => {
+	await I18n.setLanguage(I18n.getLanguage());
 
-if (params.has('file')) {
-	const emulatorElement = document.querySelector('rom-emulator') as Emulator;
+	const url = new URL(window.location.toString());
+	const params = new URLSearchParams(url.search);
 
-	emulatorElement.file = params.get('file') as string;
-}
+	if (params.has('file')) {
+		const emulatorElement = document.querySelector('rom-emulator') as Emulator;
+
+		emulatorElement.file = params.get('file') as string;
+	}
+})();

@@ -1,14 +1,20 @@
 import type { ComicBookReader } from './reader';
-import '../intl/bootstrap';
+
+import { I18n } from '../intl/translations';
+
 import '../button/button';
 import '../menu-bar/menu-bar';
 import './reader';
 
-const url = new URL(window.location.toString());
-const params = new URLSearchParams(url.search);
+(async () => {
+	await I18n.setLanguage(I18n.getLanguage());
 
-if (params.has('file')) {
-	const readerElement = document.querySelector('cbz-reader') as ComicBookReader;
+	const url = new URL(window.location.toString());
+	const params = new URLSearchParams(url.search);
 
-	readerElement.file = params.get('file') as string;
-}
+	if (params.has('file')) {
+		const readerElement = document.querySelector('cbz-reader') as ComicBookReader;
+
+		readerElement.file = params.get('file') as string;
+	}
+})();
