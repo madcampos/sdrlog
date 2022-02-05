@@ -6,7 +6,7 @@ import { I18n } from '../intl/translations';
 import { Logger } from '../logger/logger';
 
 export async function saveCoversToFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export covers` });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export Covers` });
 
 	try {
 		if ('showDirectoryPicker' in window) {
@@ -49,7 +49,7 @@ export async function saveCoversToFolder() {
 
 			const zipFile = await zip.generateAsync({ type: 'blob' });
 
-			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
+			await fileSave(zipFile, { fileName: 'covers.zip' });
 		}
 	} catch (err) {
 		Logger.error('Failed to save covers.', err);
@@ -59,7 +59,7 @@ export async function saveCoversToFolder() {
 }
 
 export async function saveThumbsToFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export thumbnails` });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export Thumbnails` });
 
 	try {
 		if ('showDirectoryPicker' in window) {
@@ -102,7 +102,7 @@ export async function saveThumbsToFolder() {
 
 			const zipFile = await zip.generateAsync({ type: 'blob' });
 
-			await fileSave(zipFile, { fileName: I18n.t`covers.zip` });
+			await fileSave(zipFile, { fileName: 'thumbs.zip' });
 		}
 	} catch (err) {
 		Logger.error('Failed to save thmbs.', err);

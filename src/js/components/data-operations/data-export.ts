@@ -43,7 +43,7 @@ function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 }
 
 export async function exportDataFile() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export data file` });
+	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export Data` });
 
 	try {
 		const items = (await getMaterials()).map((material) => formatDataItem(material as unknown as NewMaterialProperties));
@@ -54,7 +54,7 @@ export async function exportDataFile() {
 					// @ts-expect-error
 					id: 'dataFile',
 					startIn: 'downloads',
-					suggestedName: I18n.t`data.json`,
+					suggestedName: 'data.json',
 					excludeAcceptAllOption: true,
 					types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
 				});
@@ -67,9 +67,9 @@ export async function exportDataFile() {
 				}, null, '\t'));
 				await file.close();
 			} else {
-				const file = new File([JSON.stringify({ $schema: './data.schema.json', items }, null, '\t')], I18n.t`data.json`, { type: 'application/json' });
+				const file = new File([JSON.stringify({ $schema: './data.schema.json', items }, null, '\t')], 'data.json', { type: 'application/json' });
 
-				await saveFile(file, { fileName: I18n.t`data.json` });
+				await saveFile(file, { fileName: 'data.json' });
 			}
 		}
 	} catch (err) {
