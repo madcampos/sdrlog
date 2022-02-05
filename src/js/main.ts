@@ -92,7 +92,7 @@ async function init() {
 	document.querySelector<SearchBox>('search-box')?.updateSuggestions();
 
 	updateLoadStatus(I18n.t`Done!`);
-	document.querySelector('#load-overlay')?.remove();
+	document.querySelector('#splash-screen')?.remove();
 }
 
 window.addEventListener('load', async () => {
