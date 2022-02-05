@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
-		<meta name="referrer" content="no-referrer">
-		<meta name="format-detection" content="telephone=no">
 
 		<title>%APP_NAME%</title>
 
@@ -20,11 +18,31 @@
 		<link rel="icon" href="./img/icons/favicon.svg"/>
 		<meta name="theme-color" content="%THEME_COLOR%">
 
-		<!-- Apple icons -->
-		<meta name="apple-mobile-web-app-title" content="%APP_NAME%">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<!-- Social metadata -->
+		<meta name="keywords" content="%APP_KEYWORDS%"/>
 
+		<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
+		<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
+		<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:locale" content="en_US"/>
+		<meta property="og:url" content="%PUBLIC_URL%" />
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:dnt" content="on">
+
+		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
+
+		<!-- Search -->
+		<link rel="search" href="./open-search.xml" type="application/opensearchdescription+xml" title="%APP_NAME%">
+
+		<!-- Site configuration -->
+		<meta name="referrer" content="no-referrer">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="google" content="notranslate"/>
+		<link rel="license" href="%PUBLIC_URL%#copyright">
+
+		<!-- Apple icons -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<link rel="apple-touch-icon" href="%APPLE_ICON%">
 
 		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
@@ -53,26 +71,6 @@
 		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
 		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-
-		<!-- Search -->
-		<link rel="search" href="./open-search.xml" type="application/opensearchdescription+xml" title="%APP_NAME%">
-
-		<!-- Social metadata -->
-		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
-
-		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:dnt" content="on">
-
-		<meta property="og:type" content="website"/>
-		<meta property="og:locale" content="en_US"/>
-		<meta property="og:url" content="%PUBLIC_URL%" />
-		<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
-		<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
-		<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
-		<meta name="keywords" content="%APP_KEYWORDS%"/>
-
-		<meta name="google" content="nositelinkssearchbox"/>
-		<meta name="google" content="notranslate"/>
 
 		<!-- Styles -->
 		<link rel="stylesheet" href="./css/base.css"/>

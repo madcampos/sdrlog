@@ -6,32 +6,33 @@
 	<title>Epub Reader · %APP_NAME%</title>
 
 	<!-- App Metadata -->
-	<link rel="canonical" href="%PUBLIC_URL%">
 	<link rel="manifest" href="./sdrlog.webmanifest"/>
 	<link rel="icon" href="./img/icons/favicon.svg"/>
 	<meta name="theme-color" content="%THEME_COLOR%">
 
-	<!-- Apple icons -->
-	<meta name="apple-mobile-web-app-title" content="%APP_NAME%">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 	<!-- Social metadata -->
-	<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
+	<meta name="keywords" content="%APP_KEYWORDS%"/>
 
-	<meta name="twitter:card" content="summary"/>
-	<meta name="twitter:dnt" content="on">
-
+	<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
+	<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
+	<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:locale" content="en_US"/>
 	<meta property="og:url" content="%PUBLIC_URL%" />
-	<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
-	<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
-	<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
-	<meta name="keywords" content="Shadowrun, RPG, list of books"/>
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:dnt" content="on">
 
-	<meta name="google" content="nositelinkssearchbox"/>
+	<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
+
+	<!-- Site configuration -->
+	<meta name="referrer" content="no-referrer">
+	<meta name="format-detection" content="telephone=no">
 	<meta name="google" content="notranslate"/>
+	<link rel="license" href="%PUBLIC_URL%#copyright">
+
+	<!-- Apple icons -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="%APPLE_ICON%">
 
 	<link rel="stylesheet" href="./css/base.css"/>
 	<link rel="stylesheet" href="./css/components/epub/reader.css"/>
