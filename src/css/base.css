@@ -47,7 +47,7 @@ body *, body *::after, body *::before {
 
 main {
 	overflow: auto;
-	margin-top: calc(var(--menubar-top) + var(--menubar-height));
+	margin: calc(var(--menubar-top) + var(--menubar-height)) var(--bound-right) var(--bound-bottom) var(--bound-left);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
