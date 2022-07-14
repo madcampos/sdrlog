@@ -18,6 +18,16 @@ https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 
+https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
+https://www.drivethrurpg.com/product/393672/Shadowrun-The-Third-Parallel-Campaign-Book?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/387976/Shadowrun-Falsch-abgebogen?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/390272/Der-Almanach--Gratis-Rollenspieltag-2022?src=also_purchased&filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/390503/Shadowrun-Emerald-City?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/384678/Shadowrun-Albtraume?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/384680/Shadowrun-Der-KechibiCode?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/384162/Shadowrun-Lofwyrs-Legions-Shadow-Stock?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/384161/Shadowrun-Missions-Learning-Little-from-Victory-0903?filters=1700_0_0_0_0
+
 # Japanese materials
 https://www.shadowiki.de/Shadowrun_Manga
 https://fondationdraco.fr/shadowrun-manga-scan-trad/
