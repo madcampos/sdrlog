@@ -104,6 +104,8 @@ window.addEventListener('load', async () => {
 		}
 	} catch (err) {
 		console.error(err);
+
+		await init();
 	}
 }, { once: true });
 
