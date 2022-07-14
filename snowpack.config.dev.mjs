@@ -6,14 +6,15 @@ const sslOptions = {
 	key: readFileSync('./snowpack.key')
 };
 
-const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => baseConfig.env?.[match] ?? '');
-
 /**
  * @param {import("http").IncomingMessage} _req
  * @param {import("http").ServerResponse} res
  * @returns {void}
  */
 function handleManifest(_req, res) {
+	// eslint-disable-next-line @typescript-eslint/no-use-before-define
+	const manifest = readFileSync('./src/sdrlog.webmanifest', { encoding: 'utf8' }).replaceAll(/%(.+?)%/giu, (_, match) => config.env?.[match] ?? '');
+
 	res.setHeader('Content-Type', 'text/javascript');
 
 	res.end(manifest);
@@ -38,7 +39,10 @@ const config = {
 		MODE: 'development',
 		PUBLIC_URL: 'https://localhost:8080/'
 	},
-	devOptions: { secure: sslOptions },
+	devOptions: {
+		secure: sslOptions,
+		open: 'none'
+	},
 	routes: [
 		{
 			match: 'all',
