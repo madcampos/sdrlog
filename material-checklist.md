@@ -17,16 +17,34 @@ https://www.shadowrunsixthworld.com/2021/05/whats-up-with-shadowrun/
 https://boardgamegeek.com/boardgame/182961/shadowrun-crossfire-demo-box
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
+https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
-https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
-https://www.drivethrurpg.com/product/393672/Shadowrun-The-Third-Parallel-Campaign-Book?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/387976/Shadowrun-Falsch-abgebogen?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/390272/Der-Almanach--Gratis-Rollenspieltag-2022?src=also_purchased&filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/390503/Shadowrun-Emerald-City?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/384678/Shadowrun-Albtraume?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/384680/Shadowrun-Der-KechibiCode?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/384162/Shadowrun-Lofwyrs-Legions-Shadow-Stock?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/384161/Shadowrun-Missions-Learning-Little-from-Victory-0903?filters=1700_0_0_0_0
+https://shadowhelix.de/Quelle,_de:_Shadowrun-Mitmachbuch
+https://www.drivethrurpg.com/product/397252/Shadowrun-Schattenkompendium?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/396661/Shadowrun-Sixth-World-Companion-Core-Character-Rulebook?filters=1700_0_0_0_0
+
+https://www.shadowrun6.de/index.php/spielhilfen-2/promomaterial/aprilscherze/341-sr5-schwarzgeld.html
+
+https://mega.nz/folder/vDhhGS7T#r_AjyW1myaJWMWUHb5GyoQ
+
+http://ul.to/folder/xk4syi
+http://ul.to/folder/upkklm
+http://ul.to/folder/1m2glp
+http://ul.to/folder/crvrc9
+http://ul.to/folder/glmzqi
+https://rapidgator.net/folder/5356982/Missions.html
+https://rapidgator.net/folder/5356984/Runs.html
+https://rapidgator.net/folder/5356986/Shadowrun%202D.html
+https://rapidgator.net/folder/5356998/Shadowrun%202E.html
+https://rapidgator.net/folder/5356987/Shadowrun%203D.html
+https://rapidgator.net/folder/5357000/Shadowrun%203E.html
+https://rapidgator.net/folder/5356988/Shadowrun%204D.html
+https://rapidgator.net/folder/5356993/Shadowrun%204E.html
+https://rapidgator.net/folder/5356989/Shadowrun%205D.html
+https://rapidgator.net/folder/5356994/Shadowrun%205E.html
 
 # Japanese materials
 https://www.shadowiki.de/Shadowrun_Manga

@@ -1047,24 +1047,6 @@
 		},
 		{
 			"sku": [
-				"27010X"
-			],
-			"name": "Shadowrun: Anarchy (Prototype)",
-			"category": "rulebook",
-			"type": "digital",
-			"originalLanguage": "en-US",
-			"description": "Man. Machine. Magic.\n\nShadowrun. The Sixth World. Orks in pinstripe suits with uzis; mohawked dwarves jacked into vehicles racing through megasprawls at breakneck speed; humans casting fireballs at corporate-trained paracritters; elves hacking the Matrix for a datasteal of the latest tech or working to topple an upstart corp. It’s where man meets magic and machine.\nDive into a cyberpunk dystopia and become a shadowrunner, a deniable asset who does the jobs no one else can—or will—do. It’s not an easy life, but it beats selling your soul to the megacorps. You’ll break into top-secret labs, stand up to gangs bent on destruction and chaos, encounter dark spirits hiding even darker secrets, and come face to face with some of the infinite dangers the Sixth World can throw at you. And you’ll come out on top—because if you don’t, you don’t get paid.\nShadowrun: Anarchy is a new way to get into the best cyberpunk/urban fantasy action around. Based upon the rules-light and easy-to-learn Cue System, Shadowrun: Anarchy is a narrative-focused game experience that has everything you need to quickly grab some gear, load up on spells, and get to throwing the dice. With loads of characters and missions, the book makes it simple to get up and running. Immerse yourselves in the Sixth World!",
-			"edition": 5,
-			"publisher": [
-				"Catalyst Game Labs"
-			],
-			"releaseDate": [
-				"2016-09-01"
-			],
-			"gameDate": "2075-01-01"
-		},
-		{
-			"sku": [
 				"27500"
 			],
 			"name": "Gear Cards, Series 1",
@@ -11171,7 +11153,7 @@
 			"sku": [
 				"RET-SBK"
 			],
-			"name": "Shadorwun Returns: Hong Kong Sourcebook",
+			"name": "Shadorwun Returns: Hong Kong - Neon Contrails",
 			"category": "sourcebook",
 			"type": "digital",
 			"originalLanguage": "en-US",
@@ -12014,7 +11996,6 @@
 				"2017-12-15"
 			],
 			"gameDate": "2075-01-01",
-			"status": "missing",
 			"notes": "This is a collection of the Denver Adventures"
 		},
 		{
@@ -12034,7 +12015,6 @@
 				"2016-01-01"
 			],
 			"gameDate": "2075-01-01",
-			"status": "missing",
 			"notes": "Collects three Shadowrun Missions adventures (SRM05-04: Liberation, SRM05-05: While the City Sleeps, SRM05-06: Take a Chance) and a description of the city of Chicago."
 		},
 		{
@@ -13115,8 +13095,7 @@
 			"releaseDate": [
 				"2019-01-28"
 			],
-			"gameDate": "2075-01-01",
-			"status": "missing"
+			"gameDate": "2075-01-01"
 		},
 		{
 			"sku": [
@@ -13231,8 +13210,7 @@
 			"releaseDate": [
 				"2019-10-01"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13444,92 +13422,6 @@
 			"publisher": [
 				"Pegasus Spiele"
 			],
-			"releaseDate": [
-				"2009-06-06",
-				"2011-06-04",
-				"2011-06-05",
-				"2012-12-21",
-				"2013-01-21",
-				"2013-02-21",
-				"2013-03-20",
-				"2013-04-01",
-				"2013-05-01",
-				"2013-06-01",
-				"2013-07-01",
-				"2013-08-01",
-				"2013-09-01",
-				"2013-10-01",
-				"2013-11-01",
-				"2013-12-01",
-				"2014-01-01",
-				"2014-02-01",
-				"2014-03-01",
-				"2014-04-01",
-				"2014-05-01",
-				"2014-06-01",
-				"2014-07-01",
-				"2014-08-01",
-				"2014-09-01",
-				"2014-10-01",
-				"2014-11-01",
-				"2014-12-01",
-				"2015-01-01",
-				"2015-02-01",
-				"2015-03-01",
-				"2015-04-01",
-				"2015-05-01",
-				"2015-06-01",
-				"2015-07-01",
-				"2015-08-01",
-				"2015-09-01",
-				"2015-10-01",
-				"2015-11-01",
-				"2015-12-01",
-				"2016-01-01",
-				"2016-02-01",
-				"2016-03-01",
-				"2016-04-01",
-				"2016-05-01",
-				"2016-06-01",
-				"2016-07-01",
-				"2016-09-01",
-				"2016-10-01",
-				"2016-11-01",
-				"2016-12-01",
-				"2017-01-01",
-				"2017-02-01",
-				"2017-03-01",
-				"2017-04-01",
-				"2017-05-01",
-				"2017-06-01",
-				"2017-07-01",
-				"2017-08-01",
-				"2017-09-01",
-				"2017-10-01",
-				"2017-11-01",
-				"2017-12-01",
-				"2018-01-01",
-				"2018-02-01",
-				"2018-03-01",
-				"2018-04-01",
-				"2018-05-01",
-				"2018-06-01",
-				"2018-07-01",
-				"2018-08-01",
-				"2018-09-01",
-				"2018-10-01",
-				"2019-10-01",
-				"2020-03-01",
-				"2018-11-01",
-				"2018-12-01",
-				"2020-05-01",
-				"2020-09-01",
-				"2020-11-01",
-				"2020-12-01",
-				"2021-02-01",
-				"2021-04-01",
-				"2021-05-01"
-			],
 			"gameDate": "2070-01-01",
 			"notes": "It has been replaced by SchattenLoad."
 		},
@@ -13682,8 +13574,7 @@
 				"2020-05-31",
 				"2020-06-15"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13898,8 +13789,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13917,8 +13807,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13936,8 +13825,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13955,8 +13843,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -13974,8 +13861,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14012,8 +13898,7 @@
 			"releaseDate": [
 				"2020-10-15"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14309,7 +14194,7 @@
 			"sku": [
 				"46125"
 			],
-			"name": "Neo-Noir",
+			"name": "Neo Noir",
 			"category": "mission",
 			"type": "digital",
 			"originalLanguage": "de-DE",
@@ -14321,8 +14206,7 @@
 			"releaseDate": [
 				"2021-05-10"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14340,8 +14224,7 @@
 			"releaseDate": [
 				"2021-04-29"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14359,8 +14242,7 @@
 			"releaseDate": [
 				"2021-02-18"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14378,8 +14260,7 @@
 			"releaseDate": [
 				"2021-02-18"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14397,8 +14278,7 @@
 			"releaseDate": [
 				"2021-04-24"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14416,8 +14296,7 @@
 			"releaseDate": [
 				"2021-04-27"
 			],
-			"gameDate": "2080-01-01",
-			"status": "missing"
+			"gameDate": "2080-01-01"
 		},
 		{
 			"sku": [
@@ -14456,7 +14335,7 @@
 				"2021-06-01"
 			],
 			"gameDate": "2080-01-01",
-			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerwehr\"",
+			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerläufer\"",
 			"status": "missing"
 		},
 		{
@@ -14703,8 +14582,7 @@
 			"releaseDate": [
 				"2021-10-01"
 			],
-			"gameDate": "2064-01",
-			"status": "missing"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -14760,8 +14638,7 @@
 			"releaseDate": [
 				"2021-10-01"
 			],
-			"gameDate": "2064-01",
-			"status": "missing"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -14779,8 +14656,7 @@
 			"releaseDate": [
 				"2021-10-01"
 			],
-			"gameDate": "2064-01",
-			"status": "missing"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -14859,8 +14735,7 @@
 			"releaseDate": [
 				"2021-10-04"
 			],
-			"gameDate": "2081-01",
-			"status": "missing"
+			"gameDate": "2081-01"
 		},
 		{
 			"sku": [
@@ -14878,8 +14753,7 @@
 			"releaseDate": [
 				"2021-10-04"
 			],
-			"gameDate": "2081-01",
-			"status": "missing"
+			"gameDate": "2081-01"
 		},
 		{
 			"sku": [
@@ -14923,18 +14797,242 @@
 				"28302"
 			],
 			"name": "The Kechibi Code",
+			"names": {
+				"de-DE": "Der Kechibi-Code"
+			},
 			"category": "mission",
 			"type": "digital",
 			"originalLanguage": "en-US",
 			"description": "# WHAT WILL YOU DO?\nThe power to shake cities, nations, even corporations is out there, contained in a compact code. What would you do if you could control it? Wield it? Or destroy it? Where would you direct the power? Who would you save, and who would you doom?\n\nShadowrunners are used to reacting and surviving. The larger choices, things like the flow of billions of nuyen, or shifts in the highest levels of power, are usually out of their grasp.\n\nBut not this time. What will you do if you finally manage to grab it?",
 			"edition": 6,
 			"publisher": [
-				"Catalyst Game Labs"
+				"Catalyst Game Labs",
+				"Pegasus Spiele"
 			],
 			"releaseDate": [
 				"2021-12-14"
 			],
 			"gameDate": "2081-01"
+		},
+		{
+			"sku": [
+				"28100"
+			],
+			"name": "Emerald City",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# THE SHADOW CAPITAL\n\nJoin spies, smugglers, liars, cheats, killers, thieves, rebels, anarchists, gangers, thugs, hoods, outlaws, low-lifes, hackers, con artists, hustlers, and more as they gather and try to climb to the summit of the shadowrunning world. In Seattle, the gold glitters brighter and the dungeons are darker, meaning the shadows in between are the widest and most intense in the world.\n\nAs a newly free city, Seattle hovers lightly over a pit of ravening wolves, saved only by the fact that as much as one wolf would love to devour the sprawl whole, they equally don’t want any of their competitors to get it. Maintaining that balance is the core desire of city leaders; undoing it has become the obsession of the city’s enemies. Whether shadowrunners decide to pick a side or just play all sides against each other, there is plenty of work to be done and danger to avoid, all while showing they can run the shadows with the best of them.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-03-16"
+			],
+			"gameDate": "2081-01"
+		},
+		{
+			"sku": [
+				"28403"
+			],
+			"name": "The Third Parallel",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# ALL LINED UP\n\nYour eyes have to be everywhere. In front. In back. On the Matrix. On the astral. Threats come from every possible direction and dimension, and runners who don’t keep an eye on every possible danger end up falling to the one they neglected.\n\nThe threats are lined up in Denver, a city ruled by a dragon and home to one of the greatest outlaw tech archives in the world. Shadows are aligning and plots are fomenting, and shadowrunners have the chance to learn what’s happening in enough time to make some nuyen and save a few lives—including their own.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-04-14"
+			],
+			"gameDate": "2081-01"
+		},
+		{
+			"sku": [
+				"28880S"
+			],
+			"name": "Shadow Stock: Lofwyr's Legions",
+			"category": "rulebook",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# IN THE SHADOW OF DRAGONS\n\nShadowrunners know that the most dangerous position to have in the Sixth World is being perceived as a threat by the powerful. Drakes are the perfect example—their power is considerable, which means they almost always have someone after them. They often end up seeking protection by serving dragons and doing their bidding—which means they represent dragons’ interests in the shadows. Runners need to know about drakes, because they could mess up their lives in short order. Or, if they’re lucky, become one of the greatest friends or even teammates a runner could have.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-01-21"
+			],
+			"gameDate": "2081-01"
+		},
+		{
+			"sku": [
+				"SRM09-03"
+			],
+			"name": "Learning Little from Victory",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# POLITICS AS A BLOOD SPORT\n\nWhen the Yakuza decide to get involved with local politics, what could go wrong? Shadowrunners in Neo-Tokyo are about to find out. Runners are going to be asked to influence the election, and they’ll have to deal with the candidates, their backers, and anyone else who wants things to go their way. They’ll have plenty of obstacles to overcome and decisions to make—are they just going to work for pay, or will they try to get the right person into office? Assuming they can decide who that is.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-01-21"
+			],
+			"gameDate": "2081-01"
+		},
+		{
+			"sku": [
+				"SRM09-04"
+			],
+			"name": "Neo-Tokyo Drift",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Rev Your Engine!\n\nA big race is coming up, and a lot of people want to win it, as there is both money and prestige on the line. The runners are asked to help arrange for a particular winner of the race, but soon others come in with a competing offer. The runners have to decide who to help, who to anger, and just how they’ll make sure their selected target wins.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-03-13"
+			],
+			"gameDate": "2081-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"SRM09-05"
+			],
+			"name": "Violent Shadows",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Confused Kidnapping\n\nIf you’re hired to deal with a kidnapping, it should be straightforward—someone is missing, and you should get them back. But if the kidnappers took the wrong person, and then corporate intrigue gets twisted up in the rescue, you have an unusual run and some shadowrunners trying to not get entangled in too many complexities. With competing suits, rampaging gang members, and hidden smugglers, this mission has plenty of obstacles to keep players on their toes!",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-07-05"
+			],
+			"gameDate": "2081-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"46134"
+			],
+			"name": "Schattendossier 3",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Wer nichts weiß, der ist nichts wert. Du möchtest gerne in der Alpenzone ein paar Ökogruppen observieren und dich darauf vorbereiten, dabei von Kalkwyvern angegriffen zu werden? Dein Auftraggeber schickt dich in der Walpurgisnacht in den Harz für eine verdeckte Operation? In den neuesten Berichten der DeMeKo lauern brisante Informationen, die nicht veröffentlicht werden sollen, und nun suchst du nach dem richtigen Ansprechpartner? Oder du möchtest einfach nur das neueste Schießeisen erwerben oder den neuesten Konzern-Spieler in den Schatten kennenlernen?\n\nBegib dich nicht uninformiert in den Tod. Denn Informationen retten Leben.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2022-06-01"
+			],
+			"gameDate": "2082-01-01",
+			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: DeMeKo und Medien\", \"Datapuls: Alpen\", \"Datapuls: Harz\", \"Datapuls: SOTA 2082\" and \"Datapuls: 10 Konzerne\"",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"482D1"
+			],
+			"name": "Datapuls: DeMeKo und Medien",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# Die bunte Welt des Trideos\n\nAlles wird bunter, wenn es erstmal in den Medien erscheint. Jedes Thema bekommt neue Farben, neue Facetten und glänzt nach der medialen Waschmaschine in neuem Licht. Ob es dann noch die Wahrheit ist? Nun, das ist eine andere Frage. Die DeMeKo, der wichtigste Medienkonzern der ADL, arbeitet mit seiner eigenen Wahrheit und schafft seine eigene Welt.\n\nDatapuls DeMeKo und Medien wirft ein Licht auf den großen Medienkonzern der ADL: Die Machtspieler, die Konzernkultur, die Agenda und die unterschiedlichen Geschäftsbereiche. Der zweite Teil des PDFs beschäftigt sich mit der Medienlandschaft der ADL: den neuesten Serien, Filmen und Gerüchten.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2022-04-14"
+			],
+			"gameDate": "2082-01-01"
+		},
+		{
+			"sku": [
+				"482D2"
+			],
+			"name": "Datapuls: Alpen",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# Hohe Gipfel, tiefe Stürze\n\nSchneebedeckte Höhen, grüne Almen, Täler mit gurgelnden Gebirgsbächen: So präsentiert sich das Alpengebiet oft auf Postkarten von Konzern- oder Tourismusseiten. Aber hinter den prächtigen Bergpanoramen lauern Gefahren, Geheimnisse … und Aufträge für Runner. Ob nun eine Extraktion aus einer Öko-Kommune, ein Einbruch in eine abgelegene Konzerneinrichtung oder die Jagd auf einen erwachten Critter ist: Die Alpen begraben so machen Gescheiterten in den dunklen Schatten ihrer Schluchten.\n\nDatapuls Alpen wirft ein Licht auf die Alpenzone Europas in der Sechsten Welt. Sowohl die geographischen Begebenheiten, als auch wichtige Hotspots und Machtspieler werden ausführlich für den direkten Spielgebrauch beschrieben: seien es etwa Konzerne, Drachen oder Schmuggler. Hinzu kommt neue Ausrüstung für das Überleben in den Bergen und die Geheimnisse um den Jahrhundertwinter.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2022-04-28"
+			],
+			"gameDate": "2082-01-01"
+		},
+		{
+			"sku": [
+				"482D3"
+			],
+			"name": "Datapuls: Harz",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# Zwischen Tannen und Magie\n\nDichtes Unterholz, Geisterdörfer, sagenumwobende Orte, Hexencoven und Tourismus: So präsentiert sich der Harz Runnern, die ihn besuchen. Während es unterschiedlichste arkane Produkte zu erwerben gibt und Critter Teile des Mittelgebirges unsicher machen, sorgen die Schwestern und Brüder der Hexengesellschaften für noch mehr Schattenarbeit zwischen den dunklen Tannen.\n\nDatapuls Harz wirft ein Licht auf das gleichnamige deutsche Mittelgebirge in der Sechsten Welt. Sowohl die geographischen Begebenheiten, als auch wichtige Hotspots und Machtspieler werden ausführlich für den direkten Spielgebrauch beschrieben: seien es etwa Coven, Konzerne oder finstere Geheimnisse.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2020-05-02"
+			],
+			"gameDate": "2082-01-01"
+		},
+		{
+			"sku": [
+				"482D4"
+			],
+			"name": "Datapuls: 10 Konzerne",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# Hintermänner und Rivalen\n\nKaum ein Abenteuer im Shadowrun-Universum, in dem sie nicht vorkommen: Konzerne. Dabei geht es nicht immer um Konzernriesen und Megacorporations. Meist ist sind es kleinere Unternehmen oder Tochterfirmen, die den Runnern das Leben schwer machen, die im Schatten ihre Strippen ziehen oder die als direkte Antagonisten auftreten. Was kann es Schöneres geben, als ihnen zu zeigen, wie stark der Arm der Straße sein kann.\n\nDatapuls 10 Konzerne wirft ein Licht auf 10 mittelständische Konzerne der ADL. Sie werden ausführlich beschrieben und sind für den direkten Spielgebrauch gedacht: Sei es als Gegner, Auftraggeber oder andere, handelnde Elemente. Diese Konzerne wurden extra für dieses PDF erstellt und werden nie wieder auftauchen. Sie können daher völlig frei am Spieltisch genutzt werden.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2020-04-14"
+			],
+			"gameDate": "2082-01-01"
+		},
+		{
+			"sku": [
+				"482D5"
+			],
+			"name": "Datapuls: SOTA 2082",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# Von Knarren und Kähnen\n\nDie Uhr dreht sich weiter, sie bleibt niemals stehen. Und mit ihr läuft auch die Technik in die Zukunft – mit oder ohne dich. Wenn du am Ball bleiben willst, solltest du dich informieren: Du solltest die neuesten Schießeisen kennen, die coolesten Drohnen besitzen oder das schnellste Auto fahren. Oder zumindest eines, das schneller ist als die Polizei.\n\nDatapuls SOTA 2082 wirft ein Licht auf neue Ausrüstung für Shadowrun. Präsentiert werden neue und alte Waffen, Autos, Motorräder, Flugplattformen und Kampfdrohnen, mit denen sich die Runner ausrüsten können oder denen sie sich entgegenstellen müssen. Zudem enthält das PDF neue Schutzgeister für magisch Erwachte und die Beschreibungen einiger Schattengrößen.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2020-04-28"
+			],
+			"gameDate": "2082-01-01"
 		}
 	]
 }
