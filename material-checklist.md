@@ -26,6 +26,26 @@ https://shadowhelix.de/Quelle,_de:_Shadowrun-Mitmachbuch
 https://www.drivethrurpg.com/product/397252/Shadowrun-Schattenkompendium?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/396661/Shadowrun-Sixth-World-Companion-Core-Character-Rulebook?filters=1700_0_0_0_0
 
+https://www.drivethrurpg.com/product/405296/Shadowrun-Kaleidoskop--Hexen-im-Harz?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/405295/Shadowrun-Kaleidoskop--Adelsbrevier?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/405294/Shadowrun-Kaleidoskop--Lofwyrs-Legionen?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/406047/Shadowrun-Kaleidoskop--TrollAthleten?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/406048/Shadowrun-Kaleidoskop--Stadtkrieg-WM?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/406597/Shadowrun-Kaleidoskop--KRIMEKatalog?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/406598/Shadowrun-Kaleidoskop--Torpedos-in-der-Nacht?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/406599/Shadowrun-Kaleidoskop--HaustierDossier?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/408301/Shadowrun-Kaleidoskop--Salzbergwerk-Heilbronn?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/408300/Shadowrun-Kaleidoskop--Zeit-des-Rosts?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/408299/Shadowrun-Kaleidoskop--Policlub-Pro-Nobilis?filters=1700_0_0_0_0
+
+https://www.drivethrurpg.com/product/412898/Shadowrun-Auswurfschock?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/414477/Shadowrun-Shadow-Cast-Runner-Resource-Book?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/414478/Shadowrun-Hack-and-Slash-Core-Matrix-Rulebook?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/416991/Shadowrun-Missions-1001-Deaths-Daily-Business?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/410466/Shadowrun-Missions-Seven-Breaths-0906?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/406549/Shadowrun-Schattengeschafte?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/406548/Shadowrun-Die-ublichen-Verdachtigen?filters=1700_0_0_0_0
+
 https://www.shadowrun6.de/index.php/spielhilfen-2/promomaterial/aprilscherze/341-sr5-schwarzgeld.html
 
 https://mega.nz/folder/vDhhGS7T#r_AjyW1myaJWMWUHb5GyoQ
