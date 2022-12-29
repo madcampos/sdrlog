@@ -79,7 +79,7 @@ export class ItemCard extends HTMLElement {
 			}
 		}
 
-		this.#thumb.src = `${import.meta.env.PUBLIC_URL}thumbs/${id}.jpg`;
+		this.#thumb.src = `${import.meta.env.APP_PUBLIC_URL}thumbs/${id}.jpg`;
 
 		this.#thumb.addEventListener('error', async () => {
 			this.#thumb.src = await getThumbUrl(id) || FALLBACK_COVER;

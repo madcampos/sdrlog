@@ -28,7 +28,7 @@ function updateUrlSearch(searchOptions: FilterOptions) {
 		searchString = '';
 	}
 
-	const url = `${import.meta.env.PUBLIC_URL}${searchString}${window.location.hash}`;
+	const url = `${import.meta.env.APP_PUBLIC_URL}${searchString}${window.location.hash}`;
 	const data = {
 		type: 'search',
 		value: searchOptions

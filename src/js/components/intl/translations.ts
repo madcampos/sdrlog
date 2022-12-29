@@ -5,7 +5,7 @@ const availableLocales = [
 	new Intl.Locale('fr-FR')
 ];
 
-let loadedTranslations: Map<string, string> = new Map();
+let loadedTranslations = new Map<string, string>();
 
 function translateHtmlText(text: string) {
 	// eslint-disable-next-line @typescript-eslint/no-use-before-define

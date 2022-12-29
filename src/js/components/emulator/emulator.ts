@@ -285,7 +285,7 @@ export class Emulator extends HTMLElement {
 		const { emulator } = materialsFilter.get(id) ?? {};
 
 		try {
-			const { 'default': emulatorInit } = (await import(`${import.meta.env.PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`)) as { default: EmulatorInitializerFunction };
+			const { 'default': emulatorInit } = (await import(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`)) as { default: EmulatorInitializerFunction };
 
 			this.#emulator = emulatorInit({
 				canvas: this.#canvas,

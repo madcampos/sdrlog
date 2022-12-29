@@ -97,7 +97,7 @@ async function init() {
 
 window.addEventListener('load', async () => {
 	try {
-		const workerRegistration = await navigator.serviceWorker.register(`${import.meta.env.PUBLIC_URL}sw.js`);
+		const workerRegistration = await navigator.serviceWorker.register(`${import.meta.env.APP_PUBLIC_URL}sw.js`);
 
 		if (workerRegistration.active) {
 			await init();

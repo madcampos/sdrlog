@@ -4,7 +4,7 @@ import { optimize } from './optimizer';
 
 const pdfjs = window['pdfjs-dist/build/pdf'] as PDFjsModule;
 
-pdfjs.GlobalWorkerOptions.workerSrc = `${import.meta.env.PUBLIC_URL}lib/pdfjs/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `${import.meta.env.APP_PUBLIC_URL}lib/pdfjs/pdf.worker.js`;
 
 export const COVER_WIDTH = 1024;
 export const THUMB_WIDTH = 256;

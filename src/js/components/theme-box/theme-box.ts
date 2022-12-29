@@ -15,7 +15,7 @@ themeBox.addEventListener('open', () => {
 });
 
 themeBox.addEventListener('close', () => {
-	window.history.pushState(null, import.meta.env.APP_NAME, import.meta.env.PUBLIC_URL);
+	window.history.pushState(null, import.meta.env.APP_NAME, import.meta.env.APP_PUBLIC_URL);
 	window.document.title = import.meta.env.APP_NAME;
 }, { capture: false });
 
@@ -30,16 +30,16 @@ registerShortcut('t', () => {
 	themeBox.toggle();
 
 	if (themeBox.hasAttribute('open')) {
-		window.history.pushState(null, `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#theme`);
+		window.history.pushState(null, `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}#theme`);
 		window.document.title = `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`;
 	} else {
-		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
+		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}`);
 		window.document.title = import.meta.env.APP_NAME;
 	}
 });
 
 export function openThemeModal() {
-	window.history.pushState(null, `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#theme`);
+	window.history.pushState(null, `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}#theme`);
 	window.document.title = `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`;
 
 	themeBox.show();

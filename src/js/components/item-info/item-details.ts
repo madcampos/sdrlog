@@ -248,7 +248,7 @@ export class ItemDetails extends HTMLElement {
 			this.#saveButton.disabled = false;
 			this.#exportButton.disabled = false;
 
-			window.history.pushState(null, `${this.#formFields.name.value} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}#${id}`);
+			window.history.pushState(null, `${this.#formFields.name.value} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}#${id}`);
 			window.document.title = `${this.#formFields.name.value} · ${import.meta.env.APP_NAME}`;
 
 			this.toggleEdit(false, false);
@@ -277,7 +277,7 @@ export class ItemDetails extends HTMLElement {
 		});
 
 		this.#modal.addEventListener('close', () => {
-			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}${window.location.search}`);
+			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}`);
 			window.document.title = import.meta.env.APP_NAME;
 		});
 	}
@@ -310,7 +310,7 @@ export class ItemDetails extends HTMLElement {
 		this.#modal.show();
 		this.setAttribute('open', '');
 
-		window.history.pushState(null, `${title} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}${window.location.search}${hash}`);
+		window.history.pushState(null, `${title} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}${hash}`);
 		window.document.title = `${title} · ${import.meta.env.APP_NAME}`;
 	}
 

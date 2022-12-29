@@ -1,4 +1,4 @@
-const isDebug = import.meta.env.MODE !== 'production';
+const isDebug = import.meta.env.APP_MODE !== 'production';
 
 type ConsoleMethods = 'log' | 'warn' | 'error' | 'info';
 
@@ -46,6 +46,6 @@ export class Logger {
 	}
 
 	static appInfo() {
-		Logger.#writeLogMessage(`${import.meta.env.APP_NAME} v${import.meta.env.APP_VERSION} (${import.meta.env.MODE})`);
+		Logger.#writeLogMessage(`${import.meta.env.APP_NAME} v${import.meta.env.APP_VERSION} (${import.meta.env.APP_MODE})`);
 	}
 }

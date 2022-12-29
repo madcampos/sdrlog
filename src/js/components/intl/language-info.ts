@@ -23,7 +23,7 @@ languageBox.addEventListener('open', () => {
 });
 
 languageBox.addEventListener('close', () => {
-	window.history.pushState(null, import.meta.env.APP_NAME, import.meta.env.PUBLIC_URL);
+	window.history.pushState(null, import.meta.env.APP_NAME, import.meta.env.APP_PUBLIC_URL);
 	window.document.title = import.meta.env.APP_NAME;
 }, { capture: false });
 
@@ -31,16 +31,16 @@ registerShortcut('l', () => {
 	languageBox.toggle();
 
 	if (languageBox.hasAttribute('open')) {
-		window.history.pushState(null, `${I18n.t`Language Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#language`);
+		window.history.pushState(null, `${I18n.t`Language Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}#language`);
 		window.document.title = `${I18n.t`Language Settings`} · ${import.meta.env.APP_NAME}`;
 	} else {
-		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.PUBLIC_URL}`);
+		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}`);
 		window.document.title = import.meta.env.APP_NAME;
 	}
 });
 
 export function openLanguageModal() {
-	window.history.pushState(null, `${I18n.t`Language Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.PUBLIC_URL}#language`);
+	window.history.pushState(null, `${I18n.t`Language Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}#language`);
 	window.document.title = `${I18n.t`Language Settings`} · ${import.meta.env.APP_NAME}`;
 
 	languageBox.show();
