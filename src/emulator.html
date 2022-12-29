@@ -1,86 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Emulator · %APP_NAME%</title>
+<html lang="en-US" itemscope itemtype="http://schema.org/WebSite">
 
-	<!-- App Metadata -->
-	<link rel="manifest" href="./sdrlog.webmanifest"/>
-	<link rel="icon" href="./img/icons/favicon.svg"/>
-	<meta name="theme-color" content="%THEME_COLOR%">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Emulator · <%= APP_NAME %></title>
 
-	<!-- Social metadata -->
-	<meta name="keywords" content="%APP_KEYWORDS%"/>
+		<!-- App Metadata -->
+		<link rel="icon" href="/icons/favicon.svg" />
+		<meta name="theme-color" content="<%= APP_THEME_COLOR %>">
 
-	<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
-	<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
-	<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:locale" content="en_US"/>
-	<meta property="og:url" content="%PUBLIC_URL%" />
-	<meta name="twitter:card" content="summary"/>
-	<meta name="twitter:dnt" content="on">
+		<!-- Social metadata -->
+		<meta name="keywords" content="<%= APP_KEYWORDS %>" />
 
-	<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
+		<meta property="og:title" name="twitter:title" itemprop="name" content="<%= APP_NAME %>" />
+		<meta property="og:description" name="description" itemprop="description" content="<%= APP_DESCRIPTION %>" />
+		<meta property="og:image" name="twitter:image" itemprop="image" content="<%= APP_PUBLIC_URL %><%= APP_LARGE_ICON %>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:url" content="<%= APP_PUBLIC_URL %>" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:dnt" content="on">
 
-	<!-- Site configuration -->
-	<meta name="referrer" content="no-referrer">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="google" content="notranslate"/>
-	<link rel="license" href="%PUBLIC_URL%#copyright">
+		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
 
-	<!-- Apple icons -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<link rel="apple-touch-icon" href="%APPLE_ICON%">
+		<!-- Site configuration -->
+		<meta name="referrer" content="no-referrer">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="google" content="notranslate" />
+		<link rel="license" href="%PUBLIC_URL%#copyright">
 
-	<link rel="stylesheet" href="./css/base.css"/>
-</head>
-<body class="notranslate fullsize" translate="no">
-	<!-- Templates -->
-	<template id="custom-button">
-		<link rel="stylesheet" href="./css/components/button/button.css"/>
-		<button type="button">
-			<span id="button-icon"></span>
-			<span id="button-text">
+		<!-- Apple icons -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="apple-touch-icon" href="<%= APP_APPLE_ICON %>">
+
+		<link rel="stylesheet" href="./css/base.css" />
+	</head>
+
+	<body class="notranslate fullsize" translate="no">
+		<!-- Templates -->
+		<template id="custom-button">
+			<link rel="stylesheet" href="./css/components/button/button.css" />
+			<button type="button">
+				<span id="button-icon"></span>
+				<span id="button-text">
+					<slot></slot>
+				</span>
+			</button>
+		</template>
+
+		<template id="rom-emulator">
+			<link rel="stylesheet" href="./css/components/emulator/emulator.css" />
+			<aside class="controller" id="left-controller">
+				<button id="button-select">Select</button>
+				<button id="button-start">Start</button>
+				<div id="dpad"></div>
+			</aside>
+			<article id="game-wrapper">
+				<div id="start-overlay">
+					<custom-button icon-button id="start-button">▶️</custom-button>
+				</div>
+				<div id="game-overlay">
+					<custom-button icon-button id="pause-button">▶️</custom-button>
+				</div>
 				<slot></slot>
-			</span>
-		</button>
-	</template>
-
-	<template id="rom-emulator">
-		<link rel="stylesheet" href="./css/components/emulator/emulator.css"/>
-		<aside class="controller" id="left-controller">
-			<button id="button-select">Select</button>
-			<button id="button-start">Start</button>
-			<div id="dpad"></div>
-		</aside>
-		<article id="game-wrapper">
-			<div id="start-overlay">
-				<custom-button icon-button id="start-button">▶️</custom-button>
-			</div>
-			<div id="game-overlay">
-				<custom-button icon-button id="pause-button">▶️</custom-button>
-			</div>
-			<slot></slot>
-		</article>
-		<aside class="controller" id="right-controller">
-			<button id="bumper-left">L</button>
-			<button id="bumper-right">R</button>
-			<button id="button-x">X</button>
-			<button id="button-y">Y</button>
-			<button id="button-a">A</button>
-			<button id="button-b">B</button>
-		</aside>
-	</template>
+			</article>
+			<aside class="controller" id="right-controller">
+				<button id="bumper-left">L</button>
+				<button id="bumper-right">R</button>
+				<button id="button-x">X</button>
+				<button id="button-y">Y</button>
+				<button id="button-a">A</button>
+				<button id="button-b">B</button>
+			</aside>
+		</template>
 
 
-	<!-- Content -->
-	<main>
-		<rom-emulator></rom-emulator>
-	</main>
+		<!-- Content -->
+		<main>
+			<rom-emulator></rom-emulator>
+		</main>
 
-	<script src="./js/components/button/button.js" type="module"></script>
-	<script src="./js/components/emulator/init.js" type="module"></script>
-</body>
+		<script src="./js/components/button/button.js" type="module"></script>
+		<script src="./js/components/emulator/init.js" type="module"></script>
+	</body>
+
 </html>

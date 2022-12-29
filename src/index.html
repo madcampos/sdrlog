@@ -1,33 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US" itemscope itemtype="http://schema.org/WebSite">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-		<title>%APP_NAME%</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+		<title><%= APP_NAME %></title>
 
 		<!-- Preload -->
 		<link rel="preload" crossorigin="anonymous" href="./data/data.json" as="fetch" type="application/json">
-		<link rel="preload" crossorigin="anonymous" href="./js/main.js" as="script" type="text/javascript">
-		<link rel="prefetch" crossorigin="anonymous" href="./lib/pdfjs/pdf.js" as="script" type="text/javascript">
-		<link rel="prefetch" crossorigin="anonymous" href="./css/components/dialog/dialog.css" as="style" type="text/css">
-		<link rel="prefetch" crossorigin="anonymous" href="./css/components/item-info/item-details.css" as="style" type="text/css">
 
 		<!-- App Metadata -->
-		<link rel="manifest" href="./sdrlog.webmanifest"/>
-		<link rel="icon" href="./img/icons/favicon.svg"/>
-		<meta name="theme-color" content="%THEME_COLOR%">
+		<link rel="icon" href="/icons/favicon.svg" />
+		<meta name="theme-color" content="<%= APP_THEME_COLOR %>">
 
 		<!-- Social metadata -->
-		<meta name="keywords" content="%APP_KEYWORDS%"/>
+		<meta name="keywords" content="<%= APP_KEYWORDS %>" />
 
-		<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
-		<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
-		<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:locale" content="en_US"/>
-		<meta property="og:url" content="%PUBLIC_URL%" />
-		<meta name="twitter:card" content="summary"/>
+		<meta property="og:title" name="twitter:title" itemprop="name" content="<%= APP_NAME %>" />
+		<meta property="og:description" name="description" itemprop="description" content="<%= APP_DESCRIPTION %>" />
+		<meta property="og:image" name="twitter:image" itemprop="image" content="<%= APP_PUBLIC_URL %><%= APP_LARGE_ICON %>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:url" content="<%= APP_PUBLIC_URL %>" />
+		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:dnt" content="on">
 
 		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
@@ -38,44 +34,45 @@
 		<!-- Site configuration -->
 		<meta name="referrer" content="no-referrer">
 		<meta name="format-detection" content="telephone=no">
-		<meta name="google" content="notranslate"/>
+		<meta name="google" content="notranslate" />
 		<link rel="license" href="%PUBLIC_URL%#copyright">
 
 		<!-- Apple icons -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="apple-touch-icon" href="%APPLE_ICON%">
+		<link rel="apple-touch-icon" href="<%= APP_APPLE_ICON %>">
 
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2388-1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2048-1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2224-1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1620-2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2160-1620.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1284-2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2778-1284.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1170-2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2532-1170.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2436-1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2688-1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1792-828.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-2208-1242.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="./img/splash/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2388-1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2048-1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2224-1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1620-2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2160-1620.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1284-2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2778-1284.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1170-2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2532-1170.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2436-1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2688-1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1792-828.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2208-1242.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="./css/base.css"/>
-		<link rel="stylesheet" href="./css/components/info-box/info-box.css"/>
+		<link rel="stylesheet" href="./css/base.css" />
+		<link rel="stylesheet" href="./css/components/info-box/info-box.css" />
 	</head>
+
 	<body class="notranslate" translate="no">
 		<!-- Content -->
 		<menu-bar>
@@ -128,7 +125,9 @@
 			<span slot="title">t("Information")</span>
 
 			<details open>
-				<summary><h2>t("Collection Organization")</h2></summary>
+				<summary>
+					<h2>t("Collection Organization")</h2>
+				</summary>
 				<p>t("The material here presented is organized into the following categories:")</p>
 				<dl>
 					<dt>t("Sourcebooks")</dt>
@@ -164,7 +163,9 @@
 			</details>
 
 			<details>
-				<summary><h2>t("Search Options")</h2></summary>
+				<summary>
+					<h2>t("Search Options")</h2>
+				</summary>
 				<p>t("The search is done by tags, which follow the format: ")<code>t("tag: term")</code>t(", where tag is one of the listed below.")</p>
 				<p>t("The default search is by name, so you don&apos;t need the tag for it, but if you use more than one tag for searching you will need to specify the ")<code>name</code>t(" tag to search by name.")</p>
 
@@ -209,7 +210,9 @@
 			</details>
 
 			<details>
-				<summary><h2>t("Material Files naming convension")</h2></summary>
+				<summary>
+					<h2>t("Material Files naming convension")</h2>
+				</summary>
 
 				<p>t("To have a file associated to an item in the collection when using the ")<em>t("&quot;Import Files&quot;")</em>t(" option the file name have to be in the following convension:")
 				</p>
@@ -296,7 +299,7 @@
 
 		<!-- Templates -->
 		<template id="custom-button">
-			<link rel="stylesheet" href="./css/components/button/button.css"/>
+			<link rel="stylesheet" href="./css/components/button/button.css" />
 			<button type="button">
 				<span id="button-icon"></span>
 				<span id="button-text">
@@ -306,12 +309,19 @@
 		</template>
 
 		<template id="dialog">
-			<style>dialog { display: none; }</style>
-			<link rel="stylesheet" href="./css/components/dialog/dialog.css"/>
+			<style>
+				dialog {
+					display: none;
+				}
+
+			</style>
+			<link rel="stylesheet" href="./css/components/dialog/dialog.css" />
 			<slot name="trigger"></slot>
 			<dialog tabindex="-1">
 				<header>
-					<h2><slot name="title"></slot></h2>
+					<h2>
+						<slot name="title"></slot>
+					</h2>
 					<custom-button icon-button id="close" title="t('Close window')">❌</custom-button>
 				</header>
 				<article>
@@ -324,7 +334,7 @@
 		</template>
 
 		<template id="drop-area">
-			<link rel="stylesheet" href="./css/components/drop-area/drop-area.css"/>
+			<link rel="stylesheet" href="./css/components/drop-area/drop-area.css" />
 			<div id="content">
 				<slot></slot>
 			</div>
@@ -338,7 +348,7 @@
 		</template>
 
 		<template id="dropdown-menu">
-			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu.css"/>
+			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu.css" />
 			<custom-button icon-button></custom-button>
 			<dialog tabindex="-1">
 				<slot></slot>
@@ -346,24 +356,24 @@
 		</template>
 
 		<template id="dropdown-menu-item">
-			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu-item.css"/>
+			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu-item.css" />
 			<custom-button wide>
 				<slot></slot>
 			</custom-button>
 		</template>
 
 		<template id="edit-box">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-box.css"/>
+			<link rel="stylesheet" href="./css/components/edit-box/edit-box.css" />
 			<label for="edit-box-input" hidden>
 				<slot name="label"></slot>
 			</label>
 			<skeleton-loader>
-				<input id="edit-box-input" readonly/>
+				<input id="edit-box-input" readonly />
 			</skeleton-loader>
 		</template>
 
 		<template id="edit-list">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-list.css"/>
+			<link rel="stylesheet" href="./css/components/edit-box/edit-list.css" />
 			<details>
 				<summary>
 					<slot name="label"></slot>
@@ -383,13 +393,13 @@
 		</template>
 
 		<template id="edit-list-item">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-list-item.css"/>
+			<link rel="stylesheet" href="./css/components/edit-box/edit-list-item.css" />
 			<slot></slot>
 			<custom-button icon-button small hidden title="t('Remove item')">❌</custom-button>
 		</template>
 
 		<template id="edit-select">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-select.css"/>
+			<link rel="stylesheet" href="./css/components/edit-box/edit-select.css" />
 			<label for="edit-select-input">
 				<slot name="label"></slot>
 			</label>
@@ -406,7 +416,7 @@
 		</template>
 
 		<template id="edit-text">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-text.css"/>
+			<link rel="stylesheet" href="./css/components/edit-box/edit-text.css" />
 			<label for="edit-textarea">
 				<slot name="label"></slot>
 			</label>
@@ -419,7 +429,7 @@
 		</template>
 
 		<template id="item-details">
-			<link rel="stylesheet" href="./css/components/item-info/item-details.css"/>
+			<link rel="stylesheet" href="./css/components/item-info/item-details.css" />
 			<modal-dialog>
 				<edit-box id="name" slot="title" placeholder="t('Item name')"></edit-box>
 
@@ -427,7 +437,7 @@
 					<header>
 						<edit-list id="sku" open>
 							<span slot="label">t("SKU")</span>
-							<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required/>
+							<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required />
 						</edit-list>
 
 						<edit-box id="edition" type="number" min="1" max="6" step="1" required>
@@ -448,7 +458,7 @@
 
 						<edit-list id="releasedate" open>
 							<span slot="label">t("Release date")</span>
-							<input slot="input" type="date" required/>
+							<input slot="input" type="date" required />
 						</edit-list>
 					</header>
 
@@ -468,7 +478,7 @@
 								<option selected disabled hidden value="">t("Please select an option...")</option>
 							</select>
 
-							<input slot="input" required placeholder="t('Name')"/>
+							<input slot="input" required placeholder="t('Name')" />
 						</edit-list>
 
 						<edit-list id="publisher" open>
@@ -483,28 +493,27 @@
 					<aside id="files">
 						<edit-list id="files-list" hidden>
 							<span slot="label">t("Files")</span>
-							<input slot="input" type="hidden" required value="📄"/>
+							<input slot="input" type="hidden" required value="📄" />
 							<label slot="input">t("Add a file")</label>
 						</edit-list>
 
 						<edit-list id="links">
 							<span slot="label">t("Online links")</span>
-							<input slot="input" type="text" placeholder="t('Name')" required/>
-							<input slot="input" type="url" placeholder="t('URL')" required/>
+							<input slot="input" type="text" placeholder="t('Name')" required />
+							<input slot="input" type="url" placeholder="t('URL')" required />
 						</edit-list>
 					</aside>
 
 					<drop-area id="cover-drop-area">
 						<figure>
-								<img
-									width="100"
-									height="160"
-									id="cover"
-									decoding="async"
-									loading="lazy"
-									role="presentation"
-									src="./img/covers/loading-anim.svg"
-								/>
+							<img
+								 width="100"
+								 height="160"
+								 id="cover"
+								 decoding="async"
+								 loading="lazy"
+								 role="presentation"
+								 src="./img/covers/loading-anim.svg" />
 						</figure>
 					</drop-area>
 
@@ -526,22 +535,21 @@
 		</template>
 
 		<template id="item-card">
-			<link rel="stylesheet" href="./css/components/item-info/item-card.css"/>
+			<link rel="stylesheet" href="./css/components/item-info/item-card.css" />
 			<figure>
 				<img
-					decoding="async"
-					loading="lazy"
-					width="100"
-					height="160"
-					role="presentation"
-					src="./img/covers/loading-simple.svg"
-				/>
+					 decoding="async"
+					 loading="lazy"
+					 width="100"
+					 height="160"
+					 role="presentation"
+					 src="./img/covers/loading-simple.svg" />
 			</figure>
 			<h4></h4>
 		</template>
 
 		<template id="menu-bar">
-			<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css"/>
+			<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css" />
 			<nav>
 				<slot></slot>
 			</nav>
@@ -549,7 +557,9 @@
 
 		<template id="progress">
 			<style>
-				:host { display: block; }
+				:host {
+					display: block;
+				}
 
 				dialog[open] {
 					padding: 0;
@@ -577,9 +587,12 @@
 				h1 {
 					color: var(--theme-color);
 				}
+
 			</style>
 			<dialog tabindex="-1">
-				<h1><slot name="title"></slot></h1>
+				<h1>
+					<slot name="title"></slot>
+				</h1>
 				<progress></progress>
 				<p><span id="count"></span></p>
 				<slot name="info"></slot>
@@ -587,22 +600,26 @@
 		</template>
 
 		<template id="radio-item">
-			<link rel="stylesheet" href="./css/components/radio/radio-item.css"/>
+			<link rel="stylesheet" href="./css/components/radio/radio-item.css" />
 			<span id="radio-icon"></span>
-			<h4><slot name="title"></slot></h4>
-			<p><slot></slot></p>
+			<h4>
+				<slot name="title"></slot>
+			</h4>
+			<p>
+				<slot></slot>
+			</p>
 		</template>
 
 		<template id="radio-group">
-			<link rel="stylesheet" href="./css/components/radio/radio-group.css"/>
+			<link rel="stylesheet" href="./css/components/radio/radio-group.css" />
 			<div id="radio-container"></div>
 			<slot></slot>
 		</template>
 
 		<template id="search-box">
-			<link rel="stylesheet" href="./css/components/search-box/search-box.css"/>
+			<link rel="stylesheet" href="./css/components/search-box/search-box.css" />
 			<label for="search-input" title="t('Search')">
-				<input id="search-input" type="search" list="search-suggestions" placeholder="t('Search items...')" role="search"/>
+				<input id="search-input" type="search" list="search-suggestions" placeholder="t('Search items...')" role="search" />
 				<datalist id="search-suggestions"></datalist>
 				<custom-button icon="🔍"></custom-button>
 			</label>
@@ -610,7 +627,9 @@
 
 		<template id="skeleton-loader">
 			<style>
-				:host { box-sizing: inherit; }
+				:host {
+					box-sizing: inherit;
+				}
 
 				#loader {
 					max-width: 20rem;
@@ -635,6 +654,7 @@
 						background-position: -100%;
 					}
 				}
+
 			</style>
 			<div id="loader">
 				t("Loading...")
@@ -643,7 +663,7 @@
 		</template>
 
 		<template id="update-refresh">
-			<link rel="stylesheet" href="./css/components/update-refresh/update-refresh.css"/>
+			<link rel="stylesheet" href="./css/components/update-refresh/update-refresh.css" />
 			<aside role="status" aria-live="polite" hidden>
 				<p></p>
 				<custom-button icon="♻️"></custom-button>
@@ -651,7 +671,7 @@
 		</template>
 
 		<template id="cbz-reader">
-			<link rel="stylesheet" href="./css/components/cbz/reader.css"/>
+			<link rel="stylesheet" href="./css/components/cbz/reader.css" />
 			<menu-bar>
 				<custom-button icon-button id="prev">⏮️</custom-button>
 				<select id="toc"></select>
@@ -668,7 +688,7 @@
 		</template>
 
 		<template id="rom-emulator">
-			<link rel="stylesheet" href="./css/components/emulator/emulator.css"/>
+			<link rel="stylesheet" href="./css/components/emulator/emulator.css" />
 			<aside class="controller" id="left-controller">
 				<button id="button-select">Select</button>
 				<button id="button-start">Start</button>
@@ -697,4 +717,5 @@
 		<script src="./lib/pdfjs/pdf.js"></script>
 		<script src="./js/main.js" type="module"></script>
 	</body>
+
 </html>

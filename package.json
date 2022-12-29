@@ -31,50 +31,64 @@
 	},
 	"scripts": {
 		"postinstall": "husky install",
-		"prepublishOnly": "pinst --disable",
-		"postpublish": "pinst --enable",
-		"start": "snowpack dev --config snowpack.config.dev.mjs",
-		"start:sw": "snowpack dev --config snowpack.config.serviceworker.mjs",
-		"check": "tsc --noEmit",
-		"lint": "npm run lint:js && npm run check && npm run lint:css",
-		"lint:js": "eslint **/*.ts",
-		"lint:css": "stylelint **/*.css",
+
+		"start": "vite",
+		"start:sw": "vite",
+
+		"typecheck": "tsc --noEmit",
+		"lint:js": "eslint src --ext .js,.mjs,.ts,.mts --fix --ignore-path .gitignore",
+		"lint:css": "stylelint **/*.css --fix",
+		"lint": "npm run typecheck && npm run lint:js && npm run lint:css",
+
 		"lint-staged": "lint-staged",
-		"build": "snowpack build --mode production",
-		"postbuild": "node build/postprocess-files.mjs",
-		"build:assets": "npm run build:icons-transparent && npm run build:icons-maskable && npm run build:splash",
-		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --scrape false --dark-mode --opaque false --log false src/img/icons/transparent",
-		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --log false src/img/icons/maskable",
-		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only --log false src/img/splash",
+
+		"prebuild:app": "npm run lint",
+		"build:app": "vite build",
+
+
 		"build:translations": "node build/find-translations.mjs",
-		"clean": "node -e \"require('fs').rmSync('./dist', { force: true, recursive: true})\"",
-		"test": "wtr"
+
+		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --scrape false --dark-mode --opaque false --log false public/icons/transparent",
+		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --log false public/icons/maskable",
+
+		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only --log false public/splash",
+
+		"build:assets": "npm run build:icons-transparent && npm run build:icons-maskable && npm run build:splash",
+
+		"prepreview": "npm run build:app",
+		"preview": "vite preview --port 3000",
+		"test": "vitest",
+		"test:coverage": "vitest run --coverage"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^16.1.0",
-		"@commitlint/config-conventional": "^16.0.0",
-		"@snowpack/web-test-runner-plugin": "^0.2.2",
-		"@types/chai": "^4.3.0",
+		"@commitlint/cli": "^17.0.3",
+		"@commitlint/config-conventional": "^17.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.33.0",
+		"@typescript-eslint/parser": "^5.33.0",
+		"c8": "^7.12.0",
+		"eslint": "^8.21.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"pwa-asset-generator": "^6.1.1",
+		"stylelint": "^14.9.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.0.5",
+		"vite-plugin-chunk-split": "^0.2.7",
+		"vite-plugin-html": "^3.2.0",
+		"vite-plugin-pwa": "^0.12.3",
+		"vitest": "^0.21.1",
 		"@types/emscripten": "^1.39.6",
-		"@types/mocha": "^9.1.0",
-		"@types/wicg-file-system-access": "^2020.9.5",
-		"@typescript-eslint/eslint-plugin": "^5.10.1",
-		"@typescript-eslint/parser": "^5.10.1",
-		"@web/test-runner": "^0.13.26",
-		"@web/test-runner-playwright": "^0.8.8",
-		"chai": "^4.3.6",
-		"eslint": "^8.8.0",
-		"husky": "^7.0.4",
-		"lint-staged": "^12.3.3",
-		"pinst": "^2.1.6",
-		"pwa-asset-generator": "^6.0.6",
-		"snowpack": "^3.8.8",
-		"snowpack-plugin-minify-html": "^0.1.1",
-		"stylelint": "^14.3.0",
-		"typescript": "^4.5.5"
+		"@types/wicg-file-system-access": "^2020.9.5"
 	},
 	"lint-staged": {
-		"*.ts": "eslint --ext .ts --ext .js --fix",
+		"*.ts": [
+			"eslint --ext .ts --fix",
+			"vitest related"
+		],
+		"*.js": [
+			"eslint --ext .js --fix",
+			"vitest related"
+		],
 		"*.css": "stylelint --fix"
 	},
 	"commitlint": {

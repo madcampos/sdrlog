@@ -7,10 +7,19 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Dependency directories
 node_modules/
 jspm_packages/
+dist
+dev-dist
+dist-ssr
+coverage
+*.local
+/cypress/videos/
+/cypress/screenshots/
 
 # Typescript v1 declaration files
 typings/
@@ -34,11 +43,11 @@ typings/
 .vscode/
 
 # Build artifacts
-dist/
 images/covers/
 images/thumbs/
 
 # server certificates
+certs
 *.pem
 *.crt
 *.key

@@ -1,80 +1,82 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Comic Book Reader · %APP_NAME%</title>
+<html lang="en-US" itemscope itemtype="http://schema.org/WebSite">
 
-	<!-- App Metadata -->
-	<link rel="manifest" href="./sdrlog.webmanifest"/>
-	<link rel="icon" href="./img/icons/favicon.svg"/>
-	<meta name="theme-color" content="%THEME_COLOR%">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Comic Book Reader · <%= APP_NAME %></title>
 
-	<!-- Social metadata -->
-	<meta name="keywords" content="%APP_KEYWORDS%"/>
+		<!-- App Metadata -->
+		<link rel="icon" href="/icons/favicon.svg" />
+		<meta name="theme-color" content="<%= APP_THEME_COLOR %>">
 
-	<meta property="og:title" name="twitter:title" itemprop="name" content="%APP_NAME%"/>
-	<meta property="og:description" name="description" itemprop="description" content="%APP_DESCRIPTION%"/>
-	<meta property="og:image" name="twitter:image" itemprop="image" content="%PUBLIC_URL%%LARGE_ICON%"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:locale" content="en_US"/>
-	<meta property="og:url" content="%PUBLIC_URL%" />
-	<meta name="twitter:card" content="summary"/>
-	<meta name="twitter:dnt" content="on">
+		<!-- Social metadata -->
+		<meta name="keywords" content="<%= APP_KEYWORDS %>" />
 
-	<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
+		<meta property="og:title" name="twitter:title" itemprop="name" content="<%= APP_NAME %>" />
+		<meta property="og:description" name="description" itemprop="description" content="<%= APP_DESCRIPTION %>" />
+		<meta property="og:image" name="twitter:image" itemprop="image" content="<%= APP_PUBLIC_URL %><%= APP_LARGE_ICON %>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:url" content="<%= APP_PUBLIC_URL %>" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:dnt" content="on">
 
-	<!-- Site configuration -->
-	<meta name="referrer" content="no-referrer">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="google" content="notranslate"/>
-	<link rel="license" href="%PUBLIC_URL%#copyright">
+		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
 
-	<!-- Apple icons -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<link rel="apple-touch-icon" href="%APPLE_ICON%">
+		<!-- Site configuration -->
+		<meta name="referrer" content="no-referrer">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="google" content="notranslate" />
+		<link rel="license" href="%PUBLIC_URL%#copyright">
 
-	<link rel="stylesheet" href="./css/base.css"/>
-</head>
-<body>
-	<!-- Templates -->
-	<template id="custom-button">
-		<link rel="stylesheet" href="./css/components/button/button.css"/>
-		<button type="button">
-			<span id="button-icon"></span>
-			<span id="button-text">
+		<!-- Apple icons -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="apple-touch-icon" href="<%= APP_APPLE_ICON %>">
+
+		<link rel="stylesheet" href="./css/base.css" />
+	</head>
+
+	<body class="notranslate" translate="no">
+		<!-- Templates -->
+		<template id="custom-button">
+			<link rel="stylesheet" href="./css/components/button/button.css" />
+			<button type="button">
+				<span id="button-icon"></span>
+				<span id="button-text">
+					<slot></slot>
+				</span>
+			</button>
+		</template>
+
+		<template id="menu-bar">
+			<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css" />
+			<nav>
 				<slot></slot>
-			</span>
-		</button>
-	</template>
+			</nav>
+		</template>
 
-	<template id="menu-bar">
-		<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css"/>
-		<nav>
-			<slot></slot>
-		</nav>
-	</template>
-
-	<template id="cbz-reader">
-		<link rel="stylesheet" href="./css/components/cbz/reader.css"/>
-		<menu-bar>
-			<custom-button icon-button id="prev">⏮️</custom-button>
-			<select id="toc"></select>
-			<custom-button icon-button id="next">⏭️</custom-button>
-		</menu-bar>
-		<article id="comic">
-			<div id="comic-loading">
-				<progress></progress>
+		<template id="cbz-reader">
+			<link rel="stylesheet" href="./css/components/cbz/reader.css" />
+			<menu-bar>
+				<custom-button icon-button id="prev">⏮️</custom-button>
+				<select id="toc"></select>
+				<custom-button icon-button id="next">⏭️</custom-button>
+			</menu-bar>
+			<article id="comic">
+				<div id="comic-loading">
+					<progress></progress>
+				</div>
+			</article>
+			<div id="comic-book-overlay">
+				<custom-button icon-button id="open-comic">▶️</custom-button>
 			</div>
-		</article>
-		<div id="comic-book-overlay">
-			<custom-button icon-button id="open-comic">▶️</custom-button>
-		</div>
-	</template>
+		</template>
 
-	<!-- Content -->
-	<cbz-reader></cbz-reader>
+		<!-- Content -->
+		<cbz-reader></cbz-reader>
 
-	<script src="./js/components/cbz/init.js" type="module"></script>
-</body>
+		<script src="./js/components/cbz/init.js" type="module"></script>
+	</body>
+
 </html>
