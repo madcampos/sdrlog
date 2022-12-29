@@ -39,6 +39,7 @@ typings/
 # dotenv environment variables file
 .env
 .env.*
+!.env.example
 
 # VS Code
 .vscode/
