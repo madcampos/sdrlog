@@ -1,13 +1,11 @@
 import type { CustomButton } from '../button/button';
 
-import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
 import { I18n } from '../intl/translations';
 
 export class ModalDialog extends HTMLElement {
 	static get observedAttributes() { return ['open']; }
 	#root: ShadowRoot;
 	#dialog: HTMLDialogElement;
-	#isDialogOpen = false;
 
 	constructor() {
 		super();
@@ -19,10 +17,6 @@ export class ModalDialog extends HTMLElement {
 		this.#root.appendChild(translatedTemplate);
 
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
-
-		if (!this.#dialog.showModal) {
-			dialogPolyfill.registerDialog(this.#dialog);
-		}
 
 		const triggerSlot = this.#root.querySelector('slot[name="trigger"]') as HTMLSlotElement;
 		const [triggerButton] = triggerSlot.assignedElements() as (CustomButton | undefined)[];
@@ -40,7 +34,7 @@ export class ModalDialog extends HTMLElement {
 			evt.preventDefault();
 			evt.stopPropagation();
 
-			this.#dialog.showModal?.();
+			this.#dialog.showModal();
 			this.#dialog.focus();
 		});
 
@@ -97,11 +91,11 @@ export class ModalDialog extends HTMLElement {
 		if (oldValue !== newValue) {
 			if (name === 'open') {
 				if (this.hasAttribute('open')) {
-					this.#dialog.showModal?.();
+					this.#dialog.showModal();
 					this.#dialog.focus();
 					this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 				} else {
-					this.#dialog.close?.();
+					this.#dialog.close();
 					this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 				}
 			}

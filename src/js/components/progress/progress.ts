@@ -1,5 +1,3 @@
-import dialogPolyfill from '../../../../lib/dialog/dialog-polyfill';
-
 export class ProgressOverlay extends HTMLElement {
 	#root: ShadowRoot;
 
@@ -22,10 +20,6 @@ export class ProgressOverlay extends HTMLElement {
 		this.#progress = this.#root.querySelector('progress') as HTMLProgressElement;
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 		this.#count = this.#root.querySelector('span') as HTMLSpanElement;
-
-		if (!this.#dialog.showModal) {
-			dialogPolyfill.registerDialog(this.#dialog);
-		}
 	}
 
 	static createOverlay({ total, title, info }: { total?: number, title?: string, info?: string }) {
@@ -73,13 +67,13 @@ export class ProgressOverlay extends HTMLElement {
 	}
 
 	show() {
-		this.#dialog.showModal?.();
+		this.#dialog.showModal();
 		this.#dialog.focus();
 	}
 
 	close() {
 		if (this.#dialog.hasAttribute('open')) {
-			this.#dialog.close?.();
+			this.#dialog.close();
 		}
 	}
 }
