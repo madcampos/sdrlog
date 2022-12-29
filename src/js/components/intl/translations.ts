@@ -27,7 +27,7 @@ export class I18n {
 		localStorage.setItem('translationLanguage', translationLanguage);
 
 		try {
-			const request = await fetch(`${import.meta.env.PUBLIC_URL}_locales/${translationLanguage}/messages.json`);
+			const request = await fetch(`${import.meta.env.APP_PUBLIC_URL}locales/${translationLanguage}/messages.json`);
 			const translationJson = await request.json() as Record<string, string>;
 
 			loadedTranslations = new Map(Object.entries(translationJson));

@@ -2,7 +2,7 @@ import { readdir, readFile, stat, writeFile } from 'fs/promises';
 import { extname, resolve } from 'path';
 
 const sourceDir = `${resolve('')}/src`;
-const languagesDir = `${sourceDir}/_locales/`;
+const languagesDir = `${sourceDir}/locales/`;
 const aditionalLanguages = ['es-ES', 'pt-BR', 'fr-FR'];
 
 /**
