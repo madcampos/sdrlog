@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import type { EmulatorInitializerFunction, EmulatorModule } from '../../../lib/webretro/webretro';
+import type { EmulatorInitializerFunction, EmulatorModule } from '../../../public/lib/webretro/webretro';
 import type { CustomButton } from '../button/button';
 
 import nipplejs from 'nipplejs';

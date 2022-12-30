@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 export interface EmulatorModule extends EmscriptenModule {
 	canvas: HTMLCanvasElement,
 	_cmd_savefiles(): void,
@@ -15,7 +16,7 @@ export interface EmulatorModule extends EmscriptenModule {
 
 export interface EmulatorInitializer {
 	canvas: HTMLCanvasElement,
-	onRuntimeInitialized: () => Promise<void> | void
+	onRuntimeInitialized(): Promise<void> | void
 }
 
 export type EmulatorInitializerFunction = (moduleInitializer: EmulatorInitializer) => EmulatorModule;

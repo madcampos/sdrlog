@@ -8,7 +8,7 @@
 			"impliedStrict": true
 		},
 		"project": "./tsconfig.json",
-		"extraFileExtensions": [".mjs"]
+		"ignorePatterns": ["public/lib/**", "dist/**"]
 	},
 	"env": {
 		"browser": true,
