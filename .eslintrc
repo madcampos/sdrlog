@@ -7,8 +7,7 @@
 		"ecmaFeatures": {
 			"impliedStrict": true
 		},
-		"project": "./tsconfig.json",
-		"ignorePatterns": ["public/lib/**", "dist/**"]
+		"project": "./tsconfig.json"
 	},
 	"env": {
 		"browser": true,
