@@ -6,7 +6,7 @@ import { defineConfig, type UserConfig } from 'vitest/config';
 import { loadEnv } from 'vite';
 import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 import { createHtmlPlugin } from 'vite-plugin-html';
-import { VitePWA as vitePWA } from 'vite-plugin-pwa';
+import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
 
 const sslOptions = {
 	cert: readFileSync('./certs/server.crt'),
@@ -37,6 +37,58 @@ export default defineConfig(({ mode }) => {
 		...loadEnv(mode, process.cwd(), 'APP_')
 	};
 
+	const manifest = {
+		id: 'fff096ca-41fa-41ca-bf0d-657154e0c1af',
+		name: env.APP_NAME,
+		short_name: env.APP_SHORT_NAME,
+		lang: 'en-US',
+		description: env.APP_DESCRIPTION,
+		categories: ['entertainment', 'utilities', 'games'],
+		display: 'standalone',
+		orientation: 'portrait',
+		display_override: ['window-controls-overlay'],
+		background_color: env.APP_BACKGROUND_COLOR,
+		theme_color: env.APP_THEME_COLOR,
+		icons: [
+			{
+				src: env.APP_SMALL_ICON,
+				sizes: '192x192',
+				type: 'image/png',
+				purpose: 'any'
+			},
+			{
+				src: env.APP_SMALL_ICON_BG,
+				sizes: '192x192',
+				type: 'image/png',
+				purpose: 'maskable'
+			},
+			{
+				src: env.APP_LARGE_ICON,
+				sizes: '512x512',
+				type: 'image/png',
+				purpose: 'any'
+			},
+			{
+				src: env.APP_LARGE_ICON_BG,
+				sizes: '512x512',
+				type: 'image/png',
+				purpose: 'maskable'
+			}
+		],
+		protocol_handlers: [
+			{
+				protocol: 'web+sdrlog',
+				url: './?search=%s'
+			}
+		],
+		capture_links: 'existing-client-navigate',
+		url_handlers: [{ origin: '%PUBLIC_URL%' }],
+		launch_handler: {
+			route_to: 'existing-client',
+			navigate_existing_client: 'always'
+		}
+	};
+
 	const config: UserConfig = {
 		plugins: [
 			chunkSplitPlugin({ strategy: 'unbundle' }),
@@ -50,57 +102,7 @@ export default defineConfig(({ mode }) => {
 				registerType: 'prompt',
 				minify: true,
 				includeAssets: ['/icons/favicon.svg'],
-				manifest: {
-					id: 'fff096ca-41fa-41ca-bf0d-657154e0c1af',
-					name: env.APP_NAME,
-					short_name: env.APP_SHORT_NAME,
-					lang: 'en-US',
-					description: env.APP_DESCRIPTION,
-					categories: ['entertainment', 'utilities', 'games'],
-					display: 'standalone',
-					orientation: 'portrait',
-					display_override: ['window-controls-overlay'],
-					background_color: env.APP_BACKGROUND_COLOR,
-					theme_color: env.APP_THEME_COLOR,
-					icons: [
-						{
-							src: env.APP_SMALL_ICON,
-							sizes: '192x192',
-							type: 'image/png',
-							purpose: 'any'
-						},
-						{
-							src: env.APP_SMALL_ICON_BG,
-							sizes: '192x192',
-							type: 'image/png',
-							purpose: 'maskable'
-						},
-						{
-							src: env.APP_LARGE_ICON,
-							sizes: '512x512',
-							type: 'image/png',
-							purpose: 'any'
-						},
-						{
-							src: env.APP_LARGE_ICON_BG,
-							sizes: '512x512',
-							type: 'image/png',
-							purpose: 'maskable'
-						}
-					],
-					protocol_handlers: [
-						{
-							protocol: 'web+sdrlog',
-							url: './?search=%s'
-						}
-					],
-					capture_links: 'existing-client-navigate',
-					url_handlers: [{ origin: '%PUBLIC_URL%' }],
-					launch_handler: {
-						route_to: 'existing-client',
-						navigate_existing_client: 'always'
-					}
-				},
+				manifest: manifest as Partial<ManifestOptions>,
 				workbox: {
 					cleanupOutdatedCaches: true,
 					clientsClaim: true,
