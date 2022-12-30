@@ -1,4 +1,5 @@
-import '../../../lib/zip/jszip';
+import JSZip from 'jszip';
+
 import { getBiosFiles, saveBiosFile } from '../data-operations/idb-persistence';
 import { Logger } from '../logger/logger';
 

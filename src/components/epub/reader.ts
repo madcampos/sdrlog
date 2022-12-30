@@ -5,7 +5,8 @@ import type Book from '../../../lib/epub/types/book';
 import type Section from '../../../lib/epub/types/section';
 import type { Location as BookLocation } from '../../../lib/epub/types/rendition';
 
-import '../../../lib/zip/jszip';
+import 'jszip';
+
 import '../../../lib/epub/epub';
 
 import { getFile } from '../data-operations/idb-persistence';

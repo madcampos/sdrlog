@@ -1,6 +1,7 @@
+import JSZip from 'jszip';
+
 import { ProgressOverlay } from '../progress/progress';
 import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
-import '../../../lib/zip/jszip';
 import fileSave from '../../../lib/file-system/file-save';
 import { I18n } from '../intl/translations';
 import { Logger } from '../logger/logger';

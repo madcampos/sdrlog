@@ -1,6 +1,6 @@
-import type { CustomButton } from '../button/button';
+import JSZip from 'jszip';
 
-import '../../../lib/zip/jszip';
+import type { CustomButton } from '../button/button';
 
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';

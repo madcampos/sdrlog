@@ -1,4 +1,5 @@
-import '../../../lib/zip/jszip';
+import JSZip from 'jszip';
+
 import { getBundleFiles, saveBundleFile } from '../data-operations/idb-persistence';
 import { Logger } from '../logger/logger';
 
