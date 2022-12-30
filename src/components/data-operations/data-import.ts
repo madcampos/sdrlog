@@ -1,4 +1,4 @@
-import type { SDRLogData } from '../../../data/data';
+import type { SDRLogData } from '../../../public/data/data';
 import { I18n } from '../intl/translations';
 import { Logger } from '../logger/logger';
 import { ProgressOverlay } from '../progress/progress';

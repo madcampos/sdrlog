@@ -1,4 +1,4 @@
-import type { Material } from '../../../data/data';
+import type { Material } from '../../../public/data/data';
 
 import { readFiles } from '../files-reader/files-reader';
 import { extractCoversFromFiles, importCoversFromFolder } from '../covers/fetch-covers';

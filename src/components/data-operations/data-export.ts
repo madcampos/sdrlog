@@ -1,4 +1,4 @@
-import type { IsoCode, Material } from '../../../data/data';
+import type { IsoCode, Material } from '../../../public/data/data';
 import type { NewMaterialProperties } from './create-material';
 
 import { ProgressOverlay } from '../progress/progress';

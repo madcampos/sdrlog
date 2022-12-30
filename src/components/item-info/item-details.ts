@@ -4,7 +4,7 @@ import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
 import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
-import type { FileForMaterial, Material } from '../../../data/data';
+import type { FileForMaterial, Material } from '../../../public/data/data';
 import type { EditListItem } from '../edit-box/edit-list-item';
 import type { DropArea } from '../drop-area/drop-area';
 import type { NewMaterialProperties } from '../data-operations/create-material';

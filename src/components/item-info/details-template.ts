@@ -1,5 +1,5 @@
 /* eslint-disable no-ternary */
-import type { FileForMaterial, MaterialLink } from '../../../data/data';
+import type { FileForMaterial, MaterialLink } from '../../../public/data/data';
 import { formatFullDate, translateLanguageName } from '../intl/formatting';
 import { I18n } from '../intl/translations';
 

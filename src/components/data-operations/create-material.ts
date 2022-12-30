@@ -1,4 +1,4 @@
-import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../data/data';
+import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 import { Logger } from '../logger/logger';
 

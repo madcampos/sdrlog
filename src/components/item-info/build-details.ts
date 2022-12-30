@@ -1,4 +1,4 @@
-import type { Material } from '../../../data/data';
+import type { Material } from '../../../public/data/data';
 import { FALLBACK_COVER, fetchCover } from '../covers/fetch-covers';
 import { getFilesForMaterial } from '../data-operations/idb-persistence';
 import type { EditBox } from '../edit-box/edit-box';
