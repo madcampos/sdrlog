@@ -55,7 +55,8 @@
 		"@types/marked": "^4.0.8",
 		"epubjs": "^0.3.93",
 		"jszip": "^3.10.1",
-		"marked": "^4.2.5"
+		"marked": "^4.2.5",
+		"pdfjs-dist": "^3.1.81"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",

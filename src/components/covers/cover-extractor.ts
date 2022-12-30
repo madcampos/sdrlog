@@ -1,10 +1,6 @@
-import type { PDFjsModule } from '../../../lib/pdfjs/pdf.js';
+import pdfjs from 'pdfjs-dist';
 import { I18n } from '../intl/translations';
 import { optimize } from './optimizer';
-
-const pdfjs = window['pdfjs-dist/build/pdf'] as PDFjsModule;
-
-pdfjs.GlobalWorkerOptions.workerSrc = `${import.meta.env.APP_PUBLIC_URL}lib/pdfjs/pdf.worker.js`;
 
 export const COVER_WIDTH = 1024;
 export const THUMB_WIDTH = 256;
@@ -95,7 +91,7 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 		canvas.width = scaledCover.width;
 		canvasContext.drawImage(scaledCover, 0, 0);
 
-		let optimizedCover: Blob | ArrayBuffer;
+		let optimizedCover: Blob | ArrayBuffer | BufferSource;
 
 		if (skipOptimize) {
 			optimizedCover = (await new Promise((resolve: BlobCallback) => {
