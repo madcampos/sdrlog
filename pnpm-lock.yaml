@@ -16,6 +16,7 @@ specifiers:
   jszip: ^3.10.1
   lint-staged: ^13.0.3
   marked: ^4.2.5
+  nipplejs: ^0.10.0
   pdfjs-dist: ^3.1.81
   pwa-asset-generator: ^6.1.1
   stylelint: ^14.9.1
@@ -32,6 +33,7 @@ dependencies:
   epubjs: 0.3.93
   jszip: 3.10.1
   marked: 4.2.5
+  nipplejs: 0.10.0
   pdfjs-dist: 3.1.81
 
 devDependencies:
@@ -4605,6 +4607,10 @@ packages:
 
   /next-tick/1.1.0:
     resolution: {integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==}
+    dev: false
+
+  /nipplejs/0.10.0:
+    resolution: {integrity: sha512-BYrPA2meyOrk59NZTwKpnbVWYE89kAuMy34hnmjNyW/JmmuQfUs/k7lJhdPgZUjI3ZU7xbASOjCeDLeIDD+8VQ==}
     dev: false
 
   /no-case/3.0.4:

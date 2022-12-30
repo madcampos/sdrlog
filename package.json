@@ -56,6 +56,7 @@
 		"epubjs": "^0.3.93",
 		"jszip": "^3.10.1",
 		"marked": "^4.2.5",
+		"nipplejs": "^0.10.0",
 		"pdfjs-dist": "^3.1.81"
 	},
 	"devDependencies": {

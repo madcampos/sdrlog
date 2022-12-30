@@ -2,7 +2,7 @@
 import type { EmulatorInitializerFunction, EmulatorModule } from '../../../lib/webretro/webretro';
 import type { CustomButton } from '../button/button';
 
-import '../../../lib/nipplejs/nipplejs';
+import nipplejs from 'nipplejs';
 
 import { getEmulatorSaveFile, getFile, saveEmulatorSaveFile } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
