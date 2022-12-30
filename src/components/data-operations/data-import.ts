@@ -1,5 +1,4 @@
 import type { SDRLogData } from '../../../data/data';
-import fileOpen from '../../../lib/file-system/file-open';
 import { I18n } from '../intl/translations';
 import { Logger } from '../logger/logger';
 import { ProgressOverlay } from '../progress/progress';
@@ -65,24 +64,19 @@ export async function fetchItems() {
 
 export async function requestDataFileFromUser() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Read data file` });
-	let file;
 
 	try {
-		if ('showOpenFilePicker' in window) {
-			const [fileHandle] = await window.showOpenFilePicker({
-				// @ts-expect-error
-				id: 'dataFile',
-				startIn: 'downloads',
-				excludeAcceptAllOption: false,
-				types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
-			});
+		const [fileHandle] = await window.showOpenFilePicker({
+			// @ts-expect-error
+			id: 'dataFile',
+			startIn: 'downloads',
+			excludeAcceptAllOption: false,
+			types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
+		});
 
-			await saveFile('data.json', fileHandle);
+		await saveFile('data.json', fileHandle);
 
-			file = await fileHandle.getFile();
-		} else {
-			file = await fileOpen({ extensions: ['.json'] });
-		}
+		const file = await fileHandle.getFile();
 
 		const parsedFile = JSON.parse(await file.text()) as SDRLogData;
 

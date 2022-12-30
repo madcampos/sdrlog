@@ -1,4 +1,3 @@
-import fileOpen from '../../../lib/file-system/file-open';
 import { I18n } from '../intl/translations';
 
 export class DropArea extends HTMLElement {
@@ -28,23 +27,16 @@ export class DropArea extends HTMLElement {
 		this.#overlay = this.#root.querySelector('#overlay') as HTMLDivElement;
 
 		this.#overlay.addEventListener('click', async () => {
-			if ('showOpenFilePicker' in window) {
-				// @ts-expect-error
-				const [handle] = await window.showOpenFilePicker({
-					id: this.id,
-					startIn: 'downloads',
-					multiple: this.#multiple,
-					excludeAcceptAllOption: false,
-					types: [this.#accepts]
-				});
+			// @ts-expect-error
+			const [handle] = await window.showOpenFilePicker({
+				id: this.id,
+				startIn: 'downloads',
+				multiple: this.#multiple,
+				excludeAcceptAllOption: false,
+				types: [this.#accepts]
+			});
 
-				this.#file = await handle.getFile();
-			} else {
-				this.#file = await fileOpen({
-					mimeTypes: Object.keys(this.#accepts.accept),
-					multiple: this.#multiple
-				});
-			}
+			this.#file = await handle.getFile();
 
 			this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
 		});

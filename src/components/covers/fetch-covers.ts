@@ -3,7 +3,6 @@ import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-o
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
-import directoryOpen from '../../../lib/file-system/directory-open';
 import { I18n } from '../intl/translations';
 import { Logger } from '../logger/logger';
 
@@ -85,23 +84,19 @@ export async function importCoversFromFolder() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Import Covers` });
 
 	try {
-		let files = [];
+		const files = [];
 
-		if ('showDirectoryPicker' in window) {
-			const dir = await window.showDirectoryPicker({
-				id: 'originalCoversFolder',
-				startIn: 'downloads'
-			});
+		const dir = await window.showDirectoryPicker({
+			id: 'originalCoversFolder',
+			startIn: 'downloads'
+		});
 
-			for await (const entry of dir.values()) {
-				if (entry.kind === 'file') {
-					await getFilePermission(entry);
+		for await (const entry of dir.values()) {
+			if (entry.kind === 'file') {
+				await getFilePermission(entry);
 
-					files.push(await entry.getFile());
-				}
+				files.push(await entry.getFile());
 			}
-		} else {
-			files = await directoryOpen();
 		}
 
 		progressOverlay.setTotal(files.length);
