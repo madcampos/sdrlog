@@ -1,4 +1,4 @@
-import { default as marked } from '../../../lib/marked/marked';
+import { marked } from 'marked';
 import { I18n } from '../intl/translations';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 
