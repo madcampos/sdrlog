@@ -1,13 +1,11 @@
 import type { CustomButton } from '../button/button';
-import type { NavItem } from '../../../lib/epub/types/navigation';
-import type { BookOptions } from '../../../lib/epub/types/book';
-import type Book from '../../../lib/epub/types/book';
-import type Section from '../../../lib/epub/types/section';
-import type { Location as BookLocation } from '../../../lib/epub/types/rendition';
+import type { Location as BookLocation, NavItem } from 'epubjs';
+import type { BookOptions } from 'epubjs/types/book';
+import type Section from 'epubjs/types/section';
+import type Book from 'epubjs/types/book';
 
 import 'jszip';
-
-import '../../../lib/epub/epub';
+import 'epubjs';
 
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';
