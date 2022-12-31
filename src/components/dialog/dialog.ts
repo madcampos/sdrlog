@@ -1,6 +1,6 @@
 import template from './template.html?raw';
 import style from './style.css?raw';
-import { BaseComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../base/BaseComponent';
 
 const watchedAttributes = ['open'];
 
@@ -8,7 +8,7 @@ export interface SdrDialog {
 	open: boolean
 }
 
-export class SdrDialog extends BaseComponent {
+export class SdrDialog extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 	#dialog: HTMLDialogElement;
 

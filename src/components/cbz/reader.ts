@@ -1,5 +1,5 @@
 import JSZip from 'jszip';
-import { BaseComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../base/BaseComponent';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';
@@ -43,7 +43,7 @@ export interface SdrComicBookReader {
 	previousPageVisibility: 'visible' | 'hidden'
 }
 
-export class SdrComicBookReader extends BaseComponent {
+export class SdrComicBookReader extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
 	#renderArea: HTMLElement;

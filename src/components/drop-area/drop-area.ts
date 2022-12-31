@@ -1,5 +1,5 @@
 import { I18n } from '../../js/intl/translations';
-import { BaseComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -10,7 +10,7 @@ export interface SdrDropArea {
 	isAcceptingFiles: boolean
 }
 
-export class SdrDropArea extends BaseComponent {
+export class SdrDropArea extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 	#overlay: HTMLDivElement;
 	#accepts: FilePickerAcceptType = {

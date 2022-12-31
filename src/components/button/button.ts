@@ -1,4 +1,4 @@
-import { BaseComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -11,7 +11,7 @@ export interface SdrButton {
 	focus(): void
 }
 
-export class SdrButton extends BaseComponent {
+export class SdrButton extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
 	#button: HTMLButtonElement;

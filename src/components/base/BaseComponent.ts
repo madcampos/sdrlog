@@ -5,7 +5,7 @@ import { templateParser, type TemplateParser } from './serialization';
 import baseStyle from './BaseComponent.css?raw';
 
 const DEBUG_MODE = false as const as boolean;
-const DEBUG_HEADER = '%c[Custom Component]';
+const DEBUG_HEADER = '%c[SDR Component]';
 const DEBUG_STYLE = 'color: #9400d3; font-weight: bold; background: #000000; border-radius: 5px; padding: 2px 5px;';
 
 type PropPrimitiveTypes = boolean | string | number | object;
@@ -50,7 +50,7 @@ export interface CustomElementInterface {
 	attributeChangedCallback?(name: string, oldValue: string, newValue: string): void | Promise<void>
 }
 
-interface BaseComponentConstructor {
+interface SdrComponentConstructor {
 	name: string,
 	watchedSlots?: WatchedSlots,
 	props?: PropDefinition<PropTypes>[],
@@ -60,7 +60,7 @@ interface BaseComponentConstructor {
 	handlers?: Record<string, EventHandler>
 }
 
-export class BaseComponent extends HTMLElement implements CustomElementInterface {
+export class SdrComponent extends HTMLElement implements CustomElementInterface {
 	static formAssociated = true;
 
 	#watchedSlots: WatchedSlots = {};
@@ -74,11 +74,11 @@ export class BaseComponent extends HTMLElement implements CustomElementInterface
 	handlers: Record<string, EventHandler | undefined> = {};
 	name = 'NO NAME';
 
-	constructor({ name, template, watchedSlots, props, watchedAttributes, style, handlers }: BaseComponentConstructor) {
+	constructor({ name, template, watchedSlots, props, watchedAttributes, style, handlers }: SdrComponentConstructor) {
 		super();
 
 		this.name = name;
-		this.#elementId = `${this.name}-${BaseComponent.uniqueID}`;
+		this.#elementId = `${this.name}-${SdrComponent.uniqueID}`;
 		this.#root = this.attachShadow({ mode: 'closed', delegatesFocus: true });
 
 		if ('attachInternals' in this) {
@@ -189,7 +189,7 @@ export class BaseComponent extends HTMLElement implements CustomElementInterface
 
 		const domTree = tempTemplate.content.cloneNode(true) as DocumentFragment;
 
-		const { props, handlers } = BaseComponent.templateParser(domTree);
+		const { props, handlers } = SdrComponent.templateParser(domTree);
 
 
 		if (DEBUG_MODE) {
@@ -259,6 +259,16 @@ export class BaseComponent extends HTMLElement implements CustomElementInterface
 		}
 	}
 
+	#deserializeAttributeToProp(attr: string, element: HTMLElement, type: PropTypes) {
+		const value = element.getAttribute(attr);
+
+		if (DEBUG_MODE) {
+			console.log(`${DEBUG_HEADER} Deserialize attribute "${attr}" to prop: "${value}"`, DEBUG_STYLE);
+		}
+
+		return this.#parseValue(value, type);
+	}
+
 	#serializePropToElement(element: HTMLElement, value: PropTypes) {
 		if (DEBUG_MODE) {
 			console.log(`${DEBUG_HEADER} Serialize prop to element: "${value instanceof Object ? JSON.stringify(value) : value.toString()}"`, DEBUG_STYLE);
@@ -294,17 +304,19 @@ export class BaseComponent extends HTMLElement implements CustomElementInterface
 			throw new Error(`Prop "${name}" is not defined in watched props`);
 		}
 
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Get computed prop: "${name}"`, DEBUG_STYLE);
-		}
-
 		if (!this.#computedPropsCache.has(name)) {
 			const prop = this.#props.get(name) as Prop<T>;
 
 			this.#updateProp(name, prop.value, true);
 		}
 
-		return this.#computedPropsCache.get(name) as T;
+		const computedValue = this.#computedPropsCache.get(name) as T;
+
+		if (DEBUG_MODE) {
+			console.log(`${DEBUG_HEADER} Get computed prop "${name}": ${computedValue instanceof Object ? JSON.stringify(computedValue) : computedValue.toString()}`, DEBUG_STYLE);
+		}
+
+		return computedValue;
 	}
 
 	#propagatePropUpdates<T extends PropTypes>(prop: Prop<T>, newValue: T) {
@@ -362,6 +374,17 @@ export class BaseComponent extends HTMLElement implements CustomElementInterface
 		}
 
 		this.#serializePropToAttribute(attributeName, element, this[prop]);
+
+		new MutationObserver(([mutation]) => {
+			if (mutation.oldValue !== this[prop]) {
+				const value = this.#deserializeAttributeToProp(attributeName, element, typeof this[prop]);
+
+				this.#updateProp(prop, value);
+			}
+		}).observe(element, {
+			attributes: true,
+			attributeFilter: [attributeName]
+		});
 
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		this.#props.get(prop)!.boundAttributes[attributeName] = element;
