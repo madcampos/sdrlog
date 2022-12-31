@@ -4,7 +4,10 @@
 		:icon="icon"
 		@click="toggleMenu"
 	></sdr-button>
-	<dialog tabindex="-1">
+	<dialog
+		tabindex="-1"
+		:open="open"
+	>
 		<slot></slot>
 	</dialog>
 </template>

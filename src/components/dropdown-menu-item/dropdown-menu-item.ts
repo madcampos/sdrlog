@@ -1,6 +1,6 @@
 import type { SdrButton } from '../button/button';
 
-import { BaseComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -11,7 +11,7 @@ export interface SdrDropdownItem {
 	icon: string
 }
 
-export class SdrDropdownItem extends BaseComponent {
+export class SdrDropdownItem extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 	#button: SdrButton;
 

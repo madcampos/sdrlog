@@ -1,6 +1,6 @@
 import type { SdrDropdownItem } from '../dropdown-menu-item/dropdown-menu-item';
 
-import { BaseComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -12,7 +12,7 @@ export interface SdrDropdown {
 	open: boolean
 }
 
-export class SdrDropdown extends BaseComponent {
+export class SdrDropdown extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 	#dialog: HTMLDialogElement;
 
@@ -22,7 +22,7 @@ export class SdrDropdown extends BaseComponent {
 			watchedAttributes,
 			props: [
 				{ name: 'icon', value: '', attributeName: 'icon' },
-				{ name: 'open', value: () => !this.#dialog.hasAttribute('open'), attributeName: 'open' }
+				{ name: 'open', value: false, attributeName: 'open' }
 			],
 			handlers: {
 				toggleMenu: (evt) => {
