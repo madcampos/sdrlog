@@ -1,58 +1,39 @@
-import { I18n } from '../intl/translations';
+import { BaseComponent } from '../base/BaseComponent';
 
-export class CustomButton extends HTMLElement {
-	static get observedAttributes() { return ['icon', 'disabled']; }
+import template from './template.html?raw';
+import style from './style.css?raw';
 
-	#root: ShadowRoot;
+const watchedAttributes = ['icon', 'disabled'];
+
+export interface SdrButton {
+	disabled: boolean,
+	icon: string,
+	focus(): void
+}
+
+export class SdrButton extends BaseComponent {
+	static get observedAttributes() { return watchedAttributes; }
+
 	#button: HTMLButtonElement;
-	#icon: HTMLSpanElement;
 
 	constructor() {
-		super();
+		super({
+			name: 'sdr-button',
+			watchedAttributes,
+			props: [
+				{ name: 'disabled', value: false, attributeName: 'disabled' },
+				{ name: 'icon', value: '', attributeName: 'icon' }
+			],
+			template,
+			style
+		});
 
-		const template = document.querySelector('#custom-button') as HTMLTemplateElement;
-
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
-
-		this.#button = this.#root.querySelector('button') as HTMLButtonElement;
-		this.#icon = this.#root.querySelector('span#button-icon') as HTMLSpanElement;
-	}
-
-	get disabled() {
-		return this.#button.disabled;
-	}
-
-	set disabled(newValue: boolean) {
-		this.#button.disabled = newValue;
-	}
-
-	get icon() {
-		return this.#icon.innerText;
-	}
-
-	set icon(newValue: string) {
-		this.#icon.innerText = newValue;
+		this.#button = this.root.querySelector('button') as HTMLButtonElement;
 	}
 
 	focus() {
 		this.#button.focus();
 	}
-
-	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-		if (oldValue !== newValue) {
-			if (name === 'icon') {
-				this.#icon.innerText = newValue;
-			} else if (name === 'disabled') {
-				this.disabled = this.hasAttribute('disabled');
-			}
-		}
-	}
-
-	connectedCallback() {
-		I18n.translateElementsContent(this);
-		this.#icon.innerText = this.getAttribute('icon') ?? '';
-	}
 }
 
-customElements.define('custom-button', CustomButton);
+customElements.define('sdr-button', SdrButton);

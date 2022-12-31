@@ -1,0 +1,11 @@
+<template>
+	<button
+		type="button"
+		:disabled="disabled"
+	>
+		<span id="button-icon">{{icon}}</span>
+		<span id="button-text">
+			<slot></slot>
+		</span>
+	</button>
+</template>
