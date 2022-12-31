@@ -1,50 +1,59 @@
-import type { SdrButton } from '../button/button';
-import type { DropdownMenuItem } from './dropdown-menu-item';
+import type { SdrDropdownItem } from '../dropdown-menu-item/dropdown-menu-item';
 
-export class DropdownMenu extends HTMLElement {
-	static get observedAttributes() { return ['icon']; }
-	#root: ShadowRoot;
-	#button: SdrButton;
+import { BaseComponent } from '../base/BaseComponent';
+
+import template from './template.html?raw';
+import style from './style.css?raw';
+
+const watchedAttributes = ['icon', 'open'];
+
+export interface SdrDropdown {
+	icon: string,
+	open: boolean
+}
+
+export class SdrDropdown extends BaseComponent {
+	static get observedAttributes() { return watchedAttributes; }
 	#dialog: HTMLDialogElement;
 
 	constructor() {
-		super();
+		super({
+			name: 'sdr-dropdown',
+			watchedAttributes,
+			props: [
+				{ name: 'icon', value: '', attributeName: 'icon' },
+				{ name: 'open', value: () => !this.#dialog.hasAttribute('open'), attributeName: 'open' }
+			],
+			handlers: {
+				toggleMenu: (evt) => {
+					evt.preventDefault();
+					evt.stopPropagation();
 
-		const template = document.querySelector('#dropdown-menu') as HTMLTemplateElement;
-
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
-
-		this.#button = this.#root.querySelector('custom-button') as SdrButton;
-		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
-
-		this.#button.addEventListener('click', (evt) => {
-			evt.preventDefault();
-			evt.stopPropagation();
-
-			this.toggle();
-			(document.activeElement as HTMLElement | undefined)?.blur();
+					this.toggle();
+					(document.activeElement as HTMLElement | undefined)?.blur();
+				}
+			},
+			template,
+			style
 		});
 
+		this.#dialog = this.root.querySelector('dialog') as HTMLDialogElement;
+
 		window.addEventListener('click', () => {
-			if (this.#dialog.hasAttribute('open')) {
+			if (this.open) {
 				this.close();
 			}
 		});
 
 		window.addEventListener('keydown', (evt) => {
-			if (evt.key === 'Escape' && this.#dialog.hasAttribute('open')) {
+			if (evt.key === 'Escape' && this.open) {
 				this.close();
 			}
 		});
 	}
 
-	get isClosed() {
-		return this.#dialog.hasAttribute('open');
-	}
-
 	toggle() {
-		if (this.#dialog.hasAttribute('open')) {
+		if (this.open) {
 			this.close();
 		} else {
 			this.show();
@@ -75,7 +84,7 @@ export class DropdownMenu extends HTMLElement {
 	}
 
 	focusNext() {
-		const elements = [...this.querySelectorAll<DropdownMenuItem>('dropdown-menu-item:not([separator])')];
+		const elements = [...this.querySelectorAll<SdrDropdownItem>('sdr-dropdown-item:not([separator])')];
 
 		if (document.activeElement && elements.length > 0) {
 			if (document.activeElement.parentElement !== this) {
@@ -93,7 +102,7 @@ export class DropdownMenu extends HTMLElement {
 	}
 
 	focusPrevious() {
-		const elements = [...this.querySelectorAll<DropdownMenuItem>('dropdown-menu-item:not([separator])')];
+		const elements = [...this.querySelectorAll<SdrDropdownItem>('sdr-dropdown-item:not([separator])')];
 
 		if (document.activeElement && elements.length > 0) {
 			if (document.activeElement.parentElement !== this) {
@@ -109,14 +118,6 @@ export class DropdownMenu extends HTMLElement {
 			}
 		}
 	}
-
-	attributeChangedCallback(_name: string, _oldValue: string, newValue: string) {
-		this.#button.icon = newValue;
-	}
-
-	connectedCallback() {
-		this.#button.icon = this.getAttribute('icon') ?? '';
-	}
 }
 
-customElements.define('dropdown-menu', DropdownMenu);
+customElements.define('sdr-dropdown', SdrDropdown);

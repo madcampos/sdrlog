@@ -1,0 +1,10 @@
+<template>
+	<sdr-button
+		icon-button
+		:icon="icon"
+		@click="toggleMenu"
+	></sdr-button>
+	<dialog tabindex="-1">
+		<slot></slot>
+	</dialog>
+</template>

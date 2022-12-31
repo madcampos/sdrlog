@@ -1,7 +1,7 @@
 import './button/button';
 import './dialog/dialog';
 import './drop-area/drop-area';
-import './dropdown-menu/dropdown-menu-item';
+import './dropdown-menu-item/dropdown-menu-item';
 import './dropdown-menu/dropdown-menu';
 import './edit-box/edit-box';
 import './edit-box/edit-list-item';

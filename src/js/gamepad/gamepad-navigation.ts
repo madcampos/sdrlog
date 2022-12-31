@@ -1,5 +1,5 @@
 import type { SdrDialog } from '../../components/dialog/dialog';
-import type { DropdownMenu } from '../../components/dropdown-menu/dropdown-menu';
+import type { SdrDropdown } from '../../components/dropdown-menu/dropdown-menu';
 import type { ItemCard } from '../../components/item-info/item-card';
 import type { ItemDetails } from '../../components/item-info/item-details';
 import type { SearchBox } from '../../components/search-box/search-box';
@@ -18,14 +18,14 @@ const gamepadNormalizer = new GamepadEventNormalizer(resetFocus);
 
 function selectNextMenuItem() {
 	if (document.activeElement?.matches('dropdown-menu-item') ?? false) {
-		document.activeElement?.closest<DropdownMenu>('dropdown-menu')?.focusNext();
+		document.activeElement?.closest<SdrDropdown>('dropdown-menu')?.focusNext();
 		gamepadNormalizer.vibrate();
 	}
 }
 
 function selectPreviousMenuItem() {
 	if (document.activeElement?.matches('dropdown-menu-item') ?? false) {
-		document.activeElement?.closest<DropdownMenu>('dropdown-menu')?.focusPrevious();
+		document.activeElement?.closest<SdrDropdown>('dropdown-menu')?.focusPrevious();
 		gamepadNormalizer.vibrate();
 	}
 }
@@ -39,9 +39,9 @@ function activateMenuItem() {
 
 function closeMenu() {
 	if (document.activeElement?.matches('dropdown-menu-item') ?? false) {
-		const menu = document.activeElement?.closest<DropdownMenu>('dropdown-menu');
+		const menu = document.activeElement?.closest<SdrDropdown>('dropdown-menu');
 
-		if (menu?.isClosed ?? false) {
+		if (!(menu?.open ?? false)) {
 			menu?.close();
 			gamepadNormalizer.vibrate();
 			resetFocus();
@@ -53,7 +53,7 @@ function openMenu(menuId: string) {
 	const openModal = document.querySelector<SdrDialog>('sdr-dialog[open]');
 
 	if (!openModal) {
-		document.querySelector<DropdownMenu>(menuId)?.toggle();
+		document.querySelector<SdrDropdown>(menuId)?.toggle();
 		gamepadNormalizer.vibrate();
 	}
 }
