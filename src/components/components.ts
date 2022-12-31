@@ -17,4 +17,4 @@ import './radio/radio-group';
 import './radio/radio-item';
 import './search-box/search-box';
 import './skeleton-loader/skeleton-loader';
-import './update-refresh/update-refresh';
+import './update-notify/update-notify';
