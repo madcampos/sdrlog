@@ -1,0 +1,17 @@
+:host {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+	line-height: 1;
+
+	box-sizing: inherit;
+}
+
+:host *,
+:host *::before,
+:host *::after {
+	box-sizing: inherit;
+	transition: inherit;
+	font-family: inherit;
+}
