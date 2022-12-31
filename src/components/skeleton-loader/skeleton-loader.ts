@@ -1,4 +1,4 @@
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 
 export class SkeletonLoader extends HTMLElement {
 	static get observedAttributes() { return ['loaded']; }

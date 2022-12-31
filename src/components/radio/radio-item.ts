@@ -1,4 +1,4 @@
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 
 export class RadioItem extends HTMLElement {
 	static get observedAttributes() { return ['icon', 'name', 'value']; }

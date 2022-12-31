@@ -1,6 +1,6 @@
 import type { SdrButton } from '../button/button';
-import { I18n } from '../intl/translations';
-import type { WorkerMessage } from '../../js/rpc-messages';
+import { I18n } from '../../js/intl/translations';
+import type { WorkerMessage } from '../../types/rpc-messages';
 
 class UpdateRefresh extends HTMLElement {
 	#root: ShadowRoot;

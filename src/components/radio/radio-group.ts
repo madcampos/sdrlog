@@ -1,5 +1,5 @@
 import type { RadioItem } from './radio-item';
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 
 export class RadioGroup extends HTMLElement {
 	#root: ShadowRoot;

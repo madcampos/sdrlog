@@ -1,7 +1,7 @@
-import { ProgressOverlay } from '../progress/progress';
+import { ProgressOverlay } from '../../components/progress/progress';
 import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
 import { I18n } from '../intl/translations';
-import { Logger } from '../logger/logger';
+import { Logger } from '../util/logger';
 
 export async function saveCoversToFolder() {
 	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export Covers` });

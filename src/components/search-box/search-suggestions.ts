@@ -1,4 +1,4 @@
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 import type { ItemCard } from '../item-info/item-card';
 import { getFiltersFromTagsString } from './update-filter';
 

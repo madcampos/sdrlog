@@ -1,6 +1,6 @@
 import type { SdrButton } from '../button/button';
-import { I18n } from '../intl/translations';
-import { registerShortcut } from '../keyboard/keyboard';
+import { I18n } from '../../js/intl/translations';
+import { registerShortcut } from '../../js/util/keyboard';
 import { getSuggestions } from './search-suggestions';
 
 import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';

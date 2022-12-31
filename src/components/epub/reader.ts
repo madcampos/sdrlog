@@ -7,9 +7,9 @@ import type Book from 'epubjs/types/book';
 import 'jszip';
 import 'epubjs';
 
-import { getFile } from '../data-operations/idb-persistence';
-import { getFilePermission } from '../files-reader/files-reader';
-import { I18n } from '../intl/translations';
+import { getFile } from '../../js/data-operations/idb-persistence';
+import { getFilePermission } from '../../js/files-reader/files-reader';
+import { I18n } from '../../js/intl/translations';
 
 declare function ePub(urlOrData: string | ArrayBuffer, options?: BookOptions): Book;
 

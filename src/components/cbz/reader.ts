@@ -1,10 +1,10 @@
 import JSZip from 'jszip';
 import { BaseComponent } from '../base/BaseComponent';
 
-import { getFile } from '../data-operations/idb-persistence';
-import { getFilePermission } from '../files-reader/files-reader';
-import { createComparer } from '../intl/formatting';
-import { I18n } from '../intl/translations';
+import { getFile } from '../../js/data-operations/idb-persistence';
+import { getFilePermission } from '../../js/files-reader/files-reader';
+import { createComparer } from '../../js/intl/formatting';
+import { I18n } from '../../js/intl/translations';
 
 import template from './template.html?raw';
 import style from './style.css?raw';

@@ -1,7 +1,7 @@
-import type { ModalDialog } from '../dialog/dialog';
-import type { EditSelect } from '../edit-box/edit-select';
+import type { ModalDialog } from '../../components/dialog/dialog';
+import type { EditSelect } from '../../components/edit-box/edit-select';
 import { I18n } from './translations';
-import { registerShortcut } from '../keyboard/keyboard';
+import { registerShortcut } from '../util/keyboard';
 
 const languageBox = document.querySelector('#language-modal') as ModalDialog;
 const languageSelect = document.querySelector('#language-select') as EditSelect;

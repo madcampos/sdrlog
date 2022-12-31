@@ -1,7 +1,7 @@
 import type { ModalDialog } from '../dialog/dialog';
 import type { RadioGroup } from '../radio/radio-group';
-import { I18n } from '../intl/translations';
-import { registerShortcut } from '../keyboard/keyboard';
+import { I18n } from '../../js/intl/translations';
+import { registerShortcut } from '../../js/util/keyboard';
 
 const themeBox = document.querySelector('#theme-modal') as ModalDialog;
 const themeSelector = document.querySelector('#theme-modal radio-group') as RadioGroup;

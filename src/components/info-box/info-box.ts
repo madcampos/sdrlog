@@ -1,6 +1,6 @@
 import type { ModalDialog } from '../dialog/dialog';
-import { I18n } from '../intl/translations';
-import { registerShortcut } from '../keyboard/keyboard';
+import { I18n } from '../../js/intl/translations';
+import { registerShortcut } from '../../js/util/keyboard';
 
 const infobox = document.querySelector('#info-modal') as ModalDialog;
 

@@ -1,7 +1,7 @@
 /* eslint-disable no-ternary */
 import type { FileForMaterial, MaterialLink } from '../../../public/data/data';
-import { formatFullDate, translateLanguageName } from '../intl/formatting';
-import { I18n } from '../intl/translations';
+import { formatFullDate, translateLanguageName } from '../../js/intl/formatting';
+import { I18n } from '../../js/intl/translations';
 
 const DEFAULT_ICON = '📄';
 

@@ -1,6 +1,6 @@
 import type { SdrComicBookReader } from './reader';
 
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 
 import '../button/button';
 import '../menu-bar/menu-bar';

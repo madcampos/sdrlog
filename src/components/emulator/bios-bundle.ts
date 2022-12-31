@@ -1,7 +1,7 @@
 import JSZip from 'jszip';
 
-import { getBiosFiles, saveBiosFile } from '../data-operations/idb-persistence';
-import { Logger } from '../logger/logger';
+import { getBiosFiles, saveBiosFile } from '../../js/data-operations/idb-persistence';
+import { Logger } from '../../js/util/logger';
 
 async function fetchBiosFile() {
 	const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/bios.zip`);

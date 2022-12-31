@@ -1,7 +1,7 @@
 import type { Material } from '../../../public/data/data';
 
-import { FALLBACK_COVER, getThumbUrl } from '../covers/fetch-covers';
-import { getMaterial } from '../data-operations/idb-persistence';
+import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/fetch-covers';
+import { getMaterial } from '../../js/data-operations/idb-persistence';
 import { ItemDetails } from './item-details';
 
 interface CreateCardOptions {

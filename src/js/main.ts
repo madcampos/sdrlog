@@ -1,5 +1,5 @@
 import type { SearchBox } from '../components/search-box/search-box';
-import type { WorkerMessage } from './rpc-messages';
+import type { WorkerMessage } from '../types/rpc-messages';
 
 function updateLoadStatus(status: string) {
 	const text = document.querySelector('#load-text') as HTMLHeadingElement;
@@ -16,7 +16,7 @@ function updateAppTheme() {
 }
 
 async function init() {
-	const { I18n } = await import('../components/intl/translations');
+	const { I18n } = await import('./intl/translations');
 	const progressLoader = document.querySelector('#load-progress') as HTMLProgressElement;
 
 	await I18n.setLanguage(I18n.getLanguage());
@@ -27,19 +27,19 @@ async function init() {
 
 	updateLoadStatus(I18n.t`Loading components.`);
 	await import('../components/components');
-	await import('../components/gamepad/gamepad-navigation');
+	await import('./gamepad/gamepad-navigation');
 
 	updateLoadStatus(I18n.t`Adding menu bar.`);
 	await import('../components/menu-bar/main-menu-items');
 
 	updateLoadStatus(I18n.t`Importing helper functions.`);
-	const { fetchItems } = await import('../components/data-operations/data-import');
+	const { fetchItems } = await import('./data-operations/data-import');
 	const { updateFiltersFromURL } = await import('../components/search-box/update-filter');
 	const { updateInfoBoxFromURL } = await import('../components/info-box/info-box');
 	const { updateThemeBoxFromURL } = await import('../components/theme-box/theme-box');
-	const { updateLanguageBoxFromURL } = await import('../components/intl/language-info');
+	const { updateLanguageBoxFromURL } = await import('./intl/language-info');
 	const { checkForMatchingId, updateItemModalFromURL } = await import('../components/item-info/item-details-url');
-	const { createComparer } = await import('../components/intl/formatting');
+	const { createComparer } = await import('./intl/formatting');
 
 	updateLoadStatus(I18n.t`Fetching items database.`);
 

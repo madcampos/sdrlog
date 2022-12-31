@@ -4,13 +4,13 @@ import type { SdrButton } from '../button/button';
 
 import nipplejs from 'nipplejs';
 
-import { getEmulatorSaveFile, getFile, saveEmulatorSaveFile } from '../data-operations/idb-persistence';
-import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
-import { I18n } from '../intl/translations';
+import { getEmulatorSaveFile, getFile, saveEmulatorSaveFile } from '../../js/data-operations/idb-persistence';
+import { extractMetadataFromFileName, getFilePermission } from '../../js/files-reader/files-reader';
+import { I18n } from '../../js/intl/translations';
 import { loadBundle } from './assets-bundle';
 import { loadBios } from './bios-bundle';
 import config from './config';
-import { Logger } from '../logger/logger';
+import { Logger } from '../../js/util/logger';
 
 interface KeyData {
 	key: string,

@@ -5,7 +5,7 @@
 const isDebug: boolean = false;
 
 import type { SDRLogData } from '../public/data/data';
-import type { UpdateMessage, WorkerReadyMessage } from './js/rpc-messages';
+import type { UpdateMessage, WorkerReadyMessage } from './types/rpc-messages';
 
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;
 const REQUEST_TIMEOUT = 20000;

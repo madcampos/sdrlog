@@ -1,6 +1,6 @@
 import type { SdrButton } from '../button/button';
 
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 
 export class ModalDialog extends HTMLElement {
 	static get observedAttributes() { return ['open']; }

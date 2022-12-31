@@ -1,5 +1,5 @@
 import type { SdrButton } from '../button/button';
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 import { EditListItem } from './edit-list-item';
 

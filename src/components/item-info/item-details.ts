@@ -7,18 +7,18 @@ import type { EditText } from '../edit-box/edit-text';
 import type { FileForMaterial, Material } from '../../../public/data/data';
 import type { EditListItem } from '../edit-box/edit-list-item';
 import type { DropArea } from '../drop-area/drop-area';
-import type { NewMaterialProperties } from '../data-operations/create-material';
+import type { NewMaterialProperties } from '../../js/data-operations/create-material';
 
 import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName, setCategories, setLanguages, setPublishers, setStatus, setTypes } from './details-template';
 import { setMaterialDetails } from './build-details';
-import { getMaterial, saveFile } from '../data-operations/idb-persistence';
+import { getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
 import { ItemCard } from './item-card';
-import { saveNewMaterialInfo } from '../data-operations/create-material';
-import { openFile } from '../files-reader/open-file';
-import { LOADING_COVER } from '../covers/fetch-covers';
-import { associateFileWithData } from '../files-reader/files-reader';
-import { exportDataItem } from '../data-operations/data-export';
-import { I18n } from '../intl/translations';
+import { saveNewMaterialInfo } from '../../js/data-operations/create-material';
+import { openFile } from '../../js/files-reader/open-file';
+import { LOADING_COVER } from '../../js/covers/fetch-covers';
+import { associateFileWithData } from '../../js/files-reader/files-reader';
+import { exportDataItem } from '../../js/data-operations/data-export';
+import { I18n } from '../../js/intl/translations';
 
 export class ItemDetails extends HTMLElement {
 	static get observedAttributes() { return ['id']; }

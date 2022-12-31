@@ -1,8 +1,8 @@
-import type { ModalDialog } from '../dialog/dialog';
-import type { DropdownMenu } from '../dropdown-menu/dropdown-menu';
-import type { ItemCard } from '../item-info/item-card';
-import type { ItemDetails } from '../item-info/item-details';
-import type { SearchBox } from '../search-box/search-box';
+import type { ModalDialog } from '../../components/dialog/dialog';
+import type { DropdownMenu } from '../../components/dropdown-menu/dropdown-menu';
+import type { ItemCard } from '../../components/item-info/item-card';
+import type { ItemDetails } from '../../components/item-info/item-details';
+import type { SearchBox } from '../../components/search-box/search-box';
 
 import { GamepadEventNormalizer } from './gamepad-events';
 

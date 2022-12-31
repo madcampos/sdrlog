@@ -1,6 +1,6 @@
 import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
-import { Logger } from '../logger/logger';
+import { Logger } from '../util/logger';
 
 import { saveCover, saveMaterial, saveThumb, setFileForMaterial } from './idb-persistence';
 

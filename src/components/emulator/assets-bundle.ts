@@ -1,7 +1,7 @@
 import JSZip from 'jszip';
 
-import { getBundleFiles, saveBundleFile } from '../data-operations/idb-persistence';
-import { Logger } from '../logger/logger';
+import { getBundleFiles, saveBundleFile } from '../../js/data-operations/idb-persistence';
+import { Logger } from '../../js/util/logger';
 
 const mimeTypes = new Map([
 	['.png', 'image/png'],

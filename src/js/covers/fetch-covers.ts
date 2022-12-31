@@ -1,10 +1,10 @@
-import { ProgressOverlay } from '../progress/progress';
+import { ProgressOverlay } from '../../components/progress/progress';
 import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
 import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
 import { I18n } from '../intl/translations';
-import { Logger } from '../logger/logger';
+import { Logger } from '../util/logger';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 

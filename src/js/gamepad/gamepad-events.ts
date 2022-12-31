@@ -1,4 +1,4 @@
-import { Logger } from '../logger/logger';
+import { Logger } from '../util/logger';
 
 /* eslint-disable no-console */
 type ButtonNames = 'a' | 'b' | 'x' | 'y' | 'leftBumper' | 'rightBumper' | 'leftTrigger' | 'rightTrigger' | 'select' | 'start' | 'leftStick' | 'rightStick' | 'up' | 'down' | 'left' | 'right' | 'logo';

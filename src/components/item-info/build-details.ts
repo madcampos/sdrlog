@@ -1,11 +1,11 @@
 import type { Material } from '../../../public/data/data';
-import { FALLBACK_COVER, fetchCover } from '../covers/fetch-covers';
-import { getFilesForMaterial } from '../data-operations/idb-persistence';
+import { FALLBACK_COVER, fetchCover } from '../../js/covers/fetch-covers';
+import { getFilesForMaterial } from '../../js/data-operations/idb-persistence';
 import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
 import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
-import { formatMonth } from '../intl/formatting';
+import { formatMonth } from '../../js/intl/formatting';
 
 import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
 

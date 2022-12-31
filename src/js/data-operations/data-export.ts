@@ -1,10 +1,10 @@
 import type { IsoCode, Material } from '../../../public/data/data';
 import type { NewMaterialProperties } from './create-material';
 
-import { ProgressOverlay } from '../progress/progress';
+import { ProgressOverlay } from '../../components/progress/progress';
 import { getMaterials } from './idb-persistence';
 import { I18n } from '../intl/translations';
-import { Logger } from '../logger/logger';
+import { Logger } from '../util/logger';
 
 function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 	const filteredData: Material = {

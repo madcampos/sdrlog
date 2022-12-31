@@ -1,6 +1,6 @@
 import type { Emulator } from './emulator';
 
-import { I18n } from '../intl/translations';
+import { I18n } from '../../js/intl/translations';
 import './emulator';
 
 (async () => {

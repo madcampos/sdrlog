@@ -1,14 +1,14 @@
 import type { Material } from '../../../public/data/data';
 
-import { readFiles } from '../files-reader/files-reader';
-import { extractCoversFromFiles, importCoversFromFolder } from '../covers/fetch-covers';
-import { saveCoversToFolder, saveThumbsToFolder } from '../covers/cover-exporter';
-import { requestDataFileFromUser } from '../data-operations/data-import';
-import { exportDataFile } from '../data-operations/data-export';
+import { readFiles } from '../../js/files-reader/files-reader';
+import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/fetch-covers';
+import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-exporter';
+import { requestDataFileFromUser } from '../../js/data-operations/data-import';
+import { exportDataFile } from '../../js/data-operations/data-export';
 import { updateSearchFilter } from '../search-box/update-filter';
 import { ItemDetails } from '../item-info/item-details';
 import { openInfoModal } from '../info-box/info-box';
-import { openLanguageModal } from '../intl/language-info';
+import { openLanguageModal } from '../../js/intl/language-info';
 import { openThemeModal } from '../theme-box/theme-box';
 
 if (!('showDirectoryPicker' in window)) {

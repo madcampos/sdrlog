@@ -1,7 +1,7 @@
 import type { SDRLogData } from '../../../public/data/data';
 import { I18n } from '../intl/translations';
-import { Logger } from '../logger/logger';
-import { ProgressOverlay } from '../progress/progress';
+import { Logger } from '../util/logger';
+import { ProgressOverlay } from '../../components/progress/progress';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
 async function fetchData() {
