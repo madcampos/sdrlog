@@ -1,4 +1,4 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 import { I18n } from '../intl/translations';
 import { registerShortcut } from '../keyboard/keyboard';
 import { getSuggestions } from './search-suggestions';
@@ -9,7 +9,7 @@ export class SearchBox extends HTMLElement {
 	#root: ShadowRoot;
 	#searchBox: HTMLInputElement;
 	#datalist: HTMLDataListElement;
-	#searchButton: CustomButton;
+	#searchButton: SdrButton;
 
 	constructor() {
 		super();
@@ -21,7 +21,7 @@ export class SearchBox extends HTMLElement {
 		this.#root.appendChild(translatedTemplate);
 
 		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;
-		this.#searchButton = this.#root.querySelector('custom-button') as CustomButton;
+		this.#searchButton = this.#root.querySelector('custom-button') as SdrButton;
 		this.#datalist = this.#root.querySelector('datalist') as HTMLDataListElement;
 
 		const initialFilters = getFiltersFromURL();

@@ -1,11 +1,11 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 import { I18n } from '../intl/translations';
 
 export class EditListItem extends HTMLElement {
 	static get observedAttributes() { return ['edit', 'value']; }
 
 	#root: ShadowRoot;
-	#closeButton: CustomButton;
+	#closeButton: SdrButton;
 
 	#value = '';
 
@@ -18,7 +18,7 @@ export class EditListItem extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(translatedTemplate);
 
-		this.#closeButton = this.#root.querySelector('custom-button') as CustomButton;
+		this.#closeButton = this.#root.querySelector('custom-button') as SdrButton;
 
 		this.#closeButton.addEventListener('click', () => {
 			this.remove();

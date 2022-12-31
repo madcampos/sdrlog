@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import type { EmulatorInitializerFunction, EmulatorModule } from '../../../public/lib/webretro/webretro';
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 
 import nipplejs from 'nipplejs';
 
@@ -56,8 +56,8 @@ export class Emulator extends HTMLElement {
 	#canvas: HTMLCanvasElement;
 	#gameWrapper: HTMLElement;
 	// eslint-disable-next-line no-unused-private-class-members
-	#loadButton: CustomButton;
-	#pauseButton: CustomButton;
+	#loadButton: SdrButton;
+	#pauseButton: SdrButton;
 
 	#selectButton: HTMLButtonElement;
 	#startButton: HTMLButtonElement;
@@ -77,8 +77,8 @@ export class Emulator extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(template.content.cloneNode(true));
 		this.#gameWrapper = this.#root.querySelector('#game-wrapper') as HTMLElement;
-		this.#loadButton = this.#root.querySelector('#start-buttom') as CustomButton;
-		this.#pauseButton = this.#root.querySelector('#pause-button') as CustomButton;
+		this.#loadButton = this.#root.querySelector('#start-buttom') as SdrButton;
+		this.#pauseButton = this.#root.querySelector('#pause-button') as SdrButton;
 
 		this.#selectButton = this.#root.querySelector('#button-select') as HTMLButtonElement;
 		this.#startButton = this.#root.querySelector('#button-start') as HTMLButtonElement;

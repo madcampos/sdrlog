@@ -1,10 +1,10 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 import { I18n } from '../intl/translations';
 import type { WorkerMessage } from '../../js/rpc-messages';
 
 class UpdateRefresh extends HTMLElement {
 	#root: ShadowRoot;
-	#button: CustomButton;
+	#button: SdrButton;
 	#message: HTMLParagraphElement;
 	#popup: HTMLElement;
 
@@ -17,7 +17,7 @@ class UpdateRefresh extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 
-		this.#button = this.#root.querySelector('custom-button') as CustomButton;
+		this.#button = this.#root.querySelector('custom-button') as SdrButton;
 		this.#message = this.#root.querySelector('p') as HTMLParagraphElement;
 		this.#popup = this.#root.querySelector('aside') as HTMLElement;
 

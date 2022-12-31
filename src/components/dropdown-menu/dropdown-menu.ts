@@ -1,10 +1,10 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 import type { DropdownMenuItem } from './dropdown-menu-item';
 
 export class DropdownMenu extends HTMLElement {
 	static get observedAttributes() { return ['icon']; }
 	#root: ShadowRoot;
-	#button: CustomButton;
+	#button: SdrButton;
 	#dialog: HTMLDialogElement;
 
 	constructor() {
@@ -15,7 +15,7 @@ export class DropdownMenu extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(template.content.cloneNode(true));
 
-		this.#button = this.#root.querySelector('custom-button') as CustomButton;
+		this.#button = this.#root.querySelector('custom-button') as SdrButton;
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
 		this.#button.addEventListener('click', (evt) => {

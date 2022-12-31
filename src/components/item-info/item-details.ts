@@ -1,4 +1,4 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 import type { ModalDialog } from '../dialog/dialog';
 import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
@@ -26,9 +26,9 @@ export class ItemDetails extends HTMLElement {
 	#root: ShadowRoot;
 	#modal: ModalDialog;
 
-	#editButton: CustomButton;
-	#saveButton: CustomButton;
-	#exportButton: CustomButton;
+	#editButton: SdrButton;
+	#saveButton: SdrButton;
+	#exportButton: SdrButton;
 
 	#isEditing = false;
 
@@ -75,9 +75,9 @@ export class ItemDetails extends HTMLElement {
 
 		this.#modal = this.#root.querySelector('modal-dialog') as ModalDialog;
 
-		this.#editButton = this.#root.querySelector('#edit') as CustomButton;
-		this.#saveButton = this.#root.querySelector('#save') as CustomButton;
-		this.#exportButton = this.#root.querySelector('#export') as CustomButton;
+		this.#editButton = this.#root.querySelector('#edit') as SdrButton;
+		this.#saveButton = this.#root.querySelector('#save') as SdrButton;
+		this.#exportButton = this.#root.querySelector('#export') as SdrButton;
 
 		this.#formFields = {
 			name: this.#root.querySelector('#name') as EditBox,

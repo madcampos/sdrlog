@@ -1,4 +1,4 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 import type { Location as BookLocation, NavItem } from 'epubjs';
 import type { BookOptions } from 'epubjs/types/book';
 import type Section from 'epubjs/types/section';
@@ -14,13 +14,13 @@ import { I18n } from '../intl/translations';
 declare function ePub(urlOrData: string | ArrayBuffer, options?: BookOptions): Book;
 
 const renderArea = document.querySelector('#book') as HTMLElement;
-const nextButton = document.querySelector('#next') as CustomButton;
-const prevButton = document.querySelector('#prev') as CustomButton;
+const nextButton = document.querySelector('#next') as SdrButton;
+const prevButton = document.querySelector('#prev') as SdrButton;
 const tocSelect = document.querySelector('#toc') as HTMLSelectElement;
 
 document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
 	try {
-		(evt.target as CustomButton).disabled = true;
+		(evt.target as SdrButton).disabled = true;
 
 		const url = new URL(window.location.toString());
 		const params = new URLSearchParams(url.search);

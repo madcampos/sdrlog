@@ -1,4 +1,4 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 import { I18n } from '../intl/translations';
 import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
 import { EditListItem } from './edit-list-item';
@@ -12,7 +12,7 @@ export class EditList extends HTMLElement {
 	#input: HTMLDivElement;
 	#inputSlot: HTMLSlotElement;
 	#items: HTMLSlotElement;
-	#addButton: CustomButton;
+	#addButton: SdrButton;
 
 	constructor() {
 		super();
@@ -28,7 +28,7 @@ export class EditList extends HTMLElement {
 		this.#input = this.#root.querySelector('#input-container') as HTMLDivElement;
 		this.#inputSlot = this.#root.querySelector('slot[name="input"]') as HTMLSlotElement;
 		this.#items = this.#root.querySelector('slot:not([name])') as HTMLSlotElement;
-		this.#addButton = this.#root.querySelector('#add-button') as CustomButton;
+		this.#addButton = this.#root.querySelector('#add-button') as SdrButton;
 
 		this.#addButton.addEventListener('click', () => {
 			const [input] = this.#inputSlot.assignedElements() as (HTMLInputElement | HTMLSelectElement | null)[];

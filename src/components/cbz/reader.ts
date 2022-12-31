@@ -1,6 +1,6 @@
 import JSZip from 'jszip';
 
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';
@@ -39,8 +39,8 @@ export class ComicBookReader extends HTMLElement {
 
 	#root: ShadowRoot;
 	#renderArea: HTMLElement;
-	#nextButton: CustomButton;
-	#prevButton: CustomButton;
+	#nextButton: SdrButton;
+	#prevButton: SdrButton;
 	#tocSelect: HTMLSelectElement;
 	// eslint-disable-next-line no-unused-private-class-members
 	#loadOverlay: HTMLDivElement;
@@ -55,8 +55,8 @@ export class ComicBookReader extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#renderArea = this.#root.querySelector('#comic') as HTMLElement;
-		this.#nextButton = this.#root.querySelector('#next') as CustomButton;
-		this.#prevButton = this.#root.querySelector('#prev') as CustomButton;
+		this.#nextButton = this.#root.querySelector('#next') as SdrButton;
+		this.#prevButton = this.#root.querySelector('#prev') as SdrButton;
 		this.#tocSelect = this.#root.querySelector('#toc') as HTMLSelectElement;
 		this.#loadOverlay = this.#root.querySelector('#comic-load-overlay') as HTMLDivElement;
 

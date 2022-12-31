@@ -1,4 +1,4 @@
-import type { CustomButton } from '../button/button';
+import type { SdrButton } from '../button/button';
 
 import { I18n } from '../intl/translations';
 
@@ -19,7 +19,7 @@ export class ModalDialog extends HTMLElement {
 		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
 
 		const triggerSlot = this.#root.querySelector('slot[name="trigger"]') as HTMLSlotElement;
-		const [triggerButton] = triggerSlot.assignedElements() as (CustomButton | undefined)[];
+		const [triggerButton] = triggerSlot.assignedElements() as (SdrButton | undefined)[];
 
 		this.#root.addEventListener('slotchange', (evt) => {
 			const slot = evt.target as HTMLSlotElement;
