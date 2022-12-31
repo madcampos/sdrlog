@@ -1,11 +1,15 @@
 import JSZip from 'jszip';
-
-import type { SdrButton } from '../button/button';
+import { BaseComponent } from '../base/BaseComponent';
 
 import { getFile } from '../data-operations/idb-persistence';
 import { getFilePermission } from '../files-reader/files-reader';
 import { createComparer } from '../intl/formatting';
 import { I18n } from '../intl/translations';
+
+import template from './template.html?raw';
+import style from './style.css?raw';
+
+const watchedAttributes = ['file', 'loaded'];
 
 interface Page {
 	name: string,
@@ -32,40 +36,51 @@ const mimeTypes = new Map([
 	['.gif', 'image/gif']
 ]);
 
-export class ComicBookReader extends HTMLElement {
-	static get observedAttributes() { return ['file', 'loaded']; }
+export interface SdrComicBookReader {
+	file: string,
+	loaded: boolean,
+	nextPageVisibility: 'visible' | 'hidden',
+	previousPageVisibility: 'visible' | 'hidden'
+}
 
-	#filePath = '';
+export class SdrComicBookReader extends BaseComponent {
+	static get observedAttributes() { return watchedAttributes; }
 
-	#root: ShadowRoot;
 	#renderArea: HTMLElement;
-	#nextButton: SdrButton;
-	#prevButton: SdrButton;
 	#tocSelect: HTMLSelectElement;
-	// eslint-disable-next-line no-unused-private-class-members
-	#loadOverlay: HTMLDivElement;
 	#currentVisibleImage: HTMLImageElement | undefined;
 
 	constructor() {
-		super();
+		super({
+			name: 'sdr-comic-book-reader',
+			watchedAttributes,
+			props: [
+				{
+					name: 'file',
+					value: (newValue = '') => {
+						this.loaded = false;
+						this.#resetComicBook();
 
-		const template = document.querySelector('#cbz-reader') as HTMLTemplateElement;
-
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
-
-		this.#renderArea = this.#root.querySelector('#comic') as HTMLElement;
-		this.#nextButton = this.#root.querySelector('#next') as SdrButton;
-		this.#prevButton = this.#root.querySelector('#prev') as SdrButton;
-		this.#tocSelect = this.#root.querySelector('#toc') as HTMLSelectElement;
-		this.#loadOverlay = this.#root.querySelector('#comic-load-overlay') as HTMLDivElement;
-
-		this.#prevButton.addEventListener('click', () => this.showPreviousPage());
-		this.#nextButton.addEventListener('click', () => this.showNextPage());
-
-		this.#tocSelect.addEventListener('change', () => {
-			this.#root.querySelector(`[data-folder="${this.#tocSelect.value}"]`)?.scrollIntoView();
+						return newValue;
+					},
+					attributeName: 'file'
+				},
+				{ name: 'loaded', value: false, attributeName: 'loaded' },
+				{ name: 'nextPageVisibility', value: 'visible' },
+				{ name: 'previousPageVisibility', value: 'visible' }
+			],
+			handlers: {
+				showPreviousPage: () => { this.showPreviousPage(); },
+				showNextPage: () => { this.showNextPage(); },
+				openComic: () => { void this.#loadComicBook(); },
+				tocSelect: () => { this.root.querySelector(`[data-folder="${this.#tocSelect.value}"]`)?.scrollIntoView(); }
+			},
+			template,
+			style
 		});
+
+		this.#renderArea = this.root.querySelector('#comic') as HTMLElement;
+		this.#tocSelect = this.root.querySelector('#toc') as HTMLSelectElement;
 
 		document.addEventListener('keyup', (keyEvt) => {
 			// Left Key
@@ -86,23 +101,21 @@ export class ComicBookReader extends HTMLElement {
 				this.#renderArea.scrollBy({ left: evt.deltaY, behavior: 'smooth' });
 			}
 		}, { capture: false, passive: false });
-
-		this.#root.querySelector('#open-comic')?.addEventListener('click', async () => this.#loadComicBook());
 	}
 
 	#updateVisibleImage([entry]: IntersectionObserverEntry[]) {
 		this.#currentVisibleImage = entry.target as HTMLImageElement;
 
 		if (!this.#currentVisibleImage.previousElementSibling) {
-			this.#prevButton.style.visibility = 'hidden';
+			this.previousPageVisibility = 'hidden';
 		} else {
-			this.#prevButton.style.visibility = 'visible';
+			this.previousPageVisibility = 'visible';
 		}
 
 		if (!this.#currentVisibleImage.nextElementSibling) {
-			this.#nextButton.style.visibility = 'hidden';
+			this.nextPageVisibility = 'hidden';
 		} else {
-			this.#nextButton.style.visibility = 'visible';
+			this.nextPageVisibility = 'visible';
 		}
 
 		const currentValue = this.#currentVisibleImage.dataset.folder;
@@ -111,13 +124,13 @@ export class ComicBookReader extends HTMLElement {
 		this.#tocSelect.selectedIndex = newIndex;
 	}
 
-	async #loadComicBookFile() {
+	async #loadFile() {
 		try {
-			if (!this.#filePath) {
+			if (!this.file) {
 				throw new Error(I18n.t`Missing comic file.`);
 			}
 
-			const handler = await getFile(this.#filePath) as FileSystemFileHandle | undefined;
+			const handler = await getFile(this.file) as FileSystemFileHandle | undefined;
 
 			if (!handler) {
 				throw new Error(I18n.t`Comic does not exist.`);
@@ -131,7 +144,7 @@ export class ComicBookReader extends HTMLElement {
 		}
 	}
 
-	async #parseZipFileImages(file?: File) {
+	async #unzipImages(file?: File) {
 		if (!file) {
 			return {};
 		}
@@ -160,51 +173,56 @@ export class ComicBookReader extends HTMLElement {
 			}
 		}
 
-		return pages;
-	}
 
-	#fillToc(pages: Pages) {
-		const sortedFolders = Object.keys(pages).sort((folderA, folderB) => {
+		const sortedPages = Object.fromEntries(Object.keys(pages).sort((folderA, folderB) => {
 			if (folderB === DEFAULT_FOLDER_NAME) {
 				return 1;
 			}
 
 			return comparer(folderA, folderB);
-		});
+		}).map((folder) => [folder, pages[folder]]));
 
-		for (const folder of sortedFolders) {
-			const tocItem = document.createElement('option');
+		return sortedPages;
+	}
 
-			tocItem.innerText = folder;
-			tocItem.value = encodeURIComponent(folder);
-			this.#tocSelect.appendChild(tocItem);
+	#appendTocItem(folder: string) {
+		const tocItem = document.createElement('option');
 
-			pages[folder] = pages[folder].sort(({ name: aName }, { name: bName }) => comparer(aName, bName));
+		tocItem.innerText = folder;
+		tocItem.value = encodeURIComponent(folder);
+		this.#tocSelect.appendChild(tocItem);
+	}
 
-			for (const page of pages[folder]) {
-				const img = document.createElement('img');
-				const observer = new IntersectionObserver((entries) => this.#updateVisibleImage(entries), { threshold: 1 });
+	#appendPage(page: Page) {
+		const img = document.createElement('img');
+		const observer = new IntersectionObserver((entries) => this.#updateVisibleImage(entries), { threshold: 1 });
 
-				img.dataset.folder = encodeURIComponent(page.folder);
-				img.src = page.url;
-				img.loading = 'lazy';
-				img.decoding = 'async';
-				img.addEventListener('load', () => {
-					observer.observe(img);
-				});
+		img.dataset.folder = encodeURIComponent(page.folder);
+		img.src = page.url;
+		img.loading = 'lazy';
+		img.decoding = 'async';
+		img.alt = page.name;
 
-				this.#renderArea.appendChild(img);
-			}
-		}
+		img.addEventListener('load', () => {
+			observer.observe(img);
+		}, { once: true });
+
+		this.#renderArea.appendChild(img);
 	}
 
 	async #loadComicBook() {
+		const file = await this.#loadFile();
+		const folders = await this.#unzipImages(file);
+
+		for (const folder of Object.keys(folders)) {
+			this.#appendTocItem(folder);
+
+			for (const page of folders[folder]) {
+				this.#appendPage(page);
+			}
+		}
+
 		this.loaded = true;
-
-		const file = await this.#loadComicBookFile();
-		const pages = await this.#parseZipFileImages(file);
-
-		this.#fillToc(pages);
 
 		// Force start at the begining
 		this.#tocSelect.selectedIndex = 0;
@@ -215,28 +233,6 @@ export class ComicBookReader extends HTMLElement {
 		[...this.#renderArea.querySelectorAll('img')].forEach((img) => img.remove());
 	}
 
-	get file() {
-		return this.#filePath;
-	}
-
-	set file(newValue: string) {
-		this.#filePath = newValue;
-		this.loaded = false;
-		this.#resetComicBook();
-	}
-
-	get loaded() {
-		return this.hasAttribute('loaded');
-	}
-
-	set loaded(newValue: boolean) {
-		if (newValue) {
-			this.setAttribute('loaded', '');
-		} else {
-			this.removeAttribute('loaded');
-		}
-	}
-
 	showNextPage() {
 		this.#currentVisibleImage?.nextElementSibling?.scrollIntoView();
 	}
@@ -244,22 +240,6 @@ export class ComicBookReader extends HTMLElement {
 	showPreviousPage() {
 		this.#currentVisibleImage?.previousElementSibling?.scrollIntoView();
 	}
-
-	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-		if (oldValue !== newValue) {
-			if (name === 'file') {
-				this.file = newValue;
-			} else if (name === 'loaded') {
-				this.loaded = this.hasAttribute('loaded');
-			}
-		}
-	}
-
-	connectedCallback() {
-		if (this.hasAttribute('file')) {
-			this.file = this.getAttribute('file') ?? '';
-		}
-	}
 }
 
-customElements.define('cbz-reader', ComicBookReader);
+customElements.define('sdr-cbz-reader', SdrComicBookReader);

@@ -28,55 +28,20 @@
 		<meta name="referrer" content="no-referrer">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="google" content="notranslate" />
-		<link rel="license" href="%PUBLIC_URL%#copyright">
+		<link rel="license" href="/#copyright">
 
 		<!-- Apple icons -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<link rel="apple-touch-icon" href="<%= APP_APPLE_ICON %>">
 
-		<link rel="stylesheet" href="./css/base.css" />
+		<link rel="stylesheet" href="/css/base.css" />
 	</head>
 
 	<body class="notranslate" translate="no">
-		<!-- Templates -->
-		<template id="custom-button">
-			<link rel="stylesheet" href="./css/components/button/button.css" />
-			<button type="button">
-				<span id="button-icon"></span>
-				<span id="button-text">
-					<slot></slot>
-				</span>
-			</button>
-		</template>
-
-		<template id="menu-bar">
-			<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css" />
-			<nav>
-				<slot></slot>
-			</nav>
-		</template>
-
-		<template id="cbz-reader">
-			<link rel="stylesheet" href="./css/components/cbz/reader.css" />
-			<menu-bar>
-				<custom-button icon-button id="prev">⏮️</custom-button>
-				<select id="toc"></select>
-				<custom-button icon-button id="next">⏭️</custom-button>
-			</menu-bar>
-			<article id="comic">
-				<div id="comic-loading">
-					<progress></progress>
-				</div>
-			</article>
-			<div id="comic-book-overlay">
-				<custom-button icon-button id="open-comic">▶️</custom-button>
-			</div>
-		</template>
-
 		<!-- Content -->
-		<cbz-reader></cbz-reader>
+		<sdr-cbz-reader></sdr-cbz-reader>
 
-		<script src="./js/components/cbz/init.js" type="module"></script>
+		<script src="./components/cbz/init.ts" type="module"></script>
 	</body>
 
 </html>

@@ -1,4 +1,4 @@
-import type { ComicBookReader } from './reader';
+import type { SdrComicBookReader } from './reader';
 
 import { I18n } from '../intl/translations';
 
@@ -13,7 +13,7 @@ import './reader';
 	const params = new URLSearchParams(url.search);
 
 	if (params.has('file')) {
-		const readerElement = document.querySelector('cbz-reader') as ComicBookReader;
+		const readerElement = document.querySelector('cbz-reader') as SdrComicBookReader;
 
 		readerElement.file = params.get('file') as string;
 	}

@@ -22,8 +22,7 @@ interface PropDefinition<T extends PropTypes> {
 	name: string,
 	value: T,
 	validate?: PropValidationHandler,
-	attributeName?: string,
-	selector?: string
+	attributeName?: string
 }
 
 type EventHandler = (evt: Event) => void | Promise<void>;
@@ -384,14 +383,13 @@ export class BaseComponent extends HTMLElement implements CustomElementInterface
 
 	static templateParser: TemplateParser = (template) => templateParser(template);
 
-	watchProp({ name, value, attributeName, validate, selector }: PropDefinition<PropTypes>) {
+	watchProp({ name, value, attributeName, validate }: PropDefinition<PropTypes>) {
 		if (DEBUG_MODE) {
 			console.log(`${DEBUG_HEADER} Watching prop "${name}":`, DEBUG_STYLE);
 			console.log({
 				value,
 				attributeName,
-				validate,
-				selector
+				validate
 			});
 		}
 
@@ -406,12 +404,6 @@ export class BaseComponent extends HTMLElement implements CustomElementInterface
 
 		if (attributeName) {
 			this.#watchedAttributes.set(attributeName, name);
-		}
-
-		if (selector) {
-			this.#root.querySelectorAll<HTMLElement>(selector).forEach((element) => {
-				this.#bindPropToInternalElement(name, element);
-			});
 		}
 
 		if (typeof value === 'function') {
