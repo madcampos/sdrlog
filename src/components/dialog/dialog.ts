@@ -1,46 +1,68 @@
-import type { SdrButton } from '../button/button';
+import template from './template.html?raw';
+import style from './style.css?raw';
+import { BaseComponent } from '../base/BaseComponent';
 
-import { I18n } from '../../js/intl/translations';
+const watchedAttributes = ['open'];
 
-export class ModalDialog extends HTMLElement {
-	static get observedAttributes() { return ['open']; }
-	#root: ShadowRoot;
+export interface SdrDialog {
+	open: boolean
+}
+
+export class SdrDialog extends BaseComponent {
+	static get observedAttributes() { return watchedAttributes; }
 	#dialog: HTMLDialogElement;
 
 	constructor() {
-		super();
+		super({
+			name: 'sdr-dialog',
+			watchedAttributes,
+			props: [
+				{
+					name: 'open',
+					value: (newValue = false) => {
+						if (newValue === true) {
+							this.#dialog.showModal();
+							this.#dialog.focus();
+							this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
+						} else {
+							this.#dialog.close();
+							this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
+						}
 
-		const template = document.querySelector('#dialog') as HTMLTemplateElement;
-		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
+						return newValue;
+					},
+					attributeName: 'open'
+				}
+			],
+			handlers: {
+				closeModal: () => {
+					this.close();
+				}
+			},
+			watchedSlots: {
+				footer: (evt) => {
+					const slot = evt.target as HTMLSlotElement;
+					const slotHasElements = slot.assignedElements().length > 0;
 
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(translatedTemplate);
+					(this.root.querySelector('footer') as HTMLElement).hidden = !slotHasElements;
+				},
+				trigger: (evt) => {
+					const slot = evt.target as HTMLSlotElement;
+					const [triggerButton] = slot.assignedElements() as (Element | undefined)[];
 
-		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
+					triggerButton?.addEventListener('click', (triggerEvt) => {
+						triggerEvt.preventDefault();
+						triggerEvt.stopPropagation();
 
-		const triggerSlot = this.#root.querySelector('slot[name="trigger"]') as HTMLSlotElement;
-		const [triggerButton] = triggerSlot.assignedElements() as (SdrButton | undefined)[];
-
-		this.#root.addEventListener('slotchange', (evt) => {
-			const slot = evt.target as HTMLSlotElement;
-			const slotHasElements = slot.assignedElements().length > 0;
-
-			if (slot.name === 'footer') {
-				(this.#root.querySelector('footer') as HTMLElement).hidden = !slotHasElements;
-			}
+						this.open = true;
+					});
+				}
+			},
+			template,
+			style
 		});
 
-		triggerButton?.addEventListener('click', (evt) => {
-			evt.preventDefault();
-			evt.stopPropagation();
-
-			this.#dialog.showModal();
-			this.#dialog.focus();
-		});
-
-		this.#root.querySelector('#close')?.addEventListener('click', () => {
-			this.close();
-		});
+		this.#dialog = this.root.querySelector('dialog') as HTMLDialogElement;
 
 		this.#dialog.addEventListener('click', (evt) => {
 			const target = evt.target as HTMLDialogElement;
@@ -59,17 +81,6 @@ export class ModalDialog extends HTMLElement {
 			}
 		});
 	}
-	get open() {
-		return this.hasAttribute('open');
-	}
-
-	set open(isOpen: boolean) {
-		if (isOpen) {
-			this.setAttribute('open', '');
-		} else {
-			this.removeAttribute('open');
-		}
-	}
 
 	show() {
 		this.open = true;
@@ -86,26 +97,6 @@ export class ModalDialog extends HTMLElement {
 			this.show();
 		}
 	}
-
-	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-		if (oldValue !== newValue) {
-			if (name === 'open') {
-				if (this.hasAttribute('open')) {
-					this.#dialog.showModal();
-					this.#dialog.focus();
-					this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
-				} else {
-					this.#dialog.close();
-					this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
-				}
-			}
-		}
-	}
-
-	connectedCallback() {
-		this.open = this.hasAttribute('open');
-		I18n.translateElementsContent(this);
-	}
 }
 
-customElements.define('modal-dialog', ModalDialog);
+customElements.define('sdr-dialog', SdrDialog);

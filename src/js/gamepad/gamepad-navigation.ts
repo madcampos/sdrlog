@@ -1,4 +1,4 @@
-import type { ModalDialog } from '../../components/dialog/dialog';
+import type { SdrDialog } from '../../components/dialog/dialog';
 import type { DropdownMenu } from '../../components/dropdown-menu/dropdown-menu';
 import type { ItemCard } from '../../components/item-info/item-card';
 import type { ItemDetails } from '../../components/item-info/item-details';
@@ -50,7 +50,7 @@ function closeMenu() {
 }
 
 function openMenu(menuId: string) {
-	const openModal = document.querySelector<ModalDialog>('modal-dialog[open]');
+	const openModal = document.querySelector<SdrDialog>('sdr-dialog[open]');
 
 	if (!openModal) {
 		document.querySelector<DropdownMenu>(menuId)?.toggle();
@@ -59,7 +59,7 @@ function openMenu(menuId: string) {
 }
 
 function closeModal() {
-	const openModal = document.querySelector<ModalDialog>('modal-dialog[open]');
+	const openModal = document.querySelector<SdrDialog>('sdr-dialog[open]');
 
 	if (openModal) {
 		openModal.close();
@@ -69,7 +69,7 @@ function closeModal() {
 }
 
 function activateSearch() {
-	const openModal = document.querySelector<ModalDialog>('modal-dialog[open]');
+	const openModal = document.querySelector<SdrDialog>('sdr-dialog[open]');
 
 	if (!openModal) {
 		document.querySelector<SearchBox>('search-box')?.focus();

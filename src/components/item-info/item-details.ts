@@ -1,5 +1,5 @@
 import type { SdrButton } from '../button/button';
-import type { ModalDialog } from '../dialog/dialog';
+import type { SdrDialog } from '../dialog/dialog';
 import type { EditBox } from '../edit-box/edit-box';
 import type { EditList } from '../edit-box/edit-list';
 import type { EditSelect } from '../edit-box/edit-select';
@@ -24,7 +24,7 @@ export class ItemDetails extends HTMLElement {
 	static get observedAttributes() { return ['id']; }
 
 	#root: ShadowRoot;
-	#modal: ModalDialog;
+	#modal: SdrDialog;
 
 	#editButton: SdrButton;
 	#saveButton: SdrButton;
@@ -73,7 +73,7 @@ export class ItemDetails extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(translatedTemplate);
 
-		this.#modal = this.#root.querySelector('modal-dialog') as ModalDialog;
+		this.#modal = this.#root.querySelector('sdr-dialog') as SdrDialog;
 
 		this.#editButton = this.#root.querySelector('#edit') as SdrButton;
 		this.#saveButton = this.#root.querySelector('#save') as SdrButton;

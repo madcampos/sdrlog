@@ -1,8 +1,8 @@
-import type { ModalDialog } from '../dialog/dialog';
+import type { SdrDialog } from '../dialog/dialog';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
-const infobox = document.querySelector('#info-modal') as ModalDialog;
+const infobox = document.querySelector('#info-modal') as SdrDialog;
 
 I18n.translateElementsContent(infobox);
 
