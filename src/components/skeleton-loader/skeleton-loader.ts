@@ -7,6 +7,10 @@ import style from './style.css?raw';
 
 const watchedAttributes = ['loaded'];
 
+export interface SdrLoader {
+	loaded: boolean
+}
+
 export class SdrLoader extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
