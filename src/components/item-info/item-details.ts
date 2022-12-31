@@ -197,13 +197,13 @@ export class ItemDetails extends HTMLElement {
 		});
 
 		this.#coverDropArea.addEventListener('handler', () => {
-			this.#coverDropArea.show = false;
+			this.#coverDropArea.isAcceptingFiles = false;
 			this.#cover.src = LOADING_COVER;
 
 			this.#coverFile = this.#coverDropArea.file as File;
 			this.#cover.src = URL.createObjectURL(this.#coverFile);
 
-			this.#coverDropArea.show = true;
+			this.#coverDropArea.isAcceptingFiles = true;
 		});
 
 		this.#editButton.addEventListener('click', () => {
@@ -328,7 +328,7 @@ export class ItemDetails extends HTMLElement {
 			field.edit = editingStatus;
 		});
 
-		this.#coverDropArea.show = editingStatus;
+		this.#coverDropArea.isAcceptingFiles = editingStatus;
 
 		if (this.#formFields.notes.value === '') {
 			this.#formFields.notes.hidden = !editingStatus;
@@ -373,7 +373,7 @@ export class ItemDetails extends HTMLElement {
 				field.loaded = true;
 			});
 
-			this.#coverDropArea.show = true;
+			this.#coverDropArea.isAcceptingFiles = true;
 		}
 	}
 
@@ -388,7 +388,7 @@ export class ItemDetails extends HTMLElement {
 		this.#formFields.files.value = '📄';
 
 		this.#cover.src = LOADING_COVER;
-		this.#coverDropArea.show = false;
+		this.#coverDropArea.isAcceptingFiles = false;
 
 		this.#editButton.disabled = true;
 		this.#exportButton.disabled = true;
