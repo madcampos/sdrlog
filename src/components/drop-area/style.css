@@ -14,10 +14,10 @@
 	grid-column: 1 / -1;
 }
 
-#overlay:not([hidden]) {
+#overlay {
 	border: dotted var(--border-width) var(--border-color, transparent);
 	box-sizing: border-box;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 
@@ -25,6 +25,10 @@
 	color: var(--text-color, currentcolor);
 
 	z-index: 1;
+}
+
+:host([is-accepting-files]) #overlay {
+	display: none;
 }
 
 .drop {

@@ -6,7 +6,7 @@ import type { EditSelect } from '../edit-box/edit-select';
 import type { EditText } from '../edit-box/edit-text';
 import type { FileForMaterial, Material } from '../../../public/data/data';
 import type { EditListItem } from '../edit-box/edit-list-item';
-import type { DropArea } from '../drop-area/drop-area';
+import type { SdrDropArea } from '../drop-area/drop-area';
 import type { NewMaterialProperties } from '../../js/data-operations/create-material';
 
 import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName, setCategories, setLanguages, setPublishers, setStatus, setTypes } from './details-template';
@@ -61,7 +61,7 @@ export class ItemDetails extends HTMLElement {
 	};
 
 	#cover: HTMLImageElement;
-	#coverDropArea: DropArea;
+	#coverDropArea: SdrDropArea;
 	#coverFile: File | undefined;
 
 	constructor() {
@@ -127,7 +127,7 @@ export class ItemDetails extends HTMLElement {
 		setLanguages(this.#editInputs.namesLang);
 
 		this.#cover = this.#root.querySelector('#cover') as HTMLImageElement;
-		this.#coverDropArea = this.#root.querySelector('#cover-drop-area') as DropArea;
+		this.#coverDropArea = this.#root.querySelector('#cover-drop-area') as SdrDropArea;
 
 
 		this.#formFields.sku.addEventListener('additem', () => {
