@@ -1,13 +1,13 @@
 import type { SdrButton } from '../button/button';
 import { I18n } from '../../js/intl/translations';
-import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
+import type { SdrLoader } from '../skeleton-loader/skeleton-loader';
 import { EditListItem } from './edit-list-item';
 
 export class EditList extends HTMLElement {
 	static get observedAttributes() { return ['edit', 'open']; }
 
 	#root: ShadowRoot;
-	#loader: SkeletonLoader;
+	#loader: SdrLoader;
 	#details: HTMLDetailsElement;
 	#input: HTMLDivElement;
 	#inputSlot: HTMLSlotElement;
@@ -23,7 +23,7 @@ export class EditList extends HTMLElement {
 		this.#root = this.attachShadow({ mode: 'closed' });
 		this.#root.appendChild(translatedTemplate);
 
-		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
+		this.#loader = this.#root.querySelector('skeleton-loader') as SdrLoader;
 		this.#details = this.#root.querySelector('details') as HTMLDetailsElement;
 		this.#input = this.#root.querySelector('#input-container') as HTMLDivElement;
 		this.#inputSlot = this.#root.querySelector('slot[name="input"]') as HTMLSlotElement;

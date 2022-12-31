@@ -1,0 +1,27 @@
+:host {
+	box-sizing: inherit;
+}
+
+#loader {
+	max-width: 20rem;
+	border-radius: var(--border-radius);
+	background-color: var(--theme-color);
+	background-image: linear-gradient(-60deg, var(--bg-color) 40%, transparent, var(--bg-color) 60%);
+	background-size: 200% 100%;
+	background-position: 100%;
+	color: transparent;
+	user-select: none;
+
+	animation: loader 2s linear infinite;
+	opacity: 0.2;
+}
+
+@keyframes loader {
+	from {
+		background-position: 100%;
+	}
+
+	to {
+		background-position: -100%;
+	}
+}

@@ -1,5 +1,5 @@
 import { I18n } from '../../js/intl/translations';
-import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
+import type { SdrLoader } from '../skeleton-loader/skeleton-loader';
 
 const banList = [
 	'id',
@@ -14,7 +14,7 @@ export class EditSelect extends HTMLElement {
 
 	#root: ShadowRoot;
 	#select: HTMLSelectElement;
-	#loader: SkeletonLoader;
+	#loader: SdrLoader;
 
 	constructor() {
 		super();
@@ -26,7 +26,7 @@ export class EditSelect extends HTMLElement {
 		this.#root.appendChild(translatedTemplate);
 
 		this.#select = this.#root.querySelector('select') as HTMLSelectElement;
-		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
+		this.#loader = this.#root.querySelector('skeleton-loader') as SdrLoader;
 
 		this.#root.addEventListener('slotchange', (evt) => {
 			const slot = evt.target as HTMLSlotElement;

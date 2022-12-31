@@ -1,6 +1,6 @@
 import { marked } from 'marked';
 import { I18n } from '../../js/intl/translations';
-import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
+import type { SdrLoader } from '../skeleton-loader/skeleton-loader';
 
 const banList = [
 	'id',
@@ -15,7 +15,7 @@ export class EditText extends HTMLElement {
 	static get observedAttributes() { return ['edit', 'value']; }
 
 	#root: ShadowRoot;
-	#loader: SkeletonLoader;
+	#loader: SdrLoader;
 	#textArea: HTMLTextAreaElement;
 	#renderedTextArea: HTMLElement;
 	#renderedTextContainer: HTMLDivElement;
@@ -31,7 +31,7 @@ export class EditText extends HTMLElement {
 		this.#renderedTextArea = this.#root.querySelector('article') as HTMLElement;
 		this.#renderedTextContainer = this.#root.querySelector('#rendered-text') as HTMLDivElement;
 		this.#textArea = this.#root.querySelector('textarea') as HTMLTextAreaElement;
-		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
+		this.#loader = this.#root.querySelector('skeleton-loader') as SdrLoader;
 
 		for (const attribute of this.attributes as NamedNodeMap & { [Symbol.iterator](): Iterator<Attr> }) {
 			if (!banList.includes(attribute.name)) {

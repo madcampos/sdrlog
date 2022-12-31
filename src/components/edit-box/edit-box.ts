@@ -1,5 +1,5 @@
 import { I18n } from '../../js/intl/translations';
-import type { SkeletonLoader } from '../skeleton-loader/skeleton-loader';
+import type { SdrLoader } from '../skeleton-loader/skeleton-loader';
 
 const banList = [
 	'id',
@@ -15,7 +15,7 @@ export class EditBox extends HTMLElement {
 
 	#root: ShadowRoot;
 	#input: HTMLInputElement;
-	#loader: SkeletonLoader;
+	#loader: SdrLoader;
 
 	constructor() {
 		super();
@@ -26,7 +26,7 @@ export class EditBox extends HTMLElement {
 		this.#root.appendChild(template.content.cloneNode(true));
 
 		this.#input = this.#root.querySelector('input') as HTMLInputElement;
-		this.#loader = this.#root.querySelector('skeleton-loader') as SkeletonLoader;
+		this.#loader = this.#root.querySelector('skeleton-loader') as SdrLoader;
 
 		for (const attribute of this.attributes as NamedNodeMap & { [Symbol.iterator](): Iterator<Attr> }) {
 			if (!banList.includes(attribute.name)) {
