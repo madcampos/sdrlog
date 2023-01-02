@@ -36,6 +36,7 @@ export class SdrCard extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-card',
+			watchedAttributes,
 			props: [
 				{ name: 'id', value: '', attributeName: 'id' },
 				{ name: 'title', value: '', attributeName: 'title' },

@@ -20,6 +20,7 @@ export class SdrSelect extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-select',
+			watchedAttributes,
 			props: [
 				{ name: 'edit', value: false, attributeName: 'edit' },
 				{ name: 'value', value: '', attributeName: 'value' },

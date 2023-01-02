@@ -17,6 +17,7 @@ export class SdrLoader extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-loader',
+			watchedAttributes,
 			props: [
 				{
 					name: 'loaded',

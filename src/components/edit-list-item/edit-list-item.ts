@@ -16,6 +16,7 @@ export class SdrEditListItem extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-edit-list-item',
+			watchedAttributes,
 			props: [
 				{ name: 'edit', value: false, attributeName: 'edit' },
 				{ name: 'value', value: '', attributeName: 'value' }

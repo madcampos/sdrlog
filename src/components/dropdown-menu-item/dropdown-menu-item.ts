@@ -18,6 +18,7 @@ export class SdrDropdownItem extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-dropdown-item',
+			watchedAttributes,
 			props: [{ name: 'icon', value: '', attributeName: 'icon' }],
 			template,
 			style

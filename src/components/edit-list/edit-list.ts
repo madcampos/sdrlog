@@ -23,6 +23,7 @@ export class SdrEditList extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-edit-list',
+			watchedAttributes,
 			props: [
 				{
 					name: 'edit',

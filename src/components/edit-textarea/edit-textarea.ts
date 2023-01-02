@@ -22,6 +22,7 @@ export class SdrTextArea extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-textarea',
+			watchedAttributes,
 			props: [
 				{ name: 'edit', value: false, attributeName: 'edit' },
 				{

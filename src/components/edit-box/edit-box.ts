@@ -21,6 +21,7 @@ export class SdrEditBox extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-edit-box',
+			watchedAttributes,
 			props: [
 				{ name: 'edit', value: false, attributeName: 'edit' },
 				{ name: 'value', value: '', attributeName: 'value' },
