@@ -1,6 +1,6 @@
 /* eslint-disable max-lines, no-console */
 
-import { templateParser, type TemplateParser } from './serialization';
+import { type PropBinding, type TemplateParser, templateParser } from './serialization';
 
 import baseStyle from './BaseComponent.css?raw';
 
@@ -27,9 +27,14 @@ interface PropDefinition<T extends PropTypes> {
 
 type EventHandler = (evt: Event) => void | Promise<void>;
 
-type Prop<T extends PropTypes> = Omit<PropDefinition<T>, 'selector'> & {
+type Prop<T extends PropTypes> = PropDefinition<T> & {
 	boundAttributes: Record<string, HTMLElement>,
-	boundElements: HTMLElement[]
+	boundElements: HTMLElement[],
+	boundLoops: {
+		element: HTMLElement,
+		template: HTMLTemplateElement,
+		props: PropBinding[]
+	}[]
 };
 
 type WatchedSlotEvent = Event & { target: HTMLSlotElement };
@@ -138,7 +143,15 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			}
 		}
 
-		// TODO: handle conditional and loop props
+		const loopProps = parsedProps.filter((prop) => prop.type === 'loop');
+
+		for (const prop of loopProps) {
+			if (!this.#props.has(prop.prop)) {
+				throw new Error(`Prop "${prop.prop}" is not defined in watched props`);
+			}
+
+			this.#bindPropToLoop(prop.prop, prop.element);
+		}
 
 		for (const attribute of watchedAttributes ?? []) {
 			if (!this.#watchedAttributes.has(attribute)) {
@@ -338,6 +351,10 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		if (prop.attributeName) {
 			this.#serializePropToAttribute(prop.attributeName, this, newValue);
 		}
+
+		prop.boundLoops.forEach((boundLoop) => {
+			// TODO: Implement loop update
+		});
 	}
 
 	#updateProp(propName: string, value: PropTypes, forceUpdate = false) {
@@ -409,6 +426,31 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		this.#props.get(prop)?.boundElements.push(element);
 	}
 
+	#bindPropToLoop(prop: string, element: HTMLElement) {
+		if (!this.#props.has(prop)) {
+			throw new Error(`Prop "${prop}" is not defined in watched props`);
+		}
+
+		if (DEBUG_MODE) {
+			console.log(`${DEBUG_HEADER} Binding prop "${prop}" to loop:`, DEBUG_STYLE);
+			console.log(element);
+		}
+
+		const elementTemplate = document.createElement('template');
+
+		elementTemplate.content.append(...element.childNodes);
+
+		const { props } = SdrComponent.templateParser(elementTemplate.content);
+
+		this.#props.get(prop)?.boundLoops.push({
+			element,
+			template: elementTemplate,
+			props
+		});
+
+		// TODO: render loop inside element
+	}
+
 	static templateParser: TemplateParser = (template) => templateParser(template);
 
 	watchProp({ name, value, attributeName, validate }: PropDefinition<PropTypes>) {
@@ -421,11 +463,45 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			});
 		}
 
+		let propValue = value;
+
+		if (typeof value === 'object') {
+			propValue = new Proxy(value, {
+				set: (target, prop, newValue) => {
+					target[prop] = newValue;
+
+					this.#updateProp(name, target);
+
+					return true;
+				},
+				deleteProperty: (target, prop) => {
+					if (prop in target) {
+						// eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+						delete target[prop];
+
+						this.#updateProp(name, target);
+
+						return true;
+					}
+
+					return false;
+				},
+				defineProperty: (target, property, attributes) => {
+					Object.defineProperty(target, property, attributes);
+
+					this.#updateProp(name, target);
+
+					return true;
+				}
+			});
+		}
+
 		this.#props.set(name, {
 			name,
-			value,
+			value: propValue,
 			boundAttributes: {},
 			boundElements: [],
+			boundLoops: [],
 			validate,
 			attributeName
 		});
