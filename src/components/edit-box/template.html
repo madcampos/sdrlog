@@ -1,0 +1,15 @@
+<template>
+	<label for="edit-box-input">
+		<slot name="label"></slot>
+	</label>
+	<input
+		id="edit-box-input"
+
+		:value="value"
+		:readonly="readonly"
+		:disabled="disabled"
+		:required="required"
+
+		@change="updateValue"
+	/>
+</template>

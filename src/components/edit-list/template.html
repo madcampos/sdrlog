@@ -1,0 +1,24 @@
+<template>
+	<details
+		:open="open"
+	>
+		<summary>
+			<slot name="label"></slot>
+		</summary>
+
+		<div id="input-container" hidden>
+			<slot name="input"></slot>
+			<sdr-button
+				icon-button
+				id="add-button"
+				title="t('Add item')"
+
+				@click="addItem"
+			>➕</sdr-button>
+		</div>
+
+		<article id="items-container">
+			<slot></slot>
+		</article>
+	</details>
+</template>

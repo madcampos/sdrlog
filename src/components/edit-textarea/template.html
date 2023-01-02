@@ -1,0 +1,18 @@
+<template>
+	<label for="edit-textarea">
+		<slot name="label"></slot>
+	</label>
+	<div id="rendered-text">
+		<article></article>
+	</div>
+	<textarea
+		id="edit-textarea"
+		:disabled="disabled"
+		:required="required"
+		:readonly="readonly"
+
+		@change="update"
+	>
+		{{value}}
+	</textarea>
+</template>

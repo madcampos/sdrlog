@@ -30,6 +30,8 @@
 	background: var(--border-color);
 }
 
+:host([edit]) #close-button { display: block; }
+
 :host:hover {
 	background: var(--accent-color);
 }

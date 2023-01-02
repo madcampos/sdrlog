@@ -1,31 +1,31 @@
 import type { Material } from '../../../public/data/data';
 import { FALLBACK_COVER, fetchCover } from '../../js/covers/fetch-covers';
 import { getFilesForMaterial } from '../../js/data-operations/idb-persistence';
-import type { EditBox } from '../edit-box/edit-box';
-import type { EditList } from '../edit-box/edit-list';
-import type { EditSelect } from '../edit-box/edit-select';
-import type { EditText } from '../edit-box/edit-text';
+import type { SdrInput } from '../edit-box/edit-box';
+import type { SdrEditList } from '../edit-list/edit-list';
+import type { SdrSelect } from '../edit-select/edit-select';
+import type { SdrTextArea } from '../edit-textarea/edit-textarea';
 import { formatMonth } from '../../js/intl/formatting';
 
 import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName } from './details-template';
 
 interface DetailElementsReferences {
-	name: EditBox,
-	sku: EditList,
-	edition: EditBox,
-	gameDate: EditBox,
-	category: EditSelect,
-	type: EditSelect,
-	originalLanguage: EditSelect,
-	releaseDate: EditList,
-	publisher: EditList,
-	status: EditSelect,
-	names: EditList,
-	files: EditList,
-	links: EditList,
+	name: SdrInput,
+	sku: SdrEditList,
+	edition: SdrInput,
+	gameDate: SdrInput,
+	category: SdrSelect,
+	type: SdrSelect,
+	originalLanguage: SdrSelect,
+	releaseDate: SdrEditList,
+	publisher: SdrEditList,
+	status: SdrSelect,
+	names: SdrEditList,
+	files: SdrEditList,
+	links: SdrEditList,
 	cover: HTMLImageElement,
-	notes: EditText,
-	description: EditText
+	notes: SdrTextArea,
+	description: SdrTextArea
 }
 
 export function setMaterialDetails(material: Material, {

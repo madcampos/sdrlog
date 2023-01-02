@@ -1,10 +1,10 @@
 import type { SdrDialog } from '../../components/dialog/dialog';
-import type { EditSelect } from '../../components/edit-box/edit-select';
+import type { SdrSelect } from '../../components/edit-select/edit-select';
 import { I18n } from './translations';
 import { registerShortcut } from '../util/keyboard';
 
 const languageBox = document.querySelector('#language-modal') as SdrDialog;
-const languageSelect = document.querySelector('#language-select') as EditSelect;
+const languageSelect = document.querySelector('#language-select') as SdrSelect;
 
 I18n.translateElementsContent(languageBox);
 

@@ -1,11 +1,11 @@
 import type { SdrButton } from '../button/button';
 import type { SdrDialog } from '../dialog/dialog';
-import type { EditBox } from '../edit-box/edit-box';
-import type { EditList } from '../edit-box/edit-list';
-import type { EditSelect } from '../edit-box/edit-select';
-import type { EditText } from '../edit-box/edit-text';
+import type { SdrInput } from '../edit-box/edit-box';
+import type { SdrEditList } from '../edit-list/edit-list';
+import type { SdrSelect } from '../edit-select/edit-select';
+import type { SdrTextArea } from '../edit-textarea/edit-textarea';
 import type { FileForMaterial, Material } from '../../../public/data/data';
-import type { EditListItem } from '../edit-box/edit-list-item';
+import type { SdrEditListItem } from '../edit-list-item/edit-list-item';
 import type { SdrDropArea } from '../drop-area/drop-area';
 import type { NewMaterialProperties } from '../../js/data-operations/create-material';
 
@@ -33,21 +33,21 @@ export class ItemDetails extends HTMLElement {
 	#isEditing = false;
 
 	#formFields: {
-		name: EditBox,
-		sku: EditList,
-		edition: EditBox,
-		gameDate: EditBox,
-		category: EditSelect,
-		type: EditSelect,
-		originalLanguage: EditSelect,
-		releaseDate: EditList,
-		publisher: EditList,
-		status: EditSelect,
-		names: EditList,
-		files: EditList,
-		links: EditList,
-		notes: EditText,
-		description: EditText
+		name: SdrInput,
+		sku: SdrEditList,
+		edition: SdrInput,
+		gameDate: SdrInput,
+		category: SdrSelect,
+		type: SdrSelect,
+		originalLanguage: SdrSelect,
+		releaseDate: SdrEditList,
+		publisher: SdrEditList,
+		status: SdrSelect,
+		names: SdrEditList,
+		files: SdrEditList,
+		links: SdrEditList,
+		notes: SdrTextArea,
+		description: SdrTextArea
 	};
 
 	#editInputs: {
@@ -80,33 +80,33 @@ export class ItemDetails extends HTMLElement {
 		this.#exportButton = this.#root.querySelector('#export') as SdrButton;
 
 		this.#formFields = {
-			name: this.#root.querySelector('#name') as EditBox,
+			name: this.#root.querySelector('#name') as SdrInput,
 
-			sku: this.#root.querySelector('#sku') as EditList,
+			sku: this.#root.querySelector('#sku') as SdrEditList,
 
-			edition: this.#root.querySelector('#edition') as EditBox,
-			gameDate: this.#root.querySelector('#gamedate') as EditBox,
+			edition: this.#root.querySelector('#edition') as SdrInput,
+			gameDate: this.#root.querySelector('#gamedate') as SdrInput,
 
-			category: this.#root.querySelector('#category') as EditSelect,
+			category: this.#root.querySelector('#category') as SdrSelect,
 
-			type: this.#root.querySelector('#type') as EditSelect,
+			type: this.#root.querySelector('#type') as SdrSelect,
 
-			originalLanguage: this.#root.querySelector('#language') as EditSelect,
+			originalLanguage: this.#root.querySelector('#language') as SdrSelect,
 
-			releaseDate: this.#root.querySelector('#releasedate') as EditList,
+			releaseDate: this.#root.querySelector('#releasedate') as SdrEditList,
 
-			publisher: this.#root.querySelector('#publisher') as EditList,
+			publisher: this.#root.querySelector('#publisher') as SdrEditList,
 
-			status: this.#root.querySelector('#status') as EditSelect,
+			status: this.#root.querySelector('#status') as SdrSelect,
 
-			names: this.#root.querySelector('#names') as EditList,
+			names: this.#root.querySelector('#names') as SdrEditList,
 
-			files: this.#root.querySelector('#files-list') as EditList,
+			files: this.#root.querySelector('#files-list') as SdrEditList,
 
-			links: this.#root.querySelector('#links') as EditList,
+			links: this.#root.querySelector('#links') as SdrEditList,
 
-			notes: this.#root.querySelector('#notes') as EditText,
-			description: this.#root.querySelector('#description') as EditText
+			notes: this.#root.querySelector('#notes') as SdrTextArea,
+			description: this.#root.querySelector('#description') as SdrTextArea
 		};
 
 		this.#editInputs = {
@@ -169,7 +169,7 @@ export class ItemDetails extends HTMLElement {
 				evt.preventDefault();
 				evt.stopPropagation();
 
-				const targetParent = target.closest('edit-list-item') as EditListItem;
+				const targetParent = target.closest('edit-list-item') as SdrEditListItem;
 				const fileInfo = JSON.parse(decodeURI(targetParent.value)) as FileForMaterial;
 
 				await openFile(fileInfo);

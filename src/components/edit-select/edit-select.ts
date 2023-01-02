@@ -5,7 +5,7 @@ import style from './style.css?raw';
 
 const watchedAttributes = ['edit', 'value', 'disabled', 'required', 'readonly'];
 
-export interface SdrEditBox {
+export interface SdrSelect {
 	edit: boolean,
 	value: string,
 	disabled: boolean,
@@ -13,14 +13,13 @@ export interface SdrEditBox {
 	readonly: boolean
 }
 
-export class SdrEditBox extends SdrComponent {
+export class SdrSelect extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
-
-	#input: HTMLInputElement;
+	#select: HTMLSelectElement;
 
 	constructor() {
 		super({
-			name: 'sdr-edit-box',
+			name: 'sdr-select',
 			props: [
 				{ name: 'edit', value: false, attributeName: 'edit' },
 				{ name: 'value', value: '', attributeName: 'value' },
@@ -29,22 +28,30 @@ export class SdrEditBox extends SdrComponent {
 				{ name: 'readonly', value: false, attributeName: 'readonly' }
 			],
 			handlers: {
-				updateValue: () => {
-					this.value = this.#input.value;
-
+				update: () => {
+					this.#select.value = this.value;
 					this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+				}
+			},
+			watchedSlots: {
+				'default': (evt) => {
+					const optionList = [...evt.target.assignedElements()].filter((option) => option instanceof HTMLOptGroupElement || option instanceof HTMLOptionElement);
+
+					for (const option of optionList) {
+						this.#select.add(option as HTMLOptGroupElement | HTMLOptionElement);
+					}
 				}
 			},
 			template,
 			style
 		});
 
-		this.#input = this.root.querySelector('input') as HTMLInputElement;
+		this.#select = this.root.querySelector('select') as HTMLSelectElement;
 	}
 
 	resetValue() {
-		this.#input.value = '';
+		this.#select.selectedIndex = 0;
 	}
 }
 
-customElements.define('sdr-edit-box', SdrEditBox);
+customElements.define('sdr-select', SdrSelect);

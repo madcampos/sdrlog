@@ -11,6 +11,9 @@
 
 :host([hidden]) { display: none; }
 
+:host([edit]) textarea { display: none; }
+:host([edit]) #rendered-text { display: block; }
+
 label:not([hidden]) {
 	font-size: var(--small-text);
 	display: block;

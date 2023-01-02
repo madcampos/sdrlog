@@ -1,0 +1,21 @@
+<template id="edit-select">
+	<label for="edit-select-input">
+		<slot name="label"></slot>
+	</label>
+
+	<select
+		id="edit-select-input"
+
+		:disabled="disabled"
+		:required="required"
+		:readonly="readonly"
+
+		@change="update"
+	>
+		<option selected disabled hidden value="">t("Please select an option...")</option>
+	</select>
+
+	<div hidden>
+		<slot></slot>
+	</div>
+</template>
