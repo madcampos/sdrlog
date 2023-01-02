@@ -1,10 +1,10 @@
-import { ProgressOverlay } from '../../components/progress/progress';
+import { SdrProgressOverlay } from '../../components/progress/progress';
 import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
 import { I18n } from '../intl/translations';
 import { Logger } from '../util/logger';
 
 export async function saveCoversToFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export Covers` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Export Covers` });
 
 	try {
 		const coversFolder = await window.showDirectoryPicker({
@@ -39,7 +39,7 @@ export async function saveCoversToFolder() {
 }
 
 export async function saveThumbsToFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export Thumbnails` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Export Thumbnails` });
 
 	try {
 		const thumbsFolder = await window.showDirectoryPicker({

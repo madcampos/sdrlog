@@ -1,7 +1,7 @@
 import type { SDRLogData } from '../../../public/data/data';
 import { I18n } from '../intl/translations';
 import { Logger } from '../util/logger';
-import { ProgressOverlay } from '../../components/progress/progress';
+import { SdrProgressOverlay } from '../../components/progress/progress';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
 async function fetchData() {
@@ -63,7 +63,7 @@ export async function fetchItems() {
 }
 
 export async function requestDataFileFromUser() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Read data file` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Read data file` });
 
 	try {
 		const [fileHandle] = await window.showOpenFilePicker({

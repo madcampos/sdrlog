@@ -1,37 +1,51 @@
-export class ProgressOverlay extends HTMLElement {
-	#root: ShadowRoot;
+import { SdrComponent } from '../base/BaseComponent';
 
-	#progress: HTMLProgressElement;
+import template from './template.html?raw';
+import style from './style.css?raw';
+
+export interface SdrProgressOverlay {
+	title: string,
+	info: string,
+	total: number,
+	count: string,
+	value: number
+}
+
+export class SdrProgressOverlay extends SdrComponent {
 	#dialog: HTMLDialogElement;
-	#count: HTMLSpanElement;
-
-	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-	#total = 100;
-	#current = 0;
 
 	constructor() {
-		super();
+		super({
+			name: 'sdr-progress-overlay',
+			props: [
+				{ name: 'title', value: '' },
+				{ name: 'info', value: '' },
+				{ name: 'total', value: 100 },
+				{ name: 'count', value: '' },
+				{
+					name: 'value',
+					value: (newValue = 0) => {
+						this.count = `${newValue as number} / ${this.total}`;
 
-		const template = document.querySelector('#progress') as HTMLTemplateElement;
+						return newValue;
+					}
+				}
+			],
+			template,
+			style
+		});
 
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
-
-		this.#progress = this.#root.querySelector('progress') as HTMLProgressElement;
-		this.#dialog = this.#root.querySelector('dialog') as HTMLDialogElement;
-		this.#count = this.#root.querySelector('span') as HTMLSpanElement;
+		this.#dialog = this.root.querySelector('dialog') as HTMLDialogElement;
 	}
 
 	static createOverlay({ total, title, info }: { total?: number, title?: string, info?: string }) {
-		const overlay = new ProgressOverlay();
+		const overlay = new SdrProgressOverlay();
 
-		overlay.innerHTML = `
-			<span slot="title">${title ?? ''}</span>
-			<span slot="info">${info ?? ''}</span>
-		`;
+		overlay.title = title ?? '';
+		overlay.info = info ?? '';
 
 		if (typeof total === 'number') {
-			overlay.setTotal(total);
+			overlay.total = total;
 		} else {
 			overlay.setIndefinite();
 		}
@@ -43,27 +57,13 @@ export class ProgressOverlay extends HTMLElement {
 	}
 
 	setIndefinite() {
-		this.#progress.max = 0;
-		this.#count.hidden = true;
-	}
-
-	setTotal(total: number) {
-		this.#total = total;
-		this.#progress.max = total;
-		this.#count.hidden = false;
-		this.#count.innerText = `${this.#current} / ${this.#total}`;
-	}
-
-	setValue(value: number) {
-		this.#current = value;
-		this.#progress.value = value;
-		this.#count.innerText = `${this.#current} / ${this.#total}`;
+		this.total = 0;
+		this.value = 0;
+		this.count = '';
 	}
 
 	increment() {
-		this.#current += 1;
-		this.#progress.value = this.#current;
-		this.#count.innerText = `${this.#current} / ${this.#total}`;
+		this.value += 1;
 	}
 
 	show() {
@@ -78,4 +78,4 @@ export class ProgressOverlay extends HTMLElement {
 	}
 }
 
-customElements.define('progress-overlay', ProgressOverlay);
+customElements.define('sdr-progress-overlay', SdrProgressOverlay);

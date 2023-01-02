@@ -1,4 +1,4 @@
-import { ProgressOverlay } from '../../components/progress/progress';
+import { SdrProgressOverlay } from '../../components/progress/progress';
 import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
@@ -39,7 +39,7 @@ export async function getThumbUrl(id: string) {
 }
 
 export async function extractCoversFromFiles() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Extract Covers` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Extract Covers` });
 
 	try {
 		const files = await getAllFiles();
@@ -81,7 +81,7 @@ export async function extractCoversFromFiles() {
 }
 
 export async function importCoversFromFolder() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Import Covers` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Import Covers` });
 
 	try {
 		const files = [];

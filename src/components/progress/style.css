@@ -1,0 +1,30 @@
+:host {
+	display: block;
+}
+
+dialog[open] {
+	padding: 0;
+	width: var(--dialog-width);
+	height: var(--dialog-height);
+	border: none;
+	border-radius: var(--dialog-border-radius);
+	background: var(--bg-color);
+	accent-color: var(--theme-color);
+
+	pointer-events: none;
+	user-select: none;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+dialog::backdrop {
+	background: var(--dialog-backdrop-color);
+	backdrop-filter: var(--dialog-backdrop-filter);
+}
+
+h1 {
+	color: var(--theme-color);
+}

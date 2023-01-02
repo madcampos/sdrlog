@@ -1,7 +1,7 @@
 import type { IsoCode, Material } from '../../../public/data/data';
 import type { NewMaterialProperties } from './create-material';
 
-import { ProgressOverlay } from '../../components/progress/progress';
+import { SdrProgressOverlay } from '../../components/progress/progress';
 import { getMaterials } from './idb-persistence';
 import { I18n } from '../intl/translations';
 import { Logger } from '../util/logger';
@@ -42,7 +42,7 @@ function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 }
 
 export async function exportDataFile() {
-	const progressOverlay = ProgressOverlay.createOverlay({ title: I18n.t`Export Data` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Export Data` });
 
 	try {
 		const items = (await getMaterials()).map((material) => formatDataItem(material as unknown as NewMaterialProperties));
