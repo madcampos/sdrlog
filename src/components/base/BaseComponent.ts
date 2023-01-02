@@ -87,7 +87,7 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 
 		this.addStyle(baseStyle);
 
-		const { props: parsedProps, template: parsedTemplate, handlers: parsedHandlers } = this.#parseTemplate(template);
+		const { props: parsedProps, template: parsedTemplate } = this.#parseTemplate(template);
 
 		if ((typeof style === 'string' && style !== '') || style instanceof CSSStyleSheet) {
 			this.addStyle(style);
@@ -107,13 +107,15 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			});
 		}
 
+		const parsedHandlers = parsedProps.filter((prop) => prop.type === 'event');
+
 		for (const handler of parsedHandlers) {
-			if (this.handlers[handler.handlerName] === undefined) {
-				throw new Error(`Handler "${handler.handlerName}" is not defined in watched handlers`);
+			if (this.handlers[handler.prop] === undefined) {
+				throw new Error(`Handler "${handler.prop}" is not defined in watched handlers`);
 			}
 
-			handler.boundElement.addEventListener(handler.eventName, (evt) => {
-				void this.handlers[handler.handlerName]?.(evt);
+			handler.element.addEventListener(handler.attribute as string, (evt) => {
+				void this.handlers[handler.prop]?.(evt);
 			});
 		}
 
@@ -121,17 +123,22 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			this.watchProp(prop);
 		}
 
-		for (const prop of parsedProps) {
-			if (!this.#props.has(prop.propName)) {
-				throw new Error(`Prop "${prop.propName}" is not defined in watched props`);
+		const simplePropsTypes = ['attribute', 'text'];
+		const simpleParsedProps = parsedProps.filter((prop) => simplePropsTypes.includes(prop.type));
+
+		for (const prop of simpleParsedProps) {
+			if (!this.#props.has(prop.prop)) {
+				throw new Error(`Prop "${prop.prop}" is not defined in watched props`);
 			}
 
-			if (!prop.boundAttribute) {
-				this.#bindPropToInternalElement(prop.propName, prop.boundElement);
+			if (!prop.attribute) {
+				this.#bindPropToInternalElement(prop.prop, prop.element);
 			} else {
-				this.#bindPropToInternalAttribute(prop.propName, prop.boundAttribute, prop.boundElement);
+				this.#bindPropToInternalAttribute(prop.prop, prop.attribute, prop.element);
 			}
 		}
+
+		// TODO: handle conditional and loop props
 
 		for (const attribute of watchedAttributes ?? []) {
 			if (!this.#watchedAttributes.has(attribute)) {
@@ -189,22 +196,20 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 
 		const domTree = tempTemplate.content.cloneNode(true) as DocumentFragment;
 
-		const { props, handlers } = SdrComponent.templateParser(domTree);
+		const { props } = SdrComponent.templateParser(domTree);
 
 
 		if (DEBUG_MODE) {
 			console.log(`${DEBUG_HEADER} Parsed template`, DEBUG_STYLE);
 			console.log({
 				props,
-				handlers,
 				domTree
 			});
 		}
 
 		return {
 			template: domTree,
-			props,
-			handlers
+			props
 		};
 	}
 
