@@ -9,7 +9,7 @@ import './edit-list/edit-list';
 import './edit-select/edit-select';
 import './edit-textarea/edit-textarea';
 import './info-box/info-box';
-import './item-info/item-card';
+import './item-card/item-card';
 import './item-info/item-details';
 import './menu-bar/menu-bar';
 import './progress/progress';

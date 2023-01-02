@@ -1,6 +1,6 @@
 import type { SdrDialog } from '../../components/dialog/dialog';
 import type { SdrDropdown } from '../../components/dropdown-menu/dropdown-menu';
-import type { ItemCard } from '../../components/item-info/item-card';
+import type { SdrCard } from '../../components/item-card/item-card';
 import type { ItemDetails } from '../../components/item-info/item-details';
 import type { SearchBox } from '../../components/search-box/search-box';
 
@@ -11,7 +11,7 @@ const ACTIVATION_WEAK_VIBRATE = 0.8;
 const ACTIVATION_STRONG_VIBRATE = 1;
 
 function resetFocus() {
-	document.querySelector<ItemCard>('item-card')?.focus();
+	document.querySelector<SdrCard>('item-card')?.focus();
 }
 
 const gamepadNormalizer = new GamepadEventNormalizer(resetFocus);
@@ -90,7 +90,7 @@ function selectNextCard() {
 		if (document.activeElement?.nextElementSibling) {
 			(document.activeElement.nextElementSibling as HTMLElement).focus();
 		} else {
-			(document.querySelector('item-card:first-of-type') as ItemCard).focus();
+			(document.querySelector('item-card:first-of-type') as SdrCard).focus();
 		}
 	}
 }
@@ -100,14 +100,14 @@ function selectPreviousCard() {
 		if (document.activeElement?.previousElementSibling) {
 			(document.activeElement.previousElementSibling as HTMLElement).focus();
 		} else {
-			(document.querySelector('item-card:last-of-type') as ItemCard).focus();
+			(document.querySelector('item-card:last-of-type') as SdrCard).focus();
 		}
 	}
 }
 
 function selectCardUp() {
 	if (document.activeElement?.matches('item-card') ?? false) {
-		const currentCard = document.activeElement as ItemCard;
+		const currentCard = document.activeElement as SdrCard;
 		const { left: currentLeft, top: currentTop, width: currentWidth, height: currentHeight } = currentCard.getBoundingClientRect();
 
 		const cards = [...document.querySelectorAll('item-card')];
@@ -129,9 +129,9 @@ function selectCardUp() {
 		});
 
 		if (elementUp) {
-			(elementUp as ItemCard).focus();
+			(elementUp as SdrCard).focus();
 		} else {
-			(document.querySelector('item-card:last-of-type') as ItemCard).focus();
+			(document.querySelector('item-card:last-of-type') as SdrCard).focus();
 		}
 	}
 }
@@ -139,7 +139,7 @@ function selectCardUp() {
 
 function selectCardDown() {
 	if (document.activeElement?.matches('item-card') ?? false) {
-		const currentCard = document.activeElement as ItemCard;
+		const currentCard = document.activeElement as SdrCard;
 		const { left: currentLeft, bottom: currentBottom, width: currentWidth, height: currentHeight } = currentCard.getBoundingClientRect();
 
 		const cards = [...document.querySelectorAll('item-card')];
@@ -161,16 +161,16 @@ function selectCardDown() {
 		});
 
 		if (elementDown?.matches('item-card') ?? false) {
-			(elementDown as ItemCard).focus();
+			(elementDown as SdrCard).focus();
 		} else {
-			(document.querySelector('item-card:first-of-type') as ItemCard).focus();
+			(document.querySelector('item-card:first-of-type') as SdrCard).focus();
 		}
 	}
 }
 
 function openCardDetails() {
 	if (document.activeElement?.matches('item-card') ?? false) {
-		(document.activeElement as ItemCard).click();
+		(document.activeElement as SdrCard).click();
 		gamepadNormalizer.vibrate(ACTIVATION_TIME, ACTIVATION_WEAK_VIBRATE, ACTIVATION_STRONG_VIBRATE);
 	}
 }

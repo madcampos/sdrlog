@@ -12,7 +12,7 @@ import type { NewMaterialProperties } from '../../js/data-operations/create-mate
 import { formatFile, formatLink, formatPublisher, formatReleaseDate, formatSku, formatTranslatedName, setCategories, setLanguages, setPublishers, setStatus, setTypes } from './details-template';
 import { setMaterialDetails } from './build-details';
 import { getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
-import { ItemCard } from './item-card';
+import { SdrCard } from '../item-card/item-card';
 import { saveNewMaterialInfo } from '../../js/data-operations/create-material';
 import { openFile } from '../../js/files-reader/open-file';
 import { LOADING_COVER } from '../../js/covers/fetch-covers';
@@ -233,7 +233,7 @@ export class ItemDetails extends HTMLElement {
 				});
 
 				if (!document.querySelector(`item-card[id="${id}"]`)) {
-					ItemCard.createCard({
+					SdrCard.createCard({
 						name: this.#formFields.name.value,
 						id,
 						sku: this.#formFields.sku.values,
