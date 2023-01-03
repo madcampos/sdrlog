@@ -4,7 +4,7 @@ import { type PropBinding, type TemplateParser, templateParser } from './seriali
 
 import baseStyle from './BaseComponent.css?raw';
 
-const DEBUG_MODE = false as const as boolean;
+const DEBUG_MODE = true as const as boolean;
 const DEBUG_HEADER = '%c[SDR Component]';
 const DEBUG_STYLE = 'color: #9400d3; font-weight: bold; background: #000000; border-radius: 5px; padding: 2px 5px;';
 
@@ -277,16 +277,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		}
 	}
 
-	#deserializeAttributeToProp(attr: string, element: HTMLElement, type: PropTypes) {
-		const value = element.getAttribute(attr);
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Deserialize attribute "${attr}" to prop: "${value}"`, DEBUG_STYLE);
-		}
-
-		return this.#parseValue(value, type);
-	}
-
 	#serializePropToElement(element: HTMLElement, value: PropTypes) {
 		if (DEBUG_MODE) {
 			console.log(`${DEBUG_HEADER} Serialize prop to element: "${value instanceof Object ? JSON.stringify(value) : value.toString()}"`, DEBUG_STYLE);
@@ -373,10 +363,10 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 					tempValue = undefined as unknown as typeof value;
 				}
 
-				const computedValue = (prop.value as ComputedPropHandler<typeof value>)(tempValue);
+				tempValue = (prop.value as ComputedPropHandler<typeof value>)(tempValue);
 
-				this.#computedPropsCache.set(propName, computedValue);
-				this.#propagatePropUpdates(prop, computedValue);
+				this.#computedPropsCache.set(propName, tempValue);
+				this.#propagatePropUpdates(prop, tempValue);
 			} else if (prop.value !== value || forceUpdate) {
 				this.#propagatePropUpdates(prop, value);
 
@@ -394,19 +384,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			console.log(`${DEBUG_HEADER} Binding prop "${prop}" to attirbute "${attributeName}":`, DEBUG_STYLE);
 			console.log(element);
 		}
-
-		this.#serializePropToAttribute(attributeName, element, this[prop]);
-
-		new MutationObserver(([mutation]) => {
-			if (mutation.oldValue !== this[prop]) {
-				const value = this.#deserializeAttributeToProp(attributeName, element, typeof this[prop]);
-
-				this.#updateProp(prop, value);
-			}
-		}).observe(element, {
-			attributes: true,
-			attributeFilter: [attributeName]
-		});
 
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		this.#props.get(prop)!.boundAttributes[attributeName] = element;
