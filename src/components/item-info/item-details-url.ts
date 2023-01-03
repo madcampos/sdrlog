@@ -1,4 +1,4 @@
-import { ItemDetails } from './item-details';
+import { SdrItemDetails } from '../item-details/item-details';
 
 export function checkForMatchingId(idToCheck: string) {
 	if (window.location.hash === '#information') {
@@ -11,5 +11,5 @@ export function checkForMatchingId(idToCheck: string) {
 }
 
 export function updateItemModalFromURL(id: string, title: string) {
-	void ItemDetails.openMaterialModal(id, title);
+	void SdrItemDetails.openMaterialModal(id, title);
 }

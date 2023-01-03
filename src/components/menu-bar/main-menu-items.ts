@@ -6,7 +6,7 @@ import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-ex
 import { requestDataFileFromUser } from '../../js/data-operations/data-import';
 import { exportDataFile } from '../../js/data-operations/data-export';
 import { updateSearchFilter } from '../search-box/update-filter';
-import { ItemDetails } from '../item-info/item-details';
+import { SdrItemDetails } from '../item-details/item-details';
 import { openInfoModal } from '../info-box/info-box';
 import { openLanguageModal } from '../../js/intl/language-info';
 import { openThemeModal } from '../theme-box/theme-box';
@@ -39,4 +39,4 @@ document.querySelectorAll('#filters dropdown-menu-item').forEach((filterButton) 
 	});
 });
 
-document.querySelector('menu-bar #add-material')?.addEventListener('click', async () => ItemDetails.openMaterialModal());
+document.querySelector('menu-bar #add-material')?.addEventListener('click', async () => SdrItemDetails.openMaterialModal());

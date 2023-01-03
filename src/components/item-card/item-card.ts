@@ -3,7 +3,7 @@ import type { Material } from '../../../public/data/data';
 import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/fetch-covers';
 import { getMaterial } from '../../js/data-operations/idb-persistence';
 import { SdrComponent } from '../base/BaseComponent';
-import { ItemDetails } from '../item-info/item-details';
+import { SdrItemDetails } from '../item-details/item-details';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -51,7 +51,7 @@ export class SdrCard extends SdrComponent {
 		});
 
 		this.addEventListener('click', async () => {
-			await ItemDetails.openMaterialModal(this.id, this.title);
+			await SdrItemDetails.openMaterialModal(this.id, this.title);
 		});
 
 		this.addEventListener('keyup', (evt) => {

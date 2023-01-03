@@ -1,0 +1,231 @@
+<template>
+	<sdr-dialog>
+		<sdr-sdr-edit-box
+			id="name"
+			slot="title"
+			:edit="edit"
+			:disabled="edit"
+		></sdr-sdr-edit-box>
+
+		<div id="item-content">
+			<header>
+				<sdr-edit-list
+					id="sku"
+					open
+					:edit="edit"
+				>
+					<span slot="label">t("SKU")</span>
+					<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required />
+				</sdr-edit-list>
+
+				<sdr-edit-box
+					id="edition"
+					type="number"
+					min="1"
+					max="6"
+					step="1"
+					required
+
+					:edit="edit"
+					:value="edition"
+				>
+					<span slot="label">t("Edition")</span>
+				</sdr-edit-box>
+
+				<sdr-select
+					id="category"
+					required
+
+					:edit="edit"
+					:value="category"
+				>
+					<span slot="label">t("Category")</span>
+
+					<option value="novel">📚 t("Novel")</option>
+					<option value="sourcebook">📜 t("Sourcebook")</option>
+					<option value="mission">🗺️ t("Mission")</option>
+					<option value="rulebook">📝 t("Rulebook")</option>
+					<option value="misc">🔣 t("Misc.")</option>
+					<option value="magazine">📰 t("Magazine")</option>
+					<option value="boardgame">♟️ t("Boardgame")</option>
+					<option value="videogame">🎮 t("Videogame")</option>
+					<option value="tcg">🃏 t("T.C.G.")</option>
+					<option value="unofficial">📓 t("Unofficial")</option>
+				</sdr-select>
+
+				<sdr-select
+					id="type"
+					required
+
+					:edit="edit"
+					:value="type"
+				>
+					<span slot="label">t("Type")</span>
+
+
+					<option value="digital">💽 t("Digital")</option>
+					<option value="scan">📠 t("Scan")</option>
+					<option value="print">🖨️ t("Print")</option>
+					<option value="physical">🎲 t("Physical")</option>
+				</sdr-select>
+
+				<sdr-select
+					id="language"
+					required
+
+					:edit="edit"
+					:value="originalLanguage"
+				>
+					<span slot="label">t("Original Language")</span>
+
+					<option value="en-US">🇺🇸 t("en")</option>
+					<option value="de-DE">🇩🇪 t("de")</option>
+					<option value="fr-FR">🇫🇷 t("fr")</option>
+					<option value="jp-JP">🇯🇵 t("jp")</option>
+					<option value="es-ES">🇪🇸 t("es")</option>
+					<option value="hu-HU">🇭🇺 t("hu")</option>
+					<option value="it-IT">🇮🇹 t("it")</option>
+					<option value="pt-BR">🇧🇷 t("pt")</option>
+					<option value="cs-CZ">🇨🇿 t("cs")</option>
+					<option value="he-IL">🇮🇱 t("he")</option>
+					<option value="pl-PL">🇵🇱 t("pl")</option>
+					<option value="fi-FI">🇫🇮 t("fi")</option>
+				</sdr-select>
+
+				<sdr-edit-list
+					id="releasedate"
+					open
+
+					:edit="edit"
+				>
+					<span slot="label">t("Release date")</span>
+					<input slot="input" type="date" required />
+				</sdr-edit-list>
+			</header>
+
+			<aside id="meta">
+				<sdr-select
+					id="status"
+					required
+
+					:edit="edit"
+					:value="status"
+				>
+					<span slot="label">t("Status")</span>
+
+					<option value="ok">✔️ t("OK")</option>
+					<option value="missing">❌ t("Missing")</option>
+					<option value="outofscope">⛔ t("Out of scope")</option>
+					<option value="canceled">🚫 t("Canceled")</option>
+				</sdr-select>
+
+				<sdr-edit-box
+					type="month"
+					id="gamedate"
+					required
+
+					:edit="edit"
+					:value="gameDate"
+				>
+					<span slot="label">t("Game date")</span>
+				</sdr-edit-box>
+
+				<sdr-edit-list
+					id="names"
+
+					:edit="edit"
+				>
+					<span slot="label">t("Names published")</span>
+
+					<select slot="input" required>
+						<option selected disabled hidden value="">t("Please select an option...")</option>
+
+						<option value="en-US">🇺🇸 t("en")</option>
+						<option value="de-DE">🇩🇪 t("de")</option>
+						<option value="fr-FR">🇫🇷 t("fr")</option>
+						<option value="jp-JP">🇯🇵 t("jp")</option>
+						<option value="es-ES">🇪🇸 t("es")</option>
+						<option value="hu-HU">🇭🇺 t("hu")</option>
+						<option value="it-IT">🇮🇹 t("it")</option>
+						<option value="pt-BR">🇧🇷 t("pt")</option>
+						<option value="cs-CZ">🇨🇿 t("cs")</option>
+						<option value="he-IL">🇮🇱 t("he")</option>
+						<option value="pl-PL">🇵🇱 t("pl")</option>
+						<option value="fi-FI">🇫🇮 t("fi")</option>
+					</select>
+
+					<input slot="input" required placeholder="t('Name')" />
+				</sdr-edit-list>
+
+				<sdr-edit-list
+					id="publisher"
+					open
+
+					:edit="edit"
+				>
+					<span slot="label">t("Publisher")</span>
+
+					<select slot="input" required>
+						<option selected disabled hidden value="">t("Please select an option...")</option>
+
+						<option value="heyne">Heyne Verlag</option>
+						<option value="fanpro">Fantasy Productions</option>
+						<option value="other">other</option>
+						<option value="catalyst">Catalyst Game Labs</option>
+						<option value="fasa">FASA Corporation</option>
+						<option value="unofficial">unofficial</option>
+						<option value="wizkids">WizKids Games</option>
+						<option value="pegasus">Pegasus Spiele</option>
+						<option value="cliffhanger">Cliffhanger Productions</option>
+						<option value="harebrained">Harebrained Schemes</option>
+					</select>
+				</sdr-edit-list>
+			</aside>
+
+			<aside id="files">
+				<sdr-edit-list id="files-list" hidden>
+					<span slot="label">t("Files")</span>
+					<input slot="input" type="hidden" required value="📄" />
+					<label slot="input">t("Add a file")</label>
+				</sdr-edit-list>
+
+				<sdr-edit-list id="links">
+					<span slot="label">t("Online links")</span>
+					<input slot="input" type="text" placeholder="t('Name')" required />
+					<input slot="input" type="url" placeholder="t('URL')" required />
+				</sdr-edit-list>
+			</aside>
+
+			<drop-area
+				id="cover-drop-area"
+				:is-accepting-files="edit"
+			>
+				<figure>
+					<img
+						 width="100"
+						 height="160"
+						 id="cover"
+						 decoding="async"
+						 loading="lazy"
+						 role="presentation"
+						 src="./img/covers/loading-anim.svg" />
+				</figure>
+			</drop-area>
+
+			<article>
+				<sdr-textarea id="notes" hidden>
+					<span slot="label">t("Notes")</span>
+				</sdr-textarea>
+
+				<sdr-textarea id="description" required>
+					<span slot="label">t("Description")</span>
+				</sdr-textarea>
+			</article>
+		</div>
+
+		<sdr-button slot="footer" id="cancel" icon="❌">t("Cancel")</sdr-button>
+		<sdr-button slot="footer" id="edit" icon="✏️">t("Edit")</sdr-button>
+		<sdr-button slot="footer" id="save" icon="💾">t("Save")</sdr-button>
+		<sdr-button slot="footer" id="export" icon="📥">t("Export")</sdr-button>
+	</sdr-dialog>
+</template>
