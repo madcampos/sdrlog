@@ -4,7 +4,7 @@ import { type PropBinding, type TemplateParser, templateParser } from './seriali
 
 import baseStyle from './BaseComponent.css?raw';
 
-const DEBUG_MODE = true as const as boolean;
+const DEBUG_MODE = false as const as boolean;
 const DEBUG_HEADER = '%c[SDR Component]';
 const DEBUG_STYLE = 'color: #9400d3; font-weight: bold; background: #000000; border-radius: 5px; padding: 2px 5px;';
 
