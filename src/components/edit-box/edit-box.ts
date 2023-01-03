@@ -24,16 +24,28 @@ export class SdrEditBox extends SdrComponent {
 			watchedAttributes,
 			props: [
 				{ name: 'edit', value: false, attributeName: 'edit' },
-				{ name: 'value', value: '', attributeName: 'value' },
+				{
+					name: 'value',
+					value: (newValue = '') => {
+						this.#input.value = newValue as string;
+
+						this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+
+						return newValue;
+					},
+					attributeName: 'value'
+				},
 				{ name: 'disabled', value: false, attributeName: 'disabled' },
 				{ name: 'required', value: false, attributeName: 'required' },
 				{ name: 'readonly', value: false, attributeName: 'readonly' }
 			],
 			handlers: {
 				updateValue: () => {
-					this.value = this.#input.value;
+					if (this.#input.value !== this.value) {
+						this.value = this.#input.value;
 
-					this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+						this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+					}
 				}
 			},
 			template,
@@ -41,6 +53,12 @@ export class SdrEditBox extends SdrComponent {
 		});
 
 		this.#input = this.root.querySelector('input') as HTMLInputElement;
+
+		for (const attribute of [...this.attributes]) {
+			if (!watchedAttributes.includes(attribute.name)) {
+				this.#input.setAttribute(attribute.name, attribute.value);
+			}
+		}
 	}
 
 	resetValue() {

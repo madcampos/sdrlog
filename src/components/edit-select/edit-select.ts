@@ -23,15 +23,27 @@ export class SdrSelect extends SdrComponent {
 			watchedAttributes,
 			props: [
 				{ name: 'edit', value: false, attributeName: 'edit' },
-				{ name: 'value', value: '', attributeName: 'value' },
+				{
+					name: 'value',
+					value: (newValue = '') => {
+						this.#select.value = newValue as string;
+
+						this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+
+						return newValue;
+					},
+					attributeName: 'value'
+				},
 				{ name: 'disabled', value: false, attributeName: 'disabled' },
 				{ name: 'required', value: false, attributeName: 'required' },
 				{ name: 'readonly', value: false, attributeName: 'readonly' }
 			],
 			handlers: {
 				update: () => {
-					this.#select.value = this.value;
-					this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+					if (this.#select.value !== this.value) {
+						this.#select.value = this.value;
+						this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+					}
 				}
 			},
 			watchedSlots: {

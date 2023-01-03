@@ -18,6 +18,7 @@ export interface SdrTextArea {
 export class SdrTextArea extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 	#renderedTextArea: HTMLElement;
+	#textArea: HTMLTextAreaElement;
 
 	constructor() {
 		super({
@@ -28,7 +29,10 @@ export class SdrTextArea extends SdrComponent {
 				{
 					name: 'value',
 					value: (newValue = '') => {
+						this.#textArea.innerText = newValue as string;
 						this.#renderedTextArea.innerHTML = marked(newValue as string);
+
+						this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
 
 						return newValue;
 					},
@@ -40,8 +44,11 @@ export class SdrTextArea extends SdrComponent {
 			],
 			handlers: {
 				update: () => {
-					this.#renderedTextArea.innerHTML = marked(this.value);
-					this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+					if (this.#textArea.innerText !== this.value) {
+						this.value = this.#textArea.innerText;
+						this.#renderedTextArea.innerHTML = marked(this.value);
+						this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+					}
 				}
 			},
 			template,
@@ -49,6 +56,7 @@ export class SdrTextArea extends SdrComponent {
 		});
 
 		this.#renderedTextArea = this.root.querySelector('article') as HTMLElement;
+		this.#textArea = this.root.querySelector('textarea') as HTMLTextAreaElement;
 	}
 
 	resetValue() {
