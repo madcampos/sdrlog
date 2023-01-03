@@ -6,8 +6,8 @@ import { resolve } from 'path';
 import { defineConfig, type UserConfig } from 'vitest/config';
 import { loadEnv } from 'vite';
 import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
-import { createHtmlPlugin } from 'vite-plugin-html';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
+import vitePluginHtmlEnv from 'vite-plugin-html-env';
 
 const sslOptions = {
 	cert: readFileSync('./certs/server.crt'),
@@ -93,11 +93,13 @@ export default defineConfig(({ mode }) => {
 	const config: UserConfig = {
 		plugins: [
 			chunkSplitPlugin({ strategy: 'unbundle' }),
-			createHtmlPlugin({
-				minify: true,
-				inject: {
-					data: env
-				}
+			vitePluginHtmlEnv({
+				compiler: false,
+				compress: true,
+				envPrefixes: 'APP_',
+				prefix: '{{',
+				suffix: '}}',
+				...env
 			}),
 			vitePWA({
 				registerType: 'prompt',
