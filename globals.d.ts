@@ -58,7 +58,7 @@ interface ImportMetaEnv {
 	readonly APP_LARGE_ICON_BG: string,
 
 	/** The app's database version. */
-	readonly APP_DB_VERSION?: string
+	readonly APP_DB_VERSION: string
 }
 
 interface ImportMeta {

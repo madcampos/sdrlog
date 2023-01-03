@@ -1,4 +1,4 @@
-const isDebug = import.meta.env.APP_MODE !== 'production';
+const isDebug = import.meta.env.MODE !== 'production';
 
 type ConsoleMethods = 'log' | 'warn' | 'error' | 'info';
 
