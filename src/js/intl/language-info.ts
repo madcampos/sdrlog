@@ -10,7 +10,7 @@ I18n.translateElementsContent(languageBox);
 
 languageSelect.addEventListener('change', async () => {
 	if (languageSelect.value !== I18n.getLanguage()) {
-		languageSelect.edit = false;
+		languageSelect.disabled = true;
 
 		await I18n.setLanguage(languageSelect.value);
 

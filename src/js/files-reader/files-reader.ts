@@ -94,7 +94,7 @@ export async function readFiles() {
 
 		const entries = await readDir(dir, '');
 
-		progressOverlay.setTotal(entries.length);
+		progressOverlay.total = entries.length;
 		for await (const { entry, path } of entries) {
 			progressOverlay.increment();
 
