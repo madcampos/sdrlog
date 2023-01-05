@@ -76,6 +76,22 @@ export class SdrDropArea extends SdrComponent {
 		this.addEventListener('dragleave', () => {
 			this.#overlay.classList.remove('drop');
 		});
+
+		document.addEventListener('paste', (evt) => {
+			if (this.disabled) {
+				return;
+			}
+
+			const clipboardData = evt.clipboardData as DataTransfer;
+			const { files } = clipboardData;
+			const mimes = Object.keys(this.#accepts.accept);
+			const file = [...files].find((potentialFile) => mimes.includes(potentialFile.type));
+
+			if (file) {
+				this.#file = file;
+				this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
+			}
+		});
 	}
 
 	get file() {
