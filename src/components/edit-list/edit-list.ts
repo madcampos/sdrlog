@@ -7,7 +7,7 @@ import style from './style.css?raw';
 const watchedAttributes = ['disabled', 'open', 'value', 'values'];
 
 export interface SdrEditList {
-	edit: boolean,
+	disabled: boolean,
 	open: boolean,
 	value: string,
 	values: string[]
@@ -48,6 +48,7 @@ export class SdrEditList extends SdrComponent {
 					const newItems = items.filter((item) => !this.values.includes(item.value));
 
 					newItems.forEach((item) => {
+						item.disabled = this.disabled;
 						this.values.push(item.value);
 
 						item.addEventListener('remove', (removeEvt) => {
