@@ -85,9 +85,13 @@ export default defineConfig(({ mode }) => {
 		capture_links: 'existing-client-navigate',
 		url_handlers: [{ origin: '%PUBLIC_URL%' }],
 		launch_handler: {
-			route_to: 'existing-client',
-			navigate_existing_client: 'always'
+			// https://developer.chrome.com/docs/web-platform/launch-handler/
+			client_mode: 'navigate-existing'
 		}
+		// TODO: add screenshots: https://developer.mozilla.org/en-US/docs/Web/Manifest/screenshots
+		// TODO: add share target for covers/files: https://developer.mozilla.org/en-US/docs/Web/Manifest/share_target
+		// TODO: re-add shortcuts: https://developer.mozilla.org/en-US/docs/Web/Manifest/shortcuts
+		// TODO: add file handler: https://github.com/WICG/file-handling/blob/main/explainer.md
 	};
 
 	const config: UserConfig = {
