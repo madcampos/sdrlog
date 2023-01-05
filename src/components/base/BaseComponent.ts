@@ -389,18 +389,25 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		this.#props.get(prop)!.boundAttributes[attributeName] = element;
 	}
 
-	#bindPropToInternalElement(prop: string, element: HTMLElement) {
-		if (!this.#props.has(prop)) {
-			throw new Error(`Prop "${prop}" is not defined in watched props`);
+	#bindPropToInternalElement(propName: string, element: HTMLElement) {
+		if (!this.#props.has(propName)) {
+			throw new Error(`Prop "${propName}" is not defined in watched props`);
 		}
 
 		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Binding prop "${prop}" to element:`, DEBUG_STYLE);
+			console.log(`${DEBUG_HEADER} Binding prop "${propName}" to element:`, DEBUG_STYLE);
 			console.log(element);
 		}
 
-		this.#serializePropToElement(element, this[prop]);
-		this.#props.get(prop)?.boundElements.push(element);
+		const prop = this.#props.get(propName) as Prop<PropTypes>;
+
+		if (typeof prop.value === 'function') {
+			this.#serializePropToElement(element, '');
+		} else {
+			this.#serializePropToElement(element, prop.value);
+		}
+
+		prop.boundElements.push(element);
 	}
 
 	#bindPropToLoop(prop: string, element: HTMLElement) {
