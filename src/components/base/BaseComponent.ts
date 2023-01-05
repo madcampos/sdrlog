@@ -28,7 +28,7 @@ interface PropDefinition<T extends PropTypes> {
 type EventHandler = (evt: Event) => void | Promise<void>;
 
 type Prop<T extends PropTypes> = PropDefinition<T> & {
-	boundAttributes: Record<string, HTMLElement>,
+	boundAttributes: [HTMLElement, string][],
 	boundElements: HTMLElement[],
 	boundLoops: {
 		element: HTMLElement,
@@ -330,7 +330,7 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 	#propagatePropUpdates<T extends PropTypes>(prop: Prop<T>, newValue: T) {
 		prop.validate?.(newValue);
 
-		Object.entries(prop.boundAttributes).forEach(([attr, boundElement]) => {
+		prop.boundAttributes.forEach(([boundElement, attr]) => {
 			this.#serializePropToAttribute(attr, boundElement, newValue);
 		});
 
@@ -385,8 +385,7 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			console.log(element);
 		}
 
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		this.#props.get(prop)!.boundAttributes[attributeName] = element;
+		this.#props.get(prop)?.boundAttributes.push([element, attributeName]);
 	}
 
 	#bindPropToInternalElement(propName: string, element: HTMLElement) {
@@ -483,7 +482,7 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		this.#props.set(name, {
 			name,
 			value: propValue,
-			boundAttributes: {},
+			boundAttributes: [],
 			boundElements: [],
 			boundLoops: [],
 			validate,
