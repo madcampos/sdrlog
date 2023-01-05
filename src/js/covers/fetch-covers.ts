@@ -8,9 +8,9 @@ import { Logger } from '../util/logger';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 
-export const FALLBACK_COVER = `${import.meta.env.APP_PUBLIC_URL}img/covers/fallback.svg`;
-export const LOADING_COVER = `${import.meta.env.APP_PUBLIC_URL}img/covers/loading-anim.svg`;
-export const LOADING_SIMPLE_COVER = `${import.meta.env.APP_PUBLIC_URL}img/covers/loading-simple.svg`;
+export const FALLBACK_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/fallback.svg`;
+export const LOADING_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/loading-anim.svg`;
+export const LOADING_SIMPLE_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/loading-simple.svg`;
 
 export async function fetchCover(id: string) {
 	let currentCover = await getCover(id);
@@ -44,7 +44,7 @@ export async function extractCoversFromFiles() {
 	try {
 		const files = await getAllFiles();
 
-		progressOverlay.setTotal(files.length);
+		progressOverlay.total = files.length;
 
 		for await (const file of files) {
 			progressOverlay.increment();
@@ -99,7 +99,7 @@ export async function importCoversFromFolder() {
 			}
 		}
 
-		progressOverlay.setTotal(files.length);
+		progressOverlay.total = files.length;
 
 		for await (const file of files) {
 			progressOverlay.increment();

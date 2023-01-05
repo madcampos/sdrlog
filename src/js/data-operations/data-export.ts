@@ -49,7 +49,6 @@ export async function exportDataFile() {
 
 		if (items.length > 0) {
 			const fileHandler = await window.showSaveFilePicker({
-				// @ts-expect-error
 				id: 'dataFile',
 				startIn: 'downloads',
 				suggestedName: 'data.json',
@@ -76,7 +75,6 @@ export async function exportDataItem(data: Omit<NewMaterialProperties, 'cover'>)
 	const filteredData = formatDataItem(data);
 
 	const fileHandler = await window.showSaveFilePicker({
-		// @ts-expect-error
 		id: 'dataFile',
 		startIn: 'downloads',
 		suggestedName: `${data.sku[0]}.json`,

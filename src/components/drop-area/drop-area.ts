@@ -31,7 +31,6 @@ export class SdrDropArea extends SdrComponent {
 			handlers: {
 				clickToPickFile: async () => {
 					const [handle] = await window.showOpenFilePicker({
-						// @ts-expect-error
 						id: this.id,
 						startIn: 'downloads',
 						excludeAcceptAllOption: false,

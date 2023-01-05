@@ -67,7 +67,6 @@ export async function requestDataFileFromUser() {
 
 	try {
 		const [fileHandle] = await window.showOpenFilePicker({
-			// @ts-expect-error
 			id: 'dataFile',
 			startIn: 'downloads',
 			excludeAcceptAllOption: false,

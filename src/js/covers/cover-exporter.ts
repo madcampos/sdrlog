@@ -13,7 +13,7 @@ export async function saveCoversToFolder() {
 		});
 		const covers = await getAllCovers();
 
-		progressOverlay.setTotal(covers.length);
+		progressOverlay.total = covers.length;
 
 		for await (const cover of covers) {
 			progressOverlay.increment();
@@ -48,7 +48,7 @@ export async function saveThumbsToFolder() {
 		});
 		const thumbs = await getAllThumbs();
 
-		progressOverlay.setTotal(thumbs.length);
+		progressOverlay.total = thumbs.length;
 
 		for await (const thumb of thumbs) {
 			progressOverlay.increment();
