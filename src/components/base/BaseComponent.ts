@@ -277,6 +277,16 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		}
 	}
 
+	#deserializeAttributeToProp(attr: string, element: HTMLElement, type: PropTypes) {
+		const value = element.getAttribute(attr);
+
+		if (DEBUG_MODE) {
+			console.log(`${DEBUG_HEADER} Deserialize attribute "${attr}" to prop: "${value}"`, DEBUG_STYLE);
+		}
+
+		return this.#parseValue(value, type);
+	}
+
 	#serializePropToElement(element: HTMLElement, value: PropTypes) {
 		if (DEBUG_MODE) {
 			console.log(`${DEBUG_HEADER} Serialize prop to element: "${value instanceof Object ? JSON.stringify(value) : value.toString()}"`, DEBUG_STYLE);
@@ -368,9 +378,23 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 				this.#computedPropsCache.set(propName, tempValue);
 				this.#propagatePropUpdates(prop, tempValue);
 			} else if (prop.value !== value || forceUpdate) {
-				this.#propagatePropUpdates(prop, value);
+				if (typeof prop.value !== 'object') {
+					this.#propagatePropUpdates(prop, value);
+					prop.value = value;
+				} else {
+					const oldValue = JSON.stringify(prop.value);
+					const newValue = JSON.stringify(value);
 
-				prop.value = value;
+					if (oldValue !== newValue || forceUpdate) {
+						Object.entries(value).forEach(([key, val]) => {
+							if (prop.value[key] !== val) {
+								prop.value[key] = val;
+							}
+						});
+
+						this.#propagatePropUpdates(prop, prop.value);
+					}
+				}
 			}
 		}
 	}
@@ -384,6 +408,35 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			console.log(`${DEBUG_HEADER} Binding prop "${prop}" to attirbute "${attributeName}":`, DEBUG_STYLE);
 			console.log(element);
 		}
+
+		new MutationObserver(() => {
+			const value = this.#deserializeAttributeToProp(attributeName, element, typeof this[prop]);
+			const isNewAttributeValue = value !== this[prop];
+
+			if (isNewAttributeValue) {
+				console.log({
+					id: this.elementId,
+					prop,
+					attributeName,
+					element,
+					value
+				});
+
+				if (typeof this[prop] === 'object') {
+					const propSerializedValue = JSON.stringify(this[prop]);
+					const attributeSerializedValue = JSON.stringify(value);
+
+					if (propSerializedValue === attributeSerializedValue) {
+						return;
+					}
+				}
+
+				this.#updateProp(prop, value);
+			}
+		}).observe(element, {
+			attributes: true,
+			attributeFilter: [attributeName]
+		});
 
 		this.#props.get(prop)?.boundAttributes.push([element, attributeName]);
 	}
