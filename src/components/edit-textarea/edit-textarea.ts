@@ -63,5 +63,3 @@ export class SdrTextArea extends SdrComponent {
 		this.value = '';
 	}
 }
-
-customElements.define('sdr-textarea', SdrTextArea);

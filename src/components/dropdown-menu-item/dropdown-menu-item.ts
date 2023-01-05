@@ -41,5 +41,3 @@ export class SdrDropdownItem extends SdrComponent {
 		}
 	}
 }
-
-customElements.define('sdr-dropdown-item', SdrDropdownItem);

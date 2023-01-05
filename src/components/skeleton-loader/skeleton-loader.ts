@@ -35,5 +35,3 @@ export class SdrLoader extends SdrComponent {
 		});
 	}
 }
-
-customElements.define('sdr-loader', SdrLoader);

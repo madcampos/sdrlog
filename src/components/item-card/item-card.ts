@@ -111,5 +111,3 @@ export class SdrCard extends SdrComponent {
 		document.querySelector('main')?.appendChild(itemCard);
 	}
 }
-
-customElements.define('sdr-card', SdrCard);

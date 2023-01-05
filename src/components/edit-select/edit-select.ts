@@ -66,5 +66,3 @@ export class SdrSelect extends SdrComponent {
 		this.#select.selectedIndex = 0;
 	}
 }
-
-customElements.define('sdr-select', SdrSelect);

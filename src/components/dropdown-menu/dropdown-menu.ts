@@ -119,5 +119,3 @@ export class SdrDropdown extends SdrComponent {
 		}
 	}
 }
-
-customElements.define('sdr-dropdown', SdrDropdown);

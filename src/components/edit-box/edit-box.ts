@@ -65,5 +65,3 @@ export class SdrEditBox extends SdrComponent {
 		this.#input.value = '';
 	}
 }
-
-customElements.define('sdr-edit-box', SdrEditBox);

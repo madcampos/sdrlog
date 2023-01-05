@@ -77,5 +77,3 @@ export class SdrProgressOverlay extends SdrComponent {
 		}
 	}
 }
-
-customElements.define('sdr-progress-overlay', SdrProgressOverlay);

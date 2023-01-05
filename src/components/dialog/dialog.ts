@@ -98,5 +98,3 @@ export class SdrDialog extends SdrComponent {
 		}
 	}
 }
-
-customElements.define('sdr-dialog', SdrDialog);

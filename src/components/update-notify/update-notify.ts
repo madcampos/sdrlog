@@ -52,5 +52,3 @@ export class SdrUpdateNotify extends SdrComponent {
 		this.#popup.hidden = true;
 	}
 }
-
-customElements.define('sdr-update-notify', SdrUpdateNotify);

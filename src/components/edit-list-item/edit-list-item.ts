@@ -31,5 +31,3 @@ export class SdrEditListItem extends SdrComponent {
 		});
 	}
 }
-
-customElements.define('sdr-edit-list-item', SdrEditListItem);

@@ -82,5 +82,3 @@ export class SdrDropArea extends SdrComponent {
 		return this.#file;
 	}
 }
-
-customElements.define('drop-area', SdrDropArea);

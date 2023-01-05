@@ -300,5 +300,3 @@ export class SdrItemDetails extends SdrComponent {
 		}
 	}
 }
-
-customElements.define('sdr-item-details', SdrItemDetails);

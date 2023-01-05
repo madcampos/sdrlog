@@ -35,5 +35,3 @@ export class SdrButton extends SdrComponent {
 		this.#button.focus();
 	}
 }
-
-customElements.define('sdr-button', SdrButton);
