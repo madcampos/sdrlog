@@ -1,12 +1,12 @@
 <template>
-	<label for="edit-textarea">
+	<label for="textarea">
 		<slot name="label"></slot>
 	</label>
 	<div id="rendered-text">
 		<article></article>
 	</div>
 	<textarea
-		id="edit-textarea"
+		id="textarea"
 		:disabled="disabled"
 		:required="required"
 		:readonly="readonly"

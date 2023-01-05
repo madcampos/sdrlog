@@ -3,10 +3,9 @@ import { SdrComponent } from '../base/BaseComponent';
 import template from './template.html?raw';
 import style from './style.css?raw';
 
-const watchedAttributes = ['edit', 'value', 'disabled', 'required', 'readonly'];
+const watchedAttributes = ['value', 'disabled', 'required', 'readonly'];
 
 export interface SdrEditBox {
-	edit: boolean,
 	value: string,
 	disabled: boolean,
 	required: boolean,
@@ -23,7 +22,6 @@ export class SdrEditBox extends SdrComponent {
 			name: 'sdr-edit-box',
 			watchedAttributes,
 			props: [
-				{ name: 'edit', value: false, attributeName: 'edit' },
 				{
 					name: 'value',
 					value: (newValue = '') => {

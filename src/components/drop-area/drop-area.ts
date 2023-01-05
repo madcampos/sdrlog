@@ -4,10 +4,10 @@ import { SdrComponent } from '../base/BaseComponent';
 import template from './template.html?raw';
 import style from './style.css?raw';
 
-const watchedAttributes = ['isAccpetingFiles'];
+const watchedAttributes = ['disabled'];
 
 export interface SdrDropArea {
-	isAcceptingFiles: boolean
+	disabled: boolean
 }
 
 export class SdrDropArea extends SdrComponent {
@@ -27,7 +27,7 @@ export class SdrDropArea extends SdrComponent {
 		super({
 			name: 'sdr-drop-area',
 			watchedAttributes,
-			props: [{ name: 'isAcceptingFiles', value: false, attributeName: 'is-accepting-files' }],
+			props: [{ name: 'disabled', value: false, attributeName: 'disabled' }],
 			handlers: {
 				clickToPickFile: async () => {
 					const [handle] = await window.showOpenFilePicker({
@@ -46,7 +46,7 @@ export class SdrDropArea extends SdrComponent {
 					evt.preventDefault();
 					evt.stopPropagation();
 
-					if (!this.isAcceptingFiles) {
+					if (this.disabled) {
 						return;
 					}
 
