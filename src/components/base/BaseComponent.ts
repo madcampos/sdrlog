@@ -1,18 +1,10 @@
-/* eslint-disable max-lines, no-console */
-
 import { type PropBinding, type TemplateParser, templateParser } from './serialization';
 
 import baseStyle from './BaseComponent.css?raw';
 
-const DEBUG_MODE = false as const as boolean;
-const DEBUG_HEADER = '%c[SDR Component]';
-const DEBUG_STYLE = 'color: #9400d3; font-weight: bold; background: #000000; border-radius: 5px; padding: 2px 5px;';
-
 type PropPrimitiveTypes = boolean | string | number | object;
 
-export type ComputedPropValue<T extends PropPrimitiveTypes> = T | string;
-
-type ComputedPropHandler<T extends PropPrimitiveTypes> = (newValue?: ComputedPropValue<T>) => T;
+type ComputedPropHandler<T extends PropPrimitiveTypes> = (newValue?: T) => T;
 
 type PropTypes = PropPrimitiveTypes | ComputedPropHandler<PropPrimitiveTypes>;
 
@@ -45,8 +37,6 @@ type WatchedSlots = Record<string, WatchedSlotHandler | undefined>;
 
 type ElementTemplate = string | HTMLTemplateElement;
 
-type ElementStyle = string | CSSStyleSheet;
-
 export interface CustomElementInterface {
 	observedAttributes?: string[],
 	connectedCallback?(): void | Promise<void>,
@@ -61,7 +51,7 @@ interface SdrComponentConstructor {
 	props?: PropDefinition<PropTypes>[],
 	watchedAttributes?: string[],
 	template?: ElementTemplate,
-	style?: ElementStyle,
+	style?: string,
 	handlers?: Record<string, EventHandler>
 }
 
@@ -94,7 +84,7 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 
 		const { props: parsedProps, template: parsedTemplate } = this.#parseTemplate(template);
 
-		if ((typeof style === 'string' && style !== '') || style instanceof CSSStyleSheet) {
+		if (style && style !== '') {
 			this.addStyle(style);
 		}
 
@@ -211,15 +201,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 
 		const { props } = SdrComponent.templateParser(domTree);
 
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Parsed template`, DEBUG_STYLE);
-			console.log({
-				props,
-				domTree
-			});
-		}
-
 		return {
 			template: domTree,
 			props
@@ -244,19 +225,10 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 				break;
 		}
 
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Parsed value:`, DEBUG_STYLE);
-			console.log(parsedValue);
-		}
-
 		return parsedValue;
 	}
 
 	#serializePropToAttribute(attr: string, element: HTMLElement, value: PropTypes) {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Serialize prop to attribute "${attr}": "${value instanceof Object ? JSON.stringify(value) : value.toString()}"`, DEBUG_STYLE);
-		}
-
 		switch (typeof value) {
 			case 'boolean':
 				if (value) {
@@ -277,21 +249,7 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		}
 	}
 
-	#deserializeAttributeToProp(attr: string, element: HTMLElement, type: PropTypes) {
-		const value = element.getAttribute(attr);
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Deserialize attribute "${attr}" to prop: "${value}"`, DEBUG_STYLE);
-		}
-
-		return this.#parseValue(value, type);
-	}
-
 	#serializePropToElement(element: HTMLElement, value: PropTypes) {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Serialize prop to element: "${value instanceof Object ? JSON.stringify(value) : value.toString()}"`, DEBUG_STYLE);
-		}
-
 		switch (typeof value) {
 			case 'object':
 				element.textContent = JSON.stringify(value);
@@ -306,22 +264,10 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 	}
 
 	#getPropValue(name: string) {
-		if (!this.#props.has(name)) {
-			throw new Error(`Prop "${name}" is not defined in watched props`);
-		}
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Get prop: "${name}"`, DEBUG_STYLE);
-		}
-
 		return this.#props.get(name)?.value as PropPrimitiveTypes;
 	}
 
 	#getComputedPropValue<T extends PropPrimitiveTypes>(name: string): T {
-		if (!this.#props.has(name)) {
-			throw new Error(`Prop "${name}" is not defined in watched props`);
-		}
-
 		if (!this.#computedPropsCache.has(name)) {
 			const prop = this.#props.get(name) as Prop<T>;
 
@@ -329,10 +275,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		}
 
 		const computedValue = this.#computedPropsCache.get(name) as T;
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Get computed prop "${name}": ${computedValue instanceof Object ? JSON.stringify(computedValue) : computedValue.toString()}`, DEBUG_STYLE);
-		}
 
 		return computedValue;
 	}
@@ -358,99 +300,32 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 	}
 
 	#updateProp(propName: string, value: PropTypes, forceUpdate = false) {
-		if (this.#props.has(propName)) {
-			if (DEBUG_MODE) {
-				console.log(`${DEBUG_HEADER} Update prop "${propName}": "${value instanceof Object ? JSON.stringify(value) : value.toString()}"${forceUpdate ? ' (forced)' : ''}`, DEBUG_STYLE);
+		const prop = this.#props.get(propName) as Prop<typeof value>;
+
+		if (typeof prop.value === 'function') {
+			let tempValue = value;
+
+			// Don't stringify functions, instead call it without any value
+			if (typeof tempValue === 'function') {
+				tempValue = undefined as unknown as typeof value;
 			}
 
-			const prop = this.#props.get(propName) as Prop<typeof value>;
+			tempValue = (prop.value as ComputedPropHandler<typeof value>)(tempValue);
 
-			if (typeof prop.value === 'function') {
-				let tempValue = value;
+			this.#computedPropsCache.set(propName, tempValue);
+			this.#propagatePropUpdates(prop, tempValue);
+		} else if (prop.value !== value || forceUpdate) {
+			this.#propagatePropUpdates(prop, value);
 
-				// Don't stringify functions, instead call it without any value
-				if (typeof tempValue === 'function') {
-					tempValue = undefined as unknown as typeof value;
-				}
-
-				tempValue = (prop.value as ComputedPropHandler<typeof value>)(tempValue);
-
-				this.#computedPropsCache.set(propName, tempValue);
-				this.#propagatePropUpdates(prop, tempValue);
-			} else if (prop.value !== value || forceUpdate) {
-				if (typeof prop.value !== 'object') {
-					this.#propagatePropUpdates(prop, value);
-					prop.value = value;
-				} else {
-					const oldValue = JSON.stringify(prop.value);
-					const newValue = JSON.stringify(value);
-
-					if (oldValue !== newValue || forceUpdate) {
-						Object.entries(value).forEach(([key, val]) => {
-							if (prop.value[key] !== val) {
-								prop.value[key] = val;
-							}
-						});
-
-						this.#propagatePropUpdates(prop, prop.value);
-					}
-				}
-			}
+			prop.value = value;
 		}
 	}
 
 	#bindPropToInternalAttribute(prop: string, attributeName: string, element: HTMLElement) {
-		if (!this.#props.has(prop)) {
-			throw new Error(`Prop "${prop}" is not defined in watched props`);
-		}
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Binding prop "${prop}" to attirbute "${attributeName}":`, DEBUG_STYLE);
-			console.log(element);
-		}
-
-		new MutationObserver(() => {
-			const value = this.#deserializeAttributeToProp(attributeName, element, typeof this[prop]);
-			const isNewAttributeValue = value !== this[prop];
-
-			if (isNewAttributeValue) {
-				console.log({
-					id: this.elementId,
-					prop,
-					attributeName,
-					element,
-					value
-				});
-
-				if (typeof this[prop] === 'object') {
-					const propSerializedValue = JSON.stringify(this[prop]);
-					const attributeSerializedValue = JSON.stringify(value);
-
-					if (propSerializedValue === attributeSerializedValue) {
-						return;
-					}
-				}
-
-				this.#updateProp(prop, value);
-			}
-		}).observe(element, {
-			attributes: true,
-			attributeFilter: [attributeName]
-		});
-
 		this.#props.get(prop)?.boundAttributes.push([element, attributeName]);
 	}
 
 	#bindPropToInternalElement(propName: string, element: HTMLElement) {
-		if (!this.#props.has(propName)) {
-			throw new Error(`Prop "${propName}" is not defined in watched props`);
-		}
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Binding prop "${propName}" to element:`, DEBUG_STYLE);
-			console.log(element);
-		}
-
 		const prop = this.#props.get(propName) as Prop<PropTypes>;
 
 		if (typeof prop.value === 'function') {
@@ -463,15 +338,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 	}
 
 	#bindPropToLoop(prop: string, element: HTMLElement) {
-		if (!this.#props.has(prop)) {
-			throw new Error(`Prop "${prop}" is not defined in watched props`);
-		}
-
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Binding prop "${prop}" to loop:`, DEBUG_STYLE);
-			console.log(element);
-		}
-
 		const elementTemplate = document.createElement('template');
 
 		elementTemplate.content.append(...element.childNodes);
@@ -490,15 +356,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 	static templateParser: TemplateParser = (template) => templateParser(template);
 
 	watchProp({ name, value, attributeName, validate }: PropDefinition<PropTypes>) {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Watching prop "${name}":`, DEBUG_STYLE);
-			console.log({
-				value,
-				attributeName,
-				validate
-			});
-		}
-
 		let propValue = value;
 
 		if (typeof value === 'object') {
@@ -578,35 +435,18 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			throw new Error(`"${name}" is not a computed prop`);
 		}
 
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Updating computed prop "${name}" with value: "${value instanceof Object ? JSON.stringify(value) : value.toString()}"`, DEBUG_STYLE);
-		}
-
 		this.#updateProp(name, value, true);
 	}
 
-	addStyle(style: string | CSSStyleSheet) {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Adding style to ${this.constructor.name}`, DEBUG_STYLE);
-			console.log(style);
-		}
+	addStyle(style: string) {
+		const stylesheet = document.createElement('style');
 
-		if (typeof style === 'string') {
-			const stylesheet = document.createElement('style');
+		stylesheet.innerHTML = style;
 
-			stylesheet.innerHTML = style;
-
-			this.#root.insertBefore(stylesheet, this.#root.firstChild);
-		} else {
-			this.#root.adoptedStyleSheets = [...this.#root.adoptedStyleSheets, style];
-		}
+		this.#root.insertBefore(stylesheet, this.#root.firstChild);
 	}
 
 	connectedCallback() {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Connected: ${this.constructor.name}`, DEBUG_STYLE);
-		}
-
 		// Props have to be updated after the component is initialized
 		this.#props.forEach((prop) => {
 			if (!prop.attributeName) {
@@ -616,22 +456,14 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 	}
 
 	adoptedCallback() {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Adopted`, DEBUG_STYLE);
-		}
+		// NOOP
 	}
 
 	disconnectedCallback() {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Disconected`, DEBUG_STYLE);
-		}
+		// NOOP
 	}
 
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-		if (DEBUG_MODE) {
-			console.log(`${DEBUG_HEADER} Attribute changed: "${name}": "${oldValue}" => "${newValue}"`, DEBUG_STYLE);
-		}
-
 		if (oldValue !== newValue) {
 			const propName = this.#watchedAttributes.get(name) ?? '';
 			const prop = this.#props.get(propName);
