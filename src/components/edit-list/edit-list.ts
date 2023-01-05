@@ -1,11 +1,10 @@
-import { I18n } from '../../js/intl/translations';
 import { SdrEditListItem } from '../edit-list-item/edit-list-item';
 import { SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
 
-const watchedAttributes = ['edit', 'open', 'value', 'values'];
+const watchedAttributes = ['disabled', 'open', 'value', 'values'];
 
 export interface SdrEditList {
 	edit: boolean,
@@ -17,7 +16,6 @@ export interface SdrEditList {
 export class SdrEditList extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
-	#inputSlot: HTMLSlotElement;
 	#items: HTMLSlotElement;
 
 	constructor() {
@@ -26,56 +24,65 @@ export class SdrEditList extends SdrComponent {
 			watchedAttributes,
 			props: [
 				{
-					name: 'edit',
+					name: 'disabled',
 					value: (isEditing = false) => {
-						this.#updateEditItems(isEditing as boolean);
+						this.#updateDisabledItems(isEditing as boolean);
 
 						return isEditing;
 					},
-					attributeName: 'edit'
+					attributeName: 'disabled'
 				},
 				{ name: 'open', value: false, attributeName: 'open' },
-				{
-					name: 'value',
-					value: () => {
-						const [input] = this.#inputSlot.assignedElements() as (HTMLInputElement | HTMLSelectElement | null)[];
-
-						return input?.value ?? '';
-					},
-					attributeName: 'value'
-				},
-				{
-					name: 'values',
-					value: () => [...this.#items.assignedElements()].map((item) => (item as SdrEditListItem).value),
-					attributeName: 'values'
-				}
+				{ name: 'value', value: '', attributeName: 'value' },
+				{ name: 'values', value: [], attributeName: 'values' },
+				{ name: 'type', value: 'text', attributeName: 'type' }
 			],
 			handlers: {
 				addItem: () => {
-					const [input] = this.#inputSlot.assignedElements() as (HTMLInputElement | HTMLSelectElement | null)[];
-					let validationMessage = '';
+					this.dispatchEvent(new CustomEvent('additem', { bubbles: true, cancelable: true, composed: true }));
+				}
+			},
+			watchedSlots: {
+				'default': (evt) => {
+					const items = evt.target.assignedElements().filter((element) => element instanceof SdrEditListItem) as SdrEditListItem[];
+					const newItems = items.filter((item) => !this.values.includes(item.value));
 
-					if (this.values.includes(input?.value ?? '')) {
-						validationMessage = I18n.t`Item already exists in the list.`;
-					} else if (!input?.value) {
-						validationMessage = I18n.t`Please fill the field.`;
-					} else {
-						this.dispatchEvent(new CustomEvent('additem', {
-							bubbles: true,
-							cancelable: true,
-							composed: true
-						}));
-					}
+					newItems.forEach((item) => {
+						this.values.push(item.value);
 
-					input?.setCustomValidity(validationMessage);
-					input?.reportValidity();
+						item.addEventListener('remove', (removeEvt) => {
+							const target = removeEvt.target as SdrEditListItem;
+
+							this.values.splice(this.values.indexOf(target.value), 1);
+
+							this.dispatchEvent(new CustomEvent('removeitem', {
+								bubbles: true,
+								cancelable: true,
+								composed: true,
+								detail: {
+									type: target.type,
+									value: target.value,
+									url: target.url,
+									icon: target.icon
+								}
+							}));
+						});
+					});
+				},
+				input: (evt) => {
+					const [input] = evt.target.assignedElements();
+
+					input.addEventListener('input', (inputEvt) => {
+						const target = inputEvt.target as HTMLInputElement;
+
+						this.value = target.value;
+					});
 				}
 			},
 			template,
 			style
 		});
 
-		this.#inputSlot = this.root.querySelector('slot[name="input"]') as HTMLSlotElement;
 		this.#items = this.root.querySelector('slot:not([name])') as HTMLSlotElement;
 	}
 
@@ -87,11 +94,11 @@ export class SdrEditList extends SdrComponent {
 		});
 	}
 
-	#updateEditItems(isEditing: boolean) {
+	#updateDisabledItems(isDisabled: boolean) {
 		const items = this.#items.assignedElements().filter((element) => element instanceof SdrEditListItem) as SdrEditListItem[];
 
 		items.forEach((item) => {
-			item.edit = isEditing;
+			item.disabled = isDisabled;
 		});
 	}
 }

@@ -23,14 +23,12 @@
 
 :host([stretch]) { width: 100%; }
 
-:host([hidden]) { display: none; }
-
-:host([edit]) {
+:host([disabled]) {
 	border-color: var(--theme-color);
 	background: var(--border-color);
 }
 
-:host([edit]) #close-button { display: block; }
+:host(:not([disabled])) #remove-button { display: none; }
 
 :host:hover {
 	background: var(--accent-color);
