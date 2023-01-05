@@ -13,8 +13,10 @@
 
 :host([disabled]) textarea { display: none; }
 :host([disabled]) #rendered-text { display: block; }
+:host(:not([disabled])) textarea { display: block; }
+:host(:not([disabled])) #rendered-text { display: none; }
 
-label:not([hidden]) {
+label {
 	font-size: var(--small-text);
 	display: block;
 	width: fit-content;
