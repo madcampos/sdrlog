@@ -5,41 +5,41 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-		<title><%= APP_NAME %></title>
+		<title>{{ APP_NAME }}</title>
 
 		<!-- Preload -->
-		<link rel="preload" crossorigin="anonymous" href="./data/data.json" as="fetch" type="application/json">
+		<link rel="preload" crossorigin="anonymous" href="/data/data.json" as="fetch" type="application/json">
 
 		<!-- App Metadata -->
 		<link rel="icon" href="/icons/favicon.svg" />
-		<meta name="theme-color" content="<%= APP_THEME_COLOR %>">
+		<meta name="theme-color" content="{{ APP_THEME_COLOR }}">
 
 		<!-- Social metadata -->
-		<meta name="keywords" content="<%= APP_KEYWORDS %>" />
+		<meta name="keywords" content="{{ APP_KEYWORDS }}" />
 
-		<meta property="og:title" name="twitter:title" itemprop="name" content="<%= APP_NAME %>" />
-		<meta property="og:description" name="description" itemprop="description" content="<%= APP_DESCRIPTION %>" />
-		<meta property="og:image" name="twitter:image" itemprop="image" content="<%= APP_PUBLIC_URL %><%= APP_LARGE_ICON %>" />
+		<meta property="og:title" name="twitter:title" itemprop="name" content="{{ APP_NAME }}" />
+		<meta property="og:description" name="description" itemprop="description" content="{{ APP_DESCRIPTION }}" />
+		<meta property="og:image" name="twitter:image" itemprop="image" content="{{ APP_PUBLIC_URL }}{{ APP_LARGE_ICON }}" />
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="en_US" />
-		<meta property="og:url" content="<%= APP_PUBLIC_URL %>" />
+		<meta property="og:url" content="{{ APP_PUBLIC_URL }}" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:dnt" content="on">
 
 		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
 
 		<!-- Search -->
-		<link rel="search" href="./open-search.xml" type="application/opensearchdescription+xml" title="%APP_NAME%">
+		<link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="{{ APP_NAME }}">
 
 		<!-- Site configuration -->
 		<meta name="referrer" content="no-referrer">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="google" content="notranslate" />
-		<link rel="license" href="%PUBLIC_URL%#copyright">
+		<link rel="license" href="/#copyright">
 
 		<!-- Apple icons -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="apple-touch-icon" href="<%= APP_APPLE_ICON %>">
+		<link rel="apple-touch-icon" href="{{ APP_APPLE_ICON }}">
 
 		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
 		<link rel="apple-touch-startup-image" href="/splash/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
@@ -69,8 +69,7 @@
 		<link rel="apple-touch-startup-image" href="/splash/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="./css/base.css" />
-		<link rel="stylesheet" href="./css/components/info-box/info-box.css" />
+		<link rel="stylesheet" href="/css/base.css" />
 	</head>
 
 	<body class="notranslate" translate="no">
@@ -298,305 +297,12 @@
 		<update-refresh></update-refresh>
 
 		<!-- Templates -->
-		<template id="custom-button">
-			<link rel="stylesheet" href="./css/components/button/button.css" />
-			<button type="button">
-				<span id="button-icon"></span>
-				<span id="button-text">
-					<slot></slot>
-				</span>
-			</button>
-		</template>
-
-		<template id="dialog">
-			<style>
-				dialog {
-					display: none;
-				}
-
-			</style>
-			<link rel="stylesheet" href="./css/components/dialog/dialog.css" />
-			<slot name="trigger"></slot>
-			<dialog tabindex="-1">
-				<header>
-					<h2>
-						<slot name="title"></slot>
-					</h2>
-					<custom-button icon-button id="close" title="t('Close window')">❌</custom-button>
-				</header>
-				<article>
-					<slot></slot>
-				</article>
-				<footer hidden>
-					<slot name="footer"></slot>
-				</footer>
-			</dialog>
-		</template>
-
-		<template id="drop-area">
-			<link rel="stylesheet" href="./css/components/drop-area/drop-area.css" />
-			<div id="content">
-				<slot></slot>
-			</div>
-			<div id="overlay" hidden>
-				<slot name="overlay">
-					t("Click to select a item")
-					<br>
-					t("Or drag the item here...")
-				</slot>
-			</div>
-		</template>
-
-		<template id="dropdown-menu">
-			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu.css" />
-			<custom-button icon-button></custom-button>
-			<dialog tabindex="-1">
-				<slot></slot>
-			</dialog>
-		</template>
-
-		<template id="dropdown-menu-item">
-			<link rel="stylesheet" href="./css/components/dropdown-menu/dropdown-menu-item.css" />
-			<custom-button wide>
-				<slot></slot>
-			</custom-button>
-		</template>
-
-		<template id="edit-box">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-box.css" />
-			<label for="edit-box-input" hidden>
-				<slot name="label"></slot>
-			</label>
-			<skeleton-loader>
-				<input id="edit-box-input" readonly />
-			</skeleton-loader>
-		</template>
-
-		<template id="edit-list">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-list.css" />
-			<details>
-				<summary>
-					<slot name="label"></slot>
-				</summary>
-
-				<div id="input-container" hidden>
-					<slot name="input"></slot>
-					<custom-button icon-button id="add-button" title="t('Add item')">➕</custom-button>
-				</div>
-
-				<skeleton-loader>
-					<article id="items-container">
-						<slot></slot>
-					</article>
-				</skeleton-loader>
-			</details>
-		</template>
-
-		<template id="edit-list-item">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-list-item.css" />
-			<slot></slot>
-			<custom-button icon-button small hidden title="t('Remove item')">❌</custom-button>
-		</template>
-
-		<template id="edit-select">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-select.css" />
-			<label for="edit-select-input">
-				<slot name="label"></slot>
-			</label>
-
-			<skeleton-loader>
-				<select id="edit-select-input" disabled>
-					<option selected disabled hidden value="">t("Please select an option...")</option>
-				</select>
-			</skeleton-loader>
-
-			<div hidden>
-				<slot></slot>
-			</div>
-		</template>
-
-		<template id="edit-text">
-			<link rel="stylesheet" href="./css/components/edit-box/edit-text.css" />
-			<label for="edit-textarea">
-				<slot name="label"></slot>
-			</label>
-			<skeleton-loader>
-				<div id="rendered-text">
-					<article></article>
-				</div>
-				<textarea id="edit-textarea" hidden></textarea>
-			</skeleton-loader>
-		</template>
-
-		<template id="item-details">
-			<link rel="stylesheet" href="./css/components/item-info/item-details.css" />
-			<modal-dialog>
-				<edit-box id="name" slot="title" placeholder="t('Item name')"></edit-box>
-
-				<div id="item-content">
-					<header>
-						<edit-list id="sku" open>
-							<span slot="label">t("SKU")</span>
-							<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required />
-						</edit-list>
-
-						<edit-box id="edition" type="number" min="1" max="6" step="1" required>
-							<span slot="label">t("Edition")</span>
-						</edit-box>
-
-						<edit-select id="category" required>
-							<span slot="label">t("Category")</span>
-						</edit-select>
-
-						<edit-select id="type" required>
-							<span slot="label">t("Type")</span>
-						</edit-select>
-
-						<edit-select id="language" required>
-							<span slot="label">t("Original Language")</span>
-						</edit-select>
-
-						<edit-list id="releasedate" open>
-							<span slot="label">t("Release date")</span>
-							<input slot="input" type="date" required />
-						</edit-list>
-					</header>
-
-					<aside id="meta">
-						<edit-select id="status" required>
-							<span slot="label">t("Status")</span>
-						</edit-select>
-
-						<edit-box type="month" id="gamedate" required>
-							<span slot="label">t("Game date")</span>
-						</edit-box>
-
-						<edit-list id="names">
-							<span slot="label">t("Names published")</span>
-
-							<select slot="input" required>
-								<option selected disabled hidden value="">t("Please select an option...")</option>
-							</select>
-
-							<input slot="input" required placeholder="t('Name')" />
-						</edit-list>
-
-						<edit-list id="publisher" open>
-							<span slot="label">t("Publisher")</span>
-
-							<select slot="input" required>
-								<option selected disabled hidden value="">t("Please select an option...")</option>
-							</select>
-						</edit-list>
-					</aside>
-
-					<aside id="files">
-						<edit-list id="files-list" hidden>
-							<span slot="label">t("Files")</span>
-							<input slot="input" type="hidden" required value="📄" />
-							<label slot="input">t("Add a file")</label>
-						</edit-list>
-
-						<edit-list id="links">
-							<span slot="label">t("Online links")</span>
-							<input slot="input" type="text" placeholder="t('Name')" required />
-							<input slot="input" type="url" placeholder="t('URL')" required />
-						</edit-list>
-					</aside>
-
-					<drop-area id="cover-drop-area">
-						<figure>
-							<img
-								 width="100"
-								 height="160"
-								 id="cover"
-								 decoding="async"
-								 loading="lazy"
-								 role="presentation"
-								 src="./img/covers/loading-anim.svg" />
-						</figure>
-					</drop-area>
-
-					<article>
-						<edit-text id="notes" hidden>
-							<span slot="label">t("Notes")</span>
-						</edit-text>
-
-						<edit-text id="description" required>
-							<span slot="label">t("Description")</span>
-						</edit-text>
-					</article>
-				</div>
-
-				<custom-button slot="footer" id="edit" disabled icon="✏️">t("Edit")</custom-button>
-				<custom-button slot="footer" hidden id="save" icon="💾">t("Save")</custom-button>
-				<custom-button slot="footer" id="export" disabled icon="📥">t("Export")</custom-button>
-			</modal-dialog>
-		</template>
-
-		<template id="item-card">
-			<link rel="stylesheet" href="./css/components/item-info/item-card.css" />
-			<figure>
-				<img
-					 decoding="async"
-					 loading="lazy"
-					 width="100"
-					 height="160"
-					 role="presentation"
-					 src="./img/covers/loading-simple.svg" />
-			</figure>
-			<h4></h4>
-		</template>
 
 		<template id="menu-bar">
 			<link rel="stylesheet" href="./css/components/menu-bar/menu-bar.css" />
 			<nav>
 				<slot></slot>
 			</nav>
-		</template>
-
-		<template id="progress">
-			<style>
-				:host {
-					display: block;
-				}
-
-				dialog[open] {
-					padding: 0;
-					width: var(--dialog-width);
-					height: var(--dialog-height);
-					border: none;
-					border-radius: var(--dialog-border-radius);
-					background: var(--bg-color);
-					accent-color: var(--theme-color);
-
-					pointer-events: none;
-					user-select: none;
-
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-				}
-
-				dialog::backdrop {
-					background: var(--dialog-backdrop-color);
-					backdrop-filter: var(--dialog-backdrop-filter);
-				}
-
-				h1 {
-					color: var(--theme-color);
-				}
-
-			</style>
-			<dialog tabindex="-1">
-				<h1>
-					<slot name="title"></slot>
-				</h1>
-				<progress></progress>
-				<p><span id="count"></span></p>
-				<slot name="info"></slot>
-			</dialog>
 		</template>
 
 		<template id="radio-item">
@@ -623,68 +329,6 @@
 				<datalist id="search-suggestions"></datalist>
 				<custom-button icon="🔍"></custom-button>
 			</label>
-		</template>
-
-		<template id="skeleton-loader">
-			<style>
-				:host {
-					box-sizing: inherit;
-				}
-
-				#loader {
-					max-width: 20rem;
-					border-radius: var(--border-radius);
-					background-color: var(--theme-color);
-					background-image: linear-gradient(-60deg, var(--bg-color) 40%, transparent, var(--bg-color) 60%);
-					background-size: 200% 100%;
-					background-position: 100%;
-					color: transparent;
-					user-select: none;
-
-					animation: loader 2s linear infinite;
-					opacity: 0.2;
-				}
-
-				@keyframes loader {
-					from {
-						background-position: 100%;
-					}
-
-					to {
-						background-position: -100%;
-					}
-				}
-
-			</style>
-			<div id="loader">
-				t("Loading...")
-			</div>
-			<slot hidden></slot>
-		</template>
-
-		<template id="update-refresh">
-			<link rel="stylesheet" href="./css/components/update-refresh/update-refresh.css" />
-			<aside role="status" aria-live="polite" hidden>
-				<p></p>
-				<custom-button icon="♻️"></custom-button>
-			</aside>
-		</template>
-
-		<template id="cbz-reader">
-			<link rel="stylesheet" href="./css/components/cbz/reader.css" />
-			<menu-bar>
-				<custom-button icon-button id="prev">⏮️</custom-button>
-				<select id="toc"></select>
-				<custom-button icon-button id="next">⏭️</custom-button>
-			</menu-bar>
-			<article id="comic">
-				<div id="comic-loading">
-					<progress></progress>
-				</div>
-			</article>
-			<div id="comic-book-overlay">
-				<custom-button icon-button id="open-comic">▶️</custom-button>
-			</div>
 		</template>
 
 		<template id="rom-emulator">
