@@ -1,11 +1,11 @@
 import type { SdrDialog } from '../dialog/dialog';
 import type { FileForMaterial, IsoCode, Material, MaterialStatus } from '../../../public/data/data';
-import type { SdrEditListItem } from '../edit-list-item/edit-list-item';
+import { SdrEditListItem } from '../edit-list-item/edit-list-item';
 import type { SdrDropArea } from '../drop-area/drop-area';
 
 import { getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
 import { SdrCard } from '../item-card/item-card';
-import { saveNewMaterialInfo } from '../../js/data-operations/create-material';
+import { getIconForFile, saveNewMaterialInfo } from '../../js/data-operations/create-material';
 import { openFile } from '../../js/files-reader/open-file';
 import { LOADING_COVER } from '../../js/covers/fetch-covers';
 import { associateFileWithData } from '../../js/files-reader/files-reader';
@@ -15,25 +15,32 @@ import { SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
+import { formatFullDate } from '../../js/intl/formatting';
 
-const watchedAttributes = ['id', 'edit', 'name', 'description', 'sku', 'edition', 'game-date', 'category', 'type', 'original-language', 'release-date', 'publisher', 'status', 'names', 'files', 'links', 'notes'];
+const watchedAttributes = ['id', 'name', 'description', 'sku', 'edition', 'game-date', 'category', 'type', 'original-language', 'release-date', 'publisher', 'status', 'names', 'files', 'links', 'notes'];
 
 export interface SdrItemDetails {
 	id: string,
-	edit: boolean,
+	isDisplaying: boolean,
 	name: string,
 	description: string,
-	sku: string[],
+	sku: string,
+	skus: string[],
 	edition: string,
 	gameDate: string,
 	category: string,
 	type: string,
 	originalLanguage: string,
-	releaseDate: string[],
+	releaseDate: string,
+	releaseDates: string[],
 	publisher: string,
+	publishers: string[],
 	status: string,
-	names: string[],
+	translatedLanguage: string,
+	translatedName: string,
+	translatedNames: [string, string][],
 	files: FileForMaterial[],
+	link: string,
 	links: string[],
 	notes: string
 }
@@ -41,7 +48,7 @@ export interface SdrItemDetails {
 export class SdrItemDetails extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
-	#modal: SdrDialog;
+	#modal: SdrDialog | null;
 
 	#cover: HTMLImageElement;
 	#coverDropArea: SdrDropArea;
@@ -53,46 +60,162 @@ export class SdrItemDetails extends SdrComponent {
 			watchedAttributes,
 			props: [
 				{ name: 'id', value: '', attributeName: 'id' },
-				{ name: 'edit', value: false, attributeName: 'edit' },
-				{ name: 'name', value: '' },
-				{ name: 'description', value: '' },
-				{ name: 'sku', value: [] },
-				{ name: 'edition', value: '' },
-				{ name: 'gameDate', value: '' },
-				{ name: 'category', value: '' },
-				{ name: 'type', value: '' },
-				{ name: 'originalLanguage', value: '' },
-				{ name: 'releaseDate', value: [] },
+				{ name: 'isDisplaying', value: false },
+				{ name: 'name', value: '', attributeName: 'name' },
+				{ name: 'description', value: '', attributeName: 'description' },
+				{ name: 'sku', value: '' },
+				{ name: 'skus', value: [], attributeName: 'sku' },
+				{ name: 'edition', value: '', attributeName: 'edition' },
+				{ name: 'gameDate', value: '', attributeName: 'game-date' },
+				{ name: 'category', value: '', attributeName: 'category' },
+				{ name: 'type', value: '', attributeName: 'type' },
+				{ name: 'originalLanguage', value: '', attributeName: 'original-language' },
+				{ name: 'releaseDate', value: '' },
+				{ name: 'releaseDates', value: [], attributeName: 'release-date' },
 				{ name: 'publisher', value: '' },
-				{ name: 'status', value: '' },
-				{ name: 'names', value: [] },
-				{ name: 'files', value: [] },
-				{ name: 'links', value: [] },
-				{ name: 'notes', value: '' }
+				{ name: 'publishers', value: [], attributeName: 'publisher' },
+				{ name: 'status', value: '', attributeName: 'status' },
+				{ name: 'translatedLanguage', value: '' },
+				{ name: 'translatedName', value: '' },
+				{ name: 'translatedNames', value: [], attributeName: 'names' },
+				{ name: 'files', value: [], attributeName: 'files' },
+				{ name: 'link', value: '' },
+				{ name: 'links', value: [], attributeName: 'links' },
+				{ name: 'notes', value: '', attributeName: 'notes' }
 			],
 			handlers: {
+				updateSku: (evt) => {
+					const target = evt.target as HTMLInputElement;
+					let validationMessage = '';
+
+					if (this.skus.includes(target.value)) {
+						validationMessage = I18n.t`SKU already exists in the list.`;
+					} else if (!target.value) {
+						validationMessage = I18n.t`Please fill out the SKU.`;
+					}
+
+					target.setCustomValidity(validationMessage);
+
+					const isValid = target.reportValidity();
+
+					if (isValid) {
+						this.sku = target.value;
+					} else {
+						this.sku = '';
+					}
+				},
 				addSku: () => {
-					// FormatSku(this.#editInputs.sku.value);
+					const newSku = new SdrEditListItem();
+
+					newSku.setAttribute('value', this.sku);
+					newSku.textContent = this.sku;
+
+					this.root.querySelector('#sku-list')?.appendChild(newSku);
+
+					this.skus.push(this.sku);
+					this.sku = '';
+				},
+				removeSku: (evt) => {
+					const sku = (evt as CustomEvent).detail.value;
+
+					this.skus.splice(this.skus.indexOf(sku), 1);
 				},
 				addReleaseDate: () => {
-					// FormatReleaseDate(this.#editInputs.releaseDate.value);
+					const newReleaseDate = new SdrEditListItem();
+
+					newReleaseDate.setAttribute('value', this.releaseDate);
+					newReleaseDate.textContent = formatFullDate(new Date(this.releaseDate));
+
+					this.root.querySelector('#release-date-list')?.appendChild(newReleaseDate);
+
+					this.releaseDates.push(this.releaseDate);
+					this.releaseDate = '';
+				},
+				removeReleaseDate: (evt) => {
+					const releaseDate = (evt as CustomEvent).detail.value;
+
+					this.releaseDates.splice(this.releaseDates.indexOf(releaseDate), 1);
+				},
+				updatePublisher: (evt) => {
+					const target = evt.target as HTMLSelectElement;
+
+					this.publisher = target.value;
 				},
 				addPublisher: () => {
-					// FormatPublisher(evt?.target.value);
+					const newPublisher = new SdrEditListItem();
+					const publisherImage = document.createElement('img');
+
+					newPublisher.setAttribute('value', this.publisher);
+
+					publisherImage.src = `${import.meta.env.APP_PUBLIC_URL}img/publishers/${this.publisher}.png`;
+					publisherImage.alt = this.publisher;
+
+					newPublisher.appendChild(publisherImage);
+					this.root.querySelector('#publisher-list')?.appendChild(newPublisher);
+
+					this.publishers.push(this.publisher);
+					this.publisher = '';
 				},
-				addName: () => {
-					// FormatTranslatedName(this.#editInputs.namesLang.value, this.#editInputs.namesValue.value);
+				removePublisher: (evt) => {
+					const publisher = (evt as CustomEvent).detail.value;
+
+					this.publishers.splice(this.publishers.indexOf(publisher), 1);
+				},
+				updateTranslatedName: (evt) => {
+					const target = evt.target as HTMLInputElement;
+					const validationMessage = '';
+
+					// TODO: create validations for name and language
+
+					target.setCustomValidity(validationMessage);
+
+					const isValid = target.reportValidity();
+
+					if (isValid) {
+						this.translatedName = target.value;
+					} else {
+						this.translatedName = '';
+					}
+				},
+				addTranslatedName: () => {
+					const newTranslatedName = new SdrEditListItem();
+					const translatedNameData = JSON.stringify([
+						this.translatedLanguage,
+						this.translatedName
+					]);
+
+					newTranslatedName.setAttribute('value', translatedNameData);
+					newTranslatedName.textContent = `[${this.translatedLanguage}]: ${this.translatedName}`;
+
+					this.root.querySelector('#translated-name-list')?.appendChild(newTranslatedName);
+
+					this.translatedNames.push([
+						this.translatedLanguage,
+						this.translatedName
+					]);
+
+					this.translatedLanguage = '';
+					this.translatedName = '';
+				},
+				removeTranslatedName: (evt) => {
+					const name = (evt as CustomEvent).detail.value;
+
+					this.translatedNames.splice(this.translatedNames.indexOf(name), 1);
 				},
 				addLink: () => {
-					// FormatLink(this.#editInputs.linksName.value, this.#editInputs.linksUrl.value);
+					// TODO: migrate `formatLink`
+				},
+				removeLink: (evt) => {
+					const link = (evt as CustomEvent).detail.value;
+
+					this.links.splice(this.links.indexOf(link), 1);
 				},
 				addFile: async () => {
-					if (this.sku.length === 0) {
+					if (this.skus.length === 0) {
 						// eslint-disable-next-line no-alert
 						alert(I18n.t`Please add an SKU first before adding a file.`);
 					} else {
 						const [handle] = await window.showOpenFilePicker({
-							// @ts-expect-error
 							id: 'newMaterialFile',
 							startIn: 'downloads',
 							excludeAcceptAllOption: false
@@ -102,17 +225,35 @@ export class SdrItemDetails extends SdrComponent {
 						const fileForMaterial = await associateFileWithData(handle.name, `/${file.lastModified}/${file.name}`, file.type) as FileForMaterial;
 
 						await saveFile(`/${handle.name}`, handle);
-						// This.#formFields.files.insertAdjacentHTML('beforeend', formatFile(fileForMaterial));
+
+						this.files.push(fileForMaterial);
+
+						const newFileItem = new SdrEditListItem();
+						const fileLink = document.createElement('a');
+
+						newFileItem.value = JSON.stringify(fileForMaterial);
+						newFileItem.setAttribute('stretch', '');
+
+						fileLink.href = '#';
+						fileLink.textContent = `${getIconForFile(fileForMaterial.mimeType, fileForMaterial.fileExtension)} ${fileForMaterial.fileName}${fileForMaterial.fileExtension}`;
+
+						newFileItem.appendChild(fileLink);
+						this.root.querySelector('#files-list')?.appendChild(newFileItem);
 					}
 				},
+				removeFile: (evt) => {
+					const file = (evt as CustomEvent).detail.value;
+
+					this.files.splice(this.files.indexOf(file), 1);
+				},
 				addCover: () => {
-					this.#coverDropArea.isAcceptingFiles = false;
+					this.#coverDropArea.disabled = true;
 					this.#cover.src = LOADING_COVER;
 
 					this.#coverFile = this.#coverDropArea.file as File;
 					this.#cover.src = URL.createObjectURL(this.#coverFile);
 
-					this.#coverDropArea.isAcceptingFiles = true;
+					this.#coverDropArea.disabled = false;
 				},
 				save: async () => {
 					const [id] = this.sku;
@@ -121,16 +262,16 @@ export class SdrItemDetails extends SdrComponent {
 						await saveNewMaterialInfo(id, {
 							name: this.name,
 							description: this.description,
-							sku: this.sku,
+							sku: this.skus,
 							edition: this.edition,
 							gameDate: this.gameDate as `${number}-${number}`,
 							category: this.category as Material['category'],
 							type: this.type as Material['type'],
 							originalLanguage: this.originalLanguage as IsoCode,
-							releaseDate: this.releaseDate as `${number}-${number}-${number}`[],
+							releaseDate: this.releaseDates as `${number}-${number}-${number}`[],
 							publisher: this.publisher as unknown as Material['publisher'],
 							status: this.status as MaterialStatus,
-							names: this.names,
+							names: this.translatedNames,
 							files: this.files as unknown as string[],
 							links: this.links,
 							notes: this.notes,
@@ -141,7 +282,7 @@ export class SdrItemDetails extends SdrComponent {
 							SdrCard.createCard({
 								name: this.name,
 								id,
-								sku: this.sku,
+								sku: this.skus,
 								edition: Number.parseInt(this.edition),
 								category: this.category as Material['category'],
 								type: this.type as Material['type'],
@@ -153,7 +294,7 @@ export class SdrItemDetails extends SdrComponent {
 					window.history.pushState(null, `${this.name} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}#${id}`);
 					window.document.title = `${this.name} · ${import.meta.env.APP_NAME}`;
 
-					this.edit = false;
+					this.isDisplaying = true;
 
 					// eslint-disable-next-line no-alert
 					alert(`${I18n.t`Item # `}${id}${I18n.t` saved successfully.`}`);
@@ -161,16 +302,16 @@ export class SdrItemDetails extends SdrComponent {
 				'export': async () => {
 					await exportDataItem({
 						name: this.name,
-						sku: this.sku,
+						sku: this.skus,
 						edition: this.edition,
 						gameDate: this.gameDate as `${number}-${number}`,
 						category: this.category as Material['category'],
 						type: this.type as Material['type'],
 						originalLanguage: this.originalLanguage as IsoCode,
-						releaseDate: this.releaseDate as `${number}-${number}-${number}`[],
+						releaseDate: this.releaseDates as `${number}-${number}-${number}`[],
 						publisher: this.publisher as unknown as Material['publisher'],
 						status: this.status as MaterialStatus,
-						names: this.names,
+						names: this.translatedNames,
 						files: this.files as unknown as string[],
 						links: this.links,
 						notes: this.notes,
@@ -178,7 +319,7 @@ export class SdrItemDetails extends SdrComponent {
 					});
 				},
 				edit: () => {
-					this.edit = !this.edit;
+					this.isDisplaying = !this.isDisplaying;
 				},
 				openFile: async (evt) => {
 					const target = evt.target as HTMLLinkElement;
@@ -198,12 +339,12 @@ export class SdrItemDetails extends SdrComponent {
 			style
 		});
 
-		this.#modal = this.root.querySelector('sdr-dialog') as SdrDialog;
+		this.#modal = this.root.querySelector<SdrDialog>('sdr-dialog');
 
 		this.#cover = this.root.querySelector('#cover') as HTMLImageElement;
 		this.#coverDropArea = this.root.querySelector('#cover-drop-area') as SdrDropArea;
 
-		this.#modal.addEventListener('close', () => {
+		this.#modal?.addEventListener('close', () => {
 			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}`);
 			window.document.title = import.meta.env.APP_NAME;
 		});
@@ -216,7 +357,7 @@ export class SdrItemDetails extends SdrComponent {
 			hash = `#${id}`;
 		}
 
-		this.#modal.show();
+		this.#modal?.show();
 		this.setAttribute('open', '');
 
 		window.history.pushState(null, `${title} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}${hash}`);
@@ -224,12 +365,12 @@ export class SdrItemDetails extends SdrComponent {
 	}
 
 	close() {
-		this.#modal.close();
+		this.#modal?.close();
 		this.removeAttribute('open');
 	}
 
 	resetMaterial() {
-		this.edit = false;
+		this.isDisplaying = true;
 		// This.#formFields.files.value = '📄';
 
 		this.#cover.src = LOADING_COVER;
@@ -237,22 +378,22 @@ export class SdrItemDetails extends SdrComponent {
 
 	async setMaterial(id: string) {
 		this.resetMaterial();
-		this.edit = false;
+		this.isDisplaying = true;
 
 		const material = await getMaterial(id);
 
 		if (material) {
 			this.name = material.name;
-			this.sku = material.sku;
+			this.skus = material.sku;
 			this.edition = material.edition.toString();
 			this.gameDate = material.gameDate ?? '';
 			this.category = material.category;
 			this.type = material.type;
 			this.originalLanguage = material.originalLanguage;
-			this.releaseDate = material.releaseDate ?? [];
+			this.releaseDates = material.releaseDate ?? [];
 			this.publisher = material.publisher.join();
 			this.status = material.status ?? 'OK';
-			this.names = Object.values(material.names ?? {});
+			this.translatedNames = Object.entries(material.names ?? {});
 			// This.links = material.links;
 			this.notes = material.notes ?? '';
 			this.description = material.description;
@@ -296,7 +437,7 @@ export class SdrItemDetails extends SdrComponent {
 			await modal.setMaterial(id);
 		} else {
 			modal.resetMaterial();
-			modal.edit = true;
+			modal.isDisplaying = false;
 		}
 	}
 }

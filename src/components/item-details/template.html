@@ -1,21 +1,34 @@
 <template>
-	<sdr-dialog>
-		<sdr-sdr-edit-box
+	<div>
+		<sdr-edit-box
 			id="name"
 			slot="title"
-			:edit="edit"
-			:disabled="edit"
-		></sdr-sdr-edit-box>
+			:disabled="isDisplaying"
+		></sdr-edit-box>
 
 		<div id="item-content">
 			<header>
 				<sdr-edit-list
-					id="sku"
+					id="sku-list"
 					open
-					:edit="edit"
+					type="text"
+
+					:disabled="isDisplaying"
+					:value="sku"
+
+					@itemadded="addSku"
+					@itemremoved="removeSku"
 				>
 					<span slot="label">t("SKU")</span>
-					<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required />
+					<input
+						slot="input"
+						pattern="^[A-Z0-9](?:-?[A-Z0-9])+$"
+						required
+
+						:value="sku"
+						@update="updateSku"
+						@input="updateSku"
+					/>
 				</sdr-edit-list>
 
 				<sdr-edit-box
@@ -26,7 +39,7 @@
 					step="1"
 					required
 
-					:edit="edit"
+					:disabled="isDisplaying"
 					:value="edition"
 				>
 					<span slot="label">t("Edition")</span>
@@ -36,7 +49,7 @@
 					id="category"
 					required
 
-					:edit="edit"
+					:disabled="isDisplaying"
 					:value="category"
 				>
 					<span slot="label">t("Category")</span>
@@ -57,7 +70,7 @@
 					id="type"
 					required
 
-					:edit="edit"
+					:disabled="isDisplaying"
 					:value="type"
 				>
 					<span slot="label">t("Type")</span>
@@ -73,7 +86,7 @@
 					id="language"
 					required
 
-					:edit="edit"
+					:disabled="isDisplaying"
 					:value="originalLanguage"
 				>
 					<span slot="label">t("Original Language")</span>
@@ -93,10 +106,15 @@
 				</sdr-select>
 
 				<sdr-edit-list
-					id="releasedate"
+					id="release-date-list"
 					open
 
-					:edit="edit"
+					:disabled="isDisplaying"
+					:value="releaseDate"
+					:values="releaseDates"
+
+					@itemadded="addReleaseDate"
+					@itemremoved="removeReleaseDate"
 				>
 					<span slot="label">t("Release date")</span>
 					<input slot="input" type="date" required />
@@ -108,7 +126,7 @@
 					id="status"
 					required
 
-					:edit="edit"
+					:disabled="isDisplaying"
 					:value="status"
 				>
 					<span slot="label">t("Status")</span>
@@ -124,7 +142,7 @@
 					id="gamedate"
 					required
 
-					:edit="edit"
+					:disabled="isDisplaying"
 					:value="gameDate"
 				>
 					<span slot="label">t("Game date")</span>
@@ -133,7 +151,12 @@
 				<sdr-edit-list
 					id="names"
 
-					:edit="edit"
+					:disabled="isDisplaying"
+
+					:value="translatedNames"
+
+					@itemadded="addTranslatedName"
+					@itemremoved="removeTranslatedName"
 				>
 					<span slot="label">t("Names published")</span>
 
@@ -161,7 +184,7 @@
 					id="publisher"
 					open
 
-					:edit="edit"
+					:disabled="isDisplaying"
 				>
 					<span slot="label">t("Publisher")</span>
 
@@ -183,13 +206,25 @@
 			</aside>
 
 			<aside id="files">
-				<sdr-edit-list id="files-list" hidden>
+				<sdr-edit-list
+					id="files-list"
+
+					value="new file"
+
+					:disabled="isDisplaying"
+
+					@itemadded="addFile"
+					@itemremoved="removeFile"
+				>
 					<span slot="label">t("Files")</span>
-					<input slot="input" type="hidden" required value="📄" />
 					<label slot="input">t("Add a file")</label>
 				</sdr-edit-list>
 
-				<sdr-edit-list id="links">
+				<sdr-edit-list
+					id="links"
+
+					:disabled="isDisplaying"
+				>
 					<span slot="label">t("Online links")</span>
 					<input slot="input" type="text" placeholder="t('Name')" required />
 					<input slot="input" type="url" placeholder="t('URL')" required />
@@ -198,7 +233,9 @@
 
 			<drop-area
 				id="cover-drop-area"
-				:is-accepting-files="edit"
+				:disabled="isDisplaying"
+
+				@drop="addCover"
 			>
 				<figure>
 					<img
@@ -208,24 +245,51 @@
 						 decoding="async"
 						 loading="lazy"
 						 role="presentation"
-						 src="./img/covers/loading-anim.svg" />
+						 src="./images/base-covers/loading-anim.svg" />
 				</figure>
 			</drop-area>
 
 			<article>
-				<sdr-textarea id="notes" hidden>
+				<sdr-textarea
+					id="notes"
+
+					:disabled="isDisplaying"
+					:value="notes"
+				>
 					<span slot="label">t("Notes")</span>
 				</sdr-textarea>
 
-				<sdr-textarea id="description" required>
+				<sdr-textarea
+					id="description"
+					required
+
+					:disabled="isDisplaying"
+					:value="description"
+				>
 					<span slot="label">t("Description")</span>
 				</sdr-textarea>
 			</article>
 		</div>
 
-		<sdr-button slot="footer" id="cancel" icon="❌">t("Cancel")</sdr-button>
-		<sdr-button slot="footer" id="edit" icon="✏️">t("Edit")</sdr-button>
-		<sdr-button slot="footer" id="save" icon="💾">t("Save")</sdr-button>
-		<sdr-button slot="footer" id="export" icon="📥">t("Export")</sdr-button>
-	</sdr-dialog>
+		<sdr-button
+			slot="footer"
+			icon="❌"
+			@click="edit"
+		>t("Cancel")</sdr-button>
+		<sdr-button
+			slot="footer"
+			icon="✏️"
+			@click="edit"
+		>t("Edit")</sdr-button>
+		<sdr-button
+			slot="footer"
+			icon="💾"
+			@click="save"
+		>t("Save")</sdr-button>
+		<sdr-button
+			slot="footer"
+			icon="📥"
+			@click="export"
+		>t("Export")</sdr-button>
+	</div>
 </template>

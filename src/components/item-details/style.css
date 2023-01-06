@@ -52,12 +52,12 @@ header {
 		'release release release .';
 }
 
-header #sku { grid-area: sku; }
+header #sku-list { grid-area: sku; }
 header #edition { grid-area: edition; }
 header #category { grid-area: category; }
 header #type { grid-area: type; }
 header #language { grid-area: language; }
-header #releasedate { grid-area: release; }
+header #release-date-list { grid-area: release; }
 
 #name {
 	--border-color: transparent;
