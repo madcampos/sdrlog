@@ -1,13 +1,51 @@
-import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
+import type { FileForMaterial, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 import { Logger } from '../util/logger';
 
 import { saveCover, saveMaterial, saveThumb, setFileForMaterial } from './idb-persistence';
 
+const DEFAULT_ICON = '📄';
+
+const mimeIcons = new Map([
+	['application/pdf', '📓'],
+	['image', '🖼️'],
+	['audio', '🔊'],
+	['text', '📝'],
+	['video', '🎞️'],
+	['application/zip', '📦'],
+	['application/epub+zip', '📚']
+]);
+
+const extensionIcons = new Map([
+	['.pdf', '📓'],
+	['.epub', '📚'],
+	['.bin', '💾'],
+	['.img', '💽'],
+	['.iso', '💽'],
+	['.smc', '🕹️'],
+	['.smd', '🕹️'],
+	['.cbz', '💭'],
+	['.apk', '🤖'],
+	['.xapk', '🤖'],
+	['.doc', '🖋️'],
+	['.docx', '🖋️'],
+	['.xls', '📊'],
+	['.xlsx', '📊'],
+	['.ppt', '📽️'],
+	['.pptx', '📽️']
+]);
+
+export function getIconForFile(mime: string, extension: string) {
+	const mimes = [...mimeIcons.keys()];
+	const mimeKey = mimes.find((iconMime) => mime.includes(iconMime)) ?? '';
+
+	return mimeIcons.get(mimeKey) ?? extensionIcons.get(extension) ?? DEFAULT_ICON;
+}
+
 export type NewMaterialProperties = Required<Omit<Material, 'edition' | 'names' | 'status' | 'links'>> & {
 	status: 'ok' | MaterialStatus,
 	edition: string,
-	names: string[],
+	names: [string, string][],
 	links: string[],
 	files: string[],
 	cover?: File
@@ -56,13 +94,7 @@ export async function saveNewMaterialInfo(id: string, {
 		materialToSave.status = status as Material['status'];
 	}
 
-	const namesValues = {};
-
-	names.forEach((item) => {
-		const { lang, name } = JSON.parse(decodeURI(item)) as { lang: IsoCode, name: string };
-
-		namesValues[lang] = name;
-	});
+	const namesValues = Object.fromEntries(names);
 
 	if (Object.keys(namesValues).length > 0) {
 		materialToSave.names = namesValues;
