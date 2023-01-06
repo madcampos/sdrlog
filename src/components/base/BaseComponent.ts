@@ -317,7 +317,9 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		} else if (prop.value !== value || forceUpdate) {
 			this.#propagatePropUpdates(prop, value);
 
-			prop.value = value;
+			if (typeof prop.value !== 'object') {
+				prop.value = value;
+			}
 		}
 	}
 
