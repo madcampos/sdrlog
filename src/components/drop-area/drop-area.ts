@@ -39,7 +39,7 @@ export class SdrDropArea extends SdrComponent {
 
 					this.#file = await handle.getFile();
 
-					this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
+					this.dispatchEvent(new CustomEvent('drop', { bubbles: true, composed: true, cancelable: true }));
 				},
 				dropFile: (evt) => {
 					evt.preventDefault();
@@ -55,7 +55,7 @@ export class SdrDropArea extends SdrComponent {
 
 					if (mimes.includes(fileType)) {
 						this.#file = file;
-						this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
+						this.dispatchEvent(new CustomEvent('drop', { bubbles: true, composed: true, cancelable: true }));
 					}
 
 					this.#overlay.classList.remove('drop');
@@ -88,7 +88,7 @@ export class SdrDropArea extends SdrComponent {
 
 			if (file) {
 				this.#file = file;
-				this.dispatchEvent(new CustomEvent('handler', { bubbles: true, composed: true, cancelable: true }));
+				this.dispatchEvent(new CustomEvent('drop', { bubbles: true, composed: true, cancelable: true }));
 			}
 		});
 	}
