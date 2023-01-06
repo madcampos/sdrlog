@@ -1,4 +1,4 @@
-import type { IsoCode, Material } from '../../../public/data/data';
+import type { Material } from '../../../public/data/data';
 import type { NewMaterialProperties } from './create-material';
 
 import { SdrProgressOverlay } from '../../components/progress/progress';
@@ -25,9 +25,7 @@ function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 	}
 
 	if (data.names.length > 0) {
-		filteredData.names = data.names.reduce((names, nameString) => {
-			const { lang, name } = JSON.parse(nameString) as { lang: IsoCode, name: string };
-
+		filteredData.names = data.names.reduce((names, [lang, name]) => {
 			names[lang] = name;
 
 			return names;
