@@ -4,13 +4,12 @@ import { SdrComponent } from '../base/BaseComponent';
 import template from './template.html?raw';
 import style from './style.css?raw';
 
-const watchedAttributes = ['disabled', 'open', 'value', 'values'];
+const watchedAttributes = ['disabled', 'open', 'value'];
 
 export interface SdrEditList {
 	disabled: boolean,
 	open: boolean,
-	value: string,
-	values: string[]
+	value: string
 }
 
 export class SdrEditList extends SdrComponent {
@@ -33,13 +32,17 @@ export class SdrEditList extends SdrComponent {
 					attributeName: 'disabled'
 				},
 				{ name: 'open', value: false, attributeName: 'open' },
-				{ name: 'value', value: '', attributeName: 'value' },
-				{ name: 'values', value: [], attributeName: 'values' },
-				{ name: 'type', value: 'text', attributeName: 'type' }
+				{ name: 'value', value: '', attributeName: 'value' }
 			],
 			handlers: {
 				addItem: () => {
-					this.dispatchEvent(new CustomEvent('additem', { bubbles: true, cancelable: true, composed: true }));
+					if (this.value !== '') {
+						this.dispatchEvent(new CustomEvent('itemadded', {
+							bubbles: true,
+							cancelable: true,
+							composed: true
+						}));
+					}
 				}
 			},
 			watchedSlots: {
@@ -49,25 +52,6 @@ export class SdrEditList extends SdrComponent {
 
 					newItems.forEach((item) => {
 						item.disabled = this.disabled;
-						this.values.push(item.value);
-
-						item.addEventListener('remove', (removeEvt) => {
-							const target = removeEvt.target as SdrEditListItem;
-
-							this.values.splice(this.values.indexOf(target.value), 1);
-
-							this.dispatchEvent(new CustomEvent('removeitem', {
-								bubbles: true,
-								cancelable: true,
-								composed: true,
-								detail: {
-									type: target.type,
-									value: target.value,
-									url: target.url,
-									icon: target.icon
-								}
-							}));
-						});
 					});
 				},
 				input: (evt) => {
@@ -85,6 +69,23 @@ export class SdrEditList extends SdrComponent {
 		});
 
 		this.#items = this.root.querySelector('slot:not([name])') as HTMLSlotElement;
+
+		this.addEventListener('remove', (evt) => {
+			const target = evt.target as SdrEditListItem;
+
+			this.dispatchEvent(new CustomEvent('itemremoved', {
+				bubbles: true,
+				cancelable: true,
+				composed: true,
+				detail: { value: target.value }
+			}));
+		});
+	}
+
+	get values() {
+		const items = this.#items.assignedElements().filter((element) => element instanceof SdrEditListItem) as SdrEditListItem[];
+
+		return items.map((item) => item.value);
 	}
 
 	resetValue() {

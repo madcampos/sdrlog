@@ -28,7 +28,8 @@
 	background: var(--border-color);
 }
 
-:host(:not([disabled])) #remove-button { display: none; }
+:host(:not([disabled])) #remove-button { display: block; }
+:host([disabled]) #remove-button { display: none; }
 
 :host:hover {
 	background: var(--accent-color);
