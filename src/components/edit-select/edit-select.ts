@@ -39,7 +39,7 @@ export class SdrSelect extends SdrComponent {
 			handlers: {
 				update: () => {
 					if (this.#select.value !== this.value) {
-						this.#select.value = this.value;
+						this.value = this.#select.value;
 						this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 					}
 				}
