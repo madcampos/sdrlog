@@ -2,8 +2,15 @@
 	<div>
 		<sdr-edit-box
 			id="name"
+			name="name"
+
 			slot="title"
+
 			:disabled="isDisplaying"
+			:value="name"
+
+			@input="updateInputValue"
+			@change="updateInputValue"
 		></sdr-edit-box>
 
 		<div id="item-content">
@@ -26,13 +33,16 @@
 						required
 
 						:value="sku"
-						@update="updateSku"
+
 						@input="updateSku"
+						@change="updateSku"
 					/>
 				</sdr-edit-list>
 
 				<sdr-edit-box
 					id="edition"
+					name="edition"
+
 					type="number"
 					min="1"
 					max="6"
@@ -41,16 +51,24 @@
 
 					:disabled="isDisplaying"
 					:value="edition"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Edition")</span>
 				</sdr-edit-box>
 
 				<sdr-select
 					id="category"
+					name="category"
+
 					required
 
 					:disabled="isDisplaying"
 					:value="category"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Category")</span>
 
@@ -68,10 +86,15 @@
 
 				<sdr-select
 					id="type"
+					name="type"
+
 					required
 
 					:disabled="isDisplaying"
 					:value="type"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Type")</span>
 
@@ -84,10 +107,15 @@
 
 				<sdr-select
 					id="language"
+					name="language"
+
 					required
 
 					:disabled="isDisplaying"
 					:value="originalLanguage"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Original Language")</span>
 
@@ -117,17 +145,31 @@
 					@itemremoved="removeReleaseDate"
 				>
 					<span slot="label">t("Release date")</span>
-					<input slot="input" type="date" required />
+					<input
+						slot="input"
+						type="date"
+						required
+
+						:value="releaseDate"
+
+						@input="updateReleaseDate"
+						@change="updateReleaseDate"
+					/>
 				</sdr-edit-list>
 			</header>
 
 			<aside id="meta">
 				<sdr-select
 					id="status"
+					name="status"
+
 					required
 
 					:disabled="isDisplaying"
 					:value="status"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Status")</span>
 
@@ -138,12 +180,17 @@
 				</sdr-select>
 
 				<sdr-edit-box
+					id="gameDate"
+					name="gameDate"
+
 					type="month"
-					id="gamedate"
 					required
 
 					:disabled="isDisplaying"
 					:value="gameDate"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Game date")</span>
 				</sdr-edit-box>
@@ -153,14 +200,20 @@
 
 					:disabled="isDisplaying"
 
-					:value="translatedNames"
-
 					@itemadded="addTranslatedName"
 					@itemremoved="removeTranslatedName"
 				>
 					<span slot="label">t("Names published")</span>
 
-					<select slot="input" required>
+					<select
+						slot="input"
+						required
+
+						:value="translatedLanguage"
+
+						@input="updateTranslatedName"
+						@change="updateTranslatedName"
+					>
 						<option selected disabled hidden value="">t("Please select an option...")</option>
 
 						<option value="en-US">🇺🇸 t("en")</option>
@@ -177,7 +230,16 @@
 						<option value="fi-FI">🇫🇮 t("fi")</option>
 					</select>
 
-					<input slot="input" required placeholder="t('Name')" />
+					<input
+						slot="input"
+						required
+						placeholder="t('Name')"
+
+						:value="translatedName"
+
+						@input="updateTranslatedName"
+						@change="updateTranslatedName"
+					/>
 				</sdr-edit-list>
 
 				<sdr-edit-list
@@ -185,10 +247,22 @@
 					open
 
 					:disabled="isDisplaying"
+					:value="publisher"
+
+					@itemadded="addPublisher"
+					@itemremoved="removePublisher"
 				>
 					<span slot="label">t("Publisher")</span>
 
-					<select slot="input" required>
+					<select
+						slot="input"
+						required
+
+						:value="publisher"
+
+						@input="updatePublisher"
+						@change="updatePublisher"
+					>
 						<option selected disabled hidden value="">t("Please select an option...")</option>
 
 						<option value="heyne">Heyne Verlag</option>
@@ -221,13 +295,38 @@
 				</sdr-edit-list>
 
 				<sdr-edit-list
-					id="links"
+					id="link-list"
 
 					:disabled="isDisplaying"
+
+					@itemadded="addLink"
+					@itemremoved="removeLink"
 				>
 					<span slot="label">t("Online links")</span>
-					<input slot="input" type="text" placeholder="t('Name')" required />
-					<input slot="input" type="url" placeholder="t('URL')" required />
+					<input
+						slot="input"
+						type="text"
+						id="link-title"
+						placeholder="t('Name')"
+						required
+
+						:value="linkTitle"
+
+						@input="updateLink"
+						@change="updateLink"
+					/>
+					<input
+						slot="input"
+						type="url"
+						id="link-url"
+						placeholder="t('URL')"
+						required
+
+						:value="linkUrl"
+
+						@input="updateLink"
+						@change="updateLink"
+					/>
 				</sdr-edit-list>
 			</aside>
 
@@ -252,19 +351,28 @@
 			<article>
 				<sdr-textarea
 					id="notes"
+					name="notes"
 
 					:disabled="isDisplaying"
 					:value="notes"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Notes")</span>
 				</sdr-textarea>
 
 				<sdr-textarea
 					id="description"
+					name="description"
+
 					required
 
 					:disabled="isDisplaying"
 					:value="description"
+
+					@input="updateInputValue"
+					@change="updateInputValue"
 				>
 					<span slot="label">t("Description")</span>
 				</sdr-textarea>
@@ -274,22 +382,34 @@
 		<sdr-button
 			slot="footer"
 			icon="❌"
+
 			@click="edit"
-		>t("Cancel")</sdr-button>
+		>
+			t("Cancel")
+		</sdr-button>
 		<sdr-button
 			slot="footer"
 			icon="✏️"
+
 			@click="edit"
-		>t("Edit")</sdr-button>
+		>
+			t("Edit")
+		</sdr-button>
 		<sdr-button
 			slot="footer"
 			icon="💾"
+
 			@click="save"
-		>t("Save")</sdr-button>
+		>
+			t("Save")
+		</sdr-button>
 		<sdr-button
 			slot="footer"
 			icon="📥"
+
 			@click="export"
-		>t("Export")</sdr-button>
+		>
+			t("Export")
+		</sdr-button>
 	</div>
 </template>

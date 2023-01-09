@@ -1,13 +1,15 @@
+/* eslint-disable max-lines */
+
 import type { SdrDialog } from '../dialog/dialog';
-import type { FileForMaterial, IsoCode, Material, MaterialStatus } from '../../../public/data/data';
+import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
 import { SdrEditListItem } from '../edit-list-item/edit-list-item';
 import type { SdrDropArea } from '../drop-area/drop-area';
 
-import { getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
+import { getFilesForMaterial, getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
 import { SdrCard } from '../item-card/item-card';
 import { getIconForFile, saveNewMaterialInfo } from '../../js/data-operations/create-material';
 import { openFile } from '../../js/files-reader/open-file';
-import { LOADING_COVER } from '../../js/covers/fetch-covers';
+import { FALLBACK_COVER, fetchCover, LOADING_COVER } from '../../js/covers/fetch-covers';
 import { associateFileWithData } from '../../js/files-reader/files-reader';
 import { exportDataItem } from '../../js/data-operations/data-export';
 import { I18n } from '../../js/intl/translations';
@@ -17,10 +19,11 @@ import template from './template.html?raw';
 import style from './style.css?raw';
 import { formatFullDate } from '../../js/intl/formatting';
 
-const watchedAttributes = ['id', 'name', 'description', 'sku', 'edition', 'game-date', 'category', 'type', 'original-language', 'release-date', 'publisher', 'status', 'names', 'files', 'links', 'notes'];
+const watchedAttributes = ['id', 'loading'];
 
 export interface SdrItemDetails {
 	id: string,
+	loading: boolean,
 	isDisplaying: boolean,
 	name: string,
 	description: string,
@@ -40,8 +43,9 @@ export interface SdrItemDetails {
 	translatedName: string,
 	translatedNames: [string, string][],
 	files: FileForMaterial[],
-	link: string,
-	links: string[],
+	linkUrl: string,
+	linkTitle: string,
+	links: MaterialLink[],
 	notes: string
 }
 
@@ -60,30 +64,47 @@ export class SdrItemDetails extends SdrComponent {
 			watchedAttributes,
 			props: [
 				{ name: 'id', value: '', attributeName: 'id' },
+				{ name: 'loading', value: false, attributeName: 'loading' },
 				{ name: 'isDisplaying', value: false },
-				{ name: 'name', value: '', attributeName: 'name' },
-				{ name: 'description', value: '', attributeName: 'description' },
+
+				{ name: 'name', value: '' },
+				{ name: 'description', value: '' },
+				{ name: 'edition', value: '' },
+				{ name: 'gameDate', value: '' },
+				{ name: 'category', value: '' },
+				{ name: 'type', value: '' },
+				{ name: 'originalLanguage', value: '' },
+				{ name: 'status', value: '' },
+				{ name: 'notes', value: '' },
+
 				{ name: 'sku', value: '' },
-				{ name: 'skus', value: [], attributeName: 'sku' },
-				{ name: 'edition', value: '', attributeName: 'edition' },
-				{ name: 'gameDate', value: '', attributeName: 'game-date' },
-				{ name: 'category', value: '', attributeName: 'category' },
-				{ name: 'type', value: '', attributeName: 'type' },
-				{ name: 'originalLanguage', value: '', attributeName: 'original-language' },
+				{ name: 'skus', value: [] },
+
 				{ name: 'releaseDate', value: '' },
-				{ name: 'releaseDates', value: [], attributeName: 'release-date' },
+				{ name: 'releaseDates', value: [] },
+
 				{ name: 'publisher', value: '' },
-				{ name: 'publishers', value: [], attributeName: 'publisher' },
-				{ name: 'status', value: '', attributeName: 'status' },
+				{ name: 'publishers', value: [] },
+
 				{ name: 'translatedLanguage', value: '' },
 				{ name: 'translatedName', value: '' },
-				{ name: 'translatedNames', value: [], attributeName: 'names' },
-				{ name: 'files', value: [], attributeName: 'files' },
-				{ name: 'link', value: '' },
-				{ name: 'links', value: [], attributeName: 'links' },
-				{ name: 'notes', value: '', attributeName: 'notes' }
+				{ name: 'translatedNames', value: [] },
+
+				{ name: 'files', value: [] },
+
+				{ name: 'linkUrl', value: '' },
+				{ name: 'linkTitle', value: '' },
+				{ name: 'links', value: [] }
 			],
 			handlers: {
+				updateInputValue: (evt) => {
+					const target = evt.target as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+
+					if (this[target.name] !== target.value) {
+						this[target.name] = target.value;
+					}
+				},
+
 				updateSku: (evt) => {
 					const target = evt.target as HTMLInputElement;
 					let validationMessage = '';
@@ -120,6 +141,27 @@ export class SdrItemDetails extends SdrComponent {
 
 					this.skus.splice(this.skus.indexOf(sku), 1);
 				},
+
+				updateReleaseDate: (evt) => {
+					const target = evt.target as HTMLInputElement;
+					let validationMessage = '';
+
+					if (this.releaseDates.includes(target.value)) {
+						validationMessage = I18n.t`Release date already exists in the list.`;
+					} else if (!target.value) {
+						validationMessage = I18n.t`Please fill out the release date.`;
+					}
+
+					target.setCustomValidity(validationMessage);
+
+					const isValid = target.reportValidity();
+
+					if (isValid) {
+						this.releaseDate = target.value;
+					} else {
+						this.releaseDate = '';
+					}
+				},
 				addReleaseDate: () => {
 					const newReleaseDate = new SdrEditListItem();
 
@@ -136,10 +178,24 @@ export class SdrItemDetails extends SdrComponent {
 
 					this.releaseDates.splice(this.releaseDates.indexOf(releaseDate), 1);
 				},
+
 				updatePublisher: (evt) => {
 					const target = evt.target as HTMLSelectElement;
+					let validationMessage = '';
 
-					this.publisher = target.value;
+					if (!target.value) {
+						validationMessage = I18n.t`Please select a publisher.`;
+					}
+
+					target.setCustomValidity(validationMessage);
+
+					const isValid = target.reportValidity();
+
+					if (isValid) {
+						this.publisher = target.value;
+					} else {
+						this.publisher = '';
+					}
 				},
 				addPublisher: () => {
 					const newPublisher = new SdrEditListItem();
@@ -161,20 +217,25 @@ export class SdrItemDetails extends SdrComponent {
 
 					this.publishers.splice(this.publishers.indexOf(publisher), 1);
 				},
-				updateTranslatedName: (evt) => {
-					const target = evt.target as HTMLInputElement;
-					const validationMessage = '';
 
-					// TODO: create validations for name and language
+				updateTranslatedName: (evt) => {
+					const target = evt.target as HTMLInputElement | HTMLSelectElement;
+					let validationMessage = '';
+
+					if (target instanceof HTMLInputElement && !target.value) {
+						validationMessage = I18n.t`Please fill out the translated name.`;
+					} else if (!target.value) {
+						validationMessage = I18n.t`Please select a language.`;
+					}
 
 					target.setCustomValidity(validationMessage);
 
 					const isValid = target.reportValidity();
 
 					if (isValid) {
-						this.translatedName = target.value;
+						this.root.querySelector('#translated-name-list')?.setAttribute('value', 'valid-name');
 					} else {
-						this.translatedName = '';
+						this.root.querySelector('#translated-name-list')?.setAttribute('value', '');
 					}
 				},
 				addTranslatedName: () => {
@@ -202,14 +263,56 @@ export class SdrItemDetails extends SdrComponent {
 
 					this.translatedNames.splice(this.translatedNames.indexOf(name), 1);
 				},
+
+				updateLink: (evt) => {
+					const target = evt.target as HTMLInputElement;
+					let validationMessage = '';
+
+					if (target.id === 'link-url' && !target.value) {
+						validationMessage = I18n.t`Please fill out the link URL.`;
+					} else if (!target.value) {
+						validationMessage = I18n.t`Please fill out the link title.`;
+					}
+
+					target.setCustomValidity(validationMessage);
+
+					const isValid = target.reportValidity();
+
+					if (isValid) {
+						this.root.querySelector('#link-list')?.setAttribute('value', 'valid-link');
+					} else {
+						this.root.querySelector('#link-list')?.setAttribute('value', '');
+					}
+				},
 				addLink: () => {
-					// TODO: migrate `formatLink`
+					const newLink = new SdrEditListItem();
+					const link = document.createElement('a');
+
+					link.href = this.linkUrl;
+					link.textContent = this.linkUrl;
+
+					newLink.value = JSON.stringify({
+						url: this.linkUrl,
+						title: this.linkTitle
+					});
+
+					newLink.appendChild(link);
+					this.root.querySelector('#link-list')?.appendChild(newLink);
+
+					this.links.push({
+						url: this.linkUrl,
+						title: this.linkTitle
+					});
+
+					this.linkUrl = '';
+					this.linkTitle = '';
 				},
 				removeLink: (evt) => {
 					const link = (evt as CustomEvent).detail.value;
 
 					this.links.splice(this.links.indexOf(link), 1);
 				},
+
 				addFile: async () => {
 					if (this.skus.length === 0) {
 						// eslint-disable-next-line no-alert
@@ -226,8 +329,6 @@ export class SdrItemDetails extends SdrComponent {
 
 						await saveFile(`/${handle.name}`, handle);
 
-						this.files.push(fileForMaterial);
-
 						const newFileItem = new SdrEditListItem();
 						const fileLink = document.createElement('a');
 
@@ -235,10 +336,13 @@ export class SdrItemDetails extends SdrComponent {
 						newFileItem.setAttribute('stretch', '');
 
 						fileLink.href = '#';
+						fileLink.classList.add('file-link');
 						fileLink.textContent = `${getIconForFile(fileForMaterial.mimeType, fileForMaterial.fileExtension)} ${fileForMaterial.fileName}${fileForMaterial.fileExtension}`;
 
 						newFileItem.appendChild(fileLink);
 						this.root.querySelector('#files-list')?.appendChild(newFileItem);
+
+						this.files.push(fileForMaterial);
 					}
 				},
 				removeFile: (evt) => {
@@ -246,6 +350,7 @@ export class SdrItemDetails extends SdrComponent {
 
 					this.files.splice(this.files.indexOf(file), 1);
 				},
+
 				addCover: () => {
 					this.#coverDropArea.disabled = true;
 					this.#cover.src = LOADING_COVER;
@@ -255,8 +360,9 @@ export class SdrItemDetails extends SdrComponent {
 
 					this.#coverDropArea.disabled = false;
 				},
+
 				save: async () => {
-					const [id] = this.sku;
+					const [id] = this.skus;
 
 					if (id) {
 						await saveNewMaterialInfo(id, {
@@ -269,10 +375,10 @@ export class SdrItemDetails extends SdrComponent {
 							type: this.type as Material['type'],
 							originalLanguage: this.originalLanguage as IsoCode,
 							releaseDate: this.releaseDates as `${number}-${number}-${number}`[],
-							publisher: this.publisher as unknown as Material['publisher'],
+							publisher: this.publishers,
 							status: this.status as MaterialStatus,
 							names: this.translatedNames,
-							files: this.files as unknown as string[],
+							files: this.files,
 							links: this.links,
 							notes: this.notes,
 							cover: this.#coverFile
@@ -309,10 +415,10 @@ export class SdrItemDetails extends SdrComponent {
 						type: this.type as Material['type'],
 						originalLanguage: this.originalLanguage as IsoCode,
 						releaseDate: this.releaseDates as `${number}-${number}-${number}`[],
-						publisher: this.publisher as unknown as Material['publisher'],
+						publisher: this.publishers,
 						status: this.status as MaterialStatus,
 						names: this.translatedNames,
-						files: this.files as unknown as string[],
+						files: this.files,
 						links: this.links,
 						notes: this.notes,
 						description: this.description
@@ -320,19 +426,6 @@ export class SdrItemDetails extends SdrComponent {
 				},
 				edit: () => {
 					this.isDisplaying = !this.isDisplaying;
-				},
-				openFile: async (evt) => {
-					const target = evt.target as HTMLLinkElement;
-
-					if (target.matches('a.file-link')) {
-						evt.preventDefault();
-						evt.stopPropagation();
-
-						const targetParent = target.closest('edit-list-item') as SdrEditListItem;
-						const fileInfo = JSON.parse(decodeURI(targetParent.value)) as FileForMaterial;
-
-						await openFile(fileInfo);
-					}
 				}
 			},
 			template,
@@ -347,6 +440,20 @@ export class SdrItemDetails extends SdrComponent {
 		this.#modal?.addEventListener('close', () => {
 			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}`);
 			window.document.title = import.meta.env.APP_NAME;
+		});
+
+		this.root.querySelector('#files-list')?.addEventListener('click', async (evt) => {
+			const target = evt.target as HTMLLinkElement;
+
+			if (target.matches('a.file-link')) {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				const targetParent = target.closest('sdr-edit-list-item') as SdrEditListItem;
+				const fileInfo = JSON.parse(targetParent.value) as FileForMaterial;
+
+				await openFile(fileInfo);
+			}
 		});
 	}
 
@@ -394,31 +501,38 @@ export class SdrItemDetails extends SdrComponent {
 			this.publisher = material.publisher.join();
 			this.status = material.status ?? 'OK';
 			this.translatedNames = Object.entries(material.names ?? {});
-			// This.links = material.links;
+			this.links = material.links ?? [];
 			this.notes = material.notes ?? '';
 			this.description = material.description;
 
-			// Void fetchCover(material.sku[0]).then((coverFile) => {
-			// 	If (coverFile) {
-			// 		Cover.src = URL.createObjectURL(coverFile);
-			// 	} else {
-			// 		Cover.src = FALLBACK_COVER;
-			// 	}
-			// });
+			void fetchCover(material.sku[0]).then((coverFile) => {
+				if (coverFile) {
+					this.#cover.src = URL.createObjectURL(coverFile);
+				} else {
+					this.#cover.src = FALLBACK_COVER;
+				}
+			});
 
-			// Void getFilesForMaterial(material.sku[0]).then((fileList) => {
-			// 	If (fileList) {
-			// 		For (const file of fileList) {
-			// 			Files.insertAdjacentHTML('beforeend', formatFile(file));
-			// 		}
+			void getFilesForMaterial(material.sku[0]).then((fileList) => {
+				if (fileList) {
+					for (const file of fileList) {
+						const newFileItem = new SdrEditListItem();
+						const fileLink = document.createElement('a');
 
-			// 		If (fileList.length > 0) {
-			// 			Files.hidden = false;
-			// 		}
-			// 	}
+						newFileItem.value = JSON.stringify(file);
+						newFileItem.setAttribute('stretch', '');
 
-			// 	Files.loaded = true;
-			// });
+						fileLink.href = '#';
+						fileLink.classList.add('file-link');
+						fileLink.textContent = `${getIconForFile(file.mimeType, file.fileExtension)} ${file.fileName}${file.fileExtension}`;
+
+						newFileItem.appendChild(fileLink);
+						this.root.querySelector('#files-list')?.appendChild(newFileItem);
+
+						this.files.push(file);
+					}
+				}
+			});
 		}
 	}
 

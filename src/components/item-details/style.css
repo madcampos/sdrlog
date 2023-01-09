@@ -97,7 +97,7 @@ drop-area figure img {
 
 #meta #publisher { grid-area: pub; }
 #meta #names { grid-area: names; }
-#meta #gamedate { grid-area: gamedate; }
+#meta #gameDate { grid-area: gamedate; }
 
 #meta #publisher abbr { text-decoration: none; }
 
