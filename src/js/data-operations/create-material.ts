@@ -1,4 +1,4 @@
-import type { FileForMaterial, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
+import type { FileForMaterial, Material, MaterialStatus } from '../../../public/data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 import { Logger } from '../util/logger';
 
@@ -42,12 +42,11 @@ export function getIconForFile(mime: string, extension: string) {
 	return mimeIcons.get(mimeKey) ?? extensionIcons.get(extension) ?? DEFAULT_ICON;
 }
 
-export type NewMaterialProperties = Required<Omit<Material, 'edition' | 'names' | 'status' | 'links'>> & {
+export type NewMaterialProperties = Required<Omit<Material, 'edition' | 'names' | 'status'>> & {
 	status: 'ok' | MaterialStatus,
 	edition: string,
 	names: [string, string][],
-	links: string[],
-	files: string[],
+	files: FileForMaterial[],
 	cover?: File
 };
 
@@ -83,7 +82,7 @@ export async function saveNewMaterialInfo(id: string, {
 	};
 
 	if (links.length > 0) {
-		materialToSave.links = links.map((link) => JSON.parse(decodeURI(link)) as MaterialLink);
+		materialToSave.links = links;
 	}
 
 	if (notes && notes !== '') {
@@ -103,7 +102,7 @@ export async function saveNewMaterialInfo(id: string, {
 	await saveMaterial(id, materialToSave);
 
 	for await (const file of files) {
-		await setFileForMaterial(JSON.parse(decodeURI(file)) as FileForMaterial);
+		await setFileForMaterial(file);
 	}
 
 	if (cover) {
