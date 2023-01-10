@@ -32,3 +32,5 @@ nav {
 nav ::slotted(*) {
 	margin: var(--margin-block);
 }
+
+:host([no-file-system]) .file-system { display: none; }

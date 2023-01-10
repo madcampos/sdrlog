@@ -1,5 +1,44 @@
 <template>
 	<nav>
-		<slot></slot>
+		<sdr-dropdown id="filters" icon="︙">
+			<sdr-dropdown-item action="sourcebook" icon="📜" @click="updateSearchFilter">t("Sourcebooks")</sdr-dropdown-item>
+			<sdr-dropdown-item action="rulebook" icon="📝" @click="updateSearchFilter">t("Rulebooks")</sdr-dropdown-item>
+			<sdr-dropdown-item action="mission" icon="🗺️" @click="updateSearchFilter">t("Adventures &amp; Campaigns")</sdr-dropdown-item>
+			<sdr-dropdown-item action="novel" icon="📚" @click="updateSearchFilter">t("Novels")</sdr-dropdown-item>
+			<sdr-dropdown-item action="magazine" icon="📰" @click="updateSearchFilter">t("Magazines")</sdr-dropdown-item>
+			<sdr-dropdown-item action="boardgame" icon="♟️" @click="updateSearchFilter">t("Tabletop")</sdr-dropdown-item>
+			<sdr-dropdown-item action="tcg" icon="🃏" @click="updateSearchFilter">t("Trading Card Game")</sdr-dropdown-item>
+			<sdr-dropdown-item action="videogame" icon="🎮" @click="updateSearchFilter">t("Video Games")</sdr-dropdown-item>
+			<sdr-dropdown-item action="unofficial" icon="📓" @click="updateSearchFilter">t("Unofficial")</sdr-dropdown-item>
+			<sdr-dropdown-item action="misc" icon="🔣" @click="updateSearchFilter">t("Misc.")</sdr-dropdown-item>
+
+			<sdr-dropdown-item separator></sdr-dropdown-item>
+
+			<sdr-dropdown-item action="all" icon="📚" @click="updateSearchFilter">t("All")</sdr-dropdown-item>
+		</sdr-dropdown>
+		<sdr-button id="add-material" @click="openMaterialModal">➕</sdr-button>
+
+		<search-box></search-box>
+		<sdr-dropdown id="app-menu" icon="⚙️" align-right>
+			<sdr-dropdown-item icon="ℹ️" @click="openInfoModal">t("Tool Information")</sdr-dropdown-item>
+			<sdr-dropdown-item icon="💬" @click="openLanguageModal">t("Language Settings")</sdr-dropdown-item>
+			<sdr-dropdown-item icon="🌓" @click="openThemeModal">t("Theme Settings")</sdr-dropdown-item>
+
+			<sdr-dropdown-item separator class="file-system"></sdr-dropdown-item>
+
+			<sdr-dropdown-item icon="📥" class="file-system" @click="readFiles">t("Import Files")</sdr-dropdown-item>
+			<sdr-dropdown-item icon="📦" class="file-system" @click="requestDataFileFromUser">t("Import Data")</sdr-dropdown-item>
+
+			<sdr-dropdown-item separator class="file-system"></sdr-dropdown-item>
+
+			<sdr-dropdown-item icon="📂" class="file-system" @click="importCoversFromFolder">t("Import Covers")</sdr-dropdown-item>
+			<sdr-dropdown-item icon="🧩" class="file-system" @click="extractCoversFromFiles">t("Extract Covers")</sdr-dropdown-item>
+
+			<sdr-dropdown-item separator class="file-system"></sdr-dropdown-item>
+
+			<sdr-dropdown-item icon="📤" class="file-system" @click="exportDataFile">t("Export Data")</sdr-dropdown-item>
+			<sdr-dropdown-item icon="🎴" class="file-system" @click="saveThumbsToFolder">t("Export Thumbnails")</sdr-dropdown-item>
+			<sdr-dropdown-item icon="🖼️" class="file-system" @click="saveCoversToFolder">t("Export Covers")</sdr-dropdown-item>
+		</sdr-dropdown>
 	</nav>
 </template>
