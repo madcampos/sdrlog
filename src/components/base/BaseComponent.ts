@@ -229,22 +229,58 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 	}
 
 	#serializePropToAttribute(attr: string, element: HTMLElement, value: PropTypes) {
+		const isInputElement = element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement || element instanceof HTMLSelectElement;
+		const isClassAttribute = attr === 'class';
+		const isStyleAttribute = attr === 'style';
+
 		switch (typeof value) {
 			case 'boolean':
 				if (value) {
 					element.setAttribute(attr, '');
+
+					if (isInputElement && attr === 'value') {
+						element.value = 'on';
+					}
 				} else {
 					element.removeAttribute(attr);
+
+					if (isInputElement && attr === 'value') {
+						element.value = 'off';
+					}
 				}
 				break;
 			case 'object':
 				element.setAttribute(attr, JSON.stringify(value));
+
+				if (isInputElement && attr === 'value') {
+					element.value = JSON.stringify(value);
+				}
+
+				if (isClassAttribute) {
+					Object.values(value).forEach((className) => {
+						element.classList.add(className);
+					});
+				}
+
+				if (isStyleAttribute) {
+					Object.entries(value).forEach(([styleName, styleValue]) => {
+						element.style[styleName] = styleValue;
+					});
+				}
 				break;
 			case 'function':
 				element.setAttribute(attr, '[function]');
+
+				if (isInputElement && attr === 'value') {
+					element.value = '[function]';
+				}
 				break;
 			default:
 				element.setAttribute(attr, value.toString());
+
+				if (isInputElement && attr === 'value') {
+					element.value = value.toString();
+				}
 				break;
 		}
 	}
