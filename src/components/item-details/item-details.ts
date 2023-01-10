@@ -237,6 +237,12 @@ export class SdrItemDetails extends SdrComponent {
 
 					if (isValid) {
 						this.root.querySelector('#translated-name-list')?.setAttribute('value', 'valid-name');
+
+						if (target instanceof HTMLInputElement) {
+							this.translatedName = target.value;
+						} else {
+							this.translatedLanguage = target.value;
+						}
 					} else {
 						this.root.querySelector('#translated-name-list')?.setAttribute('value', '');
 					}
@@ -283,6 +289,12 @@ export class SdrItemDetails extends SdrComponent {
 
 					if (isValid) {
 						this.root.querySelector('#link-list')?.setAttribute('value', 'valid-link');
+
+						if (target.id === 'link-url') {
+							this.linkUrl = target.value;
+						} else {
+							this.linkTitle = target.value;
+						}
 					} else {
 						this.root.querySelector('#link-list')?.setAttribute('value', '');
 					}
@@ -292,7 +304,9 @@ export class SdrItemDetails extends SdrComponent {
 					const link = document.createElement('a');
 
 					link.href = this.linkUrl;
-					link.textContent = this.linkUrl;
+					link.textContent = this.linkTitle;
+					link.rel = 'noopener noreferrer';
+					link.target = '_blank';
 
 					newLink.value = JSON.stringify({
 						url: this.linkUrl,
