@@ -555,7 +555,30 @@ export class SdrItemDetails extends SdrComponent {
 		}
 	}
 
-	static async openMaterialModal(id?: string, title?: string) {
+	// TODO: remove method and merge with updateFromURL
+	static checkForMatchingId(idToCheck: string) {
+		if (window.location.hash === '#information') {
+			return false;
+		}
+
+		const id = window.location.hash.replace('#', '');
+
+		return id === idToCheck;
+	}
+
+	static updateFromURL(id: string, title: string) {
+		let modal = document.querySelector<SdrItemDetails>('sdr-item-details');
+
+		if (!modal) {
+			modal = document.createElement('sdr-item-details') as SdrItemDetails;
+
+			document.body.appendChild(modal);
+		}
+
+		modal.show(title, id);
+	}
+
+	static async openModal(id?: string, title?: string) {
 		let modal = document.querySelector<SdrItemDetails>('sdr-item-details');
 
 		if (!modal) {
@@ -572,5 +595,17 @@ export class SdrItemDetails extends SdrComponent {
 			modal.resetMaterial();
 			modal.isDisplaying = false;
 		}
+	}
+
+	static closeModal() {
+		let modal = document.querySelector<SdrItemDetails>('sdr-item-details');
+
+		if (!modal) {
+			modal = document.createElement('sdr-item-details') as SdrItemDetails;
+
+			document.body.appendChild(modal);
+		}
+
+		modal.close();
 	}
 }

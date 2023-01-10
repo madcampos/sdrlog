@@ -37,7 +37,7 @@ async function init() {
 	const { SdrInfoBox } = await import('../views/info-box/info-box');
 	const { SdrThemeBox } = await import('../views/theme-box/theme-box');
 	const { SdrLanguageBox } = await import('../views/language-box/language-info');
-	const { checkForMatchingId, updateItemModalFromURL } = await import('../components/item-info/item-details-url');
+	const { SdrItemDetails } = await import('../views/item-details/item-details');
 	const { createComparer } = await import('./intl/formatting');
 
 	updateLoadStatus(I18n.t`Fetching items database.`);
@@ -70,7 +70,7 @@ async function init() {
 
 		progressLoader.value += 1;
 
-		if (checkForMatchingId(materialId)) {
+		if (SdrItemDetails.checkForMatchingId(materialId)) {
 			matchedId = materialId;
 			matchedTitle = material.name;
 		}
@@ -79,10 +79,11 @@ async function init() {
 	if (matchedId) {
 		updateLoadStatus(I18n.t`Setting modal from URL.`);
 
-		updateItemModalFromURL(matchedId, matchedTitle);
+		SdrItemDetails.updateFromURL(matchedId, matchedTitle);
 	}
 
 	updateLoadStatus(I18n.t`Setting information from URL.`);
+
 
 	SdrInfoBox.updateFromURL();
 	SdrThemeBox.updateFromURL();
