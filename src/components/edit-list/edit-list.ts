@@ -25,7 +25,7 @@ export class SdrEditList extends SdrComponent {
 				{
 					name: 'disabled',
 					value: (newValue = false) => {
-						const parsedValue = newValue === '';
+						const parsedValue = newValue === '' || newValue === true;
 
 						this.#updateDisabledItems(parsedValue);
 

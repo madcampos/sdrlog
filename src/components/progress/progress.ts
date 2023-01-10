@@ -25,7 +25,7 @@ export class SdrProgressOverlay extends SdrComponent {
 				{
 					name: 'value',
 					value: (newValue = '0') => {
-						const parsedValue = Number.parseInt(newValue as string);
+						const parsedValue = typeof newValue === 'number' ? newValue : Number.parseInt(newValue as string);
 
 						this.count = `${parsedValue} / ${this.total}`;
 

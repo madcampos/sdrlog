@@ -20,7 +20,7 @@ export class SdrDialog extends SdrComponent {
 				{
 					name: 'open',
 					value: (newValue = false) => {
-						const parsedValue = newValue === '';
+						const parsedValue = newValue === '' || newValue === true;
 
 						if (parsedValue) {
 							this.#dialog.showModal();

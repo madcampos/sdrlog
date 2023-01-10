@@ -22,7 +22,7 @@ export class SdrLoader extends SdrComponent {
 				{
 					name: 'loaded',
 					value: (newValue = false) => {
-						const parsedValue = newValue === '';
+						const parsedValue = newValue === '' || newValue === true;
 
 						this.root.querySelector<HTMLDivElement>('#loader')!.hidden = parsedValue;
 						this.root.querySelector<HTMLSlotElement>('slot')!.hidden = !parsedValue;
