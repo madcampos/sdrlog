@@ -25,9 +25,13 @@ export class SdrEditBox extends SdrComponent {
 				{
 					name: 'value',
 					value: (newValue = '') => {
+						const oldValue = this.#input.value;
+
 						this.#input.value = newValue as string;
 
-						this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+						if (oldValue !== newValue) {
+							this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+						}
 
 						return newValue;
 					},

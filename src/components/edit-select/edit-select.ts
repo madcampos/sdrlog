@@ -24,9 +24,13 @@ export class SdrSelect extends SdrComponent {
 				{
 					name: 'value',
 					value: (newValue = '') => {
+						const oldValue = this.#select.value;
+
 						this.#select.value = newValue as string;
 
-						this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+						if (oldValue !== newValue) {
+							this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+						}
 
 						return newValue;
 					},

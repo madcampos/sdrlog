@@ -27,10 +27,14 @@ export class SdrTextArea extends SdrComponent {
 				{
 					name: 'value',
 					value: (newValue = '') => {
-						this.#textArea.innerText = newValue as string;
+						const oldValue = this.#textArea.value;
+
+						this.#textArea.value = newValue as string;
 						this.#renderedTextArea.innerHTML = marked(newValue as string);
 
-						this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+						if (oldValue !== newValue) {
+							this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+						}
 
 						return newValue;
 					},
@@ -42,8 +46,8 @@ export class SdrTextArea extends SdrComponent {
 			],
 			handlers: {
 				update: () => {
-					if (this.#textArea.innerText !== this.value) {
-						this.value = this.#textArea.innerText;
+					if (this.#textArea.value !== this.value) {
+						this.value = this.#textArea.value;
 						this.#renderedTextArea.innerHTML = marked(this.value);
 						this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 					}
