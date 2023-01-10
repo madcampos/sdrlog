@@ -24,10 +24,12 @@ export class SdrEditList extends SdrComponent {
 			props: [
 				{
 					name: 'disabled',
-					value: (isEditing = false) => {
-						this.#updateDisabledItems(isEditing as boolean);
+					value: (newValue = false) => {
+						const parsedValue = newValue === '';
 
-						return isEditing;
+						this.#updateDisabledItems(parsedValue);
+
+						return parsedValue;
 					},
 					attributeName: 'disabled'
 				},

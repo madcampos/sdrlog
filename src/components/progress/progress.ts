@@ -24,10 +24,12 @@ export class SdrProgressOverlay extends SdrComponent {
 				{ name: 'count', value: '' },
 				{
 					name: 'value',
-					value: (newValue = 0) => {
-						this.count = `${newValue as number} / ${this.total}`;
+					value: (newValue = '0') => {
+						const parsedValue = Number.parseInt(newValue as string);
 
-						return newValue;
+						this.count = `${parsedValue} / ${this.total}`;
+
+						return parsedValue;
 					}
 				}
 			],

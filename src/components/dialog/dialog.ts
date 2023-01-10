@@ -20,7 +20,9 @@ export class SdrDialog extends SdrComponent {
 				{
 					name: 'open',
 					value: (newValue = false) => {
-						if (newValue === true) {
+						const parsedValue = newValue === '';
+
+						if (parsedValue) {
 							this.#dialog.showModal();
 							this.#dialog.focus();
 							this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
@@ -29,7 +31,7 @@ export class SdrDialog extends SdrComponent {
 							this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 						}
 
-						return newValue;
+						return parsedValue;
 					},
 					attributeName: 'open'
 				}

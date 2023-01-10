@@ -21,11 +21,13 @@ export class SdrLoader extends SdrComponent {
 			props: [
 				{
 					name: 'loaded',
-					value: (isLoaded = false) => {
-						this.root.querySelector<HTMLDivElement>('#loader')!.hidden = isLoaded as boolean;
-						this.root.querySelector<HTMLSlotElement>('slot')!.hidden = !(isLoaded as boolean);
+					value: (newValue = false) => {
+						const parsedValue = newValue === '';
 
-						return isLoaded;
+						this.root.querySelector<HTMLDivElement>('#loader')!.hidden = parsedValue;
+						this.root.querySelector<HTMLSlotElement>('slot')!.hidden = !parsedValue;
+
+						return parsedValue;
 					},
 					attributeName: 'loaded'
 				}
