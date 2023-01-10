@@ -1,22 +1,16 @@
-import { I18n } from '../../js/intl/translations';
+import { SdrComponent } from '../base/BaseComponent';
 
+import template from './template.html?raw';
+import style from './style.css?raw';
 
-class MenuBar extends HTMLElement {
-	#root: ShadowRoot;
-
+export class SdrMenuBar extends SdrComponent {
 	constructor() {
-		super();
-
-		const template = document.querySelector('#menu-bar') as HTMLTemplateElement;
-		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
-
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(translatedTemplate);
-	}
-
-	connectedCallback() {
-		I18n.translateElementsContent(this);
+		super({
+			name: 'menu-bar',
+			handlers: {
+			},
+			template,
+			style
+		});
 	}
 }
-
-customElements.define('menu-bar', MenuBar);
