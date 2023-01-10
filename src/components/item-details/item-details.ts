@@ -206,7 +206,7 @@ export class SdrItemDetails extends SdrComponent {
 
 					newPublisher.setAttribute('value', this.publisher);
 
-					publisherImage.src = `${import.meta.env.APP_PUBLIC_URL}img/publishers/${this.publisher}.png`;
+					publisherImage.src = `${import.meta.env.APP_PUBLIC_URL}images/publishers/${this.publisher}.png`;
 					publisherImage.alt = this.publisher;
 
 					newPublisher.appendChild(publisherImage);
