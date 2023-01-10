@@ -37,7 +37,7 @@ export class SdrMenuBar extends SdrComponent {
 
 					updateSearchFilter({ category: action });
 				},
-				openMaterialModal: async () => SdrItemDetails.openMaterialModal()
+				openMaterialModal: async () => SdrItemDetails.openModal()
 			},
 			template,
 			style
