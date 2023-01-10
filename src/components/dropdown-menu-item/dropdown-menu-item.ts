@@ -5,7 +5,7 @@ import { SdrComponent } from '../base/BaseComponent';
 import template from './template.html?raw';
 import style from './style.css?raw';
 
-const watchedAttributes = ['icon', 'disabled'];
+const watchedAttributes = ['icon'];
 
 export interface SdrDropdownItem {
 	icon: string
@@ -24,20 +24,16 @@ export class SdrDropdownItem extends SdrComponent {
 			style
 		});
 
-		this.#button = this.root.querySelector('custom-button') as SdrButton;
-	}
-
-	focus() {
-		this.#button.focus();
-	}
-
-	connectedCallback() {
-		super.connectedCallback();
+		this.#button = this.root.querySelector('sdr-button') as SdrButton;
 
 		if (this.hasAttribute('separator')) {
 			const divider = document.createElement('hr');
 
 			this.#button.replaceWith(divider);
 		}
+	}
+
+	focus() {
+		this.#button.focus();
 	}
 }

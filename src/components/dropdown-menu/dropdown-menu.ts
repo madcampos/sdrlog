@@ -65,6 +65,8 @@ export class SdrDropdown extends SdrComponent {
 
 		(document.activeElement as HTMLElement | undefined)?.blur();
 
+		this.open = false;
+
 		this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 	}
 
@@ -79,6 +81,8 @@ export class SdrDropdown extends SdrComponent {
 		if (rect.right > window.innerWidth) {
 			this.#dialog.classList.add('right');
 		}
+
+		this.open = true;
 
 		this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 	}
