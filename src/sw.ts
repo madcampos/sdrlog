@@ -15,7 +15,7 @@ const preCacheFiles = [
 	// Base files
 	'./',
 	'./sdrlog.webmanifest',
-	'./img/icons/favicon.svg',
+	'./images/icons/favicon.svg',
 	'./data/data.json',
 
 	// JS
