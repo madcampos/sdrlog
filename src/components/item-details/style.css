@@ -17,6 +17,11 @@
 	color: var(--dark-bg-color);
 }
 
+:host([disabled]) #cancel-button { display: none; }
+:host([disabled]) #save-button { display: none; }
+:host(:not([disabled])) #edit-button { display: none; }
+:host(:not([disabled])) #export-button { display: none; }
+
 #item-content {
 	display: grid;
 	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;

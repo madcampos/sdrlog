@@ -22,7 +22,7 @@ import template from './template.html?raw';
 import style from './style.css?raw';
 import { formatFullDate } from '../../js/intl/formatting';
 
-const watchedAttributes = ['id', 'loading'];
+const watchedAttributes = ['id', 'loading', 'disabled'];
 
 export interface SdrItemDetails {
 	id: string,
@@ -68,7 +68,7 @@ export class SdrItemDetails extends SdrComponent {
 			props: [
 				{ name: 'id', value: '', attributeName: 'id' },
 				{ name: 'loading', value: false, attributeName: 'loading' },
-				{ name: 'isDisplaying', value: false },
+				{ name: 'isDisplaying', value: false, attributeName: 'disabled' },
 
 				{ name: 'name', value: '' },
 				{ name: 'description', value: '' },

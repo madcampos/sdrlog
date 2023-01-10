@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<sdr-dialog>
 		<sdr-edit-box
 			id="name"
 
@@ -371,6 +371,7 @@
 		</div>
 
 		<sdr-button
+			id="cancel-button"
 			slot="footer"
 			icon="❌"
 
@@ -379,6 +380,7 @@
 			t("Cancel")
 		</sdr-button>
 		<sdr-button
+			id="edit-button"
 			slot="footer"
 			icon="✏️"
 
@@ -387,6 +389,7 @@
 			t("Edit")
 		</sdr-button>
 		<sdr-button
+			id="save-button"
 			slot="footer"
 			icon="💾"
 
@@ -395,6 +398,7 @@
 			t("Save")
 		</sdr-button>
 		<sdr-button
+			id="export-button"
 			slot="footer"
 			icon="📥"
 
@@ -402,5 +406,5 @@
 		>
 			t("Export")
 		</sdr-button>
-	</div>
+	</sdr-dialog>
 </template>
