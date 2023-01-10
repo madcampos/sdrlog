@@ -22,13 +22,15 @@ export class SdrDialog extends SdrComponent {
 					value: (newValue = false) => {
 						const parsedValue = newValue === '' || newValue === true;
 
-						if (parsedValue) {
-							this.#dialog.showModal();
-							this.#dialog.focus();
-							this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
-						} else {
-							this.#dialog.close();
-							this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
+						if (parsedValue !== this.#dialog.open) {
+							if (parsedValue) {
+								this.#dialog.showModal();
+								this.#dialog.focus();
+								this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
+							} else {
+								this.#dialog.close();
+								this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
+							}
 						}
 
 						return parsedValue;
