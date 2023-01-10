@@ -4,6 +4,9 @@ import type { SdrDialog } from '../dialog/dialog';
 import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
 import { SdrEditListItem } from '../edit-list-item/edit-list-item';
 import type { SdrDropArea } from '../drop-area/drop-area';
+import type { SdrEditBox } from '../edit-box/edit-box';
+import type { SdrSelect } from '../edit-select/edit-select';
+import type { SdrTextArea } from '../edit-textarea/edit-textarea';
 
 import { getFilesForMaterial, getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
 import { SdrCard } from '../item-card/item-card';
@@ -98,10 +101,10 @@ export class SdrItemDetails extends SdrComponent {
 			],
 			handlers: {
 				updateInputValue: (evt) => {
-					const target = evt.target as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+					const target = evt.target as SdrEditBox | SdrSelect | SdrTextArea;
 
-					if (this[target.name] !== target.value) {
-						this[target.name] = target.value;
+					if (this[target.id] !== target.value) {
+						this[target.id] = target.value;
 					}
 				},
 
