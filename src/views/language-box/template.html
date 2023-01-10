@@ -1,0 +1,19 @@
+<sdr-dialog id="language-modal">
+	<span slot="title">t("Language Settings")</span>
+
+	<p>t("Set the language for the application:")</p>
+	<p><small><strong>t("Note:")</strong> t("The page will reload after changing the app language.")</small></p>
+
+	<sdr-select
+		id="language-select"
+
+		:value="language"
+	>
+		<span slot="label">t("App Language")</span>
+
+		<option value="en">t("English")</option>
+		<option value="fr">t("French")</option>
+		<option value="es">t("Spanish")</option>
+		<option value="pt-BR">t("Brazilian Portuguese")</option>
+	</sdr-select>
+</sdr-dialog>

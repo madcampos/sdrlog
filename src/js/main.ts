@@ -30,14 +30,13 @@ async function init() {
 	await import('./gamepad/gamepad-navigation');
 
 	updateLoadStatus(I18n.t`Adding menu bar.`);
-	await import('../components/menu-bar/main-menu-items');
 
 	updateLoadStatus(I18n.t`Importing helper functions.`);
 	const { fetchItems } = await import('./data-operations/data-import');
 	const { updateFiltersFromURL } = await import('../components/search-box/update-filter');
-	const { updateInfoBoxFromURL } = await import('../components/info-box/info-box');
-	const { updateThemeBoxFromURL } = await import('../components/theme-box/theme-box');
-	const { updateLanguageBoxFromURL } = await import('./intl/language-info');
+	const { SdrInfoBox } = await import('../views/info-box/info-box');
+	const { SdrThemeBox } = await import('../views/theme-box/theme-box');
+	const { SdrLanguageBox } = await import('../views/language-box/language-info');
 	const { checkForMatchingId, updateItemModalFromURL } = await import('../components/item-info/item-details-url');
 	const { createComparer } = await import('./intl/formatting');
 
@@ -85,9 +84,9 @@ async function init() {
 
 	updateLoadStatus(I18n.t`Setting information from URL.`);
 
-	updateInfoBoxFromURL();
-	updateThemeBoxFromURL();
-	updateLanguageBoxFromURL();
+	SdrInfoBox.updateFromURL();
+	SdrThemeBox.updateFromURL();
+	SdrLanguageBox.updateFromURL();
 	updateFiltersFromURL();
 	document.querySelector<SearchBox>('search-box')?.updateSuggestions();
 

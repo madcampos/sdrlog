@@ -1,22 +1,22 @@
 /* eslint-disable max-lines */
 
-import type { SdrDialog } from '../dialog/dialog';
+import type { SdrDialog } from '../../components/dialog/dialog';
 import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
-import { SdrEditListItem } from '../edit-list-item/edit-list-item';
-import type { SdrDropArea } from '../drop-area/drop-area';
-import type { SdrEditBox } from '../edit-box/edit-box';
-import type { SdrSelect } from '../edit-select/edit-select';
-import type { SdrTextArea } from '../edit-textarea/edit-textarea';
+import { SdrEditListItem } from '../../components/edit-list-item/edit-list-item';
+import type { SdrDropArea } from '../../components/drop-area/drop-area';
+import type { SdrEditBox } from '../../components/edit-box/edit-box';
+import type { SdrSelect } from '../../components/edit-select/edit-select';
+import type { SdrTextArea } from '../../components/edit-textarea/edit-textarea';
 
 import { getFilesForMaterial, getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
-import { SdrCard } from '../item-card/item-card';
+import { SdrCard } from '../../components/item-card/item-card';
 import { getIconForFile, saveNewMaterialInfo } from '../../js/data-operations/create-material';
 import { openFile } from '../../js/files-reader/open-file';
 import { FALLBACK_COVER, fetchCover, LOADING_COVER } from '../../js/covers/fetch-covers';
 import { associateFileWithData } from '../../js/files-reader/files-reader';
 import { exportDataItem } from '../../js/data-operations/data-export';
 import { I18n } from '../../js/intl/translations';
-import { SdrComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../../components/base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -457,6 +457,8 @@ export class SdrItemDetails extends SdrComponent {
 		this.#modal?.addEventListener('close', () => {
 			window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}`);
 			window.document.title = import.meta.env.APP_NAME;
+
+			this.close();
 		});
 
 		this.root.querySelector('#files-list')?.addEventListener('click', async (evt) => {
@@ -554,10 +556,10 @@ export class SdrItemDetails extends SdrComponent {
 	}
 
 	static async openMaterialModal(id?: string, title?: string) {
-		let modal = document.querySelector<SdrItemDetails>('item-details');
+		let modal = document.querySelector<SdrItemDetails>('sdr-item-details');
 
 		if (!modal) {
-			modal = document.createElement('item-details') as SdrItemDetails;
+			modal = document.createElement('sdr-item-details') as SdrItemDetails;
 
 			document.body.appendChild(modal);
 		}

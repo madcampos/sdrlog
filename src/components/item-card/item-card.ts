@@ -3,7 +3,7 @@ import type { Material } from '../../../public/data/data';
 import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/fetch-covers';
 import { getMaterial } from '../../js/data-operations/idb-persistence';
 import { SdrComponent } from '../base/BaseComponent';
-import { SdrItemDetails } from '../item-details/item-details';
+import { SdrItemDetails } from '../../views/item-details/item-details';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
