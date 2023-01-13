@@ -13,6 +13,7 @@ import { SdrProgressOverlay } from './progress/progress';
 import { SdrLoader } from './skeleton-loader/skeleton-loader';
 import { SdrUpdateNotify } from './update-notify/update-notify';
 import { SdrMenuBar } from './menu-bar/menu-bar';
+import { SdrSearchBox } from './search-box/search-box';
 
 customElements.define('sdr-button', SdrButton);
 customElements.define('sdr-dialog', SdrDialog);
@@ -29,3 +30,4 @@ customElements.define('sdr-progress-overlay', SdrProgressOverlay);
 customElements.define('sdr-loader', SdrLoader);
 customElements.define('sdr-update-notify', SdrUpdateNotify);
 customElements.define('sdr-menu-bar', SdrMenuBar);
+customElements.define('search-box', SdrSearchBox);

@@ -1,73 +1,69 @@
-import type { SdrButton } from '../button/button';
-import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 import { getSuggestions } from './search-suggestions';
+import { SdrComponent } from '../base/BaseComponent';
 
 import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
 
-export class SearchBox extends HTMLElement {
-	#root: ShadowRoot;
-	#searchBox: HTMLInputElement;
-	#datalist: HTMLDataListElement;
-	#searchButton: SdrButton;
+import template from './template.html?raw';
+import style from './style.css?raw';
+
+const watchedAttributes = ['value'];
+
+export interface SdrSearchBox {
+	value: string
+}
+
+export class SdrSearchBox extends SdrComponent {
+	static get observedAttributes() { return watchedAttributes; }
 
 	constructor() {
-		super();
+		super({
+			name: 'sdr-search-box',
+			watchedAttributes,
+			props: [{ name: 'value', value: '', attributeName: 'value' }],
+			handlers: {
+				updateSuggestions: () => {
+					window.requestAnimationFrame(() => {
+						const suggestions = getSuggestions(this.value);
+						const datalist = this.root.querySelector('datalist') as HTMLDataListElement;
 
-		const template = document.querySelector('#search-box') as HTMLTemplateElement;
-		const translatedTemplate = I18n.translateElementsContent(template.content.cloneNode(true));
+						datalist.innerHTML = '';
+						datalist.append(...suggestions);
+					});
+				},
+				updateFilter: () => {
+					if (!this.value) {
+						updateSearchFilter({});
+					} else {
+						const filters = getFiltersFromTagsString(this.value);
 
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(translatedTemplate);
-
-		this.#searchBox = this.#root.querySelector('input') as HTMLInputElement;
-		this.#searchButton = this.#root.querySelector('custom-button') as SdrButton;
-		this.#datalist = this.#root.querySelector('datalist') as HTMLDataListElement;
-
-		const initialFilters = getFiltersFromURL();
-		const initialValue = getTagStringFromFilters(initialFilters);
-
-		this.#searchBox.value = initialValue;
-
-		this.#searchButton.addEventListener('click', () => {
-			this.#searchBox.dispatchEvent(new Event('change'));
-		});
-
-		this.#searchBox.addEventListener('input', () => {
-			this.updateSuggestions();
-		});
-
-		this.#searchBox.addEventListener('change', () => {
-			if (!this.#searchBox.value) {
-				updateSearchFilter({});
-			} else {
-				const filters = getFiltersFromTagsString(this.#searchBox.value);
-
-				updateSearchFilter(filters);
-			}
+						updateSearchFilter(filters);
+					}
+				},
+				searchClick: () => {
+					this.root.querySelector('input')?.dispatchEvent(new Event('change'));
+				}
+			},
+			template,
+			style
 		});
 
 		registerShortcut('f', () => {
 			if (document.activeElement === this) {
-				this.#searchBox.blur();
+				this.blur();
 			} else {
-				this.#searchBox.focus();
+				this.focus();
 			}
 		});
+
+		this.value = getTagStringFromFilters(getFiltersFromURL());
 	}
 
 	focus() {
-		this.#searchBox.focus();
+		this.root.querySelector('input')?.focus();
 	}
 
-	updateSuggestions() {
-		window.requestAnimationFrame(() => {
-			const suggestions = getSuggestions(this.#searchBox.value);
-
-			this.#datalist.innerHTML = '';
-			this.#datalist.append(...suggestions);
-		});
+	blur() {
+		this.root.querySelector('input')?.blur();
 	}
 }
-
-customElements.define('search-box', SearchBox);

@@ -1,4 +1,3 @@
-import type { SearchBox } from '../components/search-box/search-box';
 import type { WorkerMessage } from '../types/rpc-messages';
 
 function updateLoadStatus(status: string) {
@@ -89,7 +88,6 @@ async function init() {
 	SdrThemeBox.updateFromURL();
 	SdrLanguageBox.updateFromURL();
 	updateFiltersFromURL();
-	document.querySelector<SearchBox>('search-box')?.updateSuggestions();
 
 	updateLoadStatus(I18n.t`Done!`);
 	document.querySelector('#splash-screen')?.remove();

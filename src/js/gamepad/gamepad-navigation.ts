@@ -2,7 +2,7 @@ import type { SdrDialog } from '../../components/dialog/dialog';
 import type { SdrDropdown } from '../../components/dropdown-menu/dropdown-menu';
 import type { SdrCard } from '../../components/item-card/item-card';
 import type { SdrItemDetails } from '../../views/item-details/item-details';
-import type { SearchBox } from '../../components/search-box/search-box';
+import type { SdrSearchBox } from '../../components/search-box/search-box';
 
 import { GamepadEventNormalizer } from './gamepad-events';
 
@@ -72,7 +72,7 @@ function activateSearch() {
 	const openModal = document.querySelector<SdrDialog>('sdr-dialog[open]');
 
 	if (!openModal) {
-		document.querySelector<SearchBox>('search-box')?.focus();
+		document.querySelector<SdrSearchBox>('search-box')?.focus();
 		gamepadNormalizer.vibrate(ACTIVATION_TIME, ACTIVATION_WEAK_VIBRATE, ACTIVATION_STRONG_VIBRATE);
 	}
 }
