@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import type { EmulatorInitializerFunction, EmulatorModule } from '../../../public/lib/webretro/webretro';
-import type { SdrButton } from '../button/button';
+import type { SdrButton } from '../../components/button/button';
 
 import nipplejs from 'nipplejs';
 
