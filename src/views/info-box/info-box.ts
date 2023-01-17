@@ -4,6 +4,7 @@ import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
 import template from './template.html?raw';
+import style from './style.css?raw';
 
 export class SdrInfoBox extends SdrComponent {
 	#modal: SdrDialog;
@@ -11,7 +12,8 @@ export class SdrInfoBox extends SdrComponent {
 	constructor() {
 		super({
 			name: 'sdr-info-modal',
-			template
+			template,
+			style
 		});
 
 		this.#modal = this.root.querySelector('sdr-dialog') as SdrDialog;
