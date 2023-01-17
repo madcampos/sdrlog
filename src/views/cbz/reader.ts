@@ -1,5 +1,5 @@
 import JSZip from 'jszip';
-import { SdrComponent } from '../base/BaseComponent';
+import { SdrComponent } from '../../components/base/BaseComponent';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';
@@ -241,5 +241,3 @@ export class SdrComicBookReader extends SdrComponent {
 		this.#currentVisibleImage?.previousElementSibling?.scrollIntoView();
 	}
 }
-
-customElements.define('sdr-cbz-reader', SdrComicBookReader);

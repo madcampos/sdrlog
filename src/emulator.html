@@ -38,40 +38,12 @@
 	</head>
 
 	<body class="notranslate fullsize" translate="no">
-		<template id="rom-emulator">
-			<link rel="stylesheet" href="./css/components/emulator/emulator.css" />
-			<aside class="controller" id="left-controller">
-				<button id="button-select">Select</button>
-				<button id="button-start">Start</button>
-				<div id="dpad"></div>
-			</aside>
-			<article id="game-wrapper">
-				<div id="start-overlay">
-					<custom-button icon-button id="start-button">▶️</custom-button>
-				</div>
-				<div id="game-overlay">
-					<custom-button icon-button id="pause-button">▶️</custom-button>
-				</div>
-				<slot></slot>
-			</article>
-			<aside class="controller" id="right-controller">
-				<button id="bumper-left">L</button>
-				<button id="bumper-right">R</button>
-				<button id="button-x">X</button>
-				<button id="button-y">Y</button>
-				<button id="button-a">A</button>
-				<button id="button-b">B</button>
-			</aside>
-		</template>
-
-
 		<!-- Content -->
 		<main>
-			<rom-emulator></rom-emulator>
+			<sdr-rom-emulator></sdr-rom-emulator>
 		</main>
 
-		<script src="./js/components/button/button.js" type="module"></script>
-		<script src="./js/components/emulator/init.js" type="module"></script>
+		<script src="./views/emulator/init.ts" type="module"></script>
 	</body>
 
 </html>

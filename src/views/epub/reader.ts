@@ -1,4 +1,4 @@
-import type { SdrButton } from '../button/button';
+import type { SdrButton } from '../../components/button/button';
 import type { Location as BookLocation, NavItem } from 'epubjs';
 import type { BookOptions } from 'epubjs/types/book';
 import type Section from 'epubjs/types/section';
