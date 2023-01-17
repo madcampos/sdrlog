@@ -30,4 +30,5 @@ customElements.define('sdr-progress-overlay', SdrProgressOverlay);
 customElements.define('sdr-loader', SdrLoader);
 customElements.define('sdr-update-notify', SdrUpdateNotify);
 customElements.define('sdr-menu-bar', SdrMenuBar);
-customElements.define('search-box', SdrSearchBox);
+customElements.define('sdr-radio-group', SdrRadioGroup);
+customElements.define('sdr-radio-item', SdrRadioItem);

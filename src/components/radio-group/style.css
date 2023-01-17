@@ -12,14 +12,14 @@ input {
 
 input:focus { outline: none; }
 
-input:focus ~ radio-item {
+input:focus ~ sdr-radio-item {
 	border-color: var(--theme-color);
 }
 
-input:checked ~ radio-item {
+input:checked ~ sdr-radio-item {
 	background-color: var(--theme-color);
 }
 
-input:hover ~ radio-item {
+input:hover ~ sdr-radio-item {
 	background: var(--accent-color);
 }

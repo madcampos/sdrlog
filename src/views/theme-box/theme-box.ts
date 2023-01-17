@@ -1,6 +1,6 @@
 import { SdrComponent } from '../../components/base/BaseComponent';
 import type { SdrDialog } from '../../components/dialog/dialog';
-import type { RadioGroup } from '../../components/radio/radio-group';
+import type { SdrRadioGroup } from '../../components/radio-group/radio-group';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
@@ -19,7 +19,7 @@ export class SdrThemeBox extends SdrComponent {
 			props: [{ name: 'theme', value: 'system' }],
 			handlers: {
 				changeTheme: (event: Event) => {
-					const theme = event.target as RadioGroup;
+					const theme = event.target as SdrRadioGroup;
 
 					localStorage.setItem('appTheme', theme.value);
 
