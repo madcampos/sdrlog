@@ -1,3 +1,5 @@
+const touchTreshold = 50;
+
 let startX: number | null = null;
 let startY: number | null = null;
 
@@ -29,6 +31,10 @@ function handleTouchMove(evt: TouchEvent) {
 
 	const xDiff = startX - endX;
 	const yDiff = startY - endY;
+
+	if (Math.abs(xDiff) < touchTreshold && Math.abs(yDiff) < touchTreshold) {
+		return;
+	}
 
 	// @ts-expect-error
 	const swipeEvent: SwipeEvent = new CustomEvent('swipe', { bubbles: true, composed: true, cancelable: true });
