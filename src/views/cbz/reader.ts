@@ -130,7 +130,7 @@ export class SdrComicBookReader extends SdrComponent {
 				throw new Error(I18n.t`Missing comic file.`);
 			}
 
-			const handler = await getFile(this.file) as FileSystemFileHandle | undefined;
+			const handler = await getFile<FileSystemFileHandle>(this.file);
 
 			if (!handler) {
 				throw new Error(I18n.t`Comic does not exist.`);

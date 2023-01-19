@@ -266,7 +266,7 @@ export class Emulator extends HTMLElement {
 				throw new Error(I18n.t`Missing ROM file.`);
 			}
 
-			const handler = await getFile(this.#filePath) as FileSystemFileHandle | undefined;
+			const handler = await getFile<FileSystemFileHandle>(this.#filePath);
 
 			if (!handler) {
 				throw new Error(I18n.t`ROM file does not exist.`);

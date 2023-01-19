@@ -22,7 +22,7 @@ async function fetchData() {
 
 async function readDataFromFile() {
 	try {
-		const savedHandler = await getFile('data.json') as FileSystemFileHandle | undefined;
+		const savedHandler = await getFile<FileSystemFileHandle>('data.json');
 
 		let file: FileSystemFileHandle | undefined;
 

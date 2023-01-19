@@ -204,8 +204,8 @@ export async function saveFile(name: string, handler: FileSystemHandle) {
 	return setIDBItem<FileSystemHandle>('files', name, handler);
 }
 
-export async function getFile(name: string) {
-	return getIDBItem<FileSystemHandle>('files', name);
+export async function getFile<T = FileSystemHandle>(name: string) {
+	return getIDBItem<T>('files', name);
 }
 
 export async function getAllFiles() {
