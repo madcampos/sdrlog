@@ -1,125 +1,205 @@
-import type { SdrButton } from '../../components/button/button';
-import type { Location as BookLocation, NavItem } from 'epubjs';
-import type { BookOptions } from 'epubjs/types/book';
 import type Section from 'epubjs/types/section';
-import type Book from 'epubjs/types/book';
+import type { Location as BookLocation, NavItem, Rendition } from 'epubjs';
+import type { SdrButton } from '../../components/button/button';
 
 import 'jszip';
-import 'epubjs';
+import { default as ePub } from 'epubjs';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';
 import { I18n } from '../../js/intl/translations';
+import { SdrComponent } from '../../components/base/BaseComponent';
 
-declare function ePub(urlOrData: string | ArrayBuffer, options?: BookOptions): Book;
+import template from './template.html?raw';
+import style from './style.css?raw';
 
-const renderArea = document.querySelector('#book') as HTMLElement;
-const nextButton = document.querySelector('#next') as SdrButton;
-const prevButton = document.querySelector('#prev') as SdrButton;
-const tocSelect = document.querySelector('#toc') as HTMLSelectElement;
+const watchedAttributes = ['file', 'loaded'];
 
-document.querySelector('#open-book')?.addEventListener('click', async (evt) => {
-	try {
-		(evt.target as SdrButton).disabled = true;
+export interface SdrEpubReader {
+	file: string,
+	loaded: boolean,
+	prevButtonDisabled: boolean,
+	nextButtonDisabled: boolean
+}
 
-		const url = new URL(window.location.toString());
-		const params = new URLSearchParams(url.search);
+export class SdrEpubReader extends SdrComponent {
+	static get observedAttributes() { return watchedAttributes; }
 
-		if (!params.has('file')) {
-			throw new Error(I18n.t`Missing book file.`);
+	#renderArea: HTMLElement;
+	#tocSelect: HTMLSelectElement;
+
+	#rendition: Rendition | undefined;
+
+	constructor() {
+		super({
+			name: 'sdr-epub-reader',
+			watchedAttributes,
+			props: [
+				{
+					name: 'file',
+					value: (newValue = '') => {
+						this.loaded = false;
+						this.#resetBook();
+
+						return newValue;
+					},
+					attributeName: 'file'
+				},
+				{ name: 'loaded', value: false, attributeName: 'loaded' },
+				{ name: 'prevButtonDisabled', value: false },
+				{ name: 'nextButtonDisabled', value: false }
+			],
+			handlers: {
+				showPreviousPage: () => { void this.showPreviousPage(); },
+				showNextPage: () => { void this.showNextPage(); },
+				openBook: async (evt) => {
+					const target = evt.target as SdrButton;
+
+					target.disabled = true;
+					await this.#loadBook();
+					target.disabled = false;
+				},
+				tocSelect: (evt) => {
+					const chapterHref = (evt.target as HTMLSelectElement).value;
+
+					void this.#rendition?.display(chapterHref);
+				}
+			},
+			template,
+			style
+		});
+
+		this.#renderArea = this.root.querySelector('#book') as HTMLElement;
+		this.#tocSelect = this.root.querySelector('#toc') as HTMLSelectElement;
+	}
+
+	#keyboardNavigation(evt: KeyboardEvent) {
+		// Left Key
+		if (evt.key === 'ArrowLeft') {
+			void this.showPreviousPage();
 		}
 
-		const filePath = params.get('file') as string;
-		const handler = await getFile(filePath) as FileSystemFileHandle | undefined;
-
-		if (!handler) {
-			throw new Error(I18n.t`Book does not exist.`);
+		// Right Key
+		if (evt.key === 'ArrowRight') {
+			void this.showNextPage();
 		}
+	}
 
-		await getFilePermission(handler);
-
-		const file = await handler.getFile();
-
-		const book = ePub(await file.arrayBuffer());
-		const { toc } = await book.loaded.navigation;
-		const rendition = book.renderTo(renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
-
-		rendition.themes.register('dark', './css/components/epub/theme.css');
-		rendition.themes.select('dark');
+	#loadToc(toc: NavItem[]) {
 		const appendOptions = (chapter: NavItem) => {
 			const option = document.createElement('option');
 
 			option.textContent = chapter.label;
 			option.value = decodeURI(chapter.href);
 
-			tocSelect.appendChild(option);
+			this.#tocSelect.appendChild(option);
 
 			chapter.subitems?.forEach(appendOptions);
 		};
 
 		toc.forEach(appendOptions);
-
-		tocSelect.addEventListener('change', async () => {
-			const chapterHref = tocSelect.value;
-
-			await rendition.display(chapterHref);
-		});
-
-		prevButton.addEventListener('click', async () => {
-			await rendition.prev();
-		});
-
-		nextButton.addEventListener('click', async () => {
-			await rendition.next();
-		});
-
-		rendition.on('keyup', async (keyEvt: KeyboardEvent) => {
-			// Left Key
-			if (keyEvt.key === 'ArrowLeft') {
-				await rendition.prev();
-			}
-
-			// Right Key
-			if (keyEvt.key === 'ArrowRight') {
-				await rendition.next();
-			}
-		});
-
-		document.addEventListener('keyup', async (keyEvt) => {
-			// Left Key
-			if (keyEvt.key === 'ArrowLeft') {
-				await rendition.prev();
-			}
-
-			// Right Key
-			if (keyEvt.key === 'ArrowRight') {
-				await rendition.next();
-			}
-		}, false);
-
-		rendition.on('rendered', (section: Section) => {
-			const newIndex = [...tocSelect.options].findIndex((option) => option.value === section.href);
-
-			tocSelect.selectedIndex = newIndex;
-		});
-
-		rendition.on('relocated', (bookLocation: BookLocation) => {
-			if (bookLocation.atEnd) {
-				nextButton.style.visibility = 'hidden';
-			} else {
-				nextButton.style.visibility = 'visible';
-			}
-
-			if (bookLocation.atStart) {
-				prevButton.style.visibility = 'hidden';
-			} else {
-				prevButton.style.visibility = 'visible';
-			}
-		});
-
-		await rendition.display();
-		document.querySelector('#load-overlay')?.remove();
-	} catch (err) {
-		(document.querySelector('main') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
 	}
-});
+
+	async #loadFile() {
+		try {
+			if (!this.file) {
+				throw new Error(I18n.t`Missing book file.`);
+			}
+
+			const handler = await getFile<FileSystemFileHandle>(this.file);
+
+			if (!handler) {
+				throw new Error(I18n.t`Book does not exist.`);
+			}
+
+			await getFilePermission(handler);
+
+			return await handler.getFile();
+		} catch (err) {
+			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
+		}
+	}
+
+	async #loadBook() {
+		const file = await this.#loadFile();
+
+		if (!file) {
+			return;
+		}
+
+		try {
+			const book = ePub(await file.arrayBuffer());
+			const { toc } = await book.loaded.navigation;
+
+			this.#rendition = book.renderTo(this.#renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
+
+			// TODO: fix path
+			this.#rendition.themes.register('dark', './dark-theme.css');
+			this.#rendition.themes.select('dark');
+
+			this.#loadToc(toc);
+
+			this.#rendition.on('keyup', (evt: KeyboardEvent) => this.#keyboardNavigation(evt));
+			document.addEventListener('keyup', (evt) => this.#keyboardNavigation(evt));
+
+			this.#rendition.on('rendered', (section: Section) => {
+				const newIndex = [...this.#tocSelect.options].findIndex((option) => option.value === section.href);
+
+				this.#tocSelect.selectedIndex = newIndex;
+			});
+
+			this.#rendition.on('relocated', (bookLocation: BookLocation) => {
+				if (bookLocation.atEnd) {
+					this.nextButtonDisabled = true;
+				} else {
+					this.nextButtonDisabled = false;
+				}
+
+				if (bookLocation.atStart) {
+					this.prevButtonDisabled = true;
+				} else {
+					this.prevButtonDisabled = false;
+				}
+			});
+
+			await this.#rendition.display();
+
+			this.loaded = true;
+		} catch (err) {
+			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
+		}
+	}
+
+	#resetBook() {
+		this.#rendition?.destroy();
+		this.#rendition = undefined;
+
+		this.#renderArea.innerHTML = '';
+		[...this.#tocSelect.querySelectorAll('option')].forEach((option) => option.remove());
+	}
+
+	async showNextPage() {
+		await this.#rendition?.next();
+	}
+
+	async showPreviousPage() {
+		await this.#rendition?.prev();
+	}
+
+	static updateFromURL() {
+		const url = new URL(window.location.toString());
+		const params = new URLSearchParams(url.search);
+
+		if (params.has('file')) {
+			let readerElement = document.querySelector<SdrEpubReader>('sdr-cbz-reader');
+
+			if (!readerElement) {
+				readerElement = document.createElement('sdr-cbz-reader') as SdrEpubReader;
+
+				document.body.appendChild(readerElement);
+			}
+
+			readerElement.file = params.get('file') as string;
+		}
+	}
+}

@@ -43,27 +43,3 @@ select:focus {
 	border-color: var(--border-color);
 	border-bottom-color: var(--theme-color);
 }
-
-.dark {
-	background: var(--dark-bg-color);
-	color: var(--text-color);
-
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: calc(var(--body-text) * 1.5);
-
-	-webkit-tap-highlight-color: transparent;
-}
-
-::selection {
-	background-color: var(--theme-color);
-	color: var(--dark-bg-color);
-}
-
-:root body:not([hidden]) .dark :is(*, *::after, *::before) {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: var(--text-color);
-}
-
-:root .dark *::first-letter {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}

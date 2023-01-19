@@ -1,12 +1,30 @@
 <template>
 	<sdr-menu-bar>
-		<sdr-button icon-button id="prev">⏮️</sdr-button>
-		<select id="toc"></select>
-		<sdr-button icon-button id="next">⏭️</sdr-button>
+		<sdr-button
+			icon-button
+
+			:disabled="prevButtonDisabled"
+
+			@click="showPreviousPage"
+		>⏮️</sdr-button>
+		<select
+			id="toc"
+
+			@change="tocSelect"
+		></select>
+		<sdr-button
+			icon-button
+
+			:disabled="nextButtonDisabled"
+
+			@click="showNextPage"
+		>⏭️</sdr-button>
 	</sdr-menu-bar>
-	<main id="book">
-		<div id="load-overlay">
-			<sdr-button icon-button id="open-book">▶️</sdr-button>
-		</div>
-	</main>
+	<article id="book">
+	</article>
+	<div id="load-overlay">
+		<sdr-button
+			icon-button
+		>▶️</sdr-button>
+	</div>
 </template>
