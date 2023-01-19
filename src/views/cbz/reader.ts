@@ -231,6 +231,7 @@ export class SdrComicBookReader extends SdrComponent {
 
 	#resetComicBook() {
 		[...this.#renderArea.querySelectorAll('img')].forEach((img) => img.remove());
+		[...this.#tocSelect.querySelectorAll('option')].forEach((option) => option.remove());
 	}
 
 	showNextPage() {
@@ -239,5 +240,22 @@ export class SdrComicBookReader extends SdrComponent {
 
 	showPreviousPage() {
 		this.#currentVisibleImage?.previousElementSibling?.scrollIntoView();
+	}
+
+	static updateFromURL() {
+		const url = new URL(window.location.toString());
+		const params = new URLSearchParams(url.search);
+
+		if (params.has('file')) {
+			let readerElement = document.querySelector<SdrComicBookReader>('sdr-cbz-reader');
+
+			if (!readerElement) {
+				readerElement = document.createElement('sdr-cbz-reader') as SdrComicBookReader;
+
+				document.body.appendChild(readerElement);
+			}
+
+			readerElement.file = params.get('file') as string;
+		}
 	}
 }
