@@ -1,16 +1,16 @@
 /* eslint-disable no-underscore-dangle */
 import type { EmulatorInitializerFunction, EmulatorModule } from '../../../public/lib/webretro/webretro';
-import type { SdrButton } from '../../components/button/button';
 
+import JSZip from 'jszip';
 import nipplejs from 'nipplejs';
 
-import { getEmulatorSaveFile, getFile, saveEmulatorSaveFile } from '../../js/data-operations/idb-persistence';
+import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../../js/files-reader/files-reader';
 import { I18n } from '../../js/intl/translations';
-import { loadBundle } from './assets-bundle';
-import { loadBios } from './bios-bundle';
-import config from './config';
-import { Logger } from '../../js/util/logger';
+import { SdrComponent } from '../../components/base/BaseComponent';
+
+import template from './template.html?raw';
+import style from './style.css?raw';
 
 interface KeyData {
 	key: string,
@@ -33,68 +33,64 @@ const keyMap: Record<string, KeyData> = {
 	y: { key: 'T', code: 'KeyT', keyCode: 84 }
 };
 
-const materialsFilter = new Map([
-	['GENESIS', { emulator: 'genesis_plus_gx' }],
-	['SEGA-CD', { emulator: 'genesis_plus_gx' }],
-	['SNES', { emulator: 'snes9x' }]
-]);
+const watchedAttributes = ['file', 'paused', 'loaded'];
 
-function mkdirTree(fileSystem: typeof FS | undefined, path: string) {
-	if (fileSystem) {
-		// @ts-expect-error
-		fileSystem.createPath('/', path, true, true);
-	}
+export interface SdrEmulator {
+	file: string,
+	paused: boolean,
+	loaded: boolean
 }
 
-export class Emulator extends HTMLElement {
-	static get observedAttributes() { return ['file', 'paused', 'loaded']; }
+export class SdrEmulator extends SdrComponent {
+	static get observedAttributes() { return watchedAttributes; }
 
-	#filePath = '';
 	#emulator: EmulatorModule | null = null;
-
-	#root: ShadowRoot;
 	#canvas: HTMLCanvasElement;
-	#gameWrapper: HTMLElement;
-	// eslint-disable-next-line no-unused-private-class-members
-	#loadButton: SdrButton;
-	#pauseButton: SdrButton;
-
-	#selectButton: HTMLButtonElement;
-	#startButton: HTMLButtonElement;
-	#bumperLeft: HTMLButtonElement;
-	#bumperRight: HTMLButtonElement;
-	#aButton: HTMLButtonElement;
-	#bButton: HTMLButtonElement;
-	#xButton: HTMLButtonElement;
-	#yButton: HTMLButtonElement;
-	#dpad: HTMLDivElement;
-
 	constructor() {
-		super();
+		super({
+			name: 'sdr-emulator',
+			watchedAttributes,
+			props: [
+				{
+					name: 'file',
+					value: (newValue = '') => {
+						this.loaded = false;
+						this.#resetEmulator();
 
-		const template = document.querySelector('#rom-emulator') as HTMLTemplateElement;
+						return newValue;
+					},
+					attributeName: 'file'
+				},
+				{
+					name: 'paused',
+					value: (newValue = false) => {
+						const parsedValue = newValue === '' || newValue === true;
 
-		this.#root = this.attachShadow({ mode: 'closed' });
-		this.#root.appendChild(template.content.cloneNode(true));
-		this.#gameWrapper = this.#root.querySelector('#game-wrapper') as HTMLElement;
-		this.#loadButton = this.#root.querySelector('#start-buttom') as SdrButton;
-		this.#pauseButton = this.#root.querySelector('#pause-button') as SdrButton;
+						if (parsedValue) {
+							this.#emulator?.pauseMainLoop();
+						} else {
+							this.#emulator?.resumeMainLoop();
+						}
 
-		this.#selectButton = this.#root.querySelector('#button-select') as HTMLButtonElement;
-		this.#startButton = this.#root.querySelector('#button-start') as HTMLButtonElement;
-		this.#bumperLeft = this.#root.querySelector('#bumper-left') as HTMLButtonElement;
-		this.#bumperRight = this.#root.querySelector('#bumper-right') as HTMLButtonElement;
-		this.#aButton = this.#root.querySelector('#button-a') as HTMLButtonElement;
-		this.#bButton = this.#root.querySelector('#button-b') as HTMLButtonElement;
-		this.#xButton = this.#root.querySelector('#button-x') as HTMLButtonElement;
-		this.#yButton = this.#root.querySelector('#button-y') as HTMLButtonElement;
-		this.#dpad = this.#root.querySelector('#dpad') as HTMLDivElement;
+						return parsedValue;
+					},
+					attributeName: 'paused'
+				},
+				{ name: 'loaded', value: false, attributeName: 'loaded' }
+			],
+			handlers: {
+				buttonDown: (evt) => this.#sendKeyEvent('keydown', (evt.target as HTMLButtonElement).dataset.key as string),
+				buttonUp: (evt) => this.#sendKeyEvent('keyup', (evt.target as HTMLButtonElement).dataset.key as string),
+				pause: () => { this.paused = true; },
+				loadGame: async () => this.#loadGame()
+			},
+			template,
+			style
+		});
 
 		this.#canvas = document.createElement('canvas');
 		this.#canvas.id = 'canvas';
 		this.appendChild(this.#canvas);
-
-		this.#root.querySelector('#start-button')?.addEventListener('click', async () => this.#loadGame());
 
 		// Avoid unwanted key presses to exit the game.
 		document.addEventListener('keydown', (evt) => {
@@ -126,88 +122,26 @@ export class Emulator extends HTMLElement {
 			}
 		}, { capture: false, passive: true });
 
-		// Add pause toggle
-		this.#pauseButton.addEventListener('click', () => {
-			this.#togglePause();
-		});
-
+		// Toggle pause on escape.
 		document.addEventListener('keydown', (evt) => {
 			if (this.loaded && evt.key === 'Escape') {
-				this.#togglePause();
+				this.paused = !this.paused;
 			}
 		});
 
+		// Pause on tab change.
 		document.addEventListener('visibilitychange', () => {
 			const isVisible = document.visibilityState === 'visible';
 			const isHidden = document.visibilityState === 'hidden';
 
 			if (this.loaded && isHidden && !this.paused) {
-				this.#togglePause();
+				this.paused = true;
 			}
 
 			if (this.loaded && isVisible && this.paused) {
-				this.#togglePause();
+				this.paused = false;
 			}
 		}, false);
-
-		// Gamepad buttons
-		this.#selectButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'select'));
-		this.#selectButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'select'));
-
-		this.#startButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'start'));
-		this.#startButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'start'));
-
-		this.#bumperLeft.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'leftBumber'));
-		this.#bumperLeft.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'leftBumber'));
-
-		this.#bumperRight.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'rightBumper'));
-		this.#bumperRight.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'rightBumper'));
-
-		this.#aButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'a'));
-		this.#aButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'a'));
-
-		this.#bButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'b'));
-		this.#bButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'b'));
-
-		this.#xButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'x'));
-		this.#xButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'x'));
-
-		this.#yButton.addEventListener('pointerdown', () => this.#sendKeyEvent('keydown', 'y'));
-		this.#yButton.addEventListener('pointerup', () => this.#sendKeyEvent('keyup', 'y'));
-	}
-
-	get paused() {
-		return this.hasAttribute('paused');
-	}
-
-	set paused(newValue: boolean) {
-		if (newValue) {
-			this.setAttribute('paused', '');
-			this.#emulator?.pauseMainLoop();
-		} else {
-			this.removeAttribute('paused');
-			this.#emulator?.resumeMainLoop();
-		}
-	}
-
-	get loaded() {
-		return this.hasAttribute('loaded');
-	}
-
-	set loaded(newValue: boolean) {
-		if (newValue) {
-			this.setAttribute('loaded', '');
-		} else {
-			this.removeAttribute('loaded');
-		}
-	}
-
-	get file() {
-		return this.getAttribute('file') ?? '';
-	}
-
-	set file(newValue: string) {
-		this.#resetEmulator(newValue);
 	}
 
 	#sendKeyEvent(type: 'keydown' | 'keyup', key: keyof typeof keyMap) {
@@ -222,96 +156,153 @@ export class Emulator extends HTMLElement {
 		}));
 	}
 
+	#addDPadButtons() {
+		const dpadElement = this.root.querySelector('#dpad') as HTMLDivElement;
+		const { top, left, width, height } = dpadElement.getBoundingClientRect();
+
+		const dpad = nipplejs.create({
+			zone: dpadElement,
+			color: 'white',
+			multitouch: false,
+			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+			position: { top: `${top + (height / 2)}px`, left: `${left + (width / 2)}px` },
+			mode: 'static',
+			restJoystick: true,
+			shape: 'circle',
+			follow: false,
+			dynamicPage: true
+		});
+
+		let dpadDirection: string | null = null;
+
+		dpad.on('move', (_, { direction }) => {
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+			dpadDirection = direction?.angle ?? null;
+
+			if (dpadDirection) {
+				this.#sendKeyEvent('keydown', dpadDirection);
+			}
+		});
+
+		dpad.on('end', () => {
+			if (dpadDirection) {
+				this.#sendKeyEvent('keyup', dpadDirection);
+			}
+		});
+	}
+
 	#adjustCanvasSize() {
-		const { width, height } = this.#gameWrapper.getBoundingClientRect();
+		const { width, height } = this.root.querySelector('#game-wrapper')?.getBoundingClientRect() ?? { width: 0, height: 0 };
 
 		this.#emulator?.setCanvasSize(width, height);
 	}
 
-	async #startGame(romFile: File) {
-		this.#adjustCanvasSize();
-
-		const romData = await romFile.arrayBuffer();
-
-		this.#emulator?.FS.writeFile('/rom.bin', new Uint8Array(romData));
-
-		const saveFile = await getEmulatorSaveFile(`save_${romFile.name}`);
-
-		if (saveFile) {
-			const saveData = await saveFile.arrayBuffer();
-
-			mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/saves');
-			this.#emulator?.FS.writeFile('/home/web_user/retroarch/userdata/saves/rom.srm', new Uint8Array(saveData));
-		}
-
-		const gameState = await getEmulatorSaveFile(`state_${romFile.name}`);
-
-		if (gameState) {
-			const stateData = await gameState.arrayBuffer();
-
-			mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/states');
-			this.#emulator?.FS.writeFile('/home/web_user/retroarch/userdata/states/rom.state', new Uint8Array(stateData));
-		}
-
-		mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata');
-		this.#emulator?.FS.writeFile('/home/web_user/retroarch/userdata/retroarch.cfg', config);
-
-		this.#emulator?.callMain(this.#emulator.arguments);
-		this.#adjustCanvasSize();
+	#mkdirTree(path: string) {
+		// @ts-expect-error - FS is not defined in the type definitions.
+		this.#emulator?.FS.createPath('/', path, true, true);
 	}
 
-	async #loadGameFile() {
-		try {
-			if (!this.#filePath) {
-				throw new Error(I18n.t`Missing ROM file.`);
+	async #loadEmulatorFiles() {
+		const folderPath = '/home/web_user/retroarch/';
+
+		const mimeTypes = new Map([
+			['png', 'image/png'],
+			['ttf', 'font/ttf'],
+			['cfg', 'text/plain']
+		]);
+
+		let files = await getEmulatorFiles();
+
+		if (Object.keys(files).length === 0) {
+			const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/bundle.zip`);
+			const fileBlob = await response.blob();
+			const zipFile = new File([fileBlob], 'bundle.zip', { type: 'application/zip' });
+
+			const zip = await JSZip.loadAsync(zipFile);
+
+			for await (const zipObject of Object.values(zip.files)) {
+				if (!zipObject.dir) {
+					const blob = await zipObject.async('blob');
+					const name = zipObject.name.split('/').pop() ?? '';
+					const [extension] = name.split('.').reverse();
+
+					const file = new File([blob], name, { type: mimeTypes.get(extension) ?? 'application/octet-stream' });
+
+					await saveEmulatorFile(zipObject.name, file);
+				} else {
+					const file = new File([zipObject.name], zipObject.name, { type: 'application/x+directory' });
+
+					await saveEmulatorFile(zipObject.name, file);
+				}
 			}
 
-			const handler = await getFile<FileSystemFileHandle>(this.#filePath);
+			files = await getEmulatorFiles();
+		}
 
-			if (!handler) {
-				throw new Error(I18n.t`ROM file does not exist.`);
+		this.#mkdirTree(folderPath);
+
+		for await (const [path, file] of Object.entries(files)) {
+			const buffer = await file.arrayBuffer();
+
+			if (file.type === 'application/x+directory') {
+				this.#mkdirTree(`${folderPath}${file.name}`);
+			} else {
+				this.#emulator?.FS.writeFile(`${folderPath}${path}`, new Uint8Array(buffer));
 			}
-
-			await getFilePermission(handler);
-
-			return await handler.getFile();
-		} catch (err) {
-			Logger.error('Failed to load game file.', err);
-			this.#gameWrapper.innerText = err?.message ?? err ?? 'Error';
 		}
 	}
 
-	async #loadEmulatorScript(romFile: File) {
-		const { id } = extractMetadataFromFileName(romFile.name);
-		const { emulator } = materialsFilter.get(id) ?? {};
+	async #loadFile() {
+		if (!this.file) {
+			throw new Error(I18n.t`Missing ROM file.`);
+		}
 
+		const handler = await getFile<FileSystemFileHandle>(this.file);
+
+		if (!handler) {
+			throw new Error(I18n.t`ROM does not exist.`);
+		}
+
+		await getFilePermission(handler);
+
+		return handler.getFile();
+	}
+
+	async #loadGame() {
 		try {
-			const { 'default': emulatorInit } = (await import(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/${emulator ?? ''}_libretro.js`)) as { default: EmulatorInitializerFunction };
+			const materialsFilter = new Map([
+				['GENESIS', 'genesis_plus_gx'],
+				['SEGA-CD', 'genesis_plus_gx'],
+				['SNES', 'snes9x']
+			]);
+
+			const romFile = await this.#loadFile();
+
+			const { id } = extractMetadataFromFileName(romFile.name);
+
+			const emulator = materialsFilter.get(id) ?? '';
+
+			const { 'default': emulatorInit } = (await import(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/${emulator}_libretro.js`)) as { default: EmulatorInitializerFunction };
 
 			this.#emulator = emulatorInit({
 				canvas: this.#canvas,
 				onRuntimeInitialized: async () => {
-					mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/bundle');
-					await loadBundle(this.#emulator?.FS);
+					this.#adjustCanvasSize();
 
-					mkdirTree(this.#emulator?.FS, '/home/web_user/retroarch/userdata/system');
-					await loadBios(this.#emulator?.FS);
+					await this.#loadEmulatorFiles();
 
-					await this.#startGame(romFile);
+					const romData = await romFile.arrayBuffer();
+
+					this.#emulator?.FS.writeFile('/rom.bin', new Uint8Array(romData));
+
+					this.#emulator?.callMain(this.#emulator.arguments);
+					this.#adjustCanvasSize();
 
 					this.loaded = true;
 				}
 			});
-		} catch {
-			throw new Error(I18n.t`Unable to load emulator.`);
-		}
-	}
-
-	async #loadGame() {
-		const romFile = await this.#loadGameFile();
-
-		if (romFile) {
-			await this.#loadEmulatorScript(romFile);
+		} catch (err) {
+			(this.root.querySelector('#game-wrapper') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
 		}
 	}
 
@@ -322,10 +313,6 @@ export class Emulator extends HTMLElement {
 		} else {
 			await this.requestFullscreen({ navigationUI: 'hide' });
 		}
-	}
-
-	#togglePause() {
-		this.paused = !this.paused;
 	}
 
 	#loadState() {
@@ -339,83 +326,56 @@ export class Emulator extends HTMLElement {
 		this.#emulator?._cmd_save_state();
 
 		window.setTimeout(async () => {
-			const memoryStats = this.#emulator?.FS.stat('/home/web_user/retroarch/userdata/saves/rom.srm') as { size: number };
-			const saveStats = this.#emulator?.FS.stat('/home/web_user/retroarch/userdata/states/rom.state') as { size: number };
+			const statePath = '/home/web_user/retroarch/userdata/saves/rom.srm';
+			const savePath = '/home/web_user/retroarch/userdata/states/rom.state';
+
+			const memoryStats = this.#emulator?.FS.stat(statePath) ?? { size: 0 };
+			const saveStats = this.#emulator?.FS.stat(savePath) ?? { size: 0 };
 
 			if (memoryStats.size > 0 && saveStats.size > 0) {
 				this.#emulator?.pauseMainLoop();
 
-				const stateBuffer = this.#emulator?.FS.readFile('/home/web_user/retroarch/userdata/saves/rom.srm') ?? new Uint8Array();
-				const stateFile = new File([stateBuffer], 'emulator_state');
+				const stateBuffer = this.#emulator?.FS.readFile(statePath) ?? new Uint8Array();
+				const stateFile = new File([stateBuffer], statePath);
 
-				const saveBuffer = this.#emulator?.FS.readFile('/home/web_user/retroarch/userdata/saves/rom.state') ?? new Uint8Array();
-				const saveFile = new File([saveBuffer], 'emulator_save');
+				const saveBuffer = this.#emulator?.FS.readFile(savePath) ?? new Uint8Array();
+				const saveFile = new File([saveBuffer], savePath);
 
-				await saveEmulatorSaveFile('emulator_state', stateFile);
-				await saveEmulatorSaveFile('emulator_save', saveFile);
+				await saveEmulatorFile(statePath, stateFile);
+				await saveEmulatorFile(savePath, saveFile);
 
 				this.#emulator?.resumeMainLoop();
 			}
 		}, WAIT_BEFORE_SAVE);
 	}
 
-	#resetEmulator(newFilePath: string) {
+	#resetEmulator() {
 		this.#emulator = null;
-		this.#filePath = newFilePath;
 		this.loaded = false;
-		this.paused = false;
-	}
-
-	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-		if (oldValue !== newValue) {
-			if (name === 'file') {
-				this.file = newValue;
-			} else if (name === 'paused') {
-				this.paused = this.hasAttribute('paused');
-			} else if (name === 'loaded') {
-				this.loaded = this.hasAttribute('loaded');
-			}
-		}
 	}
 
 	connectedCallback() {
-		const DPAD_LOAD_TIMEOUT = 200;
+		super.connectedCallback();
 
-		this.#resetEmulator(this.getAttribute('file') ?? '');
+		this.#addDPadButtons();
+	}
 
-		setTimeout(() => {
-			const { top, left, width, height } = this.#dpad.getBoundingClientRect();
-			const dpad = nipplejs.create({
-				zone: this.#dpad,
-				color: 'white',
-				multitouch: false,
-				// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-				position: { top: `${top + (height / 2)}px`, left: `${left + (width / 2)}px` },
-				mode: 'static',
-				restJoystick: true,
-				shape: 'circle',
-				follow: false,
-				dynamicPage: true
-			});
+	static updateFromURL() {
+		const url = new URL(window.location.toString());
+		const params = new URLSearchParams(url.search);
 
-			let dpadDirection: string | null = null;
+		if (params.has('file')) {
+			let emulatorElement = document.querySelector<SdrEmulator>('sdr-emulator');
 
-			dpad.on('move', (_, { direction }) => {
-				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-				dpadDirection = direction?.angle ?? null;
+			if (!emulatorElement) {
+				emulatorElement = document.createElement('sdr-emulator') as SdrEmulator;
 
-				if (dpadDirection) {
-					this.#sendKeyEvent('keydown', dpadDirection);
-				}
-			});
+				document.body.appendChild(emulatorElement);
+			}
 
-			dpad.on('end', () => {
-				if (dpadDirection) {
-					this.#sendKeyEvent('keyup', dpadDirection);
-				}
-			});
-		}, DPAD_LOAD_TIMEOUT);
+			emulatorElement.file = params.get('file') as string;
+		}
 	}
 }
 
-customElements.define('rom-emulator', Emulator);
+customElements.define('rom-emulator', SdrEmulator);
