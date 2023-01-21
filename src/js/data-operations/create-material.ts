@@ -1,4 +1,4 @@
-import type { FileForMaterial, Material, MaterialStatus } from '../../../public/data/data';
+import type { FileForMaterial, Material, MaterialStatus } from '../../data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 import { Logger } from '../util/logger';
 

@@ -1,4 +1,4 @@
-import type { FileForMaterial } from '../../../public/data/data';
+import type { FileForMaterial } from '../../data/data';
 
 import { getFile } from '../data-operations/idb-persistence';
 import { I18n } from '../intl/translations';

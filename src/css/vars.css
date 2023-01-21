@@ -94,13 +94,13 @@
 	--card-width: var(--thumbnail-width);
 	--card-height: calc(var(--thumbnail-height) + var(--card-title-height));
 
-	--thumb-missing-image: url('../../../images/covers/missing.svg');
+	--thumb-missing-image: url('/images/base-covers/missing.svg');
 	--thumb-missing-filter: grayscale(0.6) brightness(70%) contrast(120%);
 
-	--thumb-outofscope-image: url('../../../images/covers/outofscope.svg');
+	--thumb-outofscope-image: url('/images/base-covers/outofscope.svg');
 	--thumb-outofscope-filter: sepia(1) brightness(50%) contrast(110%) blur(5px);
 
-	--thumb-canceled-image: url('../../../images/covers/canceled.svg');
+	--thumb-canceled-image: url('/images/base-covers/canceled.svg');
 	--thumb-canceled-filter: grayscale(0.8) brightness(80%) contrast(80%) blur(5px);
 
 	color-scheme: light;

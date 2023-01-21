@@ -9,8 +9,8 @@ import { extractMetadataFromFileName, getFilePermission } from '../../js/files-r
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
 
-import template from './template.html?raw';
-import style from './style.css?raw';
+import template from './template.html?raw' assert { type: 'html' };
+import style from './style.css?inline' assert { type: 'css' };
 
 interface KeyData {
 	key: string,
@@ -283,7 +283,8 @@ export class SdrEmulator extends SdrComponent {
 
 			const emulator = materialsFilter.get(id) ?? '';
 
-			const { 'default': emulatorInit } = (await import(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/${emulator}_libretro.js`)) as { default: EmulatorInitializerFunction };
+			const emulatorImport = await import(/* @vite-ignore */ `${import.meta.env.APP_PUBLIC_URL}lib/webretro/${emulator}_libretro.js`);
+			const emulatorInit = emulatorImport.default as EmulatorInitializerFunction;
 
 			this.#emulator = emulatorInit({
 				canvas: this.#canvas,

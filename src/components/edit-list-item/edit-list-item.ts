@@ -1,7 +1,7 @@
 import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
-import template from './template.html?raw';
-import style from './style.css?raw';
+import template from './template.html?raw' assert { type: 'html' };
+import style from './style.css?inline' assert { type: 'css' };
 
 const watchedAttributes = ['disabled', 'value'];
 

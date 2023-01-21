@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 
 import { SdrDialog } from '../../components/dialog/dialog';
-import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
+import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../data/data';
 import { SdrEditListItem } from '../../components/edit-list-item/edit-list-item';
 import type { SdrDropArea } from '../../components/drop-area/drop-area';
 import type { SdrEditBox } from '../../components/edit-box/edit-box';
@@ -18,8 +18,8 @@ import { exportDataItem } from '../../js/data-operations/data-export';
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
 
-import template from './template.html?raw';
-import style from './style.css?raw';
+import template from './template.html?raw' assert { type: 'html' };
+import style from './style.css?inline' assert { type: 'css' };
 import { formatFullDate } from '../../js/intl/formatting';
 
 const watchedAttributes = ['id', 'loading', 'disabled'];

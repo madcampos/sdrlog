@@ -4,7 +4,7 @@
 // eslint-disable-next-line @typescript-eslint/no-inferrable-types
 const isDebug: boolean = false;
 
-import type { SDRLogData } from '../public/data/data';
+import type { SDRLogData } from './data/data';
 import type { UpdateMessage, WorkerReadyMessage } from './types/rpc-messages';
 
 const worker: ServiceWorkerGlobalScope = self as unknown as ServiceWorkerGlobalScope;

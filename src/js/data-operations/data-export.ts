@@ -1,4 +1,4 @@
-import type { Material } from '../../../public/data/data';
+import type { Material } from '../../data/data';
 import type { NewMaterialProperties } from './create-material';
 
 import { SdrProgressOverlay } from '../../components/progress/progress';

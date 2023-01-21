@@ -3,8 +3,8 @@ import { SdrDialog } from '../../components/dialog/dialog';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
-import template from './template.html?raw';
-import style from './style.css?raw';
+import template from './template.html?raw' assert { type: 'html' };
+import style from './style.css?inline' assert { type: 'css' };
 
 export class SdrInfoBox extends SdrComponent {
 	static readonly elementName = 'sdr-info-box';

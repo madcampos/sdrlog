@@ -235,7 +235,7 @@
 		"no-array-constructor": "off",
 		"no-bitwise": "error",
 		"no-continue": "error",
-		"no-inline-comments": "warn",
+		"no-inline-comments": ["warn", { "ignorePattern": "(?:@vite-ignore|@ts-expect-error).+" }],
 		"no-lonely-if": "warn",
 		"no-mixed-operators": ["warn", { "allowSamePrecedence": true }],
 		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],

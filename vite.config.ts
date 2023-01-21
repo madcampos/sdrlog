@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 // eslint-env node
 import { readFileSync } from 'fs';
-import { resolve } from 'path';
 
 import { defineConfig, type UserConfig } from 'vitest/config';
 import { loadEnv } from 'vite';
@@ -140,7 +139,6 @@ export default defineConfig(({ mode }) => {
 		envDir: '../',
 		root: 'src',
 		publicDir: '../public',
-		assetsInclude: ['locales/**/*.json'],
 		clearScreen: false,
 		server: {
 			https: sslOptions,
@@ -156,12 +154,6 @@ export default defineConfig(({ mode }) => {
 				output: {
 					generatedCode: 'es2015',
 					inlineDynamicImports: false
-				},
-				input: {
-					main: resolve(__dirname, 'src/index.html'),
-					cbz: resolve(__dirname, 'src/cbz.html'),
-					epub: resolve(__dirname, 'src/epub.html'),
-					emulator: resolve(__dirname, 'src/emulator.html')
 				}
 			}
 		},

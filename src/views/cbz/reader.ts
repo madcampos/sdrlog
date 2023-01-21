@@ -6,8 +6,8 @@ import { getFilePermission } from '../../js/files-reader/files-reader';
 import { createComparer } from '../../js/intl/formatting';
 import { I18n } from '../../js/intl/translations';
 
-import template from './template.html?raw';
-import style from './style.css?raw';
+import template from './template.html?raw' assert { type: 'html' };
+import style from './style.css?inline' assert { type: 'css' };
 
 const watchedAttributes = ['file', 'loaded'];
 

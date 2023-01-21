@@ -1,4 +1,4 @@
-import type { FileForMaterial, Material } from '../../../public/data/data';
+import type { FileForMaterial, Material } from '../../data/data';
 
 type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems' | 'emulator';
 

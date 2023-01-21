@@ -2,7 +2,7 @@
 
 import { type PropBinding, type TemplateParser, templateParser } from './serialization';
 
-import baseStyle from './BaseComponent.css?raw';
+import baseStyle from './BaseComponent.css?inline' assert { type: 'css' };
 
 type PropPrimitiveTypes = boolean | string | number | object;
 

@@ -4,7 +4,7 @@ import type { SdrSelect } from '../../components/edit-select/edit-select';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
-import template from './template.html?raw';
+import template from './template.html?raw' assert { type: 'html' };
 
 export interface SdrLanguageBox {
 	language: string

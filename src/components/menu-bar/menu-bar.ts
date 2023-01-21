@@ -1,4 +1,4 @@
-import type { Material } from '../../../public/data/data';
+import type { Material } from '../../data/data';
 
 import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
@@ -13,8 +13,8 @@ import { SdrInfoBox } from '../../views/info-box/info-box';
 import { SdrLanguageBox } from '../../views/language-box/language-info';
 import { SdrThemeBox } from '../../views/theme-box/theme-box';
 
-import template from './template.html?raw';
-import style from './style.css?raw';
+import template from './template.html?raw' assert { type: 'html' };
+import style from './style.css?inline' assert { type: 'css' };
 
 export class SdrMenuBar extends SdrComponent {
 	static readonly elementName = 'sdr-menu-bar';

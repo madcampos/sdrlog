@@ -4,7 +4,7 @@ import type { SdrRadioGroup } from '../../components/radio-group/radio-group';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
-import template from './template.html?raw';
+import template from './template.html?raw' assert { type: 'html' };
 
 export interface SdrThemeBox {
 	theme: string

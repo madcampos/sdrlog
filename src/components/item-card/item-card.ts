@@ -1,12 +1,12 @@
-import type { Material } from '../../../public/data/data';
+import type { Material } from '../../data/data';
 
 import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/fetch-covers';
 import { getMaterial } from '../../js/data-operations/idb-persistence';
 import { registerComponent, SdrComponent } from '../base/BaseComponent';
 import { SdrItemDetails } from '../../views/item-details/item-details';
 
-import template from './template.html?raw';
-import style from './style.css?raw';
+import template from './template.html?raw' assert { type: 'html' };
+import style from './style.css?inline' assert { type: 'css' };
 
 const watchedAttributes = ['id', 'title', 'category', 'sku', 'type', 'edition', 'status'];
 

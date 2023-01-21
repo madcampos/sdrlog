@@ -1,5 +1,5 @@
 {
-	"include": ["globals.d.ts", "src/**/*", "src/**/*.json", "vite.config.ts", "public/data/**/*"],
+	"include": ["globals.d.ts", "src/**/*", "vite.config.ts"],
 	"exclude": ["src/**/__tests__/*", "node_modules/**/*", "dist/**/*", "public/lib/**/*"],
 	"compilerOptions": {
 		"tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
