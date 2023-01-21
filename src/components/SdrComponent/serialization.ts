@@ -13,7 +13,7 @@ export interface HandlerBinding {
 
 const BIND_REGEX = /^(?:s-bind:|:)/giu;
 const EVENT_REGEX = /^(?:s-on:|@)/giu;
-const TEXT_REGEX = /\{\{([a-z][a-z0-9]+?)\}\}/giu;
+const TEXT_REGEX = /\{\{\s*([a-z][a-z0-9]+?)\s*\}\}/giu;
 const LOOP_REGEX = /^(?<item>[a-z][a-z0-9]+?) in (?<list>[a-z][a-z0-9]+?)$/giu;
 
 // TODO: update parser to support property accessors
