@@ -2,7 +2,7 @@ import type { Material } from '../../../public/data/data';
 
 import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/fetch-covers';
 import { getMaterial } from '../../js/data-operations/idb-persistence';
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 import { SdrItemDetails } from '../../views/item-details/item-details';
 
 import template from './template.html?raw';
@@ -32,10 +32,11 @@ export interface SdrCard {
 
 export class SdrCard extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-card';
 
 	constructor() {
 		super({
-			name: 'sdr-card',
+			name: SdrCard.elementName,
 			watchedAttributes,
 			props: [
 				{ name: 'id', value: '', attributeName: 'id' },
@@ -99,7 +100,7 @@ export class SdrCard extends SdrComponent {
 	}
 
 	static createCard({ id, name, category, sku, type, edition, status }: CreateCardOptions) {
-		const itemCard = document.createElement('sdr-card') as SdrCard;
+		const itemCard = document.createElement(SdrCard.elementName) as SdrCard;
 
 		itemCard.id = id;
 		itemCard.title = name;
@@ -111,3 +112,5 @@ export class SdrCard extends SdrComponent {
 		document.querySelector('main')?.appendChild(itemCard);
 	}
 }
+
+registerComponent(SdrCard);

@@ -1,5 +1,5 @@
 import { SdrEditListItem } from '../edit-list-item/edit-list-item';
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -14,12 +14,13 @@ export interface SdrEditList {
 
 export class SdrEditList extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-edit-list';
 
 	#items: HTMLSlotElement;
 
 	constructor() {
 		super({
-			name: 'sdr-edit-list',
+			name: SdrEditList.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -106,3 +107,5 @@ export class SdrEditList extends SdrComponent {
 		});
 	}
 }
+
+registerComponent(SdrEditList);

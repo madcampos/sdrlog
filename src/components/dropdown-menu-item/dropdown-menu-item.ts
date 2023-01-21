@@ -1,6 +1,6 @@
-import type { SdrButton } from '../button/button';
+import { SdrButton } from '../button/button';
 
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -13,18 +13,19 @@ export interface SdrDropdownItem {
 
 export class SdrDropdownItem extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-dropdown-item';
 	#button: SdrButton;
 
 	constructor() {
 		super({
-			name: 'sdr-dropdown-item',
+			name: SdrDropdownItem.elementName,
 			watchedAttributes,
 			props: [{ name: 'icon', value: '', attributeName: 'icon' }],
 			template,
 			style
 		});
 
-		this.#button = this.root.querySelector('sdr-button') as SdrButton;
+		this.#button = this.root.querySelector(SdrButton.elementName) as SdrButton;
 
 		if (this.hasAttribute('separator')) {
 			const divider = document.createElement('hr');
@@ -37,3 +38,5 @@ export class SdrDropdownItem extends SdrComponent {
 		this.#button.focus();
 	}
 }
+
+registerComponent(SdrDropdownItem);

@@ -1,5 +1,5 @@
-import { SdrComponent } from '../../components/base/BaseComponent';
-import type { SdrDialog } from '../../components/dialog/dialog';
+import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
+import { SdrDialog } from '../../components/dialog/dialog';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
@@ -7,16 +7,17 @@ import template from './template.html?raw';
 import style from './style.css?raw';
 
 export class SdrInfoBox extends SdrComponent {
+	static readonly elementName = 'sdr-info-box';
 	#modal: SdrDialog;
 
 	constructor() {
 		super({
-			name: 'sdr-info-modal',
+			name: SdrInfoBox.elementName,
 			template,
 			style
 		});
 
-		this.#modal = this.root.querySelector('sdr-dialog') as SdrDialog;
+		this.#modal = this.root.querySelector(SdrDialog.elementName) as SdrDialog;
 
 		this.#modal.addEventListener('close', () => {
 			this.close();
@@ -46,10 +47,10 @@ export class SdrInfoBox extends SdrComponent {
 	}
 
 	static updateFromURL() {
-		let modal = document.querySelector<SdrInfoBox>('sdr-info-box');
+		let modal = document.querySelector<SdrInfoBox>(SdrInfoBox.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-info-box') as SdrInfoBox;
+			modal = document.createElement(SdrInfoBox.elementName) as SdrInfoBox;
 
 			document.body.appendChild(modal);
 		}
@@ -60,10 +61,10 @@ export class SdrInfoBox extends SdrComponent {
 	}
 
 	static openModal() {
-		let modal = document.querySelector<SdrInfoBox>('sdr-info-box');
+		let modal = document.querySelector<SdrInfoBox>(SdrInfoBox.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-info-box') as SdrInfoBox;
+			modal = document.createElement(SdrInfoBox.elementName) as SdrInfoBox;
 
 			document.body.appendChild(modal);
 		}
@@ -72,10 +73,10 @@ export class SdrInfoBox extends SdrComponent {
 	}
 
 	static closeModal() {
-		let modal = document.querySelector<SdrInfoBox>('sdr-info-box');
+		let modal = document.querySelector<SdrInfoBox>(SdrInfoBox.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-info-box') as SdrInfoBox;
+			modal = document.createElement(SdrInfoBox.elementName) as SdrInfoBox;
 
 			document.body.appendChild(modal);
 		}
@@ -83,3 +84,5 @@ export class SdrInfoBox extends SdrComponent {
 		modal.close();
 	}
 }
+
+registerComponent(SdrInfoBox);

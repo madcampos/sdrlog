@@ -1,4 +1,4 @@
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -14,12 +14,13 @@ export interface SdrEditBox {
 
 export class SdrEditBox extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-edit-box';
 
 	#input: HTMLInputElement;
 
 	constructor() {
 		super({
-			name: 'sdr-edit-box',
+			name: SdrEditBox.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -67,3 +68,5 @@ export class SdrEditBox extends SdrComponent {
 		this.#input.value = '';
 	}
 }
+
+registerComponent(SdrEditBox);

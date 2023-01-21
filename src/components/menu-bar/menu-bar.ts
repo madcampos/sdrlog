@@ -1,6 +1,6 @@
 import type { Material } from '../../../public/data/data';
 
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import { readFiles } from '../../js/files-reader/files-reader';
 import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/fetch-covers';
@@ -17,9 +17,11 @@ import template from './template.html?raw';
 import style from './style.css?raw';
 
 export class SdrMenuBar extends SdrComponent {
+	static readonly elementName = 'sdr-menu-bar';
+
 	constructor() {
 		super({
-			name: 'menu-bar',
+			name: SdrMenuBar.elementName,
 			handlers: {
 				openInfoModal: () => SdrInfoBox.openModal(),
 				openLanguageModal: () => SdrLanguageBox.openModal(),
@@ -48,3 +50,5 @@ export class SdrMenuBar extends SdrComponent {
 		}
 	}
 }
+
+registerComponent(SdrMenuBar);

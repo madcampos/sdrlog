@@ -1,6 +1,6 @@
 import { registerShortcut } from '../../js/util/keyboard';
 import { getSuggestions } from './search-suggestions';
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
 
@@ -15,10 +15,11 @@ export interface SdrSearchBox {
 
 export class SdrSearchBox extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-search-box';
 
 	constructor() {
 		super({
-			name: 'sdr-search-box',
+			name: SdrSearchBox.elementName,
 			watchedAttributes,
 			props: [{ name: 'value', value: '', attributeName: 'value' }],
 			handlers: {
@@ -67,3 +68,5 @@ export class SdrSearchBox extends SdrComponent {
 		this.root.querySelector('input')?.blur();
 	}
 }
+
+registerComponent(SdrSearchBox);

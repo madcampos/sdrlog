@@ -1,4 +1,4 @@
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -12,10 +12,11 @@ export interface SdrEditListItem {
 
 export class SdrEditListItem extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-edit-list-item';
 
 	constructor() {
 		super({
-			name: 'sdr-edit-list-item',
+			name: SdrEditListItem.elementName,
 			watchedAttributes,
 			props: [
 				{ name: 'disabled', value: false, attributeName: 'disabled' },
@@ -40,3 +41,5 @@ export class SdrEditListItem extends SdrComponent {
 		});
 	}
 }
+
+registerComponent(SdrEditListItem);

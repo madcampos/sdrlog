@@ -1,6 +1,6 @@
-import type { SdrDropdownItem } from '../dropdown-menu-item/dropdown-menu-item';
+import { SdrDropdownItem } from '../dropdown-menu-item/dropdown-menu-item';
 
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -14,11 +14,12 @@ export interface SdrDropdown {
 
 export class SdrDropdown extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-dropdown';
 	#dialog: HTMLDialogElement;
 
 	constructor() {
 		super({
-			name: 'sdr-dropdown',
+			name: SdrDropdown.elementName,
 			watchedAttributes,
 			props: [
 				{ name: 'icon', value: '', attributeName: 'icon' },
@@ -88,7 +89,7 @@ export class SdrDropdown extends SdrComponent {
 	}
 
 	focusNext() {
-		const elements = [...this.querySelectorAll<SdrDropdownItem>('sdr-dropdown-item:not([separator])')];
+		const elements = [...this.querySelectorAll<SdrDropdownItem>(SdrDropdownItem.elementName)];
 
 		if (document.activeElement && elements.length > 0) {
 			if (document.activeElement.parentElement !== this) {
@@ -106,7 +107,7 @@ export class SdrDropdown extends SdrComponent {
 	}
 
 	focusPrevious() {
-		const elements = [...this.querySelectorAll<SdrDropdownItem>('sdr-dropdown-item:not([separator])')];
+		const elements = [...this.querySelectorAll<SdrDropdownItem>(SdrDropdownItem.elementName)];
 
 		if (document.activeElement && elements.length > 0) {
 			if (document.activeElement.parentElement !== this) {
@@ -123,3 +124,5 @@ export class SdrDropdown extends SdrComponent {
 		}
 	}
 }
+
+registerComponent(SdrDropdown);

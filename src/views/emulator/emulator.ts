@@ -7,7 +7,7 @@ import nipplejs from 'nipplejs';
 import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../../js/files-reader/files-reader';
 import { I18n } from '../../js/intl/translations';
-import { SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -43,12 +43,13 @@ export interface SdrEmulator {
 
 export class SdrEmulator extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-emulator';
 
 	#emulator: EmulatorModule | null = null;
 	#canvas: HTMLCanvasElement;
 	constructor() {
 		super({
-			name: 'sdr-emulator',
+			name: SdrEmulator.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -365,10 +366,10 @@ export class SdrEmulator extends SdrComponent {
 		const params = new URLSearchParams(url.search);
 
 		if (params.has('file')) {
-			let emulatorElement = document.querySelector<SdrEmulator>('sdr-emulator');
+			let emulatorElement = document.querySelector<SdrEmulator>(SdrEmulator.elementName);
 
 			if (!emulatorElement) {
-				emulatorElement = document.createElement('sdr-emulator') as SdrEmulator;
+				emulatorElement = document.createElement(SdrEmulator.elementName) as SdrEmulator;
 
 				document.body.appendChild(emulatorElement);
 			}
@@ -378,4 +379,4 @@ export class SdrEmulator extends SdrComponent {
 	}
 }
 
-customElements.define('rom-emulator', SdrEmulator);
+registerComponent(SdrEmulator);

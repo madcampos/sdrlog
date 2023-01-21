@@ -1,4 +1,4 @@
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -14,11 +14,13 @@ export interface SdrButton {
 export class SdrButton extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
+	static readonly elementName = 'sdr-button';
+
 	#button: HTMLButtonElement;
 
 	constructor() {
 		super({
-			name: 'sdr-button',
+			name: SdrButton.elementName,
 			watchedAttributes,
 			props: [
 				{ name: 'disabled', value: false, attributeName: 'disabled' },
@@ -35,3 +37,5 @@ export class SdrButton extends SdrComponent {
 		this.#button.focus();
 	}
 }
+
+registerComponent(SdrButton);

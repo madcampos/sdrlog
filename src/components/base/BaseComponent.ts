@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 import { type PropBinding, type TemplateParser, templateParser } from './serialization';
 
 import baseStyle from './BaseComponent.css?raw';
@@ -57,6 +59,8 @@ interface SdrComponentConstructor {
 
 export class SdrComponent extends HTMLElement implements CustomElementInterface {
 	static formAssociated = true;
+
+	static get elementName(): string { throw new Error('Element name is not defined'); }
 
 	#watchedSlots: WatchedSlots = {};
 	#props = new Map<string, Prop<PropTypes>>();
@@ -516,5 +520,15 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 				}
 			}
 		}
+	}
+}
+
+export function registerComponent(component: typeof SdrComponent & { elementName: string }) {
+	if (!component.elementName) {
+		throw new Error('Component must have a name');
+	}
+
+	if (!customElements.get(component.elementName)) {
+		customElements.define(component.elementName, component);
 	}
 }

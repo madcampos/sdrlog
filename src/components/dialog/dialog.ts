@@ -1,6 +1,6 @@
 import template from './template.html?raw';
 import style from './style.css?raw';
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 const watchedAttributes = ['open'];
 
@@ -10,11 +10,13 @@ export interface SdrDialog {
 
 export class SdrDialog extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+
+	static readonly elementName = 'sdr-dialog';
 	#dialog: HTMLDialogElement;
 
 	constructor() {
 		super({
-			name: 'sdr-dialog',
+			name: SdrDialog.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -102,3 +104,5 @@ export class SdrDialog extends SdrComponent {
 		}
 	}
 }
+
+registerComponent(SdrDialog);

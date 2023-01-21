@@ -1,6 +1,6 @@
 import { marked } from 'marked';
 
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -16,12 +16,13 @@ export interface SdrTextArea {
 
 export class SdrTextArea extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-textarea';
 	#renderedTextArea: HTMLElement;
 	#textArea: HTMLTextAreaElement;
 
 	constructor() {
 		super({
-			name: 'sdr-textarea',
+			name: SdrTextArea.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -65,3 +66,5 @@ export class SdrTextArea extends SdrComponent {
 		this.value = '';
 	}
 }
+
+registerComponent(SdrTextArea);

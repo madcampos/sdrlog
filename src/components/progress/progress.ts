@@ -1,4 +1,4 @@
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -12,11 +12,12 @@ export interface SdrProgressOverlay {
 }
 
 export class SdrProgressOverlay extends SdrComponent {
+	static readonly elementName = 'sdr-progress-overlay';
 	#dialog: HTMLDialogElement;
 
 	constructor() {
 		super({
-			name: 'sdr-progress-overlay',
+			name: SdrProgressOverlay.elementName,
 			props: [
 				{ name: 'title', value: '' },
 				{ name: 'info', value: '' },
@@ -79,3 +80,5 @@ export class SdrProgressOverlay extends SdrComponent {
 		}
 	}
 }
+
+registerComponent(SdrProgressOverlay);

@@ -1,4 +1,4 @@
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -13,9 +13,11 @@ export interface SdrRadioItem {
 export class SdrRadioItem extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
+	static readonly elementName = 'sdr-radio-item';
+
 	constructor() {
 		super({
-			name: 'sdr-radio-item',
+			name: SdrRadioItem.elementName,
 			watchedAttributes,
 			props: [
 				{ name: 'icon', value: '', attributeName: 'icon' },
@@ -26,3 +28,5 @@ export class SdrRadioItem extends SdrComponent {
 		});
 	}
 }
+
+registerComponent(SdrRadioItem);

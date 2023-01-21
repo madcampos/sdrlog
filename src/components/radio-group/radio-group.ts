@@ -1,6 +1,6 @@
 import type { SdrRadioItem } from '../radio-item/radio-item';
 
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -11,9 +11,11 @@ export interface SdrRadioGroup {
 }
 
 export class SdrRadioGroup extends SdrComponent {
+	static readonly elementName = 'sdr-radio-group';
+
 	constructor() {
 		super({
-			name: 'sdr-radio-group',
+			name: SdrRadioGroup.elementName,
 			props: [
 				{
 					name: 'value',
@@ -66,3 +68,5 @@ export class SdrRadioGroup extends SdrComponent {
 		});
 	}
 }
+
+registerComponent(SdrRadioGroup);

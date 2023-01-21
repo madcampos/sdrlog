@@ -8,7 +8,7 @@ import { default as ePub } from 'epubjs';
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';
 import { I18n } from '../../js/intl/translations';
-import { SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -24,6 +24,7 @@ export interface SdrEpubReader {
 
 export class SdrEpubReader extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-epub-reader';
 
 	#renderArea: HTMLElement;
 	#tocSelect: HTMLSelectElement;
@@ -32,7 +33,7 @@ export class SdrEpubReader extends SdrComponent {
 
 	constructor() {
 		super({
-			name: 'sdr-epub-reader',
+			name: SdrEpubReader.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -191,10 +192,10 @@ export class SdrEpubReader extends SdrComponent {
 		const params = new URLSearchParams(url.search);
 
 		if (params.has('file')) {
-			let readerElement = document.querySelector<SdrEpubReader>('sdr-cbz-reader');
+			let readerElement = document.querySelector<SdrEpubReader>(SdrEpubReader.elementName);
 
 			if (!readerElement) {
-				readerElement = document.createElement('sdr-cbz-reader') as SdrEpubReader;
+				readerElement = document.createElement(SdrEpubReader.elementName) as SdrEpubReader;
 
 				document.body.appendChild(readerElement);
 			}
@@ -203,3 +204,5 @@ export class SdrEpubReader extends SdrComponent {
 		}
 	}
 }
+
+registerComponent(SdrEpubReader);

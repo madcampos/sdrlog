@@ -1,5 +1,5 @@
 import JSZip from 'jszip';
-import { SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';
@@ -45,6 +45,7 @@ export interface SdrComicBookReader {
 
 export class SdrComicBookReader extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-comic-book-reader';
 
 	#renderArea: HTMLElement;
 	#tocSelect: HTMLSelectElement;
@@ -52,7 +53,7 @@ export class SdrComicBookReader extends SdrComponent {
 
 	constructor() {
 		super({
-			name: 'sdr-comic-book-reader',
+			name: SdrComicBookReader.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -247,10 +248,10 @@ export class SdrComicBookReader extends SdrComponent {
 		const params = new URLSearchParams(url.search);
 
 		if (params.has('file')) {
-			let readerElement = document.querySelector<SdrComicBookReader>('sdr-cbz-reader');
+			let readerElement = document.querySelector<SdrComicBookReader>(SdrComicBookReader.elementName);
 
 			if (!readerElement) {
-				readerElement = document.createElement('sdr-cbz-reader') as SdrComicBookReader;
+				readerElement = document.createElement(SdrComicBookReader.elementName) as SdrComicBookReader;
 
 				document.body.appendChild(readerElement);
 			}
@@ -259,3 +260,5 @@ export class SdrComicBookReader extends SdrComponent {
 		}
 	}
 }
+
+registerComponent(SdrComicBookReader);

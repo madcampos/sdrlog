@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -14,9 +14,11 @@ export interface SdrLoader {
 export class SdrLoader extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 
+	static readonly elementName = 'sdr-loader';
+
 	constructor() {
 		super({
-			name: 'sdr-loader',
+			name: SdrLoader.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -37,3 +39,5 @@ export class SdrLoader extends SdrComponent {
 		});
 	}
 }
+
+registerComponent(SdrLoader);

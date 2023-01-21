@@ -1,4 +1,4 @@
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -14,11 +14,12 @@ export interface SdrSelect {
 
 export class SdrSelect extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-select';
 	#select: HTMLSelectElement;
 
 	constructor() {
 		super({
-			name: 'sdr-select',
+			name: SdrSelect.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -68,3 +69,5 @@ export class SdrSelect extends SdrComponent {
 		this.#select.selectedIndex = 0;
 	}
 }
+
+registerComponent(SdrSelect);

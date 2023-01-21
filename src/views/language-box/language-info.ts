@@ -1,5 +1,5 @@
-import { SdrComponent } from '../../components/base/BaseComponent';
-import type { SdrDialog } from '../../components/dialog/dialog';
+import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
+import { SdrDialog } from '../../components/dialog/dialog';
 import type { SdrSelect } from '../../components/edit-select/edit-select';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
@@ -11,11 +11,13 @@ export interface SdrLanguageBox {
 }
 
 export class SdrLanguageBox extends SdrComponent {
+	static readonly elementName = 'sdr-language-box';
+
 	#modal: SdrDialog;
 
 	constructor() {
 		super({
-			name: 'sdr-language-modal',
+			name: SdrLanguageBox.elementName,
 			props: [{ name: 'language', value: 'en-US' }],
 			handlers: {
 				changeLanguage: async (event: Event) => {
@@ -33,7 +35,7 @@ export class SdrLanguageBox extends SdrComponent {
 			template
 		});
 
-		this.#modal = this.root.querySelector('sdr-dialog') as SdrDialog;
+		this.#modal = this.root.querySelector(SdrDialog.elementName) as SdrDialog;
 
 		this.#modal.addEventListener('close', () => {
 			this.close();
@@ -65,10 +67,10 @@ export class SdrLanguageBox extends SdrComponent {
 	}
 
 	static updateFromURL() {
-		let modal = document.querySelector<SdrLanguageBox>('sdr-language-box');
+		let modal = document.querySelector<SdrLanguageBox>(SdrLanguageBox.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-language-box') as SdrLanguageBox;
+			modal = document.createElement(SdrLanguageBox.elementName) as SdrLanguageBox;
 
 			document.body.appendChild(modal);
 		}
@@ -79,10 +81,10 @@ export class SdrLanguageBox extends SdrComponent {
 	}
 
 	static openModal() {
-		let modal = document.querySelector<SdrLanguageBox>('sdr-language-box');
+		let modal = document.querySelector<SdrLanguageBox>(SdrLanguageBox.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-language-box') as SdrLanguageBox;
+			modal = document.createElement(SdrLanguageBox.elementName) as SdrLanguageBox;
 
 			document.body.appendChild(modal);
 		}
@@ -91,10 +93,10 @@ export class SdrLanguageBox extends SdrComponent {
 	}
 
 	static closeModal() {
-		let modal = document.querySelector<SdrLanguageBox>('sdr-language-box');
+		let modal = document.querySelector<SdrLanguageBox>(SdrLanguageBox.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-language-box') as SdrLanguageBox;
+			modal = document.createElement(SdrLanguageBox.elementName) as SdrLanguageBox;
 
 			document.body.appendChild(modal);
 		}
@@ -102,3 +104,5 @@ export class SdrLanguageBox extends SdrComponent {
 		modal.close();
 	}
 }
+
+registerComponent(SdrLanguageBox);

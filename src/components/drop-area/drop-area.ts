@@ -1,5 +1,5 @@
 import { I18n } from '../../js/intl/translations';
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -12,6 +12,7 @@ export interface SdrDropArea {
 
 export class SdrDropArea extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-drop-area';
 	#overlay: HTMLDivElement;
 	#accepts: FilePickerAcceptType = {
 		description: I18n.t`Image Files`,
@@ -25,7 +26,7 @@ export class SdrDropArea extends SdrComponent {
 
 	constructor() {
 		super({
-			name: 'sdr-drop-area',
+			name: SdrDropArea.elementName,
 			watchedAttributes,
 			props: [{ name: 'disabled', value: false, attributeName: 'disabled' }],
 			handlers: {
@@ -97,3 +98,5 @@ export class SdrDropArea extends SdrComponent {
 		return this.#file;
 	}
 }
+
+registerComponent(SdrDropArea);

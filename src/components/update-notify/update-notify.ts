@@ -1,7 +1,7 @@
 import { I18n } from '../../js/intl/translations';
 import type { WorkerMessage } from '../../types/rpc-messages';
 
-import { SdrComponent } from '../base/BaseComponent';
+import { registerComponent, SdrComponent } from '../base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -11,11 +11,13 @@ export interface SdrUpdateNotify {
 }
 
 export class SdrUpdateNotify extends SdrComponent {
+	static readonly elementName = 'sdr-update-notify';
+
 	#popup: HTMLElement;
 
 	constructor() {
 		super({
-			name: 'sdr-update-notify',
+			name: SdrUpdateNotify.elementName,
 			props: [{ name: 'message', value: '' }],
 			handlers: {
 				update: () => {
@@ -52,3 +54,5 @@ export class SdrUpdateNotify extends SdrComponent {
 		this.#popup.hidden = true;
 	}
 }
+
+registerComponent(SdrUpdateNotify);

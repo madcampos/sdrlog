@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 
-import type { SdrDialog } from '../../components/dialog/dialog';
+import { SdrDialog } from '../../components/dialog/dialog';
 import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../../public/data/data';
 import { SdrEditListItem } from '../../components/edit-list-item/edit-list-item';
 import type { SdrDropArea } from '../../components/drop-area/drop-area';
@@ -16,7 +16,7 @@ import { FALLBACK_COVER, fetchCover, LOADING_COVER } from '../../js/covers/fetch
 import { associateFileWithData } from '../../js/files-reader/files-reader';
 import { exportDataItem } from '../../js/data-operations/data-export';
 import { I18n } from '../../js/intl/translations';
-import { SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
 
 import template from './template.html?raw';
 import style from './style.css?raw';
@@ -54,6 +54,7 @@ export interface SdrItemDetails {
 
 export class SdrItemDetails extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
+	static readonly elementName = 'sdr-item-details';
 
 	#modal: SdrDialog | null;
 
@@ -63,7 +64,7 @@ export class SdrItemDetails extends SdrComponent {
 
 	constructor() {
 		super({
-			name: 'sdr-item-details',
+			name: SdrItemDetails.elementName,
 			watchedAttributes,
 			props: [
 				{ name: 'id', value: '', attributeName: 'id' },
@@ -449,7 +450,7 @@ export class SdrItemDetails extends SdrComponent {
 			style
 		});
 
-		this.#modal = this.root.querySelector<SdrDialog>('sdr-dialog');
+		this.#modal = this.root.querySelector<SdrDialog>(SdrDialog.elementName);
 
 		this.#cover = this.root.querySelector('#cover') as HTMLImageElement;
 		this.#coverDropArea = this.root.querySelector('#cover-drop-area') as SdrDropArea;
@@ -468,7 +469,7 @@ export class SdrItemDetails extends SdrComponent {
 				evt.preventDefault();
 				evt.stopPropagation();
 
-				const targetParent = target.closest('sdr-edit-list-item') as SdrEditListItem;
+				const targetParent = target.closest(SdrEditListItem.elementName) as SdrEditListItem;
 				const fileInfo = JSON.parse(targetParent.value) as FileForMaterial;
 
 				await openFile(fileInfo);
@@ -567,10 +568,10 @@ export class SdrItemDetails extends SdrComponent {
 	}
 
 	static updateFromURL(id: string, title: string) {
-		let modal = document.querySelector<SdrItemDetails>('sdr-item-details');
+		let modal = document.querySelector<SdrItemDetails>(SdrItemDetails.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-item-details') as SdrItemDetails;
+			modal = document.createElement(SdrItemDetails.elementName) as SdrItemDetails;
 
 			document.body.appendChild(modal);
 		}
@@ -579,10 +580,10 @@ export class SdrItemDetails extends SdrComponent {
 	}
 
 	static async openModal(id?: string, title?: string) {
-		let modal = document.querySelector<SdrItemDetails>('sdr-item-details');
+		let modal = document.querySelector<SdrItemDetails>(SdrItemDetails.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-item-details') as SdrItemDetails;
+			modal = document.createElement(SdrItemDetails.elementName) as SdrItemDetails;
 
 			document.body.appendChild(modal);
 		}
@@ -598,10 +599,10 @@ export class SdrItemDetails extends SdrComponent {
 	}
 
 	static closeModal() {
-		let modal = document.querySelector<SdrItemDetails>('sdr-item-details');
+		let modal = document.querySelector<SdrItemDetails>(SdrItemDetails.elementName);
 
 		if (!modal) {
-			modal = document.createElement('sdr-item-details') as SdrItemDetails;
+			modal = document.createElement(SdrItemDetails.elementName) as SdrItemDetails;
 
 			document.body.appendChild(modal);
 		}
@@ -609,3 +610,5 @@ export class SdrItemDetails extends SdrComponent {
 		modal.close();
 	}
 }
+
+registerComponent(SdrItemDetails);
