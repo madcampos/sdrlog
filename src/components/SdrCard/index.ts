@@ -92,7 +92,7 @@ export class SdrCard extends SdrComponent {
 
 		const thumb = this.root.querySelector('img') as HTMLImageElement;
 
-		thumb.src = `${import.meta.env.APP_PUBLIC_URL}thumbs/${id}.jpg`;
+		thumb.src = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${id}.jpg`;
 
 		thumb.addEventListener('error', async () => {
 			thumb.src = await getThumbUrl(id) || FALLBACK_COVER;

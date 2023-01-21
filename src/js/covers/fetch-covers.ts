@@ -16,7 +16,7 @@ export async function fetchCover(id: string) {
 	let currentCover = await getCover(id);
 
 	if (!currentCover) {
-		const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}covers/${id}.jpg`);
+		const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}images/covers/${id}.jpg`);
 
 		if (response.ok) {
 			const responseData = await response.blob();
