@@ -1,4 +1,4 @@
-import { SdrProgressOverlay } from '../../components/progress/progress';
+import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';

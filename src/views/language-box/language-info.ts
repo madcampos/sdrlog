@@ -1,6 +1,6 @@
-import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
-import { SdrDialog } from '../../components/dialog/dialog';
-import type { SdrSelect } from '../../components/edit-select/edit-select';
+import { registerComponent, SdrComponent } from '../../components/SdrComponent';
+import { SdrDialog } from '../../components/SdrDialog';
+import type { SdrSelect } from '../../components/SdrSelect';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 

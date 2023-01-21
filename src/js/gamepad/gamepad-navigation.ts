@@ -1,8 +1,8 @@
-import { SdrDialog } from '../../components/dialog/dialog';
-import type { SdrDropdown } from '../../components/dropdown-menu/dropdown-menu';
-import type { SdrCard } from '../../components/item-card/item-card';
+import { SdrDialog } from '../../components/SdrDialog';
+import type { SdrDropdown } from '../../components/SdrDropdown';
+import type { SdrCard } from '../../components/SdrCard';
 import type { SdrItemDetails } from '../../views/item-details/item-details';
-import type { SdrSearchBox } from '../../components/search-box/search-box';
+import type { SdrSearchBox } from '../../components/SdrSearchBox';
 
 import { GamepadEventNormalizer } from './gamepad-events';
 

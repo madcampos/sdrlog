@@ -1,5 +1,5 @@
 import { SdrComicBookReader } from './reader';
-import '../../components/button/button';
-import '../../components/menu-bar/menu-bar';
+import '../../components/SdrButton';
+import '../../components/SdrMenuBar';
 
 SdrComicBookReader.updateFromURL();

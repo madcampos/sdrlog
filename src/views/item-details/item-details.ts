@@ -1,22 +1,22 @@
 /* eslint-disable max-lines */
 
-import { SdrDialog } from '../../components/dialog/dialog';
+import { SdrDialog } from '../../components/SdrDialog';
 import type { FileForMaterial, IsoCode, Material, MaterialLink, MaterialStatus } from '../../data/data';
-import { SdrEditListItem } from '../../components/edit-list-item/edit-list-item';
-import type { SdrDropArea } from '../../components/drop-area/drop-area';
-import type { SdrEditBox } from '../../components/edit-box/edit-box';
-import type { SdrSelect } from '../../components/edit-select/edit-select';
-import type { SdrTextArea } from '../../components/edit-textarea/edit-textarea';
+import { SdrEditListItem } from '../../components/SdrEditListItem';
+import type { SdrDropArea } from '../../components/SdrDropArea';
+import type { SdrEditBox } from '../../components/SdrEditBox';
+import type { SdrSelect } from '../../components/SdrSelect';
+import type { SdrTextArea } from '../../components/SdrTextArea';
 
 import { getFilesForMaterial, getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
-import { SdrCard } from '../../components/item-card/item-card';
+import { SdrCard } from '../../components/SdrCard';
 import { getIconForFile, saveNewMaterialInfo } from '../../js/data-operations/create-material';
 import { openFile } from '../../js/files-reader/open-file';
 import { FALLBACK_COVER, fetchCover, LOADING_COVER } from '../../js/covers/fetch-covers';
 import { associateFileWithData } from '../../js/files-reader/files-reader';
 import { exportDataItem } from '../../js/data-operations/data-export';
 import { I18n } from '../../js/intl/translations';
-import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
 import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };

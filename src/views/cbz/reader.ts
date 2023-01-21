@@ -1,5 +1,5 @@
 import JSZip from 'jszip';
-import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';

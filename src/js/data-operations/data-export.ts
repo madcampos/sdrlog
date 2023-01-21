@@ -1,7 +1,7 @@
 import type { Material } from '../../data/data';
 import type { NewMaterialProperties } from './create-material';
 
-import { SdrProgressOverlay } from '../../components/progress/progress';
+import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getMaterials } from './idb-persistence';
 import { I18n } from '../intl/translations';
 import { Logger } from '../util/logger';

@@ -1,6 +1,6 @@
 import type Section from 'epubjs/types/section';
 import type { Location as BookLocation, NavItem, Rendition } from 'epubjs';
-import type { SdrButton } from '../../components/button/button';
+import type { SdrButton } from '../../components/SdrButton';
 
 import 'jszip';
 import { default as ePub } from 'epubjs';
@@ -8,7 +8,7 @@ import { default as ePub } from 'epubjs';
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';
 import { I18n } from '../../js/intl/translations';
-import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
 import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };

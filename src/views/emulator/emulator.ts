@@ -7,7 +7,7 @@ import nipplejs from 'nipplejs';
 import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../../js/files-reader/files-reader';
 import { I18n } from '../../js/intl/translations';
-import { registerComponent, SdrComponent } from '../../components/base/BaseComponent';
+import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
 import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };

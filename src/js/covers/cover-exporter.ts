@@ -1,4 +1,4 @@
-import { SdrProgressOverlay } from '../../components/progress/progress';
+import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
 import { I18n } from '../intl/translations';
 import { Logger } from '../util/logger';
