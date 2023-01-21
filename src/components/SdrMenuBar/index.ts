@@ -8,10 +8,10 @@ import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-ex
 import { requestDataFileFromUser } from '../../js/data-operations/data-import';
 import { exportDataFile } from '../../js/data-operations/data-export';
 import { updateSearchFilter } from '../SdrSearchBox/update-filter';
-import { SdrItemDetails } from '../../views/item-details/item-details';
-import { SdrInfoBox } from '../../views/info-box/info-box';
-import { SdrLanguageBox } from '../../views/language-box/language-info';
-import { SdrThemeBox } from '../../views/theme-box/theme-box';
+import { SdrItemDetails } from '../../views/SdrItemDetails';
+import { SdrInfoBox } from '../../views/SdrInfoBox';
+import { SdrLanguageBox } from '../../views/SdrLanguageBox';
+import { SdrThemeBox } from '../../views/SdrThemeBox';
 
 import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };

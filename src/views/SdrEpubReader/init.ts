@@ -1,4 +1,4 @@
-import { SdrEpubReader } from './reader';
+import { SdrEpubReader } from './index';
 import '../../components/SdrButton';
 import '../../components/SdrMenuBar';
 

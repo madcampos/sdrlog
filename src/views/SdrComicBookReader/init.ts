@@ -1,4 +1,4 @@
-import { SdrComicBookReader } from './reader';
+import { SdrComicBookReader } from './index';
 import '../../components/SdrButton';
 import '../../components/SdrMenuBar';
 

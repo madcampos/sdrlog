@@ -4,6 +4,7 @@ import type { SdrButton } from '../../components/SdrButton';
 
 import 'jszip';
 import { default as ePub } from 'epubjs';
+import darkTheme from './dark-theme.css?url';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
 import { getFilePermission } from '../../js/files-reader/files-reader';
@@ -134,8 +135,7 @@ export class SdrEpubReader extends SdrComponent {
 
 			this.#rendition = book.renderTo(this.#renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
 
-			// TODO: fix path
-			this.#rendition.themes.register('dark', './dark-theme.css');
+			this.#rendition.themes.register('dark', darkTheme);
 			this.#rendition.themes.select('dark');
 
 			this.#loadToc(toc);
