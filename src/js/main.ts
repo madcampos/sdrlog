@@ -1,4 +1,14 @@
-import type { WorkerMessage } from '../types/rpc-messages';
+import type { SdrCard } from '../components/SdrCard';
+import { registerSW } from 'virtual:pwa-register';
+
+registerSW({
+	onOfflineReady() {
+		// TODO: add notification
+	},
+	onNeedRefresh() {
+		// TODO: invoke refresh updater
+	}
+});
 
 function updateLoadStatus(status: string) {
 	const text = document.querySelector('#load-text') as HTMLHeadingElement;
@@ -8,35 +18,28 @@ function updateLoadStatus(status: string) {
 	progress.value += 1;
 }
 
-function updateAppTheme() {
-	const theme = localStorage.getItem('appTheme') ?? 'system';
-
-	document.body.classList.add(`theme-${theme}`);
-}
-
-async function init() {
+window.addEventListener('DOMContentLoaded', async () => {
 	const { I18n } = await import('./intl/translations');
 	const progressLoader = document.querySelector('#load-progress') as HTMLProgressElement;
 
 	await I18n.setLanguage(I18n.getLanguage());
 
-	updateAppTheme();
-
 	progressLoader.max = 8;
 
 	updateLoadStatus(I18n.t`Loading components.`);
-	await import('../components/components');
+	await import('../components');
+	await import('../views');
 	await import('./gamepad/gamepad-navigation');
 
-	updateLoadStatus(I18n.t`Adding menu bar.`);
+	const { SdrCard } = await import('../components/SdrCard');
+	const { SdrInfoBox } = await import('../views/SdrInfoBox');
+	const { SdrThemeBox } = await import('../views/SdrThemeBox');
+	const { SdrLanguageBox } = await import('../views/SdrLanguageBox');
+	const { SdrItemDetails } = await import('../views/SdrItemDetails');
 
 	updateLoadStatus(I18n.t`Importing helper functions.`);
 	const { fetchItems } = await import('./data-operations/data-import');
 	const { updateFiltersFromURL } = await import('../components/SdrSearchBox/update-filter');
-	const { SdrInfoBox } = await import('../views/info-box/info-box');
-	const { SdrThemeBox } = await import('../views/theme-box/theme-box');
-	const { SdrLanguageBox } = await import('../views/language-box/language-info');
-	const { SdrItemDetails } = await import('../views/item-details/item-details');
 	const { createComparer } = await import('./intl/formatting');
 
 	updateLoadStatus(I18n.t`Fetching items database.`);
@@ -47,70 +50,36 @@ async function init() {
 
 	const sorter = createComparer();
 	const sortedMaterials = materials.sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));
-	let matchedId: string | null = null;
-	let matchedTitle = '';
 
 	updateLoadStatus(I18n.t`Adding materials to the display.`);
 	progressLoader.max = sortedMaterials.length;
 	progressLoader.value = 0;
 
 	for (const material of sortedMaterials) {
-		const itemCard = document.createElement('item-card');
+		const itemCard = document.createElement(SdrCard.elementName) as SdrCard;
 		const [materialId] = material.sku;
 
 		itemCard.id = materialId;
 		itemCard.title = material.name;
-		itemCard.dataset.category = material.category;
-		itemCard.dataset.sku = material.sku.join(' ');
-		itemCard.dataset.type = material.type;
-		itemCard.dataset.edition = material.edition.toString();
-		itemCard.dataset.status = material.status ?? '';
+		itemCard.category = material.category;
+		itemCard.sku = material.sku;
+		itemCard.type = material.type;
+		itemCard.edition = material.edition;
+		itemCard.status = material.status ?? 'OK';
 		document.querySelector('main')?.appendChild(itemCard);
 
 		progressLoader.value += 1;
-
-		if (SdrItemDetails.checkForMatchingId(materialId)) {
-			matchedId = materialId;
-			matchedTitle = material.name;
-		}
-	}
-
-	if (matchedId) {
-		updateLoadStatus(I18n.t`Setting modal from URL.`);
-
-		SdrItemDetails.updateFromURL(matchedId, matchedTitle);
 	}
 
 	updateLoadStatus(I18n.t`Setting information from URL.`);
 
-
+	await SdrItemDetails.updateFromURL();
 	SdrInfoBox.updateFromURL();
 	SdrThemeBox.updateFromURL();
 	SdrLanguageBox.updateFromURL();
+
 	updateFiltersFromURL();
 
 	updateLoadStatus(I18n.t`Done!`);
 	document.querySelector('#splash-screen')?.remove();
-}
-
-window.addEventListener('load', async () => {
-	try {
-		const workerRegistration = await navigator.serviceWorker.register(`${import.meta.env.APP_PUBLIC_URL}sw.js`);
-
-		if (workerRegistration.active) {
-			await init();
-		}
-	} catch (err) {
-		console.error(err);
-
-		await init();
-	}
-}, { once: true });
-
-navigator.serviceWorker.addEventListener('message', async (evt) => {
-	const message = evt.data as WorkerMessage;
-
-	if (message.type === 'worker-ready') {
-		await init();
-	}
-}, { once: true });
+});

@@ -57,7 +57,8 @@
 		"jszip": "^3.10.1",
 		"marked": "^4.2.12",
 		"nipplejs": "^0.10.0",
-		"pdfjs-dist": "^3.2.146"
+		"pdfjs-dist": "^3.2.146",
+		"workbox-window": "^6.5.4"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.4.2",

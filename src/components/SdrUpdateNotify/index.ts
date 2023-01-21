@@ -1,6 +1,3 @@
-import { I18n } from '../../js/intl/translations';
-import type { WorkerMessage } from '../../types/rpc-messages';
-
 import { registerComponent, SdrComponent } from '../SdrComponent';
 
 import template from './template.html?raw' assert { type: 'html' };
@@ -29,20 +26,6 @@ export class SdrUpdateNotify extends SdrComponent {
 		});
 
 		this.#popup = this.root.querySelector('aside') as HTMLElement;
-
-		navigator.serviceWorker.addEventListener('message', (evt) => {
-			const message = evt.data as WorkerMessage;
-
-			if (message.type === 'update') {
-				const lastUpdated = localStorage.getItem('dataLastUpdated');
-
-				if (message.updatedAt !== lastUpdated) {
-					localStorage.setItem('dataLastUpdated', message.updatedAt);
-
-					this.show(I18n.t`Data updated, please refresh the app.`);
-				}
-			}
-		});
 	}
 
 	show(message: string) {
