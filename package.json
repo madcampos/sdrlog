@@ -40,7 +40,6 @@
 		"lint-staged": "lint-staged",
 		"prebuild:app": "npm run lint",
 		"build:app": "vite build",
-		"build:translations": "node build/find-translations.mjs",
 		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --scrape false --dark-mode --opaque false --log false public/icons/transparent",
 		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --log false public/icons/maskable",
 		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only --log false public/splash",
