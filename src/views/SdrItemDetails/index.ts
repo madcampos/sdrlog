@@ -402,7 +402,7 @@ export class SdrItemDetails extends SdrComponent {
 							cover: this.#coverFile
 						});
 
-						if (!document.querySelector(`item-card[id="${id}"]`)) {
+						if (!document.querySelector(`${SdrCard.elementName}[id="${id}"]`)) {
 							SdrCard.createCard({
 								name: this.name,
 								id,
@@ -477,11 +477,13 @@ export class SdrItemDetails extends SdrComponent {
 		});
 	}
 
-	show(title = I18n.t`New Material`, id?: string) {
+	show() {
 		let hash = '';
+		let title = I18n.t`New Material`;
 
-		if (id) {
-			hash = `#${id}`;
+		if (this.id) {
+			hash = `#item-${this.id}`;
+			title = this.name;
 		}
 
 		this.#modal?.show();
@@ -556,18 +558,7 @@ export class SdrItemDetails extends SdrComponent {
 		}
 	}
 
-	// TODO: remove method and merge with updateFromURL
-	static checkForMatchingId(idToCheck: string) {
-		if (window.location.hash === '#information') {
-			return false;
-		}
-
-		const id = window.location.hash.replace('#', '');
-
-		return id === idToCheck;
-	}
-
-	static updateFromURL(id: string, title: string) {
+	static async updateFromURL() {
 		let modal = document.querySelector<SdrItemDetails>(SdrItemDetails.elementName);
 
 		if (!modal) {
@@ -576,10 +567,14 @@ export class SdrItemDetails extends SdrComponent {
 			document.body.appendChild(modal);
 		}
 
-		modal.show(title, id);
+		if (window.location.hash.startsWith('#item-')) {
+			modal.id = window.location.hash.replace('#item-', '');
+			await modal.setMaterial(modal.id);
+			modal.show();
+		}
 	}
 
-	static async openModal(id?: string, title?: string) {
+	static async openModal(id?: string) {
 		let modal = document.querySelector<SdrItemDetails>(SdrItemDetails.elementName);
 
 		if (!modal) {
@@ -588,14 +583,15 @@ export class SdrItemDetails extends SdrComponent {
 			document.body.appendChild(modal);
 		}
 
-		modal.show(title, id);
+		modal.resetMaterial();
+		modal.isDisplaying = false;
 
 		if (id) {
-			await modal.setMaterial(id);
-		} else {
-			modal.resetMaterial();
-			modal.isDisplaying = false;
+			modal.id = id;
+			await modal.setMaterial(modal.id);
 		}
+
+		modal.show();
 	}
 
 	static closeModal() {

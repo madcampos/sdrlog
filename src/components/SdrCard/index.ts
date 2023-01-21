@@ -51,9 +51,7 @@ export class SdrCard extends SdrComponent {
 			style
 		});
 
-		this.addEventListener('click', async () => {
-			await SdrItemDetails.openModal(this.id, this.title);
-		});
+		this.addEventListener('click', async () => SdrItemDetails.openModal(this.id));
 
 		this.addEventListener('keyup', (evt) => {
 			if (evt.code === 'Space' || evt.code === 'Enter') {
