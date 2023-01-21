@@ -5,6 +5,10 @@ export interface MaterialLink {
 	url: string
 }
 
+export type MaterialEdition = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type MaterialPublisher = 'Catalyst Game Labs' | 'Cliffhanger Productions' | 'FASA Corporation' | 'Fantasy Productions' | 'Harebrained Schemes' | 'Pegasus Spiele' | 'WizKids Games' | 'Heyne Verlag' | 'Other' | 'Unofficial';
+
 export type MaterialCategory = 'rulebook' | 'sourcebook' | 'mission' | 'magazine' | 'novel' | 'videogame' | 'tcg' | 'boardgame' | 'misc';
 
 export type MaterialType = 'digital' | 'print' | 'scan' | 'ocr' | 'physical';
@@ -22,8 +26,8 @@ export interface Material {
 	name: string,
 	names?: Partial<Record<IsoCode, string>>,
 	description: string,
-	edition: number,
-	publisher: string[],
+	edition: MaterialEdition,
+	publisher: MaterialPublisher[],
 	gameDate?: MaterialGameDate,
 	releaseDate?: MaterialReleaseDate[],
 	status?: MaterialStatus,

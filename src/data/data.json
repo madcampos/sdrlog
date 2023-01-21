@@ -23,7 +23,7 @@
 			"publisher": [
 				"Fantasy Productions",
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2005-10-01",
@@ -31,7 +31,7 @@
 				"2007-06-04",
 				"2008-02-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -52,7 +52,7 @@
 			"edition": 4,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other",
+				"Other",
 				"Pegasus Spiele"
 			],
 			"releaseDate": [
@@ -60,7 +60,7 @@
 				"2009-01-01",
 				"2011-01-01"
 			],
-			"gameDate": "2070-08-01",
+			"gameDate": "2070-08",
 			"notes": "The German \"Bodytech\" contains the latest errata for \"augmentation\" as well as 5 additional cybersuites (which are twice as many as in the original)."
 		},
 		{
@@ -85,7 +85,7 @@
 			"publisher": [
 				"Fantasy Productions",
 				"Catalyst Game Labs",
-				"other",
+				"Other",
 				"Pegasus Spiele"
 			],
 			"releaseDate": [
@@ -94,7 +94,7 @@
 				"2009-01-01",
 				"2007-09-05"
 			],
-			"gameDate": "2070-04-01",
+			"gameDate": "2070-04",
 			"notes": "The German 2nd edition has an aditional translation of \"Digital Grimoire\"."
 		},
 		{
@@ -119,7 +119,7 @@
 				"2001-01-01",
 				"2002-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -144,7 +144,7 @@
 				"1999-06-01",
 				"2004-02-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -169,7 +169,7 @@
 				"1999-04-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -194,7 +194,7 @@
 				"2001-02-01",
 				"2003-06-01"
 			],
-			"gameDate": "2062-01-01"
+			"gameDate": "2062-01"
 		},
 		{
 			"sku": [
@@ -220,7 +220,7 @@
 				"2001-01-01",
 				"2003-06-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -241,13 +241,13 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2006-03-01",
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -265,7 +265,7 @@
 			"releaseDate": [
 				"2011-08-17"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -288,7 +288,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2009-03-12",
@@ -296,7 +296,7 @@
 				"2010-01-01",
 				"2012-09-10"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -313,13 +313,13 @@
 			"edition": 4,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2008-11-15",
 				"2011-05-18"
 			],
-			"gameDate": "2070-01-01",
+			"gameDate": "2070-01",
 			"notes": "The German edition of Street Magic incorporates the translation of Digital Grimoire."
 		},
 		{
@@ -343,7 +343,7 @@
 				"2012-02-15",
 				"2012-08-18"
 			],
-			"gameDate": "2074-08-01"
+			"gameDate": "2074-08"
 		},
 		{
 			"sku": [
@@ -365,14 +365,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2008-08-20",
 				"2009-10-22",
 				"2015-04-30"
 			],
-			"gameDate": "2071-07-01"
+			"gameDate": "2071-07"
 		},
 		{
 			"sku": [
@@ -393,13 +393,13 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2006-03-01",
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -421,7 +421,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2008-07-29",
@@ -430,7 +430,7 @@
 				"2010-03-01",
 				"2014-10-31"
 			],
-			"gameDate": "2071-05-01"
+			"gameDate": "2071-05"
 		},
 		{
 			"sku": [
@@ -450,7 +450,7 @@
 			"edition": 4,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other",
+				"Other",
 				"Pegasus Spiele"
 			],
 			"releaseDate": [
@@ -459,7 +459,7 @@
 				"2011-06-01",
 				"2013-07-13"
 			],
-			"gameDate": "2071-04-01",
+			"gameDate": "2071-04",
 			"notes": "The German edition has aditional equipamente regarding the ADL."
 		},
 		{
@@ -486,7 +486,7 @@
 				"2001-01-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -509,7 +509,7 @@
 			"releaseDate": [
 				"1996-10-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -532,7 +532,7 @@
 			"releaseDate": [
 				"1996-07-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -555,7 +555,7 @@
 			"releaseDate": [
 				"1997-03-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -577,7 +577,7 @@
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -599,7 +599,7 @@
 			"releaseDate": [
 				"1996-04-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -623,7 +623,7 @@
 				"1995-07-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -648,7 +648,7 @@
 				"1995-05-01",
 				"2003-06-01"
 			],
-			"gameDate": "2055-01-01"
+			"gameDate": "2055-01"
 		},
 		{
 			"sku": [
@@ -673,7 +673,7 @@
 				"1996-01-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -698,7 +698,7 @@
 				"1995-10-01",
 				"2003-06-01"
 			],
-			"gameDate": "2056-01-01"
+			"gameDate": "2056-01"
 		},
 		{
 			"sku": [
@@ -723,7 +723,7 @@
 				"1997-05-01",
 				"2003-06-01"
 			],
-			"gameDate": "2058-01-01"
+			"gameDate": "2058-01"
 		},
 		{
 			"sku": [
@@ -747,7 +747,7 @@
 				"1998-07-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -772,7 +772,7 @@
 				"1998-05-01",
 				"2003-06-01"
 			],
-			"gameDate": "2059-01-01"
+			"gameDate": "2059-01"
 		},
 		{
 			"sku": [
@@ -796,7 +796,7 @@
 				"1999-01-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -821,7 +821,7 @@
 				"1998-10-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -845,7 +845,7 @@
 				"1998-03-01",
 				"2003-06-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -870,7 +870,7 @@
 				"1997-10-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -895,7 +895,7 @@
 				"1997-07-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -920,7 +920,7 @@
 				"1998-01-01",
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -945,7 +945,7 @@
 				"1997-11-01",
 				"2003-06-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -963,7 +963,7 @@
 			"releaseDate": [
 				"2013-12-27"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -990,7 +990,7 @@
 				"FASA Corporation",
 				"Fantasy Productions",
 				"WizKids Games",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1998-09-01",
@@ -998,7 +998,7 @@
 				"2001-01-01",
 				"2004-02-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -1016,7 +1016,7 @@
 			"releaseDate": [
 				"2013-11-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -1043,7 +1043,7 @@
 				"2016-11-30",
 				"2017-05-29"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -1061,7 +1061,7 @@
 			"releaseDate": [
 				"2013-11-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -1086,7 +1086,7 @@
 				"2017-10-19",
 				"2017-11-05"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -1107,7 +1107,7 @@
 				"1998-12-01",
 				"2004-07-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -1129,7 +1129,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -1137,7 +1137,7 @@
 				"2003-01-01",
 				"2004-04-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -1161,7 +1161,7 @@
 				"1991-12-01",
 				"1996-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"notes": "The german version of Rigger Black Book updated to the rules of the 2nd edition of Shadowrun. It also contains additional vehicles from other sourcebooks that had been published between the original release of the Rigger Black Book and 1996, for example Corporate Security Handbook and Fields of Fire."
 		},
 		{
@@ -1188,7 +1188,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-06-01",
@@ -1197,7 +1197,7 @@
 				"1995-01-01",
 				"1997-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -1218,14 +1218,14 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-06-01",
 				"1994-01-01",
 				"1995-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -1255,7 +1255,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-01-01",
@@ -1265,7 +1265,7 @@
 				"1996-01-01",
 				"1997-06-01"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "The japanese edition has an aditional 10 pages about the city of Tokyo and the shadows of Japan."
 		},
 		{
@@ -1286,7 +1286,7 @@
 				"1991-07-01",
 				"2011-08-31"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -1309,7 +1309,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -1318,7 +1318,7 @@
 				"1991-01-01",
 				"2010-02-15"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -1339,7 +1339,7 @@
 				"1999-08-01",
 				"2005-02-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -1357,7 +1357,7 @@
 			"releaseDate": [
 				"1990-07-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -1381,7 +1381,7 @@
 				"1989-01-01",
 				"1993-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -1409,7 +1409,7 @@
 				"FASA Corporation",
 				"Fantasy Productions",
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1989-01-01",
@@ -1422,7 +1422,7 @@
 				"1998-01-01",
 				"2010-03-02"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -1446,7 +1446,7 @@
 				"2016-05-28",
 				"2016-06-16"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "In contrast to the original English version, the German edition contains alternative model names to the individual vehicles and drones in the book. These were created among other things by users of the Pegasus forum."
 		},
 		{
@@ -1469,7 +1469,7 @@
 			"releaseDate": [
 				"2012-05-01"
 			],
-			"gameDate": "2072-11-01"
+			"gameDate": "2072-11"
 		},
 		{
 			"sku": [
@@ -1491,7 +1491,7 @@
 			"releaseDate": [
 				"2011-07-01"
 			],
-			"gameDate": "2073-07-01"
+			"gameDate": "2073-07"
 		},
 		{
 			"sku": [
@@ -1512,14 +1512,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-06-03",
 				"2014-11-06",
 				"2016-12-27"
 			],
-			"gameDate": "2076-05-01"
+			"gameDate": "2076-05"
 		},
 		{
 			"sku": [
@@ -1542,7 +1542,7 @@
 				"2012-07-01",
 				"2012-10-28"
 			],
-			"gameDate": "2074-07-01"
+			"gameDate": "2074-07"
 		},
 		{
 			"sku": [
@@ -1564,7 +1564,7 @@
 			"releaseDate": [
 				"2011-06-01"
 			],
-			"gameDate": "2073-06-01"
+			"gameDate": "2073-06"
 		},
 		{
 			"sku": [
@@ -1588,7 +1588,7 @@
 				"2011-11-25",
 				"2013-01-19"
 			],
-			"gameDate": "2072-07-01",
+			"gameDate": "2072-07",
 			"notes": "The revised version is the colored version included in \"Runner's Black Book\"."
 		},
 		{
@@ -1612,7 +1612,7 @@
 				"2011-05-01",
 				"2011-11-07"
 			],
-			"gameDate": "2072-09-01"
+			"gameDate": "2072-09"
 		},
 		{
 			"sku": [
@@ -1635,7 +1635,7 @@
 				"2011-01-01",
 				"2012-09-11"
 			],
-			"gameDate": "2073-02-01"
+			"gameDate": "2073-02"
 		},
 		{
 			"sku": [
@@ -1656,14 +1656,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2013-12-14",
 				"2013-03-23",
 				"2016-12-27"
 			],
-			"gameDate": "2075-11-01",
+			"gameDate": "2075-11",
 			"notes": "The German edition contains aditional material about Europe."
 		},
 		{
@@ -1687,7 +1687,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-12-18",
@@ -1698,7 +1698,7 @@
 				"2017-03-01",
 				"2018-01-01"
 			],
-			"gameDate": "2076-01-01",
+			"gameDate": "2076-01",
 			"notes": "The German version has aditional life modules based on the ADL."
 		},
 		{
@@ -1721,7 +1721,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-06-30",
@@ -1730,7 +1730,7 @@
 				"2016-02-12",
 				"2017-10-19"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "The German version has aditional spells and traditions."
 		},
 		{
@@ -1749,7 +1749,7 @@
 			"releaseDate": [
 				"2014-08-11"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Set of cards available at Gen Con 2014."
 		},
@@ -1775,7 +1775,7 @@
 				"2015-05-26",
 				"2015-10-01"
 			],
-			"gameDate": "2076-01-01"
+			"gameDate": "2076-01"
 		},
 		{
 			"sku": [
@@ -1796,12 +1796,12 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2015-06-01"
 			],
-			"gameDate": "2077-01-01"
+			"gameDate": "2077-01"
 		},
 		{
 			"sku": [
@@ -1823,7 +1823,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-04-09",
@@ -1833,7 +1833,7 @@
 				"2015-07-31",
 				"2017-10-20"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -1851,7 +1851,7 @@
 			"releaseDate": [
 				"2014-08-11"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Print only set of gear cards, Available at Gen Con 2014"
 		},
@@ -1872,13 +1872,13 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2013-12-14",
 				"2014-02-03"
 			],
-			"gameDate": "2075-12-01"
+			"gameDate": "2075-12"
 		},
 		{
 			"sku": [
@@ -1899,14 +1899,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2013-10-25",
 				"2013-12-11",
 				"2016-12-27"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -1933,7 +1933,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2013-06-14",
@@ -1944,7 +1944,7 @@
 				"2014-05-01",
 				"2015-07-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -1967,7 +1967,7 @@
 				"2011-04-26",
 				"2011-10-20"
 			],
-			"gameDate": "2072-08-01"
+			"gameDate": "2072-08"
 		},
 		{
 			"sku": [
@@ -1992,7 +1992,7 @@
 				"1994-11-01",
 				"2003-06-01"
 			],
-			"gameDate": "2055-01-01"
+			"gameDate": "2055-01"
 		},
 		{
 			"sku": [
@@ -2017,7 +2017,7 @@
 				"1991-02-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -2042,7 +2042,7 @@
 				"1990-12-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -2067,7 +2067,7 @@
 				"1991-06-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -2091,7 +2091,7 @@
 				"1990-02-01",
 				"1992-10-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2109,7 +2109,7 @@
 			"releaseDate": [
 				"1994-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2127,7 +2127,7 @@
 			"releaseDate": [
 				"1994-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2145,7 +2145,7 @@
 			"releaseDate": [
 				"1995-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2163,7 +2163,7 @@
 			"releaseDate": [
 				"1998-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2181,7 +2181,7 @@
 			"releaseDate": [
 				"2002-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2200,7 +2200,7 @@
 				"1999-01-01",
 				"2002-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2218,7 +2218,7 @@
 			"releaseDate": [
 				"2002-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2236,7 +2236,7 @@
 			"releaseDate": [
 				"2003-07-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2254,7 +2254,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2273,7 +2273,7 @@
 				"2002-01-01",
 				"2005-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2291,7 +2291,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2309,7 +2309,7 @@
 			"releaseDate": [
 				"2005-09-02"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2328,7 +2328,7 @@
 				"2001-01-01",
 				"2006-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2347,7 +2347,7 @@
 				"2001-01-01",
 				"2007-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2366,7 +2366,7 @@
 				"2003-01-01",
 				"2007-04-02"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2385,7 +2385,7 @@
 				"2005-01-01",
 				"2007-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2404,7 +2404,7 @@
 				"2002-09-01",
 				"2007-11-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2423,7 +2423,7 @@
 				"2004-09-01",
 				"2007-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2442,7 +2442,7 @@
 				"2003-03-01",
 				"2008-05-05"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2461,7 +2461,7 @@
 				"2006-01-01",
 				"2008-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2480,7 +2480,7 @@
 				"2000-01-01",
 				"2003-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2499,7 +2499,7 @@
 				"2001-01-01",
 				"2003-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2517,7 +2517,7 @@
 			"releaseDate": [
 				"2004-07-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2536,7 +2536,7 @@
 				"2002-01-01",
 				"2004-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2554,7 +2554,7 @@
 			"releaseDate": [
 				"2009-02-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -2572,7 +2572,7 @@
 			"releaseDate": [
 				"2003-06-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2591,7 +2591,7 @@
 			"releaseDate": [
 				"2003-12-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2610,7 +2610,7 @@
 			"releaseDate": [
 				"2005-04-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2629,7 +2629,7 @@
 			"releaseDate": [
 				"2005-07-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2648,7 +2648,7 @@
 			"releaseDate": [
 				"2005-05-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2667,7 +2667,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2686,7 +2686,7 @@
 			"releaseDate": [
 				"2005-11-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2705,7 +2705,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2724,7 +2724,7 @@
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2738,12 +2738,12 @@
 			"description": "Dresden 2061: Bei einem Unfall in einer Chemiefabrik, kommen ein Runnerteam und alles beteiligte Sicherheitspersonal bis auf Seth Morgan ums Leben. Er verliert durch die schweren Verletzungen und eine Vergiftung, einen großen Teil seiner Essenz, sowie seine magischen Fähigkeiten komplett. Seth Morgan findet sich zwei Jahre später in der Unterschicht Dresdens wieder. Seine Vergiftung konnte er nicht heilen, aber einen Teil seiner Magie mit einem experimentellen Medikament wieder herstellen. Dieses ist eigentlich als Gift erfunden worden und er ist inzwischen von der Substanz abhängig. Seth muss ständig Geld auftreiben um seine Medikamente zu bezahlen. Ein Fernziel ist es, Geld in die Forschung nach einer endgültigen Heilung stecken zu können. Seine letzte Möglichkeit ist es, sich auf die Seite der ehemaligen Gegner zu schlagen und ein Runner zu werden. Es gibt jedoch einen wichtigen Unterschied: Es geht für Seth nicht um Geld, sondern um Alles.",
 			"edition": 2,
 			"publisher": [
-				"unofficial"
+				"Unofficial"
 			],
 			"releaseDate": [
 				"2010-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "outofscope",
 			"notes": "This is a fan romance published without consent or licensing."
 		},
@@ -2763,7 +2763,7 @@
 			"releaseDate": [
 				"2008-02-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2782,7 +2782,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2801,7 +2801,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"status": "missing"
 		},
 		{
@@ -2820,7 +2820,7 @@
 			"releaseDate": [
 				"2018-10-19"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -2838,7 +2838,7 @@
 			"releaseDate": [
 				"2018-03-29"
 			],
-			"gameDate": "2078-01-01",
+			"gameDate": "2078-01",
 			"status": "missing"
 		},
 		{
@@ -2857,7 +2857,7 @@
 			"releaseDate": [
 				"2018-07-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "missing"
 		},
 		{
@@ -2876,7 +2876,7 @@
 			"releaseDate": [
 				"2018-09-21"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -2899,7 +2899,7 @@
 			"releaseDate": [
 				"2006-10-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -2918,7 +2918,7 @@
 			"releaseDate": [
 				"2006-03-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -2937,7 +2937,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -2960,7 +2960,7 @@
 			"releaseDate": [
 				"2006-07-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -2983,7 +2983,7 @@
 			"releaseDate": [
 				"2006-05-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -3005,7 +3005,7 @@
 			"releaseDate": [
 				"1992-12-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -3030,7 +3030,7 @@
 				"1994-04-01",
 				"2003-06-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -3055,7 +3055,7 @@
 				"1993-06-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -3079,7 +3079,7 @@
 				"1994-08-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -3103,7 +3103,7 @@
 				"1994-02-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -3128,7 +3128,7 @@
 				"1993-04-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -3152,7 +3152,7 @@
 				"1992-06-01",
 				"2003-06-01"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -3176,7 +3176,7 @@
 				"1992-02-01",
 				"2003-07-01"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -3198,7 +3198,7 @@
 			"releaseDate": [
 				"1997-02-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -3222,7 +3222,7 @@
 				"1992-08-01",
 				"2003-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -3240,7 +3240,7 @@
 			"releaseDate": [
 				"2005-11-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -3262,7 +3262,7 @@
 			"releaseDate": [
 				"2015-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3284,7 +3284,7 @@
 			"releaseDate": [
 				"2014-12-28"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3306,7 +3306,7 @@
 			"releaseDate": [
 				"2016-02-06"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3328,7 +3328,7 @@
 			"releaseDate": [
 				"2015-05-26"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3346,7 +3346,7 @@
 			"releaseDate": [
 				"2014-12-28"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3369,7 +3369,7 @@
 				"2014-07-02",
 				"2014-08-26"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3388,7 +3388,7 @@
 				"2010-05-14",
 				"2010-12-22"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -3410,7 +3410,7 @@
 			"releaseDate": [
 				"2015-06-13"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3428,7 +3428,7 @@
 			"releaseDate": [
 				"2014-08-10"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3446,7 +3446,7 @@
 			"releaseDate": [
 				"2013-09-16"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3464,7 +3464,7 @@
 			"releaseDate": [
 				"2015-08-19"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3482,7 +3482,7 @@
 			"releaseDate": [
 				"2014-04-22"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3504,7 +3504,7 @@
 			"releaseDate": [
 				"2015-03-19"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3526,7 +3526,7 @@
 			"releaseDate": [
 				"2016-09-03"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3544,7 +3544,7 @@
 			"releaseDate": [
 				"2016-02-06"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "In 2021 Catalyst rereleased the antology and the tarot with a new cover and bigger cards."
 		},
 		{
@@ -3563,7 +3563,7 @@
 			"releaseDate": [
 				"2016-12-02"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3581,7 +3581,7 @@
 			"releaseDate": [
 				"2012-11-10"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -3600,13 +3600,13 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-09-25",
 				"2014-12-10"
 			],
-			"gameDate": "2076-09-01"
+			"gameDate": "2076-09"
 		},
 		{
 			"sku": [
@@ -3624,7 +3624,7 @@
 			"releaseDate": [
 				"2015-10-01"
 			],
-			"gameDate": "2077-10-01"
+			"gameDate": "2077-10"
 		},
 		{
 			"sku": [
@@ -3648,7 +3648,7 @@
 				"2016-05-16",
 				"2017-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3665,12 +3665,12 @@
 			"edition": 5,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3688,7 +3688,7 @@
 			"releaseDate": [
 				"2015-04-01"
 			],
-			"gameDate": "2077-01-01"
+			"gameDate": "2077-01"
 		},
 		{
 			"sku": [
@@ -3705,12 +3705,12 @@
 			"edition": 5,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2015-01-01"
 			],
-			"gameDate": "2076-12-01"
+			"gameDate": "2076-12"
 		},
 		{
 			"sku": [
@@ -3728,7 +3728,7 @@
 			"releaseDate": [
 				"2016-10-22"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3745,12 +3745,12 @@
 			"edition": 5,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2015-09-01"
 			],
-			"gameDate": "2077-01-01"
+			"gameDate": "2077-01"
 		},
 		{
 			"sku": [
@@ -3767,12 +3767,12 @@
 			"edition": 5,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2015-02-17"
 			],
-			"gameDate": "2077-02-01"
+			"gameDate": "2077-02"
 		},
 		{
 			"sku": [
@@ -3795,7 +3795,7 @@
 			"releaseDate": [
 				"2016-07-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3821,7 +3821,7 @@
 				"1994-01-01",
 				"2005-08-26"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -3841,14 +3841,14 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1990-04-01",
 				"1991-01-01",
 				"1992-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -3870,7 +3870,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -3878,7 +3878,7 @@
 				"1995-01-01",
 				"2009-08-06"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -3896,7 +3896,7 @@
 			"releaseDate": [
 				"1992-09-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -3920,7 +3920,7 @@
 				"2016-03-02",
 				"2016-05-25"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -3942,7 +3942,7 @@
 			"releaseDate": [
 				"2015-10-01"
 			],
-			"gameDate": "2077-11-01"
+			"gameDate": "2077-11"
 		},
 		{
 			"sku": [
@@ -3963,14 +3963,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-05-15",
 				"2014-10-10",
 				"2015-05-03"
 			],
-			"gameDate": "2076-04-01",
+			"gameDate": "2076-04",
 			"notes": "The German version has aditional material about the ADL."
 		},
 		{
@@ -3990,12 +3990,12 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2015-05-01"
 			],
-			"gameDate": "2076-09-01",
+			"gameDate": "2076-09",
 			"notes": "The German Edition has an aditional adventure for German characters called \"Operation Baybreaker\"."
 		},
 		{
@@ -4020,7 +4020,7 @@
 				"2016-12-09",
 				"2017-10-19"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -4038,7 +4038,7 @@
 			"releaseDate": [
 				"2015-04-01"
 			],
-			"gameDate": "2077-01-01"
+			"gameDate": "2077-01"
 		},
 		{
 			"sku": [
@@ -4059,7 +4059,7 @@
 			"releaseDate": [
 				"2012-04-01"
 			],
-			"gameDate": "2074-03-01"
+			"gameDate": "2074-03"
 		},
 		{
 			"sku": [
@@ -4082,7 +4082,7 @@
 				"2011-12-20",
 				"2012-05-23"
 			],
-			"gameDate": "2073-12-01"
+			"gameDate": "2073-12"
 		},
 		{
 			"sku": [
@@ -4100,7 +4100,7 @@
 			"releaseDate": [
 				"2012-01-01"
 			],
-			"gameDate": "2073-12-01"
+			"gameDate": "2073-12"
 		},
 		{
 			"sku": [
@@ -4122,7 +4122,7 @@
 				"2012-06-01",
 				"2012-10-09"
 			],
-			"gameDate": "2074-05-01"
+			"gameDate": "2074-05"
 		},
 		{
 			"sku": [
@@ -4145,7 +4145,7 @@
 				"2011-03-01",
 				"2011-10-20"
 			],
-			"gameDate": "2072-08-01"
+			"gameDate": "2072-08"
 		},
 		{
 			"sku": [
@@ -4163,7 +4163,7 @@
 			"releaseDate": [
 				"2010-02-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -4181,7 +4181,7 @@
 			"releaseDate": [
 				"2013-01-12"
 			],
-			"gameDate": "2074-01-01"
+			"gameDate": "2074-01"
 		},
 		{
 			"sku": [
@@ -4199,7 +4199,7 @@
 			"releaseDate": [
 				"2010-03-01"
 			],
-			"gameDate": "2072-03-01"
+			"gameDate": "2072-03"
 		},
 		{
 			"sku": [
@@ -4217,7 +4217,7 @@
 			"releaseDate": [
 				"2009-03-22"
 			],
-			"gameDate": "2072-10-01"
+			"gameDate": "2072-10"
 		},
 		{
 			"sku": [
@@ -4240,7 +4240,7 @@
 				"2013-01-13",
 				"2013-02-27"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -4259,14 +4259,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-12-01",
 				"2015-02-28",
 				"2018-01-01"
 			],
-			"gameDate": "2076-04-01"
+			"gameDate": "2076-04"
 		},
 		{
 			"sku": [
@@ -4284,7 +4284,7 @@
 			"releaseDate": [
 				"2012-12-01"
 			],
-			"gameDate": "2074-12-01"
+			"gameDate": "2074-12"
 		},
 		{
 			"sku": [
@@ -4302,7 +4302,7 @@
 			"releaseDate": [
 				"2013-02-01"
 			],
-			"gameDate": "2075-06-01"
+			"gameDate": "2075-06"
 		},
 		{
 			"sku": [
@@ -4320,7 +4320,7 @@
 			"releaseDate": [
 				"2013-08-01"
 			],
-			"gameDate": "2075-08-01"
+			"gameDate": "2075-08"
 		},
 		{
 			"sku": [
@@ -4338,7 +4338,7 @@
 			"releaseDate": [
 				"2012-09-05"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -4361,7 +4361,7 @@
 				"2012-07-13",
 				"2012-09-30"
 			],
-			"gameDate": "2074-02-01"
+			"gameDate": "2074-02"
 		},
 		{
 			"sku": [
@@ -4379,7 +4379,7 @@
 			"releaseDate": [
 				"2013-05-01"
 			],
-			"gameDate": "2075-02-01"
+			"gameDate": "2075-02"
 		},
 		{
 			"sku": [
@@ -4397,7 +4397,7 @@
 			"releaseDate": [
 				"2013-03-01"
 			],
-			"gameDate": "2074-12-01"
+			"gameDate": "2074-12"
 		},
 		{
 			"sku": [
@@ -4420,7 +4420,7 @@
 				"2012-11-01",
 				"2015-02-16"
 			],
-			"gameDate": "2074-11-01"
+			"gameDate": "2074-11"
 		},
 		{
 			"sku": [
@@ -4440,7 +4440,7 @@
 				"1997-06-01",
 				"2011-07-14"
 			],
-			"gameDate": "2058-02-01"
+			"gameDate": "2058-02"
 		},
 		{
 			"sku": [
@@ -4459,7 +4459,7 @@
 			"releaseDate": [
 				"1995-07-01"
 			],
-			"gameDate": "2056-05-01"
+			"gameDate": "2056-05"
 		},
 		{
 			"sku": [
@@ -4480,7 +4480,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1999-03-01",
@@ -4489,7 +4489,7 @@
 				"2003-01-01",
 				"2005-02-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -4508,7 +4508,7 @@
 			"releaseDate": [
 				"1998-04-01"
 			],
-			"gameDate": "2059-02-01"
+			"gameDate": "2059-02"
 		},
 		{
 			"sku": [
@@ -4526,7 +4526,7 @@
 			"releaseDate": [
 				"1994-11-01"
 			],
-			"gameDate": "2055-05-01",
+			"gameDate": "2055-05",
 			"notes": "This is a box set with two books: one for players and another for GMs."
 		},
 		{
@@ -4547,7 +4547,7 @@
 				"1996-03-01",
 				"2010-10-28"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -4573,7 +4573,7 @@
 				"1997-01-01",
 				"2005-08-26"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "In the German translation it misses two chapters of the original publication (\"One-way Communication\" and \"Guarding the Till\")"
 		},
 		{
@@ -4591,7 +4591,7 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -4599,7 +4599,7 @@
 				"2000-01-01",
 				"2005-03-17"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -4616,7 +4616,7 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -4624,7 +4624,7 @@
 				"1994-01-01",
 				"2005-03-17"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -4647,7 +4647,7 @@
 				"2000-01-01",
 				"2002-01-01"
 			],
-			"gameDate": "2061-08-01"
+			"gameDate": "2061-08"
 		},
 		{
 			"sku": [
@@ -4670,7 +4670,7 @@
 			"releaseDate": [
 				"2016-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -4690,7 +4690,7 @@
 				"1991-12-01",
 				"2015-03-11"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -4716,7 +4716,7 @@
 				"1998-01-01",
 				"2010-06-06"
 			],
-			"gameDate": "2055-09-01"
+			"gameDate": "2055-09"
 		},
 		{
 			"sku": [
@@ -4734,7 +4734,7 @@
 			"releaseDate": [
 				"1994-12-01"
 			],
-			"gameDate": "2055-08-01"
+			"gameDate": "2055-08"
 		},
 		{
 			"sku": [
@@ -4758,7 +4758,7 @@
 				"1995-12-01",
 				"1997-10-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -4784,7 +4784,7 @@
 				"1997-01-01",
 				"2009-08-20"
 			],
-			"gameDate": "2056-03-01"
+			"gameDate": "2056-03"
 		},
 		{
 			"sku": [
@@ -4802,7 +4802,7 @@
 			"releaseDate": [
 				"1994-10-01"
 			],
-			"gameDate": "2055-03-01"
+			"gameDate": "2055-03"
 		},
 		{
 			"sku": [
@@ -4828,7 +4828,7 @@
 				"1996-01-01",
 				"2015-03-11"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -4848,7 +4848,7 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -4857,7 +4857,7 @@
 				"1997-01-01",
 				"2013-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -4875,7 +4875,7 @@
 			"releaseDate": [
 				"1994-06-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -4894,7 +4894,7 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Fantasy Productions",
 				"Catalyst Game Labs"
 			],
@@ -4904,7 +4904,7 @@
 				"1995-01-01",
 				"2010-03-02"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -4922,7 +4922,7 @@
 			"releaseDate": [
 				"1996-06-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -4940,7 +4940,7 @@
 			"releaseDate": [
 				"1991-09-01"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -4960,7 +4960,7 @@
 				"1991-05-01",
 				"2015-03-11"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -4977,7 +4977,7 @@
 			"edition": 1,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -4985,7 +4985,7 @@
 				"1994-06-01",
 				"2013-03-13"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -5003,7 +5003,7 @@
 			"releaseDate": [
 				"1994-02-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -5022,7 +5022,7 @@
 				"1992-01-01",
 				"1993-01-01"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "In the English translation \"Germany Sourcebook\" the following chapters are missing from the original \"Germany in the Shadow\":\n\t- \"The eyes of the Riggers\" - short story / novel excerpt\n\t- \"Hamburg: Venice of the North\"\n\t- \"Connections\"\n\t- \"Archetypes\"\n\t- \"Equipment\" and\n\t- the map of the ADL\n\nSome of the other chapters are arranged and arranged in completely different order. In addition, the English translation also contains a glossary with pronunciation tips and the chapter \"Game Information\" In addition, almost all inGame advertising of the German original (including the color pages) was replaced by completely different advertisements, and also replaced part of the original Shadowtalks to certain, particularly bizarre ideas of German authors (such as the \" Gore \" in Berlin) to relativize."
 		},
 		{
@@ -5041,7 +5041,7 @@
 			"releaseDate": [
 				"1998-01-01"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "The German version of The Lands of Promisse (Tír Tairngire & Tír na nÓg), contains the elemental parts of the original issues of Tir Tairngire, Tír na nÓg and as a world first publication a view into Pomorya, the german elvenstate."
 		},
 		{
@@ -5060,7 +5060,7 @@
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "Combines material of Native American Nations Volumes 1 & 2 as well as the Neo-Anarchists Guide to North America into one volume. Not included are the Native American Nation's adventures and the description of California Free State and San Francisco."
 		},
 		{
@@ -5079,7 +5079,7 @@
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "A German adventure book with 4 short-adventures."
 		},
 		{
@@ -5098,7 +5098,7 @@
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "\"Schlagschatten\" (Drop Shadow) is a German Shadowrun adventure collection set in the Germany of 2053. It contains three adventures."
 		},
 		{
@@ -5117,7 +5117,7 @@
 			"releaseDate": [
 				"2003-01-01"
 			],
-			"gameDate": "2062-01-01",
+			"gameDate": "2062-01",
 			"notes": "This sourcebook is the German translation of two original Shadowrun titles: Threats and Threats 2"
 		},
 		{
@@ -5136,7 +5136,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2063-01-01",
+			"gameDate": "2063-01",
 			"notes": "It mainly deals with areas of the ADL society that could not be covered in detail in Deutschland in den Schatten II: politics, police , judiciary and prison system, magic - from the university magician training on the witches and the Theurgen Westphalens to the psionics - as well as the media, professional sports , the neo-anarchists in the east of the re-divided Berlin and various subcultures."
 		},
 		{
@@ -5155,7 +5155,7 @@
 			"releaseDate": [
 				"2001-01-01"
 			],
-			"gameDate": "2062-01-01",
+			"gameDate": "2062-01",
 			"notes": "\"Deutschland in den Schatten II\" (Germany in the Shadows II) is the successor to the Germany Sourcebook. It details the German territories in the year 2062."
 		},
 		{
@@ -5174,7 +5174,7 @@
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2058-01-01",
+			"gameDate": "2058-01",
 			"notes": "The book is inGame 2058, after Dunkelzahn's death, and includes a comprehensive chapter of Austria . In addition, there is a \"culture shock\" chapter for the ADL that describes life and work, fashion lawmakers, cultural trends and subcultures in the Alliance and was intended as a German equivalent to the American \"Neo-Anarchists' Guide to Real Life\". It also contains updates on Proteus AG and the Draco Foundation in the Alliance and on Berlin after the corporate invasion, as well as one chapter for SOX and one for Bremen. Finally, the book is rounded off by a short Switzerland-update."
 		},
 		{
@@ -5188,12 +5188,12 @@
 			"description": "Everything about Tokyo in 2054\nFrom the detailed descriptions of each districts, to the Japanese magic and critters.",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2053-01-01",
+			"gameDate": "2053-01",
 			"notes": "This was the sourcebook of Tokyo and Japan Imperial State in 2050, in Japanese. Non-cannon."
 		},
 		{
@@ -5214,7 +5214,7 @@
 			"edition": 1,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Fantasy Productions",
 				"Catalyst Game Labs"
 			],
@@ -5223,7 +5223,7 @@
 				"1994-02-01",
 				"2012-12-18"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -5247,7 +5247,7 @@
 				"1997-03-01",
 				"2000-01-01"
 			],
-			"gameDate": "2058-01-01",
+			"gameDate": "2058-01",
 			"notes": "The German edition has rules updated to the third edition and an aditional chapter about the ADL."
 		},
 		{
@@ -5274,7 +5274,7 @@
 				"2004-01-01",
 				"2005-02-04"
 			],
-			"gameDate": "2057-08-01",
+			"gameDate": "2057-08",
 			"notes": "The German version was released for Shadowrun 3, eight years after the original publication."
 		},
 		{
@@ -5292,13 +5292,13 @@
 			"edition": 3,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1999-09-01",
 				"2001-05-01"
 			],
-			"gameDate": "2061-02-01"
+			"gameDate": "2061-02"
 		},
 		{
 			"sku": [
@@ -5322,7 +5322,7 @@
 				"1997-11-01",
 				"1998-01-01"
 			],
-			"gameDate": "2059-01-01",
+			"gameDate": "2059-01",
 			"notes": "The German translation/publication features 8 additional pages on pirates of the North Seas and additional equipment."
 		},
 		{
@@ -5341,7 +5341,7 @@
 			"releaseDate": [
 				"2012-06-19"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -5359,7 +5359,7 @@
 			"releaseDate": [
 				"2014-01-30"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -5377,7 +5377,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -5396,13 +5396,13 @@
 			"edition": 5,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2014-01-01",
 				"2018-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -5424,7 +5424,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2000-08-01",
@@ -5432,7 +5432,7 @@
 				"2004-01-01",
 				"2005-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -5456,7 +5456,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -5465,7 +5465,7 @@
 				"2002-01-01",
 				"2003-12-01"
 			],
-			"gameDate": "2061-01-01",
+			"gameDate": "2061-01",
 			"notes": "The German edition has diffrent equipament, based on German sources."
 		},
 		{
@@ -5484,7 +5484,7 @@
 			"releaseDate": [
 				"2011-02-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -5502,7 +5502,7 @@
 			"releaseDate": [
 				"2012-06-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -5520,7 +5520,7 @@
 			"releaseDate": [
 				"2015-07-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -5539,12 +5539,12 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2013-07-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -5562,7 +5562,7 @@
 			"releaseDate": [
 				"2001-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -5585,7 +5585,7 @@
 				"2003-09-01",
 				"2013-08-28"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -5609,7 +5609,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -5619,7 +5619,7 @@
 				"2003-06-01",
 				"2006-10-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -5641,7 +5641,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -5650,7 +5650,7 @@
 				"1998-05-01",
 				"2011-08-23"
 			],
-			"gameDate": "2055-07-01"
+			"gameDate": "2055-07"
 		},
 		{
 			"sku": [
@@ -5675,7 +5675,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-12-01",
@@ -5684,7 +5684,7 @@
 				"1997-01-01",
 				"1998-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -5702,7 +5702,7 @@
 			"releaseDate": [
 				"1997-10-01"
 			],
-			"gameDate": "2058-01-01"
+			"gameDate": "2058-01"
 		},
 		{
 			"sku": [
@@ -5723,14 +5723,14 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-12-01",
 				"1997-01-01",
 				"1999-01-01"
 			],
-			"gameDate": "2057-01-01"
+			"gameDate": "2057-01"
 		},
 		{
 			"sku": [
@@ -5751,7 +5751,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -5761,7 +5761,7 @@
 				"2004-06-01",
 				"2005-01-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -5788,7 +5788,7 @@
 				"2011-01-01",
 				"2012-07-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -5806,7 +5806,7 @@
 			"releaseDate": [
 				"2011-01-01"
 			],
-			"gameDate": "2072-01-01",
+			"gameDate": "2072-01",
 			"notes": "A soft cover book containing some of the material from Runner's Toolkit German edition and a new adventure."
 		},
 		{
@@ -5825,7 +5825,7 @@
 			"releaseDate": [
 				"2011-08-01"
 			],
-			"gameDate": "2072-01-01",
+			"gameDate": "2072-01",
 			"status": "outofscope",
 			"notes": "Set of cards available at Gen Con 2014."
 		},
@@ -5851,7 +5851,7 @@
 				"2011-11-20",
 				"2012-05-11"
 			],
-			"gameDate": "2073-10-01",
+			"gameDate": "2073-10",
 			"notes": "The German edition has an aditional chapter about the ADL."
 		},
 		{
@@ -5876,7 +5876,7 @@
 				"2011-05-01",
 				"2012-02-01"
 			],
-			"gameDate": "2073-05-01",
+			"gameDate": "2073-05",
 			"notes": "The German edition has an aditional chapter about the ADL."
 		},
 		{
@@ -5901,7 +5901,7 @@
 				"2012-05-01",
 				"2012-10-01"
 			],
-			"gameDate": "2074-04-01"
+			"gameDate": "2074-04"
 		},
 		{
 			"sku": [
@@ -5925,7 +5925,7 @@
 				"2011-08-01",
 				"2012-02-01"
 			],
-			"gameDate": "2073-08-01",
+			"gameDate": "2073-08",
 			"notes": "The German edition has aditional information about German characters."
 		},
 		{
@@ -5949,7 +5949,7 @@
 			"releaseDate": [
 				"2010-12-01"
 			],
-			"gameDate": "2073-01-01",
+			"gameDate": "2073-01",
 			"notes": "The German edition has aditional content about the Bundeswehr and MET2000 and a translation of the \"MilSpec Tech\"."
 		},
 		{
@@ -5971,14 +5971,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2008-12-01",
 				"2010-01-01",
 				"2011-01-01"
 			],
-			"gameDate": "2071-10-01",
+			"gameDate": "2071-10",
 			"notes": "The French edition has an aditional chapter about Clermont-Ferrand."
 		},
 		{
@@ -6000,7 +6000,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2008-08-01",
@@ -6008,7 +6008,7 @@
 				"2009-10-22",
 				"2012-01-11"
 			],
-			"gameDate": "2071-02-01",
+			"gameDate": "2071-02",
 			"notes": "Both the German and the French editions have an aditional chapters about Lille (French), Frankfurt (German) and Manhattan (both)."
 		},
 		{
@@ -6031,7 +6031,7 @@
 			"releaseDate": [
 				"2010-06-01"
 			],
-			"gameDate": "2072-11-01",
+			"gameDate": "2072-11",
 			"notes": "The English almanac was riddled with content and formal errors that were removed by Pegasus in consultation with CGL in the German version. These include duplicate or incorrect info boxes, flags in illustrations, which did not exist at the time of the depicted scene, and incorrect coastal and borderlines."
 		},
 		{
@@ -6051,14 +6051,14 @@
 			"edition": 4,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other",
+				"Other",
 				"Pegasus Spiele"
 			],
 			"releaseDate": [
 				"2009-12-01",
 				"2010-06-01"
 			],
-			"gameDate": "2072-02-01",
+			"gameDate": "2072-02",
 			"notes": "The German edition has a translation of 10 Gangs and aditional material regarding Germany."
 		},
 		{
@@ -6083,7 +6083,7 @@
 				"2012-08-08",
 				"2013-01-01"
 			],
-			"gameDate": "2074-07-01",
+			"gameDate": "2074-07",
 			"notes": "The German edition has some aditions regarding German dragons."
 		},
 		{
@@ -6105,13 +6105,13 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2008-08-01",
 				"2009-05-01"
 			],
-			"gameDate": "2070-08-01"
+			"gameDate": "2070-08"
 		},
 		{
 			"sku": [
@@ -6135,7 +6135,7 @@
 				"2011-03-01",
 				"2011-09-01"
 			],
-			"gameDate": "2073-03-01"
+			"gameDate": "2073-03"
 		},
 		{
 			"sku": [
@@ -6153,7 +6153,7 @@
 			"releaseDate": [
 				"2011-10-01"
 			],
-			"gameDate": "2073-09-01"
+			"gameDate": "2073-09"
 		},
 		{
 			"sku": [
@@ -6174,14 +6174,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2008-10-01",
 				"2010-01-01",
 				"2012-11-09"
 			],
-			"gameDate": "2071-11-01",
+			"gameDate": "2071-11",
 			"notes": "Both the German and the French editions have additions based on Europe. The german version includes a CD with aditional material."
 		},
 		{
@@ -6199,14 +6199,14 @@
 			"edition": 4,
 			"publisher": [
 				"Catalyst Game Labs",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2009-08-23",
 				"2009-10-01",
 				"2013-01-01"
 			],
-			"gameDate": "2072-01-01",
+			"gameDate": "2072-01",
 			"notes": "The French edition also contains 2 of the Missions adventures."
 		},
 		{
@@ -6231,7 +6231,7 @@
 				"2013-03-01",
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting."
 		},
 		{
@@ -6250,7 +6250,7 @@
 			"releaseDate": [
 				"2012-11-06"
 			],
-			"gameDate": "2074-11-01"
+			"gameDate": "2074-11"
 		},
 		{
 			"sku": [
@@ -6268,7 +6268,7 @@
 			"releaseDate": [
 				"2012-07-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -6292,7 +6292,7 @@
 				"2010-06-01",
 				"2011-03-01"
 			],
-			"gameDate": "2072-05-01",
+			"gameDate": "2072-05",
 			"notes": "The German edition has an aditional chapter about the ADL."
 		},
 		{
@@ -6316,7 +6316,7 @@
 			"releaseDate": [
 				"2003-01-01"
 			],
-			"gameDate": "2063-01-01",
+			"gameDate": "2063-01",
 			"notes": "The German edition has an aditional chapter about the ADL."
 		},
 		{
@@ -6337,7 +6337,7 @@
 			"edition": 3,
 			"publisher": [
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -6347,7 +6347,7 @@
 				"2005-01-01",
 				"2006-01-01"
 			],
-			"gameDate": "2062-08-01"
+			"gameDate": "2062-08"
 		},
 		{
 			"sku": [
@@ -6369,7 +6369,7 @@
 			"releaseDate": [
 				"2004-02-01"
 			],
-			"gameDate": "2063-04-01"
+			"gameDate": "2063-04"
 		},
 		{
 			"sku": [
@@ -6391,7 +6391,7 @@
 			"releaseDate": [
 				"2003-10-01"
 			],
-			"gameDate": "2063-02-01"
+			"gameDate": "2063-02"
 		},
 		{
 			"sku": [
@@ -6414,7 +6414,7 @@
 				"2002-07-01",
 				"2003-01-01"
 			],
-			"gameDate": "2062-09-01"
+			"gameDate": "2062-09"
 		},
 		{
 			"sku": [
@@ -6436,7 +6436,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2000-09-01",
@@ -6444,7 +6444,7 @@
 				"2002-02-01",
 				"2003-06-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -6465,7 +6465,7 @@
 				"2001-01-01",
 				"2003-06-01"
 			],
-			"gameDate": "2061-12-01"
+			"gameDate": "2061-12"
 		},
 		{
 			"sku": [
@@ -6483,14 +6483,14 @@
 			"edition": 3,
 			"publisher": [
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2001-01-01",
 				"2002-04-01",
 				"2002-06-01"
 			],
-			"gameDate": "2062-06-01"
+			"gameDate": "2062-06"
 		},
 		{
 			"sku": [
@@ -6508,7 +6508,7 @@
 			"releaseDate": [
 				"2003-09-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -6531,7 +6531,7 @@
 			"releaseDate": [
 				"2005-09-01"
 			],
-			"gameDate": "2064-03-01",
+			"gameDate": "2064-03",
 			"notes": "The German edition has an aditional chapter about the ADL."
 		},
 		{
@@ -6545,12 +6545,12 @@
 			"description": "This book collects material published online by the authors of the canceled book describing various locations in Latin America.",
 			"edition": 3,
 			"publisher": [
-				"unofficial"
+				"Unofficial"
 			],
 			"releaseDate": [
 				"2011-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -6571,14 +6571,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2009-07-18",
 				"2010-03-01",
 				"2012-01-01"
 			],
-			"gameDate": "2072-07-01",
+			"gameDate": "2072-07",
 			"notes": "The French version has a translation of \"Parazoology\" and the German version has aditional animals from the ADL."
 		},
 		{
@@ -6602,14 +6602,14 @@
 				"Catalyst Game Labs",
 				"Fantasy Productions",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2006-08-29",
 				"2006-07-19",
 				"2010-01-11"
 			],
-			"gameDate": "2070-02-01",
+			"gameDate": "2070-02",
 			"notes": "The German edition added a chapter about Hamburg and the French edition a chapter about Marseille. The revised German edition has both chapters."
 		},
 		{
@@ -6630,7 +6630,7 @@
 			"releaseDate": [
 				"2005-05-01"
 			],
-			"gameDate": "2064-04-01"
+			"gameDate": "2064-04"
 		},
 		{
 			"sku": [
@@ -6654,7 +6654,7 @@
 			"releaseDate": [
 				"2004-08-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -6675,13 +6675,13 @@
 			"edition": 3,
 			"publisher": [
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2003-06-01",
 				"2007-01-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -6705,7 +6705,7 @@
 			"releaseDate": [
 				"2005-04-01"
 			],
-			"gameDate": "2064-02-01"
+			"gameDate": "2064-02"
 		},
 		{
 			"sku": [
@@ -6728,7 +6728,7 @@
 			"releaseDate": [
 				"2004-10-01"
 			],
-			"gameDate": "2063-12-01"
+			"gameDate": "2063-12"
 		},
 		{
 			"sku": [
@@ -6747,7 +6747,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -6766,7 +6766,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -6785,7 +6785,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -6804,7 +6804,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -6823,7 +6823,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -6842,7 +6842,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -6861,7 +6861,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -6880,7 +6880,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -6899,7 +6899,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -6917,7 +6917,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -6935,7 +6935,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -6953,7 +6953,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -6971,7 +6971,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -6989,7 +6989,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -7007,7 +7007,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -7025,7 +7025,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -7043,7 +7043,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -7061,7 +7061,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -7079,7 +7079,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -7098,7 +7098,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7117,7 +7117,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7136,7 +7136,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7155,7 +7155,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7174,7 +7174,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7193,7 +7193,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7212,7 +7212,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7231,7 +7231,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7250,7 +7250,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7269,7 +7269,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7288,7 +7288,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7307,7 +7307,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7326,7 +7326,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7345,7 +7345,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7364,7 +7364,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7383,7 +7383,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7402,7 +7402,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7421,7 +7421,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -7444,7 +7444,7 @@
 			"releaseDate": [
 				"2017-03-01"
 			],
-			"gameDate": "2079-02-01"
+			"gameDate": "2079-02"
 		},
 		{
 			"sku": [
@@ -7465,14 +7465,14 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2015-05-01",
 				"2016-03-01",
 				"2018-09-01"
 			],
-			"gameDate": "2077-02-01"
+			"gameDate": "2077-02"
 		},
 		{
 			"sku": [
@@ -7497,7 +7497,7 @@
 				"2014-10-16",
 				"2015-05-03"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -7515,7 +7515,7 @@
 			"releaseDate": [
 				"2013-07-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "The German translation is split in two books: \"Licht aus der Asche\" and \"Trittbrettfahrer\"."
 		},
 		{
@@ -7540,7 +7540,7 @@
 				"2015-02-01",
 				"2016-05-01"
 			],
-			"gameDate": "2076-01-01"
+			"gameDate": "2076-01"
 		},
 		{
 			"sku": [
@@ -7558,7 +7558,7 @@
 			"releaseDate": [
 				"2016-03-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -7579,7 +7579,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2013-09-30",
@@ -7587,7 +7587,7 @@
 				"2014-07-01",
 				"2014-11-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -7605,7 +7605,7 @@
 			"releaseDate": [
 				"2017-06-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -7623,7 +7623,7 @@
 			"releaseDate": [
 				"2016-12-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -7647,7 +7647,7 @@
 				"2014-12-01",
 				"2015-04-08"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -7667,14 +7667,14 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1990-09-01",
 				"1993-01-01",
 				"1994-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -7695,7 +7695,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -7704,7 +7704,7 @@
 				"1995-01-01",
 				"2011-05-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -7724,7 +7724,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -7733,7 +7733,7 @@
 				"2002-05-01",
 				"2005-03-17"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -7754,7 +7754,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -7764,7 +7764,7 @@
 				"1997-01-01",
 				"2012-11-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -7787,13 +7787,13 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1990-11-01",
 				"1991-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -7813,14 +7813,14 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1989-01-01",
 				"1990-01-01",
 				"1993-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -7844,7 +7844,7 @@
 				"2015-10-16",
 				"2016-12-01"
 			],
-			"gameDate": "2077-08-01",
+			"gameDate": "2077-08",
 			"notes": "The German edition also has a summary of \"Montreal 2074\"."
 		},
 		{
@@ -7871,7 +7871,7 @@
 				"1991-01-01",
 				"1997-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -7890,14 +7890,14 @@
 			"edition": 1,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Fantasy Productions",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
 				"1990-10-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -7915,7 +7915,7 @@
 			"releaseDate": [
 				"2012-09-01"
 			],
-			"gameDate": "2074-01-01"
+			"gameDate": "2074-01"
 		},
 		{
 			"sku": [
@@ -7938,7 +7938,7 @@
 				"2009-07-01",
 				"2012-03-20"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -7961,7 +7961,7 @@
 				"2010-08-01",
 				"2012-04-19"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -7984,7 +7984,7 @@
 				"2009-12-01",
 				"2012-03-31"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -8006,7 +8006,7 @@
 				"2002-07-01",
 				"2003-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -8026,12 +8026,12 @@
 			"edition": 4,
 			"publisher": [
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2006-06-30"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -8053,7 +8053,7 @@
 			"releaseDate": [
 				"2004-05-01"
 			],
-			"gameDate": "2062-06-01"
+			"gameDate": "2062-06"
 		},
 		{
 			"sku": [
@@ -8076,7 +8076,7 @@
 				"2011-08-01",
 				"2012-05-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -8094,7 +8094,7 @@
 			"releaseDate": [
 				"2012-02-01"
 			],
-			"gameDate": "2074-02-01"
+			"gameDate": "2074-02"
 		},
 		{
 			"sku": [
@@ -8112,7 +8112,7 @@
 			"releaseDate": [
 				"2011-12-01"
 			],
-			"gameDate": "2073-12-01"
+			"gameDate": "2073-12"
 		},
 		{
 			"sku": [
@@ -8130,7 +8130,7 @@
 			"releaseDate": [
 				"2009-02-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -8148,7 +8148,7 @@
 			"releaseDate": [
 				"2012-03-01"
 			],
-			"gameDate": "2074-03-01"
+			"gameDate": "2074-03"
 		},
 		{
 			"sku": [
@@ -8166,7 +8166,7 @@
 			"releaseDate": [
 				"2012-10-01"
 			],
-			"gameDate": "2074-01-01"
+			"gameDate": "2074-01"
 		},
 		{
 			"sku": [
@@ -8184,7 +8184,7 @@
 			"releaseDate": [
 				"2011-09-01"
 			],
-			"gameDate": "2073-01-01"
+			"gameDate": "2073-01"
 		},
 		{
 			"sku": [
@@ -8202,7 +8202,7 @@
 			"releaseDate": [
 				"2011-04-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -8220,7 +8220,7 @@
 			"releaseDate": [
 				"2012-03-01"
 			],
-			"gameDate": "2073-08-01"
+			"gameDate": "2073-08"
 		},
 		{
 			"sku": [
@@ -8238,7 +8238,7 @@
 			"releaseDate": [
 				"2011-12-01"
 			],
-			"gameDate": "2073-01-01"
+			"gameDate": "2073-01"
 		},
 		{
 			"sku": [
@@ -8256,7 +8256,7 @@
 			"releaseDate": [
 				"2013-09-13"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -8274,7 +8274,7 @@
 			"releaseDate": [
 				"2011-09-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -8294,13 +8294,13 @@
 			"edition": 3,
 			"publisher": [
 				"FASA Corporation",
-				"other",
+				"Other",
 				"Fantasy Productions"
 			],
 			"releaseDate": [
 				"1999-01-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -8321,13 +8321,13 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1998-11-01",
 				"2000-01-01"
 			],
-			"gameDate": "2060-02-01"
+			"gameDate": "2060-02"
 		},
 		{
 			"sku": [
@@ -8350,7 +8350,7 @@
 			"releaseDate": [
 				"2000-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -8370,7 +8370,7 @@
 				"2000-01-01",
 				"2006-12-03"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -8388,7 +8388,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -8406,7 +8406,7 @@
 			"releaseDate": [
 				"2017-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -8424,7 +8424,7 @@
 			"releaseDate": [
 				"2004-01-01"
 			],
-			"gameDate": "2061-01-01"
+			"gameDate": "2061-01"
 		},
 		{
 			"sku": [
@@ -8442,7 +8442,7 @@
 			"releaseDate": [
 				"2016-10-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -8460,7 +8460,7 @@
 			"releaseDate": [
 				"2012-04-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -8478,7 +8478,7 @@
 			"releaseDate": [
 				"2012-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -8496,7 +8496,7 @@
 			"releaseDate": [
 				"2016-03-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -8514,7 +8514,7 @@
 			"releaseDate": [
 				"2015-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -8532,7 +8532,7 @@
 			"releaseDate": [
 				"2016-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -8550,7 +8550,7 @@
 			"releaseDate": [
 				"2017-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -8575,7 +8575,7 @@
 				"1998-01-01",
 				"2010-06-06"
 			],
-			"gameDate": "2057-08-01"
+			"gameDate": "2057-08"
 		},
 		{
 			"sku": [
@@ -8595,7 +8595,7 @@
 				"1993-12-01",
 				"2012-11-16"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -8613,13 +8613,13 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-01-01",
 				"1996-11-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -8637,7 +8637,7 @@
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -8655,7 +8655,7 @@
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -8673,13 +8673,13 @@
 			"edition": 1,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1991-05-01",
 				"1995-04-01"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -8696,13 +8696,13 @@
 			"edition": 1,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1991-11-01",
 				"1993-01-01"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -8723,7 +8723,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other",
+				"Other",
 				"Catalyst Game Labs"
 			],
 			"releaseDate": [
@@ -8732,7 +8732,7 @@
 				"1995-01-01",
 				"2010-06-07"
 			],
-			"gameDate": "2051-01-01"
+			"gameDate": "2051-01"
 		},
 		{
 			"sku": [
@@ -8749,13 +8749,13 @@
 			"edition": 1,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-01-01",
 				"1996-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -8775,7 +8775,7 @@
 				"1992-01-01",
 				"2011-07-22"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -8797,7 +8797,7 @@
 				"1994-01-01",
 				"1997-07-01"
 			],
-			"gameDate": "2055-01-01"
+			"gameDate": "2055-01"
 		},
 		{
 			"sku": [
@@ -8815,7 +8815,7 @@
 			"releaseDate": [
 				"1998-01-01"
 			],
-			"gameDate": "2057-09-01"
+			"gameDate": "2057-09"
 		},
 		{
 			"sku": [
@@ -8835,7 +8835,7 @@
 				"1996-12-01",
 				"2010-07-17"
 			],
-			"gameDate": "2057-05-01"
+			"gameDate": "2057-05"
 		},
 		{
 			"sku": [
@@ -8853,7 +8853,7 @@
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2058-01-01"
+			"gameDate": "2058-01"
 		},
 		{
 			"sku": [
@@ -8871,13 +8871,13 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-01-01",
 				"2000-01-01"
 			],
-			"gameDate": "2058-01-01"
+			"gameDate": "2058-01"
 		},
 		{
 			"sku": [
@@ -8897,7 +8897,7 @@
 				"1996-12-01",
 				"2011-08-01"
 			],
-			"gameDate": "2057-05-01"
+			"gameDate": "2057-05"
 		},
 		{
 			"sku": [
@@ -8915,7 +8915,7 @@
 			"releaseDate": [
 				"1994-01-01"
 			],
-			"gameDate": "2055-07-01"
+			"gameDate": "2055-07"
 		},
 		{
 			"sku": [
@@ -8935,7 +8935,7 @@
 				"1994-01-01",
 				"2011-06-25"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -8961,7 +8961,7 @@
 				"1996-01-01",
 				"2010-11-24"
 			],
-			"gameDate": "2055-01-01"
+			"gameDate": "2055-01"
 		},
 		{
 			"sku": [
@@ -8978,13 +8978,13 @@
 			"edition": 2,
 			"publisher": [
 				"FASA Corporation",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1994-12-01",
 				"1998-09-01"
 			],
-			"gameDate": "2055-08-01"
+			"gameDate": "2055-08"
 		},
 		{
 			"sku": [
@@ -9002,7 +9002,7 @@
 			"releaseDate": [
 				"1994-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -9020,7 +9020,7 @@
 			"releaseDate": [
 				"2013-07-16"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9038,7 +9038,7 @@
 			"releaseDate": [
 				"2019-01-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -9056,7 +9056,7 @@
 			"releaseDate": [
 				"1990-10-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -9074,7 +9074,7 @@
 			"releaseDate": [
 				"2009-04-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9092,7 +9092,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9110,7 +9110,7 @@
 			"releaseDate": [
 				"1997-06-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -9128,7 +9128,7 @@
 			"releaseDate": [
 				"2013-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9146,7 +9146,7 @@
 			"releaseDate": [
 				"2012-04-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9164,7 +9164,7 @@
 			"releaseDate": [
 				"2012-05-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9182,7 +9182,7 @@
 			"releaseDate": [
 				"2012-02-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9200,7 +9200,7 @@
 			"releaseDate": [
 				"2012-09-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9218,7 +9218,7 @@
 			"releaseDate": [
 				"2012-08-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9236,7 +9236,7 @@
 			"releaseDate": [
 				"2012-01-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9254,7 +9254,7 @@
 			"releaseDate": [
 				"2011-07-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9272,7 +9272,7 @@
 			"releaseDate": [
 				"2011-05-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9290,7 +9290,7 @@
 			"releaseDate": [
 				"2011-12-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9308,7 +9308,7 @@
 			"releaseDate": [
 				"2011-09-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9326,7 +9326,7 @@
 			"releaseDate": [
 				"2012-11-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9344,7 +9344,7 @@
 			"releaseDate": [
 				"2014-04-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9362,7 +9362,7 @@
 			"releaseDate": [
 				"2013-09-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9380,7 +9380,7 @@
 			"releaseDate": [
 				"2014-12-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9398,7 +9398,7 @@
 			"releaseDate": [
 				"2014-08-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9416,7 +9416,7 @@
 			"releaseDate": [
 				"2013-02-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9434,7 +9434,7 @@
 			"releaseDate": [
 				"2011-03-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9452,7 +9452,7 @@
 			"releaseDate": [
 				"2009-08-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9470,7 +9470,7 @@
 			"releaseDate": [
 				"2009-06-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9488,7 +9488,7 @@
 			"releaseDate": [
 				"2010-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9506,7 +9506,7 @@
 			"releaseDate": [
 				"2009-11-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9524,7 +9524,7 @@
 			"releaseDate": [
 				"2009-05-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9542,7 +9542,7 @@
 			"releaseDate": [
 				"2009-04-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9560,7 +9560,7 @@
 			"releaseDate": [
 				"2009-03-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9578,7 +9578,7 @@
 			"releaseDate": [
 				"2010-02-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9596,7 +9596,7 @@
 			"releaseDate": [
 				"2011-01-01"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -9614,7 +9614,7 @@
 			"releaseDate": [
 				"2010-11-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9632,7 +9632,7 @@
 			"releaseDate": [
 				"2010-08-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9650,7 +9650,7 @@
 			"releaseDate": [
 				"2010-07-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9668,7 +9668,7 @@
 			"releaseDate": [
 				"2010-10-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9686,7 +9686,7 @@
 			"releaseDate": [
 				"2010-09-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -9704,7 +9704,7 @@
 			"releaseDate": [
 				"2016-06-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9722,7 +9722,7 @@
 			"releaseDate": [
 				"2016-05-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9740,7 +9740,7 @@
 			"releaseDate": [
 				"2016-09-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9758,7 +9758,7 @@
 			"releaseDate": [
 				"2016-08-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9776,7 +9776,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9794,7 +9794,7 @@
 			"releaseDate": [
 				"2015-10-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9812,7 +9812,7 @@
 			"releaseDate": [
 				"2015-03-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9830,7 +9830,7 @@
 			"releaseDate": [
 				"2015-12-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -9843,12 +9843,12 @@
 			"description": "Although this is a magazine, the page numbering starts on the first page, excluding the covers.\nCover Art: Bottled Demon by John Zeleznik",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1995-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9861,12 +9861,12 @@
 			"description": "Index:\nCover (John Zeleznik)\nLunatic Fringe (Fiction - Phillip T. Adams)\nDrak's Drek (D. L. Knox)\nMcKissack's Chameleon (Critter - Andrew Ragland)\nGift Horse (Fiction - Erik Kjerland)\nA Runner's Guide to Magic (Background - Linda Naughton)\nThe Gross-Frankfurt Sprawl (city description - Jonathan Szeto)\nLearning and Improving Skills (Skill rules - Linda Naughton)\nPath of the Tiger (Totems - Gabriel Salazar)\nHeadaches: Social Animals (Adventure - Chris Hussey)\nThe Hermetic Lodge (Spells - Chris Hussey)",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1995-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9879,12 +9879,12 @@
 			"description": "Three fiction articles, new gear, new spells, new groups and a new adventure.\nCover Art: Jeff Laubenstein",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9897,12 +9897,12 @@
 			"description": "Table of Contents\nPg 3: The Shopping Mall (Gear, by Erik Jameson)\nPg 7: The Street Gang Compaign (Campaign suggestion, by Steve Kenson)\nPg 9: Serious Buckshot (Gear, By Kevin Montanaro)\nPg 12: 2056 Harley Davidson Ultra-Glide (Gear, By Kevin Montanaro)\nPg 13: The Ahvaz Diaspora (Magical phenomena, by Erik Jameson)\nPg 20: VatJob (Adventure, by Andrew Ragland)\nPg 46: A star is Dead (Andventure, by Chris Hussey)\nPg 52: Dead Air Novel excerpt, by Jak Koke)",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9915,12 +9915,12 @@
 			"description": "This is the fifth issue of Shadowland, an official publication devoted to Shadowrun.\nCover: Jeff Laubenstein",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9933,12 +9933,12 @@
 			"description": "Cover Art: Jeff Laubenstein",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9951,12 +9951,12 @@
 			"description": "The cover is not included in the page numbers.\nIndex:\nFront page (Mark Nelson)\n1 Index & Credits\n2 Download (Editorial - Chris Hussey)\n3 Expect the Unexpected (Fiction - Andrew Hamilton)\n6 Getting Physical (Physical Adept powers - Ken Sato)\n7 Friendship & Honor (Fiction - Steven Warnock)\n12 Gen Con Wrap-up\n13 Technobabel (Preview - Steven Kenson)\n15 Cyberpirates Preview\n17 The Knight Shift (Prime Runners - Unknown)\n28 The New Tools of Anti-Social Behavior (Firearms - Brian Downes)\n31 Gotcha! (Hit locations - Ben Zitterkoph, Jason Shockley)\n33 Nature's Shadows (Plant Totems - Anonymous)\n37 Nothing Personal - Just Business (Fiction - Jon Szeto)\n46 Shadowrun CCG List (Mike Mulvihill)\n49 High Noon (Fiction - Jay Fugiel)\n50 Way of the hunter (Physical Adept path, skills & powers - Jonathan Szeto)\n52 Hermetic Lodge (Spells - Chris Hussey)\n54 Newsline (News from the Shadowrun universe)\n55 Writer's Guidelines\n56 Shadowland Disclosure Form",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9969,12 +9969,12 @@
 			"description": "Index:\n1 Front page (Sean Parrack)\n2 Notes from the Net (Index, Editorial - Jim Long)\n3 Notes from the Net (Letters)\n4 Paterson's Guide to Paranormal Animals (Alicanto, Calchuna, Onaqui - Stephen Kenson)\n10 KA*GE Fiction (Wonderland - Chad Olson)\n17 Shadows (Troll Ranger archetype - Bryan Walker)\n18 Turing's Guide to Organizations (Armour International, part 1 - Chad Olson)\n23 KA*GE Fiction (Business Unusual - Vicki Kirchhoff)\n28 Off the shelf (16 new pieces of gear - Stephen Kenson)\n38 FASA Product list\n39 AWOL Product list\n40 AWOL order form\n41 Paydata (Upcoming from FASA and Ral Partha)\n42 Paydata (Reviews: Corporate Shadowfiles, A Killing Glare, Tir Tairngire)\n44 Calendar of Events\n45 Shadowrun Network membership form\n46 Network Member Graffiti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear Page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -9987,12 +9987,12 @@
 			"description": "Index:\n0 Front page\n1 Introduction\n2 Sysop's Notes (Editorial)\n3 KA*GE Fiction (Squasher and Squeeker - George Pace)\n8 Contacts: Fetish Monger & Limo Driver\n9 Location Archetype: High Security Warehouse\n11 KA*GE scenario: Go Fish!\n13 Profile: Danté: Inside the Black Box\n16 Archetype: Investigative Reporter (Free-lance Reporter)\n17 Q & A\n18 Vehicle Stats: Grumman Cargomaster Van\n19 Off the shelf: New gear\n22 On the Street: Rumors from the sprawl (Writing on the Wall: News from the Shadowrun Universe)\n23 Rear page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1991-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -10005,12 +10005,12 @@
 			"description": "Index:\n0 Front page\n1 Net Notes: Welcome To The Shadows (Editorial - Jim Long)\n2 KA*GE Fiction (Lucy - James D. Long)\n11 KA*GE Credits\n12 KA*GE Author and Artist Guidelines\n14 CYCO Circuits (corporation description)\n15 Scenario: No Free Parking (adventure)\n17 CYCO Circuits (continued)\n19 Archetype: Former Company Decker\n20 Contacts: Hairstylist & E-Wizzard\n21 CYCO Circuits: Matrix Map\n23 Off The Shelf: Cyberdeck Utilities, Cyberdeck Gear & CYCO Cyberdecks\n26 Q&A: FASA explains it all to you\n27 Up and comming from FASA\n28 Reviews: London Sourcebook, Native American Nations: Volume One & Virtual Realities \n31 Rear page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1991-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -10023,12 +10023,12 @@
 			"description": "Articles & Authors (where known):\n* Net Notes (editorial & letters, James D. Long),\n* Ragfeather (short story, GB Pace),\n* Privat Investigator (archetype),\n* Contacts\n* The Dwarven Technical Guild (corporation description),\n* A Short In The Dark (adventure),\n* Stranges In The Night (scenario ideas),\n* The Torque Wrench (location description),\n* Off The Shelf (equipment),\n* Sprawl Survival (tips for characters),\n* Paydata (reviews),\n* Writing On The Wall (world background)",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -10041,12 +10041,12 @@
 			"description": "Articles & Authors (where known):\n* Notes From The Net (editorial & letters, James D. Long),\n* Paterson's Guide To Paranormal Animals (critters),\n* Lone Star File (gang description),\n* Shadows (archetype & contacts),\n* The Awakened Citizen (2050s legal hassle),\n* The Retching Rat (adventure),\n* Off The Shelf (equipment),\n* Neo-Anarchists Guide (Boston city description, Stephen Kenson),\n* AWOL Release Form (1992 legal hassle),\n* Paydata (reviews, James D. Long),\n* Graffiti (classifieds),\n* Writing on the Wall (world background)",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -10059,12 +10059,12 @@
 			"description": "Index:\n1 Front page (Sean Parrack)\n2 Notes from the Net (Editorial, Letters, Index, Credits - Jim Long)\n4 Paterson's Guide to Paranormal Animals (Sewer Gator)\n6 KA*GE Fiction (Vengeance - Brantley Bryant)\n10 Lone Star File\n11 Scenario Ideas (Night Encounters)\n13 Shadows (NPC: Niedertracht)\n14 Shadows (Paranaturalist Archetype, Medical Examiner Contact, Hospital Orderly Contact)\n16 The Awakened Citizen (Legal systems of 2053 - Terry Reinsch)\n18 The Awakened Citizen (Lawyer contacts: Judge, Bail Bondsman - Terry Reinsch)\n19 Turring's Guide to Organizations (Major corporations of Minneapolis-St. Paul, Timeline of MSP - Michael W. Harris)\n25 Neo-Anarchist Guide (Minneapolis-St. Paul metroplex - Michael W. Harris)\n31 FASA Product list\n32 AWOL Product list\n33 AWOL Order Form\n34 Off the Shelf (Gear - James Buchanan)\n40 Paydata (Reviews: Shadowland, 10-860 Corporat Dragon, 20-507 Go-Gangers, 20-516 Mercs and Bouncers, 20-517\nShapeshifters, 20-518 Shadowbeat, 20-519 Tribals)\n43 Combat Laws (Myrphy's Laws of Combat)\n44 Upcoming from Ral Parthe, Upcoming from FASA\n45 Shadowrun Network membership form\n46 Network Member Grafitti\n47 Writing on the Wall (News from the Shadwrun Universe)\n48 Rear Page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -10077,12 +10077,12 @@
 			"description": "Index:\n1 Front Page (Sean Parrack)\n2 Notes from the Net (Editorial, Index, Credits - Jim Long)\n3 Notes from the Net (Letters)\n4 Paterson's Guide to Paranormal Animals (Carrion Crow, Cooper's Fox, Fenris Wolf - Michael W. Harris)\n10 KA*GE Fiction (The Night's Change of Plans - Chad Olson)\n16 Shadows (Archetypes: Former Electronic Warfare Specialist, Former Combat Engineer - James Buchanan)\n18 Shadows (Contacts: Sporting Goods Salesman, Arcade Owner)\n19 Neo-Anarchists Guide (Minneapolis-St. Paul metroplex - Michael W. Harris)\n23 Turring's Guide to Organizations (MSP Corporations - Michael W. Harris)\n27 KA*GE Fiction (Jolly Ol' Elf - Victoria Kirchoff & Curtis Martin)\n32 Off the Shelf (Spells and Plasma Shock Weapons - Michael W. Harris, Dentalware - James Rommell, Bomb Sniffer - Jeff Hosty)\n37 AWOL Product List\n38 AWOL Order Form\n39 Paydata (Questions and Answers)\n41 Paydata (Upcoming from FASA, Upcoming from Ral Partha)\n42 Paydata (Reviews: The Grimoire II, Paranormal Animals of Europe, Tir Tairngire, Total Eclipse, One Stage Before)\n45 Shadowrun Network Membership Form\n46 Network Member Grafitti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear Page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1992-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -10095,12 +10095,12 @@
 			"description": "Index:\n1 Front page (Sean Parrack)\n2 Notes from the Net (Editorial, Credits and Index - Jim Long)\n3 Notes from the Net (Letters - Steve Scott)\n4 Paterson's Guide to Paranormal Animals (Gaki, Goblin Spider, Greater Carp - Stephen Kenson)\n10 KA*GE Fiction (A Closer Look - Chad Olson)\n16 Shadows (Former KE Guard, Former KE Decker, Former KE Security Mage archetypes - Brian Walker)\n19 Neo-Anarchist Guide (Australiasia History, Brisbane Sprawl - Craig Gaffney)\n25 Turring's Guide to Organizations (ANZAC - Craig Gaffney)\n27 The Awakened Citizen (Life in Australiasia - Craig Gaffney)\n30 KA*GE Fiction (An Ounce of Prevention - Robert Frager)\n36 Questions and Answers\n40 Paydata\n46 Network Member Graffiti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear Page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2054-01-01"
+			"gameDate": "2054-01"
 		},
 		{
 			"sku": [
@@ -10113,12 +10113,12 @@
 			"description": "Index:\n1 Front page (Corey Gulley)\n2 Notes from the Net (Editorial, Credits and Index - Jim Long)\n3 Notes from the Net (Letters)\n4 Paterson's Guide to Paranormal Animals (The Greater Toad, Hengeyokai, Hsing-sing - Stephen Kenson)\n10 KA*GE Fiction (First Contact - Chad Olson)\n16 Shadows (Dwarven Stoic Physical Adept archetype - Brian Walker)\n17 Neo-Anarchist Guide (Boston Sprawl - Stephen Kenson)\n24 Turring's Guide to Organizations (The Black Lotus - Stephen Kenson)\n30 KA*GE Fiction (Instructions Takes A Turn - Simon Foster)\n34 FASA Product list\n35 AWOL Product list\n36 AWOL Order Form\n37 Paydata (Upcoming from FASA and Ral Partha)\n38 Paydata (Official errata for Shadowrun II)\n40 Paydata (Official errata for Grimoire II)\n41 Paydata (Reviews: 20-508 Riggers and Rockers, 20-520 Yakuza, 20-521 Ork Biker, 20-522 Meta-Human Tribal, 20-528 Black ICE Icons, 20-529 Wasp Male Spirits, 20-530 Wasp Queen Human Host, 20-531 Combat Mages)\n44 Calendar of Events\n45 Shadowrun Network membership form\n46 Network Member Graffiti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -10131,12 +10131,12 @@
 			"description": "Index:\n0 Front page (Sean Parrack)\n1 Net notes (Editorial - Jim Long)\n2 KA*GE Fiction (Just Another Night... - George Pace)\n9 Corporate profile (Turring's Annoted Guide to Modern Organizations: Advanced Weapons and Systems, Incorporated - AWS Inc.)\n12 Contacts (Body Shop Tech, Independent Hauler)\n14 Archetype (Former DocWagon TM Paramedic)\n15 Scenario (A Night in the Sound)\n17 Personalities (AWS NPC's)\n18 Upcoming from FASA\n19 Run for it (Scenario Ideas)\n23 Q&A (FASA explains it all to you)\n24 Off the Shelf (New gear)\n27 Reviews (Total Eclipse, Native American Nations Volume 2, 20-500 Shadowrunners, 20-501 Deckers, 20-502 Human Street Samurai, 20-503 Mages, 20-504 Meta-Human Street Samurai, 20-505 Elves)\n30 Writing on the Wall (News from the Shadowrun Universe)\n31 Rear page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1991-01-01"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -10149,12 +10149,12 @@
 			"description": "Index:\n1 Frontpage (Sean Parrack)\n2 Notes from the Net (Index, Editorial - Jim Long)\n3 Statmet of Ownership (James D. Long)\n4 Patterson's Guide to Paranormal Animals (Hide, Tzitsimne)\n8 KA*GE Fiction (Chasing Ghosts, part 2 - Chad Olson)\n15 Shadows (Contacts: Model, Hustler, Stock Analyst, Stock Broker, Archetype: Hermetic Hitman - Sean Parrack)\n18 Turring's Guide to Organizations (Armor International, part 2 - Chad Olson)\n31 KA*GE Fiction (Who Your Friends Are - Vicki Kirchhoff)\n37 FASA Product list\n38 AWOL Product list\n39 AWOL Order Form\n40 Paydata (Upcoming from FASA & Ral Partha)\n41 Paydata (Reviews: Tir na nOg Sourcebook, Celtic Double Cross, 20-534 Spirit of Man, 20-535 Spirit of Water, 20-532 Piasma, 20-533 Dzoo-Noo-Qua, 10-861 Feathered Serpent)\n44 Calendar of Events\n45 Shadowrun Network membership form\n46 Network Member Grafitti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -10167,12 +10167,12 @@
 			"description": "Index:\n1 Front page (Eric von Haas)\n2 Notes from the net (Editorial, Staff and Index)\n3 Notes from the net (Letters)\n4 Patterson's Guide to Paranormal Animals (Mist Viper, Arachnis - Peter Williams, Sean Parrack & Corey Gulley)\n8 Ka*ge Fiction (If As Beast You Don't Succeed, Part One - Michael A. Stackpole)\n20 Shadows (Two Archetypes: Former Combat Medic, Ex-Brawler, Two Contacts: Foreign Dignitary, Social Worker - Sean Parrack, J.B. Buchanan)\n23 Corporate Shadow Files (European Business Machines and Magic - Stephen Kenson)\n27 Ka*ge Fiction (There Are Shadowruns, And Then There is... - Chris Hussey)\n33 Paydata (FASA Products, AWOL Products, Order Form, Upcoming from FASA, Reviews: Lone Wolf, The Germany Sourcebook, Eye Witness)\n39 Calendar of Events (Cons)\n40 Turring's Guide to Organizations (Coven of the Crimson Moon - Stephen Kenson)\n44 New Gear (8 new pieces of gear - Teras Cassidy & Michael Morris)\n48 Network Member Graffiti\n49 Writing on the Wall (News from the Shadowrun Universe)\n51 Shadowrun Network application form\n52 Rear page",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1994-01-01"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -10185,12 +10185,12 @@
 			"description": "This was the last issue of KA*GE before the publisher went AWOL. The issue was published late, and the was promises of further issues being on time.\nThe issue contains:\nLetters, errata, paranormal critter, fiction, archetypes, contacts, magic theory, new gear, new organizations, scenario ideas, new spells, merchandizing, slang, event calender and newsnet downloads. --user description",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1994-01-01"
 			],
-			"gameDate": "2052-01-01"
+			"gameDate": "2052-01"
 		},
 		{
 			"sku": [
@@ -10208,7 +10208,7 @@
 			"releaseDate": [
 				"2017-05-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10226,7 +10226,7 @@
 			"releaseDate": [
 				"2017-09-11"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10244,7 +10244,7 @@
 			"releaseDate": [
 				"2017-09-19"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10267,7 +10267,7 @@
 				"2017-11-26",
 				"2018-03-15"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10285,7 +10285,7 @@
 			"releaseDate": [
 				"2016-12-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10303,7 +10303,7 @@
 			"releaseDate": [
 				"2016-11-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10321,7 +10321,7 @@
 			"releaseDate": [
 				"2017-02-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10339,7 +10339,7 @@
 			"releaseDate": [
 				"2017-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10362,7 +10362,7 @@
 			"releaseDate": [
 				"2017-07-01"
 			],
-			"gameDate": "2079-08-01"
+			"gameDate": "2079-08"
 		},
 		{
 			"sku": [
@@ -10380,7 +10380,7 @@
 			"releaseDate": [
 				"2017-03-17"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10403,7 +10403,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "In 2021 Catalyst rereleased the antology and the tarot with a new cover and bigger cards."
 		},
@@ -10427,7 +10427,7 @@
 			"releaseDate": [
 				"2016-07-22"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10445,7 +10445,7 @@
 			"releaseDate": [
 				"2016-06-11"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10463,7 +10463,7 @@
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -10481,7 +10481,7 @@
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -10499,7 +10499,7 @@
 			"releaseDate": [
 				"2003-06-01"
 			],
-			"gameDate": "2060-01-01",
+			"gameDate": "2060-01",
 			"status": "outofscope"
 		},
 		{
@@ -10518,7 +10518,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10537,7 +10537,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10556,7 +10556,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10575,7 +10575,7 @@
 			"releaseDate": [
 				"2015-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10594,7 +10594,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10613,7 +10613,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10632,7 +10632,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10651,7 +10651,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -10667,7 +10667,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "canceled",
 			"notes": "Announced fo the Year of Shadowrun but never released. Some \"developer diary\" posts are available on Shadowrun's blog."
 		},
@@ -10684,7 +10684,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "canceled",
 			"notes": "Announced fo the Year of Shadowrun but never released. Some \"developer diary\" posts are available on Shadowrun's blog."
 		},
@@ -10704,7 +10704,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2078-01-01"
+			"gameDate": "2078-01"
 		},
 		{
 			"sku": [
@@ -10722,7 +10722,7 @@
 			"releaseDate": [
 				"1993-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -10735,12 +10735,12 @@
 			"description": "Shadowrun's story begins on January 31, 2058 in Seattle, United Canadian and American States. In the wilderness of the newly reclaimed Amerindian lands of the Salish-Shidhe, a small team of shadowrunners is brutally ambushed by unknown forces. The massacre is over quickly, but is captured in video by one of the slain member's cybereyes; the video is recovered and made national news. The last man to die in the video was a shadowrunner known as Michael, Joshua's brother.\nJoshua spends his last nuyen and flies to Seattle, vowing to avenge his brother's death. He arrives at Sea-Tac Airport and traces back Michael's last credstick transaction to \"Stoker's Coffin Motel\", in the Redmond Barrens. Joshua travels there to inquire about his brother, only to be told by the owner that Michael never paid his bill and in fact has some belongings being held. He strikes a deal with Joshua, and by beginning to do small shadowruns for a small-time Mr. Johnson, called Gunderson, he gains enough money to pay his brother's bills. In Michael's belongings, he finds three \"holopix\": one of a young woman, Tabatha Shale; of an Amerindian, David Owlfeather, and of Seattle General Hospital Dr. Heaversheen. There is also a low grade cyberdeck, along with a credstick containing 500 nuyen, which could have been used to pay off Michael's bill (the irony of this is one of the game's many humorous points).",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1994-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -10753,12 +10753,12 @@
 			"description": "The game has a 1990s manga-based visual style loosely based on a contemporary Japanese manga series which was based on the Shadowrun franchise. Unlike the other Shadowrun video games which are set in Seattle and surrounding areas, this game is set entirely in Japan. In the fictional Shadowrun setting, Japan maintains a practice of exiling all orcs and trolls; thus there are no characters of those races in this game. The combat system is turn-based, and six-sided dice appear rolling on the screen determine the results of combat—the conflict resolution system used in the Shadowrun table-top game.",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -10776,7 +10776,7 @@
 			"releaseDate": [
 				"2007-01-01"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -10794,7 +10794,7 @@
 			"releaseDate": [
 				"2013-07-25"
 			],
-			"gameDate": "2054-01-01",
+			"gameDate": "2054-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
 		},
@@ -10814,7 +10814,7 @@
 			"releaseDate": [
 				"2014-09-18"
 			],
-			"gameDate": "2054-01-01",
+			"gameDate": "2054-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
 		},
@@ -10834,7 +10834,7 @@
 			"releaseDate": [
 				"2015-08-20"
 			],
-			"gameDate": "2054-01-01",
+			"gameDate": "2054-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
 		},
@@ -10854,7 +10854,7 @@
 			"releaseDate": [
 				"2011-01-01"
 			],
-			"gameDate": "2060-01-01",
+			"gameDate": "2060-01",
 			"notes": "A semi-internal doc about the world of Shadowrun."
 		},
 		{
@@ -10870,7 +10870,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -10888,7 +10888,7 @@
 			"releaseDate": [
 				"2012-12-21"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -10906,7 +10906,7 @@
 			"releaseDate": [
 				"2015-04-28"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
 		},
@@ -10926,7 +10926,7 @@
 			"releaseDate": [
 				"2015-04-28"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
 		},
@@ -10946,7 +10946,7 @@
 			"releaseDate": [
 				"2015-04-28"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -10964,7 +10964,7 @@
 			"releaseDate": [
 				"2013-02-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Print only cards."
 		},
@@ -10984,7 +10984,7 @@
 			"releaseDate": [
 				"2013-10-01"
 			],
-			"gameDate": "2072-01-01",
+			"gameDate": "2072-01",
 			"status": "outofscope",
 			"notes": "Print only cards."
 		},
@@ -11008,7 +11008,7 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2011-09-14",
@@ -11017,7 +11017,7 @@
 				"2012-10-30",
 				"2016-01-12"
 			],
-			"gameDate": "2072-01-01",
+			"gameDate": "2072-01",
 			"status": "missing",
 			"notes": "Originally print only, this book is a compilation of other books with few added material.\nThe German edition has a few items from Germany and the French edition has the items from \"Used Car Lot\" and \"Gun Haven 2\"."
 		},
@@ -11044,7 +11044,7 @@
 				"2013-02-05",
 				"2016-01-12"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"notes": "Originally print only, this book is a compilation of other books with few added material.\nThe German edition have a few itens from Germany."
 		},
 		{
@@ -11063,7 +11063,7 @@
 			"releaseDate": [
 				"2013-05-23"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"status": "outofscope",
 			"notes": "A print only German compilation of: \"Parazoologie\", \"Parabotanik\", \"Magische Gesellschaften\", \"Der Weg des Adepten\", \"Der Weg des Samurai\", \"Safehouses\" und \"State of the Art 2073\" and a few extra pages."
 		},
@@ -11087,7 +11087,7 @@
 			"releaseDate": [
 				"2013-11-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "missing",
 			"notes": "Print only."
 		},
@@ -11107,7 +11107,7 @@
 			"releaseDate": [
 				"2013-01-01"
 			],
-			"gameDate": "2053-01-01"
+			"gameDate": "2053-01"
 		},
 		{
 			"sku": [
@@ -11125,7 +11125,7 @@
 			"releaseDate": [
 				"2017-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -11140,7 +11140,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "A compilation of previously released novels."
 		},
 		{
@@ -11159,7 +11159,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -11177,7 +11177,7 @@
 			"releaseDate": [
 				"2016-02-01"
 			],
-			"gameDate": "2055-01-01"
+			"gameDate": "2055-01"
 		},
 		{
 			"sku": [
@@ -11198,7 +11198,7 @@
 			"publisher": [
 				"FASA Corporation",
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1998-12-01",
@@ -11206,7 +11206,7 @@
 				"2000-01-01",
 				"2004-07-01"
 			],
-			"gameDate": "2060-01-01"
+			"gameDate": "2060-01"
 		},
 		{
 			"sku": [
@@ -11230,7 +11230,7 @@
 				"1989-01-01",
 				"1990-01-01"
 			],
-			"gameDate": "2050-01-01"
+			"gameDate": "2050-01"
 		},
 		{
 			"sku": [
@@ -11245,7 +11245,7 @@
 			"publisher": [
 				"FASA Corporation"
 			],
-			"gameDate": "2060-01-01",
+			"gameDate": "2060-01",
 			"status": "canceled",
 			"notes": "This was the last FASA novel, announced but never released. Here for historical reasons."
 		},
@@ -11262,7 +11262,7 @@
 			"publisher": [
 				"FASA Corporation"
 			],
-			"gameDate": "2060-01-01",
+			"gameDate": "2060-01",
 			"status": "canceled",
 			"notes": "An adventure announced by FASA, never released. Here for historical reasons."
 		},
@@ -11279,7 +11279,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11296,7 +11296,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11313,7 +11313,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11330,7 +11330,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11347,7 +11347,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11364,7 +11364,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11381,7 +11381,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11398,7 +11398,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2073-01-01",
+			"gameDate": "2073-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11415,7 +11415,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11432,7 +11432,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11449,7 +11449,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
 		},
@@ -11466,7 +11466,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2070-01-01",
+			"gameDate": "2070-01",
 			"status": "canceled",
 			"notes": "An Prime Mission announced for the Year of Shadowrun but never released."
 		},
@@ -11483,7 +11483,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2070-01-01",
+			"gameDate": "2070-01",
 			"status": "canceled",
 			"notes": "An Prime Mission announced for the Year of Shadowrun but never released."
 		},
@@ -11503,7 +11503,7 @@
 			"releaseDate": [
 				"2010-05-06"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"notes": "Bundle of 4 novels."
 		},
 		{
@@ -11526,7 +11526,7 @@
 				"2003-01-01",
 				"2006-01-01"
 			],
-			"gameDate": "2063-01-01"
+			"gameDate": "2063-01"
 		},
 		{
 			"sku": [
@@ -11540,12 +11540,12 @@
 			"description": "Découvrez la France de 'an 2057!\n\nUn Pays moderne fortement bouleversé par de puissants conflicts ayant conduit à l'instauration de la domination de quatre grandes familles siégeant au Conseil Oligarchique aux côte d'un cardinal, d'un rand druide et d'un représentant de la famille Villiers.\n\nVisitez les nouvelles régions françaises!\n\nParmi toutes les provinces présentées, n'hésitez pas à aller explorer la Bretagne dont une partie est restée prisonnière de la Brume, un étrange phénomène inexpliqué ayant ouvert le passage à des Ankous, des êtres humanoïdes cadavériques aux longs cheveux blancs animés des pires intentions. Mais attendez-vous à bien des surprises dans les autres régions et duchés.\n\nAllez faire une virée à Paris!\n\nMais il faut être solide survivre dans une mégalopole d'un diamètre d'environ 90 km où sévissent les gangs les plus sauvages, où tant de choses ont changé sous la pression de l'affluence de populations pas toujours avide d'honnêteté. Quartier par quartier, secteur par secteur, et même par sous-sol, explorez une ville où toutes les bonnes affaires (et les autres) sont possibles.\n\nSHADOWRUN FRANCE est un supplément pour le jeu de rôle Shadowrun conçu pour permettre la mise en place de véritables campagnes dans la France de années 2057. Bien qu'il soit plus praticulièrement destiné aux maîtres de jeu, les joueurs peuvent aussi y trouver une foule d'informations susceptibles de les intéresser directement tant elle seront utiles à leurs shadowrunners. En dehors d'une description détaillée du fonctionnement économique et politique du pays, d'une pésentation complète des événements historiques qui ont permis l'avènement du régime actuel, une foule de renseignements pratiques touchant tous les domaines d'activité et des règles particulières à la magie de Bretagne accompagnent la description de nouveaux équipments et de métacréatures inédites. Des cartes géographiques originales, la descrition approfondie des plus grandes villes françaises et des illustrations de qualité font de ce supplément une source de renseignements indispensable.",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1997-01-01"
 			],
-			"gameDate": "2057-02-01",
+			"gameDate": "2057-02",
 			"notes": "A complete description of France from the world of Shadowrun in 2057, with its history, political system, organization of society, organized crime, most powerful duchies, new creatures, new equipment, new spells, etc. French only. Considered semi/non-cannon."
 		},
 		{
@@ -11562,7 +11562,7 @@
 			"publisher": [
 				"Fantasy Productions"
 			],
-			"gameDate": "2064-01-01",
+			"gameDate": "2064-01",
 			"status": "canceled",
 			"notes": "Unreleased adventure."
 		},
@@ -11582,7 +11582,7 @@
 			"releaseDate": [
 				"2020-05-20"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -11605,7 +11605,7 @@
 				"2020-08-21",
 				"2021-07-30"
 			],
-			"gameDate": "2064-01-01"
+			"gameDate": "2064-01"
 		},
 		{
 			"sku": [
@@ -11625,7 +11625,7 @@
 				"2010-10-01",
 				"2012-01-15"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"notes": "German sourcebook about Berlin."
 		},
 		{
@@ -11645,7 +11645,7 @@
 			"releaseDate": [
 				"2016-10-12"
 			],
-			"gameDate": "2078-01-01",
+			"gameDate": "2078-01",
 			"notes": "German sourcebook about Germany."
 		},
 		{
@@ -11664,7 +11664,7 @@
 			"releaseDate": [
 				"2018-10-07"
 			],
-			"gameDate": "2078-01-01"
+			"gameDate": "2078-01"
 		},
 		{
 			"sku": [
@@ -11682,7 +11682,7 @@
 			"releaseDate": [
 				"2018-10-07"
 			],
-			"gameDate": "2078-01-01",
+			"gameDate": "2078-01",
 			"notes": "Complementary material to Datapuls: Hamburg, contains maps, booklets and a GM Screen."
 		},
 		{
@@ -11701,7 +11701,7 @@
 			"releaseDate": [
 				"2018-02-16"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German sourcebook about Berlin."
 		},
 		{
@@ -11720,7 +11720,7 @@
 			"releaseDate": [
 				"2018-03-11"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German sourcebook about the ADL."
 		},
 		{
@@ -11739,7 +11739,7 @@
 			"releaseDate": [
 				"2018-03-23"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German sourcebook about the ADL."
 		},
 		{
@@ -11758,7 +11758,7 @@
 			"releaseDate": [
 				"2018-04-09"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German sourcebook about Austria."
 		},
 		{
@@ -11777,7 +11777,7 @@
 			"releaseDate": [
 				"2018-04-09"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German sourcebook about the SOX."
 		},
 		{
@@ -11796,7 +11796,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German translation of Parazoology and Parazoology 2 - updated with rules for Shadowrun, 5th Edition."
 		},
 		{
@@ -11815,7 +11815,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -11839,7 +11839,7 @@
 				"2018-05-01",
 				"2018-10-07"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -11857,7 +11857,7 @@
 			"releaseDate": [
 				"2018-10-07"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -11875,7 +11875,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "Schattenhandbuch (Shadow Handbook) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin's Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch was published in a numbered limited edition with a print run of 3000 books."
 		},
 		{
@@ -11894,7 +11894,7 @@
 			"releaseDate": [
 				"2015-01-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -11912,7 +11912,7 @@
 			"releaseDate": [
 				"2015-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "A German printed edition of the previeously released \"Datapuls\" series, with public transportation maps as an addition."
 		},
 		{
@@ -11931,7 +11931,7 @@
 			"releaseDate": [
 				"2011-06-01"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"notes": "German 200 page adventure."
 		},
 		{
@@ -11950,7 +11950,7 @@
 			"releaseDate": [
 				"2018-04-25"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "A compilation of: \"Shadows in Focus: Sioux Nation\", \"Starving the Masses\" and \"Counting Coup\""
 		},
 		{
@@ -11969,7 +11969,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "A Shadowrun supplement released at Gratisrollenspiltag 2016."
 		},
 		{
@@ -11988,7 +11988,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "Collects three Shadowrun Missions adventures (SRM 5A-01 Chasin' the Wind, SRM 5A-02 Critic's Choice, SRM 5A-03 Gone long gone) and a description of the city of Chicago."
 		},
 		{
@@ -12007,7 +12007,7 @@
 			"releaseDate": [
 				"2017-12-15"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "This is a collection of the Denver Adventures"
 		},
 		{
@@ -12026,7 +12026,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "Collects three Shadowrun Missions adventures (SRM05-04: Liberation, SRM05-05: While the City Sleeps, SRM05-06: Take a Chance) and a description of the city of Chicago."
 		},
 		{
@@ -12045,7 +12045,7 @@
 			"releaseDate": [
 				"2016-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Shadowrun Karren Quartett is a set of 32 cards depicting various vehicles of the Shadowrun universe with Shadowrun 5 game stats."
 		},
@@ -12065,7 +12065,7 @@
 			"releaseDate": [
 				"2014-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Shadowrun Wummen Quartett is a set of 32 cards depicting various weapons of the Shadowrun universe with Shadowrun5 game stats. It also includes an activation code for Shadowrun Online."
 		},
@@ -12085,7 +12085,7 @@
 			"releaseDate": [
 				"2017-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "German adventure based on the book \"Blut & Spiele\"."
 		},
 		{
@@ -12104,7 +12104,7 @@
 			"releaseDate": [
 				"2017-01-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "Three short scenarios for use with the Tarot Deck."
 		},
 		{
@@ -12123,7 +12123,7 @@
 			"releaseDate": [
 				"2006-01-01"
 			],
-			"gameDate": "2074-01-01"
+			"gameDate": "2074-01"
 		},
 		{
 			"sku": [
@@ -12141,7 +12141,7 @@
 			"releaseDate": [
 				"2005-01-01"
 			],
-			"gameDate": "2069-01-01",
+			"gameDate": "2069-01",
 			"status": "missing",
 			"notes": "This book was poublished in 2005 by Fanpro. It features a comprehensive look at the history, influence and mechanics of Shadowrun from 1989 to date. It includes a collection of articles on Shadowrun-related topics, short stories and a collector's guide listing all Shadowrun publications and novels in English and German."
 		},
@@ -12161,14 +12161,14 @@
 			"edition": 4,
 			"publisher": [
 				"Fantasy Productions",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2007-01-01",
 				"2009-01-01",
 				"2011-01-01"
 			],
-			"gameDate": "2072-01-01",
+			"gameDate": "2072-01",
 			"notes": "\"SOX\" covers a description of the Saar-Lorraine-Luxemburg containment zone and two related adventures (\"Hoffnungsstrahlen\" and \"Mauvais Présage\"). It is a French-German cooperation."
 		},
 		{
@@ -12187,7 +12187,7 @@
 			"releaseDate": [
 				"2012-01-01"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"notes": "Netzstücke is an expansion for the German version of Spy Games (Machtspiele). It features additional material for campaigns in Germany."
 		},
 		{
@@ -12207,7 +12207,7 @@
 			"releaseDate": [
 				"2011-01-01"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"notes": "Rhein-Ruhr-Megaplex (Rhine Ruhr Megaplex) is a German Shadowrun sourcebook that provides detailed information about the Ruhr area and parts of the Rhineland.\nMain Topics of the book are:\n\t- Megaplex overview\n\t- A tour through the Megaplex areas\n\t- Culture\n\t- Saeder-Krupp\n\t- Powers and Organizations\n\t- Points of Interest\n\t- Maps, locations, and adventure hooks"
 		},
 		{
@@ -12226,7 +12226,7 @@
 			"releaseDate": [
 				"2012-01-01"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"notes": "German sourcebook for Shadowrun detailing various aspcets of shadowrunning in Germany, including organized crime, famous shadowrunners, possible targets and certain interesting regions."
 		},
 		{
@@ -12245,7 +12245,7 @@
 			"releaseDate": [
 				"2017-05-29"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12258,12 +12258,12 @@
 			"description": "…Mindezek mellett igaz, hogy az ország a korlátlan lehetőségek hazája. Nem sok különbség van az árnyvadászok és az egyszeri emberek között. Mindenki fegyverrel, lehetőleg páncélozott autókban jár. A megvesztegetés nem különlegesség, az élet része. A hirtelen meggazdagodás könnyű, de nagyon veszélyes. …\" - Részlet egy Magyarországról szóló dekás tájékoztatóból - Shadowland, 2056.\n\nKell egy hely, ahol a cégek nem lépnek folyton a nyakadra? Kell egy hely, ahol virágzik az árnyvadász szakma? Ahol el lehet tűnni a balhé után, és ahol nem kérik a RASSZ-odat? Nos, cimbora, ez esetben azt tanácsoljuk, tedd át a székhelyed Magyarországra. Persze, ha idejössz, nem árt, ha néhány dolgot észben tartasz. Tudd, hogy itt csak magadra számíthatsz. Magyarországon tiéd ugyan a pálya - de ugyanez igaz nálad sokkal nagyobb halakra is, akik nem tétováznak, ha félre kell tenni valakit az útból. Ha életben akarsz maradni, tartsd be az utca íratlan játékszabályait. Ja, és még valami: ügyelj rá, hogy ne menj a Fertőzött zónák közelébe.\n\nA Shadowrun szerepjáték a közeli jövőben játszódik, amikor a világot óriási mamutcégek, mindenhová elérő számítógépes hálózat, és mágikusan aktív, „felébredt\" teremtmények uralják. Ennek az amerikai játéktervezők által megálmodott világnak a mintájára képzeltük el, milyen lenne Magyarország a Shadowrun fantasztikus utópiája szerint. Az ÁrnyékMagyarország önállóan is élvezhető olvasmány, ha azonban ismered a magyarul is kiadott Shadowrun szerepjátékot, akkor az ÁrnyékMagyarország egyben egy szerepjáték kiegészítő is, amely lehetővé teszi, hogy árnyvadászaitok a jövő Magyarországán kalandozzanak.",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2050-01-01",
+			"gameDate": "2050-01",
 			"notes": "Shadowrun Hungary sourcebook (Hungarian)"
 		},
 		{
@@ -12282,7 +12282,7 @@
 			"releaseDate": [
 				"1996-01-01"
 			],
-			"gameDate": "2056-01-01",
+			"gameDate": "2056-01",
 			"notes": "Chrom & Dioxin succeeds in making the years 2054-2056 playable for german Runners, too. Filled with lots of information on the latest events and developments in politics, economy and technology, plus a special treat: the Switzerland. With its many paranormal beings and rigid security politics a challenge for every Runner. There are also sections dealing with the Lueneburg Heath in northern Germany and the city of Karlsruhe."
 		},
 		{
@@ -12301,7 +12301,7 @@
 			"releaseDate": [
 				"2009-01-01"
 			],
-			"gameDate": "2074-01-01",
+			"gameDate": "2074-01",
 			"notes": "Winning entry of Pegasus' 2009 adventure competition for Shadowrun. Subsequently released as a free pdf."
 		},
 		{
@@ -12320,7 +12320,7 @@
 			"releaseDate": [
 				"2017-12-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12338,7 +12338,7 @@
 			"releaseDate": [
 				"2017-12-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12356,7 +12356,7 @@
 			"releaseDate": [
 				"2017-12-01"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12374,7 +12374,7 @@
 			"releaseDate": [
 				"2020-01-21"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12392,7 +12392,7 @@
 			"releaseDate": [
 				"2020-02-24"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12410,7 +12410,7 @@
 			"releaseDate": [
 				"2018-01-27"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12428,7 +12428,7 @@
 			"releaseDate": [
 				"2019-06-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Announced as a kickstarter campaign. Possible a retake on Hostile Takeover."
 		},
@@ -12448,7 +12448,7 @@
 			"releaseDate": [
 				"2019-06-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -12467,7 +12467,7 @@
 			"releaseDate": [
 				"2019-06-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -12486,7 +12486,7 @@
 			"releaseDate": [
 				"2019-06-01"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope"
 		},
 		{
@@ -12502,7 +12502,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Announced at GenCon 2018."
 		},
@@ -12519,7 +12519,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Announced at GenCon 2018."
 		},
@@ -12544,7 +12544,7 @@
 				"2018-06-27",
 				"2018-10-07"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12568,7 +12568,7 @@
 				"2018-06-17",
 				"2018-06-26"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12590,7 +12590,7 @@
 			"releaseDate": [
 				"2018-11-23"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12603,12 +12603,12 @@
 			"description": "Les Nations des Américains d'Origine est la traduction-compilation de deux suppléments américains (Native American Nations Volume 1 et Native American Nations Volume 2) écrits par FASA, sauf le scénario Peacekeeper tiré du premier volume qui sera traduit séparément sous le titre Alerte Rouge. Il traite donc des nations apparues en Amérique du Nord (Aztlan et Tir Taingire exceptés) à la suite de l'Éveil et de la révolte des peuples indiens. Ce guide se conclut par un scénario se déroulant dans la nation Tsimshian.",
 			"edition": 1,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1995-01-01"
 			],
-			"gameDate": "2060-01-01",
+			"gameDate": "2060-01",
 			"status": "outofscope",
 			"notes": "A condensed edition with: Native American Nations Volume 1, Native American Nations Volume 2 without the adventure \"Peacekeeper\"."
 		},
@@ -12623,12 +12623,12 @@
 			"description": "Voilà trente ans, la naissance tumultueuse des Nations des Américan d'Origine ébranlait les États-Unis d'Amérique et bouleversait les frontières géo-politiques de l'Amérique du Nord. Aujourd'hui, quelqu'un qui n'apprécie pas cette tournure des événements travaille à un nouveau bouleversement de son cru. Est-ce une venegeance? Ou quelque chose de plus profond? Quoiqu'il en soit, cette sombre histoire vous entraîne dans une longue traque à travers les nations tribales. Mais si vous êtes les chasseurs, pourquoi cette impression que les mâchoires du piège se referment sur vous?",
 			"edition": 2,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"1995-09-01"
 			],
-			"gameDate": "2060-01-01",
+			"gameDate": "2060-01",
 			"notes": "A translation of the adventure \"Peacekeeper\"."
 		},
 		{
@@ -12647,7 +12647,7 @@
 			"releaseDate": [
 				"2009-01-01"
 			],
-			"gameDate": "2060-01-01",
+			"gameDate": "2060-01",
 			"notes": "The German version of the \"Start Rules\". Contains the adventure \"Freier Markt\"."
 		},
 		{
@@ -12666,7 +12666,7 @@
 			"releaseDate": [
 				"2018-11-24"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12684,7 +12684,7 @@
 			"releaseDate": [
 				"2019-01-21"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12708,7 +12708,7 @@
 				"2019-01-21",
 				"2019-03-19"
 			],
-			"gameDate": "2075-01-01",
+			"gameDate": "2075-01",
 			"notes": "The German version has an aditional 20 pages of the life in ADL."
 		},
 		{
@@ -12733,7 +12733,7 @@
 				"2019-06-13",
 				"2019-07-10"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12755,13 +12755,13 @@
 			"publisher": [
 				"Catalyst Game Labs",
 				"Pegasus Spiele",
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2019-08-26",
 				"2019-10-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12779,7 +12779,7 @@
 			"releaseDate": [
 				"2020-01-22"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12803,7 +12803,7 @@
 				"2019-06-01",
 				"2019-07-19"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12821,7 +12821,7 @@
 			"releaseDate": [
 				"2019-04-29"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12839,7 +12839,7 @@
 			"releaseDate": [
 				"2019-04-29"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12857,7 +12857,7 @@
 			"releaseDate": [
 				"2019-04-29"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12875,7 +12875,7 @@
 			"releaseDate": [
 				"2019-04-29"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12893,7 +12893,7 @@
 			"releaseDate": [
 				"2019-04-29"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -12908,7 +12908,7 @@
 			"publisher": [
 				"Catalyst Game Labs"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12926,7 +12926,7 @@
 			"releaseDate": [
 				"2019-10-24"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12944,7 +12944,7 @@
 			"releaseDate": [
 				"2019-10-24"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12962,7 +12962,7 @@
 			"releaseDate": [
 				"2019-05-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12980,7 +12980,7 @@
 			"releaseDate": [
 				"2019-05-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -12998,7 +12998,7 @@
 			"releaseDate": [
 				"2019-05-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13016,7 +13016,7 @@
 			"releaseDate": [
 				"2019-05-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13034,7 +13034,7 @@
 			"releaseDate": [
 				"2019-05-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13052,7 +13052,7 @@
 			"releaseDate": [
 				"2019-05-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13070,7 +13070,7 @@
 			"releaseDate": [
 				"2020-01-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13088,7 +13088,7 @@
 			"releaseDate": [
 				"2018-10-07"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -13106,7 +13106,7 @@
 			"releaseDate": [
 				"2019-01-28"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -13129,7 +13129,7 @@
 				"2019-12-11",
 				"2020-10-15"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13151,7 +13151,7 @@
 			"releaseDate": [
 				"2020-02-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13166,7 +13166,7 @@
 			"publisher": [
 				"Pegasus Spiele"
 			],
-			"gameDate": "2072-01-01"
+			"gameDate": "2072-01"
 		},
 		{
 			"sku": [
@@ -13184,7 +13184,7 @@
 			"releaseDate": [
 				"2020-01-12"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13202,7 +13202,7 @@
 			"releaseDate": [
 				"2019-11-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13220,7 +13220,7 @@
 			"releaseDate": [
 				"2019-10-01"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13242,7 +13242,7 @@
 			"releaseDate": [
 				"2020-02-13"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13260,12 +13260,12 @@
 			"edition": 6,
 			"publisher": [
 				"Pegasus Spiele",
-				 "other"
+				 "Other"
 			],
 			"releaseDate": [
 				"2019-10-24"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13283,7 +13283,7 @@
 			"releaseDate": [
 				"2011-12-23"
 			],
-			"gameDate": "2070-01-01"
+			"gameDate": "2070-01"
 		},
 		{
 			"sku": [
@@ -13301,7 +13301,7 @@
 			"releaseDate": [
 				"2019-07-01"
 			],
-			"gameDate": "2073-01-01",
+			"gameDate": "2073-01",
 			"status": "missing",
 			"notes": "The book contains the printed version of several \"Datapuls\" supplements previously only published as eBooks: \"Datapuls\"-Ergänzungen: \"Datapuls: Schweiz\", \"Datapuls: Verschlusssache\", \"Datapuls: Frankfurt\", \"Datapuls: Proteus\" and \"Datapuls: SOTA 2080\" and - as an exclusive addition - \"Datapuls: Auf der Jagd\" with interesting facts about the federal police authorities of the ADL with a focus on BGS and BKA."
 		},
@@ -13321,7 +13321,7 @@
 			"releaseDate": [
 				"2020-01-21"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13339,7 +13339,7 @@
 			"releaseDate": [
 				"2019-07-31"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "missing"
 		},
 		{
@@ -13358,7 +13358,7 @@
 			"releaseDate": [
 				"2020-05-18"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13376,7 +13376,7 @@
 			"releaseDate": [
 				"2020-10-15"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "missing"
 		},
 		{
@@ -13390,12 +13390,12 @@
 			"description": "Quelque chose de pourri se trame dans l'Hexagone...\n\nParis, 2076. Le peuple gronde et la VIe République menace de s'effondrer. Le président, Yohann de Kervelec, sent l'étau se resserrer. La noblesse veut sa tête pour avoir révélé la Cabale, les corporations veulent qu'il disparaisse pour avoir les coudées franches et tous ses alliés l'ont abandonné. Acculé, il tente un dernier coup, qui va plonger un groupe de shadowrunners dans la tourmente qui va s'emparer dans la France jusqu'en 2080. Entre rencontres de PNJ français emblématiques et exploration des recoins de la capitale, les PJ mèneront de périlleuses excursions au cœur de la Brume de Bretagne et dans la fange radioactive de la SOX. Au bout du compte, ils seront les seuls à pouvoir révéler les sombres secrets qui se cachent derrière la Néo-Révolution - s'ils y survivent.\nNéo-Révolution est une campagne en cinq scénarios pour Shadowrun, Cinquième édition et Shadowrun Anarchy, accompagnée d'un guide détaillé de Paris en 2080. La campagne invite ses joueurs à prendre part aux événements qui mèneront à la Néo-Révolution, un bouleversement politique qui changera à jamais le visage de la France de Shadowrun.",
 			"edition": 5,
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"releaseDate": [
 				"2018-07-13"
 			],
-			"gameDate": "2076-01-01",
+			"gameDate": "2076-01",
 			"notes": "Campaign and sourcebook for France and in particular the capital Paris."
 		},
 		{
@@ -13411,7 +13411,7 @@
 			"publisher": [
 				"Pegasus Spiele"
 			],
-			"gameDate": "2076-01-01",
+			"gameDate": "2076-01",
 			"status": "missing",
 			"notes": "As it is released monthly, some itens are missing."
 		},
@@ -13428,7 +13428,7 @@
 			"publisher": [
 				"Pegasus Spiele"
 			],
-			"gameDate": "2070-01-01",
+			"gameDate": "2070-01",
 			"notes": "It has been replaced by SchattenLoad."
 		},
 		{
@@ -13450,7 +13450,7 @@
 			"releaseDate": [
 				"2020-05-26"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13468,7 +13468,7 @@
 			"releaseDate": [
 				"2020-04-06"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -13486,7 +13486,7 @@
 			"releaseDate": [
 				"2020-05-26"
 			],
-			"gameDate": "2075-01-01"
+			"gameDate": "2075-01"
 		},
 		{
 			"sku": [
@@ -13504,7 +13504,7 @@
 			"releaseDate": [
 				"2020-06-17"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13522,7 +13522,7 @@
 			"releaseDate": [
 				"2020-06-17"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13540,7 +13540,7 @@
 			"releaseDate": [
 				"2020-06-17"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13558,7 +13558,7 @@
 			"releaseDate": [
 				"2020-06-12"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "Print only puzzles and folios of the game."
 		},
@@ -13579,7 +13579,7 @@
 				"2020-05-31",
 				"2020-06-15"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13597,7 +13597,7 @@
 			"releaseDate": [
 				"2020-05-25"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13620,7 +13620,7 @@
 				"2020-08-24",
 				"2020-10-15"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13641,7 +13641,7 @@
 			"releaseDate": [
 				"2020-07-17"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13663,7 +13663,7 @@
 				"2020-07-08",
 				"2022-08-19"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13685,7 +13685,7 @@
 				"2020-05-01",
 				"2022-09-02"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13703,7 +13703,7 @@
 			"releaseDate": [
 				"2020-06-01"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope"
 		},
 		{
@@ -13722,7 +13722,7 @@
 			"releaseDate": [
 				"2020-06-01"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope"
 		},
 		{
@@ -13741,7 +13741,7 @@
 			"releaseDate": [
 				"2019-12-18"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13765,7 +13765,7 @@
 				"2019-12-18",
 				"2021-05-15"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "missing",
 			"notes": "A deck of printed NPC cards."
 		},
@@ -13785,7 +13785,7 @@
 			"releaseDate": [
 				"2020-06-15"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A collection of PDFs."
 		},
@@ -13805,7 +13805,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13823,7 +13823,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13841,7 +13841,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13859,7 +13859,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13877,7 +13877,7 @@
 			"releaseDate": [
 				"2020-04-23"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13895,7 +13895,7 @@
 			"releaseDate": [
 				"2020-05-18"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "missing"
 		},
 		{
@@ -13914,7 +13914,7 @@
 			"releaseDate": [
 				"2020-10-15"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13932,7 +13932,7 @@
 			"releaseDate": [
 				"2020-10-15"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "missing"
 		},
 		{
@@ -13951,7 +13951,7 @@
 			"releaseDate": [
 				"2020-12-15"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope"
 		},
 		{
@@ -13970,7 +13970,7 @@
 			"releaseDate": [
 				"2020-08-24"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -13988,7 +13988,7 @@
 			"releaseDate": [
 				"2019-01-01"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope"
 		},
 		{
@@ -14007,7 +14007,7 @@
 			"releaseDate": [
 				"2019-01-01"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope"
 		},
 		{
@@ -14026,7 +14026,7 @@
 			"releaseDate": [
 				"2019-01-01"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"status": "outofscope"
 		},
 		{
@@ -14045,7 +14045,7 @@
 			"releaseDate": [
 				"2020-11-02"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14066,7 +14066,7 @@
 			"releaseDate": [
 				"2021-01-08"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"notes": "The german edition has an additional part discussing groups such as the \"Disciples of the Cleansing Fire\" or the \"SiegfriedBund\"."
 		},
 		{
@@ -14085,7 +14085,7 @@
 			"releaseDate": [
 				"2020-09-28"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14104,7 +14104,7 @@
 			"releaseDate": [
 				"2019-07-01"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"notes": "Also released in english as part of the \"Shadowrun: Sixth World Beginner Box\"."
 		},
 		{
@@ -14127,7 +14127,7 @@
 			"releaseDate": [
 				"2021-02-09"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14149,7 +14149,7 @@
 			"releaseDate": [
 				"2021-04-23"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"notes": "The German edition has additional information on ADL Mega Corps"
 		},
 		{
@@ -14168,7 +14168,7 @@
 			"releaseDate": [
 				"2021-05-31"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14186,7 +14186,7 @@
 			"releaseDate": [
 				"2021-04-20"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14204,7 +14204,7 @@
 			"releaseDate": [
 				"2021-04-20"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14222,7 +14222,7 @@
 			"releaseDate": [
 				"2021-05-10"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14240,7 +14240,7 @@
 			"releaseDate": [
 				"2021-04-29"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14258,7 +14258,7 @@
 			"releaseDate": [
 				"2021-02-18"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14276,7 +14276,7 @@
 			"releaseDate": [
 				"2021-02-18"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14294,7 +14294,7 @@
 			"releaseDate": [
 				"2021-04-24"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14312,7 +14312,7 @@
 			"releaseDate": [
 				"2021-04-27"
 			],
-			"gameDate": "2080-01-01"
+			"gameDate": "2080-01"
 		},
 		{
 			"sku": [
@@ -14330,7 +14330,7 @@
 			"releaseDate": [
 				"2021-06-15"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: München\", \"Datapuls: Pomorya\", \"Datapuls: SOTA 2081\", \"Datapuls: Westphalen\" und \"Datapuls: Piraten der Deutschen Bucht\"",
 			"status": "missing"
 		},
@@ -14350,7 +14350,7 @@
 			"releaseDate": [
 				"2021-06-01"
 			],
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerläufer\"",
 			"status": "missing"
 		},
@@ -14370,7 +14370,7 @@
 			"releaseDate": [
 				"2008-06-01"
 			],
-			"gameDate": "2070-01-01",
+			"gameDate": "2070-01",
 			"notes": "This was a promo CD with the quick start rules and the adventure \"Freir Market\" released for SPIEL 2008."
 		},
 		{
@@ -14379,7 +14379,7 @@
 				"28F001"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "mission",
 			"type": "digital",
 			"originalLanguage": "en-US",
@@ -14397,7 +14397,7 @@
 				"26869"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "novel",
 			"type": "digital",
 			"originalLanguage": "en-US",
@@ -14415,7 +14415,7 @@
 				"28D00"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "misc",
 			"type": "physical",
 			"originalLanguage": "en-US",
@@ -14434,7 +14434,7 @@
 				"28FM02"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "misc",
 			"type": "physical",
 			"originalLanguage": "en-US",
@@ -14453,7 +14453,7 @@
 				"28FM01"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "misc",
 			"type": "physical",
 			"originalLanguage": "en-US",
@@ -14472,7 +14472,7 @@
 				"28P00"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "misc",
 			"type": "physical",
 			"originalLanguage": "en-US",
@@ -14492,7 +14492,7 @@
 				"28P01"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "misc",
 			"type": "physical",
 			"originalLanguage": "en-US",
@@ -14511,7 +14511,7 @@
 				"28T00"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"category": "misc",
 			"type": "physical",
 			"originalLanguage": "en-US",
@@ -14531,7 +14531,7 @@
 				"28T01"
 			],
 			"edition": 6,
-			"gameDate": "2080-10-01",
+			"gameDate": "2080-10",
 			"category": "misc",
 			"type": "physical",
 			"originalLanguage": "en-US",
@@ -14550,13 +14550,13 @@
 				"BBESR6G03"
 			],
 			"edition": 6,
-			"gameDate": "2080-01-01",
+			"gameDate": "2080-01",
 			"releaseDate": ["2021-01-01"],
 			"category": "mission",
 			"type": "digital",
 			"originalLanguage": "fr-FR",
 			"publisher": [
-				"other"
+				"Other"
 			],
 			"status": "missing",
 			"notes": "This is a French mission based on the \"Neo Revolution\" scenario.",
@@ -14954,7 +14954,7 @@
 			"releaseDate": [
 				"2022-06-01"
 			],
-			"gameDate": "2082-01-01",
+			"gameDate": "2082-01",
 			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: DeMeKo und Medien\", \"Datapuls: Alpen\", \"Datapuls: Harz\", \"Datapuls: SOTA 2082\" and \"Datapuls: 10 Konzerne\"",
 			"status": "missing"
 		},
@@ -14974,7 +14974,7 @@
 			"releaseDate": [
 				"2022-04-14"
 			],
-			"gameDate": "2082-01-01"
+			"gameDate": "2082-01"
 		},
 		{
 			"sku": [
@@ -14992,7 +14992,7 @@
 			"releaseDate": [
 				"2022-04-28"
 			],
-			"gameDate": "2082-01-01"
+			"gameDate": "2082-01"
 		},
 		{
 			"sku": [
@@ -15010,7 +15010,7 @@
 			"releaseDate": [
 				"2020-05-02"
 			],
-			"gameDate": "2082-01-01"
+			"gameDate": "2082-01"
 		},
 		{
 			"sku": [
@@ -15028,7 +15028,7 @@
 			"releaseDate": [
 				"2020-04-14"
 			],
-			"gameDate": "2082-01-01"
+			"gameDate": "2082-01"
 		},
 		{
 			"sku": [
@@ -15046,7 +15046,7 @@
 			"releaseDate": [
 				"2020-04-28"
 			],
-			"gameDate": "2082-01-01"
+			"gameDate": "2082-01"
 		},
 		{
 			"sku": [
@@ -15616,7 +15616,9 @@
 			"originalLanguage": "en-US",
 			"description": "# TIES THAT BIND…\n\nMage Jonathan Leeds has built himself a comfortable life owning and operating an exclusive night club in London, far from the iron grasp of his family. But when his father, Gordon, abruptly summons him to the Seattle Metroplex, John finds himself a stranger in a strange land, thrown into the wilds of the ’Plex to manage a situation apparently only he can handle. Although he’d prefer to ignore his father’s wishes, John knows that no one—family or foe—says no to Gordon Leeds. At least, not if they want to live to tell about it.\n\nBut family obligations aren’t the only reason John is in Seattle. His patron back in England, Lord Callen Nassau, has asked him to look for a missing woman. John is only too happy to oblige, as the elegant elf noble is everything his father is not. But when Gordon’s and Callen’s tasks intertwine in unexpected ways, John is forced to question everything he knows about both men, and soon discovers not all that glitters is gold.\n\nWhen the desires of these rich and powerful beings collide in the Sixth World, John finds himself a pawn in their vicious game. If he’s to escape the Emerald City in one piece, John knows he must take control of the situation—any way he can—or suffer the lethal consequences.",
 			"edition": 6,
-			"publisher": [],
+			"publisher": [
+				"Catalyst Game Labs"
+			],
 			"releaseDate": [
 				"2022-03-16"
 			],

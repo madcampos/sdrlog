@@ -1,4 +1,4 @@
-import type { FileForMaterial, Material, MaterialStatus } from '../../data/data';
+import type { FileForMaterial, Material, MaterialEdition, MaterialStatus } from '../../data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 import { Logger } from '../util/logger';
 
@@ -71,7 +71,7 @@ export async function saveNewMaterialInfo(id: string, {
 	const materialToSave: Material = {
 		name,
 		sku,
-		edition: Number.parseInt(edition),
+		edition: Number.parseInt(edition) as MaterialEdition,
 		gameDate,
 		category,
 		type,

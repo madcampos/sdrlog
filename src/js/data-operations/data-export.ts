@@ -1,4 +1,4 @@
-import type { Material } from '../../data/data';
+import type { Material, MaterialEdition } from '../../data/data';
 import type { NewMaterialProperties } from './create-material';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
@@ -14,7 +14,7 @@ function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 		type: data.type,
 		originalLanguage: data.originalLanguage,
 		description: data.description,
-		edition: Number.parseInt(data.edition),
+		edition: Number.parseInt(data.edition) as MaterialEdition,
 		publisher: data.publisher,
 		releaseDate: data.releaseDate,
 		gameDate: data.gameDate

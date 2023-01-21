@@ -63,13 +63,13 @@
 						"type": "array",
 						"minItems": 1,
 						"uniqueItems": true,
-						"items": { "enum": ["Catalyst Game Labs", "Cliffhanger Productions", "FASA Corporation", "Fantasy Productions", "Harebrained Schemes", "Pegasus Spiele", "WizKids Games", "Heyne Verlag", "other", "unofficial"] },
+						"items": { "enum": ["Catalyst Game Labs", "Cliffhanger Productions", "FASA Corporation", "Fantasy Productions", "Harebrained Schemes", "Pegasus Spiele", "WizKids Games", "Heyne Verlag", "Other", "Unofficial"] },
 						"description": "A list of enterprises who published the material."
 					},
 					"gameDate": {
 						"type": "string",
 						"description": "The in game date of the material.",
-						"pattern": "[0-9]{4}-[0-9]{2}"
+						"pattern": "^[0-9]{4}-[0-9]{2}$"
 					},
 					"releaseDate": {
 						"type": "array",
