@@ -4,9 +4,11 @@ import { Logger } from '../util/logger';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
+import dataUrl from '../../data/data.json?url';
+
 async function fetchData() {
 	try {
-		const res = await fetch(`${import.meta.env.APP_PUBLIC_URL}data/data.json`);
+		const res = await fetch(dataUrl);
 
 		if (res.ok) {
 			const parsedFile = await res.json() as SDRLogData;

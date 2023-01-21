@@ -1,5 +1,5 @@
 import { I18n } from '../../js/intl/translations';
-import type { SdrCard } from '../SdrCard';
+import { SdrCard } from '../SdrCard';
 import { getFiltersFromTagsString } from './update-filter';
 
 function getSuggestionListForTag(tag: string, value: string) {
@@ -7,7 +7,7 @@ function getSuggestionListForTag(tag: string, value: string) {
 
 	switch (tag) {
 		case 'sku':
-			document.querySelectorAll<SdrCard>(`item-card[data-sku*="${value}" i]`).forEach((card) => {
+			document.querySelectorAll<SdrCard>(`${SdrCard.elementName}[data-sku*="${value}" i]`).forEach((card) => {
 				const skus = (card.getAttribute('data-sku') as string).split(' ');
 				const correctSku = skus.find((sku) => sku.includes(value));
 
@@ -63,7 +63,7 @@ function getSuggestionListForTag(tag: string, value: string) {
 			break;
 
 		default:
-			document.querySelectorAll<SdrCard>(`item-card[title*="${value}" i]`).forEach((card) => {
+			document.querySelectorAll<SdrCard>(`${SdrCard.elementName}[title*="${value}" i]`).forEach((card) => {
 				suggestionList.push([`name: ${card.getAttribute('title') ?? ''}`, card.getAttribute('title') ?? '']);
 			});
 			break;
@@ -91,7 +91,7 @@ export function getSuggestions(tagString: string) {
 			}
 
 			return updatedQuery;
-		}, 'item-card');
+		}, SdrCard.elementName);
 
 		const elements = document.querySelectorAll<SdrCard>(query);
 

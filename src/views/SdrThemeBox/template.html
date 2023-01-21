@@ -4,23 +4,23 @@
 
 		<p>t("Set the theme for the application:")</p>
 
-		<radio-group
+		<sdr-radio-group
 			:value="theme"
 
 			@change="changeTheme"
 		>
-			<radio-item icon="🌓" value="system">
+			<sdr-radio-item icon="🌓" value="system">
 				<span slot="title">t("System Theme")</span>
 				<span>t("Follows the system defined theme.")</span>
-			</radio-item>
-			<radio-item icon="🌞" value="light">
+			</sdr-radio-item>
+			<sdr-radio-item icon="🌞" value="light">
 				<span slot="title">t("Light Theme")</span>
 				<span>t("Always use a light theme.")</span>
-			</radio-item>
-			<radio-item icon="🌚" value="dark">
+			</sdr-radio-item>
+			<sdr-radio-item icon="🌚" value="dark">
 				<span slot="title">t("Dark Theme")</span>
 				<span>t("Always use a dark theme.")</span>
-			</radio-item>
-		</radio-group>
+			</sdr-radio-item>
+		</sdr-radio-group>
 	</sdr-dialog>
 </template>
