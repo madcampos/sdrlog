@@ -49,6 +49,7 @@ export class SdrLanguageBox extends SdrComponent {
 			}
 		});
 
+		// TODO: ensure this is correctly set
 		this.language = I18n.getLanguage();
 	}
 

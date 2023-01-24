@@ -8,12 +8,14 @@
 		id="language-select"
 
 		:value="language"
+
+		@change="changeLanguage"
 	>
 		<span slot="label">t("App Language")</span>
 
-		<option value="en">t("English")</option>
-		<option value="fr">t("French")</option>
-		<option value="es">t("Spanish")</option>
+		<option value="en-US">t("English")</option>
+		<option value="fr-FR">t("French")</option>
+		<option value="es-ES">t("Spanish")</option>
 		<option value="pt-BR">t("Brazilian Portuguese")</option>
 	</sdr-select>
 </sdr-dialog>
