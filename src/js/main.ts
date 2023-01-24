@@ -39,7 +39,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 	updateLoadStatus(I18n.t`Importing helper functions.`);
 	const { fetchItems } = await import('./data-operations/data-import');
-	const { updateFiltersFromURL } = await import('../components/SdrSearchBox/update-filter');
 	const { createComparer } = await import('./intl/formatting');
 
 	updateLoadStatus(I18n.t`Fetching items database.`);
@@ -77,8 +76,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 	SdrInfoBox.updateFromURL();
 	SdrThemeBox.updateFromURL();
 	SdrLanguageBox.updateFromURL();
-
-	updateFiltersFromURL();
 
 	updateLoadStatus(I18n.t`Done!`);
 	document.querySelector('#splash-screen')?.remove();

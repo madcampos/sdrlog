@@ -7,7 +7,7 @@ import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/
 import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-exporter';
 import { requestDataFileFromUser } from '../../js/data-operations/data-import';
 import { exportDataFile } from '../../js/data-operations/data-export';
-import { updateSearchFilter } from '../SdrSearchBox/update-filter';
+import { SearchEngine } from '../SdrSearchBox/search-engine';
 import { SdrItemDetails } from '../../views/SdrItemDetails';
 import { SdrInfoBox } from '../../views/SdrInfoBox';
 import { SdrLanguageBox } from '../../views/SdrLanguageBox';
@@ -37,7 +37,7 @@ export class SdrMenuBar extends SdrComponent {
 					const target = evt.target as HTMLElement;
 					const action = target.getAttribute('action') as Material['category'] | 'all';
 
-					updateSearchFilter({ category: action });
+					SearchEngine.updateSearchResults(`category: ${action}`);
 				},
 				openMaterialModal: async () => SdrItemDetails.openModal()
 			},

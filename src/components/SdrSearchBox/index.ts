@@ -1,8 +1,7 @@
 import { registerShortcut } from '../../js/util/keyboard';
-import { getSuggestions } from './search-suggestions';
 import { registerComponent, SdrComponent } from '../SdrComponent';
 
-import { getFiltersFromTagsString, getFiltersFromURL, getTagStringFromFilters, updateSearchFilter } from './update-filter';
+import { SearchEngine } from './search-engine';
 
 import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
@@ -23,22 +22,20 @@ export class SdrSearchBox extends SdrComponent {
 			watchedAttributes,
 			props: [{ name: 'value', value: '', attributeName: 'value' }],
 			handlers: {
-				updateSuggestions: () => {
+				updateSuggestions: (evt) => {
+					const { value } = evt.target as HTMLInputElement;
+
+					this.value = value;
+
 					window.requestAnimationFrame(() => {
-						const suggestions = getSuggestions(this.value);
 						const datalist = this.root.querySelector('datalist') as HTMLDataListElement;
 
-						datalist.innerHTML = '';
-						datalist.append(...suggestions);
+						SearchEngine.updateSuggestions(this.value, datalist);
 					});
 				},
 				updateFilter: () => {
-					if (!this.value) {
-						updateSearchFilter({});
-					} else {
-						const filters = getFiltersFromTagsString(this.value);
-
-						updateSearchFilter(filters);
+					if (this.value) {
+						SearchEngine.updateSearchResults(this.value);
 					}
 				},
 				searchClick: () => {
@@ -57,7 +54,7 @@ export class SdrSearchBox extends SdrComponent {
 			}
 		});
 
-		this.value = getTagStringFromFilters(getFiltersFromURL());
+		this.value = SearchEngine.updateFromURL();
 	}
 
 	focus() {
