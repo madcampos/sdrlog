@@ -1,8 +1,10 @@
 import type Section from 'epubjs/types/section';
 import type { Location as BookLocation, NavItem, Rendition } from 'epubjs';
 import type { SdrButton } from '../../components/SdrButton';
-
+// TODO: import lib async
 import 'jszip';
+
+// TODO: import lib async
 import { default as ePub } from 'epubjs';
 import darkTheme from './dark-theme.css?url';
 

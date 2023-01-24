@@ -1,7 +1,10 @@
 /* eslint-disable no-underscore-dangle */
 import type { EmulatorInitializerFunction, EmulatorModule } from '../../../public/lib/webretro/webretro';
 
+// TODO: import lib async
 import JSZip from 'jszip';
+
+// TODO: import lib async
 import nipplejs from 'nipplejs';
 
 import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data-operations/idb-persistence';
