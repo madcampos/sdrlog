@@ -34,9 +34,7 @@ export class SdrSearchBox extends SdrComponent {
 					});
 				},
 				updateFilter: () => {
-					if (this.value) {
-						SearchEngine.updateSearchResults(this.value);
-					}
+					SearchEngine.updateSearchResults(this.value);
 				},
 				searchClick: () => {
 					this.root.querySelector('input')?.dispatchEvent(new Event('change'));

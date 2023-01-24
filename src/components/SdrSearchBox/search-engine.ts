@@ -17,15 +17,16 @@ export class SearchEngine {
 	}
 
 	static #updateUrlSearchParams(tag: FilterTypes, value: string) {
-		if (tag === 'name' && value === '') {
-			return;
-		}
-
 		const search = new URLSearchParams(window.location.search);
 		const url = new URL(window.location.href);
 		const searchString = `${tag}: ${value}`;
 
-		if (search.get('search') !== searchString) {
+		if (searchString === 'name: ' || searchString === 'category: all') {
+			search.delete('search');
+			url.search = search.toString();
+
+			window.history.pushState(null, document.title, url);
+		} else if (search.get('search') !== searchString) {
 			const data = {
 				type: 'search',
 				value: searchString
@@ -47,6 +48,8 @@ export class SearchEngine {
 		window.requestAnimationFrame(() => {
 			if ((tag === 'category' && value === 'all') || (tag === 'name' && value === '')) {
 				(filterElement as HTMLElement).innerText = '';
+			} else if (tag === 'name') {
+				(filterElement as HTMLElement).innerText = `${SdrCard.elementName}:not([title*="${value}" i]){ display:none; }`;
 			} else {
 				(filterElement as HTMLElement).innerText = `${SdrCard.elementName}:not([${tag}*="${value}" i]){ display:none; }`;
 			}
