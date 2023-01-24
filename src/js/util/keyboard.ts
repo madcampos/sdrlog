@@ -1,7 +1,6 @@
 type ShortcutEventHandler = (evt?: KeyboardEvent) => void;
 
 const shortcuts = new Map<string, ShortcutEventHandler>();
-let shortcutEventHandler: ShortcutEventHandler | undefined;
 
 function isMacOs() {
 	return navigator.userAgent.includes('Mac OS X') || navigator.platform.includes('Mac') || navigator.platform.includes('iPad') || navigator.platform.includes('iPhone') || navigator.platform.includes('darwin');
@@ -20,7 +19,7 @@ window.addEventListener('keydown', (evt) => {
 		return;
 	}
 
-	shortcutEventHandler = shortcuts.get(evt.key);
+	const shortcutEventHandler = shortcuts.get(evt.key);
 
 	if (shortcutEventHandler) {
 		evt.preventDefault();
@@ -29,13 +28,20 @@ window.addEventListener('keydown', (evt) => {
 });
 
 window.addEventListener('keyup', (evt) => {
-	if (!shortcutEventHandler) {
+	const isMac = isMacOs();
+
+	if (isMac && !evt.metaKey) {
+		return;
+	} else if (!isMac && !evt.ctrlKey) {
 		return;
 	}
 
-	evt.preventDefault();
-	evt.stopPropagation();
+	const shortcutEventHandler = shortcuts.get(evt.key);
 
-	shortcutEventHandler(evt);
-	shortcutEventHandler = undefined;
+	if (shortcutEventHandler) {
+		evt.preventDefault();
+		evt.stopPropagation();
+
+		shortcutEventHandler(evt);
+	}
 }, { capture: false });
