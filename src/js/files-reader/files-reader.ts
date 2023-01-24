@@ -38,7 +38,7 @@ export async function associateFileWithData(fileName: string, path: string, type
 		await setFileForMaterial(fileForMaterial);
 
 		if (material.status === 'missing') {
-			delete material.status;
+			material.status = 'ok';
 
 			await saveMaterial(id, material);
 		}

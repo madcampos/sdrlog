@@ -30,7 +30,7 @@ export interface Material {
 	description: string,
 	edition: MaterialEdition,
 	publisher: MaterialPublisher[],
-	gameDate?: MaterialGameDate,
+	gameDate: MaterialGameDate,
 	releaseDate?: MaterialReleaseDate[],
 	status: MaterialStatus,
 	originalLanguage: IsoCode,
