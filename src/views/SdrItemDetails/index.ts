@@ -548,7 +548,7 @@ export class SdrItemDetails extends SdrComponent {
 			this.name = material.name;
 			this.skus.push(...material.sku);
 			this.edition = material.edition.toString();
-			this.gameDate = material.gameDate ?? '';
+			this.gameDate = material.gameDate;
 			this.category = material.category;
 			this.type = material.type;
 			this.originalLanguage = material.originalLanguage;

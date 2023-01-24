@@ -84,7 +84,7 @@ export class SdrCard extends SdrComponent {
 				this.sku = material.sku;
 				this.type = material.type;
 				this.edition = material.edition;
-				this.status = material.status ?? 'OK';
+				this.status = material.status;
 			}
 		}
 

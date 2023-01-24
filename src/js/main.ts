@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 		itemCard.sku = material.sku;
 		itemCard.type = material.type;
 		itemCard.edition = material.edition;
-		itemCard.status = material.status ?? 'OK';
+		itemCard.status = material.status;
 		document.querySelector('main')?.appendChild(itemCard);
 
 		progressLoader.value += 1;
