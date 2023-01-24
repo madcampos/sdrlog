@@ -1,7 +1,6 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getMaterial, saveFile, saveMaterial, setFileForMaterial } from '../data-operations/idb-persistence';
 import { I18n } from '../intl/translations';
-import { Logger } from '../util/logger';
 
 export function extractMetadataFromFileName(fileName: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
@@ -107,7 +106,7 @@ export async function readFiles() {
 			await saveFile(path, entry);
 		}
 	} catch (err) {
-		Logger.error('Failed to read materials.', err);
+		console.error('Failed to read materials.', err);
 	}
 
 	progressOverlay.remove();

@@ -1,7 +1,6 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
 import { I18n } from '../intl/translations';
-import { Logger } from '../util/logger';
 
 export async function saveCoversToFolder() {
 	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Export Covers` });
@@ -32,7 +31,7 @@ export async function saveCoversToFolder() {
 			}
 		}
 	} catch (err) {
-		Logger.error('Failed to save covers.', err);
+		console.error('Failed to save covers.', err);
 	}
 
 	progressOverlay.remove();
@@ -67,7 +66,7 @@ export async function saveThumbsToFolder() {
 			}
 		}
 	} catch (err) {
-		Logger.error('Failed to save thmbs.', err);
+		console.error('Failed to save thmbs.', err);
 	}
 
 	progressOverlay.remove();

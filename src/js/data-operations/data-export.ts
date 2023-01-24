@@ -4,7 +4,6 @@ import type { NewMaterialProperties } from './create-material';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getMaterials } from './idb-persistence';
 import { I18n } from '../intl/translations';
-import { Logger } from '../util/logger';
 
 function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 	const filteredData: Material = {
@@ -63,7 +62,7 @@ export async function exportDataFile() {
 			await file.close();
 		}
 	} catch (err) {
-		Logger.error('Failed to export data file.', err);
+		console.error('Failed to export data file.', err);
 	}
 
 	progressOverlay.remove();

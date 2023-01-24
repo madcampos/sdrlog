@@ -1,6 +1,5 @@
 import type { SDRLogData } from '../../data/data';
 import { I18n } from '../intl/translations';
-import { Logger } from '../util/logger';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
@@ -16,7 +15,7 @@ async function fetchData() {
 			return parsedFile.items;
 		}
 	} catch (err) {
-		Logger.error('Failed to load data.', err);
+		console.error('Failed to load data.', err);
 	}
 
 	return [];
@@ -39,7 +38,7 @@ async function readDataFromFile() {
 
 		return parsedFile.items;
 	} catch (err) {
-		Logger.error('Failed to read data from file.', err);
+		console.error('Failed to read data from file.', err);
 	}
 
 	return [];
@@ -83,7 +82,7 @@ export async function requestDataFileFromUser() {
 
 		await saveMaterials(parsedFile.items.map((material) => [material.sku[0], material]));
 	} catch (err) {
-		Logger.error('Failed to open data file.', err);
+		console.error('Failed to open data file.', err);
 	}
 
 	progressOverlay.remove();
