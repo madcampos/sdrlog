@@ -13,24 +13,26 @@ export type MaterialCategory = 'rulebook' | 'sourcebook' | 'mission' | 'magazine
 
 export type MaterialType = 'digital' | 'print' | 'scan' | 'ocr' | 'physical';
 
-export type MaterialStatus = 'missing' | 'outofscope' | 'canceled';
+export type MaterialStatus = 'missing' | 'outofscope' | 'canceled' | 'ok';
 
 export type MaterialReleaseDate = `${number}-${number}-${number}`;
 
 export type MaterialGameDate = `${number}-${number}`;
+
+export type MaterialNames = Partial<Record<IsoCode, string>>;
 
 export interface Material {
 	category: MaterialCategory,
 	type: MaterialType,
 	sku: string[],
 	name: string,
-	names?: Partial<Record<IsoCode, string>>,
+	names?: MaterialNames,
 	description: string,
 	edition: MaterialEdition,
 	publisher: MaterialPublisher[],
 	gameDate?: MaterialGameDate,
 	releaseDate?: MaterialReleaseDate[],
-	status?: MaterialStatus,
+	status: MaterialStatus,
 	originalLanguage: IsoCode,
 	notes?: string,
 	links?: MaterialLink[]
@@ -47,4 +49,9 @@ export interface FileForMaterial {
 	filePath: string,
 	mimeType: string,
 	fileExtension: string
+}
+
+export interface NewMaterial extends Material {
+	files?: FileForMaterial[],
+	cover?: File
 }

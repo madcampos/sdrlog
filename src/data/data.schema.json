@@ -10,7 +10,7 @@
 			"items": {
 				"type": "object",
 				"description": "The list of materials.",
-				"required": ["category", "type", "sku", "name", "description", "edition", "publisher", "originalLanguage"],
+				"required": ["category", "type", "sku", "name", "description", "edition", "publisher", "originalLanguage", "gameDate", "status"],
 				"properties": {
 					"category": {
 						"enum": ["rulebook", "sourcebook", "mission", "magazine", "novel", "videogame", "tcg", "boardgame", "misc"],
@@ -82,7 +82,7 @@
 						"description": "The date the material was released and it's rereleases. If not present the material is considered unreleased."
 					},
 					"status": {
-						"enum": ["missing", "outofscope", "canceled"],
+						"enum": ["missing", "outofscope", "canceled", "ok"],
 						"description": "The status of the item.",
 						"markdownDescription": "The status of the item, one of the following:\n\n- **Missing**: The item is not present on the archives.\n- **Out of Scope**: The item is not available or is really hard to obtain and don't add anything new.\n- **Canceled**: The item was canceled."
 					},

@@ -1,4 +1,4 @@
-import type { FileForMaterial, Material, MaterialEdition, MaterialStatus } from '../../data/data';
+import type { NewMaterial } from '../../data/data';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extractor';
 
 import { saveCover, saveMaterial, saveThumb, setFileForMaterial } from './idb-persistence';
@@ -41,62 +41,8 @@ export function getIconForFile(mime: string, extension: string) {
 	return mimeIcons.get(mimeKey) ?? extensionIcons.get(extension) ?? DEFAULT_ICON;
 }
 
-export type NewMaterialProperties = Required<Omit<Material, 'edition' | 'names' | 'status'>> & {
-	status: 'ok' | MaterialStatus,
-	edition: string,
-	names?: [string, string][],
-	files?: FileForMaterial[],
-	cover?: File
-};
-
-export async function saveNewMaterialInfo(id: string, {
-	name,
-	sku,
-	edition,
-	gameDate,
-	category,
-	type,
-	originalLanguage,
-	releaseDate,
-	publisher,
-	status,
-	names,
-	notes,
-	description,
-	links,
-	files,
-	cover
-}: NewMaterialProperties) {
-	const materialToSave: Material = {
-		name,
-		sku,
-		edition: Number.parseInt(edition) as MaterialEdition,
-		gameDate,
-		category,
-		type,
-		originalLanguage,
-		releaseDate,
-		publisher,
-		description
-	};
-
-	if (links.length > 0) {
-		materialToSave.links = links;
-	}
-
-	if (notes && notes !== '') {
-		materialToSave.notes = notes;
-	}
-
-	if (status !== 'ok') {
-		materialToSave.status = status as Material['status'];
-	}
-
-	const namesValues = Object.fromEntries(names ?? []);
-
-	if (Object.keys(namesValues).length > 0) {
-		materialToSave.names = namesValues;
-	}
+export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) {
+	const { cover, files, ...materialToSave } = newMaterial;
 
 	await saveMaterial(id, materialToSave);
 

@@ -1,7 +1,7 @@
 import type { SDRLogData } from '../../data/data';
 import { I18n } from '../intl/translations';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getFile, getMaterials, saveFile, saveMaterials } from './idb-persistence';
+import { getMaterials, saveFile, saveMaterials } from './idb-persistence';
 
 import dataUrl from '../../data/data.json?url';
 
@@ -21,46 +21,14 @@ async function fetchData() {
 	return [];
 }
 
-async function readDataFromFile() {
-	try {
-		const savedHandler = await getFile<FileSystemFileHandle>('data.json');
-
-		let file: FileSystemFileHandle | undefined;
-
-		if (savedHandler && await savedHandler.queryPermission({ mode: 'read' }) === 'granted') {
-			file = savedHandler;
-		} else if (savedHandler && await savedHandler.requestPermission({ mode: 'read' }) === 'granted') {
-			file = savedHandler;
-		}
-
-		const content = await file?.getFile();
-		const parsedFile = JSON.parse(await content?.text() ?? '{ "items": [] }') as SDRLogData;
-
-		return parsedFile.items;
-	} catch (err) {
-		console.error('Failed to read data from file.', err);
-	}
-
-	return [];
-}
-
 export async function fetchItems() {
-	let currentData = await getMaterials();
+	const currentData = await getMaterials();
 	const onlineData = await fetchData();
 
-	if (currentData.length < onlineData.length) {
-		currentData = onlineData;
-	}
+	await saveMaterials(currentData.map((material) => [material.sku[0], material]));
+	await saveMaterials(onlineData.map((material) => [material.sku[0], material]));
 
-	if (currentData.length === 0) {
-		currentData = await readDataFromFile();
-	}
-
-	if (currentData.length > 0) {
-		await saveMaterials(currentData.map((material) => [material.sku[0], material]));
-	}
-
-	return currentData;
+	return [...currentData, ...onlineData];
 }
 
 export async function requestDataFileFromUser() {

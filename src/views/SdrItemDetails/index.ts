@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 
 import { SdrDialog } from '../../components/SdrDialog';
-import type { FileForMaterial, IsoCode, Material, MaterialCategory, MaterialEdition, MaterialLink, MaterialPublisher, MaterialStatus, MaterialType } from '../../data/data';
+import type { FileForMaterial, IsoCode, MaterialCategory, MaterialEdition, MaterialLink, MaterialNames, MaterialPublisher, MaterialStatus, MaterialType } from '../../data/data';
 import { SdrEditListItem } from '../../components/SdrEditListItem';
 import type { SdrDropArea } from '../../components/SdrDropArea';
 import type { SdrEditBox } from '../../components/SdrEditBox';
@@ -45,7 +45,7 @@ export interface SdrItemDetails {
 	status: MaterialStatus | 'ok',
 	translatedLanguage: string,
 	translatedName: string,
-	translatedNames: [string, string][],
+	translatedNames: MaterialNames,
 	files: FileForMaterial[],
 	linkUrl: string,
 	linkTitle: string,
@@ -232,6 +232,8 @@ export class SdrItemDetails extends SdrComponent {
 						validationMessage = I18n.t`Please select a language.`;
 					}
 
+					// TODO: Check if the translated name already exists in the list.
+
 					target.setCustomValidity(validationMessage);
 
 					const isValid = target.reportValidity();
@@ -250,29 +252,25 @@ export class SdrItemDetails extends SdrComponent {
 				},
 				addTranslatedName: () => {
 					const newTranslatedName = new SdrEditListItem();
-					const translatedNameData = JSON.stringify([
-						this.translatedLanguage,
-						this.translatedName
-					]);
 
-					newTranslatedName.setAttribute('value', translatedNameData);
+					newTranslatedName.setAttribute('value', this.translatedLanguage);
 					newTranslatedName.textContent = `[${this.translatedLanguage}]: ${this.translatedName}`;
 					newTranslatedName.disabled = this.isDisplaying;
 
 					this.root.querySelector('#translated-name-list')?.appendChild(newTranslatedName);
 
-					this.translatedNames.push([
-						this.translatedLanguage,
-						this.translatedName
-					]);
+					this.translatedNames[this.translatedLanguage] = this.translatedName;
 
 					this.translatedLanguage = '';
 					this.translatedName = '';
 				},
 				removeTranslatedName: (evt) => {
-					const name = (evt as CustomEvent).detail.value;
+					const language = (evt as CustomEvent).detail.value as IsoCode;
 
-					this.translatedNames.splice(this.translatedNames.indexOf(name), 1);
+					if (this.translatedNames[language]) {
+						// eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+						delete this.translatedNames[language];
+					}
 				},
 
 				updateLink: (evt) => {
@@ -388,14 +386,14 @@ export class SdrItemDetails extends SdrComponent {
 							name: this.name,
 							description: this.description,
 							sku: this.skus,
-							edition: this.edition,
+							edition: Number.parseInt(this.edition) as MaterialEdition,
 							gameDate: this.gameDate as `${number}-${number}`,
 							category: this.category,
 							type: this.type,
 							originalLanguage: this.originalLanguage as IsoCode,
 							releaseDate: this.releaseDates as `${number}-${number}-${number}`[],
 							publisher: this.publishers,
-							status: this.status as MaterialStatus,
+							status: this.status,
 							names: this.translatedNames,
 							files: this.files,
 							links: this.links,
@@ -411,7 +409,7 @@ export class SdrItemDetails extends SdrComponent {
 								edition: Number.parseInt(this.edition) as MaterialEdition,
 								category: this.category,
 								type: this.type,
-								status: this.status as Material['status']
+								status: this.status
 							});
 						}
 					}
@@ -428,16 +426,15 @@ export class SdrItemDetails extends SdrComponent {
 					await exportDataItem({
 						name: this.name,
 						sku: this.skus,
-						edition: this.edition,
+						edition: Number.parseInt(this.edition) as MaterialEdition,
 						gameDate: this.gameDate as `${number}-${number}`,
 						category: this.category,
 						type: this.type,
 						originalLanguage: this.originalLanguage as IsoCode,
 						releaseDate: this.releaseDates as `${number}-${number}-${number}`[],
 						publisher: this.publishers,
-						status: this.status as MaterialStatus,
+						status: this.status,
 						names: this.translatedNames,
-						files: this.files,
 						links: this.links,
 						notes: this.notes,
 						description: this.description
@@ -519,7 +516,6 @@ export class SdrItemDetails extends SdrComponent {
 		this.status = '' as MaterialStatus;
 		this.translatedLanguage = '';
 		this.translatedName = '';
-		this.translatedNames.length = 0;
 		this.linkTitle = '';
 		this.linkUrl = '';
 		this.links.length = 0;
@@ -528,6 +524,11 @@ export class SdrItemDetails extends SdrComponent {
 		this.files.length = 0;
 
 		this.#cover.src = LOADING_COVER;
+
+		[...Object.keys(this.translatedNames)].forEach((key) => {
+			// eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+			delete this.translatedNames[key];
+		});
 
 		[...this.root.querySelectorAll(SdrEditList.elementName)].forEach((list) => {
 			(list as SdrEditList).resetValue();
@@ -553,8 +554,8 @@ export class SdrItemDetails extends SdrComponent {
 			this.originalLanguage = material.originalLanguage;
 			this.releaseDates.push(...material.releaseDate ?? []);
 			this.publishers.push(...material.publisher);
-			this.status = material.status ?? 'ok';
-			this.translatedNames.push(...Object.entries(material.names ?? {}));
+			this.status = material.status;
+			this.translatedNames = material.names ?? {};
 			this.links.push(...material.links ?? []);
 			this.notes = material.notes ?? '';
 			this.description = material.description;
@@ -589,11 +590,10 @@ export class SdrItemDetails extends SdrComponent {
 				this.root.querySelector('#publisher-list')?.appendChild(newPublisher);
 			});
 
-			this.translatedNames.forEach(([language, name]) => {
+			Object.entries(this.translatedNames).forEach(([language, name]) => {
 				const newTranslatedName = new SdrEditListItem();
-				const translatedNameData = JSON.stringify([language, name]);
 
-				newTranslatedName.setAttribute('value', translatedNameData);
+				newTranslatedName.setAttribute('value', language);
 				newTranslatedName.textContent = `[${language}]: ${name}`;
 				newTranslatedName.disabled = this.isDisplaying;
 
