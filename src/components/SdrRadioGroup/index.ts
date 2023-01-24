@@ -17,19 +17,7 @@ export class SdrRadioGroup extends SdrComponent {
 		super({
 			name: SdrRadioGroup.elementName,
 			props: [
-				{
-					name: 'value',
-					value: (newValue = '') => {
-						this.root.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach((radio) => {
-							if (radio.value === newValue) {
-								radio.checked = true;
-							}
-						});
-
-						return this.root.querySelector<HTMLInputElement>('input[type="radio"]:checked')?.value ?? '';
-					},
-					attributeName: 'value'
-				},
+				{ name: 'value', value: '', attributeName: 'value' },
 				{ name: 'values', value: [] }
 			],
 			watchedSlots: {
@@ -60,9 +48,11 @@ export class SdrRadioGroup extends SdrComponent {
 			style
 		});
 
-		this.addEventListener('change', (evt) => {
+		this.root.addEventListener('change', (evt) => {
 			evt.preventDefault();
 			evt.stopPropagation();
+
+			this.value = (evt.target as HTMLInputElement).value;
 
 			this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 		});

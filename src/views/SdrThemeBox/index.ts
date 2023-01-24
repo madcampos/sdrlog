@@ -22,13 +22,13 @@ export class SdrThemeBox extends SdrComponent {
 				changeTheme: (event: Event) => {
 					const theme = event.target as SdrRadioGroup;
 
-					localStorage.setItem('appTheme', theme.value);
+					localStorage.setItem('app-theme', theme.value);
 
-					const [themeClass] = [...document.body.classList.values()].filter(([key]) => key.startsWith('theme-'));
+					const themeClasses = [...document.body.classList].filter((key) => key.startsWith('theme-'));
 
-					if (themeClass) {
+					themeClasses.forEach((themeClass) => {
 						document.body.classList.remove(themeClass);
-					}
+					});
 
 					document.body.classList.add(`theme-${theme.value}`);
 
@@ -52,8 +52,10 @@ export class SdrThemeBox extends SdrComponent {
 			}
 		});
 
-		if (localStorage.getItem('theme')) {
-			this.theme = localStorage.getItem('theme') as string;
+		if (localStorage.getItem('app-theme')) {
+			this.theme = localStorage.getItem('app-theme') as string;
+
+			document.body.classList.add(`theme-${this.theme}`);
 		}
 	}
 
