@@ -45,8 +45,8 @@ export function getIconForFile(mime: string, extension: string) {
 export type NewMaterialProperties = Required<Omit<Material, 'edition' | 'names' | 'status'>> & {
 	status: 'ok' | MaterialStatus,
 	edition: string,
-	names: [string, string][],
-	files: FileForMaterial[],
+	names?: [string, string][],
+	files?: FileForMaterial[],
 	cover?: File
 };
 
@@ -93,7 +93,7 @@ export async function saveNewMaterialInfo(id: string, {
 		materialToSave.status = status as Material['status'];
 	}
 
-	const namesValues = Object.fromEntries(names);
+	const namesValues = Object.fromEntries(names ?? []);
 
 	if (Object.keys(namesValues).length > 0) {
 		materialToSave.names = namesValues;
@@ -101,7 +101,7 @@ export async function saveNewMaterialInfo(id: string, {
 
 	await saveMaterial(id, materialToSave);
 
-	for await (const file of files) {
+	for await (const file of files ?? []) {
 		await setFileForMaterial(file);
 	}
 

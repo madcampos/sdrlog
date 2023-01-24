@@ -24,7 +24,7 @@ function formatDataItem(data: Omit<NewMaterialProperties, 'cover' | 'files'>) {
 		filteredData.status = data.status;
 	}
 
-	if (data.names.length > 0) {
+	if (data.names && data.names.length > 0) {
 		filteredData.names = data.names.reduce((names, [lang, name]) => {
 			names[lang] = name;
 
