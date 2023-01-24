@@ -53,6 +53,7 @@
 		"@saschazar/wasm-mozjpeg": "^3.0.0",
 		"@types/marked": "^4.0.8",
 		"epubjs": "^0.3.93",
+		"idb": "^7.1.1",
 		"jszip": "^3.10.1",
 		"marked": "^4.2.12",
 		"nipplejs": "^0.10.0",
