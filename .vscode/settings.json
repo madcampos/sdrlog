@@ -1,8 +1,8 @@
 {
 	"i18n-ally.localesPaths": [
-		"src/_locales"
+		"src/locales"
 	],
-	"i18n-ally.pathMatcher": "{locale}/messages.json",
+	"i18n-ally.pathMatcher": "{locale}.json",
 	"i18n-ally.disablePathParsing": true,
 	"dotenv.enableAutocloaking": false
 }
