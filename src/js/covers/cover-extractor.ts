@@ -1,6 +1,10 @@
-import pdfjs from 'pdfjs-dist';
+import type { optimize as OptimizerType } from './optimizer';
+import type { default as PDFJS } from 'pdfjs-dist';
+
 import { I18n } from '../intl/translations';
-import { optimize } from './optimizer';
+
+let optimize: typeof OptimizerType | undefined;
+let pdfjs: typeof PDFJS | undefined;
 
 export const COVER_WIDTH = 1024;
 export const THUMB_WIDTH = 256;
@@ -19,7 +23,11 @@ canvas.height = COVER_WIDTH;
 export async function extractCover(file: File) {
 	const fileURL = URL.createObjectURL(file);
 
-	const pdf = await pdfjs.getDocument({ url: fileURL }).promise;
+	if (!('pdfjs' in window)) {
+		pdfjs = await import('pdfjs-dist');
+	}
+
+	const pdf = await (pdfjs as typeof PDFJS).getDocument({ url: fileURL }).promise;
 	const page = await pdf.getPage(1);
 	const originalViewport = page.getViewport({ scale: 1 });
 
@@ -58,6 +66,11 @@ export async function extractCover(file: File) {
 }
 
 export async function optimizeCover(cover: ImageData) {
+	if (!optimize) {
+		// eslint-disable-next-line prefer-destructuring, require-atomic-updates
+		optimize = (await import('./optimizer')).optimize;
+	}
+
 	const { width: coverWidth, height: coverHeight, data: coverData } = cover;
 	const optimizedCover = await optimize(coverData.buffer, { width: coverWidth, height: coverHeight });
 

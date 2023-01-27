@@ -1,5 +1,3 @@
-// TODO: import lib async
-import JSZip from 'jszip';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
@@ -149,6 +147,11 @@ export class SdrComicBookReader extends SdrComponent {
 	async #unzipImages(file?: File) {
 		if (!file) {
 			return {};
+		}
+
+
+		if (!('JSZip' in window)) {
+			await import('jszip');
 		}
 
 		const zip = await JSZip.loadAsync(file);

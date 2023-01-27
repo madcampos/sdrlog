@@ -1,11 +1,7 @@
 import type Section from 'epubjs/types/section';
-import type { Location as BookLocation, NavItem, Rendition } from 'epubjs';
+import type { Book, Location as BookLocation, NavItem, Rendition } from 'epubjs';
 import type { SdrButton } from '../../components/SdrButton';
-// TODO: import lib async
-import 'jszip';
 
-// TODO: import lib async
-import { default as ePub } from 'epubjs';
 import darkTheme from './dark-theme.css?url';
 
 import { getFile } from '../../js/data-operations/idb-persistence';
@@ -132,7 +128,17 @@ export class SdrEpubReader extends SdrComponent {
 		}
 
 		try {
-			const book = ePub(await file.arrayBuffer());
+			if (!('JSZip' in window)) {
+				await import('jszip');
+			}
+
+			if (!('ePub' in window)) {
+				// @ts-expect-error - Loading the dist version of the module instead of the default one
+				await import('epubjs/dist/epub.min.js');
+			}
+
+			// @ts-expect-error - ePub should be available in the window object
+			const book = ePub(await file.arrayBuffer()) as Book;
 			const { toc } = await book.loaded.navigation;
 
 			this.#rendition = book.renderTo(this.#renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });

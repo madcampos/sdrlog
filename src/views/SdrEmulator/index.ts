@@ -1,11 +1,4 @@
-/* eslint-disable no-underscore-dangle */
-import type { EmulatorInitializerFunction, EmulatorModule } from '../../../public/lib/webretro/webretro';
-
-// TODO: import lib async
-import JSZip from 'jszip';
-
-// TODO: import lib async
-import nipplejs from 'nipplejs';
+/* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle */
 
 import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data-operations/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../../js/files-reader/files-reader';
@@ -14,6 +7,28 @@ import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
 import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
+
+interface EmulatorModule extends EmscriptenModule {
+	canvas: HTMLCanvasElement,
+	_cmd_savefiles(): void,
+	_cmd_save_state(): void,
+	_cmd_load_state(): void,
+	_cmd_toggle_menu(): void,
+	_cmd_undo_save_state(): void,
+	_cmd_undo_load_state(): void,
+	setCanvasSize(width: number, height: number): void,
+	pauseMainLoop(): void,
+	resumeMainLoop(): void,
+	callMain(args: string[]): void,
+	FS: typeof FS
+}
+
+interface EmulatorInitializer {
+	canvas: HTMLCanvasElement,
+	onRuntimeInitialized(): Promise<void> | void
+}
+
+type EmulatorInitializerFunction = (moduleInitializer: EmulatorInitializer) => EmulatorModule;
 
 interface KeyData {
 	key: string,
@@ -160,7 +175,8 @@ export class SdrEmulator extends SdrComponent {
 		}));
 	}
 
-	#addDPadButtons() {
+	async #addDPadButtons() {
+		const nipplejs = await import('nipplejs');
 		const dpadElement = this.root.querySelector('#dpad') as HTMLDivElement;
 		const { top, left, width, height } = dpadElement.getBoundingClientRect();
 
@@ -221,6 +237,10 @@ export class SdrEmulator extends SdrComponent {
 			const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/bundle.zip`);
 			const fileBlob = await response.blob();
 			const zipFile = new File([fileBlob], 'bundle.zip', { type: 'application/zip' });
+
+			if (!('JSZip' in window)) {
+				await import('jszip');
+			}
 
 			const zip = await JSZip.loadAsync(zipFile);
 
@@ -362,7 +382,7 @@ export class SdrEmulator extends SdrComponent {
 	connectedCallback() {
 		super.connectedCallback();
 
-		this.#addDPadButtons();
+		void this.#addDPadButtons();
 	}
 
 	static updateFromURL() {

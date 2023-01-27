@@ -1,4 +1,5 @@
-/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/consistent-type-imports, @typescript-eslint/no-unused-vars */
+const JSZip: typeof import('jszip');
 
 interface FilePickerOptions {
 	id: string,
