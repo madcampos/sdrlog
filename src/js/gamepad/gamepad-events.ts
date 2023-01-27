@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 type ButtonNames = 'a' | 'b' | 'x' | 'y' | 'leftBumper' | 'rightBumper' | 'leftTrigger' | 'rightTrigger' | 'select' | 'start' | 'leftStick' | 'rightStick' | 'up' | 'down' | 'left' | 'right' | 'logo';
 
 export declare class ButtonEvent<T = 'buttondown' | 'buttonup' | 'buttonpress'> extends CustomEvent<T> {

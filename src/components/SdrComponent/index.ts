@@ -190,10 +190,9 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			throw new Error('Template is empty');
 		}
 
-		if (tempTemplate.content.children[0] instanceof HTMLTemplateElement) {
-			// eslint-disable-next-line prefer-destructuring
-			const wrappedTemplate = tempTemplate.content.children[0];
+		const [wrappedTemplate] = tempTemplate.content.children;
 
+		if (wrappedTemplate instanceof HTMLTemplateElement) {
 			tempTemplate.content.removeChild(wrappedTemplate);
 
 			[...wrappedTemplate.content.children].forEach((child) => {
