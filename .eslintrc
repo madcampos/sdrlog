@@ -66,7 +66,7 @@
 		"no-unsafe-negation": "error",
 		"no-unsafe-optional-chaining": ["error", { "disallowArithmeticOperators": true }],
 		"no-useless-backreference": "error",
-		"require-atomic-updates": "warn",
+		"require-atomic-updates": "off",
 		"use-isnan": "error",
 		"valid-typeof": "warn",
 
@@ -234,7 +234,7 @@
 		"newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 6 }],
 		"no-array-constructor": "off",
 		"no-bitwise": "error",
-		"no-continue": "error",
+		"no-continue": "off",
 		"no-inline-comments": ["warn", { "ignorePattern": "(?:@vite-ignore|@ts-expect-error).+" }],
 		"no-lonely-if": "warn",
 		"no-mixed-operators": ["warn", { "allowSamePrecedence": true }],

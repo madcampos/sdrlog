@@ -67,7 +67,7 @@ export async function extractCover(file: File) {
 
 export async function optimizeCover(cover: ImageData) {
 	if (!optimize) {
-		// eslint-disable-next-line prefer-destructuring, require-atomic-updates
+		// eslint-disable-next-line prefer-destructuring
 		optimize = (await import('./cover-optimizer')).optimize;
 	}
 

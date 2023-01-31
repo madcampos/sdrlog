@@ -94,7 +94,6 @@ export async function optimize(imageArray: BufferSource, { width, height }: { wi
 	}
 
 	if (!mozjpegModule) {
-		// eslint-disable-next-line require-atomic-updates
 		mozjpegModule = (await import(/* @vite-ignore */ `${import.meta.env.APP_PUBLIC_URL}/lib/mozjpeg/mozjpeg.js`)).default as MozJPEGModuleImport;
 	}
 

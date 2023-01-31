@@ -1,3 +1,4 @@
+/* eslint-disable default-case, @typescript-eslint/switch-exhaustiveness-check */
 import { SdrDialog } from '../../components/SdrDialog';
 import { SdrDropdown } from '../../components/SdrDropdown';
 import { SdrCard } from '../../components/SdrCard';
@@ -189,7 +190,6 @@ function closeCardDetails() {
 // TODO: navigate modals, scroll, navigate item-details
 
 window.addEventListener('buttondown', (evt) => {
-	// eslint-disable-next-line default-case, @typescript-eslint/switch-exhaustiveness-check
 	switch (evt.button) {
 		case 'up':
 			selectCardUp();
@@ -211,7 +211,6 @@ window.addEventListener('buttondown', (evt) => {
 });
 
 window.addEventListener('stickmove', (evt) => {
-	// eslint-disable-next-line default-case, @typescript-eslint/switch-exhaustiveness-check
 	switch (evt.direction) {
 		case 'up':
 			selectCardUp();
@@ -233,7 +232,6 @@ window.addEventListener('stickmove', (evt) => {
 });
 
 window.addEventListener('buttonpress', (evt) => {
-	// eslint-disable-next-line default-case, @typescript-eslint/switch-exhaustiveness-check
 	switch (evt.button) {
 		case 'y':
 			activateSearch();
