@@ -1,5 +1,6 @@
 /* eslint-disable max-lines */
 
+import { I18n } from '../../js/intl/translations';
 import { type TemplateParser, templateParser } from './serialization';
 
 import baseStyle from './style.css?inline' assert { type: 'css' };
@@ -186,11 +187,12 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		}
 
 		const domTree = tempTemplate.content.cloneNode(true) as DocumentFragment;
+		const translatedDomTree = I18n.translateTemplate(domTree);
 
-		const { props } = SdrComponent.templateParser(domTree);
+		const { props } = SdrComponent.templateParser(translatedDomTree);
 
 		return {
-			template: domTree,
+			template: translatedDomTree,
 			props
 		};
 	}
