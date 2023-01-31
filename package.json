@@ -5,7 +5,7 @@
 	"displayName": "Shadowrun Catalog",
 	"shortName": "SDRlog",
 	"description": "An interactive list of Shadowrun published material (books, tabletop, video games, etc.). Information about the items and can be linked to local files.",
-	"homepage": "https://madcampos.github.io/sdrlog/",
+	"homepage": "https://madcampos.dev/sdrlog/",
 	"keywords": [
 		"shadowrun",
 		"sdr",
