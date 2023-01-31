@@ -48,9 +48,6 @@ export class SdrLanguageBox extends SdrComponent {
 				this.close();
 			}
 		});
-
-		// TODO: ensure this is correctly set
-		this.language = I18n.getLanguage();
 	}
 
 	show() {
@@ -103,6 +100,14 @@ export class SdrLanguageBox extends SdrComponent {
 		}
 
 		modal.close();
+	}
+
+	connectedCallback() {
+		super.connectedCallback();
+
+		requestAnimationFrame(() => {
+			this.language = I18n.getLanguage();
+		});
 	}
 }
 

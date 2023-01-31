@@ -231,9 +231,9 @@ export class SdrItemDetails extends SdrComponent {
 						validationMessage = I18n.t`Please fill out the translated name.`;
 					} else if (!target.value) {
 						validationMessage = I18n.t`Please select a language.`;
+					} else if (this.translatedNames[this.translatedLanguage] !== undefined) {
+						validationMessage = I18n.t`Language already exists in the list.`;
 					}
-
-					// TODO: Check if the translated name already exists in the list.
 
 					target.setCustomValidity(validationMessage);
 
