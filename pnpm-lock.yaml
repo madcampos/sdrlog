@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.4.2
   '@commitlint/config-conventional': ^17.4.2
-  '@saschazar/wasm-mozjpeg': ^3.0.0
   '@types/emscripten': ^1.39.6
   '@types/marked': ^4.0.8
   '@types/wicg-file-system-access': ^2020.9.5
@@ -29,7 +28,6 @@ specifiers:
   workbox-window: ^6.5.4
 
 dependencies:
-  '@saschazar/wasm-mozjpeg': 3.0.0
   '@types/marked': 4.0.8
   epubjs: 0.3.93
   idb: 7.1.1
@@ -1825,10 +1823,6 @@ packages:
       picomatch: 2.3.1
       rollup: 3.10.1
     dev: true
-
-  /@saschazar/wasm-mozjpeg/3.0.0:
-    resolution: {integrity: sha512-z58t4usk/YqpAyiCmyfomHuAj/PBH4eJVzqQgGIhaCL6LWQZ85Mr0aKERdVbUgWhgzNQzl+DjNhqkcT17DQYWg==}
-    dev: false
 
   /@surma/rollup-plugin-off-main-thread/2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}

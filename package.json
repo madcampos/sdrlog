@@ -50,7 +50,6 @@
 		"test:coverage": "vitest run --coverage"
 	},
 	"dependencies": {
-		"@saschazar/wasm-mozjpeg": "^3.0.0",
 		"@types/marked": "^4.0.8",
 		"epubjs": "^0.3.93",
 		"idb": "^7.1.1",
