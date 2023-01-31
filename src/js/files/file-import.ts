@@ -1,5 +1,5 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getMaterial, saveFile, saveMaterial, setFileForMaterial } from '../data-operations/idb-persistence';
+import { getMaterial, saveFile, saveMaterial, setFileForMaterial } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
 
 export function extractMetadataFromFileName(fileName: string) {

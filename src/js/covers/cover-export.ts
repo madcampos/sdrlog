@@ -1,5 +1,5 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllCovers, getAllThumbs } from '../data-operations/idb-persistence';
+import { getAllCovers, getAllThumbs } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
 
 export async function saveCoversToFolder() {

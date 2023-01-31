@@ -1,8 +1,8 @@
 import type { FileForMaterial } from '../../data/data';
 
-import { getFile } from '../data-operations/idb-persistence';
+import { getFile } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
-import { getFilePermission } from './files-reader';
+import { getFilePermission } from './file-import';
 
 interface AllowedExtension {
 	url: string,

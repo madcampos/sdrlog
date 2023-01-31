@@ -1,7 +1,7 @@
 import type { Material } from '../../data/data';
 
-import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/fetch-covers';
-import { getMaterial } from '../../js/data-operations/idb-persistence';
+import { getThumbUrl } from '../../js/covers/cover-fetch';
+import { getMaterial } from '../../js/data/idb-persistence';
 import { registerComponent, SdrComponent } from '../SdrComponent';
 import { SdrItemDetails } from '../../views/SdrItemDetails';
 
@@ -76,6 +76,7 @@ export class SdrCard extends SdrComponent {
 
 	async setMaterial(id: string) {
 		if (!this.hasAttribute('title')) {
+			// TODO: avoid db query if we have all the data needed
 			const material = await getMaterial(id);
 
 			if (material) {
@@ -93,7 +94,7 @@ export class SdrCard extends SdrComponent {
 		thumb.src = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${id}.jpg`;
 
 		thumb.addEventListener('error', async () => {
-			thumb.src = await getThumbUrl(id) || FALLBACK_COVER;
+			thumb.src = await getThumbUrl(id);
 		}, { capture: false, once: true, passive: true });
 	}
 

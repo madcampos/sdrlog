@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 	const { SdrItemDetails } = await import('../views/SdrItemDetails');
 
 	updateLoadStatus(I18n.t`Importing helper functions.`);
-	const { fetchItems } = await import('./data-operations/data-import');
+	const { fetchItems } = await import('./data/data-import');
 	const { createComparer } = await import('./intl/formatting');
 
 	updateLoadStatus(I18n.t`Fetching items database.`);

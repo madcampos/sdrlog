@@ -1,9 +1,10 @@
-import type { SDRLogData } from '../../data/data';
+import type { Material, NewMaterial, SDRLogData } from '../../data/data';
 import { I18n } from '../intl/translations';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getMaterials, saveFile, saveMaterials } from './idb-persistence';
+import { getMaterials, saveCover, saveFile, saveMaterial, saveMaterials, saveThumb, setFileForMaterial } from './idb-persistence';
 
 import dataUrl from '../../data/data.json?url';
+import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extract';
 
 async function fetchData() {
 	try {
@@ -24,11 +25,19 @@ async function fetchData() {
 export async function fetchItems() {
 	const currentData = await getMaterials();
 	const onlineData = await fetchData();
+	const mergedData = new Map<string, Material>();
 
-	await saveMaterials(currentData.map((material) => [material.sku[0], material]));
-	await saveMaterials(onlineData.map((material) => [material.sku[0], material]));
+	for (const material of currentData) {
+		mergedData.set(material.sku[0], material);
+	}
 
-	return [...currentData, ...onlineData];
+	for (const material of onlineData) {
+		mergedData.set(material.sku[0], material);
+	}
+
+	await saveMaterials([...mergedData.entries()]);
+
+	return [...mergedData.values()];
 }
 
 export async function requestDataFileFromUser() {
@@ -54,4 +63,28 @@ export async function requestDataFileFromUser() {
 	}
 
 	progressOverlay.remove();
+}
+
+export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) {
+	const { cover, files, ...materialToSave } = newMaterial;
+
+	await saveMaterial(id, materialToSave);
+
+	for await (const file of files ?? []) {
+		await setFileForMaterial(file);
+	}
+
+	if (cover) {
+		try {
+			const coverFile = await processCoverFile(cover);
+
+			await saveCover(id, coverFile);
+
+			const thumbFile = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH });
+
+			await saveThumb(id, thumbFile);
+		} catch (err) {
+			console.error(`Failed to save material for id "${id}".`, err);
+		}
+	}
 }

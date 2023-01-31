@@ -1,4 +1,4 @@
-import type { optimize as OptimizerType } from './optimizer';
+import type { optimize as OptimizerType } from './cover-optimizer';
 import type { default as PDFJS } from 'pdfjs-dist';
 
 import { I18n } from '../intl/translations';
@@ -68,7 +68,7 @@ export async function extractCover(file: File) {
 export async function optimizeCover(cover: ImageData) {
 	if (!optimize) {
 		// eslint-disable-next-line prefer-destructuring, require-atomic-updates
-		optimize = (await import('./optimizer')).optimize;
+		optimize = (await import('./cover-optimizer')).optimize;
 	}
 
 	const { width: coverWidth, height: coverHeight, data: coverData } = cover;

@@ -1,4 +1,4 @@
-import { extractMetadataFromFileName } from '../files-reader/files-reader';
+import { extractMetadataFromFileName } from '../files/file-import';
 import { getCover, getMaterial } from './idb-persistence';
 
 const ONE_MB = 1048576;

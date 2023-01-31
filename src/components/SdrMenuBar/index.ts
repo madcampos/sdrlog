@@ -2,11 +2,11 @@ import type { Material } from '../../data/data';
 
 import { registerComponent, SdrComponent } from '../SdrComponent';
 
-import { readFiles } from '../../js/files-reader/files-reader';
-import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/fetch-covers';
-import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-exporter';
-import { requestDataFileFromUser } from '../../js/data-operations/data-import';
-import { exportDataFile } from '../../js/data-operations/data-export';
+import { readFiles } from '../../js/files/file-import';
+import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/cover-fetch';
+import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-export';
+import { requestDataFileFromUser } from '../../js/data/data-import';
+import { exportDataFile } from '../../js/data/data-export';
 import { SearchEngine } from '../SdrSearchBox/search-engine';
 import { SdrItemDetails } from '../../views/SdrItemDetails';
 import { SdrInfoBox } from '../../views/SdrInfoBox';

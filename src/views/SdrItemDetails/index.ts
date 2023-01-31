@@ -8,13 +8,13 @@ import type { SdrEditBox } from '../../components/SdrEditBox';
 import type { SdrSelect } from '../../components/SdrSelect';
 import type { SdrTextArea } from '../../components/SdrTextArea';
 
-import { getFilesForMaterial, getMaterial, saveFile } from '../../js/data-operations/idb-persistence';
+import { getFilesForMaterial, getMaterial, saveFile } from '../../js/data/idb-persistence';
 import { SdrCard } from '../../components/SdrCard';
-import { getIconForFile, saveNewMaterialInfo } from '../../js/data-operations/create-material';
-import { openFile } from '../../js/files-reader/open-file';
-import { FALLBACK_COVER, fetchCover, LOADING_COVER } from '../../js/covers/fetch-covers';
-import { associateFileWithData } from '../../js/files-reader/files-reader';
-import { exportDataItem } from '../../js/data-operations/data-export';
+import { openFile } from '../../js/files/file-open';
+import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
+import { associateFileWithData } from '../../js/files/file-import';
+import { exportDataItem } from '../../js/data/data-export';
+import { getIconForFile } from '../../js/files/file-icons';
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
@@ -22,6 +22,7 @@ import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 import { formatFullDate } from '../../js/intl/formatting';
 import { SdrEditList } from '../../components/SdrEditList';
+import { saveNewMaterialInfo } from '../../js/data/data-import';
 
 const watchedAttributes = ['id', 'loading', 'disabled'];
 
@@ -615,12 +616,8 @@ export class SdrItemDetails extends SdrComponent {
 				this.root.querySelector('#link-list')?.appendChild(newLink);
 			});
 
-			void fetchCover(material.sku[0]).then((coverFile) => {
-				if (coverFile) {
-					this.#cover.src = URL.createObjectURL(coverFile);
-				} else {
-					this.#cover.src = FALLBACK_COVER;
-				}
+			void getCoverUrl(material.sku[0]).then((coverUrl) => {
+				this.#cover.src = coverUrl;
 			});
 
 			void getFilesForMaterial(material.sku[0]).then((fileList) => {

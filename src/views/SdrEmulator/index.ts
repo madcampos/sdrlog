@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle */
 
-import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data-operations/idb-persistence';
-import { extractMetadataFromFileName, getFilePermission } from '../../js/files-reader/files-reader';
+import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data/idb-persistence';
+import { extractMetadataFromFileName, getFilePermission } from '../../js/files/file-import';
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 

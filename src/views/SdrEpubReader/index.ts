@@ -4,8 +4,8 @@ import type { SdrButton } from '../../components/SdrButton';
 
 import darkTheme from './dark-theme.css?url';
 
-import { getFile } from '../../js/data-operations/idb-persistence';
-import { getFilePermission } from '../../js/files-reader/files-reader';
+import { getFile } from '../../js/data/idb-persistence';
+import { getFilePermission } from '../../js/files/file-import';
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 

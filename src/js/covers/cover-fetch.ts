@@ -1,8 +1,8 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data-operations/idb-persistence';
-import { extractMetadataFromFileName, getFilePermission } from '../files-reader/files-reader';
-import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extractor';
-import { canExtractCover, canImportCover } from '../data-operations/storage-conditions';
+import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data/idb-persistence';
+import { extractMetadataFromFileName, getFilePermission } from '../files/file-import';
+import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extract';
+import { canExtractCover, canImportCover } from '../data/storage-conditions';
 import { I18n } from '../intl/translations';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
@@ -11,20 +11,23 @@ export const FALLBACK_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-cove
 export const LOADING_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/loading-anim.svg`;
 export const LOADING_SIMPLE_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/loading-simple.svg`;
 
-export async function fetchCover(id: string) {
-	let currentCover = await getCover(id);
+export async function getCoverUrl(id: string) {
+	const currentCover = await getCover(id);
 
-	if (!currentCover) {
-		const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}images/covers/${id}.jpg`);
-
-		if (response.ok) {
-			const responseData = await response.blob();
-
-			currentCover = new File([responseData], `${id}.jpg`, { type: 'image/jpeg' });
-		}
+	if (currentCover) {
+		return URL.createObjectURL(currentCover);
 	}
 
-	return currentCover;
+	const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}images/covers/${id}.jpg`);
+
+	if (response.ok) {
+		const responseData = await response.blob();
+		const coverFile = new File([responseData], `${id}.jpg`, { type: 'image/jpeg' });
+
+		return URL.createObjectURL(coverFile);
+	}
+
+	return FALLBACK_COVER;
 }
 
 export async function getThumbUrl(id: string) {
@@ -34,7 +37,7 @@ export async function getThumbUrl(id: string) {
 		return URL.createObjectURL(currentThumb);
 	}
 
-	return '';
+	return FALLBACK_COVER;
 }
 
 export async function extractCoversFromFiles() {

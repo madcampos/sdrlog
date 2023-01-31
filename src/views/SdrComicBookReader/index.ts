@@ -1,7 +1,7 @@
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
-import { getFile } from '../../js/data-operations/idb-persistence';
-import { getFilePermission } from '../../js/files-reader/files-reader';
+import { getFile } from '../../js/data/idb-persistence';
+import { getFilePermission } from '../../js/files/file-import';
 import { createComparer } from '../../js/intl/formatting';
 import { I18n } from '../../js/intl/translations';
 
