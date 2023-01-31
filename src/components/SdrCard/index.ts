@@ -66,17 +66,13 @@ export class SdrCard extends SdrComponent {
 	connectedCallback() {
 		super.connectedCallback();
 
-		this.setAttribute('role', 'listitem');
-		this.setAttribute('tabindex', '0');
-
 		if (this.id !== '') {
 			void this.setMaterial(this.id);
 		}
 	}
 
 	async setMaterial(id: string) {
-		if (!this.hasAttribute('title')) {
-			// TODO: avoid db query if we have all the data needed
+		if (!this.title) {
 			const material = await getIDBItem('items', id);
 
 			if (material) {

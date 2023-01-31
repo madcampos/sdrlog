@@ -62,6 +62,7 @@ export class SdrDropdown extends SdrComponent {
 	}
 
 	close() {
+		this.#dialog.inert = true;
 		this.#dialog.close();
 
 		(document.activeElement as HTMLElement | undefined)?.blur();
@@ -75,6 +76,7 @@ export class SdrDropdown extends SdrComponent {
 		// Close all other menus
 		document.body.click();
 
+		this.#dialog.inert = false;
 		this.#dialog.show();
 
 		const rect = this.#dialog.getBoundingClientRect();
