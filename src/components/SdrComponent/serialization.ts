@@ -2,7 +2,7 @@ export interface PropBinding {
 	prop: string,
 	element: HTMLElement,
 	attribute?: string,
-	type: 'attribute' | 'event' | 'text' | 'loop'
+	type: 'attribute' | 'event' | 'text'
 }
 
 export interface HandlerBinding {
@@ -14,9 +14,6 @@ export interface HandlerBinding {
 const BIND_REGEX = /^(?:s-bind:|:)/giu;
 const EVENT_REGEX = /^(?:s-on:|@)/giu;
 const TEXT_REGEX = /\{\{\s*([a-z][a-z0-9]+?)\s*\}\}/giu;
-const LOOP_REGEX = /^(?<item>[a-z][a-z0-9]+?) in (?<list>[a-z][a-z0-9]+?)$/giu;
-
-// TODO: update parser to support property accessors
 
 export type TemplateParser = (template: DocumentFragment) => { props: PropBinding[] };
 
@@ -53,23 +50,6 @@ export const templateParser: TemplateParser = (template) => {
 							attribute: eventName,
 							type: 'event'
 						});
-
-						(node as Element).removeAttribute(attribute.name);
-					} else if (attribute.name === 's-for') {
-						const { list, item } = attribute.value.match(LOOP_REGEX)?.groups ?? {};
-
-						// eslint-disable-next-line max-depth
-						if (!list || !item) {
-							throw new Error(`Invalid loop syntax: ${attribute.value}`);
-						}
-
-						props.push({
-							prop: list,
-							element: node as HTMLElement,
-							type: 'loop'
-						});
-
-						loopElments.push(node as Element);
 
 						(node as Element).removeAttribute(attribute.name);
 					}

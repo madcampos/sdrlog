@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 
-import { type PropBinding, type TemplateParser, templateParser } from './serialization';
+import { type TemplateParser, templateParser } from './serialization';
 
 import baseStyle from './style.css?inline' assert { type: 'css' };
 
@@ -23,12 +23,7 @@ type EventHandler = (evt: Event) => void | Promise<void>;
 
 type Prop<T extends PropTypes> = PropDefinition<T> & {
 	boundAttributes: [HTMLElement, string][],
-	boundElements: HTMLElement[],
-	boundLoops: {
-		element: HTMLElement,
-		template: HTMLTemplateElement,
-		props: PropBinding[]
-	}[]
+	boundElements: HTMLElement[]
 };
 
 type WatchedSlotEvent = Event & { target: HTMLSlotElement };
@@ -135,16 +130,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			} else {
 				this.#bindPropToInternalAttribute(prop.prop, prop.attribute, prop.element);
 			}
-		}
-
-		const loopProps = parsedProps.filter((prop) => prop.type === 'loop');
-
-		for (const prop of loopProps) {
-			if (!this.#props.has(prop.prop)) {
-				throw new Error(`Prop "${prop.prop}" is not defined in watched props`);
-			}
-
-			this.#bindPropToLoop(prop.prop, prop.element);
 		}
 
 		for (const attribute of watchedAttributes ?? []) {
@@ -332,10 +317,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		if (prop.attributeName) {
 			this.#serializePropToAttribute(prop.attributeName, this, newValue);
 		}
-
-		prop.boundLoops.forEach((boundLoop) => {
-			// TODO: Implement loop update
-		});
 	}
 
 	#updateProp(propName: string, value: PropTypes, forceUpdate = false) {
@@ -376,22 +357,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		}
 
 		prop.boundElements.push(element);
-	}
-
-	#bindPropToLoop(prop: string, element: HTMLElement) {
-		const elementTemplate = document.createElement('template');
-
-		elementTemplate.content.append(...element.childNodes);
-
-		const { props } = SdrComponent.templateParser(elementTemplate.content);
-
-		this.#props.get(prop)?.boundLoops.push({
-			element,
-			template: elementTemplate,
-			props
-		});
-
-		// TODO: render loop inside element
 	}
 
 	static templateParser: TemplateParser = (template) => templateParser(template);
@@ -435,7 +400,6 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 			value: propValue,
 			boundAttributes: [],
 			boundElements: [],
-			boundLoops: [],
 			validate,
 			attributeName
 		});
@@ -484,7 +448,13 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 
 		stylesheet.innerHTML = style;
 
-		this.#root.insertBefore(stylesheet, this.#root.firstChild);
+		const existingStylesheet = this.#root.querySelector('style:last-of-type');
+
+		if (existingStylesheet) {
+			existingStylesheet.after(stylesheet);
+		} else {
+			this.#root.insertBefore(stylesheet, this.#root.firstChild);
+		}
 	}
 
 	connectedCallback() {
