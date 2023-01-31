@@ -31,6 +31,19 @@ export class I18n {
 		return matchingLocale ?? I18n.defaultLocale;
 	}
 
+	static #untranslateMessage(message: string) {
+		return [...message].map((char) => {
+			const RANDOM_CONST = 2;
+			const repeatTimes = Math.floor(Math.random() * RANDOM_CONST);
+
+			return char.repeat(repeatTimes);
+		}).map((char) => {
+			const ZALGO_CHARS = ['\u030d', '\u030e', '\u0304', '\u0305', '\u033f', '\u0311', '\u0306', '\u0310', '\u0352', '\u0357', '\u0351', '\u0307', '\u0308', '\u030a', '\u0342', '\u0343', '\u0344', '\u034a', '\u034b', '\u034c', '\u0303', '\u0302', '\u030c', '\u0350', '\u0300', '\u0301', '\u030b', '\u030f', '\u0312', '\u0313', '\u0314', '\u033d', '\u0309', '\u0363', '\u0364', '\u0365', '\u0366', '\u0367', '\u0368', '\u0369', '\u036a', '\u036b', '\u036c', '\u036d', '\u036e', '\u036f', '\u033e', '\u035b', '\u0346', '\u031a'];
+
+			return char + ZALGO_CHARS[Math.floor(Math.random() * ZALGO_CHARS.length)];
+		}).join('');
+	}
+
 	static #translateHtmlText(text: string) {
 		return text.replaceAll(/\bt\(['"`](.+?)['"`]\)/gu, (_, original: string) => I18n.t([original]));
 	}
@@ -60,30 +73,36 @@ export class I18n {
 	static t(strings: TemplateStringsArray | string[]) {
 		const [messageKey] = strings;
 		// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-		const message = loadedTranslations.get(messageKey) || messageKey;
+		const message = loadedTranslations.get(messageKey) || I18n.#untranslateMessage(messageKey);
 
 		return message;
 	}
 
-	static translateElementsContent(template: Node) {
-		const translateChildren = (baseNode: Node) => {
-			baseNode.childNodes.forEach((node) => {
-				if (node.nodeType === Node.TEXT_NODE) {
-					node.textContent = I18n.#translateHtmlText(node.textContent ?? '');
-				}
+	static translateTemplate(template: DocumentFragment) {
+		const translateChildren = (node: Node) => {
+			if (node.nodeType === Node.TEXT_NODE) {
+				node.textContent = I18n.#translateHtmlText(node.textContent ?? '');
+			}
 
-				if (node.nodeType === Node.ELEMENT_NODE) {
-					translateChildren(node);
+			if (node.nodeType === Node.ELEMENT_NODE) {
+				const { attributes } = node as Element;
 
-					[...(node as Element).attributes].forEach((attribute) => {
-						attribute.value = I18n.#translateHtmlText(attribute.value);
-					});
+				for (const attribute of [...attributes]) {
+					attribute.value = I18n.#translateHtmlText(attribute.value);
 				}
-			});
+			}
+
+			if (node.hasChildNodes()) {
+				node.childNodes.forEach((childNode) => {
+					translateChildren(childNode);
+				});
+			}
 		};
 
-		translateChildren(template);
+		const translatedTemplate = template.cloneNode(true);
 
-		return template;
+		translateChildren(translatedTemplate);
+
+		return translatedTemplate as DocumentFragment;
 	}
 }
