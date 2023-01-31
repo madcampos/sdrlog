@@ -1,6 +1,6 @@
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
-import { getFile } from '../../js/data/idb-persistence';
+import { getIDBItem } from '../../js/data/idb-persistence';
 import { getFilePermission } from '../../js/files/file-import';
 import { createComparer } from '../../js/intl/formatting';
 import { I18n } from '../../js/intl/translations';
@@ -127,13 +127,13 @@ export class SdrComicBookReader extends SdrComponent {
 	async #loadFile() {
 		try {
 			if (!this.file) {
-				throw new Error(I18n.t`Missing comic file.`);
+				throw new Error(I18n.t`Missing comic book file.`);
 			}
 
-			const handler = await getFile<FileSystemFileHandle>(this.file);
+			const handler = await getIDBItem('files', this.file);
 
-			if (!handler) {
-				throw new Error(I18n.t`Comic does not exist.`);
+			if (!handler || handler.kind !== 'file') {
+				throw new Error(I18n.t`Comic book does not exist.`);
 			}
 
 			await getFilePermission(handler);

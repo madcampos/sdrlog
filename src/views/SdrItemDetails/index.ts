@@ -8,7 +8,7 @@ import type { SdrEditBox } from '../../components/SdrEditBox';
 import type { SdrSelect } from '../../components/SdrSelect';
 import type { SdrTextArea } from '../../components/SdrTextArea';
 
-import { getFilesForMaterial, getMaterial, saveFile } from '../../js/data/idb-persistence';
+import { getIDBItem, getIDBItemsByIndex, setIDBItem } from '../../js/data/idb-persistence';
 import { SdrCard } from '../../components/SdrCard';
 import { openFile } from '../../js/files/file-open';
 import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
@@ -345,7 +345,7 @@ export class SdrItemDetails extends SdrComponent {
 						const file = await handle.getFile();
 						const fileForMaterial = await associateFileWithData(handle.name, `/${file.lastModified}/${file.name}`, file.type) as FileForMaterial;
 
-						await saveFile(`/${handle.name}`, handle);
+						await setIDBItem('files', `/${handle.name}`, handle);
 
 						const newFileItem = new SdrEditListItem();
 						const fileLink = document.createElement('a');
@@ -539,7 +539,7 @@ export class SdrItemDetails extends SdrComponent {
 	async setMaterial(id: string) {
 		this.isDisplaying = true;
 
-		const material = await getMaterial(id);
+		const material = await getIDBItem('items', id);
 
 		if (material) {
 			this.isDisplaying = true;
@@ -620,25 +620,23 @@ export class SdrItemDetails extends SdrComponent {
 				this.#cover.src = coverUrl;
 			});
 
-			void getFilesForMaterial(material.sku[0]).then((fileList) => {
-				if (fileList) {
-					for (const file of fileList) {
-						const newFileItem = new SdrEditListItem();
-						const fileLink = document.createElement('a');
+			void getIDBItemsByIndex('fileItems', 'itemId', material.sku[0]).then((fileList) => {
+				for (const file of fileList) {
+					const newFileItem = new SdrEditListItem();
+					const fileLink = document.createElement('a');
 
-						newFileItem.value = JSON.stringify(file);
-						newFileItem.setAttribute('stretch', '');
-						newFileItem.disabled = this.isDisplaying;
+					newFileItem.value = JSON.stringify(file);
+					newFileItem.setAttribute('stretch', '');
+					newFileItem.disabled = this.isDisplaying;
 
-						fileLink.href = '#';
-						fileLink.classList.add('file-link');
-						fileLink.textContent = `${getIconForFile(file.mimeType, file.fileExtension)} ${file.fileName}${file.fileExtension}`;
+					fileLink.href = '#';
+					fileLink.classList.add('file-link');
+					fileLink.textContent = `${getIconForFile(file.mimeType, file.fileExtension)} ${file.fileName}${file.fileExtension}`;
 
-						newFileItem.appendChild(fileLink);
-						this.root.querySelector('#files-list')?.appendChild(newFileItem);
+					newFileItem.appendChild(fileLink);
+					this.root.querySelector('#files-list')?.appendChild(newFileItem);
 
-						this.files.push(file);
-					}
+					this.files.push(file);
 				}
 			});
 		}

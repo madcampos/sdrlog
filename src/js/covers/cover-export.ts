@@ -1,5 +1,5 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllCovers, getAllThumbs } from '../data/idb-persistence';
+import { getAllIDBValues } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
 
 export async function saveCoversToFolder() {
@@ -10,7 +10,7 @@ export async function saveCoversToFolder() {
 			id: 'coversFolder',
 			startIn: 'downloads'
 		});
-		const covers = await getAllCovers();
+		const covers = await getAllIDBValues('covers');
 
 		progressOverlay.total = covers.length;
 
@@ -45,7 +45,7 @@ export async function saveThumbsToFolder() {
 			id: 'thumbsFolder',
 			startIn: 'downloads'
 		});
-		const thumbs = await getAllThumbs();
+		const thumbs = await getAllIDBValues('thumbs');
 
 		progressOverlay.total = thumbs.length;
 

@@ -1,7 +1,7 @@
 import type { Material, NewMaterial, SDRLogData } from '../../data/data';
 import { I18n } from '../intl/translations';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getMaterials, saveCover, saveFile, saveMaterial, saveMaterials, saveThumb, setFileForMaterial } from './idb-persistence';
+import { getAllIDBValues, setIDBItem, setIDBItems } from './idb-persistence';
 
 import dataUrl from '../../data/data.json?url';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extract';
@@ -23,7 +23,7 @@ async function fetchData() {
 }
 
 export async function fetchItems() {
-	const currentData = await getMaterials();
+	const currentData = await getAllIDBValues('items');
 	const onlineData = await fetchData();
 	const mergedData = new Map<string, Material>();
 
@@ -35,7 +35,7 @@ export async function fetchItems() {
 		mergedData.set(material.sku[0], material);
 	}
 
-	await saveMaterials([...mergedData.entries()]);
+	await setIDBItems('items', [...mergedData.entries()]);
 
 	return [...mergedData.values()];
 }
@@ -51,13 +51,13 @@ export async function requestDataFileFromUser() {
 			types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
 		});
 
-		await saveFile('data.json', fileHandle);
+		await setIDBItem('files', 'data.json', fileHandle);
 
 		const file = await fileHandle.getFile();
 
 		const parsedFile = JSON.parse(await file.text()) as SDRLogData;
 
-		await saveMaterials(parsedFile.items.map((material) => [material.sku[0], material]));
+		await setIDBItems('items', parsedFile.items.map((material) => [material.sku[0], material]));
 	} catch (err) {
 		console.error('Failed to open data file.', err);
 	}
@@ -68,21 +68,21 @@ export async function requestDataFileFromUser() {
 export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) {
 	const { cover, files, ...materialToSave } = newMaterial;
 
-	await saveMaterial(id, materialToSave);
+	await setIDBItem('items', id, materialToSave);
 
 	for await (const file of files ?? []) {
-		await setFileForMaterial(file);
+		await setIDBItem('fileItems', file.itemId, file);
 	}
 
 	if (cover) {
 		try {
 			const coverFile = await processCoverFile(cover);
 
-			await saveCover(id, coverFile);
+			await setIDBItem('covers', id, coverFile);
 
 			const thumbFile = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH });
 
-			await saveThumb(id, thumbFile);
+			await setIDBItem('thumbs', id, thumbFile);
 		} catch (err) {
 			console.error(`Failed to save material for id "${id}".`, err);
 		}

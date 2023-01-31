@@ -1,289 +1,125 @@
 import type { FileForMaterial, Material } from '../../data/data';
+import { type DBSchema, type IndexKey, type IndexNames, openDB, type StoreNames } from 'idb';
 
-type Collections = 'items' | 'covers' | 'thumbs' | 'files' | 'fileItems' | 'emulator';
-
-const IDB_VERSION = Number.parseInt(import.meta.env.APP_DB_VERSION.replaceAll('.', ''));
-let database: IDBDatabase | undefined;
-
-const databaseSchema: Record<Collections, { indexes: Record<string, IDBIndexParameters>, storeOptions?: IDBObjectStoreParameters }> = {
+interface DatabaseSchema extends DBSchema {
 	items: {
+		key: string,
+		value: Material,
 		indexes: {
-			sku: { multiEntry: true, unique: false },
-			name: { unique: false },
-			category: { unique: false },
-			type: { unique: false }
+			sku: string[],
+			name: string,
+			category: string,
+			type: string
 		}
 	},
 	files: {
-		indexes: {
-			kind: { unique: false },
-			name: { unique: false }
-		}
+		key: string,
+		value: FileSystemFileHandle | FileSystemDirectoryHandle
 	},
 	fileItems: {
-		indexes: {
-			fileName: { unique: false },
-			filePath: { unique: false },
-			itemId: { unique: false }
-		},
-		storeOptions: { autoIncrement: true }
+		key: string,
+		value: FileForMaterial,
+		indexes: { fileName: string, filePath: string, itemId: string }
 	},
 	covers: {
-		indexes: {
-			name: { unique: true }
-		}
+		key: string,
+		value: File
 	},
 	thumbs: {
-		indexes: {
-			name: { unique: true }
-		}
+		key: string,
+		value: File
 	},
 	emulator: {
-		indexes: {
-			name: { unique: false }
+		key: string,
+		value: File
+	}
+}
+
+type Collections = StoreNames<DatabaseSchema>;
+
+const IDB_VERSION = Number.parseInt(import.meta.env.APP_DB_VERSION.replaceAll('.', ''));
+const database = openDB<DatabaseSchema>('SDRLog', IDB_VERSION, {
+	upgrade(store) {
+		if (!store.objectStoreNames.contains('items')) {
+			const items = store.createObjectStore('items');
+
+			items.createIndex('sku', 'sku', { multiEntry: true, unique: false });
+			items.createIndex('name', 'name', { unique: false });
+			items.createIndex('category', 'category', { unique: false });
+			items.createIndex('type', 'type', { unique: false });
+		}
+
+		if (!store.objectStoreNames.contains('files')) {
+			store.createObjectStore('files');
+		}
+
+		if (!store.objectStoreNames.contains('fileItems')) {
+			const fileItems = store.createObjectStore('fileItems', { autoIncrement: true });
+
+			fileItems.createIndex('fileName', 'fileName', { unique: false });
+			fileItems.createIndex('filePath', 'filePath', { unique: false });
+			fileItems.createIndex('itemId', 'itemId', { unique: false });
+		}
+
+		if (!store.objectStoreNames.contains('covers')) {
+			store.createObjectStore('covers');
+		}
+
+		if (!store.objectStoreNames.contains('thumbs')) {
+			store.createObjectStore('thumbs');
+		}
+
+		if (!store.objectStoreNames.contains('emulator')) {
+			store.createObjectStore('emulator');
 		}
 	}
-};
+});
 
-function createDatabseSchema(idb: IDBDatabase) {
-	[...Object.entries(databaseSchema)].forEach(([store, { indexes, storeOptions }]) => {
-		if (!idb.objectStoreNames.contains(store)) {
-			const newStore = idb.createObjectStore(store, storeOptions);
-
-			[...Object.entries(indexes)].forEach(([indexName, indexOptions]) => {
-				newStore.createIndex(indexName, indexName, indexOptions);
-			});
-		}
-	});
+export async function getIDBItem<T extends Collections>(collection: T, key: DatabaseSchema[T]['key']) {
+	return (await database).get<T>(collection, key);
 }
 
-async function databaseFactory() {
-	return new Promise<IDBDatabase>((resolve, reject) => {
-		let dbRequest: IDBOpenDBRequest;
-
-		if (!database) {
-			dbRequest = window.indexedDB.open('SDRLog', IDB_VERSION);
-
-			dbRequest.onupgradeneeded = () => {
-				database = dbRequest.result;
-
-				createDatabseSchema(database);
-			};
-
-			dbRequest.onsuccess = () => {
-				database = dbRequest.result;
-				resolve(database);
-			};
-
-			dbRequest.onerror = () => {
-				reject(dbRequest.error);
-			};
-		} else {
-			resolve(database);
-		}
-	});
+export async function getAllIDBValues<T extends Collections>(collection: T) {
+	return (await database).getAll<T>(collection);
 }
 
-async function getIDBItem<T = null>(collection: Collections, name: IDBValidKey) {
-	const idb = await databaseFactory();
-	const transaction = idb.transaction([collection], 'readonly');
-	const store = transaction.objectStore(collection);
-	const request = store.get(name);
-
-	return new Promise<T | undefined>((resolve, reject) => {
-		request.onsuccess = () => {
-			resolve(request.result as T);
-		};
-
-		request.onerror = () => {
-			reject(request.error);
-		};
-	});
+export async function getAllIDBKeys<T extends Collections>(collection: T) {
+	return (await database).getAllKeys(collection);
 }
 
-export async function getIDBItemFromIndex<T>(collection: Collections, indexName: string, name: IDBValidKey) {
-	const idb = await databaseFactory();
-	const transaction = idb.transaction([collection], 'readonly');
-	const store = transaction.objectStore(collection);
-	const index = store.index(indexName);
-	const request = index.getAll(name);
+export async function getAllIDBEntries<T extends Collections>(collection: T) {
+	const values = await getAllIDBValues(collection);
+	const keys = await getAllIDBKeys(collection);
+	const results: [DatabaseSchema[T]['key'], DatabaseSchema[T]['value']][] = [];
 
-	return new Promise<T[] | undefined>((resolve, reject) => {
-		request.onsuccess = () => {
-			resolve(request.result as T[]);
-		};
-
-		request.onerror = () => {
-			reject(request.error);
-		};
-	});
-}
-
-async function getAllIDBItem<T>(collection: Collections) {
-	const idb = await databaseFactory();
-	const transaction = idb.transaction([collection], 'readonly');
-	const store = transaction.objectStore(collection);
-	const request = store.getAll();
-
-	return new Promise<T[]>((resolve, reject) => {
-		request.onsuccess = () => {
-			resolve(request.result as T[]);
-		};
-
-		request.onerror = () => {
-			reject(request.error);
-		};
-	});
-}
-
-async function getAllIDBKeys(collection: Collections) {
-	const idb = await databaseFactory();
-	const transaction = idb.transaction([collection], 'readonly');
-	const store = transaction.objectStore(collection);
-	const request = store.getAllKeys();
-
-	return new Promise<IDBValidKey[]>((resolve, reject) => {
-		request.onsuccess = () => {
-			resolve(request.result);
-		};
-
-		request.onerror = () => {
-			reject(request.error);
-		};
-	});
-}
-
-async function setIDBItem<T>(collection: Collections, name: IDBValidKey | undefined, value: T) {
-	const idb = await databaseFactory();
-	const transaction = idb.transaction([collection], 'readwrite');
-	const store = transaction.objectStore(collection);
-	const request = store.put(value, name);
-
-	return new Promise<IDBValidKey>((resolve, reject) => {
-		request.onsuccess = () => {
-			resolve(request.result);
-		};
-
-		request.onerror = () => {
-			reject(request.error);
-		};
-	});
-}
-
-async function setIDBItems<T>(collection: Collections, items: [IDBValidKey, T][]) {
-	const idb = await databaseFactory();
-	const transaction = idb.transaction([collection], 'readwrite');
-	const store = transaction.objectStore(collection);
-
-	items.forEach(([key, value]) => {
-		store.put(value, key);
-	});
-
-	return new Promise<IDBTransaction>((resolve, reject) => {
-		store.transaction.oncomplete = () => {
-			resolve(store.transaction);
-		};
-
-		store.transaction.onerror = () => {
-			reject(store.transaction);
-		};
-	});
-}
-
-export async function saveFile(name: string, handler: FileSystemHandle) {
-	return setIDBItem<FileSystemHandle>('files', name, handler);
-}
-
-export async function getFile<T = FileSystemHandle>(name: string) {
-	return getIDBItem<T>('files', name);
-}
-
-export async function getAllFiles() {
-	const files = await getAllIDBItem<FileSystemHandle>('files');
-
-	return files.filter((item) => item.kind === 'file' && item.name !== 'data.json') as FileSystemFileHandle[];
-}
-
-export async function saveThumb(id: string, thumb: File) {
-	return setIDBItem<File>('thumbs', id, thumb);
-}
-
-export async function getThumb(id: string) {
-	return getIDBItem<File>('thumbs', id);
-}
-
-export async function getAllThumbs() {
-	return getAllIDBItem<File>('thumbs');
-}
-
-export async function saveCover(id: string, cover: File) {
-	return setIDBItem<File>('covers', id, cover);
-}
-
-export async function getCover(id: string) {
-	return getIDBItem<File>('covers', id);
-}
-
-export async function getAllCovers() {
-	return getAllIDBItem<File>('covers');
-}
-
-export async function getMaterial(id: IDBValidKey) {
-	return getIDBItem<Material>('items', id);
-}
-
-export async function getMaterials() {
-	return getAllIDBItem<Material>('items');
-}
-
-export async function getMaterialIds() {
-	return getAllIDBKeys('items');
-}
-
-export async function getMaterialsBasicInfo() {
-	return (await getAllIDBItem<Material>('items')).map(({ name, sku, category, type, edition, status }) => ({
-		id: sku[0],
-		name,
-		sku,
-		category,
-		type,
-		edition,
-		status
-	}));
-}
-
-export async function saveMaterial(id: IDBValidKey, material: Material) {
-	return setIDBItem<Material>('items', id, material);
-}
-
-export async function saveMaterials(materials: [IDBValidKey, Material][]) {
-	return setIDBItems<Material>('items', materials);
-}
-
-export async function getFilesForMaterial(itemId: string) {
-	return getIDBItemFromIndex<FileForMaterial>('fileItems', 'itemId', itemId);
-}
-
-export async function setFileForMaterial(fileForMaterial: FileForMaterial) {
-	return setIDBItem<FileForMaterial>('fileItems', undefined, fileForMaterial);
-}
-
-export async function getEmulatorFiles() {
-	const files = await getAllIDBItem<File>('emulator');
-	const paths = await getAllIDBKeys('emulator') as string[];
-	const results: Record<string, File> = {};
-
-	for (let i = 0; i < files.length; i++) {
-		results[paths[i]] = files[i];
+	for (let i = 0; i < keys.length; i++) {
+		results.push([keys[i], values[i]]);
 	}
 
 	return results;
 }
 
-export async function saveEmulatorFile(path: string, file: File) {
-	return setIDBItem('emulator', path, file);
+// eslint-disable-next-line max-len
+export async function getIDBItemsByIndex<T extends Collections, I extends IndexNames<DatabaseSchema, T>>(collection: T, index: I, value: IndexKey<DatabaseSchema, T, I> | IDBKeyRange) {
+	return (await database).getAllFromIndex(collection, index, value);
 }
 
-export async function getEmulatorFile(name: string) {
-	return getIDBItem<File>('emulator', name);
+export async function setIDBItem<T extends Collections>(collection: T, key: DatabaseSchema[T]['key'] | undefined, value: DatabaseSchema[T]['value']) {
+	return (await database).put(collection, value, key);
+}
+
+export async function setIDBItems<T extends Collections>(collection: T, items: [DatabaseSchema[T]['key'], DatabaseSchema[T]['value']][]) {
+	const transaction = (await database).transaction(collection, 'readwrite');
+
+	try {
+		for await (const [key, value] of items) {
+			await transaction.store.put(value, key);
+		}
+
+		transaction.commit();
+	} catch (err) {
+		console.error(err);
+
+		transaction.abort();
+	}
 }

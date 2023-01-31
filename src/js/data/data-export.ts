@@ -1,14 +1,14 @@
 import type { Material } from '../../data/data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getMaterials } from './idb-persistence';
+import { getAllIDBValues } from './idb-persistence';
 import { I18n } from '../intl/translations';
 
 export async function exportDataFile() {
 	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Export Data` });
 
 	try {
-		const items = await getMaterials();
+		const items = await getAllIDBValues('items');
 
 		if (items.length > 0) {
 			const fileHandler = await window.showSaveFilePicker({

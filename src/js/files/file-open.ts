@@ -1,6 +1,6 @@
 import type { FileForMaterial } from '../../data/data';
 
-import { getFile } from '../data/idb-persistence';
+import { getIDBItem } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
 import { getFilePermission } from './file-import';
 
@@ -45,7 +45,14 @@ export async function openFile(fileInfo: FileForMaterial) {
 		}
 	}
 
-	const fileHandler = await getFile(fileInfo.filePath) as FileSystemFileHandle;
+	const fileHandler = await getIDBItem('files', fileInfo.filePath);
+
+	if (!fileHandler || fileHandler.kind !== 'file') {
+		// eslint-disable-next-line no-alert
+		alert(`${I18n.t`File not found.`}`);
+
+		return;
+	}
 
 	await getFilePermission(fileHandler);
 

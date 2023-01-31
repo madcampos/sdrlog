@@ -1,5 +1,5 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getMaterial, saveFile, saveMaterial, setFileForMaterial } from '../data/idb-persistence';
+import { getIDBItem, setIDBItem } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
 
 export function extractMetadataFromFileName(fileName: string) {
@@ -24,7 +24,7 @@ export function extractMetadataFromFileName(fileName: string) {
 export async function associateFileWithData(fileName: string, path: string, type: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: [A-Z])? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
 	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? { name: '', id: '', extension: '' };
-	const material = await getMaterial(id);
+	const material = await getIDBItem('items', id);
 
 	if (material) {
 		const fileForMaterial = {
@@ -35,12 +35,12 @@ export async function associateFileWithData(fileName: string, path: string, type
 			itemId: id
 		};
 
-		await setFileForMaterial(fileForMaterial);
+		await setIDBItem('fileItems', id, fileForMaterial);
 
 		if (material.status === 'missing') {
 			material.status = 'ok';
 
-			await saveMaterial(id, material);
+			await setIDBItem('items', id, material);
 		}
 
 		return fileForMaterial;
@@ -60,7 +60,7 @@ export async function getFilePermission(file: FileSystemHandle, mode: 'read' | '
 }
 
 async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
-	const entries: { path: string, entry: FileSystemHandle }[] = [];
+	const entries: { path: string, entry: FileSystemFileHandle | FileSystemDirectoryHandle }[] = [];
 
 	for await (const entry of dirHandle.values()) {
 		const entryPath = `${parentPath}/${entry.name}`;
@@ -89,7 +89,7 @@ export async function readFiles() {
 			startIn: 'downloads'
 		});
 
-		await saveFile('/', dir);
+		await setIDBItem('files', '/', dir);
 
 		const entries = await readDir(dir, '');
 
@@ -98,12 +98,12 @@ export async function readFiles() {
 			progressOverlay.increment();
 
 			if (entry.kind === 'file') {
-				const file = await (entry as FileSystemFileHandle).getFile();
+				const file = await entry.getFile();
 
 				await associateFileWithData(entry.name, path, file.type);
 			}
 
-			await saveFile(path, entry);
+			await setIDBItem('files', path, entry);
 		}
 	} catch (err) {
 		console.error('Failed to read materials.', err);

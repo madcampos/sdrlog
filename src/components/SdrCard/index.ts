@@ -1,7 +1,7 @@
 import type { Material } from '../../data/data';
 
 import { getThumbUrl } from '../../js/covers/cover-fetch';
-import { getMaterial } from '../../js/data/idb-persistence';
+import { getIDBItem } from '../../js/data/idb-persistence';
 import { registerComponent, SdrComponent } from '../SdrComponent';
 import { SdrItemDetails } from '../../views/SdrItemDetails';
 
@@ -77,7 +77,7 @@ export class SdrCard extends SdrComponent {
 	async setMaterial(id: string) {
 		if (!this.hasAttribute('title')) {
 			// TODO: avoid db query if we have all the data needed
-			const material = await getMaterial(id);
+			const material = await getIDBItem('items', id);
 
 			if (material) {
 				this.title = material.name;

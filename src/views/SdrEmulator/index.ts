@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle */
 
-import { getEmulatorFiles, getFile, saveEmulatorFile } from '../../js/data/idb-persistence';
+import { getAllIDBEntries, getIDBItem, setIDBItem } from '../../js/data/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../../js/files/file-import';
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
@@ -231,9 +231,9 @@ export class SdrEmulator extends SdrComponent {
 			['cfg', 'text/plain']
 		]);
 
-		let files = await getEmulatorFiles();
+		let files = await getAllIDBEntries('emulator');
 
-		if (Object.keys(files).length === 0) {
+		if (files.length === 0) {
 			const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/bundle.zip`);
 			const fileBlob = await response.blob();
 			const zipFile = new File([fileBlob], 'bundle.zip', { type: 'application/zip' });
@@ -252,20 +252,20 @@ export class SdrEmulator extends SdrComponent {
 
 					const file = new File([blob], name, { type: mimeTypes.get(extension) ?? 'application/octet-stream' });
 
-					await saveEmulatorFile(zipObject.name, file);
+					await setIDBItem('emulator', zipObject.name, file);
 				} else {
 					const file = new File([zipObject.name], zipObject.name, { type: 'application/x+directory' });
 
-					await saveEmulatorFile(zipObject.name, file);
+					await setIDBItem('emulator', zipObject.name, file);
 				}
 			}
 
-			files = await getEmulatorFiles();
+			files = await getAllIDBEntries('emulator');
 		}
 
 		this.#mkdirTree(folderPath);
 
-		for await (const [path, file] of Object.entries(files)) {
+		for await (const [path, file] of files) {
 			const buffer = await file.arrayBuffer();
 
 			if (file.type === 'application/x+directory') {
@@ -281,9 +281,9 @@ export class SdrEmulator extends SdrComponent {
 			throw new Error(I18n.t`Missing ROM file.`);
 		}
 
-		const handler = await getFile<FileSystemFileHandle>(this.file);
+		const handler = await getIDBItem('files', this.file);
 
-		if (!handler) {
+		if (!handler || handler.kind !== 'file') {
 			throw new Error(I18n.t`ROM does not exist.`);
 		}
 
@@ -366,8 +366,8 @@ export class SdrEmulator extends SdrComponent {
 				const saveBuffer = this.#emulator?.FS.readFile(savePath) ?? new Uint8Array();
 				const saveFile = new File([saveBuffer], savePath);
 
-				await saveEmulatorFile(statePath, stateFile);
-				await saveEmulatorFile(savePath, saveFile);
+				await setIDBItem('emulator', statePath, stateFile);
+				await setIDBItem('emulator', savePath, saveFile);
 
 				this.#emulator?.resumeMainLoop();
 			}

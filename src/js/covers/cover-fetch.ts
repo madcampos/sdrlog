@@ -1,5 +1,5 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllFiles, getCover, getThumb, saveCover, saveThumb } from '../data/idb-persistence';
+import { getAllIDBValues, getIDBItem, setIDBItem } from '../data/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../files/file-import';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extract';
 import { canExtractCover, canImportCover } from '../data/storage-conditions';
@@ -12,7 +12,7 @@ export const LOADING_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-cover
 export const LOADING_SIMPLE_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/loading-simple.svg`;
 
 export async function getCoverUrl(id: string) {
-	const currentCover = await getCover(id);
+	const currentCover = await getIDBItem('covers', id);
 
 	if (currentCover) {
 		return URL.createObjectURL(currentCover);
@@ -31,7 +31,7 @@ export async function getCoverUrl(id: string) {
 }
 
 export async function getThumbUrl(id: string) {
-	const currentThumb = await getThumb(id);
+	const currentThumb = await getIDBItem('thumbs', id);
 
 	if (currentThumb) {
 		return URL.createObjectURL(currentThumb);
@@ -44,12 +44,16 @@ export async function extractCoversFromFiles() {
 	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Extract Covers` });
 
 	try {
-		const files = await getAllFiles();
+		const files = await getAllIDBValues('files');
 
 		progressOverlay.total = files.length;
 
 		for await (const file of files) {
 			progressOverlay.increment();
+
+			if (file.kind !== 'file') {
+				continue;
+			}
 
 			const canSaveCover = await canExtractCover(file.name);
 
@@ -67,8 +71,8 @@ export async function extractCoversFromFiles() {
 				const coverFile = new File([optimizedCover], fileName, { type: 'image/jpeg' });
 				const thumbFile = new File([optimizedThumb], fileName, { type: 'image/jpeg' });
 
-				await saveCover(id, coverFile);
-				await saveThumb(id, thumbFile);
+				await setIDBItem('covers', id, coverFile);
+				await setIDBItem('thumbs', id, thumbFile);
 			}
 		}
 	} catch (err) {
@@ -114,11 +118,11 @@ export async function importCoversFromFolder() {
 				try {
 					const coverFile = await processCoverFile(file, { name: `${id}.jpg` });
 
-					await saveCover(id, coverFile);
+					await setIDBItem('covers', id, coverFile);
 
 					const thumbFile = await processCoverFile(file, { referenceWidth: THUMB_WIDTH, name: `${id}.jpg` });
 
-					await saveThumb(id, thumbFile);
+					await setIDBItem('thumbs', id, thumbFile);
 				} catch (err) {
 					console.error(`Failed to import cover "${id}" from file.`, err);
 				}
