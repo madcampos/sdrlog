@@ -13,17 +13,23 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 # Materials to add
 
-https://www.shadowrunsixthworld.com/2021/05/whats-up-with-shadowrun/
-https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-2022/
+https://www.drivethrurpg.com/product/410466/Shadowrun-Missions-Seven-Breaths-0906?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/416991/Shadowrun-Missions-1001-Deaths-Daily-Business?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/424603/Shadowrun-Missions-1002-One-Stone-Two-Birds
+https://www.drivethrurpg.com/product/424604/Shadowrun-Lifestyles-of-the-Shadowy--Infamous
+https://www.drivethrurpg.com/product/424606/Shadowrun-Null-Value-Runner-Resource-Book
+https://store.catalystgamelabs.com/collections/shadowrun/products/shadowrun-scorpions-bane-by-mel-odom
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
-https://www.drivethrurpg.com/product/410466/Shadowrun-Missions-Seven-Breaths-0906?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/416991/Shadowrun-Missions-1001-Deaths-Daily-Business?filters=1700_0_0_0_0
-
-https://mega.nz/folder/vDhhGS7T#r_AjyW1myaJWMWUHb5GyoQ
-https://mega.nz/folder/WSIGmB5A#PavCKeTSjOQMKwZvg-X1_g
+https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-2022/
+- Best laid plans
+- corporate business
+- program deck
+- The chimera complex
+- Body shop
+- Wild life
 
 # Archive
 **TODO**: Scrap html and old pages and archive
@@ -47,6 +53,8 @@ https://www.shadowiki.de/Geisterstunde
 http://danvolodar.ru/ancientfiles/Spoorn/
 http://danvolodar.ru/ancientfiles/index.html
 
+http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
+
 ## Japanese materials
 https://www.shadowiki.de/Shadowrun_Manga
 https://fondationdraco.fr/shadowrun-manga-scan-trad/
@@ -55,11 +63,3 @@ https://fondationdraco.fr/2016/05/05/shadowrun-au-japon-entangled-betrayal/
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/tokyo-eye-shot-shadowrun-city-file/
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-shikkoku-no-senki/
 https://fondationdraco.fr/shadowrun-au-japon-partie-5/
-
-## Old file sharring
-
-http://ul.to/folder/xk4syi
-http://ul.to/folder/upkklm
-http://ul.to/folder/1m2glp
-http://ul.to/folder/crvrc9
-http://ul.to/folder/glmzqi

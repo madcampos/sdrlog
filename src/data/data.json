@@ -1819,7 +1819,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Set of cards available at Gen Con 2014."
-},
+		},
 		{
 			"sku": [
 				"27006",
@@ -1924,7 +1924,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Print only set of gear cards, Available at Gen Con 2014"
-},
+		},
 		{
 			"sku": [
 				"26S040"
@@ -2850,7 +2850,7 @@
 			"gameDate": "2050-01",
 			"status": "outofscope",
 			"notes": "This is a fan romance published without consent or licensing."
-},
+		},
 		{
 			"sku": [
 				"9783890641232"
@@ -4127,8 +4127,8 @@
 			],
 			"gameDate": "2076-04",
 			"notes": "The German version has aditional material about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"27300"
@@ -4153,8 +4153,8 @@
 			],
 			"gameDate": "2076-09",
 			"notes": "The German Edition has an aditional adventure for German characters called \"Operation Baybreaker\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"27202",
@@ -4710,8 +4710,8 @@
 			],
 			"gameDate": "2055-05",
 			"notes": "This is a box set with two books: one for players and another for GMs.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"7209"
@@ -4759,8 +4759,8 @@
 			],
 			"gameDate": "2053-01",
 			"notes": "In the German translation it misses two chapters of the original publication (\"One-way Communication\" and \"Guarding the Till\")",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"7211"
@@ -5228,8 +5228,8 @@
 			],
 			"gameDate": "2053-01",
 			"notes": "In the English translation \"Germany Sourcebook\" the following chapters are missing from the original \"Germany in the Shadow\":\n\t- \"The eyes of the Riggers\" - short story / novel excerpt\n\t- \"Hamburg: Venice of the North\"\n\t- \"Connections\"\n\t- \"Archetypes\"\n\t- \"Equipment\" and\n\t- the map of the ADL\n\nSome of the other chapters are arranged and arranged in completely different order. In addition, the English translation also contains a glossary with pronunciation tips and the chapter \"Game Information\" In addition, almost all inGame advertising of the German original (including the color pages) was replaced by completely different advertisements, and also replaced part of the original Shadowtalks to certain, particularly bizarre ideas of German authors (such as the \" Gore \" in Berlin) to relativize.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10738"
@@ -5248,8 +5248,8 @@
 			],
 			"gameDate": "2053-01",
 			"notes": "The German version of The Lands of Promisse (Tír Tairngire & Tír na nÓg), contains the elemental parts of the original issues of Tir Tairngire, Tír na nÓg and as a world first publication a view into Pomorya, the german elvenstate.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10728"
@@ -5268,8 +5268,8 @@
 			],
 			"gameDate": "2053-01",
 			"notes": "Combines material of Native American Nations Volumes 1 & 2 as well as the Neo-Anarchists Guide to North America into one volume. Not included are the Native American Nation's adventures and the description of California Free State and San Francisco.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10730"
@@ -5288,8 +5288,8 @@
 			],
 			"gameDate": "2053-01",
 			"notes": "A German adventure book with 4 short-adventures.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10709"
@@ -5308,8 +5308,8 @@
 			],
 			"gameDate": "2053-01",
 			"notes": "\"Schlagschatten\" (Drop Shadow) is a German Shadowrun adventure collection set in the Germany of 2053. It contains three adventures.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10757"
@@ -5328,8 +5328,8 @@
 			],
 			"gameDate": "2062-01",
 			"notes": "This sourcebook is the German translation of two original Shadowrun titles: Threats and Threats 2",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"22004"
@@ -5348,8 +5348,8 @@
 			],
 			"gameDate": "2063-01",
 			"notes": "It mainly deals with areas of the ADL society that could not be covered in detail in Deutschland in den Schatten II: politics, police , judiciary and prison system, magic - from the university magician training on the witches and the Theurgen Westphalens to the psionics - as well as the media, professional sports , the neo-anarchists in the east of the re-divided Berlin and various subcultures.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10753"
@@ -5368,8 +5368,8 @@
 			],
 			"gameDate": "2062-01",
 			"notes": "\"Deutschland in den Schatten II\" (Germany in the Shadows II) is the successor to the Germany Sourcebook. It details the German territories in the year 2062.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10733"
@@ -5388,8 +5388,8 @@
 			],
 			"gameDate": "2058-01",
 			"notes": "The book is inGame 2058, after Dunkelzahn's death, and includes a comprehensive chapter of Austria . In addition, there is a \"culture shock\" chapter for the ADL that describes life and work, fashion lawmakers, cultural trends and subcultures in the Alliance and was intended as a German equivalent to the American \"Neo-Anarchists' Guide to Real Life\". It also contains updates on Proteus AG and the Draco Foundation in the Alliance and on Berlin after the corporate invasion, as well as one chapter for SOX and one for Bremen. Finally, the book is rounded off by a short Switzerland-update.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"4-8291-7337-8"
@@ -5408,8 +5408,8 @@
 			],
 			"gameDate": "2053-01",
 			"notes": "This was the sourcebook of Tokyo and Japan Imperial State in 2050, in Japanese. Non-cannon.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"7201",
@@ -5464,8 +5464,8 @@
 			],
 			"gameDate": "2058-01",
 			"notes": "The German edition has rules updated to the third edition and an aditional chapter about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"7122",
@@ -5492,8 +5492,8 @@
 			],
 			"gameDate": "2057-08",
 			"notes": "The German version was released for Shadowrun 3, eight years after the original publication.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"7125"
@@ -5542,8 +5542,8 @@
 			],
 			"gameDate": "2059-01",
 			"notes": "The German translation/publication features 8 additional pages on pirates of the North Seas and additional equipment.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26500"
@@ -5691,8 +5691,8 @@
 			],
 			"gameDate": "2061-01",
 			"notes": "The German edition has diffrent equipament, based on German sources.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"SR4QS"
@@ -6046,8 +6046,8 @@
 			],
 			"gameDate": "2072-01",
 			"notes": "A soft cover book containing some of the material from Runner's Toolkit German edition and a new adventure.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26100A"
@@ -6067,7 +6067,7 @@
 			"gameDate": "2072-01",
 			"status": "outofscope",
 			"notes": "Set of cards available at Gen Con 2014."
-},
+		},
 		{
 			"sku": [
 				"26208",
@@ -6092,8 +6092,8 @@
 			],
 			"gameDate": "2073-10",
 			"notes": "The German edition has an aditional chapter about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26207",
@@ -6118,8 +6118,8 @@
 			],
 			"gameDate": "2073-05",
 			"notes": "The German edition has an aditional chapter about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26210",
@@ -6169,8 +6169,8 @@
 			],
 			"gameDate": "2073-08",
 			"notes": "The German edition has aditional information about German characters.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26206",
@@ -6194,8 +6194,8 @@
 			],
 			"gameDate": "2073-01",
 			"notes": "The German edition has aditional content about the Bundeswehr and MET2000 and a translation of the \"MilSpec Tech\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26202",
@@ -6224,8 +6224,8 @@
 			],
 			"gameDate": "2071-10",
 			"notes": "The French edition has an aditional chapter about Clermont-Ferrand.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26201",
@@ -6255,8 +6255,8 @@
 			],
 			"gameDate": "2071-02",
 			"notes": "Both the German and the French editions have an aditional chapters about Lille (French), Frankfurt (German) and Manhattan (both).",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26205"
@@ -6279,8 +6279,8 @@
 			],
 			"gameDate": "2072-11",
 			"notes": "The English almanac was riddled with content and formal errors that were removed by Pegasus in consultation with CGL in the German version. These include duplicate or incorrect info boxes, flags in illustrations, which did not exist at the time of the depicted scene, and incorrect coastal and borderlines.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26203",
@@ -6307,8 +6307,8 @@
 			],
 			"gameDate": "2072-02",
 			"notes": "The German edition has a translation of 10 Gangs and aditional material regarding Germany.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26211",
@@ -6333,8 +6333,8 @@
 			],
 			"gameDate": "2074-07",
 			"notes": "The German edition has some aditions regarding German dragons.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26301",
@@ -6435,8 +6435,8 @@
 			],
 			"gameDate": "2071-11",
 			"notes": "Both the German and the French editions have additions based on Europe. The german version includes a CD with aditional material.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26240"
@@ -6461,8 +6461,8 @@
 			],
 			"gameDate": "2072-01",
 			"notes": "The French edition also contains 2 of the Missions adventures.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26213",
@@ -6487,8 +6487,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26212"
@@ -6551,8 +6551,8 @@
 			],
 			"gameDate": "2072-05",
 			"notes": "The German edition has an aditional chapter about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10664",
@@ -6576,8 +6576,8 @@
 			],
 			"gameDate": "2063-01",
 			"notes": "The German edition has an aditional chapter about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10655",
@@ -6800,8 +6800,8 @@
 			],
 			"gameDate": "2064-03",
 			"notes": "The German edition has an aditional chapter about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"25011"
@@ -6849,8 +6849,8 @@
 			],
 			"gameDate": "2072-07",
 			"notes": "The French version has a translation of \"Parazoology\" and the German version has aditional animals from the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26005",
@@ -6881,8 +6881,8 @@
 			],
 			"gameDate": "2070-02",
 			"notes": "The German edition added a chapter about Hamburg and the French edition a chapter about Marseille. The revised German edition has both chapters.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10670",
@@ -7833,8 +7833,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "The German translation is split in two books: \"Licht aus der Asche\" and \"Trittbrettfahrer\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"27409",
@@ -8175,8 +8175,8 @@
 			],
 			"gameDate": "2077-08",
 			"notes": "The German edition also has a summary of \"Montreal 2074\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"7301",
@@ -10868,7 +10868,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "In 2021 Catalyst rereleased the antology and the tarot with a new cover and bigger cards."
-},
+		},
 		{
 			"sku": [
 				"26860"
@@ -11136,7 +11136,7 @@
 			"gameDate": "2075-01",
 			"status": "canceled",
 			"notes": "Announced fo the Year of Shadowrun but never released. Some \"developer diary\" posts are available on Shadowrun's blog."
-},
+		},
 		{
 			"sku": [
 				"27800"
@@ -11153,7 +11153,7 @@
 			"gameDate": "2075-01",
 			"status": "canceled",
 			"notes": "Announced fo the Year of Shadowrun but never released. Some \"developer diary\" posts are available on Shadowrun's blog."
-},
+		},
 		{
 			"sku": [
 				"27750"
@@ -11268,7 +11268,7 @@
 			"gameDate": "2054-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
-},
+		},
 		{
 			"sku": [
 				"RET-02"
@@ -11288,7 +11288,7 @@
 			"gameDate": "2054-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
-},
+		},
 		{
 			"sku": [
 				"RET-03"
@@ -11308,7 +11308,7 @@
 			"gameDate": "2054-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
-},
+		},
 		{
 			"sku": [
 				"PRIMER"
@@ -11327,8 +11327,8 @@
 			],
 			"gameDate": "2060-01",
 			"notes": "A semi-internal doc about the world of Shadowrun.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"JUL"
@@ -11383,7 +11383,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
-},
+		},
 		{
 			"sku": [
 				"ONLINE2"
@@ -11403,7 +11403,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Not present for beeing multiplatform and huge in size."
-},
+		},
 		{
 			"sku": [
 				"SCBA"
@@ -11442,7 +11442,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Print only cards."
-},
+		},
 		{
 			"sku": [
 				"26530"
@@ -11462,7 +11462,7 @@
 			"gameDate": "2072-01",
 			"status": "outofscope",
 			"notes": "Print only cards."
-},
+		},
 		{
 			"sku": [
 				"26104",
@@ -11495,7 +11495,7 @@
 			"gameDate": "2072-01",
 			"status": "missing",
 			"notes": "Originally print only, this book is a compilation of other books with few added material.\nThe German edition has a few items from Germany and the French edition has the items from \"Used Car Lot\" and \"Gun Haven 2\"."
-},
+		},
 		{
 			"sku": [
 				"26105",
@@ -11521,8 +11521,8 @@
 			],
 			"gameDate": "2074-01",
 			"notes": "Originally print only, this book is a compilation of other books with few added material.\nThe German edition have a few itens from Germany.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"47012"
@@ -11542,7 +11542,7 @@
 			"gameDate": "2074-01",
 			"status": "outofscope",
 			"notes": "A print only German compilation of: \"Parazoologie\", \"Parabotanik\", \"Magische Gesellschaften\", \"Der Weg des Adepten\", \"Der Weg des Samurai\", \"Safehouses\" und \"State of the Art 2073\" and a few extra pages."
-},
+		},
 		{
 			"sku": [
 				"27050"
@@ -11566,7 +11566,7 @@
 			"gameDate": "2075-01",
 			"status": "missing",
 			"notes": "Print only."
-},
+		},
 		{
 			"sku": [
 				"RET-ANT"
@@ -11620,8 +11620,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "A compilation of previously released novels.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"RET-NOV"
@@ -11731,7 +11731,7 @@
 			"gameDate": "2060-01",
 			"status": "canceled",
 			"notes": "This was the last FASA novel, announced but never released. Here for historical reasons."
-},
+		},
 		{
 			"sku": [
 				"7321"
@@ -11748,7 +11748,7 @@
 			"gameDate": "2060-01",
 			"status": "canceled",
 			"notes": "An adventure announced by FASA, never released. Here for historical reasons."
-},
+		},
 		{
 			"sku": [
 				"26CMP13-1"
@@ -11765,7 +11765,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP13-2"
@@ -11782,7 +11782,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP14"
@@ -11799,7 +11799,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP15-1"
@@ -11816,7 +11816,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP15-2"
@@ -11833,7 +11833,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP16-1"
@@ -11867,7 +11867,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP11"
@@ -11884,7 +11884,7 @@
 			"gameDate": "2073-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP18-1"
@@ -11901,7 +11901,7 @@
 			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP18-2"
@@ -11918,7 +11918,7 @@
 			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"26CMP17"
@@ -11935,7 +11935,7 @@
 			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A series of adventures played at conventions, not relesed afterwards."
-},
+		},
 		{
 			"sku": [
 				"X27PM001"
@@ -11952,7 +11952,7 @@
 			"gameDate": "2070-01",
 			"status": "canceled",
 			"notes": "An Prime Mission announced for the Year of Shadowrun but never released."
-},
+		},
 		{
 			"sku": [
 				"X27PM002"
@@ -11969,7 +11969,7 @@
 			"gameDate": "2070-01",
 			"status": "canceled",
 			"notes": "An Prime Mission announced for the Year of Shadowrun but never released."
-},
+		},
 		{
 			"sku": [
 				"26404"
@@ -11988,8 +11988,8 @@
 			],
 			"gameDate": "2050-01",
 			"notes": "Bundle of 4 novels.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10763"
@@ -12032,8 +12032,8 @@
 			],
 			"gameDate": "2057-02",
 			"notes": "A complete description of France from the world of Shadowrun in 2057, with its history, political system, organization of society, organized crime, most powerful duchies, new creatures, new equipment, new spells, etc. French only. Considered semi/non-cannon.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10674",
@@ -12051,7 +12051,7 @@
 			"gameDate": "2064-01",
 			"status": "canceled",
 			"notes": "Unreleased adventure."
-},
+		},
 		{
 			"sku": [
 				"26859"
@@ -12115,8 +12115,8 @@
 			],
 			"gameDate": "2074-01",
 			"notes": "German sourcebook about Berlin.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"47020",
@@ -12136,8 +12136,8 @@
 			],
 			"gameDate": "2078-01",
 			"notes": "German sourcebook about Germany.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45061"
@@ -12175,8 +12175,8 @@
 			],
 			"gameDate": "2078-01",
 			"notes": "Complementary material to Datapuls: Hamburg, contains maps, booklets and a GM Screen.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"470D1"
@@ -12195,8 +12195,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German sourcebook about Berlin.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"470D2"
@@ -12215,8 +12215,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German sourcebook about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"470D3"
@@ -12235,8 +12235,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German sourcebook about the ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"470D4"
@@ -12255,8 +12255,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German sourcebook about Austria.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"470D5"
@@ -12275,8 +12275,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German sourcebook about the SOX.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"47000GA"
@@ -12295,8 +12295,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German translation of Parazoology and Parazoology 2 - updated with rules for Shadowrun, 5th Edition.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"47000GC"
@@ -12377,8 +12377,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "Schattenhandbuch (Shadow Handbook) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin's Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch was published in a numbered limited edition with a print run of 3000 books.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45034"
@@ -12416,8 +12416,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "A German printed edition of the previeously released \"Datapuls\" series, with public transportation maps as an addition.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"46085"
@@ -12436,8 +12436,8 @@
 			],
 			"gameDate": "2074-01",
 			"notes": "German 200 page adventure.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"46065"
@@ -12456,8 +12456,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "A compilation of: \"Shadows in Focus: Sioux Nation\", \"Starving the Masses\" and \"Counting Coup\"",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"GRST-2016"
@@ -12476,8 +12476,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "A Shadowrun supplement released at Gratisrollenspiltag 2016.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45033"
@@ -12496,8 +12496,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "Collects three Shadowrun Missions adventures (SRM 5A-01 Chasin' the Wind, SRM 5A-02 Critic's Choice, SRM 5A-03 Gone long gone) and a description of the city of Chicago.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45060"
@@ -12516,8 +12516,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "This is a collection of the Denver Adventures",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45035"
@@ -12536,8 +12536,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "Collects three Shadowrun Missions adventures (SRM05-04: Liberation, SRM05-05: While the City Sleeps, SRM05-06: Take a Chance) and a description of the city of Chicago.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45042"
@@ -12557,7 +12557,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Shadowrun Karren Quartett is a set of 32 cards depicting various vehicles of the Shadowrun universe with Shadowrun 5 game stats."
-},
+		},
 		{
 			"sku": [
 				"45020"
@@ -12577,7 +12577,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Shadowrun Wummen Quartett is a set of 32 cards depicting various weapons of the Shadowrun universe with Shadowrun5 game stats. It also includes an activation code for Shadowrun Online."
-},
+		},
 		{
 			"sku": [
 				"45046"
@@ -12596,8 +12596,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "German adventure based on the book \"Blut & Spiele\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45056"
@@ -12616,8 +12616,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "Three short scenarios for use with the Tarot Deck.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"23001"
@@ -12656,7 +12656,7 @@
 			"gameDate": "2069-01",
 			"status": "missing",
 			"notes": "This book was poublished in 2005 by Fanpro. It features a comprehensive look at the history, influence and mechanics of Shadowrun from 1989 to date. It includes a collection of articles on Shadowrun-related topics, short stories and a collector's guide listing all Shadowrun publications and novels in English and German."
-},
+		},
 		{
 			"sku": [
 				"23006",
@@ -12682,8 +12682,8 @@
 			],
 			"gameDate": "2072-01",
 			"notes": "\"SOX\" covers a description of the Saar-Lorraine-Luxemburg containment zone and two related adventures (\"Hoffnungsstrahlen\" and \"Mauvais Présage\"). It is a French-German cooperation.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"47000GX"
@@ -12702,8 +12702,8 @@
 			],
 			"gameDate": "2074-01",
 			"notes": "Netzstücke is an expansion for the German version of Spy Games (Machtspiele). It features additional material for campaigns in Germany.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"46095",
@@ -12723,8 +12723,8 @@
 			],
 			"gameDate": "2074-01",
 			"notes": "Rhein-Ruhr-Megaplex (Rhine Ruhr Megaplex) is a German Shadowrun sourcebook that provides detailed information about the Ruhr area and parts of the Rhineland.\nMain Topics of the book are:\n\t- Megaplex overview\n\t- A tour through the Megaplex areas\n\t- Culture\n\t- Saeder-Krupp\n\t- Powers and Organizations\n\t- Points of Interest\n\t- Maps, locations, and adventure hooks",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45210"
@@ -12743,8 +12743,8 @@
 			],
 			"gameDate": "2074-01",
 			"notes": "German sourcebook for Shadowrun detailing various aspcets of shadowrunning in Germany, including organized crime, famous shadowrunners, possible targets and certain interesting regions.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45047"
@@ -12782,8 +12782,8 @@
 			],
 			"gameDate": "2050-01",
 			"notes": "Shadowrun Hungary sourcebook (Hungarian)",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"10727"
@@ -12802,8 +12802,8 @@
 			],
 			"gameDate": "2056-01",
 			"notes": "Chrom & Dioxin succeeds in making the years 2054-2056 playable for german Runners, too. Filled with lots of information on the latest events and developments in politics, economy and technology, plus a special treat: the Switzerland. With its many paranormal beings and rigid security politics a challenge for every Runner. There are also sections dealing with the Lueneburg Heath in northern Germany and the city of Karlsruhe.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"P2009A"
@@ -12822,8 +12822,8 @@
 			],
 			"gameDate": "2074-01",
 			"notes": "Winning entry of Pegasus' 2009 adventure competition for Shadowrun. Subsequently released as a free pdf.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26056S"
@@ -12957,7 +12957,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Announced as a kickstarter campaign. Possible a retake on Hostile Takeover."
-},
+		},
 		{
 			"sku": [
 				"KS002"
@@ -13031,7 +13031,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Announced at GenCon 2018."
-},
+		},
 		{
 			"sku": [
 				"27706"
@@ -13048,7 +13048,7 @@
 			"gameDate": "2075-01",
 			"status": "outofscope",
 			"notes": "Announced at GenCon 2018."
-},
+		},
 		{
 			"sku": [
 				"27013"
@@ -13140,7 +13140,7 @@
 			"gameDate": "2060-01",
 			"status": "outofscope",
 			"notes": "A condensed edition with: Native American Nations Volume 1, Native American Nations Volume 2 without the adventure \"Peacekeeper\"."
-},
+		},
 		{
 			"sku": [
 				"2-7408-0112-2"
@@ -13159,8 +13159,8 @@
 			],
 			"gameDate": "2060-01",
 			"notes": "A translation of the adventure \"Peacekeeper\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"45050"
@@ -13179,8 +13179,8 @@
 			],
 			"gameDate": "2060-01",
 			"notes": "The German version of the \"Start Rules\". Contains the adventure \"Freier Markt\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26057S"
@@ -13243,8 +13243,8 @@
 			],
 			"gameDate": "2075-01",
 			"notes": "The German version has an aditional 20 pages of the life in ADL.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"27454",
@@ -13868,7 +13868,7 @@
 			"gameDate": "2073-01",
 			"status": "missing",
 			"notes": "The book contains the printed version of several \"Datapuls\" supplements previously only published as eBooks: \"Datapuls\"-Ergänzungen: \"Datapuls: Schweiz\", \"Datapuls: Verschlusssache\", \"Datapuls: Frankfurt\", \"Datapuls: Proteus\" and \"Datapuls: SOTA 2080\" and - as an exclusive addition - \"Datapuls: Auf der Jagd\" with interesting facts about the federal police authorities of the ADL with a focus on BGS and BKA."
-},
+		},
 		{
 			"sku": [
 				"26864"
@@ -13963,8 +13963,8 @@
 			],
 			"gameDate": "2076-01",
 			"notes": "Campaign and sourcebook for France and in particular the capital Paris.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"STLD"
@@ -13981,7 +13981,7 @@
 			"gameDate": "2076-01",
 			"status": "missing",
 			"notes": "As it is released monthly, some itens are missing."
-},
+		},
 		{
 			"sku": [
 				"NVP"
@@ -13997,8 +13997,8 @@
 			],
 			"gameDate": "2070-01",
 			"notes": "It has been replaced by SchattenLoad.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"28002"
@@ -14135,7 +14135,7 @@
 			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "Print only puzzles and folios of the game."
-},
+		},
 		{
 			"sku": [
 				"46114G"
@@ -14349,7 +14349,7 @@
 			"gameDate": "2080-01",
 			"status": "missing",
 			"notes": "A deck of printed NPC cards."
-},
+		},
 		{
 			"sku": [
 				"46115"
@@ -14369,7 +14369,7 @@
 			"gameDate": "2080-01",
 			"status": "outofscope",
 			"notes": "A collection of PDFs."
-},
+		},
 		{
 			"sku": [
 				"480D1"
@@ -14657,8 +14657,8 @@
 			],
 			"gameDate": "2080-01",
 			"notes": "The german edition has an additional part discussing groups such as the \"Disciples of the Cleansing Fire\" or the \"SiegfriedBund\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26863"
@@ -14697,8 +14697,8 @@
 			],
 			"gameDate": "2080-01",
 			"notes": "Also released in english as part of the \"Shadowrun: Sixth World Beginner Box\".",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"28003"
@@ -14744,8 +14744,8 @@
 			],
 			"gameDate": "2080-01",
 			"notes": "The German edition has additional information on ADL Mega Corps",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26007NV"
@@ -14975,8 +14975,8 @@
 			],
 			"gameDate": "2070-01",
 			"notes": "This was a promo CD with the quick start rules and the adventure \"Freir Market\" released for SPIEL 2008.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"name": "BattleRun II: The Quest for the Thing",
 			"sku": [
@@ -15697,8 +15697,8 @@
 			],
 			"gameDate": "2082-01",
 			"notes": "This is a re-release of the Shadowrun CCG.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"26090"
@@ -15850,8 +15850,8 @@
 			],
 			"gameDate": "2070-01",
 			"notes": "This is an April's Fool suplement only published in German.",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"28005"
@@ -15876,8 +15876,8 @@
 				"de-DE": "Schattenkompendium"
 			},
 			"notes": "The German edition includes 20 additional new metavariant illustrations and the karma creation system (which is missing in the English version).",
-"status": "ok"
-},
+			"status": "ok"
+		},
 		{
 			"sku": [
 				"PRO754"
