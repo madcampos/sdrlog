@@ -27,13 +27,19 @@ export async function fetchItems() {
 	const currentData = await getAllIDBValues('items');
 	const onlineData = await fetchData();
 	const mergedData = new Map<string, Material>();
+	const ids: string[] = [];
 
 	for (const material of currentData) {
 		mergedData.set(material.sku[0], material);
 	}
 
 	for (const material of onlineData) {
+		if (ids.includes(material.sku[0])) {
+			console.log('Duplicate SKU found:', material.sku[0]);
+		}
+
 		mergedData.set(material.sku[0], material);
+		ids.push(material.sku[0]);
 	}
 
 	await setIDBItems('items', [...mergedData.entries()]);

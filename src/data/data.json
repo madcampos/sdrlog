@@ -14352,26 +14352,6 @@
 		},
 		{
 			"sku": [
-				"46115"
-			],
-			"name": "Schattendossier 1",
-			"category": "sourcebook",
-			"type": "print",
-			"originalLanguage": "de-DE",
-			"description": "Schatten sind alle schwarz? Das stimmt nicht, Chummer. Ihnen mag das Licht fehlen, aber wer in den Schatten der ADL sein Geld verdienen will, der sollte sich gut auskennen. In Westphalen, wo die Kirche regiert und erwachte Theurgen dich jagen. In Pomorya, dem Elfenstaat an der Ostsee mit seinen Adelsgeschlechtern und seiner modernen Öko-Industrie. In München, dem Megaplex der Schwarzen Sheriffs und der Schickeria. An der Nordseeküste, wo Piraten von verlassenen Ölplattformen und im toxischen Watt gegen Giftgeister und Konzerne kämpfen. Und du solltest dabei schauen, dass deine Ausrüstung immer auf dem neuesten Stand bleibt … sonst wird die Dunkelheit der Schatten dich irgendwann verschlingen.\n\nDas Schattendossier I ist der erste Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Westphalen, München, Pomorya, Piraten der Deutschen Bucht und das SOTA 2081 zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Seucheninsel in der Ostsee. Das Schattendossier I ist streng limitiert und die einzelnen Bücher durchnummeriert.",
-			"edition": 6,
-			"publisher": [
-				"Pegasus Spiele"
-			],
-			"releaseDate": [
-				"2020-06-15"
-			],
-			"gameDate": "2080-01",
-			"status": "outofscope",
-			"notes": "A collection of PDFs."
-		},
-		{
-			"sku": [
 				"480D1"
 			],
 			"name": "Datapuls: Pomorya",
@@ -16275,7 +16255,7 @@
 		},
 		{
 			"sku": [
-				"26879"
+				"26867"
 			],
 			"name": "CTRL Issues",
 			"category": "novel",
@@ -16313,7 +16293,7 @@
 		},
 		{
 			"sku": [
-				"26874"
+				"26874X"
 			],
 			"name": "Down These Dark Streets",
 			"category": "novel",
