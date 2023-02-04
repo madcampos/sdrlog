@@ -1,7 +1,7 @@
 import type { optimize as OptimizerType } from './cover-optimizer';
 import type { default as PDFJS } from 'pdfjs-dist';
 
-import { I18n } from '../intl/translations';
+import pdfJsWorkerSource from 'pdfjs-dist/build/pdf.worker?url';
 
 let optimize: typeof OptimizerType | undefined;
 let pdfjs: typeof PDFJS | undefined;
@@ -15,7 +15,7 @@ if (!document.querySelector('#cover-canvas')) {
 }
 
 const canvas = document.querySelector('#cover-canvas') as HTMLCanvasElement;
-const canvasContext = canvas.getContext('2d') as CanvasRenderingContext2D;
+const canvasContext = canvas.getContext('2d', { willReadFrequently: true, desynchronized: true, alpha: false }) as CanvasRenderingContext2D;
 
 canvas.width = COVER_WIDTH;
 canvas.height = COVER_WIDTH;
@@ -25,6 +25,7 @@ export async function extractCover(file: File) {
 
 	if (!('pdfjs' in window)) {
 		pdfjs = await import('pdfjs-dist');
+		pdfjs.GlobalWorkerOptions.workerSrc = pdfJsWorkerSource;
 	}
 
 	const pdf = await (pdfjs as typeof PDFJS).getDocument({ url: fileURL }).promise;
@@ -91,7 +92,7 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 	const coverScale = referenceWidth / cover.width;
 
 	if (coverScale > MAX_UPSCALE_FACTOR && !forceProcess) {
-		throw new Error(I18n.t`Cover would be upscaled!`);
+		throw new Error('Cover would be upscaled!');
 	}
 
 	if (coverScale !== 1 || forceProcess) {

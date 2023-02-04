@@ -40,9 +40,9 @@ export function extractMetadataFromFileName(fileName: string) {
 
 export function getFileMetadataForMaterial(fileName: string, path: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: [A-Z])? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
-	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? { name: fileName, id: undefined, extension: undefined };
+	const { id, extension } = testRegex.exec(fileName)?.groups ?? { name: fileName, id: undefined, extension: undefined };
 	const fileForMaterial = {
-		fileName: name,
+		fileName,
 		filePath: path,
 		fileExtension: extension,
 		itemId: id
