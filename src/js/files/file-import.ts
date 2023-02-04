@@ -20,7 +20,7 @@ export async function getFileHash(dataToHash: ArrayBuffer | string) {
 }
 
 export function extractMetadataFromFileName(fileName: string) {
-	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
+	const testRegex = /^(?:(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - )?(?<name>.*)(?<extension>\.[a-z][a-z0-9]+)?$/u;
 	const { name, modifier, id, extension } = testRegex.exec(fileName)?.groups ?? {};
 	const modifierMap = new Map([
 		['A', 'attachement'],
@@ -38,19 +38,6 @@ export function extractMetadataFromFileName(fileName: string) {
 	};
 }
 
-export function getFileMetadataForMaterial(fileName: string, path: string) {
-	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: [A-Z])? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
-	const { id, extension } = testRegex.exec(fileName)?.groups ?? { name: fileName, id: undefined, extension: undefined };
-	const fileForMaterial = {
-		fileName,
-		filePath: path,
-		fileExtension: extension,
-		itemId: id
-	};
-
-	return fileForMaterial;
-}
-
 export async function getFilePermission(file: FileSystemHandle, mode: 'read' | 'readwrite' = 'read') {
 	const isPermissionGranted = await file.queryPermission({ mode }) === 'granted';
 
@@ -64,8 +51,11 @@ export async function getFilePermission(file: FileSystemHandle, mode: 'read' | '
 async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
 	const entries: { path: string, entry: FileSystemFileHandle | FileSystemDirectoryHandle }[] = [];
 
+	// TODO: add ignore list for files and folders?
+
 	for await (const entry of dirHandle.values()) {
-		if (entry.name.startsWith('.')) {
+		// Ignore useless mac os files
+		if (entry.name.startsWith('.DS_Store')) {
 			continue;
 		}
 
@@ -109,8 +99,14 @@ export async function readFiles() {
 		for await (const { entry, path } of entries) {
 			progressOverlay.increment();
 
+
+			const { name, id, extension } = extractMetadataFromFileName(entry.name);
 			const fileForMaterial: FileForMaterial = {
-				...getFileMetadataForMaterial(entry.name, path),
+				fileName: name,
+				fileExtension: extension,
+				mimeType: 'text/directory',
+				itemId: id,
+				filePath: path,
 				hash: await getFileHash(path),
 				handler: entry
 			};
@@ -133,13 +129,7 @@ export async function readFiles() {
 				}
 			}
 
-			const existingFile = await getIDBItem('files', fileForMaterial.hash);
-
-			if (!existingFile) {
-				await setIDBItem('files', undefined, fileForMaterial);
-			} else {
-				console.warn('File already exists.', existingFile, fileForMaterial);
-			}
+			await setIDBItem('files', undefined, fileForMaterial);
 		}
 	} catch (err) {
 		console.error('Failed to read materials.', err);

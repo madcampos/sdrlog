@@ -39,6 +39,10 @@
 			<sdr-dropdown-item icon="📤" class="file-system" @click="exportDataFile">$t{Export Data}</sdr-dropdown-item>
 			<sdr-dropdown-item icon="🎴" class="file-system" @click="saveThumbsToFolder">$t{Export Thumbnails}</sdr-dropdown-item>
 			<sdr-dropdown-item icon="🖼️" class="file-system" @click="saveCoversToFolder">$t{Export Covers}</sdr-dropdown-item>
+
+			<sdr-dropdown-item separator class="file-system"></sdr-dropdown-item>
+
+			<sdr-dropdown-item icon="⛔️" class="file-system" @click="reportDataInconsistencies">$t{Report Data Inconsistencies}</sdr-dropdown-item>
 		</sdr-dropdown>
 	</nav>
 </template>

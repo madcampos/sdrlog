@@ -15,6 +15,7 @@ import { SdrThemeBox } from '../../views/SdrThemeBox';
 
 import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
+import { reportInconsistencies } from '../../js/data/analysis';
 
 export class SdrMenuBar extends SdrComponent {
 	static readonly elementName = 'sdr-menu-bar';
@@ -39,7 +40,8 @@ export class SdrMenuBar extends SdrComponent {
 
 					SearchEngine.updateSearchResults(`category: ${action}`);
 				},
-				openMaterialModal: async () => SdrItemDetails.openModal()
+				openMaterialModal: async () => SdrItemDetails.openModal(),
+				reportDataInconsistencies: async () => reportInconsistencies()
 			},
 			template,
 			style

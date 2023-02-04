@@ -12,7 +12,7 @@ import { getIDBItem, getIDBItemByIndex, getIDBItemsByIndex, setIDBItem } from '.
 import { SdrCard } from '../../components/SdrCard';
 import { openFile } from '../../js/files/file-open';
 import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
-import { getFileHash, getFileMetadataForMaterial } from '../../js/files/file-import';
+import { extractMetadataFromFileName, getFileHash } from '../../js/files/file-import';
 import { exportDataItem } from '../../js/data/data-export';
 import { getIconForFile } from '../../js/files/file-icons';
 import { I18n } from '../../js/intl/translations';
@@ -343,9 +343,13 @@ export class SdrItemDetails extends SdrComponent {
 						});
 
 						const file = await handler.getFile();
-						const fileForMaterial = {
-							...getFileMetadataForMaterial(handler.name, `/${file.lastModified}/${file.name}`),
+						const { name, id, extension } = extractMetadataFromFileName(file.name);
+						const fileForMaterial: FileForMaterial = {
+							fileName: name,
+							fileExtension: extension,
+							filePath: `/${file.lastModified}/${file.name}`,
 							mimeType: file.type,
+							itemId: id,
 							handler,
 							hash: await getFileHash(await file.arrayBuffer())
 						};

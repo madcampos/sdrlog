@@ -46,11 +46,12 @@ const database = openDB<DatabaseSchema>('SDRLog', IDB_VERSION, {
 		}
 
 		if (!store.objectStoreNames.contains('files')) {
-			const file = store.createObjectStore('files', { keyPath: 'hash' });
+			const file = store.createObjectStore('files', { autoIncrement: true });
 
 			file.createIndex('fileName', 'fileName', { unique: false });
 			file.createIndex('filePath', 'filePath', { unique: false });
 			file.createIndex('itemId', 'itemId', { unique: false });
+			file.createIndex('hash', 'hash', { unique: false });
 		}
 
 		if (!store.objectStoreNames.contains('covers')) {
