@@ -1,8 +1,8 @@
 <template>
 	<sdr-dialog id="theme-modal">
-		<span slot="title">t("Theme Settings")</span>
+		<span slot="title">$t{Theme Settings}</span>
 
-		<p>t("Set the theme for the application:")</p>
+		<p>$t{Set the theme for the application:}</p>
 
 		<sdr-radio-group
 			:value="theme"
@@ -10,16 +10,16 @@
 			@change="changeTheme"
 		>
 			<sdr-radio-item icon="🌓" value="system">
-				<span slot="title">t("System Theme")</span>
-				<span>t("Follows the system defined theme.")</span>
+				<span slot="title">$t{System Theme}</span>
+				<span>$t{Follows the system defined theme.}</span>
 			</sdr-radio-item>
 			<sdr-radio-item icon="🌞" value="light">
-				<span slot="title">t("Light Theme")</span>
-				<span>t("Always use a light theme.")</span>
+				<span slot="title">$t{Light Theme}</span>
+				<span>$t{Always use a light theme.}</span>
 			</sdr-radio-item>
 			<sdr-radio-item icon="🌚" value="dark">
-				<span slot="title">t("Dark Theme")</span>
-				<span>t("Always use a dark theme.")</span>
+				<span slot="title">$t{Dark Theme}</span>
+				<span>$t{Always use a dark theme.}</span>
 			</sdr-radio-item>
 		</sdr-radio-group>
 	</sdr-dialog>

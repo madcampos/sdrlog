@@ -426,7 +426,7 @@ export class SdrItemDetails extends SdrComponent {
 					this.isDisplaying = true;
 
 					// eslint-disable-next-line no-alert
-					alert(`${I18n.t`Item # `}${id}${I18n.t` saved successfully.`}`);
+					alert(`${I18n.t`Item #`} ${id} ${I18n.t`saved successfully.`}`);
 				},
 				'export': async () => {
 					await exportDataItem({

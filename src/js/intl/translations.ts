@@ -45,7 +45,7 @@ export class I18n {
 	}
 
 	static #translateHtmlText(text: string) {
-		return text.replaceAll(/\bt\(['"`](.+?)['"`]\)/gu, (_, original: string) => I18n.t([original]));
+		return text.replaceAll(/\$t\{(.+?)\}/gu, (_, original: string) => I18n.t([original]));
 	}
 
 	static getLanguage() {
