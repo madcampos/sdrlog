@@ -51,21 +51,21 @@ export async function extractCoversFromFiles() {
 		for await (const file of files) {
 			progressOverlay.increment();
 
-			if (file.kind !== 'file') {
+			if (file.handler.kind !== 'file') {
 				continue;
 			}
 
-			const canSaveCover = await canExtractCover(file.name);
+			const canSaveCover = await canExtractCover(file.fileName ?? file.handler.name);
 
 			if (canSaveCover) {
-				await getFilePermission(file);
+				await getFilePermission(file.handler);
 
-				const itemFile = await file.getFile();
+				const itemFile = await file.handler.getFile();
 				const { cover, thumb } = await extractCover(itemFile);
 				const optimizedCover = await optimizeCover(cover);
 				const optimizedThumb = await optimizeCover(thumb);
 
-				const { id } = extractMetadataFromFileName(file.name);
+				const { id } = extractMetadataFromFileName(file.fileName ?? file.handler.name);
 				const fileName = `${id}.jpg`;
 
 				const coverFile = new File([optimizedCover], fileName, { type: 'image/jpeg' });
