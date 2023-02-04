@@ -29,9 +29,9 @@ const extensionIcons = new Map([
 	['.pptx', '📽️']
 ]);
 
-export function getIconForFile(mime: string, extension: string) {
-	const mimes = [...mimeIcons.keys()];
-	const mimeKey = mimes.find((iconMime) => mime.includes(iconMime)) ?? '';
+export function getIconForFile(mimeOrExtension: string) {
+	const mimeIcon = mimeIcons.get(mimeOrExtension);
+	const extensionIcon = extensionIcons.get(mimeOrExtension);
 
-	return mimeIcons.get(mimeKey) ?? extensionIcons.get(extension) ?? DEFAULT_ICON;
+	return mimeIcon ?? extensionIcon ?? DEFAULT_ICON;
 }

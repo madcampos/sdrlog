@@ -4,7 +4,7 @@ import type { SdrButton } from '../../components/SdrButton';
 
 import darkTheme from './dark-theme.css?url';
 
-import { getIDBItem } from '../../js/data/idb-persistence';
+import { getIDBItemByIndex } from '../../js/data/idb-persistence';
 import { getFilePermission } from '../../js/files/file-import';
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
@@ -106,7 +106,7 @@ export class SdrEpubReader extends SdrComponent {
 				throw new Error(I18n.t`Missing book file.`);
 			}
 
-			const handler = await getIDBItem('files', this.file);
+			const { handler } = await getIDBItemByIndex('files', 'itemId', this.file) ?? {};
 
 			if (!handler || handler.kind !== 'file') {
 				throw new Error(I18n.t`Book does not exist.`);

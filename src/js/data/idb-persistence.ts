@@ -14,12 +14,8 @@ interface DatabaseSchema extends DBSchema {
 	},
 	files: {
 		key: string,
-		value: FileSystemFileHandle | FileSystemDirectoryHandle
-	},
-	fileItems: {
-		key: string,
 		value: FileForMaterial,
-		indexes: { fileName: string, filePath: string, itemId: string }
+		indexes: { fileName: string, filePath: string, itemId: string, hash: string }
 	},
 	covers: {
 		key: string,
@@ -50,15 +46,11 @@ const database = openDB<DatabaseSchema>('SDRLog', IDB_VERSION, {
 		}
 
 		if (!store.objectStoreNames.contains('files')) {
-			store.createObjectStore('files');
-		}
+			const file = store.createObjectStore('files', { keyPath: 'hash' });
 
-		if (!store.objectStoreNames.contains('fileItems')) {
-			const fileItems = store.createObjectStore('fileItems', { autoIncrement: true });
-
-			fileItems.createIndex('fileName', 'fileName', { unique: false });
-			fileItems.createIndex('filePath', 'filePath', { unique: false });
-			fileItems.createIndex('itemId', 'itemId', { unique: false });
+			file.createIndex('fileName', 'fileName', { unique: false });
+			file.createIndex('filePath', 'filePath', { unique: false });
+			file.createIndex('itemId', 'itemId', { unique: false });
 		}
 
 		if (!store.objectStoreNames.contains('covers')) {
@@ -102,6 +94,10 @@ export async function getAllIDBEntries<T extends Collections>(collection: T) {
 // eslint-disable-next-line max-len
 export async function getIDBItemsByIndex<T extends Collections, I extends IndexNames<DatabaseSchema, T>>(collection: T, index: I, value: IndexKey<DatabaseSchema, T, I> | IDBKeyRange) {
 	return (await database).getAllFromIndex(collection, index, value);
+}
+
+export async function getIDBItemByIndex<T extends Collections, I extends IndexNames<DatabaseSchema, T>>(collection: T, index: I, value: IndexKey<DatabaseSchema, T, I>) {
+	return (await database).getFromIndex(collection, index, value);
 }
 
 export async function setIDBItem<T extends Collections>(collection: T, key: DatabaseSchema[T]['key'] | undefined, value: DatabaseSchema[T]['value']) {

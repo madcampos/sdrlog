@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle */
 
-import { getAllIDBEntries, getIDBItem, setIDBItem } from '../../js/data/idb-persistence';
+import { getAllIDBEntries, getIDBItemByIndex, setIDBItem } from '../../js/data/idb-persistence';
 import { extractMetadataFromFileName, getFilePermission } from '../../js/files/file-import';
 import { I18n } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
@@ -281,7 +281,7 @@ export class SdrEmulator extends SdrComponent {
 			throw new Error(I18n.t`Missing ROM file.`);
 		}
 
-		const handler = await getIDBItem('files', this.file);
+		const { handler } = await getIDBItemByIndex('files', 'itemId', this.file) ?? {};
 
 		if (!handler || handler.kind !== 'file') {
 			throw new Error(I18n.t`ROM does not exist.`);

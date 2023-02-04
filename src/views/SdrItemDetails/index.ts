@@ -8,11 +8,11 @@ import type { SdrEditBox } from '../../components/SdrEditBox';
 import type { SdrSelect } from '../../components/SdrSelect';
 import type { SdrTextArea } from '../../components/SdrTextArea';
 
-import { getIDBItem, getIDBItemsByIndex, setIDBItem } from '../../js/data/idb-persistence';
+import { getIDBItem, getIDBItemByIndex, getIDBItemsByIndex, setIDBItem } from '../../js/data/idb-persistence';
 import { SdrCard } from '../../components/SdrCard';
 import { openFile } from '../../js/files/file-open';
 import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
-import { associateFileWithData } from '../../js/files/file-import';
+import { getFileHash, getFileMetadataForMaterial } from '../../js/files/file-import';
 import { exportDataItem } from '../../js/data/data-export';
 import { getIconForFile } from '../../js/files/file-icons';
 import { I18n } from '../../js/intl/translations';
@@ -336,26 +336,31 @@ export class SdrItemDetails extends SdrComponent {
 						// eslint-disable-next-line no-alert
 						alert(I18n.t`Please add an SKU first before adding a file.`);
 					} else {
-						const [handle] = await window.showOpenFilePicker({
+						const [handler] = await window.showOpenFilePicker({
 							id: 'newMaterialFile',
 							startIn: 'downloads',
 							excludeAcceptAllOption: false
 						});
 
-						const file = await handle.getFile();
-						const fileForMaterial = await associateFileWithData(handle.name, `/${file.lastModified}/${file.name}`, file.type) as FileForMaterial;
+						const file = await handler.getFile();
+						const fileForMaterial = {
+							...getFileMetadataForMaterial(handler.name, `/${file.lastModified}/${file.name}`),
+							mimeType: file.type,
+							handler,
+							hash: await getFileHash(await file.arrayBuffer())
+						};
 
-						await setIDBItem('files', `/${handle.name}`, handle);
+						await setIDBItem('files', undefined, fileForMaterial);
 
 						const newFileItem = new SdrEditListItem();
 						const fileLink = document.createElement('a');
 
-						newFileItem.value = JSON.stringify(fileForMaterial);
+						newFileItem.value = fileForMaterial.itemId ?? '';
 						newFileItem.setAttribute('stretch', '');
 
 						fileLink.href = '#';
 						fileLink.classList.add('file-link');
-						fileLink.textContent = `${getIconForFile(fileForMaterial.mimeType, fileForMaterial.fileExtension)} ${fileForMaterial.fileName}${fileForMaterial.fileExtension}`;
+						fileLink.textContent = `${getIconForFile(fileForMaterial.fileExtension ?? file.type)} ${fileForMaterial.fileName}${fileForMaterial.fileExtension}`;
 
 						newFileItem.appendChild(fileLink);
 						this.root.querySelector('#files-list')?.appendChild(newFileItem);
@@ -469,9 +474,11 @@ export class SdrItemDetails extends SdrComponent {
 				evt.stopPropagation();
 
 				const targetParent = target.closest(SdrEditListItem.elementName) as SdrEditListItem;
-				const fileInfo = JSON.parse(targetParent.value) as FileForMaterial;
+				const fileInfo = await getIDBItemByIndex('files', 'itemId', targetParent.value);
 
-				await openFile(fileInfo);
+				if (fileInfo) {
+					await openFile(fileInfo);
+				}
 			}
 		});
 	}
@@ -620,18 +627,18 @@ export class SdrItemDetails extends SdrComponent {
 				this.#cover.src = coverUrl;
 			});
 
-			void getIDBItemsByIndex('fileItems', 'itemId', material.sku[0]).then((fileList) => {
+			void getIDBItemsByIndex('files', 'itemId', material.sku[0]).then((fileList) => {
 				for (const file of fileList) {
 					const newFileItem = new SdrEditListItem();
 					const fileLink = document.createElement('a');
 
-					newFileItem.value = JSON.stringify(file);
+					newFileItem.value = file.itemId ?? '';
 					newFileItem.setAttribute('stretch', '');
 					newFileItem.disabled = this.isDisplaying;
 
 					fileLink.href = '#';
 					fileLink.classList.add('file-link');
-					fileLink.textContent = `${getIconForFile(file.mimeType, file.fileExtension)} ${file.fileName}${file.fileExtension}`;
+					fileLink.textContent = `${getIconForFile(file.fileExtension ?? file.mimeType ?? '')} ${file.fileName}${file.fileExtension}`;
 
 					newFileItem.appendChild(fileLink);
 					this.root.querySelector('#files-list')?.appendChild(newFileItem);

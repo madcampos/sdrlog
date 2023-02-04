@@ -2,6 +2,7 @@ import type { Material, NewMaterial, SDRLogData } from '../../data/data';
 import { I18n } from '../intl/translations';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues, setIDBItem, setIDBItems } from './idb-persistence';
+import { getFileHash } from '../files/file-import';
 
 import dataUrl from '../../data/data.json?url';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extract';
@@ -51,7 +52,14 @@ export async function requestDataFileFromUser() {
 			types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
 		});
 
-		await setIDBItem('files', 'data.json', fileHandle);
+		await setIDBItem('files', undefined, {
+			filePath: '/data.json',
+			fileName: 'data.json',
+			fileExtension: '.json',
+			mimeType: 'text/json',
+			handler: fileHandle,
+			hash: await getFileHash(await (await fileHandle.getFile()).arrayBuffer())
+		});
 
 		const file = await fileHandle.getFile();
 
@@ -71,7 +79,7 @@ export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) 
 	await setIDBItem('items', id, materialToSave);
 
 	for await (const file of files ?? []) {
-		await setIDBItem('fileItems', file.itemId, file);
+		await setIDBItem('files', undefined, file);
 	}
 
 	if (cover) {

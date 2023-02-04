@@ -1,6 +1,5 @@
 import type { FileForMaterial } from '../../data/data';
 
-import { getIDBItem } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
 import { getFilePermission } from './file-import';
 
@@ -30,9 +29,10 @@ const itemExtensions: AllowedExtensions = {
 	'.sfc': { url: `${import.meta.env.APP_PUBLIC_URL}emulator.html`, id: 'SNES' }
 };
 
+// TODO: rewrite viewer to use views instead of opening new windows
 export async function openFile(fileInfo: FileForMaterial) {
-	if (Object.keys(itemExtensions).includes(fileInfo.fileExtension)) {
-		const infoForExtension = itemExtensions[fileInfo.fileExtension];
+	if (Object.keys(itemExtensions).includes(fileInfo.fileExtension ?? '')) {
+		const infoForExtension = itemExtensions[fileInfo.fileExtension ?? ''];
 		const isSameItemId = fileInfo.itemId === infoForExtension.id;
 		const isExtensionAllowed = infoForExtension.id === true;
 
@@ -45,18 +45,16 @@ export async function openFile(fileInfo: FileForMaterial) {
 		}
 	}
 
-	const fileHandler = await getIDBItem('files', fileInfo.filePath);
-
-	if (!fileHandler || fileHandler.kind !== 'file') {
+	if (fileInfo.handler.kind !== 'file') {
 		// eslint-disable-next-line no-alert
 		alert(`${I18n.t`File not found.`}`);
 
 		return;
 	}
 
-	await getFilePermission(fileHandler);
+	await getFilePermission(fileInfo.handler);
 
-	const file = await fileHandler.getFile();
+	const file = await fileInfo.handler.getFile();
 
 	if (!mimeAllowed.some((mime) => file.type.startsWith(mime))) {
 		// eslint-disable-next-line no-alert

@@ -44,11 +44,13 @@ export interface SDRLogData {
 }
 
 export interface FileForMaterial {
-	itemId: string,
-	fileName: string,
+	itemId?: string,
+	fileName?: string,
 	filePath: string,
-	mimeType: string,
-	fileExtension: string
+	mimeType?: string,
+	fileExtension?: string,
+	handler: FileSystemFileHandle | FileSystemDirectoryHandle,
+	hash: string
 }
 
 export interface NewMaterial extends Material {

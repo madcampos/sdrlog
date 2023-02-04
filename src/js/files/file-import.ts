@@ -1,6 +1,23 @@
+import type { FileForMaterial } from '../../data/data';
+
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getIDBItem, setIDBItem } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
+
+export async function getFileHash(dataToHash: ArrayBuffer | string) {
+	const encoder = new TextEncoder();
+
+	let data = dataToHash;
+
+	if (typeof data === 'string') {
+		data = encoder.encode(data);
+	}
+
+	const hash = await crypto.subtle.digest('SHA-1', data);
+
+	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+	return [...new Uint8Array(hash)].map((char) => char.toString(16).padStart(2, '0')).join('');
+}
 
 export function extractMetadataFromFileName(fileName: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
@@ -21,32 +38,17 @@ export function extractMetadataFromFileName(fileName: string) {
 	};
 }
 
-export async function associateFileWithData(fileName: string, path: string, type: string) {
+export function getFileMetadataForMaterial(fileName: string, path: string) {
 	const testRegex = /^(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: [A-Z])? - (?<name>.+)(?<extension>\.[a-z0-9]{3,})$/u;
-	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? { name: '', id: '', extension: '' };
-	const material = await getIDBItem('items', id);
+	const { name, id, extension } = testRegex.exec(fileName)?.groups ?? { name: fileName, id: undefined, extension: undefined };
+	const fileForMaterial = {
+		fileName: name,
+		filePath: path,
+		fileExtension: extension,
+		itemId: id
+	};
 
-	if (material) {
-		const fileForMaterial = {
-			fileName: name,
-			filePath: path,
-			mimeType: type,
-			fileExtension: extension,
-			itemId: id
-		};
-
-		await setIDBItem('fileItems', id, fileForMaterial);
-
-		if (material.status === 'missing') {
-			material.status = 'ok';
-
-			await setIDBItem('items', id, material);
-		}
-
-		return fileForMaterial;
-	}
-
-	return null;
+	return fileForMaterial;
 }
 
 export async function getFilePermission(file: FileSystemHandle, mode: 'read' | 'readwrite' = 'read') {
@@ -63,6 +65,10 @@ async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string)
 	const entries: { path: string, entry: FileSystemFileHandle | FileSystemDirectoryHandle }[] = [];
 
 	for await (const entry of dirHandle.values()) {
+		if (entry.name.startsWith('.')) {
+			continue;
+		}
+
 		const entryPath = `${parentPath}/${entry.name}`;
 
 		if (entry.kind === 'directory') {
@@ -89,7 +95,13 @@ export async function readFiles() {
 			startIn: 'downloads'
 		});
 
-		await setIDBItem('files', '/', dir);
+		const dirHash = await getFileHash('/');
+
+		await setIDBItem('files', undefined, {
+			filePath: '/',
+			handler: dir,
+			hash: dirHash
+		});
 
 		const entries = await readDir(dir, '');
 
@@ -97,13 +109,37 @@ export async function readFiles() {
 		for await (const { entry, path } of entries) {
 			progressOverlay.increment();
 
+			const fileForMaterial: FileForMaterial = {
+				...getFileMetadataForMaterial(entry.name, path),
+				hash: await getFileHash(path),
+				handler: entry
+			};
+
 			if (entry.kind === 'file') {
 				const file = await entry.getFile();
 
-				await associateFileWithData(entry.name, path, file.type);
+				fileForMaterial.hash = await getFileHash(await file.arrayBuffer());
+				fileForMaterial.mimeType = file.type;
+
+				if (fileForMaterial.itemId) {
+					const material = await getIDBItem('items', fileForMaterial.itemId);
+
+					// eslint-disable-next-line max-depth
+					if (material) {
+						material.status = 'ok';
+
+						await setIDBItem('items', fileForMaterial.itemId, material);
+					}
+				}
 			}
 
-			await setIDBItem('files', path, entry);
+			const existingFile = await getIDBItem('files', fileForMaterial.hash);
+
+			if (!existingFile) {
+				await setIDBItem('files', undefined, fileForMaterial);
+			} else {
+				console.warn('File already exists.', existingFile, fileForMaterial);
+			}
 		}
 	} catch (err) {
 		console.error('Failed to read materials.', err);
