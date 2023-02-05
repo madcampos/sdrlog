@@ -31,6 +31,8 @@ https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-20
 - Body shop
 - Wild life
 
+https://www.shadowiki.de/Shadowrun_Schnell_und_dreckig
+
 # Archive
 **TODO**: Scrap html and old pages and archive
 
@@ -63,3 +65,28 @@ https://fondationdraco.fr/2016/05/05/shadowrun-au-japon-entangled-betrayal/
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/tokyo-eye-shot-shadowrun-city-file/
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-shikkoku-no-senki/
 https://fondationdraco.fr/shadowrun-au-japon-partie-5/
+
+## Sites to archive
+- http://shadowrunrpg.com/
+- http://shadowrun.fr/
+- http://shadowrun.com/
+- http://shadowrun.de/
+- http://shadowrun.co.uk/
+- http://shadowrun-archiv.de/
+- http://shadowrun-ring.de/
+- http://shadowrun.co/
+- http://dumpshock.com/
+- http://shadowrun4.com/
+- http://fondationdraco.free.fr/
+- http://shadowrun-online.de/
+- http://shadowrun.netroof.eu/
+- http://shadowrunberlin.de/
+- http://forums.shadowrun4.com/
+- http://webring.dumpshock.com/
+- http://shadowrun-universe.de/
+- http://old.shadowrun4.com/
+- http://shadowrun5.de/
+- http://shadowrun6.de/
+- http://shadowruntabletop.com/
+- http://forums.shadowruntabletop.com/
+- http://shadowrunsixthworld.com/
