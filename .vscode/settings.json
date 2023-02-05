@@ -9,5 +9,6 @@
 		"\\$t\\{(.*?)\\}"
 	],
 	"i18n-ally.disablePathParsing": true,
+	"i18n-ally.keystyle": "flat",
 	"dotenv.enableAutocloaking": false
 }
