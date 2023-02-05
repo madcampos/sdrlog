@@ -31,7 +31,7 @@
 	background-color: var(--accent-color);
 }
 
-:host([data-status]) figure::after {
+:host([status]) figure::after {
 	content: '';
 	display: block;
 	width: 100%;
@@ -44,17 +44,17 @@
 	background-position: center;
 }
 
-:host([data-status='missing']) figure::after {
+:host([status='missing']) figure::after {
 	backdrop-filter: var(--thumb-missing-filter);
 	background-image: var(--thumb-missing-image);
 }
 
-:host([data-status='outofscope']) figure::after {
+:host([status='outofscope']) figure::after {
 	backdrop-filter: var(--thumb-outofscope-filter);
 	background-image: var(--thumb-outofscope-image);
 }
 
-:host([data-status='canceled']) figure::after {
+:host([status='canceled']) figure::after {
 	backdrop-filter: var(--thumb-canceled-filter);
 	background-image: var(--thumb-canceled-image);
 }
