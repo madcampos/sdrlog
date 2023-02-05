@@ -1,4 +1,5 @@
 import type { Material } from '../../data/data';
+import { extractMetadataFromFileName } from '../files/file-import';
 import { fetchData, fetchItems } from './data-import';
 import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from './idb-persistence';
 
@@ -43,8 +44,8 @@ async function findMissingCovers() {
 	}
 
 	return {
-		missingCovers,
-		missingThumbs
+		missingCovers: missingCovers.sort(),
+		missingThumbs: missingThumbs.sort()
 	};
 }
 
@@ -66,7 +67,7 @@ async function findDuplicateIds() {
 		ids.set(id, material);
 	}
 
-	return duplidateIds;
+	return duplidateIds.sort();
 }
 
 async function findMissingFiles() {
@@ -89,8 +90,8 @@ async function findMissingFiles() {
 	}
 
 	return {
-		materialsWithMissingFiles,
-		materialsWithOkStatusButMissingFiles
+		materialsWithMissingFiles: materialsWithMissingFiles.sort(),
+		materialsWithOkStatusButMissingFiles: materialsWithOkStatusButMissingFiles.sort()
 	};
 }
 
@@ -100,6 +101,10 @@ async function findExtraFiles() {
 	const extraFiles: string[] = [];
 
 	for await (const file of files) {
+		if (file.handler.kind !== 'file') {
+			continue;
+		}
+
 		const id = file.itemId;
 
 		if (!id || !data.includes(id)) {
@@ -133,12 +138,47 @@ async function findDuplicateFiles() {
 	return duplicateFiles;
 }
 
+async function findFilesWithDuplicateIds() {
+	const items = await getAllIDBValues('files');
+	const duplicateIdFiles: string[][] = [];
+	const duplicateIds: string[] = [];
+
+	for await (const item of items) {
+		const id = item.itemId;
+
+		if (!id) {
+			continue;
+		}
+
+		if (duplicateIds.includes(id)) {
+			continue;
+		}
+
+		const filesWithSameId = items.filter((i) => i.itemId === id);
+		const filesWithNameMetadata = filesWithSameId.map((i) => ({
+			filePath: i.filePath,
+			...extractMetadataFromFileName(i.filePath.split('/').pop() ?? '')
+		}));
+		const duplicatesForItem = filesWithNameMetadata.filter((i) => !i.modifier);
+
+		if (duplicatesForItem.length > 1) {
+			const duplicateFilePaths = duplicatesForItem.map((i) => i.filePath);
+
+			duplicateIdFiles.push(duplicateFilePaths);
+			duplicateIds.push(id);
+		}
+	}
+
+	return duplicateIdFiles;
+}
+
 export async function reportInconsistencies() {
 	const duplicateIds = await findDuplicateIds();
 	const missingCovers = await findMissingCovers();
 	const missingFiles = await findMissingFiles();
 	const extraFiles = await findExtraFiles();
 	const duplicateFiles = await findDuplicateFiles();
+	const duplicateIdFiles = await findFilesWithDuplicateIds();
 
 	// eslint-disable-next-line no-console
 	console.log({
@@ -146,6 +186,7 @@ export async function reportInconsistencies() {
 		missingCovers,
 		missingFiles,
 		extraFiles,
-		duplicateFiles
+		duplicateFiles,
+		duplicateIdFiles
 	});
 }
