@@ -1,7 +1,7 @@
 import { extractMetadataFromFileName } from '../files/file-import';
 import { getIDBItem } from './idb-persistence';
 
-const ONE_MB = 1048576;
+const ONE_MB_IN_BYTES = 1048576;
 const STORAGE_TRESHOLD = 0.7;
 const MB_TRESHOLD = 512;
 
@@ -52,7 +52,7 @@ export async function canExtractCover(fileName: string, forceReplace = false) {
 	const hasSavedCover = await getIDBItem('covers', id) !== undefined;
 	const { quota, usage } = await navigator.storage.estimate();
 	const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
-	const isUsingTooMuchData = (usage ?? 0) / ONE_MB >= MB_TRESHOLD;
+	const isUsingTooMuchData = (usage ?? 0) / ONE_MB_IN_BYTES >= MB_TRESHOLD;
 	const isToReplaceCover = !(hasSavedCover && !forceReplace);
 
 	return isToReplaceCover && !isReachingQuota && !isUsingTooMuchData;
@@ -73,7 +73,7 @@ export async function canImportCover(file: File, forceReplace = false) {
 	const hasSavedCover = await getIDBItem('covers', id) !== undefined;
 	const { quota, usage } = await navigator.storage.estimate();
 	const isReachingQuota = (usage ?? 0) / (quota ?? 1) >= STORAGE_TRESHOLD;
-	const isUsingTooMuchData = (usage ?? 0) / ONE_MB >= MB_TRESHOLD;
+	const isUsingTooMuchData = (usage ?? 0) / ONE_MB_IN_BYTES >= MB_TRESHOLD;
 	const isToReplaceCover = !(hasSavedCover && !forceReplace);
 
 	return isToReplaceCover && !isReachingQuota && !isUsingTooMuchData;
