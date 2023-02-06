@@ -66,6 +66,13 @@ https://fondationdraco.fr/shadowrun-au-japon-partie-3/tokyo-eye-shot-shadowrun-c
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-shikkoku-no-senki/
 https://fondationdraco.fr/shadowrun-au-japon-partie-5/
 
+## short stories
+- https://www.shadowiki.de/Drachenbrut_(Kurzgeschichten)
+- https://www.shadowiki.de/Der_letzte_Flug_des_Greifen_(Kurzgeschichten)
+- https://www.shadowiki.de/Deckard_(Kurzgeschichten)
+- https://www.shadowiki.de/Poolitzers_NICHTTod
+- https://www.shadowiki.de/Kategorie:Quellen_(Online)
+
 ## Sites to archive
 - http://shadowrunrpg.com/
 - http://shadowrun.fr/
