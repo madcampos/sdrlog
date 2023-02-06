@@ -15,7 +15,7 @@ import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
 import { extractMetadataFromFileName, getFileHash } from '../../js/files/file-import';
 import { exportDataItem } from '../../js/data/data-export';
 import { getIconForFile } from '../../js/files/file-icons';
-import { I18n } from '../../js/intl/translations';
+import { I18n, languageNames } from '../../js/intl/translations';
 import { registerComponent, SdrComponent } from '../../components/SdrComponent';
 
 import template from './template.html?raw' assert { type: 'html' };
@@ -94,7 +94,7 @@ export class SdrItemDetails extends SdrComponent {
 
 				{ name: 'translatedLanguage', value: '' },
 				{ name: 'translatedName', value: '' },
-				{ name: 'translatedNames', value: [] },
+				{ name: 'translatedNames', value: {} },
 
 				{ name: 'files', value: [] },
 
@@ -567,7 +567,6 @@ export class SdrItemDetails extends SdrComponent {
 			this.releaseDates.push(...material.releaseDate ?? []);
 			this.publishers.push(...material.publisher);
 			this.status = material.status;
-			this.translatedNames = material.names ?? {};
 			this.links.push(...material.links ?? []);
 			this.notes = material.notes ?? '';
 			this.description = material.description;
@@ -602,11 +601,13 @@ export class SdrItemDetails extends SdrComponent {
 				this.root.querySelector('#publisher-list')?.appendChild(newPublisher);
 			});
 
-			Object.entries(this.translatedNames).forEach(([language, name]) => {
+			Object.entries(material.names ?? {}).forEach(([language, name]) => {
+				this.translatedNames[language] = name;
+
 				const newTranslatedName = new SdrEditListItem();
 
 				newTranslatedName.setAttribute('value', language);
-				newTranslatedName.textContent = `[${language}]: ${name}`;
+				newTranslatedName.textContent = `[${I18n.t([languageNames[language]])}]: ${name}`;
 				newTranslatedName.disabled = this.isDisplaying;
 
 				this.root.querySelector('#translated-name-list')?.appendChild(newTranslatedName);
