@@ -51,8 +51,6 @@ export async function getFilePermission(file: FileSystemHandle, mode: 'read' | '
 async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
 	const entries: { path: string, entry: FileSystemFileHandle | FileSystemDirectoryHandle }[] = [];
 
-	// TODO: add ignore list for files and folders?
-
 	for await (const entry of dirHandle.values()) {
 		// Ignore useless mac os files
 		if (entry.name.startsWith('.DS_Store')) {
