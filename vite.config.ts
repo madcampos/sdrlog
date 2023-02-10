@@ -4,7 +4,6 @@ import { readFileSync } from 'fs';
 
 import { defineConfig, type UserConfig } from 'vitest/config';
 import { loadEnv } from 'vite';
-import vue from '@vitejs/plugin-vue';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
 import vitePluginHtmlEnv from 'vite-plugin-html-env';
 
@@ -134,8 +133,7 @@ export default defineConfig(({ mode }) => {
 				devOptions: {
 					enabled: false
 				}
-			}),
-			vue()
+			})
 		],
 		envPrefix: 'APP_',
 		envDir: '../',
