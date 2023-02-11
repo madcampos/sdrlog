@@ -1,72 +1,73 @@
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['value', 'disabled', 'required', 'readonly'];
-
-export interface SdrEditBox {
-	value: string,
-	disabled: boolean,
-	required: boolean,
-	readonly: boolean
-}
-
-export class SdrEditBox extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
+@customElement('sdr-edit-box')
+export class SdrEditBox extends LitElement {
 	static readonly elementName = 'sdr-edit-box';
+	static styles = unsafeCSS(style);
 
-	#input: HTMLInputElement;
+	@property({ type: String, reflect: true }) declare value: string;
+	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
+	@property({ type: Boolean, reflect: true }) declare required: boolean;
+	@property({ type: Boolean, reflect: true }) declare readonly: boolean;
+	@property({ type: String, reflect: true }) declare type: string;
+	@property({ type: Number, reflect: true }) declare min?: number;
+	@property({ type: Number, reflect: true }) declare max?: number;
+	@property({ type: Number, reflect: true }) declare step?: number;
+
+	@query('input') declare private input: HTMLInputElement;
 
 	constructor() {
-		super({
-			name: SdrEditBox.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'value',
-					value: (newValue = '') => {
-						const oldValue = this.#input.value;
+		super();
 
-						this.#input.value = newValue as string;
+		this.value = '';
+		this.disabled = false;
+		this.required = false;
+		this.readonly = false;
+		this.type = 'text';
+	}
 
-						if (oldValue !== newValue) {
-							this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
-						}
+	#input() {
+		this.value = this.input.value;
+		this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+	}
 
-						return newValue;
-					},
-					attributeName: 'value'
-				},
-				{ name: 'disabled', value: false, attributeName: 'disabled' },
-				{ name: 'required', value: false, attributeName: 'required' },
-				{ name: 'readonly', value: false, attributeName: 'readonly' }
-			],
-			handlers: {
-				updateValue: () => {
-					if (this.#input.value !== this.value) {
-						this.value = this.#input.value;
-
-						this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
-					}
-				}
-			},
-			template,
-			style
-		});
-
-		this.#input = this.root.querySelector('input') as HTMLInputElement;
-
-		for (const attribute of [...this.attributes]) {
-			if (!watchedAttributes.includes(attribute.name)) {
-				this.#input.setAttribute(attribute.name, attribute.value);
-			}
-		}
+	#change() {
+		this.value = this.input.value;
+		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 	}
 
 	resetValue() {
-		this.#input.value = '';
+		this.input.value = '';
+	}
+
+	focus() {
+		this.input.focus();
+	}
+
+	render() {
+		return html`
+			<label for="input">
+				<slot name="label"></slot>
+			</label>
+			<input
+				id="input"
+
+				.value="${this.value}"
+				?readonly="${this.readonly}"
+				?disabled="${this.disabled}"
+				?required="${this.required}"
+
+				type="${this.type}"
+				min="${this.min}"
+				max="${this.max}"
+				step="${this.step}"
+
+				@change="${() => this.#change()}"
+				@input="${() => this.#input()}"
+			/>
+		`;
 	}
 }
-
-registerComponent(SdrEditBox);

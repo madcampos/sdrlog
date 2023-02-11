@@ -1,56 +1,28 @@
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query, queryAssignedElements } from 'lit/decorators.js';
+
 import { SdrDropdownItem } from '../SdrDropdownItem';
 
-import { registerComponent, SdrComponent } from '../SdrComponent';
-
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['icon', 'open'];
-
-export interface SdrDropdown {
-	icon: string,
-	open: boolean
-}
-
-export class SdrDropdown extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
+@customElement('sdr-dropdown')
+export class SdrDropdown extends LitElement {
 	static readonly elementName = 'sdr-dropdown';
-	#dialog: HTMLDialogElement;
+
+	static styles = unsafeCSS(style);
+
+	@property({ type: String, reflect: true }) declare icon: string;
+	@property({ type: Boolean, reflect: true }) declare open: boolean;
+
+	@query('dialog') declare private dialog: HTMLDialogElement;
+
+	@queryAssignedElements({ selector: SdrDropdownItem.elementName }) declare private items: SdrDropdownItem[];
 
 	constructor() {
-		super({
-			name: SdrDropdown.elementName,
-			watchedAttributes,
-			props: [
-				{ name: 'icon', value: '', attributeName: 'icon' },
-				{ name: 'open', value: false, attributeName: 'open' }
-			],
-			handlers: {
-				toggleMenu: (evt) => {
-					evt.preventDefault();
-					evt.stopPropagation();
+		super();
 
-					this.toggle();
-					(document.activeElement as HTMLElement | undefined)?.blur();
-				}
-			},
-			template,
-			style
-		});
-
-		this.#dialog = this.root.querySelector('dialog') as HTMLDialogElement;
-
-		window.addEventListener('click', () => {
-			if (this.open) {
-				this.close();
-			}
-		});
-
-		window.addEventListener('keydown', (evt) => {
-			if (evt.key === 'Escape' && this.open) {
-				this.close();
-			}
-		});
+		this.icon = '';
+		this.open = false;
 	}
 
 	toggle() {
@@ -62,9 +34,6 @@ export class SdrDropdown extends SdrComponent {
 	}
 
 	close() {
-		this.#dialog.inert = true;
-		this.#dialog.close();
-
 		(document.activeElement as HTMLElement | undefined)?.blur();
 
 		this.open = false;
@@ -76,13 +45,10 @@ export class SdrDropdown extends SdrComponent {
 		// Close all other menus
 		document.body.click();
 
-		this.#dialog.inert = false;
-		this.#dialog.show();
-
-		const rect = this.#dialog.getBoundingClientRect();
+		const rect = this.dialog.getBoundingClientRect();
 
 		if (rect.right > window.innerWidth) {
-			this.#dialog.classList.add('right');
+			this.dialog.classList.add('right');
 		}
 
 		this.open = true;
@@ -91,40 +57,69 @@ export class SdrDropdown extends SdrComponent {
 	}
 
 	focusNext() {
-		const elements = [...this.querySelectorAll<SdrDropdownItem>(SdrDropdownItem.elementName)];
-
-		if (document.activeElement && elements.length > 0) {
+		if (document.activeElement && this.items.length > 0) {
 			if (document.activeElement.parentElement !== this) {
-				elements[0].focus();
+				this.items[0].focus();
 			} else {
-				const index = elements.findIndex((i) => i === document.activeElement);
+				const index = this.items.findIndex((i) => i === document.activeElement);
 
-				if (index + 1 === elements.length) {
-					elements[0].focus();
+				if (index + 1 === this.items.length) {
+					this.items[0].focus();
 				} else {
-					elements[index + 1].focus();
+					this.items[index + 1].focus();
 				}
 			}
 		}
 	}
 
 	focusPrevious() {
-		const elements = [...this.querySelectorAll<SdrDropdownItem>(SdrDropdownItem.elementName)];
-
-		if (document.activeElement && elements.length > 0) {
+		if (document.activeElement && this.items.length > 0) {
 			if (document.activeElement.parentElement !== this) {
-				elements[0].focus();
+				this.items[0].focus();
 			} else {
-				const index = elements.findIndex((i) => i === document.activeElement);
+				const index = this.items.findIndex((i) => i === document.activeElement);
 
 				if (index - 1 < 0) {
-					elements[elements.length - 1].focus();
+					this.items[this.items.length - 1].focus();
 				} else {
-					elements[index - 1].focus();
+					this.items[index - 1].focus();
 				}
 			}
 		}
 	}
-}
 
-registerComponent(SdrDropdown);
+	connectedCallback() {
+		super.connectedCallback();
+
+		window.addEventListener('click', () => {
+			if (this.open) {
+				this.close();
+			}
+		}, { capture: true, passive: true });
+
+		window.addEventListener('keydown', (evt) => {
+			if (evt.key === 'Escape' && this.open) {
+				this.close();
+			}
+		});
+	}
+
+	render() {
+		return html`
+			<sdr-button
+				icon-button
+
+				icon="${this.icon}"
+
+				@click="${() => this.toggle()}"
+			></sdr-button>
+			<dialog
+				tabindex="-1"
+				?inert="${!this.open}"
+				?open="${this.open}"
+			>
+				<slot></slot>
+			</dialog>
+		`;
+	}
+}

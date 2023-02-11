@@ -1,73 +1,79 @@
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query, queryAssignedElements } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['value', 'disabled', 'required', 'readonly'];
-
-export interface SdrSelect {
-	value: string,
-	disabled: boolean,
-	required: boolean,
-	readonly: boolean
-}
-
-export class SdrSelect extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
+@customElement('sdr-select')
+export class SdrSelect extends LitElement {
 	static readonly elementName = 'sdr-select';
-	#select: HTMLSelectElement;
+	static styles = unsafeCSS(style);
+
+	@property({ type: String, reflect: true }) declare value: string;
+	@property({ type: Array }) declare values: string[];
+	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
+	@property({ type: Boolean, reflect: true }) declare required: boolean;
+	@property({ type: Boolean, reflect: true }) declare readonly: boolean;
+
+	@query('select') declare private select: HTMLSelectElement;
+
+	@queryAssignedElements({ selector: 'optgroup, option' }) declare private items: (HTMLOptGroupElement | HTMLOptionElement)[];
 
 	constructor() {
-		super({
-			name: SdrSelect.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'value',
-					value: (newValue = '') => {
-						const oldValue = this.#select.value;
+		super();
 
-						this.#select.value = newValue as string;
+		this.value = '';
+		this.values = [];
+		this.disabled = false;
+		this.required = false;
+		this.readonly = false;
+	}
 
-						if (oldValue !== newValue) {
-							this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
-						}
+	#input() {
+		this.value = this.select.value;
+		this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
+	}
 
-						return newValue;
-					},
-					attributeName: 'value'
-				},
-				{ name: 'disabled', value: false, attributeName: 'disabled' },
-				{ name: 'required', value: false, attributeName: 'required' },
-				{ name: 'readonly', value: false, attributeName: 'readonly' }
-			],
-			handlers: {
-				update: () => {
-					if (this.#select.value !== this.value) {
-						this.value = this.#select.value;
-						this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
-					}
-				}
-			},
-			watchedSlots: {
-				'default': (evt) => {
-					const optionList = [...evt.target.assignedElements()].filter((option) => option instanceof HTMLOptGroupElement || option instanceof HTMLOptionElement);
+	#change() {
+		this.value = this.select.value;
+		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
+	}
 
-					for (const option of optionList) {
-						this.#select.add(option as HTMLOptGroupElement | HTMLOptionElement);
-					}
-				}
-			},
-			template,
-			style
+	#moveItems() {
+		this.items.forEach((item) => {
+			this.select.appendChild(item);
 		});
-
-		this.#select = this.root.querySelector('select') as HTMLSelectElement;
 	}
 
 	resetValue() {
-		this.#select.selectedIndex = 0;
+		this.select.selectedIndex = 0;
+	}
+
+	focus() {
+		this.select.focus();
+	}
+
+	render() {
+		return html`
+			<label for="select">
+				<slot name="label"></slot>
+			</label>
+
+			<select
+				id="select"
+
+				?disabled="${this.disabled}"
+				?required="${this.required}"
+				?readonly="${this.readonly}"
+
+				@change="${() => this.#change()}"
+				@input="${() => this.#input()}"
+			>
+				<option selected disabled hidden value="">$t{Please select an option...}</option>
+			</select>
+
+			<div hidden>
+				<slot @slotchange="${() => this.#moveItems()}"></slot>
+			</div>
+		`;
 	}
 }
-
-registerComponent(SdrSelect);

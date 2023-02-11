@@ -1,43 +1,25 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
-import { registerComponent, SdrComponent } from '../SdrComponent';
-
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['loaded'];
-
-export interface SdrLoader {
-	loaded: boolean
-}
-
-export class SdrLoader extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
-
+@customElement('sdr-loader')
+export class SdrLoader extends LitElement {
 	static readonly elementName = 'sdr-loader';
+	static readonly styles = unsafeCSS(style);
+
+	@property({ type: Boolean, reflect: true }) declare loaded: boolean;
 
 	constructor() {
-		super({
-			name: SdrLoader.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'loaded',
-					value: (newValue = false) => {
-						const parsedValue = newValue === '' || newValue === true;
+		super();
 
-						this.root.querySelector<HTMLDivElement>('#loader')!.hidden = parsedValue;
-						this.root.querySelector<HTMLSlotElement>('slot')!.hidden = !parsedValue;
+		this.loaded = false;
+	}
 
-						return parsedValue;
-					},
-					attributeName: 'loaded'
-				}
-			],
-			template,
-			style
-		});
+	render() {
+		return html`
+			<div id="loader">$t{Loading...}</div>
+			<div id="content"><slot></slot></div>
+		`;
 	}
 }
-
-registerComponent(SdrLoader);

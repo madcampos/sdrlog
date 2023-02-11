@@ -141,6 +141,7 @@ export default defineConfig(({ mode }) => {
 		publicDir: '../public',
 		clearScreen: false,
 		server: {
+			host: 'localhost',
 			https: sslOptions,
 			open: false,
 			cors: true,

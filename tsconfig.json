@@ -1,5 +1,5 @@
 {
-	"include": ["globals.d.ts", "vite.config.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "src/**/*.ce.vue"],
+	"include": ["globals.d.ts", "vite.config.ts", "src/**/*.ts", "src/**/*.d.ts"],
 	"exclude": ["src/**/__tests__/*", "node_modules/**/*", "dist/**/*", "public/lib/**/*"],
 	"compilerOptions": {
 		"tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
@@ -12,7 +12,10 @@
 		"removeComments": true,
 		"target": "ESNext",
 		"strict": true,
-		"jsx": "preserve",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
 		"allowSyntheticDefaultImports": true,
 		"noImplicitThis": true,
 		"preserveValueImports": true,
@@ -25,6 +28,7 @@
 		"esModuleInterop": true,
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
+		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
 		"newLine": "LF",

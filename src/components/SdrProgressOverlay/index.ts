@@ -1,44 +1,29 @@
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-export interface SdrProgressOverlay {
-	title: string,
-	info: string,
-	total: number,
-	count: string,
-	value: number
-}
-
-export class SdrProgressOverlay extends SdrComponent {
+@customElement('sdr-progress-overlay')
+export class SdrProgressOverlay extends LitElement {
 	static readonly elementName = 'sdr-progress-overlay';
-	#dialog: HTMLDialogElement;
+	static readonly styles = unsafeCSS(style);
+
+	@property({ type: String, reflect: true }) declare title: string;
+	@property({ type: String, reflect: true }) declare info: string;
+	@property({ type: Number, reflect: true }) declare total: number;
+	@property({ type: String, reflect: true }) declare count: string;
+	@property({ type: Number, reflect: true }) declare value: number;
+
+	@query('#dialog') private declare dialog: HTMLDialogElement;
 
 	constructor() {
-		super({
-			name: SdrProgressOverlay.elementName,
-			props: [
-				{ name: 'title', value: '' },
-				{ name: 'info', value: '' },
-				{ name: 'total', value: 100 },
-				{ name: 'count', value: '' },
-				{
-					name: 'value',
-					value: (newValue = '0') => {
-						const parsedValue = typeof newValue === 'number' ? newValue : Number.parseInt(newValue as string);
+		super();
 
-						this.count = `${parsedValue} / ${this.total}`;
-
-						return parsedValue;
-					}
-				}
-			],
-			template,
-			style
-		});
-
-		this.#dialog = this.root.querySelector('dialog') as HTMLDialogElement;
+		this.title = '';
+		this.info = '';
+		this.total = 0;
+		this.count = '';
+		this.value = 0;
 	}
 
 	static createOverlay({ total, title, info }: { total?: number, title?: string, info?: string }) {
@@ -70,15 +55,27 @@ export class SdrProgressOverlay extends SdrComponent {
 	}
 
 	show() {
-		this.#dialog.showModal();
-		this.#dialog.focus();
+		this.dialog.showModal();
+		this.dialog.focus();
 	}
 
 	close() {
-		if (this.#dialog.hasAttribute('open')) {
-			this.#dialog.close();
+		if (this.dialog.hasAttribute('open')) {
+			this.dialog.close();
 		}
 	}
-}
 
-registerComponent(SdrProgressOverlay);
+	render() {
+		return html`
+			<dialog tabindex="-1">
+				<h1>${this.title}</h1>
+				<progress
+					max="${this.total}"
+					value="${this.value}"
+				></progress>
+				<p>${this.count}</p>
+				<p>${this.info}</p>
+			</dialog>
+		`;
+	}
+}

@@ -1,14 +1,13 @@
 import type { Material } from '../../data/data';
 
-import { getThumbUrl } from '../../js/covers/cover-fetch';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, eventOptions, property, query } from 'lit/decorators.js';
+
+import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/cover-fetch';
 import { getIDBItem } from '../../js/data/idb-persistence';
-import { registerComponent, SdrComponent } from '../SdrComponent';
 import { SdrItemDetails } from '../../views/SdrItemDetails';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
-
-const watchedAttributes = ['id', 'title', 'category', 'sku', 'type', 'edition', 'status'];
 
 interface CreateCardOptions {
 	name: string,
@@ -20,58 +19,50 @@ interface CreateCardOptions {
 	status?: Material['status']
 }
 
-export interface SdrCard {
-	id: string,
-	title: string,
-	category: Material['category'],
-	sku: string[],
-	type: Material['type'],
-	edition: Material['edition'],
-	status: Material['status'] | 'OK'
-}
-
-export class SdrCard extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
+@customElement('sdr-card')
+export class SdrCard extends LitElement {
 	static readonly elementName = 'sdr-card';
+	static styles = unsafeCSS(style);
+
+	@property({ type: String, reflect: true }) declare id: string;
+	@property({ type: String, reflect: true }) declare title: string;
+	@property({ type: String, reflect: true }) declare category: Material['category'];
+	@property({ type: Array, reflect: true }) declare sku: string[];
+	@property({ type: String, reflect: true }) declare type: Material['type'];
+	@property({ type: String, reflect: true }) declare edition: Material['edition'];
+	@property({ type: String, reflect: true }) declare status: Material['status'];
+
+	@query('img') declare private thumb: HTMLImageElement;
 
 	constructor() {
-		super({
-			name: SdrCard.elementName,
-			watchedAttributes,
-			props: [
-				{ name: 'id', value: '', attributeName: 'id' },
-				{ name: 'title', value: '', attributeName: 'title' },
-				{ name: 'category', value: '', attributeName: 'category' },
-				{ name: 'sku', value: '', attributeName: 'sku' },
-				{ name: 'type', value: '', attributeName: 'type' },
-				{ name: 'edition', value: '', attributeName: 'edition' },
-				{ name: 'status', value: '', attributeName: 'status' }
-			],
-			template,
-			style
-		});
+		super();
 
-		this.addEventListener('click', async () => SdrItemDetails.openModal(this.id));
-
-		this.addEventListener('keyup', (evt) => {
-			if (evt.code === 'Space' || evt.code === 'Enter') {
-				evt.preventDefault();
-				evt.stopPropagation();
-
-				this.click();
-			}
-		});
+		this.id = '';
+		this.title = '';
 	}
 
-	connectedCallback() {
-		super.connectedCallback();
+	#handleKeyboardNavigation(evt: KeyboardEvent) {
+		if (evt.code === 'Space' || evt.code === 'Enter') {
+			evt.preventDefault();
+			evt.stopPropagation();
 
-		if (this.id !== '') {
-			void this.setMaterial(this.id);
+			this.click();
 		}
 	}
 
-	async setMaterial(id: string) {
+	@eventOptions({ passive: true, once: true })
+	private loadThumb() {
+		this.thumb.src = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${this.id}.jpg`;
+	}
+
+	@eventOptions({ passive: true, once: true })
+	private async fallbackThumb() {
+		if (this.thumb.src !== FALLBACK_COVER) {
+			this.thumb.src = await getThumbUrl(this.id);
+		}
+	}
+
+	async #setMaterial(id: string) {
 		if (!this.title) {
 			const material = await getIDBItem('items', id);
 
@@ -84,18 +75,44 @@ export class SdrCard extends SdrComponent {
 				this.status = material.status;
 			}
 		}
+	}
 
-		const thumb = this.root.querySelector('img') as HTMLImageElement;
+	render() {
+		return html`
+			<figure
+				tabindex="0"
+				role="listitem"
 
-		thumb.src = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${id}.jpg`;
+				@click=${async () => SdrItemDetails.openModal(this.id)}
+				@keyup=${(evt: KeyboardEvent) => this.#handleKeyboardNavigation(evt)}
+			>
+				<img
+					decoding="async"
+					loading="lazy"
+					width="100"
+					height="160"
+					role="presentation"
+					src="./images/base-covers/loading-simple.svg"
+					alt=${this.title}
 
-		thumb.addEventListener('error', async () => {
-			thumb.src = await getThumbUrl(id);
-		}, { capture: false, once: true, passive: true });
+					@load=${() => this.loadThumb()}
+					@error=${async () => this.fallbackThumb()}
+				/>
+			</figure>
+			<h4>${this.title}</h4>
+		`;
+	}
+
+	connectedCallback() {
+		super.connectedCallback();
+
+		if (this.id !== '') {
+			void this.#setMaterial(this.id);
+		}
 	}
 
 	static createCard({ id, name, category, sku, type, edition, status }: CreateCardOptions) {
-		const itemCard = document.createElement(SdrCard.elementName) as SdrCard;
+		const itemCard = document.createElement('sdr-card');
 
 		itemCard.id = id;
 		itemCard.title = name;
@@ -103,9 +120,7 @@ export class SdrCard extends SdrComponent {
 		itemCard.sku = sku;
 		itemCard.type = type;
 		itemCard.edition = edition;
-		itemCard.status = status ?? 'OK';
+		itemCard.status = status ?? 'missing';
 		document.querySelector('main')?.appendChild(itemCard);
 	}
 }
-
-registerComponent(SdrCard);

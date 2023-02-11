@@ -1,91 +1,58 @@
-import template from './template.html?raw' assert { type: 'html' };
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query, queryAssignedElements } from 'lit/decorators.js';
+
 import style from './style.css?inline' assert { type: 'css' };
-import { registerComponent, SdrComponent } from '../SdrComponent';
 
-const watchedAttributes = ['open'];
-
-export interface SdrDialog {
-	open: boolean
-}
-
-export class SdrDialog extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
-
+@customElement('sdr-dialog')
+export class SdrDialog extends LitElement {
 	static readonly elementName = 'sdr-dialog';
-	#dialog: HTMLDialogElement;
+	static styles = unsafeCSS(style);
 
-	constructor() {
-		super({
-			name: SdrDialog.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'open',
-					value: (newValue = false) => {
-						const parsedValue = newValue === '' || newValue === true;
+	#isOpen = false;
 
-						if (parsedValue !== this.#dialog.open) {
-							if (parsedValue) {
-								this.#dialog.showModal();
-								this.#dialog.focus();
-								this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
-							} else {
-								this.#dialog.close();
-								this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
-							}
-						}
+	@property({ type: Boolean, reflect: true })
+	get open() {
+		return this.#isOpen;
+	}
 
-						return parsedValue;
-					},
-					attributeName: 'open'
-				}
-			],
-			handlers: {
-				closeModal: () => {
-					this.close();
-				}
-			},
-			watchedSlots: {
-				footer: (evt) => {
-					const slot = evt.target as HTMLSlotElement;
-					const slotHasElements = slot.assignedElements().length > 0;
+	set open(value: boolean) {
+		if (value !== this.#isOpen) {
+			this.#isOpen = value;
 
-					(this.root.querySelector('footer') as HTMLElement).hidden = !slotHasElements;
-				},
-				trigger: (evt) => {
-					const slot = evt.target as HTMLSlotElement;
-					const [triggerButton] = slot.assignedElements() as (Element | undefined)[];
+			if (value) {
+				this.dialog.showModal();
+				this.dialog.focus();
 
-					triggerButton?.addEventListener('click', (triggerEvt) => {
-						triggerEvt.preventDefault();
-						triggerEvt.stopPropagation();
+				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
+			} else {
+				this.dialog.close();
 
-						this.open = true;
-					});
-				}
-			},
-			template,
-			style
-		});
-
-		this.#dialog = this.root.querySelector('dialog') as HTMLDialogElement;
-
-		this.#dialog.addEventListener('click', (evt) => {
-			const target = evt.target as HTMLDialogElement;
-
-			if (target === this.#dialog && this.open) {
-				this.close();
+				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}
-		});
 
-		window.addEventListener('keydown', (evt) => {
-			if (evt.key === 'Escape' && this.open) {
-				evt.preventDefault();
-				evt.stopPropagation();
+			this.requestUpdate();
+		}
+	}
 
-				this.close();
-			}
-		});
+	@query('dialog') declare private dialog: HTMLDialogElement;
+
+	@queryAssignedElements({ slot: 'trigger' }) declare private triggerElements: (HTMLElement | undefined)[];
+	@queryAssignedElements({ slot: 'footer' }) declare private footerElements: HTMLElement[];
+
+	#clickDialog(evt: MouseEvent) {
+		const target = evt.target as HTMLDialogElement;
+
+		if (target === this.dialog && this.open) {
+			this.close();
+		}
+	}
+
+	#updateFooter() {
+		if (this.footerElements.length > 0) {
+			this.dialog.querySelector('footer')?.removeAttribute('hidden');
+		} else {
+			this.dialog.querySelector('footer')?.setAttribute('hidden', '');
+		}
 	}
 
 	show() {
@@ -103,6 +70,59 @@ export class SdrDialog extends SdrComponent {
 			this.show();
 		}
 	}
-}
 
-registerComponent(SdrDialog);
+	connectedCallback() {
+		super.connectedCallback();
+
+		window.addEventListener('keydown', (evt) => {
+			if (evt.key === 'Escape' && this.open) {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				this.close();
+			}
+		});
+
+		const [triggerElement] = this.triggerElements;
+
+		if (triggerElement) {
+			triggerElement.addEventListener('click', (evt) => {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				this.show();
+			});
+		}
+	}
+
+	render() {
+		return html`
+			<slot name="trigger"></slot>
+			<dialog
+				tabindex="-1"
+				@click=${(evt: MouseEvent) => this.#clickDialog(evt)}
+			>
+				<header>
+					<h2>
+						<slot name="title"></slot>
+					</h2>
+					<sdr-button
+						icon-button
+						title="$t{Close window}"
+						@click=${() => this.close()}
+					>❌</sdr-button>
+				</header>
+				<article>
+					<slot></slot>
+				</article>
+				<footer hidden>
+					<slot
+						name="footer"
+
+						@slotchange=${() => this.#updateFooter()}
+					></slot>
+				</footer>
+			</dialog>
+		`;
+	}
+}

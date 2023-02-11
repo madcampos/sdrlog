@@ -1,32 +1,28 @@
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['icon', 'value'];
-
-export interface SdrRadioItem {
-	icon: string,
-	value: string
-}
-
-export class SdrRadioItem extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
-
+@customElement('sdr-radio-item')
+export class SdrRadioItem extends LitElement {
 	static readonly elementName = 'sdr-radio-item';
+	static styles = unsafeCSS(style);
+
+	@property({ type: String, reflect: true }) declare icon: string;
+	@property({ type: String, reflect: true }) declare value: string;
 
 	constructor() {
-		super({
-			name: SdrRadioItem.elementName,
-			watchedAttributes,
-			props: [
-				{ name: 'icon', value: '', attributeName: 'icon' },
-				{ name: 'value', value: '', attributeName: 'value' }
-			],
-			template,
-			style
-		});
+		super();
+
+		this.icon = '';
+		this.value = '';
+	}
+
+	render() {
+		return html`
+			<span id="radio-icon">${this.icon}</span>
+			<h4><slot name="title"></slot></h4>
+			<p><slot></slot></p>
+		`;
 	}
 }
-
-registerComponent(SdrRadioItem);

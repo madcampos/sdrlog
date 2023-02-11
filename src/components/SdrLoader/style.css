@@ -2,6 +2,9 @@
 	box-sizing: inherit;
 }
 
+:host([loaded]) #loader { display: none; }
+:host(:not([loaded])) #content { display: none; }
+
 #loader {
 	max-width: 20rem;
 	border-radius: var(--border-radius);

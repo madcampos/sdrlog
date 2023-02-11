@@ -1,111 +1,78 @@
-import { SdrEditListItem } from '../SdrEditListItem';
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import type { SdrEditListItem } from '../SdrEditListItem';
 
-import template from './template.html?raw' assert { type: 'html' };
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, queryAssignedElements } from 'lit/decorators.js';
+
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['disabled', 'open', 'value'];
-
-export interface SdrEditList {
-	disabled: boolean,
-	open: boolean,
-	value: string
-}
-
-export class SdrEditList extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
+@customElement('sdr-edit-list')
+export class SdrEditList extends LitElement {
 	static readonly elementName = 'sdr-edit-list';
+	static readonly styles = unsafeCSS(style);
 
-	#items: HTMLSlotElement;
+	#isDisabled = false;
 
-	constructor() {
-		super({
-			name: SdrEditList.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'disabled',
-					value: (newValue = false) => {
-						const parsedValue = newValue === '' || newValue === true;
+	@property({ type: Boolean, reflect: true })
+	get disabled() { return this.#isDisabled; }
 
-						this.#updateDisabledItems(parsedValue);
+	set disabled(value: boolean) {
+		const oldValue = this.#isDisabled;
 
-						return parsedValue;
-					},
-					attributeName: 'disabled'
-				},
-				{ name: 'open', value: false, attributeName: 'open' },
-				{ name: 'value', value: '', attributeName: 'value' }
-			],
-			handlers: {
-				addItem: () => {
-					if (this.value !== '') {
-						this.dispatchEvent(new CustomEvent('itemadded', {
-							bubbles: true,
-							cancelable: true,
-							composed: true
-						}));
-					}
-				}
-			},
-			watchedSlots: {
-				'default': (evt) => {
-					const items = evt.target.assignedElements().filter((element) => element instanceof SdrEditListItem) as SdrEditListItem[];
-					const newItems = items.filter((item) => !this.values.includes(item.value));
+		this.#isDisabled = value;
 
-					newItems.forEach((item) => {
-						item.disabled = this.disabled;
-					});
-				},
-				input: (evt) => {
-					const [input] = evt.target.assignedElements();
-
-					input.addEventListener('input', (inputEvt) => {
-						const target = inputEvt.target as HTMLInputElement;
-
-						this.value = target.value;
-					});
-				}
-			},
-			template,
-			style
+		this.items.forEach((item) => {
+			item.disabled = value;
 		});
 
-		this.#items = this.root.querySelector('slot:not([name])') as HTMLSlotElement;
-
-		this.addEventListener('remove', (evt) => {
-			const target = evt.target as SdrEditListItem;
-
-			this.dispatchEvent(new CustomEvent('itemremoved', {
-				bubbles: true,
-				cancelable: true,
-				composed: true,
-				detail: { value: target.value }
-			}));
-		});
+		this.requestUpdate('disabled', oldValue);
 	}
 
-	get values() {
-		const items = this.#items.assignedElements().filter((element) => element instanceof SdrEditListItem) as SdrEditListItem[];
+	@property({ type: Boolean, reflect: true }) declare open: boolean;
+	@property({ type: Array }) declare values: string[];
 
-		return items.map((item) => item.value);
+	@queryAssignedElements({ selector: 'sdr-edit-list-item' }) declare private items: SdrEditListItem[];
+
+	constructor() {
+		super();
+
+		this.open = false;
+		this.values = [];
 	}
 
 	resetValue() {
-		this.value = '';
-
-		[...this.#items.assignedElements()].forEach((item) => {
+		this.items.forEach((item) => {
 			item.remove();
 		});
 	}
 
-	#updateDisabledItems(isDisabled: boolean) {
-		const items = this.#items.assignedElements().filter((element) => element instanceof SdrEditListItem) as SdrEditListItem[];
+	#addItem(){
+		this.dispatchEvent(new CustomEvent('add-item', { bubbles: true, composed: true, cancelable: true }));
+	}
 
-		items.forEach((item) => {
-			item.disabled = isDisabled;
-		});
+	render() {
+		return html`
+			<details
+				?open="${this.open}"
+			>
+				<summary>
+					<slot name="label"></slot>
+				</summary>
+
+				<div id="input-container" hidden>
+					<slot name="input"></slot>
+					<sdr-button
+						icon-button
+						id="add-button"
+						title="$t{Add item}"
+
+						@click="${() => this.#addItem()}"
+					>➕</sdr-button>
+				</div>
+
+				<article id="items-container">
+					<slot></slot>
+				</article>
+			</details>
+		`;
 	}
 }
-
-registerComponent(SdrEditList);

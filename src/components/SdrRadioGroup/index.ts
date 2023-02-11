@@ -1,54 +1,54 @@
 import type { SdrRadioItem } from '../SdrRadioItem';
 
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query, queryAssignedElements } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-export interface SdrRadioGroup {
-	value: string,
-	values: string[]
-}
-
-export class SdrRadioGroup extends SdrComponent {
+@customElement('sdr-radio-group')
+export class SdrRadioGroup extends LitElement {
 	static readonly elementName = 'sdr-radio-group';
+	static styles = unsafeCSS(style);
+
+	@property({ type: String, reflect: true }) declare value: string;
+	@property({ type: Array }) declare values: string[];
+
+	@query('#radio-container') declare private container: HTMLElement;
+
+	@queryAssignedElements({ selector: 'sdr-radio-item' }) declare private items: SdrRadioItem[];
 
 	constructor() {
-		super({
-			name: SdrRadioGroup.elementName,
-			props: [
-				{ name: 'value', value: '', attributeName: 'value' },
-				{ name: 'values', value: [] }
-			],
-			watchedSlots: {
-				'default': (evt) => {
-					const slot = evt.target;
+		super();
 
-					([...slot.assignedElements()] as SdrRadioItem[]).forEach((element) => {
-						if (!this.values.includes(element.value)) {
-							const label = document.createElement('label');
-							const radio = document.createElement('input');
+		this.value = '';
+		this.values = [];
+	}
 
-							radio.type = 'radio';
-							radio.value = element.value;
-							radio.name = this.elementId;
-							radio.id = `${this.elementId}-${element.value}`;
+	#moveItems() {
+		this.items.forEach((item) => {
+			if (!this.values.includes(item.value)) {
+				const label = document.createElement('label');
+				const radio = document.createElement('input');
 
-							label.setAttribute('for', radio.id);
+				radio.type = 'radio';
+				radio.value = item.value;
+				radio.name = crypto.randomUUID();
+				radio.id = `${radio.name}-${item.value}`;
 
-							label.appendChild(radio);
-							label.appendChild(element);
+				label.setAttribute('for', radio.id);
 
-							this.root.querySelector('#radio-container')?.appendChild(label);
-						}
-					});
-				}
-			},
-			template,
-			style
+				label.appendChild(radio);
+				label.appendChild(item);
+
+				this.container.appendChild(label);
+			}
 		});
+	}
 
-		this.root.addEventListener('change', (evt) => {
+	connectedCallback() {
+		super.connectedCallback();
+
+		this.renderRoot.addEventListener('change', (evt) => {
 			evt.preventDefault();
 			evt.stopPropagation();
 
@@ -57,6 +57,11 @@ export class SdrRadioGroup extends SdrComponent {
 			this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 		});
 	}
-}
 
-registerComponent(SdrRadioGroup);
+	render() {
+		return html`
+			<div id="radio-container"></div>
+			<slot @slotchange="${() => this.#moveItems()}"></slot>
+		`;
+	}
+}

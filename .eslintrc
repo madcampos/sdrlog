@@ -263,7 +263,7 @@
 		"one-var": ["warn", "never"],
 		"one-var-declaration-per-line": "warn",
 		"operator-assignment": "warn",
-		"operator-linebreak": ["error", "none"],
+		"operator-linebreak": ["error", "none", { "overrides": { "?": "before", ":": "before" } }],
 		"padded-blocks": ["warn", "never"],
 		"padding-line-between-statements": "off",
 		"prefer-exponentiation-operator": "warn",
@@ -519,7 +519,7 @@
 		"@typescript-eslint/triple-slash-reference": "off",
 		"@typescript-eslint/type-annotation-spacing": "error",
 		"@typescript-eslint/typedef": "off",
-		"@typescript-eslint/unbound-method": "error",
+		"@typescript-eslint/unbound-method": ["error", { "ignoreStatic": true }],
 		"@typescript-eslint/unified-signatures": "error",
 		"@typescript-eslint/parameter-properties": ["error"],
 

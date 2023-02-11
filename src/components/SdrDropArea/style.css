@@ -7,6 +7,7 @@
 	--hover-background: var(--theme-color);
 
 	user-select: none;
+	pointer-events: none;
 }
 
 #content, #overlay {
@@ -17,7 +18,7 @@
 #overlay {
 	border: dotted var(--border-width) var(--border-color, transparent);
 	box-sizing: border-box;
-	display: none;
+	display: grid;
 	align-items: center;
 	justify-content: center;
 
@@ -27,7 +28,15 @@
 	z-index: 1;
 }
 
-:host([is-accepting-files]) #overlay {
+:host(:not([disabled])) {
+	pointer-events: all;
+}
+
+:host([disabled]) #overlay {
+	display: none;
+}
+
+:host(:not([disabled])) #content {
 	display: none;
 }
 

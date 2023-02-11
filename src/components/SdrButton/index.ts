@@ -1,41 +1,41 @@
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['icon', 'disabled'];
-
-export interface SdrButton {
-	disabled: boolean,
-	icon: string,
-	focus(): void
-}
-
-export class SdrButton extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
-
+@customElement('sdr-button')
+export class SdrButton extends LitElement {
 	static readonly elementName = 'sdr-button';
 
-	#button: HTMLButtonElement;
+	static styles = unsafeCSS(style);
+
+	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
+	@property({ type: String, reflect: true }) declare icon: string;
+
+	@query('button') declare private button: HTMLButtonElement;
 
 	constructor() {
-		super({
-			name: SdrButton.elementName,
-			watchedAttributes,
-			props: [
-				{ name: 'disabled', value: false, attributeName: 'disabled' },
-				{ name: 'icon', value: '', attributeName: 'icon' }
-			],
-			template,
-			style
-		});
+		super();
 
-		this.#button = this.root.querySelector('button') as HTMLButtonElement;
+		this.disabled = false;
+		this.icon = '';
 	}
 
 	focus() {
-		this.#button.focus();
+		this.button.focus();
+	}
+
+	render() {
+		return html`
+			<button
+				type="button"
+				?disabled=${this.disabled}
+			>
+				<span id="button-icon">${this.icon}</span>
+				<span id="button-text">
+					<slot></slot>
+				</span>
+			</button>
+		`;
 	}
 }
-
-registerComponent(SdrButton);
