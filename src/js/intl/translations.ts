@@ -4,21 +4,6 @@ import frFRTranslation from '../../locales/fr-FR.json?url';
 
 let loadedTranslations = new Map<string, string>();
 
-export const languageNames = {
-	'en-US': 'English',
-	'de-DE': 'German',
-	'fr-FR': 'French',
-	'jp-JP': 'Japanese',
-	'es-ES': 'Spanish',
-	'hu-HU': 'Hungarian',
-	'it-IT': 'Italian',
-	'pt-BR': 'Brazilian Portuguese',
-	'cs-CZ': 'Czech',
-	'he-IL': 'Hebrew',
-	'pl-PL': 'Polish',
-	'fi-FI': 'Finish'
-};
-
 export class I18n {
 	static get defaultLocale() {
 		return new Intl.Locale('en-US');
