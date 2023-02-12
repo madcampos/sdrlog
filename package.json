@@ -36,15 +36,15 @@
 		"typecheck": "tsc --noEmit",
 		"lint:js": "eslint src --ext .js,.mjs,.ts,.mts --fix --ignore-path .gitignore",
 		"lint:css": "stylelint **/*.css --fix",
-		"lint": "npm run typecheck && npm run lint:js && npm run lint:css",
+		"lint": "pnpm run typecheck && pnpm run lint:js && pnpm run lint:css",
 		"lint-staged": "lint-staged",
-		"prebuild:app": "npm run lint",
+		"prebuild:app": "pnpm run lint",
 		"build:app": "vite build",
 		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --scrape false --dark-mode --opaque false --log false public/icons/transparent",
 		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --log false public/icons/maskable",
 		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only --log false public/splash",
-		"build:assets": "npm run build:icons-transparent && npm run build:icons-maskable && npm run build:splash",
-		"prepreview": "npm run build:app",
+		"build:assets": "pnpm run build:icons-transparent && pnpm run build:icons-maskable && pnpm run build:splash",
+		"prepreview": "pnpm run build:app",
 		"preview": "vite preview --port 3000",
 		"test": "vitest",
 		"test:coverage": "vitest run --coverage"
@@ -69,7 +69,6 @@
 		"@typescript-eslint/parser": "^5.48.2",
 		"c8": "^7.12.0",
 		"eslint": "^8.32.0",
-		"eslint-plugin-vue": "^9.9.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.1.0",
 		"pwa-asset-generator": "^6.2.1",
@@ -86,10 +85,6 @@
 		],
 		"*.js": [
 			"eslint --ext .js --fix",
-			"vitest related"
-		],
-		"*.vue": [
-			"eslint --ext .vue --fix",
 			"vitest related"
 		]
 	},
