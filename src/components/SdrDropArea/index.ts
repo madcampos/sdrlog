@@ -5,15 +5,19 @@ import { I18n } from '../../js/intl/translations';
 
 import style from './style.css?inline' assert { type: 'css' };
 
+declare global {
+	interface ElementEventMap {
+		['dropfile']: CustomEvent<{ file: File }>
+	}
+}
+
 @customElement('sdr-drop-area')
 export class SdrDropArea extends LitElement {
-	static readonly elementName = 'sdr-drop-area';
-
 	static styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
 
-	@query('#overlay') declare private overlay: HTMLDivElement;
+	@query('#overlay') private declare overlay: HTMLDivElement;
 
 	#accepts: FilePickerAcceptType = {
 		description: I18n.t`Image Files`,
@@ -35,7 +39,7 @@ export class SdrDropArea extends LitElement {
 
 		this.#file = await handle.getFile();
 
-		this.dispatchEvent(new CustomEvent('drop', { bubbles: true, composed: true, cancelable: true }));
+		this.dispatchEvent(new CustomEvent('dropfile', { bubbles: true, composed: true, cancelable: true, detail: { file: this.#file } }));
 	}
 
 	#dropFile(evt: DragEvent) {
@@ -53,7 +57,7 @@ export class SdrDropArea extends LitElement {
 		if (mimes.includes(fileType)) {
 			this.#file = file;
 
-			this.dispatchEvent(new CustomEvent('drop', { bubbles: true, composed: true, cancelable: true }));
+			this.dispatchEvent(new CustomEvent('dropfile', { bubbles: true, composed: true, cancelable: true, detail: { file: this.#file } }));
 		}
 
 		this.overlay.classList.remove('drop');
@@ -87,7 +91,7 @@ export class SdrDropArea extends LitElement {
 
 			if (file) {
 				this.#file = file;
-				this.dispatchEvent(new CustomEvent('drop', { bubbles: true, composed: true, cancelable: true }));
+				this.dispatchEvent(new CustomEvent('dropfile', { bubbles: true, composed: true, cancelable: true, detail: { file: this.#file } }));
 			}
 		});
 	}

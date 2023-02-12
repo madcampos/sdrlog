@@ -3,9 +3,14 @@ import { customElement, property } from 'lit/decorators.js';
 
 import style from './style.css?inline' assert { type: 'css' };
 
+declare global {
+	interface ElementEventMap {
+		['itemremoved']: CustomEvent<{ value: string }>
+	}
+}
+
 @customElement('sdr-edit-list-item')
 export class SdrEditListItem extends LitElement {
-	static readonly elementName = 'sdr-edit-list-item';
 	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
@@ -19,7 +24,7 @@ export class SdrEditListItem extends LitElement {
 	}
 
 	#removeItem() {
-		this.dispatchEvent(new CustomEvent('remove-item', { bubbles: true, composed: true, cancelable: true }));
+		this.dispatchEvent(new CustomEvent('itemremoved', { bubbles: true, composed: true, cancelable: true, detail: { value: this.value } }));
 	}
 
 	render() {

@@ -142,6 +142,8 @@ export class SdrComicBookReader extends SdrComponent {
 		} catch (err) {
 			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
 		}
+
+		return undefined;
 	}
 
 	async #unzipImages(file?: File) {
@@ -252,10 +254,10 @@ export class SdrComicBookReader extends SdrComponent {
 		const params = new URLSearchParams(url.search);
 
 		if (params.has('file')) {
-			let readerElement = document.querySelector<SdrComicBookReader>(SdrComicBookReader.elementName);
+			let readerElement = document.querySelector('sdr-comic-book-reader');
 
 			if (!readerElement) {
-				readerElement = document.createElement(SdrComicBookReader.elementName) as SdrComicBookReader;
+				readerElement = document.createElement('sdr-comic-book-reader');
 
 				document.body.appendChild(readerElement);
 			}

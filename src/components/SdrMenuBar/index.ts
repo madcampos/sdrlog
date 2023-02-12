@@ -29,15 +29,14 @@ interface MenuItem {
 
 @customElement('sdr-menu-bar')
 export class SdrMenuBar extends LitElement {
-	static readonly elementName = 'sdr-menu-bar';
 	static styles = unsafeCSS(style);
 
-	@state() declare private hasFileSystem: boolean;
-	@state() declare private isDevMode: boolean;
-	@state() declare private filters: (FilterItem | null)[];
-	@state() declare private appMenuItems: (MenuItem | null)[];
-	@state() declare private fileMenuItems: (MenuItem | null)[];
-	@state() declare private devMenuItems: (MenuItem | null)[];
+	@state() private declare hasFileSystem: boolean;
+	@state() private declare isDevMode: boolean;
+	@state() private declare filters: (FilterItem | null)[];
+	@state() private declare appMenuItems: (MenuItem | null)[];
+	@state() private declare fileMenuItems: (MenuItem | null)[];
+	@state() private declare devMenuItems: (MenuItem | null)[];
 
 	constructor() {
 		super();

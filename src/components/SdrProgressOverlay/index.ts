@@ -5,7 +5,6 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-progress-overlay')
 export class SdrProgressOverlay extends LitElement {
-	static readonly elementName = 'sdr-progress-overlay';
 	static readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare title: string;

@@ -8,12 +8,11 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-search-box')
 export class SdrSearchBox extends LitElement {
-	static readonly elementName = 'sdr-search-box';
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;
 
-	@query('input') declare private input: HTMLInputElement;
+	@query('input') private declare input: HTMLInputElement;
 
 	constructor() {
 		super();

@@ -5,7 +5,6 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-loader')
 export class SdrLoader extends LitElement {
-	static readonly elementName = 'sdr-loader';
 	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare loaded: boolean;

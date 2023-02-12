@@ -118,6 +118,8 @@ export class SdrEpubReader extends SdrComponent {
 		} catch (err) {
 			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
 		}
+
+		return undefined;
 	}
 
 	async #loadBook() {
@@ -200,10 +202,10 @@ export class SdrEpubReader extends SdrComponent {
 		const params = new URLSearchParams(url.search);
 
 		if (params.has('file')) {
-			let readerElement = document.querySelector<SdrEpubReader>(SdrEpubReader.elementName);
+			let readerElement = document.querySelector('sdr-epub-reader');
 
 			if (!readerElement) {
-				readerElement = document.createElement(SdrEpubReader.elementName) as SdrEpubReader;
+				readerElement = document.createElement('sdr-epub-reader');
 
 				document.body.appendChild(readerElement);
 			}

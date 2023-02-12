@@ -21,7 +21,6 @@ interface CreateCardOptions {
 
 @customElement('sdr-card')
 export class SdrCard extends LitElement {
-	static readonly elementName = 'sdr-card';
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare id: string;
@@ -32,7 +31,7 @@ export class SdrCard extends LitElement {
 	@property({ type: String, reflect: true }) declare edition: Material['edition'];
 	@property({ type: String, reflect: true }) declare status: Material['status'];
 
-	@query('img') declare private thumb: HTMLImageElement;
+	@query('img') private declare thumb: HTMLImageElement;
 
 	constructor() {
 		super();

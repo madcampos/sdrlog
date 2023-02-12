@@ -5,9 +5,14 @@ import { customElement, property, queryAssignedElements } from 'lit/decorators.j
 
 import style from './style.css?inline' assert { type: 'css' };
 
+declare global {
+	interface ElementEventMap {
+		['itemadded']: CustomEvent
+	}
+}
+
 @customElement('sdr-edit-list')
 export class SdrEditList extends LitElement {
-	static readonly elementName = 'sdr-edit-list';
 	static readonly styles = unsafeCSS(style);
 
 	#isDisabled = false;
@@ -28,15 +33,13 @@ export class SdrEditList extends LitElement {
 	}
 
 	@property({ type: Boolean, reflect: true }) declare open: boolean;
-	@property({ type: Array }) declare values: string[];
 
-	@queryAssignedElements({ selector: 'sdr-edit-list-item' }) declare private items: SdrEditListItem[];
+	@queryAssignedElements({ selector: 'sdr-edit-list-item' }) private declare items: SdrEditListItem[];
 
 	constructor() {
 		super();
 
 		this.open = false;
-		this.values = [];
 	}
 
 	resetValue() {
@@ -46,7 +49,7 @@ export class SdrEditList extends LitElement {
 	}
 
 	#addItem(){
-		this.dispatchEvent(new CustomEvent('add-item', { bubbles: true, composed: true, cancelable: true }));
+		this.dispatchEvent(new CustomEvent('itemadded', { bubbles: true, composed: true, cancelable: true }));
 	}
 
 	render() {

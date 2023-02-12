@@ -1,4 +1,3 @@
-import type { SdrCard } from '../components/SdrCard';
 import { registerSW } from 'virtual:pwa-register';
 
 registerSW({
@@ -31,7 +30,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 	await import('../views');
 	await import('./gamepad/gamepad-navigation');
 
-	const { SdrCard } = await import('../components/SdrCard');
 	const { SdrInfoBox } = await import('../views/SdrInfoBox');
 	const { SdrThemeBox } = await import('../views/SdrThemeBox');
 	const { SdrLanguageBox } = await import('../views/SdrLanguageBox');
@@ -55,7 +53,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 	progressLoader.value = 0;
 
 	for (const material of sortedMaterials) {
-		const itemCard = document.createElement(SdrCard.elementName) as SdrCard;
+		const itemCard = document.createElement('sdr-card');
 		const [materialId] = material.sku;
 
 		itemCard.id = materialId;

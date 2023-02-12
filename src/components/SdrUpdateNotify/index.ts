@@ -1,41 +1,47 @@
-import { registerComponent, SdrComponent } from '../SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, query } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
+import { I18n } from '../../js/intl/translations';
+
 import style from './style.css?inline' assert { type: 'css' };
 
-export interface SdrUpdateNotify {
-	message: string
-}
+@customElement('sdr-update-notify')
+export class SdrUpdateNotify extends LitElement {
+	static readonly styles = [unsafeCSS(style)];
 
-export class SdrUpdateNotify extends SdrComponent {
-	static readonly elementName = 'sdr-update-notify';
+	@property({ type: String, reflect: true }) declare message: string;
 
-	#popup: HTMLElement;
+	@query('aside') private declare popup: HTMLElement;
 
 	constructor() {
-		super({
-			name: SdrUpdateNotify.elementName,
-			props: [{ name: 'message', value: '' }],
-			handlers: {
-				update: () => {
-					window.location.reload();
-				}
-			},
-			template,
-			style
-		});
+		super();
 
-		this.#popup = this.root.querySelector('aside') as HTMLElement;
+		this.message = I18n.t`A new version of the app is available.`;
+	}
+
+	#update() {
+		window.location.reload();
 	}
 
 	show(message: string) {
-		this.#popup.hidden = false;
+		this.popup.hidden = false;
 		this.message = message;
 	}
 
 	hide() {
-		this.#popup.hidden = true;
+		this.popup.hidden = true;
+	}
+
+	render() {
+		return html`
+			<aside role="status" aria-live="polite" hidden>
+				<p>${this.message}</p>
+				<sdr-button
+					icon="♻️"
+					icon-button
+					@click="${() => this.#update()}"
+				></sdr-button>
+			</aside>
+		`;
 	}
 }
-
-registerComponent(SdrUpdateNotify);

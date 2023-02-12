@@ -5,7 +5,6 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dialog')
 export class SdrDialog extends LitElement {
-	static readonly elementName = 'sdr-dialog';
 	static styles = unsafeCSS(style);
 
 	#isOpen = false;
@@ -34,10 +33,10 @@ export class SdrDialog extends LitElement {
 		}
 	}
 
-	@query('dialog') declare private dialog: HTMLDialogElement;
+	@query('dialog') private declare dialog: HTMLDialogElement;
 
-	@queryAssignedElements({ slot: 'trigger' }) declare private triggerElements: (HTMLElement | undefined)[];
-	@queryAssignedElements({ slot: 'footer' }) declare private footerElements: HTMLElement[];
+	@queryAssignedElements({ slot: 'trigger' }) private declare triggerElements: (HTMLElement | undefined)[];
+	@queryAssignedElements({ slot: 'footer' }) private declare footerElements: HTMLElement[];
 
 	#clickDialog(evt: MouseEvent) {
 		const target = evt.target as HTMLDialogElement;

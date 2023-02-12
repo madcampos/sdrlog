@@ -5,14 +5,12 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-button')
 export class SdrButton extends LitElement {
-	static readonly elementName = 'sdr-button';
-
 	static styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
 	@property({ type: String, reflect: true }) declare icon: string;
 
-	@query('button') declare private button: HTMLButtonElement;
+	@query('button') private declare button: HTMLButtonElement;
 
 	constructor() {
 		super();

@@ -1,22 +1,20 @@
+import type { SdrDropdownItem } from '../SdrDropdownItem';
+
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query, queryAssignedElements } from 'lit/decorators.js';
-
-import { SdrDropdownItem } from '../SdrDropdownItem';
 
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dropdown')
 export class SdrDropdown extends LitElement {
-	static readonly elementName = 'sdr-dropdown';
-
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare icon: string;
 	@property({ type: Boolean, reflect: true }) declare open: boolean;
 
-	@query('dialog') declare private dialog: HTMLDialogElement;
+	@query('dialog') private declare dialog: HTMLDialogElement;
 
-	@queryAssignedElements({ selector: SdrDropdownItem.elementName }) declare private items: SdrDropdownItem[];
+	@queryAssignedElements({ selector: 'sdr-dropdown-item' }) private declare items: SdrDropdownItem[];
 
 	constructor() {
 		super();

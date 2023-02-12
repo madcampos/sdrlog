@@ -7,15 +7,14 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-radio-group')
 export class SdrRadioGroup extends LitElement {
-	static readonly elementName = 'sdr-radio-group';
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;
 	@property({ type: Array }) declare values: string[];
 
-	@query('#radio-container') declare private container: HTMLElement;
+	@query('#radio-container') private declare container: HTMLElement;
 
-	@queryAssignedElements({ selector: 'sdr-radio-item' }) declare private items: SdrRadioItem[];
+	@queryAssignedElements({ selector: 'sdr-radio-item' }) private declare items: SdrRadioItem[];
 
 	constructor() {
 		super();

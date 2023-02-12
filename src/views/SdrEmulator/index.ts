@@ -331,6 +331,7 @@ export class SdrEmulator extends SdrComponent {
 		}
 	}
 
+	//@ts-expect-error
 	// eslint-disable-next-line no-unused-private-class-members
 	async #toggleFullScreen() {
 		if (document.fullscreenElement) {
@@ -390,10 +391,10 @@ export class SdrEmulator extends SdrComponent {
 		const params = new URLSearchParams(url.search);
 
 		if (params.has('file')) {
-			let emulatorElement = document.querySelector<SdrEmulator>(SdrEmulator.elementName);
+			let emulatorElement = document.querySelector('sdr-emulator');
 
 			if (!emulatorElement) {
-				emulatorElement = document.createElement(SdrEmulator.elementName) as SdrEmulator;
+				emulatorElement = document.createElement('sdr-emulator');
 
 				document.body.appendChild(emulatorElement);
 			}
