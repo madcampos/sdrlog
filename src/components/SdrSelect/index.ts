@@ -5,7 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-select')
 export class SdrSelect extends LitElement {
-	static readonly elementName = 'sdr-select';
+	static formAssociated = true;
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;
@@ -14,12 +14,16 @@ export class SdrSelect extends LitElement {
 	@property({ type: Boolean, reflect: true }) declare required: boolean;
 	@property({ type: Boolean, reflect: true }) declare readonly: boolean;
 
-	@query('select') declare private select: HTMLSelectElement;
+	@query('select') private declare select: HTMLSelectElement;
 
-	@queryAssignedElements({ selector: 'optgroup, option' }) declare private items: (HTMLOptGroupElement | HTMLOptionElement)[];
+	@queryAssignedElements({ selector: 'optgroup, option' }) private declare items: (HTMLOptGroupElement | HTMLOptionElement)[];
+
+	#internals: ElementInternals;
 
 	constructor() {
 		super();
+
+		this.#internals = this.attachInternals();
 
 		this.value = '';
 		this.values = [];
@@ -28,13 +32,33 @@ export class SdrSelect extends LitElement {
 		this.readonly = false;
 	}
 
+	#validate() {
+		let message = '';
+		const valueMissing = this.required && this.value === '';
+
+		if (valueMissing) {
+			message = 'Required';
+		}
+
+		this.#internals.setValidity({
+			valueMissing,
+			customError: false
+		}, message);
+	}
+
 	#input() {
 		this.value = this.select.value;
+
+		this.#validate();
+
 		this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
 	}
 
 	#change() {
 		this.value = this.select.value;
+
+		this.#validate();
+
 		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 	}
 
@@ -43,6 +67,16 @@ export class SdrSelect extends LitElement {
 			this.select.appendChild(item);
 		});
 	}
+
+	get form() { return this.#internals.form; }
+	get name() { return this.getAttribute('name'); }
+	get validity() { return this.#internals.validity; }
+	get validationMessage() { return this.#internals.validationMessage; }
+	get willValidate() { return this.#internals.willValidate; }
+
+	checkValidity() { return this.#internals.checkValidity(); }
+	reportValidity() { return this.#internals.reportValidity(); }
+	setCustomValidity(message: string) { this.#internals.setValidity({ customError: message !== '' }, message); }
 
 	resetValue() {
 		this.select.selectedIndex = 0;
