@@ -1,5 +1,6 @@
+import type { SdrCard } from '../SdrCard';
+
 import { I18n } from '../../js/intl/translations';
-import { SdrCard } from '../SdrCard';
 
 type FilterTypes = 'name' | 'category' | 'type' | 'status' | 'sku' | 'edition';
 
@@ -49,9 +50,9 @@ export class SearchEngine {
 			if ((tag === 'category' && value === 'all') || (tag === 'name' && value === '')) {
 				(filterElement as HTMLElement).innerText = '';
 			} else if (tag === 'name') {
-				(filterElement as HTMLElement).innerText = `${SdrCard.elementName}:not([title*="${value}" i]){ display:none; }`;
+				(filterElement as HTMLElement).innerText = `sdr-card:not([title*="${value}" i]){ display:none; }`;
 			} else {
-				(filterElement as HTMLElement).innerText = `${SdrCard.elementName}:not([${tag}*="${value}" i]){ display:none; }`;
+				(filterElement as HTMLElement).innerText = `sdr-card:not([${tag}*="${value}" i]){ display:none; }`;
 			}
 		});
 	}
@@ -61,7 +62,7 @@ export class SearchEngine {
 
 		switch (tag) {
 			case 'sku':
-				document.querySelectorAll<SdrCard>(`${SdrCard.elementName}[sku*="${value}" i]`).forEach((card) => {
+				document.querySelectorAll<SdrCard>(`sdr-card[sku*="${value}" i]`).forEach((card) => {
 					const skus = card.sku;
 					const correctSku = skus.find((sku) => sku.includes(value));
 
@@ -117,7 +118,7 @@ export class SearchEngine {
 				break;
 
 			default:
-				document.querySelectorAll<SdrCard>(`${SdrCard.elementName}[title*="${value}" i]`).forEach((card) => {
+				document.querySelectorAll<SdrCard>(`sdr-card[title*="${value}" i]`).forEach((card) => {
 					suggestionList.push([`name: ${card.title}`, card.title]);
 				});
 				break;

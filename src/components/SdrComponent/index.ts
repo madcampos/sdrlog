@@ -289,10 +289,12 @@ export class SdrComponent extends HTMLElement implements CustomElementInterface 
 		}
 	}
 
+	// @ts-expect-error
 	#getPropValue(name: string) {
 		return this.#props.get(name)?.value as PropPrimitiveTypes;
 	}
 
+	// @ts-expect-error
 	#getComputedPropValue<T extends PropPrimitiveTypes>(name: string): T {
 		if (!this.#computedPropsCache.has(name)) {
 			const prop = this.#props.get(name) as Prop<T>;
