@@ -95,6 +95,8 @@ export class SdrSelect extends LitElement {
 			<select
 				id="select"
 
+				.value="${this.value}"
+
 				?disabled="${this.disabled}"
 				?required="${this.required}"
 				?readonly="${this.readonly}"

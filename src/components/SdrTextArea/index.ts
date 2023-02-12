@@ -10,13 +10,13 @@ export class SdrTextArea extends LitElement {
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;
+	@property({ type: String, reflect: true }) declare placeholder?: string;
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
 	@property({ type: Boolean, reflect: true }) declare required: boolean;
 	@property({ type: Boolean, reflect: true }) declare readonly: boolean;
 	@property({ type: Number, reflect: true }) declare minLength?: number;
 	@property({ type: Number, reflect: true }) declare maxLength?: number;
 
-	@query('textarea') private declare textArea: HTMLTextAreaElement;
 	@query('article') private declare renderedTextArea: HTMLElement;
 
 	#internals: ElementInternals;
@@ -55,16 +55,20 @@ export class SdrTextArea extends LitElement {
 		}, message);
 	}
 
-	#input() {
-		this.value = this.textArea.value;
+	#input(evt: Event) {
+		const target = evt.target as HTMLTextAreaElement;
+
+		this.value = target.value;
 
 		this.#validate();
 
 		this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
 	}
 
-	#change() {
-		this.value = this.textArea.value;
+	#change(evt: Event) {
+		const target = evt.target as HTMLTextAreaElement;
+
+		this.value = target.value;
 		this.renderedTextArea.innerHTML = marked(this.value);
 
 		this.#validate();
@@ -86,6 +90,14 @@ export class SdrTextArea extends LitElement {
 		this.value = '';
 	}
 
+	protected updated(_changedProperties: Map<PropertyKey, unknown>) {
+		super.updated(_changedProperties);
+
+		if (_changedProperties.has('value')) {
+			this.renderedTextArea.innerHTML = marked(this.value);
+		}
+	}
+
 	render() {
 		return html`
 		<label for="textarea">
@@ -96,14 +108,19 @@ export class SdrTextArea extends LitElement {
 		</div>
 		<textarea
 			id="textarea"
+
+			.value="${this.value}"
+
+			placeholder="${this.placeholder}"
 			?disabled="${this.disabled}"
 			?required="${this.required}"
 			?readonly="${this.readonly}"
 
-			.value="${this.value}"
+			minlength="${this.minLength}"
+			maxlength="${this.maxLength}"
 
-			@change="${() => this.#change()}"
-			@input="${() => this.#input()}"
+			@change="${(evt: Event) => this.#change(evt)}"
+			@input="${(evt: Event) => this.#input(evt)}"
 		></textarea>
 		`;
 	}

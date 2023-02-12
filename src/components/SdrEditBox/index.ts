@@ -9,6 +9,7 @@ export class SdrEditBox extends LitElement {
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;
+	@property({ type: String, reflect: true }) declare placeholder?: string;
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
 	@property({ type: Boolean, reflect: true }) declare required: boolean;
 	@property({ type: Boolean, reflect: true }) declare readonly: boolean;
@@ -138,11 +139,18 @@ export class SdrEditBox extends LitElement {
 				id="input"
 
 				.value="${this.value}"
+
+				placeholder="${this.placeholder}"
 				?readonly="${this.readonly}"
 				?disabled="${this.disabled}"
 				?required="${this.required}"
 
 				type="${this.type}"
+				pattern="${this.pattern}"
+
+				minlength="${this.minLength}"
+				maxlength="${this.maxLength}"
+
 				min="${this.min}"
 				max="${this.max}"
 				step="${this.step}"

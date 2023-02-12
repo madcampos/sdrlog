@@ -42,6 +42,12 @@ export class SdrEditList extends LitElement {
 		this.open = false;
 	}
 
+	#updateSlots() {
+		this.items.forEach((item) => {
+			item.disabled = this.disabled;
+		});
+	}
+
 	resetValue() {
 		this.items.forEach((item) => {
 			item.remove();
@@ -73,7 +79,7 @@ export class SdrEditList extends LitElement {
 				</div>
 
 				<article id="items-container">
-					<slot></slot>
+					<slot @slotchange="${() => this.#updateSlots()}"></slot>
 				</article>
 			</details>
 		`;
