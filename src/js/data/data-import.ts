@@ -84,7 +84,6 @@ export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) 
 		await setIDBItem('files', undefined, file);
 	}
 
-	// TODO: Remove old cover, if any
 	if (cover) {
 		try {
 			const coverFile = await processCoverFile(cover);

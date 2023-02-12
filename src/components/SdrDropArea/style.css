@@ -37,7 +37,7 @@
 }
 
 :host(:not([disabled])) #content {
-	display: none;
+	opacity: 0.5;
 }
 
 .drop {

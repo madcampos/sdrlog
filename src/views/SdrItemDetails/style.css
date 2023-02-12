@@ -57,12 +57,12 @@ header {
 		'release release release .';
 }
 
-header #sku-list { grid-area: sku; }
+header #sku { grid-area: sku; }
 header #edition { grid-area: edition; }
 header #category { grid-area: category; }
 header #type { grid-area: type; }
 header #originalLanguage { grid-area: language; }
-header #release-date-list { grid-area: release; }
+header #releaseDate { grid-area: release; }
 
 #name {
 	--border-color: transparent;
@@ -100,11 +100,11 @@ header #release-date-list { grid-area: release; }
 		'pub pub pub';
 }
 
-#meta #publisher-list { grid-area: pub; }
-#meta #translated-name-list { grid-area: names; }
+#meta #publisher { grid-area: pub; }
+#meta #names { grid-area: names; }
 #meta #gameDate { grid-area: gamedate; }
 
-#meta #publisher-list img {
+#meta #publisher img {
 	height: 1.5rem;
 	max-width: 3rem;
 	object-fit: contain;
