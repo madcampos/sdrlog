@@ -11,7 +11,6 @@ specifiers:
   c8: ^7.12.0
   epubjs: ^0.3.93
   eslint: ^8.32.0
-  eslint-plugin-vue: ^9.9.0
   husky: ^8.0.3
   idb: ^7.1.1
   jszip: ^3.10.1
@@ -21,6 +20,7 @@ specifiers:
   nipplejs: ^0.10.0
   pdfjs-dist: ^3.2.146
   pwa-asset-generator: ^6.2.1
+  typed-query-selector: ^2.8.0
   typescript: ^4.9.4
   vite: ^4.0.4
   vite-plugin-html-env: ^1.2.7
@@ -48,10 +48,10 @@ devDependencies:
   '@typescript-eslint/parser': 5.51.0_4vsywjlpuriuw3tl5oq6zy5a64
   c8: 7.12.0
   eslint: 8.33.0
-  eslint-plugin-vue: 9.9.0_eslint@8.33.0
   husky: 8.0.3
   lint-staged: 13.1.1
   pwa-asset-generator: 6.2.1
+  typed-query-selector: 2.8.0
   typescript: 4.9.5
   vite: 4.1.1
   vite-plugin-html-env: 1.2.7_vite@4.1.1
@@ -2720,12 +2720,6 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /cssesc/3.0.0:
-    resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
-    engines: {node: '>=4'}
-    hasBin: true
-    dev: true
-
   /d/1.0.1:
     resolution: {integrity: sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA==}
     dependencies:
@@ -3062,24 +3056,6 @@ packages:
   /escape-string-regexp/4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
-    dev: true
-
-  /eslint-plugin-vue/9.9.0_eslint@8.33.0:
-    resolution: {integrity: sha512-YbubS7eK0J7DCf0U2LxvVP7LMfs6rC6UltihIgval3azO3gyDwEGVgsCMe1TmDiEkl6GdMKfRpaME6QxIYtzDQ==}
-    engines: {node: ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-    dependencies:
-      eslint: 8.33.0
-      eslint-utils: 3.0.0_eslint@8.33.0
-      natural-compare: 1.4.0
-      nth-check: 2.1.1
-      postcss-selector-parser: 6.0.11
-      semver: 7.3.8
-      vue-eslint-parser: 9.1.0_eslint@8.33.0
-      xml-name-validator: 4.0.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /eslint-scope/5.1.1:
@@ -4904,14 +4880,6 @@ packages:
       pathe: 1.1.0
     dev: true
 
-  /postcss-selector-parser/6.0.11:
-    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
-    engines: {node: '>=4'}
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
-    dev: true
-
   /postcss/8.4.21:
     resolution: {integrity: sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -5803,6 +5771,10 @@ packages:
       is-typed-array: 1.1.10
     dev: true
 
+  /typed-query-selector/2.8.0:
+    resolution: {integrity: sha512-jo9NLGQ0b7sT9TK3mxzemATQqTb/uh8TRvcOK6WSwKNewALt3AA8q2m7cdpF/uUbd/cdixaBxCGe6fpzpEWbGw==}
+    dev: true
+
   /typescript/4.9.5:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
@@ -6077,24 +6049,6 @@ packages:
       - terser
     dev: true
 
-  /vue-eslint-parser/9.1.0_eslint@8.33.0:
-    resolution: {integrity: sha512-NGn/iQy8/Wb7RrRa4aRkokyCZfOUWk19OP5HP6JEozQFX5AoS/t+Z0ZN7FY4LlmWc4FNI922V7cvX28zctN8dQ==}
-    engines: {node: ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: '>=6.0.0'
-    dependencies:
-      debug: 4.3.4
-      eslint: 8.33.0
-      eslint-scope: 7.1.1
-      eslint-visitor-keys: 3.3.0
-      espree: 9.4.1
-      esquery: 1.4.0
-      lodash: 4.17.21
-      semver: 7.3.8
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /web-streams-polyfill/3.2.1:
     resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
     engines: {node: '>= 8'}
@@ -6348,11 +6302,6 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-    dev: true
-
-  /xml-name-validator/4.0.0:
-    resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
-    engines: {node: '>=12'}
     dev: true
 
   /y18n/5.0.8:

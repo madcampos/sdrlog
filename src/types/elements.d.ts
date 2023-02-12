@@ -1,3 +1,5 @@
+import type {} from 'typed-query-selector/strict';
+
 import type { SdrButton } from '../components/SdrButton';
 import type { SdrCard } from '../components/SdrCard';
 import type { SdrDialog } from '../components/SdrDialog';
