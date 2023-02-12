@@ -1,14 +1,13 @@
-import { registerComponent, SdrComponent } from '../../components/SdrComponent';
+import { html, LitElement, unsafeCSS } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
 
 import { getIDBItemByIndex } from '../../js/data/idb-persistence';
 import { getFilePermission } from '../../js/files/file-import';
 import { createComparer } from '../../js/intl/formatting';
 import { I18n } from '../../js/intl/translations';
 
-import template from './template.html?raw' assert { type: 'html' };
 import style from './style.css?inline' assert { type: 'css' };
 
-const watchedAttributes = ['file', 'loaded'];
 
 interface Page {
 	name: string,
@@ -35,52 +34,25 @@ const mimeTypes = new Map([
 	['.gif', 'image/gif']
 ]);
 
-export interface SdrComicBookReader {
-	file: string,
-	loaded: boolean,
-	nextPageVisibility: 'visible' | 'hidden',
-	previousPageVisibility: 'visible' | 'hidden'
-}
+@customElement('sdr-comic-book-reader')
+export class SdrComicBookReader extends LitElement {
+	static styles = unsafeCSS(style);
 
-export class SdrComicBookReader extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
-	static readonly elementName = 'sdr-comic-book-reader';
+	@property({ type: String, reflect: true }) declare file: string;
+	@property({ type: Boolean, reflect: true }) declare loaded: boolean;
 
-	#renderArea: HTMLElement;
-	#tocSelect: HTMLSelectElement;
+	@state() declare private selectedPage: string;
+	@state() declare private pages: Page[];
+	@state() declare private toc: string[];
+	@state() declare private nextPageVisibility: 'visible' | 'hidden';
+	@state() declare private previousPageVisibility: 'visible' | 'hidden';
+
 	#currentVisibleImage: HTMLImageElement | undefined;
 
 	constructor() {
-		super({
-			name: SdrComicBookReader.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'file',
-					value: (newValue = '') => {
-						this.loaded = false;
-						this.#resetComicBook();
+		super();
 
-						return newValue;
-					},
-					attributeName: 'file'
-				},
-				{ name: 'loaded', value: false, attributeName: 'loaded' },
-				{ name: 'nextPageVisibility', value: 'visible' },
-				{ name: 'previousPageVisibility', value: 'visible' }
-			],
-			handlers: {
-				showPreviousPage: () => { this.showPreviousPage(); },
-				showNextPage: () => { this.showNextPage(); },
-				openComic: () => { void this.#loadComicBook(); },
-				tocSelect: () => { this.root.querySelector(`[data-folder="${this.#tocSelect.value}"]`)?.scrollIntoView(); }
-			},
-			template,
-			style
-		});
-
-		this.#renderArea = this.root.querySelector('#comic') as HTMLElement;
-		this.#tocSelect = this.root.querySelector('#toc') as HTMLSelectElement;
+		this.#resetComicBook();
 
 		document.addEventListener('keyup', (keyEvt) => {
 			// Left Key
@@ -98,7 +70,7 @@ export class SdrComicBookReader extends SdrComponent {
 			if (!evt.shiftKey) {
 				evt.preventDefault();
 
-				this.#renderArea.scrollBy({ left: evt.deltaY, behavior: 'smooth' });
+				this.renderRoot.querySelector('article')?.scrollBy({ left: evt.deltaY, behavior: 'smooth' });
 			}
 		}, { capture: false, passive: false });
 	}
@@ -118,10 +90,7 @@ export class SdrComicBookReader extends SdrComponent {
 			this.nextPageVisibility = 'visible';
 		}
 
-		const currentValue = this.#currentVisibleImage.dataset.folder;
-		const newIndex = [...this.#tocSelect.options].findIndex((option) => option.value === currentValue);
-
-		this.#tocSelect.selectedIndex = newIndex;
+		this.selectedPage = this.#currentVisibleImage.dataset.folder as string;
 	}
 
 	async #loadFile() {
@@ -140,7 +109,7 @@ export class SdrComicBookReader extends SdrComponent {
 
 			return await handler.getFile();
 		} catch (err) {
-			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
+			(this.renderRoot.querySelector('artice') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
 		}
 
 		return undefined;
@@ -192,53 +161,35 @@ export class SdrComicBookReader extends SdrComponent {
 		return sortedPages;
 	}
 
-	#appendTocItem(folder: string) {
-		const tocItem = document.createElement('option');
-
-		tocItem.innerText = folder;
-		tocItem.value = encodeURIComponent(folder);
-		this.#tocSelect.appendChild(tocItem);
-	}
-
-	#appendPage(page: Page) {
-		const img = document.createElement('img');
-		const observer = new IntersectionObserver((entries) => this.#updateVisibleImage(entries), { threshold: 1 });
-
-		img.dataset.folder = encodeURIComponent(page.folder);
-		img.src = page.url;
-		img.loading = 'lazy';
-		img.decoding = 'async';
-		img.alt = page.name;
-
-		img.addEventListener('load', () => {
-			observer.observe(img);
-		}, { once: true });
-
-		this.#renderArea.appendChild(img);
-	}
-
 	async #loadComicBook() {
 		const file = await this.#loadFile();
 		const folders = await this.#unzipImages(file);
 
 		for (const folder of Object.keys(folders)) {
-			this.#appendTocItem(folder);
+			this.toc.push(folder);
 
 			for (const page of folders[folder]) {
-				this.#appendPage(page);
+				this.pages.push(page);
 			}
 		}
+
+		const observer = new IntersectionObserver((entries) => this.#updateVisibleImage(entries), { threshold: 1 });
+
+		// TODO: Attach observer to images
 
 		this.loaded = true;
 
 		// Force start at the begining
-		this.#tocSelect.selectedIndex = 0;
-		this.#renderArea.querySelector('img:first-child')?.scrollIntoView();
+		[this.selectedPage] = this.toc;
+		this.renderRoot.querySelector('article img:first-child')?.scrollIntoView();
 	}
 
 	#resetComicBook() {
-		[...this.#renderArea.querySelectorAll('img')].forEach((img) => img.remove());
-		[...this.#tocSelect.querySelectorAll('option')].forEach((option) => option.remove());
+		this.file = '';
+		this.loaded = false;
+		this.selectedPage = '';
+		this.toc = [];
+		this.pages = [];
 	}
 
 	showNextPage() {
@@ -247,6 +198,42 @@ export class SdrComicBookReader extends SdrComponent {
 
 	showPreviousPage() {
 		this.#currentVisibleImage?.previousElementSibling?.scrollIntoView();
+	}
+
+	render() {
+		return html`
+			<sdr-menu-bar>
+				<sdr-button
+					icon-button
+					visibility="${this.previousPageVisibility}"
+					@click="${() => this.showPreviousPage()}"
+				>⏮️</sdr-button>
+				<select
+					id="toc"
+					.value="${this.selectedPage}"
+					@change="${() => this.renderRoot.querySelector(`[data-folder="${this.selectedPage}"]`)?.scrollIntoView()}"
+				>
+					${this.toc}
+				</select>
+				<sdr-button
+					icon-button
+					visibility="${this.nextPageVisibility}"
+					@click="${() => this.showNextPage()}"
+				>⏭️</sdr-button>
+			</sdr-menu-bar>
+			<article id="comic">
+				${this.pages.map((page) => html`
+					<img src="${page.url}" alt="${page.name}" loading="lazy" decoding="async" data-folder="${page.folder}"/>
+				`)}
+			</article>
+			<div id="comic-book-overlay">
+				<sdr-button
+					icon-button
+					id="open-comic"
+					@click="${async () => this.#loadComicBook()}"
+				>▶️</sdr-button>
+			</div>
+		`;
 	}
 
 	static updateFromURL() {
@@ -266,5 +253,3 @@ export class SdrComicBookReader extends SdrComponent {
 		}
 	}
 }
-
-registerComponent(SdrComicBookReader);
