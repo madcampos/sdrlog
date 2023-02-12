@@ -13,7 +13,9 @@ export class SdrProgressOverlay extends LitElement {
 	@property({ type: String, reflect: true }) declare count: string;
 	@property({ type: Number, reflect: true }) declare value: number;
 
-	@query('#dialog') private declare dialog: HTMLDialogElement;
+	@property({ type: Boolean, reflect: true }) declare open: boolean;
+
+	@query('dialog') private declare dialog: HTMLDialogElement;
 
 	constructor() {
 		super();
@@ -54,13 +56,27 @@ export class SdrProgressOverlay extends LitElement {
 	}
 
 	show() {
-		this.dialog.showModal();
-		this.dialog.focus();
+		this.open = true;
 	}
 
 	close() {
-		if (this.dialog.hasAttribute('open')) {
-			this.dialog.close();
+		this.open = false;
+	}
+
+	protected updated(changedProperties: Map<string, unknown>): void {
+		super.updated(changedProperties);
+
+		if (changedProperties.has('open')) {
+			if (this.open) {
+				this.dialog.showModal();
+				this.dialog.focus();
+
+				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
+			} else {
+				this.dialog.close();
+
+				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
+			}
 		}
 	}
 

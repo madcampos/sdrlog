@@ -67,8 +67,6 @@
 	--dialog-width: clamp(10rem, 80vw, 60rem);
 	--dialog-height: clamp(15rem, 80vh, 100rem);
 	--dialog-border-radius: var(--border-radius);
-	--dialog-backdrop-color: rgba(0, 0, 0, 0.7);
-	--dialog-backdrop-filter: blur(0.3rem);
 
 	/* Dropdown */
 	--dropdown-width: 15rem;

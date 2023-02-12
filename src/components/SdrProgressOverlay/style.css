@@ -4,8 +4,8 @@
 
 dialog[open] {
 	padding: 0;
-	width: var(--dialog-width);
-	height: var(--dialog-height);
+	width: clamp(6rem, calc(var(--dialog-width) / 2), 60vmin);
+	height: clamp(6rem, calc(var(--dialog-height) / 2), 60vmin);
 	border: none;
 	border-radius: var(--dialog-border-radius);
 	background: var(--bg-color);
@@ -21,8 +21,8 @@ dialog[open] {
 }
 
 dialog::backdrop {
-	background: var(--dialog-backdrop-color);
-	backdrop-filter: var(--dialog-backdrop-filter);
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(0.3rem);
 }
 
 h1 {

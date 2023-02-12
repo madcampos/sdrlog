@@ -46,8 +46,8 @@ dialog[open] { display: flex; }
 dialog:focus { outline: none; }
 
 dialog::backdrop {
-	background: var(--dialog-backdrop-color);
-	backdrop-filter: var(--dialog-backdrop-filter);
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(0.3rem);
 }
 
 dialog header {
