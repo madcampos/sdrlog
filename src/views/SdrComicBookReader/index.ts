@@ -175,7 +175,7 @@ export class SdrComicBookReader extends LitElement {
 
 		const observer = new IntersectionObserver((entries) => this.#updateVisibleImage(entries), { threshold: 1 });
 
-		// TODO: Attach observer to images
+		this.renderRoot.querySelectorAll('img').forEach((img) => observer.observe(img));
 
 		this.loaded = true;
 
