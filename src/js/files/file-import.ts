@@ -38,6 +38,42 @@ export function extractMetadataFromFileName(fileName: string) {
 	};
 }
 
+export async function saveFile(handler: FileSystemFileHandle | FileSystemDirectoryHandle, path?: string) {
+	const filePath = path ?? `/${new Date().toISOString()}/${handler.name}`;
+	const { name, id, extension } = extractMetadataFromFileName(handler.name);
+	const fileForMaterial: FileForMaterial = {
+		fileName: name,
+		fileExtension: extension,
+		mimeType: 'text/directory',
+		itemId: id,
+		filePath,
+		hash: await getFileHash(filePath),
+		handler
+	};
+
+	if (handler.kind === 'file') {
+		const file = await handler.getFile();
+
+		fileForMaterial.hash = await getFileHash(await file.arrayBuffer());
+		fileForMaterial.mimeType = file.type;
+
+		if (fileForMaterial.itemId) {
+			const material = await getIDBItem('items', fileForMaterial.itemId);
+
+			// eslint-disable-next-line max-depth
+			if (material) {
+				material.status = 'ok';
+
+				await setIDBItem('items', fileForMaterial.itemId, material);
+			}
+		}
+	}
+
+	await setIDBItem('files', undefined, fileForMaterial);
+
+	return fileForMaterial;
+}
+
 export async function getFilePermission(file: FileSystemHandle, mode: 'read' | 'readwrite' = 'read') {
 	const isPermissionGranted = await file.queryPermission({ mode }) === 'granted';
 
@@ -97,37 +133,7 @@ export async function readFiles() {
 		for await (const { entry, path } of entries) {
 			progressOverlay.increment();
 
-
-			const { name, id, extension } = extractMetadataFromFileName(entry.name);
-			const fileForMaterial: FileForMaterial = {
-				fileName: name,
-				fileExtension: extension,
-				mimeType: 'text/directory',
-				itemId: id,
-				filePath: path,
-				hash: await getFileHash(path),
-				handler: entry
-			};
-
-			if (entry.kind === 'file') {
-				const file = await entry.getFile();
-
-				fileForMaterial.hash = await getFileHash(await file.arrayBuffer());
-				fileForMaterial.mimeType = file.type;
-
-				if (fileForMaterial.itemId) {
-					const material = await getIDBItem('items', fileForMaterial.itemId);
-
-					// eslint-disable-next-line max-depth
-					if (material) {
-						material.status = 'ok';
-
-						await setIDBItem('items', fileForMaterial.itemId, material);
-					}
-				}
-			}
-
-			await setIDBItem('files', undefined, fileForMaterial);
+			await saveFile(entry, path);
 		}
 	} catch (err) {
 		console.error('Failed to read materials.', err);
