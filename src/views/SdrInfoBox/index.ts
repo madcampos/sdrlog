@@ -38,11 +38,7 @@ export class SdrInfoBox extends LitElement {
 
 	render() {
 		return html`
-			<sdr-dialog
-				?open="${this.open}"
-
-				@close="${() => this.close()}"
-			>
+			<sdr-dialog ?open="${this.open}" @close="${() => this.close()}">
 				<span slot="title">${I18n.t`Information`}</span>
 
 				<details open>

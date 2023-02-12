@@ -16,6 +16,8 @@ export class SdrRadioGroup extends LitElement {
 
 	@queryAssignedElements({ selector: 'sdr-radio-item' }) private declare items: SdrRadioItem[];
 
+	#groupName = crypto.randomUUID();
+
 	constructor() {
 		super();
 
@@ -31,8 +33,12 @@ export class SdrRadioGroup extends LitElement {
 
 				radio.type = 'radio';
 				radio.value = item.value;
-				radio.name = crypto.randomUUID();
+				radio.name = this.#groupName;
 				radio.id = `${radio.name}-${item.value}`;
+
+				if (this.value === item.value) {
+					radio.checked = true;
+				}
 
 				label.setAttribute('for', radio.id);
 
@@ -40,26 +46,24 @@ export class SdrRadioGroup extends LitElement {
 				label.appendChild(item);
 
 				this.container.appendChild(label);
+
+				this.values.push(item.value);
 			}
 		});
 	}
 
-	connectedCallback() {
-		super.connectedCallback();
+	#change(evt: Event) {
+		evt.preventDefault();
+		evt.stopPropagation();
 
-		this.renderRoot.addEventListener('change', (evt) => {
-			evt.preventDefault();
-			evt.stopPropagation();
+		this.value = (evt.target as HTMLInputElement).value;
 
-			this.value = (evt.target as HTMLInputElement).value;
-
-			this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
-		});
+		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 	}
 
 	render() {
 		return html`
-			<div id="radio-container"></div>
+			<div id="radio-container" @change=${(evt: Event) => this.#change(evt)}></div>
 			<slot @slotchange="${() => this.#moveItems()}"></slot>
 		`;
 	}

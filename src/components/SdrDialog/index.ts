@@ -7,31 +7,7 @@ import style from './style.css?inline' assert { type: 'css' };
 export class SdrDialog extends LitElement {
 	static styles = unsafeCSS(style);
 
-	#isOpen = false;
-
-	@property({ type: Boolean, reflect: true })
-	get open() {
-		return this.#isOpen;
-	}
-
-	set open(value: boolean) {
-		if (value !== this.#isOpen) {
-			this.#isOpen = value;
-
-			if (value) {
-				this.dialog.showModal();
-				this.dialog.focus();
-
-				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
-			} else {
-				this.dialog.close();
-
-				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
-			}
-
-			this.requestUpdate();
-		}
-	}
+	@property({ type: Boolean, reflect: true }) declare open: boolean;
 
 	@query('dialog') private declare dialog: HTMLDialogElement;
 
@@ -91,6 +67,23 @@ export class SdrDialog extends LitElement {
 
 				this.show();
 			});
+		}
+	}
+
+	protected updated(changedProperties: Map<string, unknown>): void {
+		super.updated(changedProperties);
+
+		if (changedProperties.has('open')) {
+			if (this.open) {
+				this.dialog.showModal();
+				this.dialog.focus();
+
+				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
+			} else {
+				this.dialog.close();
+
+				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
+			}
 		}
 	}
 
