@@ -1,0 +1,18 @@
+:host {
+	display: flex;
+	flex-direction: column;
+}
+
+#tabs {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	gap: var(--padding-inline);
+	overflow: auto;
+}
+
+#tab-panels {
+	height: 100%;
+	overflow: auto;
+}
