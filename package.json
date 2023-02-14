@@ -58,6 +58,7 @@
 		"marked": "^4.2.12",
 		"nipplejs": "^0.10.0",
 		"pdfjs-dist": "^3.2.146",
+		"urlpattern-polyfill": "^6.0.2",
 		"workbox-window": "^6.5.4"
 	},
 	"devDependencies": {
