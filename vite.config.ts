@@ -81,7 +81,7 @@ export default defineConfig(({ mode }) => {
 			}
 		],
 		capture_links: 'existing-client-navigate',
-		url_handlers: [{ origin: '%PUBLIC_URL%' }],
+		url_handlers: [{ origin: env.APP_PUBLIC_URL }],
 		launch_handler: {
 			// https://developer.chrome.com/docs/web-platform/launch-handler/
 			client_mode: 'navigate-existing'
