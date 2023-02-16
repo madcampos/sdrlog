@@ -1,4 +1,5 @@
-import { type RouteLocation, Router, type RouterView } from '../../router/router';
+import type { RouteLocation, RouterView } from '../../router/router';
+
 import type { FileForMaterial, IsoCode, Material, MaterialCategory, MaterialEdition, MaterialStatus, MaterialType } from '../../data/data';
 import type { SdrEditBox } from '../../components/SdrEditBox';
 import type { SdrSelect } from '../../components/SdrSelect';
@@ -9,6 +10,7 @@ import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { guard } from 'lit/directives/guard.js';
 
+import { Router } from '../../router/router';
 import { getIDBItem, getIDBItemByIndex, getIDBItemsByIndex } from '../../js/data/idb-persistence';
 import { openFile } from '../../js/files/file-open';
 import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';

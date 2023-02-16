@@ -1,13 +1,15 @@
+import type { RouterView } from '../../router/router';
 import type { SdrRadioGroup } from '../../components/SdrRadioGroup';
 
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
+import { Router } from '../../router/router';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
 @customElement('sdr-view-theme-settings')
-export class SdrViewThemeSettings extends LitElement {
+export class SdrViewThemeSettings extends LitElement implements RouterView {
 	@state() private declare open: boolean;
 	@state() private declare theme: string;
 
@@ -44,23 +46,21 @@ export class SdrViewThemeSettings extends LitElement {
 		this.theme = theme.value;
 	}
 
-	show() {
-		this.open = true;
-
-		window.history.pushState(null, `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}#theme`);
-		window.document.title = `${I18n.t`Theme Settings`} · ${import.meta.env.APP_NAME}`;
-	}
-
-	close() {
+	#close() {
 		this.open = false;
 
-		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}`);
-		window.document.title = import.meta.env.APP_NAME;
+		void Router.navigate('/');
+	}
+
+	navigate() {
+		this.open = true;
+
+		return I18n.t`Theme Settings`;
 	}
 
 	render() {
 		return html`
-		<sdr-dialog id="theme-modal" ?open="${this.open}" @close="${() => this.close()}">
+		<sdr-dialog id="theme-modal" ?open="${this.open}" @close="${() => this.#close()}">
 			<span slot="title">$t{Theme Settings}</span>
 
 			<p>$t{Set the theme for the application:}</p>

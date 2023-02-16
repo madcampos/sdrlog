@@ -1,13 +1,16 @@
+import type { RouterView } from '../../router/router';
+
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
+import { Router } from '../../router/router';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-view-app-info')
-export class SdrViewAppInfo extends LitElement {
+export class SdrViewAppInfo extends LitElement implements RouterView {
 	static readonly styles = unsafeCSS(style);
 
 	@state() private declare open: boolean;
@@ -22,23 +25,21 @@ export class SdrViewAppInfo extends LitElement {
 		});
 	}
 
-	show() {
-		this.open = true;
-
-		window.history.pushState(null, `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}#information`);
-		window.document.title = `${I18n.t`Information`} · ${import.meta.env.APP_NAME}`;
-	}
-
-	close() {
+	#close() {
 		this.open = false;
 
-		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}`);
-		window.document.title = import.meta.env.APP_NAME;
+		void Router.navigate('/');
+	}
+
+	navigate() {
+		this.open = true;
+
+		return I18n.t`Information`;
 	}
 
 	render() {
 		return html`
-			<sdr-dialog ?open="${this.open}" @close="${() => this.close()}">
+			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
 				<span slot="title">${I18n.t`Information`}</span>
 
 				<details open>
