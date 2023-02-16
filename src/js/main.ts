@@ -56,15 +56,15 @@ window.addEventListener('DOMContentLoaded', async () => {
 	for (const material of sortedMaterials) {
 		const [materialId] = material.sku;
 
-		// SdrCard.createCard({
-		// 	Name: material.name,
-		// 	Id: materialId,
-		// 	Category: material.category,
-		// 	Sku: material.sku,
-		// 	Type: material.type,
-		// 	Edition: material.edition,
-		// 	Status: material.status
-		// });
+		SdrCard.createCard({
+			name: material.name,
+			id: materialId,
+			category: material.category,
+			sku: material.sku,
+			type: material.type,
+			edition: material.edition,
+			status: material.status
+		});
 
 		progressLoader.value += 1;
 	}
