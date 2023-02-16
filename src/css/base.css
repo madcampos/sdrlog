@@ -125,17 +125,6 @@ main {
 	flex-grow: 1;
 }
 
-#load-menubar {
-	position: absolute;
-	display: block;
-	background: var(--theme-color);
-	width: 100vw;
-	height: var(--menubar-height);
-	top: var(--menubar-top);
-	left: 0;
-	z-index: 1;
-}
-
 @keyframes fadein {
 	from { opacity: 0; }
 	to { opacity: 1; }

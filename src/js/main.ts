@@ -1,5 +1,4 @@
 import { registerSW } from 'virtual:pwa-register';
-import { SdrCard } from '../components/SdrCard';
 
 registerSW({
 	onOfflineReady() {
@@ -24,58 +23,21 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 	await I18n.setLanguage(I18n.getLanguage());
 
-	progressLoader.max = 8;
+	progressLoader.max = 3;
 
-	updateLoadStatus(I18n.t`Loading components.`);
+	updateLoadStatus(I18n.t`Loading components...`);
 	await import('../components');
-	await import('../views');
 	await import('./gamepad/gamepad-navigation');
 
-	const { SdrInfoBox } = await import('../views/SdrInfoBox');
-	const { SdrThemeBox } = await import('../views/SdrThemeBox');
-	const { SdrLanguageBox } = await import('../views/SdrLanguageBox');
-	const { SdrItemDetails } = await import('../views/SdrItemDetails');
+	updateLoadStatus(I18n.t`Loading router...`);
 
-	updateLoadStatus(I18n.t`Importing helper functions.`);
-	const { fetchItems } = await import('./data/data-import');
-	const { createComparer } = await import('./intl/formatting');
+	updateLoadStatus(I18n.t`Loading data...`);
 
-	updateLoadStatus(I18n.t`Fetching items database.`);
+	progressLoader.removeAttribute('value');
+	progressLoader.removeAttribute('max');
+	progressLoader.removeAttribute('min');
 
-	const materials = await fetchItems();
-
-	updateLoadStatus(I18n.t`Sorting materials.`);
-
-	const sorter = createComparer();
-	const sortedMaterials = materials.sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));
-
-	updateLoadStatus(I18n.t`Adding materials to the display.`);
-	progressLoader.max = sortedMaterials.length;
-	progressLoader.value = 0;
-
-	for (const material of sortedMaterials) {
-		const [materialId] = material.sku;
-
-		SdrCard.createCard({
-			name: material.name,
-			id: materialId,
-			category: material.category,
-			sku: material.sku,
-			type: material.type,
-			edition: material.edition,
-			status: material.status
-		});
-
-		progressLoader.value += 1;
-	}
-
-	updateLoadStatus(I18n.t`Setting information from URL.`);
-
-	await SdrItemDetails.updateFromURL();
-	SdrInfoBox.updateFromURL();
-	SdrThemeBox.updateFromURL();
-	SdrLanguageBox.updateFromURL();
-
-	updateLoadStatus(I18n.t`Done!`);
-	document.querySelector('#splash-screen')?.remove();
+	document.addEventListener('apploaded', () => {
+		document.querySelector('#splash-screen')?.remove();
+	});
 });
