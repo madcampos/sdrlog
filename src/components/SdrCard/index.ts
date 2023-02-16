@@ -3,9 +3,9 @@ import type { Material } from '../../data/data';
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
+import { Router } from '../../router/router';
 import { FALLBACK_COVER, getThumbUrl, LOADING_SIMPLE_COVER } from '../../js/covers/cover-fetch';
 import { getIDBItem } from '../../js/data/idb-persistence';
-import { SdrItemDetails } from '../../views/SdrItemDetails';
 
 import style from './style.css?inline' assert { type: 'css' };
 
@@ -34,11 +34,16 @@ export class SdrCard extends LitElement {
 
 	@property({ type: String }) declare thumbUrl: string;
 
-	constructor() {
+	constructor({ id, name, category, sku, type, edition, status }: Partial<CreateCardOptions>) {
 		super();
 
-		this.id = '';
-		this.title = '';
+		this.id = id ?? '';
+		this.title = name ?? '';
+		this.category = category ?? '' as Material['category'];
+		this.sku = sku ?? [];
+		this.type = type ?? '' as Material['type'];
+		this.edition = edition ?? 0 as Material['edition'];
+		this.status = status ?? '' as Material['status'];
 		this.thumbUrl = LOADING_SIMPLE_COVER;
 	}
 
@@ -79,7 +84,7 @@ export class SdrCard extends LitElement {
 				tabindex="0"
 				role="listitem"
 
-				@click=${async () => SdrItemDetails.openModal(this.id)}
+				@click=${async () => Router.navigate(`/item/${this.id}`)}
 				@keyup=${(evt: KeyboardEvent) => this.#handleKeyboardNavigation(evt)}
 			>
 				<img
@@ -104,20 +109,5 @@ export class SdrCard extends LitElement {
 		if (this.id !== '') {
 			void this.#setMaterial(this.id);
 		}
-	}
-
-	static createCard({ id, name, category, sku, type, edition, status }: CreateCardOptions) {
-		const itemCard = document.createElement('sdr-card');
-
-		itemCard.id = id;
-		itemCard.title = name;
-		itemCard.category = category;
-		itemCard.sku = sku;
-		itemCard.type = type;
-		itemCard.edition = edition;
-		itemCard.status = status ?? 'missing';
-		itemCard.thumbUrl = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${id}.jpg`;
-
-		document.querySelector('main')?.appendChild(itemCard);
 	}
 }

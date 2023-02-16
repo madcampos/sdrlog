@@ -1,6 +1,7 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
+import { Router } from '../../router/router';
 import { readFiles } from '../../js/files/file-import';
 import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/cover-fetch';
 import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-export';
@@ -8,10 +9,6 @@ import { requestDataFileFromUser } from '../../js/data/data-import';
 import { exportDataFile } from '../../js/data/data-export';
 import { reportInconsistencies } from '../../js/data/analysis';
 import { SearchEngine } from '../SdrSearchBox/search-engine';
-import { SdrItemDetails } from '../../views/SdrItemDetails';
-import { SdrInfoBox } from '../../views/SdrInfoBox';
-import { SdrLanguageBox } from '../../views/SdrLanguageBox';
-import { SdrThemeBox } from '../../views/SdrThemeBox';
 
 import style from './style.css?inline' assert { type: 'css' };
 
@@ -70,9 +67,9 @@ export class SdrMenuBar extends LitElement {
 		];
 
 		this.appMenuItems = [
-			{ icon: 'ℹ️', label: '$t{Tool Information}', action: SdrInfoBox.openModal },
-			{ icon: '💬', label: '$t{Language Settings}', action: SdrLanguageBox.openModal },
-			{ icon: '🌓', label: '$t{Theme Settings}', action: SdrThemeBox.openModal }
+			{ icon: 'ℹ️', label: '$t{Tool Information}', action: async () => Router.navigate('/info') },
+			{ icon: '💬', label: '$t{Language Settings}', action: async () => Router.navigate('/settings/language') },
+			{ icon: '🌓', label: '$t{Theme Settings}', action: async () => Router.navigate('/settings/theme') }
 		];
 
 		this.fileMenuItems = [
@@ -114,7 +111,7 @@ export class SdrMenuBar extends LitElement {
 					})}
 				</sdr-dropdown>
 
-				<sdr-button id="add-material" @click="${async () => SdrItemDetails.openModal()}" icon="➕"></sdr-button>
+				<sdr-button id="add-material" @click="${async () => Router.navigate('/add-item')}" icon="➕"></sdr-button>
 
 				<sdr-search-box></sdr-search-box>
 
