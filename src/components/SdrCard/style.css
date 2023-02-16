@@ -69,6 +69,10 @@ figure {
 	box-sizing: border-box;
 }
 
+figure:focus {
+	outline: none;
+}
+
 img {
 	height: 100%;
 	width: auto;
