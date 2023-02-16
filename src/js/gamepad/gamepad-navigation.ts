@@ -1,9 +1,11 @@
 /* eslint-disable default-case, @typescript-eslint/switch-exhaustiveness-check */
 import type { SdrCard } from '../../components/SdrCard';
 import type { SdrDropdown } from '../../components/SdrDropdown';
-import type { SdrItemDetails } from '../../views/SdrItemDetails';
+import type { SdrViewItemDetails } from '../../views/SdrItemDetailsView';
 
 import { GamepadEventNormalizer } from './gamepad-events';
+
+// TODO: export a class for shortcut registration
 
 const ACTIVATION_TIME = 500;
 const ACTIVATION_WEAK_VIBRATE = 0.8;
@@ -175,7 +177,7 @@ function openCardDetails() {
 }
 
 function closeCardDetails() {
-	const openDetails = document.querySelector<SdrItemDetails>('sdr-item-details[open]');
+	const openDetails = document.querySelector<SdrViewItemDetails>('sdr-item-details[open]');
 
 	if (openDetails) {
 		openDetails.close();

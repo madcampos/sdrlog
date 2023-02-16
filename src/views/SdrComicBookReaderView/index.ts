@@ -8,6 +8,7 @@ import { I18n } from '../../js/intl/translations';
 
 import style from './style.css?inline' assert { type: 'css' };
 
+// TODO: add navigation for pages and folders
 
 interface Page {
 	name: string,
