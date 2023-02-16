@@ -22,7 +22,7 @@ import type { SdrTextArea } from '../components/SdrTextArea';
 import type { SdrUpdateNotify } from '../components/SdrUpdateNotify';
 
 import type { SdrViewMain } from '../views/SdrMainView';
-import type { SdrViewCbrReader } from '../views/SdrComicBookReaderView';
+import type { SdrViewCbzReader } from '../views/SdrComicBookReaderView';
 import type { SdrViewEmulator } from '../views/SdrEmulatorView';
 import type { SdrViewEpubReader } from '../views/SdrEpubReaderView';
 import type { SdrViewAppInfo } from '../views/SdrInfoView';
@@ -54,7 +54,7 @@ declare global {
 		'sdr-update-notify': SdrUpdateNotify,
 
 		'sdr-view-main': SdrViewMain,
-		'sdr-view-cbz-reader': SdrViewCbrReader,
+		'sdr-view-cbz-reader': SdrViewCbzReader,
 		'sdr-view-emulator': SdrViewEmulator,
 		'sdr-view-epub-reader': SdrViewEpubReader,
 		'sdr-view-app-info': SdrViewAppInfo,
