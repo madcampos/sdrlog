@@ -29,6 +29,7 @@ interface MenuItem {
 
 @customElement('sdr-menu-bar')
 export class SdrMenuBar extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static styles = unsafeCSS(style);
 
 	@state() private declare hasFileSystem: boolean;

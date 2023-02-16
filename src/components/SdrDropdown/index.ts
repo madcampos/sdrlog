@@ -7,6 +7,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dropdown')
 export class SdrDropdown extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare icon: string;
@@ -112,7 +113,6 @@ export class SdrDropdown extends LitElement {
 				@click="${() => this.toggle()}"
 			></sdr-button>
 			<dialog
-				tabindex="-1"
 				?inert="${!this.open}"
 				?open="${this.open}"
 			>

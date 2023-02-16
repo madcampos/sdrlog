@@ -5,6 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-select')
 export class SdrSelect extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static styles = unsafeCSS(style);
 
@@ -80,10 +81,6 @@ export class SdrSelect extends LitElement {
 
 	resetValue() {
 		this.select.selectedIndex = 0;
-	}
-
-	focus() {
-		this.select.focus();
 	}
 
 	render() {

@@ -13,6 +13,7 @@ declare global {
 
 @customElement('sdr-edit-list')
 export class SdrEditList extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static readonly styles = unsafeCSS(style);
 
 	#isDisabled = false;

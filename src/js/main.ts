@@ -1,4 +1,5 @@
 import { registerSW } from 'virtual:pwa-register';
+import { SdrCard } from '../components/SdrCard';
 
 registerSW({
 	onOfflineReady() {
@@ -53,17 +54,17 @@ window.addEventListener('DOMContentLoaded', async () => {
 	progressLoader.value = 0;
 
 	for (const material of sortedMaterials) {
-		const itemCard = document.createElement('sdr-card');
 		const [materialId] = material.sku;
 
-		itemCard.id = materialId;
-		itemCard.title = material.name;
-		itemCard.category = material.category;
-		itemCard.sku = material.sku;
-		itemCard.type = material.type;
-		itemCard.edition = material.edition;
-		itemCard.status = material.status;
-		document.querySelector('main')?.appendChild(itemCard);
+		// SdrCard.createCard({
+		// 	Name: material.name,
+		// 	Id: materialId,
+		// 	Category: material.category,
+		// 	Sku: material.sku,
+		// 	Type: material.type,
+		// 	Edition: material.edition,
+		// 	Status: material.status
+		// });
 
 		progressLoader.value += 1;
 	}

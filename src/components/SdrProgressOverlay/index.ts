@@ -82,7 +82,7 @@ export class SdrProgressOverlay extends LitElement {
 
 	render() {
 		return html`
-			<dialog tabindex="-1">
+			<dialog>
 				<h1>${this.title}</h1>
 				<progress
 					max="${this.total}"

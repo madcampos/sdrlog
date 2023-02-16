@@ -7,6 +7,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dropdown-item')
 export class SdrDropdownItem extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare icon: string;
@@ -19,10 +20,6 @@ export class SdrDropdownItem extends LitElement {
 
 		this.icon = '';
 		this.separator = false;
-	}
-
-	focus() {
-		this.button.focus();
 	}
 
 	render() {

@@ -11,6 +11,7 @@ declare global {
 
 @customElement('sdr-edit-list-item')
 export class SdrEditListItem extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;

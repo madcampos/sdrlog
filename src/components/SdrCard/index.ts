@@ -1,9 +1,9 @@
 import type { Material } from '../../data/data';
 
 import { html, LitElement, unsafeCSS } from 'lit';
-import { customElement, eventOptions, property, query } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
-import { FALLBACK_COVER, getThumbUrl } from '../../js/covers/cover-fetch';
+import { FALLBACK_COVER, getThumbUrl, LOADING_SIMPLE_COVER } from '../../js/covers/cover-fetch';
 import { getIDBItem } from '../../js/data/idb-persistence';
 import { SdrItemDetails } from '../../views/SdrItemDetails';
 
@@ -21,6 +21,7 @@ interface CreateCardOptions {
 
 @customElement('sdr-card')
 export class SdrCard extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare id: string;
@@ -31,13 +32,14 @@ export class SdrCard extends LitElement {
 	@property({ type: String, reflect: true }) declare edition: Material['edition'];
 	@property({ type: String, reflect: true }) declare status: Material['status'];
 
-	@query('img') private declare thumb: HTMLImageElement;
+	@property({ type: String }) declare thumbUrl: string;
 
 	constructor() {
 		super();
 
 		this.id = '';
 		this.title = '';
+		this.thumbUrl = LOADING_SIMPLE_COVER;
 	}
 
 	#handleKeyboardNavigation(evt: KeyboardEvent) {
@@ -49,15 +51,9 @@ export class SdrCard extends LitElement {
 		}
 	}
 
-	@eventOptions({ passive: true, once: true })
-	private loadThumb() {
-		this.thumb.src = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${this.id}.jpg`;
-	}
-
-	@eventOptions({ passive: true, once: true })
-	private async fallbackThumb() {
-		if (this.thumb.src !== FALLBACK_COVER) {
-			this.thumb.src = await getThumbUrl(this.id);
+	async #fallbackThumb() {
+		if (this.thumbUrl !== FALLBACK_COVER) {
+			this.thumbUrl = await getThumbUrl(this.id);
 		}
 	}
 
@@ -72,6 +68,7 @@ export class SdrCard extends LitElement {
 				this.type = material.type;
 				this.edition = material.edition;
 				this.status = material.status;
+				this.thumbUrl = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${this.id}.jpg`;
 			}
 		}
 	}
@@ -91,11 +88,10 @@ export class SdrCard extends LitElement {
 					width="100"
 					height="160"
 					role="presentation"
-					src="./images/base-covers/loading-simple.svg"
+					src="${this.thumbUrl}"
 					alt=${this.title}
 
-					@load=${() => this.loadThumb()}
-					@error=${async () => this.fallbackThumb()}
+					@error=${async () => this.#fallbackThumb()}
 				/>
 			</figure>
 			<h4>${this.title}</h4>
@@ -120,6 +116,8 @@ export class SdrCard extends LitElement {
 		itemCard.type = type;
 		itemCard.edition = edition;
 		itemCard.status = status ?? 'missing';
+		itemCard.thumbUrl = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${id}.jpg`;
+
 		document.querySelector('main')?.appendChild(itemCard);
 	}
 }

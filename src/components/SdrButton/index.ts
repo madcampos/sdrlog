@@ -5,6 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-button')
 export class SdrButton extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
@@ -17,10 +18,6 @@ export class SdrButton extends LitElement {
 
 		this.disabled = false;
 		this.icon = '';
-	}
-
-	focus() {
-		this.button.focus();
 	}
 
 	render() {

@@ -5,6 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-edit-box')
 export class SdrEditBox extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static styles = unsafeCSS(style);
 
@@ -124,10 +125,6 @@ export class SdrEditBox extends LitElement {
 
 	resetValue() {
 		this.input.value = '';
-	}
-
-	focus() {
-		this.input.focus();
 	}
 
 	render() {

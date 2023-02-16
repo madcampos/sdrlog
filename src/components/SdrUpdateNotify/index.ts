@@ -7,6 +7,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-update-notify')
 export class SdrUpdateNotify extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static readonly styles = [unsafeCSS(style)];
 
 	@property({ type: String, reflect: true }) declare message: string;
