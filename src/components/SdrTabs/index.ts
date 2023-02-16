@@ -5,6 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-tab')
 export class SdrTab extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 
 	@property({ type: String, reflect: true }) declare role: string;
@@ -23,12 +24,13 @@ export class SdrTab extends LitElement {
 	}
 
 	render() {
-		return html`<div id="tab"><slot></slot></div>`;
+		return html`<div tabindex="0" id="tab"><slot></slot></div>`;
 	}
 }
 
 @customElement('sdr-tab-panel')
 export class SdrTabPanel extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 
 	@property({ type: String, reflect: true }) declare role: string;
@@ -53,6 +55,7 @@ export class SdrTabPanel extends LitElement {
 
 @customElement('sdr-tabs')
 export class SdrTabs extends LitElement {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static styles = unsafeCSS(style);
 
@@ -64,6 +67,8 @@ export class SdrTabs extends LitElement {
 
 	#internals: ElementInternals;
 
+	#isTabFocused = false;
+
 	constructor() {
 		super();
 
@@ -72,6 +77,48 @@ export class SdrTabs extends LitElement {
 		this.selectedTab = 0;
 		this.role = 'tablist';
 		this.#internals.role = 'tablist';
+
+		document.addEventListener('focusin', () => {
+			const targetTabIndex = this.tabList.findIndex((tab) => tab === document.activeElement);
+
+			if (targetTabIndex !== -1) {
+				this.#isTabFocused = true;
+			}
+		}, { capture: true, passive: true });
+
+		document.addEventListener('focusout', () => {
+			if (this.#isTabFocused) {
+				this.#isTabFocused = false;
+			}
+		}, { capture: true, passive: true });
+
+		document.addEventListener('keydown', (evt) => {
+			if (this.#isTabFocused) {
+				if (evt.key === 'ArrowLeft') {
+					evt.preventDefault();
+
+					if (this.selectedTab > 0) {
+						this.selectedTab -= 1;
+					} else {
+						this.selectedTab = this.tabList.length - 1;
+					}
+
+					this.tabList[this.selectedTab].focus();
+					this.tabList[this.selectedTab].click();
+				} else if (evt.key === 'ArrowRight') {
+					evt.preventDefault();
+
+					if (this.selectedTab < this.tabList.length - 1) {
+						this.selectedTab += 1;
+					} else {
+						this.selectedTab = 0;
+					}
+
+					this.tabList[this.selectedTab].focus();
+					this.tabList[this.selectedTab].click();
+				}
+			}
+		});
 	}
 
 	#updateTabs() {
@@ -90,6 +137,8 @@ export class SdrTabs extends LitElement {
 
 			if (index !== this.selectedTab) {
 				tab.tabIndex = -1;
+			} else {
+				tab.tabIndex = 0;
 			}
 		});
 	}
@@ -110,6 +159,8 @@ export class SdrTabs extends LitElement {
 
 				if (index !== this.selectedTab) {
 					tab.tabIndex = -1;
+				} else {
+					tab.tabIndex = 0;
 				}
 			});
 		}
