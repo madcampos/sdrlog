@@ -1,33 +1,37 @@
 import { Router } from './router';
 
-import { AddFeedView } from '../views/AddFeedView/AddFeedView';
-import { ConfigureFeedView } from '../views/ConfigureFeedView/ConfigureFeedView';
-import { FeedItemView } from '../views/FeedItemView/FeedItemView';
-import { FeedView } from '../views/FeedView/FeedView';
-import { HomeView } from '../views/HomeView/HomeView';
+import { SdrViewMain } from '../views/SdrMainView';
+import { SdrViewItemDetails } from '../views/SdrItemDetailsView';
+import { SdrViewThemeSettings } from '../views/SdrThemeSettingsView';
+import { SdrViewLanguageSettings } from '../views/SdrLanguageSettingsView';
+import { SdrViewAppInfo } from '../views/SdrInfoView';
 
 Router.init({
 	baseUrl: import.meta.env.APP_PUBLIC_URL,
 	routes: [
 		{
 			path: '/',
-			view: HomeView
+			view: SdrViewMain
 		},
 		{
-			path: '/add-feed',
-			view: AddFeedView
+			path: '/new-item',
+			view: SdrViewItemDetails
 		},
 		{
-			path: '/feed/:id',
-			view: FeedView
+			path: '/item/:id',
+			view: SdrViewItemDetails
 		},
 		{
-			path: '/feed/:id/configure',
-			view: ConfigureFeedView
+			path: '/info',
+			view: SdrViewAppInfo
 		},
 		{
-			path: '/feed/:id/item/:itemId',
-			view: FeedItemView
+			path: '/settings/theme',
+			view: SdrViewThemeSettings
+		},
+		{
+			path: '/settings/language',
+			view: SdrViewLanguageSettings
 		}
 	]
 });
