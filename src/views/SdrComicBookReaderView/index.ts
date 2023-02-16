@@ -34,8 +34,8 @@ const mimeTypes = new Map([
 	['.gif', 'image/gif']
 ]);
 
-@customElement('sdr-comic-book-reader')
-export class SdrComicBookReader extends LitElement {
+@customElement('sdr-view-cbr-reader')
+export class SdrViewCbrReader extends LitElement {
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare file: string;

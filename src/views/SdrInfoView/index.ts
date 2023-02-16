@@ -6,8 +6,8 @@ import { registerShortcut } from '../../js/util/keyboard';
 
 import style from './style.css?inline' assert { type: 'css' };
 
-@customElement('sdr-info-box')
-export class SdrInfoBox extends LitElement {
+@customElement('sdr-view-app-info')
+export class SdrViewAppInfo extends LitElement {
 	static readonly styles = unsafeCSS(style);
 
 	@state() private declare open: boolean;
@@ -164,31 +164,5 @@ export class SdrInfoBox extends LitElement {
 				</details>
 			</sdr-dialog>
 		`;
-	}
-
-	private static getModal() {
-		let modal = document.querySelector<SdrInfoBox>('sdr-info-box');
-
-		if (!modal) {
-			modal = document.createElement('sdr-info-box');
-
-			document.body.appendChild(modal);
-		}
-
-		return modal;
-	}
-
-	static updateFromURL() {
-		if (window.location.hash === '#information') {
-			SdrInfoBox.getModal().show();
-		}
-	}
-
-	static openModal() {
-		SdrInfoBox.getModal().show();
-	}
-
-	static closeModal() {
-		SdrInfoBox.getModal().close();
 	}
 }

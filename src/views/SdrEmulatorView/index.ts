@@ -53,13 +53,13 @@ const keyMap: Record<string, KeyData> = {
 
 const watchedAttributes = ['file', 'paused', 'loaded'];
 
-export interface SdrEmulator {
+export interface SdrViewEmulator {
 	file: string,
 	paused: boolean,
 	loaded: boolean
 }
 
-export class SdrEmulator extends SdrComponent {
+export class SdrViewEmulator extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 	static readonly elementName = 'sdr-emulator';
 
@@ -67,7 +67,7 @@ export class SdrEmulator extends SdrComponent {
 	#canvas: HTMLCanvasElement;
 	constructor() {
 		super({
-			name: SdrEmulator.elementName,
+			name: SdrViewEmulator.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -404,4 +404,4 @@ export class SdrEmulator extends SdrComponent {
 	}
 }
 
-registerComponent(SdrEmulator);
+registerComponent(SdrViewEmulator);

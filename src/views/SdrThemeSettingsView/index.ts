@@ -6,10 +6,8 @@ import { customElement, state } from 'lit/decorators.js';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
-@customElement('sdr-theme-box')
-export class SdrThemeBox extends LitElement {
-	static readonly elementName = 'sdr-theme-box';
-
+@customElement('sdr-view-theme-settings')
+export class SdrViewThemeSettings extends LitElement {
 	@state() private declare open: boolean;
 	@state() private declare theme: string;
 
@@ -87,31 +85,5 @@ export class SdrThemeBox extends LitElement {
 			</sdr-radio-group>
 		</sdr-dialog>
 		`;
-	}
-
-	private static getModal() {
-		let modal = document.querySelector('sdr-theme-box');
-
-		if (!modal) {
-			modal = document.createElement('sdr-theme-box');
-
-			document.body.appendChild(modal);
-		}
-
-		return modal;
-	}
-
-	static updateFromURL() {
-		if (window.location.hash === '#theme') {
-			SdrThemeBox.getModal().show();
-		}
-	}
-
-	static openModal() {
-		SdrThemeBox.getModal().show();
-	}
-
-	static closeModal() {
-		SdrThemeBox.getModal().close();
 	}
 }

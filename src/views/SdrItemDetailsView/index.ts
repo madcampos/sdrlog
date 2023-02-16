@@ -1,3 +1,4 @@
+import { type RouteLocation, Router, type RouterView } from '../../router/router';
 import type { FileForMaterial, IsoCode, Material, MaterialCategory, MaterialEdition, MaterialStatus, MaterialType } from '../../data/data';
 import type { SdrEditBox } from '../../components/SdrEditBox';
 import type { SdrSelect } from '../../components/SdrSelect';
@@ -22,8 +23,8 @@ import { SdrCard } from '../../components/SdrCard';
 
 import style from './style.css?inline' assert { type: 'css' };
 
-@customElement('sdr-item-details')
-export class SdrItemDetails extends LitElement {
+@customElement('sdr-view-item-details')
+export class SdrViewItemDetails extends LitElement implements RouterView {
 	static readonly styles = [unsafeCSS(style)];
 
 	@property({ type: Boolean, reflect: true, attribute: 'disabled' }) declare isDisplaying: boolean;
@@ -39,6 +40,8 @@ export class SdrItemDetails extends LitElement {
 		super();
 
 		this.resetMaterial();
+
+		document.body.appendChild(this);
 	}
 
 	#updateInputValue(evt: Event, prop: 'category' | 'type' | 'name' | 'description' | 'edition' | 'gameDate' | 'status' | 'originalLanguage' | 'notes') {
@@ -162,7 +165,7 @@ export class SdrItemDetails extends LitElement {
 			});
 
 			if (!document.querySelector(`sdr-card[id="${id}"]`)) {
-				SdrCard.createCard({
+				const card = new SdrCard({
 					name: this.material.name,
 					id,
 					sku: this.material.sku,
@@ -171,6 +174,8 @@ export class SdrItemDetails extends LitElement {
 					type: this.material.type,
 					status: this.material.status
 				});
+
+				// TODO: add card to the correct place
 			}
 
 			window.history.pushState(null, `${this.material.name} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}#${id}`);
@@ -181,26 +186,22 @@ export class SdrItemDetails extends LitElement {
 		}
 	}
 
-	show() {
-		let hash = '';
+	#close() {
+		this.open = false;
+
+		void Router.navigate('/');
+	}
+
+	navigate(destination: RouteLocation<'/item/:id' | '/new-item'>) {
 		let title = I18n.t`New Material`;
 
-		if (this.material.sku[0]) {
-			hash = `#item-${this.material.sku[0]}`;
+		if (destination.params.id) {
 			title = this.material.name;
 		}
 
 		this.open = true;
 
-		window.history.pushState(null, `${title} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}${hash}`);
-		window.document.title = `${title} · ${import.meta.env.APP_NAME}`;
-	}
-
-	close() {
-		this.open = false;
-
-		window.history.pushState(null, import.meta.env.APP_NAME, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}`);
-		window.document.title = import.meta.env.APP_NAME;
+		return title;
 	}
 
 	resetMaterial() {
@@ -258,9 +259,13 @@ export class SdrItemDetails extends LitElement {
 		});
 	}
 
+	protected createRenderRoot() {
+		return this;
+	}
+
 	render() {
 		return html`
-			<sdr-dialog ?open="${this.open}" @close="${() => this.close()}">
+			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
 				<sdr-edit-box slot="title" ?disabled="${this.isDisplaying}" value="${this.material.name}" @input="${(evt: Event) => this.#updateInputValue(evt, 'name')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'name')}"></sdr-edit-box>
 
 				<div id="item-content">
@@ -422,46 +427,5 @@ export class SdrItemDetails extends LitElement {
 				</sdr-button>
 			</sdr-dialog>
 		`;
-	}
-
-	private static getModal() {
-		let modal = document.querySelector('sdr-item-details');
-
-		if (!modal) {
-			modal = document.createElement('sdr-item-details');
-
-			document.body.appendChild(modal);
-		}
-
-		return modal;
-	}
-
-	static async updateFromURL() {
-		const modal = SdrItemDetails.getModal();
-
-		modal.resetMaterial();
-
-		if (window.location.hash.startsWith('#item-')) {
-			modal.id = window.location.hash.replace('#item-', '');
-			await modal.setMaterial(modal.id);
-			modal.show();
-		}
-	}
-
-	static async openModal(id?: string) {
-		const modal = SdrItemDetails.getModal();
-
-		modal.resetMaterial();
-
-		if (id) {
-			modal.id = id;
-			await modal.setMaterial(modal.id);
-		}
-
-		modal.show();
-	}
-
-	static closeModal() {
-		SdrItemDetails.getModal().close();
 	}
 }

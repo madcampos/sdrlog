@@ -6,8 +6,8 @@ import { customElement, state } from 'lit/decorators.js';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
-@customElement('sdr-language-box')
-export class SdrLanguageBox extends LitElement {
+@customElement('sdr-view-language-settings')
+export class SdrViewLanguageSettings extends LitElement {
 	@state() private declare open: boolean;
 	@state() declare private language: string;
 
@@ -71,32 +71,6 @@ export class SdrLanguageBox extends LitElement {
 				</sdr-select>
 			</sdr-dialog>
 		`;
-	}
-
-	private static getModal() {
-		let modal = document.querySelector('sdr-language-box');
-
-		if (!modal) {
-			modal = document.createElement('sdr-language-box');
-
-			document.body.appendChild(modal);
-		}
-
-		return modal;
-	}
-
-	static updateFromURL() {
-		if (window.location.hash === '#language') {
-			SdrLanguageBox.getModal().show();
-		}
-	}
-
-	static openModal() {
-		SdrLanguageBox.getModal().show();
-	}
-
-	static closeModal() {
-		SdrLanguageBox.getModal().close();
 	}
 
 	connectedCallback() {

@@ -14,14 +14,14 @@ import style from './style.css?inline' assert { type: 'css' };
 
 const watchedAttributes = ['file', 'loaded'];
 
-export interface SdrEpubReader {
+export interface SdrViewEpubReader {
 	file: string,
 	loaded: boolean,
 	prevButtonDisabled: boolean,
 	nextButtonDisabled: boolean
 }
 
-export class SdrEpubReader extends SdrComponent {
+export class SdrViewEpubReader extends SdrComponent {
 	static get observedAttributes() { return watchedAttributes; }
 	static readonly elementName = 'sdr-epub-reader';
 
@@ -32,7 +32,7 @@ export class SdrEpubReader extends SdrComponent {
 
 	constructor() {
 		super({
-			name: SdrEpubReader.elementName,
+			name: SdrViewEpubReader.elementName,
 			watchedAttributes,
 			props: [
 				{
@@ -215,4 +215,4 @@ export class SdrEpubReader extends SdrComponent {
 	}
 }
 
-registerComponent(SdrEpubReader);
+registerComponent(SdrViewEpubReader);

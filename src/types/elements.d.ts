@@ -1,5 +1,7 @@
 import type {} from 'typed-query-selector/strict';
 
+import type { RouterLink } from '../router/router-link';
+
 import type { SdrButton } from '../components/SdrButton';
 import type { SdrCard } from '../components/SdrCard';
 import type { SdrDialog } from '../components/SdrDialog';
@@ -19,16 +21,19 @@ import type { SdrSelect } from '../components/SdrSelect';
 import type { SdrTextArea } from '../components/SdrTextArea';
 import type { SdrUpdateNotify } from '../components/SdrUpdateNotify';
 
-import type { SdrComicBookReader } from '../views/SdrComicBookReader';
-import type { SdrEmulator } from '../views/SdrEmulator';
-import type { SdrEpubReader } from '../views/SdrEpubReader';
-import type { SdrInfoBox } from '../views/SdrInfoBox';
-import type { SdrItemDetails } from '../views/SdrItemDetails';
-import type { SdrLanguageBox } from '../views/SdrLanguageBox';
-import type { SdrThemeBox } from '../views/SdrThemeBox';
+import type { SdrViewMain } from '../views/SdrMainView';
+import type { SdrViewCbrReader } from '../views/SdrComicBookReaderView';
+import type { SdrViewEmulator } from '../views/SdrEmulatorView';
+import type { SdrViewEpubReader } from '../views/SdrEpubReaderView';
+import type { SdrViewAppInfo } from '../views/SdrInfoView';
+import type { SdrViewItemDetails } from '../views/SdrItemDetailsView';
+import type { SdrViewLanguageSettings } from '../views/SdrLanguageSettingsView';
+import type { SdrViewThemeSettings } from '../views/SdrThemeSettingsView';
 
 declare global {
 	interface HTMLElementTagNameMap {
+		'router-link': RouterLink,
+
 		'sdr-button': SdrButton,
 		'sdr-card': SdrCard,
 		'sdr-dialog': SdrDialog,
@@ -48,12 +53,13 @@ declare global {
 		'sdr-textarea': SdrTextArea,
 		'sdr-update-notify': SdrUpdateNotify,
 
-		'sdr-comic-book-reader': SdrComicBookReader,
-		'sdr-emulator': SdrEmulator,
-		'sdr-epub-reader': SdrEpubReader,
-		'sdr-info-box': SdrInfoBox,
-		'sdr-item-details': SdrItemDetails,
-		'sdr-language-box': SdrLanguageBox,
-		'sdr-theme-box': SdrThemeBox
+		'sdr-view-main': SdrViewMain,
+		'sdr-view-cbz-reader': SdrViewCbrReader,
+		'sdr-view-emulator': SdrViewEmulator,
+		'sdr-view-epub-reader': SdrViewEpubReader,
+		'sdr-view-app-info': SdrViewAppInfo,
+		'sdr-view-item-details': SdrViewItemDetails,
+		'sdr-view-language-settings': SdrViewLanguageSettings,
+		'sdr-view-theme-settings': SdrViewThemeSettings
 	}
 }
