@@ -194,10 +194,13 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		void Router.navigate('/');
 	}
 
-	navigate(destination: RouteLocation<'/item/:id' | '/new-item'>) {
+	async navigate(destination: RouteLocation<'/item/:id'>) {
 		let title = I18n.t`New Material`;
 
 		if (destination.params.id) {
+			this.resetMaterial();
+			await this.setMaterial(destination.params.id);
+
 			title = this.material.name;
 		}
 
