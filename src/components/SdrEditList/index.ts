@@ -6,8 +6,8 @@ import { customElement, property, queryAssignedElements } from 'lit/decorators.j
 import style from './style.css?inline' assert { type: 'css' };
 
 declare global {
-	interface ElementEventMap {
-		['itemadded']: CustomEvent
+	interface GlobalEventHandlersEventMap {
+		itemadded: CustomEvent
 	}
 }
 

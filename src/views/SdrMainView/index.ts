@@ -7,11 +7,24 @@ import { customElement, property } from 'lit/decorators.js';
 import { fetchItems } from '../../js/data/data-import';
 import { createComparer } from '../../js/intl/formatting';
 
+declare global {
+	interface GlobalEventHandlersEventMap {
+		itemloaded: CustomEvent<{
+			index: number,
+			total: number,
+			name: string
+		}>,
+		apploaded: CustomEvent<undefined>
+	}
+}
+
 @customElement('sdr-view-main')
 export class SdrViewMain extends LitElement implements RouterView {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
 	@property({ type: Array }) declare cards: Pick<Material, 'name' | 'category' | 'sku' | 'type' | 'edition' | 'status'>[];
+
+	#hasLoadedData = false;
 
 	constructor() {
 		super();
@@ -28,6 +41,10 @@ export class SdrViewMain extends LitElement implements RouterView {
 
 	navigate() {
 		this.hidden = false;
+	}
+
+	protected shouldUpdate(_changedProperties: Map<PropertyKey, unknown>): boolean {
+		return this.#hasLoadedData && super.shouldUpdate(_changedProperties);
 	}
 
 	render() {
@@ -60,7 +77,7 @@ export class SdrViewMain extends LitElement implements RouterView {
 		const sorter = createComparer();
 		const sortedMaterials = materials.sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));
 
-		for (const material of sortedMaterials) {
+		for (const [index, material] of sortedMaterials.entries()) {
 			this.cards.push({
 				name: material.name,
 				category: material.category,
@@ -69,8 +86,11 @@ export class SdrViewMain extends LitElement implements RouterView {
 				edition: material.edition,
 				status: material.status
 			});
+
+			this.dispatchEvent(new CustomEvent('itemloaded', { bubbles: true, composed: true, detail: { item: index, total: sortedMaterials.length, name: material.name } }));
 		}
 
+		this.#hasLoadedData = true;
 		this.requestUpdate();
 
 		this.dispatchEvent(new CustomEvent('apploaded', { bubbles: true, composed: true }));

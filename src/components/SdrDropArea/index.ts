@@ -6,8 +6,8 @@ import { I18n } from '../../js/intl/translations';
 import style from './style.css?inline' assert { type: 'css' };
 
 declare global {
-	interface ElementEventMap {
-		['dropfile']: CustomEvent<{ file: File }>
+	interface GlobalEventHandlersEventMap {
+		dropfile: CustomEvent<{ file: File }>
 	}
 }
 

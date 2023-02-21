@@ -4,8 +4,8 @@ import { customElement, property } from 'lit/decorators.js';
 import style from './style.css?inline' assert { type: 'css' };
 
 declare global {
-	interface ElementEventMap {
-		['itemremoved']: CustomEvent<{ value: string }>
+	interface GlobalEventHandlersEventMap {
+		itemremoved: CustomEvent<{ value: string }>
 	}
 }
 
