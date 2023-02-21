@@ -1,79 +1,48 @@
+import type { RouteLocation, RouterView } from '../../router/router';
+
 import type Section from 'epubjs/types/section';
 import type { Book, Location as BookLocation, NavItem, Rendition } from 'epubjs';
-import type { SdrButton } from '../../components/SdrButton';
+
+import { html, LitElement } from 'lit';
+import { customElement, property, query, state } from 'lit/decorators.js';
 
 import darkTheme from './dark-theme.css?url';
 
-import { getIDBItemByIndex } from '../../js/data/idb-persistence';
-import { getFilePermission } from '../../js/files/file-import';
-import { I18n } from '../../js/intl/translations';
-import { registerComponent, SdrComponent } from '../../components/SdrComponent';
+import { Router } from '../../router/router';
+import { loadFile } from '../../js/files/file-open';
 
-import template from './template.html?raw' assert { type: 'html' };
-import style from './style.css?inline' assert { type: 'css' };
-
-const watchedAttributes = ['file', 'loaded'];
-
-export interface SdrViewEpubReader {
-	file: string,
-	loaded: boolean,
-	prevButtonDisabled: boolean,
-	nextButtonDisabled: boolean
-}
-
-export class SdrViewEpubReader extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
-	static readonly elementName = 'sdr-epub-reader';
-
-	#renderArea: HTMLElement;
-	#tocSelect: HTMLSelectElement;
-
+@customElement('sdr-view-epub-reader')
+export class SdrViewEpubReader extends LitElement implements RouterView {
 	#rendition: Rendition | undefined;
 
+	@property({ type: Boolean, attribute: 'loaded' }) declare loaded: boolean;
+
+	@state() declare open: boolean;
+	@state() declare private toc: NavItem[];
+	@state() declare private selectedPage: string;
+	@state() declare private nextPageVisibility: 'visible' | 'hidden';
+	@state() declare private previousPageVisibility: 'visible' | 'hidden';
+
+	@query('#book') declare private renderArea: HTMLElement;
+
 	constructor() {
-		super({
-			name: SdrViewEpubReader.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'file',
-					value: (newValue = '') => {
-						this.loaded = false;
-						this.#resetBook();
+		super();
 
-						return newValue;
-					},
-					attributeName: 'file'
-				},
-				{ name: 'loaded', value: false, attributeName: 'loaded' },
-				{ name: 'prevButtonDisabled', value: false },
-				{ name: 'nextButtonDisabled', value: false }
-			],
-			handlers: {
-				showPreviousPage: () => { void this.showPreviousPage(); },
-				showNextPage: () => { void this.showNextPage(); },
-				openBook: async (evt) => {
-					const target = evt.target as SdrButton;
+		this.open = false;
+		this.#resetBook();
+	}
 
-					target.disabled = true;
-					await this.#loadBook();
-					target.disabled = false;
-				},
-				tocSelect: (evt) => {
-					const chapterHref = (evt.target as HTMLSelectElement).value;
+	#close() {
+		this.open = false;
 
-					void this.#rendition?.display(chapterHref);
-				}
-			},
-			template,
-			style
-		});
-
-		this.#renderArea = this.root.querySelector('#book') as HTMLElement;
-		this.#tocSelect = this.root.querySelector('#toc') as HTMLSelectElement;
+		void Router.navigate('/');
 	}
 
 	#keyboardNavigation(evt: KeyboardEvent) {
+		if (!this.loaded) {
+			return;
+		}
+
 		// Left Key
 		if (evt.key === 'ArrowLeft') {
 			void this.showPreviousPage();
@@ -85,108 +54,62 @@ export class SdrViewEpubReader extends SdrComponent {
 		}
 	}
 
-	#loadToc(toc: NavItem[]) {
-		const appendOptions = (chapter: NavItem) => {
-			const option = document.createElement('option');
+	async #loadBook(id: string) {
+		const file = await loadFile(id);
 
-			option.textContent = chapter.label;
-			option.value = decodeURI(chapter.href);
-
-			this.#tocSelect.appendChild(option);
-
-			chapter.subitems?.forEach(appendOptions);
-		};
-
-		toc.forEach(appendOptions);
-	}
-
-	async #loadFile() {
-		try {
-			if (!this.file) {
-				throw new Error(I18n.t`Missing book file.`);
-			}
-
-			const { handler } = await getIDBItemByIndex('files', 'itemId', this.file) ?? {};
-
-			if (!handler || handler.kind !== 'file') {
-				throw new Error(I18n.t`Book does not exist.`);
-			}
-
-			await getFilePermission(handler);
-
-			return await handler.getFile();
-		} catch (err) {
-			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
+		if (!('JSZip' in window)) {
+			await import('jszip');
 		}
 
-		return undefined;
-	}
-
-	async #loadBook() {
-		const file = await this.#loadFile();
-
-		if (!file) {
-			return;
+		if (!('ePub' in window)) {
+			// @ts-expect-error - Loading the dist version of the module instead of the default one
+			await import('epubjs/dist/epub.min.js');
 		}
 
-		try {
-			if (!('JSZip' in window)) {
-				await import('jszip');
+		// @ts-expect-error - ePub should be available in the window object
+		const book = ePub(await file.arrayBuffer()) as Book;
+		const { toc } = await book.loaded.navigation;
+
+		this.#rendition = book.renderTo(this.renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
+
+		this.#rendition.themes.register('dark', darkTheme);
+		this.#rendition.themes.select('dark');
+
+		this.toc = toc;
+
+		this.#rendition.on('keyup', (evt: KeyboardEvent) => this.#keyboardNavigation(evt));
+		document.addEventListener('keyup', (evt) => this.#keyboardNavigation(evt));
+
+		this.#rendition.on('rendered', (section: Section) => {
+			this.selectedPage = section.href;
+		});
+
+		this.#rendition.on('relocated', (bookLocation: BookLocation) => {
+			if (bookLocation.atEnd) {
+				this.nextPageVisibility = 'hidden';
+			} else {
+				this.nextPageVisibility = 'visible';
 			}
 
-			if (!('ePub' in window)) {
-				// @ts-expect-error - Loading the dist version of the module instead of the default one
-				await import('epubjs/dist/epub.min.js');
+			if (bookLocation.atStart) {
+				this.previousPageVisibility = 'hidden';
+			} else {
+				this.previousPageVisibility = 'visible';
 			}
+		});
 
-			// @ts-expect-error - ePub should be available in the window object
-			const book = ePub(await file.arrayBuffer()) as Book;
-			const { toc } = await book.loaded.navigation;
+		await this.#rendition.display();
 
-			this.#rendition = book.renderTo(this.#renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
-
-			this.#rendition.themes.register('dark', darkTheme);
-			this.#rendition.themes.select('dark');
-
-			this.#loadToc(toc);
-
-			this.#rendition.on('keyup', (evt: KeyboardEvent) => this.#keyboardNavigation(evt));
-			document.addEventListener('keyup', (evt) => this.#keyboardNavigation(evt));
-
-			this.#rendition.on('rendered', (section: Section) => {
-				const newIndex = [...this.#tocSelect.options].findIndex((option) => option.value === section.href);
-
-				this.#tocSelect.selectedIndex = newIndex;
-			});
-
-			this.#rendition.on('relocated', (bookLocation: BookLocation) => {
-				if (bookLocation.atEnd) {
-					this.nextButtonDisabled = true;
-				} else {
-					this.nextButtonDisabled = false;
-				}
-
-				if (bookLocation.atStart) {
-					this.prevButtonDisabled = true;
-				} else {
-					this.prevButtonDisabled = false;
-				}
-			});
-
-			await this.#rendition.display();
-
-			this.loaded = true;
-		} catch (err) {
-			this.#renderArea.innerText = err?.message ?? err ?? 'Error';
-		}
+		this.loaded = true;
 	}
 
 	#resetBook() {
+		this.loaded = false;
+
 		this.#rendition?.destroy();
 		this.#rendition = undefined;
 
-		this.#renderArea.innerHTML = '';
-		[...this.#tocSelect.querySelectorAll('option')].forEach((option) => option.remove());
+		this.renderArea.innerHTML = '';
 	}
 
 	async showNextPage() {
@@ -197,22 +120,65 @@ export class SdrViewEpubReader extends SdrComponent {
 		await this.#rendition?.prev();
 	}
 
-	static updateFromURL() {
-		const url = new URL(window.location.toString());
-		const params = new URLSearchParams(url.search);
+	async navigate(destination: RouteLocation<'/epub/:id'>) {
+		this.#resetBook();
 
-		if (params.has('file')) {
-			let readerElement = document.querySelector('sdr-epub-reader');
-
-			if (!readerElement) {
-				readerElement = document.createElement('sdr-epub-reader');
-
-				document.body.appendChild(readerElement);
-			}
-
-			readerElement.file = params.get('file') as string;
+		if (!destination.params.id) {
+			return;
 		}
+
+		await this.#loadBook(destination.params.id);
+		this.open = true;
+
+		return 'Epub Reader';
+	}
+
+	createRenderRoot() {
+		return this;
+	}
+
+	render() {
+		return html`
+			<sdr-dialog ?open=${this.open} @close=${() => this.#close()}>
+				<sdr-button
+					icon-button
+					slot="title"
+					class="title-menu"
+					style="visibility: ${this.previousPageVisibility}"
+					@click="${async () => this.showPreviousPage()}"
+				>⏮️</sdr-button>
+				<sdr-select
+					id="toc"
+					slot="title"
+					class="title-menu"
+					.value="${this.selectedPage}"
+					@change="${(evt: InputEvent) => this.#rendition?.display((evt.target as HTMLSelectElement).value)}"
+				>
+					${this.toc.map((chapter) => {
+						if (chapter.subitems) {
+							return html`
+								<optgroup label="${chapter.label}">
+									${chapter.subitems.map((subChapter) => html`<option value="${subChapter.href}">${subChapter.label}</option>`)}
+								</optgroup>
+							`;
+						}
+
+						return html`<option value="${chapter.href}">${chapter.label}</option>`;
+					})}
+				</sdr-select>
+				<sdr-button
+					icon-button
+					slot="title"
+					class="title-menu"
+					style="visibility: ${this.nextPageVisibility}"
+					@click="${async () => this.showNextPage()}"
+				>⏭️</sdr-button>
+				<article id="book">
+				</article>
+				<div id="load-overlay">
+					<progress></progress>
+				</div>
+			</sdr-dialog>
+		`;
 	}
 }
-
-registerComponent(SdrViewEpubReader);
