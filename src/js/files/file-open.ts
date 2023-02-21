@@ -2,13 +2,8 @@ import type { FileForMaterial } from '../../data/data';
 
 import { I18n } from '../intl/translations';
 import { getFilePermission } from './file-import';
-
-interface AllowedExtension {
-	url: string,
-	id: string | true
-}
-
-type AllowedExtensions = Record<string, AllowedExtension>;
+import { getIDBItemByIndex } from '../data/idb-persistence';
+import { Router } from '../../router/router';
 
 const mimeAllowed = [
 	'image',
@@ -18,32 +13,25 @@ const mimeAllowed = [
 	'application/pdf'
 ];
 
-const itemExtensions: AllowedExtensions = {
-	'.epub': { url: `${import.meta.env.APP_PUBLIC_URL}epub.html`, id: true },
-	'.cbz': { url: `${import.meta.env.APP_PUBLIC_URL}cbz.html`, id: true },
-	'.smd': { url: `${import.meta.env.APP_PUBLIC_URL}emulator.html`, id: 'GENESIS' },
-	'.gen': { url: `${import.meta.env.APP_PUBLIC_URL}emulator.html`, id: 'GENESIS' },
-	'.img': { url: `${import.meta.env.APP_PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
-	'.bin': { url: `${import.meta.env.APP_PUBLIC_URL}emulator.html`, id: 'SEGA-CD' },
-	'.smc': { url: `${import.meta.env.APP_PUBLIC_URL}emulator.html`, id: 'SNES' },
-	'.sfc': { url: `${import.meta.env.APP_PUBLIC_URL}emulator.html`, id: 'SNES' }
+const urlsForExtension: Record<string, string> = {
+	'.epub': '/epub',
+	'.cbz': '/cbz',
+	'.smd': '/emulator',
+	'.gen': '/emulator',
+	'.img': '/emulator',
+	'.bin': '/emulator',
+	'.smc': '/emulator',
+	'.sfc': '/emulator'
 };
 
-// TODO: rewrite viewer to use views instead of opening new windows
 export async function openFile(fileInfo: FileForMaterial) {
-	if (Object.keys(itemExtensions).includes(fileInfo.fileExtension ?? '')) {
-		const infoForExtension = itemExtensions[fileInfo.fileExtension ?? ''];
-		const isSameItemId = fileInfo.itemId === infoForExtension.id;
-		const isExtensionAllowed = infoForExtension.id === true;
+	const urlForExtension = urlsForExtension[fileInfo.fileExtension ?? ''];
 
-		if (isExtensionAllowed || isSameItemId) {
-			const url = new URL(infoForExtension.url, window.location.origin);
-
-			url.searchParams.set('file', fileInfo.filePath);
-
-			return window.open(url.toString(), '_blank', 'noopener,noreferrer');
-		}
+	if (urlForExtension) {
+		return Router.navigate(`${urlForExtension}/${fileInfo.itemId}`);
 	}
+
+	// TODO: create file viewer for other file types
 
 	if (fileInfo.handler.kind !== 'file') {
 		// eslint-disable-next-line no-alert
@@ -64,4 +52,16 @@ export async function openFile(fileInfo: FileForMaterial) {
 	const fileURL = URL.createObjectURL(file);
 
 	return window.open(fileURL, '_blank', 'noopener,noreferrer');
+}
+
+export async function loadFile(id: string) {
+	const { handler } = await getIDBItemByIndex('files', 'itemId', id) ?? {};
+
+	if (!handler || handler.kind !== 'file') {
+		throw new Error(I18n.t`File does not exist.`);
+	}
+
+	await getFilePermission(handler);
+
+	return handler.getFile();
 }
