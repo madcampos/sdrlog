@@ -1,14 +1,12 @@
-import { html, LitElement, unsafeCSS } from 'lit';
+import type { RouteLocation, RouterView } from '../../router/router';
+
+import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
-import { getIDBItemByIndex } from '../../js/data/idb-persistence';
-import { getFilePermission } from '../../js/files/file-import';
-import { createComparer } from '../../js/intl/formatting';
+import { Router } from '../../router/router';
 import { I18n } from '../../js/intl/translations';
-
-import style from './style.css?inline' assert { type: 'css' };
-
-// TODO: add navigation for pages and folders
+import { createComparer } from '../../js/intl/formatting';
+import { loadFile } from '../../js/files/file-open';
 
 interface Page {
 	name: string,
@@ -36,12 +34,12 @@ const mimeTypes = new Map([
 ]);
 
 @customElement('sdr-view-cbz-reader')
-export class SdrViewCbzReader extends LitElement {
-	static styles = unsafeCSS(style);
+export class SdrViewCbzReader extends LitElement implements RouterView {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-	@property({ type: String, reflect: true }) declare file: string;
 	@property({ type: Boolean, reflect: true }) declare loaded: boolean;
 
+	@state() declare private open: boolean;
 	@state() declare private selectedPage: string;
 	@state() declare private pages: Page[];
 	@state() declare private toc: string[];
@@ -53,9 +51,14 @@ export class SdrViewCbzReader extends LitElement {
 	constructor() {
 		super();
 
+		this.open = false;
 		this.#resetComicBook();
 
 		document.addEventListener('keyup', (keyEvt) => {
+			if (!this.loaded) {
+				return;
+			}
+
 			// Left Key
 			if (keyEvt.key === 'ArrowLeft') {
 				this.showPreviousPage();
@@ -68,12 +71,22 @@ export class SdrViewCbzReader extends LitElement {
 		}, false);
 
 		window.addEventListener('wheel', (evt) => {
+			if (!this.loaded) {
+				return;
+			}
+
 			if (!evt.shiftKey) {
 				evt.preventDefault();
 
 				this.renderRoot.querySelector('article')?.scrollBy({ left: evt.deltaY, behavior: 'smooth' });
 			}
 		}, { capture: false, passive: false });
+	}
+
+	#close() {
+		this.open = false;
+
+		void Router.navigate('/');
 	}
 
 	#updateVisibleImage([entry]: IntersectionObserverEntry[]) {
@@ -92,28 +105,6 @@ export class SdrViewCbzReader extends LitElement {
 		}
 
 		this.selectedPage = this.#currentVisibleImage.dataset.folder as string;
-	}
-
-	async #loadFile() {
-		try {
-			if (!this.file) {
-				throw new Error(I18n.t`Missing comic book file.`);
-			}
-
-			const { handler } = await getIDBItemByIndex('files', 'itemId', this.file) ?? {};
-
-			if (!handler || handler.kind !== 'file') {
-				throw new Error(I18n.t`Comic book does not exist.`);
-			}
-
-			await getFilePermission(handler);
-
-			return await handler.getFile();
-		} catch (err) {
-			(this.renderRoot.querySelector('artice') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
-		}
-
-		return undefined;
 	}
 
 	async #unzipImages(file?: File) {
@@ -162,8 +153,8 @@ export class SdrViewCbzReader extends LitElement {
 		return sortedPages;
 	}
 
-	async #loadComicBook() {
-		const file = await this.#loadFile();
+	async #loadComicBook(id: string) {
+		const file = await loadFile(id);
 		const folders = await this.#unzipImages(file);
 
 		for (const folder of Object.keys(folders)) {
@@ -186,11 +177,13 @@ export class SdrViewCbzReader extends LitElement {
 	}
 
 	#resetComicBook() {
-		this.file = '';
 		this.loaded = false;
 		this.selectedPage = '';
 		this.toc = [];
 		this.pages = [];
+
+		this.nextPageVisibility = 'hidden';
+		this.previousPageVisibility = 'hidden';
 	}
 
 	showNextPage() {
@@ -201,56 +194,60 @@ export class SdrViewCbzReader extends LitElement {
 		this.#currentVisibleImage?.previousElementSibling?.scrollIntoView();
 	}
 
+	async navigate(destination: RouteLocation<'/cbz/:id'>) {
+		this.#resetComicBook();
+
+		if (!destination.params.id) {
+			return;
+		}
+
+		await this.#loadComicBook(destination.params.id);
+		this.open = true;
+
+		return 'Comic Book Reader';
+	}
+
+	createRenderRoot() {
+		return this;
+	}
+
 	render() {
 		return html`
-			<sdr-menu-bar>
+			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
 				<sdr-button
 					icon-button
-					visibility="${this.previousPageVisibility}"
+					slot="title"
+					class="title-menu"
+					style="visibility: ${this.previousPageVisibility}"
 					@click="${() => this.showPreviousPage()}"
 				>⏮️</sdr-button>
-				<select
+				<sdr-select
 					id="toc"
+					slot="title"
+					class="title-menu"
 					.value="${this.selectedPage}"
 					@change="${() => this.renderRoot.querySelector(`[data-folder="${this.selectedPage}"]`)?.scrollIntoView()}"
 				>
-					${this.toc}
-				</select>
+					${this.toc.map((folder) => html`<option>${folder}</option>`)}
+				</sdr-select>
 				<sdr-button
 					icon-button
-					visibility="${this.nextPageVisibility}"
+					slot="title"
+					class="title-menu"
+					style="visibility: ${this.nextPageVisibility}"
 					@click="${() => this.showNextPage()}"
 				>⏭️</sdr-button>
-			</sdr-menu-bar>
-			<article id="comic">
-				${this.pages.map((page) => html`
-					<img src="${page.url}" alt="${page.name}" loading="lazy" decoding="async" data-folder="${page.folder}"/>
-				`)}
-			</article>
-			<div id="comic-book-overlay">
-				<sdr-button
-					icon-button
-					id="open-comic"
-					@click="${async () => this.#loadComicBook()}"
-				>▶️</sdr-button>
-			</div>
+
+				<article id="comic">
+					${this.pages.map((page) => html`
+						<img src="${page.url}" alt="${page.name}" loading="lazy" decoding="async" data-folder="${page.folder}"/>
+					`)}
+				</article>
+
+				<div id="comic-book-overlay">
+					<progress></progress>
+				</div>
+			</sdr-dialog>
 		`;
-	}
-
-	static updateFromURL() {
-		const url = new URL(window.location.toString());
-		const params = new URLSearchParams(url.search);
-
-		if (params.has('file')) {
-			let readerElement = document.querySelector('sdr-comic-book-reader');
-
-			if (!readerElement) {
-				readerElement = document.createElement('sdr-comic-book-reader');
-
-				document.body.appendChild(readerElement);
-			}
-
-			readerElement.file = params.get('file') as string;
-		}
 	}
 }
