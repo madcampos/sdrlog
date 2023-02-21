@@ -1,5 +1,5 @@
 :host {
-	display: flex;
+	display: inline-flex;
 	align-items: stretch;
 	justify-content: flex-start;
 	flex-direction: column;
@@ -9,7 +9,7 @@
 
 :host([hidden]) { display: none; }
 
-label:not([hidden]) {
+label {
 	font-size: var(--small-text);
 	display: block;
 	width: fit-content;

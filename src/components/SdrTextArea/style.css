@@ -1,7 +1,7 @@
 :host {
 	--height: clamp(10rem, 30vh, 20rem);
 
-	display: flex;
+	display: inline-flex;
 	align-items: stretch;
 	justify-content: flex-start;
 	flex-direction: column;
