@@ -34,7 +34,7 @@ export class SdrCard extends LitElement {
 
 	@property({ type: String }) declare thumbUrl: string;
 
-	constructor({ id, name, category, sku, type, edition, status }: Partial<CreateCardOptions>) {
+	constructor({ id, name, category, sku, type, edition, status }: Partial<CreateCardOptions> = {}) {
 		super();
 
 		this.id = id ?? '';
