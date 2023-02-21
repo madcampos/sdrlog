@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 	await import('./gamepad/gamepad-navigation');
 
 	updateLoadStatus(I18n.t`Loading router...`);
+	await import('../router');
 
 	updateLoadStatus(I18n.t`Loading data...`);
 

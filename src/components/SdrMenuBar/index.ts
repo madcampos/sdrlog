@@ -111,7 +111,7 @@ export class SdrMenuBar extends LitElement {
 					})}
 				</sdr-dropdown>
 
-				<sdr-button id="add-material" @click="${async () => Router.navigate('/add-item')}" icon="➕"></sdr-button>
+				<sdr-button id="add-material" @click="${async () => Router.navigate('/item')}" icon="➕"></sdr-button>
 
 				<sdr-search-box></sdr-search-box>
 

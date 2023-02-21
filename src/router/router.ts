@@ -23,7 +23,7 @@ export interface RouteLocation<Path = string> {
 type RouteGuardHandler = (origin: string, destination: string) => false | RouteLocation | void | Promise<false | RouteLocation | void>;
 
 export interface RouterView {
-	navigate(origin: RouteLocation, destination: RouteLocation): string | void
+	navigate(destination: RouteLocation, origin: RouteLocation): string | void | Promise<string | void>
 }
 
 type ViewImplementation = new () => RouterView;
@@ -106,7 +106,7 @@ export class Router {
 					hash: destinationMatcher?.hash.input
 				};
 
-				const title = view.navigate(Router.#currentLocation, destination);
+				const title = await view.navigate(destination, Router.#currentLocation);
 
 				/* eslint-disable require-atomic-updates */
 				Router.#currentPath = pathToSearch;

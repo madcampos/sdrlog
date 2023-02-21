@@ -17,11 +17,7 @@ Router.init({
 			view: SdrViewMain
 		},
 		{
-			path: '/new-item',
-			view: SdrViewItemDetails
-		},
-		{
-			path: '/item/:id',
+			path: '/item/:id?',
 			view: SdrViewItemDetails
 		},
 		{
