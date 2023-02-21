@@ -42,8 +42,6 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		super();
 
 		this.resetMaterial();
-
-		document.body.appendChild(this);
 	}
 
 	#updateInputValue(evt: Event, prop: 'category' | 'type' | 'name' | 'description' | 'edition' | 'gameDate' | 'status' | 'originalLanguage' | 'notes') {

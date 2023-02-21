@@ -79,6 +79,8 @@ export class Router {
 		const view = new ViewClass();
 
 		Router.#routes.push([new URLPattern({ pathname: path }), view]);
+
+		document.body.appendChild(view as unknown as Node);
 	}
 
 	static async navigate(path: string) {
