@@ -95,9 +95,7 @@ export class SdrDialog extends LitElement {
 				@click=${(evt: MouseEvent) => this.#clickDialog(evt)}
 			>
 				<header>
-					<h2>
-						<slot name="title"></slot>
-					</h2>
+					<slot name="title"></slot>
 					<sdr-button
 						icon-button
 						title="$t{Close window}"

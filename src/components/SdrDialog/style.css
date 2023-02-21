@@ -53,7 +53,8 @@ dialog::backdrop {
 dialog header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
+	gap: var(--padding-inline);
 	padding: 0 var(--padding-inline);
 	height: var(--menubar-height);
 
@@ -61,9 +62,12 @@ dialog header {
 	color: var(--text-color);
 }
 
-dialog header ::slotted(*) {
+dialog header ::slotted(hr, sdr-select, sdr-edit-box) {
 	flex-grow: 1;
-	margin-inline-end: var(--margin-inline);
+}
+
+dialog header ::slotted(hr) {
+	border: none;
 }
 
 dialog footer:not([hidden]) {
