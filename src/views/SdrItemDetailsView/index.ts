@@ -6,7 +6,7 @@ import type { SdrSelect } from '../../components/SdrSelect';
 import type { SdrTextArea } from '../../components/SdrTextArea';
 import type { SdrEditList } from '../../components/SdrEditList';
 
-import { html, LitElement, unsafeCSS } from 'lit';
+import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { guard } from 'lit/directives/guard.js';
 
@@ -23,15 +23,13 @@ import { saveNewMaterialInfo } from '../../js/data/data-import';
 import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
 import { SdrCard } from '../../components/SdrCard';
 
-import style from './style.css?inline' assert { type: 'css' };
-
 @customElement('sdr-view-item-details')
 export class SdrViewItemDetails extends LitElement implements RouterView {
-	static readonly styles = [unsafeCSS(style)];
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
 	@property({ type: Boolean, reflect: true, attribute: 'disabled' }) declare isDisplaying: boolean;
-	@property({ type: Boolean, reflect: true }) declare open: boolean;
 
+	@state() private declare open: boolean;
 	@state({ hasChanged: (value, oldValue) => JSON.stringify(oldValue) !== JSON.stringify(value) }) private declare material: Material;
 	@state() private declare files: FileForMaterial[];
 	@state() private declare coverUrl: string;
