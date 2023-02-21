@@ -33,10 +33,11 @@ window.addEventListener('DOMContentLoaded', async () => {
 	await import('../router');
 
 	updateLoadStatus(I18n.t`Loading data...`);
+	document.addEventListener('itemloaded', (evt) => {
+		progressLoader.max = evt.detail.total;
 
-	progressLoader.removeAttribute('value');
-	progressLoader.removeAttribute('max');
-	progressLoader.removeAttribute('min');
+		updateLoadStatus(evt.detail.name);
+	});
 
 	document.addEventListener('apploaded', () => {
 		document.querySelector('#splash-screen')?.remove();
