@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle */
+import type { RouteLocation, RouterView } from '../../router/router';
 
-import { getAllIDBEntries, getIDBItemByIndex, setIDBItem } from '../../js/data/idb-persistence';
-import { extractMetadataFromFileName, getFilePermission } from '../../js/files/file-import';
-import { I18n } from '../../js/intl/translations';
-import { registerComponent, SdrComponent } from '../../components/SdrComponent';
+import { html, LitElement } from 'lit';
+import { customElement, property, query, state } from 'lit/decorators.js';
 
-import template from './template.html?raw' assert { type: 'html' };
-import style from './style.css?inline' assert { type: 'css' };
+import { Router } from '../../router/router';
+import { setIDBItem } from '../../js/data/idb-persistence';
+import { extractMetadataFromFileName } from '../../js/files/file-import';
+import { loadFile } from '../../js/files/file-open';
+import { getEmulatorFiles } from '../../js/files/file-emulator';
 
 interface EmulatorModule extends EmscriptenModule {
 	canvas: HTMLCanvasElement,
@@ -51,65 +53,41 @@ const keyMap: Record<string, KeyData> = {
 	y: { key: 'T', code: 'KeyT', keyCode: 84 }
 };
 
-const watchedAttributes = ['file', 'paused', 'loaded'];
+@customElement('sdr-view-emulator')
+export class SdrViewEmulator extends LitElement implements RouterView {
+	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-export interface SdrViewEmulator {
-	file: string,
-	paused: boolean,
-	loaded: boolean
-}
+	@property({ type: Boolean, reflect: true }) declare loaded: boolean;
 
-export class SdrViewEmulator extends SdrComponent {
-	static get observedAttributes() { return watchedAttributes; }
-	static readonly elementName = 'sdr-emulator';
+	@query('#game-canvas') declare private canvas: HTMLCanvasElement;
+	@query('#game-wrapper') declare private gameWrapper: HTMLDivElement;
+	@query('#dpad') declare private dpad: HTMLDivElement;
 
+	@state() declare private open: boolean;
+
+	set paused(newValue: boolean) {
+		if (newValue) {
+			this.#emulator?.pauseMainLoop();
+		} else {
+			this.#emulator?.resumeMainLoop();
+		}
+
+		this.#isPaused = newValue;
+	}
+
+	@state()
+	get paused() {
+		return this.#isPaused;
+	}
+
+	#isPaused = false;
 	#emulator: EmulatorModule | null = null;
-	#canvas: HTMLCanvasElement;
+
 	constructor() {
-		super({
-			name: SdrViewEmulator.elementName,
-			watchedAttributes,
-			props: [
-				{
-					name: 'file',
-					value: (newValue = '') => {
-						this.loaded = false;
-						this.#resetEmulator();
+		super();
 
-						return newValue;
-					},
-					attributeName: 'file'
-				},
-				{
-					name: 'paused',
-					value: (newValue = false) => {
-						const parsedValue = newValue === '' || newValue === true;
-
-						if (parsedValue) {
-							this.#emulator?.pauseMainLoop();
-						} else {
-							this.#emulator?.resumeMainLoop();
-						}
-
-						return parsedValue;
-					},
-					attributeName: 'paused'
-				},
-				{ name: 'loaded', value: false, attributeName: 'loaded' }
-			],
-			handlers: {
-				buttonDown: (evt) => this.#sendKeyEvent('keydown', (evt.target as HTMLButtonElement).dataset.key as string),
-				buttonUp: (evt) => this.#sendKeyEvent('keyup', (evt.target as HTMLButtonElement).dataset.key as string),
-				pause: () => { this.paused = true; },
-				loadGame: async () => this.#loadGame()
-			},
-			template,
-			style
-		});
-
-		this.#canvas = document.createElement('canvas');
-		this.#canvas.id = 'canvas';
-		this.appendChild(this.#canvas);
+		this.open = false;
+		this.#resetEmulator();
 
 		// Avoid unwanted key presses to exit the game.
 		document.addEventListener('keydown', (evt) => {
@@ -163,8 +141,14 @@ export class SdrViewEmulator extends SdrComponent {
 		}, false);
 	}
 
+	#close() {
+		this.open = false;
+
+		void Router.navigate('/');
+	}
+
 	#sendKeyEvent(type: 'keydown' | 'keyup', key: keyof typeof keyMap) {
-		this.#canvas.dispatchEvent(new KeyboardEvent(type, {
+		this.canvas.dispatchEvent(new KeyboardEvent(type, {
 			bubbles: true,
 			cancelable: false,
 			shiftKey: false,
@@ -176,8 +160,8 @@ export class SdrViewEmulator extends SdrComponent {
 	}
 
 	async #addDPadButtons() {
-		const nipplejs = await import('nipplejs');
-		const dpadElement = this.root.querySelector('#dpad') as HTMLDivElement;
+		const nipplejs = (await import('nipplejs')).default;
+		const dpadElement = this.dpad;
 		const { top, left, width, height } = dpadElement.getBoundingClientRect();
 
 		const dpad = nipplejs.create({
@@ -212,7 +196,7 @@ export class SdrViewEmulator extends SdrComponent {
 	}
 
 	#adjustCanvasSize() {
-		const { width, height } = this.root.querySelector('#game-wrapper')?.getBoundingClientRect() ?? { width: 0, height: 0 };
+		const { width, height } = this.gameWrapper.getBoundingClientRect();
 
 		this.#emulator?.setCanvasSize(width, height);
 	}
@@ -225,43 +209,7 @@ export class SdrViewEmulator extends SdrComponent {
 	async #loadEmulatorFiles() {
 		const folderPath = '/home/web_user/retroarch/';
 
-		const mimeTypes = new Map([
-			['png', 'image/png'],
-			['ttf', 'font/ttf'],
-			['cfg', 'text/plain']
-		]);
-
-		let files = await getAllIDBEntries('emulator');
-
-		if (files.length === 0) {
-			const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/bundle.zip`);
-			const fileBlob = await response.blob();
-			const zipFile = new File([fileBlob], 'bundle.zip', { type: 'application/zip' });
-
-			if (!('JSZip' in window)) {
-				await import('jszip');
-			}
-
-			const zip = await JSZip.loadAsync(zipFile);
-
-			for await (const zipObject of Object.values(zip.files)) {
-				if (!zipObject.dir) {
-					const blob = await zipObject.async('blob');
-					const name = zipObject.name.split('/').pop() ?? '';
-					const [extension] = name.split('.').reverse();
-
-					const file = new File([blob], name, { type: mimeTypes.get(extension) ?? 'application/octet-stream' });
-
-					await setIDBItem('emulator', zipObject.name, file);
-				} else {
-					const file = new File([zipObject.name], zipObject.name, { type: 'application/x+directory' });
-
-					await setIDBItem('emulator', zipObject.name, file);
-				}
-			}
-
-			files = await getAllIDBEntries('emulator');
-		}
+		const files = await getEmulatorFiles();
 
 		this.#mkdirTree(folderPath);
 
@@ -276,63 +224,41 @@ export class SdrViewEmulator extends SdrComponent {
 		}
 	}
 
-	async #loadFile() {
-		if (!this.file) {
-			throw new Error(I18n.t`Missing ROM file.`);
-		}
+	async #loadGame(fileId: string) {
+		const materialsFilter = new Map([
+			['GENESIS', 'genesis_plus_gx'],
+			['SEGA-CD', 'genesis_plus_gx'],
+			['SNES', 'snes9x']
+		]);
 
-		const { handler } = await getIDBItemByIndex('files', 'itemId', this.file) ?? {};
+		const romFile = await loadFile(fileId);
 
-		if (!handler || handler.kind !== 'file') {
-			throw new Error(I18n.t`ROM does not exist.`);
-		}
+		const { id } = extractMetadataFromFileName(romFile.name);
 
-		await getFilePermission(handler);
+		const emulator = materialsFilter.get(id) ?? '';
 
-		return handler.getFile();
+		const emulatorImport = await import(/* @vite-ignore */ `${import.meta.env.APP_PUBLIC_URL}lib/webretro/${emulator}_libretro.js`);
+		const emulatorInit = emulatorImport.default as EmulatorInitializerFunction;
+
+		this.#emulator = emulatorInit({
+			canvas: this.canvas,
+			onRuntimeInitialized: async () => {
+				this.#adjustCanvasSize();
+
+				await this.#loadEmulatorFiles();
+
+				const romData = await romFile.arrayBuffer();
+
+				this.#emulator?.FS.writeFile('/rom.bin', new Uint8Array(romData));
+
+				this.#emulator?.callMain(this.#emulator.arguments);
+				this.#adjustCanvasSize();
+
+				this.loaded = true;
+			}
+		});
 	}
 
-	async #loadGame() {
-		try {
-			const materialsFilter = new Map([
-				['GENESIS', 'genesis_plus_gx'],
-				['SEGA-CD', 'genesis_plus_gx'],
-				['SNES', 'snes9x']
-			]);
-
-			const romFile = await this.#loadFile();
-
-			const { id } = extractMetadataFromFileName(romFile.name);
-
-			const emulator = materialsFilter.get(id) ?? '';
-
-			const emulatorImport = await import(/* @vite-ignore */ `${import.meta.env.APP_PUBLIC_URL}lib/webretro/${emulator}_libretro.js`);
-			const emulatorInit = emulatorImport.default as EmulatorInitializerFunction;
-
-			this.#emulator = emulatorInit({
-				canvas: this.#canvas,
-				onRuntimeInitialized: async () => {
-					this.#adjustCanvasSize();
-
-					await this.#loadEmulatorFiles();
-
-					const romData = await romFile.arrayBuffer();
-
-					this.#emulator?.FS.writeFile('/rom.bin', new Uint8Array(romData));
-
-					this.#emulator?.callMain(this.#emulator.arguments);
-					this.#adjustCanvasSize();
-
-					this.loaded = true;
-				}
-			});
-		} catch (err) {
-			(this.root.querySelector('#game-wrapper') as HTMLElement).innerText = err?.message ?? err ?? 'Error';
-		}
-	}
-
-	//@ts-expect-error
-	// eslint-disable-next-line no-unused-private-class-members
 	async #toggleFullScreen() {
 		if (document.fullscreenElement) {
 			await document.exitFullscreen();
@@ -380,28 +306,106 @@ export class SdrViewEmulator extends SdrComponent {
 		this.loaded = false;
 	}
 
-	connectedCallback() {
-		super.connectedCallback();
+	async navigate(destination: RouteLocation<'/cbz/:id'>) {
+		this.#resetEmulator();
+
+		if (!destination.params.id) {
+			return;
+		}
+
+		await this.#loadGame(destination.params.id);
+		this.open = true;
+
+		return 'Emulator';
+	}
+
+	firstUpdated(changedProperties: Map<string, unknown>): void {
+		super.firstUpdated(changedProperties);
 
 		void this.#addDPadButtons();
 	}
 
-	static updateFromURL() {
-		const url = new URL(window.location.toString());
-		const params = new URLSearchParams(url.search);
+	createRenderRoot() {
+		return this;
+	}
 
-		if (params.has('file')) {
-			let emulatorElement = document.querySelector('sdr-emulator');
+	render() {
+		return html`
+			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
+				<sdr-button icon-button slot="title" @click="${() => this.#emulator?._cmd_toggle_menu()}">⚙️</sdr-button>
+				<hr slot="title">
+				<sdr-button icon-button slot="title" @click="${() => { this.paused = true; }}">⏸️</sdr-button>
+				<hr slot="title">
+				<sdr-button icon-button slot="title" @click="${() => this.#loadState()}">⏮️</sdr-button>
+				<sdr-button icon-button slot="title" @click="${() => this.#saveState()}">⏭️</sdr-button>
+				<hr slot="title">
+				<sdr-button icon-button slot="title" @click="${async () => this.#toggleFullScreen()}">🖥️</sdr-button>
 
-			if (!emulatorElement) {
-				emulatorElement = document.createElement('sdr-emulator');
+				<aside class="controller" id="left-controller">
+					<button
+						id="button-select"
 
-				document.body.appendChild(emulatorElement);
-			}
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'select')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'select')}"
+					>Select</button>
+					<button
+						id="button-start"
 
-			emulatorElement.file = params.get('file') as string;
-		}
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'start')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'start')}"
+					>Start</button>
+					<div id="dpad"></div>
+				</aside>
+				<article id="game-wrapper">
+					<div id="game-overlay">
+						<button
+							type="button"
+							id="pause-button"
+
+							@click="${() => { this.paused = true; }}"
+						>▶️</button>
+					</div>
+					<canvas id="game-canvas"></canvas>
+				</article>
+				<aside class="controller" id="right-controller">
+					<button
+						id="bumper-left"
+
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'leftBumper')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'leftBumper')}"
+					>L</button>
+					<button
+						id="bumper-right"
+
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'rightBumper')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'rightBumber')}"
+					>R</button>
+					<button
+						id="button-x"
+
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'x')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'x')}"
+					>X</button>
+					<button
+						id="button-y"
+
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'y')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'y')}"
+					>Y</button>
+					<button
+						id="button-a"
+
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'a')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'a')}"
+					>A</button>
+					<button
+						id="button-b"
+
+						@pointerup="${() => this.#sendKeyEvent('keyup', 'b')}"
+						@pointerdown="${() => this.#sendKeyEvent('keydown', 'b')}"
+					>B</button>
+				</aside>
+			</sdr-dialog>
+		`;
 	}
 }
-
-registerComponent(SdrViewEmulator);
