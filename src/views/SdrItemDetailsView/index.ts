@@ -252,8 +252,8 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		}
 	}
 
-	protected firstUpdated(_changedProperties: Map<PropertyKey, unknown>) {
-		super.firstUpdated(_changedProperties);
+	firstUpdated(changedProperties: Map<string, unknown>) {
+		super.firstUpdated(changedProperties);
 
 		this.renderRoot.querySelectorAll('sdr-edit-list').forEach((list) => {
 			list.addEventListener('itemremoved', (evt) => {
@@ -262,7 +262,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		});
 	}
 
-	protected createRenderRoot() {
+	createRenderRoot() {
 		return this;
 	}
 

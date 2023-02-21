@@ -70,7 +70,7 @@ export class SdrDialog extends LitElement {
 		}
 	}
 
-	protected updated(changedProperties: Map<string, unknown>): void {
+	updated(changedProperties: Map<string, unknown>): void {
 		super.updated(changedProperties);
 
 		if (changedProperties.has('open')) {

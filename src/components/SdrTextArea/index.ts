@@ -91,10 +91,10 @@ export class SdrTextArea extends LitElement {
 		this.value = '';
 	}
 
-	protected updated(_changedProperties: Map<PropertyKey, unknown>) {
-		super.updated(_changedProperties);
+	updated(changedProperties: Map<string, unknown>) {
+		super.updated(changedProperties);
 
-		if (_changedProperties.has('value')) {
+		if (changedProperties.has('value')) {
 			this.renderedTextArea.innerHTML = marked(this.value);
 		}
 	}

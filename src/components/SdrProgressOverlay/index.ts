@@ -63,7 +63,7 @@ export class SdrProgressOverlay extends LitElement {
 		this.open = false;
 	}
 
-	protected updated(changedProperties: Map<string, unknown>): void {
+	updated(changedProperties: Map<string, unknown>): void {
 		super.updated(changedProperties);
 
 		if (changedProperties.has('open')) {

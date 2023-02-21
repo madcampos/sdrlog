@@ -33,7 +33,7 @@ export class SdrViewMain extends LitElement implements RouterView {
 		this.hidden = true;
 	}
 
-	protected createRenderRoot() {
+	createRenderRoot() {
 		return this;
 	}
 
@@ -41,8 +41,8 @@ export class SdrViewMain extends LitElement implements RouterView {
 		this.hidden = false;
 	}
 
-	protected shouldUpdate(_changedProperties: Map<PropertyKey, unknown>): boolean {
-		return this.#hasLoadedData && super.shouldUpdate(_changedProperties);
+	shouldUpdate(changedProperties: Map<string, unknown>) {
+		return this.#hasLoadedData && super.shouldUpdate(changedProperties);
 	}
 
 	render() {
