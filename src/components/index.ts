@@ -7,6 +7,7 @@ import './SdrDropdownItem';
 import './SdrEditBox';
 import './SdrEditList';
 import './SdrEditListItem';
+import './SdrGamepadBadge';
 import './SdrLoader';
 import './SdrMenuBar';
 import './SdrProgressOverlay';

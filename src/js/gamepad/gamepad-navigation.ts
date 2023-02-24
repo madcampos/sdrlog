@@ -180,15 +180,15 @@ function closeCardDetails() {
 	const openDetails = document.querySelector<SdrViewItemDetails>('sdr-item-details[open]');
 
 	if (openDetails) {
-		openDetails.close();
 		gamepadNormalizer.vibrate();
 		resetFocus();
 	}
 }
 
 // TODO: navigate modals, scroll, navigate item-details
+// TODO: move callbacks to the respective components
 
-window.addEventListener('buttondown', (evt) => {
+window.addEventListener('gamepadbuttondown', (evt) => {
 	switch (evt.button) {
 		case 'up':
 			selectCardUp();
@@ -209,7 +209,7 @@ window.addEventListener('buttondown', (evt) => {
 	}
 });
 
-window.addEventListener('stickmove', (evt) => {
+window.addEventListener('gamepadstickmove', (evt) => {
 	switch (evt.direction) {
 		case 'up':
 			selectCardUp();
@@ -230,7 +230,7 @@ window.addEventListener('stickmove', (evt) => {
 	}
 });
 
-window.addEventListener('buttonpress', (evt) => {
+window.addEventListener('gamepadbuttonpress', (evt) => {
 	switch (evt.button) {
 		case 'y':
 			activateSearch();
