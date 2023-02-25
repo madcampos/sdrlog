@@ -1,7 +1,7 @@
 import type { Material, NewMaterial, SDRLogData } from '../../data/data';
 import { I18n } from '../intl/translations';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllIDBValues, setIDBItem, setIDBItems } from './idb-persistence';
+import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
 import { getFileHash } from '../files/file-import';
 
 import dataUrl from '../../data/data.json?url';
@@ -78,10 +78,12 @@ export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) 
 
 	await setIDBItem('items', id, materialToSave);
 
-	// TODO: Remove old files
-
 	for await (const file of files ?? []) {
-		await setIDBItem('files', undefined, file);
+		const existingFile = await getIDBItemByIndex('files', 'hash', file.hash);
+
+		if (!existingFile) {
+			await setIDBItem('files', undefined, file);
+		}
 	}
 
 	if (cover) {
