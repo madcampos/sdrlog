@@ -1,27 +1,28 @@
-type ButtonNames = 'a' | 'b' | 'x' | 'y' | 'leftBumper' | 'rightBumper' | 'leftTrigger' | 'rightTrigger' | 'select' | 'start' | 'leftStick' | 'rightStick' | 'up' | 'down' | 'left' | 'right' | 'logo';
+type ButtonNames = 'a' | 'b' | 'x' | 'y' | 'leftBumper' | 'rightBumper' | 'leftTrigger' | 'rightTrigger' | 'select' | 'start' | 'leftStick' | 'rightStick' | 'up' | 'down' | 'left' | 'right' | 'logo' | 'share';
 
-export declare class GamepadButtonEvent<T = 'buttondown' | 'buttonup' | 'buttonpress'> extends CustomEvent<T> {
-	button: ButtonNames;
+interface GamepadButtonEventDetail {
+	button: ButtonNames
 }
 
-type StickDirection = 'up' | 'down' | 'left' | 'right';
-
-export declare class GamepadStickEvent extends CustomEvent<'stickmove'> {
-	direction: StickDirection;
-	delta: number;
+interface GamepadStickEventDetail {
+	stick: 'left' | 'right',
+	directionX?: 'left' | 'right',
+	directionY?: 'up' | 'down',
+	deltaX: number,
+	deltaY: number
 }
 
 declare global {
 	interface WindowEventMap {
-		['gamepadbuttondown']: GamepadButtonEvent<'buttondown'>,
-		['gamepadbuttonup']: GamepadButtonEvent<'buttonup'>,
-		['gamepadbuttonpress']: GamepadButtonEvent<'buttonpress'>,
-		['gamepadstickmove']: GamepadStickEvent
+		['gamepadbuttondown']: CustomEvent<GamepadButtonEventDetail>,
+		['gamepadbuttonup']: CustomEvent<GamepadButtonEventDetail>,
+		['gamepadbuttonpress']: CustomEvent<GamepadButtonEventDetail>,
+		['gamepadstickmove']: CustomEvent<GamepadStickEventDetail>
 	}
 }
 
-export class GamepadEventNormalizer extends EventTarget {
-	#buttonsPressed: Record<ButtonNames, boolean> = {
+export class GamepadHandler extends EventTarget {
+	static #buttonsPressed: Record<ButtonNames, boolean> = {
 		a: false,
 		b: false,
 		x: false,
@@ -38,32 +39,105 @@ export class GamepadEventNormalizer extends EventTarget {
 		down: false,
 		left: false,
 		right: false,
-		logo: false
+		logo: false,
+		share: false
 	};
 
-	#timestamp = 0;
+	static #timestamp = 0;
 
-	constructor(callback?: () => void) {
-		super();
-
+	static init(callback?: () => void) {
 		window.addEventListener('gamepadconnected', () => {
-			this.#timestamp = performance.now();
+			GamepadHandler.#timestamp = performance.now();
 
-			this.#updateLoop();
+			GamepadHandler.#updateLoop();
 
 			callback?.();
 		});
 	}
 
-	#updateLoop() {
-		this.#triggerEvents();
+	static #updateLoop() {
+		GamepadHandler.#triggerEvents();
 
 		window.requestAnimationFrame(() => {
-			this.#updateLoop();
+			GamepadHandler.#updateLoop();
 		});
 	}
 
-	vibrate(time = 100, weakIntensity = 0.4, strongIntentisy = 0) {
+	static #triggerStickEvents(stick: 'left' | 'right', x: number, y: number) {
+		const DEADZONE_TRESHOLD = 0.2;
+
+		window.dispatchEvent(new CustomEvent<GamepadStickEventDetail>('gamepadstickmove', {
+			bubbles: true,
+			composed: true,
+			cancelable: true,
+			detail: {
+				// eslint-disable-next-line no-nested-ternary
+				directionX: x > DEADZONE_TRESHOLD ? 'right' : x < -DEADZONE_TRESHOLD ? 'left' : undefined,
+				// eslint-disable-next-line no-nested-ternary
+				directionY: y > DEADZONE_TRESHOLD ? 'down' : y < -DEADZONE_TRESHOLD ? 'up' : undefined,
+				deltaX: x,
+				deltaY: y,
+				stick
+			}
+		}));
+	}
+
+	static #triggerButtonEvents(buttonName: ButtonNames, isButtonDown: boolean) {
+		const wasButtonDown = GamepadHandler.#buttonsPressed[buttonName];
+
+		if (isButtonDown) {
+			GamepadHandler.#buttonsPressed[buttonName] = true;
+
+			window.dispatchEvent(new CustomEvent<GamepadButtonEventDetail>('gamepadbuttondown', {
+				bubbles: true,
+				composed: true,
+				cancelable: true,
+				detail: { button: buttonName }
+			}));
+		}
+
+		if (wasButtonDown && !isButtonDown) {
+			GamepadHandler.#buttonsPressed[buttonName] = false;
+
+			window.dispatchEvent(new CustomEvent<GamepadButtonEventDetail>('gamepadbuttonup', {
+				bubbles: true,
+				composed: true,
+				cancelable: true,
+				detail: { button: buttonName }
+			}));
+
+			window.dispatchEvent(new CustomEvent<GamepadButtonEventDetail>('gamepadbuttonpress', {
+				bubbles: true,
+				composed: true,
+				cancelable: true,
+				detail: { button: buttonName }
+			}));
+		}
+	}
+
+	static #triggerEvents() {
+		const THROTTLE_TIME = 100;
+
+		const [gamepad] = navigator.getGamepads();
+		const currentTimestamp = performance.now();
+
+		if (gamepad && currentTimestamp - GamepadHandler.#timestamp > THROTTLE_TIME) {
+			GamepadHandler.#timestamp = currentTimestamp;
+
+			const [leftX, leftY, rightX, rightY] = gamepad.axes;
+
+			GamepadHandler.#triggerStickEvents('left', leftX, leftY);
+			GamepadHandler.#triggerStickEvents('right', rightX, rightY);
+
+			(Object.keys(GamepadHandler.#buttonsPressed) as ButtonNames[]).forEach((buttonName, i) => {
+				const isButtonDown = gamepad.buttons[i]?.pressed;
+
+				GamepadHandler.#triggerButtonEvents(buttonName, isButtonDown);
+			});
+		}
+	}
+
+	static vibrate(time = 100, weakIntensity = 0.4, strongIntentisy = 0) {
 		const [gamepad] = navigator.getGamepads();
 
 		gamepad?.vibrationActuator?.playEffect('dual-rumble', {
@@ -74,88 +148,15 @@ export class GamepadEventNormalizer extends EventTarget {
 		});
 	}
 
-	#triggerEvents() {
-		const DEADZONE_TRESHOLD = 0.2;
-		const THROTTLE_TIME = 128;
+	static shortVibration() {
+		GamepadHandler.vibrate();
+	}
 
-		const [gamepad] = navigator.getGamepads();
-		const currentTimestamp = performance.now();
+	static longVibration() {
+		const ACTIVATION_TIME = 300;
+		const ACTIVATION_WEAK_VIBRATE = 0.8;
+		const ACTIVATION_STRONG_VIBRATE = 0.2;
 
-		if (gamepad && currentTimestamp - this.#timestamp > THROTTLE_TIME) {
-			this.#timestamp = currentTimestamp;
-
-			const [leftX, leftY] = gamepad.axes;
-
-			if (leftX < -DEADZONE_TRESHOLD) {
-				// @ts-expect-error
-				const stickEvent: GamepadStickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
-
-				stickEvent.direction = 'left';
-				stickEvent.delta = leftX;
-
-				window.dispatchEvent(stickEvent);
-			}
-
-			if (leftX > DEADZONE_TRESHOLD) {
-				// @ts-expect-error
-				const stickEvent: GamepadStickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
-
-				stickEvent.direction = 'right';
-				stickEvent.delta = leftX;
-
-				window.dispatchEvent(stickEvent);
-			}
-
-			if (leftY < -DEADZONE_TRESHOLD) {
-				// @ts-expect-error
-				const stickEvent: GamepadStickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
-
-				stickEvent.direction = 'up';
-				stickEvent.delta = leftY;
-
-				window.dispatchEvent(stickEvent);
-			}
-
-			if (leftY > DEADZONE_TRESHOLD) {
-				// @ts-expect-error
-				const stickEvent: GamepadStickEvent = new CustomEvent('stickmove', { bubbles: true, composed: true, cancelable: true });
-
-				stickEvent.direction = 'down';
-				stickEvent.delta = leftY;
-
-				window.dispatchEvent(stickEvent);
-			}
-
-			(Object.keys(this.#buttonsPressed) as ButtonNames[]).forEach((buttonName, i) => {
-				const wasButtonDown = this.#buttonsPressed[buttonName];
-				const isButtonDown = gamepad.buttons[i]?.pressed;
-
-				if (isButtonDown) {
-					this.#buttonsPressed[buttonName] = true;
-
-					// @ts-expect-error
-					const buttonDownEvent: GamepadButtonEvent<'buttondown'> = new CustomEvent('buttondown', { bubbles: true, composed: true, cancelable: true });
-
-					buttonDownEvent.button = buttonName;
-					window.dispatchEvent(buttonDownEvent);
-				}
-
-				if (wasButtonDown && !isButtonDown) {
-					this.#buttonsPressed[buttonName] = false;
-
-					// @ts-expect-error
-					const buttonUpEvent: GamepadButtonEvent<'buttonup'> = new CustomEvent('buttonup', { bubbles: true, composed: true, cancelable: true });
-
-					buttonUpEvent.button = buttonName;
-					window.dispatchEvent(buttonUpEvent);
-
-					// @ts-expect-error
-					const buttonPressEvent: GamepadButtonEvent<'buttonpress'> = new CustomEvent('buttonpress', { bubbles: true, composed: true, cancelable: true });
-
-					buttonPressEvent.button = buttonName;
-					window.dispatchEvent(buttonPressEvent);
-				}
-			});
-		}
+		GamepadHandler.vibrate(ACTIVATION_TIME, ACTIVATION_WEAK_VIBRATE, ACTIVATION_STRONG_VIBRATE);
 	}
 }

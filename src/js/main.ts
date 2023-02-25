@@ -27,7 +27,11 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 	updateLoadStatus(I18n.t`Loading components...`);
 	await import('../components');
-	await import('./gamepad/gamepad-navigation');
+	const { GamepadHandler } = await import('./gamepad/gamepad-events');
+
+	GamepadHandler.init(() => {
+		document.querySelector('sdr-card')?.focus();
+	});
 
 	updateLoadStatus(I18n.t`Loading router...`);
 	await import('../router');
