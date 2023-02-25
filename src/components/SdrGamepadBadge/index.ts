@@ -29,13 +29,13 @@ export class SdrGamepadBadge extends LitElement {
 		});
 
 		window.addEventListener('gamepadbuttondown', (evt) => {
-			if (evt.button === this.button) {
+			if (evt.detail.button === this.button) {
 				this.isPressed = true;
 			}
 		});
 
 		window.addEventListener('gamepadbuttonup', (evt) => {
-			if (evt.button === this.button) {
+			if (evt.detail.button === this.button) {
 				this.isPressed = false;
 			}
 		});
