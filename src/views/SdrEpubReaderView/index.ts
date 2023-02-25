@@ -30,6 +30,8 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 
 		this.open = false;
 		this.#resetBook();
+
+		// TODO: add gamepad navigation
 	}
 
 	#close() {

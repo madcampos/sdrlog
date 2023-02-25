@@ -23,6 +23,8 @@ export class SdrViewAppInfo extends LitElement implements RouterView {
 		registerShortcut('i', () => {
 			this.open = !this.open;
 		});
+
+		// TODO: add gamepad navigation
 	}
 
 	#close() {

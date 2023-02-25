@@ -40,6 +40,8 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		super();
 
 		this.resetMaterial();
+
+		// TODO: add gamepad navigation
 	}
 
 	#updateInputValue(evt: Event, prop: 'category' | 'type' | 'name' | 'description' | 'edition' | 'gameDate' | 'status' | 'originalLanguage' | 'notes') {

@@ -81,6 +81,8 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 				this.renderRoot.querySelector('article')?.scrollBy({ left: evt.deltaY, behavior: 'smooth' });
 			}
 		}, { capture: false, passive: false });
+
+		// TODO: add gamepad navigation
 	}
 
 	#close() {

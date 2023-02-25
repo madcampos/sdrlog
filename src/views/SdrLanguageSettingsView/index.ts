@@ -22,6 +22,8 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 		registerShortcut('l', () => {
 			this.open = !this.open;
 		});
+
+		// TODO: add gamepad navigation
 	}
 
 	async #changeLanguage(event: Event) {

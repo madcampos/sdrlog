@@ -110,6 +110,8 @@ export class SdrViewMain extends LitElement implements RouterView {
 			{ icon: '🕹️', label: 'Open Emulator', action: async () => Router.navigate('/emulator/test') },
 			{ icon: '📖', label: 'Open Epub reader', action: async () => Router.navigate('/epub/test') }
 		];
+
+		// TODO: add gamepad scrolling
 	}
 
 	createRenderRoot() {
