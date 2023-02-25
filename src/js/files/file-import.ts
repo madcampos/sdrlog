@@ -1,7 +1,7 @@
 import type { FileForMaterial } from '../../data/data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getIDBItem, setIDBItem } from '../data/idb-persistence';
+import { getIDBItem, getIDBItemByIndex, setIDBItem } from '../data/idb-persistence';
 import { I18n } from '../intl/translations';
 
 export async function getFileHash(dataToHash: ArrayBuffer | string) {
@@ -69,7 +69,11 @@ export async function saveFile(handler: FileSystemFileHandle | FileSystemDirecto
 		}
 	}
 
-	await setIDBItem('files', undefined, fileForMaterial);
+	const existingFile = await getIDBItemByIndex('files', 'hash', fileForMaterial.hash);
+
+	if (!existingFile) {
+		await setIDBItem('files', undefined, fileForMaterial);
+	}
 
 	return fileForMaterial;
 }
@@ -119,13 +123,23 @@ export async function readFiles() {
 			startIn: 'downloads'
 		});
 
-		const dirHash = await getFileHash('/');
+		const isPermissionGranted = await getFilePermission(dir);
 
-		await setIDBItem('files', undefined, {
-			filePath: '/',
-			handler: dir,
-			hash: dirHash
-		});
+		if (!isPermissionGranted) {
+			throw new Error('Permission denied.');
+		}
+
+		const existingDir = await getIDBItemByIndex('files', 'filePath', '/');
+
+		if (!existingDir) {
+			const dirHash = await getFileHash('/');
+
+			await setIDBItem('files', undefined, {
+				filePath: '/',
+				handler: dir,
+				hash: dirHash
+			});
+		}
 
 		const entries = await readDir(dir, '');
 
