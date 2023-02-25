@@ -106,10 +106,13 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 	#resetBook() {
 		this.loaded = false;
 
+		this.toc = [];
+		this.selectedPage = '';
+		this.nextPageVisibility = 'hidden';
+		this.previousPageVisibility = 'hidden';
+
 		this.#rendition?.destroy();
 		this.#rendition = undefined;
-
-		this.renderArea.innerHTML = '';
 	}
 
 	async showNextPage() {
@@ -122,6 +125,7 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 
 	async navigate(destination: RouteLocation<'/epub/:id'>) {
 		this.#resetBook();
+		this.renderArea.innerHTML = '';
 
 		if (!destination.params.id) {
 			return;
