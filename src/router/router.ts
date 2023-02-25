@@ -53,6 +53,10 @@ export class Router {
 	static #currentPath = '';
 	static #currentLocation: RouteLocation;
 
+	static get currentPath() {
+		return this.#currentPath;
+	}
+
 	static get selectorAttribute() {
 		return this.#selectorAttribute;
 	}
@@ -85,17 +89,19 @@ export class Router {
 
 	static async navigate(path: string) {
 		try {
-			if (Router.#currentPath === path) {
+			const normalizedPath = new URL(path, Router.#baseUrl).pathname;
+
+			if (Router.#currentPath === normalizedPath) {
 				return;
 			}
 
-			const guardResult = await Router.#beforeEach?.(this.#currentPath, path);
+			const guardResult = await Router.#beforeEach?.(this.#currentPath, normalizedPath);
 
 			if (guardResult === false) {
 				return;
 			}
 
-			const pathToSearch = guardResult?.path ?? path;
+			const pathToSearch = guardResult?.path ?? normalizedPath;
 
 			const [matcher, view] = Router.#routes.find(([pattern]) => pattern.test(pathToSearch, this.#baseUrl)) ?? [];
 
@@ -115,7 +121,7 @@ export class Router {
 				Router.#currentLocation = destination;
 				/* eslint-enable require-atomic-updates */
 
-				window.history.pushState(null, '', path);
+				window.history.pushState(null, '', normalizedPath);
 
 				if (title) {
 					window.document.title = `${title} · ${import.meta.env.APP_NAME}`;
@@ -133,7 +139,7 @@ export class Router {
 
 		const currentMatcher = Router.#fallbackPattern.exec(window.location.href, Router.#baseUrl);
 
-		Router.#currentPath = currentMatcher?.pathname.input ?? '';
+		Router.#currentPath = '';
 		Router.#currentLocation = {
 			path: Router.#currentPath,
 			params: currentMatcher?.pathname.groups ?? {},
