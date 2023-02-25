@@ -17,7 +17,7 @@ button {
 	-webkit-app-region: no-drag;
 }
 
-button:focus {
+:host(:focus-within) button {
 	border-color: var(--accent-color);
 	outline: none;
 }

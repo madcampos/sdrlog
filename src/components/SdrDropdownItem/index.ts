@@ -8,6 +8,7 @@ import style from './style.css?inline' assert { type: 'css' };
 @customElement('sdr-dropdown-item')
 export class SdrDropdownItem extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static formAssociated = true;
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare icon: string;

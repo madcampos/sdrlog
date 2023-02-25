@@ -9,6 +9,7 @@ import style from './style.css?inline' assert { type: 'css' };
 @customElement('sdr-search-box')
 export class SdrSearchBox extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static formAssociated = true;
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;

@@ -22,6 +22,7 @@ interface CreateCardOptions {
 @customElement('sdr-card')
 export class SdrCard extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static formAssociated = true;
 	static styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare id: string;
