@@ -30,7 +30,7 @@ export class SdrViewMain extends LitElement implements RouterView {
 		super();
 
 		this.cards = [];
-		this.hidden = true;
+		this.hidden = false;
 	}
 
 	createRenderRoot() {
