@@ -14,6 +14,35 @@ export class SdrDialog extends LitElement {
 	@queryAssignedElements({ slot: 'trigger' }) private declare triggerElements: (HTMLElement | undefined)[];
 	@queryAssignedElements({ slot: 'footer' }) private declare footerElements: HTMLElement[];
 
+	constructor() {
+		super();
+
+		window.addEventListener('keydown', (evt) => {
+			if (evt.key === 'Escape' && this.open) {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				this.close();
+
+				window.requestAnimationFrame(() => {
+					document.querySelector('sdr-card')?.focus();
+				});
+			}
+		});
+
+		window.addEventListener('gamepadbuttonpress', (evt) => {
+			if (evt.detail.button === 'b' && this.open) {
+				evt.stopPropagation();
+
+				this.close();
+
+				window.requestAnimationFrame(() => {
+					document.querySelector('sdr-card')?.focus();
+				});
+			}
+		});
+	}
+
 	#clickDialog(evt: MouseEvent) {
 		const target = evt.target as HTMLDialogElement;
 
@@ -48,15 +77,6 @@ export class SdrDialog extends LitElement {
 
 	connectedCallback() {
 		super.connectedCallback();
-
-		window.addEventListener('keydown', (evt) => {
-			if (evt.key === 'Escape' && this.open) {
-				evt.preventDefault();
-				evt.stopPropagation();
-
-				this.close();
-			}
-		});
 
 		const [triggerElement] = this.triggerElements;
 

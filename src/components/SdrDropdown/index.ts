@@ -4,6 +4,8 @@ import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query, queryAssignedElements } from 'lit/decorators.js';
 
 import style from './style.css?inline' assert { type: 'css' };
+import { GamepadHandler } from '../../js/gamepad/gamepad-events';
+import { Router } from '../../router/router';
 
 @customElement('sdr-dropdown')
 export class SdrDropdown extends LitElement {
@@ -12,6 +14,7 @@ export class SdrDropdown extends LitElement {
 
 	@property({ type: String, reflect: true }) declare icon: string;
 	@property({ type: Boolean, reflect: true }) declare open: boolean;
+	@property({ type: String, reflect: true, attribute: 'trigger-button' }) declare triggerButton: string;
 
 	@query('dialog') private declare dialog: HTMLDialogElement;
 
@@ -22,6 +25,70 @@ export class SdrDropdown extends LitElement {
 
 		this.icon = '';
 		this.open = false;
+		this.triggerButton = '';
+
+		window.addEventListener('keydown', (evt) => {
+			if (evt.key === 'Escape' && this.open) {
+				evt.preventDefault();
+				evt.stopPropagation();
+
+				this.close();
+
+				window.requestAnimationFrame(() => {
+					document.querySelector('sdr-card')?.focus();
+				});
+			}
+		});
+
+		window.addEventListener('gamepadbuttonpress', (evt) => {
+			if (Router.currentPath === '/' && !this.open && evt.detail.button === this.triggerButton) {
+				evt.stopPropagation();
+
+				this.show();
+
+				window.requestAnimationFrame(() => {
+					this.items[0]?.focus();
+					GamepadHandler.shortVibration();
+				});
+			}
+
+			if (this.open && evt.detail.button === 'b') {
+				evt.stopPropagation();
+
+				this.close();
+
+				window.requestAnimationFrame(() => {
+					document.querySelector('sdr-card')?.focus();
+					GamepadHandler.shortVibration();
+				});
+			}
+
+			if (this.open && (evt.detail.button === 'up' || evt.detail.button === 'left')) {
+				evt.stopPropagation();
+
+				this.#focusPrevious();
+			}
+
+			if (this.open && (evt.detail.button === 'down' || evt.detail.button === 'right')) {
+				evt.stopPropagation();
+
+				this.#focusNext();
+			}
+		});
+
+		window.addEventListener('gamepadstickmove', (evt) => {
+			if (this.open && (evt.detail.directionY === 'up' || evt.detail.directionX === 'left')) {
+				evt.stopPropagation();
+
+				this.#focusPrevious();
+			}
+
+			if (this.open && (evt.detail.directionY === 'down' || evt.detail.directionX === 'right')) {
+				evt.stopPropagation();
+
+				this.#focusNext();
+			}
+		});
 	}
 
 	toggle() {
@@ -52,39 +119,41 @@ export class SdrDropdown extends LitElement {
 
 		this.open = true;
 
+		window.requestAnimationFrame(() => {
+			this.items[0]?.focus();
+		});
+
 		this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 	}
 
-	focusNext() {
-		if (document.activeElement && this.items.length > 0) {
-			if (document.activeElement.parentElement !== this) {
-				this.items[0].focus();
-			} else {
-				const index = this.items.findIndex((i) => i === document.activeElement);
+	#focusNext() {
+		const selectedIndex = this.items.findIndex((i) => i === document.activeElement);
+		let nextIndex = selectedIndex + 1;
 
-				if (index + 1 === this.items.length) {
-					this.items[0].focus();
-				} else {
-					this.items[index + 1].focus();
-				}
-			}
+		if (nextIndex === this.items.length) {
+			nextIndex = 0;
 		}
+
+		if (this.items[nextIndex].separator) {
+			nextIndex += 1;
+		}
+
+		this.items[nextIndex]?.focus();
 	}
 
-	focusPrevious() {
-		if (document.activeElement && this.items.length > 0) {
-			if (document.activeElement.parentElement !== this) {
-				this.items[0].focus();
-			} else {
-				const index = this.items.findIndex((i) => i === document.activeElement);
+	#focusPrevious() {
+		const selectedIndex = this.items.findIndex((i) => i === document.activeElement);
+		let nextIndex = selectedIndex - 1;
 
-				if (index - 1 < 0) {
-					this.items[this.items.length - 1].focus();
-				} else {
-					this.items[index - 1].focus();
-				}
-			}
+		if (nextIndex < 0) {
+			nextIndex = this.items.length - 1;
 		}
+
+		if (this.items[nextIndex].separator) {
+			nextIndex -= 1;
+		}
+
+		this.items[nextIndex]?.focus();
 	}
 
 	connectedCallback() {

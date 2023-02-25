@@ -8,6 +8,7 @@ import { FALLBACK_COVER, getThumbUrl, LOADING_SIMPLE_COVER } from '../../js/cove
 import { getIDBItem } from '../../js/data/idb-persistence';
 
 import style from './style.css?inline' assert { type: 'css' };
+import { GamepadHandler } from '../../js/gamepad/gamepad-events';
 
 interface CreateCardOptions {
 	name: string,
@@ -46,6 +47,32 @@ export class SdrCard extends LitElement {
 		this.edition = edition ?? 0 as Material['edition'];
 		this.status = status ?? '' as Material['status'];
 		this.thumbUrl = LOADING_SIMPLE_COVER;
+
+		window.addEventListener('gamepadbuttondown', (evt) => {
+			if (document.activeElement === this && evt.detail.button === 'left') {
+				evt.stopPropagation();
+				this.#selectPreviousCard();
+			}
+
+			if (document.activeElement === this && evt.detail.button === 'right') {
+				evt.stopPropagation();
+				this.#selectNextCard();
+			}
+
+			if (document.activeElement === this && evt.detail.button === 'down') {
+				// TODO: implement
+				// 1. Get main element width and divide by this element width to get the number of columns
+				// 2. Then get this element column number.
+				// 3. Then get the nth element of the next row and focus it.
+			}
+		});
+
+		window.addEventListener('gamepadbuttonpress', (evt) => {
+			if (document.activeElement === this && evt.detail.button === 'a') {
+				GamepadHandler.longVibration();
+				void Router.navigate(`/item/${this.id}`);
+			}
+		});
 	}
 
 	#handleKeyboardNavigation(evt: KeyboardEvent) {
@@ -53,7 +80,31 @@ export class SdrCard extends LitElement {
 			evt.preventDefault();
 			evt.stopPropagation();
 
-			this.click();
+			void Router.navigate(`/item/${this.id}`);
+		}
+	}
+
+	#selectNextCard() {
+		if (this.nextElementSibling) {
+			window.requestAnimationFrame(() => {
+				(this.nextElementSibling as SdrCard).focus();
+			});
+		} else {
+			window.requestAnimationFrame(() => {
+				document.querySelector('sdr-card')?.focus();
+			});
+		}
+	}
+
+	#selectPreviousCard() {
+		if (this.previousElementSibling) {
+			window.requestAnimationFrame(() => {
+				(this.previousElementSibling as SdrCard).focus();
+			});
+		} else {
+			window.requestAnimationFrame(() => {
+				this.parentElement?.querySelector('sdr-card:last-child')?.focus();
+			});
 		}
 	}
 
@@ -86,7 +137,7 @@ export class SdrCard extends LitElement {
 				role="listitem"
 
 				@click=${async () => Router.navigate(`/item/${this.id}`)}
-				@keyup=${(evt: KeyboardEvent) => this.#handleKeyboardNavigation(evt)}
+				@keydown=${(evt: KeyboardEvent) => this.#handleKeyboardNavigation(evt)}
 			>
 				<img
 					decoding="async"

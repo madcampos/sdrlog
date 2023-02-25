@@ -1,7 +1,9 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
+import { GamepadHandler } from '../../js/gamepad/gamepad-events';
 
 import { registerShortcut } from '../../js/util/keyboard';
+import { Router } from '../../router/router';
 import { SearchEngine } from './search-engine';
 
 import style from './style.css?inline' assert { type: 'css' };
@@ -27,7 +29,26 @@ export class SdrSearchBox extends LitElement {
 			}
 		});
 
+		// TODO: review this
 		this.value = SearchEngine.updateFromURL();
+
+		window.addEventListener('gamepadbuttonpress', (evt) => {
+			if (Router.currentPath === '/' && evt.detail.button === 'y') {
+				evt.stopPropagation();
+
+				this.input.focus();
+				GamepadHandler.longVibration();
+			}
+
+			if (document.activeElement === this && evt.detail.button === 'b') {
+				evt.stopPropagation();
+
+				document.querySelector('sdr-card')?.focus();
+				GamepadHandler.shortVibration();
+			}
+
+			// TODO: add gamepad and keyboard support for search suggestions
+		});
 	}
 
 	#updateSuggestions() {

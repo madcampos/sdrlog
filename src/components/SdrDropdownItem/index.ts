@@ -4,6 +4,7 @@ import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 
 import style from './style.css?inline' assert { type: 'css' };
+import { GamepadHandler } from '../../js/gamepad/gamepad-events';
 
 @customElement('sdr-dropdown-item')
 export class SdrDropdownItem extends LitElement {
@@ -21,6 +22,19 @@ export class SdrDropdownItem extends LitElement {
 
 		this.icon = '';
 		this.separator = false;
+
+		window.addEventListener('gamepadbuttonpress', (evt) => {
+			if (document.activeElement === this && evt.detail.button === 'a') {
+				evt.stopPropagation();
+
+				this.button.click();
+
+				window.requestAnimationFrame(() => {
+					document.querySelector('sdr-card')?.focus();
+					GamepadHandler.longVibration();
+				});
+			}
+		});
 	}
 
 	render() {
