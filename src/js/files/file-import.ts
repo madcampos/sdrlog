@@ -131,7 +131,7 @@ export async function readFiles() {
 
 		progressOverlay.total = entries.length;
 		for await (const { entry, path } of entries) {
-			progressOverlay.increment();
+			progressOverlay.increment(entry.name);
 
 			await saveFile(entry, path);
 		}

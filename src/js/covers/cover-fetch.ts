@@ -49,7 +49,7 @@ export async function extractCoversFromFiles() {
 		progressOverlay.total = files.length;
 
 		for await (const file of files) {
-			progressOverlay.increment();
+			progressOverlay.increment(file.fileName);
 
 			if (file.handler.kind !== 'file') {
 				continue;
@@ -108,7 +108,7 @@ export async function importCoversFromFolder() {
 		progressOverlay.total = files.length;
 
 		for await (const file of files) {
-			progressOverlay.increment();
+			progressOverlay.increment(file.name);
 
 			const canSaveCover = await canImportCover(file, true);
 

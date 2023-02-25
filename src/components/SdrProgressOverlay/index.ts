@@ -51,8 +51,11 @@ export class SdrProgressOverlay extends LitElement {
 		this.count = '';
 	}
 
-	increment() {
+	increment(info?: string) {
 		this.value += 1;
+
+		this.count = `${this.value} / ${this.total}`;
+		this.info = info ?? '';
 	}
 
 	show() {

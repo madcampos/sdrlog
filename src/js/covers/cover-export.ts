@@ -15,7 +15,7 @@ export async function saveCoversToFolder() {
 		progressOverlay.total = covers.length;
 
 		for await (const cover of covers) {
-			progressOverlay.increment();
+			progressOverlay.increment(cover.name);
 
 			try {
 				// Will error out if the file doesn't exist
@@ -50,7 +50,7 @@ export async function saveThumbsToFolder() {
 		progressOverlay.total = thumbs.length;
 
 		for await (const thumb of thumbs) {
-			progressOverlay.increment();
+			progressOverlay.increment(thumb.name);
 
 			try {
 				// Will error out if the file doesn't exist
