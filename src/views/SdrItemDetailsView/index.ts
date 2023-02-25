@@ -174,6 +174,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 				});
 
 				// TODO: add card to the correct place
+				console.log(card);
 			}
 
 			window.history.pushState(null, `${this.material.name} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}#${id}`);
@@ -277,6 +278,17 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 					</sdr-drop-area>
 
 					<sdr-tabs>
+						<sdr-tab slot="tab">$t{Description}</sdr-tab>
+						<sdr-tab-panel slot="tabpanel">
+							<sdr-textarea id="notes" ?disabled="${this.isDisplaying}" value="${this.material.notes ?? ''}" @input="${(evt: Event) => this.#updateInputValue(evt, 'notes')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'notes')}">
+								<span slot="label">$t{Notes}</span>
+							</sdr-textarea>
+
+							<sdr-textarea id="description" required ?disabled="${this.isDisplaying}" value="${this.material.description}" @input="${(evt: Event) => this.#updateInputValue(evt, 'description')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'description')}">
+								<span slot="label">$t{Description}</span>
+							</sdr-textarea>
+						</sdr-tab-panel>
+
 						<sdr-tab slot="tab">$t{Info}</sdr-tab>
 						<sdr-tab-panel slot="tabpanel">
 							<sdr-edit-list id="sku" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'sku')}">
@@ -399,17 +411,6 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 									</sdr-edit-list-item>
 								`)}
 							</sdr-edit-list>
-						</sdr-tab-panel>
-
-						<sdr-tab slot="tab">$t{Notes}</sdr-tab>
-						<sdr-tab-panel slot="tabpanel">
-							<sdr-textarea id="notes" ?disabled="${this.isDisplaying}" value="${this.material.notes ?? ''}" @input="${(evt: Event) => this.#updateInputValue(evt, 'notes')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'notes')}">
-								<span slot="label">$t{Notes}</span>
-							</sdr-textarea>
-
-							<sdr-textarea id="description" required ?disabled="${this.isDisplaying}" value="${this.material.description}" @input="${(evt: Event) => this.#updateInputValue(evt, 'description')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'description')}">
-								<span slot="label">$t{Description}</span>
-							</sdr-textarea>
 						</sdr-tab-panel>
 					</sdr-tabs>
 				</div>

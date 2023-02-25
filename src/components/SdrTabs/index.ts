@@ -166,6 +166,12 @@ export class SdrTabs extends LitElement {
 		}
 	}
 
+	firstUpdated(changedProperties: Map<string, unknown>) {
+		super.firstUpdated(changedProperties);
+
+		this.#updateTabs();
+	}
+
 	render() {
 		return html`
 			<div id="tabs">
