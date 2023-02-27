@@ -37,7 +37,8 @@ export default defineConfig(({ mode }) => {
 	};
 
 	const manifest = {
-		id: 'fff096ca-41fa-41ca-bf0d-657154e0c1af',
+		id: env.APP_PUBLIC_URL,
+		scope: env.APP_PUBLIC_URL,
 		name: env.APP_NAME,
 		short_name: env.APP_SHORT_NAME,
 		lang: 'en-US',
@@ -107,6 +108,7 @@ export default defineConfig(({ mode }) => {
 				minify: true,
 				includeAssets: ['/icons/favicon.svg'],
 				manifest: manifest as Partial<ManifestOptions>,
+				scope: env.APP_PUBLIC_URL,
 				workbox: {
 					cleanupOutdatedCaches: true,
 					clientsClaim: true,
@@ -135,6 +137,7 @@ export default defineConfig(({ mode }) => {
 				}
 			})
 		],
+		base: env.APP_PUBLIC_URL,
 		envPrefix: 'APP_',
 		envDir: '../',
 		root: 'src',
