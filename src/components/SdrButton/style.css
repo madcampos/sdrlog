@@ -1,4 +1,6 @@
 button {
+	position: relative;
+
 	background: transparent;
 	border: solid var(--border-width) transparent;
 	border-radius: var(--border-radius);
@@ -20,6 +22,10 @@ button {
 :host(:focus-within) button {
 	border-color: var(--accent-color);
 	outline: none;
+}
+
+:host(:not(:focus-within):not([keep-trigger-button])) sdr-gamepad-badge {
+	display: none;
 }
 
 button:active {

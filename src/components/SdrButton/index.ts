@@ -11,6 +11,7 @@ export class SdrButton extends LitElement {
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
 	@property({ type: String, reflect: true }) declare icon: string;
+	@property({ type: String, reflect: true, attribute: 'trigger-button' }) declare triggerButton?: string;
 
 	@query('button') private declare button: HTMLButtonElement;
 
@@ -31,6 +32,7 @@ export class SdrButton extends LitElement {
 				<span id="button-text">
 					<slot></slot>
 				</span>
+				<sdr-gamepad-badge button="${this.triggerButton ?? 'a'}"></sdr-gamepad-badge>
 			</button>
 		`;
 	}
