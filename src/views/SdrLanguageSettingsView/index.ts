@@ -46,6 +46,7 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 
 	navigate() {
 		this.open = true;
+		(this.shadowRoot?.querySelector('#language-select') as SdrSelect).focus();
 
 		return I18n.t`Language Settings`;
 	}
