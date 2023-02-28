@@ -31,6 +31,10 @@ export class SdrSelect extends LitElement {
 		this.disabled = false;
 		this.required = false;
 		this.readonly = false;
+
+		window.addEventListener('gamepadbuttondown', (evt) => {
+			// TODO: implement gamepad interaction
+		});
 	}
 
 	#validate() {
@@ -89,20 +93,24 @@ export class SdrSelect extends LitElement {
 				<slot name="label"></slot>
 			</label>
 
-			<select
-				id="select"
+			<span>
+				<select
+					id="select"
 
-				.value="${this.value}"
+					.value="${this.value}"
 
-				?disabled="${this.disabled}"
-				?required="${this.required}"
-				?readonly="${this.readonly}"
+					?disabled="${this.disabled}"
+					?required="${this.required}"
+					?readonly="${this.readonly}"
 
-				@change="${() => this.#change()}"
-				@input="${() => this.#input()}"
-			>
-				<option selected disabled hidden value="">$t{Please select an option...}</option>
-			</select>
+					@change="${() => this.#change()}"
+					@input="${() => this.#input()}"
+				>
+					<option selected disabled hidden value="">$t{Please select an option...}</option>
+				</select>
+
+				<sdr-gamepad-badge button="a"></sdr-gamepad-badge>
+			</span>
 
 			<div hidden>
 				<slot @slotchange="${() => this.#moveItems()}"></slot>

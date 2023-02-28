@@ -9,6 +9,8 @@
 
 :host([hidden]) { display: none; }
 
+:host(:not(:focus-within)) sdr-gamepad-badge { display: none; }
+
 label {
 	font-size: var(--small-text);
 	display: block;
@@ -27,6 +29,8 @@ label {
 
 	user-select: none;
 }
+
+span { position: relative; }
 
 select {
 	width: 100%;
