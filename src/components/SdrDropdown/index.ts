@@ -181,6 +181,7 @@ export class SdrDropdown extends LitElement {
 
 				@click="${() => this.toggle()}"
 			></sdr-button>
+			<sdr-gamepad-badge button="${!this.open ? this.triggerButton : 'b'}"></sdr-gamepad-badge>
 			<dialog
 				?inert="${!this.open}"
 				?open="${this.open}"

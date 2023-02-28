@@ -118,6 +118,8 @@ export class SdrDialog extends LitElement {
 					<slot name="title"></slot>
 					<sdr-button
 						icon-button
+						keep-trigger-button
+						trigger-button="b"
 						title="$t{Close window}"
 						@click=${() => this.close()}
 					>❌</sdr-button>

@@ -39,6 +39,7 @@ dialog {
 	border-radius: var(--dialog-border-radius);
 
 	box-shadow: var(--shadow-deepest);
+	overflow: visible;
 }
 
 dialog[open] { display: flex; }
@@ -60,9 +61,11 @@ dialog header {
 
 	background: var(--theme-color);
 	color: var(--text-color);
+
+	border-radius: var(--dialog-border-radius) var(--dialog-border-radius) 0 0;
 }
 
-dialog header ::slotted(hr, sdr-select, sdr-edit-box) {
+dialog header ::slotted(*) {
 	flex-grow: 1;
 }
 
