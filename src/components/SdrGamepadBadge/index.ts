@@ -44,8 +44,8 @@ export class SdrGamepadBadge extends LitElement {
 	render() {
 		return html`
 			<span id="icon" ?hidden="${this.disabled}">
-				<img ?hidden="${!this.isPressed}" src="${`images/gamepad-buttons/${this.button}.svg`}">
-				<img ?hidden="${this.isPressed}" src="${`images/gamepad-buttons/${this.button}-pressed.svg`}">
+				<img ?hidden="${this.isPressed}" src="${`${import.meta.env.APP_PUBLIC_URL}images/gamepad-buttons/${this.button}.svg`}">
+				<img ?hidden="${!this.isPressed}" src="${`${import.meta.env.APP_PUBLIC_URL}images/gamepad-buttons/${this.button}-pressed.svg`}">
 			</span>
 		`;
 	}
