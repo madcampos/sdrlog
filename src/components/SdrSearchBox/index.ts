@@ -29,7 +29,6 @@ export class SdrSearchBox extends LitElement {
 			}
 		});
 
-		// TODO: review this
 		this.value = SearchEngine.updateFromURL();
 
 		window.addEventListener('gamepadbuttonpress', (evt) => {
@@ -90,6 +89,9 @@ export class SdrSearchBox extends LitElement {
 					@change="${() => this.#updateFilter()}"
 				/>
 				<datalist id="search-suggestions"></datalist>
+				<span id="icon-container">
+					<sdr-gamepad-badge button="y"></sdr-gamepad-badge>
+				</span>
 				<sdr-button icon="🔍" @click="${() => this.#searchClick()}"></sdr-button>
 			</label>
 		`;

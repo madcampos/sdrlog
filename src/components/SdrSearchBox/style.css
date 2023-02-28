@@ -13,6 +13,7 @@
 label {
 	box-sizing: inherit;
 	display: flex;
+	position: relative;
 	align-items: center;
 	margin: 0 var(--searchbox-margin);
 	width: var(--searchbox-width);
@@ -51,4 +52,9 @@ input:focus {
 input::selection {
 	background-color: var(--theme-color);
 	color: var(--dark-bg-color);
+}
+
+#icon-container {
+	position: relative;
+	align-self: stretch;
 }
