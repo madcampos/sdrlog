@@ -47,6 +47,9 @@ export class GamepadHandler extends EventTarget {
 
 	static init(callback?: () => void) {
 		window.addEventListener('gamepadconnected', () => {
+			// eslint-disable-next-line no-console
+			console.info('[🎮] Gamepad connected.');
+
 			GamepadHandler.#timestamp = performance.now();
 
 			GamepadHandler.#updateLoop();
