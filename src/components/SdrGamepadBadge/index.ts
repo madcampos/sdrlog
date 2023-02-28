@@ -16,7 +16,7 @@ export class SdrGamepadBadge extends LitElement {
 	constructor() {
 		super();
 
-		this.disabled = false;
+		this.disabled = true;
 		this.isPressed = false;
 		this.button = '';
 
