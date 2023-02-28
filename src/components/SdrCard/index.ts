@@ -60,10 +60,13 @@ export class SdrCard extends LitElement {
 			}
 
 			if (document.activeElement === this && evt.detail.button === 'down') {
-				// TODO: implement
-				// 1. Get main element width and divide by this element width to get the number of columns
-				// 2. Then get this element column number.
-				// 3. Then get the nth element of the next row and focus it.
+				evt.stopPropagation();
+				this.#selectCardDown();
+			}
+
+			if (document.activeElement === this && evt.detail.button === 'up') {
+				evt.stopPropagation();
+				this.#selectCardUp();
 			}
 		});
 
@@ -71,6 +74,30 @@ export class SdrCard extends LitElement {
 			if (document.activeElement === this && evt.detail.button === 'a') {
 				GamepadHandler.longVibration();
 				void Router.navigate(`/item/${this.id}`);
+			}
+		});
+
+		window.addEventListener('gamepadstickmove', (evt) => {
+			if (document.activeElement === this && evt.detail.stick === 'left') {
+				if (evt.detail.directionY === 'up') {
+					evt.stopPropagation();
+					this.#selectCardUp();
+				}
+
+				if (evt.detail.directionY === 'down') {
+					evt.stopPropagation();
+					this.#selectCardDown();
+				}
+
+				if (evt.detail.directionX === 'left') {
+					evt.stopPropagation();
+					this.#selectPreviousCard();
+				}
+
+				if (evt.detail.directionX === 'right') {
+					evt.stopPropagation();
+					this.#selectNextCard();
+				}
 			}
 		});
 	}
@@ -106,6 +133,36 @@ export class SdrCard extends LitElement {
 				this.parentElement?.querySelector('sdr-card:last-child')?.focus();
 			});
 		}
+	}
+
+	#selectCardDown() {
+		const { marginLeft, marginRight } = window.getComputedStyle(this);
+		const width = this.offsetWidth + Number.parseFloat(marginLeft) + Number.parseFloat(marginRight);
+		const parentElement = this.parentElement as HTMLElement;
+		const parentWidth = parentElement.clientWidth;
+		const columns = Math.floor(parentWidth / width);
+		const index = [...parentElement.children].indexOf(this);
+		const column = index % columns;
+		const nextRowCard = (parentElement.children.item(index + columns) ?? parentElement.children.item(column)) as SdrCard;
+
+		window.requestAnimationFrame(() => {
+			nextRowCard.focus();
+		});
+	}
+
+	#selectCardUp() {
+		const { marginLeft, marginRight } = window.getComputedStyle(this);
+		const width = this.offsetWidth + Number.parseFloat(marginLeft) + Number.parseFloat(marginRight);
+		const parentElement = this.parentElement as HTMLElement;
+		const parentWidth = parentElement.clientWidth;
+		const columns = Math.floor(parentWidth / width);
+		const index = [...parentElement.children].indexOf(this);
+		const column = index % columns;
+		const previousRowCard = (parentElement.children.item(index - columns) ?? parentElement.children.item(parentElement.children.length - columns + column)) as SdrCard;
+
+		window.requestAnimationFrame(() => {
+			previousRowCard.focus();
+		});
 	}
 
 	async #fallbackThumb() {
