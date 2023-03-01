@@ -32,7 +32,7 @@ export class SdrSelect extends LitElement {
 		this.required = false;
 		this.readonly = false;
 
-		window.addEventListener('gamepadbuttondown', (evt) => {
+		window.addEventListener('gamepadbuttondown', () => {
 			// TODO: implement gamepad interaction
 		});
 	}
