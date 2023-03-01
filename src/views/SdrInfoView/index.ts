@@ -45,11 +45,12 @@ export class SdrViewAppInfo extends LitElement implements RouterView {
 
 	render() {
 		return html`
+			<style>${SdrViewAppInfo.styles}</style>
 			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
-				<h2 slot="title">${I18n.t`Information`}</h2>
+				<span slot="title">${I18n.t`Information`}</span>
 
 				<details open>
-					<summary>${I18n.t`Collection Organization`}</summary>
+					<summary><h3>${I18n.t`Collection Organization`}</h3></summary>
 					<p>${I18n.t`The material here presented is organized into the following categories:`}</p>
 					<dl>
 						<dt>${I18n.t`Sourcebooks`}</dt>
@@ -85,11 +86,11 @@ export class SdrViewAppInfo extends LitElement implements RouterView {
 				</details>
 
 				<details>
-					<summary>${I18n.t`Search Options`}</summary>
+					<summary><h3>${I18n.t`Search Options`}</h3></summary>
 					<p>${I18n.t`The search is done by tags, which follow the format:`} <code>${I18n.t`tag: term`}</code>${I18n.t`, where tag is one of the listed below.`}</p>
 					<p>${I18n.t`The default search is by name, so you don't need the tag for it, but if you use more than one tag for searching you will need to specify the`} <code>name</code> ${I18n.t`tag to search by name.`}</p>
 
-					<h2>${I18n.t`Tags list`}</h2>
+					<h4>${I18n.t`Tags list`}</h4>
 					<dl>
 						<dt>${I18n.t`Name`} (<code>name</code>)</dt>
 						<dd>${I18n.t`The name of the material. Also the default search tag, if none is provided it will be used.`}</dd>
@@ -130,7 +131,7 @@ export class SdrViewAppInfo extends LitElement implements RouterView {
 				</details>
 
 				<details>
-					<summary>${I18n.t`Material Files naming convension`}</summary>
+					<summary><h3>${I18n.t`Material Files naming convension`}</h3></summary>
 
 					<p>${I18n.t`To have a file associated to an item in the collection when using the`} <em>${I18n.t`"Import Files"`}</em> ${I18n.t`option the file name have to be in the following convension:`}
 					</p>
