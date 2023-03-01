@@ -144,11 +144,11 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		}
 	}
 
-	async #openFile(evt: Event, fileId: string) {
+	async #openFile(evt: Event, fileHash: string) {
 		evt.preventDefault();
 		evt.stopPropagation();
 
-		const fileInfo = await getIDBItemByIndex('files', 'itemId', fileId);
+		const fileInfo = await getIDBItemByIndex('files', 'hash', fileHash);
 
 		if (fileInfo) {
 			await openFile(fileInfo);
@@ -400,7 +400,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 
 								${this.files.map((file) => html`
 									<sdr-edit-list-item stretch value="${file.itemId ?? ''}">
-										<a href="#" rel="noopener noreferrer" @click="${async (evt: Event) => this.#openFile(evt, file.itemId ?? '')}">
+										<a href="#" rel="noopener noreferrer" @click="${async (evt: Event) => this.#openFile(evt, file.hash)}">
 											${getIconForFile(file.fileExtension ?? file.mimeType ?? '')} ${file.fileName}${file.fileExtension}
 										</a>
 									</sdr-edit-list-item>
