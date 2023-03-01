@@ -21,10 +21,13 @@
 }
 
 dialog {
-	display: none;
 	box-sizing: border-box;
 
-	flex-direction: column;
+	display: grid;
+	align-items: stretch;
+	justify-items: stretch;
+	grid-template-columns: 1fr;
+	grid-template-rows: 3rem 1fr 3rem;
 
 	padding: 0;
 	margin: auto;
@@ -39,10 +42,10 @@ dialog {
 	border-radius: var(--dialog-border-radius);
 
 	box-shadow: var(--shadow-deepest);
-	overflow: visible;
+	overflow: hidden;
 }
 
-dialog[open] { display: flex; }
+dialog:not([open]) { display: none; }
 
 dialog:focus { outline: none; }
 
