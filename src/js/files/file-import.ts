@@ -20,8 +20,8 @@ export async function getFileHash(dataToHash: ArrayBuffer | string) {
 }
 
 export function extractMetadataFromFileName(fileName: string) {
-	const testRegex = /^(?:(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - )?(?<name>.*)(?<extension>\.[a-z][a-z0-9]+)?$/u;
-	const { name, modifier, id, extension } = testRegex.exec(fileName)?.groups ?? {};
+	const testRegex = /^(?:(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - )?(?<name>.*?)?(?<extension>\.\w+)$/u;
+	const { name, modifier, id, extension } = testRegex.exec(fileName)?.groups ?? { name: fileName, id: undefined, extension: undefined, modifier: undefined };
 	const modifierMap = new Map([
 		['A', 'attachement'],
 		['D', 'draft'],
@@ -32,7 +32,7 @@ export function extractMetadataFromFileName(fileName: string) {
 
 	return {
 		name,
-		modifier: modifierMap.get(modifier),
+		modifier: modifierMap.get(modifier ?? ''),
 		id,
 		extension
 	};
@@ -135,9 +135,11 @@ export async function readFiles() {
 			const dirHash = await getFileHash('/');
 
 			await setIDBItem('files', undefined, {
+				fileName: '/',
 				filePath: '/',
 				handler: dir,
-				hash: dirHash
+				hash: dirHash,
+				mimeType: 'text/directory'
 			});
 		}
 

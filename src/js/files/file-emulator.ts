@@ -15,7 +15,8 @@ export async function getEmulatorFiles() {
 		const zipFile = new File([fileBlob], 'bundle.zip', { type: 'application/zip' });
 
 		if (!('JSZip' in window)) {
-			await import('jszip');
+			// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+			(window as Window & { JSZip?: typeof import('jszip') }).JSZip = (await import('jszip')).default;
 		}
 
 		const zip = await JSZip.loadAsync(zipFile);
