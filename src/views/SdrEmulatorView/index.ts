@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle */
 import type { RouteLocation, RouterView } from '../../router/router';
 
-import { html, LitElement } from 'lit';
+import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 
 import { Router } from '../../router/router';
@@ -9,6 +9,8 @@ import { setIDBItem } from '../../js/data/idb-persistence';
 import { extractMetadataFromFileName } from '../../js/files/file-import';
 import { loadFile } from '../../js/files/file-open';
 import { getEmulatorFiles } from '../../js/files/file-emulator';
+
+import style from './style.css?inline' assert { type: 'css' };
 
 interface EmulatorModule extends EmscriptenModule {
 	canvas: HTMLCanvasElement,
@@ -56,6 +58,7 @@ const keyMap: Record<string, KeyData> = {
 @customElement('sdr-view-emulator')
 export class SdrViewEmulator extends LitElement implements RouterView {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare loaded: boolean;
 
@@ -162,14 +165,14 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	async #addDPadButtons() {
 		const nipplejs = (await import('nipplejs')).default;
 		const dpadElement = this.dpad;
-		const { top, left, width, height } = dpadElement.getBoundingClientRect();
+		const { width, height } = dpadElement.getBoundingClientRect();
 
 		const dpad = nipplejs.create({
 			zone: dpadElement,
 			color: 'white',
 			multitouch: false,
 			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-			position: { top: `${top + (height / 2)}px`, left: `${left + (width / 2)}px` },
+			position: { top: `${height / 2}px`, left: `${width / 2}px` },
 			mode: 'static',
 			restJoystick: true,
 			shape: 'circle',
@@ -331,6 +334,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 
 	render() {
 		return html`
+			<style>${SdrViewEmulator.styles}</style>
 			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
 				<sdr-button icon-button slot="title" @click="${() => this.#emulator?._cmd_toggle_menu()}">⚙️</sdr-button>
 				<hr slot="title">
@@ -341,70 +345,72 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 				<hr slot="title">
 				<sdr-button icon-button slot="title" @click="${async () => this.#toggleFullScreen()}">🖥️</sdr-button>
 
-				<aside class="controller" id="left-controller">
-					<button
-						id="button-select"
-
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'select')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'select')}"
-					>Select</button>
-					<button
-						id="button-start"
-
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'start')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'start')}"
-					>Start</button>
-					<div id="dpad"></div>
-				</aside>
-				<article id="game-wrapper">
-					<div id="game-overlay">
+				<div id="emulator-wrapper">
+					<aside class="controller" id="left-controller">
 						<button
-							type="button"
-							id="pause-button"
+							id="button-select"
 
-							@click="${() => { this.paused = true; }}"
-						>▶️</button>
-					</div>
-					<canvas id="game-canvas"></canvas>
-				</article>
-				<aside class="controller" id="right-controller">
-					<button
-						id="bumper-left"
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'select')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'select')}"
+						>Select</button>
+						<button
+							id="button-start"
 
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'leftBumper')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'leftBumper')}"
-					>L</button>
-					<button
-						id="bumper-right"
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'start')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'start')}"
+						>Start</button>
+						<div id="dpad"></div>
+					</aside>
+					<article id="game-wrapper">
+						<div id="game-overlay">
+							<button
+								type="button"
+								id="pause-button"
 
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'rightBumper')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'rightBumber')}"
-					>R</button>
-					<button
-						id="button-x"
+								@click="${() => { this.paused = true; }}"
+							>▶️</button>
+						</div>
+						<canvas id="game-canvas"></canvas>
+					</article>
+					<aside class="controller" id="right-controller">
+						<button
+							id="bumper-left"
 
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'x')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'x')}"
-					>X</button>
-					<button
-						id="button-y"
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'leftBumper')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'leftBumper')}"
+						>L</button>
+						<button
+							id="bumper-right"
 
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'y')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'y')}"
-					>Y</button>
-					<button
-						id="button-a"
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'rightBumper')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'rightBumber')}"
+						>R</button>
+						<button
+							id="button-x"
 
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'a')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'a')}"
-					>A</button>
-					<button
-						id="button-b"
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'x')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'x')}"
+						>X</button>
+						<button
+							id="button-y"
 
-						@pointerup="${() => this.#sendKeyEvent('keyup', 'b')}"
-						@pointerdown="${() => this.#sendKeyEvent('keydown', 'b')}"
-					>B</button>
-				</aside>
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'y')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'y')}"
+						>Y</button>
+						<button
+							id="button-a"
+
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'a')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'a')}"
+						>A</button>
+						<button
+							id="button-b"
+
+							@pointerup="${() => this.#sendKeyEvent('keyup', 'b')}"
+							@pointerdown="${() => this.#sendKeyEvent('keydown', 'b')}"
+						>B</button>
+					</aside>
+				</div>
 			</sdr-dialog>
 		`;
 	}
