@@ -31,8 +31,6 @@ export async function openFile(fileInfo: FileForMaterial) {
 		return Router.navigate(`${urlForExtension}/${fileInfo.itemId}`);
 	}
 
-	// TODO: create file viewer for other file types
-
 	if (fileInfo.handler.kind !== 'file') {
 		// eslint-disable-next-line no-alert
 		alert(`${I18n.t`File not found.`}`);
