@@ -1,8 +1,3 @@
-::selection {
-	background-color: var(--theme-color);
-	color: var(--dark-bg-color);
-}
-
 :host {
 	display: flex;
 	align-items: center;
@@ -34,3 +29,5 @@
 :host:hover {
 	background: var(--accent-color);
 }
+
+::slotted(abbr) { text-decoration: none; }

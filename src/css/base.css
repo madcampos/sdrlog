@@ -16,6 +16,11 @@
 	background-color: var(--theme-color);
 }
 
+::selection {
+	background-color: var(--accent-color);
+	color: var(--dark-bg-color);
+}
+
 :not(:defined) { display: none; }
 
 body {

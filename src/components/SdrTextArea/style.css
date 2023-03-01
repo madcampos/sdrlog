@@ -1,5 +1,7 @@
 :host {
-	--height: clamp(10rem, 30vh, 20rem);
+	--min-height: 6rem;
+	--max-height: 20rem;
+	--textarea-height: 12rem;
 
 	display: inline-flex;
 	align-items: stretch;
@@ -39,7 +41,7 @@ skeleton-loader { flex-grow: 1; }
 
 textarea, #rendered-text {
 	width: 100%;
-	height: var(--height);
+	height: clamp(var(--min-height), fit-content, var(--max-height));
 	padding: var(--padding-block) var(--padding-inline);
 	padding-block-start: var(--small-text);
 
@@ -77,6 +79,7 @@ textarea {
 	background: var(--bg-color);
 	border-color: var(--border-color);
 	white-space: pre-wrap;
+	height: var(--textarea-height);
 }
 
 textarea::-webkit-scrollbar,

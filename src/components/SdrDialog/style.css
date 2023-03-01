@@ -27,7 +27,7 @@ dialog {
 	align-items: stretch;
 	justify-items: stretch;
 	grid-template-columns: 1fr;
-	grid-template-rows: 3rem 1fr 3rem;
+	grid-template-rows: 3rem 1fr 3.5rem;
 
 	padding: 0;
 	margin: auto;

@@ -126,16 +126,16 @@ export class SdrTabs extends LitElement {
 	#updateTabs() {
 		this.tabPanels.forEach((tabPanel, index) => {
 			tabPanel.role = 'tabpanel';
-			tabPanel.id = `section${index}`;
-			tabPanel.ariaLabeledBy = `tab${index}`;
+			tabPanel.id = `${this.id}-section-${index}`;
+			tabPanel.ariaLabeledBy = `${this.id}-tab-${index}`;
 			tabPanel.hidden = index !== this.selectedTab;
 		});
 
 		this.tabList.forEach((tab, index) => {
 			tab.role = 'tab';
-			tab.id = `tab${index}`;
+			tab.id = `${this.id}-tab-${index}`;
 			tab.ariaSelected = index === this.selectedTab ? 'true' : 'false';
-			tab.ariaControls = `section${index}`;
+			tab.ariaControls = `${this.id}-section-${index}`;
 
 			if (index !== this.selectedTab) {
 				tab.tabIndex = -1;

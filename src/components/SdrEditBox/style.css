@@ -36,6 +36,7 @@ input {
 	appearance: none;
 	border: solid var(--border-width) var(--border-color);
 	background: transparent;
+	color: var(--text-color);
 	border-radius: var(--border-radius);
 
 	transition: var(--transition);

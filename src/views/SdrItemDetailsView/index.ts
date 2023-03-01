@@ -6,7 +6,7 @@ import type { SdrSelect } from '../../components/SdrSelect';
 import type { SdrTextArea } from '../../components/SdrTextArea';
 import type { SdrEditList } from '../../components/SdrEditList';
 
-import { html, LitElement } from 'lit';
+import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { guard } from 'lit/directives/guard.js';
 
@@ -23,9 +23,12 @@ import { saveNewMaterialInfo } from '../../js/data/data-import';
 import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
 import { SdrCard } from '../../components/SdrCard';
 
+import style from './style.css?inline' assert { type: 'css' };
+
 @customElement('sdr-view-item-details')
 export class SdrViewItemDetails extends LitElement implements RouterView {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true, attribute: 'disabled' }) declare isDisplaying: boolean;
 
@@ -268,6 +271,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 
 	render() {
 		return html`
+			<style>${SdrViewItemDetails.styles}</style>
 			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
 				<sdr-edit-box slot="title" ?disabled="${this.isDisplaying}" value="${this.material.name}" @input="${(evt: Event) => this.#updateInputValue(evt, 'name')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'name')}"></sdr-edit-box>
 
@@ -278,10 +282,10 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 						</figure>
 					</sdr-drop-area>
 
-					<sdr-tabs>
+					<sdr-tabs id="item-details-tabs">
 						<sdr-tab slot="tab">$t{Description}</sdr-tab>
 						<sdr-tab-panel slot="tabpanel">
-							<sdr-textarea id="notes" ?disabled="${this.isDisplaying}" value="${this.material.notes ?? ''}" @input="${(evt: Event) => this.#updateInputValue(evt, 'notes')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'notes')}">
+							<sdr-textarea id="notes" ?disabled="${this.isDisplaying}" ?hidden="${!this.material.notes}" value="${this.material.notes ?? ''}" @input="${(evt: Event) => this.#updateInputValue(evt, 'notes')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'notes')}">
 								<span slot="label">$t{Notes}</span>
 							</sdr-textarea>
 
@@ -292,98 +296,100 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 
 						<sdr-tab slot="tab">$t{Info}</sdr-tab>
 						<sdr-tab-panel slot="tabpanel">
-							<sdr-edit-list id="sku" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'sku')}">
-								<span slot="label">$t{SKU}</span>
-								<sdr-edit-box slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required></sdr-edit-box>
+							<div id="item-info">
+								<sdr-edit-list id="sku" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'sku')}">
+									<span slot="label">$t{SKU}</span>
+									<sdr-edit-box slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required></sdr-edit-box>
 
-								${this.material.sku.map((sku) => html`
-									<sdr-edit-list-item value="${sku}">${sku}</sdr-edit-list-item>
-								`)}
-							</sdr-edit-list>
+									${this.material.sku.map((sku) => html`
+										<sdr-edit-list-item value="${sku}">${sku}</sdr-edit-list-item>
+									`)}
+								</sdr-edit-list>
 
-							<sdr-edit-box type="number" min="1" max="6" step="1" required ?disabled="${this.isDisplaying}" value="${this.material.edition}" @input="${(evt: Event) => this.#updateInputValue(evt, 'edition')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'edition')}">
-								<span slot="label">$t{Edition}</span>
-							</sdr-edit-box>
+								<sdr-edit-box type="number" min="1" max="6" step="1" required ?disabled="${this.isDisplaying}" value="${this.material.edition}" @input="${(evt: Event) => this.#updateInputValue(evt, 'edition')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'edition')}">
+									<span slot="label">$t{Edition}</span>
+								</sdr-edit-box>
 
-							<sdr-select id="category" required ?disabled="${this.isDisplaying}" value="${this.material.category}" @input="${(evt: Event) => this.#updateInputValue(evt, 'category')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'category')}">
-								<span slot="label">$t{Category}</span>
+								<sdr-select id="category" required ?disabled="${this.isDisplaying}" value="${this.material.category}" @input="${(evt: Event) => this.#updateInputValue(evt, 'category')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'category')}">
+									<span slot="label">$t{Category}</span>
 
-								${guard(Object.keys(MATERIAL_CATEGORY_INFO), () => Object.entries(MATERIAL_CATEGORY_INFO).map(([key, value]) => html`
-									<option value="${key}">${value.icon} ${value.name}</option>
-								`))}
-							</sdr-select>
+									${guard(Object.keys(MATERIAL_CATEGORY_INFO), () => Object.entries(MATERIAL_CATEGORY_INFO).map(([key, value]) => html`
+										<option value="${key}">${value.icon} ${value.name}</option>
+									`))}
+								</sdr-select>
 
-							<sdr-select id="type" required ?disabled="${this.isDisplaying}" value="${this.material.type}" @input="${(evt: Event) => this.#updateInputValue(evt, 'type')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'type')}">
-								<span slot="label">$t{Type}</span>
+								<sdr-select id="type" required ?disabled="${this.isDisplaying}" value="${this.material.type}" @input="${(evt: Event) => this.#updateInputValue(evt, 'type')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'type')}">
+									<span slot="label">$t{Type}</span>
 
-								${guard(Object.keys(MATERIAL_TYPE_INFO), () => Object.entries(MATERIAL_TYPE_INFO).map(([key, value]) => html`
-									<option value="${key}">${value.icon} ${value.name}</option>
-								`))}
-							</sdr-select>
+									${guard(Object.keys(MATERIAL_TYPE_INFO), () => Object.entries(MATERIAL_TYPE_INFO).map(([key, value]) => html`
+										<option value="${key}">${value.icon} ${value.name}</option>
+									`))}
+								</sdr-select>
 
-							<sdr-select id="originalLanguage" required ?disabled="${this.isDisplaying}" value="${this.material.originalLanguage}" @input="${(evt: Event) => this.#updateInputValue(evt, 'originalLanguage')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'originalLanguage')}">
-								<span slot="label">$t{Original Language}</span>
+								<sdr-select id="originalLanguage" required ?disabled="${this.isDisplaying}" value="${this.material.originalLanguage}" @input="${(evt: Event) => this.#updateInputValue(evt, 'originalLanguage')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'originalLanguage')}">
+									<span slot="label">$t{Original Language}</span>
 
-								${guard(Object.keys(MATERIAL_LANGUAGES_INFO), () => Object.entries(MATERIAL_LANGUAGES_INFO).map(([key, value]) => html`
-									<option value="${key}">${value.icon} ${value.name}</option>
-								`))}
-							</sdr-select>
-
-							<sdr-edit-list id="releaseDate" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'releaseDate')}">
-								<span slot="label">$t{Release date}</span>
-								<sdr-edit-box slot="input" type="date" required></sdr-edit-box>
-
-								${this.material.releaseDate?.map((releaseDate) => html`
-									<sdr-edit-list-item value="${releaseDate}">${formatFullDate(new Date(releaseDate))}</sdr-edit-list-item>
-								`)}
-							</sdr-edit-list>
-
-							<sdr-select id="status" required ?disabled="${this.isDisplaying}" value="${this.material.status}" @input="${(evt: Event) => this.#updateInputValue(evt, 'status')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'status')}">
-								<span slot="label">$t{Status}</span>
-
-								${guard(Object.keys(MATERIAL_STATUS_INFO), () => Object.entries(MATERIAL_STATUS_INFO).map(([key, value]) => html`
-									<option value="${key}">${value.icon} ${value.name}</option>
-								`))}
-							</sdr-select>
-
-							<sdr-edit-box id="gameDate" type="month" required ?disabled="${this.isDisplaying}" value="${this.material.gameDate}" @input="${(evt: Event) => this.#updateInputValue(evt, 'gameDate')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'gameDate')}">
-								<span slot="label">$t{Game date}</span>
-							</sdr-edit-box>
-
-							<sdr-edit-list id="names" ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToMap(evt, 'names')}">
-								<span slot="label">$t{Names published}</span>
-
-								<sdr-select slot="input" required>
 									${guard(Object.keys(MATERIAL_LANGUAGES_INFO), () => Object.entries(MATERIAL_LANGUAGES_INFO).map(([key, value]) => html`
 										<option value="${key}">${value.icon} ${value.name}</option>
 									`))}
 								</sdr-select>
-								<sdr-edit-box slot="input" required placeholder="$t{Name}"></sdr-edit-box>
 
-								${Object.entries(this.material.names ?? {}).map(([language, name]) => html`
-									<sdr-edit-list-item value="${language}">
-										<abbr title="${MATERIAL_LANGUAGES_INFO[language].name}">${MATERIAL_LANGUAGES_INFO[language].icon}</abbr>:
-										${name}
-									</sdr-edit-list-item>
-								`)}
-							</sdr-edit-list>
+								<sdr-edit-list id="releaseDate" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'releaseDate')}">
+									<span slot="label">$t{Release date}</span>
+									<sdr-edit-box slot="input" type="date" required></sdr-edit-box>
 
-							<sdr-edit-list id="publisher" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'publisher')}">
-								<span slot="label">$t{Publisher}</span>
-								<sdr-select slot="input" required>
-									${guard(MATERIAL_PUBLISHERS, () => MATERIAL_PUBLISHERS.map((publisher) => html`
-										<option>${publisher}</option>
+									${this.material.releaseDate?.map((releaseDate) => html`
+										<sdr-edit-list-item value="${releaseDate}">${formatFullDate(new Date(releaseDate))}</sdr-edit-list-item>
+									`)}
+								</sdr-edit-list>
+
+								<sdr-select id="status" required ?disabled="${this.isDisplaying}" value="${this.material.status}" @input="${(evt: Event) => this.#updateInputValue(evt, 'status')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'status')}">
+									<span slot="label">$t{Status}</span>
+
+									${guard(Object.keys(MATERIAL_STATUS_INFO), () => Object.entries(MATERIAL_STATUS_INFO).map(([key, value]) => html`
+										<option value="${key}">${value.icon} ${value.name}</option>
 									`))}
 								</sdr-select>
 
-								${this.material.publisher.map((publisher) => html`
-									<sdr-edit-list-item value="${publisher}">
-										<abbr title="${publisher}">
-											<img alt="${publisher}" src="${import.meta.env.APP_PUBLIC_URL}images/publishers/${publisher}.png"/>
-										</abbr>
-									</sdr-edit-list-item>
-								`)}
-							</sdr-edit-list>
+								<sdr-edit-box id="gameDate" type="month" required ?disabled="${this.isDisplaying}" value="${this.material.gameDate}" @input="${(evt: Event) => this.#updateInputValue(evt, 'gameDate')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'gameDate')}">
+									<span slot="label">$t{Game date}</span>
+								</sdr-edit-box>
+
+								<sdr-edit-list id="names" ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToMap(evt, 'names')}">
+									<span slot="label">$t{Names published}</span>
+
+									<sdr-select slot="input" required>
+										${guard(Object.keys(MATERIAL_LANGUAGES_INFO), () => Object.entries(MATERIAL_LANGUAGES_INFO).map(([key, value]) => html`
+											<option value="${key}">${value.icon} ${value.name}</option>
+										`))}
+									</sdr-select>
+									<sdr-edit-box slot="input" required placeholder="$t{Name}"></sdr-edit-box>
+
+									${Object.entries(this.material.names ?? {}).map(([language, name]) => html`
+										<sdr-edit-list-item value="${language}">
+											<abbr title="${MATERIAL_LANGUAGES_INFO[language].name}">${MATERIAL_LANGUAGES_INFO[language].icon}</abbr>:
+											${name}
+										</sdr-edit-list-item>
+									`)}
+								</sdr-edit-list>
+
+								<sdr-edit-list id="publisher" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'publisher')}">
+									<span slot="label">$t{Publisher}</span>
+									<sdr-select slot="input" required>
+										${guard(MATERIAL_PUBLISHERS, () => MATERIAL_PUBLISHERS.map((publisher) => html`
+											<option>${publisher}</option>
+										`))}
+									</sdr-select>
+
+									${this.material.publisher.map((publisher) => html`
+										<sdr-edit-list-item value="${publisher}">
+											<abbr title="${publisher}">
+												<img alt="${publisher}" src="${import.meta.env.APP_PUBLIC_URL}images/publishers/${publisher}.png"/>
+											</abbr>
+										</sdr-edit-list-item>
+									`)}
+								</sdr-edit-list>
+							</div>
 						</sdr-tab-panel>
 
 						<sdr-tab slot="tab">$t{Files & Links}</sdr-tab>

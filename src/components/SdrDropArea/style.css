@@ -5,9 +5,6 @@
 
 	--hover-color: var(--secondary-color);
 	--hover-background: var(--theme-color);
-
-	user-select: none;
-	pointer-events: none;
 }
 
 #content, #overlay {
@@ -16,20 +13,19 @@
 }
 
 #overlay {
-	border: dotted var(--border-width) var(--border-color, transparent);
+	border: solid var(--border-width) var(--border-color, transparent);
+	border-radius: var(--border-radius);
 	box-sizing: border-box;
 	display: grid;
 	align-items: center;
 	justify-content: center;
 
+	user-select: none;
+
 	background: radial-gradient(var(--background, rgba(0, 0, 0, 0.5)), transparent);
 	color: var(--text-color, currentcolor);
 
 	z-index: 1;
-}
-
-:host(:not([disabled])) {
-	pointer-events: all;
 }
 
 :host([disabled]) #overlay {

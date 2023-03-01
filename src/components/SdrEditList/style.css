@@ -55,7 +55,6 @@ details #items-container {
 	min-height: var(--list-item-size);
 	height: max-content;
 	max-height: calc(var(--list-item-size) * 3);
-	max-width: calc(var(--list-item-size) * 5);
 	overflow: auto;
 	display: flex;
 	flex-wrap: wrap;
