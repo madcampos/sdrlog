@@ -6,7 +6,7 @@ import style from './style.css?inline' assert { type: 'css' };
 @customElement('sdr-gamepad-badge')
 export class SdrGamepadBadge extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
 	@property({ type: String, reflect: true }) declare button: string;

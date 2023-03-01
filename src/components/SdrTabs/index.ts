@@ -57,7 +57,7 @@ export class SdrTabPanel extends LitElement {
 export class SdrTabs extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare role: string;
 	@property({ type: Number }) declare selectedTab: number;

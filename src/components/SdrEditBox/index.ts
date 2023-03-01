@@ -7,7 +7,7 @@ import style from './style.css?inline' assert { type: 'css' };
 export class SdrEditBox extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;
 	@property({ type: String, reflect: true }) declare placeholder?: string;

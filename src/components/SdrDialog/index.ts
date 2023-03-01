@@ -5,7 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dialog')
 export class SdrDialog extends LitElement {
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare open: boolean;
 

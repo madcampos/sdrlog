@@ -14,7 +14,7 @@ declare global {
 @customElement('sdr-drop-area')
 export class SdrDropArea extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
 

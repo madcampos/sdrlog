@@ -5,7 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-radio-item')
 export class SdrRadioItem extends LitElement {
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare icon: string;
 	@property({ type: String, reflect: true }) declare value: string;

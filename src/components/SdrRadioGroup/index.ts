@@ -8,7 +8,7 @@ import style from './style.css?inline' assert { type: 'css' };
 @customElement('sdr-radio-group')
 export class SdrRadioGroup extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare value: string;
 	@property({ type: Array }) declare values: string[];

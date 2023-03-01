@@ -10,7 +10,7 @@ import { Router } from '../../router/router';
 @customElement('sdr-dropdown')
 export class SdrDropdown extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static styles = unsafeCSS(style);
+	static readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true }) declare icon: string;
 	@property({ type: Boolean, reflect: true }) declare open: boolean;
