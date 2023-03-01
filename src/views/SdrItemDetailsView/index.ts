@@ -175,8 +175,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 					status: this.material.status
 				});
 
-				// TODO: add card to the correct place
-				console.log(card);
+				document.querySelector('main')?.append(card);
 			}
 
 			window.history.pushState(null, `${this.material.name} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}#${id}`);
