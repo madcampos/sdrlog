@@ -39,6 +39,10 @@ export class SdrViewAppInfo extends LitElement implements RouterView {
 		return I18n.t`Information`;
 	}
 
+	createRenderRoot() {
+		return this;
+	}
+
 	render() {
 		return html`
 			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">

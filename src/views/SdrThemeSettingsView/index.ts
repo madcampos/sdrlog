@@ -60,6 +60,10 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 		return I18n.t`Theme Settings`;
 	}
 
+	createRenderRoot() {
+		return this;
+	}
+
 	render() {
 		return html`
 		<sdr-dialog id="theme-modal" ?open="${this.open}" @close="${() => this.#close()}">

@@ -51,6 +51,10 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 		return I18n.t`Language Settings`;
 	}
 
+	createRenderRoot() {
+		return this;
+	}
+
 	render() {
 		return html`
 			<sdr-dialog id="language-modal" ?open="${this.open}" @close="${() => this.#close()}">
