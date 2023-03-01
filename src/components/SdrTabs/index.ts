@@ -2,11 +2,13 @@ import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, queryAssignedElements } from 'lit/decorators.js';
 
 import style from './style.css?inline' assert { type: 'css' };
+import tabStyle from './tab-style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-tab')
 export class SdrTab extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
+	static readonly styles = unsafeCSS(tabStyle);
 
 	@property({ type: String, reflect: true }) declare role: string;
 

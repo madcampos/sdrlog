@@ -1,0 +1,18 @@
+:host {
+	display: inline-block;
+}
+
+#tab {
+	display: inline-block;
+	padding: var(--padding-inline) var(--padding-block);
+	border: var(--border-width) solid var(--border-color);
+	border-bottom: none;
+	background: var(--bg-color);
+	cursor: pointer;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+:host([aria-selected='true']) #tab {
+	border-color: var(--theme-color);
+	background: var(--accent-color);
+}
