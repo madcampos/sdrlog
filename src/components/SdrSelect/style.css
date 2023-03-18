@@ -1,0 +1,77 @@
+:host {
+	display: inline-flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	flex-direction: column;
+	box-sizing: inherit;
+	width: 100%;
+}
+
+:host([hidden]) { display: none; }
+
+:host(:not(:focus-within)) sdr-gamepad-badge { display: none; }
+
+label {
+	font-size: var(--small-text);
+	display: block;
+	width: fit-content;
+	padding: var(--padding-small) var(--padding-inline);
+	margin-inline-start: var(--label-recess);
+
+	border-radius: var(--pill-border-radius);
+
+	background: var(--border-color);
+	color: var(--text-color);
+
+	z-index: 1;
+	transform: translateY(50%);
+	transition: var(--transition);
+
+	user-select: none;
+}
+
+span { position: relative; }
+
+select {
+	width: 100%;
+	padding: var(--padding-block) var(--padding-inline);
+	padding-inline-end: var(--select-arrow-spacing);
+	padding-block-start: var(--small-text);
+
+	appearance: none;
+	border: solid var(--border-width) var(--border-color);
+	border-radius: var(--border-radius);
+
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: calc(100% - var(--margin-inline)) center;
+	background-size: var(--select-arrow-size);
+
+	transition: var(--transition);
+
+	font: inherit;
+	box-sizing: border-box;
+
+	accent-color: var(--theme-color);
+}
+
+select::selection {
+	background-color: var(--theme-color);
+	color: var(--dark-bg-color);
+}
+
+select:disabled {
+	opacity: 1;
+	color: currentcolor;
+}
+
+select:not(:disabled) {
+	background-color: var(--bg-color);
+	background-image: var(--select-arrow);
+}
+
+select:focus {
+	outline: none;
+	border-color: var(--border-color);
+	border-bottom-color: var(--theme-color);
+}

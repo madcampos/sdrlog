@@ -1,0 +1,91 @@
+sdr-view-item-details[disabled] #cancel-button { display: none; }
+sdr-view-item-details[disabled] #save-button { display: none; }
+sdr-view-item-details:not([disabled]) #edit-button { display: none; }
+sdr-view-item-details:not([disabled]) #export-button { display: none; }
+
+sdr-view-item-details #item-content {
+	display: grid;
+	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
+	grid-template-rows: 100%;
+	grid-gap: 0.5rem;
+	grid-template-areas: 'image tabs';
+
+	align-items: start;
+	align-content: start;
+	justify-content: center;
+
+	height: 100%;
+	box-sizing: inherit;
+	overflow: auto;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+}
+
+sdr-view-item-details [slot='title'] {
+	--border-color: transparent;
+	--theme-color: var(--accent-color);
+	--small-text: 0;
+}
+
+sdr-view-item-details #cover-drop-area {
+	grid-area: image;
+}
+
+sdr-view-item-details #cover-drop-area figure {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+sdr-view-item-details #cover-drop-area figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+	border-radius: var(--border-radius);
+}
+
+sdr-view-item-details #publisher img {
+	height: 1.5rem;
+	max-width: 3rem;
+	object-fit: contain;
+}
+
+sdr-view-item-details #item-info {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(auto, 25%));
+	gap: var(--margin-block);
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas:
+		'sku sku sku sku'
+		'edition category category type'
+		'gamedate gamedate language language'
+		'languages languages languages status'
+		'release release release release'
+		'publisher publisher publisher publisher';
+}
+
+sdr-view-item-details #item-info #sku { grid-area: sku; }
+sdr-view-item-details #item-info #category { grid-area: category; }
+sdr-view-item-details #item-info #type { grid-area: type; }
+sdr-view-item-details #item-info #edition { grid-area: edition; }
+sdr-view-item-details #item-info #originalLanguage { grid-area: language; }
+sdr-view-item-details #item-info #status { grid-area: status; }
+sdr-view-item-details #item-info #gameDate { grid-area: gamedate; }
+sdr-view-item-details #item-info #names { grid-area: languages; }
+sdr-view-item-details #item-info #releaseDate { grid-area: release; }
+sdr-view-item-details #item-info #publisher { grid-area: publisher; }
+
+@media (max-width: 680px) {
+	sdr-view-item-details #item-content {
+		grid-template-columns: 1fr;
+		grid-template-rows: 10rem 1fr;
+		grid-template-areas: 'image' 'tabs';
+	}
+
+	sdr-view-item-details #cover-drop-area figure img {
+		width: fit-content;
+		height: 10rem;
+	}
+}

@@ -1,0 +1,105 @@
+:host {
+	--min-height: 6rem;
+	--max-height: 20rem;
+	--textarea-height: 12rem;
+
+	display: inline-flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	flex-direction: column;
+	box-sizing: inherit;
+	width: 100%;
+}
+
+:host([hidden]) { display: none; }
+
+:host([disabled]) textarea { display: none; }
+:host([disabled]) #rendered-text { display: block; }
+:host(:not([disabled])) textarea { display: block; }
+:host(:not([disabled])) #rendered-text { display: none; }
+
+label {
+	font-size: var(--small-text);
+	display: block;
+	width: fit-content;
+	padding: var(--padding-small) var(--padding-inline);
+	margin-inline-start: var(--label-recess);
+
+	border-radius: var(--pill-border-radius);
+
+	background: var(--border-color);
+	color: var(--text-color);
+
+	z-index: 1;
+	transform: translateY(50%);
+	transition: var(--transition);
+
+	user-select: none;
+}
+
+skeleton-loader { flex-grow: 1; }
+
+textarea, #rendered-text {
+	width: 100%;
+	height: clamp(var(--min-height), fit-content, var(--max-height));
+	padding: var(--padding-block) var(--padding-inline);
+	padding-block-start: var(--small-text);
+
+	appearance: none;
+	border: solid var(--border-width) transparent;
+	background: transparent;
+	border-radius: var(--border-radius);
+
+	transition: var(--transition);
+
+	font: inherit;
+	box-sizing: border-box;
+
+	resize: none;
+	overflow: auto;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+}
+
+#rendered-text article > *:first-child {
+	margin-top: 0;
+}
+
+#rendered-text article > *:last-child {
+	margin-bottom: 0;
+}
+
+::selection {
+	background-color: var(--theme-color);
+	color: var(--dark-bg-color);
+}
+
+textarea {
+	background: var(--bg-color);
+	border-color: var(--border-color);
+	white-space: pre-wrap;
+	height: var(--textarea-height);
+}
+
+textarea::-webkit-scrollbar,
+#rendered-text::-webkit-scrollbar {
+	width: var(--scrollbar-size);
+}
+
+textarea::-webkit-scrollbar-track,
+#rendered-text::-webkit-scrollbar-track {
+	border-radius: var(--pill-border-radius);
+	background-color: var(--scrollbar-bg);
+}
+
+textarea::-webkit-scrollbar-thumb,
+#rendered-text::-webkit-scrollbar-thumb {
+	border-radius: var(--pill-border-radius);
+	background-color: var(--theme-color);
+}
+
+textarea:focus {
+	outline: none;
+	border-color: var(--theme-color);
+}

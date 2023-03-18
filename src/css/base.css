@@ -16,6 +16,11 @@
 	background-color: var(--theme-color);
 }
 
+::selection {
+	background-color: var(--accent-color);
+	color: var(--dark-bg-color);
+}
+
 :not(:defined) { display: none; }
 
 body {
@@ -123,17 +128,6 @@ main {
 	margin: var(--margin-block) 0 0;
 	font-size: var(--small-text);
 	flex-grow: 1;
-}
-
-#load-menubar {
-	position: absolute;
-	display: block;
-	background: var(--theme-color);
-	width: 100vw;
-	height: var(--menubar-height);
-	top: var(--menubar-top);
-	left: 0;
-	z-index: 1;
 }
 
 @keyframes fadein {

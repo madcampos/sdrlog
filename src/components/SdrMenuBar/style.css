@@ -1,0 +1,36 @@
+:host {
+	position: absolute;
+	display: block;
+	top: var(--menubar-top);
+	height: var(--menubar-height);
+	width: 100%;
+	background-color: var(--theme-color);
+
+	app-region: drag;
+	-webkit-app-region: drag;
+
+	box-sizing: border-box;
+	z-index: 1;
+
+	box-shadow: var(--deep-shadow);
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	display: flex;
+	user-select: none;
+	height: 100%;
+	left: var(--menubar-left);
+	width: var(--menubar-width);
+	padding: var(--padding-block) var(--padding-inline);
+	box-sizing: inherit;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ::slotted(*) {
+	margin: var(--margin-block);
+}
+
+:host([no-file-system]) .file-system { display: none; }

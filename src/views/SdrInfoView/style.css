@@ -1,0 +1,7 @@
+sdr-view-app-info summary h3 {
+	display: inline;
+	margin-inline-start: var(--margin-inline);
+}
+
+sdr-view-app-info dt { font-weight: bold; }
+sdr-view-app-info code { font-family: ui-monospace, monospace; }

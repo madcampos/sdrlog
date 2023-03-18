@@ -1,0 +1,93 @@
+::-webkit-scrollbar {
+	width: var(--scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+	border-radius: var(--pill-border-radius);
+	background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: var(--pill-border-radius);
+	background-color: var(--theme-color);
+}
+
+:host {
+	display: flex;
+	box-sizing: inherit;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+}
+
+dialog {
+	box-sizing: border-box;
+
+	display: grid;
+	align-items: stretch;
+	justify-items: stretch;
+	grid-template-columns: 1fr;
+	grid-template-rows: 3rem 1fr auto;
+
+	padding: 0;
+	margin: auto;
+
+	width: var(--dialog-width);
+	max-width: initial;
+	height: var(--dialog-height);
+	max-height: initial;
+
+	background: var(--bg-color);
+	border: none;
+	border-radius: var(--dialog-border-radius);
+
+	box-shadow: var(--shadow-deepest);
+	overflow: hidden;
+}
+
+dialog:not([open]) { display: none; }
+
+dialog:focus { outline: none; }
+
+dialog::backdrop {
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(0.3rem);
+}
+
+dialog header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: var(--padding-inline);
+	padding: 0 var(--padding-inline);
+	height: var(--menubar-height);
+
+	background: var(--theme-color);
+	color: var(--text-color);
+
+	border-radius: var(--dialog-border-radius) var(--dialog-border-radius) 0 0;
+}
+
+dialog header ::slotted(*) {
+	flex-grow: 1;
+}
+
+dialog header ::slotted(hr) {
+	border: none;
+}
+
+dialog footer:not([hidden]) {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: var(--padding-block) var(--padding-inline);
+	height: var(--menubar-height);
+
+	background: var(--bg-color);
+}
+
+dialog article {
+	padding: 1rem;
+	flex-grow: 1;
+	overflow: auto;
+}

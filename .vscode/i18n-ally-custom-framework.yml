@@ -1,6 +1,10 @@
 languageIds:
   - javascript
   - typescript
+  - html
 
 usageMatchRegex:
   - "\\bI18n.t`({key})`"
+  - "\\$t\\{(.*?)\\}"
+
+monopoly: true

@@ -1,7 +1,14 @@
 {
 	"i18n-ally.localesPaths": [
-		"src/_locales"
+		"src/locales"
 	],
-	"i18n-ally.pathMatcher": "{locale}/messages.json",
-	"i18n-ally.disablePathParsing": true
+	"i18n-ally.pathMatcher": "{locale}.json",
+	"i18n-ally.enabledFrameworks": ["custom"],
+	"i18n-ally.regex.usageMatch": [
+		"\\bI18n.t`(.*?)`",
+		"\\$t\\{(.*?)\\}"
+	],
+	"i18n-ally.disablePathParsing": true,
+	"i18n-ally.keystyle": "flat",
+	"dotenv.enableAutocloaking": false
 }

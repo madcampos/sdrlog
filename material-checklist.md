@@ -13,17 +13,26 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 # Materials to add
 
-https://www.shadowrunsixthworld.com/2021/05/whats-up-with-shadowrun/
-https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-2022/
+https://www.drivethrurpg.com/product/410466/Shadowrun-Missions-Seven-Breaths-0906?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/416991/Shadowrun-Missions-1001-Deaths-Daily-Business?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/424603/Shadowrun-Missions-1002-One-Stone-Two-Birds
+https://www.drivethrurpg.com/product/424604/Shadowrun-Lifestyles-of-the-Shadowy--Infamous
+https://www.drivethrurpg.com/product/424606/Shadowrun-Null-Value-Runner-Resource-Book
+https://www.drivethrufiction.com/product/425431/Shadowrun-Scorpions-Bane?cPath=7051_21533
+https://www.drivethrurpg.com/product/427909/Shadowrun-Astral-Ways-Sixth-World-Setting-Book?filters=1700_0_0_0_0
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
-https://www.drivethrurpg.com/product/410466/Shadowrun-Missions-Seven-Breaths-0906?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/416991/Shadowrun-Missions-1001-Deaths-Daily-Business?filters=1700_0_0_0_0
+https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-2022/
+- Best laid plans
+- corporate business
+- program deck
+- The chimera complex
+- Body shop
+- Wild life
 
-https://mega.nz/folder/vDhhGS7T#r_AjyW1myaJWMWUHb5GyoQ
-https://mega.nz/folder/WSIGmB5A#PavCKeTSjOQMKwZvg-X1_g
+https://www.shadowiki.de/Shadowrun_Schnell_und_dreckig
 
 # Archive
 **TODO**: Scrap html and old pages and archive
@@ -47,6 +56,8 @@ https://www.shadowiki.de/Geisterstunde
 http://danvolodar.ru/ancientfiles/Spoorn/
 http://danvolodar.ru/ancientfiles/index.html
 
+http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
+
 ## Japanese materials
 https://www.shadowiki.de/Shadowrun_Manga
 https://fondationdraco.fr/shadowrun-manga-scan-trad/
@@ -56,10 +67,34 @@ https://fondationdraco.fr/shadowrun-au-japon-partie-3/tokyo-eye-shot-shadowrun-c
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-shikkoku-no-senki/
 https://fondationdraco.fr/shadowrun-au-japon-partie-5/
 
-## Old file sharring
+## short stories
+- https://www.shadowiki.de/Drachenbrut_(Kurzgeschichten)
+- https://www.shadowiki.de/Der_letzte_Flug_des_Greifen_(Kurzgeschichten)
+- https://www.shadowiki.de/Deckard_(Kurzgeschichten)
+- https://www.shadowiki.de/Poolitzers_NICHTTod
+- https://www.shadowiki.de/Kategorie:Quellen_(Online)
 
-http://ul.to/folder/xk4syi
-http://ul.to/folder/upkklm
-http://ul.to/folder/1m2glp
-http://ul.to/folder/crvrc9
-http://ul.to/folder/glmzqi
+## Sites to archive
+- http://shadowrunrpg.com/
+- http://shadowrun.fr/
+- http://shadowrun.com/
+- http://shadowrun.de/
+- http://shadowrun.co.uk/
+- http://shadowrun-archiv.de/
+- http://shadowrun-ring.de/
+- http://shadowrun.co/
+- http://dumpshock.com/
+- http://shadowrun4.com/
+- http://fondationdraco.free.fr/
+- http://shadowrun-online.de/
+- http://shadowrun.netroof.eu/
+- http://shadowrunberlin.de/
+- http://forums.shadowrun4.com/
+- http://webring.dumpshock.com/
+- http://shadowrun-universe.de/
+- http://old.shadowrun4.com/
+- http://shadowrun5.de/
+- http://shadowrun6.de/
+- http://shadowruntabletop.com/
+- http://forums.shadowruntabletop.com/
+- http://shadowrunsixthworld.com/
