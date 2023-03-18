@@ -3,6 +3,10 @@
 	justify-content: center;
 }
 
+label { position: relative; }
+
+sdr-gamepad-badge { display: none; }
+
 input {
 	width: 1px;
 	height: 1px;
@@ -18,6 +22,10 @@ input:focus ~ sdr-radio-item {
 
 input:checked ~ sdr-radio-item {
 	background-color: var(--theme-color);
+}
+
+input:checked ~ sdr-gamepad-badge {
+	display: block;
 }
 
 input:hover ~ sdr-radio-item {

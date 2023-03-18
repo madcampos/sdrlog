@@ -28,8 +28,6 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 
 			document.body.classList.add(`theme-${this.theme}`);
 		}
-
-		// TODO: add gamepad navigation
 	}
 
 	#changeTheme(event: Event) {
