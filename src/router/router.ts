@@ -88,26 +88,20 @@ export class Router {
 	}
 
 	static async navigate(path: string) {
-		try {
-			const basePath = new URL(Router.#baseUrl).pathname.replace(/\/$/u, '');
-			const normalizedPath = new URL(`${basePath}${path}`, Router.#baseUrl).pathname;
+	try {
+			const newPath = new URL(path, Router.#baseUrl).pathname;
 
-			console.log(`[⛵️] Base URL: ${Router.#baseUrl}`);
-			console.log(`[⛵️] Current path: ${Router.#currentPath}`);
-			console.log(`[⛵️] Path: ${path}`);
-			console.log(`[⛵️] Navigating to ${normalizedPath}`);
-
-			if (Router.#currentPath === normalizedPath) {
+			if (Router.#currentPath === newPath) {
 				return;
 			}
 
-			const guardResult = await Router.#beforeEach?.(this.#currentPath, normalizedPath);
+			const guardResult = await Router.#beforeEach?.(this.#currentPath, newPath);
 
 			if (guardResult === false) {
 				return;
 			}
 
-			const pathToSearch = guardResult?.path ?? normalizedPath;
+			const pathToSearch = guardResult?.path ?? newPath;
 
 			const [matcher, view] = Router.#routes.find(([pattern]) => pattern.test(pathToSearch, this.#baseUrl)) ?? [];
 
@@ -126,6 +120,9 @@ export class Router {
 				Router.#currentPath = pathToSearch;
 				Router.#currentLocation = destination;
 				/* eslint-enable require-atomic-updates */
+
+				const basePath = new URL(Router.#baseUrl).pathname.replace(/\/$/u, '');
+				const normalizedPath = new URL(`${basePath}${path}`, Router.#baseUrl).pathname;
 
 				window.history.pushState(null, '', normalizedPath);
 
