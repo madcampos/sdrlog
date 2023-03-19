@@ -91,6 +91,11 @@ export class Router {
 		try {
 			const normalizedPath = new URL(path, Router.#baseUrl).pathname;
 
+			console.log(`[⛵️] Base URL: ${Router.#baseUrl}`);
+			console.log(`[⛵️] Current path: ${Router.#currentPath}`);
+			console.log(`[⛵️] Path: ${path}`);
+			console.log(`[⛵️] Navigating to ${normalizedPath}`);
+
 			if (Router.#currentPath === normalizedPath) {
 				return;
 			}
