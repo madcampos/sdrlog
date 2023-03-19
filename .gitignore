@@ -19,6 +19,7 @@ node_modules/
 .vscode/
 
 # Build artifacts
+dist
 dev-dist
 dist-ssr
 coverage
