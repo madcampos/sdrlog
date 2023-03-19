@@ -89,7 +89,8 @@ export class Router {
 
 	static async navigate(path: string) {
 		try {
-			const normalizedPath = new URL(path, Router.#baseUrl).pathname;
+			const basePath = new URL(Router.#baseUrl).pathname.replace(/\/$/u, '');
+			const normalizedPath = new URL(`${basePath}${path}`, Router.#baseUrl).pathname;
 
 			console.log(`[⛵️] Base URL: ${Router.#baseUrl}`);
 			console.log(`[⛵️] Current path: ${Router.#currentPath}`);
