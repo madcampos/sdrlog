@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-	<ShortName>%APP_SHORT_NAME%</ShortName>
-	<Description>%APP_NAME%</Description>
-	<Url type="text/html" method="get" template="%PUBLIC_URL%?search={searchTerms}"/>
-	<Url type="application/opensearchdescription+xml" rel="self" template="%PUBLIC_URL%open-search.xml" />
-	<Image width="16" height="16">%PUBLIC_URL%favicon.ico</Image>
+	<ShortName>SDRlog</ShortName>
+	<Description>Shadowrun Catalog</Description>
+	<Url type="text/html" method="get" template="https://madcampos.dev/sdrlog/?search={searchTerms}"/>
+	<Url type="application/opensearchdescription+xml" rel="self" template="https://madcampos.dev/sdrlog/open-search.xml" />
+	<Image width="16" height="16">https://madcampos.dev/sdrlog/favicon.ico</Image>
 	<InputEncoding>UTF-8</InputEncoding>
-	<moz:SearchForm>%PUBLIC_URL%</moz:SearchForm>
+	<moz:SearchForm>https://madcampos.dev/sdrlog/</moz:SearchForm>
 </OpenSearchDescription>

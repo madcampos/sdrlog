@@ -124,9 +124,9 @@ export class Router {
 				window.history.pushState(null, '', normalizedPath);
 
 				if (title) {
-					window.document.title = `${title} · ${import.meta.env.APP_NAME}`;
+					window.document.title = `${title} · Shadowrun Catalog`;
 				} else {
-					window.document.title = import.meta.env.APP_NAME;
+					window.document.title = 'Shadowrun Catalog';
 				}
 			}
 		} catch (err) {
@@ -136,6 +136,10 @@ export class Router {
 
 	static init({ routes, baseUrl, attribute, beforeEach, fallback }: RouterConfig) {
 		Router.#baseUrl = baseUrl;
+
+		if (Router.#baseUrl === '/') {
+			Router.#baseUrl = new URL('/', import.meta.url).href;
+		}
 
 		const currentMatcher = Router.#fallbackPattern.exec(window.location.href, Router.#baseUrl);
 

@@ -182,7 +182,7 @@ export class SdrCard extends LitElement {
 				this.type = material.type;
 				this.edition = material.edition;
 				this.status = material.status;
-				this.thumbUrl = `${import.meta.env.APP_PUBLIC_URL}images/thumbs/${this.id}.jpg`;
+				this.thumbUrl = `${import.meta.env.BASE_URL}images/thumbs/${this.id}.jpg`;
 			}
 		}
 	}

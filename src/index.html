@@ -5,31 +5,30 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-		<title>{{ APP_NAME }}</title>
+		<title>Shadowrun Catalog</title>
 
 		<!-- Preload -->
-		<link rel="preload" crossorigin="anonymous" href="{{ APP_PUBLIC_URL }}/data/data.json" as="fetch" type="application/json">
 
 		<!-- App Metadata -->
-		<link rel="icon" href="{{ APP_PUBLIC_URL }}/icons/favicon.svg" />
-		<meta name="theme-color" content="{{ APP_THEME_COLOR }}">
+		<link rel="icon" href="icons/favicon.svg" />
+		<meta name="theme-color" content="#9400d3">
 
 		<!-- Social metadata -->
-		<meta name="keywords" content="{{ APP_KEYWORDS }}" />
+		<meta name="keywords" content="shadowrun, sdr, rpg, books" />
 
-		<meta property="og:title" name="twitter:title" itemprop="name" content="{{ APP_NAME }}" />
-		<meta property="og:description" name="description" itemprop="description" content="{{ APP_DESCRIPTION }}" />
-		<meta property="og:image" name="twitter:image" itemprop="image" content="{{ APP_PUBLIC_URL }}{{ APP_LARGE_ICON }}" />
+		<meta property="og:title" name="twitter:title" itemprop="name" content="Shadowrun Catalog" />
+		<meta property="og:description" name="description" itemprop="description" content="An interactive list of Shadowrun published material (books, tabletop, video games, etc.). Information about the items and can be linked to local files." />
+		<meta property="og:image" name="twitter:image" itemprop="image" content="icons/transparent/manifest-icon-512.png" />
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="en_US" />
-		<meta property="og:url" content="{{ APP_PUBLIC_URL }}" />
+		<meta property="og:url" content="https://madcampos.dev/sdrlog" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:dnt" content="on">
 
 		<meta name="pinterest" content="nopin" description="Pintrest not allowed here!">
 
 		<!-- Search -->
-		<link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="{{ APP_NAME }}">
+		<!-- <link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Shadowrun Catalog"> -->
 
 		<!-- Site configuration -->
 		<meta name="referrer" content="no-referrer">
@@ -39,34 +38,34 @@
 
 		<!-- Apple icons -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="apple-touch-icon" href="{{ APP_APPLE_ICON }}">
+		<link rel="apple-touch-icon" href="icons/maskable/apple-icon-180.png">
 
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2388-1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2048-1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2224-1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1620-2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2160-1620.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1284-2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2778-1284.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1170-2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2532-1170.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2436-1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2688-1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1792-828.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-2208-1242.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-		<link rel="apple-touch-startup-image" href="{{ APP_PUBLIC_URL }}splash/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2388-1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2048-1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2224-1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1620-2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2160-1620.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1284-2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2778-1284.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1170-2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2532-1170.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2436-1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2688-1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1792-828.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1242-2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-2208-1242.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="splash/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 
 		<!-- Styles -->
 		<link rel="stylesheet" href="./css/base.css" />
@@ -75,7 +74,7 @@
 	<body class="notranslate" translate="no">
 		<div id="splash-screen">
 			<div id="load-overlay">
-				<img src="{{ APP_PUBLIC_URL }}images/base-covers/loading-anim.svg" alt="Animation of the Shadowrun logo" role="presentation">
+				<img src="images/base-covers/loading-anim.svg" alt="Animation of the Shadowrun logo" role="presentation">
 				<div>
 					<progress id="load-progress"></progress>
 					<p id="load-text">Loading Data...</p>

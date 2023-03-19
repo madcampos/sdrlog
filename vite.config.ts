@@ -3,9 +3,7 @@
 import { readFileSync } from 'fs';
 
 import { defineConfig, type UserConfig } from 'vitest/config';
-import { loadEnv } from 'vite';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
-import vitePluginHtmlEnv from 'vite-plugin-html-env';
 
 const sslOptions = {
 	cert: readFileSync('./certs/server.crt'),
@@ -15,61 +13,40 @@ const sslOptions = {
 const packageJson: PackageJsonVariables = JSON.parse(readFileSync('./package.json', { encoding: 'utf8' }));
 
 export default defineConfig(({ mode }) => {
-	const env = {
-		APP_PUBLIC_URL: packageJson.homepage,
-
-		APP_NAME: packageJson.displayName,
-		APP_SHORT_NAME: packageJson.shortName,
-		APP_DESCRIPTION: packageJson.description,
-		APP_KEYWORDS: packageJson.keywords.join(', '),
-		APP_AUTHOR: packageJson.author.name,
-		APP_VERSION: packageJson.version,
-
-		APP_THEME_COLOR: '#9400d3',
-		APP_BACKGROUND_COLOR: '#252525',
-
-		APP_APPLE_ICON: 'icons/maskable/apple-icon-180.png',
-		APP_SMALL_ICON: 'icons/transparent/manifest-icon-192.png',
-		APP_SMALL_ICON_BG: 'icons/maskable/manifest-icon-192.png',
-		APP_LARGE_ICON: 'icons/transparent/manifest-icon-512.png',
-		APP_LARGE_ICON_BG: 'icons/maskable/manifest-icon-512.png',
-		...loadEnv(mode, process.cwd(), 'APP_')
-	};
-
 	const manifest: Partial<ManifestOptions> = {
-		id: env.APP_PUBLIC_URL,
-		scope: env.APP_PUBLIC_URL,
-		name: env.APP_NAME,
-		short_name: env.APP_SHORT_NAME,
+		id: packageJson.homepage,
+		scope: packageJson.homepage,
+		name: packageJson.displayName,
+		short_name: packageJson.shortName,
 		lang: 'en-US',
-		description: env.APP_DESCRIPTION,
+		description: packageJson.description,
 		categories: ['entertainment', 'utilities', 'games'],
 		display: 'standalone',
 		orientation: 'portrait',
 		display_override: ['window-controls-overlay'],
-		background_color: env.APP_BACKGROUND_COLOR,
-		theme_color: env.APP_THEME_COLOR,
+		background_color: '#252525',
+		theme_color: '#9400d3',
 		icons: [
 			{
-				src: env.APP_SMALL_ICON,
+				src: 'icons/transparent/manifest-icon-192.png',
 				sizes: '192x192',
 				type: 'image/png',
 				purpose: 'any'
 			},
 			{
-				src: env.APP_SMALL_ICON_BG,
+				src: 'icons/maskable/manifest-icon-192.png',
 				sizes: '192x192',
 				type: 'image/png',
 				purpose: 'maskable'
 			},
 			{
-				src: env.APP_LARGE_ICON,
+				src: 'icons/transparent/manifest-icon-512.png',
 				sizes: '512x512',
 				type: 'image/png',
 				purpose: 'any'
 			},
 			{
-				src: env.APP_LARGE_ICON_BG,
+				src: 'icons/maskable/manifest-icon-512.png',
 				sizes: '512x512',
 				type: 'image/png',
 				purpose: 'maskable'
@@ -85,27 +62,19 @@ export default defineConfig(({ mode }) => {
 
 	const config: UserConfig = {
 		plugins: [
-			vitePluginHtmlEnv({
-				compiler: false,
-				compress: true,
-				envPrefixes: 'APP_',
-				prefix: '{{',
-				suffix: '}}',
-				...env
-			}),
 			vitePWA({
 				registerType: 'prompt',
 				minify: true,
 				includeAssets: ['/icons/favicon.svg'],
 				manifest,
-				scope: env.APP_PUBLIC_URL,
+				scope: packageJson.homepage,
 				workbox: {
 					cleanupOutdatedCaches: true,
 					clientsClaim: true,
 					navigationPreload: false,
 					runtimeCaching: [
 						{
-							urlPattern: new RegExp(`^${env.APP_PUBLIC_URL}.*`, 'iu'),
+							urlPattern: new RegExp(`^${packageJson.homepage}.*`, 'iu'),
 							handler: 'CacheFirst',
 							options: {
 								cacheName: 'app-cache',
@@ -117,7 +86,7 @@ export default defineConfig(({ mode }) => {
 							}
 						},
 						{
-							urlPattern: new RegExp(`^(?!${env.APP_PUBLIC_URL}).*`, 'iu'),
+							urlPattern: new RegExp(`^(?!${packageJson.homepage}).*`, 'iu'),
 							handler: 'NetworkOnly'
 						}
 					]
@@ -127,7 +96,7 @@ export default defineConfig(({ mode }) => {
 				}
 			})
 		],
-		base: env.APP_PUBLIC_URL,
+		base: mode === 'production' ? packageJson.homepage : 'https://localhost:3000/',
 		envPrefix: 'APP_',
 		envDir: '../',
 		root: 'src',

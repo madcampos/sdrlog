@@ -33,7 +33,7 @@ interface DatabaseSchema extends DBSchema {
 
 type Collections = StoreNames<DatabaseSchema>;
 
-const IDB_VERSION = Number.parseInt(import.meta.env.APP_DB_VERSION.replaceAll('.', ''));
+const IDB_VERSION = 102;
 const database = openDB<DatabaseSchema>('SDRLog', IDB_VERSION, {
 	upgrade(store) {
 		if (!store.objectStoreNames.contains('items')) {

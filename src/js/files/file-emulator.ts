@@ -10,7 +10,7 @@ export async function getEmulatorFiles() {
 	let files = await getAllIDBEntries('emulator');
 
 	if (files.length === 0) {
-		const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}lib/webretro/bundle.zip`);
+		const response = await fetch(`${import.meta.env.BASE_URL}lib/webretro/bundle.zip`);
 		const fileBlob = await response.blob();
 		const zipFile = new File([fileBlob], 'bundle.zip', { type: 'application/zip' });
 

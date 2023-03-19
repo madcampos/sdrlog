@@ -47,8 +47,6 @@ typings/
 # Build artifacts
 public/images/covers/
 public/images/thumbs/
-images/covers/
-images/thumbs/
 
 # server certificates
 certs

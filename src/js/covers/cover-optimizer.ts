@@ -94,7 +94,7 @@ export async function optimize(imageArray: BufferSource, { width, height }: { wi
 	}
 
 	if (!mozjpegModule) {
-		mozjpegModule = (await import(/* @vite-ignore */ `${import.meta.env.APP_PUBLIC_URL}lib/mozjpeg/mozjpeg.js`)).default as MozJPEGModuleImport;
+		mozjpegModule = (await import(/* @vite-ignore */ `${import.meta.env.BASE_URL}lib/mozjpeg/mozjpeg.js`)).default as MozJPEGModuleImport;
 	}
 
 	const mozjpeg = await mozjpegModule();

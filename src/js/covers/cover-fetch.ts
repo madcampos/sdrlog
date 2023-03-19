@@ -7,9 +7,9 @@ import { I18n } from '../intl/translations';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 
-export const FALLBACK_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/fallback.svg`;
-export const LOADING_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/loading-anim.svg`;
-export const LOADING_SIMPLE_COVER = `${import.meta.env.APP_PUBLIC_URL}images/base-covers/loading-simple.svg`;
+export const FALLBACK_COVER = `${import.meta.env.BASE_URL}images/base-covers/fallback.svg`;
+export const LOADING_COVER = `${import.meta.env.BASE_URL}images/base-covers/loading-anim.svg`;
+export const LOADING_SIMPLE_COVER = `${import.meta.env.BASE_URL}images/base-covers/loading-simple.svg`;
 
 export async function getCoverUrl(id: string) {
 	const currentCover = await getIDBItem('covers', id);
@@ -18,7 +18,7 @@ export async function getCoverUrl(id: string) {
 		return URL.createObjectURL(currentCover);
 	}
 
-	const response = await fetch(`${import.meta.env.APP_PUBLIC_URL}images/covers/${id}.jpg`);
+	const response = await fetch(`${import.meta.env.BASE_URL}images/covers/${id}.jpg`);
 
 	if (response.ok) {
 		const responseData = await response.blob();

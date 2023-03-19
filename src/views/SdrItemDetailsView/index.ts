@@ -181,9 +181,6 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 				document.querySelector('main')?.append(card);
 			}
 
-			window.history.pushState(null, `${this.material.name} · ${import.meta.env.APP_NAME}`, `${import.meta.env.APP_PUBLIC_URL}${window.location.search}#${id}`);
-			window.document.title = `${this.material.name} · ${import.meta.env.APP_NAME}`;
-
 			// eslint-disable-next-line no-alert
 			alert(`${I18n.t`Item #`} ${id} ${I18n.t`saved successfully.`}`);
 		}
@@ -384,7 +381,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 									${this.material.publisher.map((publisher) => html`
 										<sdr-edit-list-item value="${publisher}">
 											<abbr title="${publisher}">
-												<img alt="${publisher}" src="${import.meta.env.APP_PUBLIC_URL}images/publishers/${publisher}.png"/>
+												<img alt="${publisher}" src="${import.meta.env.BASE_URL}images/publishers/${publisher}.png"/>
 											</abbr>
 										</sdr-edit-list-item>
 									`)}
