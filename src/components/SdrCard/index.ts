@@ -36,8 +36,12 @@ export class SdrCard extends LitElement {
 
 	@property({ type: String }) declare thumbUrl: string;
 
+	#internals: ElementInternals;
+
 	constructor({ id, name, category, sku, type, edition, status }: Partial<CreateCardOptions> = {}) {
 		super();
+
+		this.#internals = this.attachInternals();
 
 		this.id = id ?? '';
 		this.title = name ?? '';
@@ -47,6 +51,9 @@ export class SdrCard extends LitElement {
 		this.edition = edition ?? 0 as Material['edition'];
 		this.status = status ?? '' as Material['status'];
 		this.thumbUrl = LOADING_SIMPLE_COVER;
+
+		this.#internals.role = 'listitem';
+		this.#internals.ariaLabel = this.title;
 
 		window.addEventListener('gamepadbuttondown', (evt) => {
 			if (document.activeElement === this && evt.detail.button === 'left') {
@@ -191,7 +198,6 @@ export class SdrCard extends LitElement {
 		return html`
 			<figure
 				tabindex="0"
-				role="listitem"
 
 				@click=${async () => Router.navigate(`/item/${this.id}`)}
 				@keydown=${(evt: KeyboardEvent) => this.#handleKeyboardNavigation(evt)}
@@ -208,7 +214,7 @@ export class SdrCard extends LitElement {
 					@error=${async () => this.#fallbackThumb()}
 				/>
 			</figure>
-			<h4>${this.title}</h4>
+			<h4 id="title">${this.title}</h4>
 		`;
 	}
 
