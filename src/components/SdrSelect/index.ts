@@ -87,6 +87,7 @@ export class SdrSelect extends LitElement {
 		this.select.selectedIndex = 0;
 	}
 
+	// TODO: implement custom select
 	render() {
 		return html`
 			<label for="select">
