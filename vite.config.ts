@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => {
 		name: packageJson.displayName,
 		short_name: packageJson.shortName,
 		lang: 'en-US',
+		dir: 'ltr',
 		description: packageJson.description,
 		categories: ['entertainment', 'utilities', 'games'],
 		display: 'standalone',
@@ -26,6 +27,7 @@ export default defineConfig(({ mode }) => {
 		display_override: ['window-controls-overlay'],
 		background_color: '#252525',
 		theme_color: '#9400d3',
+		prefer_related_applications: false,
 		icons: [
 			{
 				src: 'icons/transparent/manifest-icon-192.png',
@@ -55,9 +57,98 @@ export default defineConfig(({ mode }) => {
 		protocol_handlers: [
 			{
 				protocol: 'web+sdrlog',
-				url: './?search=%s'
+				url: `${packageJson.homepage}/?search=%s`
+			}
+		],
+		shortcuts: [
+			{
+				name: 'Search',
+				short_name: 'Search',
+				description: 'Search for an item',
+				url: `${packageJson.homepage}/?search=`,
+				icons: [
+					{
+						src: 'icons/actions/search.png',
+						sizes: '192x192'
+					}
+				]
+			},
+			{
+				name: 'App Information',
+				short_name: 'Info',
+				description: 'Information about how the app is strutctured',
+				url: `${packageJson.homepage}/info`,
+				icons: [
+					{
+						src: 'icons/actions/info.png',
+						sizes: '192x192'
+					}
+				]
+			},
+			{
+				name: 'New Item',
+				short_name: 'New Item',
+				description: 'adds a new item to the collection',
+				url: `${packageJson.homepage}/item`,
+				icons: [
+					{
+						src: 'icons/actions/new-item.png',
+						sizes: '192x192'
+					}
+				]
+			}
+		],
+		screenshots: [
+			{
+				src: 'screenshots/wide-1.png',
+				sizes: '1280x720',
+				type: 'image/png',
+				platform: 'wide'
+			},
+			{
+				src: 'screenshots/wide-2.png',
+				sizes: '1280x720',
+				type: 'image/png',
+				platform: 'wide'
+			},
+			{
+				src: 'screenshots/wide-3.png',
+				sizes: '1280x720',
+				type: 'image/png',
+				platform: 'wide'
+			},
+			{
+				src: 'screenshots/wide-4.png',
+				sizes: '1280x720',
+				type: 'image/png',
+				platform: 'wide'
+			},
+			{
+				src: 'screenshots/narrow-1.png',
+				sizes: '720x1280',
+				type: 'image/png',
+				platform: 'narrow'
+			},
+			{
+				src: 'screenshots/narrow-2.png',
+				sizes: '720x1280',
+				type: 'image/png',
+				platform: 'narrow'
+			},
+			{
+				src: 'screenshots/narrow-3.png',
+				sizes: '720x1280',
+				type: 'image/png',
+				platform: 'narrow'
+			},
+			{
+				src: 'screenshots/narrow-4.png',
+				sizes: '720x1280',
+				type: 'image/png',
+				platform: 'narrow'
 			}
 		]
+		// TODO: include share target
 	};
 
 	const config: UserConfig = {
