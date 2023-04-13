@@ -14,7 +14,7 @@ const packageJson: PackageJsonVariables = JSON.parse(readFileSync('./package.jso
 
 export default defineConfig(({ mode }) => {
 	const manifest: Partial<ManifestOptions> = {
-		id: packageJson.homepage,
+		id: `${packageJson.homepage}?id=19a66539-f75c-4ebb-9818-57b19b12dc63`,
 		scope: packageJson.homepage,
 		name: packageJson.displayName,
 		short_name: packageJson.shortName,
@@ -57,7 +57,7 @@ export default defineConfig(({ mode }) => {
 		protocol_handlers: [
 			{
 				protocol: 'web+sdrlog',
-				url: `${packageJson.homepage}/?search=%s`
+				url: `${packageJson.homepage}/item?url=%s`
 			}
 		],
 		shortcuts: [
@@ -69,7 +69,7 @@ export default defineConfig(({ mode }) => {
 				icons: [
 					{
 						src: 'icons/actions/search.png',
-						sizes: '192x192'
+						sizes: '512x512'
 					}
 				]
 			},
@@ -81,7 +81,7 @@ export default defineConfig(({ mode }) => {
 				icons: [
 					{
 						src: 'icons/actions/info.png',
-						sizes: '192x192'
+						sizes: '512x512'
 					}
 				]
 			},
@@ -93,7 +93,7 @@ export default defineConfig(({ mode }) => {
 				icons: [
 					{
 						src: 'icons/actions/new-item.png',
-						sizes: '192x192'
+						sizes: '512x512'
 					}
 				]
 			}
@@ -147,8 +147,43 @@ export default defineConfig(({ mode }) => {
 				type: 'image/png',
 				platform: 'narrow'
 			}
+		],
+		share_target: {
+			action: `${packageJson.homepage}/item`,
+			method: 'POST',
+			enctype: 'multipart/form-data',
+			params: {
+				title: 'title',
+				text: 'description',
+				url: 'url',
+				files: [
+					{
+						name: 'item',
+						accept: ['application/json', '.json', '.sdr']
+					},
+					{
+						name: 'cover',
+						accept: ['image/jpeg', '.jpg', '.jpeg', 'image/png', '.png']
+					}
+				]
+			}
+		},
+		// @ts-expect-error
+		handle_links: 'preffered',
+		launch_handler: {
+			client_mode: 'navigate-exitsing'
+		},
+		file_handlers: [
+			{
+				action: `${packageJson.homepage}/item`,
+				accept: {
+					'text/json': [
+						'.json',
+						'.sdr'
+					]
+				}
+			}
 		]
-		// TODO: include share target
 	};
 
 	const config: UserConfig = {
