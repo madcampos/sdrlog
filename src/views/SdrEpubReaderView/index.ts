@@ -158,7 +158,7 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 					slot="title"
 					class="title-menu"
 					.value="${this.selectedPage}"
-					@change="${(evt: InputEvent) => this.#rendition?.display((evt.target as HTMLSelectElement).value)}"
+					@change="${async (evt: InputEvent) => this.#rendition?.display((evt.target as HTMLSelectElement).value)}"
 				>
 					${this.toc.map((chapter) => {
 						if (chapter.subitems) {

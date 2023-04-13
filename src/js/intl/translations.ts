@@ -61,7 +61,10 @@ export class I18n {
 		localStorage.setItem('app-language', translationLanguage);
 
 		try {
-			const request = await fetch(I18n.availableTranslations[translationLanguage]);
+			// @ts-expect-error
+			const translation = I18n.availableTranslations[translationLanguage] as string;
+
+			const request = await fetch(translation);
 			const translationJson = await request.json() as Record<string, string>;
 
 			loadedTranslations = new Map(Object.entries(translationJson));

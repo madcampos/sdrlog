@@ -80,7 +80,10 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		const target = evt.target as SdrEditList;
 		const [key, input] = target.querySelectorAll('sdr-edit-box, sdr-select');
 
-		if (this.material[map]?.[key.value] !== undefined) {
+		// @ts-expect-error
+		const mapToAddItems = this.material[map]?.[key.value];
+
+		if (mapToAddItems !== undefined) {
 			key.setCustomValidity(I18n.t`Item already exists in the list.`);
 		} else if (key.value === '') {
 			key.setCustomValidity(I18n.t`Please fill the field.`);
@@ -110,12 +113,14 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 			return;
 		}
 
-		const list = this.material[target.id];
+		// @ts-expect-error
+		const list = this.material[target.id] as string[] | Record<string, string>;
 
 		if (Array.isArray(list)) {
-			this.material[target.id].splice(this.material[target.id].indexOf(removedItem), 1);
+			list.splice(list.indexOf(removedItem), 1);
 		} else {
-			this.material[target.id] = Object.fromEntries(Object.entries(this.material[target.id]).filter(([key]) => key !== removedItem));
+			// @ts-expect-error
+			this.material[target.id] = Object.fromEntries(Object.entries(list).filter(([key]) => key !== removedItem));
 		}
 
 		this.requestUpdate('material');
@@ -362,12 +367,17 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 									</sdr-select>
 									<sdr-edit-box slot="input" required placeholder="$t{Name}"></sdr-edit-box>
 
-									${Object.entries(this.material.names ?? {}).map(([language, name]) => html`
-										<sdr-edit-list-item value="${language}">
-											<abbr title="${MATERIAL_LANGUAGES_INFO[language].name}">${MATERIAL_LANGUAGES_INFO[language].icon}</abbr>:
-											${name}
-										</sdr-edit-list-item>
-									`)}
+									${Object.entries(this.material.names ?? {}).map(([language, name]) => {
+										// @ts-expect-error
+										const { name: languageName, icon } = MATERIAL_LANGUAGES_INFO[language];
+
+										return html`
+											<sdr-edit-list-item value="${language}">
+												<abbr title="${languageName}">${icon}</abbr>:
+												${name}
+											</sdr-edit-list-item>
+										`;
+									})}
 								</sdr-edit-list>
 
 								<sdr-edit-list id="publisher" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'publisher')}">
