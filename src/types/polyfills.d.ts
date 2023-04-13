@@ -16,3 +16,16 @@ interface Gamepad {
 		}): void
 	}
 }
+
+interface LaunchParams {
+	readonly files: FileSystemHandle[],
+	readonly targetURL: string
+}
+
+interface LaunchQueue {
+	setConsumer(consumer: (params: LaunchParams) => unknown): void
+}
+
+interface Window {
+	launchQueue: LaunchQueue
+}

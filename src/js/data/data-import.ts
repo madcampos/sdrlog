@@ -1,4 +1,4 @@
-import type { Material, NewMaterial, SDRLogData } from '../../data/data';
+import type { IsoCode, Material, MaterialCategory, MaterialEdition, MaterialGameDate, MaterialPublisher, MaterialStatus, MaterialType, NewMaterial, SDRLogData } from '../../data/data';
 import { I18n } from '../intl/translations';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
@@ -6,6 +6,7 @@ import { getFileHash } from '../files/file-import';
 
 import dataUrl from '../../data/data.json?url';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extract';
+import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
 
 export async function fetchData() {
 	try {
@@ -41,6 +42,65 @@ export async function fetchItems() {
 	return [...mergedData.values()];
 }
 
+export function parseMaterial(material: Partial<Material | Record<string, unknown>>) {
+	function handleArray<T>(value: unknown) {
+		const ensureArray = Array.isArray(value) ? value : [];
+		const ensureNonEmpty = ensureArray.filter((val) => val);
+		const ensureString = ensureNonEmpty.map((val) => val.toString());
+		const ensureUnique = [...new Set(ensureString)];
+
+		return ensureUnique as T[];
+	}
+
+	function handleEnum<T extends string>(value: unknown, enumValues: Record<T, unknown>, fallback: T | '') {
+		const ensureString = value?.toString() ?? '';
+		const ensureValid = Object.keys(enumValues).includes(ensureString) ? ensureString : fallback;
+
+		return ensureValid as T;
+	}
+
+	const parsedMaterial: Material = {
+		name: material.name?.toString() ?? '',
+		description: material.description?.toString() ?? '',
+		notes: material.notes?.toString() ?? '',
+
+		edition: Number.parseInt(material.edition?.toString() ?? '0') as MaterialEdition,
+
+		gameDate: ((/^\d{4}-\d{2}$/iu).test(material.gameDate?.toString() ?? '') ? material.gameDate?.toString() : '') as MaterialGameDate,
+
+		category: handleEnum<MaterialCategory>(material.category, MATERIAL_CATEGORY_INFO, ''),
+		status: handleEnum<MaterialStatus>(material.status, MATERIAL_STATUS_INFO, 'missing'),
+		type: handleEnum<MaterialType>(material.type, MATERIAL_TYPE_INFO, ''),
+		publisher: handleArray<MaterialPublisher>(material.publisher).filter((pub) => MATERIAL_PUBLISHERS.includes(pub)),
+		sku: handleArray<string>(material.sku),
+		originalLanguage: handleEnum<IsoCode>(material.originalLanguage, MATERIAL_LANGUAGES_INFO, ''),
+		releaseDate: handleArray(material.releaseDate)
+	};
+
+	if (material.names !== null && typeof material.names === 'object') {
+		parsedMaterial.names = {};
+
+		for (const [lang, name] of Object.entries(material.names)) {
+			if ((/^[a-z]-[A-Z]/u).test(lang) && typeof name === 'string') {
+				// @ts-expect-error
+				parsedMaterial.names[lang] = name;
+			}
+		}
+	}
+
+	if (material.links !== null && typeof material.links === 'object') {
+		parsedMaterial.links = {};
+
+		for (const [url, title] of Object.entries(material.links)) {
+			if (typeof url === 'string' && typeof title === 'string') {
+				parsedMaterial.links[url] = title;
+			}
+		}
+	}
+
+	return parsedMaterial;
+}
+
 export async function requestDataFileFromUser() {
 	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Read data file` });
 
@@ -63,9 +123,15 @@ export async function requestDataFileFromUser() {
 
 		const file = await fileHandle.getFile();
 
-		const parsedFile = JSON.parse(await file.text()) as SDRLogData;
+		const parsedFile = JSON.parse(await file.text()) as Partial<SDRLogData>;
 
-		await setIDBItems('items', parsedFile.items.map((material) => [material.sku[0], material]));
+		if (!parsedFile.items) {
+			throw new Error('No items found in data file.');
+		}
+
+		const parsedItems = parsedFile.items.map((material) => parseMaterial(material));
+
+		await setIDBItems('items', parsedItems.map((material) => [material.sku[0], material]));
 	} catch (err) {
 		console.error('Failed to open data file.', err);
 	}

@@ -19,7 +19,7 @@ import { exportDataItem } from '../../js/data/data-export';
 import { getIconForFile } from '../../js/files/file-icons';
 import { I18n } from '../../js/intl/translations';
 import { formatFullDate } from '../../js/intl/formatting';
-import { saveNewMaterialInfo } from '../../js/data/data-import';
+import { parseMaterial, saveNewMaterialInfo } from '../../js/data/data-import';
 import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
 import { SdrCard } from '../../components/SdrCard';
 
@@ -205,6 +205,28 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 			await this.setMaterial(destination.params.id);
 
 			title = this.material.name;
+		}
+
+		if ('launchQueue' in window) {
+			window.launchQueue.setConsumer(async (launchParams) => {
+				this.resetMaterial();
+
+				for await (const fileReference of launchParams.files) {
+					if (fileReference.kind === 'file') {
+						try {
+							const file = await (fileReference as FileSystemFileHandle).getFile();
+							const textContent = await file.text();
+							const jsonContent = JSON.parse(textContent) as Partial<Material>;
+
+							this.material = parseMaterial(jsonContent);
+
+							break;
+						} catch (error) {
+							console.error(error);
+						}
+					}
+				}
+			});
 		}
 
 		this.open = true;

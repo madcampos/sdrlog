@@ -214,6 +214,20 @@ export default defineConfig(({ mode }) => {
 						{
 							urlPattern: new RegExp(`^(?!${packageJson.homepage}).*`, 'iu'),
 							handler: 'NetworkOnly'
+						},
+						{
+							urlPattern: new RegExp(`^${packageJson.homepage}/item$`, 'iu'),
+							method: 'POST',
+							handler: async ({ event, request }) => {
+								const formData = await event.request.formData();
+
+								// TODO: handle form data
+
+								return fetch({
+									...request,
+									method: 'GET'
+								});
+							}
 						}
 					]
 				},
