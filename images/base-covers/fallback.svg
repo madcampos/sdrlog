@@ -28,6 +28,7 @@
 			#img-noise {
 				display: none;
 			}
+
 			#img-pixel {
 				opacity: 0.3;
 			}
@@ -35,16 +36,21 @@
 
 		@media (max-width: 128px) {
 			#img-clean {
-				opacity: 0.4;
+				opacity: 0.8;
+			}
+
+			#img-glitch {
+				opacity: 0.6;
+			}
+
+			#img-pixel {
+				opacity: 0.2;
 			}
 		}
 
 		@media (max-width: 96px) {
-			#img-clean {
-				opacity: 0.2;
-			}
 			#img-glitch {
-				filter: none;
+				opacity: 0.2;
 			}
 		}
 
@@ -52,14 +58,21 @@
 			#img-pixel {
 				display: none;
 			}
-			#img-clean {
+		}
+
+		@media (max-width: 32px) {
+			#img-glitch {
 				display: none;
+			}
+
+			#img-clean {
+				opacity: 1;
 			}
 		}
 	</style>
 	<defs>
 		<filter id="sdr-glitch" x="-10%" y="-10%" width="120%" height="120%">
-			<feTurbulence baseFrequency="0 1.001" numOctaves="32" seed="2"/>
+			<feTurbulence baseFrequency="0 1.01" numOctaves="32" seed="2"/>
 			<feMorphology operator="dilate" radius="8" result="glitch-lines"/>
 			<feDisplacementMap in="SourceGraphic" in2="glitch-lines" scale="32" xChannelSelector="R" yChannelSelector="R"/>
 			<feOffset dy="-2"/>
