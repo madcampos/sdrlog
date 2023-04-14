@@ -57,7 +57,7 @@ export default defineConfig(({ mode }) => {
 		protocol_handlers: [
 			{
 				protocol: 'web+sdrlog',
-				url: `${packageJson.homepage}/item?url=%s`
+				url: `${packageJson.homepage}item?url=%s`
 			}
 		],
 		shortcuts: [
@@ -65,7 +65,7 @@ export default defineConfig(({ mode }) => {
 				name: 'Search',
 				short_name: 'Search',
 				description: 'Search for an item',
-				url: `${packageJson.homepage}/?search=`,
+				url: `${packageJson.homepage}?search=`,
 				icons: [
 					{
 						src: 'icons/actions/search.png',
@@ -77,7 +77,7 @@ export default defineConfig(({ mode }) => {
 				name: 'App Information',
 				short_name: 'Info',
 				description: 'Information about how the app is strutctured',
-				url: `${packageJson.homepage}/info`,
+				url: `${packageJson.homepage}info`,
 				icons: [
 					{
 						src: 'icons/actions/info.png',
@@ -89,7 +89,7 @@ export default defineConfig(({ mode }) => {
 				name: 'New Item',
 				short_name: 'New Item',
 				description: 'adds a new item to the collection',
-				url: `${packageJson.homepage}/item`,
+				url: `${packageJson.homepage}item`,
 				icons: [
 					{
 						src: 'icons/actions/new-item.png',
@@ -149,7 +149,7 @@ export default defineConfig(({ mode }) => {
 			}
 		],
 		share_target: {
-			action: `${packageJson.homepage}/item`,
+			action: `${packageJson.homepage}item`,
 			method: 'POST',
 			enctype: 'multipart/form-data',
 			params: {
@@ -175,7 +175,7 @@ export default defineConfig(({ mode }) => {
 		},
 		file_handlers: [
 			{
-				action: `${packageJson.homepage}/item`,
+				action: `${packageJson.homepage}item`,
 				accept: {
 					'text/json': [
 						'.json',
@@ -249,7 +249,7 @@ export default defineConfig(({ mode }) => {
 							handler: 'NetworkOnly'
 						},
 						{
-							urlPattern: new RegExp(`^${packageJson.homepage}/item$`, 'iu'),
+							urlPattern: new RegExp(`^${packageJson.homepage}item$`, 'iu'),
 							method: 'POST',
 							handler: async ({ event, request }) => {
 								const formData = await event.request.formData();
