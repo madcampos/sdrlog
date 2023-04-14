@@ -57,7 +57,7 @@ export default defineConfig(({ mode }) => {
 		protocol_handlers: [
 			{
 				protocol: 'web+sdrlog',
-				url: `${packageJson.homepage}item?url=%s`
+				url: '/item?url=%s'
 			}
 		],
 		shortcuts: [
@@ -65,10 +65,14 @@ export default defineConfig(({ mode }) => {
 				name: 'Search',
 				short_name: 'Search',
 				description: 'Search for an item',
-				url: `${packageJson.homepage}?search=`,
+				url: `${packageJson.homepage}?search`,
 				icons: [
 					{
-						src: 'icons/actions/search.png',
+						src: 'icons/actions/search-96.png',
+						sizes: '96x96'
+					},
+					{
+						src: 'icons/actions/search-512.png',
 						sizes: '512x512'
 					}
 				]
@@ -80,7 +84,11 @@ export default defineConfig(({ mode }) => {
 				url: `${packageJson.homepage}info`,
 				icons: [
 					{
-						src: 'icons/actions/info.png',
+						src: 'icons/actions/info-96.png',
+						sizes: '96x96'
+					},
+					{
+						src: 'icons/actions/info-512.png',
 						sizes: '512x512'
 					}
 				]
@@ -92,7 +100,11 @@ export default defineConfig(({ mode }) => {
 				url: `${packageJson.homepage}item`,
 				icons: [
 					{
-						src: 'icons/actions/new-item.png',
+						src: 'icons/actions/new-item-96.png',
+						sizes: '96x96'
+					},
+					{
+						src: 'icons/actions/new-item-512.png',
 						sizes: '512x512'
 					}
 				]
@@ -252,6 +264,7 @@ export default defineConfig(({ mode }) => {
 							urlPattern: new RegExp(`^${packageJson.homepage}item$`, 'iu'),
 							method: 'POST',
 							handler: async ({ event, request }) => {
+								// @ts-expect-error
 								const formData = await event.request.formData();
 
 								// TODO: handle form data
