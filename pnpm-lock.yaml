@@ -41,7 +41,6 @@ dependencies:
   nipplejs: 0.10.1
   pdfjs-dist: 3.5.141
   urlpattern-polyfill: 6.0.2
-  workbox-window: 6.5.4
 
 devDependencies:
   '@commitlint/cli': 17.5.1
@@ -63,6 +62,7 @@ devDependencies:
   vite: 4.2.1
   vite-plugin-pwa: 0.14.7_2zwjfzulkrffi34qjwvtq6zb6a
   vitest: 0.29.8
+  workbox-window: 6.5.4
 
 packages:
 
@@ -7219,6 +7219,7 @@ packages:
 
   /workbox-core/6.5.4:
     resolution: {integrity: sha512-OXYb+m9wZm8GrORlV2vBbE5EC1FKu71GGp0H4rjmxmF4/HLbMCoTFws87M3dFwgpmg0v00K++PImpNQ6J5NQ6Q==}
+    dev: true
 
   /workbox-expiration/6.5.4:
     resolution: {integrity: sha512-jUP5qPOpH1nXtjGGh1fRBa1wJL2QlIb5mGpct3NzepjGG2uFFBn4iiEBiI9GUmfAFR2ApuRhDydjcRmYXddiEQ==}
@@ -7295,6 +7296,7 @@ packages:
     dependencies:
       '@types/trusted-types': 2.0.2
       workbox-core: 6.5.4
+    dev: true
 
   /wrap-ansi/6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
