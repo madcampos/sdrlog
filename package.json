@@ -2,27 +2,8 @@
 	"name": "sdrlog",
 	"private": true,
 	"version": "1.0.0",
-	"displayName": "Shadowrun Catalog",
-	"shortName": "SDRlog",
-	"description": "An interactive list of Shadowrun published material (books, tabletop, video games, etc.). Information about the items and can be linked to local files.",
-	"homepage": "https://madcampos.dev/sdrlog/",
-	"keywords": [
-		"shadowrun",
-		"sdr",
-		"rpg",
-		"books"
-	],
-	"author": {
-		"name": "madcampos",
-		"email": "madcampos@outlook.com"
-	},
 	"license": "MIT",
-	"browser": "./dist/index.html",
 	"type": "module",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/madcampos/sdrlog.git"
-	},
 	"engines": {
 		"node": ">=17.0.0"
 	},
