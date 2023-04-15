@@ -23,6 +23,7 @@ dist
 dev-dist
 dist-ssr
 coverage
+public/
 public/images/covers/
 public/images/thumbs/
 
