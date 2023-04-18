@@ -4,6 +4,30 @@ import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues } from './idb-persistence';
 import { I18n } from '../intl/translations';
 
+function formatDataToExport(data: Material) {
+	const formattedData: Material = {
+		sku: data.sku,
+		name: data.name,
+		category: data.category,
+		type: data.type,
+		originalLanguage: data.originalLanguage,
+		...(Object.keys(data.names ?? {}).length > 0 ? { names: data.names } : {}),
+		description: data.description,
+		...(Object.keys(data.links ?? {}).length > 0 ? { links: data.links } : {}),
+		edition: data.edition,
+		publisher: data.publisher,
+		releaseDate: data.releaseDate,
+		gameDate: data.gameDate,
+		status: data.status
+	};
+
+	if (data.notes) {
+		formattedData.notes = data.notes;
+	}
+
+	return formattedData;
+}
+
 export async function exportDataFile() {
 	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Export Data` });
 
@@ -44,7 +68,9 @@ export async function exportDataItem(data: Material) {
 	});
 	const file = await fileHandler.createWritable();
 
+	const formattedData = formatDataToExport(data);
+
 	await file.truncate(0);
-	await file.write(JSON.stringify(data, null, '\t'));
+	await file.write(JSON.stringify(formattedData, null, '\t'));
 	await file.close();
 }
