@@ -131,6 +131,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 
 		this.coverUrl = LOADING_COVER;
 		this.coverUrl = URL.createObjectURL(file);
+		this.#coverFile = file;
 	}
 
 	async #addFile() {

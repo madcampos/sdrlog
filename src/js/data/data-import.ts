@@ -154,11 +154,11 @@ export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) 
 
 	if (cover) {
 		try {
-			const coverFile = await processCoverFile(cover);
+			const coverFile = await processCoverFile(cover, { name: `${id}.jpg` });
 
 			await setIDBItem('covers', id, coverFile);
 
-			const thumbFile = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH });
+			const thumbFile = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH, name: `${id}.jpg` });
 
 			await setIDBItem('thumbs', id, thumbFile);
 		} catch (err) {
