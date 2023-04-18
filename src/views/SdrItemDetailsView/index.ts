@@ -15,7 +15,7 @@ import { getIDBItem, getIDBItemByIndex, getIDBItemsByIndex } from '../../js/data
 import { openFile } from '../../js/files/file-open';
 import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
 import { saveFile } from '../../js/files/file-import';
-import { exportDataItem } from '../../js/data/data-export';
+import { copyItemToClipboard, exportDataItem } from '../../js/data/data-export';
 import { getIconForFile } from '../../js/files/file-icons';
 import { I18n } from '../../js/intl/translations';
 import { formatFullDate } from '../../js/intl/formatting';
@@ -451,17 +451,20 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 					</sdr-tabs>
 				</div>
 
-				<sdr-button id="cancel-button" slot="footer" icon="❌" @click="${() => { this.isDisplaying = !this.isDisplaying; }}">
+				<sdr-button class="edit-button" slot="footer" icon="❌" @click="${() => { this.isDisplaying = !this.isDisplaying; }}">
 					$t{Cancel}
 				</sdr-button>
-				<sdr-button id="edit-button" slot="footer" icon="✏️" @click="${() => { this.isDisplaying = !this.isDisplaying; }}">
+				<sdr-button class="display-button" slot="footer" icon="✏️" @click="${() => { this.isDisplaying = !this.isDisplaying; }}">
 					$t{Edit}
 				</sdr-button>
-				<sdr-button id="save-button" slot="footer" icon="💾" @click="${async () => this.#saveItem()}">
+				<sdr-button class="edit-button" slot="footer" icon="💾" @click="${async () => this.#saveItem()}">
 					$t{Save}
 				</sdr-button>
-				<sdr-button id="export-button" slot="footer" icon="📥" @click="${async () => exportDataItem(this.material)}">
+				<sdr-button class="display-button" slot="footer" icon="📥" @click="${async () => exportDataItem(this.material)}">
 					$t{Export}
+				</sdr-button>
+				<sdr-button class="display-button" slot="footer" icon="📋" @click="${async () => copyItemToClipboard(this.material)}">
+					$t{Copy to clipboard}
 				</sdr-button>
 			</sdr-dialog>
 		`;

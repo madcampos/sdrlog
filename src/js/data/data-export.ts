@@ -74,3 +74,12 @@ export async function exportDataItem(data: Material) {
 	await file.write(JSON.stringify(formattedData, null, '\t'));
 	await file.close();
 }
+
+export async function copyItemToClipboard(data: Material) {
+	const formattedData = formatDataToExport(data);
+
+	await navigator.clipboard.writeText(JSON.stringify(formattedData, null, '\t'));
+
+	// eslint-disable-next-line no-alert
+	alert(I18n.t`Copied to clipboard!`);
+}

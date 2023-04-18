@@ -1,7 +1,5 @@
-sdr-view-item-details[disabled] #cancel-button { display: none; }
-sdr-view-item-details[disabled] #save-button { display: none; }
-sdr-view-item-details:not([disabled]) #edit-button { display: none; }
-sdr-view-item-details:not([disabled]) #export-button { display: none; }
+sdr-view-item-details[disabled] .edit-button { display: none; }
+sdr-view-item-details:not([disabled]) .display-button { display: none; }
 
 sdr-view-item-details #item-content {
 	display: grid;
