@@ -16327,6 +16327,82 @@
 			],
 			"gameDate": "2082-01",
 			"status": "ok"
+		},
+		{
+			"sku": [
+				"28956"
+			],
+			"name": "Who Drek'd in the Sprawl? A Sprawl Scouts Recognition Guide",
+			"category": "misc",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Know Your Drek\n\nThe Sixth World is full of drek. All kinds of drek. All different shapes. Different shades of brown. And we’re not even going to start on the smells.\n\nYou’re a shadowrunner. You know this. You’ve had all types of drek thrown at you. But did you know what it was when it hit the fan? With this deck, you will! Quickly identify six kinds of drek with this handy deck, which, sure, might not sound like a ton, but it’s six more than you knew about beforeyou had this deck. And it’s free! So just get it!\n\nWho Drek’d in the Sprawl is for use with any game or situation where people want to know who drek’d in the sprawl, which is pretty much limitless. But it’s made by Shadowrun people, so there’s that.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-04-01"
+			],
+			"gameDate": "2080-01",
+			"status": "ok"
+		},
+		{
+			"sku": [
+				"SRM09-05"
+			],
+			"name": "Violent Shadows",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Confused Kidnapping\n\nIf you’re hired to deal with a kidnapping, it should be straightforward—someone is missing, and you should get them back. But if the kidnappers took the wrong person, and then corporate intrigue gets twisted up in the rescue, you have an unusual run and some shadowrunners trying to not get entangled in too many complexities. With competing suits, rampaging gang members, and hidden smugglers, this mission has plenty of obstacles to keep players on their toes!",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-06-05"
+			],
+			"gameDate": "2080-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"SRM09-06"
+			],
+			"name": "Seven Breaths",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Grand Finale\n\nYou always get the most fireworks at the end of the show, and that’s the case for the Neo-Tokyo arc of Shadowrun Missions. The conflict between Yakuza factions comes to a head, and the PCs can play a key role in ending it—or escalating it. They’re given a list of names to take out. Do they do it? Who do they go after first? How far are they willing to go? These and other questions will change the face of Neo-Tokyo—and could alter the shadowrunners’ lives forever.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-09-16"
+			],
+			"gameDate": "2080-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"SRM10-01"
+			],
+			"name": "Death's Daily Business",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# High Stakes, Poor Aim\n\nIt’s a new season of Shadowrun Missions, so it’s time to dive back into the chaos of Neo-Tokyo. An assassination gone wrong has put a covert operation in danger, and Tanaka-San wants to know what happened and why. The runners will be sent in the investigative trail to find out some of the unusual ways things go wrong in the Sixth World. Hopefully, they’ll survive long enough to get their hands on some valuable paydata!",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2022-11-02"
+			],
+			"gameDate": "2080-01",
+			"status": "missing"
 		}
 	]
 }

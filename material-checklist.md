@@ -13,13 +13,18 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 # Materials to add
 
-https://www.drivethrurpg.com/product/410466/Shadowrun-Missions-Seven-Breaths-0906?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/416991/Shadowrun-Missions-1001-Deaths-Daily-Business?filters=1700_0_0_0_0
 https://www.drivethrurpg.com/product/424603/Shadowrun-Missions-1002-One-Stone-Two-Birds
 https://www.drivethrurpg.com/product/424604/Shadowrun-Lifestyles-of-the-Shadowy--Infamous
 https://www.drivethrurpg.com/product/424606/Shadowrun-Null-Value-Runner-Resource-Book
 https://www.drivethrufiction.com/product/425431/Shadowrun-Scorpions-Bane?cPath=7051_21533
 https://www.drivethrurpg.com/product/427909/Shadowrun-Astral-Ways-Sixth-World-Setting-Book?filters=1700_0_0_0_0
+https://www.drivethrurpg.com/product/427909/Shadowrun-Astral-Ways-Sixth-World-Setting-Book
+https://www.drivethrurpg.com/product/432070/Shadowrun-Whisper-Nets-Campaign-Book
+https://www.drivethrurpg.com/product/432141/Shadowrun-Datapuls-HessenNassau?filters=1700_0_0_0_0
+https://store.catalystgamelabs.com/products/shadowrun-rogues-lineup
+https://store.catalystgamelabs.com/products/shadowrun-program-deck
+
+https://www.drivethrurpg.com/browse/pub/2216/Catalyst-Game-Labs/subcategory/44855/Shadowrun-Holostreets?page=1&sort=4a&include_community_content=1&show_only_community_content=1
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
