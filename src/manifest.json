@@ -42,7 +42,7 @@
 	"protocol_handlers": [
 		{
 			"protocol": "web+sdrlog",
-			"url": "/item?url=%s"
+			"url": "https://madcampos.dev/sdrlog/item?url=%s"
 		}
 	],
 	"shortcuts": [
@@ -122,25 +122,25 @@
 		},
 		{
 			"src": "screenshots/narrow-1.png",
-			"sizes": "720x1280",
+			"sizes": "720x1080",
 			"type": "image/png",
 			"platform": "narrow"
 		},
 		{
 			"src": "screenshots/narrow-2.png",
-			"sizes": "720x1280",
+			"sizes": "720x1080",
 			"type": "image/png",
 			"platform": "narrow"
 		},
 		{
 			"src": "screenshots/narrow-3.png",
-			"sizes": "720x1280",
+			"sizes": "720x1080",
 			"type": "image/png",
 			"platform": "narrow"
 		},
 		{
 			"src": "screenshots/narrow-4.png",
-			"sizes": "720x1280",
+			"sizes": "720x1080",
 			"type": "image/png",
 			"platform": "narrow"
 		}
@@ -167,7 +167,7 @@
 	},
 	"handle_links": "preffered",
 	"launch_handler": {
-		"client_mode": "navigate-exitsing"
+		"client_mode": "navigate-existing"
 	},
 	"file_handlers": [
 		{
