@@ -242,5 +242,21 @@
 				}
 			]
 		}
-	]
+	],
+	"edge_side_panel": {
+		"preffer_width": 460
+	},
+	"changelog": {
+		"version": "1.0.0",
+		"history": [
+			{
+				"url": "https://madcampos.dev/sdrlog/changelog",
+				"type": "text/html"
+			},
+			{
+				"url": "https://madcampos.dev/sdrlog/changelog.rss",
+				"type": "application/rss+xml"
+			}
+		]
+	}
 }

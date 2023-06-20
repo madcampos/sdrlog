@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>Shadowrun Catalog Changelog</title>
+	<description>Changelog (Version History) for Shadowrun Catalog, containing all recent changes.</description>
+	<link>http://madcampos.dev/sdrlog/changelog</link>
+
+	<item>
+		<title>Version 1.0.0 "Sliver Angel"</title>
+		<pubDate>Thu, 15 Jun 2023 16:34:00 -0400</pubDate>
+		<description><![CDATA[
+			<p>This release contain the first full fledged version of the Shadowrun Catalog. It contains most of the materials from editions 1 to 6.</p>
+			<p>Included in this release are support for the folowing features:</p>
+			<ul>
+				<li>Search materials by title, publisher, date published, SKU, type (book, magazine, etc.), edition (1st, 2nd, 3rd, 4th, 5th, and 6th).</li>
+				<li>View, edit, add and remove materials on the local list</li>
+				<li>Load a collaction from a folder that is auto-mapped to the materials on the local list</li>
+			</ul>
+		]]></description>
+	</item>
+</channel>
+</rss>
