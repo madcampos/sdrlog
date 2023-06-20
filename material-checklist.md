@@ -13,9 +13,6 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 # Materials to add
 
-https://store.catalystgamelabs.com/products/shadowrun-rogues-lineup
-https://store.catalystgamelabs.com/products/shadowrun-program-deck
-
 https://www.drivethrurpg.com/browse/pub/2216/Catalyst-Game-Labs/subcategory/44855/Shadowrun-Holostreets?page=1&sort=4a&include_community_content=1&show_only_community_content=1
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
@@ -27,8 +24,6 @@ https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-20
 - Wild life
 
 https://www.shadowiki.de/Shadowrun_Schnell_und_dreckig
-
-https://marketplace.roll20.net/browse/set/22293/shadowrun-sixth-world-city-edition-seattle-art-pack
 
 # Archive
 **TODO**: Scrap html and old pages and archive
