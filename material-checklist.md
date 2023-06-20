@@ -13,14 +13,6 @@ https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 # Materials to add
 
-https://www.drivethrurpg.com/product/424603/Shadowrun-Missions-1002-One-Stone-Two-Birds
-https://www.drivethrurpg.com/product/424604/Shadowrun-Lifestyles-of-the-Shadowy--Infamous
-https://www.drivethrurpg.com/product/424606/Shadowrun-Null-Value-Runner-Resource-Book
-https://www.drivethrufiction.com/product/425431/Shadowrun-Scorpions-Bane?cPath=7051_21533
-https://www.drivethrurpg.com/product/427909/Shadowrun-Astral-Ways-Sixth-World-Setting-Book?filters=1700_0_0_0_0
-https://www.drivethrurpg.com/product/427909/Shadowrun-Astral-Ways-Sixth-World-Setting-Book
-https://www.drivethrurpg.com/product/432070/Shadowrun-Whisper-Nets-Campaign-Book
-https://www.drivethrurpg.com/product/432141/Shadowrun-Datapuls-HessenNassau?filters=1700_0_0_0_0
 https://store.catalystgamelabs.com/products/shadowrun-rogues-lineup
 https://store.catalystgamelabs.com/products/shadowrun-program-deck
 
@@ -30,9 +22,6 @@ https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_i
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
 https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-2022/
-- Best laid plans
-- corporate business
-- program deck
 - The chimera complex
 - Body shop
 - Wild life
@@ -41,8 +30,6 @@ https://www.shadowiki.de/Shadowrun_Schnell_und_dreckig
 
 # Archive
 **TODO**: Scrap html and old pages and archive
-
-https://index.rpg.net/display-search.phtml?key=system&value=Shadowrun
 
 https://shadowhelix.de/Quelle,_de:_Adventskalender_2019
 https://www.shadowiki.de/Shadowrun_Adventskalender_2019

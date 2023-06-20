@@ -16403,6 +16403,349 @@
 			],
 			"gameDate": "2080-01",
 			"status": "missing"
+		},
+		{
+			"sku": [
+				"SRM10-02"
+			],
+			"name": "One Stone, Two Birds",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Cross and Doublecross\n\nMr. Johnson has been working overtime on their scheme this time. There is a prototype to steal, there are people to frame, and there is the whole delicate balance of Neo-Tokyo etiquette to navigate. Skilled runners can make some valuable contacts and a fine amount of nuyen. Less-skilled runners might find themselves on a flight out of town in short order—possibly in a pine box in the cargo hold.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-01-26"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"28800S"
+			],
+			"name": "Lifestyles of the Shadowy & Infamous",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Live a Little!\n\nWhen the job is done and the battle won, or at least when you’ve managed to not entirely bleed out, it’s good to have a place to go. Lifestyles of the Shadowy & Infamous provides rules to flesh out your doss, making it truly what you want it to be. Do you want someone to tidy up the place while you’re away? A place with extra privacy, whether it be physical, Matrix, or astral? Or maybe just a place near your favorite club? The options are here, as well as rules on the effects of these options. Open the book and build your dream home! Or at least a place you can afford with minimal rodents!",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-01-26"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"28452"
+			],
+			"name": "Null Value",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Infinite Weapon\n\nShoot straight, conserve ammo—shadowrunners often think about threats in terms of guns and bullets. That’s thinking too small. Why shoot someone when you can drain their entire bank account without coming anywhere near them?\n\nOr you can burn whatever ID they’re using, forcing them to restrict their movements and travel? Or you can broadcast their current location to all their enemies, so that a bullet still finds them, but you don’t have to fire it.\n\nAll this and more can happen in the Matrix. From hacker and technomancer groups to rogue AIs to mysterious entities, the Matrix is full of threats shadowrunners need to know about. This book lists ten of them that can fuel campaigns, character development, and more in any Shadowrun game.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-01-26"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"26883"
+			],
+			"name": "Dragonbones",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# A DEADLY QUEST FOR RICHES…\n\nA seemingly-harmless photo seen by the wrong person sets off a dangerous treasure hunt for a fortune contained in the opalized fossil skeleton of a dragon in the Australian Outback.\n\nOn one side, the corporate operators of a ruthless mining company, who’s greedy owner wants the potential billions of nuyen such a find would bring on the black market. On the other side, a loose alliance of shadowrunners, Awakened magic-users, and local tribespeople for whom the site of the fossil, nicknamed the Old Timer, is sacred land, and who will defend it by any means necessary.\n\nBut when the megacorp ups the stakes by releasing a debilitating nanovirus among the scattered communities around the site, the shadowrunners do what they do best—execute a daring run both in the Matrix and real-time at the mining corp’s headquarters in search of something—anything—to get the corp to stand down. But will they succeed before the corp operators find the Old Timer and steal it away?",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-05-23"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"26873"
+			],
+			"name": "Scorpion's Bane",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# STRIKE FROM THE SHADOWS…\n\nOn the trail of her missing brother, shaman Rashida bint Tariq bin Feroze al-Nazari travels to South Africa to interrogate a corp executive who may have actually seen Qasim. But the meeting turns into a trap she barely escapes, and Rashida realizes she and her shadowrunning team have stumbled onto something much deeper than a rash of missing children.\n\nTheir search for answers will take them from the glittering neon towers of Dubai to the harsh desert wilderness of the Arabian Caliphate. Rashida and her team scour every clue they find, whether it is in the deep African jungle, the artificial world of the Matrix, or the infinite astral plane, to uncover who’s masterminding this plot…and stop them before it can be put into action.\n\nAnd all the while, Rashida must contend with Scorpion, the insect spirit who came to her when she cried out for revenge against those who had killed her father and stolen her brother, and now lives within her in an uneasy alliance. Vicious, cunning, and deadly, Scorpion’s power always comes with a price…and if Rashida isn’t careful, she may end up paying it before she has the chance to save her brother…and punish the ones who took him.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-02-23"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"26005NV"
+			],
+			"name": "Corporate Business",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# A CORP’S SHADOWS ARE EVEN LONGER…\n\nA “cleaner” for the megacorporation Ares Macrotechnology, Maria Payne is a model employee—efficient, attentive to detail, and very deadly. She navigates every danger that comes at her, whether it’s on a mission in the field, or walking the political tightropes in her own corp.\n\nBut when Internal Affairs takes an interest in her, Maria begins to suspect something is going on. Her suspicions are confirmed when what should be a simple convoy heist nearly goes lethally awry. And when Maria’s investigations find an innocent man marked for death, she suddenly has to decide between the corp that has given her everything and the fate of one man…and if she makes the wrong choice, she could be targeted for termination by her own employers…",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-05-01"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"26010NV"
+			],
+			"name": "Best Laid Plans",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# TWO AGAINST THE WORLD…\n\nTwo-gun hacker William “Billy” Bonney and laconic street samurai Cheveyo are holed up after what should have been a straightforward job testing security for one of the megacorporations in the Sixth World. But when a megacorp is involved, nothing is ever easy, and when law enforcement comes looking for the pair of shadowrunners, Billy knows someone’s either ratted them out or double-crossed them—and he intends to find out who tried to make them dead.\n\nTheir search takes them to the mean streets of Manhattan, where they have to infiltrate one of the largest symbols—literally—of the Sixth World, to find the truth. But the truth behind what has led them to this place is far worse than anything they could think of…and unless they come up with a new plan fast, they might not be leaving alive…",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-04-05"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"28101"
+			],
+			"name": "Astral Ways",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Explorers Needed\n\nDo you have heart? Courage? The ability to remain unfazed in the face of the incredibly bizarre? Then the metaplanes are waiting for you.\n\nGateways to different metaplanes have appeared across the Sixth World, opening travel to a wider range of people than before. That means there are more chances to encounter strange spirits, weird artifacts, and other people exploring what is out there. Intrepid runners might be able to uncover clues to some of the deeper mysteries bedeviling the Sixth World.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-02-22"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"28404"
+			],
+			"name": "Whisper Nets",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# It's What You Know\n\nPowerful financiers have been sent to prison for sending inside information to investment bankers so they could trade based on things they weren’t supposed to know. Government officials have resigned because the answer to the question “What did they know and when did they know it” turned out to be bad for them.\n\nInformation is power, and lately the Sixth World has been full of juicy secrets. In this campaign, runners will be called to the corporate capital of Manhattan to uncover some hidden information and then see how to they can extract the most value out of them—without drawing too large of a target on their backs.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-05-29"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"SRM10-03"
+			],
+			"name": "When the Bough Breaks",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "# Cradle Will Rock\n\nShadowrunners are used to handling valuable packages, but one that needs to be fed every few hours or it screams uncontrollably is a new one. This is not just an ordinary baby, though, and lots of people would like to take care of it—though their definitions of “take care” come with varying degrees of menace. The runners will have to maneuver the Neo-Tokyo scene carefully to protect all of the lives involved, including their own.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-02-25"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"482D6"
+			],
+			"name": "Datapuls: Hessen-Nassau",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# HESSEN-NASSAU\n\nMärchen, Mächte, Machenschaften\n\nFür Groß-Frankfurt ist Hessen-Nassau das grüne Umland, in das man zum Teambuilding gekarrt wird. Für Pendelnde und Liefernde ist es Durchfahrgebiet. Und für die Bewohnenden eine Heimat, die von allen Seiten angegriffen, verkauft und zerrissen wird. Die Fronten verhärten sich seit Langem: zwischen Stadt und Land, zwischen Erneuerung und Bewahrung, Industrie und Naturschutz – und zwischen Metamenschen und dem erstarkenden Hessisch-Nassauischen Heimatschutz.\n\nDer *Datapuls Hessen-Nassau* wirft einen genaueren Blick auf Geografie, Geschichte, die Städte und Dörfer sowie die brodelnden Konflikte in diesem Gebiet. Erfahre Näheres über die Landeshauptstadt Gießen, deren Altstadt nach dem schweren Anschlag 2021 komplett neu aufgebaut werden musste – und welche Folgen der Anschlag bis heute im Land hat. Besuche Marburg, Kassel, Hachenburg, den Nationalpark Kellerwald und die Urlaubsenklaven in der Rhön und im Rheingau. Und lerne die mysteriöse Frau Holle kennen, deren unsichtbare Finger sich um immer mehr Betriebe des Landes legen – und die auch die kommende Landtagswahl entscheidend beeinflussen könnte.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2023-05-30"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"482D7"
+			],
+			"name": "Datapuls: Riggerszene ADL",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# Wer bremst, verliert\n\nDie deutsche Riggerszene? Welche meinst du? Denn da gibt’s viel mehr als nur Autobahnraser und Straßenkrieger! Meinst du Fahrzeug- oder Drohnenrigger? Piloten mit oder ohne Implantate? Racer oder Tuner? Jetski-Speeder, Airjockeys – oder die wachsende Feldjäger-Szene, die mit Offroad-Boliden, Militär-SUVs, Mudbikes oder Kettenpanzern durchs Niemandsland pflügt? Ach, vergiss es: Am besten ziehst du dir einfach die neue Dateisammlung, die Rigger und Runner aus allen Teilen der ADL gerade zusammengehackt haben …\n\nDer Datapuls Riggerszene ADL wirft einen Blick auf die verschiedenen Szenen rund um Fahrzeuge, Drohnen, Motoren und Styles innerhalb der Allianz Deutscher Länder. Erfahre alles zum aktuellen Zustand der deutschen Straßen, studiere die ganzseitige Karte der wichtigsten deutschen Autobahnen, tritt zu den Autobahnkriegern ans brennende Wrack und erhalte wertvolle Tipps, wie man einen Shadowrun als Roadmovie aufzieht und leitet. Enthält eine Liste mit 36 Begegnungen plus weitere Zufallstabellen, drei neue Connections, vier neue Fahrzeuge und zwei neue Drohnen.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2023-04-06"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"482D8"
+			],
+			"name": "Datapuls: Untergrundmedizin",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# UNTERGRUNDMEDIZIN\n\nIst das Patient bei uns oder kann das weg?\n\nEgal, wie hart, schnell oder schlau du bist: Irgendwann wirst du den Preis für das Runnerdasein zahlen. Und keiner der großen Gesundheitsanbieter ist scharf darauf, einen Hochrisikokunden wie dich im Quartalsbericht zu haben. Also hol dir ein paar Extra-Patches, gib den Heilkundigen im Team einen aus und mach dich schlau, was deine Optionen sind, wenn alles zur Hölle geht. Gibt’s im Gebiet des nächsten Auftrags eine Straßenklinik – und wer betreibt sie? Eine karitative Einrichtung? Eine Sekte, ein Policlub oder ein anderer Seelenfänger? Die Organmafia? Unwissenheit bringt keine Glückseligkeit – sie bringt dich um.\n\nDer Datapuls Untergrundmedizin beleuchtet das Gesundheitswesen der Allianz Deutscher Länder – beziehungsweise dessen Nichtvorhandensein. Was geschieht mit denen, die durch die weiten Maschen des Netzes fallen? Wer hilft dir als Runner, wenn du nicht gerade vor der Tür deines Stamm-Straßendocs zusammenbrichst? Was zur Hölle ist eine Kapselklinik? Und welche Rolle spielen Alchemie und Neo-Esoterik in der Medizin der 2080er? Dieser Datapuls ist randvoll mit Infos und bietet darüber hinaus vier Locations plus vier Medizinpraktizierende mit jeweils eigenen Aufhängern für Runs.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2023-04-13"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"482D9"
+			],
+			"name": "Datapuls: 10 Museen",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# 10 MUSEEN\n\nKrieg um die Köpfe\n\nMuseen sind mehr als nur Gebäude, in denen netterweise Raubgut für dich aufbewahrt wird. Neben klassischen Museen gibt es Museumsdörfer, Ausstellungen in historischen Bauten und mit modernster Technik vollgestopfte Unterhaltungsbetriebe, die lediglich vorgeben, Wissen vermitteln zu wollen. Es gibt Einrichtungen, die mit religiösem Eifer der Ergründung und Bewahrung der Wahrheit verpflichtet sind – und die bestens finanzierten Bildungsbetriebe der Konzerne, die mit subtilem Revisionismus oder unverhohlener Propaganda das exakte Gegenteil erreichen wollen. Es ist ein Krieg um die Köpfe – und jeder Krieg braucht Söldner.\n\nDer Datapuls 10 Museen wirft einen Blick auf die Museumslandschaft der Allianz Deutscher Länder: die Betreiber und Förderer, die Ausstellungs- und Sicherheitstechnik – und die Jobs für Runner, die es im Umfeld von Wissensvermittlung und Wissensverzerrung der Museumsbetreiber gibt. Schwerpunkt des Datapulses sind 10 beispielhafte Museen vom Computerspielemuseum Berlin über ein Museumsschiff, ein Panzermuseum und ein Schlossmuseum bis hin zum Deutschen Museum in München, einem der größten Museen der ADL. Zusätzlich findest du Nichtspielcharaktere, Museumsobjekte und neue Ausrüstung.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2023-04-20"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"482D10"
+			],
+			"name": "Datapuls: Norddeutscher Bund",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# NORDDEUTSCHER BUND\n\nVon der Küste in die Kiste\n\nDas flächenmäßig größte Land der ADL ist auch das leerste: Zusammengeschustert aus den Resten, die nach Schwarzer Flut und der Gründung des Elfenstaates Pomorya übrig blieben, erstreckt sich der Norddeutsche Zweckverband von der Nordsee im Westen bis nach Polen im Osten, von der Skandinavischen Union im Norden bis nach Thüringen, Westphalen und Hessen-Nassau im Süden. Aber der „NDB“ ist mehr als nur das Land der wichtigsten Schmugglerrouten, mehr als Küste und weites Land. Und es ist dringend Zeit, sich das alles genauer anzusehen.\n\nDer Datapuls Norddeutscher Bund wirft einen weiten Blick über den Norden der Allianz Deutscher Länder, mit aktuellen Infos zu Bremen, Lübeck, der ADL-Hauptstadt Hannover, Rostock, Göttingen und Braunschweig. Lerne die Tücken des norddeutschen Wegenetzes und der Grenzregion zu Pomorya kennen, besuche die Lüneburger Heide und die Küsten von Nord- und Ostsee, erhalte aktuelle Reisewarnungen zur stetig wachsenden Kohlhoff-Anomaliezone und all den Gefahren, die dich im Norden erwarten",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2023-04-27"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"46143"
+			],
+			"name": "Schattendossier 4",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "Du glaubst, du kennst die Allianz Deutscher Länder? Du hast keine Ahnung, Chummer. Abseits des Neonlichts der Megaplexe zerschneiden die Scheinwerfer der Autobahnkrieger das Dunkel der Landstraßen. Erntedrohnen ziehen unermüdlich ihre Bahnen über riesige Agrarfarmen, während in vergessenen Geisterorten Schmuggler und Kultisten ihr Unwesen treiben. Also wirf dir deine Panzerjacke über, schnapp dir deinen Warhawk-Revolver und das Crittergewehr und lern sie kennen: Die Riggerszene der ADL, die Küsten von Ost- und Nordsee im Norddeutschen Bund, die Schatten von Bremen und die Geheimnisse von Hessen-Nassau. Hab keine Angst vor der Gefahr: Im File zur Untergrundmedizin verraten wir dir, wer dich wieder zusammenflickt. Oder deine Reste verwertet. Und wer weiß? Vielleicht landest du einen derart epischen Run, dass er in einem der 10 Museen verewigt wird, die wir dir hier vorstellen.\n\nDas Schattendossier 4 ist der vierte Sammelband der bisher erschienenen Datapuls-PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für die deutsche Riggerszene, Hessen-Nassau, den Norddeutschen Bund, 10 Museen und die Untergrundmedizin zusammengefasst, einschließlich einer kleinen, exklusiven Erweiterung mit der Beschreibung eines Rastplatzes in der ADL. Das Schattendossier 4 ist streng limitiert und handnummeriert.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2023-06-01"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"46142"
+			],
+			"name": "Schwere Fracht",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "de-DE",
+			"description": "# BEWEGLICHE ZIELE\n\nIn der Sechsten Welt können Daten gedankenschnell um die ganze Welt geschickt werden. Jedenfalls dann, wenn man an die Sicherheit und Diskretion der Konzernmatrix glaubt. Wer das nicht tut oder eine besonders sensible Datenfracht verschicken will, greift auf Kuriere mit speziellen Hirnimplantaten, magisch gesicherte Datentresore oder gut versteckte Speicher zurück – und wirbt ein paar Schattenläufer als Geleitschutz an.\n\nSchwere Fracht ist eine Eigenproduktion von Pegasus Press und eine Anthologie für Shadowrun 6 mit drei Einzelabenteuern, die passend zum parallel erschienen Quellenband Schattendossier 4 und den darin enthaltenen Datapulsen Riggerszene ADL, Hessen-Nassau und Norddeutscher Bund entwickelt wurden. Alle Abenteuer sind auch ohne die Datapulse komplett spielfertig, inklusive Grundrissen und Plänen.\n\nIn Schwere Fracht begleiten die Runner mysteriöse Ladungen auf ihrer Fahrt zwischen den Metroplexen der ADL. Dabei müssen sie Gefahren abwehren, Geheimnisse aufdecken und schwierige Entscheidungen treffen.",
+			"edition": 6,
+			"publisher": [
+				"Pegasus Spiele"
+			],
+			"releaseDate": [
+				"2023-05-12",
+				"2023-06-01"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"BBESR6G10"
+			],
+			"name": "Les Dossiers McCarthy",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "fr-FR",
+			"description": "# Plus ça change, plus c’est la même chose !\n\nLes rues de Seattle en 2082 ne sont pas moins humides ni dangereuses qu’elles ne l’étaient il y a trente ans, quand la Lone Star était supposée y faire régner l’ordre. Son retour en ville n’a rien fait pour améliorer la situation. Mais après tout, ça n’a jamais été le but de la manœuvre, hein, chummer ?\n\nLes dossiers de l’inspecteur McCarthy montrent bien comment ça marche dans la Cité d’émeraude : plutôt bien pour ceux qui maîtrisent le Jeu ; mal pour les autres, tous les autres.",
+			"edition": 6,
+			"publisher": [
+				"Other"
+			],
+			"releaseDate": [
+				"2023-02-01"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
 		}
 	]
 }
