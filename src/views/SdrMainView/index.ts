@@ -86,7 +86,7 @@ export class SdrViewMain extends LitElement implements RouterView {
 
 		this.appMenuItems = [
 			{ icon: 'ℹ️', label: 'Tool Information', action: async () => Router.navigate('/info') },
-			{ icon: '💬', label: 'Language Settings', action: async () => Router.navigate('/settings/language') },
+			// { icon: '💬', label: 'Language Settings', action: async () => Router.navigate('/settings/language') },
 			{ icon: '🌓', label: 'Theme Settings', action: async () => Router.navigate('/settings/theme') }
 		];
 
