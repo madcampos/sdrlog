@@ -48,7 +48,7 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 		this.open = true;
 		(this.shadowRoot?.querySelector('#language-select') as SdrSelect).focus();
 
-		return I18n.t`Language Settings`;
+		return 'Language Settings';
 	}
 
 	createRenderRoot() {
@@ -58,10 +58,10 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 	render() {
 		return html`
 			<sdr-dialog id="language-modal" ?open="${this.open}" @close="${() => this.#close()}">
-				<span slot="title">$t{Language Settings}</span>
+				<span slot="title">Language Settings</span>
 
-				<p>$t{Set the language for the application:}</p>
-				<p><small><strong>$t{Note:}</strong> $t{The page will reload after changing the app language.}</small></p>
+				<p>Set the language for the application:</p>
+				<p><small><strong>Note:</strong> The page will reload after changing the app language.</small></p>
 
 				<sdr-select
 					id="language-select"
@@ -70,11 +70,11 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 
 					@change="${async (evt: Event) => this.#changeLanguage(evt)}"
 				>
-					<span slot="label">$t{App Language}</span>
+					<span slot="label">App Language</span>
 
-					<option value="en-US">$t{English}</option>
-					<option value="fr-FR">$t{French}</option>
-					<option value="pt-BR">$t{Brazilian Portuguese}</option>
+					<option value="en-US">English</option>
+					<option value="fr-FR">French</option>
+					<option value="pt-BR">Brazilian Portuguese</option>
 				</sdr-select>
 			</sdr-dialog>
 		`;

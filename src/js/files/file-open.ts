@@ -1,6 +1,5 @@
 import type { FileForMaterial } from '../../data/data';
 
-import { I18n } from '../intl/translations';
 import { getFilePermission } from './file-import';
 import { getIDBItemByIndex } from '../data/idb-persistence';
 import { Router } from '../../router/router';
@@ -33,7 +32,7 @@ export async function openFile(fileInfo: FileForMaterial) {
 
 	if (fileInfo.handler.kind !== 'file') {
 		// eslint-disable-next-line no-alert
-		alert(`${I18n.t`File not found.`}`);
+		alert('File not found.');
 
 		return;
 	}
@@ -44,7 +43,7 @@ export async function openFile(fileInfo: FileForMaterial) {
 
 	if (!mimeAllowed.some((mime) => file.type.startsWith(mime))) {
 		// eslint-disable-next-line no-alert
-		alert(`${I18n.t`File type for`} "${file.name}" ${I18n.t`not supported.\nTry opening it on your file explorer.`}`);
+		alert(`File type for "${file.name}" not supported.\nTry opening it on your file explorer.`);
 
 		return;
 	}
@@ -58,7 +57,7 @@ export async function loadFile(id: string) {
 	const { handler } = await getIDBItemByIndex('files', 'itemId', id) ?? {};
 
 	if (!handler || handler.kind !== 'file') {
-		throw new Error(I18n.t`File does not exist.`);
+		throw new Error('File does not exist.');
 	}
 
 	await getFilePermission(handler);

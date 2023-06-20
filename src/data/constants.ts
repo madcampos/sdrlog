@@ -1,19 +1,18 @@
-import { I18n } from '../js/intl/translations';
 import type { IsoCode, MaterialCategory, MaterialPublisher, MaterialStatus, MaterialType } from './data';
 
 export const MATERIAL_LANGUAGES_INFO: Readonly<Record<IsoCode, { name: string, icon: string }>> = {
-	'de-DE': { icon: '🇩🇪', name: I18n.t`German` },
-	'fr-FR': { icon: '🇫🇷', name: I18n.t`French` },
-	'jp-JP': { icon: '🇯🇵', name: I18n.t`Japanese` },
-	'es-ES': { icon: '🇪🇸', name: I18n.t`Spanish` },
-	'hu-HU': { icon: '🇭🇺', name: I18n.t`Hungarian` },
-	'it-IT': { icon: '🇮🇹', name: I18n.t`Italian` },
-	'pt-BR': { icon: '🇧🇷', name: I18n.t`Brazilian Portuguese` },
-	'cs-CZ': { icon: '🇨🇿', name: I18n.t`Czech` },
-	'he-IL': { icon: '🇮🇱', name: I18n.t`Hebrew` },
-	'pl-PL': { icon: '🇵🇱', name: I18n.t`Polish` },
-	'fi-FI': { icon: '🇫🇮', name: I18n.t`Finnish` },
-	'en-US': { icon: '🇺🇸', name: I18n.t`English` }
+	'de-DE': { icon: '🇩🇪', name: 'German' },
+	'fr-FR': { icon: '🇫🇷', name: 'French' },
+	'jp-JP': { icon: '🇯🇵', name: 'Japanese' },
+	'es-ES': { icon: '🇪🇸', name: 'Spanish' },
+	'hu-HU': { icon: '🇭🇺', name: 'Hungarian' },
+	'it-IT': { icon: '🇮🇹', name: 'Italian' },
+	'pt-BR': { icon: '🇧🇷', name: 'Brazilian Portuguese' },
+	'cs-CZ': { icon: '🇨🇿', name: 'Czech' },
+	'he-IL': { icon: '🇮🇱', name: 'Hebrew' },
+	'pl-PL': { icon: '🇵🇱', name: 'Polish' },
+	'fi-FI': { icon: '🇫🇮', name: 'Finnish' },
+	'en-US': { icon: '🇺🇸', name: 'English' }
 } as const;
 
 export const MATERIAL_PUBLISHERS: Readonly<MaterialPublisher[]> = [
@@ -30,30 +29,30 @@ export const MATERIAL_PUBLISHERS: Readonly<MaterialPublisher[]> = [
 ] as const;
 
 export const MATERIAL_CATEGORY_INFO: Readonly<Record<MaterialCategory, { name: string, icon: string }>> = {
-	novel: { icon: '📚', name: I18n.t`Novel` },
-	sourcebook: { icon: '📜', name: I18n.t`Sourcebook` },
-	mission: { icon: '🗺️', name: I18n.t`Mission` },
-	rulebook: { icon: '📝', name: I18n.t`Rulebook` },
-	misc: { icon: '🔣', name: I18n.t`Misc.` },
-	magazine: { icon: '📰', name: I18n.t`Magazine` },
-	boardgame: { icon: '♟️', name: I18n.t`Boardgame` },
-	videogame: { icon: '🎮', name: I18n.t`Videogame` },
-	tcg: { icon: '🃏', name: I18n.t`T.C.G.` },
-	unofficial: { icon: '📓', name: I18n.t`Unofficial` }
+	novel: { icon: '📚', name: 'Novel' },
+	sourcebook: { icon: '📜', name: 'Sourcebook' },
+	mission: { icon: '🗺️', name: 'Mission' },
+	rulebook: { icon: '📝', name: 'Rulebook' },
+	misc: { icon: '🔣', name: 'Misc.' },
+	magazine: { icon: '📰', name: 'Magazine' },
+	boardgame: { icon: '♟️', name: 'Boardgame' },
+	videogame: { icon: '🎮', name: 'Videogame' },
+	tcg: { icon: '🃏', name: 'T.C.G.' },
+	unofficial: { icon: '📓', name: 'Unofficial' }
 } as const;
 
 export const MATERIAL_TYPE_INFO: Readonly<Record<MaterialType, { name: string, icon: string }>> = {
-	digital: { icon: '💽', name: I18n.t`Digital` },
-	scan: { icon: '📠', name: I18n.t`Scan` },
-	ocr: { icon: '💾', name: I18n.t`OCR` },
-	print: { icon: '🖨️', name: I18n.t`Print` },
-	physical: { icon: '🎲', name: I18n.t`Physical` }
+	digital: { icon: '💽', name: 'Digital' },
+	scan: { icon: '📠', name: 'Scan' },
+	ocr: { icon: '💾', name: 'OCR' },
+	print: { icon: '🖨️', name: 'Print' },
+	physical: { icon: '🎲', name: 'Physical' }
 } as const;
 
 
 export const MATERIAL_STATUS_INFO: Readonly<Record<MaterialStatus, { name: string, icon: string }>> = {
-	ok: { icon: '✅', name: I18n.t`OK` },
-	missing: { icon: '❌', name: I18n.t`Missing` },
-	outofscope: { icon: '⛔', name: I18n.t`Out of scope` },
-	canceled: { icon: '🚫', name: I18n.t`Canceled` }
+	ok: { icon: '✅', name: 'OK' },
+	missing: { icon: '❌', name: 'Missing' },
+	outofscope: { icon: '⛔', name: 'Out of scope' },
+	canceled: { icon: '🚫', name: 'Canceled' }
 } as const;

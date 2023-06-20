@@ -73,7 +73,7 @@ export class SdrEditList extends LitElement {
 					<sdr-button
 						icon-button
 						id="add-button"
-						title="$t{Add item}"
+						title="Add item"
 
 						@click="${() => this.#addItem()}"
 					>➕</sdr-button>

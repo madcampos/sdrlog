@@ -2,7 +2,6 @@ import type { Material } from '../../data/data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues } from './idb-persistence';
-import { I18n } from '../intl/translations';
 
 function formatDataToExport(data: Material) {
 	const formattedData: Material = {
@@ -29,7 +28,7 @@ function formatDataToExport(data: Material) {
 }
 
 export async function exportDataFile() {
-	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Export Data` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: 'Export Data' });
 
 	try {
 		const items = await getAllIDBValues('items');
@@ -40,7 +39,7 @@ export async function exportDataFile() {
 				startIn: 'downloads',
 				suggestedName: 'data.json',
 				excludeAcceptAllOption: true,
-				types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
+				types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
 			});
 			const file = await fileHandler.createWritable();
 
@@ -64,7 +63,7 @@ export async function exportDataItem(data: Material) {
 		startIn: 'downloads',
 		suggestedName: `${data.sku[0]}.json`,
 		excludeAcceptAllOption: true,
-		types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
+		types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
 	});
 	const file = await fileHandler.createWritable();
 
@@ -81,5 +80,5 @@ export async function copyItemToClipboard(data: Material) {
 	await navigator.clipboard.writeText(JSON.stringify(formattedData, null, '\t'));
 
 	// eslint-disable-next-line no-alert
-	alert(I18n.t`Copied to clipboard!`);
+	alert('Copied to clipboard!');
 }

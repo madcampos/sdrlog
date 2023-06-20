@@ -3,7 +3,6 @@ import { getAllIDBValues, getIDBItem, setIDBItem } from '../data/idb-persistence
 import { extractMetadataFromFileName, getFilePermission } from '../files/file-import';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extract';
 import { canExtractCover, canImportCover } from '../data/storage-conditions';
-import { I18n } from '../intl/translations';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 
@@ -41,7 +40,7 @@ export async function getThumbUrl(id: string) {
 }
 
 export async function extractCoversFromFiles() {
-	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Extract Covers` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: 'Extract Covers' });
 
 	try {
 		const files = await getAllIDBValues('files');
@@ -87,7 +86,7 @@ export async function extractCoversFromFiles() {
 }
 
 export async function importCoversFromFolder() {
-	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Import Covers` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: 'Import Covers' });
 
 	try {
 		const files = [];

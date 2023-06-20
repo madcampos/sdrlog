@@ -5,7 +5,6 @@ import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
 import { Router } from '../../router/router';
-import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
 
 @customElement('sdr-view-theme-settings')
@@ -55,7 +54,7 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 	navigate() {
 		this.open = true;
 
-		return I18n.t`Theme Settings`;
+		return 'Theme Settings';
 	}
 
 	createRenderRoot() {
@@ -65,9 +64,9 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 	render() {
 		return html`
 		<sdr-dialog id="theme-modal" ?open="${this.open}" @close="${() => this.#close()}">
-			<span slot="title">$t{Theme Settings}</span>
+			<span slot="title">Theme Settings</span>
 
-			<p>$t{Set the theme for the application:}</p>
+			<p>Set the theme for the application:</p>
 
 			<sdr-radio-group
 				value="${this.theme}"
@@ -75,16 +74,16 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 				@change="${(evt: Event) => this.#changeTheme(evt)}"
 			>
 				<sdr-radio-item icon="🌓" value="system">
-					<span slot="title">$t{System Theme}</span>
-					<span>$t{Follows the system defined theme.}</span>
+					<span slot="title">System Theme</span>
+					<span>Follows the system defined theme.</span>
 				</sdr-radio-item>
 				<sdr-radio-item icon="🌞" value="light">
-					<span slot="title">$t{Light Theme}</span>
-					<span>$t{Always use a light theme.}</span>
+					<span slot="title">Light Theme</span>
+					<span>Always use a light theme.</span>
 				</sdr-radio-item>
 				<sdr-radio-item icon="🌚" value="dark">
-					<span slot="title">$t{Dark Theme}</span>
-					<span>$t{Always use a dark theme.}</span>
+					<span slot="title">Dark Theme</span>
+					<span>Always use a dark theme.</span>
 				</sdr-radio-item>
 			</sdr-radio-group>
 		</sdr-dialog>

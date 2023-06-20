@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 	progressLoader.max = 3;
 
-	updateLoadStatus(I18n.t`Loading components...`);
+	updateLoadStatus('Loading components...');
 	await import('../components');
 	const { GamepadHandler } = await import('./gamepad/gamepad-events');
 
@@ -33,10 +33,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 		document.querySelector('sdr-card')?.focus();
 	});
 
-	updateLoadStatus(I18n.t`Loading router...`);
+	updateLoadStatus('Loading router...');
 	await import('../router');
 
-	updateLoadStatus(I18n.t`Loading data...`);
+	updateLoadStatus('Loading data...');
 	document.addEventListener('itemloaded', (evt) => {
 		progressLoader.max = evt.detail.total;
 

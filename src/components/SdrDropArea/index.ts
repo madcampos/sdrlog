@@ -1,8 +1,6 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 
-import { I18n } from '../../js/intl/translations';
-
 import style from './style.css?inline' assert { type: 'css' };
 
 declare global {
@@ -21,7 +19,7 @@ export class SdrDropArea extends LitElement {
 	@query('#overlay') private declare overlay: HTMLDivElement;
 
 	#accepts: FilePickerAcceptType = {
-		description: I18n.t`Image Files`,
+		description: 'Image Files',
 		accept: {
 			'image/jpeg': ['.jpg', '.jpeg'],
 			'image/png': ['.png'],
@@ -112,9 +110,9 @@ export class SdrDropArea extends LitElement {
 				@drop=${(evt: DragEvent) => this.#dropFile(evt)}
 			>
 				<slot name="overlay">
-					${I18n.t`Click to select a item`}
+					Click to select a item
 					<br>
-					${I18n.t`Or drag the item here...`}
+					Or drag the item here...
 				</slot>
 			</div>
 		`;

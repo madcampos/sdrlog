@@ -74,13 +74,13 @@ export class SdrSearchBox extends LitElement {
 		return html`
 			<label
 				for="search-input"
-				title="$t{Search}"
+				title="Search"
 			>
 				<input
 					id="search-input"
 					type="search"
 					list="search-suggestions"
-					placeholder="$t{Search items...}"
+					placeholder="Search items..."
 					role="search"
 
 					.value="${this.value}"

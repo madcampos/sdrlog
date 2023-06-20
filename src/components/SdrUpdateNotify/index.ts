@@ -1,8 +1,6 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 
-import { I18n } from '../../js/intl/translations';
-
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-update-notify')
@@ -17,7 +15,7 @@ export class SdrUpdateNotify extends LitElement {
 	constructor() {
 		super();
 
-		this.message = I18n.t`A new version of the app is available.`;
+		this.message = 'A new version of the app is available.';
 	}
 
 	#update() {

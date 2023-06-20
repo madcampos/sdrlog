@@ -2,7 +2,6 @@ import type { FileForMaterial } from '../../data/data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getIDBItem, getIDBItemByIndex, setIDBItem } from '../data/idb-persistence';
-import { I18n } from '../intl/translations';
 
 export async function getFileHash(dataToHash: ArrayBuffer | string) {
 	const encoder = new TextEncoder();
@@ -115,7 +114,7 @@ async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string)
 }
 
 export async function readFiles() {
-	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Read materials` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: 'Read materials' });
 
 	try {
 		const dir = await window.showDirectoryPicker({

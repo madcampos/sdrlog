@@ -17,7 +17,7 @@ export class SdrLoader extends LitElement {
 
 	render() {
 		return html`
-			<div id="loader">$t{Loading...}</div>
+			<div id="loader">Loading...</div>
 			<div id="content"><slot></slot></div>
 		`;
 	}

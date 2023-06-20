@@ -34,7 +34,7 @@ export class SdrEditListItem extends LitElement {
 			<sdr-button
 				icon-button
 				small
-				title="$t{Remove item}"
+				title="Remove item"
 				id="remove-button"
 
 				@click="${() => this.#removeItem()}"

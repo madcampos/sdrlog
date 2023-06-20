@@ -107,7 +107,7 @@ export class SdrSelect extends LitElement {
 					@change="${() => this.#change()}"
 					@input="${() => this.#input()}"
 				>
-					<option selected disabled hidden value="">$t{Please select an option...}</option>
+					<option selected disabled hidden value="">Please select an option...</option>
 				</select>
 
 				<sdr-gamepad-badge button="a"></sdr-gamepad-badge>

@@ -1,7 +1,5 @@
 import type { SdrCard } from '../SdrCard';
 
-import { I18n } from '../../js/intl/translations';
-
 type FilterTypes = 'name' | 'category' | 'type' | 'status' | 'sku' | 'edition';
 
 let filterElement: HTMLStyleElement | undefined;
@@ -75,45 +73,45 @@ export class SearchEngine {
 
 			case 'category':
 				suggestionList.push(
-					['category: rulebook', I18n.t`Rulebook`],
-					['category: sourcebook', I18n.t`Sourcebook`],
-					['category: mission', I18n.t`Mission`],
-					['category: magazine', I18n.t`Magazine`],
-					['category: novel', I18n.t`Novel`],
-					['category: videogame', I18n.t`Videogame`],
-					['category: tcg', I18n.t`T.C.G.`],
-					['category: boardgame', I18n.t`Boardgame`],
-					['category: misc', I18n.t`Misc.`]
+					['category: rulebook', 'Rulebook'],
+					['category: sourcebook', 'Sourcebook'],
+					['category: mission', 'Mission'],
+					['category: magazine', 'Magazine'],
+					['category: novel', 'Novel'],
+					['category: videogame', 'Videogame'],
+					['category: tcg', 'T.C.G.'],
+					['category: boardgame', 'Boardgame'],
+					['category: misc', 'Misc.']
 				);
 				break;
 
 			case 'edition':
 				suggestionList.push(
-					['edition: 1', I18n.t`First Edition`],
-					['edition: 2', I18n.t`Second Edition`],
-					['edition: 3', I18n.t`Third Edition`],
-					['edition: 4', I18n.t`Forth Edition`],
-					['edition: 5', I18n.t`Fifth Edition`],
-					['edition: 6', I18n.t`Sixth Edition`]
+					['edition: 1', 'First Edition'],
+					['edition: 2', 'Second Edition'],
+					['edition: 3', 'Third Edition'],
+					['edition: 4', 'Forth Edition'],
+					['edition: 5', 'Fifth Edition'],
+					['edition: 6', 'Sixth Edition']
 				);
 				break;
 
 			case 'type':
 				suggestionList.push(
-					['type: digital', I18n.t`Digital`],
-					['type: print', I18n.t`Print`],
-					['type: scan', I18n.t`Scan`],
-					['type: ocr', I18n.t`OCR`],
-					['type: physical', I18n.t`Physical`]
+					['type: digital', 'Digital'],
+					['type: print', 'Print'],
+					['type: scan', 'Scan'],
+					['type: ocr', 'OCR'],
+					['type: physical', 'Physical']
 				);
 				break;
 
 			case 'status':
 				suggestionList.push(
-					['status: missing', I18n.t`Missing`],
-					['status: outofscope', I18n.t`Out of scope`],
-					['status: canceled', I18n.t`Canceled`],
-					['status: ok', I18n.t`Okay`]
+					['status: missing', 'Missing'],
+					['status: outofscope', 'Out of scope'],
+					['status: canceled', 'Canceled'],
+					['status: ok', 'Okay']
 				);
 				break;
 

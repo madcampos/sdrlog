@@ -70,37 +70,37 @@ export class SdrViewMain extends LitElement implements RouterView {
 		}
 
 		this.filters = [
-			{ icon: '📜', label: '$t{Sourcebooks}', filter: 'category: sourcebook' },
-			{ icon: '📝', label: '$t{Rulebooks}', filter: 'category: rulebook' },
-			{ icon: '🗺️', label: '$t{Adventures & Campaigns}', filter: 'category: mission' },
-			{ icon: '📚', label: '$t{Novels}', filter: 'category: novel' },
-			{ icon: '📰', label: '$t{Magazines}', filter: 'category: magazine' },
-			{ icon: '♟️', label: '$t{Tabletop}', filter: 'category: boardgame' },
-			{ icon: '🃏', label: '$t{Trading Card Game}', filter: 'category: tcg' },
-			{ icon: '🎮', label: '$t{Video Games}', filter: 'category: videogame' },
-			{ icon: '📓', label: '$t{Unofficial}', filter: 'category: unofficial' },
-			{ icon: '🔣', label: '$t{Misc.}', filter: 'category: misc' },
+			{ icon: '📜', label: 'Sourcebooks', filter: 'category: sourcebook' },
+			{ icon: '📝', label: 'Rulebooks', filter: 'category: rulebook' },
+			{ icon: '🗺️', label: 'Adventures & Campaigns', filter: 'category: mission' },
+			{ icon: '📚', label: 'Novels', filter: 'category: novel' },
+			{ icon: '📰', label: 'Magazines', filter: 'category: magazine' },
+			{ icon: '♟️', label: 'Tabletop', filter: 'category: boardgame' },
+			{ icon: '🃏', label: 'Trading Card Game', filter: 'category: tcg' },
+			{ icon: '🎮', label: 'Video Games', filter: 'category: videogame' },
+			{ icon: '📓', label: 'Unofficial', filter: 'category: unofficial' },
+			{ icon: '🔣', label: 'Misc.', filter: 'category: misc' },
 			null,
-			{ icon: '📚', label: '$t{All}', filter: 'category: all' }
+			{ icon: '📚', label: 'All', filter: 'category: all' }
 		];
 
 		this.appMenuItems = [
-			{ icon: 'ℹ️', label: '$t{Tool Information}', action: async () => Router.navigate('/info') },
-			{ icon: '💬', label: '$t{Language Settings}', action: async () => Router.navigate('/settings/language') },
-			{ icon: '🌓', label: '$t{Theme Settings}', action: async () => Router.navigate('/settings/theme') }
+			{ icon: 'ℹ️', label: 'Tool Information', action: async () => Router.navigate('/info') },
+			{ icon: '💬', label: 'Language Settings', action: async () => Router.navigate('/settings/language') },
+			{ icon: '🌓', label: 'Theme Settings', action: async () => Router.navigate('/settings/theme') }
 		];
 
 		this.fileMenuItems = [
 			null,
-			{ icon: '📥', label: '$t{Import Files}', action: readFiles },
-			{ icon: '📦', label: '$t{Import Data}', action: requestDataFileFromUser },
+			{ icon: '📥', label: 'Import Files', action: readFiles },
+			{ icon: '📦', label: 'Import Data', action: requestDataFileFromUser },
 			null,
-			{ icon: '📂', label: '$t{Import Covers}', action: importCoversFromFolder },
-			{ icon: '🧩', label: '$t{Extract Covers}', action: extractCoversFromFiles },
+			{ icon: '📂', label: 'Import Covers', action: importCoversFromFolder },
+			{ icon: '🧩', label: 'Extract Covers', action: extractCoversFromFiles },
 			null,
-			{ icon: '📤', label: '$t{Export Data}', action: exportDataFile },
-			{ icon: '🎴', label: '$t{Export Thumbnails}', action: saveThumbsToFolder },
-			{ icon: '🖼️', label: '$t{Export Covers}', action: saveCoversToFolder }
+			{ icon: '📤', label: 'Export Data', action: exportDataFile },
+			{ icon: '🎴', label: 'Export Thumbnails', action: saveThumbsToFolder },
+			{ icon: '🖼️', label: 'Export Covers', action: saveCoversToFolder }
 		];
 
 		this.devMenuItems = [

@@ -1,5 +1,5 @@
 import type { IsoCode, Material, MaterialCategory, MaterialEdition, MaterialGameDate, MaterialPublisher, MaterialStatus, MaterialType, NewMaterial, SDRLogData } from '../../data/data';
-import { I18n } from '../intl/translations';
+
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
 import { getFileHash } from '../files/file-import';
@@ -102,14 +102,14 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 }
 
 export async function requestDataFileFromUser() {
-	const progressOverlay = SdrProgressOverlay.createOverlay({ title: I18n.t`Read data file` });
+	const progressOverlay = SdrProgressOverlay.createOverlay({ title: 'Read data file' });
 
 	try {
 		const [fileHandle] = await window.showOpenFilePicker({
 			id: 'dataFile',
 			startIn: 'downloads',
 			excludeAcceptAllOption: false,
-			types: [{ description: I18n.t`JSON Files`, accept: { 'text/json': ['.json'] } }]
+			types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
 		});
 
 		await setIDBItem('files', undefined, {

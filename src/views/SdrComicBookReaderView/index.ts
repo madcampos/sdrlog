@@ -4,7 +4,6 @@ import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
 import { Router } from '../../router/router';
-import { I18n } from '../../js/intl/translations';
 import { createComparer } from '../../js/intl/formatting';
 import { loadFile } from '../../js/files/file-open';
 
@@ -17,7 +16,7 @@ interface Page {
 type Pages = Record<string, Page[]>;
 
 const comparer = createComparer({ ignorePunctuation: true, numeric: true });
-const DEFAULT_FOLDER_NAME = I18n.t`Default section`;
+const DEFAULT_FOLDER_NAME = 'Default section';
 
 const mimeTypes = new Map([
 	['.png', 'image/png'],
