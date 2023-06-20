@@ -16746,6 +16746,66 @@
 			],
 			"gameDate": "2083-01",
 			"status": "missing"
+		},
+		{
+			"sku": [
+				"28511"
+			],
+			"name": "Rogues Lineup",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"description": "# All Lined Up\n\nYou come across plenty of characters in the shadows, with a range of experience in their past. They can be useful in ways you might not expect, so broaden your horizons, get to know them, and discover what’s possible.\n\nRogues Lineup contains 40 characters spanning a range of metatypes, archetypes, and abilities. Whether you need a quick NPC to drop into a game or want to use them as pre-generated player characters, this deck is ready!",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-05-01"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"28512"
+			],
+			"name": "Program Deck",
+			"category": "misc",
+			"type": "physical",
+			"originalLanguage": "en-US",
+			"description": "# LOAD ‘EM UP!\n\nDeckers rely on their wits and skills, but a screaming fast machine with choice programs loaded doesn’t hurt. Program Deck has info on more than 40 different programs for deckers, including basic programs, hacking programs, and commlink apps. Program Deck is for use with Shadowrun, Sixth World.",
+			"edition": 6,
+			"publisher": [
+				"Catalyst Game Labs"
+			],
+			"releaseDate": [
+				"2023-05-01"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
+		},
+		{
+			"sku": [
+				"R20-001"
+			],
+			"name": "Shadowrun, Sixth World City Edition - Seattle - Art Pack",
+			"category": "misc",
+			"type": "digital",
+			"originalLanguage": "en-US",
+			"description": "Tokens for the characters, drones and vehicles of Shadowrun, Sixth World made available for use in the Roll20 VTT.\n\nIn This Package:\n- Art and tokens usable for characters, vehicles and drones made from art in the compendium.",
+			"links": {
+				"https://marketplace.roll20.net/browse/set/22293/shadowrun-sixth-world-city-edition-seattle-art-pack": "Shadowrun, Sixth World City Edition - Seattle - Art Pack"
+			},
+			"edition": 6,
+			"publisher": [
+				"Other"
+			],
+			"releaseDate": [
+				"2023-05-01"
+			],
+			"gameDate": "2083-01",
+			"status": "missing"
 		}
 	]
 }
