@@ -28,6 +28,8 @@ https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-20
 
 https://www.shadowiki.de/Shadowrun_Schnell_und_dreckig
 
+https://marketplace.roll20.net/browse/set/22293/shadowrun-sixth-world-city-edition-seattle-art-pack
+
 # Archive
 **TODO**: Scrap html and old pages and archive
 
