@@ -1,6 +1,6 @@
 {
 	"id": "https://madcampos.dev/sdrlog/?id=19a66539-f75c-4ebb-9818-57b19b12dc63",
-	"scope": "https://madcampos.dev/sdrlog/",
+	"scope": "https://madcampos.dev/sdrlog/?utm_source=pwa&utm_medium=installed&utm_campaign=web_app_manifest",
 	"name": "Shadowrun Catalog",
 	"short_name": "SDRlog",
 	"lang": "en-US",
@@ -50,7 +50,7 @@
 			"name": "Search",
 			"short_name": "Search",
 			"description": "Search for an item",
-			"url": "https://madcampos.dev/sdrlog/?search",
+			"url": "https://madcampos.dev/sdrlog/?utm_source=pwa&utm_medium=shortcut&utm_campaign=search&search=",
 			"icons": [
 				{
 					"src": "icons/actions/search-96.png",
@@ -66,7 +66,7 @@
 			"name": "App Information",
 			"short_name": "Info",
 			"description": "Information about how the app is strutctured",
-			"url": "https://madcampos.dev/sdrlog/info",
+			"url": "https://madcampos.dev/sdrlog/info?utm_source=pwa&utm_medium=shortcut&utm_campaign=info",
 			"icons": [
 				{
 					"src": "icons/actions/info-96.png",
@@ -82,7 +82,7 @@
 			"name": "New Item",
 			"short_name": "New Item",
 			"description": "adds a new item to the collection",
-			"url": "https://madcampos.dev/sdrlog/item",
+			"url": "https://madcampos.dev/sdrlog/item?utm_source=pwa&utm_medium=shortcut&utm_campaign=new_item",
 			"icons": [
 				{
 					"src": "icons/actions/new-item-96.png",
@@ -146,7 +146,7 @@
 		}
 	],
 	"share_target": {
-		"action": "https://madcampos.dev/sdrlog/item",
+		"action": "https://madcampos.dev/sdrlog/item?utm_source=pwa&utm_medium=share_target&utm_campaign=new_item",
 		"method": "POST",
 		"enctype": "multipart/form-data",
 		"params": {
@@ -171,7 +171,7 @@
 	},
 	"file_handlers": [
 		{
-			"action": "https://madcampos.dev/sdrlog/item",
+			"action": "https://madcampos.dev/sdrlog/item?utm_source=pwa&utm_medium=file_handler&utm_campaign=open_item",
 			"accept": {
 				"text/json": [
 					".json",
@@ -250,11 +250,11 @@
 		"version": "1.0.0",
 		"history": [
 			{
-				"url": "https://madcampos.dev/sdrlog/changelog",
+				"url": "https://madcampos.dev/sdrlog/changelog?utm_source=pwa&utm_medium=changelog&utm_campaign=changelog",
 				"type": "text/html"
 			},
 			{
-				"url": "https://madcampos.dev/sdrlog/changelog.rss",
+				"url": "https://madcampos.dev/sdrlog/changelog.rss?utm_source=pwa&utm_medium=changelog&utm_campaign=changelog",
 				"type": "application/rss+xml"
 			}
 		]
