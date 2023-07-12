@@ -143,7 +143,7 @@ export class GamepadHandler extends EventTarget {
 	static vibrate(time = 100, weakIntensity = 0.4, strongIntentisy = 0) {
 		const [gamepad] = navigator.getGamepads();
 
-		gamepad?.vibrationActuator?.playEffect('dual-rumble', {
+		void gamepad?.vibrationActuator?.playEffect('dual-rumble', {
 			startDelay: 0,
 			duration: time,
 			weakMagnitude: weakIntensity,

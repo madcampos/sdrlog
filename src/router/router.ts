@@ -61,7 +61,6 @@ export class Router {
 		return this.#selectorAttribute;
 	}
 
-	// @ts-expect-error
 	static get beforeEach(): RouteGuardHandler | undefined {
 		return Router.#beforeEach;
 	}
@@ -70,7 +69,6 @@ export class Router {
 		Router.#beforeEach = handler;
 	}
 
-	// @ts-expect-error
 	static get fallback(): RouterView | undefined {
 		return Router.#fallback;
 	}
