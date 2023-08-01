@@ -6,15 +6,17 @@ import { defineConfig, type UserConfig } from 'vitest/config';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
 import { externalResources, internalResources, shareTarget } from './src/service-worker';
 
-const sslOptions = {
-	cert: readFileSync('./certs/server.crt'),
-	key: readFileSync('./certs/server.key')
-};
-
 const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manifest.json', { encoding: 'utf8' }));
 
 export default defineConfig(({ mode }) => {
 	const baseUrl = mode === 'production' ? 'https://madcampos.dev/sdrlog/' : 'https://localhost:3000/';
+
+	const sslOptions = mode === 'production'
+		? false
+		: {
+			cert: readFileSync('./certs/server.crt'),
+			key: readFileSync('./certs/server.key')
+		};
 
 	const config: UserConfig = {
 		plugins: [
