@@ -23,8 +23,6 @@ dist
 dev-dist
 dist-ssr
 coverage
-public/images/covers/
-public/images/thumbs/
 
 # Server certificates
 certs
