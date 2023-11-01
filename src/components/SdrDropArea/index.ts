@@ -51,7 +51,7 @@ export class SdrDropArea extends LitElement {
 
 		const [file] = Array.from(evt.dataTransfer?.files ?? []);
 		const fileType = file.type;
-		const mimes = Object.keys(this.#accepts.accept);
+		const mimes = Object.keys(this.#accepts.accept as Record<string, string[]>);
 
 		if (mimes.includes(fileType)) {
 			this.#file = file;
@@ -85,7 +85,7 @@ export class SdrDropArea extends LitElement {
 
 			const clipboardData = evt.clipboardData as DataTransfer;
 			const { files } = clipboardData;
-			const mimes = Object.keys(this.#accepts.accept);
+			const mimes = Object.keys(this.#accepts.accept as Record<string, string[]>);
 			const file = [...files].find((potentialFile) => mimes.includes(potentialFile.type));
 
 			if (file) {
