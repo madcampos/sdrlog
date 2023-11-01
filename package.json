@@ -68,11 +68,11 @@
 	"lint-staged": {
 		"*.ts": [
 			"eslint --ext .ts --fix",
-			"vitest related"
+			"vitest related --run"
 		],
 		"*.js": [
 			"eslint --ext .js --fix",
-			"vitest related"
+			"vitest related --run"
 		]
 	},
 	"commitlint": {
