@@ -32,6 +32,7 @@ export const shareTarget: RuntimeCaching = {
 		const formData = await event.request.formData();
 
 		// TODO: handle form data
+		// Ref: https://docs.pwabuilder.com/#/home/native-features?id=how-to-share-to-your-pwa
 
 		return fetch({
 			...request,
@@ -39,3 +40,9 @@ export const shareTarget: RuntimeCaching = {
 		});
 	}
 };
+
+// TODO: add support for push notifications
+// Ref: https://docs.pwabuilder.com/#/home/native-features?id=adding-a-push-listener-to-our-service-worker
+
+// TODO: add support for background sync
+// Ref: https://docs.pwabuilder.com/#/home/native-features?id=background-sync
