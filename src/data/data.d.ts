@@ -16,6 +16,14 @@ export type MaterialGameDate = `${number}-${number}`;
 
 export type MaterialNames = Partial<Record<IsoCode, string>>;
 
+export interface MaterialItem {
+	name: string,
+	status: MaterialStatus,
+	description: string,
+	notes: string,
+	links?: Record<string, string>
+}
+
 export interface Material {
 	category: MaterialCategory,
 	type: MaterialType,
@@ -30,7 +38,8 @@ export interface Material {
 	status: MaterialStatus,
 	originalLanguage: IsoCode,
 	notes?: string,
-	links?: Record<string, string>
+	links?: Record<string, string>,
+	items?: MaterialItem[]
 }
 
 export interface SDRLogData {
@@ -50,5 +59,9 @@ export interface FileForMaterial {
 
 export interface NewMaterial extends Material {
 	files?: FileForMaterial[],
-	cover?: File
+	cover?: File,
+	items?: (MaterialItem & {
+		files?: FileForMaterial[],
+		cover?: File
+	})[]
 }
