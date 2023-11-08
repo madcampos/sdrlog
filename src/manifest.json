@@ -1,56 +1,110 @@
 {
-	"id": "https://madcampos.dev/sdrlog/?id=19a66539-f75c-4ebb-9818-57b19b12dc63",
-	"scope": "https://madcampos.dev/sdrlog/?utm_source=pwa&utm_medium=installed&utm_campaign=web_app_manifest",
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
+	"id": "/?id=19a66539-f75c-4ebb-9818-57b19b12dc63",
 	"name": "Shadowrun Catalog",
 	"short_name": "SDRlog",
+	"categories": ["entertainment", "utilities", "games"],
+	"description": "An interactive list of Shadowrun published material (books, tabletop, video games, etc.). Information about the items and can be linked to local files.",
 	"lang": "en-US",
 	"dir": "ltr",
-	"description": "An interactive list of Shadowrun published material (books, tabletop, video games, etc.). Information about the items and can be linked to local files.",
-	"categories": ["entertainment", "utilities", "games"],
+
+	"scope": "https://madcampos.dev/sdrlog/",
+	"scope_extensions": [],
+	"start_url": "/?utm_source=pwa&utm_medium=installed&utm_campaign=web_app_manifest",
+
+	"background_color": "#252525",
+	"theme_color": "#9400d3",
 	"display": "standalone",
 	"orientation": "portrait",
 	"display_override": ["window-controls-overlay"],
-	"background_color": "#252525",
-	"theme_color": "#9400d3",
+
+	"related_applications": [],
 	"prefer_related_applications": false,
+
 	"icons": [
 		{
-			"src": "icons/transparent/manifest-icon-192.png",
+			"src": "/icons/transparent/manifest-icon-192.png",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "any"
 		},
 		{
-			"src": "icons/maskable/manifest-icon-192.png",
+			"src": "/icons/maskable/manifest-icon-192.png",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icons/transparent/manifest-icon-512.png",
+			"src": "/icons/transparent/manifest-icon-512.png",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "any"
 		},
 		{
-			"src": "icons/maskable/manifest-icon-512.png",
+			"src": "/icons/maskable/manifest-icon-512.png",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "maskable"
 		}
 	],
-	"protocol_handlers": [
+
+	"screenshots": [
 		{
-			"protocol": "web+sdrlog",
-			"url": "https://madcampos.dev/sdrlog/item?url=%s"
+			"src": "/screenshots/wide-1.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"platform": "wide"
+		},
+		{
+			"src": "/screenshots/wide-2.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"platform": "wide"
+		},
+		{
+			"src": "/screenshots/wide-3.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"platform": "wide"
+		},
+		{
+			"src": "/screenshots/wide-4.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"platform": "wide"
+		},
+		{
+			"src": "/screenshots/narrow-1.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"platform": "narrow"
+		},
+		{
+			"src": "/screenshots/narrow-2.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"platform": "narrow"
+		},
+		{
+			"src": "/screenshots/narrow-3.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"platform": "narrow"
+		},
+		{
+			"src": "/screenshots/narrow-4.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"platform": "narrow"
 		}
 	],
+
 	"shortcuts": [
 		{
 			"name": "Search",
 			"short_name": "Search",
 			"description": "Search for an item",
-			"url": "https://madcampos.dev/sdrlog/?utm_source=pwa&utm_medium=shortcut&utm_campaign=search&search=",
+			"url": "/?utm_source=pwa&utm_medium=shortcut&utm_campaign=search&search=",
 			"icons": [
 				{
 					"src": "icons/actions/search-96.png",
@@ -66,7 +120,7 @@
 			"name": "App Information",
 			"short_name": "Info",
 			"description": "Information about how the app is strutctured",
-			"url": "https://madcampos.dev/sdrlog/info?utm_source=pwa&utm_medium=shortcut&utm_campaign=info",
+			"url": "/info?utm_source=pwa&utm_medium=shortcut&utm_campaign=info",
 			"icons": [
 				{
 					"src": "icons/actions/info-96.png",
@@ -82,7 +136,7 @@
 			"name": "New Item",
 			"short_name": "New Item",
 			"description": "adds a new item to the collection",
-			"url": "https://madcampos.dev/sdrlog/item?utm_source=pwa&utm_medium=shortcut&utm_campaign=new_item",
+			"url": "/item?utm_source=pwa&utm_medium=shortcut&utm_campaign=new_item",
 			"icons": [
 				{
 					"src": "icons/actions/new-item-96.png",
@@ -95,58 +149,19 @@
 			]
 		}
 	],
-	"screenshots": [
+
+	"handle_links": "preffered",
+	"launch_handler": {
+		"client_mode": "navigate-existing"
+	},
+	"protocol_handlers": [
 		{
-			"src": "screenshots/wide-1.png",
-			"sizes": "1024x593",
-			"type": "image/png",
-			"platform": "wide"
-		},
-		{
-			"src": "screenshots/wide-2.png",
-			"sizes": "1024x593",
-			"type": "image/png",
-			"platform": "wide"
-		},
-		{
-			"src": "screenshots/wide-3.png",
-			"sizes": "1024x593",
-			"type": "image/png",
-			"platform": "wide"
-		},
-		{
-			"src": "screenshots/wide-4.png",
-			"sizes": "1024x593",
-			"type": "image/png",
-			"platform": "wide"
-		},
-		{
-			"src": "screenshots/narrow-1.png",
-			"sizes": "540x720",
-			"type": "image/png",
-			"platform": "narrow"
-		},
-		{
-			"src": "screenshots/narrow-2.png",
-			"sizes": "540x720",
-			"type": "image/png",
-			"platform": "narrow"
-		},
-		{
-			"src": "screenshots/narrow-3.png",
-			"sizes": "540x720",
-			"type": "image/png",
-			"platform": "narrow"
-		},
-		{
-			"src": "screenshots/narrow-4.png",
-			"sizes": "540x720",
-			"type": "image/png",
-			"platform": "narrow"
+			"protocol": "web+sdrlog",
+			"url": "/item?url=%s"
 		}
 	],
 	"share_target": {
-		"action": "https://madcampos.dev/sdrlog/item?utm_source=pwa&utm_medium=share_target&utm_campaign=new_item",
+		"action": "/item?utm_source=pwa&utm_medium=share_target&utm_campaign=new_item",
 		"method": "POST",
 		"enctype": "multipart/form-data",
 		"params": {
@@ -165,13 +180,9 @@
 			]
 		}
 	},
-	"handle_links": "preffered",
-	"launch_handler": {
-		"client_mode": "navigate-existing"
-	},
 	"file_handlers": [
 		{
-			"action": "https://madcampos.dev/sdrlog/item?utm_source=pwa&utm_medium=file_handler&utm_campaign=open_item",
+			"action": "/item?utm_source=pwa&utm_medium=file_handler&utm_campaign=open_item",
 			"accept": {
 				"text/json": [
 					".json",
@@ -181,80 +192,82 @@
 			"launch_type": "single-client",
 			"icons": [
 				{
-					"src": "icons/file/file-icon-1024.png",
+					"src": "/icons/file/file-icon-1024.png",
 					"sizes": "1024x1024",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-512.png",
+					"src": "/icons/file/file-icon-512.png",
 					"sizes": "512x512",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-256.png",
+					"src": "/icons/file/file-icon-256.png",
 					"sizes": "256x256",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-96.png",
+					"src": "/icons/file/file-icon-96.png",
 					"sizes": "96x96",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-64.png",
+					"src": "/icons/file/file-icon-64.png",
 					"sizes": "64x64",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-48.png",
+					"src": "/icons/file/file-icon-48.png",
 					"sizes": "48x48",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-32.png",
+					"src": "/icons/file/file-icon-32.png",
 					"sizes": "32x32",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-24.png",
+					"src": "/icons/file/file-icon-24.png",
 					"sizes": "24x24",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon-16.png",
+					"src": "/icons/file/file-icon-16.png",
 					"sizes": "16x16",
 					"type": "image/png"
 				},
 				{
-					"src": "icons/file/file-icon.ico",
+					"src": "/icons/file/file-icon.ico",
 					"sizes": "16x16 32x32 48x48 64x64 96x96 128x128 256x256",
 					"type": "image/x-icon"
 				},
 				{
-					"src": "icons/file/file-icon.icns",
+					"src": "/icons/file/file-icon.icns",
 					"sizes": "any",
 					"type": "image/x-icns"
 				},
 				{
-					"src": "icons/file/file-icon.svg",
+					"src": "/icons/file/file-icon.svg",
 					"sizes": "any",
 					"type": "image/svg+xml"
 				}
 			]
 		}
 	],
+
 	"edge_side_panel": {
 		"preffer_width": 460
 	},
+
 	"changelog": {
 		"version": "1.0.0",
 		"history": [
 			{
-				"url": "https://madcampos.dev/sdrlog/changelog?utm_source=pwa&utm_medium=changelog&utm_campaign=changelog",
+				"url": "/changelog?utm_source=pwa&utm_medium=changelog&utm_campaign=changelog",
 				"type": "text/html"
 			},
 			{
-				"url": "https://madcampos.dev/sdrlog/changelog.rss?utm_source=pwa&utm_medium=changelog&utm_campaign=changelog",
+				"url": "/changelog.rss?utm_source=pwa&utm_medium=changelog&utm_campaign=changelog",
 				"type": "application/rss+xml"
 			}
 		]

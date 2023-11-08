@@ -24,7 +24,10 @@ export default defineConfig(({ mode }) => {
 				registerType: 'prompt',
 				minify: true,
 				includeAssets: ['/icons/favicon.svg'],
-				manifest,
+				manifest: {
+					...manifest,
+					scope: baseUrl
+				},
 				scope: baseUrl,
 				workbox: {
 					cleanupOutdatedCaches: true,
