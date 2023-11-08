@@ -95,8 +95,7 @@ details[open] summary::before {
 	align-items: center;
 
 	padding: calc((var(--small-text) / 2) + var(--padding-block)) var(--padding-inline) var(--padding-block);
-	margin-block-start: calc((var(--margin-block) + var(--border-width)) * -1);
-	margin-block-end: var(--margin-block);
+	margin-block: calc((var(--margin-block) + var(--border-width)) * -1) var(--margin-block);
 	margin-inline: 0;
 	border-top-left-radius: var(--border-radius);
 	border-top-right-radius: var(--border-radius);

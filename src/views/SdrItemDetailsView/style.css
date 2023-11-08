@@ -9,8 +9,7 @@ sdr-view-item-details #item-content {
 	grid-template-areas: 'image tabs';
 
 	align-items: start;
-	align-content: start;
-	justify-content: center;
+	place-content: start center;
 
 	height: 100%;
 	box-sizing: inherit;

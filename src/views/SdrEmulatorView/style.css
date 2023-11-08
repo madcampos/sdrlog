@@ -38,8 +38,7 @@ sdr-view-emulator #game-wrapper {
 	place-items: center;
 	place-content: stretch;
 	grid-area: game;
-	align-self: center;
-	justify-self: center;
+	place-self: center center;
 	position: relative;
 	overflow: hidden;
 }

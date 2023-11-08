@@ -10,8 +10,7 @@
 	display: inline-grid;
 	grid-template-columns: var(--thumbnail-width);
 	grid-template-rows: var(--thumbnail-height) var(--card-title-height);
-	justify-items: center;
-	align-items: start;
+	place-items: start center;
 	margin: var(--margin-block);
 
 	width: var(--card-width);

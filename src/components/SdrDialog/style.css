@@ -24,8 +24,7 @@ dialog {
 	box-sizing: border-box;
 
 	display: grid;
-	align-items: stretch;
-	justify-items: stretch;
+	place-items: stretch stretch;
 	grid-template-columns: 1fr;
 	grid-template-rows: 3rem 1fr auto;
 

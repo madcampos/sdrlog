@@ -21,14 +21,12 @@
 	gap: 1rem;
 
 	place-items: center;
-	align-content: center;
-	justify-content: start;
+	place-content: center start;
 
 	width: 100%;
 	height: 100%;
 
-	overflow-x: auto;
-	overflow-y: hidden;
+	overflow: auto hidden;
 	scroll-snap-type: both mandatory;
 	scroll-behavior: smooth;
 	overscroll-behavior: contain;

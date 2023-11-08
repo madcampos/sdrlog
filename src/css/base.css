@@ -55,8 +55,7 @@ main {
 	margin: calc(var(--menubar-top) + var(--menubar-height)) var(--bound-right) var(--bound-bottom) var(--bound-left);
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-content: flex-start;
+	place-content: flex-start center;
 	align-items: flex-start;
 	scroll-snap-type: both proximity;
 	width: 100vw;
@@ -67,10 +66,8 @@ main {
 	margin-top: calc(var(--titlebar-top) + var(--titlebar-height));
 	height: calc(100vh - (var(--titlebar-top) + var(--titlebar-height)));
 	display: grid;
-	align-items: stretch;
-	justify-items: stretch;
-	align-content: center;
-	justify-content: center;
+	place-items: stretch stretch;
+	place-content: center center;
 	overflow: hidden;
 }
 
