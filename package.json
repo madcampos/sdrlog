@@ -79,5 +79,9 @@
 		"extends": [
 			"@commitlint/config-conventional"
 		]
+	},
+	"overrides": {
+		"has": "npm:@nolyfill/has@latest",
+		"string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest"
 	}
 }
