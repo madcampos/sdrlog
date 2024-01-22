@@ -139,7 +139,7 @@ export class Router {
 		Router.#baseUrl = baseUrl;
 
 		if (Router.#baseUrl === '/') {
-			Router.#baseUrl = import.meta.resolve('/');
+			Router.#baseUrl = new URL('./', import.meta.env.BASE_URL).toString();
 		}
 
 		const currentMatcher = Router.#fallbackPattern.exec(window.location.href, Router.#baseUrl);

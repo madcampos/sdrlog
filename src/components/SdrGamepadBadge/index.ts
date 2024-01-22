@@ -41,11 +41,19 @@ export class SdrGamepadBadge extends LitElement {
 		});
 	}
 
+	get #buttonImage() {
+		return new URL(`./images/gamepad-buttons/${this.button}.svg`, import.meta.env.BASE_URL).toString();
+	}
+
+	get #buttonPressedImage() {
+		return new URL(`./images/gamepad-buttons/${this.button}-pressed.svg`, import.meta.env.BASE_URL).toString();
+	}
+
 	render() {
 		return html`
 			<span id="icon" ?hidden="${this.disabled}">
-				<img ?hidden="${this.isPressed}" src="${`${import.meta.env.BASE_URL}images/gamepad-buttons/${this.button}.svg`}">
-				<img ?hidden="${!this.isPressed}" src="${`${import.meta.env.BASE_URL}images/gamepad-buttons/${this.button}-pressed.svg`}">
+				<img ?hidden="${this.isPressed}" src="${this.#buttonImage}">
+				<img ?hidden="${!this.isPressed}" src="${this.#buttonPressedImage}">
 			</span>
 		`;
 	}

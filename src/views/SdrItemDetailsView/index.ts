@@ -221,6 +221,10 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		void Router.navigate('/');
 	}
 
+	#getPublisherImageUrl(publisher: string) {
+		return new URL(`./images/publishers/${publisher}.png`, import.meta.env.BASE_URL).toString();
+	}
+
 	async navigate(destination: RouteLocation<'/item/:id'>) {
 		let title = 'New Material';
 
@@ -437,7 +441,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 									${this.material.publisher.map((publisher) => html`
 										<sdr-edit-list-item value="${publisher}">
 											<abbr title="${publisher}">
-												<img alt="${publisher}" src="${import.meta.env.BASE_URL}images/publishers/${publisher}.png"/>
+												<img alt="${publisher}" src="${this.#getPublisherImageUrl(publisher)}"/>
 											</abbr>
 										</sdr-edit-list-item>
 									`)}
