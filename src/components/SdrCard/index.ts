@@ -26,15 +26,15 @@ export class SdrCard extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor id: string;
-	@property({ type: String, reflect: true }) accessor title: string;
-	@property({ type: String, reflect: true }) accessor category: Material['category'];
-	@property({ type: Array, reflect: true }) accessor sku: string[];
-	@property({ type: String, reflect: true }) accessor type: Material['type'];
-	@property({ type: String, reflect: true }) accessor edition: Material['edition'];
-	@property({ type: String, reflect: true }) accessor status: Material['status'];
+	@property({ type: String, reflect: true }) id: string;
+	@property({ type: String, reflect: true }) title: string;
+	@property({ type: String, reflect: true }) category: Material['category'];
+	@property({ type: Array, reflect: true }) sku: string[];
+	@property({ type: String, reflect: true }) type: Material['type'];
+	@property({ type: Number, reflect: true }) edition: Material['edition'];
+	@property({ type: String, reflect: true }) status: Material['status'];
 
-	@property({ type: String }) accessor thumbUrl: string;
+	@property({ type: String }) thumbUrl: string;
 
 	#internals: ElementInternals;
 

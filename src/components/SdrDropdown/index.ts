@@ -12,16 +12,20 @@ export class SdrDropdown extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor icon = '';
-	@property({ type: Boolean, reflect: true }) accessor open = false;
-	@property({ type: String, reflect: true, attribute: 'trigger-button' }) accessor triggerButton = '';
+	@property({ type: String, reflect: true }) icon: string;
+	@property({ type: Boolean, reflect: true }) open: boolean;
+	@property({ type: String, reflect: true, attribute: 'trigger-button' }) triggerButton: string;
 
-	@query('dialog') accessor #dialog: HTMLDialogElement;
+	@query('dialog') private declare dialog: HTMLDialogElement;
 
-	@queryAssignedElements({ selector: 'sdr-dropdown-item' }) accessor #items: SdrDropdownItem[];
+	@queryAssignedElements({ selector: 'sdr-dropdown-item' }) private declare items: SdrDropdownItem[];
 
 	constructor() {
 		super();
+
+		this.icon = '';
+		this.open = false;
+		this.triggerButton = '';
 
 		window.addEventListener('keydown', (evt) => {
 			if (evt.key === 'Escape' && this.open) {
@@ -43,7 +47,7 @@ export class SdrDropdown extends LitElement {
 				this.show();
 
 				window.requestAnimationFrame(() => {
-					this.#items[0]?.focus();
+					this.items[0]?.focus();
 					GamepadHandler.shortVibration();
 				});
 			}
@@ -107,49 +111,49 @@ export class SdrDropdown extends LitElement {
 		// Close all other menus
 		document.body.click();
 
-		const rect = this.#dialog.getBoundingClientRect();
+		const rect = this.dialog.getBoundingClientRect();
 
 		if (rect.right > window.innerWidth) {
-			this.#dialog.classList.add('right');
+			this.dialog.classList.add('right');
 		}
 
 		this.open = true;
 
 		window.requestAnimationFrame(() => {
-			this.#items[0]?.focus();
+			this.items[0]?.focus();
 		});
 
 		this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 	}
 
 	#focusNext() {
-		const selectedIndex = this.#items.findIndex((i) => i === document.activeElement);
+		const selectedIndex = this.items.findIndex((i) => i === document.activeElement);
 		let nextIndex = selectedIndex + 1;
 
-		if (nextIndex === this.#items.length) {
+		if (nextIndex === this.items.length) {
 			nextIndex = 0;
 		}
 
-		if (this.#items[nextIndex].separator) {
+		if (this.items[nextIndex].separator) {
 			nextIndex += 1;
 		}
 
-		this.#items[nextIndex]?.focus();
+		this.items[nextIndex]?.focus();
 	}
 
 	#focusPrevious() {
-		const selectedIndex = this.#items.findIndex((i) => i === document.activeElement);
+		const selectedIndex = this.items.findIndex((i) => i === document.activeElement);
 		let nextIndex = selectedIndex - 1;
 
 		if (nextIndex < 0) {
-			nextIndex = this.#items.length - 1;
+			nextIndex = this.items.length - 1;
 		}
 
-		if (this.#items[nextIndex].separator) {
+		if (this.items[nextIndex].separator) {
 			nextIndex -= 1;
 		}
 
-		this.#items[nextIndex]?.focus();
+		this.items[nextIndex]?.focus();
 	}
 
 	connectedCallback() {

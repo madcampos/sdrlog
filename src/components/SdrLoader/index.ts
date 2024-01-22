@@ -7,7 +7,13 @@ import style from './style.css?inline' assert { type: 'css' };
 export class SdrLoader extends LitElement {
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) accessor loaded = false;
+	@property({ type: Boolean, reflect: true }) loaded: boolean;
+
+	constructor() {
+		super();
+
+		this.loaded = false;
+	}
 
 	render() {
 		return html`

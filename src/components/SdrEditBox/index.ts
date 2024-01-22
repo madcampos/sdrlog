@@ -11,25 +11,30 @@ export class SdrEditBox extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor value = '';
-	@property({ type: String, reflect: true }) accessor placeholder: string | undefined;
-	@property({ type: Boolean, reflect: true }) accessor disabled = false;
-	@property({ type: Boolean, reflect: true }) accessor required = false;
-	@property({ type: Boolean, reflect: true }) accessor readonly = false;
-	@property({ type: String, reflect: true }) accessor type: InputType = 'text';
-	@property({ type: String, reflect: true }) accessor pattern: string | undefined;
-	@property({ type: Number, reflect: true }) accessor minLength: number | undefined;
-	@property({ type: Number, reflect: true }) accessor maxLength: number | undefined;
-	@property({ type: Number, reflect: true }) accessor min: number | undefined;
-	@property({ type: Number, reflect: true }) accessor max: number | undefined;
-	@property({ type: Number, reflect: true }) accessor step: number | undefined;
+	@property({ type: String, reflect: true }) value: string;
+	@property({ type: String, reflect: true }) placeholder?: string;
+	@property({ type: Boolean, reflect: true }) disabled: boolean;
+	@property({ type: Boolean, reflect: true }) required: boolean;
+	@property({ type: Boolean, reflect: true }) readonly: boolean;
+	@property({ type: String, reflect: true }) type: InputType = 'text';
+	@property({ type: String, reflect: true }) pattern?: string;
+	@property({ type: Number, reflect: true }) minLength?: number;
+	@property({ type: Number, reflect: true }) maxLength?: number;
+	@property({ type: Number, reflect: true }) min?: number;
+	@property({ type: Number, reflect: true }) max?: number;
+	@property({ type: Number, reflect: true }) step?: number;
 
-	@query('input') accessor #inputElement: HTMLInputElement;
+	@query('input') private declare inputElement: HTMLInputElement;
 
 	#internals: ElementInternals;
 
 	constructor() {
 		super();
+
+		this.value = '';
+		this.disabled = false;
+		this.required = false;
+		this.readonly = false;
 
 		this.#internals = this.attachInternals();
 	}
@@ -94,7 +99,7 @@ export class SdrEditBox extends LitElement {
 	}
 
 	#input() {
-		this.value = this.#inputElement.value;
+		this.value = this.inputElement.value;
 
 		this.#validate();
 
@@ -102,7 +107,7 @@ export class SdrEditBox extends LitElement {
 	}
 
 	#change() {
-		this.value = this.#inputElement.value;
+		this.value = this.inputElement.value;
 
 		this.#validate();
 
@@ -120,7 +125,7 @@ export class SdrEditBox extends LitElement {
 	setCustomValidity(message: string) { this.#internals.setValidity({ customError: message !== '' }, message); }
 
 	resetValue() {
-		this.#inputElement.value = '';
+		this.inputElement.value = '';
 	}
 
 	render() {

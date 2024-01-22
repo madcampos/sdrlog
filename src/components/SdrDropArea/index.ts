@@ -14,9 +14,15 @@ export class SdrDropArea extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) accessor disabled = false;
+	@property({ type: Boolean, reflect: true }) disabled: boolean;
 
-	@query('#overlay') accessor #overlay: HTMLDivElement;
+	@query('overlay') private declare overlay: HTMLDivElement;
+
+	constructor() {
+		super();
+
+		this.disabled = false;
+	}
 
 	#accepts: FilePickerAcceptType = {
 		description: 'Image Files',
@@ -59,7 +65,7 @@ export class SdrDropArea extends LitElement {
 			this.dispatchEvent(new CustomEvent('dropfile', { bubbles: true, composed: true, cancelable: true, detail: { file: this.#file } }));
 		}
 
-		this.#overlay.classList.remove('drop');
+		this.overlay.classList.remove('drop');
 	}
 
 	get file() {
@@ -71,11 +77,11 @@ export class SdrDropArea extends LitElement {
 
 		this.addEventListener('dragover', (evt) => {
 			evt.preventDefault();
-			this.#overlay.classList.add('drop');
+			this.overlay.classList.add('drop');
 		});
 
 		this.addEventListener('dragleave', () => {
-			this.#overlay.classList.remove('drop');
+			this.overlay.classList.remove('drop');
 		});
 
 		document.addEventListener('paste', (evt) => {

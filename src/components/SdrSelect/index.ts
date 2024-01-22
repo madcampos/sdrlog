@@ -9,15 +9,15 @@ export class SdrSelect extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor value = '';
-	@property({ type: Array }) accessor values: string[] = [];
-	@property({ type: Boolean, reflect: true }) accessor disabled = false;
-	@property({ type: Boolean, reflect: true }) accessor required = false;
-	@property({ type: Boolean, reflect: true }) accessor readonly = false;
+	@property({ type: String, reflect: true }) value: string;
+	@property({ type: Array }) values: string[];
+	@property({ type: Boolean, reflect: true }) disabled: boolean;
+	@property({ type: Boolean, reflect: true }) required: boolean;
+	@property({ type: Boolean, reflect: true }) readonly: boolean;
 
-	@query('select') accessor #select: HTMLSelectElement;
+	@query('select') private declare select: HTMLSelectElement;
 
-	@queryAssignedElements({ selector: 'optgroup, option' }) accessor #items: (HTMLOptGroupElement | HTMLOptionElement)[];
+	@queryAssignedElements({ selector: 'optgroup, option' }) private declare items: (HTMLOptGroupElement | HTMLOptionElement)[];
 
 	#internals: ElementInternals;
 
@@ -25,6 +25,12 @@ export class SdrSelect extends LitElement {
 		super();
 
 		this.#internals = this.attachInternals();
+
+		this.value = '';
+		this.values = [];
+		this.disabled = false;
+		this.required = false;
+		this.readonly = false;
 
 		window.addEventListener('gamepadbuttondown', () => {
 			// TODO: implement gamepad interaction
@@ -46,7 +52,7 @@ export class SdrSelect extends LitElement {
 	}
 
 	#input() {
-		this.value = this.#select.value;
+		this.value = this.select.value;
 
 		this.#validate();
 
@@ -54,7 +60,7 @@ export class SdrSelect extends LitElement {
 	}
 
 	#change() {
-		this.value = this.#select.value;
+		this.value = this.select.value;
 
 		this.#validate();
 
@@ -62,8 +68,8 @@ export class SdrSelect extends LitElement {
 	}
 
 	#moveItems() {
-		this.#items.forEach((item) => {
-			this.#select.appendChild(item);
+		this.items.forEach((item) => {
+			this.select.appendChild(item);
 		});
 	}
 
@@ -78,7 +84,7 @@ export class SdrSelect extends LitElement {
 	setCustomValidity(message: string) { this.#internals.setValidity({ customError: message !== '' }, message); }
 
 	resetValue() {
-		this.#select.selectedIndex = 0;
+		this.select.selectedIndex = 0;
 	}
 
 	// TODO: implement custom select

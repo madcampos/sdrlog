@@ -5,7 +5,6 @@ import { readFileSync } from 'fs';
 import { defineConfig, type UserConfig } from 'vitest/config';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
 import basicSsl from '@vitejs/plugin-basic-ssl';
-import rollupTsPlugin from '@rollup/plugin-typescript';
 import { externalResources, internalResources, shareTarget } from './src/service-worker';
 
 const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manifest.json', { encoding: 'utf8' }));
@@ -61,7 +60,6 @@ export default defineConfig(({ mode }) => {
 			emptyOutDir: true,
 			outDir: '../dist',
 			rollupOptions: {
-				plugins: [rollupTsPlugin()],
 				output: {
 					generatedCode: 'es2015'
 				}

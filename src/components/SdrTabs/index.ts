@@ -10,7 +10,7 @@ export class SdrTab extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(tabStyle);
 
-	@property({ type: String, reflect: true }) accessor role = 'tab';
+	@property({ type: String, reflect: true }) role: string;
 
 	declare ariaControls: string;
 
@@ -21,6 +21,7 @@ export class SdrTab extends LitElement {
 
 		this.#internals = this.attachInternals();
 
+		this.role = 'tab';
 		this.#internals.role = 'tab';
 	}
 
@@ -34,7 +35,7 @@ export class SdrTabPanel extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 
-	@property({ type: String, reflect: true }) accessor role = 'tabpanel';
+	@property({ type: String, reflect: true }) role: string;
 
 	declare ariaLabeledBy: string;
 
@@ -45,6 +46,7 @@ export class SdrTabPanel extends LitElement {
 
 		this.#internals = this.attachInternals();
 
+		this.role = 'tabpanel';
 		this.#internals.role = 'tabpanel';
 	}
 
@@ -59,11 +61,11 @@ export class SdrTabs extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor role = 'tablist';
-	@property({ type: Number }) accessor selectedTab = 0;
+	@property({ type: String, reflect: true }) role: string;
+	@property({ type: Number }) selectedTab: number;
 
-	@queryAssignedElements({ selector: 'sdr-tab', slot: 'tab' }) accessor tabList: SdrTab[];
-	@queryAssignedElements({ selector: 'sdr-tab-panel', slot: 'tabpanel' }) accessor tabPanels: SdrTabPanel[];
+	@queryAssignedElements({ selector: 'sdr-tab', slot: 'tab' }) private declare tabList: SdrTab[];
+	@queryAssignedElements({ selector: 'sdr-tab-panel', slot: 'tabpanel' }) private declare tabPanels: SdrTabPanel[];
 
 	#internals: ElementInternals;
 
@@ -74,7 +76,9 @@ export class SdrTabs extends LitElement {
 
 		this.#internals = this.attachInternals();
 
+		this.role = 'tablist';
 		this.#internals.role = 'tablist';
+		this.selectedTab = 0;
 
 		document.addEventListener('focusin', () => {
 			const targetTabIndex = this.tabList.findIndex((tab) => tab === document.activeElement);

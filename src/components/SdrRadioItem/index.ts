@@ -7,8 +7,15 @@ import style from './style.css?inline' assert { type: 'css' };
 export class SdrRadioItem extends LitElement {
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor icon = '';
-	@property({ type: String, reflect: true }) accessor value = '';
+	@property({ type: String, reflect: true }) icon: string;
+	@property({ type: String, reflect: true }) value: string;
+
+	constructor() {
+		super();
+
+		this.icon = '';
+		this.value = '';
+	}
 
 	render() {
 		return html`

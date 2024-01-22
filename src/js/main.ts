@@ -18,32 +18,37 @@ function updateLoadStatus(status: string) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-	const { I18n } = await import('./intl/translations.js');
-	const progressLoader = document.querySelector('#load-progress') as HTMLProgressElement;
+	try {
+		const { I18n } = await import('./intl/translations');
+		const progressLoader = document.querySelector('#load-progress') as HTMLProgressElement;
 
-	await I18n.setLanguage(I18n.getLanguage());
+		await I18n.setLanguage(I18n.getLanguage());
 
-	progressLoader.max = 3;
+		progressLoader.max = 3;
 
-	updateLoadStatus('Loading components...');
-	await import('../components');
-	const { GamepadHandler } = await import('./gamepad/gamepad-events');
+		updateLoadStatus('Loading components...');
+		await import('../components');
+		const { GamepadHandler } = await import('./gamepad/gamepad-events');
 
-	GamepadHandler.init(() => {
-		document.querySelector('sdr-card')?.focus();
-	});
+		GamepadHandler.init(() => {
+			document.querySelector('sdr-card')?.focus();
+		});
 
-	updateLoadStatus('Loading router...');
-	await import('../router');
+		updateLoadStatus('Loading router...');
+		await import('../router');
 
-	updateLoadStatus('Loading data...');
-	document.addEventListener('itemloaded', (evt) => {
-		progressLoader.max = evt.detail.total;
+		updateLoadStatus('Loading data...');
+		document.addEventListener('itemloaded', (evt) => {
+			progressLoader.max = evt.detail.total;
 
-		updateLoadStatus(evt.detail.name);
-	});
+			updateLoadStatus(evt.detail.name);
+		});
 
-	document.addEventListener('apploaded', () => {
-		document.querySelector('#splash-screen')?.remove();
-	});
+		document.addEventListener('apploaded', () => {
+			document.querySelector('#splash-screen')?.remove();
+		});
+	} catch (err) {
+		debugger;
+		console.error(err);
+	}
 });

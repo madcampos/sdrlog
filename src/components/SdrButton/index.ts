@@ -9,9 +9,16 @@ export class SdrButton extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) accessor disabled = false;
-	@property({ type: String, reflect: true }) accessor icon = '';
-	@property({ type: String, reflect: true, attribute: 'trigger-button' }) accessor triggerButton: string = 'a';
+	@property({ type: Boolean, reflect: true }) disabled: boolean;
+	@property({ type: String, reflect: true }) icon: string;
+	@property({ type: String, reflect: true, attribute: 'trigger-button' }) triggerButton?: string;
+
+	constructor() {
+		super();
+
+		this.disabled = false;
+		this.icon = '';
+	}
 
 	render() {
 		return html`
@@ -23,7 +30,7 @@ export class SdrButton extends LitElement {
 				<span id="button-text">
 					<slot></slot>
 				</span>
-				<sdr-gamepad-badge button="${this.triggerButton}"></sdr-gamepad-badge>
+				<sdr-gamepad-badge button="${this.triggerButton ?? 'a'}"></sdr-gamepad-badge>
 			</button>
 		`;
 	}

@@ -7,15 +7,17 @@ import style from './style.css?inline' assert { type: 'css' };
 export class SdrDialog extends LitElement {
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) accessor open = false;
+	@property({ type: Boolean, reflect: true }) open: boolean;
 
-	@query('dialog') accessor #dialog: HTMLDialogElement;
+	@query('dialog') private declare dialog: HTMLDialogElement;
 
-	@queryAssignedElements({ slot: 'trigger' }) accessor #triggerElements: (HTMLElement | undefined)[];
-	@queryAssignedElements({ slot: 'footer' }) accessor #footerElements: HTMLElement[];
+	@queryAssignedElements({ slot: 'trigger' }) private declare triggerElements: (HTMLElement | undefined)[];
+	@queryAssignedElements({ slot: 'footer' }) private declare footerElements: HTMLElement[];
 
 	constructor() {
 		super();
+
+		this.open = false;
 
 		window.addEventListener('keydown', (evt) => {
 			if (evt.key === 'Escape' && this.open) {
@@ -46,16 +48,16 @@ export class SdrDialog extends LitElement {
 	#clickDialog(evt: MouseEvent) {
 		const target = evt.target as HTMLDialogElement;
 
-		if (target === this.#dialog && this.open) {
+		if (target === this.dialog && this.open) {
 			this.close();
 		}
 	}
 
 	#updateFooter() {
-		if (this.#footerElements.length > 0) {
-			this.#dialog.querySelector('footer')?.removeAttribute('hidden');
+		if (this.footerElements.length > 0) {
+			this.dialog.querySelector('footer')?.removeAttribute('hidden');
 		} else {
-			this.#dialog.querySelector('footer')?.setAttribute('hidden', '');
+			this.dialog.querySelector('footer')?.setAttribute('hidden', '');
 		}
 	}
 
@@ -78,7 +80,7 @@ export class SdrDialog extends LitElement {
 	connectedCallback() {
 		super.connectedCallback();
 
-		const [triggerElement] = this.#triggerElements;
+		const [triggerElement] = this.triggerElements;
 
 		if (triggerElement) {
 			triggerElement.addEventListener('click', (evt) => {
@@ -95,12 +97,12 @@ export class SdrDialog extends LitElement {
 
 		if (changedProperties.has('open')) {
 			if (this.open) {
-				this.#dialog.showModal();
-				this.#dialog.focus();
+				this.dialog.showModal();
+				this.dialog.focus();
 
 				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 			} else {
-				this.#dialog.close();
+				this.dialog.close();
 
 				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}

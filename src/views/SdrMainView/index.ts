@@ -40,51 +40,17 @@ interface MenuItem {
 export class SdrViewMain extends LitElement implements RouterView {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-	@property({ type: Array }) accessor cards: Pick<Material, 'name' | 'category' | 'sku' | 'type' | 'edition' | 'status'>[] = [];
+	@property({ type: Array }) cards: Pick<Material, 'name' | 'category' | 'sku' | 'type' | 'edition' | 'status'>[];
 
-	@state() accessor #hasFileSystem = false;
-	@state() accessor #isDevMode = false;
-	@state() accessor #filters: (FilterItem | null)[] = [
-		{ icon: '📜', label: 'Sourcebooks', filter: 'category: sourcebook' },
-		{ icon: '📝', label: 'Rulebooks', filter: 'category: rulebook' },
-		{ icon: '🗺️', label: 'Adventures & Campaigns', filter: 'category: mission' },
-		{ icon: '📚', label: 'Novels', filter: 'category: novel' },
-		{ icon: '📰', label: 'Magazines', filter: 'category: magazine' },
-		{ icon: '♟️', label: 'Tabletop', filter: 'category: boardgame' },
-		{ icon: '🃏', label: 'Trading Card Game', filter: 'category: tcg' },
-		{ icon: '🎮', label: 'Video Games', filter: 'category: videogame' },
-		{ icon: '📓', label: 'Unofficial', filter: 'category: unofficial' },
-		{ icon: '🔣', label: 'Misc.', filter: 'category: misc' },
-		null,
-		{ icon: '📚', label: 'All', filter: 'category: all' }
-	];
+	@state() private hasFileSystem: boolean;
+	@state() private isDevMode: boolean;
+	@state() private filters: (FilterItem | null)[];
 
-	@state() accessor #appMenuItems: (MenuItem | null)[] = [
-		{ icon: 'ℹ️', label: 'Tool Information', action: async () => Router.navigate('/info') },
-		// { icon: '💬', label: 'Language Settings', action: async () => Router.navigate('/settings/language') },
-		{ icon: '🌓', label: 'Theme Settings', action: async () => Router.navigate('/settings/theme') }
-	];
+	@state() private appMenuItems: (MenuItem | null)[];
 
-	@state() accessor #fileMenuItems: (MenuItem | null)[] = [
-		null,
-		{ icon: '📥', label: 'Import Files', action: readFiles },
-		{ icon: '📦', label: 'Import Data', action: requestDataFileFromUser },
-		null,
-		{ icon: '📂', label: 'Import Covers', action: importCoversFromFolder },
-		{ icon: '🧩', label: 'Extract Covers', action: extractCoversFromFiles },
-		null,
-		{ icon: '📤', label: 'Export Data', action: exportDataFile },
-		{ icon: '🎴', label: 'Export Thumbnails', action: saveThumbsToFolder },
-		{ icon: '🖼️', label: 'Export Covers', action: saveCoversToFolder }
-	];
+	@state() private fileMenuItems: (MenuItem | null)[];
 
-	@state() accessor #devMenuItems: (MenuItem | null)[] = [
-		null,
-		{ icon: '⛔️', label: 'Report Data Inconsistencies', action: reportInconsistencies },
-		{ icon: '💬', label: 'Open CBZ reader', action: async () => Router.navigate('/cbz/test') },
-		{ icon: '🕹️', label: 'Open Emulator', action: async () => Router.navigate('/emulator/test') },
-		{ icon: '📖', label: 'Open Epub reader', action: async () => Router.navigate('/epub/test') }
-	];
+	@state() private devMenuItems: (MenuItem | null)[];
 
 	#hasLoadedData = false;
 
@@ -92,13 +58,59 @@ export class SdrViewMain extends LitElement implements RouterView {
 		super();
 
 		this.hidden = false;
+		this.cards = [];
+
+		this.isDevMode = false;
+		this.hasFileSystem = false;
+
+		this.filters = [
+			{ icon: '📜', label: 'Sourcebooks', filter: 'category: sourcebook' },
+			{ icon: '📝', label: 'Rulebooks', filter: 'category: rulebook' },
+			{ icon: '🗺️', label: 'Adventures & Campaigns', filter: 'category: mission' },
+			{ icon: '📚', label: 'Novels', filter: 'category: novel' },
+			{ icon: '📰', label: 'Magazines', filter: 'category: magazine' },
+			{ icon: '♟️', label: 'Tabletop', filter: 'category: boardgame' },
+			{ icon: '🃏', label: 'Trading Card Game', filter: 'category: tcg' },
+			{ icon: '🎮', label: 'Video Games', filter: 'category: videogame' },
+			{ icon: '📓', label: 'Unofficial', filter: 'category: unofficial' },
+			{ icon: '🔣', label: 'Misc.', filter: 'category: misc' },
+			null,
+			{ icon: '📚', label: 'All', filter: 'category: all' }
+		];
+
+		this.appMenuItems = [
+			{ icon: 'ℹ️', label: 'Tool Information', action: async () => Router.navigate('/info') },
+			// { icon: '💬', label: 'Language Settings', action: async () => Router.navigate('/settings/language') },
+			{ icon: '🌓', label: 'Theme Settings', action: async () => Router.navigate('/settings/theme') }
+		];
+
+		this.fileMenuItems = [
+			null,
+			{ icon: '📥', label: 'Import Files', action: readFiles },
+			{ icon: '📦', label: 'Import Data', action: requestDataFileFromUser },
+			null,
+			{ icon: '📂', label: 'Import Covers', action: importCoversFromFolder },
+			{ icon: '🧩', label: 'Extract Covers', action: extractCoversFromFiles },
+			null,
+			{ icon: '📤', label: 'Export Data', action: exportDataFile },
+			{ icon: '🎴', label: 'Export Thumbnails', action: saveThumbsToFolder },
+			{ icon: '🖼️', label: 'Export Covers', action: saveCoversToFolder }
+		];
+
+		this.devMenuItems = [
+			null,
+			{ icon: '⛔️', label: 'Report Data Inconsistencies', action: reportInconsistencies },
+			{ icon: '💬', label: 'Open CBZ reader', action: async () => Router.navigate('/cbz/test') },
+			{ icon: '🕹️', label: 'Open Emulator', action: async () => Router.navigate('/emulator/test') },
+			{ icon: '📖', label: 'Open Epub reader', action: async () => Router.navigate('/epub/test') }
+		];
 
 		if ('showOpenFilePicker' in window) {
-			this.#hasFileSystem = true;
+			this.hasFileSystem = true;
 		}
 
 		if (import.meta.env.DEV) {
-			this.#isDevMode = true;
+			this.isDevMode = true;
 		}
 	}
 
@@ -118,7 +130,7 @@ export class SdrViewMain extends LitElement implements RouterView {
 		return html`
 			<sdr-menu-bar>
 				<sdr-dropdown id="filters" icon="︙" trigger-button="x">
-					${this.#filters.map((filter) => {
+					${this.filters.map((filter) => {
 						if (filter === null) {
 							return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
 						}
@@ -139,7 +151,7 @@ export class SdrViewMain extends LitElement implements RouterView {
 				<sdr-search-box></sdr-search-box>
 
 				<sdr-dropdown id="app-menu" icon="⚙️" align-right trigger-button="start">
-					${this.#appMenuItems.map((item) => {
+					${this.appMenuItems.map((item) => {
 						if (item === null) {
 							return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
 						}
@@ -148,8 +160,8 @@ export class SdrViewMain extends LitElement implements RouterView {
 							<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
 					})}
 
-					${this.#hasFileSystem
-						? this.#fileMenuItems.map((item) => {
+					${this.hasFileSystem
+						? this.fileMenuItems.map((item) => {
 							if (item === null) {
 								return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
 							}
@@ -160,8 +172,8 @@ export class SdrViewMain extends LitElement implements RouterView {
 						: ''
 					}
 
-					${this.#isDevMode
-						? this.#devMenuItems.map((item) => {
+					${this.isDevMode
+						? this.devMenuItems.map((item) => {
 							if (item === null) {
 								return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
 							}

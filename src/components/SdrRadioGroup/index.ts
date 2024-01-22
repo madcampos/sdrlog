@@ -10,17 +10,20 @@ export class SdrRadioGroup extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions };
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor value = '';
-	@property({ type: Array }) accessor values: string[] = [];
+	@property({ type: String, reflect: true }) value: string;
+	@property({ type: Array }) values: string[];
 
-	@query('#radio-container') accessor #container: HTMLElement;
+	@query('#radio-container') private declare container: HTMLElement;
 
-	@queryAssignedElements({ selector: 'sdr-radio-item' }) accessor #items: SdrRadioItem[];
+	@queryAssignedElements({ selector: 'sdr-radio-item' }) private declare items: SdrRadioItem[];
 
 	#groupName = crypto.randomUUID();
 
 	constructor() {
 		super();
+
+		this.value = '';
+		this.values = [];
 
 		window.addEventListener('gamepadbuttonpress', (evt) => {
 			if (evt.detail.button === 'left') {
@@ -52,7 +55,7 @@ export class SdrRadioGroup extends LitElement {
 	}
 
 	#moveItems() {
-		this.#items.forEach((item) => {
+		this.items.forEach((item) => {
 			if (!this.values.includes(item.value)) {
 				const label = document.createElement('label');
 				const radio = document.createElement('input');
@@ -75,7 +78,7 @@ export class SdrRadioGroup extends LitElement {
 				label.appendChild(item);
 				label.appendChild(badge);
 
-				this.#container.appendChild(label);
+				this.container.appendChild(label);
 
 				this.values.push(item.value);
 			}

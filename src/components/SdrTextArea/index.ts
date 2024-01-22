@@ -10,15 +10,15 @@ export class SdrTextArea extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) accessor value = '';
-	@property({ type: String, reflect: true }) accessor placeholder: string | undefined;
-	@property({ type: Boolean, reflect: true }) accessor disabled = false;
-	@property({ type: Boolean, reflect: true }) accessor required = false;
-	@property({ type: Boolean, reflect: true }) accessor readonly = false;
-	@property({ type: Number, reflect: true }) accessor minLength: number | undefined;
-	@property({ type: Number, reflect: true }) accessor maxLength: number | undefined;
+	@property({ type: String, reflect: true }) value: string;
+	@property({ type: String, reflect: true }) placeholder?: string;
+	@property({ type: Boolean, reflect: true }) disabled: boolean;
+	@property({ type: Boolean, reflect: true }) required: boolean;
+	@property({ type: Boolean, reflect: true }) readonly: boolean;
+	@property({ type: Number, reflect: true }) minLength?: number;
+	@property({ type: Number, reflect: true }) maxLength?: number;
 
-	@query('article') accessor #renderedTextArea: HTMLElement;
+	@query('article') private declare renderedTextArea: HTMLElement;
 
 	#internals: ElementInternals;
 
@@ -26,6 +26,11 @@ export class SdrTextArea extends LitElement {
 		super();
 
 		this.#internals = this.attachInternals();
+
+		this.value = '';
+		this.disabled = false;
+		this.required = false;
+		this.readonly = false;
 	}
 
 	#validate() {
@@ -65,7 +70,7 @@ export class SdrTextArea extends LitElement {
 		const target = evt.target as HTMLTextAreaElement;
 
 		this.value = target.value;
-		this.#renderedTextArea.innerHTML = await marked(this.value);
+		this.renderedTextArea.innerHTML = await marked(this.value);
 
 		this.#validate();
 
@@ -90,7 +95,7 @@ export class SdrTextArea extends LitElement {
 		super.updated(changedProperties);
 
 		if (changedProperties.has('value')) {
-			this.#renderedTextArea.innerHTML = await marked(this.value);
+			this.renderedTextArea.innerHTML = await marked(this.value);
 		}
 	}
 
