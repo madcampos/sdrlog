@@ -4,6 +4,8 @@ import { readFileSync } from 'fs';
 
 import { defineConfig, type UserConfig } from 'vitest/config';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
+import basicSsl from '@vitejs/plugin-basic-ssl';
+import rollupTsPlugin from '@rollup/plugin-typescript';
 import { externalResources, internalResources, shareTarget } from './src/service-worker';
 
 const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manifest.json', { encoding: 'utf8' }));
@@ -11,15 +13,13 @@ const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manife
 export default defineConfig(({ mode }) => {
 	const baseUrl = mode === 'production' ? 'https://madcampos.dev/sdrlog/' : 'https://localhost:3000/';
 
-	const sslOptions = mode === 'production'
-		? false
-		: {
-			cert: readFileSync('./certs/server.crt'),
-			key: readFileSync('./certs/server.key')
-		};
-
 	const config: UserConfig = {
 		plugins: [
+			basicSsl({
+				name: 'dev-cert',
+				domains: ['localhost:3000'],
+				certDir: './certs'
+			}),
 			vitePWA({
 				registerType: 'prompt',
 				minify: true,
@@ -52,7 +52,6 @@ export default defineConfig(({ mode }) => {
 		clearScreen: false,
 		server: {
 			host: 'localhost',
-			https: sslOptions,
 			open: false,
 			cors: true,
 			port: 3000
@@ -62,27 +61,33 @@ export default defineConfig(({ mode }) => {
 			emptyOutDir: true,
 			outDir: '../dist',
 			rollupOptions: {
+				plugins: [rollupTsPlugin()],
 				output: {
-					generatedCode: 'es2015',
-					inlineDynamicImports: false
+					generatedCode: 'es2015'
 				}
 			}
 		},
+		optimizeDeps: {
+			esbuildOptions: {
+				target: 'esnext'
+			}
+		},
 		preview: {
-			https: sslOptions,
 			open: true
 		},
 		test: {
 			include: ['**/*.test.ts'],
-			minThreads: 1,
-			maxThreads: 4,
 			passWithNoTests: true,
 			maxConcurrency: 4,
 			coverage: {
-				functions: 75,
-				branches: 75,
-				lines: 75,
-				statements: 75
+				processingConcurrency: 4,
+				provider: 'v8',
+				thresholds: {
+					functions: 75,
+					branches: 75,
+					lines: 75,
+					statements: 75
+				}
 			}
 		}
 	};
