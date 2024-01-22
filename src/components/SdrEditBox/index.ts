@@ -3,26 +3,28 @@ import { customElement, property, query } from 'lit/decorators.js';
 
 import style from './style.css?inline' assert { type: 'css' };
 
+type InputType = 'text' | 'url' | 'email' | 'number' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'tel' | 'search' | 'password';
+
 @customElement('sdr-edit-box')
 export class SdrEditBox extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) declare value: string;
-	@property({ type: String, reflect: true }) declare placeholder?: string;
-	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
-	@property({ type: Boolean, reflect: true }) declare required: boolean;
-	@property({ type: Boolean, reflect: true }) declare readonly: boolean;
-	@property({ type: String, reflect: true }) declare type: 'text' | 'url' | 'email' | 'number' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'tel' | 'search' | 'password';
-	@property({ type: String, reflect: true }) declare pattern?: string;
-	@property({ type: Number, reflect: true }) declare minLength?: number;
-	@property({ type: Number, reflect: true }) declare maxLength?: number;
-	@property({ type: Number, reflect: true }) declare min?: number;
-	@property({ type: Number, reflect: true }) declare max?: number;
-	@property({ type: Number, reflect: true }) declare step?: number;
+	@property({ type: String, reflect: true }) accessor value = '';
+	@property({ type: String, reflect: true }) accessor placeholder: string | undefined;
+	@property({ type: Boolean, reflect: true }) accessor disabled = false;
+	@property({ type: Boolean, reflect: true }) accessor required = false;
+	@property({ type: Boolean, reflect: true }) accessor readonly = false;
+	@property({ type: String, reflect: true }) accessor type: InputType = 'text';
+	@property({ type: String, reflect: true }) accessor pattern: string | undefined;
+	@property({ type: Number, reflect: true }) accessor minLength: number | undefined;
+	@property({ type: Number, reflect: true }) accessor maxLength: number | undefined;
+	@property({ type: Number, reflect: true }) accessor min: number | undefined;
+	@property({ type: Number, reflect: true }) accessor max: number | undefined;
+	@property({ type: Number, reflect: true }) accessor step: number | undefined;
 
-	@query('input') private declare input: HTMLInputElement;
+	@query('input') accessor #inputElement: HTMLInputElement;
 
 	#internals: ElementInternals;
 
@@ -30,12 +32,6 @@ export class SdrEditBox extends LitElement {
 		super();
 
 		this.#internals = this.attachInternals();
-
-		this.value = '';
-		this.disabled = false;
-		this.required = false;
-		this.readonly = false;
-		this.type = 'text';
 	}
 
 	// eslint-disable-next-line complexity
@@ -98,7 +94,7 @@ export class SdrEditBox extends LitElement {
 	}
 
 	#input() {
-		this.value = this.input.value;
+		this.value = this.#inputElement.value;
 
 		this.#validate();
 
@@ -106,7 +102,7 @@ export class SdrEditBox extends LitElement {
 	}
 
 	#change() {
-		this.value = this.input.value;
+		this.value = this.#inputElement.value;
 
 		this.#validate();
 
@@ -124,7 +120,7 @@ export class SdrEditBox extends LitElement {
 	setCustomValidity(message: string) { this.#internals.setValidity({ customError: message !== '' }, message); }
 
 	resetValue() {
-		this.input.value = '';
+		this.#inputElement.value = '';
 	}
 
 	render() {

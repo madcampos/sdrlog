@@ -12,28 +12,26 @@ import style from './style.css?inline' assert { type: 'css' };
 export class SdrViewAppInfo extends LitElement implements RouterView {
 	static readonly styles = unsafeCSS(style);
 
-	@state() private declare open: boolean;
+	@state() accessor #open = false;
 
 	constructor() {
 		super();
 
-		this.open = false;
-
 		registerShortcut('i', () => {
-			this.open = !this.open;
+			this.#open = !this.#open;
 		});
 
 		// TODO: add gamepad navigation
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
 
 	navigate() {
-		this.open = true;
+		this.#open = true;
 
 		return 'Information';
 	}
@@ -45,7 +43,7 @@ export class SdrViewAppInfo extends LitElement implements RouterView {
 	render() {
 		return html`
 			<style>${SdrViewAppInfo.styles}</style>
-			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
+			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
 				<span slot="title">Information</span>
 
 				<details open>

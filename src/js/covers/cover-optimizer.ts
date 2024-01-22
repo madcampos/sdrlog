@@ -55,7 +55,7 @@ interface MozJPEGOptions {
 	chromaQuality?: number
 }
 
-declare type ImagePointer = number;
+type ImagePointer = number;
 
 interface MozJPEGModule extends EmscriptenModule {
 	encode(image: BufferSource, imageWidth: number, imageHeight: number, inputChannels: number, outputOptions: MozJPEGOptions): ImagePointer,

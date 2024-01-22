@@ -10,17 +10,14 @@ import { registerShortcut } from '../../js/util/keyboard';
 
 @customElement('sdr-view-language-settings')
 export class SdrViewLanguageSettings extends LitElement implements RouterView {
-	@state() private declare open: boolean;
-	@state() declare private language: string;
+	@state() accessor #open = false;
+	@state() accessor #language = 'en-US';
 
 	constructor() {
 		super();
 
-		this.open = false;
-		this.language = 'en-US';
-
 		registerShortcut('l', () => {
-			this.open = !this.open;
+			this.#open = !this.#open;
 		});
 
 		// TODO: add gamepad navigation
@@ -39,13 +36,13 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
 
 	navigate() {
-		this.open = true;
+		this.#open = true;
 		(this.shadowRoot?.querySelector('#language-select') as SdrSelect).focus();
 
 		return 'Language Settings';
@@ -57,7 +54,7 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 
 	render() {
 		return html`
-			<sdr-dialog id="language-modal" ?open="${this.open}" @close="${() => this.#close()}">
+			<sdr-dialog id="language-modal" ?open="${this.#open}" @close="${() => this.#close()}">
 				<span slot="title">Language Settings</span>
 
 				<p>Set the language for the application:</p>
@@ -66,7 +63,7 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 				<sdr-select
 					id="language-select"
 
-					.value="${this.language}"
+					.value="${this.#language}"
 
 					@change="${async (evt: Event) => this.#changeLanguage(evt)}"
 				>
@@ -84,7 +81,7 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 		super.connectedCallback();
 
 		requestAnimationFrame(() => {
-			this.language = I18n.getLanguage();
+			this.#language = I18n.getLanguage();
 		});
 	}
 }

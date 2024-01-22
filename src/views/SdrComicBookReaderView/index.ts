@@ -36,21 +36,20 @@ const mimeTypes = new Map([
 export class SdrViewCbzReader extends LitElement implements RouterView {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-	@property({ type: Boolean, reflect: true }) declare loaded: boolean;
+	@property({ type: Boolean, reflect: true }) accessor loaded = false;
 
-	@state() declare private open: boolean;
-	@state() declare private selectedPage: string;
-	@state() declare private pages: Page[];
-	@state() declare private toc: string[];
-	@state() declare private nextPageVisibility: 'visible' | 'hidden';
-	@state() declare private previousPageVisibility: 'visible' | 'hidden';
+	@state() accessor #open = false;
+	@state() accessor #selectedPage = '';
+	@state() accessor #pages: Page[] = [];
+	@state() accessor #toc: string[] = [];
+	@state() accessor #nextPageVisibility: 'visible' | 'hidden' = 'hidden';
+	@state() accessor #previousPageVisibility: 'visible' | 'hidden' = 'hidden';
 
 	#currentVisibleImage: HTMLImageElement | undefined;
 
 	constructor() {
 		super();
 
-		this.open = false;
 		this.#resetComicBook();
 
 		document.addEventListener('keyup', (keyEvt) => {
@@ -85,7 +84,7 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
@@ -94,18 +93,18 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		this.#currentVisibleImage = entry.target as HTMLImageElement;
 
 		if (!this.#currentVisibleImage.previousElementSibling) {
-			this.previousPageVisibility = 'hidden';
+			this.#previousPageVisibility = 'hidden';
 		} else {
-			this.previousPageVisibility = 'visible';
+			this.#previousPageVisibility = 'visible';
 		}
 
 		if (!this.#currentVisibleImage.nextElementSibling) {
-			this.nextPageVisibility = 'hidden';
+			this.#nextPageVisibility = 'hidden';
 		} else {
-			this.nextPageVisibility = 'visible';
+			this.#nextPageVisibility = 'visible';
 		}
 
-		this.selectedPage = this.#currentVisibleImage.dataset.folder as string;
+		this.#selectedPage = this.#currentVisibleImage.dataset.folder as string;
 	}
 
 	async #unzipImages(file?: File) {
@@ -159,10 +158,10 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		const folders = await this.#unzipImages(file);
 
 		for (const folder of Object.keys(folders)) {
-			this.toc.push(folder);
+			this.#toc.push(folder);
 
 			for (const page of folders[folder]) {
-				this.pages.push(page);
+				this.#pages.push(page);
 			}
 		}
 
@@ -173,18 +172,18 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		this.loaded = true;
 
 		// Force start at the begining
-		[this.selectedPage] = this.toc;
+		[this.#selectedPage] = this.#toc;
 		this.renderRoot.querySelector('article img:first-child')?.scrollIntoView();
 	}
 
 	#resetComicBook() {
 		this.loaded = false;
-		this.selectedPage = '';
-		this.toc = [];
-		this.pages = [];
+		this.#selectedPage = '';
+		this.#toc = [];
+		this.#pages = [];
 
-		this.nextPageVisibility = 'hidden';
-		this.previousPageVisibility = 'hidden';
+		this.#nextPageVisibility = 'hidden';
+		this.#previousPageVisibility = 'hidden';
 	}
 
 	showNextPage() {
@@ -203,7 +202,7 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		}
 
 		await this.#loadComicBook(destination.params.id);
-		this.open = true;
+		this.#open = true;
 
 		return 'Comic Book Reader';
 	}
@@ -214,33 +213,33 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 
 	render() {
 		return html`
-			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
+			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
 				<sdr-button
 					icon-button
 					slot="title"
 					class="title-menu"
-					style="visibility: ${this.previousPageVisibility}"
+					style="visibility: ${this.#previousPageVisibility}"
 					@click="${() => this.showPreviousPage()}"
 				>⏮️</sdr-button>
 				<sdr-select
 					id="toc"
 					slot="title"
 					class="title-menu"
-					.value="${this.selectedPage}"
-					@change="${() => this.renderRoot.querySelector(`[data-folder="${this.selectedPage}"]`)?.scrollIntoView()}"
+					.value="${this.#selectedPage}"
+					@change="${() => this.renderRoot.querySelector(`[data-folder="${this.#selectedPage}"]`)?.scrollIntoView()}"
 				>
-					${this.toc.map((folder) => html`<option>${folder}</option>`)}
+					${this.#toc.map((folder) => html`<option>${folder}</option>`)}
 				</sdr-select>
 				<sdr-button
 					icon-button
 					slot="title"
 					class="title-menu"
-					style="visibility: ${this.nextPageVisibility}"
+					style="visibility: ${this.#nextPageVisibility}"
 					@click="${() => this.showNextPage()}"
 				>⏭️</sdr-button>
 
 				<article id="comic">
-					${this.pages.map((page) => html`
+					${this.#pages.map((page) => html`
 						<img src="${page.url}" alt="${page.name}" loading="lazy" decoding="async" data-folder="${page.folder}"/>
 					`)}
 				</article>

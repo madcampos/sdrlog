@@ -12,22 +12,19 @@ export class SdrDropdownItem extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) declare icon: string;
-	@property({ type: Boolean, reflect: true }) declare separator: boolean;
+	@property({ type: String, reflect: true }) accessor icon = '';
+	@property({ type: Boolean, reflect: true }) accessor separator = false;
 
-	@query('sdr-button') private declare button: SdrButton;
+	@query('sdr-button') accessor #button: SdrButton;
 
 	constructor() {
 		super();
-
-		this.icon = '';
-		this.separator = false;
 
 		window.addEventListener('gamepadbuttonpress', (evt) => {
 			if (document.activeElement === this && evt.detail.button === 'a') {
 				evt.stopPropagation();
 
-				this.button.click();
+				this.#button.click();
 
 				window.requestAnimationFrame(() => {
 					document.querySelector('sdr-card')?.focus();

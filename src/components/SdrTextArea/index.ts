@@ -10,15 +10,15 @@ export class SdrTextArea extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) declare value: string;
-	@property({ type: String, reflect: true }) declare placeholder?: string;
-	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
-	@property({ type: Boolean, reflect: true }) declare required: boolean;
-	@property({ type: Boolean, reflect: true }) declare readonly: boolean;
-	@property({ type: Number, reflect: true }) declare minLength?: number;
-	@property({ type: Number, reflect: true }) declare maxLength?: number;
+	@property({ type: String, reflect: true }) accessor value = '';
+	@property({ type: String, reflect: true }) accessor placeholder: string | undefined;
+	@property({ type: Boolean, reflect: true }) accessor disabled = false;
+	@property({ type: Boolean, reflect: true }) accessor required = false;
+	@property({ type: Boolean, reflect: true }) accessor readonly = false;
+	@property({ type: Number, reflect: true }) accessor minLength: number | undefined;
+	@property({ type: Number, reflect: true }) accessor maxLength: number | undefined;
 
-	@query('article') private declare renderedTextArea: HTMLElement;
+	@query('article') accessor #renderedTextArea: HTMLElement;
 
 	#internals: ElementInternals;
 
@@ -26,11 +26,6 @@ export class SdrTextArea extends LitElement {
 		super();
 
 		this.#internals = this.attachInternals();
-
-		this.value = '';
-		this.disabled = false;
-		this.required = false;
-		this.readonly = false;
 	}
 
 	#validate() {
@@ -66,11 +61,11 @@ export class SdrTextArea extends LitElement {
 		this.dispatchEvent(new CustomEvent('input', { bubbles: true, composed: true, cancelable: true }));
 	}
 
-	#change(evt: Event) {
+	async #change(evt: Event) {
 		const target = evt.target as HTMLTextAreaElement;
 
 		this.value = target.value;
-		this.renderedTextArea.innerHTML = marked(this.value);
+		this.#renderedTextArea.innerHTML = await marked(this.value);
 
 		this.#validate();
 
@@ -91,11 +86,11 @@ export class SdrTextArea extends LitElement {
 		this.value = '';
 	}
 
-	updated(changedProperties: Map<string, unknown>) {
+	async updated(changedProperties: Map<string, unknown>) {
 		super.updated(changedProperties);
 
 		if (changedProperties.has('value')) {
-			this.renderedTextArea.innerHTML = marked(this.value);
+			this.#renderedTextArea.innerHTML = await marked(this.value);
 		}
 	}
 
@@ -120,7 +115,7 @@ export class SdrTextArea extends LitElement {
 			minlength="${this.minLength}"
 			maxlength="${this.maxLength}"
 
-			@change="${(evt: Event) => this.#change(evt)}"
+			@change="${async (evt: Event) => this.#change(evt)}"
 			@input="${(evt: Event) => this.#input(evt)}"
 		></textarea>
 		`;

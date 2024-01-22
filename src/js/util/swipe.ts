@@ -3,8 +3,8 @@ const touchTreshold = 50;
 let startX: number | null = null;
 let startY: number | null = null;
 
-export declare class SwipeEvent extends CustomEvent<'swipe'>{
-	direction: 'left' | 'right' | 'up' | 'down';
+export interface SwipeEvent extends CustomEvent<'swipe'>{
+	direction: 'left' | 'right' | 'up' | 'down'
 }
 
 declare global {

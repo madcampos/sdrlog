@@ -18,39 +18,33 @@ export class SdrEditList extends LitElement {
 
 	#isDisabled = false;
 
-	@property({ type: Boolean, reflect: true })
 	get disabled() { return this.#isDisabled; }
 
+	@property({ type: Boolean, reflect: true })
 	set disabled(value: boolean) {
 		const oldValue = this.#isDisabled;
 
 		this.#isDisabled = value;
 
-		this.items.forEach((item) => {
+		this.#items.forEach((item) => {
 			item.disabled = value;
 		});
 
 		this.requestUpdate('disabled', oldValue);
 	}
 
-	@property({ type: Boolean, reflect: true }) declare open: boolean;
+	@property({ type: Boolean, reflect: true }) accessor open = false;
 
-	@queryAssignedElements({ selector: 'sdr-edit-list-item' }) private declare items: SdrEditListItem[];
-
-	constructor() {
-		super();
-
-		this.open = false;
-	}
+	@queryAssignedElements({ selector: 'sdr-edit-list-item' }) accessor #items: SdrEditListItem[];
 
 	#updateSlots() {
-		this.items.forEach((item) => {
+		this.#items.forEach((item) => {
 			item.disabled = this.disabled;
 		});
 	}
 
 	resetValue() {
-		this.items.forEach((item) => {
+		this.#items.forEach((item) => {
 			item.remove();
 		});
 	}

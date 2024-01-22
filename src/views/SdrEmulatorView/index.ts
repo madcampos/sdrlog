@@ -60,14 +60,15 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) declare loaded: boolean;
+	@property({ type: Boolean, reflect: true }) accessor loaded = false;
 
-	@query('#game-canvas') declare private canvas: HTMLCanvasElement;
-	@query('#game-wrapper') declare private gameWrapper: HTMLDivElement;
-	@query('#dpad') declare private dpad: HTMLDivElement;
+	@query('#game-canvas') accessor #canvas: HTMLCanvasElement;
+	@query('#game-wrapper') accessor #gameWrapper: HTMLDivElement;
+	@query('#dpad') accessor #dpad: HTMLDivElement;
 
-	@state() declare private open: boolean;
+	@state() accessor #open = false;
 
+	@state()
 	set paused(newValue: boolean) {
 		if (newValue) {
 			this.#emulator?.pauseMainLoop();
@@ -78,7 +79,6 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		this.#isPaused = newValue;
 	}
 
-	@state()
 	get paused() {
 		return this.#isPaused;
 	}
@@ -89,7 +89,6 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	constructor() {
 		super();
 
-		this.open = false;
 		this.#resetEmulator();
 
 		// Avoid unwanted key presses to exit the game.
@@ -145,13 +144,13 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
 
 	#sendKeyEvent(type: 'keydown' | 'keyup', key: keyof typeof keyMap) {
-		this.canvas.dispatchEvent(new KeyboardEvent(type, {
+		this.#canvas.dispatchEvent(new KeyboardEvent(type, {
 			bubbles: true,
 			cancelable: false,
 			shiftKey: false,
@@ -164,7 +163,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 
 	async #addDPadButtons() {
 		const nipplejs = (await import('nipplejs')).default;
-		const dpadElement = this.dpad;
+		const dpadElement = this.#dpad;
 		const { width, height } = dpadElement.getBoundingClientRect();
 
 		const dpad = nipplejs.create({
@@ -199,7 +198,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	}
 
 	#adjustCanvasSize() {
-		const { width, height } = this.gameWrapper.getBoundingClientRect();
+		const { width, height } = this.#gameWrapper.getBoundingClientRect();
 
 		this.#emulator?.setCanvasSize(width, height);
 	}
@@ -244,7 +243,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		const emulatorInit = emulatorImport.default as EmulatorInitializerFunction;
 
 		this.#emulator = emulatorInit({
-			canvas: this.canvas,
+			canvas: this.#canvas,
 			onRuntimeInitialized: async () => {
 				this.#adjustCanvasSize();
 
@@ -317,7 +316,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		}
 
 		await this.#loadGame(destination.params.id);
-		this.open = true;
+		this.#open = true;
 
 		return 'Emulator';
 	}
@@ -335,7 +334,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	render() {
 		return html`
 			<style>${SdrViewEmulator.styles}</style>
-			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
+			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
 				<sdr-button icon-button slot="title" @click="${() => this.#emulator?._cmd_toggle_menu()}">⚙️</sdr-button>
 				<hr slot="title">
 				<sdr-button icon-button slot="title" @click="${() => { this.paused = true; }}">⏸️</sdr-button>

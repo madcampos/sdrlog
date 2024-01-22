@@ -14,9 +14,9 @@ export class SdrSearchBox extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) declare value: string;
+	@property({ type: String, reflect: true }) accessor value = '';
 
-	@query('input') private declare input: HTMLInputElement;
+	@query('input') accessor #input: HTMLInputElement;
 
 	constructor() {
 		super();
@@ -35,7 +35,7 @@ export class SdrSearchBox extends LitElement {
 			if (Router.currentPath === '/' && evt.detail.button === 'y') {
 				evt.stopPropagation();
 
-				this.input.focus();
+				this.#input.focus();
 				GamepadHandler.longVibration();
 			}
 
@@ -51,7 +51,7 @@ export class SdrSearchBox extends LitElement {
 	}
 
 	#updateSuggestions() {
-		this.value = this.input.value;
+		this.value = this.#input.value;
 
 		window.requestAnimationFrame(() => {
 			const datalist = this.renderRoot.querySelector('datalist') as HTMLDataListElement;
@@ -61,13 +61,13 @@ export class SdrSearchBox extends LitElement {
 	}
 
 	#updateFilter() {
-		this.value = this.input.value;
+		this.value = this.#input.value;
 
 		SearchEngine.updateSearchResults(this.value);
 	}
 
 	#searchClick() {
-		this.input.dispatchEvent(new Event('change'));
+		this.#input.dispatchEvent(new Event('change'));
 	}
 
 	render() {

@@ -7,25 +7,15 @@ import style from './style.css?inline' assert { type: 'css' };
 export class SdrProgressOverlay extends LitElement {
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) declare title: string;
-	@property({ type: String, reflect: true }) declare info: string;
-	@property({ type: Number, reflect: true }) declare total: number;
-	@property({ type: String, reflect: true }) declare count: string;
-	@property({ type: Number, reflect: true }) declare value: number;
+	@property({ type: String, reflect: true }) accessor title = '';
+	@property({ type: String, reflect: true }) accessor info = '';
+	@property({ type: Number, reflect: true }) accessor total = 0;
+	@property({ type: String, reflect: true }) accessor count = '';
+	@property({ type: Number, reflect: true }) accessor value = 0;
 
-	@property({ type: Boolean, reflect: true }) declare open: boolean;
+	@property({ type: Boolean, reflect: true }) accessor open = false;
 
-	@query('dialog') private declare dialog: HTMLDialogElement;
-
-	constructor() {
-		super();
-
-		this.title = '';
-		this.info = '';
-		this.total = 0;
-		this.count = '';
-		this.value = 0;
-	}
+	@query('dialog') accessor #dialog: HTMLDialogElement;
 
 	static createOverlay({ total, title, info }: { total?: number, title?: string, info?: string }) {
 		const overlay = new SdrProgressOverlay();
@@ -71,12 +61,12 @@ export class SdrProgressOverlay extends LitElement {
 
 		if (changedProperties.has('open')) {
 			if (this.open) {
-				this.dialog.showModal();
-				this.dialog.focus();
+				this.#dialog.showModal();
+				this.#dialog.focus();
 
 				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 			} else {
-				this.dialog.close();
+				this.#dialog.close();
 
 				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}

@@ -8,27 +8,21 @@ export class SdrUpdateNotify extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static readonly styles = [unsafeCSS(style)];
 
-	@property({ type: String, reflect: true }) declare message: string;
+	@property({ type: String, reflect: true }) accessor message = 'A new version of the app is available.';
 
-	@query('aside') private declare popup: HTMLElement;
-
-	constructor() {
-		super();
-
-		this.message = 'A new version of the app is available.';
-	}
+	@query('aside') accessor #popup: HTMLElement;
 
 	#update() {
 		window.location.reload();
 	}
 
 	show(message: string) {
-		this.popup.hidden = false;
+		this.#popup.hidden = false;
 		this.message = message;
 	}
 
 	hide() {
-		this.popup.hidden = true;
+		this.#popup.hidden = true;
 	}
 
 	render() {

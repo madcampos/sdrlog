@@ -10,7 +10,7 @@ export class SdrTab extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(tabStyle);
 
-	@property({ type: String, reflect: true }) declare role: string;
+	@property({ type: String, reflect: true }) accessor role = 'tab';
 
 	declare ariaControls: string;
 
@@ -21,7 +21,6 @@ export class SdrTab extends LitElement {
 
 		this.#internals = this.attachInternals();
 
-		this.role = 'tab';
 		this.#internals.role = 'tab';
 	}
 
@@ -35,7 +34,7 @@ export class SdrTabPanel extends LitElement {
 	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 
-	@property({ type: String, reflect: true }) declare role: string;
+	@property({ type: String, reflect: true }) accessor role = 'tabpanel';
 
 	declare ariaLabeledBy: string;
 
@@ -46,7 +45,6 @@ export class SdrTabPanel extends LitElement {
 
 		this.#internals = this.attachInternals();
 
-		this.role = 'tabpanel';
 		this.#internals.role = 'tabpanel';
 	}
 
@@ -61,11 +59,11 @@ export class SdrTabs extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) declare role: string;
-	@property({ type: Number }) declare selectedTab: number;
+	@property({ type: String, reflect: true }) accessor role = 'tablist';
+	@property({ type: Number }) accessor selectedTab = 0;
 
-	@queryAssignedElements({ selector: 'sdr-tab', slot: 'tab' }) declare tabList: SdrTab[];
-	@queryAssignedElements({ selector: 'sdr-tab-panel', slot: 'tabpanel' }) declare tabPanels: SdrTabPanel[];
+	@queryAssignedElements({ selector: 'sdr-tab', slot: 'tab' }) accessor tabList: SdrTab[];
+	@queryAssignedElements({ selector: 'sdr-tab-panel', slot: 'tabpanel' }) accessor tabPanels: SdrTabPanel[];
 
 	#internals: ElementInternals;
 
@@ -76,8 +74,6 @@ export class SdrTabs extends LitElement {
 
 		this.#internals = this.attachInternals();
 
-		this.selectedTab = 0;
-		this.role = 'tablist';
 		this.#internals.role = 'tablist';
 
 		document.addEventListener('focusin', () => {

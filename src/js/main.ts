@@ -18,7 +18,7 @@ function updateLoadStatus(status: string) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-	const { I18n } = await import('./intl/translations');
+	const { I18n } = await import('./intl/translations.js');
 	const progressLoader = document.querySelector('#load-progress') as HTMLProgressElement;
 
 	await I18n.setLanguage(I18n.getLanguage());

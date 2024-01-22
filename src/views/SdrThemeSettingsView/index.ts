@@ -9,23 +9,20 @@ import { registerShortcut } from '../../js/util/keyboard';
 
 @customElement('sdr-view-theme-settings')
 export class SdrViewThemeSettings extends LitElement implements RouterView {
-	@state() private declare open: boolean;
-	@state() private declare theme: string;
+	@state() accessor #open = false;
+	@state() accessor #theme = 'system';
 
 	constructor() {
 		super();
 
-		this.open = false;
-		this.theme = 'system';
-
 		registerShortcut('t', () => {
-			this.open = !this.open;
+			this.#open = !this.#open;
 		});
 
 		if (localStorage.getItem('app-theme')) {
-			this.theme = localStorage.getItem('app-theme') as string;
+			this.#theme = localStorage.getItem('app-theme') as string;
 
-			document.body.classList.add(`theme-${this.theme}`);
+			document.body.classList.add(`theme-${this.#theme}`);
 		}
 	}
 
@@ -42,17 +39,17 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 
 		document.body.classList.add(`theme-${theme.value}`);
 
-		this.theme = theme.value;
+		this.#theme = theme.value;
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
 
 	navigate() {
-		this.open = true;
+		this.#open = true;
 
 		return 'Theme Settings';
 	}
@@ -63,13 +60,13 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 
 	render() {
 		return html`
-		<sdr-dialog id="theme-modal" ?open="${this.open}" @close="${() => this.#close()}">
+		<sdr-dialog id="theme-modal" ?open="${this.#open}" @close="${() => this.#close()}">
 			<span slot="title">Theme Settings</span>
 
 			<p>Set the theme for the application:</p>
 
 			<sdr-radio-group
-				value="${this.theme}"
+				value="${this.#theme}"
 
 				@change="${(evt: Event) => this.#changeTheme(evt)}"
 			>

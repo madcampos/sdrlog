@@ -1,5 +1,5 @@
 import { html, LitElement, unsafeCSS } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 import style from './style.css?inline' assert { type: 'css' };
 
@@ -9,18 +9,9 @@ export class SdrButton extends LitElement {
 	static formAssociated = true;
 	static readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) declare disabled: boolean;
-	@property({ type: String, reflect: true }) declare icon: string;
-	@property({ type: String, reflect: true, attribute: 'trigger-button' }) declare triggerButton?: string;
-
-	@query('button') private declare button: HTMLButtonElement;
-
-	constructor() {
-		super();
-
-		this.disabled = false;
-		this.icon = '';
-	}
+	@property({ type: Boolean, reflect: true }) accessor disabled = false;
+	@property({ type: String, reflect: true }) accessor icon = '';
+	@property({ type: String, reflect: true, attribute: 'trigger-button' }) accessor triggerButton: string = 'a';
 
 	render() {
 		return html`
@@ -32,7 +23,7 @@ export class SdrButton extends LitElement {
 				<span id="button-text">
 					<slot></slot>
 				</span>
-				<sdr-gamepad-badge button="${this.triggerButton ?? 'a'}"></sdr-gamepad-badge>
+				<sdr-gamepad-badge button="${this.triggerButton}"></sdr-gamepad-badge>
 			</button>
 		`;
 	}
