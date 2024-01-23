@@ -10,7 +10,7 @@ import { externalResources, internalResources, shareTarget } from './src/service
 const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manifest.json', { encoding: 'utf8' }));
 
 export default defineConfig(({ mode }) => {
-	const baseUrl = mode === 'production' ? 'https://madcampos.dev/sdrlog/' : 'https://localhost:3000/';
+	const baseUrl = mode === 'production' ? 'https://sdrlog.madcampos.dev/' : 'https://localhost:3000/';
 
 	const config: UserConfig = {
 		plugins: [

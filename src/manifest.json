@@ -8,7 +8,7 @@
 	"lang": "en-US",
 	"dir": "ltr",
 
-	"scope": "https://madcampos.dev/sdrlog/",
+	"scope": "https://sdrlog.madcampos.dev/",
 	"scope_extensions": [],
 	"start_url": "/?utm_source=pwa&utm_medium=installed&utm_campaign=web_app_manifest",
 

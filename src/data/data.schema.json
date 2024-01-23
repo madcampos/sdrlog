@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://madcampos.dev/sdrlog/data.schema.json",
+	"$id": "https://sdrlog.madcampos.dev/data.schema.json",
 	"title": "Shadowrun Catalog Data",
 	"description": "The data description for Shadowrun Catalog",
 	"type": "object",

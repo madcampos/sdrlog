@@ -4,7 +4,7 @@ type Unpacked<T> = NonNullable<T extends (infer U)[] ? U : T>;
 
 type RuntimeCaching = Unpacked<VitePWAOptions['workbox']['runtimeCaching']>;
 
-const baseUrl = 'https://madcampos.dev/sdrlog/';
+const baseUrl = 'https://sdrlog.madcampos.dev/';
 
 export const internalResources: RuntimeCaching = {
 	urlPattern: new RegExp(`^${baseUrl}.*`, 'iu'),
@@ -38,6 +38,35 @@ export const shareTarget: RuntimeCaching = {
 			...request,
 			method: 'GET'
 		});
+	}
+};
+
+export const searchHandler: RuntimeCaching = {
+	urlPattern: new RegExp(`^${baseUrl}?.*search=.+`, 'iu'),
+	handler: async ({ event: _event, request: _request }) => {
+		// TODO: handle search!
+		const body = JSON.stringify([
+			/**
+			 * Ref: https://github.com/dewitt/opensearch/blob/master/mediawiki/Specifications/OpenSearch/Extensions/Suggestions/1.1/Draft%201.wiki#example-2
+			 * Follows the format:
+			 * [
+			 *    "query",
+			 *    ["suggestion 1", "suggestion 2", "suggestion 3"],
+			 *    ["description 1", "description 2", "description 3"],
+			 *    ["url 1", "url 2", "url 3"]
+			 * ]
+			 */
+		]);
+
+		const response = new Response(body, {
+			status: 200,
+			statusText: 'OK',
+			headers: {
+				'Content-Type': 'text/html'
+			}
+		});
+
+		return Promise.resolve(response);
 	}
 };
 
