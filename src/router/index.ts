@@ -10,7 +10,7 @@ import { SdrViewEpubReader } from '../views/SdrEpubReaderView';
 import { SdrViewCbzReader } from '../views/SdrComicBookReaderView';
 
 Router.init({
-	baseUrl: import.meta.env.BASE_URL,
+	baseUrl: '/',
 	routes: [
 		{
 			path: '/',

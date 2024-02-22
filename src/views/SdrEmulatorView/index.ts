@@ -242,7 +242,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 
 		const emulator = materialsFilter.get(id ?? '') ?? '';
 
-		const emulatorImport = await import(/* @vite-ignore */ `${import.meta.env.BASE_URL}lib/webretro/${emulator}_libretro.js`);
+		const emulatorImport = await import(/* @vite-ignore */ import.meta.resolve(`/lib/webretro/${emulator}_libretro.js`));
 		const emulatorInit = emulatorImport.default as EmulatorInitializerFunction;
 
 		this.#emulator = emulatorInit({

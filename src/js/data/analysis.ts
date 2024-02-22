@@ -16,7 +16,7 @@ async function findMissingCovers() {
 
 		if (!coverFromStorage) {
 			try {
-				const response = await fetch(new URL(`./images/covers/${id}.jpg`, import.meta.env.BASE_URL), {
+				const response = await fetch(import.meta.resolve(`/images/covers/${id}.jpg`), {
 					method: 'HEAD'
 				});
 
@@ -30,7 +30,7 @@ async function findMissingCovers() {
 
 		if (!thumbFromStorage) {
 			try {
-				const response = await fetch(new URL(`./images/thumbs/${id}.jpg`, import.meta.env.BASE_URL), {
+				const response = await fetch(import.meta.resolve(`/images/thumbs/${id}.jpg`), {
 					method: 'HEAD'
 				});
 

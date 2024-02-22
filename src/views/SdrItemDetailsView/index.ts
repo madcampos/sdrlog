@@ -222,7 +222,7 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 	}
 
 	#getPublisherImageUrl(publisher: string) {
-		return new URL(`./images/publishers/${publisher}.png`, import.meta.env.BASE_URL).toString();
+		return import.meta.resolve(`/images/publishers/${publisher}.png`);
 	}
 
 	async navigate(destination: RouteLocation<'/item/:id'>) {

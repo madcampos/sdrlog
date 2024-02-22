@@ -6,9 +6,9 @@ import { canExtractCover, canImportCover } from '../data/storage-conditions';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
 
-export const FALLBACK_COVER = new URL('./images/base-covers/fallback.svg', import.meta.env.BASE_URL).toString();
-export const LOADING_COVER = new URL('./images/base-covers/loading-anim.svg', import.meta.env.BASE_URL).toString();
-export const LOADING_SIMPLE_COVER = new URL('./images/base-covers/loading-simple.svg', import.meta.env.BASE_URL).toString();
+export const FALLBACK_COVER = import.meta.resolve('/images/base-covers/fallback.svg');
+export const LOADING_COVER = import.meta.resolve('/images/base-covers/loading-anim.svg');
+export const LOADING_SIMPLE_COVER = import.meta.resolve('/images/base-covers/loading-simple.svg');
 
 export async function getCoverUrl(id: string) {
 	const currentCover = await getIDBItem('covers', id);
@@ -17,7 +17,7 @@ export async function getCoverUrl(id: string) {
 		return URL.createObjectURL(currentCover);
 	}
 
-	const response = await fetch(new URL(`./images/covers/${id}.jpg`, import.meta.env.BASE_URL));
+	const response = await fetch(import.meta.resolve(`./images/covers/${id}.jpg`));
 
 	if (response.ok) {
 		const responseData = await response.blob();

@@ -42,11 +42,11 @@ export class SdrGamepadBadge extends LitElement {
 	}
 
 	get #buttonImage() {
-		return new URL(`./images/gamepad-buttons/${this.button}.svg`, import.meta.env.BASE_URL).toString();
+		return import.meta.resolve(`/images/gamepad-buttons/${this.button}.svg`);
 	}
 
 	get #buttonPressedImage() {
-		return new URL(`./images/gamepad-buttons/${this.button}-pressed.svg`, import.meta.env.BASE_URL).toString();
+		return import.meta.resolve(`/images/gamepad-buttons/${this.button}-pressed.svg`);
 	}
 
 	render() {

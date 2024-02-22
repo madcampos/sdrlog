@@ -48,7 +48,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 			document.querySelector('#splash-screen')?.remove();
 		});
 	} catch (err) {
-		debugger;
 		console.error(err);
 	}
 });
