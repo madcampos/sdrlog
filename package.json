@@ -13,68 +13,45 @@
 	"scripts": {
 		"postinstall": "husky install",
 		"start": "vite",
-		"start:sw": "vite",
 		"typecheck": "tsc --noEmit",
 		"lint:js": "eslint src --ext .js,.mjs,.ts,.mts --fix --ignore-path .gitignore",
 		"lint:css": "stylelint **/*.css --fix",
 		"lint": "npm run typecheck && npm run lint:js && npm run lint:css",
 		"lint-staged": "lint-staged",
-		"prebuild:app": "npm run lint",
 		"build": "vite build",
-		"build:icons-transparent": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --scrape false --dark-mode --opaque false --log false public/icons/transparent",
-		"build:icons-maskable": "pwa-asset-generator build/logo.html --type png --maskable false --icon-only --log false public/icons/maskable",
-		"build:splash": "pwa-asset-generator build/logo.html --type png --splash-only --log false public/splash",
-		"build:assets": "npm run build:icons-transparent && npm run build:icons-maskable && npm run build:splash",
-		"optimize:svg": "svgo --multipass --eol lf --final-newline -recursive -folder public -output dist",
-		"optimize:png": "oxipng --opt max --strip safe --recursive --alpha --fix --zopfli --dir dist public/**/*.png",
 		"prepreview": "npm run build",
-		"preview": "vite preview --port 3000",
-		"test": "vitest",
-		"test:coverage": "vitest run --coverage"
+		"preview": "vite preview --port 3000"
 	},
 	"dependencies": {
 		"epubjs": "^0.3.93",
 		"idb": "^8.0.0",
 		"jszip": "^3.10.1",
 		"lit": "^3.1.2",
-		"marked": "^11.2.0",
+		"marked": "^12.0.0",
 		"nipplejs": "^0.10.1",
 		"pdfjs-dist": "^4.0.379",
 		"urlpattern-polyfill": "^10.0.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^18.6.0",
-		"@commitlint/config-conventional": "^18.6.0",
+		"@commitlint/cli": "^18.6.1",
+		"@commitlint/config-conventional": "^18.6.2",
 		"@types/emscripten": "^1.39.10",
-		"@types/marked": "^6.0.0",
 		"@types/wicg-file-system-access": "^2023.10.4",
-		"@typescript-eslint/eslint-plugin": "^6.20.0",
-		"@typescript-eslint/parser": "^6.20.0",
-		"@vitejs/plugin-basic-ssl": "^1.1.0",
-		"c8": "^9.1.0",
+		"@typescript-eslint/eslint-plugin": "^7.0.1",
+		"@typescript-eslint/parser": "^7.0.1",
 		"eslint": "^8.56.0",
-		"husky": "^9.0.10",
-		"lint-staged": "^15.2.1",
-		"oxipng-bin": "^1.0.0",
-		"pwa-asset-generator": "^6.3.1",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
 		"stylelint": "^16.2.1",
-		"svgo": "^3.2.0",
 		"typed-query-selector": "^2.11.0",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.12",
-		"vite-plugin-pwa": "^0.17.5",
-		"vitest": "^1.2.2",
+		"vite": "^5.1.3",
+		"vite-plugin-pwa": "^0.18.2",
 		"workbox-window": "^7.0.0"
 	},
 	"lint-staged": {
-		"*.ts": [
-			"eslint --ext .ts --fix",
-			"vitest related --run"
-		],
-		"*.js": [
-			"eslint --ext .js --fix",
-			"vitest related --run"
-		]
+		"*.ts": "eslint --ext .ts --fix",
+		"*.js": "eslint --ext .js --fix"
 	},
 	"commitlint": {
 		"extends": [

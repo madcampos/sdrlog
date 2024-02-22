@@ -2,9 +2,8 @@
 // eslint-env node
 import { readFileSync } from 'fs';
 
-import { defineConfig, type UserConfig } from 'vitest/config';
+import { defineConfig, type UserConfig } from 'vite';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
-import basicSsl from '@vitejs/plugin-basic-ssl';
 import { externalResources, internalResources, shareTarget } from './src/service-worker';
 
 const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manifest.json', { encoding: 'utf8' }));
@@ -12,13 +11,15 @@ const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manife
 export default defineConfig(({ mode }) => {
 	const baseUrl = mode === 'production' ? 'https://sdrlog.madcampos.dev/' : 'https://localhost:3000/';
 
+	const sslOptions = mode === 'production'
+		? undefined
+		: {
+			cert: readFileSync('./certs/server.crt', 'utf-8'),
+			key: readFileSync('./certs/server.key', 'utf-8')
+		};
+
 	const config: UserConfig = {
 		plugins: [
-			basicSsl({
-				name: 'dev-cert',
-				domains: ['localhost:3000'],
-				certDir: './certs'
-			}),
 			vitePWA({
 				registerType: 'prompt',
 				minify: true,
@@ -43,6 +44,7 @@ export default defineConfig(({ mode }) => {
 				}
 			})
 		],
+		esbuild: { target: 'esnext' },
 		base: baseUrl,
 		envPrefix: 'APP_',
 		envDir: '../',
@@ -50,6 +52,7 @@ export default defineConfig(({ mode }) => {
 		publicDir: '../public',
 		clearScreen: false,
 		server: {
+			https: sslOptions,
 			host: 'localhost',
 			open: false,
 			cors: true,
@@ -58,35 +61,12 @@ export default defineConfig(({ mode }) => {
 		build: {
 			target: 'esnext',
 			emptyOutDir: true,
-			outDir: '../dist',
-			rollupOptions: {
-				output: {
-					generatedCode: 'es2015'
-				}
-			}
+			outDir: '../dist'
 		},
-		optimizeDeps: {
-			esbuildOptions: {
-				target: 'esnext'
-			}
-		},
+		optimizeDeps: { esbuildOptions: { target: 'esnext' } },
 		preview: {
+			https: sslOptions,
 			open: true
-		},
-		test: {
-			include: ['**/*.test.ts'],
-			passWithNoTests: true,
-			maxConcurrency: 4,
-			coverage: {
-				processingConcurrency: 4,
-				provider: 'v8',
-				thresholds: {
-					functions: 75,
-					branches: 75,
-					lines: 75,
-					statements: 75
-				}
-			}
 		}
 	};
 
