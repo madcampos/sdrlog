@@ -16349,25 +16349,6 @@
 		},
 		{
 			"sku": [
-				"SRM09-05"
-			],
-			"name": "Violent Shadows",
-			"category": "mission",
-			"type": "digital",
-			"originalLanguage": "en-US",
-			"description": "# Confused Kidnapping\n\nIf you’re hired to deal with a kidnapping, it should be straightforward—someone is missing, and you should get them back. But if the kidnappers took the wrong person, and then corporate intrigue gets twisted up in the rescue, you have an unusual run and some shadowrunners trying to not get entangled in too many complexities. With competing suits, rampaging gang members, and hidden smugglers, this mission has plenty of obstacles to keep players on their toes!",
-			"edition": 6,
-			"publisher": [
-				"Catalyst Game Labs"
-			],
-			"releaseDate": [
-				"2022-06-05"
-			],
-			"gameDate": "2080-01",
-			"status": "missing"
-		},
-		{
-			"sku": [
 				"SRM09-06"
 			],
 			"name": "Seven Breaths",
