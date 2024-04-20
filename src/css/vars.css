@@ -3,6 +3,11 @@
 	--body-text: 16px;
 	--small-text: 0.8rem;
 
+	/* TODO: consider virtual keyboard env var size */
+	/* TODO: rework other env vars */
+	/* TODO: use color and color-mix functions to generate other colours */
+	/* TODO: redesign css and components structure to use more modern styling and syntax */
+
 	--bound-top: env(safe-area-inset-top, 0px);
 	--bound-right: env(safe-area-inset-right, 0px);
 	--bound-bottom: env(safe-area-inset-bottom, 0px);
