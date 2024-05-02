@@ -17,7 +17,7 @@ export async function getCoverUrl(id: string) {
 		return URL.createObjectURL(currentCover);
 	}
 
-	const response = await fetch(import.meta.resolve(`./images/covers/${id}.jpg`));
+	const response = await fetch(import.meta.resolve(`/images/covers/${id}.jpg`));
 
 	if (response.ok) {
 		const responseData = await response.blob();
