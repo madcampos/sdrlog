@@ -16,7 +16,7 @@
 		"color-no-invalid-hex": true,
 		"comment-no-empty": true,
 		"comment-whitespace-inside": "always",
-		"comment-word-disallowed-list": ["/^TODO:/", "/^FIXME:/"],
+		"comment-word-disallowed-list": [ [ "/^TODO:/", "/^FIXME:/" ], { "severity": "warning" } ],
 		"custom-media-pattern": "[a-z][-a-z0-9]+",
 		"custom-property-pattern": "[a-z][-a-z0-9]+",
 		"declaration-block-no-duplicate-properties": true,
