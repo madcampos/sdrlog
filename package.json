@@ -25,7 +25,7 @@
 		"idb": "^8.0.0",
 		"jszip": "^3.10.1",
 		"lit": "^3.2.0",
-		"marked": "^13.0.3",
+		"marked": "^14.1.0",
 		"nipplejs": "^0.10.2",
 		"pdfjs-dist": "^4.5.136",
 		"urlpattern-polyfill": "^10.0.0"
