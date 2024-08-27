@@ -9,7 +9,7 @@ async function findMissingCovers() {
 	const missingThumbs: string[] = [];
 
 	for await (const item of items) {
-		const [id] = item.sku;
+		const [id = ''] = item.sku;
 
 		const coverFromStorage = await getIDBItem('covers', id);
 		const thumbFromStorage = await getIDBItem('thumbs', id);
@@ -55,7 +55,7 @@ async function findDuplicateIds() {
 	const duplidateIds: string[] = [];
 
 	for (const material of data) {
-		const [id] = material.sku;
+		const [id = ''] = material.sku;
 		const exisitingMaterial = ids.get(id);
 
 		if (exisitingMaterial) {
@@ -76,7 +76,7 @@ async function findMissingFiles() {
 	const materialsWithOkStatusButMissingFiles: string[] = [];
 
 	for await (const material of data) {
-		const [id] = material.sku;
+		const [id = ''] = material.sku;
 
 		const filesForMaterial = await getIDBItemsByIndex('files', 'itemId', id);
 

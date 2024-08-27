@@ -2,42 +2,37 @@
 
 main {
 	height: 100%;
-	width: 100vw;
 	margin-inline: auto;
 	overflow-x: hidden;
-
 	user-select: none;
+	width: 100vw;
 }
 
 main > * {
-	overflow-x: hidden !important;
 	box-sizing: border-box !important;
+	overflow-x: hidden !important;
 	width: 100% !important;
 }
 
 select {
-	width: 100%;
-	padding: var(--padding-block) var(--padding-inline);
-	padding-inline-end: var(--select-arrow-spacing);
-
 	appearance: none;
-	border: solid var(--border-width) transparent;
-	border-radius: var(--border-radius);
-
 	background-color: var(--bg-color);
 	background-image: var(--select-arrow);
-	background-repeat: no-repeat;
 	background-position: calc(100% - var(--margin-inline)) center;
+	background-repeat: no-repeat;
 	background-size: var(--select-arrow-size);
-
-	transition: var(--transition);
-
-	font: inherit;
+	border: solid var(--border-width) transparent;
+	border-radius: var(--border-radius);
 	box-sizing: border-box;
+	font: inherit;
+	padding: var(--padding-block) var(--padding-inline);
+	padding-inline-end: var(--select-arrow-spacing);
+	transition: var(--transition);
+	width: 100%;
 }
 
 select:focus {
-	outline: none;
-	border-color: var(--border-color);
 	border-bottom-color: var(--theme-color);
+	border-color: var(--border-color);
+	outline: none;
 }

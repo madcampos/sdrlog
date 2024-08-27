@@ -1,17 +1,17 @@
-import { Router, type RouterView } from '../../router/router';
 import type { Material } from '../../data/data';
+import { Router, type RouterView } from '../../router/router';
 
 import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
-import { fetchItems, requestDataFileFromUser } from '../../js/data/data-import';
-import { createComparer } from '../../js/intl/formatting';
-import { readFiles } from '../../js/files/file-import';
-import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/cover-fetch';
-import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-export';
-import { exportDataFile } from '../../js/data/data-export';
-import { reportInconsistencies } from '../../js/data/analysis';
 import { SearchEngine } from '../../components/SdrSearchBox/search-engine';
+import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-export';
+import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/cover-fetch';
+import { reportInconsistencies } from '../../js/data/analysis';
+import { exportDataFile } from '../../js/data/data-export';
+import { fetchItems, requestDataFileFromUser } from '../../js/data/data-import';
+import { readFiles } from '../../js/files/file-import';
+import { createComparer } from '../../js/intl/formatting';
 
 declare global {
 	interface GlobalEventHandlersEventMap {
@@ -19,38 +19,47 @@ declare global {
 			index: number,
 			total: number,
 			name: string
-		}>,
-		apploaded: CustomEvent<undefined>
+		}>;
+		apploaded: CustomEvent<undefined>;
 	}
 }
 
 interface FilterItem {
-	icon: string,
-	label: string,
-	filter: string
+	icon: string;
+	label: string;
+	filter: string;
 }
 
 interface MenuItem {
-	icon: string,
-	label: string,
-	action(): void
+	icon: string;
+	label: string;
+	action(): void;
 }
 
 @customElement('sdr-view-main')
 export class SdrViewMain extends LitElement implements RouterView {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-	@property({ type: Array }) cards: Pick<Material, 'name' | 'category' | 'sku' | 'type' | 'edition' | 'status'>[];
+	@property({ type: Array })
+	accessor cards: Pick<Material, 'category' | 'edition' | 'name' | 'sku' | 'status' | 'type'>[];
 
-	@state() private hasFileSystem: boolean;
-	@state() private isDevMode: boolean;
-	@state() private filters: (FilterItem | null)[];
+	@state()
+	accessor #hasFileSystem: boolean;
 
-	@state() private appMenuItems: (MenuItem | null)[];
+	@state()
+	accessor #isDevMode: boolean;
 
-	@state() private fileMenuItems: (MenuItem | null)[];
+	@state()
+	accessor #filters: (FilterItem | null)[];
 
-	@state() private devMenuItems: (MenuItem | null)[];
+	@state()
+	accessor #appMenuItems: (MenuItem | null)[];
+
+	@state()
+	accessor #fileMenuItems: (MenuItem | null)[];
+
+	@state()
+	accessor #devMenuItems: (MenuItem | null)[];
 
 	#hasLoadedData = false;
 
@@ -60,10 +69,10 @@ export class SdrViewMain extends LitElement implements RouterView {
 		this.hidden = false;
 		this.cards = [];
 
-		this.isDevMode = false;
-		this.hasFileSystem = false;
+		this.#isDevMode = false;
+		this.#hasFileSystem = false;
 
-		this.filters = [
+		this.#filters = [
 			{ icon: '📜', label: 'Sourcebooks', filter: 'category: sourcebook' },
 			{ icon: '📝', label: 'Rulebooks', filter: 'category: rulebook' },
 			{ icon: '🗺️', label: 'Adventures & Campaigns', filter: 'category: mission' },
@@ -78,13 +87,13 @@ export class SdrViewMain extends LitElement implements RouterView {
 			{ icon: '📚', label: 'All', filter: 'category: all' }
 		];
 
-		this.appMenuItems = [
+		this.#appMenuItems = [
 			{ icon: 'ℹ️', label: 'Tool Information', action: async () => Router.navigate('/info') },
 			// { icon: '💬', label: 'Language Settings', action: async () => Router.navigate('/settings/language') },
 			{ icon: '🌓', label: 'Theme Settings', action: async () => Router.navigate('/settings/theme') }
 		];
 
-		this.fileMenuItems = [
+		this.#fileMenuItems = [
 			null,
 			{ icon: '📥', label: 'Import Files', action: readFiles },
 			{ icon: '📦', label: 'Import Data', action: requestDataFileFromUser },
@@ -97,7 +106,7 @@ export class SdrViewMain extends LitElement implements RouterView {
 			{ icon: '🖼️', label: 'Export Covers', action: saveCoversToFolder }
 		];
 
-		this.devMenuItems = [
+		this.#devMenuItems = [
 			null,
 			{ icon: '⛔️', label: 'Report Data Inconsistencies', action: reportInconsistencies },
 			{ icon: '💬', label: 'Open CBZ reader', action: async () => Router.navigate('/cbz/test') },
@@ -106,15 +115,15 @@ export class SdrViewMain extends LitElement implements RouterView {
 		];
 
 		if ('showOpenFilePicker' in window) {
-			this.hasFileSystem = true;
+			this.#hasFileSystem = true;
 		}
 
 		if (import.meta.env.DEV) {
-			this.isDevMode = true;
+			this.#isDevMode = true;
 		}
 	}
 
-	createRenderRoot() {
+	override createRenderRoot() {
 		return this;
 	}
 
@@ -122,20 +131,21 @@ export class SdrViewMain extends LitElement implements RouterView {
 		this.hidden = false;
 	}
 
-	shouldUpdate(changedProperties: Map<string, unknown>) {
+	override shouldUpdate(changedProperties: Map<string, unknown>) {
 		return this.#hasLoadedData && super.shouldUpdate(changedProperties);
 	}
 
-	render() {
+	override render() {
 		return html`
 			<sdr-menu-bar>
 				<sdr-dropdown id="filters" icon="︙" trigger-button="x">
-					${this.filters.map((filter) => {
-						if (filter === null) {
-							return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
-						}
+					${
+			this.#filters.map((filter) => {
+				if (filter === null) {
+					return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
+				}
 
-						return html`
+				return html`
 							<sdr-dropdown-item
 								icon="${filter.icon}"
 								@click="${() => SearchEngine.updateSearchResults(filter.filter)}"
@@ -143,7 +153,8 @@ export class SdrViewMain extends LitElement implements RouterView {
 								${filter.label}
 							</sdr-dropdown-item>
 						`;
-					})}
+			})
+		}
 				</sdr-dropdown>
 
 				<sdr-button id="add-material" @click="${async () => Router.navigate('/item')}" icon="➕"></sdr-button>
@@ -151,45 +162,51 @@ export class SdrViewMain extends LitElement implements RouterView {
 				<sdr-search-box></sdr-search-box>
 
 				<sdr-dropdown id="app-menu" icon="⚙️" align-right trigger-button="start">
-					${this.appMenuItems.map((item) => {
-						if (item === null) {
-							return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
-						}
+					${
+			this.#appMenuItems.map((item) => {
+				if (item === null) {
+					return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
+				}
 
-						return html`
+				return html`
 							<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
-					})}
+			})
+		}
 
-					${this.hasFileSystem
-						? this.fileMenuItems.map((item) => {
-							if (item === null) {
-								return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
-							}
-
-							return html`
-								<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
-						})
-						: ''
+					${
+			this.#hasFileSystem
+				? this.#fileMenuItems.map((item) => {
+					if (item === null) {
+						return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
 					}
 
-					${this.isDevMode
-						? this.devMenuItems.map((item) => {
-							if (item === null) {
-								return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
-							}
-
-							return html`
+					return html`
 								<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
-						})
-						: ''
+				})
+				: ''
+		}
+
+					${
+			this.#isDevMode
+				? this.#devMenuItems.map((item) => {
+					if (item === null) {
+						return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
 					}
+
+					return html`
+								<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
+				})
+				: ''
+		}
 				</sdr-dropdown>
 			</sdr-menu-bar>
 
 			<main role="list">
-				${this.cards.map(({ name, category, sku, type, edition, status }) => html`
+				${
+			this.cards.map(({ name, category, sku, type, edition, status }) =>
+				html`
 					<sdr-card
-						id="${sku[0]}"
+						id="${sku[0] ?? ''}"
 						.sku="${sku}"
 						name="${name}"
 						category="${category}"
@@ -197,14 +214,16 @@ export class SdrViewMain extends LitElement implements RouterView {
 						edition="${edition}"
 						status="${status}"
 					></sdr-card>
-				`)}
+				`
+			)
+		}
 			</main>
 
 			<sdr-update-notify></sdr-update-notify>
 		`;
 	}
 
-	async connectedCallback() {
+	override async connectedCallback() {
 		super.connectedCallback();
 
 		const materials = await fetchItems();

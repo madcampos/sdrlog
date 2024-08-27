@@ -5,8 +5,7 @@ if (!('URLPattern' in globalThis)) {
 
 type IsParameter<Part> = Part extends `:${infer ParamName}` ? ParamName : never;
 
-type FilteredParts<Path> = Path extends `${infer PartA}/${infer PartB}`
-	? IsParameter<PartA> | FilteredParts<PartB>
+type FilteredParts<Path> = Path extends `${infer PartA}/${infer PartB}` ? FilteredParts<PartB> | IsParameter<PartA>
 	: IsParameter<Path>;
 
 type Params<Path> = {
@@ -14,32 +13,32 @@ type Params<Path> = {
 };
 
 export interface RouteLocation<Path = string> {
-	path: Path,
-	params: Params<Path>,
-	query?: Record<string, string | undefined>,
-	hash?: string
+	path: Path;
+	params: Params<Path>;
+	query?: Record<string, string | undefined>;
+	hash?: string;
 }
 
-type RouteGuardHandler = (origin: string, destination: string) => false | RouteLocation | void | Promise<false | RouteLocation | void>;
+type RouteGuardHandler = (origin: string, destination: string) => Promise<RouteLocation | false | void> | RouteLocation | false | void;
 
 export interface RouterView {
-	navigate(destination: RouteLocation, origin: RouteLocation): string | void | Promise<string | void>
+	navigate(destination: RouteLocation, origin: RouteLocation): Promise<string | void> | string | void;
 }
 
 type ViewImplementation = new () => RouterView;
 
 interface RouteDefinition {
-	path: string,
-	view: ViewImplementation,
-	guard?: RouteGuardHandler
+	path: string;
+	view: ViewImplementation;
+	guard?: RouteGuardHandler;
 }
 
 interface RouterConfig {
-	routes: RouteDefinition[],
-	baseUrl: string,
-	attribute?: string,
-	beforeEach?: RouteGuardHandler,
-	fallback?: RouterView
+	routes: RouteDefinition[];
+	baseUrl: string;
+	attribute?: string;
+	beforeEach?: RouteGuardHandler;
+	fallback?: RouterView;
 }
 
 export class Router {
@@ -86,7 +85,7 @@ export class Router {
 	}
 
 	static async navigate(path: string) {
-	try {
+		try {
 			const newPath = new URL(path, Router.#baseUrl).pathname;
 
 			if (Router.#currentPath === newPath) {
@@ -114,10 +113,8 @@ export class Router {
 
 				const title = await view.navigate(destination, Router.#currentLocation);
 
-				/* eslint-disable require-atomic-updates */
 				Router.#currentPath = pathToSearch;
 				Router.#currentLocation = destination;
-				/* eslint-enable require-atomic-updates */
 
 				const basePath = new URL(Router.#baseUrl).pathname.replace(/\/$/u, '');
 				const normalizedPath = new URL(`${basePath}${path}`, Router.#baseUrl).pathname;

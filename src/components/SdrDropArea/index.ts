@@ -5,18 +5,21 @@ import style from './style.css?inline' assert { type: 'css' };
 
 declare global {
 	interface GlobalEventHandlersEventMap {
-		dropfile: CustomEvent<{ file: File }>
+		dropfile: CustomEvent<{ file: File }>;
 	}
 }
 
 @customElement('sdr-drop-area')
 export class SdrDropArea extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static readonly styles = unsafeCSS(style);
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) disabled: boolean;
+	@property({ type: Boolean, reflect: true })
+	accessor disabled: boolean;
 
-	@query('overlay') private declare overlay: HTMLDivElement;
+	@query('overlay')
+	// @ts-expect-error
+	accessor #overlay: HTMLDivElement;
 
 	constructor() {
 		super();
@@ -56,7 +59,7 @@ export class SdrDropArea extends LitElement {
 		}
 
 		const [file] = Array.from(evt.dataTransfer?.files ?? []);
-		const fileType = file.type;
+		const fileType = file?.type ?? 'application/octet-stream';
 		const mimes = Object.keys(this.#accepts.accept as Record<string, string[]>);
 
 		if (mimes.includes(fileType)) {
@@ -65,23 +68,23 @@ export class SdrDropArea extends LitElement {
 			this.dispatchEvent(new CustomEvent('dropfile', { bubbles: true, composed: true, cancelable: true, detail: { file: this.#file } }));
 		}
 
-		this.overlay.classList.remove('drop');
+		this.#overlay.classList.remove('drop');
 	}
 
 	get file() {
 		return this.#file;
 	}
 
-	connectedCallback() {
+	override connectedCallback() {
 		super.connectedCallback();
 
 		this.addEventListener('dragover', (evt) => {
 			evt.preventDefault();
-			this.overlay.classList.add('drop');
+			this.#overlay.classList.add('drop');
 		});
 
 		this.addEventListener('dragleave', () => {
-			this.overlay.classList.remove('drop');
+			this.#overlay.classList.remove('drop');
 		});
 
 		document.addEventListener('paste', (evt) => {
@@ -101,7 +104,7 @@ export class SdrDropArea extends LitElement {
 		});
 	}
 
-	render() {
+	override render() {
 		return html`
 			<div id="content">
 				<slot></slot>

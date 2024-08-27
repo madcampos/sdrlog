@@ -1,22 +1,18 @@
 button {
-	position: relative;
-
+	app-region: no-drag;
+	-webkit-app-region: no-drag;
 	background: transparent;
 	border: solid var(--border-width) transparent;
 	border-radius: var(--border-radius);
-	min-width: var(--button-size);
-	width: fit-content;
-	height: var(--button-size);
-	padding: var(--padding-block) var(--padding-inline);
-	margin: var(--margin-small);
-
-	transition: var(--transition);
-
 	font: inherit;
-
+	height: var(--button-size);
+	margin: var(--margin-small);
+	min-width: var(--button-size);
+	padding: var(--padding-block) var(--padding-inline);
+	position: relative;
+	transition: var(--transition);
 	user-select: none;
-	app-region: no-drag;
-	-webkit-app-region: no-drag;
+	width: fit-content;
 }
 
 :host(:focus-within) button {
@@ -24,17 +20,11 @@ button {
 	outline: none;
 }
 
-:host(:not(:focus-within):not([keep-trigger-button])) sdr-gamepad-badge {
-	display: none;
-}
+:host(:not(:focus-within):not([keep-trigger-button])) sdr-gamepad-badge { display: none; }
 
-button:active {
-	background: var(--secondary-color);
-}
+button:active { background: var(--secondary-color); }
 
-button:hover {
-	background: var(--accent-color);
-}
+button:hover { background: var(--accent-color); }
 
 button:disabled {
 	background: var(--dark-bg-color);
@@ -42,19 +32,19 @@ button:disabled {
 }
 
 :host([icon-button]) button {
-	width: var(--button-size);
 	padding: var(--padding-small);
+	width: var(--button-size);
 }
 
 :host([small]) button {
+	font-size: var(--small-text);
+	height: calc(var(--button-size) * 0.65);
 	min-width: unset;
 	width: calc(var(--button-size) * 0.65);
-	height: calc(var(--button-size) * 0.65);
-	font-size: var(--small-text);
 }
 
 :host([wide]) button {
 	min-width: min-content;
-	width: 100%;
 	text-align: left;
+	width: 100%;
 }

@@ -3,18 +3,18 @@ const touchTreshold = 50;
 let startX: number | null = null;
 let startY: number | null = null;
 
-export interface SwipeEvent extends CustomEvent<'swipe'>{
-	direction: 'left' | 'right' | 'up' | 'down'
+export interface SwipeEvent extends CustomEvent<'swipe'> {
+	direction: 'down' | 'left' | 'right' | 'up';
 }
 
 declare global {
 	interface WindowEventMap {
-		['swipe']: SwipeEvent
+		['swipe']: SwipeEvent;
 	}
 }
 
 function handleTouchStart(evt: TouchEvent) {
-	const [firstTouch] = evt.touches;
+	const firstTouch = evt.touches[0] as Touch;
 
 	startX = firstTouch.clientX;
 	startY = firstTouch.clientY;
@@ -25,7 +25,7 @@ function handleTouchMove(evt: TouchEvent) {
 		return;
 	}
 
-	const [firstTouch] = evt.touches;
+	const firstTouch = evt.touches[0] as Touch;
 	const endX = firstTouch.clientX;
 	const endY = firstTouch.clientY;
 

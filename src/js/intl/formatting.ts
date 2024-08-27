@@ -3,9 +3,7 @@ const sorters: Partial<Record<string, Intl.Collator>> = {};
 export function createComparer(options: Intl.CollatorOptions = {}, language: string = navigator.language) {
 	const sorterKey = JSON.stringify({ language, ...options });
 
-	if (!sorters[sorterKey]) {
-		sorters[sorterKey] = new Intl.Collator(language, options);
-	}
+	sorters[sorterKey] ||= new Intl.Collator(language, options);
 
 	return (x: string, y: string) => (sorters[sorterKey] as Intl.Collator).compare(x, y);
 }
@@ -13,21 +11,21 @@ export function createComparer(options: Intl.CollatorOptions = {}, language: str
 const langNames: Partial<Record<string, Intl.DisplayNames>> = {};
 
 export function translateLanguageName(nameToTranslate: string, language: string = navigator.language) {
-	if (!langNames[language]) {
-		langNames[language] = new Intl.DisplayNames([language], { type: 'language' });
-	}
+	langNames[language] ||= new Intl.DisplayNames([language], { type: 'language' });
 
-	return (langNames[language] as Intl.DisplayNames).of(nameToTranslate);
+	return langNames[language].of(nameToTranslate);
 }
 
 const dateFormaters: Partial<Record<string, Intl.DateTimeFormat>> = {};
 
-export function formatFullDate(dateToFormat: Date | number, language: string = navigator.language, options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', timeZone: 'UTC', year: 'numeric' }) {
-	if (!dateFormaters[language]) {
-		dateFormaters[language] = new Intl.DateTimeFormat(language, options);
-	}
+export function formatFullDate(
+	dateToFormat: Date | number,
+	language: string = navigator.language,
+	options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', timeZone: 'UTC', year: 'numeric' }
+) {
+	dateFormaters[language] ||= new Intl.DateTimeFormat(language, options);
 
-	return (dateFormaters[language] as Intl.DateTimeFormat).format(dateToFormat);
+	return dateFormaters[language].format(dateToFormat);
 }
 
 export function formatMonth(dateToFormat: Date | number | string) {

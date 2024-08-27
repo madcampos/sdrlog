@@ -37,30 +37,30 @@ enum ColorSpaces {
 }
 
 interface MozJPEGOptions {
-	quality?: number,
-	baseline?: boolean,
-	arithmetic?: boolean,
-	progressive?: boolean,
-	optimizeCoding?: boolean,
-	smoothing?: number,
-	colorSpace?: ColorSpaces,
-	quantTable?: number,
-	trellisMultipass?: boolean,
-	trellisOptZero?: boolean,
-	trellisOptTable?: boolean,
-	trellisLoops?: number,
-	autoSubsample?: boolean,
-	chromaSubsample?: number,
-	separateChromaQuality?: boolean,
-	chromaQuality?: number
+	quality?: number;
+	baseline?: boolean;
+	arithmetic?: boolean;
+	progressive?: boolean;
+	optimizeCoding?: boolean;
+	smoothing?: number;
+	colorSpace?: ColorSpaces;
+	quantTable?: number;
+	trellisMultipass?: boolean;
+	trellisOptZero?: boolean;
+	trellisOptTable?: boolean;
+	trellisLoops?: number;
+	autoSubsample?: boolean;
+	chromaSubsample?: number;
+	separateChromaQuality?: boolean;
+	chromaQuality?: number;
 }
 
 type ImagePointer = number;
 
 interface MozJPEGModule extends EmscriptenModule {
-	encode(image: BufferSource, imageWidth: number, imageHeight: number, inputChannels: number, outputOptions: MozJPEGOptions): ImagePointer,
-	getImage(imagePointer: ImagePointer): ArrayBuffer,
-	freeImage(imagePointer: ImagePointer): void
+	encode(image: BufferSource, imageWidth: number, imageHeight: number, inputChannels: number, outputOptions: MozJPEGOptions): ImagePointer;
+	getImage(imagePointer: ImagePointer): ArrayBuffer;
+	freeImage(imagePointer: ImagePointer): void;
 }
 
 type MozJPEGModuleImport = (mozjpeg?: { onRuntimeInitialized(): void }) => Promise<MozJPEGModule>;
@@ -93,9 +93,7 @@ export async function optimize(imageArray: BufferSource, { width, height }: { wi
 		return imageArray;
 	}
 
-	if (!mozjpegModule) {
-		mozjpegModule = (await import(/* @vite-ignore */ import.meta.resolve('/lib/mozjpeg/mozjpeg.js'))).default as MozJPEGModuleImport;
-	}
+	mozjpegModule ||= (await import(/* @vite-ignore */ import.meta.resolve('/lib/mozjpeg/mozjpeg.js'))).default as MozJPEGModuleImport;
 
 	const mozjpeg = await mozjpegModule();
 

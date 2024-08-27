@@ -1,5 +1,5 @@
-import type { optimize as OptimizerType } from './cover-optimizer';
 import type { default as PDFJS } from 'pdfjs-dist';
+import type { optimize as OptimizerType } from './cover-optimizer';
 
 import pdfJsWorkerSource from 'pdfjs-dist/build/pdf.worker?url';
 
@@ -67,10 +67,7 @@ export async function extractCover(file: File) {
 }
 
 export async function optimizeCover(cover: ImageData) {
-	if (!optimize) {
-		// eslint-disable-next-line prefer-destructuring
-		optimize = (await import('./cover-optimizer')).optimize;
-	}
+	optimize ||= (await import('./cover-optimizer')).optimize;
 
 	const { width: coverWidth, height: coverHeight, data: coverData } = cover;
 	const optimizedCover = await optimize(coverData.buffer, { width: coverWidth, height: coverHeight });
@@ -79,10 +76,10 @@ export async function optimizeCover(cover: ImageData) {
 }
 
 interface ProcessCoverOptions {
-	referenceWidth?: number,
-	name?: string,
-	skipOptimize?: boolean,
-	forceProcess?: boolean
+	referenceWidth?: number;
+	name?: string;
+	skipOptimize?: boolean;
+	forceProcess?: boolean;
 }
 
 export async function processCoverFile(coverFile: File, { referenceWidth = COVER_WIDTH, name, skipOptimize = false, forceProcess = true }: ProcessCoverOptions = {}) {
@@ -105,7 +102,7 @@ export async function processCoverFile(coverFile: File, { referenceWidth = COVER
 		canvas.width = scaledCover.width;
 		canvasContext.drawImage(scaledCover, 0, 0);
 
-		let optimizedCover: Blob | ArrayBuffer | BufferSource;
+		let optimizedCover: ArrayBuffer | Blob | BufferSource;
 
 		if (skipOptimize) {
 			optimizedCover = (await new Promise((resolve: BlobCallback) => {

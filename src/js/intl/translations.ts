@@ -1,6 +1,6 @@
 import enUSTranslation from '../../locales/en-US.json?url';
-import ptBRTranslation from '../../locales/pt-BR.json?url';
 import frFRTranslation from '../../locales/fr-FR.json?url';
+import ptBRTranslation from '../../locales/pt-BR.json?url';
 
 let loadedTranslations = new Map<string, string>();
 
@@ -38,7 +38,58 @@ export class I18n {
 
 			return char.repeat(repeatTimes);
 		}).map((char) => {
-			const ZALGO_CHARS = ['\u030d', '\u030e', '\u0304', '\u0305', '\u033f', '\u0311', '\u0306', '\u0310', '\u0352', '\u0357', '\u0351', '\u0307', '\u0308', '\u030a', '\u0342', '\u0343', '\u0344', '\u034a', '\u034b', '\u034c', '\u0303', '\u0302', '\u030c', '\u0350', '\u0300', '\u0301', '\u030b', '\u030f', '\u0312', '\u0313', '\u0314', '\u033d', '\u0309', '\u0363', '\u0364', '\u0365', '\u0366', '\u0367', '\u0368', '\u0369', '\u036a', '\u036b', '\u036c', '\u036d', '\u036e', '\u036f', '\u033e', '\u035b', '\u0346', '\u031a'];
+			const ZALGO_CHARS = [
+				'\u030d',
+				'\u030e',
+				'\u0304',
+				'\u0305',
+				'\u033f',
+				'\u0311',
+				'\u0306',
+				'\u0310',
+				'\u0352',
+				'\u0357',
+				'\u0351',
+				'\u0307',
+				'\u0308',
+				'\u030a',
+				'\u0342',
+				'\u0343',
+				'\u0344',
+				'\u034a',
+				'\u034b',
+				'\u034c',
+				'\u0303',
+				'\u0302',
+				'\u030c',
+				'\u0350',
+				'\u0300',
+				'\u0301',
+				'\u030b',
+				'\u030f',
+				'\u0312',
+				'\u0313',
+				'\u0314',
+				'\u033d',
+				'\u0309',
+				'\u0363',
+				'\u0364',
+				'\u0365',
+				'\u0366',
+				'\u0367',
+				'\u0368',
+				'\u0369',
+				'\u036a',
+				'\u036b',
+				'\u036c',
+				'\u036d',
+				'\u036e',
+				'\u036f',
+				'\u033e',
+				'\u035b',
+				'\u0346',
+				'\u031a'
+			];
 
 			return char + ZALGO_CHARS[Math.floor(Math.random() * ZALGO_CHARS.length)];
 		}).join('');
@@ -73,8 +124,8 @@ export class I18n {
 		}
 	}
 
-	static t(strings: TemplateStringsArray | string[]) {
-		const [messageKey] = strings;
+	static t(strings: string[] | TemplateStringsArray) {
+		const [messageKey = ''] = strings;
 		// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
 		const message = loadedTranslations.get(messageKey) || I18n.#untranslateMessage(messageKey);
 

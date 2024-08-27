@@ -10,13 +10,16 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-search-box')
 export class SdrSearchBox extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) value: string;
+	@property({ type: String, reflect: true })
+	accessor value: string;
 
-	@query('input') private declare input: HTMLInputElement;
+	@query('input')
+	// @ts-expect-error
+	accessor #input: HTMLInputElement;
 
 	constructor() {
 		super();
@@ -37,7 +40,7 @@ export class SdrSearchBox extends LitElement {
 			if (Router.currentPath === '/' && evt.detail.button === 'y') {
 				evt.stopPropagation();
 
-				this.input.focus();
+				this.#input.focus();
 				GamepadHandler.longVibration();
 			}
 
@@ -53,7 +56,7 @@ export class SdrSearchBox extends LitElement {
 	}
 
 	#updateSuggestions() {
-		this.value = this.input.value;
+		this.value = this.#input.value;
 
 		window.requestAnimationFrame(() => {
 			const datalist = this.renderRoot.querySelector('datalist') as HTMLDataListElement;
@@ -63,16 +66,16 @@ export class SdrSearchBox extends LitElement {
 	}
 
 	#updateFilter() {
-		this.value = this.input.value;
+		this.value = this.#input.value;
 
 		SearchEngine.updateSearchResults(this.value);
 	}
 
 	#searchClick() {
-		this.input.dispatchEvent(new Event('change'));
+		this.#input.dispatchEvent(new Event('change'));
 	}
 
-	render() {
+	override render() {
 		return html`
 			<label
 				for="search-input"

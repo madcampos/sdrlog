@@ -5,17 +5,20 @@ import style from './style.css?inline' assert { type: 'css' };
 
 declare global {
 	interface GlobalEventHandlersEventMap {
-		itemremoved: CustomEvent<{ value: string }>
+		itemremoved: CustomEvent<{ value: string }>;
 	}
 }
 
 @customElement('sdr-edit-list-item')
 export class SdrEditListItem extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static readonly styles = unsafeCSS(style);
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) disabled: boolean;
-	@property({ type: String, reflect: true }) value: string;
+	@property({ type: Boolean, reflect: true })
+	accessor disabled: boolean;
+
+	@property({ type: String, reflect: true })
+	accessor value: string;
 
 	constructor() {
 		super();
@@ -28,7 +31,7 @@ export class SdrEditListItem extends LitElement {
 		this.dispatchEvent(new CustomEvent('itemremoved', { bubbles: true, composed: true, cancelable: true, detail: { value: this.value } }));
 	}
 
-	render() {
+	override render() {
 		return html`
 			<slot></slot>
 			<sdr-button

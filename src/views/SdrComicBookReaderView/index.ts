@@ -3,14 +3,14 @@ import type { RouteLocation, RouterView } from '../../router/router';
 import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
-import { Router } from '../../router/router';
-import { createComparer } from '../../js/intl/formatting';
 import { loadFile } from '../../js/files/file-open';
+import { createComparer } from '../../js/intl/formatting';
+import { Router } from '../../router/router';
 
 interface Page {
-	name: string,
-	folder: string,
-	url: string
+	name: string;
+	folder: string;
+	url: string;
 }
 
 type Pages = Record<string, Page[]>;
@@ -34,16 +34,28 @@ const mimeTypes = new Map([
 
 @customElement('sdr-view-cbz-reader')
 export class SdrViewCbzReader extends LitElement implements RouterView {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-	@property({ type: Boolean, reflect: true }) loaded: boolean;
+	@property({ type: Boolean, reflect: true })
+	accessor loaded: boolean;
 
-	@state() private open: boolean;
-	@state() private selectedPage: string;
-	@state() private pages: Page[];
-	@state() private toc: string[];
-	@state() private nextPageVisibility: 'visible' | 'hidden';
-	@state() private previousPageVisibility: 'visible' | 'hidden';
+	@state()
+	accessor open: boolean;
+
+	@state()
+	accessor selectedPage: string;
+
+	@state()
+	accessor pages: Page[];
+
+	@state()
+	accessor toc: string[];
+
+	@state()
+	accessor nextPageVisibility: 'hidden' | 'visible';
+
+	@state()
+	accessor previousPageVisibility: 'hidden' | 'visible';
 
 	#currentVisibleImage: HTMLImageElement | undefined;
 
@@ -98,6 +110,10 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 	}
 
 	#updateVisibleImage([entry]: IntersectionObserverEntry[]) {
+		if (!entry?.target) {
+			return;
+		}
+
 		this.#currentVisibleImage = entry.target as HTMLImageElement;
 
 		if (!this.#currentVisibleImage.previousElementSibling) {
@@ -112,14 +128,13 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 			this.nextPageVisibility = 'visible';
 		}
 
-		this.selectedPage = this.#currentVisibleImage.dataset.folder as string;
+		this.selectedPage = this.#currentVisibleImage.dataset?.['folder'] ?? '';
 	}
 
 	async #unzipImages(file?: File) {
 		if (!file) {
 			return {};
 		}
-
 
 		if (!('JSZip' in window)) {
 			await import('jszip');
@@ -131,16 +146,16 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		for await (const zipObject of Object.values(zip.files)) {
 			if (!zipObject.dir) {
 				const blob = await zipObject.async('blob');
-				const [name, folder = DEFAULT_FOLDER_NAME] = zipObject.name.split('/').reverse();
+				const [name = '', folder = DEFAULT_FOLDER_NAME] = zipObject.name.split('/').reverse();
 				const testRegex = /(?<extension>\.[a-z0-9]{3,})$/u;
-				const { extension } = testRegex.exec(name)?.groups ?? {};
+				const { extension = '' } = testRegex.exec(name)?.groups ?? {};
 
 				if (mimeTypes.has(extension)) {
 					if (!(folder in pages)) {
 						pages[folder] = [];
 					}
 
-					pages[folder].push({
+					pages[folder]?.push({
 						name,
 						folder,
 						url: URL.createObjectURL(blob)
@@ -149,14 +164,15 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 			}
 		}
 
+		const sortedPages = Object.fromEntries(
+			Object.keys(pages).sort((folderA, folderB) => {
+				if (folderB === DEFAULT_FOLDER_NAME) {
+					return 1;
+				}
 
-		const sortedPages = Object.fromEntries(Object.keys(pages).sort((folderA, folderB) => {
-			if (folderB === DEFAULT_FOLDER_NAME) {
-				return 1;
-			}
-
-			return comparer(folderA, folderB);
-		}).map((folder) => [folder, pages[folder]]));
+				return comparer(folderA, folderB);
+			}).map((folder) => [folder, pages[folder]])
+		);
 
 		return sortedPages;
 	}
@@ -168,7 +184,7 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		for (const folder of Object.keys(folders)) {
 			this.toc.push(folder);
 
-			for (const page of folders[folder]) {
+			for (const page of folders[folder] ?? []) {
 				this.pages.push(page);
 			}
 		}
@@ -180,7 +196,7 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		this.loaded = true;
 
 		// Force start at the begining
-		[this.selectedPage] = this.toc;
+		[this.selectedPage = ''] = this.toc;
 		this.renderRoot.querySelector('article img:first-child')?.scrollIntoView();
 	}
 
@@ -215,11 +231,11 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		return 'Comic Book Reader';
 	}
 
-	createRenderRoot() {
+	override createRenderRoot() {
 		return this;
 	}
 
-	render() {
+	override render() {
 		return html`
 			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
 				<sdr-button
@@ -247,9 +263,13 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 				>⏭️</sdr-button>
 
 				<article id="comic">
-					${this.pages.map((page) => html`
+					${
+			this.pages.map((page) =>
+				html`
 						<img src="${page.url}" alt="${page.name}" loading="lazy" decoding="async" data-folder="${page.folder}"/>
-					`)}
+					`
+			)
+		}
 				</article>
 
 				<div id="comic-book-overlay">

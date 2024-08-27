@@ -1,22 +1,16 @@
 :host {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
-
-	text-align: center;
-
 	background-color: var(--bg-color);
-
 	border: solid var(--border-width) var(--border-color);
 	border-radius: var(--border-radius);
-
 	cursor: pointer;
-	user-select: none;
+	display: flex;
+	flex-direction: column;
 	margin: var(--margin-block);
-
-	width: var(--radio-size);
-
+	text-align: center;
 	transition: var(--transition);
+	user-select: none;
+	width: var(--radio-size);
 }
 
 #radio-icon { font-size: var(--radio-icon-size); }

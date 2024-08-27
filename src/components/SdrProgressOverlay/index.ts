@@ -5,17 +5,29 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-progress-overlay')
 export class SdrProgressOverlay extends LitElement {
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) title: string;
-	@property({ type: String, reflect: true }) info: string;
-	@property({ type: Number, reflect: true }) total: number;
-	@property({ type: String, reflect: true }) count: string;
-	@property({ type: Number, reflect: true }) value: number;
+	@property({ type: String, reflect: true })
+	override accessor title: string;
 
-	@property({ type: Boolean, reflect: true }) open: boolean;
+	@property({ type: String, reflect: true })
+	accessor info: string;
 
-	@query('dialog') private declare dialog: HTMLDialogElement;
+	@property({ type: Number, reflect: true })
+	accessor total: number;
+
+	@property({ type: String, reflect: true })
+	accessor count: string;
+
+	@property({ type: Number, reflect: true })
+	accessor value: number;
+
+	@property({ type: Boolean, reflect: true })
+	accessor open: boolean;
+
+	@query('dialog')
+	// @ts-expect-error
+	accessor #dialog: HTMLDialogElement;
 
 	constructor() {
 		super();
@@ -68,24 +80,24 @@ export class SdrProgressOverlay extends LitElement {
 		this.open = false;
 	}
 
-	updated(changedProperties: Map<string, unknown>): void {
+	override updated(changedProperties: Map<string, unknown>): void {
 		super.updated(changedProperties);
 
 		if (changedProperties.has('open')) {
 			if (this.open) {
-				this.dialog.showModal();
-				this.dialog.focus();
+				this.#dialog.showModal();
+				this.#dialog.focus();
 
 				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 			} else {
-				this.dialog.close();
+				this.#dialog.close();
 
 				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}
 		}
 	}
 
-	render() {
+	override render() {
 		return html`
 			<dialog>
 				<h1>${this.title}</h1>

@@ -25,7 +25,7 @@ export async function getEmulatorFiles() {
 			if (!zipObject.dir) {
 				const blob = await zipObject.async('blob');
 				const name = zipObject.name.split('/').pop() ?? '';
-				const [extension] = name.split('.').reverse();
+				const [extension = ''] = name.split('.').reverse();
 
 				const file = new File([blob], name, { type: mimeTypes.get(extension) ?? 'application/octet-stream' });
 

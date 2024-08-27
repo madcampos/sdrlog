@@ -1,5 +1,5 @@
-import type { FileForMaterial, Material } from '../../data/data';
 import { type DBSchema, type IndexKey, type IndexNames, openDB, type StoreNames } from 'idb';
+import type { FileForMaterial, Material } from '../../data/data';
 
 interface DatabaseSchema extends DBSchema {
 	items: {
@@ -11,24 +11,24 @@ interface DatabaseSchema extends DBSchema {
 			category: string,
 			type: string
 		}
-	},
+	};
 	files: {
 		key: string,
 		value: FileForMaterial,
 		indexes: { fileName: string, filePath: string, itemId: string, hash: string }
-	},
+	};
 	covers: {
 		key: string,
 		value: File
-	},
+	};
 	thumbs: {
 		key: string,
 		value: File
-	},
+	};
 	emulator: {
 		key: string,
 		value: File
-	}
+	};
 }
 
 type Collections = StoreNames<DatabaseSchema>;
@@ -86,14 +86,18 @@ export async function getAllIDBEntries<T extends Collections>(collection: T) {
 	const results: [DatabaseSchema[T]['key'], DatabaseSchema[T]['value']][] = [];
 
 	for (let i = 0; i < keys.length; i++) {
-		results.push([keys[i], values[i]]);
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		results.push([keys[i]!, values[i]!]);
 	}
 
 	return results;
 }
 
-// eslint-disable-next-line max-len
-export async function getIDBItemsByIndex<T extends Collections, I extends IndexNames<DatabaseSchema, T>>(collection: T, index: I, value: IndexKey<DatabaseSchema, T, I> | IDBKeyRange) {
+export async function getIDBItemsByIndex<T extends Collections, I extends IndexNames<DatabaseSchema, T>>(
+	collection: T,
+	index: I,
+	value: IDBKeyRange | IndexKey<DatabaseSchema, T, I>
+) {
 	return (await database).getAllFromIndex(collection, index, value);
 }
 

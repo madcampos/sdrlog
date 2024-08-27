@@ -1,30 +1,56 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 import style from './style.css?inline' assert { type: 'css' };
 
-type InputType = 'text' | 'url' | 'email' | 'number' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'tel' | 'search' | 'password';
+type InputType = 'date' | 'datetime-local' | 'email' | 'month' | 'number' | 'password' | 'search' | 'tel' | 'text' | 'time' | 'url' | 'week';
 
 @customElement('sdr-edit-box')
 export class SdrEditBox extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) value: string;
-	@property({ type: String, reflect: true }) placeholder?: string;
-	@property({ type: Boolean, reflect: true }) disabled: boolean;
-	@property({ type: Boolean, reflect: true }) required: boolean;
-	@property({ type: Boolean, reflect: true }) readonly: boolean;
-	@property({ type: String, reflect: true }) type: InputType = 'text';
-	@property({ type: String, reflect: true }) pattern?: string;
-	@property({ type: Number, reflect: true }) minLength?: number;
-	@property({ type: Number, reflect: true }) maxLength?: number;
-	@property({ type: Number, reflect: true }) min?: number;
-	@property({ type: Number, reflect: true }) max?: number;
-	@property({ type: Number, reflect: true }) step?: number;
+	@property({ type: String, reflect: true })
+	accessor value: string;
 
-	@query('input') private declare inputElement: HTMLInputElement;
+	@property({ type: String, reflect: true })
+	accessor placeholder: string | undefined = undefined;
+
+	@property({ type: Boolean, reflect: true })
+	accessor disabled: boolean;
+
+	@property({ type: Boolean, reflect: true })
+	accessor required: boolean;
+
+	@property({ type: Boolean, reflect: true })
+	accessor readonly: boolean;
+
+	@property({ type: String, reflect: true })
+	accessor type: InputType = 'text';
+
+	@property({ type: String, reflect: true })
+	accessor pattern: string | undefined = undefined;
+
+	@property({ type: Number, reflect: true })
+	accessor minLength: number | undefined = undefined;
+
+	@property({ type: Number, reflect: true })
+	accessor maxLength: number | undefined = undefined;
+
+	@property({ type: Number, reflect: true })
+	accessor min: number | undefined = undefined;
+
+	@property({ type: Number, reflect: true })
+	accessor max: number | undefined = undefined;
+
+	@property({ type: Number, reflect: true })
+	accessor step: number | undefined = undefined;
+
+	@query('input')
+	// @ts-expect-error
+	accessor #inputElement: HTMLInputElement;
 
 	#internals: ElementInternals;
 
@@ -99,7 +125,7 @@ export class SdrEditBox extends LitElement {
 	}
 
 	#input() {
-		this.value = this.inputElement.value;
+		this.value = this.#inputElement.value;
 
 		this.#validate();
 
@@ -107,28 +133,44 @@ export class SdrEditBox extends LitElement {
 	}
 
 	#change() {
-		this.value = this.inputElement.value;
+		this.value = this.#inputElement.value;
 
 		this.#validate();
 
 		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 	}
 
-	get form() { return this.#internals.form; }
-	get name() { return this.getAttribute('name'); }
-	get validity() { return this.#internals.validity; }
-	get validationMessage() { return this.#internals.validationMessage; }
-	get willValidate() { return this.#internals.willValidate; }
-
-	checkValidity() { return this.#internals.checkValidity(); }
-	reportValidity() { return this.#internals.reportValidity(); }
-	setCustomValidity(message: string) { this.#internals.setValidity({ customError: message !== '' }, message); }
-
-	resetValue() {
-		this.inputElement.value = '';
+	get form() {
+		return this.#internals.form;
+	}
+	get name() {
+		return this.getAttribute('name');
+	}
+	get validity() {
+		return this.#internals.validity;
+	}
+	get validationMessage() {
+		return this.#internals.validationMessage;
+	}
+	get willValidate() {
+		return this.#internals.willValidate;
 	}
 
-	render() {
+	checkValidity() {
+		return this.#internals.checkValidity();
+	}
+	reportValidity() {
+		return this.#internals.reportValidity();
+	}
+	setCustomValidity(message: string) {
+		this.#internals.setValidity({ customError: message !== '' }, message);
+	}
+
+	resetValue() {
+		this.#inputElement.value = '';
+	}
+
+	override render() {
 		return html`
 			<label for="input">
 				<slot name="label"></slot>
@@ -138,20 +180,20 @@ export class SdrEditBox extends LitElement {
 
 				.value="${this.value}"
 
-				placeholder="${this.placeholder}"
+				placeholder="${ifDefined(this.placeholder)}"
 				?readonly="${this.readonly}"
 				?disabled="${this.disabled}"
 				?required="${this.required}"
 
 				type="${this.type}"
-				pattern="${this.pattern}"
+				pattern="${ifDefined(this.pattern)}"
 
-				minlength="${this.minLength}"
-				maxlength="${this.maxLength}"
+				minlength="${ifDefined(this.minLength)}"
+				maxlength="${ifDefined(this.maxLength)}"
 
-				min="${this.min}"
-				max="${this.max}"
-				step="${this.step}"
+				min="${ifDefined(this.min)}"
+				max="${ifDefined(this.max)}"
+				step="${ifDefined(this.step)}"
 
 				@change="${() => this.#change()}"
 				@input="${() => this.#input()}"

@@ -1,18 +1,16 @@
-:host {
-	display: inline-block;
-}
+:host { display: inline-block; }
 
 #tab {
-	display: inline-block;
-	padding: var(--padding-inline) var(--padding-block);
+	background: var(--bg-color);
 	border: var(--border-width) solid var(--border-color);
 	border-bottom: none;
-	background: var(--bg-color);
-	cursor: pointer;
 	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	cursor: pointer;
+	display: inline-block;
+	padding: var(--padding-inline) var(--padding-block);
 }
 
 :host([aria-selected='true']) #tab {
-	border-color: var(--theme-color);
 	background: var(--accent-color);
+	border-color: var(--theme-color);
 }

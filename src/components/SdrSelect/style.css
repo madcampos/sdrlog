@@ -1,9 +1,9 @@
 :host {
-	display: inline-flex;
 	align-items: stretch;
-	justify-content: flex-start;
-	flex-direction: column;
 	box-sizing: inherit;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	width: 100%;
 }
 
@@ -12,47 +12,38 @@
 :host(:not(:focus-within)) sdr-gamepad-badge { display: none; }
 
 label {
-	font-size: var(--small-text);
-	display: block;
-	width: fit-content;
-	padding: var(--padding-small) var(--padding-inline);
-	margin-inline-start: var(--label-recess);
-
-	border-radius: var(--pill-border-radius);
-
 	background: var(--border-color);
+	border-radius: var(--pill-border-radius);
 	color: var(--text-color);
-
-	z-index: 1;
+	display: block;
+	font-size: var(--small-text);
+	margin-inline-start: var(--label-recess);
+	padding: var(--padding-small) var(--padding-inline);
 	transform: translateY(50%);
 	transition: var(--transition);
-
 	user-select: none;
+	width: fit-content;
+	z-index: 1;
 }
 
 span { position: relative; }
 
 select {
-	width: 100%;
-	padding: var(--padding-block) var(--padding-inline);
-	padding-inline-end: var(--select-arrow-spacing);
-	padding-block-start: var(--small-text);
-
+	accent-color: var(--theme-color);
 	appearance: none;
+	background-color: transparent;
+	background-position: calc(100% - var(--margin-inline)) center;
+	background-repeat: no-repeat;
+	background-size: var(--select-arrow-size);
 	border: solid var(--border-width) var(--border-color);
 	border-radius: var(--border-radius);
-
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-position: calc(100% - var(--margin-inline)) center;
-	background-size: var(--select-arrow-size);
-
-	transition: var(--transition);
-
-	font: inherit;
 	box-sizing: border-box;
-
-	accent-color: var(--theme-color);
+	font: inherit;
+	padding: var(--padding-block) var(--padding-inline);
+	padding-block-start: var(--small-text);
+	padding-inline-end: var(--select-arrow-spacing);
+	transition: var(--transition);
+	width: 100%;
 }
 
 select::selection {
@@ -61,8 +52,8 @@ select::selection {
 }
 
 select:disabled {
-	opacity: 1;
 	color: currentcolor;
+	opacity: 1;
 }
 
 select:not(:disabled) {
@@ -71,7 +62,7 @@ select:not(:disabled) {
 }
 
 select:focus {
-	outline: none;
-	border-color: var(--border-color);
 	border-bottom-color: var(--theme-color);
+	border-color: var(--border-color);
+	outline: none;
 }

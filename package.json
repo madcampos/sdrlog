@@ -32,6 +32,7 @@
 	},
 	"devDependencies": {
 		"@types/emscripten": "^1.39.13",
+		"@types/node": "22.5.0",
 		"@types/wicg-file-system-access": "^2023.10.5",
 		"@typescript-eslint/eslint-plugin": "^8.3.0",
 		"@typescript-eslint/parser": "^8.3.0",

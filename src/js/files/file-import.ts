@@ -37,7 +37,7 @@ export function extractMetadataFromFileName(fileName: string) {
 	};
 }
 
-export async function saveFile(handler: FileSystemFileHandle | FileSystemDirectoryHandle, path?: string) {
+export async function saveFile(handler: FileSystemDirectoryHandle | FileSystemFileHandle, path?: string) {
 	const filePath = path ?? `/${new Date().toISOString()}/${handler.name}`;
 	const { name, id, extension } = extractMetadataFromFileName(handler.name);
 	const fileForMaterial: FileForMaterial = {
@@ -59,7 +59,6 @@ export async function saveFile(handler: FileSystemFileHandle | FileSystemDirecto
 		if (fileForMaterial.itemId) {
 			const material = await getIDBItem('items', fileForMaterial.itemId);
 
-			// eslint-disable-next-line max-depth
 			if (material) {
 				material.status = 'ok';
 
@@ -88,7 +87,7 @@ export async function getFilePermission(file: FileSystemHandle, mode: 'read' | '
 }
 
 async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
-	const entries: { path: string, entry: FileSystemFileHandle | FileSystemDirectoryHandle }[] = [];
+	const entries: { path: string, entry: FileSystemDirectoryHandle | FileSystemFileHandle }[] = [];
 
 	for await (const entry of dirHandle.values()) {
 		// Ignore useless mac os files

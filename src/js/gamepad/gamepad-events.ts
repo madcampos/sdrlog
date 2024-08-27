@@ -1,23 +1,41 @@
-type ButtonNames = 'a' | 'b' | 'x' | 'y' | 'leftBumper' | 'rightBumper' | 'leftTrigger' | 'rightTrigger' | 'select' | 'start' | 'leftStick' | 'rightStick' | 'up' | 'down' | 'left' | 'right' | 'logo' | 'share';
+type ButtonNames =
+	| 'a'
+	| 'b'
+	| 'down'
+	| 'left'
+	| 'leftBumper'
+	| 'leftStick'
+	| 'leftTrigger'
+	| 'logo'
+	| 'right'
+	| 'rightBumper'
+	| 'rightStick'
+	| 'rightTrigger'
+	| 'select'
+	| 'share'
+	| 'start'
+	| 'up'
+	| 'x'
+	| 'y';
 
 interface GamepadButtonEventDetail {
-	button: ButtonNames
+	button: ButtonNames;
 }
 
 interface GamepadStickEventDetail {
-	stick: 'left' | 'right',
-	directionX?: 'left' | 'right',
-	directionY?: 'up' | 'down',
-	deltaX: number,
-	deltaY: number
+	stick: 'left' | 'right';
+	directionX?: 'left' | 'right';
+	directionY?: 'down' | 'up';
+	deltaX: number;
+	deltaY: number;
 }
 
 declare global {
 	interface WindowEventMap {
-		['gamepadbuttondown']: CustomEvent<GamepadButtonEventDetail>,
-		['gamepadbuttonup']: CustomEvent<GamepadButtonEventDetail>,
-		['gamepadbuttonpress']: CustomEvent<GamepadButtonEventDetail>,
-		['gamepadstickmove']: CustomEvent<GamepadStickEventDetail>
+		['gamepadbuttondown']: CustomEvent<GamepadButtonEventDetail>;
+		['gamepadbuttonup']: CustomEvent<GamepadButtonEventDetail>;
+		['gamepadbuttonpress']: CustomEvent<GamepadButtonEventDetail>;
+		['gamepadstickmove']: CustomEvent<GamepadStickEventDetail>;
 	}
 }
 
@@ -69,20 +87,22 @@ export class GamepadHandler extends EventTarget {
 	static #triggerStickEvents(stick: 'left' | 'right', x: number, y: number) {
 		const DEADZONE_TRESHOLD = 0.2;
 
-		window.dispatchEvent(new CustomEvent<GamepadStickEventDetail>('gamepadstickmove', {
-			bubbles: true,
-			composed: true,
-			cancelable: true,
-			detail: {
-				// eslint-disable-next-line no-nested-ternary
-				directionX: x > DEADZONE_TRESHOLD ? 'right' : x < -DEADZONE_TRESHOLD ? 'left' : undefined,
-				// eslint-disable-next-line no-nested-ternary
-				directionY: y > DEADZONE_TRESHOLD ? 'down' : y < -DEADZONE_TRESHOLD ? 'up' : undefined,
-				deltaX: x,
-				deltaY: y,
-				stick
-			}
-		}));
+		window.dispatchEvent(
+			new CustomEvent<GamepadStickEventDetail>('gamepadstickmove', {
+				bubbles: true,
+				composed: true,
+				cancelable: true,
+				detail: {
+					// eslint-disable-next-line no-nested-ternary
+					directionX: x > DEADZONE_TRESHOLD ? 'right' : x < -DEADZONE_TRESHOLD ? 'left' : undefined,
+					// eslint-disable-next-line no-nested-ternary
+					directionY: y > DEADZONE_TRESHOLD ? 'down' : y < -DEADZONE_TRESHOLD ? 'up' : undefined,
+					deltaX: x,
+					deltaY: y,
+					stick
+				}
+			})
+		);
 	}
 
 	static #triggerButtonEvents(buttonName: ButtonNames, isButtonDown: boolean) {
@@ -91,30 +111,36 @@ export class GamepadHandler extends EventTarget {
 		if (isButtonDown) {
 			GamepadHandler.#buttonsPressed[buttonName] = true;
 
-			window.dispatchEvent(new CustomEvent<GamepadButtonEventDetail>('gamepadbuttondown', {
-				bubbles: true,
-				composed: true,
-				cancelable: true,
-				detail: { button: buttonName }
-			}));
+			window.dispatchEvent(
+				new CustomEvent<GamepadButtonEventDetail>('gamepadbuttondown', {
+					bubbles: true,
+					composed: true,
+					cancelable: true,
+					detail: { button: buttonName }
+				})
+			);
 		}
 
 		if (wasButtonDown && !isButtonDown) {
 			GamepadHandler.#buttonsPressed[buttonName] = false;
 
-			window.dispatchEvent(new CustomEvent<GamepadButtonEventDetail>('gamepadbuttonup', {
-				bubbles: true,
-				composed: true,
-				cancelable: true,
-				detail: { button: buttonName }
-			}));
+			window.dispatchEvent(
+				new CustomEvent<GamepadButtonEventDetail>('gamepadbuttonup', {
+					bubbles: true,
+					composed: true,
+					cancelable: true,
+					detail: { button: buttonName }
+				})
+			);
 
-			window.dispatchEvent(new CustomEvent<GamepadButtonEventDetail>('gamepadbuttonpress', {
-				bubbles: true,
-				composed: true,
-				cancelable: true,
-				detail: { button: buttonName }
-			}));
+			window.dispatchEvent(
+				new CustomEvent<GamepadButtonEventDetail>('gamepadbuttonpress', {
+					bubbles: true,
+					composed: true,
+					cancelable: true,
+					detail: { button: buttonName }
+				})
+			);
 		}
 	}
 
@@ -127,13 +153,13 @@ export class GamepadHandler extends EventTarget {
 		if (gamepad && currentTimestamp - GamepadHandler.#timestamp > THROTTLE_TIME) {
 			GamepadHandler.#timestamp = currentTimestamp;
 
-			const [leftX, leftY, rightX, rightY] = gamepad.axes;
+			const [leftX = 0, leftY = 0, rightX = 0, rightY = 0] = gamepad.axes;
 
 			GamepadHandler.#triggerStickEvents('left', leftX, leftY);
 			GamepadHandler.#triggerStickEvents('right', rightX, rightY);
 
 			(Object.keys(GamepadHandler.#buttonsPressed) as ButtonNames[]).forEach((buttonName, i) => {
-				const isButtonDown = gamepad.buttons[i]?.pressed;
+				const isButtonDown = gamepad.buttons[i]?.pressed ?? false;
 
 				GamepadHandler.#triggerButtonEvents(buttonName, isButtonDown);
 			});

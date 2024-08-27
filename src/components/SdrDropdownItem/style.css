@@ -1,7 +1,7 @@
 :host { display: block; }
 
 hr {
-	width: max(3rem, 80%);
 	border: none;
 	border-top: solid var(--border-width) var(--border-color);
+	width: max(3rem, 80%);
 }

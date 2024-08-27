@@ -6,12 +6,12 @@
 	"type": "object",
 	"$defs": {
 		"category": {
-			"enum": [ "rulebook", "sourcebook", "mission", "magazine", "novel", "videogame", "tcg", "boardgame", "misc" ],
+			"enum": ["rulebook", "sourcebook", "mission", "magazine", "novel", "videogame", "tcg", "boardgame", "misc"],
 			"description": "The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books.",
 			"markdownDescription": "The category the material fits in, it (almost) follows the folder organization proposed in the wikipedia article of Shadowrun books. It may be one of the following:\n\n- **Rulebook**: A book containing mostly rules that are compatible with only one edition of the game.\n- **Sourcebook**: A book containing settings, plot hooks and other stuff that is mostly background information, not rules.\n- **Mission**: A book containing information to be used on an adventure or campaign.\n- **Magazine**: A magazine publication with assosrted content.\n- **Novel**: A fiction book writen based on the Shadowrun universe.\n- **Videogame**: Digital game setted in the Shadowrun world.\n- **TCG**: Trade Card Game based on the Shadowrun universe.\n- **Boardgame**: A boardgame or other physical game that is setted in the Shadowrun universe.\n- **Miscellaneous**: Assorted matterials that don't fit in any of the above categories."
 		},
 		"type": {
-			"enum": [ "digital", "print", "scan", "ocr", "physical" ],
+			"enum": ["digital", "print", "scan", "ocr", "physical"],
 			"description": "The type of the material.",
 			"markdownDescription": "The type of the material. It may be one of the following:\n\n- **Digital**: The material is available primarily in digital format.\n- **Print**: The material is available in printed format only.\n- **Scan**: The material is available as a low quality (non OCR) scan of the printed format.\n- **OCR**: The material is a OCR scan of the printed format, usually smaller in size and with better quality.\n- **Physical**: The material is only available in a physical format other than a book (Eg.: TCG, boardgame, etc.)."
 		},
@@ -56,7 +56,20 @@
 			"type": "array",
 			"minItems": 1,
 			"uniqueItems": true,
-			"items": { "enum": [ "Catalyst Game Labs", "Cliffhanger Productions", "FASA Corporation", "Fantasy Productions", "Harebrained Schemes", "Pegasus Spiele", "WizKids Games", "Heyne Verlag", "Other", "Unofficial" ] },
+			"items": {
+				"enum": [
+					"Catalyst Game Labs",
+					"Cliffhanger Productions",
+					"FASA Corporation",
+					"Fantasy Productions",
+					"Harebrained Schemes",
+					"Pegasus Spiele",
+					"WizKids Games",
+					"Heyne Verlag",
+					"Other",
+					"Unofficial"
+				]
+			},
 			"description": "A list of enterprises who published the material."
 		},
 		"gameDate": {
@@ -75,7 +88,7 @@
 			"description": "The date the material was released and it's rereleases. If not present the material is considered unreleased."
 		},
 		"status": {
-			"enum": [ "missing", "outofscope", "canceled", "ok" ],
+			"enum": ["missing", "outofscope", "canceled", "ok"],
 			"description": "The status of the item.",
 			"markdownDescription": "The status of the item, one of the following:\n\n- **Missing**: The item is not present on the archives.\n- **Out of Scope**: The item is not available or is really hard to obtain and don't add anything new.\n- **Canceled**: The item was canceled."
 		},
@@ -105,7 +118,7 @@
 			"items": {
 				"type": "object",
 				"description": "The list of materials.",
-				"required": [ "category", "type", "sku", "name", "description", "edition", "publisher", "originalLanguage", "gameDate", "status" ],
+				"required": ["category", "type", "sku", "name", "description", "edition", "publisher", "originalLanguage", "gameDate", "status"],
 				"properties": {
 					"category": { "$ref": "#/$defs/category" },
 					"type": { "$ref": "#/$defs/type" },

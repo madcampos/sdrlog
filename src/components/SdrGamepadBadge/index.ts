@@ -5,20 +5,25 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-gamepad-badge')
 export class SdrGamepadBadge extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static readonly styles = unsafeCSS(style);
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-	@property({ type: Boolean, reflect: true }) disabled: boolean;
-	@property({ type: String, reflect: true }) button: string;
+	static override readonly styles = unsafeCSS(style);
 
-	@state() private isPressed: boolean;
+	@property({ type: Boolean, reflect: true })
+	accessor disabled: boolean;
+
+	@property({ type: String, reflect: true })
+	accessor button: string;
+
+	@state()
+	accessor #isPressed: boolean;
 
 	constructor() {
 		super();
 
 		this.disabled = true;
 		this.button = '';
-		this.isPressed = false;
+		this.#isPressed = false;
 
 		window.addEventListener('gamepadconnected', () => {
 			this.disabled = false;
@@ -30,13 +35,13 @@ export class SdrGamepadBadge extends LitElement {
 
 		window.addEventListener('gamepadbuttondown', (evt) => {
 			if (evt.detail.button === this.button) {
-				this.isPressed = true;
+				this.#isPressed = true;
 			}
 		});
 
 		window.addEventListener('gamepadbuttonup', (evt) => {
 			if (evt.detail.button === this.button) {
-				this.isPressed = false;
+				this.#isPressed = false;
 			}
 		});
 	}
@@ -49,11 +54,11 @@ export class SdrGamepadBadge extends LitElement {
 		return import.meta.resolve(`/images/gamepad-buttons/${this.button}-pressed.svg`);
 	}
 
-	render() {
+	override render() {
 		return html`
 			<span id="icon" ?hidden="${this.disabled}">
-				<img ?hidden="${this.isPressed}" src="${this.#buttonImage}">
-				<img ?hidden="${!this.isPressed}" src="${this.#buttonPressedImage}">
+				<img ?hidden="${this.#isPressed}" src="${this.#buttonImage}">
+				<img ?hidden="${!this.#isPressed}" src="${this.#buttonPressedImage}">
 			</span>
 		`;
 	}

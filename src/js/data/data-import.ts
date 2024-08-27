@@ -1,12 +1,23 @@
-import type { IsoCode, Material, MaterialCategory, MaterialEdition, MaterialGameDate, MaterialPublisher, MaterialStatus, MaterialType, NewMaterial, SDRLogData } from '../../data/data';
+import type {
+	IsoCode,
+	Material,
+	MaterialCategory,
+	MaterialEdition,
+	MaterialGameDate,
+	MaterialPublisher,
+	MaterialStatus,
+	MaterialType,
+	NewMaterial,
+	SDRLogData
+} from '../../data/data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
 import { getFileHash } from '../files/file-import';
+import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
 
+import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
 import dataUrl from '../../data/data.json?url';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extract';
-import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
 
 export async function fetchData() {
 	try {
@@ -30,11 +41,11 @@ export async function fetchItems() {
 	const mergedData = new Map<string, Material>();
 
 	for (const material of currentData) {
-		mergedData.set(material.sku[0], material);
+		mergedData.set(material.sku[0] ?? '', material);
 	}
 
 	for (const material of onlineData) {
-		mergedData.set(material.sku[0], material);
+		mergedData.set(material.sku[0] ?? '', material);
 	}
 
 	await setIDBItems('items', [...mergedData.entries()]);
@@ -42,6 +53,7 @@ export async function fetchItems() {
 	return [...mergedData.values()];
 }
 
+// eslint-disable-next-line complexity
 export function parseMaterial(material: Partial<Material | Record<string, unknown>>) {
 	function handleArray<T>(value: unknown) {
 		const ensureArray = Array.isArray(value) ? value : [];
@@ -131,7 +143,7 @@ export async function requestDataFileFromUser() {
 
 		const parsedItems = parsedFile.items.map((material) => parseMaterial(material));
 
-		await setIDBItems('items', parsedItems.map((material) => [material.sku[0], material]));
+		await setIDBItems('items', parsedItems.map((material) => [material.sku[0] ?? '', material]));
 	} catch (err) {
 		console.error('Failed to open data file.', err);
 	}

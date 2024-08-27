@@ -8,26 +8,18 @@ label { position: relative; }
 sdr-gamepad-badge { display: none; }
 
 input {
-	width: 1px;
 	height: 1px;
 	position: absolute;
 	transform: scale(0);
+	width: 1px;
 }
 
 input:focus { outline: none; }
 
-input:focus ~ sdr-radio-item {
-	border-color: var(--theme-color);
-}
+input:focus ~ sdr-radio-item { border-color: var(--theme-color); }
 
-input:checked ~ sdr-radio-item {
-	background-color: var(--theme-color);
-}
+input:checked ~ sdr-radio-item { background-color: var(--theme-color); }
 
-input:checked ~ sdr-gamepad-badge {
-	display: block;
-}
+input:checked ~ sdr-gamepad-badge { display: block; }
 
-input:hover ~ sdr-radio-item {
-	background: var(--accent-color);
-}
+input:hover ~ sdr-radio-item { background: var(--accent-color); }

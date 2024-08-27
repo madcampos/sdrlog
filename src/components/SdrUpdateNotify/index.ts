@@ -5,12 +5,15 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-update-notify')
 export class SdrUpdateNotify extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static readonly styles = [unsafeCSS(style)];
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override readonly styles = [unsafeCSS(style)];
 
-	@property({ type: String, reflect: true }) message: string;
+	@property({ type: String, reflect: true })
+	accessor message: string;
 
-	@query('aside') private declare popup: HTMLElement;
+	@query('aside')
+	// @ts-expect-error
+	accessor #popup: HTMLElement;
 
 	constructor() {
 		super();
@@ -23,15 +26,15 @@ export class SdrUpdateNotify extends LitElement {
 	}
 
 	show(message: string) {
-		this.popup.hidden = false;
+		this.#popup.hidden = false;
 		this.message = message;
 	}
 
 	hide() {
-		this.popup.hidden = true;
+		this.#popup.hidden = true;
 	}
 
-	render() {
+	override render() {
 		return html`
 			<aside role="status" aria-live="polite" hidden>
 				<p>${this.message}</p>

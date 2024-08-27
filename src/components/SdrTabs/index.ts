@@ -6,11 +6,12 @@ import tabStyle from './tab-style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-tab')
 export class SdrTab extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(tabStyle);
+	static override readonly styles = unsafeCSS(tabStyle);
 
-	@property({ type: String, reflect: true }) role: string;
+	@property({ type: String, reflect: true })
+	override accessor role: string;
 
 	declare ariaControls: string;
 
@@ -25,17 +26,18 @@ export class SdrTab extends LitElement {
 		this.#internals.role = 'tab';
 	}
 
-	render() {
+	override render() {
 		return html`<div tabindex="0" id="tab"><slot></slot></div>`;
 	}
 }
 
 @customElement('sdr-tab-panel')
 export class SdrTabPanel extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 
-	@property({ type: String, reflect: true }) role: string;
+	@property({ type: String, reflect: true })
+	override accessor role: string;
 
 	declare ariaLabeledBy: string;
 
@@ -50,22 +52,30 @@ export class SdrTabPanel extends LitElement {
 		this.#internals.role = 'tabpanel';
 	}
 
-	render() {
+	override render() {
 		return html`<section id="tab-panel"><slot></slot></section>`;
 	}
 }
 
 @customElement('sdr-tabs')
 export class SdrTabs extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) role: string;
-	@property({ type: Number }) selectedTab: number;
+	@property({ type: String, reflect: true })
+	override accessor role: string;
 
-	@queryAssignedElements({ selector: 'sdr-tab', slot: 'tab' }) private declare tabList: SdrTab[];
-	@queryAssignedElements({ selector: 'sdr-tab-panel', slot: 'tabpanel' }) private declare tabPanels: SdrTabPanel[];
+	@property({ type: Number })
+	accessor selectedTab: number;
+
+	@queryAssignedElements({ selector: 'sdr-tab', slot: 'tab' })
+	// @ts-expect-error
+	accessor #tabList: SdrTab[];
+
+	@queryAssignedElements({ selector: 'sdr-tab-panel', slot: 'tabpanel' })
+	// @ts-expect-error
+	accessor #tabPanels: SdrTabPanel[];
 
 	#internals: ElementInternals;
 
@@ -81,7 +91,7 @@ export class SdrTabs extends LitElement {
 		this.selectedTab = 0;
 
 		document.addEventListener('focusin', () => {
-			const targetTabIndex = this.tabList.findIndex((tab) => tab === document.activeElement);
+			const targetTabIndex = this.#tabList.findIndex((tab) => tab === document.activeElement);
 
 			if (targetTabIndex !== -1) {
 				this.#isTabFocused = true;
@@ -89,9 +99,7 @@ export class SdrTabs extends LitElement {
 		}, { capture: true, passive: true });
 
 		document.addEventListener('focusout', () => {
-			if (this.#isTabFocused) {
-				this.#isTabFocused = false;
-			}
+			this.#isTabFocused &&= false;
 		}, { capture: true, passive: true });
 
 		document.addEventListener('keydown', (evt) => {
@@ -102,36 +110,36 @@ export class SdrTabs extends LitElement {
 					if (this.selectedTab > 0) {
 						this.selectedTab -= 1;
 					} else {
-						this.selectedTab = this.tabList.length - 1;
+						this.selectedTab = this.#tabList.length - 1;
 					}
 
-					this.tabList[this.selectedTab].focus();
-					this.tabList[this.selectedTab].click();
+					this.#tabList[this.selectedTab]?.focus();
+					this.#tabList[this.selectedTab]?.click();
 				} else if (evt.key === 'ArrowRight') {
 					evt.preventDefault();
 
-					if (this.selectedTab < this.tabList.length - 1) {
+					if (this.selectedTab < this.#tabList.length - 1) {
 						this.selectedTab += 1;
 					} else {
 						this.selectedTab = 0;
 					}
 
-					this.tabList[this.selectedTab].focus();
-					this.tabList[this.selectedTab].click();
+					this.#tabList[this.selectedTab]?.focus();
+					this.#tabList[this.selectedTab]?.click();
 				}
 			}
 		});
 	}
 
 	#updateTabs() {
-		this.tabPanels.forEach((tabPanel, index) => {
+		this.#tabPanels.forEach((tabPanel, index) => {
 			tabPanel.role = 'tabpanel';
 			tabPanel.id = `${this.id}-section-${index}`;
 			tabPanel.ariaLabeledBy = `${this.id}-tab-${index}`;
 			tabPanel.hidden = index !== this.selectedTab;
 		});
 
-		this.tabList.forEach((tab, index) => {
+		this.#tabList.forEach((tab, index) => {
 			tab.role = 'tab';
 			tab.id = `${this.id}-tab-${index}`;
 			tab.ariaSelected = index === this.selectedTab ? 'true' : 'false';
@@ -147,16 +155,16 @@ export class SdrTabs extends LitElement {
 
 	#tabClick(evt: Event) {
 		const target = evt.target as SdrTab;
-		const tabPanel = this.tabPanels.find((panel) => panel.id === target.ariaControls);
+		const tabPanel = this.#tabPanels.find((panel) => panel.id === target.ariaControls);
 
 		if (tabPanel) {
-			this.selectedTab = this.tabPanels.indexOf(tabPanel);
+			this.selectedTab = this.#tabPanels.indexOf(tabPanel);
 
-			this.tabPanels.forEach((panel, index) => {
+			this.#tabPanels.forEach((panel, index) => {
 				panel.hidden = index !== this.selectedTab;
 			});
 
-			this.tabList.forEach((tab, index) => {
+			this.#tabList.forEach((tab, index) => {
 				tab.ariaSelected = index === this.selectedTab ? 'true' : 'false';
 
 				if (index !== this.selectedTab) {
@@ -168,13 +176,13 @@ export class SdrTabs extends LitElement {
 		}
 	}
 
-	firstUpdated(changedProperties: Map<string, unknown>) {
+	override firstUpdated(changedProperties: Map<string, unknown>) {
 		super.firstUpdated(changedProperties);
 
 		this.#updateTabs();
 	}
 
-	render() {
+	override render() {
 		return html`
 			<div id="tabs">
 				<slot name="tab" @slotchange="${() => this.#updateTabs()}" @click="${(evt: Event) => this.#tabClick(evt)}"></slot>

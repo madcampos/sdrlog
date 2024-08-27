@@ -7,18 +7,20 @@ import style from './style.css?inline' assert { type: 'css' };
 
 declare global {
 	interface GlobalEventHandlersEventMap {
-		itemadded: CustomEvent
+		itemadded: CustomEvent;
 	}
 }
 
 @customElement('sdr-edit-list')
 export class SdrEditList extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static readonly styles = unsafeCSS(style);
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override readonly styles = unsafeCSS(style);
 
 	#isDisabled = false;
 
-	get disabled() { return this.#isDisabled; }
+	get disabled() {
+		return this.#isDisabled;
+	}
 
 	@property({ type: Boolean, reflect: true })
 	set disabled(value: boolean) {
@@ -26,16 +28,19 @@ export class SdrEditList extends LitElement {
 
 		this.#isDisabled = value;
 
-		this.items.forEach((item) => {
+		this.#items.forEach((item) => {
 			item.disabled = value;
 		});
 
 		this.requestUpdate('disabled', oldValue);
 	}
 
-	@property({ type: Boolean, reflect: true }) open: boolean;
+	@property({ type: Boolean, reflect: true })
+	accessor open: boolean;
 
-	@queryAssignedElements({ selector: 'sdr-edit-list-item' }) private declare items: SdrEditListItem[];
+	@queryAssignedElements({ selector: 'sdr-edit-list-item' })
+	// @ts-expect-error
+	accessor #items: SdrEditListItem[];
 
 	constructor() {
 		super();
@@ -44,22 +49,22 @@ export class SdrEditList extends LitElement {
 	}
 
 	#updateSlots() {
-		this.items.forEach((item) => {
+		this.#items.forEach((item) => {
 			item.disabled = this.disabled;
 		});
 	}
 
 	resetValue() {
-		this.items.forEach((item) => {
+		this.#items.forEach((item) => {
 			item.remove();
 		});
 	}
 
-	#addItem(){
+	#addItem() {
 		this.dispatchEvent(new CustomEvent('itemadded', { bubbles: true, composed: true, cancelable: true }));
 	}
 
-	render() {
+	override render() {
 		return html`
 			<details
 				?open="${this.open}"

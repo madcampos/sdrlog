@@ -5,14 +5,22 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dialog')
 export class SdrDialog extends LitElement {
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) open: boolean;
+	@property({ type: Boolean, reflect: true })
+	accessor open: boolean;
 
-	@query('dialog') private declare dialog: HTMLDialogElement;
+	@query('dialog')
+	// @ts-expect-error
+	accessor #dialog: HTMLDialogElement;
 
-	@queryAssignedElements({ slot: 'trigger' }) private declare triggerElements: (HTMLElement | undefined)[];
-	@queryAssignedElements({ slot: 'footer' }) private declare footerElements: HTMLElement[];
+	@queryAssignedElements({ slot: 'trigger' })
+	// @ts-expect-error
+	accessor #triggerElements: HTMLElement[];
+
+	@queryAssignedElements({ slot: 'footer' })
+	// @ts-expect-error
+	accessor #footerElements: HTMLElement[];
 
 	constructor() {
 		super();
@@ -48,16 +56,16 @@ export class SdrDialog extends LitElement {
 	#clickDialog(evt: MouseEvent) {
 		const target = evt.target as HTMLDialogElement;
 
-		if (target === this.dialog && this.open) {
+		if (target === this.#dialog && this.open) {
 			this.close();
 		}
 	}
 
 	#updateFooter() {
-		if (this.footerElements.length > 0) {
-			this.dialog.querySelector('footer')?.removeAttribute('hidden');
+		if (this.#footerElements.length > 0) {
+			this.#dialog.querySelector('footer')?.removeAttribute('hidden');
 		} else {
-			this.dialog.querySelector('footer')?.setAttribute('hidden', '');
+			this.#dialog.querySelector('footer')?.setAttribute('hidden', '');
 		}
 	}
 
@@ -77,10 +85,10 @@ export class SdrDialog extends LitElement {
 		}
 	}
 
-	connectedCallback() {
+	override connectedCallback() {
 		super.connectedCallback();
 
-		const [triggerElement] = this.triggerElements;
+		const [triggerElement] = this.#triggerElements;
 
 		if (triggerElement) {
 			triggerElement.addEventListener('click', (evt) => {
@@ -92,24 +100,24 @@ export class SdrDialog extends LitElement {
 		}
 	}
 
-	updated(changedProperties: Map<string, unknown>): void {
+	override updated(changedProperties: Map<string, unknown>): void {
 		super.updated(changedProperties);
 
 		if (changedProperties.has('open')) {
 			if (this.open) {
-				this.dialog.showModal();
-				this.dialog.focus();
+				this.#dialog.showModal();
+				this.#dialog.focus();
 
 				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 			} else {
-				this.dialog.close();
+				this.#dialog.close();
 
 				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}
 		}
 	}
 
-	render() {
+	override render() {
 		return html`
 			<slot name="trigger"></slot>
 			<dialog

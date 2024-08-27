@@ -3,196 +3,169 @@ sdr-view-emulator #emulator-wrapper {
 	--gap-size: 1rem;
 	--controller-size: calc(var(--gamepad-button-size) * 2 + var(--gap-size));
 	--padding-size: 1rem;
-
+	align-items: stretch;
 	display: grid;
+	grid-template-areas: 'controller-left game controller-right';
 	grid-template-columns: var(--controller-size) 1fr var(--controller-size);
 	grid-template-rows: 1fr;
-	grid-template-areas: 'controller-left game controller-right';
-	align-items: stretch;
-
-	width: 100%;
 	height: 100%;
-
-	position: relative;
-
 	overflow: hidden;
+	position: relative;
+	width: 100%;
 }
 
 sdr-view-emulator canvas {
+	aspect-ratio: 4 / 3;
+	max-height: calc(100% - var(--padding-size));
+	max-width: calc(100% - var(--padding-size));
+	object-fit: contain;
 	position: absolute;
 	z-index: -1;
-	max-width: calc(100% - var(--padding-size));
-	max-height: calc(100% - var(--padding-size));
-	aspect-ratio: 4 / 3;
-	object-fit: contain;
 }
 
 sdr-view-emulator #game-wrapper {
-	display: grid;
-	margin: auto;
 	aspect-ratio: 4 / 3;
-	width: calc(100% - (var(--padding-size) * 2));
-	height: auto;
-	max-height: calc(100vmin - (var(--padding-size) * 2));
-	max-width: calc(100vmax - (var(--controller-size) * 2) - (var(--padding-size) * 4));
-	place-items: center;
-	place-content: stretch;
+	display: grid;
 	grid-area: game;
+	height: auto;
+	margin: auto;
+	max-height: calc(100vmin - var(--padding-size) * 2);
+	max-width: calc(100vmax - var(--controller-size) * 2 - var(--padding-size) * 4);
+	overflow: hidden;
+	place-content: stretch;
+	place-items: center;
 	place-self: center center;
 	position: relative;
-	overflow: hidden;
+	width: calc(100% - var(--padding-size) * 2);
 }
 
 sdr-view-emulator #game-wrapper > * {
-	width: 100%;
-	height: 100%;
 	grid-area: 1 / 1 / -1 / -1;
+	height: 100%;
 	position: absolute;
+	width: 100%;
 }
 
 sdr-view-emulator #game-overlay {
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 0, 0, 0.5);
 	display: none;
 	place-items: center;
-
-	background-color: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(5px);
 }
 
 sdr-view-emulator[paused] #game-overlay { display: grid; }
 
 sdr-view-emulator .controller {
-	display: none;
-	justify-content: end;
-	align-self: end;
 	align-items: center;
-	grid-gap: var(--gap-size);
+	align-self: end;
 	box-sizing: border-box;
-	width: 100%;
+	display: none;
+	grid-gap: var(--gap-size);
+	justify-content: end;
 	min-height: calc(var(--gamepad-button-size) * 4 + var(--gap-size) * 2);
+	width: 100%;
 }
 
 sdr-view-emulator .controller button {
 	background: var(--button-bg, transparent);
 	border: solid var(--border-width) var(--button-border, transparent);
 	border-radius: var(--pill-border-radius);
-	width: var(--gamepad-button-size);
-	height: var(--gamepad-button-size);
-	padding: 0;
-
-	transition: var(--transition);
-
 	font: inherit;
 	font-size: 2rem;
-
-	user-select: none;
-
+	height: var(--gamepad-button-size);
+	padding: 0;
 	text-align: center;
+	transition: var(--transition);
+	user-select: none;
+	width: var(--gamepad-button-size);
 }
 
-sdr-view-emulator .controller button:focus {
-	outline: none;
-}
+sdr-view-emulator .controller button:focus { outline: none; }
 
 sdr-view-emulator .controller button:active {
-	border-color: var(--button-bg, transparent);
 	background: var(--button-border, transparent);
+	border-color: var(--button-bg, transparent);
 }
 
 sdr-view-emulator #left-controller {
 	grid-area: controller-left;
-	justify-self: start;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 2fr;
 	grid-template-areas:
 		'select'
 		'start'
 		'dpad';
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 2fr;
+	justify-self: start;
 }
 
 sdr-view-emulator #right-controller {
 	grid-area: controller-right;
-	justify-self: end;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(3, 1fr);
 	grid-template-areas:
 		'l r'
 		'x y'
 		'a b';
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	justify-self: end;
 }
 
 sdr-view-emulator #button-select {
 	--button-border: silver;
 	--button-bg: dimgray;
-
-	width: auto;
 	grid-area: select;
+	width: auto;
 }
 
 sdr-view-emulator #button-start {
 	--button-border: silver;
 	--button-bg: dimgray;
-
-	width: auto;
 	grid-area: start;
+	width: auto;
 }
 
 sdr-view-emulator #bumper-left {
 	--button-border: silver;
 	--button-bg: dimgray;
-
 	grid-area: l;
 }
 
 sdr-view-emulator #bumper-right {
 	--button-border: silver;
 	--button-bg: dimgray;
-
 	grid-area: r;
 }
 
 sdr-view-emulator #button-a {
 	--button-border: limegreen;
 	--button-bg: green;
-
 	grid-area: a;
 }
 
 sdr-view-emulator #button-b {
 	--button-border: red;
 	--button-bg: darkred;
-
 	grid-area: b;
 }
 
 sdr-view-emulator #button-x {
 	--button-border: blue;
 	--button-bg: darkblue;
-
 	grid-area: x;
 }
 
 sdr-view-emulator #button-y {
 	--button-border: blueviolet;
 	--button-bg: purple;
-
 	grid-area: y;
 }
 
 sdr-view-emulator #dpad {
 	grid-area: dpad;
+	height: 100%;
 	position: relative;
 	width: 100%;
-	height: 100%;
 }
 
-@media (orientation: portrait) {
-	:host {
-		transform: rotate(90deg);
-	}
-}
+@media (orientation: portrait) { :host { transform: rotate(90deg); } }
 
-@media (pointer: coarse) {
-	.controller {
-		display: grid;
-	}
-}
+@media (pointer: coarse) { .controller { display: grid; } }

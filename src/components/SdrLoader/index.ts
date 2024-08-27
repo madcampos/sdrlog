@@ -5,9 +5,10 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-loader')
 export class SdrLoader extends LitElement {
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) loaded: boolean;
+	@property({ type: Boolean, reflect: true })
+	accessor loaded: boolean;
 
 	constructor() {
 		super();
@@ -15,7 +16,7 @@ export class SdrLoader extends LitElement {
 		this.loaded = false;
 	}
 
-	render() {
+	override render() {
 		return html`
 			<div id="loader">Loading...</div>
 			<div id="content"><slot></slot></div>

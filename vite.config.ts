@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 // eslint-env node
-import { readFileSync } from 'fs';
+import { readFileSync } from 'node:fs';
 
 import { defineConfig, type UserConfig } from 'vite';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';

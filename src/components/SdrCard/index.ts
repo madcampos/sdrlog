@@ -3,38 +3,46 @@ import type { Material } from '../../data/data';
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-import { Router } from '../../router/router';
 import { FALLBACK_COVER, getThumbUrl, LOADING_SIMPLE_COVER } from '../../js/covers/cover-fetch';
 import { getIDBItem } from '../../js/data/idb-persistence';
+import { Router } from '../../router/router';
 
-import style from './style.css?inline' assert { type: 'css' };
 import { GamepadHandler } from '../../js/gamepad/gamepad-events';
+import style from './style.css?inline' assert { type: 'css' };
 
 interface CreateCardOptions {
-	name: string,
-	id: string,
-	category: Material['category'],
-	sku: string[],
-	type: Material['type'],
-	edition: Material['edition'],
-	status?: Material['status']
+	name: string;
+	id: string;
+	category: Material['category'];
+	sku: string[];
+	type: Material['type'];
+	edition: Material['edition'];
+	status?: Material['status'];
 }
 
 @customElement('sdr-card')
 export class SdrCard extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) id: string;
-	@property({ type: String, reflect: true }) title: string;
-	@property({ type: String, reflect: true }) category: Material['category'];
-	@property({ type: Array, reflect: true }) sku: string[];
-	@property({ type: String, reflect: true }) type: Material['type'];
-	@property({ type: Number, reflect: true }) edition: Material['edition'];
-	@property({ type: String, reflect: true }) status: Material['status'];
+	@property({ type: String, reflect: true })
+	override accessor id: string;
+	@property({ type: String, reflect: true })
+	override accessor title: string;
+	@property({ type: String, reflect: true })
+	accessor category: Material['category'];
+	@property({ type: Array, reflect: true })
+	accessor sku: string[];
+	@property({ type: String, reflect: true })
+	accessor type: Material['type'];
+	@property({ type: Number, reflect: true })
+	accessor edition: Material['edition'];
+	@property({ type: String, reflect: true })
+	accessor status: Material['status'];
 
-	@property({ type: String }) thumbUrl: string;
+	@property({ type: String })
+	accessor thumbUrl: string;
 
 	#internals: ElementInternals;
 
@@ -194,7 +202,7 @@ export class SdrCard extends LitElement {
 		}
 	}
 
-	render() {
+	override render() {
 		return html`
 			<figure
 				tabindex="0"
@@ -218,7 +226,7 @@ export class SdrCard extends LitElement {
 		`;
 	}
 
-	connectedCallback() {
+	override connectedCallback() {
 		super.connectedCallback();
 
 		if (this.id !== '') {

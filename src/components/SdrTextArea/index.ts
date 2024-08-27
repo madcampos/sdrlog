@@ -1,24 +1,40 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 import { marked } from 'marked';
 
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-textarea')
 export class SdrTextArea extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) value: string;
-	@property({ type: String, reflect: true }) placeholder?: string;
-	@property({ type: Boolean, reflect: true }) disabled: boolean;
-	@property({ type: Boolean, reflect: true }) required: boolean;
-	@property({ type: Boolean, reflect: true }) readonly: boolean;
-	@property({ type: Number, reflect: true }) minLength?: number;
-	@property({ type: Number, reflect: true }) maxLength?: number;
+	@property({ type: String, reflect: true })
+	accessor value: string;
 
-	@query('article') private declare renderedTextArea: HTMLElement;
+	@property({ type: String, reflect: true })
+	accessor placeholder: string | undefined = undefined;
+
+	@property({ type: Boolean, reflect: true })
+	accessor disabled: boolean;
+
+	@property({ type: Boolean, reflect: true })
+	accessor required: boolean;
+
+	@property({ type: Boolean, reflect: true })
+	accessor readonly: boolean;
+
+	@property({ type: Number, reflect: true })
+	accessor minLength: number | undefined = undefined;
+
+	@property({ type: Number, reflect: true })
+	accessor maxLength: number | undefined = undefined;
+
+	@query('article')
+	// @ts-expect-error
+	accessor #renderedTextArea: HTMLElement;
 
 	#internals: ElementInternals;
 
@@ -70,36 +86,52 @@ export class SdrTextArea extends LitElement {
 		const target = evt.target as HTMLTextAreaElement;
 
 		this.value = target.value;
-		this.renderedTextArea.innerHTML = await marked(this.value);
+		this.#renderedTextArea.innerHTML = await marked(this.value);
 
 		this.#validate();
 
 		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 	}
 
-	get form() { return this.#internals.form; }
-	get name() { return this.getAttribute('name'); }
-	get validity() { return this.#internals.validity; }
-	get validationMessage() { return this.#internals.validationMessage; }
-	get willValidate() { return this.#internals.willValidate; }
+	get form() {
+		return this.#internals.form;
+	}
+	get name() {
+		return this.getAttribute('name');
+	}
+	get validity() {
+		return this.#internals.validity;
+	}
+	get validationMessage() {
+		return this.#internals.validationMessage;
+	}
+	get willValidate() {
+		return this.#internals.willValidate;
+	}
 
-	checkValidity() { return this.#internals.checkValidity(); }
-	reportValidity() { return this.#internals.reportValidity(); }
-	setCustomValidity(message: string) { this.#internals.setValidity({ customError: message !== '' }, message); }
+	checkValidity() {
+		return this.#internals.checkValidity();
+	}
+	reportValidity() {
+		return this.#internals.reportValidity();
+	}
+	setCustomValidity(message: string) {
+		this.#internals.setValidity({ customError: message !== '' }, message);
+	}
 
 	resetValue() {
 		this.value = '';
 	}
 
-	async updated(changedProperties: Map<string, unknown>) {
+	override async updated(changedProperties: Map<string, unknown>) {
 		super.updated(changedProperties);
 
 		if (changedProperties.has('value')) {
-			this.renderedTextArea.innerHTML = await marked(this.value);
+			this.#renderedTextArea.innerHTML = await marked(this.value);
 		}
 	}
 
-	render() {
+	override render() {
 		return html`
 		<label for="textarea">
 			<slot name="label"></slot>
@@ -112,13 +144,13 @@ export class SdrTextArea extends LitElement {
 
 			.value="${this.value}"
 
-			placeholder="${this.placeholder}"
+			placeholder="${ifDefined(this.placeholder)}"
 			?disabled="${this.disabled}"
 			?required="${this.required}"
 			?readonly="${this.readonly}"
 
-			minlength="${this.minLength}"
-			maxlength="${this.maxLength}"
+			minlength="${ifDefined(this.minLength)}"
+			maxlength="${ifDefined(this.maxLength)}"
 
 			@change="${async (evt: Event) => this.#change(evt)}"
 			@input="${(evt: Event) => this.#input(evt)}"

@@ -3,19 +3,24 @@ import type { SdrButton } from '../SdrButton';
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 
-import style from './style.css?inline' assert { type: 'css' };
 import { GamepadHandler } from '../../js/gamepad/gamepad-events';
+import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dropdown-item')
 export class SdrDropdownItem extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) icon: string;
-	@property({ type: Boolean, reflect: true }) separator: boolean;
+	@property({ type: String, reflect: true })
+	accessor icon: string;
 
-	@query('sdr-button') private declare button: SdrButton;
+	@property({ type: Boolean, reflect: true })
+	accessor separator: boolean;
+
+	@query('sdr-button')
+	// @ts-expect-error
+	accessor #button: SdrButton;
 
 	constructor() {
 		super();
@@ -27,7 +32,7 @@ export class SdrDropdownItem extends LitElement {
 			if (document.activeElement === this && evt.detail.button === 'a') {
 				evt.stopPropagation();
 
-				this.button.click();
+				this.#button.click();
 
 				window.requestAnimationFrame(() => {
 					document.querySelector('sdr-card')?.focus();
@@ -37,7 +42,7 @@ export class SdrDropdownItem extends LitElement {
 		});
 	}
 
-	render() {
+	override render() {
 		if (this.separator) {
 			return html`<hr />`;
 		}

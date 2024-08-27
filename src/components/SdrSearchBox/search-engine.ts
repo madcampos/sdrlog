@@ -1,6 +1,6 @@
 import type { SdrCard } from '../SdrCard';
 
-type FilterTypes = 'name' | 'category' | 'type' | 'status' | 'sku' | 'edition';
+type FilterTypes = 'category' | 'edition' | 'name' | 'sku' | 'status' | 'type';
 
 let filterElement: HTMLStyleElement | undefined;
 
@@ -127,7 +127,7 @@ export class SearchEngine {
 
 	static updateSuggestions(search: string, suggestionsList: HTMLDataListElement) {
 		const MIN_STRING_LENGTH = 3;
-		const { tag, value } = SearchEngine.#getFilterFromTagsString(search);
+		const { tag, value = '' } = SearchEngine.#getFilterFromTagsString(search);
 
 		suggestionsList.innerHTML = '';
 
@@ -148,7 +148,7 @@ export class SearchEngine {
 	}
 
 	static updateSearchResults(searchString: string) {
-		const { tag, value } = SearchEngine.#getFilterFromTagsString(searchString);
+		const { tag, value = '' } = SearchEngine.#getFilterFromTagsString(searchString);
 
 		SearchEngine.#updateCSSFilter(tag, value);
 		SearchEngine.#updateUrlSearchParams(tag, value);

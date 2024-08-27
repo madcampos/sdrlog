@@ -5,8 +5,8 @@ import { Router } from './router';
 
 @customElement('router-link')
 export class RouterLink extends LitElement {
-	// eslint-disable-next-line id-length
-	@property({ type: String, reflect: true, attribute: 'router-link' }) to = '/';
+	@property({ type: String, reflect: true, attribute: 'router-link' })
+	accessor to = '/';
 
 	#click(evt: MouseEvent) {
 		evt.preventDefault();
@@ -22,7 +22,7 @@ export class RouterLink extends LitElement {
 		}
 	}
 
-	render() {
+	override render() {
 		return html`
 			<a href="${this.to}" @click=${(evt: MouseEvent) => this.#click(evt)}>
 				<slot></slot>

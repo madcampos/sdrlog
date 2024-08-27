@@ -1,33 +1,27 @@
 :host {
-	display: flex;
 	align-items: center;
-	justify-content: space-between;
-
-	width: fit-content;
-	max-height: var(--list-item-size);
-
-	border-radius: var(--border-radius);
-	padding: var(--padding-block) var(--padding-inline);
-	margin: var(--margin-block) var(--margin-inline);
-
 	background: var(--bg-color);
 	border: solid var(--border-width) var(--border-color);
-
+	border-radius: var(--border-radius);
 	box-sizing: inherit;
+	display: flex;
+	justify-content: space-between;
+	margin: var(--margin-block) var(--margin-inline);
+	max-height: var(--list-item-size);
+	padding: var(--padding-block) var(--padding-inline);
+	width: fit-content;
 }
 
 :host([stretch]) { width: 100%; }
 
 :host([disabled]) {
-	border-color: var(--theme-color);
 	background: var(--border-color);
+	border-color: var(--theme-color);
 }
 
 :host(:not([disabled])) #remove-button { display: block; }
 :host([disabled]) #remove-button { display: none; }
 
-:host:hover {
-	background: var(--accent-color);
-}
+:host:hover { background: var(--accent-color); }
 
 ::slotted(abbr) { text-decoration: none; }

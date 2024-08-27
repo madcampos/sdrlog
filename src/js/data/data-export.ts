@@ -44,10 +44,14 @@ export async function exportDataFile() {
 			const file = await fileHandler.createWritable();
 
 			await file.truncate(0);
-			await file.write(JSON.stringify({
-				$schema: './data.schema.json',
-				items
-			}, null, '\t'));
+			await file.write(JSON.stringify(
+				{
+					$schema: './data.schema.json',
+					items
+				},
+				null,
+				'\t'
+			));
 			await file.close();
 		}
 	} catch (err) {

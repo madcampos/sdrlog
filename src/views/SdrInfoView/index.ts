@@ -3,49 +3,50 @@ import type { RouterView } from '../../router/router';
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
-import { Router } from '../../router/router';
 import { registerShortcut } from '../../js/util/keyboard';
+import { Router } from '../../router/router';
 
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-view-app-info')
 export class SdrViewAppInfo extends LitElement implements RouterView {
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@state() private open: boolean;
+	@state()
+	accessor #open: boolean;
 
 	constructor() {
 		super();
 
-		this.open = false;
+		this.#open = false;
 
 		registerShortcut('i', () => {
-			this.open = !this.open;
+			this.#open = !this.#open;
 		});
 
 		// TODO: add gamepad navigation
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
 
 	navigate() {
-		this.open = true;
+		this.#open = true;
 
 		return 'Information';
 	}
 
-	createRenderRoot() {
+	override createRenderRoot() {
 		return this;
 	}
 
-	render() {
+	override render() {
 		return html`
 			<style>${SdrViewAppInfo.styles}</style>
-			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
+			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
 				<span slot="title">Information</span>
 
 				<details open>

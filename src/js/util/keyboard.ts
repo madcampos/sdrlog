@@ -3,7 +3,8 @@ type ShortcutEventHandler = (evt?: KeyboardEvent) => void;
 const shortcuts = new Map<string, ShortcutEventHandler>();
 
 function isMacOs() {
-	return navigator.userAgent.includes('Mac OS X') || navigator.platform.includes('Mac') || navigator.platform.includes('iPad') || navigator.platform.includes('iPhone') || navigator.platform.includes('darwin');
+	return navigator.userAgent.includes('Mac OS X') || navigator.platform.includes('Mac') || navigator.platform.includes('iPad') || navigator.platform.includes('iPhone') ||
+		navigator.platform.includes('darwin');
 }
 
 export function registerShortcut(key: string, callback: ShortcutEventHandler) {

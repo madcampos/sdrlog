@@ -1,39 +1,51 @@
 import type { RouteLocation, RouterView } from '../../router/router';
 
-import type Section from 'epubjs/types/section';
 import type { Book, Location as BookLocation, NavItem, Rendition } from 'epubjs';
+import type Section from 'epubjs/types/section';
 
 import { html, LitElement } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 
 import darkTheme from './dark-theme.css?url';
 
-import { Router } from '../../router/router';
 import { loadFile } from '../../js/files/file-open';
+import { Router } from '../../router/router';
 
 @customElement('sdr-view-epub-reader')
 export class SdrViewEpubReader extends LitElement implements RouterView {
 	#rendition: Rendition | undefined;
 
-	@property({ type: Boolean, attribute: 'loaded' }) loaded: boolean;
+	@property({ type: Boolean, attribute: 'loaded' })
+	accessor loaded: boolean;
 
-	@state() open: boolean;
-	@state() private toc: NavItem[];
-	@state() private selectedPage: string;
-	@state() private nextPageVisibility: 'visible' | 'hidden';
-	@state() private previousPageVisibility: 'visible' | 'hidden';
+	@state()
+	accessor open: boolean;
 
-	@query('#book') private declare renderArea: HTMLElement;
+	@state()
+	accessor #toc: NavItem[];
+
+	@state()
+	accessor #selectedPage: string;
+
+	@state()
+	accessor #nextPageVisibility: 'hidden' | 'visible';
+
+	@state()
+	accessor #previousPageVisibility: 'hidden' | 'visible';
+
+	@query('#book')
+	// @ts-expect-error
+	accessor #renderArea: HTMLElement;
 
 	constructor() {
 		super();
 
 		this.open = false;
 		this.loaded = false;
-		this.toc = [];
-		this.selectedPage = '';
-		this.nextPageVisibility = 'hidden';
-		this.previousPageVisibility = 'hidden';
+		this.#toc = [];
+		this.#selectedPage = '';
+		this.#nextPageVisibility = 'hidden';
+		this.#previousPageVisibility = 'hidden';
 
 		this.#resetBook();
 
@@ -78,31 +90,31 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 		const book = ePub(await file.arrayBuffer()) as Book;
 		const { toc } = await book.loaded.navigation;
 
-		this.#rendition = book.renderTo(this.renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
+		this.#rendition = book.renderTo(this.#renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
 
 		this.#rendition.themes.register('dark', darkTheme);
 		this.#rendition.themes.select('dark');
 
-		this.toc = toc;
+		this.#toc = toc;
 
 		this.#rendition.on('keyup', (evt: KeyboardEvent) => this.#keyboardNavigation(evt));
 		document.addEventListener('keyup', (evt) => this.#keyboardNavigation(evt));
 
 		this.#rendition.on('rendered', (section: Section) => {
-			this.selectedPage = section.href;
+			this.#selectedPage = section.href;
 		});
 
 		this.#rendition.on('relocated', (bookLocation: BookLocation) => {
 			if (bookLocation.atEnd) {
-				this.nextPageVisibility = 'hidden';
+				this.#nextPageVisibility = 'hidden';
 			} else {
-				this.nextPageVisibility = 'visible';
+				this.#nextPageVisibility = 'visible';
 			}
 
 			if (bookLocation.atStart) {
-				this.previousPageVisibility = 'hidden';
+				this.#previousPageVisibility = 'hidden';
 			} else {
-				this.previousPageVisibility = 'visible';
+				this.#previousPageVisibility = 'visible';
 			}
 		});
 
@@ -114,10 +126,10 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 	#resetBook() {
 		this.loaded = false;
 
-		this.toc = [];
-		this.selectedPage = '';
-		this.nextPageVisibility = 'hidden';
-		this.previousPageVisibility = 'hidden';
+		this.#toc = [];
+		this.#selectedPage = '';
+		this.#nextPageVisibility = 'hidden';
+		this.#previousPageVisibility = 'hidden';
 
 		this.#rendition?.destroy();
 		this.#rendition = undefined;
@@ -133,7 +145,7 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 
 	async navigate(destination: RouteLocation<'/epub/:id'>) {
 		this.#resetBook();
-		this.renderArea.innerHTML = '';
+		this.#renderArea.innerHTML = '';
 
 		if (!destination.params.id) {
 			return;
@@ -145,44 +157,46 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 		return 'Epub Reader';
 	}
 
-	createRenderRoot() {
+	override createRenderRoot() {
 		return this;
 	}
 
-	render() {
+	override render() {
 		return html`
 			<sdr-dialog ?open=${this.open} @close=${() => this.#close()}>
 				<sdr-button
 					icon-button
 					slot="title"
 					class="title-menu"
-					style="visibility: ${this.previousPageVisibility}"
+					style="visibility: ${this.#previousPageVisibility}"
 					@click="${async () => this.showPreviousPage()}"
 				>⏮️</sdr-button>
 				<sdr-select
 					id="toc"
 					slot="title"
 					class="title-menu"
-					.value="${this.selectedPage}"
+					.value="${this.#selectedPage}"
 					@change="${async (evt: InputEvent) => this.#rendition?.display((evt.target as HTMLSelectElement).value)}"
 				>
-					${this.toc.map((chapter) => {
-						if (chapter.subitems) {
-							return html`
+					${
+			this.#toc.map((chapter) => {
+				if (chapter.subitems) {
+					return html`
 								<optgroup label="${chapter.label}">
 									${chapter.subitems.map((subChapter) => html`<option value="${subChapter.href}">${subChapter.label}</option>`)}
 								</optgroup>
 							`;
-						}
+				}
 
-						return html`<option value="${chapter.href}">${chapter.label}</option>`;
-					})}
+				return html`<option value="${chapter.href}">${chapter.label}</option>`;
+			})
+		}
 				</sdr-select>
 				<sdr-button
 					icon-button
 					slot="title"
 					class="title-menu"
-					style="visibility: ${this.nextPageVisibility}"
+					style="visibility: ${this.#nextPageVisibility}"
 					@click="${async () => this.showNextPage()}"
 				>⏭️</sdr-button>
 				<article id="book">

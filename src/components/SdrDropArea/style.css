@@ -2,39 +2,31 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
-
 	--hover-color: var(--secondary-color);
 	--hover-background: var(--theme-color);
 }
 
 #content, #overlay {
-	grid-row: 1 / -1;
 	grid-column: 1 / -1;
+	grid-row: 1 / -1;
 }
 
 #overlay {
+	align-items: center;
+	background: radial-gradient(var(--background, rgba(0, 0, 0, 0.5)), transparent);
 	border: solid var(--border-width) var(--border-color, transparent);
 	border-radius: var(--border-radius);
 	box-sizing: border-box;
-	display: grid;
-	align-items: center;
-	justify-content: center;
-
-	user-select: none;
-
-	background: radial-gradient(var(--background, rgba(0, 0, 0, 0.5)), transparent);
 	color: var(--text-color, currentcolor);
-
+	display: grid;
+	justify-content: center;
+	user-select: none;
 	z-index: 1;
 }
 
-:host([disabled]) #overlay {
-	display: none;
-}
+:host([disabled]) #overlay { display: none; }
 
-:host(:not([disabled])) #content {
-	opacity: 0.5;
-}
+:host(:not([disabled])) #content { opacity: 0.5; }
 
 .drop {
 	--border-color: var(--hover-color);

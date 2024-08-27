@@ -5,13 +5,18 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-button')
 export class SdrButton extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) disabled: boolean;
-	@property({ type: String, reflect: true }) icon: string;
-	@property({ type: String, reflect: true, attribute: 'trigger-button' }) triggerButton?: string;
+	@property({ type: Boolean, reflect: true })
+	accessor disabled: boolean;
+
+	@property({ type: String, reflect: true })
+	accessor icon: string;
+
+	@property({ type: String, reflect: true, attribute: 'trigger-button' })
+	accessor triggerButton: string | undefined = undefined;
 
 	constructor() {
 		super();
@@ -20,7 +25,7 @@ export class SdrButton extends LitElement {
 		this.icon = '';
 	}
 
-	render() {
+	override render() {
 		return html`
 			<button
 				type="button"

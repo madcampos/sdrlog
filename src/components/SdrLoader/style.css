@@ -1,30 +1,23 @@
-:host {
-	box-sizing: inherit;
-}
+:host { box-sizing: inherit; }
 
 :host([loaded]) #loader { display: none; }
 :host(:not([loaded])) #content { display: none; }
 
 #loader {
-	max-width: 20rem;
-	border-radius: var(--border-radius);
+	animation: loader 2s linear infinite;
 	background-color: var(--theme-color);
 	background-image: linear-gradient(-60deg, var(--bg-color) 40%, transparent, var(--bg-color) 60%);
-	background-size: 200% 100%;
 	background-position: 100%;
+	background-size: 200% 100%;
+	border-radius: var(--border-radius);
 	color: transparent;
-	user-select: none;
-
-	animation: loader 2s linear infinite;
+	max-width: 20rem;
 	opacity: 0.2;
+	user-select: none;
 }
 
 @keyframes loader {
-	from {
-		background-position: 100%;
-	}
+	from { background-position: 100%; }
 
-	to {
-		background-position: -100%;
-	}
+	to { background-position: -100%; }
 }

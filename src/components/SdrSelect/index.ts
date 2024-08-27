@@ -5,19 +5,32 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-select')
 export class SdrSelect extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) value: string;
-	@property({ type: Array }) values: string[];
-	@property({ type: Boolean, reflect: true }) disabled: boolean;
-	@property({ type: Boolean, reflect: true }) required: boolean;
-	@property({ type: Boolean, reflect: true }) readonly: boolean;
+	@property({ type: String, reflect: true })
+	accessor value: string;
 
-	@query('select') private declare select: HTMLSelectElement;
+	@property({ type: Array })
+	accessor values: string[];
 
-	@queryAssignedElements({ selector: 'optgroup, option' }) private declare items: (HTMLOptGroupElement | HTMLOptionElement)[];
+	@property({ type: Boolean, reflect: true })
+	accessor disabled: boolean;
+
+	@property({ type: Boolean, reflect: true })
+	accessor required: boolean;
+
+	@property({ type: Boolean, reflect: true })
+	accessor readonly: boolean;
+
+	@query('select')
+	// @ts-expect-error
+	accessor #select: HTMLSelectElement;
+
+	@queryAssignedElements({ selector: 'optgroup, option' })
+	// @ts-expect-error
+	accessor #items: (HTMLOptGroupElement | HTMLOptionElement)[];
 
 	#internals: ElementInternals;
 
@@ -52,7 +65,7 @@ export class SdrSelect extends LitElement {
 	}
 
 	#input() {
-		this.value = this.select.value;
+		this.value = this.#select.value;
 
 		this.#validate();
 
@@ -60,7 +73,7 @@ export class SdrSelect extends LitElement {
 	}
 
 	#change() {
-		this.value = this.select.value;
+		this.value = this.#select.value;
 
 		this.#validate();
 
@@ -68,27 +81,43 @@ export class SdrSelect extends LitElement {
 	}
 
 	#moveItems() {
-		this.items.forEach((item) => {
-			this.select.appendChild(item);
+		this.#items.forEach((item) => {
+			this.#select.appendChild(item);
 		});
 	}
 
-	get form() { return this.#internals.form; }
-	get name() { return this.getAttribute('name'); }
-	get validity() { return this.#internals.validity; }
-	get validationMessage() { return this.#internals.validationMessage; }
-	get willValidate() { return this.#internals.willValidate; }
+	get form() {
+		return this.#internals.form;
+	}
+	get name() {
+		return this.getAttribute('name');
+	}
+	get validity() {
+		return this.#internals.validity;
+	}
+	get validationMessage() {
+		return this.#internals.validationMessage;
+	}
+	get willValidate() {
+		return this.#internals.willValidate;
+	}
 
-	checkValidity() { return this.#internals.checkValidity(); }
-	reportValidity() { return this.#internals.reportValidity(); }
-	setCustomValidity(message: string) { this.#internals.setValidity({ customError: message !== '' }, message); }
+	checkValidity() {
+		return this.#internals.checkValidity();
+	}
+	reportValidity() {
+		return this.#internals.reportValidity();
+	}
+	setCustomValidity(message: string) {
+		this.#internals.setValidity({ customError: message !== '' }, message);
+	}
 
 	resetValue() {
-		this.select.selectedIndex = 0;
+		this.#select.selectedIndex = 0;
 	}
 
 	// TODO: implement custom select
-	render() {
+	override render() {
 		return html`
 			<label for="select">
 				<slot name="label"></slot>

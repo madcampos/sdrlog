@@ -2,21 +2,18 @@ sdr-view-item-details[disabled] .edit-button { display: none; }
 sdr-view-item-details:not([disabled]) .display-button { display: none; }
 
 sdr-view-item-details #item-content {
+	align-items: start;
+	box-sizing: inherit;
 	display: grid;
-	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
-	grid-template-rows: 100%;
 	grid-gap: 0.5rem;
 	grid-template-areas: 'image tabs';
-
-	align-items: start;
-	place-content: start center;
-
+	grid-template-columns: clamp(10rem, 40%, 20rem) 1fr;
+	grid-template-rows: 100%;
 	height: 100%;
-	box-sizing: inherit;
 	overflow: auto;
-
-	scrollbar-width: thin;
+	place-content: start center;
 	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+	scrollbar-width: thin;
 }
 
 sdr-view-item-details [slot='title'] {
@@ -25,9 +22,7 @@ sdr-view-item-details [slot='title'] {
 	--small-text: 0;
 }
 
-sdr-view-item-details #cover-drop-area {
-	grid-area: image;
-}
+sdr-view-item-details #cover-drop-area { grid-area: image; }
 
 sdr-view-item-details #cover-drop-area figure {
 	margin: 0;
@@ -36,11 +31,11 @@ sdr-view-item-details #cover-drop-area figure {
 }
 
 sdr-view-item-details #cover-drop-area figure img {
-	width: 100%;
+	border-radius: var(--border-radius);
 	height: 100%;
 	object-fit: contain;
 	object-position: center;
-	border-radius: var(--border-radius);
+	width: 100%;
 }
 
 sdr-view-item-details #publisher img {
@@ -51,9 +46,7 @@ sdr-view-item-details #publisher img {
 
 sdr-view-item-details #item-info {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(auto, 25%));
 	gap: var(--margin-block);
-	grid-template-rows: repeat(6, auto);
 	grid-template-areas:
 		'sku sku sku sku'
 		'edition category category type'
@@ -61,6 +54,8 @@ sdr-view-item-details #item-info {
 		'languages languages languages status'
 		'release release release release'
 		'publisher publisher publisher publisher';
+	grid-template-columns: repeat(4, minmax(auto, 25%));
+	grid-template-rows: repeat(6, auto);
 }
 
 sdr-view-item-details #item-info #sku { grid-area: sku; }
@@ -76,13 +71,13 @@ sdr-view-item-details #item-info #publisher { grid-area: publisher; }
 
 @media (max-width: 680px) {
 	sdr-view-item-details #item-content {
+		grid-template-areas: 'image' 'tabs';
 		grid-template-columns: 1fr;
 		grid-template-rows: 10rem 1fr;
-		grid-template-areas: 'image' 'tabs';
 	}
 
 	sdr-view-item-details #cover-drop-area figure img {
-		width: fit-content;
 		height: 10rem;
+		width: fit-content;
 	}
 }

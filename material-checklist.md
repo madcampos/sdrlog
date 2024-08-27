@@ -19,6 +19,7 @@ https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_i
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
 https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-2022/
+
 - The chimera complex
 - Body shop
 - Wild life
@@ -26,6 +27,7 @@ https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-20
 https://www.shadowiki.de/Shadowrun_Schnell_und_dreckig
 
 # Archive
+
 **TODO**: Scrap html and old pages and archive
 
 https://shadowhelix.de/Quelle,_de:_Adventskalender_2019
@@ -48,6 +50,7 @@ http://danvolodar.ru/ancientfiles/index.html
 http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
 
 ## Japanese materials
+
 https://www.shadowiki.de/Shadowrun_Manga
 https://fondationdraco.fr/shadowrun-manga-scan-trad/
 https://fondationdraco.fr/shadowrun-au-japon-partie-2/
@@ -57,6 +60,7 @@ https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-
 https://fondationdraco.fr/shadowrun-au-japon-partie-5/
 
 ## short stories
+
 - https://www.shadowiki.de/Drachenbrut_(Kurzgeschichten)
 - https://www.shadowiki.de/Der_letzte_Flug_des_Greifen_(Kurzgeschichten)
 - https://www.shadowiki.de/Deckard_(Kurzgeschichten)
@@ -64,6 +68,7 @@ https://fondationdraco.fr/shadowrun-au-japon-partie-5/
 - https://www.shadowiki.de/Kategorie:Quellen_(Online)
 
 ## Sites to archive
+
 - http://shadowrunrpg.com/
 - http://shadowrun.fr/
 - http://shadowrun.com/

@@ -15,7 +15,7 @@ export const MATERIAL_LANGUAGES_INFO: Readonly<Record<IsoCode, { name: string, i
 	'en-US': { icon: '🇺🇸', name: 'English' }
 } as const;
 
-export const MATERIAL_PUBLISHERS: Readonly<MaterialPublisher[]> = [
+export const MATERIAL_PUBLISHERS: readonly MaterialPublisher[] = [
 	'Catalyst Game Labs',
 	'Cliffhanger Productions',
 	'FASA Corporation',
@@ -48,7 +48,6 @@ export const MATERIAL_TYPE_INFO: Readonly<Record<MaterialType, { name: string, i
 	print: { icon: '🖨️', name: 'Print' },
 	physical: { icon: '🎲', name: 'Physical' }
 } as const;
-
 
 export const MATERIAL_STATUS_INFO: Readonly<Record<MaterialStatus, { name: string, icon: string }>> = {
 	ok: { icon: '✅', name: 'OK' },

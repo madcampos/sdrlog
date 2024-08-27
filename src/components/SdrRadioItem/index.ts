@@ -5,10 +5,13 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-radio-item')
 export class SdrRadioItem extends LitElement {
-	static readonly styles = unsafeCSS(style);
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) icon: string;
-	@property({ type: String, reflect: true }) value: string;
+	@property({ type: String, reflect: true })
+	accessor icon: string;
+
+	@property({ type: String, reflect: true })
+	accessor value: string;
 
 	constructor() {
 		super();
@@ -17,7 +20,7 @@ export class SdrRadioItem extends LitElement {
 		this.value = '';
 	}
 
-	render() {
+	override render() {
 		return html`
 			<span id="radio-icon">${this.icon}</span>
 			<h4><slot name="title"></slot></h4>

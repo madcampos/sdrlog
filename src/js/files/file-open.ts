@@ -1,8 +1,8 @@
 import type { FileForMaterial } from '../../data/data';
 
-import { getFilePermission } from './file-import';
-import { getIDBItemByIndex } from '../data/idb-persistence';
 import { Router } from '../../router/router';
+import { getIDBItemByIndex } from '../data/idb-persistence';
+import { getFilePermission } from './file-import';
 
 const mimeAllowed = [
 	'image',

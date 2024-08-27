@@ -7,15 +7,22 @@ import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-radio-group')
 export class SdrRadioGroup extends LitElement {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions };
-	static readonly styles = unsafeCSS(style);
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions };
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: String, reflect: true }) value: string;
-	@property({ type: Array }) values: string[];
+	@property({ type: String, reflect: true })
+	accessor value: string;
 
-	@query('#radio-container') private declare container: HTMLElement;
+	@property({ type: Array })
+	accessor values: string[];
 
-	@queryAssignedElements({ selector: 'sdr-radio-item' }) private declare items: SdrRadioItem[];
+	@query('#radio-container')
+	// @ts-expect-error
+	accessor #container: HTMLElement;
+
+	@queryAssignedElements({ selector: 'sdr-radio-item' })
+	// @ts-expect-error
+	accessor #items: SdrRadioItem[];
 
 	#groupName = crypto.randomUUID();
 
@@ -32,8 +39,9 @@ export class SdrRadioGroup extends LitElement {
 				const currentItemIndex = items.indexOf(currentItem);
 
 				if (currentItemIndex > 0) {
-					items[currentItemIndex - 1].checked = true;
-					this.value = items[currentItemIndex - 1].value;
+					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+					items[currentItemIndex - 1]!.checked = true;
+					this.value = items[currentItemIndex - 1]?.value ?? '';
 				}
 			}
 
@@ -43,8 +51,9 @@ export class SdrRadioGroup extends LitElement {
 				const currentItemIndex = items.indexOf(currentItem);
 
 				if (currentItemIndex < items.length - 1) {
-					items[currentItemIndex + 1].checked = true;
-					this.value = items[currentItemIndex + 1].value;
+					// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+					items[currentItemIndex + 1]!.checked = true;
+					this.value = items[currentItemIndex + 1]?.value ?? '';
 				}
 			}
 
@@ -55,7 +64,7 @@ export class SdrRadioGroup extends LitElement {
 	}
 
 	#moveItems() {
-		this.items.forEach((item) => {
+		this.#items.forEach((item) => {
 			if (!this.values.includes(item.value)) {
 				const label = document.createElement('label');
 				const radio = document.createElement('input');
@@ -78,7 +87,7 @@ export class SdrRadioGroup extends LitElement {
 				label.appendChild(item);
 				label.appendChild(badge);
 
-				this.container.appendChild(label);
+				this.#container.appendChild(label);
 
 				this.values.push(item.value);
 			}
@@ -94,7 +103,7 @@ export class SdrRadioGroup extends LitElement {
 		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));
 	}
 
-	render() {
+	override render() {
 		return html`
 			<div id="radio-container" @change=${(evt: Event) => this.#change(evt)}></div>
 			<slot @slotchange="${() => this.#moveItems()}"></slot>

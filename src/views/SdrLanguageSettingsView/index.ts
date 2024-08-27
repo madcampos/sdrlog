@@ -1,26 +1,29 @@
-import type { RouterView } from '../../router/router';
 import type { SdrSelect } from '../../components/SdrSelect';
+import type { RouterView } from '../../router/router';
 
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
-import { Router } from '../../router/router';
 import { I18n } from '../../js/intl/translations';
 import { registerShortcut } from '../../js/util/keyboard';
+import { Router } from '../../router/router';
 
 @customElement('sdr-view-language-settings')
 export class SdrViewLanguageSettings extends LitElement implements RouterView {
-	@state() private open: boolean;
-	@state() private language: string;
+	@state()
+	accessor #open: boolean;
+
+	@state()
+	accessor #language: string;
 
 	constructor() {
 		super();
 
-		this.open = false;
-		this.language = 'en-US';
+		this.#open = false;
+		this.#language = 'en-US';
 
 		registerShortcut('l', () => {
-			this.open = !this.open;
+			this.#open = !this.#open;
 		});
 
 		// TODO: add gamepad navigation
@@ -39,25 +42,25 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
 
 	navigate() {
-		this.open = true;
+		this.#open = true;
 		(this.shadowRoot?.querySelector('#language-select') as SdrSelect).focus();
 
 		return 'Language Settings';
 	}
 
-	createRenderRoot() {
+	override createRenderRoot() {
 		return this;
 	}
 
-	render() {
+	override render() {
 		return html`
-			<sdr-dialog id="language-modal" ?open="${this.open}" @close="${() => this.#close()}">
+			<sdr-dialog id="language-modal" ?open="${this.#open}" @close="${() => this.#close()}">
 				<span slot="title">Language Settings</span>
 
 				<p>Set the language for the application:</p>
@@ -66,7 +69,7 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 				<sdr-select
 					id="language-select"
 
-					.value="${this.language}"
+					.value="${this.#language}"
 
 					@change="${async (evt: Event) => this.#changeLanguage(evt)}"
 				>
@@ -80,11 +83,11 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 		`;
 	}
 
-	connectedCallback() {
+	override connectedCallback() {
 		super.connectedCallback();
 
 		requestAnimationFrame(() => {
-			this.language = I18n.getLanguage();
+			this.#language = I18n.getLanguage();
 		});
 	}
 }

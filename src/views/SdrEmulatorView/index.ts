@@ -4,40 +4,40 @@ import type { RouteLocation, RouterView } from '../../router/router';
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 
-import { Router } from '../../router/router';
 import { setIDBItem } from '../../js/data/idb-persistence';
+import { getEmulatorFiles } from '../../js/files/file-emulator';
 import { extractMetadataFromFileName } from '../../js/files/file-import';
 import { loadFile } from '../../js/files/file-open';
-import { getEmulatorFiles } from '../../js/files/file-emulator';
+import { Router } from '../../router/router';
 
 import style from './style.css?inline' assert { type: 'css' };
 
 interface EmulatorModule extends EmscriptenModule {
-	canvas: HTMLCanvasElement,
-	_cmd_savefiles(): void,
-	_cmd_save_state(): void,
-	_cmd_load_state(): void,
-	_cmd_toggle_menu(): void,
-	_cmd_undo_save_state(): void,
-	_cmd_undo_load_state(): void,
-	setCanvasSize(width: number, height: number): void,
-	pauseMainLoop(): void,
-	resumeMainLoop(): void,
-	callMain(args: string[]): void,
-	FS: typeof FS
+	canvas: HTMLCanvasElement;
+	_cmd_savefiles(): void;
+	_cmd_save_state(): void;
+	_cmd_load_state(): void;
+	_cmd_toggle_menu(): void;
+	_cmd_undo_save_state(): void;
+	_cmd_undo_load_state(): void;
+	setCanvasSize(width: number, height: number): void;
+	pauseMainLoop(): void;
+	resumeMainLoop(): void;
+	callMain(args: string[]): void;
+	FS: typeof FS;
 }
 
 interface EmulatorInitializer {
-	canvas: HTMLCanvasElement,
-	onRuntimeInitialized(): Promise<void> | void
+	canvas: HTMLCanvasElement;
+	onRuntimeInitialized(): Promise<void> | void;
 }
 
 type EmulatorInitializerFunction = (moduleInitializer: EmulatorInitializer) => EmulatorModule;
 
 interface KeyData {
-	key: string,
-	code: string,
-	keyCode: number
+	key: string;
+	code: string;
+	keyCode: number;
 }
 
 const keyMap: Record<string, KeyData> = {
@@ -57,16 +57,26 @@ const keyMap: Record<string, KeyData> = {
 
 @customElement('sdr-view-emulator')
 export class SdrViewEmulator extends LitElement implements RouterView {
-	static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
-	static readonly styles = unsafeCSS(style);
+	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+	static override readonly styles = unsafeCSS(style);
 
-	@property({ type: Boolean, reflect: true }) loaded: boolean;
+	@property({ type: Boolean, reflect: true })
+	accessor loaded: boolean;
 
-	@query('#game-canvas') private declare canvas: HTMLCanvasElement;
-	@query('#game-wrapper') private declare gameWrapper: HTMLDivElement;
-	@query('#dpad') private declare dpad: HTMLDivElement;
+	@query('#game-canvas')
+	// @ts-expect-error
+	accessor #canvas: HTMLCanvasElement;
 
-	@state() private open: boolean;
+	@query('#game-wrapper')
+	// @ts-expect-error
+	accessor #gameWrapper: HTMLDivElement;
+
+	@query('#dpad')
+	// @ts-expect-error
+	accessor #dpad: HTMLDivElement;
+
+	@state()
+	accessor #open: boolean;
 
 	@state()
 	set paused(newValue: boolean) {
@@ -90,13 +100,54 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		super();
 
 		this.loaded = false;
-		this.open = false;
+		this.#open = false;
 
 		this.#resetEmulator();
 
 		// Avoid unwanted key presses to exit the game.
 		document.addEventListener('keydown', (evt) => {
-			const pdKeys = ['8', '9', '13', '19', '27', '32', '33', '34', '35', '36', '42', '44', '45', '91', '92', '93', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '123', '124', '125', '126', '127', '128', '129', '130', '131', '132', '133', '134', '135'];
+			const pdKeys = [
+				'8',
+				'9',
+				'13',
+				'19',
+				'27',
+				'32',
+				'33',
+				'34',
+				'35',
+				'36',
+				'42',
+				'44',
+				'45',
+				'91',
+				'92',
+				'93',
+				'112',
+				'113',
+				'114',
+				'115',
+				'116',
+				'117',
+				'118',
+				'119',
+				'120',
+				'121',
+				'122',
+				'123',
+				'124',
+				'125',
+				'126',
+				'127',
+				'128',
+				'129',
+				'130',
+				'131',
+				'132',
+				'133',
+				'134',
+				'135'
+			];
 
 			if (this.loaded && pdKeys.includes(evt.code)) {
 				evt.preventDefault();
@@ -147,26 +198,28 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	}
 
 	#close() {
-		this.open = false;
+		this.#open = false;
 
 		void Router.navigate('/');
 	}
 
 	#sendKeyEvent(type: 'keydown' | 'keyup', key: keyof typeof keyMap) {
-		this.canvas.dispatchEvent(new KeyboardEvent(type, {
-			bubbles: true,
-			cancelable: false,
-			shiftKey: false,
-			ctrlKey: false,
-			metaKey: false,
-			altKey: false,
-			...keyMap[key]
-		}));
+		this.#canvas.dispatchEvent(
+			new KeyboardEvent(type, {
+				bubbles: true,
+				cancelable: false,
+				shiftKey: false,
+				ctrlKey: false,
+				metaKey: false,
+				altKey: false,
+				...keyMap[key]
+			})
+		);
 	}
 
 	async #addDPadButtons() {
 		const nipplejs = (await import('nipplejs')).default;
-		const dpadElement = this.dpad;
+		const dpadElement = this.#dpad;
 		const { width, height } = dpadElement.getBoundingClientRect();
 
 		const dpad = nipplejs.create({
@@ -185,7 +238,6 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		let dpadDirection: string | null = null;
 
 		dpad.on('move', (_, { direction }) => {
-			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 			dpadDirection = direction?.angle ?? null;
 
 			if (dpadDirection) {
@@ -201,7 +253,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 	}
 
 	#adjustCanvasSize() {
-		const { width, height } = this.gameWrapper.getBoundingClientRect();
+		const { width, height } = this.#gameWrapper.getBoundingClientRect();
 
 		this.#emulator?.setCanvasSize(width, height);
 	}
@@ -246,7 +298,7 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		const emulatorInit = emulatorImport.default as EmulatorInitializerFunction;
 
 		this.#emulator = emulatorInit({
-			canvas: this.canvas,
+			canvas: this.#canvas,
 			onRuntimeInitialized: async () => {
 				this.#adjustCanvasSize();
 
@@ -319,28 +371,30 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		}
 
 		await this.#loadGame(destination.params.id);
-		this.open = true;
+		this.#open = true;
 
 		return 'Emulator';
 	}
 
-	firstUpdated(changedProperties: Map<string, unknown>): void {
+	override firstUpdated(changedProperties: Map<string, unknown>): void {
 		super.firstUpdated(changedProperties);
 
 		void this.#addDPadButtons();
 	}
 
-	createRenderRoot() {
+	override createRenderRoot() {
 		return this;
 	}
 
-	render() {
+	override render() {
 		return html`
 			<style>${SdrViewEmulator.styles}</style>
-			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
+			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
 				<sdr-button icon-button slot="title" @click="${() => this.#emulator?._cmd_toggle_menu()}">⚙️</sdr-button>
 				<hr slot="title">
-				<sdr-button icon-button slot="title" @click="${() => { this.paused = true; }}">⏸️</sdr-button>
+				<sdr-button icon-button slot="title" @click="${() => {
+			this.paused = true;
+		}}">⏸️</sdr-button>
 				<hr slot="title">
 				<sdr-button icon-button slot="title" @click="${() => this.#loadState()}">⏮️</sdr-button>
 				<sdr-button icon-button slot="title" @click="${() => this.#saveState()}">⏭️</sdr-button>
@@ -369,7 +423,9 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 								type="button"
 								id="pause-button"
 
-								@click="${() => { this.paused = true; }}"
+								@click="${() => {
+			this.paused = true;
+		}}"
 							>▶️</button>
 						</div>
 						<canvas id="game-canvas"></canvas>

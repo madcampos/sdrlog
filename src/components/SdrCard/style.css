@@ -1,46 +1,40 @@
 :host {
 	background-color: var(--bg-color);
-
 	border: solid var(--border-width) var(--border-color);
 	border-radius: var(--border-radius);
-
+	box-shadow: var(--light-shadow);
+	contain: strict;
+	content-visibility: auto;
 	cursor: pointer;
-	user-select: none;
-
 	display: inline-grid;
 	grid-template-columns: var(--thumbnail-width);
 	grid-template-rows: var(--thumbnail-height) var(--card-title-height);
-	place-items: start center;
-	margin: var(--margin-block);
-
-	width: var(--card-width);
 	height: var(--card-height);
-
+	margin: var(--margin-block);
 	overflow: hidden;
-	contain: strict;
-	content-visibility: auto;
+	place-items: start center;
+	user-select: none;
+	width: var(--card-width);
 	z-index: auto;
-
-	box-shadow: var(--light-shadow);
 }
 
 :host(:focus-within) {
-	outline: none;
-	border-color: var(--theme-color);
 	background-color: var(--accent-color);
+	border-color: var(--theme-color);
+	outline: none;
 }
 
 :host([status]) figure::after {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 	content: '';
 	display: block;
-	width: 100%;
 	height: 100%;
-	top: 0;
 	left: 0;
 	position: absolute;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+	top: 0;
+	width: 100%;
 }
 
 :host([status='missing']) figure::after {
@@ -59,38 +53,36 @@
 }
 
 figure {
+	box-sizing: border-box;
+	height: 100%;
 	margin: 0;
 	padding: var(--padding-inline);
-	width: 100%;
-	height: 100%;
-	text-align: center;
 	position: relative;
-	box-sizing: border-box;
+	text-align: center;
+	width: 100%;
 }
 
-figure:focus {
-	outline: none;
-}
+figure:focus { outline: none; }
 
 img {
-	height: 100%;
-	width: auto;
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: contain;
 	border-radius: calc(var(--border-radius) * 2);
 	box-sizing: border-box;
+	height: 100%;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
 	overflow: hidden;
+	width: auto;
 }
 
 h4 {
 	align-self: center;
-	padding: var(--padding-block) var(--padding-inline);
-	margin: 0;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	text-align: center;
+	-webkit-box-orient: vertical;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
+	margin: 0;
+	overflow: hidden;
+	padding: var(--padding-block) var(--padding-inline);
+	text-align: center;
+	text-overflow: ellipsis;
 }

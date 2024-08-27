@@ -1,13 +1,13 @@
 import { Router } from './router';
 
-import { SdrViewMain } from '../views/SdrMainView';
-import { SdrViewItemDetails } from '../views/SdrItemDetailsView';
-import { SdrViewThemeSettings } from '../views/SdrThemeSettingsView';
-import { SdrViewLanguageSettings } from '../views/SdrLanguageSettingsView';
-import { SdrViewAppInfo } from '../views/SdrInfoView';
+import { SdrViewCbzReader } from '../views/SdrComicBookReaderView';
 import { SdrViewEmulator } from '../views/SdrEmulatorView';
 import { SdrViewEpubReader } from '../views/SdrEpubReaderView';
-import { SdrViewCbzReader } from '../views/SdrComicBookReaderView';
+import { SdrViewAppInfo } from '../views/SdrInfoView';
+import { SdrViewItemDetails } from '../views/SdrItemDetailsView';
+import { SdrViewLanguageSettings } from '../views/SdrLanguageSettingsView';
+import { SdrViewMain } from '../views/SdrMainView';
+import { SdrViewThemeSettings } from '../views/SdrThemeSettingsView';
 
 Router.init({
 	baseUrl: '/',
