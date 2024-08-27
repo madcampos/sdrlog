@@ -4,14 +4,17 @@ import { readFileSync } from 'node:fs';
 
 import { defineConfig, type UserConfig } from 'vite';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
+import { vitePluginTypescriptTranspile } from 'vite-plugin-typescript-transpile';
 import { externalResources, internalResources, shareTarget } from './src/service-worker';
 
 const manifest: Partial<ManifestOptions> = JSON.parse(readFileSync('./src/manifest.json', { encoding: 'utf8' }));
 
-export default defineConfig(({ mode }) => {
-	const baseUrl = mode === 'production' ? 'https://sdrlog.madcampos.dev/' : 'https://localhost:3000/';
+const IS_DEBUG = false;
 
-	const sslOptions = mode === 'production'
+export default defineConfig(({ mode }) => {
+	const baseUrl = mode === 'production' || IS_DEBUG ? 'https://sdrlog.madcampos.dev/' : 'https://localhost:3000/';
+
+	const sslOptions = mode === 'production' || IS_DEBUG
 		? undefined
 		: {
 			cert: readFileSync('./certs/server.crt', 'utf-8'),
@@ -20,6 +23,7 @@ export default defineConfig(({ mode }) => {
 
 	const config: UserConfig = {
 		plugins: [
+			vitePluginTypescriptTranspile({}),
 			vitePWA({
 				registerType: 'prompt',
 				minify: true,
@@ -66,7 +70,8 @@ export default defineConfig(({ mode }) => {
 		optimizeDeps: { esbuildOptions: { target: 'esnext' } },
 		preview: {
 			https: sslOptions,
-			open: true
+			open: true,
+			cors: true
 		}
 	};
 

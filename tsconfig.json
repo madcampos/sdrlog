@@ -32,7 +32,7 @@
 		"skipLibCheck": true,
 		"sourceMap": false,
 		"strict": true,
-		"target": "ESNext",
+		"target": "ES2023",
 		"tsBuildInfoFile": "dist/.tsbuildinfo",
 		"useDefineForClassFields": true,
 		"useUnknownInCatchVariables": false,
