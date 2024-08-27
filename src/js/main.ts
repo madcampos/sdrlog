@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 		progressLoader.max = 3;
 
 		updateLoadStatus('Loading components...');
-		await import('../components');
+		await import('../components/index.js');
 		const { GamepadHandler } = await import('./gamepad/gamepad-events');
 
 		GamepadHandler.init(() => {
