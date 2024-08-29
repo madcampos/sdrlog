@@ -4,7 +4,7 @@ import { customElement, property, state } from 'lit/decorators.js';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-gamepad-badge')
-export class SdrGamepadBadge extends LitElement {
+class SdrGamepadBadge extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
 	static override readonly styles = unsafeCSS(style);
@@ -63,3 +63,5 @@ export class SdrGamepadBadge extends LitElement {
 		`;
 	}
 }
+
+export { SdrGamepadBadge };

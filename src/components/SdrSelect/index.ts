@@ -4,7 +4,7 @@ import { customElement, property, query, queryAssignedElements } from 'lit/decor
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-select')
-export class SdrSelect extends LitElement {
+class SdrSelect extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -148,3 +148,5 @@ export class SdrSelect extends LitElement {
 		`;
 	}
 }
+
+export { SdrSelect };

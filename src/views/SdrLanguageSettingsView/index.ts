@@ -9,7 +9,7 @@ import { registerShortcut } from '../../js/util/keyboard';
 import { Router } from '../../router/router';
 
 @customElement('sdr-view-language-settings')
-export class SdrViewLanguageSettings extends LitElement implements RouterView {
+class SdrViewLanguageSettings extends LitElement implements RouterView {
 	@state()
 	accessor #open: boolean;
 
@@ -91,3 +91,5 @@ export class SdrViewLanguageSettings extends LitElement implements RouterView {
 		});
 	}
 }
+
+export { SdrViewLanguageSettings };

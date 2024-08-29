@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-button')
-export class SdrButton extends LitElement {
+class SdrButton extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -40,3 +40,5 @@ export class SdrButton extends LitElement {
 		`;
 	}
 }
+
+export { SdrButton };

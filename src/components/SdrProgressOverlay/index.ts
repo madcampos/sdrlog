@@ -4,7 +4,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-progress-overlay')
-export class SdrProgressOverlay extends LitElement {
+class SdrProgressOverlay extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true })
@@ -111,3 +111,5 @@ export class SdrProgressOverlay extends LitElement {
 		`;
 	}
 }
+
+export { SdrProgressOverlay };

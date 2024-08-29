@@ -4,7 +4,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-update-notify')
-export class SdrUpdateNotify extends LitElement {
+class SdrUpdateNotify extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static override readonly styles = [unsafeCSS(style)];
 
@@ -47,3 +47,5 @@ export class SdrUpdateNotify extends LitElement {
 		`;
 	}
 }
+
+export { SdrUpdateNotify };

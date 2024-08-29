@@ -21,7 +21,7 @@ interface CreateCardOptions {
 }
 
 @customElement('sdr-card')
-export class SdrCard extends LitElement {
+class SdrCard extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -234,3 +234,5 @@ export class SdrCard extends LitElement {
 		}
 	}
 }
+
+export { SdrCard };

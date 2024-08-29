@@ -8,7 +8,7 @@ import { Router } from '../../router/router';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dropdown')
-export class SdrDropdown extends LitElement {
+class SdrDropdown extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static override readonly styles = unsafeCSS(style);
 
@@ -200,3 +200,5 @@ export class SdrDropdown extends LitElement {
 		`;
 	}
 }
+
+export { SdrDropdown };

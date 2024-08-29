@@ -27,7 +27,7 @@ import { Router } from '../../router/router';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-view-item-details')
-export class SdrViewItemDetails extends LitElement implements RouterView {
+class SdrViewItemDetails extends LitElement implements RouterView {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static override readonly styles = unsafeCSS(style);
 
@@ -573,3 +573,5 @@ export class SdrViewItemDetails extends LitElement implements RouterView {
 		`;
 	}
 }
+
+export { SdrViewItemDetails };

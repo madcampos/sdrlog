@@ -4,7 +4,7 @@ import { customElement, property, query, queryAssignedElements } from 'lit/decor
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dialog')
-export class SdrDialog extends LitElement {
+class SdrDialog extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true })
@@ -148,3 +148,5 @@ export class SdrDialog extends LitElement {
 		`;
 	}
 }
+
+export { SdrDialog };

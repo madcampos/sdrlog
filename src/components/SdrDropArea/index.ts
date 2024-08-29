@@ -10,7 +10,7 @@ declare global {
 }
 
 @customElement('sdr-drop-area')
-export class SdrDropArea extends LitElement {
+class SdrDropArea extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static override readonly styles = unsafeCSS(style);
 
@@ -127,3 +127,5 @@ export class SdrDropArea extends LitElement {
 		`;
 	}
 }
+
+export { SdrDropArea };

@@ -7,7 +7,7 @@ import { GamepadHandler } from '../../js/gamepad/gamepad-events';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-dropdown-item')
-export class SdrDropdownItem extends LitElement {
+class SdrDropdownItem extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -57,3 +57,5 @@ export class SdrDropdownItem extends LitElement {
 		`;
 	}
 }
+
+export { SdrDropdownItem };

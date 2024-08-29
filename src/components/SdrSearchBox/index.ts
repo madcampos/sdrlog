@@ -9,7 +9,7 @@ import { SearchEngine } from './search-engine';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-search-box')
-export class SdrSearchBox extends LitElement {
+class SdrSearchBox extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -102,3 +102,5 @@ export class SdrSearchBox extends LitElement {
 		`;
 	}
 }
+
+export { SdrSearchBox };

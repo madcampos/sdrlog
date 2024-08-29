@@ -12,7 +12,7 @@ declare global {
 }
 
 @customElement('sdr-edit-list')
-export class SdrEditList extends LitElement {
+class SdrEditList extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static override readonly styles = unsafeCSS(style);
 
@@ -91,3 +91,5 @@ export class SdrEditList extends LitElement {
 		`;
 	}
 }
+
+export { SdrEditList };

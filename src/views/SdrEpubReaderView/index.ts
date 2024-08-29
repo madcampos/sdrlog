@@ -12,7 +12,7 @@ import { loadFile } from '../../js/files/file-open';
 import { Router } from '../../router/router';
 
 @customElement('sdr-view-epub-reader')
-export class SdrViewEpubReader extends LitElement implements RouterView {
+class SdrViewEpubReader extends LitElement implements RouterView {
 	#rendition: Rendition | undefined;
 
 	@property({ type: Boolean, attribute: 'loaded' })
@@ -208,3 +208,5 @@ export class SdrViewEpubReader extends LitElement implements RouterView {
 		`;
 	}
 }
+
+export { SdrViewEpubReader };

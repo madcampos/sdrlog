@@ -6,7 +6,7 @@ import { customElement, property, query, queryAssignedElements } from 'lit/decor
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-radio-group')
-export class SdrRadioGroup extends LitElement {
+class SdrRadioGroup extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions };
 	static override readonly styles = unsafeCSS(style);
 
@@ -110,3 +110,5 @@ export class SdrRadioGroup extends LitElement {
 		`;
 	}
 }
+
+export { SdrRadioGroup };

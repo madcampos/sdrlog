@@ -33,7 +33,7 @@ const mimeTypes = new Map([
 ]);
 
 @customElement('sdr-view-cbz-reader')
-export class SdrViewCbzReader extends LitElement implements RouterView {
+class SdrViewCbzReader extends LitElement implements RouterView {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
 	@property({ type: Boolean, reflect: true })
@@ -279,3 +279,5 @@ export class SdrViewCbzReader extends LitElement implements RouterView {
 		`;
 	}
 }
+
+export { SdrViewCbzReader };

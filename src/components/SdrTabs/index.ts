@@ -5,7 +5,7 @@ import style from './style.css?inline' assert { type: 'css' };
 import tabStyle from './tab-style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-tab')
-export class SdrTab extends LitElement {
+class SdrTab extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(tabStyle);
@@ -32,7 +32,7 @@ export class SdrTab extends LitElement {
 }
 
 @customElement('sdr-tab-panel')
-export class SdrTabPanel extends LitElement {
+class SdrTabPanel extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 
@@ -58,7 +58,7 @@ export class SdrTabPanel extends LitElement {
 }
 
 @customElement('sdr-tabs')
-export class SdrTabs extends LitElement {
+class SdrTabs extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -193,3 +193,5 @@ export class SdrTabs extends LitElement {
 		`;
 	}
 }
+
+export { SdrTab, SdrTabPanel, SdrTabs };

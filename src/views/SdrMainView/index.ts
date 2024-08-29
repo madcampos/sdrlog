@@ -37,7 +37,7 @@ interface MenuItem {
 }
 
 @customElement('sdr-view-main')
-export class SdrViewMain extends LitElement implements RouterView {
+class SdrViewMain extends LitElement implements RouterView {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
 	@property({ type: Array })
@@ -250,3 +250,5 @@ export class SdrViewMain extends LitElement implements RouterView {
 		this.dispatchEvent(new CustomEvent('apploaded', { bubbles: true, composed: true }));
 	}
 }
+
+export { SdrViewMain };

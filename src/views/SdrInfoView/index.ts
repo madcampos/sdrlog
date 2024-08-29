@@ -9,7 +9,7 @@ import { Router } from '../../router/router';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-view-app-info')
-export class SdrViewAppInfo extends LitElement implements RouterView {
+class SdrViewAppInfo extends LitElement implements RouterView {
 	static override readonly styles = unsafeCSS(style);
 
 	@state()
@@ -168,3 +168,5 @@ export class SdrViewAppInfo extends LitElement implements RouterView {
 		`;
 	}
 }
+
+export { SdrViewAppInfo };

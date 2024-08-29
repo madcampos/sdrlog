@@ -56,7 +56,7 @@ const keyMap: Record<string, KeyData> = {
 };
 
 @customElement('sdr-view-emulator')
-export class SdrViewEmulator extends LitElement implements RouterView {
+class SdrViewEmulator extends LitElement implements RouterView {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static override readonly styles = unsafeCSS(style);
 
@@ -473,3 +473,5 @@ export class SdrViewEmulator extends LitElement implements RouterView {
 		`;
 	}
 }
+
+export { SdrViewEmulator };

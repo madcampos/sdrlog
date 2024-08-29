@@ -7,7 +7,7 @@ import style from './style.css?inline' assert { type: 'css' };
 type InputType = 'date' | 'datetime-local' | 'email' | 'month' | 'number' | 'password' | 'search' | 'tel' | 'text' | 'time' | 'url' | 'week';
 
 @customElement('sdr-edit-box')
-export class SdrEditBox extends LitElement {
+class SdrEditBox extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -201,3 +201,5 @@ export class SdrEditBox extends LitElement {
 		`;
 	}
 }
+
+export { SdrEditBox };

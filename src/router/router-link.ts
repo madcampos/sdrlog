@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { Router } from './router';
 
 @customElement('router-link')
-export class RouterLink extends LitElement {
+class RouterLink extends LitElement {
 	@property({ type: String, reflect: true, attribute: 'router-link' })
 	accessor to = '/';
 
@@ -30,3 +30,5 @@ export class RouterLink extends LitElement {
 		`;
 	}
 }
+
+export { RouterLink };

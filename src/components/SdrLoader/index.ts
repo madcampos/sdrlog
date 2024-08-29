@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-loader')
-export class SdrLoader extends LitElement {
+class SdrLoader extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true })
@@ -23,3 +23,5 @@ export class SdrLoader extends LitElement {
 		`;
 	}
 }
+
+export { SdrLoader };

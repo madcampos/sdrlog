@@ -8,7 +8,7 @@ import { registerShortcut } from '../../js/util/keyboard';
 import { Router } from '../../router/router';
 
 @customElement('sdr-view-theme-settings')
-export class SdrViewThemeSettings extends LitElement implements RouterView {
+class SdrViewThemeSettings extends LitElement implements RouterView {
 	@state()
 	accessor #open: boolean;
 
@@ -93,3 +93,5 @@ export class SdrViewThemeSettings extends LitElement implements RouterView {
 		`;
 	}
 }
+
+export { SdrViewThemeSettings };

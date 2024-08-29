@@ -6,7 +6,7 @@ import { marked } from 'marked';
 import style from './style.css?inline' assert { type: 'css' };
 
 @customElement('sdr-textarea')
-export class SdrTextArea extends LitElement {
+class SdrTextArea extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static formAssociated = true;
 	static override readonly styles = unsafeCSS(style);
@@ -158,3 +158,5 @@ export class SdrTextArea extends LitElement {
 		`;
 	}
 }
+
+export { SdrTextArea };
