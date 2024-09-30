@@ -2,6 +2,7 @@
 // eslint-env node
 import { readFileSync } from 'node:fs';
 
+import { ModuleKind, ModuleResolutionKind, NewLineKind, ScriptTarget } from 'typescript';
 import { defineConfig, type UserConfig } from 'vite';
 import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
 import { vitePluginTypescriptTranspile } from 'vite-plugin-typescript-transpile';
@@ -23,7 +24,45 @@ export default defineConfig(({ mode }) => {
 
 	const config: UserConfig = {
 		plugins: [
-			vitePluginTypescriptTranspile({}),
+			vitePluginTypescriptTranspile({
+				compilerOverrides: {
+					allowImportingTsExtensions: true,
+					allowJs: true,
+					allowSyntheticDefaultImports: true,
+					allowUnreachableCode: false,
+					baseUrl: '.',
+					checkJs: true,
+					composite: true,
+					esModuleInterop: true,
+					experimentalDecorators: false,
+					forceConsistentCasingInFileNames: true,
+					incremental: true,
+					lib: ['DOM', 'DOM.Iterable', 'ESNext'],
+					module: ModuleKind.ESNext,
+					moduleResolution: ModuleResolutionKind.Node16,
+					newLine: NewLineKind.LineFeed,
+					noEmit: true,
+					noFallthroughCasesInSwitch: true,
+					noImplicitOverride: true,
+					noImplicitReturns: true,
+					noImplicitThis: true,
+					noPropertyAccessFromIndexSignature: true,
+					noUncheckedIndexedAccess: true,
+					noUnusedLocals: true,
+					noUnusedParameters: true,
+					removeComments: false,
+					resolveJsonModule: true,
+					skipDefaultLibCheck: true,
+					skipLibCheck: true,
+					sourceMap: false,
+					strict: true,
+					target: ScriptTarget.ES2023,
+					tsBuildInfoFile: 'dist/.tsbuildinfo',
+					useDefineForClassFields: true,
+					useUnknownInCatchVariables: false,
+					verbatimModuleSyntax: true
+				}
+			}),
 			vitePWA({
 				registerType: 'prompt',
 				minify: true,
@@ -33,6 +72,7 @@ export default defineConfig(({ mode }) => {
 					scope: baseUrl
 				},
 				scope: baseUrl,
+				showMaximumFileSizeToCacheInBytesWarning: true,
 				workbox: {
 					cleanupOutdatedCaches: true,
 					clientsClaim: true,
