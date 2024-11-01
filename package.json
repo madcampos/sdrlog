@@ -16,6 +16,7 @@
 		"typecheck": "tsc --noEmit",
 		"lint:js": "eslint --fix",
 		"lint": "npm run typecheck && npm run lint:js",
+		"format": "dprint fmt",
 		"build": "vite build",
 		"prepreview": "npm run build",
 		"preview": "vite preview --port 3000"
