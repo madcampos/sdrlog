@@ -8,9 +8,7 @@ type IsParameter<Part> = Part extends `:${infer ParamName}` ? ParamName : never;
 type FilteredParts<Path> = Path extends `${infer PartA}/${infer PartB}` ? FilteredParts<PartB> | IsParameter<PartA>
 	: IsParameter<Path>;
 
-type Params<Path> = {
-	[Key in FilteredParts<Path>]: string;
-};
+type Params<Path> = Record<FilteredParts<Path>, string>;
 
 export interface RouteLocation<Path = string> {
 	path: Path;

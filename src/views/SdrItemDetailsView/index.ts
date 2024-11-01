@@ -243,11 +243,13 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 			title = this.#material.name;
 		}
 
+		// TODO: move this handler elsewhere
 		if ('launchQueue' in window) {
 			window.launchQueue.setConsumer(async (launchParams) => {
 				this.resetMaterial();
 
-				for await (const fileReference of launchParams.files) {
+				for (const fileReference of launchParams.files) {
+					/* eslint-disable no-await-in-loop */
 					if (fileReference.kind === 'file') {
 						try {
 							const file = await (fileReference as FileSystemFileHandle).getFile();
@@ -261,6 +263,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 							console.error(error);
 						}
 					}
+					/* eslint-enable no-await-in-loop */
 				}
 			});
 		}

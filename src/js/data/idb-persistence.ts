@@ -113,7 +113,8 @@ export async function setIDBItems<T extends Collections>(collection: T, items: [
 	const transaction = (await database).transaction(collection, 'readwrite');
 
 	try {
-		for await (const [key, value] of items) {
+		for (const [key, value] of items) {
+			// eslint-disable-next-line no-await-in-loop
 			await transaction.store.put(value, key);
 		}
 

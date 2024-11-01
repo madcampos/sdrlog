@@ -3,7 +3,7 @@ const sorters: Partial<Record<string, Intl.Collator>> = {};
 export function createComparer(options: Intl.CollatorOptions = {}, language: string = navigator.language) {
 	const sorterKey = JSON.stringify({ language, ...options });
 
-	sorters[sorterKey] ||= new Intl.Collator(language, options);
+	sorters[sorterKey] ??= new Intl.Collator(language, options);
 
 	return (x: string, y: string) => (sorters[sorterKey] as Intl.Collator).compare(x, y);
 }
@@ -11,7 +11,7 @@ export function createComparer(options: Intl.CollatorOptions = {}, language: str
 const langNames: Partial<Record<string, Intl.DisplayNames>> = {};
 
 export function translateLanguageName(nameToTranslate: string, language: string = navigator.language) {
-	langNames[language] ||= new Intl.DisplayNames([language], { type: 'language' });
+	langNames[language] ??= new Intl.DisplayNames([language], { type: 'language' });
 
 	return langNames[language].of(nameToTranslate);
 }
@@ -23,7 +23,7 @@ export function formatFullDate(
 	language: string = navigator.language,
 	options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', timeZone: 'UTC', year: 'numeric' }
 ) {
-	dateFormaters[language] ||= new Intl.DateTimeFormat(language, options);
+	dateFormaters[language] ??= new Intl.DateTimeFormat(language, options);
 
 	return dateFormaters[language].format(dateToFormat);
 }

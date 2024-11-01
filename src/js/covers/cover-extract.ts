@@ -67,7 +67,7 @@ export async function extractCover(file: File) {
 }
 
 export async function optimizeCover(cover: ImageData) {
-	optimize ||= (await import('./cover-optimizer')).optimize;
+	optimize ??= (await import('./cover-optimizer')).optimize;
 
 	const { width: coverWidth, height: coverHeight, data: coverData } = cover;
 	const optimizedCover = await optimize(coverData.buffer, { width: coverWidth, height: coverHeight });

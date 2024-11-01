@@ -115,6 +115,7 @@ export class SearchEngine {
 				);
 				break;
 
+			case 'name':
 			default:
 				document.querySelectorAll<SdrCard>(`sdr-card[title*="${value}" i]`).forEach((card) => {
 					suggestionList.push([`name: ${card.title}`, card.title]);

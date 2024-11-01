@@ -47,7 +47,8 @@ export async function extractCoversFromFiles() {
 
 		progressOverlay.total = files.length;
 
-		for await (const file of files) {
+		for (const file of files) {
+			/* eslint-disable no-await-in-loop */
 			progressOverlay.increment(file.fileName);
 
 			if (file.handler.kind !== 'file') {
@@ -73,6 +74,7 @@ export async function extractCoversFromFiles() {
 				await setIDBItem('covers', id, coverFile);
 				await setIDBItem('thumbs', id, thumbFile);
 			}
+			/* eslint-enable no-await-in-loop */
 		}
 	} catch (err) {
 		console.error('Error extracting covers from files.', err);
@@ -106,7 +108,8 @@ export async function importCoversFromFolder() {
 
 		progressOverlay.total = files.length;
 
-		for await (const file of files) {
+		for (const file of files) {
+			/* eslint-disable no-await-in-loop */
 			progressOverlay.increment(file.name);
 
 			const canSaveCover = await canImportCover(file, true);
@@ -126,6 +129,7 @@ export async function importCoversFromFolder() {
 					console.error(`Failed to import cover "${id}" from file.`, err);
 				}
 			}
+			/* eslint-enable no-await-in-loop */
 		}
 	} catch (err) {
 		console.error('Failed to import covers from folder.', err);

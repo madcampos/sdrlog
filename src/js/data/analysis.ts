@@ -4,12 +4,11 @@ import { fetchData, fetchItems } from './data-import';
 import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from './idb-persistence';
 
 async function findMissingCovers() {
-	const items = await fetchItems();
-	const missingCovers: string[] = [];
-	const missingThumbs: string[] = [];
-
-	for await (const item of items) {
+	const { missingCovers, missingThumbs } = (await Promise.all((await fetchItems()).map(async (item) => {
 		const [id = ''] = item.sku;
+
+		let missingCover: string | undefined;
+		let missingThumb: string | undefined;
 
 		const coverFromStorage = await getIDBItem('covers', id);
 		const thumbFromStorage = await getIDBItem('thumbs', id);
@@ -21,10 +20,10 @@ async function findMissingCovers() {
 				});
 
 				if (!response.ok) {
-					missingCovers.push(id);
+					missingCover = id;
 				}
 			} catch {
-				missingCovers.push(id);
+				missingCover = id;
 			}
 		}
 
@@ -35,13 +34,28 @@ async function findMissingCovers() {
 				});
 
 				if (!response.ok) {
-					missingThumbs.push(id);
+					missingThumb = id;
 				}
 			} catch {
-				missingThumbs.push(id);
+				missingThumb = id;
 			}
 		}
-	}
+
+		return {
+			missingCover,
+			missingThumb
+		};
+	}))).reduce<{ missingCovers: string[], missingThumbs: string[] }>((results, { missingCover, missingThumb }) => {
+		if (missingCover) {
+			results.missingCovers.push(missingCover);
+		}
+
+		if (missingThumb) {
+			results.missingThumbs.push(missingThumb);
+		}
+
+		return results;
+	}, { missingCovers: [], missingThumbs: [] });
 
 	return {
 		missingCovers: missingCovers.sort(),
@@ -71,23 +85,37 @@ async function findDuplicateIds() {
 }
 
 async function findMissingFiles() {
-	const data = await fetchItems();
-	const materialsWithMissingFiles: string[] = [];
-	const materialsWithOkStatusButMissingFiles: string[] = [];
-
-	for await (const material of data) {
+	const { materialsWithMissingFiles, materialsWithOkStatusButMissingFiles } = (await Promise.all((await fetchItems()).map(async (material) => {
 		const [id = ''] = material.sku;
+
+		let missingFile: string | undefined;
+		let okButMissing: string | undefined;
 
 		const filesForMaterial = await getIDBItemsByIndex('files', 'itemId', id);
 
 		if (filesForMaterial.length === 0 && material.status !== 'canceled') {
-			materialsWithMissingFiles.push(id);
+			missingFile = id;
 		}
 
 		if (filesForMaterial.length === 0 && material.status === 'ok') {
-			materialsWithOkStatusButMissingFiles.push(id);
+			okButMissing = id;
 		}
-	}
+
+		return {
+			missingFile,
+			okButMissing
+		};
+	}))).reduce<{ materialsWithMissingFiles: string[], materialsWithOkStatusButMissingFiles: string[] }>((results, { missingFile, okButMissing }) => {
+		if (missingFile) {
+			results.materialsWithMissingFiles.push(missingFile);
+		}
+
+		if (okButMissing) {
+			results.materialsWithOkStatusButMissingFiles.push(okButMissing);
+		}
+
+		return results;
+	}, { materialsWithMissingFiles: [], materialsWithOkStatusButMissingFiles: [] });
 
 	return {
 		materialsWithMissingFiles: materialsWithMissingFiles.sort(),
@@ -100,7 +128,7 @@ async function findExtraFiles() {
 	const files = await getAllIDBValues('files');
 	const extraFiles: string[] = [];
 
-	for await (const file of files) {
+	for (const file of files) {
 		if (file.handler.kind !== 'file') {
 			continue;
 		}
@@ -121,7 +149,7 @@ async function findDuplicateFiles() {
 	const duplicateFiles: string[][] = [];
 	const duplicateHashes: string[] = [];
 
-	for await (const [i, hash] of hashes.entries()) {
+	for (const [i, hash] of hashes.entries()) {
 		if (duplicateHashes.includes(hash)) {
 			continue;
 		}
@@ -143,7 +171,7 @@ async function findFilesWithDuplicateIds() {
 	const duplicateIdFiles: string[][] = [];
 	const duplicateIds: string[] = [];
 
-	for await (const item of items) {
+	for (const item of items) {
 		const id = item.itemId;
 
 		if (!id) {

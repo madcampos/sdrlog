@@ -144,9 +144,10 @@ export async function readFiles() {
 		const entries = await readDir(dir, '');
 
 		progressOverlay.total = entries.length;
-		for await (const { entry, path } of entries) {
+		for (const { entry, path } of entries) {
 			progressOverlay.increment(entry.name);
 
+			// eslint-disable-next-line no-await-in-loop
 			await saveFile(entry, path);
 		}
 	} catch (err) {

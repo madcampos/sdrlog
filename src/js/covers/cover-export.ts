@@ -13,7 +13,8 @@ export async function saveCoversToFolder() {
 
 		progressOverlay.total = covers.length;
 
-		for await (const cover of covers) {
+		for (const cover of covers) {
+			/* eslint-disable no-await-in-loop */
 			progressOverlay.increment(cover.name);
 
 			try {
@@ -28,6 +29,7 @@ export async function saveCoversToFolder() {
 				await stream.write(cover);
 				await stream.close();
 			}
+			/* eslint-enable no-await-in-loop */
 		}
 	} catch (err) {
 		console.error('Failed to save covers.', err);
@@ -48,7 +50,8 @@ export async function saveThumbsToFolder() {
 
 		progressOverlay.total = thumbs.length;
 
-		for await (const thumb of thumbs) {
+		for (const thumb of thumbs) {
+			/* eslint-disable no-await-in-loop */
 			progressOverlay.increment(thumb.name);
 
 			try {
@@ -63,6 +66,7 @@ export async function saveThumbsToFolder() {
 				await stream.write(thumb);
 				await stream.close();
 			}
+			/* eslint-enable no-await-in-loop */
 		}
 	} catch (err) {
 		console.error('Failed to save thmbs.', err);

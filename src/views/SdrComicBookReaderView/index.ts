@@ -143,8 +143,9 @@ class SdrViewCbzReader extends LitElement implements RouterView {
 		const zip = await JSZip.loadAsync(file);
 		const pages: Pages = {};
 
-		for await (const zipObject of Object.values(zip.files)) {
+		for (const zipObject of Object.values(zip.files)) {
 			if (!zipObject.dir) {
+				// eslint-disable-next-line no-await-in-loop
 				const blob = await zipObject.async('blob');
 				const [name = '', folder = DEFAULT_FOLDER_NAME] = zipObject.name.split('/').reverse();
 				const testRegex = /(?<extension>\.[a-z0-9]{3,})$/u;

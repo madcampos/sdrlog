@@ -156,13 +156,13 @@ export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) 
 
 	await setIDBItem('items', id, materialToSave);
 
-	for await (const file of files ?? []) {
+	await Promise.all((files ?? []).map(async (file) => {
 		const existingFile = await getIDBItemByIndex('files', 'hash', file.hash);
 
 		if (!existingFile) {
 			await setIDBItem('files', undefined, file);
 		}
-	}
+	}));
 
 	if (cover) {
 		try {
