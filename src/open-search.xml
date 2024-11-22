@@ -12,7 +12,7 @@
 	<OutputEncoding>UTF-8</OutputEncoding>
 
 	<Url type="text/html" rel="results" template="https://sdrlog.madcampos.dev/?utm_source=search&amp;utm_medium=shortcut&amp;utm_campaign=search&amp;search={searchTerms}"/>
-	<Url type="application/json" rel="suggestions" template="https://sdrlog.madcampos.dev/?utm_source=search&amp;utm_medium=shortcut&amp;utm_campaign=suggestions&amp;search={searchTerms}"/>
+	<Url type="application/json" rel="suggestions" template="https://sdrlog.madcampos.dev/?utm_source=search&amp;utm_medium=shortcut&amp;utm_campaign=suggestions&amp;suggestions={searchTerms}"/>
 
 	<Url type="application/opensearchdescription+xml" rel="self" template="https://sdrlog.madcampos.dev/open-search.xml" />
 

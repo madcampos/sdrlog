@@ -131,7 +131,7 @@ export const shareTarget: RuntimeCaching = {
 };
 
 export const searchHandler: RuntimeCaching = {
-	urlPattern: ({ sameOrigin, url }) => sameOrigin && url.searchParams.has('search'),
+	urlPattern: ({ sameOrigin, url }) => sameOrigin && url.searchParams.has('suggestions'),
 	handler: async ({ event: _event, request: _request }) => {
 		// TODO: handle search!
 		const body = JSON.stringify([
@@ -151,7 +151,8 @@ export const searchHandler: RuntimeCaching = {
 			status: 200,
 			statusText: 'OK',
 			headers: {
-				'Content-Type': 'text/html'
+				// Ref: https://stackoverflow.com/questions/36535642/serving-an-opensearch-application-x-suggestionsjson-through-a-service-worker
+				'Content-Type': 'application/x-suggestions+json'
 			}
 		});
 
