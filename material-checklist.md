@@ -9,22 +9,14 @@ https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
 
 https://www.shadowrun6.de/index.php/produkte-2.html
 https://www.shadowrunsixthworld.com/
-https://www.drivethrurpg.com/browse.php?filters=1700_0_0_0_0
 
 # Materials to add
-
-https://www.drivethrurpg.com/browse/pub/2216/Catalyst-Game-Labs/subcategory/44855/Shadowrun-Holostreets?page=1&sort=4a&include_community_content=1&show_only_community_content=1
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
-https://www.shadowrunsixthworld.com/2022/05/shadowrun-preview-for-the-rest-of-2022/
-
 - The chimera complex
-- Body shop
-- Wild life
-
-https://www.shadowiki.de/Shadowrun_Schnell_und_dreckig
+- Edge Zone
 
 # Archive
 
@@ -58,6 +50,8 @@ https://fondationdraco.fr/2016/05/05/shadowrun-au-japon-entangled-betrayal/
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/tokyo-eye-shot-shadowrun-city-file/
 https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-shikkoku-no-senki/
 https://fondationdraco.fr/shadowrun-au-japon-partie-5/
+https://shadowrun.fandom.com/wiki/Shadowrun_Manga
+https://mangadex.org/title/9d811b3e-9079-4ac3-a2e9-6a8f43956e29/shadowrun
 
 ## short stories
 
