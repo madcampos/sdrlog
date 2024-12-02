@@ -3,7 +3,7 @@ import type { FileForMaterial } from '../../data/data';
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getIDBItem, getIDBItemByIndex, setIDBItem } from '../data/idb-persistence';
 
-export async function getFileHash(dataToHash: ArrayBuffer | string) {
+export async function getFileHash(dataToHash: BufferSource | string) {
 	const encoder = new TextEncoder();
 
 	let data = dataToHash;
