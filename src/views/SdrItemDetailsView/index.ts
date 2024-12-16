@@ -334,7 +334,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 	override render() {
 		return html`
-			<style>${SdrViewItemDetails.styles}</style>
+			<!-- <style>${SdrViewItemDetails.styles}</style> -->
 			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
 				<sdr-edit-box slot="title" ?disabled="${this.isDisplaying}" value="${this.#material.name}" @input="${(evt: Event) =>
 			this.#updateInputValue(evt, 'name')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'name')}"></sdr-edit-box>
