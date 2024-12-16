@@ -78,10 +78,12 @@
 		"blockSelectorLinebreak": "consistent",
 		"omitNumberLeadingZero": false,
 		"trailingComma": false,
-		"padComments": true,
+		"formatComments": true,
+		"alignComments": true,
 		"linebreakInPseudoParens": false,
 		"declarationOrder": "alphabetical",
 		"singleLineBlockThreshold": 1,
+		"attrValueQuotes": "always",
 		"ignoreCommentDirective": "dprint-ignore"
 	},
 	"markdown": {
@@ -141,11 +143,11 @@
 		"**/*-lock.json"
 	],
 	"plugins": [
-		"https://plugins.dprint.dev/typescript-0.91.4.wasm",
-		"https://plugins.dprint.dev/json-0.19.3.wasm",
-		"https://plugins.dprint.dev/g-plane/malva-v0.5.1.wasm",
-		"https://plugins.dprint.dev/g-plane/markup_fmt-v0.11.0.wasm",
-		"https://plugins.dprint.dev/markdown-0.17.1.wasm",
-		"https://plugins.dprint.dev/g-plane/pretty_yaml-v0.4.0.wasm"
+		"https://plugins.dprint.dev/typescript-0.93.3.wasm",
+		"https://plugins.dprint.dev/json-0.19.4.wasm",
+		"https://plugins.dprint.dev/g-plane/malva-v0.11.1.wasm",
+		"https://plugins.dprint.dev/g-plane/markup_fmt-v0.18.0.wasm",
+		"https://plugins.dprint.dev/markdown-0.17.8.wasm",
+		"https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm"
 	]
 }
