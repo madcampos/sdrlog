@@ -1,5 +1,9 @@
-@import './vars.css';
-@import './font.css';
+@layer vars, base, components, theme, accessibility;
+
+@import 'open-props/open-props.min.css' layer(vars);
+
+@import './vars.css' layer(vars);
+@import './font.css' layer(vars);
 
 ::selection {
 	background-color: var(--accent-color);
@@ -91,9 +95,9 @@ main {
 
 #load-text {
 	flex-grow: 1;
-	font-size: var(--small-text);
+	font-size: var(--font-size-0);
 	hyphens: auto;
-	margin: var(--margin-block) 0 0;
+	margin: var(--size-1) 0 0;
 	overflow: auto;
 	word-wrap: break-word;
 }

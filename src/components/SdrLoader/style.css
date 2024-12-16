@@ -9,7 +9,7 @@
 	background-image: linear-gradient(-60deg, var(--bg-color) 40%, transparent, var(--bg-color) 60%);
 	background-position: 100%;
 	background-size: 200% 100%;
-	border-radius: var(--border-radius);
+	border-radius: var(--radius-3);
 	color: transparent;
 	max-width: 20rem;
 	opacity: 0.2;

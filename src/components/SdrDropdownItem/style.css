@@ -2,6 +2,6 @@
 
 hr {
 	border: none;
-	border-top: solid var(--border-width) var(--border-color);
+	border-top: solid var(--size-1) var(--border-color);
 	width: max(3rem, 80%);
 }

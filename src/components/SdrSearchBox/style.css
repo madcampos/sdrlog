@@ -23,13 +23,13 @@ input[type='search'] {
 	-webkit-app-region: no-drag;
 	appearance: none;
 	background: var(--bg-color);
-	border: solid var(--border-width) var(--bg-color);
-	border-radius: var(--border-radius);
+	border: solid var(--size-1) var(--bg-color);
+	border-radius: var(--radius-3);
 	flex-grow: 1;
 	font: inherit;
 	height: 2rem;
 	outline: none;
-	padding: var(--padding-block) var(--padding-inline);
+	padding: var(--size-1) var(--size-2);
 	transition: var(--transition);
 	width: 100%;
 }

@@ -2,12 +2,12 @@
 
 #tab {
 	background: var(--bg-color);
-	border: var(--border-width) solid var(--border-color);
+	border: var(--size-1) solid var(--border-color);
 	border-bottom: none;
-	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	border-radius: var(--radius-3) var(--radius-3) 0 0;
 	cursor: pointer;
 	display: inline-block;
-	padding: var(--padding-inline) var(--padding-block);
+	padding: var(--size-2) var(--size-1);
 }
 
 :host([aria-selected='true']) #tab {

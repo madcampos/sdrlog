@@ -2,7 +2,7 @@
 	app-region: drag;
 	-webkit-app-region: drag;
 	background-color: var(--theme-color);
-	box-shadow: var(--deep-shadow);
+	box-shadow: var(--shadow-5);
 	box-sizing: border-box;
 	display: block;
 	height: var(--menubar-height);
@@ -19,13 +19,13 @@ nav {
 	height: 100%;
 	justify-content: center;
 	left: var(--menubar-left);
-	padding: var(--padding-block) var(--padding-inline);
+	padding: var(--size-1) var(--size-2);
 	position: absolute;
 	top: 0;
 	user-select: none;
 	width: var(--menubar-width);
 }
 
-nav ::slotted(*) { margin: var(--margin-block); }
+nav ::slotted(*) { margin: var(--size-1); }
 
 :host([no-file-system]) .file-system { display: none; }

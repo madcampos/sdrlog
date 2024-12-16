@@ -3,8 +3,8 @@
 aside:not([hidden]) {
 	align-items: center;
 	background: var(--secondary-color);
-	border: solid var(--border-width) var(--border-color);
-	border-radius: var(--border-radius);
+	border: solid var(--size-1) var(--border-color);
+	border-radius: var(--radius-3);
 	bottom: 0.5rem;
 	box-sizing: inherit;
 	color: var(--text-color);

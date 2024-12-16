@@ -31,7 +31,7 @@ sdr-view-item-details #cover-drop-area figure {
 }
 
 sdr-view-item-details #cover-drop-area figure img {
-	border-radius: var(--border-radius);
+	border-radius: var(--radius-3);
 	height: 100%;
 	object-fit: contain;
 	object-position: center;
@@ -46,7 +46,7 @@ sdr-view-item-details #publisher img {
 
 sdr-view-item-details #item-info {
 	display: grid;
-	gap: var(--margin-block);
+	gap: var(--size-1);
 	grid-template-areas:
 		'sku sku sku sku'
 		'edition category category type'

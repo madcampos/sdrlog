@@ -18,15 +18,15 @@ select {
 	appearance: none;
 	background-color: var(--bg-color);
 	background-image: var(--select-arrow);
-	background-position: calc(100% - var(--margin-inline)) center;
+	background-position: calc(100% - var(--size-2)) center;
 	background-repeat: no-repeat;
-	background-size: var(--select-arrow-size);
-	border: solid var(--border-width) transparent;
-	border-radius: var(--border-radius);
+	background-size: var(--size-5);
+	border: solid var(--size-1) transparent;
+	border-radius: var(--radius-3);
 	box-sizing: border-box;
 	font: inherit;
-	padding: var(--padding-block) var(--padding-inline);
-	padding-inline-end: var(--select-arrow-spacing);
+	padding: var(--size-1) var(--size-2);
+	padding-inline-end: calc(var(--size-5) + var(--size-2) * 2);
 	transition: var(--transition);
 	width: 100%;
 }

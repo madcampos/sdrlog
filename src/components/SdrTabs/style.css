@@ -8,14 +8,14 @@
 	align-items: center;
 	display: flex;
 	flex-direction: row;
-	gap: var(--padding-inline);
+	gap: var(--size-2);
 	justify-content: center;
 }
 
 #tab-panels {
-	border: var(--border-width) solid var(--theme-color);
-	border-radius: var(--border-radius);
+	border: var(--size-1) solid var(--theme-color);
+	border-radius: var(--radius-3);
 	height: fit-content;
 	overflow: auto;
-	padding: var(--padding-block) var(--padding-inline);
+	padding: var(--size-1) var(--size-2);
 }

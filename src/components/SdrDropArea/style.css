@@ -14,8 +14,8 @@
 #overlay {
 	align-items: center;
 	background: radial-gradient(var(--background, rgba(0, 0, 0, 0.5)), transparent);
-	border: solid var(--border-width) var(--border-color, transparent);
-	border-radius: var(--border-radius);
+	border: solid var(--size-1) var(--border-color, transparent);
+	border-radius: var(--radius-3);
 	box-sizing: border-box;
 	color: var(--text-color, currentcolor);
 	display: grid;

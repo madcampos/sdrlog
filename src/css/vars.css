@@ -1,7 +1,6 @@
 :root {
 	/* Sizes */
-	--body-text: 16px;
-	--small-text: 0.8rem;
+	--body-text: 18px;
 	/* TODO: consider virtual keyboard env var size */
 	/* TODO: rework other env vars */
 	/* TODO: use color and color-mix functions to generate other colours */
@@ -11,26 +10,13 @@
 	--bound-right: env(safe-area-inset-right, 0px);
 	--bound-bottom: env(safe-area-inset-bottom, 0px);
 	--bound-left: env(safe-area-inset-left, 0px);
-	--titlebar-height: env(titlebar-area-height, 0px);
+	--titlebar-height: env(titlebar-area-height, 3rem);
 	--titlebar-top: calc(env(titlebar-area-y, 0px) + var(--bound-top));
 	--menubar-top: calc(env(titlebar-area-y, 0px) + var(--bound-top));
 	--menubar-left: calc(env(titlebar-area-x, 0px) + var(--bound-left));
 	--menubar-width: calc(env(titlebar-area-width, 100vw) - var(--bound-right));
-	--menubar-height: max(3rem, env(titlebar-area-height, 3rem));
+	--menubar-height: max(3rem, var(--titlebar-height));
 	--button-size: calc(var(--menubar-height) * 0.8);
-	--border-width: 0.1rem;
-	--border-radius: 0.3rem;
-	--pill-border-radius: 100vmax;
-	--scrollbar-size: 0.5rem;
-	--label-recess: 0.5rem;
-	/* Padding */
-	--padding-inline: 0.5rem;
-	--padding-block: 0.3rem;
-	--padding-small: 0.1rem;
-	/* Margin */
-	--margin-inline: 0.5rem;
-	--margin-block: 0.3rem;
-	--margin-small: 0.1rem;
 	/* Theme colors */
 	--theme-color: darkviolet;
 	--secondary-color: deeppink;
@@ -45,28 +31,12 @@
 	--scrollbar-bg: rgba(255, 255, 255, 0.1);
 	/* Select arrow SVG */
 	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
-	--select-arrow-size: 1.5rem;
-	--select-arrow-spacing: calc(var(--select-arrow-size) + var(--margin-inline) * 2);
-	/* Shadows */
-	--light-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.13), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.11);
-	--medium-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.13), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.11);
-	--deep-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.13), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.11);
-	--deepest-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, 0.22), 0 4.8px 14.4px 0 rgba(0, 0, 0, 0.18);
 	/* Animations */
 	--transition: all 0.2s ease;
 	/* Dialog */
-	--dialog-width: clamp(10rem, 80vw, 60rem);
-	--dialog-height: clamp(15rem, 80vh, 100rem);
-	--dialog-border-radius: var(--border-radius);
-	/* Dropdown */
-	--dropdown-width: 15rem;
-	--dropdown-height: 80vh;
-	--dropdown-top: 2rem;
-	/* Radio button */
-	--radio-size: 10rem;
-	--radio-icon-size: 5rem;
-	/* Edit list */
-	--list-item-size: 3rem;
+	--dialog-width: clamp(var(--size-content-1), 80vw, vaR(--size-content-3));
+	--dialog-height: clamp(var(--size-content-1), 80vh, var(--size-content-3));
+	--dialog-border-radius: var(--radius-3);
 	/* Search box */
 	--searchbox-margin: max(1rem, 10%);
 	--searchbox-width: 100%;
@@ -83,42 +53,6 @@
 	--thumb-canceled-image: url('/images/base-covers/canceled.svg');
 	--thumb-canceled-filter: grayscale(0.8) brightness(80%) contrast(80%) blur(5px);
 	accent-color: var(--theme-color);
-	color-scheme: light;
-}
-
-.theme-dark {
-	/* Theme colors */
-	--theme-color: darkviolet;
-	--secondary-color: deeppink;
-	--accent-color: hotpink;
-	--complementary-color: gold;
-	/* Base colors */
-	--bg-color: #3c3c3c;
-	--dark-bg-color: #252525;
-	--border-color: #505050;
-	--dark-border-color: #444444;
-	--text-color: whitesmoke;
-	--scrollbar-bg: rgba(255, 255, 255, 0.1);
-	/* Select arrow SVG */
-	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
-	color-scheme: dark;
-}
-
-.theme-light {
-	/* Theme colors */
-	--theme-color: darkviolet;
-	--secondary-color: deeppink;
-	--accent-color: hotpink;
-	--complementary-color: goldenrod;
-	/* Base colors */
-	--bg-color: lightgray;
-	--dark-bg-color: whitesmoke;
-	--border-color: silver;
-	--dark-border-color: #444444;
-	--text-color: black;
-	--scrollbar-bg: rgba(255, 255, 255, 0.1);
-	/* Select arrow SVG */
-	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
 	color-scheme: light;
 }
 

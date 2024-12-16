@@ -13,12 +13,12 @@
 
 label {
 	background: var(--border-color);
-	border-radius: var(--pill-border-radius);
+	border-radius: var(--radius-round);
 	color: var(--text-color);
 	display: block;
-	font-size: var(--small-text);
-	margin-inline-start: var(--label-recess);
-	padding: var(--padding-small) var(--padding-inline);
+	font-size: var(--font-size-0);
+	margin-inline-start: var(--size-2);
+	padding: var(--size-1) var(--size-2);
 	transform: translateY(50%);
 	transition: var(--transition);
 	user-select: none;
@@ -32,16 +32,16 @@ select {
 	accent-color: var(--theme-color);
 	appearance: none;
 	background-color: transparent;
-	background-position: calc(100% - var(--margin-inline)) center;
+	background-position: calc(100% - var(--size-2)) center;
 	background-repeat: no-repeat;
-	background-size: var(--select-arrow-size);
-	border: solid var(--border-width) var(--border-color);
-	border-radius: var(--border-radius);
+	background-size: var(--size-5);
+	border: solid var(--size-1) var(--border-color);
+	border-radius: var(--radius-3);
 	box-sizing: border-box;
 	font: inherit;
-	padding: var(--padding-block) var(--padding-inline);
-	padding-block-start: var(--small-text);
-	padding-inline-end: var(--select-arrow-spacing);
+	padding: var(--size-1) var(--size-2);
+	padding-block-start: var(--font-size-0);
+	padding-inline-end: calc(var(--size-5) + var(--size-2) * 2);
 	transition: var(--transition);
 	width: 100%;
 }

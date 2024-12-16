@@ -1,6 +1,6 @@
 sdr-view-app-info summary h3 {
 	display: inline;
-	margin-inline-start: var(--margin-inline);
+	margin-inline-start: var(--size-2);
 }
 
 sdr-view-app-info dt { font-weight: bold; }

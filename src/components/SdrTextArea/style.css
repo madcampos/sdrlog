@@ -19,12 +19,12 @@
 
 label {
 	background: var(--border-color);
-	border-radius: var(--pill-border-radius);
+	border-radius: var(--radius-round);
 	color: var(--text-color);
 	display: block;
-	font-size: var(--small-text);
-	margin-inline-start: var(--label-recess);
-	padding: var(--padding-small) var(--padding-inline);
+	font-size: var(--font-size-0);
+	margin-inline-start: var(--size-2);
+	padding: var(--size-1) var(--size-2);
 	transform: translateY(50%);
 	transition: var(--transition);
 	user-select: none;
@@ -37,14 +37,14 @@ skeleton-loader { flex-grow: 1; }
 textarea, #rendered-text {
 	appearance: none;
 	background: transparent;
-	border: solid var(--border-width) transparent;
-	border-radius: var(--border-radius);
+	border: solid var(--size-1) transparent;
+	border-radius: var(--radius-3);
 	box-sizing: border-box;
 	font: inherit;
 	height: clamp(var(--min-height), fit-content, var(--max-height));
 	overflow: auto;
-	padding: var(--padding-block) var(--padding-inline);
-	padding-block-start: var(--small-text);
+	padding: var(--size-1) var(--size-2);
+	padding-block-start: var(--font-size-0);
 	resize: none;
 	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
 	scrollbar-width: thin;
@@ -66,18 +66,6 @@ textarea {
 	border-color: var(--border-color);
 	height: var(--textarea-height);
 	white-space: pre-wrap;
-}
-
-textarea::-webkit-scrollbar, #rendered-text::-webkit-scrollbar { width: var(--scrollbar-size); }
-
-textarea::-webkit-scrollbar-track, #rendered-text::-webkit-scrollbar-track {
-	background-color: var(--scrollbar-bg);
-	border-radius: var(--pill-border-radius);
-}
-
-textarea::-webkit-scrollbar-thumb, #rendered-text::-webkit-scrollbar-thumb {
-	background-color: var(--theme-color);
-	border-radius: var(--pill-border-radius);
 }
 
 textarea:focus {

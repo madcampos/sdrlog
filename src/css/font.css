@@ -8,6 +8,7 @@
 	unicode-range: U+E800;
 }
 
+/* TODO: turn this into a component */
 .sdr-icon {
 	font-feature-settings: 'liga';
 	-webkit-font-smoothing: antialiased;

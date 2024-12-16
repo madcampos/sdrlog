@@ -1,14 +1,14 @@
 :host {
 	align-items: center;
 	background: var(--bg-color);
-	border: solid var(--border-width) var(--border-color);
-	border-radius: var(--border-radius);
+	border: solid var(--size-1) var(--border-color);
+	border-radius: var(--radius-3);
 	box-sizing: inherit;
 	display: flex;
 	justify-content: space-between;
-	margin: var(--margin-block) var(--margin-inline);
-	max-height: var(--list-item-size);
-	padding: var(--padding-block) var(--padding-inline);
+	margin: var(--size-1) var(--size-2);
+	max-height: var(--size-8);
+	padding: var(--size-1) var(--size-2);
 	width: fit-content;
 }
 
