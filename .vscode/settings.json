@@ -10,5 +10,10 @@
 	],
 	"i18n-ally.disablePathParsing": true,
 	"i18n-ally.keystyle": "flat",
-	"dotenv.enableAutocloaking": false
+	"dotenv.enableAutocloaking": false,
+	"cssVariables.lookupFiles": [
+		"**/*.css",
+		"./node_modules/open-props/open-props.min.css",
+		"./node_modules/open-props/normalize.min.css",
+	],
 }
