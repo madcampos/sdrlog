@@ -1,5 +1,14 @@
 import type { IsoCode, MaterialCategory, MaterialPublisher, MaterialStatus, MaterialType } from './data';
 
+export const MATERIAL_EDITION_INFO: Readonly<Record<number, string>> = {
+	1: '1st',
+	2: '2nd',
+	3: '3rd',
+	4: '4th',
+	5: '5th',
+	6: '6th'
+} as const;
+
 export const MATERIAL_LANGUAGES_INFO: Readonly<Record<IsoCode, { name: string, icon: string }>> = {
 	'de-DE': { icon: '🇩🇪', name: 'German' },
 	'fr-FR': { icon: '🇫🇷', name: 'French' },

@@ -7,7 +7,7 @@ import { FALLBACK_COVER, getThumbUrl, LOADING_SIMPLE_COVER } from '../../js/cove
 import { getIDBItem } from '../../js/data/idb-persistence';
 import { Router } from '../../router/router';
 
-import { GamepadHandler } from '../../js/gamepad/gamepad-events';
+import { MATERIAL_CATEGORY_INFO, MATERIAL_EDITION_INFO, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants.ts';
 import style from './style.css?inline' assert { type: 'css' };
 
 interface CreateCardOptions {
@@ -62,59 +62,6 @@ class SdrCard extends LitElement {
 
 		this.#internals.role = 'listitem';
 		this.#internals.ariaLabel = this.title;
-
-		window.addEventListener('gamepadbuttondown', (evt) => {
-			if (document.activeElement === this && evt.detail.button === 'left') {
-				evt.stopPropagation();
-				this.#selectPreviousCard();
-			}
-
-			if (document.activeElement === this && evt.detail.button === 'right') {
-				evt.stopPropagation();
-				this.#selectNextCard();
-			}
-
-			if (document.activeElement === this && evt.detail.button === 'down') {
-				evt.stopPropagation();
-				this.#selectCardDown();
-			}
-
-			if (document.activeElement === this && evt.detail.button === 'up') {
-				evt.stopPropagation();
-				this.#selectCardUp();
-			}
-		});
-
-		window.addEventListener('gamepadbuttonpress', (evt) => {
-			if (document.activeElement === this && evt.detail.button === 'a') {
-				GamepadHandler.longVibration();
-				void Router.navigate(`/item/${this.id}`);
-			}
-		});
-
-		window.addEventListener('gamepadstickmove', (evt) => {
-			if (document.activeElement === this && evt.detail.stick === 'left') {
-				if (evt.detail.directionY === 'up') {
-					evt.stopPropagation();
-					this.#selectCardUp();
-				}
-
-				if (evt.detail.directionY === 'down') {
-					evt.stopPropagation();
-					this.#selectCardDown();
-				}
-
-				if (evt.detail.directionX === 'left') {
-					evt.stopPropagation();
-					this.#selectPreviousCard();
-				}
-
-				if (evt.detail.directionX === 'right') {
-					evt.stopPropagation();
-					this.#selectNextCard();
-				}
-			}
-		});
 	}
 
 	#handleKeyboardNavigation(evt: KeyboardEvent) {
@@ -124,60 +71,6 @@ class SdrCard extends LitElement {
 
 			void Router.navigate(`/item/${this.id}`);
 		}
-	}
-
-	#selectNextCard() {
-		if (this.nextElementSibling) {
-			window.requestAnimationFrame(() => {
-				(this.nextElementSibling as SdrCard).focus();
-			});
-		} else {
-			window.requestAnimationFrame(() => {
-				document.querySelector('sdr-card')?.focus();
-			});
-		}
-	}
-
-	#selectPreviousCard() {
-		if (this.previousElementSibling) {
-			window.requestAnimationFrame(() => {
-				(this.previousElementSibling as SdrCard).focus();
-			});
-		} else {
-			window.requestAnimationFrame(() => {
-				this.parentElement?.querySelector('sdr-card:last-child')?.focus();
-			});
-		}
-	}
-
-	#selectCardDown() {
-		const { marginLeft, marginRight } = window.getComputedStyle(this);
-		const width = this.offsetWidth + Number.parseFloat(marginLeft) + Number.parseFloat(marginRight);
-		const parentElement = this.parentElement as HTMLElement;
-		const parentWidth = parentElement.clientWidth;
-		const columns = Math.floor(parentWidth / width);
-		const index = [...parentElement.children].indexOf(this);
-		const column = index % columns;
-		const nextRowCard = (parentElement.children.item(index + columns) ?? parentElement.children.item(column)) as SdrCard;
-
-		window.requestAnimationFrame(() => {
-			nextRowCard.focus();
-		});
-	}
-
-	#selectCardUp() {
-		const { marginLeft, marginRight } = window.getComputedStyle(this);
-		const width = this.offsetWidth + Number.parseFloat(marginLeft) + Number.parseFloat(marginRight);
-		const parentElement = this.parentElement as HTMLElement;
-		const parentWidth = parentElement.clientWidth;
-		const columns = Math.floor(parentWidth / width);
-		const index = [...parentElement.children].indexOf(this);
-		const column = index % columns;
-		const previousRowCard = (parentElement.children.item(index - columns) ?? parentElement.children.item(parentElement.children.length - columns + column)) as SdrCard;
-
-		window.requestAnimationFrame(() => {
-			previousRowCard.focus();
-		});
 	}
 
 	async #fallbackThumb() {
@@ -204,25 +97,49 @@ class SdrCard extends LitElement {
 
 	override render() {
 		return html`
-			<figure
+			<article
 				tabindex="0"
 
 				@click=${async () => Router.navigate(`/item/${this.id}`)}
 				@keydown=${(evt: KeyboardEvent) => this.#handleKeyboardNavigation(evt)}
 			>
-				<img
-					decoding="async"
-					loading="lazy"
-					width="100"
-					height="160"
-					role="presentation"
-					src="${this.thumbUrl}"
-					alt=${this.title}
+				<aside id="badges">
+					<span id="status" data-status="${this.status}">
+						<span id="status-label">Status: </span>
+						<span>${MATERIAL_STATUS_INFO[this.status].name}</span>
+					</span>
+					<span id="edition" title="${MATERIAL_EDITION_INFO[this.edition]} edition" data-edition="${this.edition}">Edition: ${this.edition} edition</span>
+				</aside>
+				<picture>
+					<img
+						decoding="async"
+						loading="lazy"
+						width="100"
+						height="160"
+						role="presentation"
+						src="${this.thumbUrl}"
+						alt=${this.title}
 
-					@error=${async () => this.#fallbackThumb()}
-				/>
-			</figure>
-			<h4 id="title">${this.title}</h4>
+						@error=${async () => this.#fallbackThumb()}
+					/>
+				</picture>
+				<header>
+					<h2>${this.title}</h2>
+					<small id="sku"><strong>SKU:</strong> ${new Intl.ListFormat('en-US', { style: 'short', type: 'conjunction' }).format(this.sku)}</small>
+				</header>
+				<footer>
+					<small id="category" data-category="${this.category}">
+						<span id="category-label">Category: </span>
+						<span role="none">${MATERIAL_CATEGORY_INFO[this.category].icon}</span>
+						<span>${MATERIAL_CATEGORY_INFO[this.category].name}</span>
+					</small>
+					<small id="type"data-type="${this.type}">
+						<span id="type-label">Type: </span>
+						<span role="none">${MATERIAL_TYPE_INFO[this.type].icon}</span>
+						<span>${MATERIAL_TYPE_INFO[this.type].name}</span>
+					</small>
+				</footer>
+			</article>
 		`;
 	}
 
