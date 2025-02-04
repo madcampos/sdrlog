@@ -53,49 +53,57 @@
 			"src": "/screenshots/wide-1.png",
 			"sizes": "1024x593",
 			"type": "image/png",
-			"platform": "wide"
+			"form_factor": "wide",
+			"label": "A title reading: \"Organize your whole catalog\"."
 		},
 		{
 			"src": "/screenshots/wide-2.png",
 			"sizes": "1024x593",
 			"type": "image/png",
-			"platform": "wide"
+			"form_factor": "wide",
+			"label": "A title reading: \"View details for each item\". Followed by the list: Cover; Edition; Description; Languages Published."
 		},
 		{
 			"src": "/screenshots/wide-3.png",
 			"sizes": "1024x593",
 			"type": "image/png",
-			"platform": "wide"
+			"form_factor": "wide",
+			"label": "A title that reads: \"Edit and save on your device\". Followed by the list: Add missing data; Drop a new cover; Export your new item."
 		},
 		{
 			"src": "/screenshots/wide-4.png",
 			"sizes": "1024x593",
 			"type": "image/png",
-			"platform": "wide"
+			"form_factor": "wide",
+			"label": "The following list: Multi-language; Color themes; Up to date data; Import your collection; Internal file reader; Gamepad support."
 		},
 		{
 			"src": "/screenshots/narrow-1.png",
 			"sizes": "540x720",
 			"type": "image/png",
-			"platform": "narrow"
+			"form_factor": "narrow",
+			"label": "A title reading: \"Organize your whole catalog\"."
 		},
 		{
 			"src": "/screenshots/narrow-2.png",
 			"sizes": "540x720",
 			"type": "image/png",
-			"platform": "narrow"
+			"form_factor": "narrow",
+			"label": "A title reading: \"View details for each item\". Followed by the list: Cover; Edition; Description; Languages Published."
 		},
 		{
 			"src": "/screenshots/narrow-3.png",
 			"sizes": "540x720",
 			"type": "image/png",
-			"platform": "narrow"
+			"form_factor": "narrow",
+			"label": "A title that reads: \"Edit and save on your device\". Followed by the list: Add missing data; Drop a new cover; Export your new item."
 		},
 		{
 			"src": "/screenshots/narrow-4.png",
 			"sizes": "540x720",
 			"type": "image/png",
-			"platform": "narrow"
+			"form_factor": "narrow",
+			"label": "The following list: Multi-language; Color themes; Up to date data; Import your collection; Internal file reader; Gamepad support."
 		}
 	],
 
