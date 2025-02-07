@@ -3,7 +3,6 @@
 @import 'open-props/open-props.min.css' layer(vars);
 
 @import './vars.css' layer(vars);
-@import './font.css' layer(vars);
 
 @layer base {
 	::selection {
