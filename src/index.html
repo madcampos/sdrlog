@@ -6,10 +6,8 @@
 
 		<title>Shadowrun Catalog</title>
 
-		<!-- Preload -->
-
 		<!-- App Metadata -->
-		<link rel="icon" href="icons/favicon.svg" />
+		<link rel="icon" href="/icons/favicon.svg" />
 		<meta name="theme-color" content="#9400d3" />
 
 		<!-- Social metadata -->
@@ -22,10 +20,10 @@
 			itemprop="description"
 			content="An interactive list of Shadowrun published material (books, tabletop, video games, etc.). Information about the items and can be linked to local files."
 		/>
-		<meta property="og:image" name="twitter:image" itemprop="image" content="icons/transparent/manifest-icon-512.png" />
+		<meta property="og:image" name="twitter:image" itemprop="image" content="https://sdrlog.madcampos.dev/icons/transparent/manifest-icon-512.png" />
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="en_US" />
-		<meta property="og:url" content="https://madcampos.dev/sdrlog" />
+		<meta property="og:url" content="https://sdrlog.madcampos.dev/" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:dnt" content="on" />
 
@@ -43,7 +41,7 @@
 		<!-- Changelog -->
 		<link rel="alternate" type="application/rss+xml" href="https://sdrlog.madcampos.dev/changelog.rss" title="Changelog (Version History)" />
 
-		<!-- Apple icons -->
+		<!-- Apple metadata -->
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -53,8 +51,8 @@
 
 	<body class="notranslate" translate="no">
 		<sdr-loading-screen>
-			<link rel="stylesheet" href="./components/SdrLoadingScreen/style.css" />
 			<template shadowrootmode="open">
+				<link rel="stylesheet" href="./components/SdrLoadingScreen/style.css" />
 				<img
 					src="/images/base-covers/loading-anim.svg"
 					width="189"
