@@ -5,104 +5,55 @@
 @import './vars.css' layer(vars);
 @import './font.css' layer(vars);
 
-::selection {
-	background-color: var(--accent-color);
-	color: var(--dark-bg-color);
-}
+@layer base {
+	::selection {
+		background-color: var(--accent-color);
+		color: var(--dark-bg-color);
+	}
 
-:not(:defined) { display: none; }
+	:not(:defined) { display: none; }
 
-body {
-	align-items: stretch;
-	background: var(--dark-bg-color);
-	box-sizing: border-box;
-	color: var(--text-color);
-	display: flex;
-	flex-direction: column;
-	font-family: shadowrun, system-ui, 'Segoe UI', 'Segoe UI Emoji', emoji, sans-serif;
-	font-size: var(--body-text);
-	height: 100vh;
-	justify-content: stretch;
-	margin: 0;
-	padding: 0;
-	scrollbar-color: var(--theme-color) var(--scrollbar-bg);
-	scrollbar-width: thin;
-	width: 100vw;
-}
+	body {
+		align-items: stretch;
+		background: var(--dark-bg-color);
+		box-sizing: border-box;
+		color: var(--text-color);
+		display: flex;
+		flex-direction: column;
+		font-family: shadowrun, system-ui, 'Segoe UI', 'Segoe UI Emoji', emoji, sans-serif;
+		font-size: var(--body-text);
+		height: 100vh;
+		justify-content: stretch;
+		margin: 0;
+		padding: 0;
+		scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+		scrollbar-width: thin;
+		width: 100vw;
+	}
 
-body *, body *::after, body *::before {
-	box-sizing: inherit;
-	font-family: inherit;
-}
+	body *, body *::after, body *::before {
+		box-sizing: inherit;
+		font-family: inherit;
+	}
 
-main {
-	align-items: flex-start;
-	display: flex;
-	flex-wrap: wrap;
-	height: calc(100vh - (var(--menubar-top) + var(--menubar-height)));
-	margin: calc(var(--menubar-top) + var(--menubar-height)) var(--bound-right) var(--bound-bottom) var(--bound-left);
-	overflow: auto;
-	place-content: flex-start center;
-	scroll-snap-type: both proximity;
-	width: 100vw;
-}
+	main {
+		align-items: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+		height: calc(100vh - (var(--menubar-top) + var(--menubar-height)));
+		margin: calc(var(--menubar-top) + var(--menubar-height)) var(--bound-right) var(--bound-bottom) var(--bound-left);
+		overflow: auto;
+		place-content: flex-start center;
+		scroll-snap-type: both proximity;
+		width: 100vw;
+	}
 
-.fullsize main {
-	display: grid;
-	height: calc(100vh - (var(--titlebar-top) + var(--titlebar-height)));
-	margin-top: calc(var(--titlebar-top) + var(--titlebar-height));
-	overflow: hidden;
-	place-content: center center;
-	place-items: stretch stretch;
-}
-
-#load-overlay {
-	--logo-spacing: 16vmin;
-	--logo-size: 100vmin;
-	accent-color: var(--theme-color);
-	align-content: center;
-	background: var(--dark-bg-color);
-	color: var(--theme-color);
-	display: grid;
-	inset: 0;
-	place-items: center;
-	position: absolute;
-	z-index: 1;
-}
-
-#load-overlay img {
-	box-sizing: border-box;
-	height: var(--logo-size);
-	padding: var(--logo-spacing);
-	padding-bottom: calc(var(--logo-spacing) * 2);
-	width: var(--logo-size);
-}
-
-#load-overlay div {
-	align-items: center;
-	animation: fadein 0.3s linear;
-	animation-fill-mode: forwards;
-	display: flex;
-	flex-direction: column;
-	height: calc(var(--logo-spacing) * 2);
-	margin-top: calc(var(--logo-size) - var(--logo-spacing) * 2);
-	padding: 1.5rem;
-	position: absolute;
-	text-align: center;
-}
-
-#load-progress { width: calc(var(--logo-size) / 2); }
-
-#load-text {
-	flex-grow: 1;
-	font-size: var(--font-size-0);
-	hyphens: auto;
-	margin: var(--size-1) 0 0;
-	overflow: auto;
-	word-wrap: break-word;
-}
-
-@keyframes fadein {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	.fullsize main {
+		display: grid;
+		height: calc(100vh - (var(--titlebar-top) + var(--titlebar-height)));
+		margin-top: calc(var(--titlebar-top) + var(--titlebar-height));
+		overflow: hidden;
+		place-content: center center;
+		place-items: stretch stretch;
+	}
 }

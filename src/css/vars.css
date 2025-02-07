@@ -6,7 +6,7 @@
 	/* TODO: use color and color-mix functions to generate other colours */
 	/* TODO: redesign css and components structure to use more modern styling and syntax */
 
-	--bound-top: env(safe-area-inset-top, 0px);
+	/* --bound-top: env(safe-area-inset-top, 0px);
 	--bound-right: env(safe-area-inset-right, 0px);
 	--bound-bottom: env(safe-area-inset-bottom, 0px);
 	--bound-left: env(safe-area-inset-left, 0px);
@@ -16,65 +16,65 @@
 	--menubar-left: calc(env(titlebar-area-x, 0px) + var(--bound-left));
 	--menubar-width: calc(env(titlebar-area-width, 100vw) - var(--bound-right));
 	--menubar-height: max(3rem, var(--titlebar-height));
-	--button-size: calc(var(--menubar-height) * 0.8);
+	--button-size: calc(var(--menubar-height) * 0.8); */
 	/* Theme colors */
-	--theme-color: darkviolet;
+	/* --theme-color: darkviolet;
 	--secondary-color: deeppink;
 	--accent-color: hotpink;
-	--complementary-color: goldenrod;
+	--complementary-color: goldenrod; */
 	/* Base colors */
-	--bg-color: lightgray;
+	/* --bg-color: lightgray;
 	--dark-bg-color: whitesmoke;
 	--border-color: silver;
-	--dark-border-color: #444444;
-	--text-color: black;
-	--scrollbar-bg: rgba(255, 255, 255, 0.1);
+	--dark-border-color: #444444; */
+	/* --text-color: black; */
+	/* --scrollbar-bg: rgba(255, 255, 255, 0.1); */
 	/* Select arrow SVG */
-	--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
+	/* --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E"); */
 	/* Animations */
-	--transition: all 0.2s ease;
+	/* --transition: all 0.2s ease; */
 	/* Dialog */
-	--dialog-width: clamp(var(--size-content-1), 80vw, vaR(--size-content-3));
+	/* --dialog-width: clamp(var(--size-content-1), 80vw, vaR(--size-content-3));
 	--dialog-height: clamp(var(--size-content-1), 80vh, var(--size-content-3));
-	--dialog-border-radius: var(--radius-3);
+	--dialog-border-radius: var(--radius-3); */
 	/* Search box */
-	--searchbox-margin: max(1rem, 10%);
-	--searchbox-width: 100%;
+	/* --searchbox-margin: max(1rem, 10%);
+	--searchbox-width: 100%; */
 	accent-color: var(--theme-color);
 	color-scheme: light;
 }
 
 @media (max-width: 800px) {
 	:root {
-		--dialog-width: max(10rem, 100vw);
+		/* --dialog-width: max(10rem, 100vw);
 		--dialog-height: max(15rem, 100%);
-		--dialog-border-radius: 0;
+		--dialog-border-radius: 0; */
 	}
 }
 
 @media (max-width: 400px) {
 	:root {
-		--searchbox-margin: 0;
-		--searchbox-width: 100%;
+		/* --searchbox-margin: 0;
+		--searchbox-width: 100%; */
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		/* Theme colors */
-		--theme-color: darkviolet;
+		/* --theme-color: darkviolet;
 		--secondary-color: deeppink;
 		--accent-color: hotpink;
-		--complementary-color: gold;
+		--complementary-color: gold; */
 		/* Base colors */
-		--bg-color: #3c3c3c;
+		/* --bg-color: #3c3c3c;
 		--dark-bg-color: #252525;
 		--border-color: #505050;
 		--dark-border-color: #444444;
 		--text-color: whitesmoke;
-		--scrollbar-bg: rgba(255, 255, 255, 0.1);
+		--scrollbar-bg: rgba(255, 255, 255, 0.1); */
 		/* Select arrow SVG */
-		--select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E");
+		/* --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E"); */
 		color-scheme: dark;
 	}
 }
