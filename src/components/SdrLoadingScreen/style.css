@@ -1,0 +1,28 @@
+:host {
+	--logo-size: 30vmin;
+	accent-color: var(--purple-6);
+	align-content: center;
+	background: var(--gray-10);
+	color-scheme: light dark;
+	display: grid;
+	inset: 0;
+	place-items: center;
+	position: absolute;
+	z-index: 1;
+}
+
+img {
+	height: var(--logo-size);
+	margin-block-end: var(--size-7);
+	width: var(--logo-size);
+}
+
+#load-progress { width: var(--logo-size); }
+
+#load-text {
+	font-size: var(--font-size-3);
+	hyphens: auto;
+	margin: var(--size-1) 0 0;
+	overflow: auto;
+	word-wrap: break-word;
+}

@@ -1,4 +1,5 @@
 import { registerSW } from 'virtual:pwa-register';
+import type { SdrLoadingScreen } from '../components/SdrLoadingScreen/index.ts';
 
 registerSW({
 	onOfflineReady() {
@@ -9,24 +10,16 @@ registerSW({
 	}
 });
 
-function updateLoadStatus(status: string) {
-	const text = document.querySelector('#load-text') as HTMLHeadingElement;
-	const progress = document.querySelector('#load-progress') as HTMLProgressElement;
-
-	text.innerText = status;
-	progress.value += 1;
-}
-
 window.addEventListener('DOMContentLoaded', async () => {
 	try {
+		const loadingScreen = document.querySelector('sdr-loading-screen') as SdrLoadingScreen;
+		loadingScreen.max = 3;
+
 		const { I18n } = await import('./intl/translations');
-		const progressLoader = document.querySelector('#load-progress') as HTMLProgressElement;
 
 		await I18n.setLanguage(I18n.getLanguage());
 
-		progressLoader.max = 3;
-
-		updateLoadStatus('Loading components...');
+		loadingScreen.update('Loading components...');
 		await import('../components/index.js');
 		const { GamepadHandler } = await import('./gamepad/gamepad-events');
 
@@ -34,18 +27,18 @@ window.addEventListener('DOMContentLoaded', async () => {
 			document.querySelector('sdr-card')?.focus();
 		});
 
-		updateLoadStatus('Loading router...');
+		loadingScreen.update('Loading router...');
 		await import('../router');
 
-		updateLoadStatus('Loading data...');
+		loadingScreen.update('Loading data...');
 		document.addEventListener('itemloaded', (evt) => {
-			progressLoader.max = evt.detail.total;
+			loadingScreen.max = evt.detail.total;
 
-			updateLoadStatus(evt.detail.name);
+			loadingScreen.update(evt.detail.name);
 		});
 
 		document.addEventListener('apploaded', () => {
-			document.querySelector('#splash-screen')?.remove();
+			loadingScreen?.remove();
 		});
 	} catch (err) {
 		console.error(err);

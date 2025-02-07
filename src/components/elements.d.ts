@@ -12,7 +12,7 @@ import type { SdrEditBox } from './SdrEditBox';
 import type { SdrEditList } from './SdrEditList';
 import type { SdrEditListItem } from './SdrEditListItem';
 import type { SdrLoader } from './SdrLoader';
-import type { SdrMenuBar } from './SdrMenuBar';
+import type { SdrLoadingScreen } from './SdrLoadingScreen/index.ts';
 import type { SdrProgressOverlay } from './SdrProgressOverlay';
 import type { SdrRadioGroup } from './SdrRadioGroup';
 import type { SdrRadioItem } from './SdrRadioItem';
@@ -50,6 +50,7 @@ declare global {
 		'sdr-radio-item': SdrRadioItem;
 		'sdr-search-box': SdrSearchBox;
 		'sdr-select': SdrSelect;
+		'sdr-loading-screen': SdrLoadingScreen;
 		'sdr-textarea': SdrTextArea;
 		'sdr-update-notify': SdrUpdateNotify;
 
