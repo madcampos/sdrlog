@@ -5,54 +5,22 @@
 @import './vars.css' layer(vars);
 
 @layer base {
-	::selection {
-		background-color: var(--accent-color);
-		color: var(--dark-bg-color);
-	}
+	::selection { /* TODO: readd colors */ }
 
-	:not(:defined) { display: none; }
+	:not(sdr-loading-screen):not(:defined) { display: none; }
 
-	body {
-		align-items: stretch;
-		background: var(--dark-bg-color);
+	:root {
+		/* TODO: accent-color: var(--theme-color); */
 		box-sizing: border-box;
-		color: var(--text-color);
-		display: flex;
-		flex-direction: column;
-		font-family: shadowrun, system-ui, 'Segoe UI', 'Segoe UI Emoji', emoji, sans-serif;
+		color-scheme: ligth dark;
+		font-family: var(--font-industrial);
 		font-size: var(--body-text);
-		height: 100vh;
-		justify-content: stretch;
-		margin: 0;
-		padding: 0;
-		scrollbar-color: var(--theme-color) var(--scrollbar-bg);
+		/* TODO: scrollbar-color: var(--theme-color) var(--scrollbar-bg); */
 		scrollbar-width: thin;
-		width: 100vw;
 	}
 
-	body *, body *::after, body *::before {
+	*, *::after, *::before {
 		box-sizing: inherit;
 		font-family: inherit;
-	}
-
-	main {
-		align-items: flex-start;
-		display: flex;
-		flex-wrap: wrap;
-		height: calc(100vh - (var(--menubar-top) + var(--menubar-height)));
-		margin: calc(var(--menubar-top) + var(--menubar-height)) var(--bound-right) var(--bound-bottom) var(--bound-left);
-		overflow: auto;
-		place-content: flex-start center;
-		scroll-snap-type: both proximity;
-		width: 100vw;
-	}
-
-	.fullsize main {
-		display: grid;
-		height: calc(100vh - (var(--titlebar-top) + var(--titlebar-height)));
-		margin-top: calc(var(--titlebar-top) + var(--titlebar-height));
-		overflow: hidden;
-		place-content: center center;
-		place-items: stretch stretch;
 	}
 }

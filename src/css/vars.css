@@ -1,8 +1,6 @@
 :root {
 	/* Sizes */
-	--body-text: 18px;
-	/* TODO: consider virtual keyboard env var size */
-	/* TODO: rework other env vars */
+	--body-text: 1.25rem;
 	/* TODO: use color and color-mix functions to generate other colours */
 	/* TODO: redesign css and components structure to use more modern styling and syntax */
 
@@ -40,23 +38,6 @@
 	/* Search box */
 	/* --searchbox-margin: max(1rem, 10%);
 	--searchbox-width: 100%; */
-	accent-color: var(--theme-color);
-	color-scheme: light;
-}
-
-@media (max-width: 800px) {
-	:root {
-		/* --dialog-width: max(10rem, 100vw);
-		--dialog-height: max(15rem, 100%);
-		--dialog-border-radius: 0; */
-	}
-}
-
-@media (max-width: 400px) {
-	:root {
-		/* --searchbox-margin: 0;
-		--searchbox-width: 100%; */
-	}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,6 +56,5 @@
 		--scrollbar-bg: rgba(255, 255, 255, 0.1); */
 		/* Select arrow SVG */
 		/* --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10,10)' fill='darkviolet'%3E%3Ctext text-anchor='middle' dominant-baseline='central'%3E▾%3C/text%3E%3C/g%3E%3C/svg%3E"); */
-		color-scheme: dark;
 	}
 }
