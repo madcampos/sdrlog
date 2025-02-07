@@ -1,35 +1,35 @@
 import type {} from 'typed-query-selector/strict';
 
-import type { RouterLink } from '../router/router-link';
+import type { RouterLink } from '../router/router-link.ts';
 
-import type { SdrButton } from './SdrButton';
-import type { SdrCard } from './SdrCard';
-import type { SdrDialog } from './SdrDialog';
-import type { SdrDropArea } from './SdrDropArea';
-import type { SdrDropdown } from './SdrDropdown';
-import type { SdrDropdownItem } from './SdrDropdownItem';
-import type { SdrEditBox } from './SdrEditBox';
-import type { SdrEditList } from './SdrEditList';
-import type { SdrEditListItem } from './SdrEditListItem';
-import type { SdrLoader } from './SdrLoader';
+import type { SdrButton } from './SdrButton/index.ts';
+import type { SdrCard } from './SdrCard/index.ts';
+import type { SdrDialog } from './SdrDialog/index.ts';
+import type { SdrDropArea } from './SdrDropArea/index.ts';
+import type { SdrDropdown } from './SdrDropdown/index.ts';
+import type { SdrDropdownItem } from './SdrDropdownItem/index.ts';
+import type { SdrEditBox } from './SdrEditBox/index.ts';
+import type { SdrEditList } from './SdrEditList/index.ts';
+import type { SdrEditListItem } from './SdrEditListItem/index.ts';
+import type { SdrLoader } from './SdrLoader/index.ts';
 import type { SdrLoadingScreen } from './SdrLoadingScreen/index.ts';
-import type { SdrProgressOverlay } from './SdrProgressOverlay';
-import type { SdrRadioGroup } from './SdrRadioGroup';
-import type { SdrRadioItem } from './SdrRadioItem';
-import type { SdrSearchBox } from './SdrSearchBox';
-import type { SdrSelect } from './SdrSelect';
+import type { SdrProgressOverlay } from './SdrProgressOverlay/index.ts';
+import type { SdrRadioGroup } from './SdrRadioGroup/index.ts';
+import type { SdrRadioItem } from './SdrRadioItem/index.ts';
+import type { SdrSearchBox } from './SdrSearchBox/index.ts';
+import type { SdrSelect } from './SdrSelect/index.ts';
 import type { SdrTextArea } from './SdrTextArea/index.ts';
 import type { SdrTitleBar } from './SdrTitleBar/index.ts';
-import type { SdrUpdateNotify } from './SdrUpdateNotify';
+import type { SdrUpdateNotify } from './SdrUpdateNotify/index.ts';
 
-import type { SdrViewCbzReader } from '../views/SdrComicBookReaderView';
-import type { SdrViewEmulator } from '../views/SdrEmulatorView';
-import type { SdrViewEpubReader } from '../views/SdrEpubReaderView';
-import type { SdrViewAppInfo } from '../views/SdrInfoView';
-import type { SdrViewItemDetails } from '../views/SdrItemDetailsView';
-import type { SdrViewLanguageSettings } from '../views/SdrLanguageSettingsView';
-import type { SdrViewMain } from '../views/SdrMainView';
-import type { SdrViewThemeSettings } from '../views/SdrThemeSettingsView';
+import type { SdrViewCbzReader } from '../views/SdrComicBookReaderView/index.ts';
+import type { SdrViewEmulator } from '../views/SdrEmulatorView/index.ts';
+import type { SdrViewEpubReader } from '../views/SdrEpubReaderView/index.ts';
+import type { SdrViewAppInfo } from '../views/SdrInfoView/index.ts';
+import type { SdrViewItemDetails } from '../views/SdrItemDetailsView/index.ts';
+import type { SdrViewLanguageSettings } from '../views/SdrLanguageSettingsView/index.ts';
+import type { SdrViewMain } from '../views/SdrMainView/index.ts';
+import type { SdrViewThemeSettings } from '../views/SdrThemeSettingsView/index.ts';
 
 declare global {
 	interface HTMLElementTagNameMap {
