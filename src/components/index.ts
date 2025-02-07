@@ -9,7 +9,7 @@ import './SdrEditList';
 import './SdrEditListItem';
 import './SdrGamepadBadge';
 import './SdrLoader';
-import './SdrMenuBar/index.ts';
+import './SdrTitleBar/index.ts';
 import './SdrLoadingScreen/index.ts';
 import './SdrProgressOverlay';
 import './SdrRadioGroup';

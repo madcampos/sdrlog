@@ -29,3 +29,5 @@ nav {
 nav ::slotted(*) { margin: var(--size-1); }
 
 :host([no-file-system]) .file-system { display: none; }
+
+@media (display-mode: window-controls-overlay) { /* TODO: add logic to display title bar with window overlays */ }

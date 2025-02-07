@@ -137,7 +137,7 @@ class SdrViewMain extends LitElement implements RouterView {
 
 	override render() {
 		return html`
-			<sdr-menu-bar>
+			<sdr-title-bar>
 				<sdr-dropdown id="filters" icon="︙" trigger-button="x">
 					${
 			this.#filters.map((filter) => {
@@ -199,7 +199,7 @@ class SdrViewMain extends LitElement implements RouterView {
 				: ''
 		}
 				</sdr-dropdown>
-			</sdr-menu-bar>
+			</sdr-title-bar>
 
 			<main role="list">
 				${

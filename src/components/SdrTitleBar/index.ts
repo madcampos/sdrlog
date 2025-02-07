@@ -3,8 +3,8 @@ import { customElement } from 'lit/decorators.js';
 
 import style from './style.css?inline' assert { type: 'css' };
 
-@customElement('sdr-menu-bar')
-class SdrMenuBar extends LitElement {
+@customElement('sdr-title-bar')
+class SdrTitleBar extends LitElement {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 	static override readonly styles = unsafeCSS(style);
 
@@ -17,4 +17,4 @@ class SdrMenuBar extends LitElement {
 	}
 }
 
-export { SdrMenuBar };
+export { SdrTitleBar };

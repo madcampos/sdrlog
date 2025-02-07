@@ -18,7 +18,8 @@ import type { SdrRadioGroup } from './SdrRadioGroup';
 import type { SdrRadioItem } from './SdrRadioItem';
 import type { SdrSearchBox } from './SdrSearchBox';
 import type { SdrSelect } from './SdrSelect';
-import type { SdrTextArea } from './SdrTextArea';
+import type { SdrTextArea } from './SdrTextArea/index.ts';
+import type { SdrTitleBar } from './SdrTitleBar/index.ts';
 import type { SdrUpdateNotify } from './SdrUpdateNotify';
 
 import type { SdrViewCbzReader } from '../views/SdrComicBookReaderView';
@@ -44,7 +45,7 @@ declare global {
 		'sdr-edit-list': SdrEditList;
 		'sdr-edit-list-item': SdrEditListItem;
 		'sdr-loader': SdrLoader;
-		'sdr-menu-bar': SdrMenuBar;
+		'sdr-title-bar': SdrTitleBar;
 		'sdr-progress-overlay': SdrProgressOverlay;
 		'sdr-radio-group': SdrRadioGroup;
 		'sdr-radio-item': SdrRadioItem;
