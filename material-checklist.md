@@ -1,20 +1,24 @@
 # Check as news feed
 
-https://shadowiki.de/Liste_der_Shadowrun_Romane
-https://shadowiki.de/Liste_der_Quellen-_und_Regelbücher
-https://shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenbände
-
-https://www.shadowrun6.de/index.php/spielhilfen-2/schattenload.html
-https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
-
-https://www.shadowrun6.de/index.php/produkte-2.html
-https://www.shadowrunsixthworld.com/
+- https://web.archive.org/web/20241103063641/https://shadowiki.de/Liste_der_Shadowrun_Romane
+- https://web.archive.org/web/20241103054834/https://shadowiki.de/Liste_der_Quellen-_und_Regelb%C3%BCcher
+- https://web.archive.org/web/20241105073050/https://www.shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenb%C3%A4nde
+- https://www.shadowrun6.de/index.php/spielhilfen-2/schattenload.html
+- https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
+- https://www.shadowrun6.de/index.php/produkte-2.html
+- https://www.shadowrunsixthworld.com/
 
 # Materials to add
 
 https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
+- [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
+- [Stolen Thoughts](https://www.amazon.ca/gp/product/B0DV768GTP)
+- [Lethal Harvest](https://store.catalystgamelabs.com/products/shadowrun-lethal-harvest)
+- [On-call Hero](https://store.catalystgamelabs.com/products/shadowrun-on-call-hero-by-russell-zimmerman)
+- [Augment Magazine](https://www.amazon.ca/gp/product/B0DTR83QMH)
+- [Basecrackers](https://www.amazon.ca/gp/product/B0DS54TLWF)
 - The chimera complex
 - Edge Zone
 
@@ -22,24 +26,19 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 
 **TODO**: Scrap html and old pages and archive
 
-https://shadowhelix.de/Quelle,_de:_Adventskalender_2019
-https://www.shadowiki.de/Shadowrun_Adventskalender_2019
-
-https://shadowhelix.de/Quelle,_de:_Resurrection
-https://shadowhelix.de/Quelle,_de:_Promovisitenkarten
-https://shadowhelix.de/Quelle,_de:_Poolitzers_NICHTTod
-https://shadowhelix.de/Quelle,_de:_Untersch%C3%A4tzt
-
-https://www.shadowiki.de/Conspiracy_Theories_Outtakes
-
-https://www.shadowiki.de/Ein_Blick_in_den_Kreis
-https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
-https://www.shadowiki.de/Geisterstunde
-
-http://danvolodar.ru/ancientfiles/Spoorn/
-http://danvolodar.ru/ancientfiles/index.html
-
-http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
+- https://shadowhelix.de/Quelle,_de:_Adventskalender_2019
+- https://www.shadowiki.de/Shadowrun_Adventskalender_2019
+- https://shadowhelix.de/Quelle,_de:_Resurrection
+- https://shadowhelix.de/Quelle,_de:_Promovisitenkarten
+- https://shadowhelix.de/Quelle,_de:_Poolitzers_NICHTTod
+- https://shadowhelix.de/Quelle,_de:_Untersch%C3%A4tzt
+- https://www.shadowiki.de/Conspiracy_Theories_Outtakes
+- https://www.shadowiki.de/Ein_Blick_in_den_Kreis
+- https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
+- https://www.shadowiki.de/Geisterstunde
+- http://danvolodar.ru/ancientfiles/Spoorn/
+- http://danvolodar.ru/ancientfiles/index.html
+- http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
 
 ## Japanese materials
 
