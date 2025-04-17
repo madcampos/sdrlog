@@ -15,3 +15,31 @@
   - https://racheleditullio.com/blog/2021/09/structuring-accessible-forms/
 - Implement Windows 11 widgets
   - https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/widgets
+
+## Add material wizard
+
+Transform the process to add a new material/edit existing one into a wizard.
+
+1. Material group
+   - Modern English
+   - Modern German
+   - Older/Other
+2. General
+   - Name
+   - SKU
+   - Image
+   - Description
+3. Meta
+   - Names
+   - Publisher (depending on first choice it is already marked)
+   - Release date
+4. Status
+   - Edition
+   - Status
+   - Type
+   - Category
+   - Game Date (changes based on edition)
+   - Notes
+5. References
+   - Links
+   - Items
