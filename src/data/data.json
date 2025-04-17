@@ -1,5 +1,5 @@
 {
-	"$schema": "./data.schema.json",
+	"$schema": "./$schemas/data.schema.json",
 	"items": [
 		{
 			"sku": [

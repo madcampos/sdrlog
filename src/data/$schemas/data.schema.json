@@ -1,0 +1,74 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "7a61ffa0-4170-47ba-994d-1e470412c8ad",
+	"type": "object",
+	"required": ["category", "type", "sku", "name", "description", "edition", "publisher", "originalLanguage", "gameDate", "status", "cover"],
+	"definitions": {
+		"locale-code": {
+			"type": "string",
+			"pattern": "^(?:art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang|en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE|(?:x(?:-[A-Za-z0-9]{1,8})+)|(?:(?:(?:[A-Za-z]{2,3}(?:-[A-Za-z]{3}(?:-[A-Za-z]{3}){0,2})?)|[A-Za-z]{4}|[A-Za-z]{5,8})(?:-[A-Za-z]{4})?(?:-[A-Za-z]{2}|[0-9]{3})?(?:-[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3})*(?:-[0-9A-WY-Za-wy-z](?:-[A-Za-z0-9]{2,8})+)*(?:-x(?:-[A-Za-z0-9]{1,8})+)?))$"
+		},
+		"sku": { "type": "string", "pattern": "^[A-Z0-9](?:-?[A-Z0-9])+(?:-[A-Z])?$" },
+		"publisher": {
+			"enum": [
+				"Catalyst Game Labs",
+				"Cliffhanger Productions",
+				"FASA Corporation",
+				"Fantasy Productions",
+				"Harebrained Schemes",
+				"Pegasus Spiele",
+				"WizKids Games",
+				"Heyne Verlag",
+				"Other",
+				"Unofficial"
+			]
+		},
+		"absolute-link": { "type": "string", "format": "uri" },
+		"relative-link": { "type": "string", "format": "iri" },
+		"category": { "enum": ["rulebook", "sourcebook", "mission", "magazine", "novel", "videogame", "tcg", "boardgame", "misc"] },
+		"type": { "enum": ["digital", "print", "scan", "ocr", "physical"] },
+		"sku-list": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/definitions/sku" } },
+		"name": { "type": "string" },
+		"names": { "type": "object", "propertyNames": { "$ref": "#/definitions/locale-code" }, "additionalProperties": { "type": "string", "minLength": 1 }, "minProperties": 1 },
+		"description": { "type": "string", "minLength": 1 },
+		"edition": { "type": "integer", "minimum": 1, "maximum": 6 },
+		"publisher-list": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/definitions/publisher" } },
+		"game-date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+		"release-date": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "format": "date" } },
+		"status": { "enum": ["missing", "outofscope", "canceled", "ok", "partially-missing"] },
+		"original-language": { "$ref": "#/definitions/locale-code" },
+		"notes": { "type": "string", "minLength": 1 },
+		"links": { "type": "object", "propertyNames": { "$ref": "#/definitions/absolute-link" }, "additionalProperties": { "type": "string", "minLength": 1 }, "minProperties": 1 }
+	},
+	"properties": {
+		"category": { "$ref": "#/definitions/category" },
+		"type": { "$ref": "#/definitions/type" },
+		"sku": { "$ref": "#/definitions/sku-list" },
+		"name": { "$ref": "#/definitions/name" },
+		"names": { "$ref": "#/definitions/names" },
+		"description": { "$ref": "#/definitions/description" },
+		"edition": { "$ref": "#/definitions/edition" },
+		"publisher": { "$ref": "#/definitions/publisher-list" },
+		"gameDate": { "$ref": "#/definitions/game-date" },
+		"releaseDate": { "$ref": "#/definitions/release-date" },
+		"status": { "$ref": "#/definitions/status" },
+		"originalLanguage": { "$ref": "#/definitions/original-language" },
+		"notes": { "$ref": "#/definitions/notes" },
+		"links": { "$ref": "#/definitions/links" },
+		"subItems": {
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": { "$ref": "#/definitions/name" },
+					"status": { "$ref": "#/definitions/status" },
+					"description": { "$ref": "#/definitions/description" },
+					"notes": { "$ref": "#/definitions/notes" },
+					"links": { "$ref": "#/definitions/links" }
+				}
+			}
+		},
+		"cover": { "$ref": "#/definitions/relative-link" }
+	}
+}
