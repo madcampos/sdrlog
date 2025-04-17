@@ -21,6 +21,15 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 - [Basecrackers](https://www.amazon.ca/gp/product/B0DS54TLWF)
 - The chimera complex
 - Edge Zone
+- https://www.amazon.ca/gp/product/B0DTR83QMH
+- https://store.catalystgamelabs.com/products/shadowrun-mug-35th-anniversary
+- https://store.catalystgamelabs.com/products/shadowrun-35th-anniversary-hoodie
+- https://books2read.com/ShadowrunBadFaith
+- https://store.catalystgamelabs.com/products/shadowrun-uv-dice
+- https://store.catalystgamelabs.com/products/shadowrun-35th-anniversary-dice-tray
+- https://www.amazon.ca/gp/product/B0DV768GTP
+- https://store.catalystgamelabs.com/products/shadowrun-first-edition-t-shirt
+- https://store.catalystgamelabs.com/collections/shadowrun
 
 # Archive
 
