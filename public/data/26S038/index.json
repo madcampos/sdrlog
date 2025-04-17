@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S038"],
+	"name": "Nothing Personal",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Mr. Johnson. You know the name. You probably know the face—smooth, implacable, professional. He's got the nuyen and resources you want, and he knows it. He may not have your skills, but he doesn't care. That's what he has the nuyen for—so he can buy yours. He's corporate through and through, and you can't ever forget that, because if you do, that's when he sells you out for the good of his corp. But he'll stay professional, of course, right up until the moment he slides the knife smoothly into your back. He's useful, that Mr. Johnson, but every time you meet him, every time you have to deal with his double-crosses, his condescending put-downs, his smug superiority, you wish that the day would come when the tables were turned, when he was forced out on the street with nothing but his wits and street skills—whatever those might be—to keep him alive.\nWell, good news. Sometimes wishes come true, even in the Sixth World. Mr. Johnson is about to meet the street, and you've got a ringside seat.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-08-10"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

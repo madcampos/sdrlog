@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["2690ANV"],
+	"name": "Between a Corp and a Hard Place",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "-",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-01-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

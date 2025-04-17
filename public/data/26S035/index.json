@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S035", "SRL503"],
+	"name": "Coyotes",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Kojoten", "fr-FR": "Coyotes", "pt-BR": "Coiotes" },
+	"originalLanguage": "en-US",
+	"description": "Over the Edges\n\nThe Sixth World has been carefully divided and partitioned to keep people in their place, living under the thumbs of those who draw the lines. Shadowrunners, though, have never been good at staying where they're supposed to be. They've got goods to smuggle, bounties to avoid, and a host of other reasons to cross the walls and borders the rest of the world has put up.\nThese crossings aren't always easy, and that's where Coyotes come in—trained professionals with nerves of steel and steady hands who can help you sneak, talk, or just blast your way past almost any border. You may have to dig deep in your pocket to pay their asking price, but it'll be worth it when you see the heavily armed checkpoint fading in the rear view mirror.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2013-12-14", "2013-03-23", "2016-12-27"],
+	"gameDate": "2075-11",
+	"notes": "The German edition contains aditional material about Europe.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

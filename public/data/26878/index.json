@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26878"],
+	"name": "On the Rocks",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# THE STREETS ARE ABOUT TO EXPLODE…\n\nAnd Puyallup's local paranormal investigator Jimmy Kincaid is caught right in the middle of it. The neighborhood's criminal syndicates are on the brink of all-out war, and if they go at it, the streets will run red—literally.\n\nBut Jimmy's got more problems besides trying to keep the peace between feuding mobsters. Someone's sending him a very particular message by sending him severed limbs. And then there's the pairs of hitmen coming after him. Last but certainly not least, he's got to broker a deal between the biggest elven street gang in Seattle and a vicious Triad gang—and not get himself killed in the bargain.\n\nAnd when an old enemy comes to town for revenge, Jimmy finds his already fairly chaotic life completely upended—and never to be the same again. To settle the score, he'll have to face off against the deadliest assassin ever to stalk the Seattle streets—and use every bit of skill, guile, and luck he has to survive…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2021-09-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

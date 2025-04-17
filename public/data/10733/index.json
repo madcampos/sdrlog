@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10733"],
+	"name": "Walzer, Punks & Schwarzes Ice",
+	"category": "sourcebook",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "Walzer tanzt man, wenn es Nacht wird in Österreich. Doch in den Schatten der Innenstadt oder im Ghetto der vereinigten Wohnparks kämpfen zur gleichen Zeit Menschen um ihr Überleben.\nPunks beherrschen die Straßen Berlins. Doch die Konzerne haben ihre eigenen Pläne für das Tor zum Osten Europas, und sie kennen kein Pardon für die, die sich ihren Zukunftsvisionen für eine neue Weltstadt in den Weg stellen.\nSchwarzes Ice sichert die Pläne und die Errungenschaften der neuen Spieler auf Deutschlands Wirtschaftsbühne. Proteus und die Draco-Foundation heißen die Machtfaktoren, die noch niemand einzuschätzen weiß.\nWalzer, Punks & Schwarzes Ice ist ein Quellenband für Shadowrun 2.01D. Er bietet die jüngsten Enzwicklungen in der ADL, der Schweiz und einen großen Östereich-Teil, die Veränderungen in Berlin seit dem Ende der Anarchie, neue Ausrüstung und mehr, denn im Jahr 2058 heißt Wissen: Überleben.",
+	"edition": 2,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["1997-01-01"],
+	"gameDate": "2058-01",
+	"notes": "The book is inGame 2058, after Dunkelzahn's death, and includes a comprehensive chapter of Austria . In addition, there is a \"culture shock\" chapter for the ADL that describes life and work, fashion lawmakers, cultural trends and subcultures in the Alliance and was intended as a German equivalent to the American \"Neo-Anarchists' Guide to Real Life\". It also contains updates on Proteus AG and the Draco Foundation in the Alliance and on Berlin after the corporate invasion, as well as one chapter for SOX and one for Bremen. Finally, the book is rounded off by a short Switzerland-update.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

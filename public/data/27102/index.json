@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27102"],
+	"name": "Shadowrun Runner's Toolkit: Alphaware",
+	"category": "rulebook",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "THE RIGHT TOOLS FOR THE NEXT RUN\n\nSCAN THIS, CHUMMERS\n\n\t- Have you tackled the Beginner Box and are ready to move up in the Sixth World\n\t- Are you a gamemaster ready to give Shadowrun a shot, and you want a few extra tools at your disposal from the first toss of your dice?\n\t- Do you play Shadowrun now, and are you looking for a set of tools that'll allow you to easily introduce new gamers to your favorite RPG at your local games store or hangout.\nSay yes to any of those, than Runner's Toolkit: Alphaware is the box set for you.\n\nDesigned as the perfect stepping-stone between the Shadowrun Beginner Box and Shadowrun, Fifth Edition, this Box can fill a number of roles. Wether you're looking for more adventures and options to move beyond the Beginner Box, laying the groundwork for your gaming group to move fully onto Shadowrun, Fifth Edition, or providing adventures, maps and other tools to use in conjunction with the core rulebook, you'll find this kit invaluable.\n\nALPHAWARE INCLUDES:\n\n\t- Rules of the Street: A rulebook, designed to be accessible and simple to use.\n\t- The Edge of now gives the flavour and background of the Sixth World\n\t- Plots and Paydata: Adventures and tips for any Shadowrun gamemaster.\n\t- Eight double-sided maps to help the players and GMs track the action.\n\t- Spell, weapon and gear cards for quick reference.\n\t- Pre-generated characters, players can use right away.\n\t- A double-sided poster: North America map and killer art.\n\t- And of course, handfuls of six-sided dice for Shadowrun action.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-01-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

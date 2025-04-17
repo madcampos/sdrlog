@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S036", "SRL502"],
+	"name": "The Assassin's Primer",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Assassinen Handbuch", "fr-FR": "Manuel de l'assassin", "pt-BR": "A norma do Assassino" },
+	"originalLanguage": "en-US",
+	"description": "The Job of Death\n\nSome people call it wetwork. Others call it murder. A small group calls it justice. It's assassination and it's one of the jobs shadowrunners might be hired to do. And given that people are, you know, pretty protective about their lives, anyone who takes such a job is going to have to be at the top of their game to pull the job off and collect a payday. Especially if they plan to make it a regular activity.\nThe Assassin's Primer is a vital guide for assassins in the Sixth World. With tips on tools to use, techniques to employ, and the different kinds of killers you may meet in the field, this is a critical reference for anyone looking to bring an assassination flavor into their Shadowrun games. And it has a new sniper rifle and a handful of new Qualities for shadowrunners to boot!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2013-10-25", "2013-12-11", "2016-12-27"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

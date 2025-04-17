@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S057"],
+	"name": "Shadows in Focus: Morocco",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "A Dream of Shadows\n\nWhat do you want from a nation you're going to run in? How about a place with access to cutting-edge technology while also retaining a firm footing in old traditions? How about a population focused on cutting deals and making things happen? How about a system of government that can be appallingly harsh but also, when they can be made to see the benefits, rather forgiving? And how about access to a dragon's hoard worth of goods flowing into and out of the nation daily?\nIf all this sounds like the shadowrunning haven of your dreams, then you want to run in Morocco. Shadows in Focus: Morocco provides an overview of this nation, with details on how to get in, how to get out, where to go, who to meet, and what to do. It also details some of the ways you might get into trouble and offers some hints on getting out of it.\nWith plenty of tips for running games in this country as well as rules for building Morocco-based characters, Shadows in Focus: Morocco adds a new element to Shadowrun, Fifth Edition games. The setting information can also be used in Shadowrun: Anarchy games. ",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2018-01-27"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

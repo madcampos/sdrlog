@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["482D7"],
+	"name": "Datapuls: Riggerszene ADL",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# Wer bremst, verliert\n\nDie deutsche Riggerszene? Welche meinst du? Denn da gibt’s viel mehr als nur Autobahnraser und Straßenkrieger! Meinst du Fahrzeug- oder Drohnenrigger? Piloten mit oder ohne Implantate? Racer oder Tuner? Jetski-Speeder, Airjockeys – oder die wachsende Feldjäger-Szene, die mit Offroad-Boliden, Militär-SUVs, Mudbikes oder Kettenpanzern durchs Niemandsland pflügt? Ach, vergiss es: Am besten ziehst du dir einfach die neue Dateisammlung, die Rigger und Runner aus allen Teilen der ADL gerade zusammengehackt haben …\n\nDer Datapuls Riggerszene ADL wirft einen Blick auf die verschiedenen Szenen rund um Fahrzeuge, Drohnen, Motoren und Styles innerhalb der Allianz Deutscher Länder. Erfahre alles zum aktuellen Zustand der deutschen Straßen, studiere die ganzseitige Karte der wichtigsten deutschen Autobahnen, tritt zu den Autobahnkriegern ans brennende Wrack und erhalte wertvolle Tipps, wie man einen Shadowrun als Roadmovie aufzieht und leitet. Enthält eine Liste mit 36 Begegnungen plus weitere Zufallstabellen, drei neue Connections, vier neue Fahrzeuge und zwei neue Drohnen.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2023-04-06"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

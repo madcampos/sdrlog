@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10670", "25007"],
+	"name": "Shadows of Asia",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Asia. The East. A land of contrasts, from glittering megacorp skyscrapers to humble sacred temples. Japan, Malaysia and Hong Kong set the world's accelerated pace of progress, but next door in Indochina and Indonesia it's still last century. It's a mystery to most, but if you know your drek, you'll find it's a land of opportunity. Anything you want is here. Cred. Gear. Flesh. Hell, I even heard of a guy finding enlightenment. There's always a price, of course, whether it's selling your soul to the corps or your sister to the slave trade.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["2005-05-01"],
+	"gameDate": "2064-04",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

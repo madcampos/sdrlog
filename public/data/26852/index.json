@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26852"],
+	"name": "Hell on Water",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Six shadowrunners. Three mysterious packages. And twelve kilometers of a dangerous, dilapidated bridge across one of the wildest sprawls of the Sixth World.\nIt should be a simple job. Retrieve three sealed packages, then take them across the city of Lagos to their destination. All the runners' skills will be tested—they'll face ambushes, double-crosses, and more, and along the way they might be able to answer the question of just what's in those packages, and why they're so important.\nThe team has a lot on their side, including a street samurai who's a legend on the streets, a hotshot rigger with a lot of enemies, a young shaman seeking justice, a decker with a dark secret, and a pair of pros from Seattle trying to keep up with everything the unfamiliar sprawl throws at them. But the deadly streets and sinister neighborhoods of Lagos contain their own unique dangers, and it'll take every trick the runners know to complete their mission and escape the city in one piece…",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-12-28"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

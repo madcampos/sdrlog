@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["480D5"],
+	"name": "Datapuls: Piraten der Deutschen Bucht",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Toxische Wogen\n\nDie Deutsche Bucht - giftige Nordseefluten, agressive Geister, mutierte Critter, versteckte Schätze im Watt, ominöse Küstenbewohner und Piratenverstecke. Und wertvolle Fracht auf den Schiffen der Konzerne. Hier treffen sich Seeräuber und Entermannschaften und planen ihren nächsten großen Coup, rauben Containerriesen aus, verbünden sich mit den Friesen und belagern ganze Bohrplattformen. Immer im Ungewissen, ob am Ende der nächsten Fahrt eine satte Prise oder der Meeresboden wartet.\n\nDatapuls Piraten der Deutschen Bucht wirft ein Licht auf die deutsche Nordsee und die Küstengebiete mit besonderem Fokus auf die Piraten in dieser Region. Es bietet einen tieferen Einblick in die Piratennationen, die Möglichkeiten für Mannschaften auf See und im Watt, beschreibt mystische Orte, Konzernaktivitäten, wichtige Machtspieler. Zudem werden einige Wasserfahrzeuge präsentiert, sowie ein Piratennationbaukasten, ein nautisches Glossar und NSC von der Küste.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2020-04-23"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

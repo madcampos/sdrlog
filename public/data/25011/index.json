@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["25011"],
+	"name": "Shadows of Latin America",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "This book collects material published online by the authors of the canceled book describing various locations in Latin America.",
+	"edition": 3,
+	"publisher": ["Unofficial"],
+	"releaseDate": ["2011-01-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

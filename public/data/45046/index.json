@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45046"],
+	"name": "Auf dunklen Pfaden",
+	"category": "mission",
+	"type": "print",
+	"originalLanguage": "de-DE",
+	"description": "Die Gefahr lauert hinter vielen Ecken, auch in Deutschland. Für Runner bietet das Land in seiner ganzen Variabilität einen Hort der Möglichkeiten: um entweder reich und berühmt in den Schatten zu werden oder dort für immer zu verschwinden. Manchmal etwa lassen sich Studenten in dunkle Geheimnisse aus finsteren Kapiteln der Geschichte hineinziehen. Ein anderes Mal zieht das organisierte Verbrechen die Strippen hinter einem eigentlich vergnüglichen Event. Oder es verschlägt die Runner ins Venedig an der Elbe, um im wahrsten Sinne des Wortes im Trüben zu fischen. So oder so wer überlebt, darf die Beute behalten.\nAuf dunklen Pfaden ist der erste Abenteuerband für Shadowrun 5, der komplett in der Allianz Deutscher Länder spielt. Er präsentiert drei komplett ausformulierte Abenteuer inklusive aller Werte und detaillierter Grundrisse der Locations.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2017-01-01"],
+	"gameDate": "2075-01",
+	"notes": "German adventure based on the book \"Blut & Spiele\".",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

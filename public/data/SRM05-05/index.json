@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM05-05"],
+	"name": "While the City Sleeps",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "One of the things the Sixth World excels at is inventing millions of ways to piss people off. Chicago, particularly the Containment Zone, has a special gift for inciting tempers, with its pockmarked roads, feral gangs, bad-tempered thugs, drugged-out vagrants, and many other elements that are irritating at best, fatal at worst.\nFight promoter Sid Gambetti has a lot of pressures piling on him at once, including financial strain and a massive blackmail demand, and if he doesn't get some relief, he's likely to blow. Unfortunately, it seems like just about everyone who has become involved with Sid is just as pressured and just as irritated. Any shadowrunners who take on the job that Sid has for them are going to be walking through a minefield of hot-tempered, bulked-out, Sixth World crazies who are just looking for an excuse to put the hurt on someone. Yeah, there's a pile of nuyen on the other side of the gauntlet, but it will take some quick thinking and fast moving to claim it without being on the receiving end of huge doses of pain.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2015-03-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

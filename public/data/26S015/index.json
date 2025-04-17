@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S015"],
+	"name": "Street Legends Supplemental",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Unusual Suspects\n\nTen people. Ten very different people. A pirate who has made himself into one of the most wanted men in the world. A datathief whose skill is only matched by his flair and panache. Two corporate giants whose personalities—and actual physical makeup—couldn't be more different. A troll whose name has a history much older than herself. And other individuals with stories and secrets of their own.\nSome of them are people you want on your side, and some of them are people who could be very dangerous enemies if you aren't careful. All of them are people you should know, because all of them have something—money, power, knowledge, or all three—that you can use.\nStreet Legends Supplemental follows the format of the Street Legends book by presenting information on ten characters from the Shadowrun universe, sharing stories about their activities in the Sixth World and also offering complete game information and statistics for them. Each character also comes with plot information gamemasters can use as they develop their campaigns. While it is a companion to Street Legends, Street Legends Supplemental can be enjoyed entirely on its own.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-01-01"],
+	"gameDate": "2073-12",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

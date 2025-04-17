@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5220", "27804"],
+	"name": "Never Trust an Elf",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Trau keinem Elf" },
+	"originalLanguage": "en-US",
+	"description": "When Kham, an ork living in the Seattle ghetto in the year 2053, is suddenly snatched from his day-to-day existence and thrust into a world of dragons, he learns the hard way whom to trust.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Heyne Verlag"],
+	"releaseDate": ["1992-08-01", "2003-06-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

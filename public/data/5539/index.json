@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5539"],
+	"name": "Black Madonna",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Schwarze Madonna" },
+	"originalLanguage": "en-US",
+	"description": "MegaCorp enlists an elite decker, who reunited with old friends from England to try to keep a megacorp from being blackmailed by a super hacker. They come to discover that ancient powers are clashing to prevent a secret from being told. This is the 3rd book with renegade elven mage Serrin Shamander and British Lord Geraint Llanfrechfa.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Heyne Verlag"],
+	"releaseDate": ["1996-04-01"],
+	"gameDate": "2057-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

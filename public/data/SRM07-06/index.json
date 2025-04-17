@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM07-06"],
+	"name": "Windy City Chaos",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Lost Colony\nMaybe you might misplace a commlink. Or lose a box holding a few stray bullets. But who loses an entire community? Well, it's Chicago's Containment Zone, where a large group of people disappearing is not the strangest thing to happen this month. Or this week. Or today. But even if it's not the strangest thing, it's the one someone is willing to pay runners to investigate. So it's important.\nThe thing is, a whole group of people doesn't just disappear easily. Or nicely. Some of the powers that like to stay hidden in the Containment Zone are going to make themselves visible, and shadowrunners need to survive their appearance. And see if they can save some lives while they're at it.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2017-09-11"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

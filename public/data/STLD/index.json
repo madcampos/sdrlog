@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["STLD"],
+	"name": "SchattenLoad",
+	"category": "magazine",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Schattenload is a monthly, free newsletter from Pegasus Verlag, which publishes game material for the German setting. It first appeared on January 27, 2019 as a replacement for the NovaPuls, the release of which - for the time being - has been discontinued because the \"InGame Newsfax\" in December 2018 was several months ahead of the InGame data of the US publications from Catalyst Games Lab.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"gameDate": "2076-01",
+	"status": "missing",
+	"notes": "As it is released monthly, some itens are missing.",
+	"cover": "./cover.jpg"
+}

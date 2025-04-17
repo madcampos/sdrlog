@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5749", "27823"],
+	"name": "The Forever Drug",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Das neunte Leben" },
+	"originalLanguage": "en-US",
+	"description": "There's a new \"drug\" on the streets, promising a phenomenal--and deadly--high. But this time the dealers aren't selling a substance. They're working with a creature called a \"corpse light\"--a creature of pure magic that gives the customer a euphoric rush...as it drains the poor sap's life away.\nRomulus was the first to see this new scourge in action. As a shapeshifter, he's a freelance agent to the Lone Star police department. His wolfish strength and sense of smell keep him useful--and keep from being admitted into the regular force. So when Jane, a beautiful, amnesiac woman, is caught in a dangerous web with the dealers, there's no way for Romulus to be assigned to the investigation. But that won't stop him from trying to save her, and to discover how she is tied into this case...",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1999-06-01", "2004-02-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

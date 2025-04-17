@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["R20-001"],
+	"name": "Shadowrun, Sixth World City Edition - Seattle - Art Pack",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Tokens for the characters, drones and vehicles of Shadowrun, Sixth World made available for use in the Roll20 VTT.\n\nIn This Package:\n- Art and tokens usable for characters, vehicles and drones made from art in the compendium.",
+	"links": { "https://marketplace.roll20.net/browse/set/22293/shadowrun-sixth-world-city-edition-seattle-art-pack": "Shadowrun, Sixth World City Edition - Seattle - Art Pack" },
+	"edition": 6,
+	"publisher": ["Other"],
+	"releaseDate": ["2023-05-01"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

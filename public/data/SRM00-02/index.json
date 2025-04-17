@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM00-02"],
+	"name": "Demolition Run",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Sometimes drek just needs to get blown up. And when it does, you're the folks that they call to do it. It's all in the job description, chummer.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2061-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

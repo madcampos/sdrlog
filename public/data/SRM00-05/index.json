@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM00-05"],
+	"name": "A Dark and Stormy Night",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "It was a dark and stormy night - traveling near Glow City in the Redmond Barrens during a hail storm is not your idea of a good time, especially when things go bump in the night!",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2061-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28511"],
+	"name": "Rogues Lineup",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "# All Lined Up\n\nYou come across plenty of characters in the shadows, with a range of experience in their past. They can be useful in ways you might not expect, so broaden your horizons, get to know them, and discover what’s possible.\n\nRogues Lineup contains 40 characters spanning a range of metatypes, archetypes, and abilities. Whether you need a quick NPC to drop into a game or want to use them as pre-generated player characters, this deck is ready!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2023-05-01"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

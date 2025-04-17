@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S018"],
+	"name": "Euro War Antiques",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "This is the way it works—if you want to know what the main cause of World War II was, look at World War I. If you want to understand the United States of America in the late twentieth century, make sure you understand the Vietnam War and all of its ramifications. The point is this: Even if you didn't fight in a war, even if you weren't born when the war started, the conflicts still shape the world you live in. They shape you.\nThe hottest flames of the Euro Wars have faded, but the embers still burn. Whether it's tanks, missiles, planes, or guns from that conflict that are still in use today, or people in the shadows who carry old grudges and dark secrets, the impact of the Euro Wars remains strong in the Sixth World.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-05-01"],
+	"gameDate": "2075-02",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

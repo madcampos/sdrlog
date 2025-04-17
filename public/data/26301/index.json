@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26301", "46015", "SR07"],
+	"name": "Emergence",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "Emergenz: Digitales Erwachen", "fr-FR": "Émergence" },
+	"originalLanguage": "en-US",
+	"description": "The Crash of 2064 ruined the lives of millions. Some died in the Matrix or went insane, many lost everything they owned, and still others found their identities completely erased. A small percentage changed into something altogether different, with the strange and inexplicable ability to affect the new Matrix with their minds. Now, in 2070, the existence of these technomancers becomes frontpage news, leading to widespread paranoia and witch hunts. The Emergence campaign setting involves the runners in a series of pivotal events that may change the way they view the world and the Matrix—and each other.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2008-08-01", "2009-05-01"],
+	"gameDate": "2070-08",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

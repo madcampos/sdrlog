@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46116-9", "27832"],
+	"name": "A Fistful of Data",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Für eine Handvoll Daten" },
+	"originalLanguage": "en-US",
+	"description": "In the abandoned factory known as the Crypt, society's castoffs have found a place to call home. Some of the Crypt's denizens are hiding or on the run; some have nowhere left to go. But the Crypt protects its own, providing care for street kids as well as medical and magical healing for those in need. It also sports an illegal tap into the Matrix, and hosts a coven of some of the most successful shadowrunners around.\nWhen a disgraced corporate mover takes an interest in the Crypt - and in a valuable secret long hidden in its foundations - he doesn't intend to let the dregs of Seattle keep him from making the score of a lifetime. But he's about to discover that the Crypt's inhabitants aren't going to be buried so easily....",
+	"edition": 3,
+	"publisher": ["WizKids Games", "Heyne Verlag"],
+	"releaseDate": ["2006-10-01"],
+	"gameDate": "2063-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

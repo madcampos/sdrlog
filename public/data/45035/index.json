@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45035"],
+	"name": "Schatten über Chicago",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Chicago. Wespengeister. Schaben in Kleinwagengröße. Brutale Banden und toxische Schamanen. All dies fällt einem ein, wenn man den Namen der einstigen Metropole hört. Aber das ist noch lange nicht alles! In der Nachbarschaft von Medikamentenschiebern und am Rande des Kraters einer nuklearen Explosion gibt es auch die Reichen, die Großkonzerne und die Profiteure der anarchischen Zustände. Die Runner erwartet eine Reise von ganz unten nach ganz oben, eine Achterbahnfahrt durch Chicago: von Forschungsanlagen, über Gang-Territorien bis in die tiefe Vergangenheit der Stadt.\nSchatten über Chicago enthält drei Abenteuer für Shadowrun 5, die in Chicago angesiedelt sind, sowie die Kurzbeschreibung der Stadt samt Übersichtskarte, die auch schon in Mission Chicago enthalten war. Der Band ist unabhängig von seinem Vorgänger spielbar und liefert ausformulierte Abenteuer mit allen relevanten Werten - direkt für den Spieltisch.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2016-01-01"],
+	"gameDate": "2075-01",
+	"notes": "Collects three Shadowrun Missions adventures (SRM05-04: Liberation, SRM05-05: While the City Sleeps, SRM05-06: Take a Chance) and a description of the city of Chicago.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

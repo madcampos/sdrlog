@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S043A"],
+	"name": "Shadows in Focus: City by Shadow: Butte",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "pt-BR": "Sombras em Foco: Cidade nas Sombras: Butte" },
+	"originalLanguage": "en-US",
+	"description": "One of the tricks of shadowrunning in the Sioux Nation is keeping your eye on the things you can't see. It's not just the spirits and the unseen magical beings of the world—though that's part of it—but the dangers underground. The poisons seeping into the earth from abandoned mines, and the vast complex that has been built underground, out of sight of the rest of the population. A spot where money flows and the sun never shines—what more could shadowrunners want?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Other"],
+	"releaseDate": ["2015-09-01"],
+	"gameDate": "2077-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

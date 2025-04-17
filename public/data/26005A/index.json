@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26005A", "46030", "SR13"],
+	"name": "Runner's Companion",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Runnerkompendium", "fr-FR": "Le Guide du runner", "jp-JP": "ランナーズ·コンパニオン" },
+	"originalLanguage": "en-US",
+	"description": "Life in the shadows has never been as dangerous, and runners need every edge they can get. Runner's Companion opens up a world of expanded options for Shadowrun players with dozens of New Qualities, Advanced Contact and Lifestyle Rules, and handy tips on running, travelling and smuggling, and operating in a surveillance society.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2008-08-20", "2009-10-22", "2015-04-30"],
+	"gameDate": "2071-07",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28905NV"],
+	"name": "The Frame Job, Part 5: Zipfile",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "PART THREE [sic] OF THE ORIGINAL SHADOWRUN SIXTH WORLD EDITION NOVELLA SERIES!\nFIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nAfter being double-crossed by one of the largest megacorps in the Sixth World, the shadowrunner team sets their own plans in motion: clear their names and deliver payback with a vengeance.\nWhile everyone else is running around in the real world, the team's resident decker, Zipfile, takes to the Matrix to find out all she can about who set them up and who that Johnson was working for. If she can get those answers, they'll be one step closer getting their sweet revenge.\nBut the infinite pixels of the Matrix only lead to more questions at first, until the resourceful dwarf approaches their problem from a new angle…that nearly gets her and another team member killed.\nBefore their run is over, Zipfile uncovers even more danger in the neon sprawl of the Matrix…and those bits and bytes of data could prove more deadly than anything in the meat world…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-05-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

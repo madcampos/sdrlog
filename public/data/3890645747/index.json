@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890645747"],
+	"name": "Ash",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Devil's Playground und ihr Sänger Ash stehen kurz vor dem Durchbruch. Ihre Konzerte sind ausverkauft und ihre Fans lieben sie. Auch, oder gerade weil sich die Band in ihren Liedern für Toleranz zwischen Menschen und Metamenschen einsetzen. Ansichten, die einem lokalen Policlub ein Dorn im Auge sind. Ein feiger Anschlag auf Ashs Leben ist eine erste Warnung. Doch wer lässt sich schon einschüchtern, wenn er gerade auf dem Weg nach oben ist? Und da wäre noch Quickshot, der mysteriöse Runner, der gleich einem Geist in den Schatten auftaucht und wieder verschwindet. Doch um in den Schatten zu überleben, braucht man Freunde. Menschen, denen man vertrauen kann. Besonders, wenn auf den eigenen Kopf eine Belohnung ausgesetzt ist.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2001-01-01", "2007-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

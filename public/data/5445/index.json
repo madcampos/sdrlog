@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5445", "27807"],
+	"name": "Burning Bright",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Nuke City" },
+	"originalLanguage": "en-US",
+	"description": "status: Mitch Truman, heir apparent to an entertainment megacorporation. He may have fled his parents for the sake of love, but if magic is involved the reason could be darker...\nWEALTHY: Dan Truman, CEO of media giant Truman Technologies, doesn't care how much it costs--he wants his son back. He'll hire the best to find his heir, even if their motives are suspect...\nEXPERIENCED: Kyle Teller's done this job before. He knows the tricks of the trade, and not only because he's a mage. He thinks finding the missing boy will be easy. Why shouldn't it be?\nBut will money and experience be enough to defeat the terrible power growing beneath the city of Chicago?",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1994-11-01", "2003-06-01"],
+	"gameDate": "2055-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

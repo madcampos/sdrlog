@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S014"],
+	"name": "Magical Societies",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Magische Gesellschaften" },
+	"originalLanguage": "en-US",
+	"description": "Step Up\n\nDear Applicant:\nThank you for applying for membership in our revered magical society. We are certain you understand that we receive more applications than we can accept, due in part to the prestige we enjoy in the Sixth World. We are a group who attracts notice. The mundane citizens of the world look at us with suspicion, while the Awakened look at us with envy, for they believe that we harbor dark secrets and world-changing schemes, and it of course is quite possible that they are right.\nSo we understand why you would seek to join us. We hope you can show us something special. We hope you can show us something new. We hope you can give us a reason why you should associate with our members by showing us what we can gain from having you among us. If you think first about what you can give, then you will have the opportunity to think about what you can get. Of course, if the rumors about us are true, the answer to that last item is simple: the world.\nWe look forward to your trial, and we hope you survive it. Should you wish, you may cancel that ordeal and instead attempt to join one of the other, lesser magical societies in the world. If you believe you can be satisfied with that.\nWe would wish you luck, but if you are skilled, you should not need it.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-06-01", "2012-10-09"],
+	"gameDate": "2074-05",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

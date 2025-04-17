@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27700-G14"],
+	"name": "Shadowrun Crossfire: Harlequin's Shadow Promo Card",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "Harlequin's Shadow is a promo Crossfire Deck card given out during GenCon 2014. It is used in Close The Portal scenario available for download from Catalyst Game Labs website.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-01-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

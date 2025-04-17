@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM06-04"],
+	"name": "Tick Tock",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "You build walls for two reasons: to keep things out, and to keep things in. Walls were erected around the Chicago Containment Zone many years ago, keeping people from the outside away from the dangers within, and locking secrets inside that are still waiting to be discovered. Though the longer they stay hidden, the clearer it is that some secrets don't want to be found.\nIn the latest Shadowrun Mission, runners have a chance to solve one of the longest-standing mysteries of the Containment Zone, namely: What happened to Melissa Truman, the missing heir of a media empire? Digging up the right information will be hard enough, but if the runners are lucky and skilled enough to uncover the truth, they'll have a harder question in front of them. What do they do with what they've found?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2016-06-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

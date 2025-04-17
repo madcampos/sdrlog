@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26210", "47025"],
+	"name": "Hazard Pay",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Gefahrenzuschlag - Todeszonen der 6. Welt" },
+	"originalLanguage": "en-US",
+	"description": "The Ends of the Earth And Beyond\n\nDark alleys, abandoned buildings, wet streets stabbed with neon light—shadowrunners know all these places. They also know that they aren't the only places work gets done. A good shadowrunner should be open to anything, to runs that might take them anywhere. From the cold of Antarctica to the heat of the Sahara, from the life-filled dark of the deep oceans to the empty void of outer space, there is work to be had for runners brave and resourceful enough to take it. Of course, there are also dozens of new ways to die, so you should probably see if Mr. Johnson will chip in a little extra pay.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2012-05-01", "2012-10-01"],
+	"gameDate": "2074-04",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

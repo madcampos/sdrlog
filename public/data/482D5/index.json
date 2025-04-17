@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["482D5"],
+	"name": "Datapuls: SOTA 2082",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# Von Knarren und Kähnen\n\nDie Uhr dreht sich weiter, sie bleibt niemals stehen. Und mit ihr läuft auch die Technik in die Zukunft - mit oder ohne dich. Wenn du am Ball bleiben willst, solltest du dich informieren: Du solltest die neuesten Schießeisen kennen, die coolesten Drohnen besitzen oder das schnellste Auto fahren. Oder zumindest eines, das schneller ist als die Polizei.\n\nDatapuls SOTA 2082 wirft ein Licht auf neue Ausrüstung für Shadowrun. Präsentiert werden neue und alte Waffen, Autos, Motorräder, Flugplattformen und Kampfdrohnen, mit denen sich die Runner ausrüsten können oder denen sie sich entgegenstellen müssen. Zudem enthält das PDF neue Schutzgeister für magisch Erwachte und die Beschreibungen einiger Schattengrößen.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2020-04-28"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

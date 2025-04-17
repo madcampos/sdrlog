@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10674", "25005"],
+	"name": "Running Wild",
+	"category": "mission",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "Unreleased Adventure.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"gameDate": "2064-01",
+	"status": "canceled",
+	"notes": "Unreleased adventure.",
+	"cover": "./cover.jpg"
+}

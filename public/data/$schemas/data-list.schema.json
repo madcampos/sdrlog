@@ -1,0 +1,26 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "ad2ad503-404f-4d44-abff-390eae6965dd",
+	"type": "object",
+	"required": ["lastUpdated", "items"],
+	"properties": {
+		"lastUpdated": { "type": "string", "format": "date-time" },
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["sku", "name", "link", "cover", "category", "type", "edition", "status"],
+				"properties": {
+					"sku": { "$ref": "./data.schema.json#/definitions/sku" },
+					"name": { "$ref": "./data.schema.json#/definitions/name" },
+					"link": { "$ref": "./data.schema.json#/definitions/relative-link" },
+					"cover": { "$ref": "./data.schema.json#/definitions/relative-link" },
+					"category": { "$ref": "./data.schema.json#/definitions/category" },
+					"type": { "$ref": "./data.schema.json#/definitions/type" },
+					"edition": { "$ref": "./data.schema.json#/definitions/edition" },
+					"status": { "$ref": "./data.schema.json#/definitions/status" }
+				}
+			}
+		}
+	}
+}

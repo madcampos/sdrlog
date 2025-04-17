@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45072G"],
+	"name": "Schattenhandbuch 4",
+	"category": "sourcebook",
+	"type": "print",
+	"originalLanguage": "de-DE",
+	"description": "SCHATTENHANDBUCH VIER\n\nDas Schattenhandbuch 4 ist der Nachfolger der Schattenhandbücher 1-3 - und führt die Reihe damit fort. Auch dieser Band enthält mehrere PDFs von der Plattform www.pegasusdigital.de für Shadowrun 5 in gedruckter Fassung, die sich alle dem deutschsprachigen Raum widmen:\n\n- Im Datapuls: Schweiz wird die Nation im Süden der ADL beleuchtet. Großkonzerne, erwachter Alpenraum und Metamenschen-Vorbehalte prägen das Bild des immer um Neutralität bemühten Staats. - Der Datapuls: Verschlusssache schaut hinter die Vorhänge der deutschen Geheimdienste, ganz besonders von Argus und dem BIS. - Im Datapuls: Frankfurt wird der Großraum Frankfurt mit Heidelberg, Mannheim, Wiesbaden und all den anderen verschluckten Städten beschrieben - das Reich des Frankfurter Bankenvereins und der AG Chemie. - Der Datapuls: Proteus führt tief in die Geheimnisse des Nordseekonzerns und seiner abgeschlossenen Arkologien, um den Antagonisten für den Spieltisch neu aufzupolieren. - Und im Datapuls: SOTA 2080 findet der Runner von Welt deutsche Wertprodukte aus den Bereichen Schusswaffen, Fahrzeugen, Drohnen, sowie Neuigkeiten aus dem Reich der Magie.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2019-07-01"],
+	"gameDate": "2073-01",
+	"status": "missing",
+	"notes": "The book contains the printed version of several \"Datapuls\" supplements previously only published as eBooks: \"Datapuls\"-Ergänzungen: \"Datapuls: Schweiz\", \"Datapuls: Verschlusssache\", \"Datapuls: Frankfurt\", \"Datapuls: Proteus\" and \"Datapuls: SOTA 2080\" and - as an exclusive addition - \"Datapuls: Auf der Jagd\" with interesting facts about the federal police authorities of the ADL with a focus on BGS and BKA.",
+	"cover": "./cover.jpg"
+}

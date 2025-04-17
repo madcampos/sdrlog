@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27100X"],
+	"name": "Digital Tools Box",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Shadowrun Digital Tools Box is 2 box sets in 1! Whether you're just getting into Shadowrun or you're a runner that's been hitting the streets since the 2050s, you'll find useful material here for running any type of game.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-01-30"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

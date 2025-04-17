@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5630", "27833"],
+	"name": "Headhunters",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Kopfjäger" },
+	"originalLanguage": "en-US",
+	"description": "Somebody aced the dragon Dunkelzahn, and one of the mysterious links to the assassination is flat on his back in slab city: a double agent with two identities--both out of commission. Now he's the most-wanted carcass in Tacoma. Jack Skater's mission? Sleaze past the high-tech funeral security, outwit the Knight Errants, cop the stiff, and keep it on ice long enough to get the answer to the shadowrunners' life-and-death question: what's so hot about a stone-cold corpse?\nAnd that isn't all that's dropped Skater elf-deep in drek--the UCAS Secret Service is also after the dead man's secret--and the government blue crews are prepared to liquidate anything in sight to get to it first...",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1997-10-01", "2003-06-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

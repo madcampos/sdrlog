@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["470D1"],
+	"name": "Datapuls: Berlin",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Urbaner Schmelztiegel\n\nBerlin, Megaplex an der Spree. Für manche Zeichen der Konzernherrschaft. Für andere eine anarchistische Arche Noah. Für viele Bewohner der Ort, mit dem ihr Leben und ihr Schicksal unabänderlich verknüpft sind. Während in den Schatten neue Machtspieler des organisierten Verbrechens aufsteigen, breitet der Berlinkonzern seine Arme wie eine Krake über den Plex.\nDatapuls Berlin beleuchtet diesen Moloch der Sechsten Welt und liefert zusätzliche Informationen zu denen, die schon im Datapuls ADL publiziert wurden: neuste Verwicklungen und Ränkespiele, ein tiefer Blick in die Machtstrukturen der Berlin AG, neue Gangs und Banden in den anarchistischen Vierteln. Zudem werden in diversen Karten Locations und andere wichtige Orte aufgeführt und sowohl das Wedding als auch das Emirat Berlin genauer beschrieben.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2018-02-16"],
+	"gameDate": "2075-01",
+	"notes": "German sourcebook about Berlin.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

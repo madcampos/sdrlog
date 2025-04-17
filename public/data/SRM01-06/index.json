@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM01-06"],
+	"name": "Lost and Found",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "It's a simple job. Something was stolen and someone wants it back. How complicated could it be?",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2005-01-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7002X", "25008", "10739"],
+	"name": "Critters",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Critter", "fr-FR": "Les Métacréatures" },
+	"originalLanguage": "en-US",
+	"description": "Originally included with the Shadowrun, Third Edition, Gamemaster's Screen, this book is a complete catalogue of paranormal critters for Shadowrun. In addition to critter stats and short descriptions, it includes all of the rules you need for using critter powers. 48 Pages.",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1998-12-01", "1999-01-01", "2000-01-01", "2004-07-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["482D1"],
+	"name": "Datapuls: DeMeKo und Medien",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# Die bunte Welt des Trideos\n\nAlles wird bunter, wenn es erstmal in den Medien erscheint. Jedes Thema bekommt neue Farben, neue Facetten und glänzt nach der medialen Waschmaschine in neuem Licht. Ob es dann noch die Wahrheit ist? Nun, das ist eine andere Frage. Die DeMeKo, der wichtigste Medienkonzern der ADL, arbeitet mit seiner eigenen Wahrheit und schafft seine eigene Welt.\n\nDatapuls DeMeKo und Medien wirft ein Licht auf den großen Medienkonzern der ADL: Die Machtspieler, die Konzernkultur, die Agenda und die unterschiedlichen Geschäftsbereiche. Der zweite Teil des PDFs beschäftigt sich mit der Medienlandschaft der ADL: den neuesten Serien, Filmen und Gerüchten.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-04-14"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

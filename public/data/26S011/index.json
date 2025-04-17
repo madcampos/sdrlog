@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S011"],
+	"name": "Deadly Waves",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Tödliche Wogen" },
+	"originalLanguage": "en-US",
+	"description": "Run on Water\n\nMore than two-thirds of the Earth's surface is covered by water. That means that two-thirds of the Earth is covered in escape routes, infiltration points, and hiding places that people stuck on land constantly overlook. If you want to know how to use all that blue to your advantage, you need to know the boats that are out there, what they can do, and how your competition is putting them to use.\nDeadly Waves collects information about thirty different watercraft, from the fast and agile Wave Cutter to the luxurious, self-maintaining Zeppelinwerke Elite Cruiser to the hulking yet surprisingly quick Maersk-Jorgenson Fast Freighter. Runners can use this book to gain all sorts of options for taking to the water, whether they're planning a quick jaunt or embarking on a long voyage.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-07-01"],
+	"gameDate": "2073-07",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

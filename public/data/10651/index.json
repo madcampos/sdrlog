@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10651"],
+	"name": "Target: Awakened Lands",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Erwachte Länder", "fr-FR": "Terres d'Éveil" },
+	"originalLanguage": "en-US",
+	"description": "If the mana storms don't get you... the bunyips will!\nYou think Bug City was bad? Chummer, you ain't seen nothin' like Australia's Outback. Mana storms sneaks up on you, dropping acid or fire or turning your transport into melted slag. You can run for cover, but the cave you hibe in may actually be some astral mirage that doesn't really exist. If you're lucky, Awakened dingos won't eat you and you'll crawl back to the sprawl... only to die of thirst when you don't have the cred to buy precious drinking water.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions", "Other"],
+	"releaseDate": ["2001-01-01", "2002-04-01", "2002-06-01"],
+	"gameDate": "2062-06",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

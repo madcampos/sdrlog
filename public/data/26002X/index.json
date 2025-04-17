@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26002X", "23002X", "SR02X"],
+	"name": "Contacts & Adventures",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Connections & Szenarien", "fr-FR": "Contacts & aventures" },
+	"originalLanguage": "en-US",
+	"description": "The 32 page Contacts and Adventures booklet, which features a variety of NPCs with complete stats; over 30 plot hooks covering a wide range of shadowrunning possibilities; the SR3 to SR4 character conversion rules, and two pages of additional tables that we couldn't squeeze onto the GM Screen itself.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Fantasy Productions", "Other"],
+	"releaseDate": ["2006-03-01", "2007-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27480"],
+	"name": "Sprawl Wilds",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "You live in any sprawl long enough, you'll find out that there's a lot more to it than businessmen and soykaf stalls. Any sprawl worth its mettle has its dark corners, its forgotten places, its spots that are just as wild and untamed as the deepest rainforest.\nSeattle, the prime metroplex in the world for shadowrunning, is filled with such places, and Sprawl Wilds gives shadowrunners a chance to tour them. From a fortress-like Barrens farm recovering from a mysterious attack to a dark secret hidden in a clinic, runners have a chance to see the sites most people never encounter, and uncover information that some people want to stay secret at any cost. They'll meet jaded smugglers, wary police officers, passionate activists, hardened criminals, wounded warriors, and at least one deranged killer. The questions are, will they survive long enough to collect a paycheck—and how much of the sprawl will be nothing more than dust when they're done with it?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-07-01"],
+	"gameDate": "2075-01",
+	"notes": "The German translation is split in two books: \"Licht aus der Asche\" and \"Trittbrettfahrer\".",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

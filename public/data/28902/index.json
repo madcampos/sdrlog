@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28902"],
+	"name": "Art Portfolio Vol. 1",
+	"category": "misc",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "Forty classic pieces of Shadowrun art are collected in this portfolio. Each piece is large, printed on sturdy cardstock, and easily detachable, so each page can be its own poster. A must-own for any Shadowrun or even cyberpunk fan who wants to display some of the best art in RPG history. \n\n- Images span the entire history and include some high-profile artists such as Larry Elmore and Echo Chernik.\n- Some images were selected through a fan-voting process, so the book reflects fan preferences and has their investment.\n- With each page being a detachable poster, fans get a lot of variety and options for how they want to show their favorite side of Shadowrun!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-10-19"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26012NV"],
+	"name": "Chaser",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "STREETS ON FIRE…\n\nA vicious magical assault on a street gang isn't a case paranormal P.I. Jimmy Kincaid would normally pick up. But when a fellow private eye asks him to look into it, and he learns the gang was doing a charity run for a church — a church Jimmy knows quite well — when they were attacked, his professional curiosity is raised. His investigation quickly leads to a tangled maze of clues and dead-ends. Someone — or something — is prowling the streets of Puyallup, looking to incinerate whoever crosses their path. And Jimmy's got to find them — and stop them — before the entire neighborhood goes up in flames.\n\nBut whoever's looking to light innocent victims on fire made one mistake — they're doing it in Kincaid's backyard. And Jimmy's never taken kindly to trespassers…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-06-17"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

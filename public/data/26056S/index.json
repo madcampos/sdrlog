@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26056S"],
+	"name": "The Seattle Gambit",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Sucked Back In\nFormer shadowrunner Yuri Yehzov has discovered that the shadows have long tendrils. Life pushed him and Soren, his new partner in crime (and everything else), to Seattle, where they'll have to do what thousands have done before them—figure out how to scrape by and attempt to build a life.\nIf there's one thing the darker corners of the Sixth World have in common, it's the tendency to explode into violence at any moment. Yuri will discover that Seattle's shadows are merciless and unkind, but also full of opportunity for those who can think on their feet and keep flying lead from piercing their skin. Can Yuri move fast enough to stay upright in the worldwide capital of shadowrunning? He's about to find out.\nThe Seattle Gambit is new Shadowrun fiction that also includes NPC, gear, and other rules that appear in the story. Read the story, then use the rules to dive into the action! The Seattle Gambit's rules are for use with Shadowrun, Fifth Edition, though the basic concepts and story can also be used with Shadowrun: Anarchy.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2017-12-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

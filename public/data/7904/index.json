@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7904", "10710", "SH1201"],
+	"name": "Virtual Realities 2.0",
+	"category": "rulebook",
+	"type": "scan",
+	"names": { "de-DE": "Virtual Realities 2.01D", "es-ES": "Realidades Virtuales 2.0", "fr-FR": "Réalités Virtuelles 2.0" },
+	"originalLanguage": "en-US",
+	"description": "'There I was, standing next to Joe on the corner, when outta nowhere comes this overgrown troll riding the hugest Harley Scorpion I've ever seen, blastin' away from all three firmpoints. What really scared teh bejeezus outta me were his arms - coupla big chainsaws, buzzin' away like a hundred million wasps. He rode right up and sliced through Joe like a hot knife though butter! Joe flickered a bit, his face contorting into a pirmal scream, and disappeared. I hotfooted it back to the squat with the words, 'Buy Mitsuhama' running through my brain - don't ask me why, \"Then Joe's brother unhooked us from the Matrix...\n...AND THE REAL NIGHTMARE BEGAN.\"",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1995-10-01", "1996-01-01", "1998-05-01", "2011-08-23"],
+	"gameDate": "2055-07",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

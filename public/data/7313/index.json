@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7313"],
+	"name": "Dark Angel",
+	"category": "mission",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "Dark Angel\nMusic worth dying for.\n\nWhen the only known recording of a late, great street musician appears in the hands of a major record company, it's up to the runners to find out the truth.\nJust what was that corp willing to do to get that recording?",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1993-12-01", "2012-11-16"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

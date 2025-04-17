@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890644732"],
+	"name": "Böses Erwachen",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Kyon, der Zyniker (\"Feuerzauber\") und Mark, der Betbruder (\"Im Namen des Herrn\"), könnten unterschiedlicher nicht sein. Dennoch stehen sie sich näher, als sie ahnen. Jetzt kommen sie zusammen, um - im wahrsten Sinne des Wortes das - Abenteuer ihres Lebens zu bestehen. Zusammen mit ihren Gefährten Quiz, Glitzer, Kl und Marie setzen sie sich auf die Spur eines heimtückischen Mörders mit bekanntem Gesicht und treffen auf alte Feinde in neuem Gewand.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["1996-01-01"],
+	"gameDate": "2050-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

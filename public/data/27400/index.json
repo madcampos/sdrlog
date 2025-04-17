@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27400", "45016", "SR502"],
+	"name": "Splintered State",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "Tödliche Fragmente", "fr-FR": "Fragmentation" },
+	"originalLanguage": "en-US",
+	"description": "Federal Agent Seth Dietrich has a secret. Actually, multiple secrets. One of them made him go underground, hiding from the people desperate to learn just how much he knows. And the other is keeping him from surfacing, because he's found he can't even trust himself.\nIf Dietrich were in his right mind, he'd cover his tracks like a pro, and no one would find him. Especially not shadowrunners getting their feel for life on the streets. But he's not in his right mind, which means a group of shadowrunners finds themselves in possession of some very valuable information—information the highest powers in Seattle want for themselves. What started as a simple job turns into a scramble for their lives, a scramble that could become profitable if the runners play their cards right.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2013-09-30", "2013-12-01", "2014-07-01", "2014-11-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

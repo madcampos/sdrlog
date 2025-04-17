@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7902X", "S11", "92542"],
+	"name": "Contacts",
+	"category": "rulebook",
+	"type": "scan",
+	"names": { "es-ES": "Contactos", "hu-HU": "Kapcsolatok és Archeotípusok", "pt-BR": "Contatos" },
+	"originalLanguage": "en-US",
+	"description": "Contacts booklet that accompanied the 2nd Ed. GM Screen.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Other"],
+	"releaseDate": ["1992-06-01", "1994-01-01", "1995-01-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

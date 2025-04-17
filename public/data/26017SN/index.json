@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26017SN"],
+	"name": "Blackbird Two: Combined Exercises",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# NEVER STOP TRAINING...\n\nDashiell Red Clay's days on the field and at basic combat training might be behind him, but his life as a Salish Ranger has just begun...and there's a lethal learning curve! Only life in The Sixth World can teach Dash what it means to be a member of the Salish Boat Service, what it means to serve your country, and what the word \"country\" even stands for in the fractured continents of Shadowrun's dark future.\n\nRed Clay and his Rangers will clash with street gangs and elite soldiers alike, from the enigmatic, elven Ghosts to the legendary Wildcats of the NAN plains. Life will throw notorious mercenaries at him, cutthroat thrill-gangers, pride and shame, danger and love, and maybe even a street legend or two. From the barren mountains of Afghanistan to the filthy streets of Seattle, from the 2040s to the 2060s, from matters of the heart to tests of loyalty, Dash will face dangers Yakima never trained him for and threats \"the book\" never saw coming!\n\nThe Blackbird series is a short novel trilogy with strong military, Shadowrun-historical, and Native American Nation themes. Fans of the Kincaid series will enjoy a first-person narrative exploring the history of the Sixth World through Dash's eyes as he experiences the world of shadowrunners from a perspective a half-step removed from the shadows...on the battlefield, not the streets, as paramilitary action spills from one famous conflict to the next, spanning decades and three action-packed stories.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-08-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

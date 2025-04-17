@@ -1,0 +1,23 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7902", "10701", "5002", "S11"],
+	"name": "Game Master's Screen 2nd Edition",
+	"category": "rulebook",
+	"type": "scan",
+	"names": {
+		"de-DE": "Spielleiterschirm (zweite Edition)",
+		"es-ES": "Pantalla para el árbitro / Pantalla del Director de Juego, segunda versión",
+		"fr-FR": "Écran deuxième édition",
+		"hu-HU": "Játékmester Paraván",
+		"it-IT": "Schermo Dell'Arbitro",
+		"pt-BR": "Escudo do Mestre, Segunda Edição"
+	},
+	"originalLanguage": "en-US",
+	"description": "The GM Screen for the second edition, contains tables for use in game.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1992-06-01", "1993-01-01", "1994-01-01", "1995-01-01", "1997-01-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

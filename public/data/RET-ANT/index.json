@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["RET-ANT"],
+	"name": "Shadowrun: Returns: Anthology",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Along with many other features, this anthology includes Locks and Keys and The Art of Shadowrun Returns.",
+	"edition": 5,
+	"publisher": ["Harebrained Schemes"],
+	"releaseDate": ["2013-01-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

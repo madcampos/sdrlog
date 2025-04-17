@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SMH201601"],
+	"name": "UnCONventional Warfare",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Louis Gilbertson has a problem—a big problem.\nSeven years ago his father passed away and left him sole owner/proprietor/promoter of GameCon, the largest of the few remaining independent gaming conventions in the world. At first, he was honored to carry on his father's legacy, as Gilbertson is a lifelong gamer nerd himself who learned about gaming and the industry from his father, Louis Senior. For the first five years after Louis Senior's death, no one could touch GameCon. Various corporate sponsors and gaming companies continued to flock to GameCon as they had in decades past, using it to showcase their latest products.\nHowever, since Louis Senior's death, there's been a small shadow-war between GameCon and upstart rival DarkestShadowCon. So far, Gilbertson and GameCon have been able to hold DarkestShadowCon at bay (barely) by keeping its numbers up. However, that hasn't stopped DarkestShadowCon from engaging in a bit of sabotage augmented with numerous smear campaigns and flame wars on the Matrix. While their attendance numbers are higher than ever, GameCon has barely broken even monetarily over the last three years after dealing with DarkestShadowCon's shenanigans.\nNow it seems DarkestShadowCon is poised to deliver a coup de grace. ",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2016-04-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

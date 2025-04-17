@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26602"],
+	"name": "Manhattan: The Rotten Apple",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Dominated by the Manhattan Development Consortium (MDC), the City represents the largest contiguous corporate enclave in the Sixth World. This volume grants a look into the neighborhoods of Manhattan, the constant scrutiny of its security, and the activities of the thirteen corporations that oversee its development.\nThis setting is a crucial part of the New York City Shadowrun Missions campaign. This 32-page volume serves as a guide to players so that they can prepare their characters to deal with the finer details of the setting. Gamemasters are also well suited to use this book, as it grants them a deeper insight into the neighborhoods of Manhattan than can be provided in scenarios.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2009-03-22"],
+	"gameDate": "2072-10",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

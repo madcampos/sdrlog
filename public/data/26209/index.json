@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26209", "47005"],
+	"name": "Street Legends",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Straßenlegenden" },
+	"originalLanguage": "en-US",
+	"description": "CASTING A LONG SHADOW\n\nAt the end of a run, you've either got a good story to tell or you're dead. Live long enough, and you'll get enough stories to fill a book, and some of them will be killer. There is a certain class of people out on the streets that runners love to talk about, the people at the center of the stories swapped late at night over a round of wiper-fluid hooch. Some of them are good, some of them are lucky, and some of them are among the most powerful creatures of the Sixth World. All of them, in their own way, are legends.\nStreet Legends profiles more than thirty renowned figures in the Sixth World, including JackPoint stalwarts such as Haze, Rigger X, and Puck; classic runners like Serrin Shamander and Tommy Talon; and powerful behind-the-scenes figures including Lugh Surehand, Nadja Daviar, and the great dragon Lofwyr. Learn about hunting vampires with Martin de Vries, running guns in a war zone with Marcos, and trying to put a face to the elusive Hans Brackhaus.\nStreet Legends contains short fiction bringing these characters to life, as well as text describing each person and what makes them a legend. Also, each and every person profiled has complete game stats. Even the dragons.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-08-01", "2012-02-01"],
+	"gameDate": "2073-08",
+	"notes": "The German edition has aditional information about German characters.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

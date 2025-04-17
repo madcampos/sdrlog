@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10655", "25015", "2-7408-0231-5"],
+	"name": "Shadows of North America",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Nordamerika in den Schatten", "fr-FR": "L'Amérique des Ombres" },
+	"originalLanguage": "en-US",
+	"description": "The Map Is Not The Territory\n\nThere's nothing worse than dropping into some backwater sprawl in the country next door to quietly take care of some job, then realizing too late that your sprawl studs and street lingo stick out like a troll's thumb. North America ain't what it used to be, chummer--every time you cross a border, you enter a different world. Ask an anglophone in Québec, an ork in San Fran, or a mage in the NAN. The rules are different, both in the shadows and in the sunlight, and if you don't keep up with the local game, you're gonna lose. Shadows of North America tells shadowrunners what they need to know about the 13 countries and city-states of North America, including the Native American Nations and the dragon-ruled city of Denver. Each state is covered in detail, from hot spots to power players, all from a shadowrunner's point of view. Designed for Shadowrun, Third Edition, but usable for any edition.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["2002-07-01", "2003-05-01", "2004-08-01", "2005-01-01", "2006-01-01"],
+	"gameDate": "2062-08",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

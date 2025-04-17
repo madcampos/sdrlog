@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26CMP13-1"],
+	"name": "CMP 2013: Dragon Song Series",
+	"category": "mission",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "CMP 2013-01 Jailbreak Rock\nIf the payday is high enough, are you willing to bust a dragon out of a Denver jail? Shadowrun 5th Living Campaign. Help a fellow Runner out. A fellow Chummer is locked behind bars in Denver and is looking for help getting out. Brave the Cold and the Dragon to help a Runner.\n\nCMP 2013-02 Berlin Waltz\nEscort an injured Mr. Johnson to Berlin, with a dragon's minions on your tail! Shadowrun 5th Living Campaign. Welcome to Deutschland, come for the Schnitzel stay for the Neu-yen. When Mr. Johnson needs a hand moving some valuble items who's he gonna call.\n\nCMP 2013-03 Neo-Tokyo Fusion\nThe Ragin' Gaijin are the hottest indy band in Neo-Tokyo, but now they need to be rescued. Shadowrun 5th Living Campaign. Mr. Johnson's favorite Japanese Pop band has gone Missing, help locate the missing Musicians and the Wasabi Rolls are on him, Fail and you may find yourself turning Japanese. \n\nCMP 2013-04 Ballroom Blitz\nThere's a party at Underworld 93 and everyone's invited. Everyone. Shadowrun 5th Living Campaign. All roads lead to Seattle, Mr Johnson has one last run, to protect his assets from would be Assassins. Enjoy all the fine Dining Downtown has to offer...it may be your last night on the town.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "A series of adventures played at conventions, not relesed afterwards.",
+	"cover": "./cover.jpg"
+}

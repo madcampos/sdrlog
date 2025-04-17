@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7207"],
+	"name": "Native American Nations Volume Two",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "Eye of the Eagle\nSeattle isn't the only place where danger lurks. Conspiracy also grows to the north, threatening to tear the Tsimshian Nation apart and shatter its government. The radicals behind it are willing to die for their cause. Their tools are the weapons of terror: violence, fear, chaos and the ultimate weapon, something so dark and terrible it should have been left buried.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1991-12-01", "2015-03-11"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

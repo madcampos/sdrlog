@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM02-17"],
+	"name": "Patient Zero",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The team is sent to the Yakuza casino on the advice of a trusted fixer. When they arrive, the AR system goes down, and the Yakuza hire the team (with a level of courtesy based on the teaM's relationship with the Yakuza) to find out who had done it and bring them to justice - permanently. The team starts to track the phenomenon, and finds a similar occurrence at a local mental health facility. Investigating, they find that a patient named \"Mary\" was admitted with extreme schizophrenic psychosis, but suddenly recovered and checked herself out. The team tracks her to the University Psychology Department's library, where she is working. She avoids questions like a pro, but tries to slip the team a clue when the AR system goes down and Knight Errant is called.\nThe team escapes and is contacted by the Yakuza, who now have security tapes available. The team discovers that Mary was on the scene at the casino. When they track her down, they find that she has holed up in an automated factory that builds drones, vehicles, and display links, among other things. They find that Mary is the unwilling host of Taske, a free sprite from SRM02-05 Through a Rose Colored Display Link. The team has a nasty fight with the factory's equipment, and (hopefully) brings the culprit to justice.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2007-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

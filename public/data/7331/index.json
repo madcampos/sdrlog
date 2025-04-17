@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7331", "10749"],
+	"name": "Brainscan",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Brainscan" },
+	"originalLanguage": "en-US",
+	"description": "Don't Mess With My Head!\nWhat if your mind was no longer your?\nWhat if you could no longer distinguish fantasy from reality?\nWhat if your brain had an off switch, and someone else helt the remote?\nBrainscan is a campaign of five linked adventures that drop the characters squarely into the middle of a titanic struggle for identity, control and freedom.",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions"],
+	"releaseDate": ["2000-01-01"],
+	"gameDate": "2061-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

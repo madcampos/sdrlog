@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S050"],
+	"name": "Shadows in Focus: City by Shadow: San Francisco Metroplex",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "pt-BR": "Sombras em Foco: Cidade nas Sombras: São Francisco" },
+	"originalLanguage": "en-US",
+	"description": "When the Lights Go Down\n\nMoney? Check. Political turmoil leading to scrambling for power? You bet. Megacorps jockeying for position while working to take their rivals down a notch? Of course! A festering hive of corruption set next to one of the most scenic bays ever colonized by humans? Absolutely! San Francisco has all of the ingredients needed to make a nice, festering stew for shadowrunners. With the former imperialistic fascist General Saito out of power and the entire bay area united as a single sprawl, there is power and money to be had, which means business in the shadows is booming. San Francisco is a shadowrunner's guide to the people, places, and plots that make up this city, providing the paydata they need to navigate the hilly streets and cruel back roads of a sprawl whose aura of sophistication can't mask its deadly heart.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Other"],
+	"releaseDate": ["2016-01-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

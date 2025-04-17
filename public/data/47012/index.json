@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["47012"],
+	"name": "Schattenkatalog 3",
+	"category": "sourcebook",
+	"type": "print",
+	"originalLanguage": "de-DE",
+	"description": "Der Shadowrun Schattenkatalog 3 kommt bald, sprich zur RPC 2013, raus und er wird alle noch nicht auf Papier gedruckten PDFs enthalten, die bisher erschienen sind - allerdings nur die Regel- und Hintergrund-PDFs, nicht die kostenfreien oder Abenteuer-PDFs. Dafür gibt es im Band wieder 10 Seiten ADL-Zusatz - die sich mit Drohnen und deutschen Autobahnen beschäftigen werden.",
+	"edition": 4,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2013-05-23"],
+	"gameDate": "2074-01",
+	"status": "outofscope",
+	"notes": "A print only German compilation of: \"Parazoologie\", \"Parabotanik\", \"Magische Gesellschaften\", \"Der Weg des Adepten\", \"Der Weg des Samurai\", \"Safehouses\" und \"State of the Art 2073\" and a few extra pages.",
+	"cover": "./cover.jpg"
+}

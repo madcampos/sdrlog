@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["470D4"],
+	"name": "Datapuls: Österreich",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Wiener Walzer und wilde Schatten\n\nÖsterreich, das Nachbarland der ADL. Von Kriegen gezeichnet, von einer ganz eigenen Kultur geprägt, durchsetzt von Lebenslust, wilder Natur, Konzernintrigen und seinen Schatten, in denen sich Ausländer erst einmal zurecht finden müssen. Denn wenn Dr. Nowak, der österreichische Herr Schmidt, jemanden anheuert, könnten bald nicht nur die Mozartkugeln fliegen.\nDatapuls Österreich bietet einen neuen und aktuellen Einblick in den Alpenstaat. Vorgestellt wird nicht nur das Leben und die Besonderheiten der einzelnen Regionen, sondern auch die Machtgruppen und die Unterwelt, die Konzerne und die Staatsgewalt. Und natürlich die Schatten. Einen besonderen Fokus erhält Wien, inklusive eigener Stadtkarte. Und natürlich auch die Alpenzone mit ihrer erwachten Fauna. Wer in Österreich in die Schatten möchte, sollte sich also gut informieren - bevor er zwischen Salzburg und Wien verschollen geht.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2018-04-09"],
+	"gameDate": "2075-01",
+	"notes": "German sourcebook about Austria.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

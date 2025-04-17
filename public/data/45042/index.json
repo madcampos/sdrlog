@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45042"],
+	"name": "Karrenquartett",
+	"category": "misc",
+	"type": "print",
+	"originalLanguage": "de-DE",
+	"description": "DAS KARRENQUARTETT FÜR SHADOWRUN 5\nDieses für 2-5 Personen gedachte Spiel folgt den klassischen Quartett-Regeln: Ihr versucht, komplette Sätze (A-H) zu sammeln. Natürlich könnt ihr mit den zahlreichen auf den Karten aufgelisteten Fahrzeugwerten das Spiel auch als klassisches Stechquartett verwenden.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2016-01-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "Shadowrun Karren Quartett is a set of 32 cards depicting various vehicles of the Shadowrun universe with Shadowrun 5 game stats.",
+	"cover": "./cover.jpg"
+}

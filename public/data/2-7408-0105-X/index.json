@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["2-7408-0105-X"],
+	"name": "Les Nations des Américains d'Origine",
+	"category": "sourcebook",
+	"type": "print",
+	"originalLanguage": "fr-FR",
+	"description": "Les Nations des Américains d'Origine est la traduction-compilation de deux suppléments américains (Native American Nations Volume 1 et Native American Nations Volume 2) écrits par FASA, sauf le scénario Peacekeeper tiré du premier volume qui sera traduit séparément sous le titre Alerte Rouge. Il traite donc des nations apparues en Amérique du Nord (Aztlan et Tir Taingire exceptés) à la suite de l'Éveil et de la révolte des peuples indiens. Ce guide se conclut par un scénario se déroulant dans la nation Tsimshian.",
+	"edition": 1,
+	"publisher": ["Other"],
+	"releaseDate": ["1995-01-01"],
+	"gameDate": "2060-01",
+	"status": "outofscope",
+	"notes": "A condensed edition with: Native American Nations Volume 1, Native American Nations Volume 2 without the adventure \"Peacekeeper\".",
+	"cover": "./cover.jpg"
+}

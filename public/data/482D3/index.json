@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["482D3"],
+	"name": "Datapuls: Harz",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# Zwischen Tannen und Magie\n\nDichtes Unterholz, Geisterdörfer, sagenumwobende Orte, Hexencoven und Tourismus: So präsentiert sich der Harz Runnern, die ihn besuchen. Während es unterschiedlichste arkane Produkte zu erwerben gibt und Critter Teile des Mittelgebirges unsicher machen, sorgen die Schwestern und Brüder der Hexengesellschaften für noch mehr Schattenarbeit zwischen den dunklen Tannen.\n\nDatapuls Harz wirft ein Licht auf das gleichnamige deutsche Mittelgebirge in der Sechsten Welt. Sowohl die geographischen Begebenheiten, als auch wichtige Hotspots und Machtspieler werden ausführlich für den direkten Spielgebrauch beschrieben: seien es etwa Coven, Konzerne oder finstere Geheimnisse.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2020-05-02"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

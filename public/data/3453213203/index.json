@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3453213203"],
+	"name": "Nachtstreife",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Nichts ist ihm geblieben. Keine Erinnerung an sein früheres Leben, nicht einmal ein Name, der ihm sagen könnte, wer er war oder ist. Doch offensichtlich wissen andere Mächte von ihm, denn sie haben sich bereits auf seine Spur gesetzt. Bedroht durch eine elfische Profi-Killerin, verfolgt von einem großen Waffenkonzern und gestrandet in der dunkelsten Ecke des Rhein-Ruhr-Megaplexes, versucht ein Mann ohne Erinnerungen, die Schleier seiner Amnesie zu durchdringen und seine Identität wiederzufinden. Unterstützt wird er auf dieser gefährlichen Suche, die ihn bis in den Kirchenstaat Westphalen führt, von einer Magierin, die selbst die Schatten ihrer eigenen Erinnerungen verdrängen will.\nGefangen zwischen einer verlorenen Vergangenheit und einer unsicheren Zukunft, stellt sich schließlich die Frage, ob er die Antworten auf seine Gedächtnislücken wirklich wissen will und ob der Preis für diese Antworten nicht doch zu hoch ist.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["1999-01-01", "2002-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

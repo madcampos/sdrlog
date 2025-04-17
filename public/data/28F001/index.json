@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"name": "BattleRun II: The Quest for the Thing",
+	"sku": ["28F001"],
+	"edition": 6,
+	"gameDate": "2080-01",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"releaseDate": ["2021-04-01"],
+	"publisher": ["Catalyst Game Labs"],
+	"description": "# NO ONE ASKED FOR IT\n\nBut you get it anyway! The BattleTech and Shadowrun streams have crossed again, and we return to the Eighth World setting for Battlerun II: The Quest for the Thing! Join Jonas Hadry and whoever is lucky enough to travel alongside him as they look for a legendary object that will almost certainly have some sort of effect on the universe in which they live! This is the adventure that has everything—random plotlines, predictive text prompts, inaccurate trivia, and footnotes, footnotes, footnotes! It's a role-playing adventure that dares to ask: Can you figure out how to actually play it all the way through? Good luck!\n\nBattlerun II is kind of for use with Shadowrun, Sixth World, and maybe a little bit with MechWarrior: Destiny, but you meet its intended spirit best if you just kind of make crap up as you go.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

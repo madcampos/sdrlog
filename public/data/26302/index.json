@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26302", "46040", "SR14"],
+	"name": "Ghost Cartels",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "Geisterkartelle", "fr-FR": "Cartels fantômes" },
+	"originalLanguage": "en-US",
+	"description": "A Bad Beat Rocks the Street\n\nThe shadows are abuzz about the new drug in the sprawl: tempo. It takes the user on a unique trip, better than anything experienced before. Druggies can't get enough of the stuff, and even beetleheads are giving it a shot. Tempo's popularity shifts the balance of power between the syndicates and soon the blood and bullets are flowing.\nGhost Cartels drops the runners into the action, involving them in the drug deals and power plays shaking up Seattle, Los Angeles, and Hong Kong—even taking them all the way to the jungles of South America.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2008-10-01", "2010-01-01", "2012-11-09"],
+	"gameDate": "2071-11",
+	"notes": "Both the German and the French editions have additions based on Europe. The german version includes a CD with aditional material.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

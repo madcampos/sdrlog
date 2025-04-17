@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27QSR"],
+	"name": "Shadowrun Fifth Edition - Quick Start Rules",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Shadowrun Fünfte Edition Schnellstartregeln", "pt-BR": "Shadowrun Regrás Rapidas" },
+	"originalLanguage": "en-US",
+	"description": "Shadowrun, Fifth Edition is here and there's no better way to dive into the Sixth World than with these Shadowrun Quick-Start Rules. Take on the role of a Combat Adept, Decker, Street Shaman, or Street Samurai in a brawl against fast-food goodfellas using this set of streamlined rules perfect for both those new to Shadowrun or long-time players getting back into the game.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2013-07-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

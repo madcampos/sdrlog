@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26005", "23004", "46045", "SR05"],
+	"name": "Runner Havens",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Schattenstädte", "fr-FR": "Capitales des ombres" },
+	"originalLanguage": "en-US",
+	"description": "Across the Globe, Biz is Biz!\n\nThis first core setting introduces the players to two of the world's premier shadowrunner sprawls: Seattle and Hong Kong . Each city is described in detail for a shadowrunner's point-of-view, covering key topics such as the balance of power, corporate and underworld affairs, places to see, strange magics, and key features of interest. A wealth of plot hooks are also included. Four other runner-favored cities - Cape Town , Caracas , Hamburg , and Istanbul - are also covered in lesser detail, and gamemaster advice is provided for any specific urban locale into a shadow hotspot.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Fantasy Productions", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2006-08-29", "2006-07-19", "2010-01-11"],
+	"gameDate": "2070-02",
+	"notes": "The German edition added a chapter about Hamburg and the French edition a chapter about Marseille. The revised German edition has both chapters.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

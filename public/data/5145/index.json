@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5145", "27802"],
+	"name": "Find Your Own Truth: Secrets of Power, Volume 3",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Such deine eigene Wahrheit (Trilogie der Macht 3)" },
+	"originalLanguage": "en-US",
+	"description": "He was only a \"beginner\" shaman, but Sam Verner had to find a cure to ward off the curse on his sister. Only something of great magic would do the trick. It was this quest that took him to a mystical citadel in Australia, where, with the aid of his shadowrunner friends, he recovered the strange artifact he hoped would prove helpful. But instead of anything that even remotely resembled help, an unexpected and ancient terror was released—a terror that erupted into a shadow war for dominion over an awakened earth. And while the evil kept growing, inexorably drawing him into battle, the curse's power over his sister was also growing, bringing her closer and closer to death. Soon a truly desperate Sam realized that the last and only hope for saving his sister was to find the greatest shaman of the Sixth World, former leader of the Great Ghost Dance—a man who may no longer exist...",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1991-06-01", "2003-06-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7211"],
+	"name": "Tír na nÓg",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "fr-FR": "Tír na nÓg" },
+	"originalLanguage": "en-US",
+	"description": "The land of faery,\nWhere nobody gets old and godly and grave,\nWhere nobody gets old and crafty and wise....\n- W.B. Yeats, \"The Land of Heart's Desire\"\n\nTír na Nog, the Land of Youth. Long protected by a powerful Veil, the former nation of Ireland now stands revealed in its Awakened power. Who are its masters? Where did they come from? And what does its emergence hold for the world of 2054?",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1993-09-01", "2000-01-01", "2005-03-17"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

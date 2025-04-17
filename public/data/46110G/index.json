@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46110G"],
+	"name": "Berlin 2080",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Berlin. Kein Sprawl in der ADL ist so berüchtigt und berühmt wie der dystopische Megaplex an der Spree. Die Jahre der Anarchie haben das Stadtbild und die Metamenschen geprägt, die Rückeroberung der Konzerngebiete hat neue Farbe in die Berliner Schatten gebracht. Von den gesicherten Konzernmeilen rund um Tegel und Tempelhof bis zu den düstersten Ecken in Xhain, von den Critter-Farmen in Schönwalde bis zu den Freidenker-Kommunen in Köpenick: Nirgendwo treffen so viele und so scharfe Fronten in Gedanken und an Stadtteilgrenzen aufeinander. Und nirgendwo sind die Gefahren präsenter: Konzernintrigen bedrohen Kieze, Sprawlguerilla bedroht Konzerne, das organisierte Verbrechen bedroht die Freiheit in den anarchistischen Gebieten, und noch dunklere Geheimnisse bedrohen die ganze Stadt. Und mittendrin, zwischen aufgerüsteten Berlinern, Konzerngardisten, Soldaten der Vory und Gangern auf Kamikaze, suchen Runner in den Schatten ihr Glück. Berlin 2080 ist das erste Quellenbuch für Shadowrun 6 und eine deutsche Eigenproduktion. Es bietet detaillierte Hintergrundinformationen zu den einzelnen Stadtvierteln, vielen unterschiedlichen Locations, Hotspots wie der Autonomen Inselfestung Eiswerder oder den Sorben im Spreewald, Mächtegruppen aus der Unterwelt und den Konzernen. Neben Beschreibungen des Dreamland-Sprawls, der Diskordianer und des versteckten Lebens unter der Stadt wird zudem viel Zusatzmaterial geboten: NSC-Werte, Grundrisse, Flairtipps für den Spieltisch, Waffen und Fahrzeuge sowie ein herausnehmbares, großformatiges Poster mit Karten Berlins, der Berliner Mitte und des Dreamlands, auf denen Hunderte Locations genau verortet sind.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2019-10-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"name": "Shadowrun 30th Anniversary Lapel Pin",
+	"sku": ["28P00"],
+	"edition": 6,
+	"gameDate": "2080-01",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"releaseDate": ["2021-01-01"],
+	"publisher": ["Catalyst Game Labs"],
+	"status": "outofscope",
+	"notes": "This item is a limited time only sale.",
+	"description": "# ACCESSORIZE THIS!\n\nTo celebrate thirty years of Awakened Roleplaying, we commissioned a Shadowrun 30th Anniversary logo that will show up on certain products throughout the year, including this high-quality lapel pin which is good for one free Edge Point! (At participating GMs only!)\n\nEven without the extra Edge, it is a nice lapel pin, and will look good on your jacket, your 30th Anniversary Hoodie, or just set it pin-side-up on the chair being used by your mage. Probably had it coming anyway.\n\nEach lapel pin comes in an acrylic case, and can only be bought online, or as part of one of our special 30th Anniversary promotions throughout the year.",
+	"cover": "./cover.jpg"
+}

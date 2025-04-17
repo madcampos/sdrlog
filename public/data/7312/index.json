@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7312", "4775"],
+	"name": "One Stage Before",
+	"category": "mission",
+	"type": "scan",
+	"names": { "fr-FR": "Des Pourris et des Ombres" },
+	"originalLanguage": "en-US",
+	"description": "One False Step...\n...& the Fat Lady Sings!\n\nWhen Mr. Johnson hires shadowrunners to discover the brains behind repeated attempts to sabotage a major corporation's latest acquisition, their first wrong move could be their last.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Other"],
+	"releaseDate": ["1992-01-01", "1996-11-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

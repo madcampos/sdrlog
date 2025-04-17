@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM04-03"],
+	"name": "Rally Cry (Buried Underground, Part 2)",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Whoever wins the war for the future of the Ork Underground is not going to leave a single weapon holstered. From waging outright violence to employing political subterfuge, both sides in the struggle are willing to use any tactics they can dream of to advance their cause.\nAnti-metahuman sentiment has long been a hot-button issue in Seattle, and some members of the Ork Rights Committee have decided to expose one of Governor Brackhaven's cronies for the racist they believe him to be. The only trouble is, people with a high public profile are usually very careful about keeping up appearances. If the ORC is going to support their accusations of racism, they may need some help in getting—or manufacturing—the evidence they need. That, of course, is where shadowrunners come in.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2011-07-01"],
+	"gameDate": "2072-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

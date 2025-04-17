@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S001"],
+	"name": "This Old Drone",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Vertraute Drohnen" },
+	"originalLanguage": "en-US",
+	"description": "They're Not Old—They're Classic We'd all like access to bleeding-edge, state-of-the-art tech, but we can't always have it. Sometimes your nuyen's gotta be spent somewhere else, or sometimes you haven't got any nuyen to spend. And sometimes those old designs that everyone's written off show up and kick your ass, proving it's too soon for them to be forgotten. This Old Drone is a Shadowrun supplement containing information on 30 classic drones that appeared in older Shadowrun sourcebooks but haven't made the transition to Shadowrun, Fourth Edition—until now. From the rail-mounted, wireless-shunning Ares Sentinel \"P\" Series to the old MQ-8 Fire Scout roto-drone, This Old Drone contains the info, rules, and stats you need to bring classic drones into the modern era of Shadowrun.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2010-10-29", "2011-11-25", "2013-01-19"],
+	"gameDate": "2072-07",
+	"notes": "The revised version is the colored version included in \"Runner's Black Book\".",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

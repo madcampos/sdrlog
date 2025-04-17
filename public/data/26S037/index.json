@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S037"],
+	"name": "Ten Terrorists",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Causes of Blood\n\nThere is no way to sugarcoat it—people in the Sixth World spend an awful lot of time coming up with reasons to kill each other. When it comes to moral codes, people don't think they're better than others because they don't kill and others do—they compare the reasons for killing, ranking them, trying to justify the oft-unjustifiable. You can talk to a hundred people and get a hundred different opinions about what's justified and what's not, and about which motivations are worse than others, but consistently at the bottom of the list are those who would kill innocents for a cause, who would instill terror in people for political gain, because they see no other recourse.\n10 Terrorists covers ten groups in the Shadowrun setting who add chaos and violence to an already chaotic and violent world to further their own twisted causes. From Seed, a Matrix terrorism group that split off Ex Pacis, to Logos, a group that combines environmental extremism with talislegging, these are groups that can add and danger and plot hooks to Shadowrun campaigns. Whether runners are infiltrating the groups, avoiding them, or dealing with the fallout from the chaos they cause, 10 Terrorists can increase the threat level of any Shadowrun game.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2015-04-01"],
+	"gameDate": "2077-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

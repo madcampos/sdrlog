@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S027", "SRL501"],
+	"name": "Bullets & Bandages",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Kugeln & Bandagen", "fr-FR": "Balles & Pansements", "pt-BR": "Balas e Bandagens" },
+	"originalLanguage": "en-US",
+	"description": "Sew 'Em Up, Ride 'Em Out\n\nThe only reason shadowrunners have scars to show off during their downtime is that when they got hit, someone had the guts, the skill, and the speed to pull them out of whatever drekstorm they'd gotten themselves into. Maybe it was a DocWagon High Threat Response team who rode in to save the day, or maybe a teammate who'd picked up some handy medical skills in the course of their career in the shadows patched them up enough to keep them moving. Either way, having someone who can pull your hoop out of the fire is handy in any situation. Make sure you thank them and buy 'em a drink—assuming, of course, they made it out with you.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2014-06-03", "2014-11-06", "2016-12-27"],
+	"gameDate": "2076-05",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

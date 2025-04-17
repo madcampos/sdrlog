@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7206"],
+	"name": "Neo-Anarchist's Guide to North America",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "fr-FR": "Le Guide Néo-Anarchiste de l'Amérique du Nord" },
+	"originalLanguage": "en-US",
+	"description": "See the sights!\nTake a tour of North America with the slightly warped. Learn the ins and outs of major cities like Atlanta, Chicago, Dallas/Fort Worth, New York, San Francisco, and Washington D.C. Make your next vacation an exciting one, one they'll never forget.\nThe Neo-Anarchist's Guide to North America details the countries, states, and politics of Shadowrun's North America. This sourcebook covers the laws, relative costs of goods, what to smuggle and to whom, corporate activity, who's bought whom and just what are they really up to, and life in general and how to screw it up in style.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1991-05-01", "1994-06-01", "2013-03-13"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

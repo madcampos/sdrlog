@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7204"],
+	"name": "Germany Sourcebook",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "Forged in the chaos of the Awakening and the Euro-Wars, the German Alliance is a land torn by strife, rebellion, political turmoil and powerful magic. From the towering glass-and-chrome skyscrapers of Frankfurt to the anarchy of Berlin, from the GreenWar camps of the Rhine-Ruhr megaplex to the Troll Kingdom of the Black Forest, 21st-century Germany teems with opportunities and unseen dangers for the shadowrunner.",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1994-02-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

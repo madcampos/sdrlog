@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27506", "45062"],
+	"name": "The Complete Trog",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Mit Hauern und Hörnern - Almanach der Orks und Trolle" },
+	"originalLanguage": "en-US",
+	"description": "Big, bad, and awesome\n\nThey can call you a trog. Sure they can. Let 'em think it's smear. Let them show you what they don't know. Let them ignore history, the great accomplishments orks and trolls have made in every field in the Sixth World, the homes and enclaves they've built out of nothing. There's enough talent in the trog population to punch, hack, rig, charm, or enchant that smug smile right off their face. You know what you are. They'll learn—fast, if they know what's good for them.\nThe Complete Trog is the definitive guide for ork and troll characters in Shadowrun. With information on what it's like to be an ork or troll in dozens of spots across the globe, details on working in corps as a trog (including in ork- and troll-dominated corps) and the heroes and enemies of trog culture, the book helps players add flavor and depth to their characters and the world around them. On top of that, it has gear, qualities, and life modules compatible with both Shadowrun, Fifth Edition and Shadowrun: Anarchy. Plunge into the rich culture of trogs and watch them turn that slur on its head.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2017-07-01"],
+	"gameDate": "2079-08",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

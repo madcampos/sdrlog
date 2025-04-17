@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S047"],
+	"name": "Wolf & Buffalo",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Sixth World doesn't give people much time to grow up. Whoever you are, wherever you live, there's going to come a time when the world is going to throw you some serious curveballs, and if all you can do is bitch and moan about how you're not ready for what's coming your way, you're not going to last long. Get strong, grow up, and figure out how to survive—that's what everyone else has done. Except for those lying two meters underground.\nOne of those tests is about to hit Lena, a young woman living in the Sioux Nation. She's going to learn a lot about how life in the Sixth World works, and just how far people will go to get what they want, but before she can process any of that, she is going to have to survive criminals, smugglers, and worse. She doesn't have much to help her, except for some new powers she does not understand. Using them, and drawing on some unexpected allies, is the only way she will live out the day.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2015-08-19"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

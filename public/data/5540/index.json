@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5540", "27834"],
+	"name": "Preying for Keeps",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Auf Beutezug" },
+	"originalLanguage": "en-US",
+	"description": "When ace shadowrunner Jack Skater leads his team of commandos in a raid on an elven ocean freighter, things get a little sticky. Yakuza hitmen crash the party, and a Japanese shaman whips up a titanic sea creature just to make sure nobody gets out alive. Now, having escaped with his troops by the skin of their teeth, Skater wants to find out who set him up.\nBut it isn't going to be easy. Because the runners are stuck up to their pointy ears in a sinister super-scheme that involves Skater's ex-wife, two elven gene corporations, a ruthless mafioso named McKenzie, and stolen data disks containing secrets worth killing for. It's a high-tech mega-mess with no way out. And as a ghastly virus hits Seattle, unleashing hordes of homicidal cannibals onto the streets, Skater and company have to bring in some heavy artillery just to stay alive....",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Heyne Verlag"],
+	"releaseDate": ["1996-07-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

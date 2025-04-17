@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["461138"],
+	"name": "Cheat Sheets SR6",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Übersicht ist alles\n\nHier kommen sie - die Cheat Sheets für die 6. Edition. Um den Überblick in jeder Situation zu behalten, können Spielleiter und Spieler mit diesen Cheat Sheets arbeiten, die für ein noch flüssigeres Spielerlebnis sorgen. Ob im Kampf, bei Beschwörungen oder wenn mal wieder IC das Blut des Deckers in seinen Adern gefrieren lässt - die Cheat Sheets liegen stets zur Seite.\n\nCheat Sheets SR6 sind Übersichtsblätter für Shadowrun 6 für die Bereiche Kampf, Rigging, Matrix, Magie und allgemeine Regeln. Diese Cheat Sheets sind Bestandteil des Spielschirm-Bundles, das es in analoger Form zu kaufen gibt. Dies ist die digitale Version (nur der Cheat Sheets).",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2020-05-18"],
+	"gameDate": "2080-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

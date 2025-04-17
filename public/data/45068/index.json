@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45068"],
+	"name": "Hamburg - Zusatzpack",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Manchmal reicht es nicht, alle Informationen zu besitzen. Manchmal muss es einfach mehr sein. Manchmal muss man mit den Informationen spielen können, sie praktisch nutzen, tiefer in etwas eintauchen. Das gilt nicht nur für die Schatten der Sechsten Welt, es gilt auch für den heimatlichen Spieltisch. Hamburg, der Megaplex an der Elbe, ist ein Spielplatz für Runner, der mehr verlangt und deswegen auch mehr bietet. Damit man noch weiter unter die Oberfläche des dunklen und allgegenwärtigen Wassers des Venedigs an der Elbe vordringen kann.\nDer Zusatzpack zu Hamburg für Shadowrun 5 bietet nicht nur einen speziellen Spielleiterschirm. Es liefert zudem einen Kurzroman zur Stadt, eine Inplay-Werbebroschüre für Runner und andere Schattentouristen, mehr als zwanzig Charaktere aus dem Sprawl mit Bild und Spielwerten auf praktischen Karteiblättern, kleinere Übersichtskarten zu Gangaktivitäten, der Innenstadt und dem öffentlichen Nahverkehr sowie Daten für den Download eines ganz besonderen Soundtracks. So haben Runner Hamburg noch nie erlebt.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2018-10-07"],
+	"gameDate": "2078-01",
+	"notes": "Complementary material to Datapuls: Hamburg, contains maps, booklets and a GM Screen.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

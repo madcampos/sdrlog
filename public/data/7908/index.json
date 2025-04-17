@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7908", "10659", "10744", "LFSH005"],
+	"name": "Cannon Companion",
+	"category": "rulebook",
+	"type": "scan",
+	"names": { "de-DE": "Arsenal 2060", "es-ES": "Gran Caliber", "fr-FR": "Cannon Companion", "hu-HU": "Fegyverek kézikönyve" },
+	"originalLanguage": "en-US",
+	"description": "More Bang for the Buck...\n\nWhen the shadows are full of flying lead, chummer, you need an edge -- and I got it right here. You want a specialized blade? I can sell you a monosword. You want a gun to make the other guy think twice? How about the new laser pistol? Maybe you want to forge your whole body into a weapon -- I know someone who can train you in Wildcat-style martial arts. The big boys don't have all the best toys...",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["2000-07-01", "2001-06-01", "2002-01-01", "2003-12-01"],
+	"gameDate": "2061-01",
+	"notes": "The German edition has diffrent equipament, based on German sources.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

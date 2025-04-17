@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3453520076"],
+	"name": "05:58",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Eine brutale Verbrechensserie im Großraum Stuttgart versetzt die Bevölkerung in helle Aufregung. Poolitzer wittert eine sensationelle Story, denn der Täter imitiert die Verbrechen von Jack the Ripper und anderen legendären Kriminellen. Zusammen mit seinem Troll-Freund Ultra, der in seine Fußstapfen als Reporter treten will, stellt er eigene Nachforschungen an und stößt auf den Hypnotiseur Ranjit, dessen Auftritt in einem Ludwigsburger Nachtclub in einem Debakel endete. Mitten in einer Hypnose-Vorführung stürmten jugendliche Rabauken um den reichen Schnösel Johann von Boesche die Bühne und richteten ein Chaos an, woraufhin einer der Hypnotisierten spurlos verschwand. Jetzt gilt es, den Unbekannten zu finden und aus seiner Trance zu erwecken, um das Morden zu beenden. Poolitzer wähnt sich fast am Ziel, da stellt sich heraus, dass Ranjit gar nicht der ist, der er zu sein scheint...",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

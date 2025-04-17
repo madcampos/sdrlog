@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7320", "10729"],
+	"name": "Harlequin's Back",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Harlekins Rückkehr" },
+	"originalLanguage": "en-US",
+	"description": "Harlequin's Back…\n…and the world may never be the same!\nIt's long been said that trouble follows Harlequin around like a loyal dog, but this time he's taking the lead and dragging some shadowrunners along on his waking nightmare. It's clear that the level of magic is rising in the Sixth World, and bigger magic makes the world a more dangerous place. But the particular danger Harlequin's worried about isn't supposed to be a problem for another two thousand years…",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["1994-12-01", "1996-01-01", "2010-11-24"],
+	"gameDate": "2055-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

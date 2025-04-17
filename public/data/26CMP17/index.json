@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26CMP17"],
+	"name": "CMP 2017",
+	"category": "mission",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "CMP 2017-01 - Ante Up\nMrs. Johnson needs to extract an executive, but there is always a catch. Can you beat Knight Errant when extracting them from a brothel run by spirits all the while meeting exacting standards?\n\nCMP 2017-02 - Double or Nothing\nMrs. Johnson needs a demolition run on a rival biomedical company to delay production. Will the shadowrunners go in loud & hard or find a subtler approach?\n\nCMP 2017-03 - Let it Ride\nMrs. Johnson has an internal rival that she needs leverage on. All you need to do is find changeling child & prove paternity to disgrace the rival, but is it ever that simple?\n\nCMP 2017-04 - Cash Out\nMrs. Johnson needs a team to raid an underground lab & torch it. What could possibly be in this lab & who is running it... or does that really matter with a paycheck like this?\n\nCMP 2017-05 - The Heart of it All\nYou've been sent to Columbus, Ohio to rescue a wealthy, corporate kid from a gang of Triads. It turns out he is a Yakuza boss' son. Now, you just have to prevent an all-out war in the shadows. When the son of an international crime lord's son goes missing a gang war is ready to erupt out of the shadows; and that would be bad for biz. Perhaps some neutral, outsiders can run the shadows quick enough to keep the peace - such as it is.\n\nCMP 2017-06 - A Friend in Need\nA friend of a friend needs his hoop pulled from the fire. Then, his friends want to send a message to those who run in the shadows by arranging revenge against the one who burned him. The revenge needs to be public and precise. Keep your friends close and well... When a deep, undercover operative is double crossed he needs his hoop pulled from the flames. Then, there is the small matter of dealing with the one who betrayed him.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2080-01",
+	"status": "outofscope",
+	"notes": "A series of adventures played at conventions, not relesed afterwards.",
+	"cover": "./cover.jpg"
+}

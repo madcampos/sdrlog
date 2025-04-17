@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28903NV"],
+	"name": "The Frame Job, Part 3: Rude",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "PART THREE OF THE ORIGINAL SHADOWRUN SIXTH WORLD EDITION NOVELLA SERIES!\nFIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nAfter being double-crossed by one of the largest megacorps in the Sixth World, the shadowrunner team sets their own plans in motion: clear their names and deliver payback with a vengeance.\nRude didn't have much planned after the Telestrian run...sleep in and wait for his share of the payday. But when Zipfile calls asking him to run stealthy back-up on Yu's meet with the Johnson for payment, the troll heads to the warehouse district to keep an eye on things...and finds a lot more than he bargained for.\nNow, after fighting his way through the high-level ambush that nearly killed Yu, Rude hits the streets looking for information on who tried to kill them...and who hired them to do it.\nBut in Seattle, it's always good to remember that the streets can hit back...and often do...",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-05-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

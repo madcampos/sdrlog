@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["35013"],
+	"name": "Toxische Erlösung",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Ein lächerlich einfacher Run, eine unerwartete Begegnung und ein Angebot, das sie nicht ablehnen können: Aydem und Glinda wollen in eine höhere Liga aufsteigen und sehen endlich ihre Chance, sich in den Hamburger Schatten einen Namen zu machen. Der Auftrag scheint simpel, der Ex-Polizist und die Riggerin sollen eine verlorene Tochter finden und in Sicherheit bringen. Doch die Sache hat einen Haken: Die junge Frau steckt längst in den Fängen einer skrupellosen Organisation, die mit ihren Machenschaften die gesamte Hafenstadt bedroht. Schon bald wird die Rettungsaktion zum Kampf ums nackte Überleben, dem sich eine junge Rabenschamanin anschließt - eine dringend notwendige Verstärkung gegen die tödliche Magie der Gegner.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2019-11-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

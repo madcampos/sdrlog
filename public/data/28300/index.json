@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28300"],
+	"name": "Cutting Black",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "Blackout" },
+	"originalLanguage": "en-US",
+	"description": "TOTAL DARK\n\nVoice scream in the darkness. Voices of the lost drift through the night. Their sound is despair, sorrow, and terror. The noise grinds at your soul, but only thing worse than listening to the chorus of pain is joining it.\nThe world is changing. Desperate times require desperate measures, and the ground beneath your feet will shake when those measures are meted out. Hold on, buckle up, and try to survive. Parts of the world are cutting to black—so keep your guard up, be prepared, and don't let the dark consume you.\nCutting Black is a campaign book to help launch players and gamemasters into Shadowrun, Sixth World. With breaking news and world-shaking events, it provides material to carry players through months of games. If they can survive that long.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2020-02-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

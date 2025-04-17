@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7202"],
+	"name": "Native American Nations Volume One",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "Over thirty years ago, the violent formation of the Native American Nations shattered the United States of America and altered the geo-political boundaries of North America. Now, someone's setting out to prove that turn-about is not fair play and to bring about a little change of their own. Is it payback? Or something deeper? Regardless, it's a mad chase through the Native American Nations, full of the chaos one expects in a Shadowrun adventure.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1991-05-01", "2015-03-11"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7304", "10712"],
+	"name": "Queen Euphoria",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Königin Euphoria", "fr-FR": "La Reine Euphoria" },
+	"originalLanguage": "en-US",
+	"description": "It was a simple job, and the pay was good. Snatch Euphoria, the simsense star, sit on her for a weekend, and let her go. Easy.\nIf you believe that, you've never run the shadows.\nBecause now she's been snatched for a second time... and the corps think you did it.\nWhat does all this have to do with - Ambergel, the most popular junk food in Seattle?\nA former Coyote shaman?\nAn evil power so strong it threatens all mankind?\nFind the Queen. Find the answers.\nHURRY!",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1990-09-01", "1993-01-01", "1994-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

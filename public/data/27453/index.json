@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27453", "45071G"],
+	"name": "No Future (A Cyberpunk Sourcebook)",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Lifestyle 2080" },
+	"originalLanguage": "en-US",
+	"description": "SCREAM YOUR TRUTH\n\nThe voices will be heard. The powers of the Sixth World want to control everything, keeping the world pacified through bland entertainment and milquetoast messages.\n\nBut they can't keep everyone quiet. People have ideas screaming to get out and the tools to record and spread them. Whether they're starting a new band, recording guerrilla trid dramas, or launching a pirate tridcast where someone tells the truth for once, they can grab audiences by the throat and get them to listen.\n\nThey're out of patience, and everyone else is out of time. No Future is the Shadowrun guide to Sixth World culture, including information on music acts, trid movies and series, media sources, and sports, with a look at some of the voices bubbling up from the underground and demanding attention. With detailed setting information and relevant rules, No Future adds new elements and depth to Sixth World role-playing.\n\nNo Future is a cyberPUNK sourcebook that details the culture and everyday life of the Shadowrun setting and is useful for whatever version of Shadowrun you play!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2019-01-21", "2019-03-19"],
+	"gameDate": "2075-01",
+	"notes": "The German version has an aditional 20 pages of the life in ADL.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

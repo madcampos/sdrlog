@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5495"],
+	"name": "House of the Sun",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Haus der Sonne" },
+	"originalLanguage": "en-US",
+	"description": "Venturing to the Kingdom of Hawaii when a megacorporate exec demands payment of an old debt, shadowrunner Dirk Montgomery finds himself having to outrun the corrupt factions battling for control of the island.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1995-07-01", "2003-06-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27705"],
+	"name": "Shadowrun: Crossfire: Prime Runner Edition",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "The shadows of the Sixth World have every kind of danger you can imagine. Ultra-violent gangers, flesh-eating ghouls, mages that summon spirits from toxic waste, backstabbing corporate raiders, hard-nosed police officers, and even dragons. You don't have much—mainly your guts, your wits, and your friends. But maybe that's enough. Between you and your teammates, you can sling spells, hack the Matrix, talk a tiger out of his stripes, and bring down a charging ork from a hundred yards away. Will that be enough to face down the worst the mean streets can throw at you? You're about to find out.\nShadowrun: Crossfire is a deck-building game set in one of the most popular game settings of all time. Crossing cyberpunk with fantasy and plunging players into a world dominated by ruthless megacorporations. Crossfire gives players the chance to dive into the world's shadows and see if they can survive. The Prime Runner Edition adds new upgrades to make the game even better—with more missions, improved rules, and new character screens, this is the best version of Crossfire ever!\nFeaturing fast, cooperative game play and stacks of dangerous obstacles and opponents to overcome. Shadowrun: Crossfire will launch you into nonstop action. You'll even have the chance to get stronger the more you play, tackling harder and harder obstacles as you become more dangerous. Leap into the shadows for deck-building adventure like you've never experienced!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "Announced at GenCon 2018.",
+	"cover": "./cover.jpg"
+}

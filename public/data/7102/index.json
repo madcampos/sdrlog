@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7102", "10701"],
+	"name": "Shadowrun Game Master's Screen",
+	"category": "rulebook",
+	"type": "scan",
+	"names": { "de-DE": "Spielleiterschirm Erste Edition", "fr-FR": "L'Écran première édition" },
+	"originalLanguage": "en-US",
+	"description": "First GM Screen, bundled with \"Silver Angel\" adventure.",
+	"edition": 1,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1989-01-01", "1990-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

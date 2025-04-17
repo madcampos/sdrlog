@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SOK201"],
+	"name": "Shadowland #1",
+	"category": "magazine",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "Although this is a magazine, the page numbering starts on the first page, excluding the covers.\nCover Art: Bottled Demon by John Zeleznik",
+	"edition": 2,
+	"publisher": ["Other"],
+	"releaseDate": ["1995-01-01"],
+	"gameDate": "2054-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

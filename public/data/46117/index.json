@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46117"],
+	"name": "Hinter dem Vorhang",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Bühne frei\n\nNicht nur Runner müssen sich in den Schatten ständig Gedanken machen, damit sie mit Credsticks in der Tasche und nicht mit Blei im Körper von ihren Aufträgen zurückkehren. Auch die Spieler der Charaktere stehen vor diversen Entscheidungen: Wen will ich spielen, warum und wo? Wie verknüpfe ich meinen jungen Decker mit dem alten Haudegen der Gruppe? Wie kann ich meine Hintergrundgeschichte weiter ausgestalten?\n\nFür spannende Geschichten in der Sechsten Welt bedarf es zudem gut konzipierte Abenteuer, vielleicht sogar ganzer Kampagnen und Settings. Es bedarf vielschichtiger Gegenspieler, interessanter Locations und vielleicht darf es ja auch mal etwas anderes sein als die Schießerei in einer zwielichtigen Gasse.\n\nHinter dem Vorhang ist eine weitere Eigenproduktion und ein Regelband für Shadowrun 6, der kaum Regeln enthält. Neben ein paar optionalen Vorschlägen Veränderungen finden sich vor allem Werkzeuge für Spieler und Spielleiter: Informationen zum Charakterausbau, zur Gruppenzusammenführung, zur Abenteuerplanung, zu alternativen Einstiegen, zu Kampagnen-Konzepten. Du brauchst schnell einen zusammengewürfelten NSC, ein Abenteuer am Rand des eigentlichen Abenteuers, eine Automatenrestaurant-Speisekarte, einen Alltagshost oder willst wissen, was der Wachmann gerade zufällig in der Tasche oder auf dem Kommlink hatte? Hier wirst du fündig.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2020-10-15"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45100G"],
+	"name": "Schattenwerkzeug",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "HANDWERKSZEUG FÜR DIE SCHATTEN\n\nSchattenwerkzeug ist ein Zusatzband für Shadowrun 4, der neue Kontakte, Abenteuerbeispiele und -orte beschreibt und vorstellt. Zudem enthält er das CGHS, ein modulares System zur simplen und schnellen Erstellung von Spieler- und Nichtspielercharakteren, sowie die „Anatomie eines Shadowruns\". Letzteres beschreibt einen typischen Shadowrun und bringt dem Spielleiter anhand dieses Runs gleichzeitig die Regeln, die Proben und die Systematik eines Abenteuers nahe.\n\nSchattenwerkzeug ist als Printprodukt Bestandteil der Schattenrüstzeug-Box.",
+	"edition": 4,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2011-01-01"],
+	"gameDate": "2072-01",
+	"notes": "A soft cover book containing some of the material from Runner's Toolkit German edition and a new adventure.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

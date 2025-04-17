@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27110", "45027G"],
+	"name": "Seattle Sprawl Digital Box Set",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Seattle Box - Stadt der Schatten" },
+	"originalLanguage": "en-US",
+	"description": "Infinite Shadows\n\nIt's the shadowrunning capital of the world for a reason. Seattle offers an unparalleled intersection of corporate, political, and criminal powers. This is where icons are made — like the Ancients, the Halloweeners, the Finnigan Crime Family, the Skraacha, Dante's Inferno, Renraku Arcology, the Big Rhino, and the Alabaster Maiden. And this is where runners like Dodger, Sally Tsung, Dirk Montgomery, Jake Armitage, Twist, Kellan Colt, and James Kincaid made their names, sometimes made their fortunes, and occasionally experienced horrible losses. This is where you go to test your mettle. This is how you show you're at the top of the heap.\nA sprawl this big can't be contained in a single book, so we made a box. Inside you'll find:\n\t- Emerald Shadows, a book outlining the geography of the sprawl and the notable powers and locations in each district;\n\t- Ruling the Queen City, a deeper examination of the power and history of Seattle, including a look at the people who rule over the city—and the people who control them;\n\t- Tangled Threads, holding plot hooks and adventures to help launch or continue your Seattle-based game;\n\t- Character cards, fully statted out cards of Seattle denizens that can be used as easy-reference NPCs of even pre-generated PCs;\n\t- Modular map cards, a deck of cards showing maps of different types of rooms that can be combined into a never-ender variety of buildings;\n\t- Gang reference card, providing a quick listing of gangs of the sprawl, their colors, and where they operate;\n\t- And a poster-sized map of Seattle like Shadowrun has never seen before.\nAll this will bring the sprawl to lifew while making it easier for players and gamemasters to dive into the shadowy depths that make Seattle legendary—and see if they can keep their head above water.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2016-04-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

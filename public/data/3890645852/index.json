@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890645852"],
+	"name": "Flynns Weg",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Flynn, Straßensamurai aus Seattle, ist nach Hamburg gekommen, um unterzutauchen. Jetzt ist er hier schon wieder auf der Flucht vor zwei unbekannten Runnern. Die etwas von ihm fordern, das er nicht hat. Von dem er nicht einmal weiß, was es ist. Er ist zur falschen Zeit am falschen Ort gewesen. Kann er in der fremden Stadt den Hals aus der Schlinge ziehen? Unfreiwillige Unterstützung erhält er von Wildcard. Die Straßenkämpferin macht jeden Gegenstand zur Waffe und hält Beziehungen für eine Krankheit. Aspen, Wildcards Mechaniker, ein Überlebenskünstler und Träumer, würde alles geben für ein richtiges Abenteuer. Er soll mehr Abenteuer bekommen, als ihm lieb ist.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2003-06-01"],
+	"gameDate": "2050-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

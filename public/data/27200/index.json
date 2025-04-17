@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27200", "45022", "SR504"],
+	"name": "Stolen Souls",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Gestohlene Seelen", "fr-FR": "Âmes volées" },
+	"originalLanguage": "en-US",
+	"description": "Stolen Souls\n\nThose were among FastJack's parting words to JackPoint when he left, the victim of a condition that divided his mind against itself. He's not the only one that has been so afflicted. Miles Lanier, formerly of NeoNET, has the same condition. And across the Sixth World, people's minds are in schism, as new personalities emerge at unpredictable times.\nThis has thrown the world into chaos, and there is a sudden demand for new extractions. Infected people need to be forcibly removed from their positions. People who might understand something about what's happening need to be removed so they can tell what they know. And people covering secrets need to be removed so that they, and their secrets, can be buried somewhere out of reach.\nStolen Souls is a Deep Shadows sourcebook for Shadowrun that contains plot updates and adventure hooks, as well as information, techniques, and gear to help runners up their game when it comes to extraction jobs. They'll also get the chance to dig deeper into a new mystery that has torn through the Sixth World—and discover just how deep the conspiracies and cover-ups go.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2014-05-15", "2014-10-10", "2015-05-03"],
+	"gameDate": "2076-04",
+	"notes": "The German version has aditional material about the ADL.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5427"],
+	"name": "Nosferatu",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Nosferatu 2055" },
+	"originalLanguage": "en-US",
+	"description": "Mage and part-time shadowrunner Serrin Shamander and his companions desperately flee a relentless, demonic enemy out to eliminate humankind from the face of the earth. This is the 2nd book with renegade elven mage Serrin Shamander and British Lord Geraint Llanfrechfa.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1994-08-01", "2003-06-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

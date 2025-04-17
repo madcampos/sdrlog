@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46058-8"],
+	"name": "Born to Run",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "[Kellan Colt Trilogy #1] Seattle Metroplex - Kellan Colt goes to Seattle to learn how to be a professional shadowrunner and discover her past.",
+	"edition": 3,
+	"publisher": ["WizKids Games"],
+	"releaseDate": ["2005-11-01"],
+	"gameDate": "2063-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

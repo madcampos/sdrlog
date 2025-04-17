@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26866A"],
+	"name": "Tourist Trapped",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "STRANGER IN A STRANGE LAND…\n\nWhen what should have been a simple hack-and-grab heist in the Dallas metroplex goes terribly wrong, shadowrunner Gilabyte is advised by his Mr. Johnson to lay low for a while, even take a trip out of town. Which is how the technomancer finds himself relaxing in the far wilds of…Toronto.\n\nAt first the enforced vacation is pretty sweet: plush digs, plenty of nuyen, and the entire city available for him to sample. But then the lights go out…and they don't come back on the next day…or the next…\n\nWithin 3 days of the blackout, it's every person for themself as Toronto starts to splinter apart. Gilabyte just wants to get back home, but finds himself making new allies—and dubious deals—in order to get safely out of town. Along the way, he uncovers clues to a larger conspiracy that affects him and his sprites directly…and could lead to all technomancers becoming a valuable—and endangered—species if the wrong people get their hands on him…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2021-04-20"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

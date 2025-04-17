@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SOK203"],
+	"name": "Shadowland #3",
+	"category": "magazine",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "Three fiction articles, new gear, new spells, new groups and a new adventure.\nCover Art: Jeff Laubenstein",
+	"edition": 2,
+	"publisher": ["Other"],
+	"releaseDate": ["1996-01-01"],
+	"gameDate": "2054-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

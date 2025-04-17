@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["25014", "22008"],
+	"name": "System Failure",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Systemausfall" },
+	"originalLanguage": "en-US",
+	"description": "The End of the Matrix... as We Know It\n\nThe year is 2064, and all is not well. A struggling megacorp makes a drastic decision to stave off impending doom. A psychopathic artifical intelligence thought to be dead again, attempting to take over the entire matrix. And behind the scenes, apocalyptic terrorists prepare to strike at key points around the world, completing their first steps toward a vision of Armageddon. Across the globe, shadowrunners find out more about the Sixth World?\n\nSystem Failure details the events leading up to and following these dramatic, world - shaking events. In addition to in-depth treatments of the three main plotlines and adventure frameworks for each one of them, there are also numerous postshocks and spin-off events. For use with Shadowrun.\n\nSystem Failure is set in 2064, and exposes the events that lead to the technology changes that paved the way for Shadowrun, Fourth Edition.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions", "WizKids Games"],
+	"releaseDate": ["2005-09-01"],
+	"gameDate": "2064-03",
+	"notes": "The German edition has an aditional chapter about the ADL.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

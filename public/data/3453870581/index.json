@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3453870581"],
+	"name": "Aeternitas",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Bei seinen Recherchen in der magischen Szene Thüringens wird Poolitzer auf eine mysteriöse Diebstahlserie aufmerksam: Nahezu identische Kassetten sind aus verschiedenen Sammlungen und Museen verschwunden. Die letzte dieser magisch gesicherten Kassetten wird im Tresor der Weimarer Universitätsbibliothek verwahrt. Doch dann kommt noch eine weitere Kassette zum Vorschein: Das Team der Black Barons hat bei einem Auswärtsspiel in Moskau unter verlustreichen Kämpfen eines der begehrten Stücke erbeutet. Poolitzer reist nach Mainz und taucht ein in die faszinierende Welt der Stadtkriegspieler und ihres gefeierten Stars, der Elfin Tattoo. Und allmählich zeichnet sich ab, wer hinter den Diebstählen steckt: der skrupellose Kunsthändler Zozoria, Chef von Antique Enterprises, der alles daran setzt, Aeternitas, den Schlüssel zum ewigen Leben, in seine Hände zu bekommen, der sich in einer der Kassetten befindet...",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2003-07-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

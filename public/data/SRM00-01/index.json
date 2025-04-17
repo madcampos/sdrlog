@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM00-01"],
+	"name": "Mission Briefing",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Your chance at the big time - a friend has tipped you off about a job opportunity to do some bodyguard work for a group of exclusive clientele. You have been trying to break into the Seattle shadow scene, and these are just the kind of people that can help. All you have to do is make sure that their meeting doesn't get interrupted. It's a simple walk in the park, natch!",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2061-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

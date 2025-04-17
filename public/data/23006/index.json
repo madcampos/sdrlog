@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["23006", "SR09"],
+	"name": "SOX",
+	"category": "sourcebook",
+	"type": "ocr",
+	"names": { "fr-FR": "SOX - Ombres Radioactives d'Europe" },
+	"originalLanguage": "de-DE",
+	"description": "Am Anfang war der GAU. Seitdem ist das Gebiet Saar-Lorraine-Luxemburg das Verheerte Land im Herzen Europas, eine Sonderrechtszone des Kontrollrates, Paradies und Hölle für seine Einwohner, eine offene Wunde am Körper der Mutter Natur. Hier leben strahlenverseuchte Menschen, wildernde Ghule durch die urbanen Wüsten, werden verbotene Experimente von Konzernen durchgeführt, treiben Manaverzerrungen Erwachte in den Wahnsinn. Mutierte Critter jagen durch die Wälder, Strahlensenken bringen den unsichtbaren Tod - und Runner versuchen ihr Glück, denn so manches Geheimnis liegt in den sechzig Jahre alten Trümmern verborgen. Doch pass auf, Fremder: auf deine Gesundheit, auf deinen Rücken, auf deinen Verstand - denn dies ist die SOX - lass alle Hoffnung fahren!",
+	"edition": 4,
+	"publisher": ["Fantasy Productions", "Other"],
+	"releaseDate": ["2007-01-01", "2009-01-01", "2011-01-01"],
+	"gameDate": "2072-01",
+	"notes": "\"SOX\" covers a description of the Saar-Lorraine-Luxemburg containment zone and two related adventures (\"Hoffnungsstrahlen\" and \"Mauvais Présage\"). It is a French-German cooperation.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

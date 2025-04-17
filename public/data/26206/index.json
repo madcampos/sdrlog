@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26206", "46090"],
+	"name": "War!",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Fronteinsatz" },
+	"originalLanguage": "en-US",
+	"description": "The diplomats have failed. The tensions have only grown worse. Each side has pushed the other too far, so there's nothing left to do but fight. At the border of Aztlan and Amazonia, war has broken out. The streets of Bogotá are being pummeled, mercenaries are being hired and killed in approximately equal numbers, and blood is being spilled in dark rooms to give strength to mages on the battlefield. Most importantly, runners are being hired by the score.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2010-12-01"],
+	"gameDate": "2073-01",
+	"notes": "The German edition has aditional content about the Bundeswehr and MET2000 and a translation of the \"MilSpec Tech\".",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

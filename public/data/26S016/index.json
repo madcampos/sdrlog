@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S016"],
+	"name": "Gun H[e]aven 2",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Feuerkraft 2" },
+	"originalLanguage": "en-US",
+	"description": "The only friend you'll ever need. The last friend you'll ever have. Your gun is the one thing in your life that should be dependable, that should always make a nice loud bang when you squeeze the trigger, and should always bring down whoever you think should fall. Of course, if your weapon is going to be that important to you, you'll need one that suits you perfectly. And to find the right match, it's best if you have a lot of choices.\nWelcome back to Gun Heaven, where your next best friend is waiting for you. Dozens of options await, from the troll-friendly Krime Cannon to the foldable Terracotta Arms Mordred, from the stylish Shiawase Arms K2072 to the true tool of the desperate, the Barrens Special. And on top of that is a new breakthrough in ammo that gives you a better chance to hit your intended target.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2012-05-01"],
+	"gameDate": "2072-11",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

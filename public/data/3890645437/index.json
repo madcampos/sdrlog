@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890645437"],
+	"name": "Im Fadenkreuz",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "In einem kleinen Laden soll ein Koffer mit gestohlener High-Tech übergeben werden, doch die Aktion geht schief. Der zufällig anwesende Rabenschamane Spider kriegt das Diebesgut in die Finger - und flüchtet mit seinem Kumpel Ali in den Untergrund. Jade und sein Team werden angeheuert, die beiden ausfindig zu machen und die Ware wiederzubeschaffen. Eine chaotische Suche beginnt, die nicht nur durch Jades persönliche Probleme erschwert wird. Doch nicht nur diese beiden Parteien sind hinter dem Koffer her und bekanntlich heißt es ja: Wenn Zwei sich streiten, freut sich der Dritte.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2005-07-01"],
+	"gameDate": "2050-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

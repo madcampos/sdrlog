@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S041"],
+	"name": "Sail Away Sweet Sister",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Thomas McCallister's area of expertise—the virus that turns metahumans into flesh-eating monsters—has taken him into some dark corners of the Sixth World. When he came face to face with the serial murderer known as the Mealtime Killer, he had hoped that a particularly dark chapter of his life had come to a close. But when night falls in the sprawls of the world, blood is still being shed, and people are still dying. Another killer is still out there, one that needs to be found and stopped, but the challenge McAllister is about to face is one he never could have anticipated. His resolve will be tested in ways he never anticipated in his darkest nightmares.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-04-22"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

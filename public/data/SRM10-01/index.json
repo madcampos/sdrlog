@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM10-01"],
+	"name": "Death's Daily Business",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# High Stakes, Poor Aim\n\nIt’s a new season of Shadowrun Missions, so it’s time to dive back into the chaos of Neo-Tokyo. An assassination gone wrong has put a covert operation in danger, and Tanaka-San wants to know what happened and why. The runners will be sent in the investigative trail to find out some of the unusual ways things go wrong in the Sixth World. Hopefully, they’ll survive long enough to get their hands on some valuable paydata!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-11-02"],
+	"gameDate": "2080-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

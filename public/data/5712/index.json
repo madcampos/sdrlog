@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5712"],
+	"name": "Wolf & Raven",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Wolf & Rabe" },
+	"originalLanguage": "en-US",
+	"description": "The adventures of Wolfgang Kies, soldier of fortune. Together with a group of cyborg bounty hunters and computer wizards, he assists elf lord Dr. Richard Raven in keeping humanity safe from preying monsters—both magical and technological! But crime lord Etienne LaPlante interferes with their vigilantism, preparing to strike at Raven and those who serve him....",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1998-07-01", "2003-06-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

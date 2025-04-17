@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM04-10"],
+	"name": "Romero & Juliette (Artifact Rush, Part 5)",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "A missing shadowrunner. An artifact with mysterious, blood-fed powers. And astral beings with horrible grudges. All of these elements—and more—are coming together to give shadowrunners a long day and a longer night, as they move from trying to find what has been lost to struggling for their survival. And with what they're up against, survival would be a very notable accomplishment.\nWhether you have played previous Missions in Season Four or are just now diving into this plotline, SRM 04-10: Romero and Juliette provides a test for any group of shadowrunners while also increasing the intensity of the hunt for artifacts in Seattle. This one will give runners a story to tell over the next round of drinks, as long as they an stay alive long enough to buy one.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-09-01"],
+	"gameDate": "2072-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM07-05"],
+	"name": "A Little Wetwork",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Work in Chicago long enough and you get used to a lot of weird things, so when one corp puts out the feelers for a team of runners to pull off a sabotage job on another, it seems refreshingly simple. It's a classic shadowrun set up—two corps beat up on each other for a little while, runners make themselves a few nuyen, and the world keeps moving around.\nBut it's not that simple. Of course it isn't. If something of value is going through Chicago's Containment Zones, people are going to catch its scent—and when they do, they're going to want a piece of it. Runners are going to find themselves caught between multiple forces in the city, faced with the kind of choice that always seems extra difficult in the Sixth World: Figuring out what's the right thing to do?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2017-05-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

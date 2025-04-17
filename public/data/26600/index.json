@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26600"],
+	"name": "Digital Grimoire",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "fr-FR": "Grimoire numérique" },
+	"originalLanguage": "en-US",
+	"description": "Nobody Knows All Magic\n\nDigital Grimoire is the Master's Class of Magic--expanding on Street Magic, it details additional traditions, magical groups & threats, spirits, enchanting expansions, and a handful of new spells and adept powers. Traditions: Egyptian, Rastafarian, Psionic Magical Groups: Shrine of the Southern Winds, The Oxford Grand Lodge, Código 515 Magical Threats: Toxic Paths, Shadow Spirits, Insect Spirits Digital Grimoire is 18 pages (including cover): a bite-sized expansion to Shadowrun, Fourth Edition and Street Magic.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Other"],
+	"releaseDate": ["2008-11-15", "2011-05-18"],
+	"gameDate": "2070-01",
+	"notes": "The German edition of Street Magic incorporates the translation of Digital Grimoire.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

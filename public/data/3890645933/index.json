@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890645933"],
+	"name": "Wiedergänger",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Was wird aus Rachedurstgelüsten, wenn sie vier Jahre Zeit haben, vor sich hinzugären? Der Straßensamurai Jaywalker macht sich auf, um das herauszufinden. Vier Jahre nach dem Zerfall seines Teams kehrt er nach Seattle zurück. Seine Ankunft löst heilloses Chaos aus. Vor allem Conquistador, der sich längst aus den Schatten zurückgezogen hat, sieht sich mit der Frage konfrontiert, welchen Preis er für seine Rache zu zahlen bereit ist. Doch da ist auch noch der Magier Sokata. Und der hat sehr genaue Vorstellungen davon, wie er mit dem Problem >Jaywalker< verfahren will.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2005-04-01"],
+	"gameDate": "2050-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

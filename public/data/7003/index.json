@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7003"],
+	"name": "Shadowrun Third Edition - Quick Start Rules",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "With the Shadowrun Quick Start Rules, you need nothing more than a vivid imagination and a handful of dice to jump into the world's most popular science-fiction/fantasy universe. An introduction for new players to the Shadowrun, Third Edition game system, the Shadowrun Quick Start Rules provides all the rules you need to start playing. This book features background material, advice for beginners, eight pre-generated characters and a complete adventure so you can learn as you go. The Shadowrun Quick Start Rules lets you dive right into the action. Welcome to the shadows, chummer!",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["1999-08-01", "2005-02-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

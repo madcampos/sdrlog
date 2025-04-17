@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28880"],
+	"name": "Prime Runner Miniatures",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "They're rough. Tough. Ready for action. And you can fit five of them in your hand. Bring Sledge the ork street samurai, Coydog the elf shaman, Gentry the human decker, Hardpoint the dwarf rigger, and Blanco, the troll weapons specialist to your game table and let them unleash chaos!\n\nWhether you're playing Shadowrun (and you should definitely play Shadowrun) or any other game, these cyberpunk-crossed-with-fantasy minis will bring atmosphere and action to your game!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-06-01"],
+	"gameDate": "2080-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

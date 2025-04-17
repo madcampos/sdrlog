@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5594"],
+	"name": "The Lucifer Deck",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Das Luzifer Deck" },
+	"originalLanguage": "en-US",
+	"description": "In its efforts to control all information in the Shadowrun universe, a giant corporation inadvertently calls up a violent spirit from another dimension, and only a young girl can save the universe from the ensuing havoc.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Heyne Verlag"],
+	"releaseDate": ["1997-01-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

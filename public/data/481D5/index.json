@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["481D5"],
+	"name": "Datapuls: Marienbad",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "AUF WILDEN STRASSEN\n\nVon anarchistischen Tendenzen und Milizkämpfen geprägt, liegt Marienbad im Osten der ADL. Eine kleine Enklave, die unter dem Protektorat des mächtigen Drachen Schwartzkopf steht. Eine Wildnis, in der man nicht alleine mit den Auto unterwegs sein möchte - denn entweder lauern Straßenräuber hinter der nächsten Kurve oder ein Mitglied der Erwachten Fauna rammt das Gefährt vom Asphalt. Marienbad ist immer eine Reise wert.\n\nDatapuls Marienbad wirft ein Licht auf den Marienbad: Die politischen Kräfte, die Erwachten Ressourcen, die Machtspiele hinter dem Vorhang werden präsentiert.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2021-04-27"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

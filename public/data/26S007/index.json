@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S007"],
+	"name": "The Way of the Adept",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Der Weg des Adepten" },
+	"originalLanguage": "en-US",
+	"description": "LEARN THE WAYS OF POWER\n\nSomething is happening to the adepts of the Sixth World. They're becoming stronger, faster—some of them are even becoming more charming. Studies indicate that the improvements are fixing on the most disciplined of adepts, those who integrate their abilities into the greater whole known as a Way. By following these Ways, adepts are reaching new levels of power.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-04-26", "2011-10-20"],
+	"gameDate": "2072-08",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

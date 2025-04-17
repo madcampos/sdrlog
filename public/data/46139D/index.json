@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46139D"],
+	"name": "Kaleidoskop: Haustier-Dossier",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# HAUSTIER-DOSSIER\n\nFindet hier: Alles über die besten Freunde des Metamenschen in der Sechsten Welt der ADL, ob nun lebendes Fellknäuel oder Hightech-Kuscheltier.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-08-18"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

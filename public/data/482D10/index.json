@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["482D10"],
+	"name": "Datapuls: Norddeutscher Bund",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# NORDDEUTSCHER BUND\n\nVon der Küste in die Kiste\n\nDas flächenmäßig größte Land der ADL ist auch das leerste: Zusammengeschustert aus den Resten, die nach Schwarzer Flut und der Gründung des Elfenstaates Pomorya übrig blieben, erstreckt sich der Norddeutsche Zweckverband von der Nordsee im Westen bis nach Polen im Osten, von der Skandinavischen Union im Norden bis nach Thüringen, Westphalen und Hessen-Nassau im Süden. Aber der „NDB“ ist mehr als nur das Land der wichtigsten Schmugglerrouten, mehr als Küste und weites Land. Und es ist dringend Zeit, sich das alles genauer anzusehen.\n\nDer Datapuls Norddeutscher Bund wirft einen weiten Blick über den Norden der Allianz Deutscher Länder, mit aktuellen Infos zu Bremen, Lübeck, der ADL-Hauptstadt Hannover, Rostock, Göttingen und Braunschweig. Lerne die Tücken des norddeutschen Wegenetzes und der Grenzregion zu Pomorya kennen, besuche die Lüneburger Heide und die Küsten von Nord- und Ostsee, erhalte aktuelle Reisewarnungen zur stetig wachsenden Kohlhoff-Anomaliezone und all den Gefahren, die dich im Norden erwarten",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2023-04-27"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"name": "For a Few Nuyen More",
+	"sku": ["26869"],
+	"edition": 6,
+	"gameDate": "2080-01",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"releaseDate": ["2021-06-22"],
+	"publisher": ["Catalyst Game Labs"],
+	"description": "# DARK CLOUDS OF WAR…\n\n…are gathering among the various criminal factions of Seattle, and Ratatosk, 8-ball, Mute, and the rest of their shadowrunning team and allies are caught in the middle almost before they know what's even going on. A powerful, highly modified assassin duo is killing bosses and setting the various factions against each other, and the team is called on by both Knight Errant and one of the Mafia groups to find a way to stop the bloodshed before the streets truly run red.\n\nBut while locating these assassins is one thing, stopping them is something else entirely. The duo has been modified to within an inch of their lives, swimming in enough magic and cyberware to make them nearly indestructible. Ratatosk and his crew will have to use every bit of cunning and street smarts they know to take these seemingly unstoppable killers down…before the killers get to them.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

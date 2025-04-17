@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26858"],
+	"name": "Shaken (No Job Too Small)",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Für alle Fälle: Kincaid" },
+	"originalLanguage": "en-US",
+	"description": "Most folks see Puyallup as the worst Seattle's got to offer; a tangled mess of metahumanity and greed, poverty and ghettoes, vice and corruption, where the crime is more organized than the government. They call it a Barrens, an armpit, a cesspool.\nJimmy Kincaid, though, calls it home. Walking the line between the shadows and the desperate light, semi-legit like only a Puyallup brat and former cop can be, he insists Puyallup has a heart and a soul, that it's a place of life, magic, and starving hope. A former combat mage, now as burnt out as his neighborhood, he does what he can to police the worst excesses of the crime-riddled city he loves.\nIn the darkness of the Seattle Sprawl, what's one more murder?\nTo Kincaid, it's everything. He's got a dead mentor, a hermetic group in need, and a mysterious file that might have been worth killing for. To unlock the data and get a little justice, he'll face the worst the Sprawl has to offer, wading through blood, darkness, and a murderous web of lies.\nIt's a good thing he's got friends—in high and low places...",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2015-06-13"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

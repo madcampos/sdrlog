@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26105", "47011"],
+	"name": "Runner's Black Book 2074",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Schattenkatalog 2" },
+	"originalLanguage": "en-US",
+	"description": "Asking a shadowrunner if they really need another gun is like asking someone if they need all that oxygen floating around them. Are you ever going to use all that air? Maybe not. But you're sure as hell not going to be one of those suckers who's going to be caught short. RUNNER'S BLACK BOOK 2074 is about options, giving runners more choices of guns, weapons, vehicles, and other gear so that they can build a load out that suits them. Whether they want bleeding-edge gear built for those fighting the world's latest wars or classic vehicles that have stood the test of time—or old crap they can get for cheap—RUNNER'S BLACK BOOK 2074 has what they need. Collecting gear from digital products Gun H(e)aven 2, Used Car Lot, MilSpec Tech 2, and Euro War Antiques along with exclusive material for this book, RUNNER'S BLACK BOOK 2074 contains full-color illustrations, detailed descriptions, and complete game statistics for each item. It's an essential resource for runners looking to do some shopping—or to learn more about the guns that might be pointed at them in the near future.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2012-01-01", "2013-02-05", "2016-01-12"],
+	"gameDate": "2074-01",
+	"notes": "Originally print only, this book is a compilation of other books with few added material.\nThe German edition have a few itens from Germany.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

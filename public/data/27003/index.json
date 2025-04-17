@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27003", "45023", "45025", "SR505"],
+	"name": "Street Grimoire",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Straßengrimoire", "fr-FR": "Grimoire des Ombres" },
+	"originalLanguage": "en-US",
+	"description": "Paying with Your Soul\n\nMagic can burn your brain and sear your soul. It can inject power into every millimeter of your veins, or leave you a lump of ashes at the end of a dark alley. It's dangerous, but to spellslingers in the Sixth World, it's worth it. Because magic is power, and power in the Sixth World needs to be grabbed with both hands.\nSpells, rituals, alchemical preparations, adept powers, metamagics—all of those elements and more can be used to help an Awakened shadowrunner move off the streets and get a taste of the high life. Street Grimoire has more options for Shadowrun players, along with information on magical traditions, magic societies, and the dangers and benefits of living as a spellcaster in a world where \"geek the mage first\" is a common adage. With more options, deeper rules, deadlier threats, and dozens of way to have fun with magic, Street Grimoire is an essential book for anyone playing Shadowrun, Fifth Edition.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2014-06-30", "2015-04-15", "2015-05-23", "2016-02-12", "2017-10-19"],
+	"gameDate": "2075-01",
+	"notes": "The German version has aditional spells and traditions.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

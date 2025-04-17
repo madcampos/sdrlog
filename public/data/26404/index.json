@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26404"],
+	"name": "Nigel Findley Omnibus",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "FOUR CLASSICS. ONE VOLUME. PURE SHADOWRUN\nShadowrun fans know. They love the dark alleys and darker plots of the Sixth World, and they know that Nigel Findley wrote some of the best Shadowrun novels ever. Now, for the first time, his four iconic books are collected in a single volume.\nWhether you've loved Shadowrun fiction for years or are just now being introduced to it, the novels of Nigel Findley are a superb place to start. This exclusive edition contains:\n\t• 2XS, which introduces private detective Dirk Montgomery and pits him against the mysterious sources of a chip even more addictive than the strongest BTLs;\n\t• Shadowplay, featuring a veteran decker and a young shaman who stumble on lost technology that puts them up against one of the world's largest megacorporations—and the Corporate Court itself;\n\t• Lone Wolf, where an undercover Lone Star operative finds himself in the middle of an exploding gang war; and\n\t• House of the Sun, which brings back Dirk Montgomery and sends him to Hawai'i, where he runs afoul of the government, a ritual sacrifice, powerful elves, and very unpleasant bugs.\n\tThis omnibus provides a unique opportunity to dive into the complete novel output of one of Shadowrun's finest writers. Let Nigel Findley show you what it really feels like to run in the shadows!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2010-05-06"],
+	"gameDate": "2050-01",
+	"notes": "Bundle of 4 novels.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["RET-01"],
+	"name": "Shadowrun Returns",
+	"category": "videogame",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "MAN MEETS MAGIC & MACHINE. The year is 2054. Magic has returned to the world, awakening powerful creatures of myth and legend. Technology merges with flesh and consciousness. Elves, trolls, orks and dwarves walk among us, while ruthless corporations bleed the world dry. You are a shadowrunner - a mercenary living on the fringes of society, in the shadows of massive corporate arcologies, surviving day-by-day on skill and instinct alone. When the powerful or the desperate need a job done, you get it done... by any means necessary.\nIn the urban sprawl of the Seattle metroplex, the search for a mysterious killer sets you on a trail that leads from the darkest slums to the city's most powerful megacorps. You will need to tread carefully, enlist the aid of other runners, and master powerful forces of technology and magic in order to emerge from the shadows of Seattle unscathed.\nThe unique cyberpunk-meets-fantasy world of Shadowrun has gained a huge cult following since its creation nearly 25 years ago. Now, creator Jordan Weisman returns to the world of Shadowrun, modernizing this classic game setting as a single player, turn-based tactical RPG.",
+	"edition": 5,
+	"publisher": ["Harebrained Schemes"],
+	"releaseDate": ["2013-07-25"],
+	"gameDate": "2054-01",
+	"status": "outofscope",
+	"notes": "Not present for beeing multiplatform and huge in size.",
+	"cover": "./cover.jpg"
+}

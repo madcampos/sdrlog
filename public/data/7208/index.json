@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7208", "10723"],
+	"name": "The Neo-Anarchist's Guide to Real Life",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Real Life: Der Neo-Anarchisten Reiseführer ins wahre Leben" },
+	"originalLanguage": "en-US",
+	"description": "Grab the kids! Hide the wife! The Neo-Anarchists are back!\nThis time, those fun-loving Anarchists speak out on everything from transorbital travel and security systems to coffin motels and fast food. Nothing is sacred, profanity reigns, and there's more data than you can shake a chip at.\nThe Neo-Anarchist's Guide to Real Life provides useful information about the Shadowrun world in a fictionalized format along with new, specific game systems for each of the subjects covered.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["1992-10-01", "1997-01-01", "2005-08-26"],
+	"gameDate": "2053-01",
+	"notes": "In the German translation it misses two chapters of the original publication (\"One-way Communication\" and \"Guarding the Till\")",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

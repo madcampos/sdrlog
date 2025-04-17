@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26CMP18-1"],
+	"name": "CMP 2018: Viva Las Vegas",
+	"category": "mission",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "CMP 2018-01 - Viva Las Vegas: Dead Man's Hand\nThe team is called out to Las Vegas to help a gambler out with a goon issue. When the Johnson doesn't show up for the meet, they only have so long before their paycheck becomes a mirage.\n\nCMP 2018-02 - Viva Las Vegas: You're Nobody till Somebody Loves You\nThe heart wants what it wants, but there are those who don't approve of this union. The team is hired to extract a mafia princess from the family, but is it love or leverage Mr. J is looking for?\n\nCMP 2018-03 - Viva Las Vegas: Sin City Sabotage\nA new resort is opening up on the strip, and the VIP weekend is coming up. Mr Johnson wants you to make this a particularly memorable event for all the investors.\n\nCMP 2018-04 - Viva Las Vegas: Ain't That a Kick in the Head?\nIn Las Vegas, a single night out can make or break anyone. Mr Johnson decides to let it ride on the runners, in a bid to knock over a casino. The security may be state of the art, but a single pull of the lever can change a life.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2080-01",
+	"status": "outofscope",
+	"notes": "A series of adventures played at conventions, not relesed afterwards.",
+	"cover": "./cover.jpg"
+}

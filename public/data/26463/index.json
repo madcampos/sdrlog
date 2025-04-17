@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26463"],
+	"name": "The Twilight Horizon",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Horizon Corporation is everywhere. They're in the trids you watch, the music you listen to, and the news you consume. They're propping up hundreds of major brands of products across the planet with their public relations skill. And they're spending countless hours studying how you—that's right, you—think so that they can lead your mind like a master leads a spaniel.\nDenizens of the Sixth World have long suspected that there is a dark side to Horizon, if only because the corporation seemed too good to be true. If there is a dark side, it seems likely to come out soon, as the corporation has been under tremendous pressure recently—technomancers are plotting against it, spirits are causing problems in the Mojave, and Aztechnology is on the offensive, intent on keeping the competition down. That pressure is going to result in an explosion somewhere, and when it does, Horizon and the Sixth World will be changed forever.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-03-01"],
+	"gameDate": "2074-03",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

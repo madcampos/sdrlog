@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27002", "54021", "45053", "SR503"],
+	"name": "Run & Gun",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Kreuzfeuer", "fr-FR": "Run & Gun" },
+	"originalLanguage": "en-US",
+	"description": "Bullseye!\n\nGuns and ammo cost nuyen. Mastering martial arts takes time. And learning how to use explosives without blowing yourself up takes patience and a steady hand. These weapons and more are out there, waiting for you. You have the chance to use them to become deadlier, faster, more dangerous than the next guy—and more dangerous than you were yesterday. You'll have to pay the price to get what you want, but this is the Sixth World. Don't you always?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2014-04-09", "2014-07-16", "2014-09-01", "2015-05-03", "2015-07-31", "2017-10-20"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26241", "46080"],
+	"name": "Attitude",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Lifestyle 2073" },
+	"originalLanguage": "en-US",
+	"description": "Eat 'em Up, Spit 'em Out! They can have their offices, their paychecks, their 2.2 kids and their robot-trimmed lawns. Screw 'em. They trudge through life, doing what other people tell them to do, never having an original thought, burying themselves so deep down inside they might never come out. You're not them. The world's not giving you anything, so you're going to take what you can get. You're on the streets, on your own. Maybe you're helping an orxploitation band shoot to the top, maybe you're climbing up the street brawl ladder, or maybe you're getting famous just for being you. Whatever you do, you'll do it your way, because dying always beats selling out. Attitude helps shadowrunners live the untethered life by giving them the lowdown on music, entertainment, sports, and other scenes where they can make their mark without selling their soul. A repository of Sixth World culture along with a treasury of new ways to run in the shadows, Attitude is an indispensable resource for all Shadowrun players.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-03-01", "2011-09-01"],
+	"gameDate": "2073-03",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

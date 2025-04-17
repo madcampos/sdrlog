@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5199"],
+	"name": "Streets of Blood",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Blutige Straßen" },
+	"originalLanguage": "en-US",
+	"description": "Murder, Mystery, Intrigue and Betrayal! A story in foggy old England of 2054, the 1st book with elven mage Serrin Shamander and British Lord Geraint Llanfrechfa.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Heyne Verlag"],
+	"releaseDate": ["1992-12-01"],
+	"gameDate": "2054-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

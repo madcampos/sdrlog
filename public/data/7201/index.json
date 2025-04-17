@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7201", "10719", "2-7408-0061-4"],
+	"name": "Seattle Sourcebook",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Seattle Quellenbuch", "fr-FR": "Le Guide de Seattle" },
+	"originalLanguage": "en-US",
+	"description": "Visit Beautiful Seattle, An Interesting Place to Live\nA modern frontier town, sandwiched between the Elven nation of Tir Tairngire and the Native American Nations, Seattle is a place where cultures mix—often with explosive results.\nA City of Opportunity\nMegacorps with private armies trade in technology and information. Crime bosses rule the underworld of illegal trade, violence, and extortion. There is always plenty of work for people who are willing to get their hands dirty, because the turnover is…brisk.\nFun, Friendly People\nSeattle is home to over 300,000 squatters who are willing to kill their mother for a pair of shoes. Fortunately, most never knew their mothers.\nSightsee Along Our Breathtaking Waterfront.\nJust don't stay out after dark. If the Elven street gangs don't get you, the city cops will, and maybe just for target practice.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Other", "Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["1990-04-01", "1994-02-01", "2012-12-18"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

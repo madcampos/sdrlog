@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890644821"],
+	"name": "Der Schattenlehrling",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Der dreizehnjährige Boris wächst behütet als Sohn eines Konzernangestellten auf und träumt - inspiriert von Trideo und Matrixspielen - von einem abenteuerlichen Leben in den Schatten. Während eines Kurzurlaubs in München brennt er schließlich durch, um sich seinen Traum zu erfüllen: Er will Runner werden! Mit Credsticks, die er seinem Vater geklaut hat, bezahlt er die Runner Theseus, Cinque und Key, damit sie ihn ausbilden. Doch während er Schießen lernt und seinem ersten Job entgegenfiebert, hat sich längst das Team eines skrupellosen Zwergs an seine Fersen geheftet - denn unter den von Boris mitgenommenen Credsticks befindet sich einer, der viel mehr beinhaltet als Geld und den sein einflussreicher Besitzer unter allen Umständen zurückwill. Bald dämmert Boris, dass die realen Schatten viel dunkler sind als die aus dem Trideo.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2006-01-01", "2008-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

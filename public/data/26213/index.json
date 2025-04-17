@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26213", "47000"],
+	"name": "Storm Front",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Sturmfront" },
+	"originalLanguage": "en-US",
+	"description": "It's been a tense couple of years (or couple of decades, if we're being accurate) in the Sixth World. Aztlan and Amazonia have been slugging it out. Great dragons have turned on each other, testing old alliances and forging new ones. Governor Kenneth Brackhaven of Seattle is facing pressure unlike ever he's ever seen, and scandals seem on the verge of overwhelming him. In Denver, a powerful dragon and an angry elf are set to butt heads in ways that will shake up the whole city—and provide new opportunities for an old enemy. And on top of that, a new plague is spreading through the world, and the denizens of JackPoint aren't immune to its effects.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2013-03-01", "2014-01-01"],
+	"gameDate": "2075-01",
+	"notes": "German translation of Storm Front, as an abridged pdf with SR5 rules. Includes additional texts for the German setting.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10667", "10764"],
+	"name": "Sprawl Survival Guide",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Sprawl Überlebenshandbuch" },
+	"originalLanguage": "en-US",
+	"description": "Street Smart?\nNew to the sprawl kid? Wise up fast, cuz wiz wires or spell juice alone won't save your ass on the hungry streets. You flash your credstick in the wrong alley, drop a name in the wrong company, or flick out a spur at a gunfight and your organs will be next up for auction. Reps are built on etiquette and connections, not just chill attitude and piles of corpses. You need to know when to deal and when to wheel, or you're just another skidmark on the streets of the sprawl.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-02-01"],
+	"gameDate": "2063-04",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

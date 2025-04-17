@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM08-02"],
+	"name": "Can You Dig It?",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Smoke Gets In Your Eyes\n\nIn mass combat, you might be blinded by the fog of war. In hand-to-hand combat, you might have to deal with tunnel vision. And when running the shadows of Chicago, you just might have to contend with the fumes from a fire in an abandoned plastics factory that no one can seem to put out.\nWhich is what's happening when a new job comes your way. This job doesn't really need anything to make it more difficult—when some people have disappeared, and then the first team that went to find them also vanished, you know something very wrong is lurking ahead. Can the runners find the threat and defeat it, despite the now-omnipresent smoke? Only one way to find out!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2017-12-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

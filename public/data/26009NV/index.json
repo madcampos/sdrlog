@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26009NV"],
+	"name": "Kill Penalty",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# THE RULES ARE SIMPLE…\nRedburn is a rising star in the brutal sport of Urban Combat, where teams of armed combatants try to score points against their opponents while shooting it out amid Seattle's decaying urban landscape. Managed by his mother, a legendary Urban Brawl player until her forced retirement, and fitted with top-line cyberware that makes him better than human, Redburn is on the fast-track to super-stardom—until it all comes crashing down around him.\n\n# WIN OR DIE…\nAfter sabotage takes him out of the major leagues, Redburn finds himself on the streets for real, alone for the first time ever. But the lure of Urban Brawl is too seductive to ignore, and when his mother lines up another opportunity for him, all her son has to do is go against every instinct he has… Will he sacrifice his one shot back to the majors for the scrappy team that adopted him when he had nowhere else to go, or will Redburn pull the ultimate ambush play on his own teammates?",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2021-08-03"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

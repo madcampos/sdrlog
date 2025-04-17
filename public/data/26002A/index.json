@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26002A", "46010", "SR08"],
+	"name": "Augmentation",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "BodyTech", "fr-FR": "Augmentations", "jp-JP": "ーグメンテーショオン" },
+	"originalLanguage": "en-US",
+	"description": "The Shadows Have Evolved\n\nThe year is 2070. The world is not only Awakened—-it's wired. Cyber and bioware implants make your meat body better-than-flesh, while the wireless Matrix enhances your perceptions with hyper-real senses. Deals are made in steel and lead more often than gold or nuyen; success and failure live only a razor's edge apart. Creatures of myth and legend walk the streets, while the arcane skills of spellslingers are in high demand. Above it all, monolithic megacorps bleed the world dry, sabotaging each other in covert cutthroat competition as they go to war over the bottom line.\n\nYou're a shadowrunner, a street operative, scratching out a living on the mean sprawl streets. You may be human, elf, dwarf, ork or troll. From lethal street samurai to well-connected info brokers, spell-slinging mages or code-cracking hackers. No matter what, you're a professional corporate pawn or \"deniable asset,\" you get the job done.\n\nShadowrun, Fourth Edition offers a completely new rules system that is simple, integrated and accessible. The state-of-the-art has also been advanced, introducing a new level of augmented reality, new gear, new magical discoveries, and more.\n\nThis hardcover rulebook contains all the rules gamemasters and players need to create characters and ongoing adventures set in the popular Shadowrun universe. Note that the Shadowrun, Fourth Edition will replace the Shadowrun, Third Edition rules set. Source material from previous editions will still be compatible.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Other", "Pegasus Spiele"],
+	"releaseDate": ["2008-08-23", "2009-01-01", "2011-01-01"],
+	"gameDate": "2070-08",
+	"notes": "The German \"Bodytech\" contains the latest errata for \"augmentation\" as well as 5 additional cybersuites (which are twice as many as in the original).",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

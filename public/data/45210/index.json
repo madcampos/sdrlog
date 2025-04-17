@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45210"],
+	"name": "Reiseführer in die deutschen Schatten",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Die Allianz Deutscher Länder: ein Flickenteppich.\nUralte magische Orte und hochmoderne Konzernarkologien. Ödes Brachland und überbaute Straßenschluchten. Toxische Piraten und Alpen-Aktivisten. Wicca-Hexen und Universitätsmagier. Man reist durch ein Land, in dem jeder Quadratmeter Geschichte, Gefahren oder neue Möglichkeiten präsentiert. Nirgendwo liegen die Gegensätze so nah aneinander, nirgendwo sind die Gemeinsamkeiten so klar. Und daher sollte man sich auskennen. Nicht nur, um zu überleben, sondern auch, um seine Chancen zu nutzen.\nDer Reiseführer in die deutschen Schatten ist ein Quellenbuch für Shadowrun 4. Er bietet neues Material für das Spiel in der ADL: Beschreibungen von Stuttgart, dem Harz oder Pomorya, Einblicke in Schattenjobs, Besonderheiten der deutschen Runnerszene, berühmte und berüchtigte Personen und eine Vielzahl spannender Locations und Settings - reich bebildert mit Illustrationen, Karten, Grundrissen und insgesamt 24 Farbseiten, darunter eine Übersicht der Proteusarkologie auf Helgoland.\nDie Allianz Deutscher Länder: ein Runner-Spielplatz.",
+	"edition": 4,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2012-01-01"],
+	"gameDate": "2074-01",
+	"notes": "German sourcebook for Shadowrun detailing various aspcets of shadowrunning in Germany, including organized crime, famous shadowrunners, possible targets and certain interesting regions.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

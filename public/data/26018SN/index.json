@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26018SN"],
+	"name": "Blackbird Three: Hollow Point",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# ON BLOODY GROUND...\n\nDashiell Red Clay has spent decades as a soldier, a shadowrunner, a mercenary...above all, a warrior. He's survived Goblinization, the Night of Rage, the passing of Halley's Comet, the Second Matrix Crash, and more skirmishes, gunfights, and battles than almost anyone else alive. He knows more than most that history books are written in blood. It's time for new chapters to be written.\n\nFrom watching armies gather like storm clouds in Africa to bloodily taking sides in the Aztlan/Amazonian War, from wading into the madness of the Great Dracon Civil War to taking part in a surprise winter invasion against the United Canadian American States itself, Dash faces greater threats than ever before. In the exciting conclusion to his trilogy, Dash must come to grips with the friends he has lost and the home he left behind, and must learn to wield the secret, hidden power of his blood—draconic power, and draconic blood—to find the balance between metahuman and monster.\n\nHistory is written in blood, but it's written by people. And now it's Dash's turn, whether he likes it or not.\n\nThe Blackbird series is a short novel trilogy with strong military, Shadowrun-historical, and Native American Nation themes. Fans of the Kincaid series will enjoy a first-person narrative exploring the history of the Sixth World through Dash's eyes as he experiences the world of shadowrunners from a perspective a half-step removed from the shadows...on the battlefield, not the streets, as paramilitary action spills from one famous conflict to the next, spanning decades and three action-packed stories.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-08-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

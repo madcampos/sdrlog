@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["PRO676", "BBESR6G04"],
+	"name": "Schattentricks",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"names": { "fr-FR": "Sale Coup à Berlin" },
+	"description": "Großkonzerne hatten in Berlin immer schon einen schweren Stand. Und so reagieren sie besonders alarmiert, wenn Meinungsmache und Massenmanipulation gegen sie gerichtet wird. Dann aktivieren sie Runner, die tief in den Hexenkessel des Megaplex an der Spree hinabtauchen sollen, um Schattentricks aufzudecken, ohne sich selbst in diesen zu verfangen.\nSchattentricks ist ein Abenteuer für Shadowrun 6 im Berlin des Jahres 2080. Für das Abenteuer ist lediglich das Grundregelwerk für Shadowrun 6 notwendig. Das Quellenbuch Berlin 2080 liefert weiteren Hintergrund und Werkzeuge für Flair und Ambiente.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele", "Other"],
+	"releaseDate": ["2019-10-24"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

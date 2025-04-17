@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["X27PM001"],
+	"name": "Hunters Hunted",
+	"category": "mission",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "A strange package given into the care of the runners leads them in a high stakes fight through Manhattan as supernatural forces try to recover it. Who can the runners trust? Where can they turn?",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2070-01",
+	"status": "canceled",
+	"notes": "An Prime Mission announced for the Year of Shadowrun but never released.",
+	"cover": "./cover.jpg"
+}

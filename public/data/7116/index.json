@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7116"],
+	"name": "Prime Runners",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "When you care enough to run with the very best\nDeckers, Riggers, Terrorists, Newshounds, Fixers, and more. Prime Runners presents forty-one of the best of the shadows, ready to inhabit any Shadowrun campaign. Eachcharacter profile comes complete with alleged background, apparent motivations, rumored history, most-recent description, and as-acurate-as-anyone-can-guess Shadowrun, Second Edition game statistics. From Michael Sutherland, cultured decker-extraordinarie, to the elusive McBean, who seems to have been everywhere and done everything; from Yakusa bosses to hate-mongers to people not quite human, these are the prime runners, the best of the best, with enough plot hooks to snare event the most \"been there, killed thet\"shadowrunner.",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1994-10-01"],
+	"gameDate": "2055-03",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

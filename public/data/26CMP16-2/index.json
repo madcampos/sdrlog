@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26CMP16-2"],
+	"name": "CMP 2016: World Tour",
+	"category": "mission",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "CMP 2016-05 - Casablanca\nAfter a successful run, you have three days to wait in the legendary African port city before your contact shows up with your payment. What could possibly go wrong?\n\nCMP 2016-06 - Cape Town\nMaybe this time you can actually lay low while laying low. With any luck, you won't run into the same trouble on the southern end of the continent that you did on the northern end.\n\nCMP 2016-07 - Mumbai\nThere's one problem in hiding needles amidst a stack of needles. Everyone is sharp.\n\nCMP 2016-08 - Singapore\nIn a city locked down by the most prolific police force on the planet, opportunity abounds for the intrepid shadowrunner. The only question being is the job worth the cost?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "A series of adventures played at conventions, not relesed afterwards.",
+	"cover": "./cover.jpg"
+}

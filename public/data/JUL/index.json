@@ -1,0 +1,14 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["JUL"],
+	"name": "Jackpoint User List",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "A list of Jackpoint Users.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

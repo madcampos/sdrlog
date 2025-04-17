@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46139E"],
+	"name": "Kaleidoskop: Magie in Heidelberg",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# MAGISCHE FAKULTÄT HEIDELBERG\n\nFindet hier: Eine Beschreibung der Magischen Fakultät Heideberg, mit Blick hinter die Kulissen des Lehrapparats und Studienplan.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-08-26"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26NV002A"],
+	"name": "Big Dreams",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Slacker corp mage Cody's bad day is about to get a lot worse.\nLosing his job is crappy enough, but when his talismonger uncle turns up dead and dissected in his shop, Cody finds himself on the run from some very nasty people who want something they think he has.\nThe problem is, Cody has no idea what it is.\nTurning for help to old friends from his Barrens roots, Cody soon learns that his problems are bigger than any of them can handle. To survive, he'll need some heavy hitters on his side--but can he trust them not to sell him out?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2016-12-02"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

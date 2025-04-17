@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26410"],
+	"name": "Boardroom Backstabs 2: Sacrificial Limb",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "In 2072, Roger Soaring Owl, CEO of Knight Errant, resigned.\nIn 2073, Roger Soaring Owl was attacked on the streets of Denver. Witnesses were not clear on just what attacked him, but most say it was meaner, stronger, and faster than any metahuman.\nNow it's 2074. It's time to find out what Roger Soaring Owl learned.\nCorporate machinations don't get any meaner than this. Rivals of the megacorporation are certain it's hiding some dark secrets, and they're willing to spend significant nuyen to uncover this information. Runners are going to have to infiltrate an Ares subsidiary and gain the corporation's trust if they want to discover the secret—and if they do, they will have to find a way to survive with what they have learned.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-10-01"],
+	"gameDate": "2074-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

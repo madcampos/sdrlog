@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26APR13"],
+	"name": "Rigger 4",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "We love riggers. We want them to have toys. But when we gathered the freelancers at the clubhouse (saltines are free, but bring your own beverage. And a chair), we quickly noticed that they were struggling to come up with ideas.\nThis puts us in a pinch. We thought we could try making our scary face at them to intimidate them into genius creativity, but we have been told in the past that our scary face looks like a mildly peeved newspaper delivery boy, so that wasn't really going to get us anywhere. Besides, we like to offer carrots instead of sticks whenever possible. Though as we thought more about it, the whole concept of sticks seemed alluring. Maybe we could beat them into creativity!\nSo we set about them, making sure to work the torso and not leave any marks on their beautiful faces. After a while they started complaining that they'd really like to lie down for a while, so I broke out the sleeping bags and had them settle down on the clubhouse floor. I hoped that once they woke up, the genius would start flowing.\nAs you'll see in these pages, our hopes were well and truly met—and then some. While this compilation may be slightly shorter than rigger books of past editions, we think you'll agree that no rigger book in the history of Shadowrun has presented a series of vehicles and drones quite like this one. Only the right minds, treated the right way, could come up with the information this book contains. So it is with great pride that we present you: Rigger 4! Enjoy!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-04-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

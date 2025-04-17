@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7106"],
+	"name": "The Grimoire: The Manual of Practical Thaumaturgy 14th Edition, 2050",
+	"category": "rulebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "Power.\nSome people want to study it, some want to outlaw it, some drekheads even pretend id dosen't exist, but the genie's been out of the bottle since that day in 2011 when the first newborn magician in our world made the magic happen.",
+	"edition": 1,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1990-07-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

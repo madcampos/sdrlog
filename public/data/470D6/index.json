@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["470D6"],
+	"name": "Datapuls: Proteus",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Experimente mit Metamenschen. Dunkle Geheimnisse in toxischen Arkologien. Umweltbeeinflussungen durch Magie und Technik. Genmanipulierte Wachcritter und Verschwörungen: Viel wird vom Nordseekonzern Proteus berichtet und doch ist kaum etwas bekannt. Es ist Zeit, zumindest einen Teil des Schleiers zu lüften ...\nDatapuls Proteus wirft ein Licht auf den AA-Konzern Proteus, dessen Geschichte und Machenschaften die Schatten der ADL schon mehrmals durchgerüttelt und geprägt haben.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2019-04-29"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

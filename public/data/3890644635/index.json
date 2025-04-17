@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890644635"],
+	"name": "GmbH",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Kaum ist endlich genug Gras über eine Sache gewachsen, kommt irgend ein Esel daher, und frisst es wieder weg.\n\nDas ist besonders ärgerlich, wenn man Spitzenpolitiker ist und es auch bleiben möchte. So ist es dem Vizekanzler Hacklhuber gar nicht recht, dass ausgerechnet zu beginn des Wahlkampfs ein paar pikante Details aus seiner Zeit aus den Eurokriegen an die Öffentlichkeit dringen könnten. Deswegen ist er auch gar nicht gut auf die Schattenläufer Karo Ass, Topolino und Peperoni zu sprechen, aber diese 'Esel' lassen sich nicht so einfach zum Schweigen bringen, kaum dass sie sich im ersten Band dieses Zweiteilers zu einem schlagkräftigen Team zusammen geschlossen haben...",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2006-01-01"],
+	"gameDate": "2050-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

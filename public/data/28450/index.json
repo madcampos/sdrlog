@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28450"],
+	"name": "Collapsing Now",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Phantome" },
+	"originalLanguage": "en-US",
+	"description": "DO THE COLLAPSE!\n\nSome are careful, others are chaotic. Some are new, others old. Some are ruthlessly calculating and logical, others have only the barest acquaintance with sanity. But they're all in the shadows, they're all dangerous, and they're all things you need to know.\n\nCollapsing Now details ten organizations poised to make an impact on the ever-shifting structures of the Sixth Word—ten organizations shadowrunners could encounter. Maybe they'll be helpful, maybe harmful, maybe both, but whatever the case, runners need to know what they're about. Because the last thing a good runner ever wants to be is surprised.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2021-01-08"],
+	"gameDate": "2080-01",
+	"notes": "The german edition has an additional part discussing groups such as the \"Disciples of the Cleansing Fire\" or the \"SiegfriedBund\".",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

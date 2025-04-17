@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27700-G16"],
+	"name": "Shadowrun Crossfire: Las Vegas",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "Vegas: A Night on the Strip\nThis mini expansion was a GAMA Trade Show retailer exclusive. It comes with new missions and 2 copies each of 5 stickers that add an ability to a Runner card only during Vegas missions. It also adds 8 new cards to the game. Gambling and tourism are the major thematic elements of the game.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2016-01-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

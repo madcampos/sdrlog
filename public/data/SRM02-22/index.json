@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM02-22"],
+	"name": "Backlash",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Chavez family has recently had some setbacks due to Koshari interference with their business operations, in spite of the Lakeside treaty. Deciding that enough was enough, they chose to make an object lesson of a known Koshari Johnson and took his bodyguard captive for leverage to attempt to turn a known corporate fixer to their own services.\nMatt Greyfox, the bodyguard, is a former lover and still close friend of Tabby's. She is irate that Omar Chavez is attempting to use her friend to blackmail her, but she is also in a bind as the bodyguard is the son of one of Tabby's corporate contacts. Unhappy about his son's choice to become a bodyguard in the shadows, but believing that each person must choose their own path, the suit was unwilling to force the issue. Instead, he asked Tabby to strike up an acquaintance with his son and keep an eye on him. She honored that request but it became something more. Tabby now finds herself concerned about how the father may react if he learns about the affair and how his son has become a bargaining chip. She wants the situation resolved quickly. Once she heard about the runners' plight and discovered where Matt was being held, she contacted the team. She believes they are the perfect people to teach Omar Chavez a lesson that he should take to heart, while maintaining her corporate connections.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2007-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

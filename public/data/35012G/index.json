@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["35012G"],
+	"name": "Marlene Lebt",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Marlene Dietrich erwacht im Rhein-Ruhr-Megaplex des Jahres 2078. Megakonzerne wollen ihre Persönlichkeit, Shadowrunner ihren Körper und Marlene will überleben. In einer Welt in der die Magie erwacht ist, Menschen, Elfen, Zwerge, Orks und Trolle ihren Körper mit Cyberware erweitern und alle in der Matrix unterwegs sind, gerät die Diva, der Vamp, die Legende zwischen alle Fronten; übermächtige Drachen, menschenfressende Guhle, Execs die Angestellte versklaven und zu willenloser Sexarbeit zwingen, gnadenlose Runner und der Abschaum in den Schatten. Wird Marlene die sechste Welt überstehen und das Rätsel ihrer Existenz lösen?",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2019-07-31"],
+	"gameDate": "2080-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

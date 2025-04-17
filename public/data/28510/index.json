@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28510", "46135"],
+	"name": "Shadow Cast",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"names": { "de-DE": "Die üblichen Verdächtigen" },
+	"description": "# STRONG CHARACTERS\n\nShadowrunners come in all shapes, sizes, and skill sets. Some of them do things you immediately know will be useful. For others—\n\nwell, let’s say their usefulness sometimes sneaks up on you.\n\nShadow Cast embraces the full range of Shadowrun characters and invites you to do the same. It explores twenty different character archetypes, looking at how each type does its work in the Sixth World, what their backgrounds might be, and what they’ll do. It also has qualities for each archetype and a little advice on how to play them.\n\n",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2022-10-24", "2022-09-01", "2022-08-19"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

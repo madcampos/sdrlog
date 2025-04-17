@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26CMP11"],
+	"name": "CMP 2011",
+	"category": "mission",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "CMP 2011-01 Moving Day\nExtracting one person can be tough. Extracting an entire family? That's on a whole different level. They say \"Never deal with a dragon,\" but maybe they should add \"Never do a job involving grade schoolers and hormonal teens\"!\n\nCMP 2011-02 The Prize of Failure\nEvery Johnson promises an easy job, and this one's no exception. Scare an unwilling scientist into extracting willingly. You don't even have to do the extraction yourself. How hard could this be?\n\nCMP 2011-03 Threads of the Past\nA rockslide on Mt. Rainier has uncovered an ancient ship embedded in the rock, and a tunnel leading into previously unknown caverns inside the volcanic mountain. Grab some rope, lanterns, and a 3 meter pole, because you've just been hired to explore this ancient cavern.\n\nCMP 2011-05 Burn Notice\nNever deal with a dragon? How do you tell him no when Perianwyr calls you to his club in Denver with a job offer? A rogue spy has been causing no end of headache for the Great Dragon Ghostwalker, and he wants this spy burned down. Succeed and you'll get a great payday. Fail and you could end up lunch.\n\nCMP 2011-06 TRO 2073\nThe new season of Desert Wars are brewing, and Ares has a new toy it wants to unveil: A 30 foot tall mech. It's unwieldy, ungainly, and totally impracticable for modern warfare, but it makes for one hell of a publicity stunt. Ares needs a team of mercs to pilot and/or escort this so-called battlemech. Can the runners keep it in one piece and survive the opening round of Desert Wars 2073?\n\nCMP 2011-07 Super Brawl Sunday\nIt's Super Brawl 2073, and the fix is in! When you're hired to infiltrate and fix the biggest sporting event of the year, can you handle the pressure? And more importantly, will you get a pair of sneakers named after you?\n\nCMP 2011-08 Ain't That a Kick in the Head?\nBarry Mana, the troll with a voice like Sinatra and dance moves like Astaire, has once again come under death threats from ant-metahuman rights groups. When he narrowly escapes two assassination attempts in one night, he decides it's time to call in some help. Ring-a-ding-ding, baby. Keep this cat alive while he pulls of the show of his career in the City of Lights, Las Vegas!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2073-01",
+	"status": "outofscope",
+	"notes": "A series of adventures played at conventions, not relesed afterwards.",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46139A"],
+	"name": "Kaleidoskop: Adelsbrevier",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# ADELSBREVIER\n\nFindet hier: Informationen zum Adel in der ADL - das Leben und die sozialen Verflechtungen der blaublütigen Elite.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-08-05"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["389064483X"],
+	"name": "Cash Flow",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Zuviele Köche verderben den Brei, so sagt man, und zu viele Shadowrunner, die hinter der gleichen Zielperson herhecheln, verderben Karo Ass die Laune. Jetzt, wo sie ihr Team endlich um sich geschart hat, und bereit ist loszuschlagen, kommt ihr ungebetene Konkurrenz alles andere als gelegen. Nicht zuletzt deshalb, weil auch die Zielperson, Österreichs Vizekanzler Hacklhuber, nicht untätig bleibt und verzweifelt versucht, den Kopf aus der Schlinge zu ziehen, die sich immer enger um seinen Hals zusammenzieht.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2006-01-01"],
+	"gameDate": "2050-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

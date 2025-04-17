@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM00-04"],
+	"name": "A Fork in Fate's Path",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "A runner's gotta do what a runner has to do. Or does s/he? For once, you get a choice of two different runs. Time limits your choice to one or the other, but not both. But remember chummer that looks can be deceiving, and that all that glitters is not gold--like the hyper velocity gel round of an angry Lone Star Cop, just as an example…",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2061-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

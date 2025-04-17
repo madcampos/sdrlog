@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27500"],
+	"name": "Gear Cards, Series 1",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "If you're a shadowrunner, you know that danger is always waiting around the next corner. You better be ready for it. The right gun, the right vehicle, or the right piece of equipment can be the difference between life and death. So make sure you have what you need and can use it fast.\nShadowrun Gear Cards, Series 1 provide quick reference to 54 different pieces of gear, making it easy to use them in a game. Containing game stats and illustrations of guns, vehicles, drones, and more, these cards are a handy reference to keep the game moving and make sure characters have what they need to come out on top.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-11-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

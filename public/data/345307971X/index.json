@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["345307971X"],
+	"name": "Die graue Eminenz (Deutschland in den Schatten 3)",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Mitte des 21. Jahrhunderts: Nach der Rückkehr der Magie in die Welt hat sich auch Europa grundlegend verändert Deutschland ist zu einem losen Staatenbund zerfaller und Schauplatz globaler Machtkämpfe von Konzernen. HighTech-Zentren beherrschen den Süden, anarchistische Projekte dominieren Berlin und Hamburg, Slums wie der riesige Rhein-Ruhr-Sprawl sind chaotische Ballungszentren, daneben Ghettos aller Couleurs, ein Kirchenstaat Westphalen und ein Trollkönigreich im Schwarzwald. Der Shadowrunner Pandur, alias Thor Walez, ist vom Gejagten zum Jäger geworden. Im anarchistischen Berlin gelingt es ihm endlich, den Mächten auf die Spur zu kommen, die sein Leben ruiniert haben. Konzerngardisten, Straßensamurais und Yakuzakiller im Nacken, arbeiten sich Pandur und seine Freunde an das Versteck der geheimnisvollen Grauen Eminenz heran, aber ihr Feind scheint jeden ihrer Züge bereits eingeplant zu haben.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["1995-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

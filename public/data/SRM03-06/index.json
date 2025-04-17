@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM03-06"],
+	"name": "Jackknifed",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Defend a truck - What could possibly go wrong?",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2010-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

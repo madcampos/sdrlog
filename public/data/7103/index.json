@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7103", "10704"],
+	"name": "Sprawl Sites",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Asphaltdschungel", "fi-FI": "Megapleksin menoa" },
+	"originalLanguage": "en-US",
+	"description": "Build from a thousand kilometers of flesh and steel. It writhes in the passions of those who live in it. Everyone and everything is connected here; there are no accidents. Talk a walk down any street and read the writing on the wall:\n\"Welcome to the Sprawl, chummer. Too bad you could make it.\"\nSprawl Sites is a sourcebook for Shadowrun, First Edition, and includes hundreds of encounters of every type, from blood-crazed gangs and mystic magicians to mild-mannered Orks and back-stabbing Corporate Cops. Plus, you'll find Location Archetypes covering typical Sprawl locations from all sides of town, eight new Player Archetypes, and dozens of Non-Player Contacts. Round that out with additional essays and rules concerning sprawl law and credsticks, and you've got a whole new adventure on your hands. Your Shadowrun campaign will never be the same.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1990-04-01", "1991-01-01", "1992-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

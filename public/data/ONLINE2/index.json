@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["ONLINE2"],
+	"name": "Shadowrun Chronicles: Boston Lockdown - INFECTED!",
+	"category": "videogame",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "You have saved Boston from being overrun by headcases but can you save yourself from becoming one?\n\nINFECTED! puts players in a race against the clock to save themselves from the nanite-induced disease that struck Boston following a failed experiment by two megacorporations, costing thousands of citizens their life and turning the city into a battle zone infested by crazed cyborgs trying to take over any metahuman they can find. Finding out that they got infected themselves during one of their fights against the headcases, the players struggle desperately to find a cure for the Cognitive Fragmentation Disorder they are suffering, while the AI inside them tries to assert control over their body and mind.\n\n\n\nThe add-on for Shadowrun Chronicles features all new enemies, missions as well as skills, weapons and cyberware for the player's Shadowrunner and various improvements to balancing and solo-gameplay. The players will have to face evolving headcases, a cult of fanatic technomancers and a competing team of runners (chosen from actual player avatars in a recent contest) crossing their path time and again.",
+	"edition": 5,
+	"publisher": ["Cliffhanger Productions"],
+	"releaseDate": ["2015-04-28"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "Not present for beeing multiplatform and huge in size.",
+	"cover": "./cover.jpg"
+}

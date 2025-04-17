@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28902NV"],
+	"name": "The Frame Job, Part 2: Emu",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "PART TWO OF THE ORIGINAL SHADOWRUN SIXTH WORLD EDITION NOVELLA SERIES!\nFIVE RUNNERS. ONE JOB. AND A WHOLE LOT OF TROUBLE...\nNow that the shadowrunning team knows they've been double-crossed by one of the largest megacorps in the Sixth World, they've got two jobs to do: clear their name and deliver payback with a vengeance.\n\nWhile hiding out on the outskirts of Seattle, Aussie rigger Emu begins taking steps toward that exact plan by trying to find out who set them up with Knight Errant, but she's also got other problems; juggling an outstanding mob debt and handling a side courier run for a friend in exchange for intel on the corp Johnson.\nHowever, even the best laid plans can go wrong, and Emu has to find a way to accomplish all all three jobs while staying one step ahead of her enemies...and their bullets.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-05-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

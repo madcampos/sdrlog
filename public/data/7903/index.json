@@ -1,0 +1,22 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7903", "10706", "S12", "ISA00100302"],
+	"name": "Grimoire: Manual of Practical Thaumaturgy 15th Edition, 2053",
+	"category": "rulebook",
+	"type": "scan",
+	"names": {
+		"de-DE": "Grimoire: Handbuch der praktischen Thaumaturgie 9. überarbeitete deutsche Auflage, Heidelberg 2054",
+		"es-ES": "El grimorio: Manual de Thaumaturgia Practica 15ª Edicion Año 2053",
+		"fr-FR": "Le Grimoire: Manuel de la Thaumaturgy Practique, 15e Edition, 2053",
+		"hu-HU": "Grimoire: Varázslatok könyve: A Gyrakoalati Thaumaturgia Kétikönyve 15, Kiadás, 2053",
+		"pl-PL": "Grimoire: Podręcznik Praktycznij Taumaturgii 15 · ta Edycja, 2053"
+	},
+	"originalLanguage": "en-US",
+	"description": "The grimoire is the book of magical power for the Shadowrun world. Inside, gamemasters and players will find essays on the magical world and roleplaying magicians. It includes rules on sepll design, finding and forming magical groups, initiation into the higher forms of magic, enchanting, alchemy, free and ally spirits, the exploration of the metaplanes, and powerful magical threats.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1992-12-01", "1993-01-01", "1994-01-01", "1997-01-01", "1998-01-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

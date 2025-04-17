@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7303", "10701"],
+	"name": "Dreamchipper",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "Dreamchipper", "es-ES": "Chip soñador", "fr-FR": "Les Voleurs de Narcopuces" },
+	"originalLanguage": "en-US",
+	"description": "The Year is 2050\n\nLadies of the night are being murdered and butchered with the skill of a surgeon. The Gaslight Ghoul has returned, and he stalks the streets of Seattle! in Shadowrun, the rampant substance abuse of the 19th and 20th centuries are now as archaic as 8-track audio tapes. Now the escape of choice is the BTL, or Better Than Life chip. Plug it in and all physical pleasures, desires, and hopes suddenly pale by comparison. Some 'experimental' chips are missing, and you've been hired to find them. But an investigation of simple theft is turning into a grisly trail that seems to have no rhyme or reason. Now you are beginning to wonder … can these chips program someone to be a serial killer?",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1989-04-01", "1993-01-01", "1995-01-01", "2011-05-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

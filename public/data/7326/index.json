@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7326"],
+	"name": "Mob War!",
+	"category": "mission",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "Struggle in the sprawl!\nCan the death of one man forever change the balance of power in the shadowy underworld of Seattle? Can one man's death spark a blaze of violence guaranteed to burn everyone from the lowliest chip dealers to the CEOs of megacorps? When the dead man is Don James O'Malley, head of Seattle Mafia, the answer is yes. There's infighting in \"the Family\", and every other syndicate is determined to take advantage of the chaos to grab themselves a bigger share of the nuyen. As the Triads battle the Yakuza for control of Seattle's docks, the Mafia defends its upscale gambling dens agains the Yakuza attacks--and the Seoulpa Rings take over anything that's not nailed down. The Seattle underworld has erupted in violence and no one is safe from the...\n...MOB WAR!",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1997-01-01"],
+	"gameDate": "2058-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

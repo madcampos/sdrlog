@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46128"],
+	"name": "Vendetta",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Überfälle auf offener Straße, Entführungen, Attentate, explodierende Restaurants: Die deutsch-italienische Mafia ist in einem Familienkrieg gefangen, und die Blutrache wurde geschworen. Vater und Tochter kämpfen um Ehre, Tradition und die Führung des organisierten Verbrechens. Mitten in den Vorbereitungen zu den Stadtkriegsweltmeisterschaften zieht der Konflikt die Aufmerksamkeit der Obrigkeit und anderer Mächte auf sich. Wird die Mafia diesen Krieg überleben? Werden es die Runner? Und kann eine Partie Stadtkrieg die Lösung bringen?\n\nVendetta ist eine Eigenproduktion von Pegasus Press und ein Kampagnenband für Shadowrun 6, der im Rhein-Ruhr-Plex spielt. In vier Akten werden die Runner in den Krieg zwischen den Generationen innerhalb der Mafia hineingezogen und können erleben, wie sich dieser lang schwelende Konflikt gewaltsam löst. Wer wird am Ende das Rennen machen? Welchen Zug wird die Gegenseite als nächstes planen? In vollständig ausgearbeiteten Runs, mit etlichen Sandboxen und Hintergrundinfos kannst du am eigenen Spieltisch deinen Runnern das Schicksal der deutsch-italienischen Mafia in der ADL in die Hände legen.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2021-10-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

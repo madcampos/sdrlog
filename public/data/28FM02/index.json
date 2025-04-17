@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"name": "Face Mask: Shadowrun \"S\" Symbol",
+	"sku": ["28FM02"],
+	"edition": 6,
+	"gameDate": "2080-01",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"releaseDate": ["2021-01-03"],
+	"publisher": ["Catalyst Game Labs"],
+	"status": "outofscope",
+	"description": "# ROCKING THE APOCALYPSE\n\nWhatever your flavor of apocalypse, Shadowrun is the perfect accompaniment. So when you're out and about, wear your Shadowrun mask proudly to acknowledge the dystopian aspects of the world we live in while also showing you're going to help keep people safe.\n\nThis is a great, simple, low-profile cotton/spandex blend mask. Great for printing on, washable, and reusable three-ply fabric. Cotton, non-adjustable ear loops.",
+	"cover": "./cover.jpg"
+}

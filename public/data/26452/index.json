@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26452"],
+	"name": "Jet Set",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Step this way! There's no need for you to wait in line with the riff-raff, the common clay of dirty humanity. You can have something better. You can have the good life, filled with the finest food, the most expensive wines, and the most interesting people in the world. There's a price to pay, of course. There always is. But take a ride, just once, in the aircraft the upper crust uses, and see if you don't like it. Get a taste of this lifestyle, and see if you won't do anything to keep it.\nIn Jet Set, shadowrunners get the chance to rub elbows with the rich and powerful of the world—the socialites, the corporate elite, the royalty, the movers, and the shakers. These are people who know how to get what they want, no matter who they need to step over to get it. The runners may be the help they need to get rid of their latest obstacle—or they could be the next bodies the rich and powerful leave in an expanding trail behind them.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-02-01"],
+	"gameDate": "2074-02",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

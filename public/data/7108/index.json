@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7108", "10717"],
+	"name": "Rigger Black Book",
+	"category": "rulebook",
+	"type": "scan",
+	"names": { "de-DE": "Rigger Handbuch" },
+	"originalLanguage": "en-US",
+	"description": "No shadowrunning team is complete without a rigger. Commanding the vehicles that provide fire support, surveillance, and a way out if things go bad, a teaM's rigger is as important as its street samurai or combat mage. And riggers are never without the vehicles they control.The Rigger Black Book features every kind of vehicle, from urban runabouts to hunter-seeker combat drones and everything in between, and rules for modifying that off-the-dealer's-floor model into the lean machine of every rigger's dreams.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions"],
+	"releaseDate": ["1991-12-01", "1996-01-01"],
+	"gameDate": "2050-01",
+	"notes": "The german version of Rigger Black Book updated to the rules of the 2nd edition of Shadowrun. It also contains additional vehicles from other sourcebooks that had been published between the original release of the Rigger Black Book and 1996, for example Corporate Security Handbook and Fields of Fire.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

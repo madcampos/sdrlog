@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7102X", "10701"],
+	"name": "Silver Angel",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Silver Angel", "fr-FR": "Silver Angel" },
+	"originalLanguage": "en-US",
+	"description": "You've been hired to infiltrate Mitsuhama's Cavilard research center in Bellevue to steal Silver Angel. Your employer Eve Donovan was rather unclear what Silver Angel was apart from the fact that it was a file stored on a secure computer system inside the facility.\nSince Bellevue is tight on the security you decide to infiltrate using one of the Russel Overland trucks that regularly make nightly deliveries of Hazardous Materials. For that you need their schedules so you can hi-jack a truck before it enters Bellevue.\nSo here you are on a lil boat in the nightly waters of Puget Sound, cursing the others who stayed behind for their own legwork. You are wondering if they are freezing too.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1989-01-01", "1990-01-01", "1993-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

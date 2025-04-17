@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["CMP10-02"],
+	"name": "Copycat Killer",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "For three years the Mayan Cutter terrorized the metahumans of Seattle and many point to their inability to stop him as the reason Lone Star lost it's Seattle contract. Shortly after Knight Errant took over, the killings stopped and the Tin Men took credit for bringing him down. But now the killings have started again. Is it a copycat or is it the real deal? You'll have the chance to find out when a grief-stricken Mr. Johnson calls you to track him down so he can get revenge.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

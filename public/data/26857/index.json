@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26857"],
+	"name": "Undershadows",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Vaquita has had a rough go of it lately. She was doing all right, building a career as a London-based rigger, when something went wrong inside her head. Suddenly the mental space that used to be hers alone was shared as a foreign personality carved out a section of brain for itself. It wasn't exactly madness, but it sure felt like it.\nIt also made for some tough going for a time, and several lost jobs, but lately Vaquita's gotten her swagger back. Her life may be a little trickier than the average runner's, but she's also got some skills she didn't have before, not to mention new ways of bringing in the danger. And she has the perfect testing ground for her new abilities—the hulking, abandoned Angel Towers Arcology. Filled with squatters, gangs, vicious critters, and certain areas people only talk about in whispers, Angel Towers has enough danger and hidden caches of tech to keep a dozen teams of shadowrunners busy. And with her small, new team, Vaquita's going to use it to not only rebuild her rep, but take it to the next level.\nBut the arcology's secrets and dangers go far deeper than Vaquita realizes, and she'll have to deal with the perils at every turn—as well as the people who put them there.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2016-06-11"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

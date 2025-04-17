@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26865"],
+	"name": "The Johnson Run",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "AGE IS MORE THAN JUST A NUMBER\nKeandra's been around for a long time, outliving most Shadowrunners twice over. With a legacy of runs under her belt, she has the solid reputation and wisdom that comes with surviving the shadows longer than most.\nLooking for a way to cash in on her street cred, Keandra comes up with a novel idea: Why not set herself up as a Johnson? With her rep, she could take on the high-paying jobs, act as the in-between, and collect payment with no risk? With her rep, she could take on high paying jobs and farm them out to other capable teams, minus a small cut as a finder's fee. Everyone wins, and no one's the wiser…unless someone makes the wrong call.\nAnd when a run goes south, Keandra and her team must scramble to salvage more than just their reputations. They are thrust into a situation which could start a new world war, and have to figure out who to trust, and fast…but trust is hard to come by in the shadows…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-10-24"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

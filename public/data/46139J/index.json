@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46139J"],
+	"name": "Kaleidoskop: Policlub Pro Nobilis",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# POLICLUB PRO NOBILIS\n\nFindet hier: Einen Blick auf die Elfen-Gang Pro Nobilis, die sich in Hagen und Umgebung breit gemacht hat.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-09-02"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

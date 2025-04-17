@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S009"],
+	"name": "Unfriendly Skies",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Gefahr in den Wolken" },
+	"originalLanguage": "en-US",
+	"description": "It's a big world, and not all of the work that's available is sitting right outside your front door. Sometimes you might need to hop across a country, across a continent, or across an ocean. Other times you might look to the air to find a way across a border that's too tough to cross on the ground. And then there are the times you might need something in the air that can pack a much-needed punch.\nUnfriendly Skies provides descriptions and game information for thirty-two aircraft, including the EuroWars-tested MiG-63, the slow but easy-to-overlook Skyswimmer, and the luxurious Platinum II. The book also includes information on the basics of air travel in 2073, including information on which paths you may or may not follow if you are trying to lay low.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-05-01", "2011-11-07"],
+	"gameDate": "2072-09",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

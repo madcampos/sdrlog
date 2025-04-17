@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["482D2"],
+	"name": "Datapuls: Alpen",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# Hohe Gipfel, tiefe Stürze\n\nSchneebedeckte Höhen, grüne Almen, Täler mit gurgelnden Gebirgsbächen: So präsentiert sich das Alpengebiet oft auf Postkarten von Konzern- oder Tourismusseiten. Aber hinter den prächtigen Bergpanoramen lauern Gefahren, Geheimnisse … und Aufträge für Runner. Ob nun eine Extraktion aus einer Öko-Kommune, ein Einbruch in eine abgelegene Konzerneinrichtung oder die Jagd auf einen erwachten Critter ist: Die Alpen begraben so machen Gescheiterten in den dunklen Schatten ihrer Schluchten.\n\nDatapuls Alpen wirft ein Licht auf die Alpenzone Europas in der Sechsten Welt. Sowohl die geographischen Begebenheiten, als auch wichtige Hotspots und Machtspieler werden ausführlich für den direkten Spielgebrauch beschrieben: seien es etwa Konzerne, Drachen oder Schmuggler. Hinzu kommt neue Ausrüstung für das Überleben in den Bergen und die Geheimnisse um den Jahrhundertwinter.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-04-28"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7305", "10707"],
+	"name": "Bottled Demon",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Flaschendämon", "fi-FI": "Pullotettu demoni", "fr-FR": "Le Démon dans la Bouteille" },
+	"originalLanguage": "en-US",
+	"description": "Bottle, Bottle, who's got the Bottle?\nThe shadowrunners meet a very disturbed man who hires them as bodyguards on a business deal.\nBottle, Bottle, who wants the Bottle?\nNow the man is dead, and they don't know why.\nBottle, Bottle — what's in the Bottle?\nThe bottle is a mysterious artifact covered with ancient cryptic runes. Why are some people willing to kill for it? Why are some people willing to die for it? And the most sensible advice the runners receive is the one thing they can't seem to do — get rid of it.\nNo Deposit! No Return! Please dispose of property!",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1990-07-01", "1992-01-01", "1994-04-01", "1997-01-01", "2012-11-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

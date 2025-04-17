@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26CCG"],
+	"name": "Shadowrun 4th: Conversion Rules",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Rules for convertion from 3rd to 4th edition.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2005-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

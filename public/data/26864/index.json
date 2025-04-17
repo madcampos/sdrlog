@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26864"],
+	"name": "Shadow Dance",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "THE SHADOWS OF A MAN'S PAST ARE LONG…\n\nCole Danvers is a small-time shadowrunner scratching out a living in the dangerous, divided sprawl of Denver, Colorado. But when a lucrative heist to steal an AmerIndian amulet goes terribly wrong, costing him both his teammates and nearly his life, Cole hits the streets intent on only one thing — vengeance.\nBut as he tracks down the Johnson that sent him on this deadly mission, Cole quickly realizes he's stumbled onto a plot much bigger than stealing a piece of jewelry — and that it's somehow connected to his own shadowed past. Soon, he's sucked into machinations that involve Native Americans, wily shamans, and impossibly, himself. And even sooner, Cole realizes he needs help to take down his enemies — before he gets killed for real this time.\nAssembling a motley crew of shadowrunners using every bit of guile and charisma he possesses, Cole sets out to solve the mystery of who tried to double-cross him and why… and what, if anything it has to do with his own murky background. But the answers may do more than just shock him… before it's all over, they may just be the death of him…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-01-21"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

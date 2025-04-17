@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["KS001"],
+	"name": "Shadowrun: Sprawl Ops",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "In Shadowrun: Sprawl Ops, players lead a team of shadowrunners gunning for the big score!\nAlong the way they'll have the chance to hire more seasoned runners, outfit their team with cutting-edge technology—from the latest weapons to cyberware enhancements—and take on increasingly dangerous contracts on the mean streets of the Seattle Metroplex.\nEach payout increases your chances for a more lethal combination of gear, training, and skill. All leading to that final score as you take on one of the world's megacorporations. But you've got to hit it before another team steals your ticket to the big time—hold off too long to grab that ring, and you'll lose it all!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-06-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "Announced as a kickstarter campaign. Possible a retake on Hostile Takeover.",
+	"cover": "./cover.jpg"
+}

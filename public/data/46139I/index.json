@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46139I"],
+	"name": "Kaleidoskop: Salzbergwerk Heilbronn",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# SALZBERGWERK HEILBRONN\n\nFindet hier: Einen Zugang zum vergifteten Salzbergwerk-Heilbronn samt Grundrissplan, um in die toxischen Tiefen abzusteigen.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-09-02"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

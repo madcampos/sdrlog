@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46101-0", "27828"],
+	"name": "Aftershock",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Aftershocks" },
+	"originalLanguage": "en-US",
+	"description": "The troll known as Hood and his fellow Shadowrunners steal some biotechnological agriculture from the Plantech Corporation--only to find themselves framed for murder and tied to an even greater conspiracy.",
+	"edition": 3,
+	"publisher": ["WizKids Games", "Heyne Verlag"],
+	"releaseDate": ["2006-07-01"],
+	"gameDate": "2063-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

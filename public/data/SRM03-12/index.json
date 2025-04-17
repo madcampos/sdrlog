@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM03-12"],
+	"name": "Elevator Ride to Hell",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "You've had quite a time in the Rotten Apple—you've seen some weird people, done some strange things, and made some narrow escapes. Hopefully you've made some friends, and most likely you've made some enemies. But a strong wind getting ready to blow through town, and it just might take you away with it. Just make sure you leave alive.\nElevator Ride to Hell concludes the Manhattan series of Missions, giving the Big Apple a dramatic sendoff. The adventure contains character stats, maps, and everything you need to plunge a group into the treacherous heart of New York. So jump on, press the \"close door\" button, and get ready for a ride that might hurdle clever runners to the peak of Manhattan fame—or slam them to the ground in a burning, wrecked hulk.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2010-11-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

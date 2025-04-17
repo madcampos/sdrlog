@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM02-24"],
+	"name": "Hubris and Humility",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Over the last two years, the Vory have made deep inroads into several areas of Denver. They still do not have direct control over any province but have an increasing power base with only a few stumbling blocks in their way. The road to power has had its own set of hardships and now alliances must be reforged or broken. Irina Klavikov has worked her way into Mikael Petrov's bed and presented a gift that may be enough to buy his loyalty away from the ties of blood and the Kirillov Vory.\nIn SRM 02-13, Irina and Mikael gathered blackmail material on Lin Yao after her attempt to hire shadowrunners to kill An Peng and kidnap another Triad member. Unfortunately, their control over Lin is incomplete. Lin has agreed to complete the task they have approached her on, but plans on having a backdoor. Meanwhile, the Triad has learned about Lin Yao's indiscretions and takes their own action.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2007-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

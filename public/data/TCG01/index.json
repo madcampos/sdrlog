@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["TCG01"],
+	"name": "Shadowrun: Trading Card Game",
+	"category": "tcg",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "This game takes fantasy with magic, elves, dwarves, orcs, trolls etc., and puts them in a cyberpunk world 60 years in the future.\nThere are 7 types of cards...\n\t- Runners - You collect groups of these characters and use them to make runs on objectives. Some of these can support the group through computers while staying safe at home. These cards have symbols on them that represent their abilities and these are use to bypass threats without actually having to face them.\n\t- Objectives - These are what you are making runs on. They are worth reputation points and usually have a task that you must best or a number of symbols that you have to match with the symbols on your runners.\n\t- Challenge - You assign these to the objectives as additional hurdles that you have to get by before you can tackle the objective. Usually you can bypass them with the right symbols but if not they can represent nasty things you will have to fight or things that will just hurt you.\n\t- Gear - This is stuff that you assign to runners to help them make runs. Some gear requires you to have a runner with a matching symbol.\n\t- Locations - These represent places that you control and can help you in various ways.\n\t- Contacts - These represent people that will help you.\n\t- Specials - These are instants that you play to affect the current situation.\n\t- Everything is driven by money which is hard to come by. It costs money to acquire almost every card and a lot of cards require money spent just to keep them in play or every time you use them.",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1997-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

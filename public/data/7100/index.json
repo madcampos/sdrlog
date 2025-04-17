@@ -1,0 +1,20 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7100", "7101", "00900", "10700"],
+	"name": "Shadowrun: Where Man Meets Magic and Machine",
+	"category": "rulebook",
+	"type": "scan",
+	"names": {
+		"de-DE": "Shadowrun - The Cyberpunk RPG",
+		"fi-FI": "Shadowrun - Kyberfantasiaroolipeli",
+		"fr-FR": "Shadowrun - Quand l'Homme ne fait plus qu'un avec la magic et la machine"
+	},
+	"originalLanguage": "en-US",
+	"description": "The year is 2050.\nThe bending of technology and human flesh began in the late 20th century. Interfacing the human mind with computers was just the first step. Implants that \"jack up\" reflexes and cybernetic replacements followed quickly. Then came the awakening. A five-thousend-year lull in the flow of mystical energies subsided, and Magic returned to the world. Elfes, Dwarfs, and Trolls assumed their true form, throwing off their human guise.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1989-01-01", "1990-07-01", "1991-01-01", "2010-02-15"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

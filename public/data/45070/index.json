@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45070"],
+	"name": "Grimmes Erwachen",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Märchenhafte Erweckung\n\nEs war einmal, vor langer Zeit: In uralten Fabeln, in Mythen und Sagen erklärten sich früher die Menschen ihre Welt. Sie gaben dunklen Gestalten Form und flüsterten ihren Söhnen und Töchtern Schauergeschichten am Bett zu. Nun aber ist die Magie erwacht. Die Ungeheuer, Feenpakte und Legenden aus diesen vergangenen Zeiten kommen zum Leben und manifestieren sich in der märchenreichen ADL. Kinder werden gejagt, alte Versprechen angemahnt und Mythen fordern ihren Blutzoll. Gut für alle, die noch die Hintergründe und Ursprünge dieser alten Märchen kennen. Wenn sie am Ende nicht sterben wollen.\n\nGrimmes Erwachen ist ein Abenteuerband für Shadowrun 5, der in der Allianz Deutscher Länder spielt. Er präsentiert drei Abenteuer, die sich alle um erwachte Sagen und Märchen drehen. Zudem enthält der Band Hintergründe und Anregungen, um selbst Legenden zu beleben und Shadowrunner tief in diese Mythen abtauchen zu lassen.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2019-01-28"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

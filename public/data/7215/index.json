@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7215"],
+	"name": "Target: Smuggler Havens",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "BIG MONE¥!\n\nWhere can you sell body parts to voodoo priests? Where do Siberian shapeshifters buy military goods? What weird experiments are going on in corporate aquashperes? Where do t-bird smugglers hide from the military patrols? Learn the skinny here, chummer.\nThe Target: Smuggler Havens sourcebook allows you to jump right into the exciting cities of New Orleans and Vladivostok. It contains a wealth of information on smuggling, including adventure frameworks for new locations, rules for t-bird smuggling and border partols, free voodoo spirits, and information on awakened Siberia. Target: Smuggler Havens is intended for gamemasters and players of all experience levels. For use with Shadowrun.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1998-04-01"],
+	"gameDate": "2059-02",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S010"],
+	"name": "Gun H[e]aven",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Feuerkraft" },
+	"originalLanguage": "en-US",
+	"description": "Look, we all know that there are plenty of runs that go best when you don't fire a shot. But we also know how foolish you'd be to go out without your trusted sidearm, because you never know when things are going to go south. Or when you're going to be hired simply because you're the person who's got the right weapons for the job.\nIf you're looking for a new weapon to add to your arsenal, Gun Heaven is the place to go. Featuring thirty-two guns—complete with descriptions, information on their use, game statistics, and full-color illustrations of each item—Gun Heaven collects older weapons and newer designs, ranging from the SIG P298 hold-out pistol, with its slim-line design, to the massive Ogre Hammer and its devastating punch. Get caught up on the predecessors of the legendary Ares Predator IV, or check out one of the most recent offerings from Onotari Arms, the assault-rifle/shotgun combo Xfactor III.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-06-01"],
+	"gameDate": "2073-06",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

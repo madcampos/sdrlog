@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26001", "26004", "23005", "46035", "SR06"],
+	"name": "Street Magic",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Straßenmagie", "fr-FR": "La Magie des Ombres", "jp-JP": "ストリート・マジック" },
+	"originalLanguage": "en-US",
+	"description": "Street Magic is the advanced magic rulebook for Shadowrun, Fourth Edition. It provides background details on everything known to magic in the year 2070, from the nature of mana and astral space to and its effects on society and the Awakened. It also covers a few things that aren't known - or at least understood - such as the metaplanes and hostile spirits. It also contains advanced rules for magic traditions and groups, initiation and metamagic, enchanting, and new spells and adept powers.",
+	"edition": 4,
+	"publisher": ["Fantasy Productions", "Catalyst Game Labs", "Other", "Pegasus Spiele"],
+	"releaseDate": ["2006-06-01", "2008-08-01", "2009-01-01", "2007-09-05"],
+	"gameDate": "2070-04",
+	"notes": "The German 2nd edition has an aditional translation of \"Digital Grimoire\".",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

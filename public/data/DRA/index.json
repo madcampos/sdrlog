@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["DRA"],
+	"name": "Shadowrun Dice roller",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Keep Shadowrun action moving with cyberpunk style! Whether you're calculating your dice pools on the fly or using some of your most common rolls, the app features themed dice with individual animations and sounds to make your dice easy to roll and easy to count. Features include:\n\nSpecially designed dice with Shadowrun themes, each with unique animations and sounds.\nStreet samurai dice included, with a sample die of each of the other types included, namely: mage die, adept die, decker die, face die, rigger die, and shaman die. Once you try them all out, you can purchase more of your favorites.\nAutomatic calculation of hits and glitches, while also tallying the total pips rolled for initiative purposes.\nDice pools as small as 1, as large as 40.\nRoll by touching the screen—or by shaking your device.\nWhen you buy dice beyond the free sample die, you get an accompanying piece of Shadowrun art that can be used as an app backdrop.\n\nWorks with any edition of Shadowrun—or any game that includes rolling D6s. Keep the action moving and the dice rolling. And never again worry about whether your hands can hold all the dice you're going to roll!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-12-18"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

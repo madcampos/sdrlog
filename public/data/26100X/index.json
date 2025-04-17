@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26100X"],
+	"name": "Game Master's Screen - Aniversary Edition",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "All the important Shadowrun info you need, free!\nDon't spend time flipping through a book to find the tables you need. When you're on a run, time matters, and this PDF version of the Shadowrun GM Screen gets you that info, fast!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2011-08-17"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

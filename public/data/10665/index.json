@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10665", "10760"],
+	"name": "Survival of the Fittest",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Fressen oder gefressen werden" },
+	"originalLanguage": "en-US",
+	"description": "Ancient Tradition Violated...\n\nA New Order Declared...\n\nThe death of the great dragon Dunkelzahn kicked off a series of events that are only now reaching climax. A challenge is declared as antediluvian customs clash with the methods of the modern world. The shadowrunners are involved in a string of unrelated missions that begin to tie themselves together. From the ruins of Tehran to the jungles of Amazonia, from the towers of Hong Kong to the deep metaplanes, the machinations of a reptilian chess game begin to unfold.\nSurvival of the Fittest is a series of seven adventures that can be played consecutively or interwoven into an existing campaign.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-05-01"],
+	"gameDate": "2062-06",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

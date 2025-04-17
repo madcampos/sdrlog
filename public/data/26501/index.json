@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26501"],
+	"name": "Sprawl Sites: High Society and Low Life",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Find Your Way Into Wealth or Out of Danger\n\nIf your run the shadows long enough and manage to stay alive, you'll find your way into all sorts of places—from bank vaults where the wealthy store their most previous possessions to densely packed warrens that pack dozens of the poor into tight spaces. Maybe you'll need to break a patient out of a tightly guarded hospital, or maybe you'll need to help your client sneak into an exclusive party on the top floor of a luxurious mansion.\nWherever you're going, it helps to have a map—and some knowledge of who you might run into while you're there. Sprawl Sites: High Society and Low Lifeprovides eight full-color maps, including a train station, an airport terminal, an automobile chop shop, and a department store, where shadowrunners might encounter all kinds of challenges. Each map is keyed on one side, while the other provides floor plans that can be given to players clever enough to find them. The book also provides information on who runners are likely to meet at each location, security at those locations, and plot hooks to help gamemasters involve the players at each spot.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-01-12"],
+	"gameDate": "2074-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

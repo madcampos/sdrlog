@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28504"],
+	"name": "Gun Rack (Weapon Cards)",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Colt Secret Agent. The Ultimax 71. The Izom Artemis. These and many more are in this weapon pack, with each card having game stats and art. Includes weapons from Shadowrun, Sixth World and Firing Squad.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-08-24"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

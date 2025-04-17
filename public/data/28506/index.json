@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28506"],
+	"name": "Mobile Grimoire Spell Cards",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Pocket Magic\n\nMagic in the Sixth World is not about complex incantations, detailed hand movements, and long scrolls (except when it is). It's about hitting fast, hitting hard, and moving on.\n\nMobile Grimoire provides references to dozens of spells, with game stats and rules, so you can select, cast, and go.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-01-01"],
+	"gameDate": "2080-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

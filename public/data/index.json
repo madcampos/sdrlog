@@ -1,0 +1,7816 @@
+{
+	"$schema": "./$schemas/data-list.schema.json",
+	"lastUpdated": "2025-04-01T19:28:00Z",
+	"items": [
+		{
+			"sku": "26000",
+			"name": "Shadowrun 4th Edition",
+			"link": "./26000/index.json",
+			"cover": "./26000/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26002A",
+			"name": "Augmentation",
+			"link": "./26002A/index.json",
+			"cover": "./26002A/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26001",
+			"name": "Street Magic",
+			"link": "./26001/index.json",
+			"cover": "./26001/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "5839",
+			"name": "The Burning Time",
+			"link": "./5839/index.json",
+			"cover": "./5839/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5749",
+			"name": "The Forever Drug",
+			"link": "./5749/index.json",
+			"cover": "./5749/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5742",
+			"name": "Crossroads",
+			"link": "./5742/index.json",
+			"cover": "./5742/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5819",
+			"name": "Tails You Lose",
+			"link": "./5819/index.json",
+			"cover": "./5819/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5775",
+			"name": "Ragnarock",
+			"link": "./5775/index.json",
+			"cover": "./5775/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "26002X",
+			"name": "Contacts & Adventures",
+			"link": "./26002X/index.json",
+			"cover": "./26002X/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26100X",
+			"name": "Game Master's Screen - Aniversary Edition",
+			"link": "./26100X/index.json",
+			"cover": "./26100X/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "2600A",
+			"name": "Shadowrun 4th Edition - 20th Anniversary Core Book",
+			"link": "./2600A/index.json",
+			"cover": "./2600A/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26600",
+			"name": "Digital Grimoire",
+			"link": "./26600/index.json",
+			"cover": "./26600/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S013",
+			"name": "Safehouses",
+			"link": "./26S013/index.json",
+			"cover": "./26S013/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26005A",
+			"name": "Runner's Companion",
+			"link": "./26005A/index.json",
+			"cover": "./26005A/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26002",
+			"name": "Game Master's Screen 4th Edition",
+			"link": "./26002/index.json",
+			"cover": "./26002/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26004",
+			"name": "Unwired",
+			"link": "./26004/index.json",
+			"cover": "./26004/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26003A",
+			"name": "Arsenal",
+			"link": "./26003A/index.json",
+			"cover": "./26003A/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "5741",
+			"name": "Run Hard, Die Fast",
+			"link": "./5741/index.json",
+			"cover": "./5741/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5542",
+			"name": "Dead Air",
+			"link": "./5542/index.json",
+			"cover": "./5542/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5540",
+			"name": "Preying for Keeps",
+			"link": "./5540/index.json",
+			"cover": "./5540/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5627",
+			"name": "Steel Rain",
+			"link": "./5627/index.json",
+			"cover": "./5627/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5594",
+			"name": "The Lucifer Deck",
+			"link": "./5594/index.json",
+			"cover": "./5594/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5539",
+			"name": "Black Madonna",
+			"link": "./5539/index.json",
+			"cover": "./5539/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5495",
+			"name": "House of the Sun",
+			"link": "./5495/index.json",
+			"cover": "./5495/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5448",
+			"name": "Who Hunts the Hunter",
+			"link": "./5448/index.json",
+			"cover": "./5448/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5537",
+			"name": "Just Compensation",
+			"link": "./5537/index.json",
+			"cover": "./5537/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5496",
+			"name": "Worlds Without End",
+			"link": "./5496/index.json",
+			"cover": "./5496/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5628",
+			"name": "Shadowboxer",
+			"link": "./5628/index.json",
+			"cover": "./5628/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5712",
+			"name": "Wolf & Raven",
+			"link": "./5712/index.json",
+			"cover": "./5712/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5711",
+			"name": "Technobabel",
+			"link": "./5711/index.json",
+			"cover": "./5711/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5714",
+			"name": "The Terminus Experiment",
+			"link": "./5714/index.json",
+			"cover": "./5714/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5713",
+			"name": "Psychotrope",
+			"link": "./5713/index.json",
+			"cover": "./5713/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5710",
+			"name": "Beyond the Pale: Dragon Heart Saga, Volume 3",
+			"link": "./5710/index.json",
+			"cover": "./5710/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5630",
+			"name": "Headhunters",
+			"link": "./5630/index.json",
+			"cover": "./5630/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5629",
+			"name": "Stranger Souls: Dragon Heart Saga, Volume 1",
+			"link": "./5629/index.json",
+			"cover": "./5629/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5709",
+			"name": "Blood Sport",
+			"link": "./5709/index.json",
+			"cover": "./5709/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5631",
+			"name": "Clockwork Asylum: Dragon Heart Saga, Volume 2",
+			"link": "./5631/index.json",
+			"cover": "./5631/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "27S0405",
+			"name": "Gun H(e)aven 3 Cards",
+			"link": "./27S0405/index.json",
+			"cover": "./27S0405/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7000",
+			"name": "Shadowrun Third",
+			"link": "./7000/index.json",
+			"cover": "./7000/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "27502",
+			"name": "Spell Cards, Series 1",
+			"link": "./27502/index.json",
+			"cover": "./27502/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27010",
+			"name": "Shadowrun: Anarchy",
+			"link": "./27010/index.json",
+			"cover": "./27010/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27500",
+			"name": "Gear Cards, Series 1",
+			"link": "./27500/index.json",
+			"cover": "./27500/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27011",
+			"name": "Forbidden Arcana",
+			"link": "./27011/index.json",
+			"cover": "./27011/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7002",
+			"name": "Game Master's Screen 3rd Edition",
+			"link": "./7002/index.json",
+			"cover": "./7002/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7126",
+			"name": "Man & Machine: Cyberware",
+			"link": "./7126/index.json",
+			"cover": "./7126/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7108",
+			"name": "Rigger Black Book",
+			"link": "./7108/index.json",
+			"cover": "./7108/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7902",
+			"name": "Game Master's Screen 2nd Edition",
+			"link": "./7902/index.json",
+			"cover": "./7902/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7902X",
+			"name": "Contacts",
+			"link": "./7902X/index.json",
+			"cover": "./7902X/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7900",
+			"name": "Shadowrun Second",
+			"link": "./7900/index.json",
+			"cover": "./7900/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7107",
+			"name": "Virtual Realities",
+			"link": "./7107/index.json",
+			"cover": "./7107/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7100",
+			"name": "Shadowrun: Where Man Meets Magic and Machine",
+			"link": "./7100/index.json",
+			"cover": "./7100/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7003",
+			"name": "Shadowrun Third Edition - Quick Start Rules",
+			"link": "./7003/index.json",
+			"cover": "./7003/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7106",
+			"name": "The Grimoire: The Manual of Practical Thaumaturgy 14th Edition, 2050",
+			"link": "./7106/index.json",
+			"cover": "./7106/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7104",
+			"name": "Street Samurai Catalog",
+			"link": "./7104/index.json",
+			"cover": "./7104/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7104X",
+			"name": "Street Samurai Catalog (Revised)",
+			"link": "./7104X/index.json",
+			"cover": "./7104X/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "27007",
+			"name": "Rigger 5.0",
+			"link": "./27007/index.json",
+			"cover": "./27007/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S016",
+			"name": "Gun H[e]aven 2",
+			"link": "./26S016/index.json",
+			"cover": "./26S016/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S011",
+			"name": "Deadly Waves",
+			"link": "./26S011/index.json",
+			"cover": "./26S011/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S027",
+			"name": "Bullets & Bandages",
+			"link": "./26S027/index.json",
+			"cover": "./26S027/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S021",
+			"name": "MilSpec Tech 2",
+			"link": "./26S021/index.json",
+			"cover": "./26S021/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S010",
+			"name": "Gun H[e]aven",
+			"link": "./26S010/index.json",
+			"cover": "./26S010/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S001",
+			"name": "This Old Drone",
+			"link": "./26S001/index.json",
+			"cover": "./26S001/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S009",
+			"name": "Unfriendly Skies",
+			"link": "./26S009/index.json",
+			"cover": "./26S009/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S002",
+			"name": "MilSpec Tech",
+			"link": "./26S002/index.json",
+			"cover": "./26S002/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S035",
+			"name": "Coyotes",
+			"link": "./26S035/index.json",
+			"cover": "./26S035/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27004",
+			"name": "Run Faster",
+			"link": "./27004/index.json",
+			"cover": "./27004/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27003",
+			"name": "Street Grimoire",
+			"link": "./27003/index.json",
+			"cover": "./27003/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27003X",
+			"name": "Magic Cards: Street Grimoire",
+			"link": "./27003X/index.json",
+			"cover": "./27003X/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27006",
+			"name": "Data Trails",
+			"link": "./27006/index.json",
+			"cover": "./27006/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27005",
+			"name": "Chrome Flesh",
+			"link": "./27005/index.json",
+			"cover": "./27005/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27002",
+			"name": "Run & Gun",
+			"link": "./27002/index.json",
+			"cover": "./27002/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27002X",
+			"name": "Run & Gun Cards",
+			"link": "./27002X/index.json",
+			"cover": "./27002X/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26S040",
+			"name": "Gun H[e]aven 3",
+			"link": "./26S040/index.json",
+			"cover": "./26S040/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S036",
+			"name": "The Assassin's Primer",
+			"link": "./26S036/index.json",
+			"cover": "./26S036/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27000",
+			"name": "Shadowrun 5th Edition Core Rulebook",
+			"link": "./27000/index.json",
+			"cover": "./27000/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S007",
+			"name": "The Way of the Adept",
+			"link": "./26S007/index.json",
+			"cover": "./26S007/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "5445",
+			"name": "Burning Bright",
+			"link": "./5445/index.json",
+			"cover": "./5445/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5125",
+			"name": "Choose Your Enemies Carefully: Secrets of Power, Volume 2",
+			"link": "./5125/index.json",
+			"cover": "./5125/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5078",
+			"name": "Never Deal with a Dragon: Secrets of Power, Volume 1",
+			"link": "./5078/index.json",
+			"cover": "./5078/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5145",
+			"name": "Find Your Own Truth: Secrets of Power, Volume 3",
+			"link": "./5145/index.json",
+			"cover": "./5145/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5143",
+			"name": "Into the Shadows",
+			"link": "./5143/index.json",
+			"cover": "./5143/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "3453077563",
+			"name": "Das zerrissene Land (Deutschland in den Schatten 1)",
+			"link": "./3453077563/index.json",
+			"cover": "./3453077563/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3453077571",
+			"name": "Die Augen des Riggers (Deutschland in den Schatten 2)",
+			"link": "./3453077571/index.json",
+			"cover": "./3453077571/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "345307971X",
+			"name": "Die graue Eminenz (Deutschland in den Schatten 3)",
+			"link": "./345307971X/index.json",
+			"cover": "./345307971X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10555",
+			"name": "Wiener Blei",
+			"link": "./10555/index.json",
+			"cover": "./10555/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "345321319X",
+			"name": "TAKC 3000",
+			"link": "./345321319X/index.json",
+			"cover": "./345321319X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3453213203",
+			"name": "Nachtstreife",
+			"link": "./3453213203/index.json",
+			"cover": "./3453213203/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3453863224",
+			"name": "Gottes Engel",
+			"link": "./3453863224/index.json",
+			"cover": "./3453863224/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3453870581",
+			"name": "Aeternitas",
+			"link": "./3453870581/index.json",
+			"cover": "./3453870581/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3453520076",
+			"name": "05:58",
+			"link": "./3453520076/index.json",
+			"cover": "./3453520076/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890645720",
+			"name": "Die Anfänger",
+			"link": "./3890645720/index.json",
+			"cover": "./3890645720/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3453520939",
+			"name": "Jede Wette",
+			"link": "./3453520939/index.json",
+			"cover": "./3453520939/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3453521099",
+			"name": "Altes Eisen",
+			"link": "./3453521099/index.json",
+			"cover": "./3453521099/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3811851454",
+			"name": "Pesadillas",
+			"link": "./3811851454/index.json",
+			"cover": "./3811851454/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890645747",
+			"name": "Ash",
+			"link": "./3890645747/index.json",
+			"cover": "./3890645747/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890645801",
+			"name": "Shelley",
+			"link": "./3890645801/index.json",
+			"cover": "./3890645801/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "389064595X",
+			"name": "Quickshot",
+			"link": "./389064595X/index.json",
+			"cover": "./389064595X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "389064581X",
+			"name": "Vertigo",
+			"link": "./389064581X/index.json",
+			"cover": "./389064581X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890645941",
+			"name": "Im Namen des Herrn",
+			"link": "./3890645941/index.json",
+			"cover": "./3890645941/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890645836",
+			"name": "Das Bronzetor / Hand am Hort",
+			"link": "./3890645836/index.json",
+			"cover": "./3890645836/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890644821",
+			"name": "Der Schattenlehrling",
+			"link": "./3890644821/index.json",
+			"cover": "./3890644821/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3811851365",
+			"name": "Auf dem Sprung",
+			"link": "./3811851365/index.json",
+			"cover": "./3811851365/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3811851373",
+			"name": "Töne der Unendlichkeit",
+			"link": "./3811851373/index.json",
+			"cover": "./3811851373/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "345387904X",
+			"name": "Sturmvogel",
+			"link": "./345387904X/index.json",
+			"cover": "./345387904X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890645704",
+			"name": "Elementares Wissen",
+			"link": "./3890645704/index.json",
+			"cover": "./3890645704/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "9783453525153",
+			"name": "Cash",
+			"link": "./9783453525153/index.json",
+			"cover": "./9783453525153/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "3890645852",
+			"name": "Flynns Weg",
+			"link": "./3890645852/index.json",
+			"cover": "./3890645852/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890645879",
+			"name": "Matrixfeuer",
+			"link": "./3890645879/index.json",
+			"cover": "./3890645879/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890645933",
+			"name": "Wiedergänger",
+			"link": "./3890645933/index.json",
+			"cover": "./3890645933/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890645437",
+			"name": "Im Fadenkreuz",
+			"link": "./3890645437/index.json",
+			"cover": "./3890645437/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890645194",
+			"name": "Feuerzauber",
+			"link": "./3890645194/index.json",
+			"cover": "./3890645194/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890644635",
+			"name": "GmbH",
+			"link": "./3890644635/index.json",
+			"cover": "./3890644635/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890645488",
+			"name": "Kettenhund",
+			"link": "./3890645488/index.json",
+			"cover": "./3890645488/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "389064483X",
+			"name": "Cash Flow",
+			"link": "./389064483X/index.json",
+			"cover": "./389064483X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890644732",
+			"name": "Böses Erwachen",
+			"link": "./3890644732/index.json",
+			"cover": "./3890644732/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "9783839154137",
+			"name": "Junx: Die Schatten Dresdens",
+			"link": "./9783839154137/index.json",
+			"cover": "./9783839154137/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "outofscope"
+		},
+		{
+			"sku": "9783890641232",
+			"name": "Digitaler Albtraum",
+			"link": "./9783890641232/index.json",
+			"cover": "./9783890641232/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "9783890644974",
+			"name": "Flammenmeer",
+			"link": "./9783890644974/index.json",
+			"cover": "./9783890644974/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "3890645131",
+			"name": "Fatimas Tränen",
+			"link": "./3890645131/index.json",
+			"cover": "./3890645131/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
+			"sku": "35010",
+			"name": "Der Vitruvianische Moment",
+			"link": "./35010/index.json",
+			"cover": "./35010/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "3957891728",
+			"name": "Iwans Weg",
+			"link": "./3957891728/index.json",
+			"cover": "./3957891728/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "missing"
+		},
+		{
+			"sku": "35008",
+			"name": "Orks weinen nicht",
+			"link": "./35008/index.json",
+			"cover": "./35008/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "missing"
+		},
+		{
+			"sku": "35009",
+			"name": "Alter Ego",
+			"link": "./35009/index.json",
+			"cover": "./35009/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "46116-9",
+			"name": "A Fistful of Data",
+			"link": "./46116-9/index.json",
+			"cover": "./46116-9/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "46076-6",
+			"name": "Fallen Angels",
+			"link": "./46076-6/index.json",
+			"cover": "./46076-6/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "46063-4",
+			"name": "Poison Agendas",
+			"link": "./46063-4/index.json",
+			"cover": "./46063-4/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "46101-0",
+			"name": "Aftershock",
+			"link": "./46101-0/index.json",
+			"cover": "./46101-0/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "46083-9",
+			"name": "Drops of Corruption",
+			"link": "./46083-9/index.json",
+			"cover": "./46083-9/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "5199",
+			"name": "Streets of Blood",
+			"link": "./5199/index.json",
+			"cover": "./5199/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5365",
+			"name": "Fade to Black",
+			"link": "./5365/index.json",
+			"cover": "./5365/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5313",
+			"name": "Striper Assassin",
+			"link": "./5313/index.json",
+			"cover": "./5313/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5427",
+			"name": "Nosferatu",
+			"link": "./5427/index.json",
+			"cover": "./5427/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5367",
+			"name": "Lone Wolf",
+			"link": "./5367/index.json",
+			"cover": "./5367/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5310",
+			"name": "Night's Pawn",
+			"link": "./5310/index.json",
+			"cover": "./5310/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5218",
+			"name": "Changeling",
+			"link": "./5218/index.json",
+			"cover": "./5218/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5210",
+			"name": "2XS",
+			"link": "./5210/index.json",
+			"cover": "./5210/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5302",
+			"name": "Shadowplay",
+			"link": "./5302/index.json",
+			"cover": "./5302/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "5220",
+			"name": "Never Trust an Elf",
+			"link": "./5220/index.json",
+			"cover": "./5220/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "46058-8",
+			"name": "Born to Run",
+			"link": "./46058-8/index.json",
+			"cover": "./46058-8/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "26854",
+			"name": "Crimson",
+			"link": "./26854/index.json",
+			"cover": "./26854/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26853",
+			"name": "Dark Resonance",
+			"link": "./26853/index.json",
+			"cover": "./26853/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26856",
+			"name": "Deniable Assets",
+			"link": "./26856/index.json",
+			"cover": "./26856/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26855",
+			"name": "Borrowed Time",
+			"link": "./26855/index.json",
+			"cover": "./26855/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26852",
+			"name": "Hell on Water",
+			"link": "./26852/index.json",
+			"cover": "./26852/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26851",
+			"name": "Fire & Frost",
+			"link": "./26851/index.json",
+			"cover": "./26851/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26850",
+			"name": "Spells & Chrome",
+			"link": "./26850/index.json",
+			"cover": "./26850/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26858",
+			"name": "Shaken (No Job Too Small)",
+			"link": "./26858/index.json",
+			"cover": "./26858/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S038",
+			"name": "Nothing Personal",
+			"link": "./26S038/index.json",
+			"cover": "./26S038/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S030",
+			"name": "The Vladivostok Gauntlet",
+			"link": "./26S030/index.json",
+			"cover": "./26S030/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S047",
+			"name": "Wolf & Buffalo",
+			"link": "./26S047/index.json",
+			"cover": "./26S047/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S041",
+			"name": "Sail Away Sweet Sister",
+			"link": "./26S041/index.json",
+			"cover": "./26S041/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26NV002",
+			"name": "DocWagon 19",
+			"link": "./26NV002/index.json",
+			"cover": "./26NV002/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26871",
+			"name": "Drawing Destiny (Tarot Anthology)",
+			"link": "./26871/index.json",
+			"cover": "./26871/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26862",
+			"name": "World of Shadows",
+			"link": "./26862/index.json",
+			"cover": "./26862/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26NV002A",
+			"name": "Big Dreams",
+			"link": "./26NV002A/index.json",
+			"cover": "./26NV002A/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26NV001",
+			"name": "Neat",
+			"link": "./26NV001/index.json",
+			"cover": "./26NV001/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S048",
+			"name": "Shadow Spells",
+			"link": "./26S048/index.json",
+			"cover": "./26S048/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S046",
+			"name": "Shadows in Focus: Sioux Nation: Counting Coup",
+			"link": "./26S046/index.json",
+			"cover": "./26S046/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27008",
+			"name": "Howling Shadows",
+			"link": "./27008/index.json",
+			"cover": "./27008/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S050",
+			"name": "Shadows in Focus: City by Shadow: San Francisco Metroplex",
+			"link": "./26S050/index.json",
+			"cover": "./26S050/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S044",
+			"name": "Shadows in Focus: Sioux Nation: Starving the Masses",
+			"link": "./26S044/index.json",
+			"cover": "./26S044/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S042",
+			"name": "Shadows in Focus: Sioux Nation",
+			"link": "./26S042/index.json",
+			"cover": "./26S042/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S038A",
+			"name": "Shadows in Focus: City by Shadow: Metrópole",
+			"link": "./26S038A/index.json",
+			"cover": "./26S038A/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S043A",
+			"name": "Shadows in Focus: City by Shadow: Butte",
+			"link": "./26S043A/index.json",
+			"cover": "./26S043A/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S043",
+			"name": "Shadows in Focus: City by Shadow: Cheyenne",
+			"link": "./26S043/index.json",
+			"cover": "./26S043/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27009",
+			"name": "Court of Shadows",
+			"link": "./27009/index.json",
+			"cover": "./27009/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7105",
+			"name": "Paranormal Animals of North America",
+			"link": "./7105/index.json",
+			"cover": "./7105/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7103",
+			"name": "Sprawl Sites",
+			"link": "./7103/index.json",
+			"cover": "./7103/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7110",
+			"name": "Shadowtech",
+			"link": "./7110/index.json",
+			"cover": "./7110/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7109",
+			"name": "Shadowbeat",
+			"link": "./7109/index.json",
+			"cover": "./7109/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "27451",
+			"name": "Market Panic",
+			"link": "./27451/index.json",
+			"cover": "./27451/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27201",
+			"name": "Hard Targets",
+			"link": "./27201/index.json",
+			"cover": "./27201/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27200",
+			"name": "Stolen Souls",
+			"link": "./27200/index.json",
+			"cover": "./27200/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27300",
+			"name": "Lockdown",
+			"link": "./27300/index.json",
+			"cover": "./27300/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27202",
+			"name": "Cutting Aces",
+			"link": "./27202/index.json",
+			"cover": "./27202/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S037",
+			"name": "Ten Terrorists",
+			"link": "./26S037/index.json",
+			"cover": "./26S037/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S012",
+			"name": "Parabotany",
+			"link": "./26S012/index.json",
+			"cover": "./26S012/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S006",
+			"name": "State of the Art: 2073",
+			"link": "./26S006/index.json",
+			"cover": "./26S006/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S015",
+			"name": "Street Legends Supplemental",
+			"link": "./26S015/index.json",
+			"cover": "./26S015/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S014",
+			"name": "Magical Societies",
+			"link": "./26S014/index.json",
+			"cover": "./26S014/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S003",
+			"name": "Parazoology",
+			"link": "./26S003/index.json",
+			"cover": "./26S003/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26504",
+			"name": "10 Gangs",
+			"link": "./26504/index.json",
+			"cover": "./26504/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26501",
+			"name": "Sprawl Sites: High Society and Low Life",
+			"link": "./26501/index.json",
+			"cover": "./26501/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26651",
+			"name": "10 Jackpointers",
+			"link": "./26651/index.json",
+			"cover": "./26651/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26602",
+			"name": "Manhattan: The Rotten Apple",
+			"link": "./26602/index.json",
+			"cover": "./26602/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S017",
+			"name": "The Way of The Samurai",
+			"link": "./26S017/index.json",
+			"cover": "./26S017/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S032",
+			"name": "Ætherology",
+			"link": "./26S032/index.json",
+			"cover": "./26S032/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S026",
+			"name": "Montreal 2074",
+			"link": "./26S026/index.json",
+			"cover": "./26S026/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S034",
+			"name": "10 Mercs",
+			"link": "./26S034/index.json",
+			"cover": "./26S034/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S033",
+			"name": "Parazoology 2",
+			"link": "./26S033/index.json",
+			"cover": "./26S033/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S025",
+			"name": "The Land of Promise",
+			"link": "./26S025/index.json",
+			"cover": "./26S025/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S019",
+			"name": "Used Car Lot",
+			"link": "./26S019/index.json",
+			"cover": "./26S019/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S018",
+			"name": "Euro War Antiques",
+			"link": "./26S018/index.json",
+			"cover": "./26S018/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S024",
+			"name": "Sim Dreams and Nightmares",
+			"link": "./26S024/index.json",
+			"cover": "./26S024/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S020",
+			"name": "Parageology",
+			"link": "./26S020/index.json",
+			"cover": "./26S020/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "7214",
+			"name": "Target: UCAS",
+			"link": "./7214/index.json",
+			"cover": "./7214/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7213",
+			"name": "Aztlán",
+			"link": "./7213/index.json",
+			"cover": "./7213/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7216",
+			"name": "New Seattle",
+			"link": "./7216/index.json",
+			"cover": "./7216/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7215",
+			"name": "Target: Smuggler Havens",
+			"link": "./7215/index.json",
+			"cover": "./7215/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7212",
+			"name": "Denver: The City of Shadows",
+			"link": "./7212/index.json",
+			"cover": "./7212/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7209",
+			"name": "California Free State",
+			"link": "./7209/index.json",
+			"cover": "./7209/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7208",
+			"name": "The Neo-Anarchist's Guide to Real Life",
+			"link": "./7208/index.json",
+			"cover": "./7208/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7211",
+			"name": "Tír na nÓg",
+			"link": "./7211/index.json",
+			"cover": "./7211/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7210",
+			"name": "Tir Tairngire: The Land of Promise",
+			"link": "./7210/index.json",
+			"cover": "./7210/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7219",
+			"name": "Target: Matrix",
+			"link": "./7219/index.json",
+			"cover": "./7219/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "27110",
+			"name": "Seattle Sprawl Digital Box Set",
+			"link": "./27110/index.json",
+			"cover": "./27110/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7207",
+			"name": "Native American Nations Volume Two",
+			"link": "./7207/index.json",
+			"cover": "./7207/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7118",
+			"name": "Corporate Security Handbook",
+			"link": "./7118/index.json",
+			"cover": "./7118/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7117",
+			"name": "Bug city",
+			"link": "./7117/index.json",
+			"cover": "./7117/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7120",
+			"name": "Awakenings: New Magic in 2057",
+			"link": "./7120/index.json",
+			"cover": "./7120/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7119",
+			"name": "Cybertechnology",
+			"link": "./7119/index.json",
+			"cover": "./7119/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7116",
+			"name": "Prime Runners",
+			"link": "./7116/index.json",
+			"cover": "./7116/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7113",
+			"name": "Corporate Shadowfiles",
+			"link": "./7113/index.json",
+			"cover": "./7113/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7112",
+			"name": "Paranormal Animals of Europe",
+			"link": "./7112/index.json",
+			"cover": "./7112/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7115",
+			"name": "Lone Star",
+			"link": "./7115/index.json",
+			"cover": "./7115/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7114",
+			"name": "Fields of Fire",
+			"link": "./7114/index.json",
+			"cover": "./7114/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7121",
+			"name": "Threats",
+			"link": "./7121/index.json",
+			"cover": "./7121/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7203",
+			"name": "London Sourcebook",
+			"link": "./7203/index.json",
+			"cover": "./7203/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7202",
+			"name": "Native American Nations Volume One",
+			"link": "./7202/index.json",
+			"cover": "./7202/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7206",
+			"name": "Neo-Anarchist's Guide to North America",
+			"link": "./7206/index.json",
+			"cover": "./7206/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7204",
+			"name": "Germany Sourcebook",
+			"link": "./7204/index.json",
+			"cover": "./7204/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10708",
+			"name": "Deutschland in den Schatten",
+			"link": "./10708/index.json",
+			"cover": "./10708/cover.jpg",
+			"category": "sourcebook",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10738",
+			"name": "Die Länder der Verheißung",
+			"link": "./10738/index.json",
+			"cover": "./10738/cover.jpg",
+			"category": "sourcebook",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10728",
+			"name": "Nordamerika Quellenbuch",
+			"link": "./10728/index.json",
+			"cover": "./10728/cover.jpg",
+			"category": "sourcebook",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10730",
+			"name": "Schattenlichter",
+			"link": "./10730/index.json",
+			"cover": "./10730/cover.jpg",
+			"category": "mission",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10709",
+			"name": "Schlagschatten",
+			"link": "./10709/index.json",
+			"cover": "./10709/cover.jpg",
+			"category": "mission",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10757",
+			"name": "Bedrohliche 6. Welt",
+			"link": "./10757/index.json",
+			"cover": "./10757/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "22004",
+			"name": "Brennpunkt: ADL",
+			"link": "./22004/index.json",
+			"cover": "./22004/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10753",
+			"name": "Deutschland in den Schatten II",
+			"link": "./10753/index.json",
+			"cover": "./10753/cover.jpg",
+			"category": "sourcebook",
+			"type": "ocr",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10733",
+			"name": "Walzer, Punks & Schwarzes Ice",
+			"link": "./10733/index.json",
+			"cover": "./10733/cover.jpg",
+			"category": "sourcebook",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "4-8291-7337-8",
+			"name": "TOKYOソースブック",
+			"link": "./4-8291-7337-8/index.json",
+			"cover": "./4-8291-7337-8/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7201",
+			"name": "Seattle Sourcebook",
+			"link": "./7201/index.json",
+			"cover": "./7201/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7123",
+			"name": "Underworld Sourcebook",
+			"link": "./7123/index.json",
+			"cover": "./7123/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7122",
+			"name": "Portfolio of a Dragon: Dunkelzahn's Secrets",
+			"link": "./7122/index.json",
+			"cover": "./7122/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7125",
+			"name": "Corporate Download",
+			"link": "./7125/index.json",
+			"cover": "./7125/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7124",
+			"name": "Cyberpirates!",
+			"link": "./7124/index.json",
+			"cover": "./7124/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "26500",
+			"name": "Sprawl Sites: North America",
+			"link": "./26500/index.json",
+			"cover": "./26500/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "27100X",
+			"name": "Digital Tools Box",
+			"link": "./27100X/index.json",
+			"cover": "./27100X/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27102",
+			"name": "Shadowrun Runner's Toolkit: Alphaware",
+			"link": "./27102/index.json",
+			"cover": "./27102/cover.jpg",
+			"category": "rulebook",
+			"type": "print",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27101",
+			"name": "Shadowrun Beginner Box Set",
+			"link": "./27101/index.json",
+			"cover": "./27101/cover.jpg",
+			"category": "rulebook",
+			"type": "print",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7909",
+			"name": "Matrix",
+			"link": "./7909/index.json",
+			"cover": "./7909/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7908",
+			"name": "Cannon Companion",
+			"link": "./7908/index.json",
+			"cover": "./7908/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SR4QS",
+			"name": "Shadowrun 4th Ed.: Quick Start Rules",
+			"link": "./SR4QS/index.json",
+			"cover": "./SR4QS/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26FRP12",
+			"name": "Shadowrun 4th Ed.: Quick Start Rules (Free RPG Day 2012)",
+			"link": "./26FRP12/index.json",
+			"cover": "./26FRP12/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "27FRP15",
+			"name": "Shadowrun 5th Ed.: Quick Start Rules (Free RPG Day 2015)",
+			"link": "./27FRP15/index.json",
+			"cover": "./27FRP15/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "27QSR",
+			"name": "Shadowrun Fifth Edition - Quick Start Rules",
+			"link": "./27QSR/index.json",
+			"cover": "./27QSR/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7910",
+			"name": "Rigger 3",
+			"link": "./7910/index.json",
+			"cover": "./7910/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10662",
+			"name": "Rigger 3 (Revised)",
+			"link": "./10662/index.json",
+			"cover": "./10662/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7907",
+			"name": "Magic in the Shadows",
+			"link": "./7907/index.json",
+			"cover": "./7907/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7904",
+			"name": "Virtual Realities 2.0",
+			"link": "./7904/index.json",
+			"cover": "./7904/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7903",
+			"name": "Grimoire: Manual of Practical Thaumaturgy 15th Edition, 2053",
+			"link": "./7903/index.json",
+			"cover": "./7903/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7906",
+			"name": "Rigger 2",
+			"link": "./7906/index.json",
+			"cover": "./7906/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7905",
+			"name": "Shadowrun Companion: Beyond the Shadows",
+			"link": "./7905/index.json",
+			"cover": "./7905/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10656",
+			"name": "Shadowrun Companion (Revised)",
+			"link": "./10656/index.json",
+			"cover": "./10656/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "26100",
+			"name": "Runner's Toolkit",
+			"link": "./26100/index.json",
+			"cover": "./26100/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "45100G",
+			"name": "Schattenwerkzeug",
+			"link": "./45100G/index.json",
+			"cover": "./45100G/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26100A",
+			"name": "Alphaware 2.0: Weapons, Spells, Gear & Augmentations",
+			"link": "./26100A/index.json",
+			"cover": "./26100A/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 4,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26208",
+			"name": "Conspiracy Theories",
+			"link": "./26208/index.json",
+			"cover": "./26208/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26207",
+			"name": "Spy Games",
+			"link": "./26207/index.json",
+			"cover": "./26207/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26210",
+			"name": "Hazard Pay",
+			"link": "./26210/index.json",
+			"cover": "./26210/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26209",
+			"name": "Street Legends",
+			"link": "./26209/index.json",
+			"cover": "./26209/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26206",
+			"name": "War!",
+			"link": "./26206/index.json",
+			"cover": "./26206/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26202",
+			"name": "Feral Cities",
+			"link": "./26202/index.json",
+			"cover": "./26202/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26201",
+			"name": "Corporate Enclaves",
+			"link": "./26201/index.json",
+			"cover": "./26201/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26205",
+			"name": "Sixth World Almanac",
+			"link": "./26205/index.json",
+			"cover": "./26205/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26203",
+			"name": "Vice",
+			"link": "./26203/index.json",
+			"cover": "./26203/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26211",
+			"name": "The Clutch of Dragons",
+			"link": "./26211/index.json",
+			"cover": "./26211/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26301",
+			"name": "Emergence",
+			"link": "./26301/index.json",
+			"cover": "./26301/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26241",
+			"name": "Attitude",
+			"link": "./26241/index.json",
+			"cover": "./26241/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26450",
+			"name": "Artifacts Unbound",
+			"link": "./26450/index.json",
+			"cover": "./26450/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26302",
+			"name": "Ghost Cartels",
+			"link": "./26302/index.json",
+			"cover": "./26302/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26240",
+			"name": "Seattle 2072",
+			"link": "./26240/index.json",
+			"cover": "./26240/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26213",
+			"name": "Storm Front",
+			"link": "./26213/index.json",
+			"cover": "./26213/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26212",
+			"name": "Dirty Tricks",
+			"link": "./26212/index.json",
+			"cover": "./26212/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26230",
+			"name": "Shadowrun 2050",
+			"link": "./26230/index.json",
+			"cover": "./26230/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26221",
+			"name": "Corporate Guide",
+			"link": "./26221/index.json",
+			"cover": "./26221/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "10664",
+			"name": "State of the Art: 2063",
+			"link": "./10664/index.json",
+			"cover": "./10664/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10655",
+			"name": "Shadows of North America",
+			"link": "./10655/index.json",
+			"cover": "./10655/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10667",
+			"name": "Sprawl Survival Guide",
+			"link": "./10667/index.json",
+			"cover": "./10667/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10666",
+			"name": "Dragons of The Sixth World",
+			"link": "./10666/index.json",
+			"cover": "./10666/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10653",
+			"name": "Target: Wastelands",
+			"link": "./10653/index.json",
+			"cover": "./10653/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7127",
+			"name": "Year of the Comet",
+			"link": "./7127/index.json",
+			"cover": "./7127/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7128",
+			"name": "Threats 2",
+			"link": "./7128/index.json",
+			"cover": "./7128/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10651",
+			"name": "Target: Awakened Lands",
+			"link": "./10651/index.json",
+			"cover": "./10651/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10673",
+			"name": "The Shadowrun Character Dossier",
+			"link": "./10673/index.json",
+			"cover": "./10673/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "25014",
+			"name": "System Failure",
+			"link": "./25014/index.json",
+			"cover": "./25014/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "25011",
+			"name": "Shadows of Latin America",
+			"link": "./25011/index.json",
+			"cover": "./25011/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "26101",
+			"name": "Running Wild",
+			"link": "./26101/index.json",
+			"cover": "./26101/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26005",
+			"name": "Runner Havens",
+			"link": "./26005/index.json",
+			"cover": "./26005/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "10670",
+			"name": "Shadows of Asia",
+			"link": "./10670/index.json",
+			"cover": "./10670/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10672",
+			"name": "Mr. Johnson's Little Black Book",
+			"link": "./10672/index.json",
+			"cover": "./10672/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10668",
+			"name": "Shadows Of Europe",
+			"link": "./10668/index.json",
+			"cover": "./10668/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10669",
+			"name": "Loose Alliances",
+			"link": "./10669/index.json",
+			"cover": "./10669/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "10671",
+			"name": "State of The Art: 2064",
+			"link": "./10671/index.json",
+			"cover": "./10671/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-01",
+			"name": "Parliament of Thieves",
+			"link": "./SRM02-01/index.json",
+			"cover": "./SRM02-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-02",
+			"name": "Best Served Cold",
+			"link": "./SRM02-02/index.json",
+			"cover": "./SRM02-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-08",
+			"name": "Duplicity",
+			"link": "./SRM01-08/index.json",
+			"cover": "./SRM01-08/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-09",
+			"name": "For Whom the Bell Tolls",
+			"link": "./SRM01-09/index.json",
+			"cover": "./SRM01-09/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-06",
+			"name": "The Flip Side",
+			"link": "./SRM02-06/index.json",
+			"cover": "./SRM02-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-07",
+			"name": "An Ounce Of Prevention",
+			"link": "./SRM02-07/index.json",
+			"cover": "./SRM02-07/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-05",
+			"name": "Through A Rose Colored Display Link",
+			"link": "./SRM02-05/index.json",
+			"cover": "./SRM02-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-03",
+			"name": "The Grab",
+			"link": "./SRM02-03/index.json",
+			"cover": "./SRM02-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-04",
+			"name": "Thrash the Body Electric",
+			"link": "./SRM02-04/index.json",
+			"cover": "./SRM02-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-01",
+			"name": "Double Cross",
+			"link": "./SRM01-01/index.json",
+			"cover": "./SRM01-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-02",
+			"name": "Strings Attached",
+			"link": "./SRM01-02/index.json",
+			"cover": "./SRM01-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM00-05",
+			"name": "A Dark and Stormy Night",
+			"link": "./SRM00-05/index.json",
+			"cover": "./SRM00-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM00-03",
+			"name": "FORCEd RECON",
+			"link": "./SRM00-03/index.json",
+			"cover": "./SRM00-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM00-04",
+			"name": "A Fork in Fate's Path",
+			"link": "./SRM00-04/index.json",
+			"cover": "./SRM00-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-06",
+			"name": "Lost and Found",
+			"link": "./SRM01-06/index.json",
+			"cover": "./SRM01-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-07",
+			"name": "Keys to the Asylum",
+			"link": "./SRM01-07/index.json",
+			"cover": "./SRM01-07/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-05",
+			"name": "A Walk in the Park",
+			"link": "./SRM01-05/index.json",
+			"cover": "./SRM01-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-03",
+			"name": "Harvest Time",
+			"link": "./SRM01-03/index.json",
+			"cover": "./SRM01-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM01-04",
+			"name": "The Gambler",
+			"link": "./SRM01-04/index.json",
+			"cover": "./SRM01-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-20",
+			"name": "Career Path",
+			"link": "./SRM02-20/index.json",
+			"cover": "./SRM02-20/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-21",
+			"name": "Happenstance",
+			"link": "./SRM02-21/index.json",
+			"cover": "./SRM02-21/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-19",
+			"name": "By Any Means Necessary",
+			"link": "./SRM02-19/index.json",
+			"cover": "./SRM02-19/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-17",
+			"name": "Patient Zero",
+			"link": "./SRM02-17/index.json",
+			"cover": "./SRM02-17/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-18",
+			"name": "A Very Bad Day",
+			"link": "./SRM02-18/index.json",
+			"cover": "./SRM02-18/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-25",
+			"name": "Done Deal",
+			"link": "./SRM02-25/index.json",
+			"cover": "./SRM02-25/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-24",
+			"name": "Hubris and Humility",
+			"link": "./SRM02-24/index.json",
+			"cover": "./SRM02-24/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-22",
+			"name": "Backlash",
+			"link": "./SRM02-22/index.json",
+			"cover": "./SRM02-22/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-23",
+			"name": "Prodigal Son",
+			"link": "./SRM02-23/index.json",
+			"cover": "./SRM02-23/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-10",
+			"name": "Twist and Insult",
+			"link": "./SRM02-10/index.json",
+			"cover": "./SRM02-10/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-11",
+			"name": "Rising Sin",
+			"link": "./SRM02-11/index.json",
+			"cover": "./SRM02-11/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-08",
+			"name": "Chasing the Dragon",
+			"link": "./SRM02-08/index.json",
+			"cover": "./SRM02-08/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-09",
+			"name": "Tunnel Vision",
+			"link": "./SRM02-09/index.json",
+			"cover": "./SRM02-09/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-12",
+			"name": "Winter Wonderland",
+			"link": "./SRM02-12/index.json",
+			"cover": "./SRM02-12/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-15",
+			"name": "Critical Care",
+			"link": "./SRM02-15/index.json",
+			"cover": "./SRM02-15/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-16",
+			"name": "Primal Forces",
+			"link": "./SRM02-16/index.json",
+			"cover": "./SRM02-16/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-13",
+			"name": "Take Out Service",
+			"link": "./SRM02-13/index.json",
+			"cover": "./SRM02-13/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM02-14",
+			"name": "Wetwork Pure and Simple",
+			"link": "./SRM02-14/index.json",
+			"cover": "./SRM02-14/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "27452",
+			"name": "Book of the Lost",
+			"link": "./27452/index.json",
+			"cover": "./27452/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27450",
+			"name": "Bloody Business",
+			"link": "./27450/index.json",
+			"cover": "./27450/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27481",
+			"name": "Firing Line",
+			"link": "./27481/index.json",
+			"cover": "./27481/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27480",
+			"name": "Sprawl Wilds",
+			"link": "./27480/index.json",
+			"cover": "./27480/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27409",
+			"name": "Boardroom Backstabs 3: Battle of Manhattan",
+			"link": "./27409/index.json",
+			"cover": "./27409/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27401",
+			"name": "Serrated Edge (Denver Adventure 1)",
+			"link": "./27401/index.json",
+			"cover": "./27401/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27400",
+			"name": "Splintered State",
+			"link": "./27400/index.json",
+			"cover": "./27400/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27403",
+			"name": "Ripping Reality (Denver Adventure 3)",
+			"link": "./27403/index.json",
+			"cover": "./27403/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27402",
+			"name": "False Flag (Denver Adventure 2)",
+			"link": "./27402/index.json",
+			"cover": "./27402/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27482",
+			"name": "London Falling",
+			"link": "./27482/index.json",
+			"cover": "./27482/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7304",
+			"name": "Queen Euphoria",
+			"link": "./7304/index.json",
+			"cover": "./7304/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7303",
+			"name": "Dreamchipper",
+			"link": "./7303/index.json",
+			"cover": "./7303/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7306",
+			"name": "Harlequin",
+			"link": "./7306/index.json",
+			"cover": "./7306/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7305",
+			"name": "Bottled Demon",
+			"link": "./7305/index.json",
+			"cover": "./7305/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7302",
+			"name": "Mercurial",
+			"link": "./7302/index.json",
+			"cover": "./7302/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7102X",
+			"name": "Silver Angel",
+			"link": "./7102X/index.json",
+			"cover": "./7102X/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "27485",
+			"name": "Boundless Mercy",
+			"link": "./27485/index.json",
+			"cover": "./27485/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7301",
+			"name": "DNA/DOA",
+			"link": "./7301/index.json",
+			"cover": "./7301/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7205",
+			"name": "Universal Brotherhood: Unleash Your Inner Abilities / Missing Blood",
+			"link": "./7205/index.json",
+			"cover": "./7205/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "26CMP10",
+			"name": "Elven Blood",
+			"link": "./26CMP10/index.json",
+			"cover": "./26CMP10/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26400",
+			"name": "Dawn of the Artifacts 1: Dusk",
+			"link": "./26400/index.json",
+			"cover": "./26400/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26402",
+			"name": "Dawn of the Artifacts 3: Darkest Hour",
+			"link": "./26402/index.json",
+			"cover": "./26402/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26401",
+			"name": "Dawn Of The Artifacts 2: Midnight",
+			"link": "./26401/index.json",
+			"cover": "./26401/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "10654",
+			"name": "Wake of the Comet",
+			"link": "./10654/index.json",
+			"cover": "./10654/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "26003",
+			"name": "On the Run",
+			"link": "./26003/index.json",
+			"cover": "./26003/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "10665",
+			"name": "Survival of the Fittest",
+			"link": "./10665/index.json",
+			"cover": "./10665/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "26403",
+			"name": "Dawn Of The Artifacts 4: New Dawn",
+			"link": "./26403/index.json",
+			"cover": "./26403/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26452",
+			"name": "Jet Set",
+			"link": "./26452/index.json",
+			"cover": "./26452/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26451",
+			"name": "Corporate Intrigue",
+			"link": "./26451/index.json",
+			"cover": "./26451/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26601",
+			"name": "Bad Moon Rising in the East",
+			"link": "./26601/index.json",
+			"cover": "./26601/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26463",
+			"name": "The Twilight Horizon",
+			"link": "./26463/index.json",
+			"cover": "./26463/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26410",
+			"name": "Boardroom Backstabs 2: Sacrificial Limb",
+			"link": "./26410/index.json",
+			"cover": "./26410/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26406",
+			"name": "Horizon Adventure 2: Anarchy Subsidized",
+			"link": "./26406/index.json",
+			"cover": "./26406/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26405",
+			"name": "Horizon Adventure 1: A Fistful of Credsticks",
+			"link": "./26405/index.json",
+			"cover": "./26405/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26408",
+			"name": "Boardroom Backstabs 1: Damage Control",
+			"link": "./26408/index.json",
+			"cover": "./26408/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26407",
+			"name": "Horizon Adventure 3: Colombian Subterfuge",
+			"link": "./26407/index.json",
+			"cover": "./26407/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S022",
+			"name": "Another Rainy Night",
+			"link": "./26S022/index.json",
+			"cover": "./26S022/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26S005",
+			"name": "99 Bottles",
+			"link": "./26S005/index.json",
+			"cover": "./26S005/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "7329",
+			"name": "First Run",
+			"link": "./7329/index.json",
+			"cover": "./7329/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7328",
+			"name": "Renraku Arcology: Shutdown",
+			"link": "./7328/index.json",
+			"cover": "./7328/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7331",
+			"name": "Brainscan",
+			"link": "./7331/index.json",
+			"cover": "./7331/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7330",
+			"name": "Corporate Punishment",
+			"link": "./7330/index.json",
+			"cover": "./7330/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM00-01",
+			"name": "Mission Briefing",
+			"link": "./SRM00-01/index.json",
+			"cover": "./SRM00-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "27PM005",
+			"name": "Jumping Ship",
+			"link": "./27PM005/index.json",
+			"cover": "./27PM005/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM00-02",
+			"name": "Demolition Run",
+			"link": "./SRM00-02/index.json",
+			"cover": "./SRM00-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "27PM002",
+			"name": "A Holy Piece of Wetwork",
+			"link": "./27PM002/index.json",
+			"cover": "./27PM002/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26APR12",
+			"name": "Free Taiwan",
+			"link": "./26APR12/index.json",
+			"cover": "./26APR12/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "CMP10-02",
+			"name": "Copycat Killer",
+			"link": "./CMP10-02/index.json",
+			"cover": "./CMP10-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "27PM001",
+			"name": "Killing Pawn",
+			"link": "./27PM001/index.json",
+			"cover": "./27PM001/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SMH201501",
+			"name": "Friendship Is Tragic",
+			"link": "./SMH201501/index.json",
+			"cover": "./SMH201501/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SMH201601",
+			"name": "UnCONventional Warfare",
+			"link": "./SMH201601/index.json",
+			"cover": "./SMH201601/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SMH201701",
+			"name": "Scene It All Before",
+			"link": "./SMH201701/index.json",
+			"cover": "./SMH201701/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7327",
+			"name": "Blood in the Boardroom",
+			"link": "./7327/index.json",
+			"cover": "./7327/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7313",
+			"name": "Dark Angel",
+			"link": "./7313/index.json",
+			"cover": "./7313/cover.jpg",
+			"category": "mission",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7312",
+			"name": "One Stage Before",
+			"link": "./7312/index.json",
+			"cover": "./7312/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7315",
+			"name": "Celtic Double-Cross",
+			"link": "./7315/index.json",
+			"cover": "./7315/cover.jpg",
+			"category": "mission",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7314",
+			"name": "A Killing Glare",
+			"link": "./7314/index.json",
+			"cover": "./7314/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7311",
+			"name": "Ivy & Chrome",
+			"link": "./7311/index.json",
+			"cover": "./7311/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7308",
+			"name": "Total Eclipse",
+			"link": "./7308/index.json",
+			"cover": "./7308/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7307",
+			"name": "Dragon Hunt",
+			"link": "./7307/index.json",
+			"cover": "./7307/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7310",
+			"name": "Elven Fire",
+			"link": "./7310/index.json",
+			"cover": "./7310/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "7309",
+			"name": "Imago",
+			"link": "./7309/index.json",
+			"cover": "./7309/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7316",
+			"name": "Eye Witness",
+			"link": "./7316/index.json",
+			"cover": "./7316/cover.jpg",
+			"category": "mission",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7324",
+			"name": "Predator and Prey",
+			"link": "./7324/index.json",
+			"cover": "./7324/cover.jpg",
+			"category": "mission",
+			"type": "ocr",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7323",
+			"name": "Shadows of the Underworld",
+			"link": "./7323/index.json",
+			"cover": "./7323/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7326",
+			"name": "Mob War!",
+			"link": "./7326/index.json",
+			"cover": "./7326/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7325",
+			"name": "Missions",
+			"link": "./7325/index.json",
+			"cover": "./7325/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7322",
+			"name": "Super Tuesday!",
+			"link": "./7322/index.json",
+			"cover": "./7322/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7318",
+			"name": "Divided Assets",
+			"link": "./7318/index.json",
+			"cover": "./7318/cover.jpg",
+			"category": "mission",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7317",
+			"name": "Paradise Lost",
+			"link": "./7317/index.json",
+			"cover": "./7317/cover.jpg",
+			"category": "mission",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7320",
+			"name": "Harlequin's Back",
+			"link": "./7320/index.json",
+			"cover": "./7320/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7319",
+			"name": "Double Exposure",
+			"link": "./7319/index.json",
+			"cover": "./7319/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "7401",
+			"name": "Sprawl Maps",
+			"link": "./7401/index.json",
+			"cover": "./7401/cover.jpg",
+			"category": "misc",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "27CCG",
+			"name": "Shadowrun 5th: Conversion rules",
+			"link": "./27CCG/index.json",
+			"cover": "./27CCG/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "28CCG",
+			"name": "Shadowrun 6th: Conversion rules",
+			"link": "./28CCG/index.json",
+			"cover": "./28CCG/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "7111",
+			"name": "D.M.Z.: Downtown Militarized Zone",
+			"link": "./7111/index.json",
+			"cover": "./7111/cover.jpg",
+			"category": "boardgame",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "2635A",
+			"name": "BattleRun: Best Ever - An Eighth World Adventure",
+			"link": "./2635A/index.json",
+			"cover": "./2635A/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26CCG",
+			"name": "Shadowrun 4th: Conversion Rules",
+			"link": "./26CCG/index.json",
+			"cover": "./26CCG/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "7701",
+			"name": "High Tech and Low Life: The Art of Shadowrun",
+			"link": "./7701/index.json",
+			"cover": "./7701/cover.jpg",
+			"category": "misc",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "26APR13",
+			"name": "Rigger 4",
+			"link": "./26APR13/index.json",
+			"cover": "./26APR13/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26APR3P",
+			"name": "Street Legends: Home Edition",
+			"link": "./26APR3P/index.json",
+			"cover": "./26APR3P/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-08",
+			"name": "Brothers United (Artifact Rush, Part 4)",
+			"link": "./SRM04-08/index.json",
+			"cover": "./SRM04-08/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-07",
+			"name": "Burn (Buried Underground, Part 4)",
+			"link": "./SRM04-07/index.json",
+			"cover": "./SRM04-07/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-10",
+			"name": "Romero & Juliette (Artifact Rush, Part 5)",
+			"link": "./SRM04-10/index.json",
+			"cover": "./SRM04-10/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-09",
+			"name": "Assassin Nation (Buried Underground, Part 5)",
+			"link": "./SRM04-09/index.json",
+			"cover": "./SRM04-09/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-06",
+			"name": "Hard Target (Artifact Rush, Part 3)",
+			"link": "./SRM04-06/index.json",
+			"cover": "./SRM04-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-03",
+			"name": "Rally Cry (Buried Underground, Part 2)",
+			"link": "./SRM04-03/index.json",
+			"cover": "./SRM04-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-02",
+			"name": "Extraction (Artifact Rush, Part 1)",
+			"link": "./SRM04-02/index.json",
+			"cover": "./SRM04-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-05",
+			"name": "On A Silver Platter (Artifact Rush, Part 3)",
+			"link": "./SRM04-05/index.json",
+			"cover": "./SRM04-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-04",
+			"name": "Smuggler's Blues (Artifact Rush, Part 2)",
+			"link": "./SRM04-04/index.json",
+			"cover": "./SRM04-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-11",
+			"name": "Election Day (Buried Underground, Part 5)",
+			"link": "./SRM04-11/index.json",
+			"cover": "./SRM04-11/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM05-02",
+			"name": "Critic's Choice",
+			"link": "./SRM05-02/index.json",
+			"cover": "./SRM05-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM05-01",
+			"name": "Chasin' the Wind",
+			"link": "./SRM05-01/index.json",
+			"cover": "./SRM05-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM05-04",
+			"name": "Liberation",
+			"link": "./SRM05-04/index.json",
+			"cover": "./SRM05-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM05-03",
+			"name": "Gone Long Gone",
+			"link": "./SRM05-03/index.json",
+			"cover": "./SRM05-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-12",
+			"name": "Showcase (Artifact Rush, Part 6)",
+			"link": "./SRM04-12/index.json",
+			"cover": "./SRM04-12/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-01",
+			"name": "Hiding in the Dark (Buried Underground, Part 1)",
+			"link": "./SRM04-01/index.json",
+			"cover": "./SRM04-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-04",
+			"name": "Monkeywrench",
+			"link": "./SRM03-04/index.json",
+			"cover": "./SRM03-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-03",
+			"name": "Burning Bridges",
+			"link": "./SRM03-03/index.json",
+			"cover": "./SRM03-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-06",
+			"name": "Jackknifed",
+			"link": "./SRM03-06/index.json",
+			"cover": "./SRM03-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-05",
+			"name": "In and Out",
+			"link": "./SRM03-05/index.json",
+			"cover": "./SRM03-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-02",
+			"name": "Block War",
+			"link": "./SRM03-02/index.json",
+			"cover": "./SRM03-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-01",
+			"name": "Ready, Set, Gogh!",
+			"link": "./SRM03-01/index.json",
+			"cover": "./SRM03-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-00",
+			"name": "Everyone's Your Friend",
+			"link": "./SRM03-00/index.json",
+			"cover": "./SRM03-00/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-07",
+			"name": "Knight At The Opera",
+			"link": "./SRM03-07/index.json",
+			"cover": "./SRM03-07/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM04-00",
+			"name": "Back In Business",
+			"link": "./SRM04-00/index.json",
+			"cover": "./SRM04-00/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-12",
+			"name": "Elevator Ride to Hell",
+			"link": "./SRM03-12/index.json",
+			"cover": "./SRM03-12/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-09",
+			"name": "Something Completely Different",
+			"link": "./SRM03-09/index.json",
+			"cover": "./SRM03-09/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-08",
+			"name": "Firestorm",
+			"link": "./SRM03-08/index.json",
+			"cover": "./SRM03-08/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-11",
+			"name": "Food Poisoning",
+			"link": "./SRM03-11/index.json",
+			"cover": "./SRM03-11/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM03-10",
+			"name": "Spin Control",
+			"link": "./SRM03-10/index.json",
+			"cover": "./SRM03-10/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM06-04",
+			"name": "Tick Tock",
+			"link": "./SRM06-04/index.json",
+			"cover": "./SRM06-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM06-03",
+			"name": "Ancient Rumblings",
+			"link": "./SRM06-03/index.json",
+			"cover": "./SRM06-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM06-06",
+			"name": "Falling Angels",
+			"link": "./SRM06-06/index.json",
+			"cover": "./SRM06-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM06-05",
+			"name": "Healing the Sick",
+			"link": "./SRM06-05/index.json",
+			"cover": "./SRM06-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM06-02",
+			"name": "Amber Waves of Grain",
+			"link": "./SRM06-02/index.json",
+			"cover": "./SRM06-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM05-06",
+			"name": "Take a Chance",
+			"link": "./SRM05-06/index.json",
+			"cover": "./SRM05-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM05-05",
+			"name": "While the City Sleeps",
+			"link": "./SRM05-05/index.json",
+			"cover": "./SRM05-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM06-01",
+			"name": "Ten Fifty-Seven",
+			"link": "./SRM06-01/index.json",
+			"cover": "./SRM06-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SOK201",
+			"name": "Shadowland #1",
+			"link": "./SOK201/index.json",
+			"cover": "./SOK201/cover.jpg",
+			"category": "magazine",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SOK202",
+			"name": "Shadowland #2",
+			"link": "./SOK202/index.json",
+			"cover": "./SOK202/cover.jpg",
+			"category": "magazine",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SOK203",
+			"name": "Shadowland #3",
+			"link": "./SOK203/index.json",
+			"cover": "./SOK203/cover.jpg",
+			"category": "magazine",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SOK204",
+			"name": "Shadowland #4",
+			"link": "./SOK204/index.json",
+			"cover": "./SOK204/cover.jpg",
+			"category": "magazine",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SOK205",
+			"name": "Shadowland #5",
+			"link": "./SOK205/index.json",
+			"cover": "./SOK205/cover.jpg",
+			"category": "magazine",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SOK206",
+			"name": "Shadowland #6",
+			"link": "./SOK206/index.json",
+			"cover": "./SOK206/cover.jpg",
+			"category": "magazine",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SOK207",
+			"name": "Shadowland #7",
+			"link": "./SOK207/index.json",
+			"cover": "./SOK207/cover.jpg",
+			"category": "magazine",
+			"type": "ocr",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-09",
+			"name": "KA•GE: Issue 9",
+			"link": "./KAGE-09/index.json",
+			"cover": "./KAGE-09/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-00",
+			"name": "KA•GE: Issue 0",
+			"link": "./KAGE-00/index.json",
+			"cover": "./KAGE-00/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-01",
+			"name": "KA•GE: Issue 1",
+			"link": "./KAGE-01/index.json",
+			"cover": "./KAGE-01/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-03",
+			"name": "KA•GE: Issue 3",
+			"link": "./KAGE-03/index.json",
+			"cover": "./KAGE-03/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-04",
+			"name": "KA•GE: Issue 4",
+			"link": "./KAGE-04/index.json",
+			"cover": "./KAGE-04/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-05",
+			"name": "KA•GE: Issue 5",
+			"link": "./KAGE-05/index.json",
+			"cover": "./KAGE-05/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-06",
+			"name": "KA•GE: Issue 6",
+			"link": "./KAGE-06/index.json",
+			"cover": "./KAGE-06/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-07",
+			"name": "KA•GE: Issue 7",
+			"link": "./KAGE-07/index.json",
+			"cover": "./KAGE-07/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-08",
+			"name": "KA•GE: Issue 8",
+			"link": "./KAGE-08/index.json",
+			"cover": "./KAGE-08/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-02",
+			"name": "KA•GE: Issue 2",
+			"link": "./KAGE-02/index.json",
+			"cover": "./KAGE-02/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-10",
+			"name": "KA•GE: Issue 10",
+			"link": "./KAGE-10/index.json",
+			"cover": "./KAGE-10/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-11",
+			"name": "KA•GE: Issue 11",
+			"link": "./KAGE-11/index.json",
+			"cover": "./KAGE-11/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "KAGE-12",
+			"name": "KA•GE: Issue 12",
+			"link": "./KAGE-12/index.json",
+			"cover": "./KAGE-12/cover.jpg",
+			"category": "magazine",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM07-05",
+			"name": "A Little Wetwork",
+			"link": "./SRM07-05/index.json",
+			"cover": "./SRM07-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM07-06",
+			"name": "Windy City Chaos",
+			"link": "./SRM07-06/index.json",
+			"cover": "./SRM07-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S051",
+			"name": "Lethal Forces",
+			"link": "./26S051/index.json",
+			"cover": "./26S051/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27231",
+			"name": "Dark Terrors",
+			"link": "./27231/index.json",
+			"cover": "./27231/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM07-02",
+			"name": "Collective Action",
+			"link": "./SRM07-02/index.json",
+			"cover": "./SRM07-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM07-01",
+			"name": "The Deck Job",
+			"link": "./SRM07-01/index.json",
+			"cover": "./SRM07-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM07-04",
+			"name": "Do No Harm",
+			"link": "./SRM07-04/index.json",
+			"cover": "./SRM07-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM07-03",
+			"name": "Special Investigation Unit",
+			"link": "./SRM07-03/index.json",
+			"cover": "./SRM07-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27506",
+			"name": "The Complete Trog",
+			"link": "./27506/index.json",
+			"cover": "./27506/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26NV003",
+			"name": "Blind Magic",
+			"link": "./26NV003/index.json",
+			"cover": "./26NV003/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27511",
+			"name": "Sixth World Tarot",
+			"link": "./27511/index.json",
+			"cover": "./27511/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27512",
+			"name": "Sixth World Tarot (Arcanist Edition)",
+			"link": "./27512/index.json",
+			"cover": "./27512/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26860",
+			"name": "Shadows Down Under",
+			"link": "./26860/index.json",
+			"cover": "./26860/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26857",
+			"name": "Undershadows",
+			"link": "./26857/index.json",
+			"cover": "./26857/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "TCG01",
+			"name": "Shadowrun: Trading Card Game",
+			"link": "./TCG01/index.json",
+			"cover": "./TCG01/cover.jpg",
+			"category": "tcg",
+			"type": "physical",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "TCG02",
+			"name": "Shadowrun: Trading Card Game - Underworld",
+			"link": "./TCG02/index.json",
+			"cover": "./TCG02/cover.jpg",
+			"category": "tcg",
+			"type": "physical",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "WZK640X",
+			"name": "Shadowrun: Duels",
+			"link": "./WZK640X/index.json",
+			"cover": "./WZK640X/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 3,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27700",
+			"name": "Shadowrun: Crossfire",
+			"link": "./27700/index.json",
+			"cover": "./27700/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27700X",
+			"name": "Shadowrun: Crossfire (Demo Box)",
+			"link": "./27700X/index.json",
+			"cover": "./27700X/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27704",
+			"name": "Shadowrun Crossfire: Character Expansion Pack 2: Street Legends",
+			"link": "./27704/index.json",
+			"cover": "./27704/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27703",
+			"name": "Shadowrun Crossfire: High Caliber Ops",
+			"link": "./27703/index.json",
+			"cover": "./27703/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27700-G16",
+			"name": "Shadowrun Crossfire: Las Vegas",
+			"link": "./27700-G16/index.json",
+			"cover": "./27700-G16/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27701",
+			"name": "Shadowrun Crossfire: Character Expansion Pack 1",
+			"link": "./27701/index.json",
+			"cover": "./27701/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27700-G14",
+			"name": "Shadowrun Crossfire: Harlequin's Shadow Promo Card",
+			"link": "./27700-G14/index.json",
+			"cover": "./27700-G14/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27700A",
+			"name": "Shadowrun Crossfire: Oni Promo Card",
+			"link": "./27700A/index.json",
+			"cover": "./27700A/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27780",
+			"name": "Shadowrun: Hostile Takeover",
+			"link": "./27780/index.json",
+			"cover": "./27780/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "canceled"
+		},
+		{
+			"sku": "27800",
+			"name": "Shadowrun: Sprawl Gangers",
+			"link": "./27800/index.json",
+			"cover": "./27800/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "canceled"
+		},
+		{
+			"sku": "27750",
+			"name": "Encounters: Shadowrun",
+			"link": "./27750/index.json",
+			"cover": "./27750/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SNES",
+			"name": "Shadowrun",
+			"link": "./SNES/index.json",
+			"cover": "./SNES/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "GENESIS",
+			"name": "Shadowrun",
+			"link": "./GENESIS/index.json",
+			"cover": "./GENESIS/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "SEGA-CD",
+			"name": "Shadowrun (シャドウラン)",
+			"link": "./SEGA-CD/index.json",
+			"cover": "./SEGA-CD/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "XBOX",
+			"name": "Shadowrun",
+			"link": "./XBOX/index.json",
+			"cover": "./XBOX/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "RET-01",
+			"name": "Shadowrun Returns",
+			"link": "./RET-01/index.json",
+			"cover": "./RET-01/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "RET-02",
+			"name": "Shadowrun Returns: Dragonfall",
+			"link": "./RET-02/index.json",
+			"cover": "./RET-02/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "RET-03",
+			"name": "Shadowrun Returns: Hong-Kong",
+			"link": "./RET-03/index.json",
+			"cover": "./RET-03/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "PRIMER",
+			"name": "World of Shadowrun: A Primer",
+			"link": "./PRIMER/index.json",
+			"cover": "./PRIMER/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "JUL",
+			"name": "Jackpoint User List",
+			"link": "./JUL/index.json",
+			"cover": "./JUL/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "PROMO1",
+			"name": "The Year of Shadowrun",
+			"link": "./PROMO1/index.json",
+			"cover": "./PROMO1/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "ONLINE",
+			"name": "Shadowrun Chronicles: Boston Lockdown",
+			"link": "./ONLINE/index.json",
+			"cover": "./ONLINE/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "ONLINE2",
+			"name": "Shadowrun Chronicles: Boston Lockdown - INFECTED!",
+			"link": "./ONLINE2/index.json",
+			"cover": "./ONLINE2/cover.jpg",
+			"category": "videogame",
+			"type": "digital",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "SCBA",
+			"name": "Shadowrun Chronicles: Boston Adventues",
+			"link": "./SCBA/index.json",
+			"cover": "./SCBA/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26531",
+			"name": "Gear Cards [Drones & Vehicles, Volume 1]",
+			"link": "./26531/index.json",
+			"cover": "./26531/cover.jpg",
+			"category": "rulebook",
+			"type": "print",
+			"edition": 4,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26530",
+			"name": "Weapon Cards [Guns, Volume 1]",
+			"link": "./26530/index.json",
+			"cover": "./26530/cover.jpg",
+			"category": "rulebook",
+			"type": "print",
+			"edition": 4,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26104",
+			"name": "Runner's Black Book",
+			"link": "./26104/index.json",
+			"cover": "./26104/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "missing"
+		},
+		{
+			"sku": "26105",
+			"name": "Runner's Black Book 2074",
+			"link": "./26105/index.json",
+			"cover": "./26105/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "47012",
+			"name": "Schattenkatalog 3",
+			"link": "./47012/index.json",
+			"cover": "./47012/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 4,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27050",
+			"name": "Shadowrun Game Master's Screen 5th Etidion",
+			"link": "./27050/index.json",
+			"cover": "./27050/cover.jpg",
+			"category": "rulebook",
+			"type": "print",
+			"edition": 5,
+			"status": "missing"
+		},
+		{
+			"sku": "RET-ANT",
+			"name": "Shadowrun: Returns: Anthology",
+			"link": "./RET-ANT/index.json",
+			"cover": "./RET-ANT/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "RET-ANT2",
+			"name": "Shadowrun: Returns: Hong-Kong - Art Anthology",
+			"link": "./RET-ANT2/index.json",
+			"cover": "./RET-ANT2/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27760",
+			"name": "Shadowrun: Zero Day",
+			"link": "./27760/index.json",
+			"cover": "./27760/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26874",
+			"name": "Sprawl Stories Vol. 1",
+			"link": "./26874/index.json",
+			"cover": "./26874/cover.jpg",
+			"category": "novel",
+			"type": "print",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "RET-NOV",
+			"name": "Hong Kong",
+			"link": "./RET-NOV/index.json",
+			"cover": "./RET-NOV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "RET-SBK",
+			"name": "Shadorwun Returns: Hong Kong - Neon Contrails",
+			"link": "./RET-SBK/index.json",
+			"cover": "./RET-SBK/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "7002X",
+			"name": "Critters",
+			"link": "./7002X/index.json",
+			"cover": "./7002X/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "7102",
+			"name": "Shadowrun Game Master's Screen",
+			"link": "./7102/index.json",
+			"cover": "./7102/cover.jpg",
+			"category": "rulebook",
+			"type": "scan",
+			"edition": 1,
+			"status": "ok"
+		},
+		{
+			"sku": "58XX",
+			"name": "Private Agenda",
+			"link": "./58XX/index.json",
+			"cover": "./58XX/cover.jpg",
+			"category": "novel",
+			"type": "physical",
+			"edition": 3,
+			"status": "canceled"
+		},
+		{
+			"sku": "7321",
+			"name": "Running Short",
+			"link": "./7321/index.json",
+			"cover": "./7321/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 3,
+			"status": "canceled"
+		},
+		{
+			"sku": "26CMP13-1",
+			"name": "CMP 2013: Dragon Song Series",
+			"link": "./26CMP13-1/index.json",
+			"cover": "./26CMP13-1/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP13-2",
+			"name": "CMP 2013: Dangerous Games Series",
+			"link": "./26CMP13-2/index.json",
+			"cover": "./26CMP13-2/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP14",
+			"name": "CMP 2014: Company Man Series",
+			"link": "./26CMP14/index.json",
+			"cover": "./26CMP14/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP15-1",
+			"name": "CMP 2015: Tennessee Suite Series",
+			"link": "./26CMP15-1/index.json",
+			"cover": "./26CMP15-1/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP15-2",
+			"name": "CMP 2015: Deadly Competition Series",
+			"link": "./26CMP15-2/index.json",
+			"cover": "./26CMP15-2/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP16-1",
+			"name": "CMP 2016: BBQ Bob Series",
+			"link": "./26CMP16-1/index.json",
+			"cover": "./26CMP16-1/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP16-2",
+			"name": "CMP 2016: World Tour",
+			"link": "./26CMP16-2/index.json",
+			"cover": "./26CMP16-2/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP11",
+			"name": "CMP 2011",
+			"link": "./26CMP11/index.json",
+			"cover": "./26CMP11/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 4,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP18-1",
+			"name": "CMP 2018: Viva Las Vegas",
+			"link": "./26CMP18-1/index.json",
+			"cover": "./26CMP18-1/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP18-2",
+			"name": "CMP 2018: Cerulean Shadows",
+			"link": "./26CMP18-2/index.json",
+			"cover": "./26CMP18-2/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "26CMP17",
+			"name": "CMP 2017",
+			"link": "./26CMP17/index.json",
+			"cover": "./26CMP17/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "X27PM001",
+			"name": "Hunters Hunted",
+			"link": "./X27PM001/index.json",
+			"cover": "./X27PM001/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 4,
+			"status": "canceled"
+		},
+		{
+			"sku": "X27PM002",
+			"name": "Well Preserved",
+			"link": "./X27PM002/index.json",
+			"cover": "./X27PM002/cover.jpg",
+			"category": "mission",
+			"type": "physical",
+			"edition": 4,
+			"status": "canceled"
+		},
+		{
+			"sku": "26404",
+			"name": "Nigel Findley Omnibus",
+			"link": "./26404/index.json",
+			"cover": "./26404/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "10763",
+			"name": "Schockwellen",
+			"link": "./10763/index.json",
+			"cover": "./10763/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 3,
+			"status": "ok"
+		},
+		{
+			"sku": "SRF",
+			"name": "France",
+			"link": "./SRF/index.json",
+			"cover": "./SRF/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10674",
+			"name": "Running Wild",
+			"link": "./10674/index.json",
+			"cover": "./10674/cover.jpg",
+			"category": "mission",
+			"type": "print",
+			"edition": 3,
+			"status": "canceled"
+		},
+		{
+			"sku": "26859",
+			"name": "Identity Crisis",
+			"link": "./26859/index.json",
+			"cover": "./26859/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26861",
+			"name": "Stirred",
+			"link": "./26861/index.json",
+			"cover": "./26861/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45201",
+			"name": "Berlin",
+			"link": "./45201/index.json",
+			"cover": "./45201/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "47020",
+			"name": "Datapuls: ADL",
+			"link": "./47020/index.json",
+			"cover": "./47020/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45061",
+			"name": "Datapuls: Hamburg",
+			"link": "./45061/index.json",
+			"cover": "./45061/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45068",
+			"name": "Hamburg - Zusatzpack",
+			"link": "./45068/index.json",
+			"cover": "./45068/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D1",
+			"name": "Datapuls: Berlin",
+			"link": "./470D1/index.json",
+			"cover": "./470D1/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D2",
+			"name": "Datapuls: Trollrepublik und Schwarzwald",
+			"link": "./470D2/index.json",
+			"cover": "./470D2/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D3",
+			"name": "Datapuls: Karlsruhe",
+			"link": "./470D3/index.json",
+			"cover": "./470D3/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D4",
+			"name": "Datapuls: Österreich",
+			"link": "./470D4/index.json",
+			"cover": "./470D4/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D5",
+			"name": "Datapuls: SOX",
+			"link": "./470D5/index.json",
+			"cover": "./470D5/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "47000GA",
+			"name": "Parazoologie 2075",
+			"link": "./47000GA/index.json",
+			"cover": "./47000GA/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "47000GC",
+			"name": "Systemdaten",
+			"link": "./47000GC/index.json",
+			"cover": "./47000GC/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27405",
+			"name": "Toxic Alleys",
+			"link": "./27405/index.json",
+			"cover": "./27405/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45067",
+			"name": "Ebbe und Flut",
+			"link": "./45067/index.json",
+			"cover": "./45067/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45019",
+			"name": "Schattenhandbuch",
+			"link": "./45019/index.json",
+			"cover": "./45019/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45034",
+			"name": "Schattenhandbuch 2",
+			"link": "./45034/index.json",
+			"cover": "./45034/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45039",
+			"name": "Schattenhandbuch 3",
+			"link": "./45039/index.json",
+			"cover": "./45039/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "46085",
+			"name": "Blut & Spiele",
+			"link": "./46085/index.json",
+			"cover": "./46085/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "46065",
+			"name": "Mission Sioux Nation",
+			"link": "./46065/index.json",
+			"cover": "./46065/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "GRST-2016",
+			"name": "Gefahr in Boston",
+			"link": "./GRST-2016/index.json",
+			"cover": "./GRST-2016/cover.jpg",
+			"category": "mission",
+			"type": "scan",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45033",
+			"name": "Mission Chicago",
+			"link": "./45033/index.json",
+			"cover": "./45033/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45060",
+			"name": "Chaos über Denver",
+			"link": "./45060/index.json",
+			"cover": "./45060/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45035",
+			"name": "Schatten über Chicago",
+			"link": "./45035/index.json",
+			"cover": "./45035/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45042",
+			"name": "Karrenquartett",
+			"link": "./45042/index.json",
+			"cover": "./45042/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "45020",
+			"name": "Wummenquartett",
+			"link": "./45020/index.json",
+			"cover": "./45020/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "45046",
+			"name": "Auf dunklen Pfaden",
+			"link": "./45046/index.json",
+			"cover": "./45046/cover.jpg",
+			"category": "mission",
+			"type": "print",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "45056",
+			"name": "Im Bann der Karten",
+			"link": "./45056/index.json",
+			"cover": "./45056/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "23001",
+			"name": "München Noir",
+			"link": "./23001/index.json",
+			"cover": "./23001/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "21008",
+			"name": "Shadowrun: Die 6. Welt",
+			"link": "./21008/index.json",
+			"cover": "./21008/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 4,
+			"status": "missing"
+		},
+		{
+			"sku": "23006",
+			"name": "SOX",
+			"link": "./23006/index.json",
+			"cover": "./23006/cover.jpg",
+			"category": "sourcebook",
+			"type": "ocr",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "47000GX",
+			"name": "Netzstücke (Machtspiele: Handbuch für Spione)",
+			"link": "./47000GX/index.json",
+			"cover": "./47000GX/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "46095",
+			"name": "Rhein-Ruhr-Megaplex",
+			"link": "./46095/index.json",
+			"cover": "./46095/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "45210",
+			"name": "Reiseführer in die deutschen Schatten",
+			"link": "./45210/index.json",
+			"cover": "./45210/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "45047",
+			"name": "State of the Art: ADL",
+			"link": "./45047/index.json",
+			"cover": "./45047/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "963-85454-9-6",
+			"name": "Árnyék Magyarország",
+			"link": "./963-85454-9-6/index.json",
+			"cover": "./963-85454-9-6/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "10727",
+			"name": "Chrom & Dioxin",
+			"link": "./10727/index.json",
+			"cover": "./10727/cover.jpg",
+			"category": "sourcebook",
+			"type": "scan",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "P2009A",
+			"name": "Geben und Nehmen",
+			"link": "./P2009A/index.json",
+			"cover": "./P2009A/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26056S",
+			"name": "The Seattle Gambit",
+			"link": "./26056S/index.json",
+			"cover": "./26056S/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM08-01",
+			"name": "Keep Your Friend Close",
+			"link": "./SRM08-01/index.json",
+			"cover": "./SRM08-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM08-02",
+			"name": "Can You Dig It?",
+			"link": "./SRM08-02/index.json",
+			"cover": "./SRM08-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM08-03",
+			"name": "10 Block Tango",
+			"link": "./SRM08-03/index.json",
+			"cover": "./SRM08-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM08-04",
+			"name": "Dirty Laundry",
+			"link": "./SRM08-04/index.json",
+			"cover": "./SRM08-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26S057",
+			"name": "Shadows in Focus: Morocco",
+			"link": "./26S057/index.json",
+			"cover": "./26S057/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "KS001",
+			"name": "Shadowrun: Sprawl Ops",
+			"link": "./KS001/index.json",
+			"cover": "./KS001/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "KS002",
+			"name": "Shadowrun: Sprawl Ops - Kickstarter extras",
+			"link": "./KS002/index.json",
+			"cover": "./KS002/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "KS003",
+			"name": "Shadowrun: Sprawl Ops - Co-Op Expansion",
+			"link": "./KS003/index.json",
+			"cover": "./KS003/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "KS004",
+			"name": "Shadowrun: Sprawl Ops - 5-6 Player Expansion",
+			"link": "./KS004/index.json",
+			"cover": "./KS004/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27705",
+			"name": "Shadowrun: Crossfire: Prime Runner Edition",
+			"link": "./27705/index.json",
+			"cover": "./27705/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27706",
+			"name": "Shadowrun: Crossfire: Prime Runner Refit Kit",
+			"link": "./27706/index.json",
+			"cover": "./27706/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 5,
+			"status": "outofscope"
+		},
+		{
+			"sku": "27013",
+			"name": "Kill Code",
+			"link": "./27013/index.json",
+			"cover": "./27013/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27012",
+			"name": "Street Lethal",
+			"link": "./27012/index.json",
+			"cover": "./27012/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27203",
+			"name": "Better than Bad",
+			"link": "./27203/index.json",
+			"cover": "./27203/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "2-7408-0105-X",
+			"name": "Les Nations des Américains d'Origine",
+			"link": "./2-7408-0105-X/index.json",
+			"cover": "./2-7408-0105-X/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 1,
+			"status": "outofscope"
+		},
+		{
+			"sku": "2-7408-0112-2",
+			"name": "Alerte Rouge",
+			"link": "./2-7408-0112-2/index.json",
+			"cover": "./2-7408-0112-2/cover.jpg",
+			"category": "mission",
+			"type": "print",
+			"edition": 2,
+			"status": "ok"
+		},
+		{
+			"sku": "45050",
+			"name": "Shadowrun Einsteigerregeln",
+			"link": "./45050/index.json",
+			"cover": "./45050/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26057S",
+			"name": "Shadows in Focus: City by Shadow: Casablanca-Rabat",
+			"link": "./26057S/index.json",
+			"cover": "./26057S/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27486",
+			"name": "Chicago Chaos",
+			"link": "./27486/index.json",
+			"cover": "./27486/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27453",
+			"name": "No Future (A Cyberpunk Sourcebook)",
+			"link": "./27453/index.json",
+			"cover": "./27453/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "27454",
+			"name": "The Neo-Anarchist Streetpedia",
+			"link": "./27454/index.json",
+			"cover": "./27454/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28000",
+			"name": "Shadowrun: Sixth World",
+			"link": "./28000/index.json",
+			"cover": "./28000/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28001",
+			"name": "Shadowrun Sixth World: Game Master's Screen",
+			"link": "./28001/index.json",
+			"cover": "./28001/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28010",
+			"name": "Shadowrun: Sixth World: Beginner Box",
+			"link": "./28010/index.json",
+			"cover": "./28010/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "470D6",
+			"name": "Datapuls: Proteus",
+			"link": "./470D6/index.json",
+			"cover": "./470D6/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D7",
+			"name": "Datapuls: Schweiz",
+			"link": "./470D7/index.json",
+			"cover": "./470D7/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D8",
+			"name": "Datapuls: Verschlusssache",
+			"link": "./470D8/index.json",
+			"cover": "./470D8/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D9",
+			"name": "Datapuls: Frankfurt",
+			"link": "./470D9/index.json",
+			"cover": "./470D9/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "470D0",
+			"name": "Datapuls: SOTA 2080",
+			"link": "./470D0/index.json",
+			"cover": "./470D0/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26866",
+			"name": "Makeda Red",
+			"link": "./26866/index.json",
+			"cover": "./26866/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26904NV",
+			"name": "Tower of the Scorpion",
+			"link": "./26904NV/index.json",
+			"cover": "./26904NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26865",
+			"name": "The Johnson Run",
+			"link": "./26865/index.json",
+			"cover": "./26865/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28901NV",
+			"name": "The Frame Job, Part 1: Yu",
+			"link": "./28901NV/index.json",
+			"cover": "./28901NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28902NV",
+			"name": "The Frame Job, Part 2: Emu",
+			"link": "./28902NV/index.json",
+			"cover": "./28902NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28903NV",
+			"name": "The Frame Job, Part 3: Rude",
+			"link": "./28903NV/index.json",
+			"cover": "./28903NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28904NV",
+			"name": "The Frame Job, Part 4: Frostburn",
+			"link": "./28904NV/index.json",
+			"cover": "./28904NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28905NV",
+			"name": "The Frame Job, Part 5: Zipfile",
+			"link": "./28905NV/index.json",
+			"cover": "./28905NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28906NV",
+			"name": "The Frame Job, Part 6: Retribution",
+			"link": "./28906NV/index.json",
+			"cover": "./28906NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "2690ANV",
+			"name": "Between a Corp and a Hard Place",
+			"link": "./2690ANV/index.json",
+			"cover": "./2690ANV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "45070",
+			"name": "Grimmes Erwachen",
+			"link": "./45070/index.json",
+			"cover": "./45070/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "28401",
+			"name": "Free Seattle",
+			"link": "./28401/index.json",
+			"cover": "./28401/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28300",
+			"name": "Cutting Black",
+			"link": "./28300/index.json",
+			"cover": "./28300/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM-HAM",
+			"name": "Missions: Hamburg",
+			"link": "./SRM-HAM/index.json",
+			"cover": "./SRM-HAM/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "26062S",
+			"name": "Adversary",
+			"link": "./26062S/index.json",
+			"cover": "./26062S/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "35013",
+			"name": "Toxische Erlösung",
+			"link": "./35013/index.json",
+			"cover": "./35013/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46110G",
+			"name": "Berlin 2080",
+			"link": "./46110G/index.json",
+			"cover": "./46110G/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28400",
+			"name": "30 Nights",
+			"link": "./28400/index.json",
+			"cover": "./28400/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "PRO676",
+			"name": "Schattentricks",
+			"link": "./PRO676/index.json",
+			"cover": "./PRO676/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "DEA001",
+			"name": "Schattenkrieg",
+			"link": "./DEA001/index.json",
+			"cover": "./DEA001/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "45072G",
+			"name": "Schattenhandbuch 4",
+			"link": "./45072G/index.json",
+			"cover": "./45072G/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 5,
+			"status": "missing"
+		},
+		{
+			"sku": "26864",
+			"name": "Shadow Dance",
+			"link": "./26864/index.json",
+			"cover": "./26864/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "35012G",
+			"name": "Marlene Lebt",
+			"link": "./35012G/index.json",
+			"cover": "./35012G/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "35014",
+			"name": "Nachtmeisters Erben",
+			"link": "./35014/index.json",
+			"cover": "./35014/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "35015G",
+			"name": "Alter Ratio",
+			"link": "./35015G/index.json",
+			"cover": "./35015G/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "BBESR602",
+			"name": "Néo-Révolution",
+			"link": "./BBESR602/index.json",
+			"cover": "./BBESR602/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "STLD",
+			"name": "SchattenLoad",
+			"link": "./STLD/index.json",
+			"cover": "./STLD/cover.jpg",
+			"category": "magazine",
+			"type": "digital",
+			"edition": 5,
+			"status": "missing"
+		},
+		{
+			"sku": "NVP",
+			"name": "NovaPuls",
+			"link": "./NVP/index.json",
+			"cover": "./NVP/cover.jpg",
+			"category": "magazine",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "28002",
+			"name": "Firing Squad",
+			"link": "./28002/index.json",
+			"cover": "./28002/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM08-05",
+			"name": "Sleeping Giants",
+			"link": "./SRM08-05/index.json",
+			"cover": "./SRM08-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM08-06",
+			"name": "Final Countdown",
+			"link": "./SRM08-06/index.json",
+			"cover": "./SRM08-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "26006NV",
+			"name": "A Kiss to Die For",
+			"link": "./26006NV/index.json",
+			"cover": "./26006NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26012NV",
+			"name": "Chaser",
+			"link": "./26012NV/index.json",
+			"cover": "./26012NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26008NV",
+			"name": "Crocodile Tears",
+			"link": "./26008NV/index.json",
+			"cover": "./26008NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "FOIL",
+			"name": "Foil and Puzzles",
+			"link": "./FOIL/index.json",
+			"cover": "./FOIL/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "46114G",
+			"name": "Im Schatten der Drachen",
+			"link": "./46114G/index.json",
+			"cover": "./46114G/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28507",
+			"name": "Sixth World Activity Book",
+			"link": "./28507/index.json",
+			"cover": "./28507/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28301",
+			"name": "Slip Streams",
+			"link": "./28301/index.json",
+			"cover": "./28301/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28881S",
+			"name": "Shadow Stock: Ingentis Athletes",
+			"link": "./28881S/index.json",
+			"cover": "./28881S/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "27002S",
+			"name": "Krime Katalog",
+			"link": "./27002S/index.json",
+			"cover": "./27002S/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28840S",
+			"name": "Tales from the UCAS: Age of Rust",
+			"link": "./28840S/index.json",
+			"cover": "./28840S/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SLEDGE",
+			"name": "Sledge Limited Edition Statue",
+			"link": "./SLEDGE/index.json",
+			"cover": "./SLEDGE/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28880",
+			"name": "Prime Runner Miniatures",
+			"link": "./28880/index.json",
+			"cover": "./28880/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "DRA",
+			"name": "Shadowrun Dice roller",
+			"link": "./DRA/index.json",
+			"cover": "./DRA/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28500",
+			"name": "Rogue's Gallery: An NPC Deck",
+			"link": "./28500/index.json",
+			"cover": "./28500/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "480D1",
+			"name": "Datapuls: Pomorya",
+			"link": "./480D1/index.json",
+			"cover": "./480D1/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "480D2",
+			"name": "Datapuls: München",
+			"link": "./480D2/index.json",
+			"cover": "./480D2/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "480D3",
+			"name": "Datapuls: SOTA 2081",
+			"link": "./480D3/index.json",
+			"cover": "./480D3/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "480D4",
+			"name": "Datapuls: Westphalen",
+			"link": "./480D4/index.json",
+			"cover": "./480D4/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "480D5",
+			"name": "Datapuls: Piraten der Deutschen Bucht",
+			"link": "./480D5/index.json",
+			"cover": "./480D5/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "461138",
+			"name": "Cheat Sheets SR6",
+			"link": "./461138/index.json",
+			"cover": "./461138/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46117",
+			"name": "Hinter dem Vorhang",
+			"link": "./46117/index.json",
+			"cover": "./46117/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46121",
+			"name": "Netzgewitter",
+			"link": "./46121/index.json",
+			"cover": "./46121/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "45015",
+			"name": "Shadowrun: Schattenland",
+			"link": "./45015/index.json",
+			"cover": "./45015/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28504",
+			"name": "Gun Rack (Weapon Cards)",
+			"link": "./28504/index.json",
+			"cover": "./28504/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28501",
+			"name": "Dice & Edge Tokens",
+			"link": "./28501/index.json",
+			"cover": "./28501/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28505",
+			"name": "High Rollers Dice Set",
+			"link": "./28505/index.json",
+			"cover": "./28505/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28506",
+			"name": "Mobile Grimoire Spell Cards",
+			"link": "./28506/index.json",
+			"cover": "./28506/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "SRM09-01",
+			"name": "Started from the Bottom",
+			"link": "./SRM09-01/index.json",
+			"cover": "./SRM09-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28450",
+			"name": "Collapsing Now",
+			"link": "./28450/index.json",
+			"cover": "./28450/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26863",
+			"name": "Veiled Extraction",
+			"link": "./26863/index.json",
+			"cover": "./26863/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "QSA6D",
+			"name": "Battle Royale",
+			"link": "./QSA6D/index.json",
+			"cover": "./QSA6D/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28003",
+			"name": "Street Wyrd",
+			"link": "./28003/index.json",
+			"cover": "./28003/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28451",
+			"name": "Power Plays",
+			"link": "./28451/index.json",
+			"cover": "./28451/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26007NV",
+			"name": "Under Pressure",
+			"link": "./26007NV/index.json",
+			"cover": "./26007NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26013NV",
+			"name": "See How She Runs",
+			"link": "./26013NV/index.json",
+			"cover": "./26013NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26866A",
+			"name": "Tourist Trapped",
+			"link": "./26866A/index.json",
+			"cover": "./26866A/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46125",
+			"name": "Neo Noir",
+			"link": "./46125/index.json",
+			"cover": "./46125/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "481D1",
+			"name": "Datapuls: Feuerläufer",
+			"link": "./481D1/index.json",
+			"cover": "./481D1/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "481D2",
+			"name": "Datapuls: Magische Orte",
+			"link": "./481D2/index.json",
+			"cover": "./481D2/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "481D3",
+			"name": "Datapuls: Kunstraub",
+			"link": "./481D3/index.json",
+			"cover": "./481D3/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "481D4",
+			"name": "Datapuls: FBV (Frankfurter Bankenverein)",
+			"link": "./481D4/index.json",
+			"cover": "./481D4/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "481D5",
+			"name": "Datapuls: Marienbad",
+			"link": "./481D5/index.json",
+			"cover": "./481D5/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46115",
+			"name": "Schattendossier 1",
+			"link": "./46115/index.json",
+			"cover": "./46115/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46127",
+			"name": "Schattendossier 2",
+			"link": "./46127/index.json",
+			"cover": "./46127/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "PROMOCD",
+			"name": "Into the Shadows",
+			"link": "./PROMOCD/index.json",
+			"cover": "./PROMOCD/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 4,
+			"status": "ok"
+		},
+		{
+			"sku": "28F001",
+			"name": "BattleRun II: The Quest for the Thing",
+			"link": "./28F001/index.json",
+			"cover": "./28F001/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26869",
+			"name": "For a Few Nuyen More",
+			"link": "./26869/index.json",
+			"cover": "./26869/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28D00",
+			"name": "Executive Dice",
+			"link": "./28D00/index.json",
+			"cover": "./28D00/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28FM02",
+			"name": "Face Mask: Shadowrun \"S\" Symbol",
+			"link": "./28FM02/index.json",
+			"cover": "./28FM02/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28FM01",
+			"name": "Face Mask: Ancients/Anarchy Symbol",
+			"link": "./28FM01/index.json",
+			"cover": "./28FM01/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28P00",
+			"name": "Shadowrun 30th Anniversary Lapel Pin",
+			"link": "./28P00/index.json",
+			"cover": "./28P00/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28P01",
+			"name": "Sixth World Totem \"S\" Lapel Pin",
+			"link": "./28P01/index.json",
+			"cover": "./28P01/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28T00",
+			"name": "Shadowrun 30th Anniversary T-Shirt/Hoodie",
+			"link": "./28T00/index.json",
+			"cover": "./28T00/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28T01",
+			"name": "Sixth World Sprawl Fashion T-Shirt",
+			"link": "./28T01/index.json",
+			"cover": "./28T01/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "BBESR6G03",
+			"name": "Le doigt dans l'engrenage",
+			"link": "./BBESR6G03/index.json",
+			"cover": "./BBESR6G03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28053",
+			"name": "Assassin's Night",
+			"link": "./28053/index.json",
+			"cover": "./28053/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46124",
+			"name": "Revierbericht 2082",
+			"link": "./46124/index.json",
+			"cover": "./46124/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26009NV",
+			"name": "Kill Penalty",
+			"link": "./26009NV/index.json",
+			"cover": "./26009NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26878",
+			"name": "On the Rocks",
+			"link": "./26878/index.json",
+			"cover": "./26878/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46128",
+			"name": "Vendetta",
+			"link": "./46128/index.json",
+			"cover": "./46128/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46130",
+			"name": "Budenzauber",
+			"link": "./46130/index.json",
+			"cover": "./46130/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28004",
+			"name": "Double Clutch",
+			"link": "./28004/index.json",
+			"cover": "./28004/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "27487",
+			"name": "Anarchy 2050",
+			"link": "./27487/index.json",
+			"cover": "./27487/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26867",
+			"name": "Imposter",
+			"link": "./26867/index.json",
+			"cover": "./26867/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28508",
+			"name": "Johnson Dex",
+			"link": "./28508/index.json",
+			"cover": "./28508/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28509",
+			"name": "Rides",
+			"link": "./28509/index.json",
+			"cover": "./28509/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "35017G",
+			"name": "Wendigos Warhheit",
+			"link": "./35017G/index.json",
+			"cover": "./35017G/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM09-02",
+			"name": "Finders Keepers",
+			"link": "./SRM09-02/index.json",
+			"cover": "./SRM09-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28302",
+			"name": "The Kechibi Code",
+			"link": "./28302/index.json",
+			"cover": "./28302/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28100",
+			"name": "Emerald City",
+			"link": "./28100/index.json",
+			"cover": "./28100/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28403",
+			"name": "The Third Parallel",
+			"link": "./28403/index.json",
+			"cover": "./28403/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28880S",
+			"name": "Shadow Stock: Lofwyr's Legions",
+			"link": "./28880S/index.json",
+			"cover": "./28880S/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM09-03",
+			"name": "Learning Little from Victory",
+			"link": "./SRM09-03/index.json",
+			"cover": "./SRM09-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM09-04",
+			"name": "Neo-Tokyo Drift",
+			"link": "./SRM09-04/index.json",
+			"cover": "./SRM09-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM09-05",
+			"name": "Violent Shadows",
+			"link": "./SRM09-05/index.json",
+			"cover": "./SRM09-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46134",
+			"name": "Schattendossier 3",
+			"link": "./46134/index.json",
+			"cover": "./46134/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "482D1",
+			"name": "Datapuls: DeMeKo und Medien",
+			"link": "./482D1/index.json",
+			"cover": "./482D1/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "482D2",
+			"name": "Datapuls: Alpen",
+			"link": "./482D2/index.json",
+			"cover": "./482D2/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "482D3",
+			"name": "Datapuls: Harz",
+			"link": "./482D3/index.json",
+			"cover": "./482D3/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "482D4",
+			"name": "Datapuls: 10 Konzerne",
+			"link": "./482D4/index.json",
+			"cover": "./482D4/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "482D5",
+			"name": "Datapuls: SOTA 2082",
+			"link": "./482D5/index.json",
+			"cover": "./482D5/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28901",
+			"name": "Shadowrun: Edgezone",
+			"link": "./28901/index.json",
+			"cover": "./28901/cover.jpg",
+			"category": "boardgame",
+			"type": "physical",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26090",
+			"name": "Old School (Sprawl Stories, Volume Two)",
+			"link": "./26090/index.json",
+			"cover": "./26090/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26018SN",
+			"name": "Blackbird Three: Hollow Point",
+			"link": "./26018SN/index.json",
+			"cover": "./26018SN/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26017SN",
+			"name": "Blackbird Two: Combined Exercises",
+			"link": "./26017SN/index.json",
+			"cover": "./26017SN/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26016SN",
+			"name": "Blackbird One: Base of Fire",
+			"link": "./26016SN/index.json",
+			"cover": "./26016SN/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26019",
+			"name": "Unrepairable",
+			"link": "./26019/index.json",
+			"cover": "./26019/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26011NV",
+			"name": "Kings of the Street",
+			"link": "./26011NV/index.json",
+			"cover": "./26011NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46132",
+			"name": "Alpträume",
+			"link": "./46132/index.json",
+			"cover": "./46132/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "45025",
+			"name": "Schwarzgeld",
+			"link": "./45025/index.json",
+			"cover": "./45025/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
+			"sku": "28005",
+			"name": "Sixth World Companion",
+			"link": "./28005/index.json",
+			"cover": "./28005/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "PRO754",
+			"name": "Falsch Abgebogen",
+			"link": "./PRO754/index.json",
+			"cover": "./PRO754/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46139K",
+			"name": "Kaleidoskop: Torpedos in der Nacht",
+			"link": "./46139K/index.json",
+			"cover": "./46139K/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46139J",
+			"name": "Kaleidoskop: Policlub Pro Nobilis",
+			"link": "./46139J/index.json",
+			"cover": "./46139J/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46139I",
+			"name": "Kaleidoskop: Salzbergwerk Heilbronn",
+			"link": "./46139I/index.json",
+			"cover": "./46139I/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46139H",
+			"name": "Kaleidoskop: Funpark 2082",
+			"link": "./46139H/index.json",
+			"cover": "./46139H/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46139G",
+			"name": "Kaleidoskop: Internat Hohenstadt",
+			"link": "./46139G/index.json",
+			"cover": "./46139G/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46139F",
+			"name": "Kaleidoskop: Deister-Tierwelt",
+			"link": "./46139F/index.json",
+			"cover": "./46139F/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46139E",
+			"name": "Kaleidoskop: Magie in Heidelberg",
+			"link": "./46139E/index.json",
+			"cover": "./46139E/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46139D",
+			"name": "Kaleidoskop: Haustier-Dossier",
+			"link": "./46139D/index.json",
+			"cover": "./46139D/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46139C",
+			"name": "Kaleidoskop: Stadtkrieg WM",
+			"link": "./46139C/index.json",
+			"cover": "./46139C/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46139B",
+			"name": "Kaleidoskop: Hexen im Harz",
+			"link": "./46139B/index.json",
+			"cover": "./46139B/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46139A",
+			"name": "Kaleidoskop: Adelsbrevier",
+			"link": "./46139A/index.json",
+			"cover": "./46139A/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46136",
+			"name": "Schattengeschäfte",
+			"link": "./46136/index.json",
+			"cover": "./46136/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26015",
+			"name": "Mercy Street",
+			"link": "./26015/index.json",
+			"cover": "./26015/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28955",
+			"name": "16 Month Calendar (2022 - 2023)",
+			"link": "./28955/index.json",
+			"cover": "./28955/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28902",
+			"name": "Art Portfolio Vol. 1",
+			"link": "./28902/index.json",
+			"cover": "./28902/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28510",
+			"name": "Shadow Cast",
+			"link": "./28510/index.json",
+			"cover": "./28510/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28503",
+			"name": "Shadow Points",
+			"link": "./28503/index.json",
+			"cover": "./28503/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28006",
+			"name": "Hack & Slash",
+			"link": "./28006/index.json",
+			"cover": "./28006/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26879X",
+			"name": "Elfin Black",
+			"link": "./26879X/index.json",
+			"cover": "./26879X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26879",
+			"name": "CTRL Issues",
+			"link": "./26879/index.json",
+			"cover": "./26879/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26875NV",
+			"name": "Clean Record",
+			"link": "./26875NV/index.json",
+			"cover": "./26875NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26874X",
+			"name": "Down These Dark Streets",
+			"link": "./26874X/index.json",
+			"cover": "./26874X/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28956",
+			"name": "Who Drek'd in the Sprawl? A Sprawl Scouts Recognition Guide",
+			"link": "./28956/index.json",
+			"cover": "./28956/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM09-06",
+			"name": "Seven Breaths",
+			"link": "./SRM09-06/index.json",
+			"cover": "./SRM09-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM10-01",
+			"name": "Death's Daily Business",
+			"link": "./SRM10-01/index.json",
+			"cover": "./SRM10-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM10-02",
+			"name": "One Stone, Two Birds",
+			"link": "./SRM10-02/index.json",
+			"cover": "./SRM10-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28800S",
+			"name": "Lifestyles of the Shadowy & Infamous",
+			"link": "./28800S/index.json",
+			"cover": "./28800S/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28452",
+			"name": "Null Value",
+			"link": "./28452/index.json",
+			"cover": "./28452/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26883",
+			"name": "Dragonbones",
+			"link": "./26883/index.json",
+			"cover": "./26883/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26873",
+			"name": "Scorpion's Bane",
+			"link": "./26873/index.json",
+			"cover": "./26873/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26005NV",
+			"name": "Corporate Business",
+			"link": "./26005NV/index.json",
+			"cover": "./26005NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26010NV",
+			"name": "Best Laid Plans",
+			"link": "./26010NV/index.json",
+			"cover": "./26010NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28101",
+			"name": "Astral Ways",
+			"link": "./28101/index.json",
+			"cover": "./28101/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28404",
+			"name": "Whisper Nets",
+			"link": "./28404/index.json",
+			"cover": "./28404/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM10-03",
+			"name": "When the Bough Breaks",
+			"link": "./SRM10-03/index.json",
+			"cover": "./SRM10-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "482D6",
+			"name": "Datapuls: Hessen-Nassau",
+			"link": "./482D6/index.json",
+			"cover": "./482D6/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "482D7",
+			"name": "Datapuls: Riggerszene ADL",
+			"link": "./482D7/index.json",
+			"cover": "./482D7/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "482D8",
+			"name": "Datapuls: Untergrundmedizin",
+			"link": "./482D8/index.json",
+			"cover": "./482D8/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "482D9",
+			"name": "Datapuls: 10 Museen",
+			"link": "./482D9/index.json",
+			"cover": "./482D9/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "482D10",
+			"name": "Datapuls: Norddeutscher Bund",
+			"link": "./482D10/index.json",
+			"cover": "./482D10/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46143",
+			"name": "Schattendossier 4",
+			"link": "./46143/index.json",
+			"cover": "./46143/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46142",
+			"name": "Schwere Fracht",
+			"link": "./46142/index.json",
+			"cover": "./46142/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "BBESR6G10",
+			"name": "Les Dossiers McCarthy",
+			"link": "./BBESR6G10/index.json",
+			"cover": "./BBESR6G10/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28511",
+			"name": "Rogues Lineup",
+			"link": "./28511/index.json",
+			"cover": "./28511/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28512",
+			"name": "Program Deck",
+			"link": "./28512/index.json",
+			"cover": "./28512/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "R20-001",
+			"name": "Shadowrun, Sixth World City Edition - Seattle - Art Pack",
+			"link": "./R20-001/index.json",
+			"cover": "./R20-001/cover.jpg",
+			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		}
+	]
+}

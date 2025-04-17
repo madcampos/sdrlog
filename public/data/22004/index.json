@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["22004"],
+	"name": "Brennpunkt: ADL",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Willkommen zu Hause, Omae.\n\nDu kennst dich aus in deinem Sprawl? Du weißt, wer bei der Regierung die Fäden zieht? Wie sie dich in den Knast verfrachten können und wie du wieder raus kommst? Du glaubst zu wissen, was Hexen und Magier hier treiben oder was in der Szene läuft, nur weil du Karl Kombatmage guckst? Du weißt, was beim Hoverball wirklich läuft und wer daran verdient, wenn du es dir live im Trideo reinziehst? Und du bist dir sicher, dass der Schatten hinter den Mülltonnen bloß eine Ratte war? Wird Zeit, dass du dein Zuhause wirklich kennen lernst, Chummer!\n\nBrennpunkt: ADL erlaubt einen Blick hinter die Kulissen der Allianz Deutscher Länder, von dem Parteien- und Regierungssystem der Allianz und ihrem Justizapparat über die verschiedenen Wege der Magie und den Jagd und Domestizierungsmöglichkeiten bei hiesigen Crittern bis zu den aktuellen Sport- und Medientrends, und gibt Einblick in die wichtigsten Subkulturen der Allianzländer. Diese Informationen füllen den Hintergrund der ADL weiter aus und geben Spielleitern wie Spielern viele neue Möglichkeiten und Ideen an die Hand.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2063-01",
+	"notes": "It mainly deals with areas of the ADL society that could not be covered in detail in Deutschland in den Schatten II: politics, police , judiciary and prison system, magic - from the university magician training on the witches and the Theurgen Westphalens to the psionics - as well as the media, professional sports , the neo-anarchists in the east of the re-divided Berlin and various subcultures.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27502"],
+	"name": "Spell Cards, Series 1",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Everyone in the Sixth World wants to geek the mage first. Your job is to make sure that won't happen by being faster, deadlier, and more powerful than they are. Shadowrun Spell Cards, Series 1 make spellcasting faster and easier, with easy-to-reference game statistics for 54 different spells. Grab a pack and use it to call down a whole hellstorm of mana when you need it most!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-11-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

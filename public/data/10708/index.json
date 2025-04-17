@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10708"],
+	"name": "Deutschland in den Schatten",
+	"category": "sourcebook",
+	"type": "ocr",
+	"originalLanguage": "de-DE",
+	"description": "Deutschland in den Schatten: Ein Quellenbuch für Shadowrun. Das Rollenspiel einer finsteren Zukunft, in der die Skylines gigantischer Städte den Himmel verdunkeln, in der internationale Megakonzerne ganze Staaten aufkaufen, und in der Korruption einer der wichtigsten Wirtschaftszweige ist. … Wer im Labyrinth der Hamburger Kanäle, im gesetzlosen Berlin, der verstrahlten SOX und in den Chrompalästen der Megakonzerne überleben will, der braucht mehr als nur Überzeugungskraft einer Walther Secura: Cyberware oder Zauberei, der Blick hinter die glänzende Fassade, unf der Mut, ausgetretene Bahnen zu verlassen, unterscheiden den erfolgreichen vom erfolglosen Runner, den Individualisten von der Masse - und die Lebenden von den Toten.",
+	"edition": 2,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["1992-01-01", "1993-01-01"],
+	"gameDate": "2053-01",
+	"notes": "In the English translation \"Germany Sourcebook\" the following chapters are missing from the original \"Germany in the Shadow\":\n\t- \"The eyes of the Riggers\" - short story / novel excerpt\n\t- \"Hamburg: Venice of the North\"\n\t- \"Connections\"\n\t- \"Archetypes\"\n\t- \"Equipment\" and\n\t- the map of the ADL\n\nSome of the other chapters are arranged and arranged in completely different order. In addition, the English translation also contains a glossary with pronunciation tips and the chapter \"Game Information\" In addition, almost all inGame advertising of the German original (including the color pages) was replaced by completely different advertisements, and also replaced part of the original Shadowtalks to certain, particularly bizarre ideas of German authors (such as the \" Gore \" in Berlin) to relativize.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

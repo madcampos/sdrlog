@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM01-09"],
+	"name": "For Whom the Bell Tolls",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "In the corporate world, fights are not only in boardrooms, but in the streets. What if the future of an entire company were held in the hands of a team of shadowrunners?",
+	"edition": 3,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2005-01-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

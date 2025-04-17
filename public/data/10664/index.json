@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10664", "25013", "10754"],
+	"name": "State of the Art: 2063",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "State Of The Art 2063.01D" },
+	"originalLanguage": "en-US",
+	"description": "\"In this day and age, things change so nearly did the centrifugal force of progress will shear your head right off. Shadow Runners like us need to keep up with the latest Developments. When you run a B&E, you need to know what nasty new security It's the state of the art, chummer - it'll make you cred or get you dead. \"\n\nState of the art covers groundbreaking Developments in the year 2063 . It details the current state of genetics technology and corporate security, and describes advances in metamagic and mercenary operations. It also provides briefs on the latest trends in mainstream culture, sports and entertainment, with an eye on shadowing opportunities. These sections include a selection of new gear, vehicles, techniques and rules for both players and gamemasters.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2003-01-01"],
+	"gameDate": "2063-01",
+	"notes": "The German edition has an aditional chapter about the ADL.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

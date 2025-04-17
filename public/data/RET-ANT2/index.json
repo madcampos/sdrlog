@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["RET-ANT2"],
+	"name": "Shadowrun: Returns: Hong-Kong - Art Anthology",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "This anthology includes the art book for Shadowrun: Hong-Kong.",
+	"edition": 5,
+	"publisher": ["Harebrained Schemes"],
+	"releaseDate": ["2016-01-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

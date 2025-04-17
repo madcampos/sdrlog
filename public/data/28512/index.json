@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28512"],
+	"name": "Program Deck",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "# LOAD ‘EM UP!\n\nDeckers rely on their wits and skills, but a screaming fast machine with choice programs loaded doesn’t hurt. Program Deck has info on more than 40 different programs for deckers, including basic programs, hacking programs, and commlink apps. Program Deck is for use with Shadowrun, Sixth World.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2023-05-01"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

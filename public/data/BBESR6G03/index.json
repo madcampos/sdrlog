@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"name": "Le doigt dans l'engrenage",
+	"sku": ["BBESR6G03"],
+	"edition": 6,
+	"gameDate": "2080-01",
+	"releaseDate": ["2021-01-01"],
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "fr-FR",
+	"publisher": ["Other"],
+	"status": "missing",
+	"notes": "This is a French mission based on the \"Neo Revolution\" scenario.",
+	"description": "En plein cœur de Paris, des terroristes du Nouveau Jihad Islamique préparent un attentat pour frapper au cœur de la communauté musulmane de Paris, à l'Institut du monde arabe. Les runners sont plongés dans une course contre la montre pour contrecarrer l'attaque, mais comme toujours, rien n'est ce qui paraît dans les Ombres et derrière cet acte de violence gratuit se cache les fils d'une intrigue tout aussi sordide…\n\nCe scénario est une extension naturelle au supplément Néo-Révolution. Il donne l'occasion de donner un état des lieux de l'Islam dans l'Hexagone dystopique du monde de Shadowrun, mais aussi découvrir deux de ses lieux emblématiques à la capitale : l'Institut du Monde Arabe et la Mosquée de Paris. On y parle aussi « barbouze », évoquant les difficultés des services de renseignements français à l'aube de cette nouvelle et étrange cyber-république, mais aussi des machinations de la nouvelle mégacorporation, GlobalSpin, qui a bien sûr ses vues sur la France…",
+	"cover": "./cover.jpg"
+}

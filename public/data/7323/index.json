@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7323"],
+	"name": "Shadows of the Underworld",
+	"category": "mission",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "You've got a choice —\nfight back or get out of the way!\n\nShadows of the Underworld is a collection of five Shadowrun adventures, set against the chaos of the United Canadian and American States Presidential election of 2057. The runners get entangled with everything from political agents to fanatical cults, from a gun fight on the top of New York City's most famous building to the secret world of Oakland's metahuman underground. Shadows of the Underworld is intended for gamesters and players of all experience levels.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1996-12-01", "2010-07-17"],
+	"gameDate": "2057-05",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

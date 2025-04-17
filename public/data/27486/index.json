@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27486"],
+	"name": "Chicago Chaos",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "CHICAGO CHAOS THE DEEPEST DISORDER\n\nFor years, the heart of Chicago has been a wasteland, but not a barren one. Squatters and scroungers compete with ghouls, insect spirits, and creatures that haven't even been named yet in the quest to carve out a piece of this inhospitable territory for themselves. That's all changing, though. Some of the powers of the world have decided there might be things of worth inside Chicago's Containment Zone, so they're looking to open it up. The fight for the soul of Chicago is on.\n\nChicago Chaos contains Contract Briefs, characters, and plot information for Shadowrun: Anarchy players, providing the details and resources needed to let players jump into the chaos, fighting bizarre enemies, digging up pieces of the buried past, and seeing what they can make out of a once-broken city. There are also new qualities and Shadow Amps to help players flesh out their Anarchy characters. Chicago Chaos is for use with Shadowrun: Anarchy.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-01-21"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

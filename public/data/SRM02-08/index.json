@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM02-08"],
+	"name": "Chasing the Dragon",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The runners are hired by a Ms. Johnson—Junko \"Lady Jade\" Tetsuya or Donna Westmore, depending—to locate and bring to justice the murderer of 11-year-old Catherine Westmore, whose fate was sealed by the events of SRM02-03: The Grab. Finding Catherine's killer requires all of the team's ingenuity and resolve. Eventually, they find Takeshi Modori, former lover of Lady Jade and prime suspect in Catherine's murder investigations hiding at Mystic Curiosities, a Talismonger's shop in CAS. Takeshi tells them that he witnessed Catherine gunned down by her own father.\nTheir investigation resumes on the trail of Kazuya \"The Dragon\" Hotomi: an ex-Yakuza assassin. Kazuya has cut a deal with Lin Yao, a White Lotus Triad lieutenant for protection. To bring Kazuya to justice, the runners will have to deal with Lin Yao or infiltrate Klub Karma: a Triad controlled club in the heart of Chinatown. By doing so, they risk earning the enmity of the powerful organization.\nOnce Catherine's killer is in their hands, they are to take him to an abandoned flophouse in the Aurora Warrens—the very spot where Catherine's life ended. There, Ms. Johnson exacts her revenge either by using the runners to brutally torture Kazuya or, if the runners were involved in Catherine's death, by betraying them and attempting to bring their lives to a fitting end.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2006-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

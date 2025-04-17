@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7219", "10756"],
+	"name": "Target: Matrix",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Brennpunkt: Matrix" },
+	"originalLanguage": "en-US",
+	"description": "Can you hack it?\nThe Matrix is for everyone; a worldwide computer network made up of pocket universes and virtual realities. You can make deals in virtual bars, sharpen reactions in game simulations or score new gear from an online store. Deckers and non-deckers alike base most of their lives in the Matrix, the place where information lives and breeds, bought and sold like trinkets on a street corner. In shadowy data havens and behind the brain-frying defense in megacorporate data archives, information is power.",
+	"edition": 3,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["2000-01-01", "2002-01-01"],
+	"gameDate": "2061-08",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

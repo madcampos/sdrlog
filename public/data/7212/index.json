@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7212"],
+	"name": "Denver: The City of Shadows",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "A MILE HIGH AND SIX FEET UNDER\n\nWelcome to the Front Range Free Zone . It's a subdivided drek-infested, dead-dry tinderbox waiting for some political pyromaniac with slippery fingers to drop a match. Aztlan , CAS , Pueblo , Sioux , Ute , and UCAS . It's the center of the black market for most of North America and the crossroads of six nations. They get along with each other about as well as the rest of us, all jandering for position and a little bigger piece of the turf. It's the home of the Nexus , the Denver Data Haven, more information than Maria Mercurial's diary (maybe).\n\nIt's all waiting for you, chummer . Can you handle it?",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1994-11-01"],
+	"gameDate": "2055-05",
+	"notes": "This is a box set with two books: one for players and another for GMs.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

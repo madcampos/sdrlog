@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7216", "10657", "25009"],
+	"name": "New Seattle",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "New Seattle", "fr-FR": "Seattle 2060" },
+	"originalLanguage": "en-US",
+	"description": "Seattle's got it all: movers and shakers from all of the megacorporations, high-stakes political conflicts and even vicious mob wars--and it's surrounded by hostile countries! Every runner and wannabe comes to Seattle to learn their chops, hone their skills and make those big scores.\nNew Seattle takes the players on a tour of the most exciting city in the world of 2060. Each section of Seattle contains information on gangs, corporations, politics, hideouts, major players, criminal organizations and everything else players and gamemasters need to create both straightforward adventures and complex campaigns.",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1999-03-01", "2001-02-01", "2001-07-01", "2003-01-01", "2005-02-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

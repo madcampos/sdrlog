@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM04-00"],
+	"name": "Back In Business",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "It's a simple job: find a missing girl. Of course, nothing is ever simple in the shadows, and a whole lot of people seem to be interested in this job for one reason or another.\nWelcome to Season Four of the Missions Campaign, which returns home to the Emerald Sprawl, Seattle. Biz is good as a political fight is brewing to determine the fate of the vast Ork Underground, and everyone seems to be fighting over the mysterious artifacts flowing into the city. If you're going to get through this, remember the basics: Shoot straight, watch your back, and never, ever deal with a dragon. Oh, and collect a hefty payday along the way!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2011-01-01"],
+	"gameDate": "2072-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

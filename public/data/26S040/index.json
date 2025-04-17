@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S040"],
+	"name": "Gun H[e]aven 3",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Feuer und Stahl", "pt-BR": "Abrigo de Armas 3" },
+	"originalLanguage": "en-US",
+	"description": "Lethal Force\n\nYou're not a noob. You're not a poseur. You're a shadowrunner. When you pick a weapon, it's with a purpose, and 99 times out of 100, that purpose is to bring suckers down. You're going to choose your weapon carefully, and you know that the more options you have, the better your final choice will be.\nGun H(e)aven 3 is about options. Pistols, rifles, machine guns, even a flamethrower—they're all in here, ready to take out to the streets. Take a look, check your options, and then pick a weapon that will stop your enemies in their tracks. Because when the guns come out, you want it ended quick and ended right—with you still in your feet.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2013-12-14", "2014-02-03"],
+	"gameDate": "2075-12",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

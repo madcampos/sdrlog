@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46076-6", "27830"],
+	"name": "Fallen Angels",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "[Kellan Colt Trilogy #3] Kellan Colt has come far in her magical training. but all her accomplishments haven't satisfied her desire to know the truth about her shadowrunner mother, and to learn the secrets of the amulet she found among her mother's possessions. Kellan is determined to find answers - and to earn the respect of her fellow runners in the process.\nLately Kellan has been troubled by disturbing dreams. Something seems to be calling her, but before she can figure out who - or what - she joins a run into the paranoiac elven homeland of Tir Tairngire. Trapped deep inside foreign territory, she suddenly discovers the answers to her questions, but then she must unravel the most difficult riddle of all: Who can she really trust in the shadows?",
+	"edition": 3,
+	"publisher": ["WizKids Games"],
+	"releaseDate": ["2006-03-01"],
+	"gameDate": "2063-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

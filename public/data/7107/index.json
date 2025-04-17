@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7107"],
+	"name": "Virtual Realities",
+	"category": "rulebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "\"Faster, meaner, smarter...\nMan, I hate the technology\ncurve. It's back to school boys\n& girls, the kid gloves are OFF\"\n-FASTJACK, decker",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1991-07-01", "2011-08-31"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

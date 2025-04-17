@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM07-02"],
+	"name": "Collective Action",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The quintessential Chicago shadowrun is a full-to-bursting package with a variety of ingredients and flavors. And it doesn't even need to include bug spirits. If you want the true Chicago experience, it's here waiting for you. What ingredients does it contain? How about a rush job on a tight deadline, occasionally hostile crowds of locals, panicky security, explosions, stealth, open firefights in the streets, vicious traps, burning buildings, a crazed hermit, and a pack of drug-addicted dogs.\nThose are all ingredients in the stew that is this run, and Mr. Johnson is paying good money for you to wolf it down as fast as you can. Get moving!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2016-12-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

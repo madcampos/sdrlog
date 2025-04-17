@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["21008"],
+	"name": "Shadowrun: Die 6. Welt",
+	"category": "misc",
+	"type": "print",
+	"originalLanguage": "de-DE",
+	"description": "Werfen Sie einen Blick hinter die Kulissen von Shadowrun - sowohl in der Fiktion, wie auch in der Realität! Neben Kurzgeschichten bekannter Shadowrun-Autoren finden Sie wissenswerte und skurrile Interna, Interviews mit den Machern der Shadowrun-Welt, ein Who-is-Who der wichtigsten Autoren, eine komplette Zeitleiste, eine Liste aller Shadowrun-Publikationen mit Inhaltsangabe, Graphiken aus unterschiedlichen Publikationen und noch vieles mehr, was die Leser und Spieler schon immer einmal schwarz auf weiß haben wollten. Denn wie jeder Bewohner der Sechsten Welt weiß: Informationen bedeuten Macht!",
+	"edition": 4,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2005-01-01"],
+	"gameDate": "2069-01",
+	"status": "missing",
+	"notes": "This book was poublished in 2005 by Fanpro. It features a comprehensive look at the history, influence and mechanics of Shadowrun from 1989 to date. It includes a collection of articles on Shadowrun-related topics, short stories and a collector's guide listing all Shadowrun publications and novels in English and German.",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["FOIL"],
+	"name": "Foil and Puzzles",
+	"category": "misc",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "PICKING UP THE PIECES! Pre-order from our first-ever series of jigsaw puzzles for Shadowrun, printed right here in the USA! Five different images, done in high-quality foil and cut to a 500-standard piece puzzle. Each assembled puzzle is 18″ x 24″ and suitable for framing when complete. These puzzles are all limited to foiled print runs of 1000. Once they are gone, that's it. These are a \"while supplies last\" offer. If they appear again, they will be in standard paper, not foiled.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-06-12"],
+	"gameDate": "2080-01",
+	"status": "outofscope",
+	"notes": "Print only puzzles and folios of the game.",
+	"cover": "./cover.jpg"
+}

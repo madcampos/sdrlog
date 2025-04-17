@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46139K"],
+	"name": "Kaleidoskop: Torpedos in der Nacht",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# TORPEDOS IN DER NACHT\n\nFindet hier: Ein Abenteuer auf der Ostsee, bei der historische Kriegsschiffe und magische Erscheinungen mitspielen.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-08-18"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

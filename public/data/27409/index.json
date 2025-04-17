@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27409", "45041"],
+	"name": "Boardroom Backstabs 3: Battle of Manhattan",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "Krieg um Manhattan" },
+	"originalLanguage": "en-US",
+	"description": "TO: Willing recruits\n\nFROM: The people who can pay you\n\nCome to Manhattan. We will pay.\n\nWe won't bother with appeals to patriotism, or to your best instincts, or to anything the least bit noble. Come to Manhattan because there is a fight breaking out. Fighting is what you are paid for. Fighting is what you were born for. Come because there is money to be made.\nYou don't need to pick a side. Sides shift, sides change. In the end, the only consistent thing is that you are the only one you can count on. You fight for yourself. That is something you should be used to. That is how you live.\nCome to Manhattan because the corporations are spoiling for a fight. Most of the time, we're good at keeping our spats clean and civilized. We lie, we cheat, we steal, but we do not engage in anything as vulgar as open street fighting. Sometimes, though, we can't help ourselves. Sometimes, the tension gets to be too much, and it breaks, and it bursts into the open.\nThat time is coming.\nBring your skills, bring your wits, and definitely bring your guns. You'll need everything you got. We are anxious to take advantage of what you have.\nCome to Manhattan. We're waiting for you.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2015-02-01", "2016-05-01"],
+	"gameDate": "2076-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

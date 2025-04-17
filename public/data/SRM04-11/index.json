@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM04-11"],
+	"name": "Election Day (Buried Underground, Part 5)",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "When the campaigning is done, the debates are over, and the voters are heading out to cast their votes, it's time for the final push. Whether you're fighting for a particular candidate or a specific cause, you don't want to feel like there was more you could have done, that there was one more gambit you could have pulled to put your side over the top. Now is your final chance to make a difference before the votes are counted.\nIt's Election Day in Seattle, and there's plenty up for grabs, including the future of the Ork Underground. The power players of the sprawl want things to go their way—whatever way that may be—and they're not pulling any punches. They're dumping out their bags of tricks, and naturally some of those tricks involve giving money to shadowrunners. Whether they're being asked to start riots between voters or find an operative who is sitting on too many secrets, they're going to have a busy day, and their actions will shape the future of Seattle. With any luck, they'll be alive to see it.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-11-01"],
+	"gameDate": "2072-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

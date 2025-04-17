@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26651"],
+	"name": "10 Jackpointers",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Everyone's Watching Everyone.\nThe problem with keeping files about ne'er-do-wells is they're a curious and clever lot. Curious and clever enough to pilfer those files from the corporate compiler, repost them, and add their own commentary-providing a level of meta-information like you've never seen before. Get the scoop on Jackpoint-posters like Kay St. Irregular, Ecotope, Man-of-Many-Names, and Turbo Bunny.\nRemember: not everything you read is true. When the two sources of information are Horizon and Jackpoint ... all bets are off.\nThe Jackpointers presented in this download are: Baka Dabora, Ecotope, Fianchetto, Kay St. Irreggular, Lei Kung, Lyran, Man-of-Many-Names, Orbital DK, Riser, and Turbo Bunny. Each has a 2 or 3 page profile.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2010-03-01"],
+	"gameDate": "2072-03",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

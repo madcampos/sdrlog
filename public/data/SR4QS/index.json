@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SR4QS"],
+	"name": "Shadowrun 4th Ed.: Quick Start Rules",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "These Quick-Start Rules offer a streamlined rule set along with pregenerated characters, quick-reference sheets and a first adventure: Foodfight 4.0!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2011-02-01"],
+	"gameDate": "2072-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

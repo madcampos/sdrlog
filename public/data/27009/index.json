@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27009", "45055"],
+	"name": "Court of Shadows",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Hof der Feen" },
+	"originalLanguage": "en-US",
+	"description": "You have seen it. You have felt it. The dream where you are falling, falling, and you cannot see the ground but you know it is there waiting. You may try to brace yourself, you may try to force yourself awake—you do anything to avoid the impact that keeps rushing toward you.\nThe Seelie Court is the realm of the hidden, the rumored, and the unknown. Fairies, spirits, and enchanted creatures mingle there, building alliances, plotting, scheming, toying with the realm of humans—and with each other. The Court has long held a distant attachment to the material plane, influencing it like a dream influences our waking hours. But now a new connection has emerged, allowing humans to infiltrate the courts and influence its proceedings. At a time when magical power is ever in the rise, the mix of human and fae could set both worlds into a calamitous plunge, and no one will want to be awake when they hit bottom.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2016-07-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26854"],
+	"name": "Crimson",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Karmesin" },
+	"originalLanguage": "en-US",
+	"description": "Thanksgiving, 2075. Shadowrunning vampire-mage Rick \"Red\" Lang used to make his living hunting dangerous insect spirits and twisted mages, but when he awakens after twelve years of involuntary hibernation, he finds the rest of the world has gotten even stranger.\nRed begins piecing together what had happened during his lost time—and who put him under in the first place. But as he journeys through the neon-drenched ruins of Chicago and its augmented facades, Red uncovers an even larger plot involving eldritch forces seeking to invade from beyond our reality. He teams up with the few allies he can trust—Pretty, a beautiful ghoul, and Slim, a hacker extraordinaire—as they head into the middle of multiple schemes and power plays surrounding a dangerous new conflict threatening to shatter the uneasy peace into all-consuming chaos.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2015-04-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

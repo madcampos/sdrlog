@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM09-04"],
+	"name": "Neo-Tokyo Drift",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# Rev Your Engine!\n\nA big race is coming up, and a lot of people want to win it, as there is both money and prestige on the line. The runners are asked to help arrange for a particular winner of the race, but soon others come in with a competing offer. The runners have to decide who to help, who to anger, and just how they'll make sure their selected target wins.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-03-13"],
+	"gameDate": "2081-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

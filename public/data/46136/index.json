@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46136"],
+	"name": "Schattengeschäfte",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# Gestatten, mein Name ist Schmidt\n\nAm Anfang jedes Shadowruns steht ein Auftrag. „Schmidt“ gibt den Shadowrunnern die nötigen Informationen, zahlt das Geld und agiert als Schattengestalt. Hinter dieser Fassade kann eine Vielzahl von Personen stecken, mit eigenen Sorgen, Rachegelüsten oder einem Paycheck der Großkonzerne. Nicht jeder von ihnen ist im Vollzeit-Schmidtgeschäft und manchmal ist es nur diese eine illegale Sache, für die es außer Shadowrunnern keine andere Lösung gibt. Und wer auf der Straße will es sich leisten, einen gut bezahlten Job abzulehnen?",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-08-18", "2022-09-01"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

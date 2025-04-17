@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46134"],
+	"name": "Schattendossier 3",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Wer nichts weiß, der ist nichts wert. Du möchtest gerne in der Alpenzone ein paar Ökogruppen observieren und dich darauf vorbereiten, dabei von Kalkwyvern angegriffen zu werden? Dein Auftraggeber schickt dich in der Walpurgisnacht in den Harz für eine verdeckte Operation? In den neuesten Berichten der DeMeKo lauern brisante Informationen, die nicht veröffentlicht werden sollen, und nun suchst du nach dem richtigen Ansprechpartner? Oder du möchtest einfach nur das neueste Schießeisen erwerben oder den neuesten Konzern-Spieler in den Schatten kennenlernen?\n\nBegib dich nicht uninformiert in den Tod. Denn Informationen retten Leben.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-06-01"],
+	"gameDate": "2082-01",
+	"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: DeMeKo und Medien\", \"Datapuls: Alpen\", \"Datapuls: Harz\", \"Datapuls: SOTA 2082\" and \"Datapuls: 10 Konzerne\"",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

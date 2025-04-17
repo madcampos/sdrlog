@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM03-01"],
+	"name": "Ready, Set, Gogh!",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "By 2070, life literally imitates art. Some people have a fetish for it and it's your job to see that it's delivered and still breathing.\nThe team is forced to confront the challenges of Manhattan security, when Mr. Johnson asks them to perform a major heist. From there, things spiral into a double helix of complexity as motivations are abruptly twisted. This 24-page scenario includes a complete adventure, player handouts, and record handling sheets for participating in the Shadowrun Missions (SRM) campaign.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2009-04-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

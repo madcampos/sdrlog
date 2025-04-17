@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26856"],
+	"name": "Deniable Assets",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Ein ganz normaler Auftrag" },
+	"originalLanguage": "en-US",
+	"description": "Shadowrunner Katar Hawke knows the score on the streets. Every job is to be executed swiftly and simply—no muss, no fuss, and with as little help as possible. But when an extraction of a seemingly ordinary grad student from a Central American dig goes south in a big way, Hawke has to keep them both alive while he figures out what he's stumbled into—and how to get out of it in one piece.\nBut nothing about this shadowrun is remotely ordinary. The student, Rachel Gordon, has unearthed an artifact linking the Sixth World and the long gone, magical Second World. The discovery sets off a lethal chain reaction of feuding megacorporations and cold-blooded killers who will do anything to get their hands on her and what she knows.\nCaught in the hardest of hard places, Hawke must break his cardinal rule and assemble his own shadowrunning team to survive what's coming at him. But in the end, it all comes down to one question: will he sell out Rachel to the highest bidder, or join her on a quest that could change the face of the Sixth World forever?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2016-02-06"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

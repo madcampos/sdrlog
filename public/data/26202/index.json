@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26202", "46055", "SR15"],
+	"name": "Feral Cities",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Krisenzonen", "fr-FR": "Jungles urbaines" },
+	"originalLanguage": "en-US",
+	"description": "Walk on the Wild Side\n\nIn the decaying urban wilds, war-torn cityscapes, and cancerous megabarrens of these \"Feral Cities\" are just one thing that is certain - they all have their dangerous domains, factions and secrets.\nSprawls where the usual rules and constants of civilized society do not apply, where the hazards and pay-offs are unique.\nRunners cast out of their comfort zones and dared to challenge the ravaged urban wilderness of Chicago and the darkest heart of Africa, Lagos.\nRuled by lawlessness and survival of the fittest; Bogota, GeMiTo, Geneva, Karavan, and Sarajevo are also profiled.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2008-12-01", "2010-01-01", "2011-01-01"],
+	"gameDate": "2071-10",
+	"notes": "The French edition has an aditional chapter about Clermont-Ferrand.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

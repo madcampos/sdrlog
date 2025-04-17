@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26010NV"],
+	"name": "Best Laid Plans",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# TWO AGAINST THE WORLD…\n\nTwo-gun hacker William “Billy” Bonney and laconic street samurai Cheveyo are holed up after what should have been a straightforward job testing security for one of the megacorporations in the Sixth World. But when a megacorp is involved, nothing is ever easy, and when law enforcement comes looking for the pair of shadowrunners, Billy knows someone’s either ratted them out or double-crossed them—and he intends to find out who tried to make them dead.\n\nTheir search takes them to the mean streets of Manhattan, where they have to infiltrate one of the largest symbols—literally—of the Sixth World, to find the truth. But the truth behind what has led them to this place is far worse than anything they could think of…and unless they come up with a new plan fast, they might not be leaving alive…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2023-04-05"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

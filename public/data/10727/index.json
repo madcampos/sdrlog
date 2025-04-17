@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10727"],
+	"name": "Chrom & Dioxin",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "Hoi Chummers! Da sind wir wieder - mit den neuesten Updates zu den teutschen Landen, präsentiert im üblichen offenen Format. Wir haben einfach mal hochgeladen, was uns an relevantem Material in den letzten Monaten erreicht hat, das heißt, einmal quer durch die Platte: Von Hamburg und der Lüneburger Heide über die Deutschkatholen in Westphalen bis runter zum Frankfurt Plex (eine solide, aus den UCAS betriebene Recherche, also recht unabhängiges Material).",
+	"edition": 2,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["1996-01-01"],
+	"gameDate": "2056-01",
+	"notes": "Chrom & Dioxin succeeds in making the years 2054-2056 playable for german Runners, too. Filled with lots of information on the latest events and developments in politics, economy and technology, plus a special treat: the Switzerland. With its many paranormal beings and rigid security politics a challenge for every Runner. There are also sections dealing with the Lueneburg Heath in northern Germany and the city of Karlsruhe.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

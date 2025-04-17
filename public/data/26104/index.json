@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26104", "26104LE", "47010", "SR4A04"],
+	"name": "Runner's Black Book",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Schattenkatalog", "fr-FR": "Runner's Black Book" },
+	"originalLanguage": "en-US",
+	"description": "FLAUNT IT!\n\nYou've got the talent. You hopefully have lived long enough to collect a decent amount of nuyen. So show it off! Get a better gun. A bigger boat. A zeppelin that can sneak you across borders where no one thinks to look. All these toys are here, and many, many more. Runner's Black Book is a shopping catalog for the ambitious and successful runner—and it's a guide to the weapons, drones, and vehicles that the various forces of the Sixth World may send against you as you sneak through the shadows.\nRunner's Black Book collects material from Shadowrun's successful PDF line of products, compiling Deadly Waves, Gun Heaven, MilSpecTech, This Old Drone, and Unfriendly Skies in their entirety, along with updated art and information. On top of that, the book includes new pieces of gear developed specifically for this volume, including the punishing Kriss X Submachine Gun and small, smooth TPP light pistol. Each piece of gear is accompanied by a full color illustration providing a look at the item's complete details and features.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2011-09-14", "2011-09-28", "2012-05-01", "2012-10-30", "2016-01-12"],
+	"gameDate": "2072-01",
+	"status": "missing",
+	"notes": "Originally print only, this book is a compilation of other books with few added material.\nThe German edition has a few items from Germany and the French edition has the items from \"Used Car Lot\" and \"Gun Haven 2\".",
+	"cover": "./cover.jpg"
+}

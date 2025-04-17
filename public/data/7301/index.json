@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7301", "10703"],
+	"name": "DNA/DOA",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "DNA/DOA", "es-ES": "DNA/DOA", "pt-BR": "METAGEN" },
+	"originalLanguage": "en-US",
+	"description": "Biogene Technologies, a mid-sized genetic engineering firm, hires the runners to make a datasteal on a competitor, the powerful Aztechnology. The job is simply to break into Aztechnology's Tacoma Resarch Park, snatch some data and some samples, and deliver it all to the client for payment.\nSimple, yes, but nothing in the shadows of Seattle is as simple as it seems...",
+	"edition": 1,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1990-03-01", "1991-01-01", "1997-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

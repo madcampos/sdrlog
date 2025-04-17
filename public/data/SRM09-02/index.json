@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM09-02"],
+	"name": "Finders Keepers",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# THE HUNT IS ON\n\nWhat's more fun than a treasure hunt? When a man with Yakuza connections needs to recover an important family heirloom, he turns to the shadows for help, and runners will have to put some effort into following the item's trail. It won't be a simple job—when is it ever?—but runners have the chance to bound across Neo-Tokyo to make sure they find the needed object—and try to get it to end up in the right hands.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2021-12-14"],
+	"gameDate": "2081-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27011", "45059"],
+	"name": "Forbidden Arcana",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Verbotene Künste" },
+	"originalLanguage": "en-US",
+	"description": "Ride the Crashing Wave\n\nMagic is wild. Magic is undisciplined. You can try to impose order and understanding on it, but that's just surface. Underneath is chaos, an erratic heart beating to a staggering rhythm. You don't control it, any more than a surfer controls twenty-meter-tall wave; you don't direct the wave, you ride it, capture a piece of its power, and hope to survive. If you do it right, though, you catch a portion of unimaginable power—power those who control the Sixth World don't want you to have. All the more reason to push past their boundaries and grab it.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2017-05-02", "2017-10-19", "2017-11-05"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

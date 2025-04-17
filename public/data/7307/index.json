@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7307", "7441", "10721"],
+	"name": "Dragon Hunt",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Drachenjagd", "fr-FR": "Tirez sur le Dragon" },
+	"originalLanguage": "en-US",
+	"description": "Dragon Hunt\n\nIn this Shadowrun adventure, the shadowrunners are hired to find a lost identity. The only problem is that some of the biggest corporations in Seattle don't want it found. Hide and seek, cross and double-cross, a dragon's deeds and desires… Ah, business as usual in the shadows…",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1991-03-01", "1993-01-01", "1995-01-01", "2010-06-07"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

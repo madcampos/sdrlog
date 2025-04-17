@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28509"],
+	"name": "Rides",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# ROLL OUT!\n\nDo you need a new ride? Maybe a motorcycle? A sports truck? How about a tankette? Or maybe you could use something on the water, ranging from a lifeboat to a container vessel. Or you could move to the skies in a t-bird, 'copter, or your own badass personal jetpack. And drones? They're here, too, from tunnel crawlers to lethal flyers.\n\nThis card deck gives players and gamemasters alike the rundown on dozens of vehicles and drones, providing easy access to critical information.\n\nRides Deck is a card deck with images and game stats for vehicles and drones for use with Shadowrun, Sixth World.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2021-10-04"],
+	"gameDate": "2081-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7321"],
+	"name": "Running Short",
+	"category": "mission",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "A unreleased adventure announced by FASA.",
+	"edition": 3,
+	"publisher": ["FASA Corporation"],
+	"gameDate": "2060-01",
+	"status": "canceled",
+	"notes": "An adventure announced by FASA, never released. Here for historical reasons.",
+	"cover": "./cover.jpg"
+}

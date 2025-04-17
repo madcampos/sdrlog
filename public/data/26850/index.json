@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26850"],
+	"name": "Spells & Chrome",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Welcome to the year 2072…\n…And a world unlike anything you've ever imagined. A world where magic and machines exist side-by-side. Where cybernetics can replace organs or entire limbs with ease, and arcane spells can make the impossible happen. Where the Matrix has become an artificial world of its own, filled with all kinds of pleasure, treasure, and trouble. Where dwarves, elves, orks and trolls walk alongside humans every day. Some work for megacorporations whose invisible tentacles wrap around every aspect of modern life. Others choose a much less legal career, doing whatever dirty work the corp executives need done—for a price.\nWelcome to Shadowrun\nFeaturing fifteen stories about the men and women who make their living in the shadows of the Sixth World, Spells & Chrome takes you into the dark and dirty streets of the future. Whether risking their lives to execute a mission for an employer who might be planning to double-cross them anyway, or just doing whatever they need to do to survive another day, shadowrunners use everything they've got—cyberware, spells, or a very big gun—to get the job done.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2010-05-14", "2010-12-22"],
+	"gameDate": "2072-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

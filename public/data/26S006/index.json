@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S006"],
+	"name": "State of the Art: 2073",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "State of the Art: 2073" },
+	"originalLanguage": "en-US",
+	"description": "The Edge of Now\n\nSome people think that being state-of-the-art means being on the bleeding-edge of technology. That's part of it, but only a small part. If you really want to be current, if you want to know what's going on in the world and how it might affect you, you need to know about a lot more than new tech. You need to know about current events—like the speech Hestaby gave to the United Nations that put the dragons of the Sixth World into an uproar. You need to know what you'll see on the roads, from new vehicles to re-purposed classics. You need to know about the latest research on Awakened plants and the exceedingly creative uses scientists are putting them to.\n\nTake those elements and stir in up-to-date information on important people and places—like cagey intelligence ace Samantha Roth and the tumultuous nation of Thailand—and you have a dossier that can help runners stay current and make sure they know what's happening now in the Sixth World. Because the runner caught up in yesterday is a runner that's been left behind.\n\nState of the Art: 2073 is for use with Shadowrun, Twentieth Anniversary Edition.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-12-20", "2012-05-23"],
+	"gameDate": "2073-12",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

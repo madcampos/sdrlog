@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SOK206"],
+	"name": "Shadowland #6",
+	"category": "magazine",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "Cover Art: Jeff Laubenstein",
+	"edition": 2,
+	"publisher": ["Other"],
+	"releaseDate": ["1997-01-01"],
+	"gameDate": "2054-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

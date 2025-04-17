@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27002X"],
+	"name": "Run & Gun Cards",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "When the bullets start flying, when you desperately need to bring someone down, you need the right weapon at your side and the right armor covering your hoop. There are plenty of options out there, so there's no excuse for not having the tool that will get the job done. This deck has fifty-four choices, cards with full-color illustrations and game stats for weapons and armor from Run & Gun. Choose the right one, and live to see another day.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-08-11"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "Print only set of gear cards, Available at Gen Con 2014",
+	"cover": "./cover.jpg"
+}

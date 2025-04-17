@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28005"],
+	"name": "Sixth World Companion",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# Dream it, be it\n\nThe Sixth World is wild and weird, but it doesn't have to be wilder or weirder than you.\n\nIf you can dream it, the Sixth World Companion helps you play it. With alternate character creation methods, new metatypes, a whole slew of qualities, and even some rules variations, Sixth World Companion brings dozens of options to your game table for you to build your vision of what your runner should be.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2022-05-13", "2022-05-19", "2022-06-01"],
+	"gameDate": "2082-01",
+	"names": { "de-DE": "Schattenkompendium" },
+	"notes": "The German edition includes 20 additional new metavariant illustrations and the karma creation system (which is missing in the English version).",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

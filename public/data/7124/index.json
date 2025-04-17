@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7124", "10736"],
+	"name": "Cyberpirates!",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Cyberpiraten!" },
+	"originalLanguage": "en-US",
+	"description": "Forget those old stories of pirates swinging from the rigging with swords. In the 21st century, pirates have guns, cyberware and magic... and they'll use them to take anything from anyone if it'll net them a profit. They'll cut you open to watch the sharks eat you, and film the whole thing just to make a couple more bucks on the black market. They know where to get teh good, where to sell them and where to get more. Hitting a dockside warehouse, jumping a cruise ship or going toe-to-toe with another pirate crew for a shipment of weapons - they'll do whatever it takes to survive and come out on top. On the high seas, it's win or die.\nTake your shadowrunner out of the urban sprawl's mean streets and into the even meaner waterways of the world. Cyberpirates offers you a whole new realm to play in ... the world of smugglers and pirates. Become a swashbuckling, risk-taking Carribean League pirate or earn big money helping the corps exploit Africa's Ivory Coast. Or team up with a dragon to help free the Philippines and the grip of Imperial Japan. Cyberpirates offer colorful and detailed descriptions of piracy and smuggling in the Caribbean, the Philippeans and the West Coast of Africa, plus a portrait of the smuggling biz around the world. It also includes rules for underwater exploration, ship operations and combat, and loads of new toys. For use with Shadowrun.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Fantasy Productions"],
+	"releaseDate": ["1997-11-01", "1998-01-01"],
+	"gameDate": "2059-01",
+	"notes": "The German translation/publication features 8 additional pages on pirates of the North Seas and additional equipment.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

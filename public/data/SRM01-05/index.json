@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM01-05"],
+	"name": "A Walk in the Park",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Will you do anything for money? How about escort a group of wealthy clients for a day? Is it just a walk in the park, or something more?",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2005-01-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

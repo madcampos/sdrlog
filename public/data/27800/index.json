@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27800"],
+	"name": "Shadowrun: Sprawl Gangers",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "Sprawl Gangers is a competitive, skirmish-level miniatures game for 2 players, with everything needed to game right in the box. Players will take on the task of building gangs (Ancients, Halloweeners, First Nation, and so on) following specific point values of a scenario, and modifying the various miniatures based upon what new resources (weapons/gear/magic/tech) a player gained through previous games. Gangs won't simply fight for the sake of fighting, but will actively building their turfs and resources. Among other things, this will allow for the hiring of the exact right shadowrunner when they need that ace in the hole. All this adds up to the experience of watching your gang grow and expand through exciting play across a swath of games.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2075-01",
+	"status": "canceled",
+	"notes": "Announced fo the Year of Shadowrun but never released. Some \"developer diary\" posts are available on Shadowrun's blog.",
+	"cover": "./cover.jpg"
+}

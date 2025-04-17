@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26003", "23003", "SR03"],
+	"name": "On the Run",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "On the Run", "fr-FR": "En pleine course" },
+	"originalLanguage": "en-US",
+	"description": "This introductory adventure for Shadowrun, Fourth Edition sends the players in pursuit of an archaic media chip with priceless contents, mixing them up with a media legend's ancient history.\nThis adventure is seeded with helpful advice to immediately acquaint new gamemasters with running Shadowrun and also includes a number of tips that veteran gamemasters will find useful.\nIt is also intentionally designed to familiarize gamemasters and players with various key aspects of the Shadowrun universe. On the Run is perfect as a stand-alone adventure—and is also the first in a continuing series of adventures.",
+	"edition": 4,
+	"publisher": ["Fantasy Productions", "Other"],
+	"releaseDate": ["2006-06-30"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

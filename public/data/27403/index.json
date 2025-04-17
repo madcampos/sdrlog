@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27403"],
+	"name": "Ripping Reality (Denver Adventure 3)",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Denver sprawl has always been a battleground, but lately it seems to be at war with reality. People are disappearing from the streets, never to be seen again. Strange creatures are materializing out of nowhere, and sometimes they bring entire landscapes with them. Something has gone desperately wrong, and the stakes are so high that two enemies who had been locked in combat are setting aside their fight to find out what is happening and why.\nIf investigations into bizarre occurrences need to happen, then there are shadowruns to be done. The right team will have the chance to bring in an impressive payday, but they'll have to navigate their way past old grudges, tainted magic, and creatures of pure destructive power waiting to be turned loose on the sprawl.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2017-06-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

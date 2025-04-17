@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["58XX"],
+	"name": "Private Agenda",
+	"category": "novel",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "The last FASA novel, announced in Europe, but never released.",
+	"edition": 3,
+	"publisher": ["FASA Corporation"],
+	"gameDate": "2060-01",
+	"status": "canceled",
+	"notes": "This was the last FASA novel, announced but never released. Here for historical reasons.",
+	"cover": "./cover.jpg"
+}

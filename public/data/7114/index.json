@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7114", "10720"],
+	"name": "Fields of Fire",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Kreuzfeuer", "fr-FR": "Les Chiens de Guerre" },
+	"originalLanguage": "en-US",
+	"description": "The streets are a violent place, as dangerous as any battlefield. And the lessons men and women learn on those fields of fire can save their reputations-and their lives-in any combat situation.\nFields of Fire is the mercenary sourcebook for Shadowrun. Information on how to act like a professional merc, and pages of new weapons, support gear, and optional combat-rules clarifications and expansions make this book something no merc, or runner, should live without.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Other", "Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["1994-04-01", "1997-01-01", "1995-01-01", "2010-03-02"],
+	"gameDate": "2054-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM03-04"],
+	"name": "Monkeywrench",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "A little milk run like this should be no problem. Though, it sounds like you don't get much time. Non-lethal rounds and no legal complications makes these \"security consultant\" gigs the best in the Big Apple.\nMr. Johnson wants someone to test his security systems. Everything should be perfectly routine and above board. After all, things never go horribly wrong during a shadowrun, right? No reason to have any back-up plans ready for this. It's all just wonderfully straightforward. What're you giving me that look for? This 25-page scenario includes a complete adventure, player handouts, and record handling sheets for participating in the Shadowrun Missions (SRM) campaign.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2009-08-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

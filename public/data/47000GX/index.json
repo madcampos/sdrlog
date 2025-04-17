@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["47000GX"],
+	"name": "Netzstücke (Machtspiele: Handbuch für Spione)",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Die Schatten werden größer!\nÜber Hannover und die Machtspiele in der ADL ist noch längst nicht alles gesagt. Und ehe sich große Veränderungen anbahnen, sollte man den Status Quo kennen. Wer verbirgt sich hinter der Daedalus-Gesellschaft? Wer sind die Schockwellenreiter? Und was kann man alles in Hannovers Club Nikita erleben - vor und hinter den Kulissen?\nNetzstücke ist ein frei erhältlicher deutscher Zusatz zum Printbuch Machtspiele - Handbuch für Spione für Shadowrun 4. Neben einflussreichen Gruppen und Nebenakteuren auf dem politischen Parkett bietet es Abenteueraufhänger und eine Reihe neuer Locations für die Allianzhauptstadt der deutschen Länder.\nUnd denk immer daran Chummer - es kostet nichts, aber es ist nie umsonst.",
+	"edition": 4,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2012-01-01"],
+	"gameDate": "2074-01",
+	"notes": "Netzstücke is an expansion for the German version of Spy Games (Machtspiele). It features additional material for campaigns in Germany.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

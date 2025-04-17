@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7309"],
+	"name": "Imago",
+	"category": "mission",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "GREAT BRITAIN AWAITS!\n\nThere's bound to be trouble when Seattle-based shadowrunners are imported to take care of business in the United Kingdom. A valuable employee of one of Britain's largest megacorporations may be missing, and Transys Neuronet will be damned if they're going to let anyone on their side of the pond know about it.\nThe search takes the runners through Scotland, the city of Edinburgh, and to darker corners of the Matrix than they ever dreamed existed. It's a complex puzzle of betrayal, friendship, isolation, hatred, blinding love, vengeance, and, in the most bizarre twist of all - life after death.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1992-01-01", "2011-07-22"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

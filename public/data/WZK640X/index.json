@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["WZK640X"],
+	"name": "Shadowrun: Duels",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "It's 2063. The world of Shadowrun Duels is ruled by magical creatures and cybernetic weaponry. To survive, you'll need the latest laser-guided machine gun and the most arcane magic spells. Every piece of gear you use to customize your figure directly impacts your chances of survival. Game play is fast and deadly. On the mean streets of Shadowrun Duels, life is short — so come armed to the teeth!\n\nShadowrun Duels is a combat-oriented game in which shadowrunners wage battles of magic and technology to become champions of the Megasprawl!\n\nYour Figure\n\nYour shadowrunner is a uniquely painted and sculpted figure that represents one of the many types of shadowrunners that prowl the urban sprawl. Pose it on or off its base and equip it with an array of gear.\n\nYour Figure's Gear\n\nEach figure comes with gear. These pieces of gear can be swapped between characters, allowing you to customize your figure for each game. Each piece of gear has a point cost and a game bonus printed on it. Gear may give your character extra dice, damage protection in the form of shield, or both.\n\nYour Figure's Base\n\nYour figure comes with a unique base stand, which is also a playing piece in the game. The base and its three combat dials display all your figure's game information. The base details your figure's name, the number and kind of dice it gets, its collector's number, its point value, and its damage bonus.\n\nThe numbers and symbols on your figure's combat dials represent its abilities in the game. As your figure receives damage, you'll click its combat dials, changing the numbers that appear.",
+	"edition": 3,
+	"publisher": ["WizKids Games"],
+	"releaseDate": ["2003-06-01"],
+	"gameDate": "2060-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

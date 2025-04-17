@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7315"],
+	"name": "Celtic Double-Cross",
+	"category": "mission",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "Renowned as a land of wonders, Tir Na Nog brims with ancient elven art and sophisticated elven nobles, powerful magic and cutting-edge technologies. But beneath this cultured facade lies a dark mix of long-simmering feuds and Machiavellian plots. Now add a dash of good old UCAS politics, and you have a Byzantine brew of betrayal and bloodshed, a Mickey Finn with a lethal kick.",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1993-01-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

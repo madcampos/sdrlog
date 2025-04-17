@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26855"],
+	"name": "Borrowed Time",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Geborgte Zeit" },
+	"originalLanguage": "en-US",
+	"description": "JackPointer mage Winterhawk left the shadows at the top of his game: these days he indulges his curiosity about all things mysterious and magical on his own terms. But he's about to discover that the shadows are hard to leave behind, and old enemies have their ways of drawing him back in.\nDosed with an exotic arcane poison that will kill him in days unless he retrieves a powerful magical artifact, 'Hawk has to assemble a team fast and think even faster, because he's not the only one tracking down the prize. His team is hardly the well-oiled machine he's accustomed to: an old friend with major trust issues, an old rival who hates everything 'Hawk stands for, a decker who annoys everyone he meets, a samurai who's only in it for the money, and a gunslinger who may have her own agenda.\nWith his life on the line and the clock ticking fast, 'Hawk must survive the mean streets of Los Angeles and the magical hells cape of the Australian Outback while keeping his mismatched team from imploding before they finish the job. But when the artifact is revealed to be far more than it seems, Winterhawk is forced to make a choice that could affect the lives of millions—to say nothing of his own.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2015-05-26"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

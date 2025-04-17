@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7328", "10745", "LFSH104"],
+	"name": "Renraku Arcology: Shutdown",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Renraku Arkologie: Shutdown", "es-ES": "El Colapso de la Arcología Renraku" },
+	"originalLanguage": "en-US",
+	"description": "Something mysterious and terrible has shut down the Renraku Arcology . The doors are sealed, the Matrix is off-line, and 100,000 inhabitants are trapped inside. The UCAS Army seals Renraku knows what's going on. Renraku Arcology: Shutdown! tells who's behind it, and what horrible events are occurring inside. This Shadowrun adventure offers a dark and gritty technological setting complete with new drones, mysterious enemies, and new rules for otaku. It provides everything gamemasters need to take their players in the arcology nightmare, whether extracting trapped relatives, liberating abandoned research, or just getting out alive. Intended for gamemasters and players of all experience levels.",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1998-11-01", "2000-01-01"],
+	"gameDate": "2060-02",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

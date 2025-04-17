@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45019"],
+	"name": "Schattenhandbuch",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "de-DE",
+	"description": "Tipps für Assassinen, neuste Waffentechnologie, tödliche Paracritter: Das Schattenhandbuch bringt neues Material für Shadowrun 5 an die Spieltische, mit dem Spieler und Spielleiter die Sechste Welt noch näher erfahren können. Ob es um Schmuggel und unerlaubte Grenzübergänge geht, die Moral verdingter Killer, toxische Katzen oder einfach nur die Auswahl des nächsten Einsatzgefährts der Runnertruppe: Hier wird man fündig!\n\nDas Schattenhandbuch setzt die Tradition der Schattenkataloge aus der vorangegangenen Edition für Shadowrun 5 fort. In ihm enthalten sind die PDFs Feuer und Stahl, Kojoten und das Assassinen-Handbuch. Zudem präsentiert es Parazoologie 1 und das bisher noch nie auf deutsch veröffentlichte Parazoologie 2 - beide komplett aufbereitet für Shadowrun 5. Und zu guter Letzt darf auch ein exklusives ADL-AddOn mit brandneuen Vans und Waffen nicht fehlen.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2014-01-01"],
+	"gameDate": "2075-01",
+	"notes": "Schattenhandbuch (Shadow Handbook) is a print compilation of several PDF publications and some new material.\nIt contains:\n\tCoyotes\n\tThe Assassin's Primer\n\tGun Heaven 3\n\tParazoology\n\tParazoology 2\n\tKAPOWW (Shadowrun Germany)\n\tRAZANNG (Shadowrun Germany)\n\nSchattenhandbuch was published in a numbered limited edition with a print run of 3000 books.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

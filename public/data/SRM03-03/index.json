@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM03-03"],
+	"name": "Burning Bridges",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The voice on the other end of the comm sounded desperate. The kind that pays well. Then he asked, \"How much do you know about demolitions?\"\nMr. Johnson is at the end of his rope, and he needs some serious income. He latches onto a desperate and tragically dangerous scheme that just might get him what he needs, though it might cost hundreds of lives in the process. The team needs to decide if the pay is worth the risk and the ethical quandry. This 27-page scenario includes a complete adventure, player handouts, and record handling sheets for participating in the Shadowrun Missions (SRM) campaign.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2009-06-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

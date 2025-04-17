@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["DEA001"],
+	"name": "Schattenkrieg",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Bist du stark genug!\n\nWährend die Runner nach einer vermissten Person suchen, ziehen sich die Schatten um sie herum langsam zusammen. Einer Fährte folgend, stoßen sie bald auf ein gefährliches Geheimnis - bei dem sie eine folgenschwere Entscheidung zu treffen haben.\n\nSchattenkrieg ist ein komplett ausgearbeitetes Abenteuer für Shadowrun 4 - inklusive Handouts und Grundrissplänen. Es richtet sich sowohl an erfahrene Runner, wie auch an Neulinge im Sumpf der Sechsten Welt: wegbegleitend mit Tipps und Tricks für Gruppe und Spielleiter. Das Abenteuer ist als Print-Produkt in \"Schattenrüstzeug\" enthalten.",
+	"edition": 4,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2011-12-23"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

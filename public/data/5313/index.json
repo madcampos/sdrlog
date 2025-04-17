@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5313", "27805"],
+	"name": "Striper Assassin",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Die Attentäterin" },
+	"originalLanguage": "en-US",
+	"description": "Prey for the hunter.\nFor the world of humans knows her as Striper, the deadly Asian assassin and kick-artist. She has come to the City of Brotherly Love seeking revenge and made it her killing ground. But she is not the only predator stalking the dark underbelly of the Philadelphia metroplex. There are other hunters prowling the night, and some possess a power even greater than hers.\nSome may even want her dead.\nWhen the moon rises full and brilliant into the dark pall of the night, the bestial side of her nature battles for dominion, demanding vengeance and death.\nWho will survive?\nWho dares to hunt the hunter?",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1993-06-01", "2003-06-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

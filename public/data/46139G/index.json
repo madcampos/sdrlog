@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46139G"],
+	"name": "Kaleidoskop: Internat Hohenstadt",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "# INTERNAT HOHENSTADT\n\nFindet hier: Insiderinformationen und einen Plan zum Privatinternat Hohenstadt, wo die Schönen und Reichen ihre Kinder zur Lehre und Erziehung hinschicken",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2022-08-26"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["9783453525153"],
+	"name": "Cash",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Zu viele Köche verderben den Brei, sagt man - und zu viele Shadowrunner, die hinter der gleichen Zielperson her sind, verderben der Schattenläuferin Karo Ass mächtig die Laune. Nicht zuletzt deshalb, weil auch die Zielperson, Österreichs Vizekanzler Hacklhuber, nicht untätig bleibt und verzweifelt versucht, den Kopf aus der Schlinge zu ziehen. Ein dramatischer Wettlauf durch die Schatten beginnt...",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2009-02-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

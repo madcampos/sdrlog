@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM07-03"],
+	"name": "Special Investigation Unit",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Collecting evidence. Visiting medical examiners. Questioning suspects. The cops may be a pain in shadowrunners' hoops, but what kid didn't play cops and robbers when they were growing up? Sometimes playing on the cops side, even? Now they have a chance to play for real. There's been a death in the Chicago/Milwaukee sprawl—well, several, but one that got the attention of Detective Nick Ryder. It's the sort of case he'd have trouble looking into alone, so he's turned to the shadows. Runners will have the chance to crack the case—right down to the difficult work of bringing the perp to justice.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2017-01-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

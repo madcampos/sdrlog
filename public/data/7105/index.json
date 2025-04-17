@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7105", "10713"],
+	"name": "Paranormal Animals of North America",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Handbuch der Erwachten Wesen: Band 1 Nordamerika" },
+	"originalLanguage": "en-US",
+	"description": "Lions, Tigers, and Bears…\nYou Should Be So Lucky.\nMagic has returned to the world, and with it has come all manner of beasts. Genetic material, long dormant with the absence of magic, has been reactivated, transforming mundane animals into creatures once believed supernatural, even mythical. Juggernauts rome the plains, Firedrakes infest the woods, Leviathans swim in the oceans, and Devil Rats now hunt Man in the shattered Sprawls that he has created.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["1990-06-01", "1994-01-01", "2005-08-26"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

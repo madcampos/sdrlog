@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7317"],
+	"name": "Paradise Lost",
+	"category": "mission",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "A run in Hawai'i, paradise of sun and surf, should be the answer to every shadowrunner's dream. But when runners need to track down a piece of valuable, stolen tech in the island kingdom, they find that bright, cheerful Hawai'i hides dark intrigues and darker dangers.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
+	"releaseDate": ["1994-01-01", "2011-06-25"],
+	"gameDate": "2054-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

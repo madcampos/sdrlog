@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM05-03"],
+	"name": "Gone Long Gone",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "This isn't your first run in Chicago. You may not know every street corner and alleyway, but you know the sprawl well enough that when someone tells you they've got a job that \"should be easy\"—well, it won't be. It never is. So when you're offered some money to go retrieve personal items left behind in a pharmaceutical office back before the whole town went to hell, you know you're going to be dealing with more than dust and a few rats. Once you venture into the Containment Zone, something—probably more than one thing—is going to try to kill you. Not in some vague future, but right now. But you know that about Chicago. You're ready for something to come after you, and you know that part of the fun is finding out just what it is.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2014-08-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

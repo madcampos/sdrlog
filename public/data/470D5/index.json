@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["470D5"],
+	"name": "Datapuls: SOX",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "SOX - drei Buchstaben mit großer Bedeutung. Die Sonderzone Saar-Lothringen-Luxemburg entstand nach dem großen Reaktorunfall in Cattenom und ist seit dem ein Mysterium, denn die verseuchte Region bringt Tod und lebt doch. Sie beherbergt irre Sektenpaktierer, verstrahlte Glowpunk-Horden, Aussteiger und abgeschottete Konzernarkologien in einem einzigartigen Landstrich aus urbanen Ruinen, verheertem Ödland, wildwuchernder Natur, gefährlichen und mutierten Crittern und einer völlig unberechenbaren Manasphäre.\nDatapuls SOX beleuchtet dieses Land am Rande der ADL und jenseits der Grenzen der Gesellschaft. Innerhalb der streng überwachten Perimetermauern herrscht der Konzernrat oder es gilt das Recht des Stärkeren. Der Datapuls beschreibt unter anderem Schmuggler, versteckte Kommunen, besondere Orte, neue Critter und Gefahren, dunkle Geheimnisse und toxische Kräfte - Details, die ein Runner kennen sollte, wenn er hier sein Glück machen will. Damit er wenigstens nicht unwissend stirbt.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2018-04-09"],
+	"gameDate": "2075-01",
+	"notes": "German sourcebook about the SOX.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

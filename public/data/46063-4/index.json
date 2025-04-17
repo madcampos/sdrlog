@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46063-4", "27829"],
+	"name": "Poison Agendas",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "[Kellan Colt Trilogy #2] Kellan Colt has been making a name for herself as one of Seattle's up-and-coming shadowrunners, and she believes she's ready to break out on her own. Opportunity knocks when she learns the location of a secret weapons cache abandoned by the U.S. military. With the right buyer, a score this big has the potential to secure Kellan's reputation - and her bank account.\nWith a team of fellow shadowrunners assisting her, Kellan descends deep into the heart of the Awakened wilderness to extract the weapons. But the supernatural entities lurking in the forest beome the least of her worries when a rival facton appears seeking the cache - and the greatest threat to them all is revealed....",
+	"edition": 3,
+	"publisher": ["WizKids Games"],
+	"releaseDate": ["2006-01-01"],
+	"gameDate": "2063-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

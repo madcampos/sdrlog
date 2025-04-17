@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26203", "46060"],
+	"name": "Vice",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Unterwelten", "fr-FR": "Vices" },
+	"originalLanguage": "en-US",
+	"description": "Illegal is a strong word.\n\nIt means you're doing something that the government doesn't want you to do. You'd never do anything like that, right? Or would you?\nIt might be that some laws are... Misguided.\nIt's civil disobedience and a moral imperative to oppose those laws.\nGandhi taught us that.\nMy friends and I—we're here to help you make these difficult moral choices. We'll even provide you with a support network, if someone objects to your strong moral compass. And, hey, if everything works out, maybe all of us might come out ahead. Don't worry! We've got your back.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Other", "Pegasus Spiele"],
+	"releaseDate": ["2009-12-01", "2010-06-01"],
+	"gameDate": "2072-02",
+	"notes": "The German edition has a translation of 10 Gangs and aditional material regarding Germany.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

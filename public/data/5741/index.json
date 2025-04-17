@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5741", "27835"],
+	"name": "Run Hard, Die Fast",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Runner sterben schnell" },
+	"originalLanguage": "en-US",
+	"description": "Argent is the best shadowrunner in the biz...with one flaw: he's got a conscience. That's why he can't leave a chummer hanging. Only Andi Sencio is more than just a friend. She's his former partner--and lover. And now she's in the deepest drekpot of her life. Heading an op on a datasnatch turned bad, she's been stranded by the megacorp she works for--and targeted for flatlining by two more. Unless Argent gets to her first...\nRecruiting a top-notch team for the exfiltration shadowrun, Argent is risking it all--his money, his reputation, and his life--for the woman who once walked away from him. It's suicide mission through high-caliber hell. But that's never stopped the steel-armed, street samurai before...",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1999-02-01", "2001-01-01", "2003-06-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

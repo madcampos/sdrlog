@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26211", "47030"],
+	"name": "The Clutch of Dragons",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Drachenbrut" },
+	"originalLanguage": "en-US",
+	"description": "Claws At Your Throat\n\nNever, ever deal with a dragon. Shadowrunners have heard that dictum so often, they frequently say those words in their sleep. But what the aphorism forgets to tell you is this—what if you don't have a choice?\nThe tension between dragons has been growing, and the big lizards are throwing every weapon they have at each other, including shadowrunners—especially shadowrunners. Extractions, industrial sabotage, theft, wetwork—there's plenty of jobs in all those areas, and dragons are finding ways to get reluctant runners to work for them. Maybe they'll hide their involvement in the run, or maybe they'll bribe the runners with large piles of nuyen or blackmail them with their past activities. Or maybe they'll just tell the runners they have a simple choice of working for them or being eaten.\nWhatever tactics they choose, the dragons are going to be active and aggressive, and if runners want to survive, they better be on their toes. They need to know who the draconic players are, what they're up to, and what might happen to them if they fall into a dragon's grip. They need to be ready for anything, because when dragons go at each other, the world shakes, the earth beneath them burns—and far too often, shadowrunners die.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2012-08-08", "2013-01-01"],
+	"gameDate": "2074-07",
+	"notes": "The German edition has some aditions regarding German dragons.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

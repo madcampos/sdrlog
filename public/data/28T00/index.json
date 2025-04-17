@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"name": "Shadowrun 30th Anniversary T-Shirt/Hoodie",
+	"sku": ["28T00"],
+	"edition": 6,
+	"gameDate": "2080-01",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"releaseDate": ["2021-01-01"],
+	"publisher": ["Catalyst Game Labs"],
+	"status": "outofscope",
+	"notes": "This was a limited time only item.",
+	"description": "# Clothes Make the Meta-Human!\n\nWhether you are on a 'run or just out for ladies night at Dante's Inferno, you should always dress for success. And nothing screams \"SHADOWRUN\" better than our new 30th Anniversary logo! This will appear on select product throughout the anniversary year of 2019, starting right here with a fashion-fit T or warm, athletic hoodie.",
+	"cover": "./cover.jpg"
+}

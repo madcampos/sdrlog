@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45039"],
+	"name": "Schattenhandbuch 3",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "de-DE",
+	"description": "Das Schattenhandbuch 3 ist der Nachfolger der Schattenhandbücher 1 und 2 - und führt die Reihe damit fort. Auch dieser Band enthält mehrere PDFs von der Plattform www.pegasusdigital.de für Shadowrun 5 in gedruckter Fassung, die sich alle dem deutschsprachigen Raum widmen:\n\t- Datapuls Berlin (ein neuer und tieferer Blick auf das große B an der Spree mit vielen Kiezkarten, Neuigkeiten aus der Unterwelt und Beschreibung des Berlin-Konzerns);\n\t- Datapuls Trollrepublik & Schwarzwald (ein Rundgang durch die Erwachte Welt des Schwarzwalds und durch die neue politische Lage der Trollrepublik);\n\t- Datapuls Karlsruhe (ein Besuch in der Sonderverwaltungszone, in der die Bundeswehr herrscht und deren merkwürdige arkane Phänomene dunkle Logen und Geheimbünde anziehen);\n\t- Datapuls Österreich (zu Gast in den österreichischen Schatten mit einem genaueren Blick auf Wien);\n\t- Datapuls SOX (eine Reise in die toxische Verbotszone, mit all ihren Glowpunks, Manalöchern, Crittern, Ghulstämmen und düsteren Konzernmachenschaften).\nHinzukommt ein kleiner, exklusiver ADL-Zusatz, der sich nur in diesem Buch finden und sich Fahrzeugen aus dem Nahverkehr der ADL widmet.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2015-01-01"],
+	"gameDate": "2075-01",
+	"notes": "A German printed edition of the previeously released \"Datapuls\" series, with public transportation maps as an addition.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

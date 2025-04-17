@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26879"],
+	"name": "CTRL Issues",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# ONE PROGRAM TO CONTROL IT ALL…\n\nJanus is a pro shadowrunner who’s been in the game long enough to roll with the curveballs the Sixth World can throw at him. Whether it’s traveling halfway around the world for a job or finding out his new employer has a much longer lifespan than the average metahuman, the dual-natured hacker/mage has always come out on top—and made a good living to boot.\n\nBut in the Allied German States, he and the new team he’s leading are on unfamiliar ground. And when what should have been a milk run—transporting some high-tech computer gear from a corp lab to their employer—turns into a bloodbath, Janus and his team have to figure out what happened, who’s behind it, and what’s so important at this site that at least one megacorp is willing to kill to get their hands on it…before the rest of the corps turn their gaze—and guns—on the team.\n\nOn the run for their lives, never knowing who to trust, Janus and his team unravel a tangled web of invention, deception, and death with a discovery at its core that could shake the very foundations of the Sixth World…or possibly bring it all crashing down around them…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-02-04"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

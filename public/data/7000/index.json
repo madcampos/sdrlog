@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7000", "7001", "10660", "25000", "LFSH001", "LFSH001L"],
+	"name": "Shadowrun Third",
+	"category": "rulebook",
+	"type": "scan",
+	"names": { "de-DE": "Shadowrun version 3.01D", "es-ES": "Shadowrun Tercera Edición", "fr-FR": "Shadowrun Troisiéme Édition", "hu-HU": "Shadowrun Szabálykönyv 3. kiadás" },
+	"originalLanguage": "en-US",
+	"description": "Where Man Meets Magic & Machine\nThe year is 2060. Magic is as real as the mean streets of the mega-sprawls. Corporations call the shots while nailing each other through covert operatives in cutthroat competition. Flesh and machines have merged -- the street samurai with his smartguns and impossibly fast reflexes, the decker who can plug his own brain into the worldwide computer network, the rigger who links his mind to his vehicle and takes hairpin turns at fantastic speeds. And you're a part of this wired world, where corporate skyscrapers glitter over the dark shadows they cast. You live in those shadows. You're a shadowrunner -- a street operative.\nYou may be human or troll, dwarf or elf. You may throw fireballs, pull out your trusty Uzi or slice through computer security with a program as elegant and deadly as a stiletto. No matter what, you get the job done. You're a shadowrunner -- a professional. You don't just survive in the shadows -- you thrive there ... for now.",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "WizKids Games", "Other"],
+	"releaseDate": ["1998-09-01", "2000-06-01", "2001-01-01", "2004-02-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

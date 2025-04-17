@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28955"],
+	"name": "16 Month Calendar (2022 - 2023)",
+	"category": "misc",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "# ONE MONTH, ONE JOB\n\nNeed to run the shadows this month? This calendar’s for you. Each month has a map and a plot hook to go with it. Play the game, use the map, and then put it back in your wall to keep track of some of the largest conventions and critical dates in Shadowrun history—pre-printed on the calendar for your convenience!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-10-19"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

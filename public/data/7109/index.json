@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7109"],
+	"name": "Shadowbeat",
+	"category": "sourcebook",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "The beat's on the street, and that's where you have to be if you wanna be in on what's happenin'.\nShadowbeat makes it easy by dishing out the scoop on music, media, sports and entertainment in the 2050s. Discover the best way to stardom in the sims.\nLearn how to get the dirt on the stars. Get down and dirty as an Urban Brawler. All this, and the toys that make it happen, are included in…Shadowbeat!",
+	"edition": 1,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1992-09-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

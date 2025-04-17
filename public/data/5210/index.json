@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5210"],
+	"name": "2XS",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "2XS" },
+	"originalLanguage": "en-US",
+	"description": "Private Detective Dirk Montgomery thinks he knows the streets. He watched the change of the world, as magic grows and alter the balance of power, he thinks he understands the deepest shadows and the darkest of hearts. He was wrong….",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1992-02-01", "2003-07-01"],
+	"gameDate": "2052-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

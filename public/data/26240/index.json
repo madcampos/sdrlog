@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26240"],
+	"name": "Seattle 2072",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "fr-FR": "Seattle 2072" },
+	"originalLanguage": "en-US",
+	"description": "Welcome Home\n\nIt's a screwed up city. Isolated from the rest of the UCAS, it's haven for criminals—smugglers, syndicates, gangers. Legal criminals, too—megacorporations, governments, politicians.\nAs beautiful as she is dysfunctional, Seattle is urban sprawl amid rolling hills and forests nestled up to man-made wonders next door to natural and man-made disasters. Whether you're a native or not, Seattle will draw you in like no other.\nYou can run for a lifetime and never leave Seattle, but some say you can't run for a lifetime without entering.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Other"],
+	"releaseDate": ["2009-08-23", "2009-10-01", "2013-01-01"],
+	"gameDate": "2072-01",
+	"notes": "The French edition also contains 2 of the Missions adventures.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

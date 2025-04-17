@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S017"],
+	"name": "The Way of The Samurai",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Der Weg des Samurai" },
+	"originalLanguage": "en-US",
+	"description": "Honor. Skill. And Exceptionally Sharp Blades\n\nThey are legends. They are dangerous. They are feared. They are to be avoided—unless you have one of them on your side. They are street samurai. That title covers a variety of skill sets, from the accuracy to nail a target from a thousand meters away to the stealth needed to sneak into a tightly guarded environment and cut someone's throat before they—or their security—know you're there. Street samurai know they need to use every tool at their disposal if they want to maintain that all-important edge on their competition. Luckily, some new tools just became available.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2013-01-13", "2013-02-27"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["480D1"],
+	"name": "Datapuls: Pomorya",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Verheißung und Vernichtung\n\nVon Kap Arkona bis Stralsund: das Elfenreich Pomorya war schon immer ein Land der Verheißung. Es verspricht die Rückkehr zur Natur, belebt alte Naturreligionen und verspricht seinen Einwohnern Sicherheit. Aber zu welchen Kosten? Was muss dafür vernichtet werden, was wird dafür unterdrückt? Was lauert - sprichwörtlich - unter der Oberfläche des nach außen so sauber wirkenden Staats? Denn wo viel Licht ist, da lauert auch viel Schatten.\n\nDatapuls Pomorya wirft ein Licht auf den Elfenstaat Pomorya in der Ostseeküste der ADL. Es liefert einen Einblick in Intrigen zwischen den Kurfürsten, den Alltag mit der Natur, die ansässigen Mächtegruppen und bietet zudem eine tiefere Sicht in das Machtgeflecht aus Politik und Wirtschaft. Hier können Runner Abenteuer erleben - in ganz natürlicher Umgebung...",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2020-04-23"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

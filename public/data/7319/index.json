@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7319"],
+	"name": "Double Exposure",
+	"category": "mission",
+	"type": "scan",
+	"names": { "fr-FR": "Glow City Blues" },
+	"originalLanguage": "en-US",
+	"description": "The recently formed organization known as Project Hope has embarked on a seemingly imposible task of restoring life and prosperity to the Glow City region of the Redmond Barrens. To achieve its noble goal, Project Hope uses the resources of a community largely ignored by society: Seattle's teeming homeless population. Through a well-orchestred procedure, the homeless and destitute can apply at the Project's downtown Seattle office for admission to one of Project Hope's ten relief campos. For those down on their luck, the lure of free food and shelter and the chance to join a prospering new comunity far outweight the hard work demanded of them and the risks of living in the Glow City neibrhood.\nOf course, nothing is as it seems. Behind Project Hope's benevolent community-work camps and free medical services lies a deception of nightmarish propositions involving Renraku Computer Systems, the Universal Brotherhood, and a powerful Ant Queen.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Other"],
+	"releaseDate": ["1994-12-01", "1998-09-01"],
+	"gameDate": "2055-08",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

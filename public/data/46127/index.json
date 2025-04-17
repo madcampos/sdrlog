@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46127"],
+	"name": "Schattendossier 2",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Wissen ist Macht - kaum ein Sprichwort trifft im Leben von Shadowrunnern mehr zu. Denn wenn du dich in Gefahr begibst, bist du mit dem richtigen Wissen immer im Vorteil. Du möchtest in den kampfgebeutelten Schatten von Marienbad aktiv werden? Dein nächster Auftrag führt dich in die Konzernwelt des Frankfurter Bankenvereins? Herr Schmidt will etwas für seine private Gemäldesammlung haben, und nun steckst du in den Tiefen des illegalen Kunsthandels? Du unternimmst eine Reise zu den mysteriösesten, magischen Orten der ADL und angrenzenden Ländern? Oder du wolltest schon immer mal zur Feuerwehr? Wissen ist Macht. Oder verlängert zumindest dein Leben.\n\nDas Schattendossier II ist der zweite Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Feuerwehr, magische Orte, Kunstraub, den Frankfurter Bankenverein und Marienbad zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Norddeutschen Seenot-Rettungsgesellschaft. Das Schattendossier II ist streng limitiert und die einzelnen Bücher durchnummeriert.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2021-06-01"],
+	"gameDate": "2080-01",
+	"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerläufer\"",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

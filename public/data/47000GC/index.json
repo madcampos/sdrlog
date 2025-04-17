@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["47000GC"],
+	"name": "Systemdaten",
+	"category": "misc",
+	"type": "print",
+	"originalLanguage": "de-DE",
+	"description": "This item consists of a folio to store notes and character sheets as well as a sturdy cardboard version of the German SR5 character sheet. It was released by Pegasus for Gratisrollenspieltag 2014 (German Free RPG Day).",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2014-01-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

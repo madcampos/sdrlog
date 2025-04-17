@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27750"],
+	"name": "Encounters: Shadowrun",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "The year is 2078. The worlds' megacorporations straddle the sprawls of the Sixth World, goliaths that intimidate even nations as they suck in souls in their drive for the almighty nuyen. Between the cracks, shadowrunners carve out a living as deniable and disposable assets that megacorps fire at each other for datasteals, personnel extractions, or even wetwork. Whether casting manabolts of magic, riding the electrons of the Matrix with just the brain, or slinging good, old-fashioned flying lead while firing at speed enhanced by the latest in bio-engineering, runners live dangerously and hope their skills are good enough to let them survive another day.\nEncounters: Shadowrun is a 1-8 player fast-paced, pushed-your-luck dice and card game. Players take the role of Mr. Johnson, arranging the megacorps' dirty work and adding new shadowrunners to their already-assembled teams. They send their teams into the shadows of the mean sprawl streets of the Sixth World, collecting though paydata to beat down their rivals. Grab some dice, make a team, and show 'em who's the boss.\nThe goal of the game is to be the first player to acquire ¥30.\nEach player starts the game with (1) runner and 6 dice. At the start of your turn you flip over location card, that has effects aka breaks the rules, on every turn until a new environment card comes into play. You then flip over the top Event card form the deck and try and roll an exact match of the number on the card. If you succeed you place a die on the. You could stop then and receive ¥1 or flip a card and continue to press your luck. If you fail the next player starts a new run with a chance to collect n the ¥ you forfeited.\n¥ are used as victory points as well as currency to buy additional runners.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2016-01-01"],
+	"gameDate": "2078-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

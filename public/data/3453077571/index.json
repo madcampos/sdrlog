@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3453077571"],
+	"name": "Die Augen des Riggers (Deutschland in den Schatten 2)",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Mitte des 21. Jahrhunderts: Nach der Rückkehr der Magie in die Welt hat sich auch Europa grundlegend verändert. Deutschland ist zu einem losen Staatenbund zerfallen und Schauplatz globaler Machtkämpfe von Konzernen. High-Tech-Zentren beherrschen den Süden, anarchistische Projekte dominieren Berlin und Hamburg, Slums wie der riesige Rhein-Ruhr-Sprawl sind chaotische Ballungszentren, daneben Ghettos aller Couleurs, ein Kirchenstaat Westphalen und ein Trollkönigreich im Schwarzwald. Der Shadowrunner Pandur, alias Thor Walez, ist bei den Hovercraftpiraten der Nordsee untergeschlüpft und glaubt, den geheimnisvollen Mächten entkommen zu sein, die ihn manipuliert und gnadenlos gejagt haben. Aber die Vergangenheit holt ihn ein, als die Piraten vor der Arcologie Bremerhaven auf einen unbekannten Gegner treffen. Pandur sieht keinen anderen Weg, als in die Schatten zurückzukehren, und läßt sich zusammen mit dem Rigger Festus und der Magierin Jessi für einen neuen Run in Hamburg verpflichten. Im Computer der mächtigen AG Chemie stößt er auf brisante Daten, die der Megakon um jeden Preis geheimhalten will. Offenbar stehen die Daten im Zusammenhang mit den virenverseuchten Cyberaugen, die den Rigger in den Wahnsinn treiben. Gehetzt von alten und neuen Feinden, versuchen die Shadowrunner, dem Geheimnis auf die Spur zu kommen.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["1994-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

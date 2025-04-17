@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10672", "25003", "22002"],
+	"name": "Mr. Johnson's Little Black Book",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "de-DE": "Auftraggeber-Handbuch" },
+	"originalLanguage": "en-US",
+	"description": "\"I've got a job for you.\"\n\n\"Call me Mr. Johnson. I'm like a fixer for the corps. I know everybody who's anybody from suit-and-tie boardroom predators to bottom-feeder street-level scavengers. I know the best sprawl sites for scoring new talent, exchanging goods without interruption or hiding out from the hit men on your tail. I like to ensure that the people I hire can execute a well-planned black ops job and keep their faces from being splashed all over the screamsheets. My files on you say that you're right for what I have in mind. Interested?\"",
+	"edition": 3,
+	"publisher": ["Fantasy Productions", "Catalyst Game Labs"],
+	"releaseDate": ["2004-08-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

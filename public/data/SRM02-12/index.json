@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM02-12"],
+	"name": "Winter Wonderland",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Ardent's head hurt. He felt bruised all over, like bailing without a parachute. Everything was hazy, he couldn't remember what happened the last few…hours…days. \"Did I crash? Wait, no, I landed\", he thought.\nMemories started coming back. He remembered that he landed, taxied to the hangar, the Koshari met him, and then everything went black; black and painful. The Koshari weren't pleased that the cargo was missing. He tried to explain that he saw a ZDF plane coming at him and he dumped the cargo. Unfortunately he couldn't explain why he was so far off course. They thought he sold it to a competitor. Ardent mumbled to himself, \"Should have kept flying.\" The Koshari don't like mistakes, and this was Ardent's second.\nHis first only cost him repayment plus interest. A light sitting on a table pushed the shadows back. Ardent was seated in a chair with his hands tied behind his back. The room was vast beyond the darkness. Even with thermal and lowlight in his cyber eyes, there wasn't much to make out.\nFootsteps echoed behind Ardent. \"Good news, Mr. Ardent, your plane's logs confirm your statement. You can be on your way. Any further obligations we had with you are terminated as your services are no longer needed,\" said a voice from behind him.\nA figure of a man walked just past Ardent. It resembled the Mr. Johnson who hired him, though with the Hopi mask, it was impossible to be sure. The man continued as he put down a case and opened it, \"Before you go, there is the matter of payment. Cash isn't optional.\"\nArdent looked up confused. When he saw the man turn around holding a scalpel, he finally understood…",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2007-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

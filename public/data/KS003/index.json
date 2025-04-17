@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["KS003"],
+	"name": "Shadowrun: Sprawl Ops - Co-Op Expansion",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "The Co-Op Expansion introduces a threat that the usually combative teams of shadowrunners within the sprawls of the Sixth World cannot ignore. This turns Shadowrun: Sprawl Ops from a competitive game into a fun cooperative experience where players either work together toward victory or lose together.\n\nFrom the Sprawl Ops KickStarter description: \"This is an exclusive product only, which means it will only be available here on Kickstarter, through the pledge manager and through Catalyst or Lynnvander directly and/or at a variety of conventions while supplies last. This is a limited print product.\"",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-06-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

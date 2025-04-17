@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7701"],
+	"name": "High Tech and Low Life: The Art of Shadowrun",
+	"category": "misc",
+	"type": "scan",
+	"originalLanguage": "en-US",
+	"description": "High-Tech & Low-Life: The Art of Shadowrun brings to life the cyberpunk, neo-fantasy and science fiction elements of Shadowrun. It includes eight years worth of luminous interior pages and dramatic covers from FASA's futuristic roleplaying universe and, for the first time, assembles them in a single volume.\nThe work of many of the artists featured in this book also appeared in Spectrum, an annual compilation of the best of fantastic art, including Luis Royo, John Zeleznik, Doug Andersen, Brom, Rick Berry, Jim Nelson, Tom Baxa, Joel Biske, and Jeff Laubenstein.",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1997-06-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

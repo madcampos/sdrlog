@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM09-03"],
+	"name": "Learning Little from Victory",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# POLITICS AS A BLOOD SPORT\n\nWhen the Yakuza decide to get involved with local politics, what could go wrong? Shadowrunners in Neo-Tokyo are about to find out. Runners are going to be asked to influence the election, and they'll have to deal with the candidates, their backers, and anyone else who wants things to go their way. They'll have plenty of obstacles to overcome and decisions to make—are they just going to work for pay, or will they try to get the right person into office? Assuming they can decide who that is.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-01-21"],
+	"gameDate": "2081-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

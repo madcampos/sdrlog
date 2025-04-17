@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26208", "470158"],
+	"name": "Conspiracy Theories",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Verschwörungstheorien" },
+	"originalLanguage": "en-US",
+	"description": "The Tangled Web of Truth\n\nWar rages in Central America, tensions between dragons are on the rise, and the Watergate Rift has been closed in a display of power that shook the city of DeeCee to its core. To many, the world is becoming more disordered and unpredictable—but there are those who look underneath the surface chaos and see order, or even a plan. They see people and organizations who pull the strings and make the world shake, and they wonder if they can find out what these people are up to before it's too late.\nConspiracy Theories is a deep dive into the underbelly of the Sixth World, a place filled with crackpot theories and insane ideas that would be laughable if it weren't for the fact that some of them are most assuredly true. If they want to stay alive, shadowrunners need to know this information to keep them a step ahead of the forces that may be massing against them behind the scenes. If they want to do more than survive—if they want to prosper—they really need to know this data, because any runner worth a damn knows that manipulating people based on what they believe to be true is a great way to make a few nuyen.\nBringing together plot elements from War!, Spy Games, and the Dawn of the Artifacts series, Conspiracy Theories adds a twisted element to Shadowrun games. Conspiracy Theories is for use with Shadowrun, Twentieth Anniversary Edition.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-11-20", "2012-05-11"],
+	"gameDate": "2073-10",
+	"notes": "The German edition has an aditional chapter about the ADL.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

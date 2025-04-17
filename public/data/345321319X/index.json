@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["345321319X"],
+	"name": "TAKC 3000",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Eigentlich wollte sich Sparkplug bei Doktor E.R. nur eine neue Headware implantieren lassen, doch als er aus der Narkose erwacht, liegen der Straßendoc und seine hübsche Assistentin in einer Blutlache am Boden. Rasch wird dem Rigger klar, dass man ihm das Verbrechen anhängen will, und so schleppt er sich mit letzter Kraft zu seinen Riggerfreunden. Sparkplug taucht in den Barrens von Seattle unter, aber nicht nur die Cops, sondern auch mächtige Konzerne sind ihm auf den Fersen. Um seine Unschuld zu beweisen, macht sich Sparkplug auf die Suche nach den Mördern. Wer war der Doc in Wirklichkeit, und wer hatte ein Interesse daran, ihn zu ermorden? Bald stellt sich heraus, dass Doktor E.R. dem Rigger den Prototyp einer neuen und revolutionären Geheimwaffe in den Schädel eingebaut hat. Die Spur führt zu einem geheimen Konzernlabor in Deutschland...",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2002-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

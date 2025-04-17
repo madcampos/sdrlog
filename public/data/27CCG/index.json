@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27CCG"],
+	"name": "Shadowrun 5th: Conversion rules",
+	"category": "misc",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Shadowrun, Fifth Edition introduces some rule tweaks for shadowrunners and this guide will help you move from SR4 to SR5.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-07-16"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

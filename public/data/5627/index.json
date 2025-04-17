@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5627", "27811"],
+	"name": "Steel Rain",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Stahlregen" },
+	"originalLanguage": "en-US",
+	"description": "Sword Of The Serpent\nMachiko is second-in-command of the Green Serpent Guard, an elite corps of Elven samurai who are sworn to defend the Chairman of Nagato Corporation. But she soon gets a promotion - after her superior is ruthlessly cut down in a slew of attacks aimed at the famous Guard itself.\nOnly the wealthiest can afford assassins with enough muscle to take on the Green Serpent Guard, and Machiko turns up evidence that points ot Nagato's biggest rival, Fuchi Corp. It looks like Fuchi has designs on Nagato's sensitive research division, where the incredible future of the communications matrix is taking shape.\nWhen magical attacks and sabotage begin taking out more of Nagato's personnel, things between the two megacorporations really heat up. But behind the growing hostilities with Fuchi looms a more sinister threat, requiring far more of Machikos talents than her flashing sword. And staying alive may require defeating a high-tech foe with virtually unlimited powers - and absolutely no mercy...",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Heyne Verlag"],
+	"releaseDate": ["1997-03-01"],
+	"gameDate": "2057-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S002"],
+	"name": "MilSpec Tech",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "MilSpec Tech-Katalog" },
+	"originalLanguage": "en-US",
+	"description": "The corporations of the Sixth World love a good challenge—as long as it suits them. Ending world hunger? Not interested. Eliminating poverty? There's no margin in that. Finding creative and more effective ways to blow things up and/or reduce them to rubble? That, they can do.\nWar is raging on the Aztlan-Amazonia border, and there are plenty of other places in the world where people are willing to fork over piles of nuyen to buy that tank or fighter that would help them sleep better at night. There is good demand for military technology, and the corps are stepping up with the supply.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2011-01-01", "2012-09-11"],
+	"gameDate": "2073-02",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

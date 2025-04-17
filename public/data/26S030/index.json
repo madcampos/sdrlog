@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S030"],
+	"name": "The Vladivostok Gauntlet",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Yuri Yehzov has been off the streets for a long while, surviving by following a few simple rules. Don't stick your neck out. Don't get involved in something that is none of your business. And above all, don't piss off the ferocious mobsters of the Vory y Zakone.\nYuri doesn't have much left from his shadowrunning days except his cyberears, but that's enough to get him in trouble. When he hears something he cannot ignore, one by one his rules fall by the wayside until he has cold-blooded killers, vicious shapeshifters, and a ruthless Vory leader all after him. His gear is broken, his reflexes are shot, and he's about to face the toughest opponents he's ever been against. The streets have one more chance to claim his life—and he has one more chance to break the rules, beat the odds, and find a way to stay alive.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-09-16"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

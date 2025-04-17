@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5218"],
+	"name": "Changeling",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Der Wechselbalg" },
+	"originalLanguage": "en-US",
+	"description": "Chicago - Peter Clarris was a human boy who changed into a troll. He grows up surviving as a shadowrunner.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1992-06-01", "2003-06-01"],
+	"gameDate": "2052-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

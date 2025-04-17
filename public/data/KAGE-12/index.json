@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["KAGE-12"],
+	"name": "KA•GE: Issue 12",
+	"category": "magazine",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "This was the last issue of KA*GE before the publisher went AWOL. The issue was published late, and the was promises of further issues being on time.\nThe issue contains:\nLetters, errata, paranormal critter, fiction, archetypes, contacts, magic theory, new gear, new organizations, scenario ideas, new spells, merchandizing, slang, event calender and newsnet downloads. --user description",
+	"edition": 2,
+	"publisher": ["Other"],
+	"releaseDate": ["1994-01-01"],
+	"gameDate": "2052-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

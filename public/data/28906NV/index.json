@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28906NV"],
+	"name": "The Frame Job, Part 6: Retribution",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "THE THRILLING CONCLUSION OF THE FRAME JOB SERIES!\nDouble-crossed. Ambushed. One, and possibly two megacorps out for their heads...\nYu, Emu, Rude, Frostburn, and Zipfile have been through a lot in the last few days. Their backs are against the wall. And when that happens, there's only one thing left to do—come out swinging (or in Rude's case, shooting).\nTheir recon and data-gathering has all paid off. They know who to hit, where to hit them, and how. Now all they gotta do is infiltrate a heavily secure corp building in a busy business area of Seattle in broad daylight and bring it down…from the inside. And all that stands in their way is Mr. Johnson himself, corp security, and another hundred and one things that could go wrong…\nAnd, assuming they can pull this mission off, there's still the matter of the second Johnson who hired them…and who might want to ensure there are no loose ends after this job. Will the Frame Job be the team's last one, or will they use everything they have to find a way to come out on top?",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2019-05-01"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

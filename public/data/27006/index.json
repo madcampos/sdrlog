@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27006", "45024"],
+	"name": "Data Trails",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Datenpfade" },
+	"originalLanguage": "en-US",
+	"description": "THE INFINITE FRONTIER\n\nThe last great undiscovered country is vast, wild, and weirder than you can possibly imagine. And it's nearby, waiting, accessible by the press of a button, or a simple gesture, or even just a thought. The Matrix holds a whole lot more than selfies and cat videos—it has artificial intelligences, electronic ghosts of people formerly alive (or perhaps still living), and deep wells of pure data that can swallow you whole. Oh, and a copy of every secret ever recorded electronically. The possible rewards of exploration are great, and the dangers are greater.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2015-05-26", "2015-10-01"],
+	"gameDate": "2076-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

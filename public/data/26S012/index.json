@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S012"],
+	"name": "Parabotany",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Parabotanik" },
+	"originalLanguage": "en-US",
+	"description": "It's so easy to forget about plants, especially for sprawl-hardened runners who never have anything underfoot besides plascrete. But you forget about them to your peril. After all, where do you think your deepweed comes from? How about those useful, memory-wiping doses of laés? And what was it about the Brazilian kiwi that made Dunkelzahn so interested in it?\nIgnoring plants means ignoring a possible source of income, and what self-respecting runner would ever do that? Parabotany is the guide runners need to help them locate plants that will enhance their abilities and grow their income, and it also provides useful tips, such as how to avoid plants that might be inclined to devour you.\nAlong with descriptions and full-color art for dozens of plants and a garden full of plot hooks, Parabotany has new rules on creating Awakened flora, gathering reagents, and creating powerful new magical compounds. Unlock the secrets of Sixth World plants, and use your knowledge to give your foes a defeat they'll never forget—unless, of course, you dose them with laés.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2012-04-01"],
+	"gameDate": "2074-03",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

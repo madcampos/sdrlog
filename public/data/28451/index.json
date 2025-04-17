@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28451"],
+	"name": "Power Plays",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Konzerngewalten" },
+	"originalLanguage": "en-US",
+	"description": "CORP REPORT\n\nYou can be proactive, shift paradigms, think outside the box, and set aggressive agendas all you want—the megacorporations of the Sixth World are still going to disturb your plans, ruin your day, and screw up the world. They are shadowrunners' employees and adversaries, the source of cash and the source of despair. Shadowrunners need to know them—because knowing your enemy is the first step to bringing them down.\n\nPower Plays provides updates on the Big Ten megacorporations of the Sixth World, as well as news on a few other corps. Whether you're taking a job from one of them or going up against one, this book has what you need to know to survive the job.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2021-04-23"],
+	"gameDate": "2080-01",
+	"notes": "The German edition has additional information on ADL Mega Corps",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

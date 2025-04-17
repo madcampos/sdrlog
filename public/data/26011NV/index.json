@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26011NV"],
+	"name": "Kings of the Street",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# RUNNING WILD IN THE STREETS...\n\nPícaro is a street kid living in the slums of Tenochtitlan, resigned to his dead-end life, and just trying to survive until the next day. But when his grandmother falls ill, he throws in with drug pushers to try and earn enough money to save her, until he gets what he thinks is an even better idea—robbing his connection.\n\nBetrayed by a former friend, Pícaro is turned over to the most powerful street gang in the barrio, and expects a quick death. Instead, he is made one of them, and when his own magical ability begins to emerge, Pícaro realizes there's more to life than just survival.\n\nBut as he delves deeper into the gang's motives, and their charismatic, mysterious leader Serpiente, Pícaro soon learns that the gang has its own darker plan for the neighborhood…and if he doesn't take a stand against them, it could mean the destruction of everything he holds dear…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-02-03"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

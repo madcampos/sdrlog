@@ -284,6 +284,11 @@ export interface ShadowrunCatalogDataList {
 		/**
 		 * An URL pointing to a cover for this item.
 		 */
-		cover: MaterialCover
+		cover: MaterialCover,
+
+		category: Material['category'],
+		type: Material['type'],
+		edition: Material['edition'],
+		status: Material['status']
 	}[];
 }

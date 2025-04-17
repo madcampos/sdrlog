@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["47000GA"],
+	"name": "Parazoologie 2075",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Die Fabeln erwachen!\nDie Sechste Welt dreht sich weiter. Immer neue paranormale Phänomene tauchen auf und wollen von der Metamenschheit erforscht werden. So auch in der Zoologie. Unbekannte Wesen warten an den unterschiedlichsten Orten rund um die erwachte Erde: Von Australien bis in die Alpen, vom Himmel bis in die Tiefen der Ozeane.\nNach dem Standardwerk Wildwechsel präsentiert Parazoologie neue Critter für die Welt von Shadowrun 4. Vom Abramshummer bis zum Wolpertinger - denn ob toxisch oder erwacht: Jeder sollte das Tier kennen, das hinter dem nächsten Strauch auf einen lauert.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2014-01-01"],
+	"gameDate": "2075-01",
+	"notes": "German translation of Parazoology and Parazoology 2 - updated with rules for Shadowrun, 5th Edition.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

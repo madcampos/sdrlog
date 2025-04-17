@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["389064581X"],
+	"name": "Vertigo",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "In einem riskanten Balanceakt bewegt sich Vertigo im Grenzbereich zwischen zwei Welten. Dabei ist es wohl hauptsächlich ihrem Glück und ihren guten Beziehungen zuzuschreiben, dass sich die Katzenschamanin zum oberen Mittelfeld der Schattengemeinde zählen kann: Wenn man dem Rigger Silent Glauben schenken will, dann würde sie im Alleingang niemals auch nur einen Run hinbekommen. Doch auf ihren gefährlichen Gratwanderungen zwischen Licht und Dunkel scheint sich immer wieder alles zu ihren Gunsten zu fügen - bis sich ein geheimnisvoller Schatten in ihr Leben drängt und das labile Gleichgewicht ins Wanken bringt. Was harmlos beginnt, gerät bald außer Kontrolle. Doch Vertigo begreift erst viel zu spät, dass das alles kein Spiel mehr ist.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2002-09-01", "2007-11-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

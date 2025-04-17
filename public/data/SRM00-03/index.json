@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM00-03"],
+	"name": "FORCEd RECON",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The ancient ninjas were more than assassins, they were also experts in spying and inteligence gathering. A new research facility has just ben built, and someone wants to get as much paydata on their operations in case future incursions are necessary. Become the modern ninja and name your pay!",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2061-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

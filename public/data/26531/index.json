@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26531"],
+	"name": "Gear Cards [Drones & Vehicles, Volume 1]",
+	"category": "rulebook",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "Roll Out!\nShadowrunners do a lot of things, but one thing they don't do is sit still. There are places to go, people to shoot—they need the right vehicles to get them there and the right drones to take care of business when they arrive.\nThis deck has 54 drones and vehicle cards, with a full-color picture and complete stats, that make it easy to players and gamemasters to reference stats at the game table while illustrating what they're driving, piloting or riding. With selections from a range of Shadowrun, Twentieth Anniversary Edtion products, this deck will prepare you for some serious moving violations.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-02-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "Print only cards.",
+	"cover": "./cover.jpg"
+}

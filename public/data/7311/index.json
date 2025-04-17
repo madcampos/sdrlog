@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7311", "2-7408-0103-3"],
+	"name": "Ivy & Chrome",
+	"category": "mission",
+	"type": "scan",
+	"names": { "fr-FR": "La Dame de Cœur" },
+	"originalLanguage": "en-US",
+	"description": "Ever try to find someone in the Sprawl?\nSorta like findin' a smooth spot on a troll.\nNevertheless, someone needs to be found, and fast.\nIt's hid and seek, search and destroy.\nThink you can handle it, shummers?",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Other"],
+	"releaseDate": ["1991-05-01", "1995-04-01"],
+	"gameDate": "2051-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7302", "10705", "1-55560-116-2"],
+	"name": "Mercurial",
+	"category": "mission",
+	"type": "scan",
+	"names": { "de-DE": "Mercurial", "es-ES": "Mercurial", "fr-FR": "Mercurial", "he-IL": "מאריה כספיתי" },
+	"originalLanguage": "en-US",
+	"description": "A blast of light punches my eyes as I walk down the ramp from street level. The dance floor is an amorphous beast, writhing with a thousand limbs, and the beat of the music red-lines my pulse into overdrive. On the stage, a nova is dancing.\nSearing beams of the spotlights catch the mirror-bright metal arms, legs, and face, reflecting them back in a dazzling cascade of color and light. The next thing you see is the hair flaring golden in the glare, surrounding her face like a solar corona around a silver moon. While Maria Mercurial dances, nothing else matters.\nOf course, something else does matter - biz. That's why you're here, chummier, to protect the silver lady with no past. The money's good, the job's easy; what could go wrong? Except maybe the lady's past is catching up with her.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other"],
+	"releaseDate": ["1990-11-01", "1991-01-01"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["10763"],
+	"name": "Schockwellen",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "en-US": "Shockwaves" },
+	"originalLanguage": "de-DE",
+	"description": "Wer den Wind sät, wird den Sturm ernten! (Hosea, Kapitel 8 , Vers 7)\n\n\"Dich kann nichts mehr erschrecken? Du meinst, dein Leben wäre ein endloser Prozess der Wiederholung der gleichen dreckigen Straßen und Städte? Nichts ist, wie es ist, glaub mir! Du hast nur noch nicht für die Großen gearbeitet. Für diejenigen, die das Geschick der Welt mitbestimmen und dich unter ihren Fingern zerquetschen können, wenn du nicht schnell bist - und besser als die anderen. Aber wenn du dich hineinziehen lässt in das große Geschäft, dann pass auf, dass du nicht zwischen die Fronten gerätst. Und dass du dein Geld ausgibst, bevor es dich erwischt, denn im Spiel der Götter kannst du nur verlieren!\"\n\nSchockwellen ist ein Kampagnen-Band, der die Runner in den Kampf zweier Giganten hineinzieht und nicht mehr daraus entkommen lässt. Er wird sie in die dunklen Straßenschluchten deutscher Megaplexe führen, an die Strände der Südsee, in die Fjorde der Skandinavischen Union, tief unter die Fluten der toxischen Nordsee und noch viel, viel weiter. Dabei werden sie Geheimnisse erfahren, die sie lieber nicht hätten wissen wollen, und endlich einen entscheidenden Blick hinter die Kulissen des mysteriösen Konzerns aus der Nordsee werfen - nichts wird bleiben, wie es war.\n\nSchockwellen besteht aus zehn zusammenhängenden Abenteuern, die nachhaltig das Schicksal der Proteus AG bestimmen werden und bietet außerdem umfassende Hintergrundinformationen über den Giganten aus der Nordsee und die weiteren Protagonisten der Kampagne. Dabei wird die Storyline der ADL weitergeschrieben.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2003-01-01", "2006-01-01"],
+	"gameDate": "2063-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

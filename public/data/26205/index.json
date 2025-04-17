@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26205"],
+	"name": "Sixth World Almanac",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Almanach der Sechsten Welt" },
+	"originalLanguage": "en-US",
+	"description": "THE SIXTH WORLD IS YOURS\n\nWhat was the VITAS outbreak like for the people who were there? What was Renraku Arcology—and its operating software—like before it became a total nightmare? How does it feel to get off a plane and set foot in the ghoul kingdom of Asamondo? The Sixth World Almanac is the ultimate compendium of Sixth World energy, history, and geography. With the most detailed timeline in Shadowrun's history and write-ups of nearly forty major nations, this book immerses players and gamemasters in the Sixth World deeper than they have ever been. The Almanac is full of Shadowrun firsts, including the first-ever full-color map of the entire Sixth World and new fiction covering historic eras that have never been detailed in past sourcebooks. Open the Almanac and fall into the Sixth World—let the art, the maps, and the writing bring you more completely into one of the most exciting, enduring role-playing settings of all time!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2010-06-01"],
+	"gameDate": "2072-11",
+	"notes": "The English almanac was riddled with content and formal errors that were removed by Pegasus in consultation with CGL in the German version. These include duplicate or incorrect info boxes, flags in illustrations, which did not exist at the time of the depicted scene, and incorrect coastal and borderlines.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

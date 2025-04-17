@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26405"],
+	"name": "Horizon Adventure 1: A Fistful of Credsticks",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Nothing's as simple as it seems—any runner knows that. So what seems like a simple job guarding some precious cargo on the set of a trideo shoot is bound to get complicated. And it does—but are you ready to travel the full length the long, twisted road ahead? A Fistful of Credsticks begins a new series of adventures centered on the machinations of the Horizon Corporation. Runners will learn more about the dark side of Horizon, leading to future developments that could change the shape of the entire corporation. Runners that see this adventure to the finish will encounter trideo makers, music celebrities, showbiz leeches, some gang members bent on fame, and a very peculiar corporate experiment.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2011-04-01"],
+	"gameDate": "2072-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

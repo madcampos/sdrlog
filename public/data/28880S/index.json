@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28880S"],
+	"name": "Shadow Stock: Lofwyr's Legions",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Kaleidoskop: Lofwyrs Legionen" },
+	"originalLanguage": "en-US",
+	"description": "# IN THE SHADOW OF DRAGONS\n\nShadowrunners know that the most dangerous position to have in the Sixth World is being perceived as a threat by the powerful. Drakes are the perfect example—their power is considerable, which means they almost always have someone after them. They often end up seeking protection by serving dragons and doing their bidding—which means they represent dragons' interests in the shadows. Runners need to know about drakes, because they could mess up their lives in short order. Or, if they're lucky, become one of the greatest friends or even teammates a runner could have.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2022-01-21"],
+	"gameDate": "2081-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

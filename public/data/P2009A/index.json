@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["P2009A"],
+	"name": "Geben und Nehmen",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Weihnachten 2070 steht vor der Tür und nicht zum ersten Mal fragt ihr euch, ob die ganze Stadt verrückt geworden ist. Die große Werbeoffensive von DeMeKo hat bereits vor Wochen jedes vernünftige Maß weit hinter sich gelassen und gleicht immer mehr einem wahnsinnigen Gehirnwäschefeldzug. Kitschige Werbejingles donnern an jeder Straßenecke aus den Lautsprechern, unterbrochen nur vom ständigen Ho-Ho-Ho der Weihnachtsmänner. Armeen von Werbe-AROs bombardieren die Horden der Einkaufswütigen mit Schnäppchenangeboten und treiben sie wie hirntote Zombies durch die überfüllten Straßen und Kanäle zu den Konsumtempeln.\nAber Rettung naht: Heiligabend steht kurz bevor. Nur noch wenige Tage, dann werdet ihr friedvolle sechs Monate ohne Weihnachtswerbung durchleben können. Bis der ganze Wahnsinn wieder von vorne beginnt...",
+	"edition": 4,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2009-01-01"],
+	"gameDate": "2074-01",
+	"notes": "Winning entry of Pegasus' 2009 adventure competition for Shadowrun. Subsequently released as a free pdf.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

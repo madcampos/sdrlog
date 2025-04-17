@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7112", "S16", "2-7408-0145-9"],
+	"name": "Paranormal Animals of Europe",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "es-ES": "Animales paranormales de Europa", "fr-FR": "Les Métacréatures Européennes" },
+	"originalLanguage": "en-US",
+	"description": "The glorious creatures of the mythic past and horrors undreamt of dwell in the Europe of 2054. Gargoyles and goblins stalk the streets of London. Centaurs and satyrs roam the countryside. A mysterious and menacing menagerie of creatures, both fearsome and friendly, now populates the European landscape.\nParanormal Animals of Europe is a field guide to these magically awakened creatures. Detailed de",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1993-03-01", "1995-01-01", "1997-01-01", "2013-01-01"],
+	"gameDate": "2053-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

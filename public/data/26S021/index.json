@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26S021"],
+	"name": "MilSpec Tech 2",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "MilSpec Tech-Katalog 2" },
+	"originalLanguage": "en-US",
+	"description": "Sometimes you look at a catalog to see if there's anything in it that you want. And sometimes you look to see what you need to avoid.\nYou'll find both types of things in here. The tech heads of the Sixth World remain busy, coming up with more ways to slaughter metahumans with maximum efficiency. And they have plenty of battlegrounds in the world where they can test their toys out. There are things in here that shadowrunners would be exceedingly lucky to get their hands on, and things whose very appearance serves to tell them they're having a very bad day indeed. From automated strike drones to nearly invisible tactical aircraft, from the ground-clearing Dassault Zeta Bravo to the drone killing Bridgette Tactical Vehicle, Mil Spec Tech 2 has the latest and greatest tools of war - along with a host of missiles to keep anyone in a war zone on their toes.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2012-07-01", "2012-10-28"],
+	"gameDate": "2074-07",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

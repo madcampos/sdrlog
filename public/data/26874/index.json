@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26874"],
+	"name": "Sprawl Stories Vol. 1",
+	"category": "novel",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "MEAN STREETS? YOU HAVE NO IDEA...\n\nThe Sixth World is a dangerous place, and nowhere is that more obvious than in Seattle, the so-called Emerald City. Surrounding its neon-drenched heart is kilometer after kilometer of Sprawl, where millions of people scratch out a living among hazardous, slowly decaying neighborhoods and even more dangerous neighbors.\nSprawl Stories contains four Shadowrun novellas that explore Seattle through the eyes of the people who live there every day. A burned-out mage detective tackles a missing person case that quickly threatens to spiral out of control. A reporter goes on the ride-along of her life with a high-octane DocWagon team, and uncovers a conspiracy on live triedeo. A young ex-wagesalve is caught between powerful forces while investigating his uncle's death. And a shaman must deal with a serious injury that threatens his very way of life-but not before taking vengeance on those who double-crossed him.\nSo take a walk on the true wild side of the Seattle Sprawl If you're good-and lucky-you might even come back out in one piece...\n\nSprawl Stories contains the following novellas:\n\t\"Neat\" by Russell Zimmerman\n\t\"DocWagon 19\" by Jennifer Brozek\n\t\"Big Dreams\" by R. L. King\n\t\"Blind Magic\" by Dylan Birtolo",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2075-01",
+	"notes": "A compilation of previously released novels.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

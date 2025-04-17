@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26530"],
+	"name": "Weapon Cards [Guns, Volume 1]",
+	"category": "rulebook",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "Designed to make game play simpler, more colorful and more fun, Shadowrun Weapon Cards contain pictures and Shadowrun, Fourth Edition stats for a whole range of guns, making it easy for players and gamemasters to reference at the game table. These cards also bring the Sixth World to life through full-color art for each piece of gear. This deck contains 54 guns for use with Shadowrun, Fourth Edition, selected from a range of Shadowrun products.\nOnly sold at 2012 conventions.\nDeal them out and start shooting!",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2013-10-01"],
+	"gameDate": "2072-01",
+	"status": "outofscope",
+	"notes": "Print only cards.",
+	"cover": "./cover.jpg"
+}

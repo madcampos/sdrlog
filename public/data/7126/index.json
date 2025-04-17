@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7126", "10663", "25001"],
+	"name": "Man & Machine: Cyberware",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Mensch und Maschine 3.01D", "fr-FR": "La Chair & le Chrome", "hu-HU": "Ember és gép: Kiberver" },
+	"originalLanguage": "en-US",
+	"description": "Man... or Monster?\n\nCyberware can increase your speed, enhance your strength and sharpen your reflexes. It can put a computer in your head, armor under your skin and weapons in your arms. There are implants to improve every internal organ and devices that let you interface with machines... but you'd better know when to stop. Too much cyberware and you're a cyberzombie—more machine than man.",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["2000-05-01", "2003-01-01", "2004-04-01"],
+	"gameDate": "2061-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

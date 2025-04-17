@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM02-10"],
+	"name": "Twist and Insult",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "With the exodus from Mother Russia, the Avtoritey and Vory have been bringing their families to North America and settling into their old ways. Six months ago, several of these families made their way to Denver. After dividing the city along the national boundaries, each Vor and Avtoritet began to slowly expand through their own means.\nMaria Kirillova, the only daughter of Nikolai Kirillov, began seeing Tony a few months ago. After realizing that Tony was second in command, she did what any good Vory wife would have done and killed the leader of the gang. Unfortunately, Tony was distraught over Jonny's death and so Maria never told him. Now Tony wants to runaway from the gang and Denver, so that he and Maria can get married and live together.\nMeanwhile, Nikolai Kirillov has learnt of the death of the leader of the Three Kings and wants to make his move to absorb the gang before they join someone else. The runners have just completed a run for him so they are immediately at hand when he decides to move.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2006-01-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

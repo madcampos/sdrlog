@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5714"],
+	"name": "The Terminus Experiment",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Das Terminus-Experiment" },
+	"originalLanguage": "en-US",
+	"description": "Seattle - A conspiracy arrives to spread a plague of vampires. Warren Storey must discover the reason for the plague before time runs out.",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1999-01-01", "2003-06-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

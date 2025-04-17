@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3890645131"],
+	"name": "Fatimas Tränen",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Jari, ein Schieber in London, nimmt von einem sehr undurchsichtigen Auftraggeber einen hochprofitablen Job an: die Tränen Fatimas zu bergen und an einen sicheren Ort zu bringen. Nur handelt es sich dabei um heilige Artefakte einer muslimischen Sekte, die Tränen gelten als magisch, und der \"sichere Ort\" befindet sich im Norden Afghanistans. Die Shadowrunner, die den Auftrag erfüllen sollen, sind rasch gefunden: Flechette, die italienisch-deutsche Runnerin, nimmt ihn an, um ihrerseits einen Gefallen einzufordern, Reynard, ein sehr junger Runner aus gutem Haus, will Abenteuer erleben, und der Adlerschamane Voiata hat keine andere Wahl. Aber er hat andere Pläne - und Rechnungen zu begleichen.",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2007-01-01"],
+	"gameDate": "2050-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

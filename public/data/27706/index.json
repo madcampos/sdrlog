@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27706"],
+	"name": "Shadowrun: Crossfire: Prime Runner Refit Kit",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "If you have a Shadowrun: Crossfire set, you might have seen the update to the game called the Shadowrun: Crossfire: Prime Runner Edition, and maybe you're thinking that it would be good to be able to get something that has only the changed materials—the updated rules, the changed cards, the new missions—so that you'd have all the benefits of the latest edition without having to buy everything again.\nYou're right—it would be good! So here it is! The Prime Runner Refit Kit brings all the changes of the Prime Runner Edition to your Crossfire game, including updated rules, adjusted character stats, newly designed character screens, more missions, and a full range of upgrade stickers, including the set from the High Caliber Ops expansion. With this kit, your game will be ready to roll with any Crossfire game out there!\nNote: The Prime Runner Refit Kit is for use only with the first edition of Shadowrun Crossfire. If you don't have Shadowrun: Crossfire or if you have the Crossfire: Prime Runner Edition, you do not need this Refit Kit!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"notes": "Announced at GenCon 2018.",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM08-01"],
+	"name": "Keep Your Friend Close",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Raised Stakes\n\nChicago has been dangerous for a long time. But only the foolish think it can't get worse. When so many ways to die are concentrated in a single place, sometimes they prey on the innocent, and sometimes they go head to head with each other. Sometimes, they do both.\nIn SRM 08-01 Keep Your Friends Close, the Chicago Missions begin speeding toward their dramatic conclusion as the powers of the Containment Zone mobilize and start causing an even higher-than-normal level of chaos. Whether you've seen the twists and turns of the storyline through several Missions or you're looking to jump in now, this Mission will give your team all the danger they can handle in the race to save lives. Their own being a top priority.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2017-12-01"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26004", "45000", "SR12"],
+	"name": "Unwired",
+	"category": "rulebook",
+	"type": "digital",
+	"names": { "de-DE": "Vernetzt", "fr-FR": "Unwired - matrice 2.0", "jp-JP": "アンワイアード" },
+	"originalLanguage": "en-US",
+	"description": "HACK THE PLANET!\n\nUnwired is the advanced Matrix rulebook for Shadowrun, Fourth Edition. For everyday users, it explains how the Matrix works in easy-to-understand terms, and provides new software, qualities, and gear. For hackers and technomancers, it introduces new hacking tricks, malware, echoes, and sprites. It also covers system security and new Matrix phenomenon, from AIs to the resonance realms.Unwired contains everything players and gamemasters need for exploring the Matrix in Shadowrun.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2008-07-29", "2008-06-21", "2009-04-01", "2010-03-01", "2014-10-31"],
+	"gameDate": "2071-05",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27703"],
+	"name": "Shadowrun Crossfire: High Caliber Ops",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "You're tougher. Meaner. Better equipped. You've taken on a drekload of challenges the Sixth World has thrown at you, and you've survived. Barely, sometimes, but that's enough. You're walking with a certain confidence, maybe even a little strut. You're ready for the next thing the streets are going to throw at you.\nAt least, you think you are. Now you're going to find out.\nHigh Caliber Ops is a massive expansion for the award-winning Shadowrun: Crossfire deck-building game. How massive? How does two new character roles, more than a dozen new Black Market cards, fifty new obstacles, and a large bundle of new Karma upgrades sound? On top of that, we've got five brand-new missions, and a set of basic cards with new art. Taken together, you have the tools for high-powered, high-risk, high-reward shadowruns. Add High Caliber Ops to your Crossfire game to see just how much danger you can take on!",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2015-01-01"],
+	"gameDate": "2075-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

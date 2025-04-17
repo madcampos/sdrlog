@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM08-04"],
+	"name": "Dirty Laundry",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Prepare for Everything\n\nChicago's Containment Zone is the most uncontrolled of environments, where anything can and will be thrown at you. Ferocious gangers, hungry Infected, nefarious corp operatives—they're just the starters. There's a full buffet of obstacles waiting for you, and Mr. Johnson is offering a nice sum of money to encourage you to chow down.\n\nThere's a critical piece of data squirreled away in a lost, offline server, and Mr. Johnson wants it retrieved. Doing so will require running a Containment Zone gauntlet, with an array of dangers that will test any running team. But if it wasn't hard, Mr. Johnson wouldn't be paying you to do it, would he?",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-02-24"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

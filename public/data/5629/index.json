@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5629", "27814"],
+	"name": "Stranger Souls: Dragon Heart Saga, Volume 1",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Fremde Seelen (Drachenherz-Saga Teil 1)" },
+	"originalLanguage": "en-US",
+	"description": "Dunkelzahn the dragon's election as President of the United Canadian American States promised the dawn of a new era. But the hopes of a nation disintegrate with the powerful explosion that assassinates him. On that same fateful evening Dunkelzahn's most trusted special agent, Ryan Mercury, is on a secret mission of great urgency involving dangerous magic. And only a miracle can save the world from total destruction...",
+	"edition": 3,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1997-07-01", "2003-06-01"],
+	"gameDate": "2060-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

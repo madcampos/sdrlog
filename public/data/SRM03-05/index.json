@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM03-05"],
+	"name": "In and Out",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "A stool pigeon is ready to name names. Mr. Johnson wants to make sure they're the right names. He needs you to break into the NYPD Inc. holding facility and deliver a message. This 25-page scenario includes a complete adventure, player handouts, and record handling sheets for participating in the Shadowrun Missions (SRM) campaign.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2009-11-01"],
+	"gameDate": "2070-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5448", "27836"],
+	"name": "Who Hunts the Hunter",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Jäger und Gejagte" },
+	"originalLanguage": "en-US",
+	"description": "From the distant forests of Maine comes the deadly Weretiger known as Striper, seeking nature's own special justice.\nFrom the shadowed heart of the South Bronx comes the shaman called Bandit, interested only in the pursuit of his arcane arts, and the reconciliation with nature that Raccoon demands.\nFrom the nightmare streets of Newark come Monk and Minx, seeking life itself.\nWho is predator and who is prey? The assassin? The shaman? The kids with the flashing eyes? The Director of Resource for Hurley-Cooper Labs, or HCL's dedicated scientist? Or is it the elves? Or the mystery man from the Department of Water and Wastewater Management with a technical rating higher than God's?\nBefore they are done, a killer will learn the meaning of mercy, and one who honored life will discover the necessity of ruthless destruction....",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1995-05-01", "2003-06-01"],
+	"gameDate": "2055-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46125"],
+	"name": "Neo Noir",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Schwärzer als die Schatten\n\nIn einer Welt, die von Megakonzernen kontrolliert wird, entscheiden die Reichen und Mächtigen darüber, was Recht und Gesetz ist. Doch nicht jeder fügt sich in sein Schicksal. Wer keine Antworten auf seine drängenden Fragen nach Gerechtigkeit erhält, der wendet sich bisweilen an Privatermittler: Abgebrühte „Schnüffler\", die sich von Drohungen und Gewalt nicht beeindrucken lassen, um an ihr Ziel zu kommen. Und wer die Wahrheit ans Licht holen möchte, muss bisweilen in die Schatten hinabsteigen...\n\nNeo Noir ist eine Eigenproduktion von Pegasus Press und eine Anthologie für Shadowrun 6 mit drei Einzelabenteuern. Alle Abenteuer sind komplett spielfertig, inklusive Grundrissen und Plänen. In den Fußstapfen großer Privatermittler der Detektivfilme durchstreifen die Runner in Neo Noir die Metroplexe der ADL. Sie lösen dabei Mordfälle, decken Konzernintrigen auf und üben Rache für vergangenes Unrecht.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2021-05-10"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

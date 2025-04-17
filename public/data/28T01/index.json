@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"name": "Sixth World Sprawl Fashion T-Shirt",
+	"sku": ["28T01"],
+	"edition": 6,
+	"gameDate": "2080-10",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"releaseDate": ["2021-01-01"],
+	"publisher": ["Catalyst Game Labs"],
+	"status": "outofscope",
+	"description": "# SIXTH WORLD FASHION!\n\nBanned for Casual Fridays by most megacorps, the Sprawl Fashion T celebrates Sixth World culture!\n\nA full, sublimated dye T-shirt, this first selection shows off Benjamin Gilletti's amazing artwork from the upcoming Shadowrun Sixth world cover. Printed on a 100%-poly shirt, the front is full-color and wraps to the back with the same image in a gradient urban gray presentation. Looks great coming and going!",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["2-7408-0112-2"],
+	"name": "Alerte Rouge",
+	"category": "mission",
+	"type": "print",
+	"originalLanguage": "fr-FR",
+	"description": "Voilà trente ans, la naissance tumultueuse des Nations des Américan d'Origine ébranlait les États-Unis d'Amérique et bouleversait les frontières géo-politiques de l'Amérique du Nord. Aujourd'hui, quelqu'un qui n'apprécie pas cette tournure des événements travaille à un nouveau bouleversement de son cru. Est-ce une venegeance? Ou quelque chose de plus profond? Quoiqu'il en soit, cette sombre histoire vous entraîne dans une longue traque à travers les nations tribales. Mais si vous êtes les chasseurs, pourquoi cette impression que les mâchoires du piège se referment sur vous?",
+	"edition": 2,
+	"publisher": ["Other"],
+	"releaseDate": ["1995-09-01"],
+	"gameDate": "2060-01",
+	"notes": "A translation of the adventure \"Peacekeeper\".",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

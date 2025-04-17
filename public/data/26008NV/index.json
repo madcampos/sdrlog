@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26008NV"],
+	"name": "Crocodile Tears",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "FUN—AND FEAR—IN THE SUN…\n\nEverything's irie in the Caribbean. What could be better than a week of sun, fun, and parties at the bi-annual Caribbean League political conference in Havana, with every shadowrunner, pirate, and low-life in attendance looking for work? What could possibly go wrong?\n\nAnd when the Rastafarian troll shaman T'ing and his crew are approached by an official from Haiti to investigate rumors involving their old enemies, the dark voodoo Kofo cult, it looks like an opportunity for payback and profit combined.\n\nDigging deeper, however, T'ing and his runners discover a genocidal plot that threatens the entire region, possibly even resulting in an all-out shooting war between several major Sixth World players. There's nothing to do but round up all their badass runner contacts, light up a spliff, and kick some ass. But this run will take them under the sea to a top-secret covert lab where Kofo cultists are hiding a weapon that could change the face of the entire Caribbean…and only T'ing and his hard-partying—and even harder-charging—crew stand in their way...",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2020-06-17"],
+	"gameDate": "2080-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

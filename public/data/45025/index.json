@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["45025"],
+	"name": "Schwarzgeld",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Der Run ist gelaufen, du hast es nach Hause geschafft und der Schmidt hat dich nicht übers Ohr gehauen. Nachdem das Team wieder zusammengeflickt und die Siegesfeier vorbei ist, hast du tatsächlich noch Geld auf dem Credstick. Doch wohin damit? Sicher und niedrig verzinst aufs Sparbuch packen, S-K Aktien kaufen oder in die wirklich innovativen Dinge investieren? Und wie schaffst du den erwirtschafteten Gewinn hinterher möglichst elegant am Fiskus vorbei.\n\nSchwarzgeld tauscht tief in die packenden Geheimnisse der Finanzverwaltung von Shadowrun 5 ein - ein bis jetzt vernachlässigter Bereich, der spannender sein kann als das Feuergefecht mit einem Knight Errant SWAT Team. Das Buch wirft ein Licht auf Investmentmöglichkeiten in der Sechsten Welt wie Urban Magic Fonds, Fly-By Aktien, Telesma Optionshandel und Genussscheine auf regenerative Energien. Eine umfassende Abhandlung des Steuerrechts der Allianz Deutscher Länder bewahrt den Runner vor Nachzahlungsforderungen durch die Finanzbehörde. Abgerundet wird das Buch durch eine detaillierte Beschreibung des Finanzgerichtsarchivs in Cottbus, Archetypen aus dem Finanzsektor und neuen Vor- und Nachteilen für investierende Runner.",
+	"edition": 5,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2014-05-01"],
+	"gameDate": "2070-01",
+	"notes": "This is an April's Fool suplement only published in German.",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

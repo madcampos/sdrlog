@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7110", "10714", "S15"],
+	"name": "Shadowtech",
+	"category": "rulebook",
+	"type": "scan",
+	"names": { "de-DE": "Shadowtech", "es-ES": "Shadowtech", "fr-FR": "Shadowtech" },
+	"originalLanguage": "en-US",
+	"description": "THE BEST JUST GOT BETTER!\n\nThink you're already hot stuff, eh chummer? Guess again. There's a leaner, meaner machine on the streets these days, a machine whose parts aren't built, they're grown.",
+	"edition": 1,
+	"publisher": ["FASA Corporation", "Fantasy Productions", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1992-08-01", "1995-01-01", "2009-08-06"],
+	"gameDate": "2052-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

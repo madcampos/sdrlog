@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27450", "45037", "SR509"],
+	"name": "Bloody Business",
+	"category": "mission",
+	"type": "digital",
+	"names": { "de-DE": "Blutige Geschäfte", "fr-FR": "Bloody Business" },
+	"originalLanguage": "en-US",
+	"description": "A scared megacorporation does not run and hide in the shadows. Instead it lashes out, swiping with sharp claws, not caring who is hit by the blows. Many of the megacorps are currently reeling, hit by multiple harsh wallops. NeoNET and Evo are dealing with the fallout of the CFD virus, Ares has powerful forces eating it away from inside, Horizon backed the losing side of the Aztlan-Amazonia war, and the Japanacorps are rearing back to take on the world—and each other. When the corps get aggressive, shadowrunners get called, and blood gets shed.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2015-05-01", "2016-03-01", "2018-09-01"],
+	"gameDate": "2077-02",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

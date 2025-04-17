@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5710"],
+	"name": "Beyond the Pale: Dragon Heart Saga, Volume 3",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Bis zum bitteren Ende (Drachenherz-Saga Teil 3)" },
+	"originalLanguage": "en-US",
+	"description": "The Enemies with unlimited powers, ultimate evil is about to arrive, Ryan Mercury and his runners have only two options left: Victory or Death",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1998-03-01", "2003-06-01"],
+	"gameDate": "2057-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

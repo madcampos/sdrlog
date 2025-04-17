@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27050"],
+	"name": "Shadowrun Game Master's Screen 5th Etidion",
+	"category": "rulebook",
+	"type": "print",
+	"names": { "de-DE": "Spielleiterschirm Fünfte Edition" },
+	"originalLanguage": "en-US",
+	"description": "Every shadowrunner knows the value of good information. The right fact, the perfect piece of data, can be the difference between success and failure on a run, between life and death. And in the right hands, information can be more than valuable-it can be powerful.The Shadowrun Gamemaster Screen provides a collection of useful tables from Shadowrun, Fifth Edition for ease of reference in game play. With range tables, action lists, combat modifiers, social modifiers, and more, this is a critical game aid to make your Shadowrun games faster and more fun. And to provide that all-important secrecy so that the players don't know what you're up to. This screen is for use with Shadowrun, Fifth Edition.Note: This reprint (with a brand new graphic!)",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2013-11-01"],
+	"gameDate": "2075-01",
+	"status": "missing",
+	"notes": "Print only.",
+	"cover": "./cover.jpg"
+}

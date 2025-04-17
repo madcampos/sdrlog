@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["3453521099"],
+	"name": "Altes Eisen",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Zehn Jahre ist es her, seit Lulatsch, Clown, Grizzly und Madame Trix ihren letzten Coup gelandet haben. Und ein Jahrzehnt ist in der sechsten Welt eine lange Zeit, vor allem für die kurzlebigen Orks und Trolle. Sie haben die Straßen der ADL hinter sich gelassen, aber wie heißt es so schön: Niemand verlässt die Schatten ganz. So holt die Vergangenheit die Runner ein und lässt sie erkennen, dass sie im Jahr 2064 vor allem eines sind: Altes Eisen...",
+	"edition": 2,
+	"publisher": ["Heyne Verlag"],
+	"releaseDate": ["2005-09-02"],
+	"gameDate": "2050-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

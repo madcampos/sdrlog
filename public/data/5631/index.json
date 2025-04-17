@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["5631", "27817"],
+	"name": "Clockwork Asylum: Dragon Heart Saga, Volume 2",
+	"category": "novel",
+	"type": "digital",
+	"names": { "de-DE": "Der Cyberzombie (Drachenherz-Saga Teil 2)" },
+	"originalLanguage": "en-US",
+	"description": "The maelstrom of cyber-magic and political intrigue following President Dunkelzahn's assassination rages out of control. Ryan Mercury, Dunkelzahn's secret agent, is torn between his duty and his desire to find a killer. But when a spirit wrongly concludes that Ryan is working for the enemy, he anoints a cyberzombie to carry out a hit of its own. Now with an impressive arsenal of allies, weaponry, and the Dragon Heart, Ryan just might pull off the save of the century—if he doesn't lose his life first!",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
+	"releaseDate": ["1997-11-01", "2003-06-01"],
+	"gameDate": "2057-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

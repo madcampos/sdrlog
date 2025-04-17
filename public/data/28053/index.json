@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28053", "28402"],
+	"name": "Assassin's Night",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "# EXECUTE.\nAuthorization granted.\n\nManeuver AF2B9.\n\nGo dark.\n\nEliminate.\n\nThose words set a plan in motion, but what plan? Something's about to go down in Barcelona. Someone is marked for death. But who's the target, and who's pulling trigger?",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2021-08-17"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM01-04"],
+	"name": "The Gambler",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "An opportunity for a payday! Your fixer lets you know that a client is looking for a datasteal in a previously scouted location. Get in, get the paydata, and get out, all without leaving a trace or a trail of destruction. Know when to hold 'em and know when to fold 'em.",
+	"edition": 3,
+	"publisher": ["Fantasy Productions"],
+	"releaseDate": ["2004-01-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

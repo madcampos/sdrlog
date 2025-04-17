@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7318"],
+	"name": "Divided Assets",
+	"category": "mission",
+	"type": "ocr",
+	"originalLanguage": "en-US",
+	"description": "To the corporations, everything's an asset to be charted., inventoried, and maintained. Everything is accounted for - even people. But what happens when a particular asset - namely an eight-year-old boy - becomes a pawn in a messy piece of corporate extraction? That's up to the Shadowrunners to decide. Unfortunately, all the firepower and magic in teh world won't help solve the problem.",
+	"edition": 2,
+	"publisher": ["FASA Corporation"],
+	"releaseDate": ["1994-01-01"],
+	"gameDate": "2055-07",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

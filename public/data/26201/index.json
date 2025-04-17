@@ -1,0 +1,17 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26201", "46025", "SR10"],
+	"name": "Corporate Enclaves",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Konzernenklaven", "fr-FR": "Enclaves Corporatistes" },
+	"originalLanguage": "en-US",
+	"description": "Are You Ready to Sell Your Soul?\n\nCorporate Enclaves shines the spotlight on two very different bastions of corporate power in the Sixth World: Los Angeles and Neo-Tokyo. Controlled and exploited by the iron hand of the megacorps, these sprawls are home to corporate powerhouses, their political minions, powerful crime factions, and plenty of intrigue and opportunities for enterprising and resourceful shadowrunners. The second in an ongoing series of themed setting books for Shadowrun, Fourth Edition, Corporate Enclaves also briefly visits the unique corporate dominions of Dubai, Europort, Manhattan, Nairobi, and Tenochtitlán, and provides guidelines for developing your own corp-controlled settings.",
+	"edition": 4,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"releaseDate": ["2008-08-01", "2009-05-01", "2009-10-22", "2012-01-11"],
+	"gameDate": "2071-02",
+	"notes": "Both the German and the French editions have an aditional chapters about Lille (French), Frankfurt (German) and Manhattan (both).",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SCBA"],
+	"name": "Shadowrun Chronicles: Boston Adventues",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "The Boston Lockdown Campaign book companion to the video game.",
+	"edition": 5,
+	"publisher": ["Cliffhanger Productions"],
+	"releaseDate": ["2015-04-28"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

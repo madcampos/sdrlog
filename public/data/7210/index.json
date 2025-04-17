@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["7210"],
+	"name": "Tir Tairngire: The Land of Promise",
+	"category": "sourcebook",
+	"type": "scan",
+	"names": { "fr-FR": "Tír Tairngire" },
+	"originalLanguage": "en-US",
+	"description": "A Nation of the Future, Built on the Traditions of the Past\n\nLong shrouded in mystery, now one brave voice dares to speak the truth of the Land of Promise, Tir Tairngire. How did it come to be? Who holds its reigns of power? And what does its future hold? The Tir Tairngire sourcebook reveals the Elven Nation for the first time, in all its glory and danger. Journey there and beware.",
+	"edition": 2,
+	"publisher": ["FASA Corporation", "Other", "Catalyst Game Labs"],
+	"releaseDate": ["1993-05-01", "1994-01-01", "2005-03-17"],
+	"gameDate": "2054-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

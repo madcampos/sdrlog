@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["963-85454-9-6"],
+	"name": "Árnyék Magyarország",
+	"category": "sourcebook",
+	"type": "print",
+	"originalLanguage": "hu-HU",
+	"description": "…Mindezek mellett igaz, hogy az ország a korlátlan lehetőségek hazája. Nem sok különbség van az árnyvadászok és az egyszeri emberek között. Mindenki fegyverrel, lehetőleg páncélozott autókban jár. A megvesztegetés nem különlegesség, az élet része. A hirtelen meggazdagodás könnyű, de nagyon veszélyes. …\" - Részlet egy Magyarországról szóló dekás tájékoztatóból - Shadowland, 2056.\n\nKell egy hely, ahol a cégek nem lépnek folyton a nyakadra? Kell egy hely, ahol virágzik az árnyvadász szakma? Ahol el lehet tűnni a balhé után, és ahol nem kérik a RASSZ-odat? Nos, cimbora, ez esetben azt tanácsoljuk, tedd át a székhelyed Magyarországra. Persze, ha idejössz, nem árt, ha néhány dolgot észben tartasz. Tudd, hogy itt csak magadra számíthatsz. Magyarországon tiéd ugyan a pálya - de ugyanez igaz nálad sokkal nagyobb halakra is, akik nem tétováznak, ha félre kell tenni valakit az útból. Ha életben akarsz maradni, tartsd be az utca íratlan játékszabályait. Ja, és még valami: ügyelj rá, hogy ne menj a Fertőzött zónák közelébe.\n\nA Shadowrun szerepjáték a közeli jövőben játszódik, amikor a világot óriási mamutcégek, mindenhová elérő számítógépes hálózat, és mágikusan aktív, „felébredt\" teremtmények uralják. Ennek az amerikai játéktervezők által megálmodott világnak a mintájára képzeltük el, milyen lenne Magyarország a Shadowrun fantasztikus utópiája szerint. Az ÁrnyékMagyarország önállóan is élvezhető olvasmány, ha azonban ismered a magyarul is kiadott Shadowrun szerepjátékot, akkor az ÁrnyékMagyarország egyben egy szerepjáték kiegészítő is, amely lehetővé teszi, hogy árnyvadászaitok a jövő Magyarországán kalandozzanak.",
+	"edition": 2,
+	"publisher": ["Other"],
+	"releaseDate": ["1996-01-01"],
+	"gameDate": "2050-01",
+	"notes": "Shadowrun Hungary sourcebook (Hungarian)",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

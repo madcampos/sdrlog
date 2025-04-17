@@ -1,0 +1,16 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27202", "45058"],
+	"name": "Cutting Aces",
+	"category": "sourcebook",
+	"type": "digital",
+	"names": { "de-DE": "Mit Tricks und Finesse" },
+	"originalLanguage": "en-US",
+	"description": "Hit Your Marks\n\nThe hotel bartender who slips you a guest's room number because he thinks it will help him get lucky. The security guard who lets a team into a top-secret facility because he thinks he's pitching in on covert-ops training. The business suit who drops ten thousand nuyen on a project because he thinks it'll earn him fifty thousand.\nMarks, all of them, and the Sixth World is full of them. Yeah, blasting your way into a well-guarded facility is fun, but talking your way in, smooth and subtle, might be more rewarding. Almost every kind of shadowrun involves at least a little con artistry, and some of them are full-on long cons. That means you need to sharpen your con game. With tips, plot updates, spells, gear, and more to improve characters' con abilities, Cutting Aces gives players the swagger and skills they need to swindle the world. It also includes information on one of the Sixth World's hottest spots for running a con—Istanbul, City of the World's Desire.",
+	"edition": 5,
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
+	"releaseDate": ["2016-12-09", "2017-10-19"],
+	"gameDate": "2075-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

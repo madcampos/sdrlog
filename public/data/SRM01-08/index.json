@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM01-08"],
+	"name": "Duplicity",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Griffin Biotechnology has been a revolving door for shadowrunners. Runners from all over the sprawl have had at least one opportunity to scout the place or sneak a peek at what's going on inside. Word is that \"the big one\" has hit the streets - big nuyen to steal one of Griffin's hottest prototypes. Will Knight Errant be able to keep out this latest attack against the Everett based firm?",
+	"edition": 3,
+	"publisher": ["Catalyst Game Labs", "WizKids Games"],
+	"releaseDate": ["2005-01-01"],
+	"gameDate": "2064-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}
