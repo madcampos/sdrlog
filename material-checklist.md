@@ -30,6 +30,8 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 - https://www.amazon.ca/gp/product/B0DV768GTP
 - https://store.catalystgamelabs.com/products/shadowrun-first-edition-t-shirt
 - https://store.catalystgamelabs.com/collections/shadowrun
+- https://store.catalystgamelabs.com/products/shadowrun-rude-awakening-by-bryan-cp-steele
+- https://books2read.com/ShadowrunBackOfBeyond
 
 # Archive
 
