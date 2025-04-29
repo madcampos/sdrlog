@@ -1,4 +1,4 @@
-import type { FileForMaterial } from '../../data/data';
+import type { FileSystemEntryForMaterial } from '../../data/data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getIDBItem, getIDBItemByIndex, setIDBItem } from '../data/idb-persistence';
@@ -40,7 +40,7 @@ export function extractMetadataFromFileName(fileName: string) {
 export async function saveFile(handler: FileSystemDirectoryHandle | FileSystemFileHandle, path?: string) {
 	const filePath = path ?? `/${new Date().toISOString()}/${handler.name}`;
 	const { name, id, extension } = extractMetadataFromFileName(handler.name);
-	const fileForMaterial: FileForMaterial = {
+	const fileForMaterial: FileSystemEntryForMaterial = {
 		fileName: name,
 		fileExtension: extension,
 		mimeType: 'text/directory',
@@ -147,7 +147,6 @@ export async function readFiles() {
 		for (const { entry, path } of entries) {
 			progressOverlay.increment(entry.name);
 
-			// eslint-disable-next-line no-await-in-loop
 			await saveFile(entry, path);
 		}
 	} catch (err) {

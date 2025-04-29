@@ -1,6 +1,6 @@
-import type { IsoCode, MaterialCategory, MaterialPublisher, MaterialStatus, MaterialType } from './data';
+import type { MaterialPublisher } from './data';
 
-export const MATERIAL_EDITION_INFO: Readonly<Record<number, string>> = {
+export const MATERIAL_EDITION_INFO = {
 	1: '1st',
 	2: '2nd',
 	3: '3rd',
@@ -9,7 +9,7 @@ export const MATERIAL_EDITION_INFO: Readonly<Record<number, string>> = {
 	6: '6th'
 } as const;
 
-export const MATERIAL_LANGUAGES_INFO: Readonly<Record<IsoCode, { name: string, icon: string }>> = {
+export const MATERIAL_LANGUAGES_INFO = {
 	'de-DE': { icon: '🇩🇪', name: 'German' },
 	'fr-FR': { icon: '🇫🇷', name: 'French' },
 	'jp-JP': { icon: '🇯🇵', name: 'Japanese' },
@@ -37,7 +37,7 @@ export const MATERIAL_PUBLISHERS: readonly MaterialPublisher[] = [
 	'Unofficial'
 ] as const;
 
-export const MATERIAL_CATEGORY_INFO: Readonly<Record<MaterialCategory, { name: string, icon: string }>> = {
+export const MATERIAL_CATEGORY_INFO = {
 	novel: { icon: '📚', name: 'Novel' },
 	sourcebook: { icon: '📜', name: 'Sourcebook' },
 	mission: { icon: '🗺️', name: 'Mission' },
@@ -50,7 +50,7 @@ export const MATERIAL_CATEGORY_INFO: Readonly<Record<MaterialCategory, { name: s
 	unofficial: { icon: '📓', name: 'Unofficial' }
 } as const;
 
-export const MATERIAL_TYPE_INFO: Readonly<Record<MaterialType, { name: string, icon: string }>> = {
+export const MATERIAL_TYPE_INFO = {
 	digital: { icon: '💽', name: 'Digital' },
 	scan: { icon: '📠', name: 'Scan' },
 	ocr: { icon: '💾', name: 'OCR' },
@@ -58,9 +58,10 @@ export const MATERIAL_TYPE_INFO: Readonly<Record<MaterialType, { name: string, i
 	physical: { icon: '🎲', name: 'Physical' }
 } as const;
 
-export const MATERIAL_STATUS_INFO: Readonly<Record<MaterialStatus, { name: string, icon: string }>> = {
-	ok: { icon: '✅', name: 'OK' },
-	missing: { icon: '❌', name: 'Missing' },
-	outofscope: { icon: '⛔', name: 'Out of scope' },
-	canceled: { icon: '🚫', name: 'Canceled' }
+export const MATERIAL_STATUS_INFO = {
+	'ok': { icon: '✅', name: 'OK' },
+	'missing': { icon: '❌', name: 'Missing' },
+	'outofscope': { icon: '⛔', name: 'Out of scope' },
+	'canceled': { icon: '🚫', name: 'Canceled' },
+	'partially-missing': { icon: '♻️', name: 'Partially Missing' }
 } as const;

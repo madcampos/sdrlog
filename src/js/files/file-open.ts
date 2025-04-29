@@ -1,4 +1,4 @@
-import type { FileForMaterial } from '../../data/data';
+import type { FileSystemEntryForMaterial } from '../../data/data';
 
 import { Router } from '../../router/router';
 import { getIDBItemByIndex } from '../data/idb-persistence';
@@ -23,7 +23,7 @@ const urlsForExtension: Record<string, string> = {
 	'.sfc': '/emulator'
 };
 
-export async function openFile(fileInfo: FileForMaterial) {
+export async function openFile(fileInfo: FileSystemEntryForMaterial) {
 	const urlForExtension = urlsForExtension[fileInfo.fileExtension ?? ''];
 
 	if (urlForExtension) {

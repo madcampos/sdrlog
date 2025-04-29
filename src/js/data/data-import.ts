@@ -1,13 +1,8 @@
 import type {
-	IsoCode,
+	AbsoluteLink,
+	KnownLocaleCodes,
 	Material,
-	MaterialCategory,
-	MaterialEdition,
-	MaterialGameDate,
 	MaterialPublisher,
-	MaterialStatus,
-	MaterialType,
-	NewMaterial,
 	SDRLogData
 } from '../../data/data';
 
@@ -41,6 +36,7 @@ export async function fetchItems() {
 	const mergedData = new Map<string, Material>();
 
 	for (const material of currentData) {
+		// @ts-expect-error
 		mergedData.set(material.sku[0] ?? '', material);
 	}
 
@@ -61,7 +57,7 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 		const ensureString = ensureNonEmpty.map((val) => val.toString());
 		const ensureUnique = [...new Set(ensureString)];
 
-		return ensureUnique as T[];
+		return ensureUnique as [T, ...T[]];
 	}
 
 	function handleEnum<T extends string>(value: unknown, enumValues: Record<T, unknown>, fallback: T | '') {
@@ -76,16 +72,17 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 		description: material.description?.toString() ?? '',
 		notes: material.notes?.toString() ?? '',
 
-		edition: Number.parseInt(material.edition?.toString() ?? '0') as MaterialEdition,
+		edition: Number.parseInt(material.edition?.toString() ?? '0') as Material['edition'],
 
-		gameDate: ((/^\d{4}-\d{2}$/iu).test(material.gameDate?.toString() ?? '') ? material.gameDate?.toString() : '') as MaterialGameDate,
+		gameDate: ((/^\d{4}-\d{2}$/iu).test(material.gameDate?.toString() ?? '') ? material.gameDate?.toString() : '') as Material['gameDate'],
 
-		category: handleEnum<MaterialCategory>(material.category, MATERIAL_CATEGORY_INFO, ''),
-		status: handleEnum<MaterialStatus>(material.status, MATERIAL_STATUS_INFO, 'missing'),
-		type: handleEnum<MaterialType>(material.type, MATERIAL_TYPE_INFO, ''),
+		category: handleEnum<Material['category']>(material.category, MATERIAL_CATEGORY_INFO, ''),
+		status: handleEnum<Material['status']>(material.status, MATERIAL_STATUS_INFO, 'missing'),
+		type: handleEnum<Material['type']>(material.type, MATERIAL_TYPE_INFO, ''),
+		// @ts-expect-error
 		publisher: handleArray<MaterialPublisher>(material.publisher).filter((pub) => MATERIAL_PUBLISHERS.includes(pub)),
 		sku: handleArray<string>(material.sku),
-		originalLanguage: handleEnum<IsoCode>(material.originalLanguage, MATERIAL_LANGUAGES_INFO, ''),
+		originalLanguage: handleEnum<KnownLocaleCodes>(material.originalLanguage, MATERIAL_LANGUAGES_INFO, ''),
 		releaseDate: handleArray(material.releaseDate)
 	};
 
@@ -105,7 +102,7 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 
 		for (const [url, title] of Object.entries(material.links)) {
 			if (typeof url === 'string' && typeof title === 'string') {
-				parsedMaterial.links[url] = title;
+				parsedMaterial.links[url as AbsoluteLink] = title;
 			}
 		}
 	}
@@ -151,7 +148,7 @@ export async function requestDataFileFromUser() {
 	progressOverlay.remove();
 }
 
-export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) {
+export async function saveNewMaterialInfo(id: string, newMaterial: Material) {
 	const { cover, files, ...materialToSave } = newMaterial;
 
 	await setIDBItem('items', id, materialToSave);
@@ -167,12 +164,12 @@ export async function saveNewMaterialInfo(id: string, newMaterial: NewMaterial) 
 	if (cover) {
 		try {
 			const coverFile = await processCoverFile(cover, { name: `${id}.jpg` });
-
-			await setIDBItem('covers', id, coverFile);
-
 			const thumbFile = await processCoverFile(cover, { referenceWidth: THUMB_WIDTH, name: `${id}.jpg` });
 
-			await setIDBItem('thumbs', id, thumbFile);
+			if (coverFile && thumbFile) {
+				await setIDBItem('covers', id, coverFile);
+				await setIDBItem('thumbs', id, thumbFile);
+			}
 		} catch (err) {
 			console.error(`Failed to save material for id "${id}".`, err);
 		}

@@ -22,7 +22,7 @@ export async function getEmulatorFiles() {
 		const zip = await JSZip.loadAsync(zipFile);
 
 		for (const zipObject of Object.values(zip.files)) {
-			/* eslint-disable no-await-in-loop */
+			 
 			if (!zipObject.dir) {
 				const blob = await zipObject.async('blob');
 				const name = zipObject.name.split('/').pop() ?? '';
@@ -36,7 +36,7 @@ export async function getEmulatorFiles() {
 
 				await setIDBItem('emulator', zipObject.name, file);
 			}
-			/* eslint-enable no-await-in-loop */
+			 
 		}
 
 		files = await getAllIDBEntries('emulator');

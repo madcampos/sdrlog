@@ -19,6 +19,7 @@ interface ImportMeta {
 	resolve(string): string;
 }
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 const JSZip: typeof import('jszip');
 
 interface FilePickerOptions {

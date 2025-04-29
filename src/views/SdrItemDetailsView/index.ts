@@ -6,7 +6,7 @@ import type { SdrEditBox } from '../../components/SdrEditBox';
 import type { SdrEditList } from '../../components/SdrEditList';
 import type { SdrSelect } from '../../components/SdrSelect';
 import type { SdrTextArea } from '../../components/SdrTextArea';
-import type { FileForMaterial, IsoCode, Material, MaterialCategory, MaterialEdition, MaterialStatus, MaterialType } from '../../data/data';
+import type { FileSystemEntryForMaterial, KnownLocaleCodes, Material } from '../../data/data';
 
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
@@ -41,7 +41,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 	accessor #material: Material;
 
 	@state()
-	accessor #files: FileForMaterial[];
+	accessor #files: FileSystemEntryForMaterial[];
 
 	@state()
 	accessor #coverUrl: string;
@@ -54,22 +54,23 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		this.isDisplaying = false;
 		this.#open = false;
 
+		// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 		this.#material = {
-			category: '' as MaterialCategory,
-			type: '' as MaterialType,
-			sku: [],
+			category: '' as Material['category'],
+			type: '' as Material['type'],
+			sku: [] as unknown as Material['sku'],
 			name: '',
 			names: {},
 			description: '',
-			edition: 0 as MaterialEdition,
-			publisher: [],
+			edition: 0 as Material['edition'],
+			publisher: [] as unknown as Material['publisher'],
 			gameDate: '' as `${number}-${number}`,
-			releaseDate: [],
-			status: '' as MaterialStatus,
-			originalLanguage: '' as IsoCode,
+			releaseDate: [] as unknown as Material['releaseDate'],
+			status: '' as Material['status'],
+			originalLanguage: '' as KnownLocaleCodes,
 			notes: '',
 			links: {}
-		};
+		} as Material;
 
 		this.#files = [];
 
@@ -200,7 +201,8 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 			await saveNewMaterialInfo(id, {
 				...this.#material,
-				cover: this.#coverFile,
+				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+				cover: this.#coverFile!,
 				files: this.#files
 			});
 
@@ -249,7 +251,6 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 				this.resetMaterial();
 
 				for (const fileReference of launchParams.files) {
-					/* eslint-disable no-await-in-loop */
 					if (fileReference.kind === 'file') {
 						try {
 							const file = await (fileReference as FileSystemFileHandle).getFile();
@@ -263,7 +264,6 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 							console.error(error);
 						}
 					}
-					/* eslint-enable no-await-in-loop */
 				}
 			});
 		}
@@ -276,22 +276,23 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 	resetMaterial() {
 		this.isDisplaying = false;
 
+		// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 		this.#material = {
-			category: '' as MaterialCategory,
-			type: '' as MaterialType,
-			sku: [],
+			category: '' as Material['category'],
+			type: '' as Material['type'],
+			sku: [] as unknown as Material['sku'],
 			name: '',
 			names: {},
 			description: '',
-			edition: 0 as MaterialEdition,
-			publisher: [],
+			edition: 0 as Material['edition'],
+			publisher: [] as unknown as Material['publisher'],
 			gameDate: '' as `${number}-${number}`,
-			releaseDate: [],
-			status: '' as MaterialStatus,
-			originalLanguage: '' as IsoCode,
+			releaseDate: [] as unknown as Material['releaseDate'],
+			status: '' as Material['status'],
+			originalLanguage: '' as KnownLocaleCodes,
 			notes: '',
 			links: {}
-		};
+		} as Material;
 
 		this.#files = [];
 
@@ -304,7 +305,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		if (material) {
 			this.isDisplaying = true;
 
-			this.#material = material;
+			this.#material = material as Material;
 
 			void getCoverUrl(material.sku[0] ?? '').then((coverUrl) => {
 				this.#coverUrl = coverUrl;

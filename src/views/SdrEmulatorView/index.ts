@@ -271,7 +271,7 @@ class SdrViewEmulator extends LitElement implements RouterView {
 		this.#mkdirTree(folderPath);
 
 		for (const [path, file] of files) {
-			// eslint-disable-next-line no-await-in-loop
+			 
 			const buffer = await file.arrayBuffer();
 
 			if (file.type === 'application/x-directory') {

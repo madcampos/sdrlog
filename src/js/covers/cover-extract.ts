@@ -2,6 +2,7 @@ import type { default as PDFJS } from 'pdfjs-dist';
 import type { optimize as OptimizerType } from './cover-optimizer';
 
 import pdfJsWorkerSource from 'pdfjs-dist/build/pdf.worker?url';
+import type { MaterialCover } from '../../data/data';
 
 let optimize: typeof OptimizerType | undefined;
 let pdfjs: typeof PDFJS | undefined;
@@ -82,10 +83,14 @@ interface ProcessCoverOptions {
 	forceProcess?: boolean;
 }
 
-export async function processCoverFile(coverFile: File, { referenceWidth = COVER_WIDTH, name, skipOptimize = false, forceProcess = true }: ProcessCoverOptions = {}) {
+export async function processCoverFile(coverFile: MaterialCover, { referenceWidth = COVER_WIDTH, name, skipOptimize = false, forceProcess = true }: ProcessCoverOptions = {}) {
+	if (typeof coverFile === 'string') {
+		return;
+	}
+
 	let processedCover = coverFile;
 
-	const cover = await createImageBitmap(coverFile);
+	const cover = await createImageBitmap((await (coverFile as FileSystemFileHandle)?.getFile()) ?? coverFile);
 	const coverScale = referenceWidth / cover.width;
 
 	if (coverScale > MAX_UPSCALE_FACTOR && !forceProcess) {

@@ -17,7 +17,8 @@ function formatDataToExport(data: Material) {
 		publisher: data.publisher,
 		releaseDate: data.releaseDate,
 		gameDate: data.gameDate,
-		status: data.status
+		status: data.status,
+		cover: `./${data.sku[0]}.jpg`
 	};
 
 	if (data.notes) {

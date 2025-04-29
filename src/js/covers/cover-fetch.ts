@@ -12,9 +12,14 @@ export const LOADING_SIMPLE_COVER = import.meta.resolve('/images/base-covers/loa
 
 export async function getCoverUrl(id: string) {
 	const currentCover = await getIDBItem('covers', id);
+	let file = currentCover as File;
+
+	if (currentCover instanceof FileSystemFileHandle) {
+		file = await currentCover.getFile();
+	}
 
 	if (currentCover) {
-		return URL.createObjectURL(currentCover);
+		return URL.createObjectURL(file);
 	}
 
 	const response = await fetch(import.meta.resolve(`/images/covers/${id}.jpg`));
@@ -31,9 +36,14 @@ export async function getCoverUrl(id: string) {
 
 export async function getThumbUrl(id: string) {
 	const currentThumb = await getIDBItem('thumbs', id);
+	let file = currentThumb as File;
+
+	if (currentThumb instanceof FileSystemFileHandle) {
+		file = await currentThumb.getFile();
+	}
 
 	if (currentThumb) {
-		return URL.createObjectURL(currentThumb);
+		return URL.createObjectURL(file);
 	}
 
 	return FALLBACK_COVER;
@@ -48,7 +58,6 @@ export async function extractCoversFromFiles() {
 		progressOverlay.total = files.length;
 
 		for (const file of files) {
-			/* eslint-disable no-await-in-loop */
 			progressOverlay.increment(file.fileName);
 
 			if (file.handler.kind !== 'file') {
@@ -74,7 +83,6 @@ export async function extractCoversFromFiles() {
 				await setIDBItem('covers', id, coverFile);
 				await setIDBItem('thumbs', id, thumbFile);
 			}
-			/* eslint-enable no-await-in-loop */
 		}
 	} catch (err) {
 		console.error('Error extracting covers from files.', err);
@@ -109,7 +117,6 @@ export async function importCoversFromFolder() {
 		progressOverlay.total = files.length;
 
 		for (const file of files) {
-			/* eslint-disable no-await-in-loop */
 			progressOverlay.increment(file.name);
 
 			const canSaveCover = await canImportCover(file, true);
@@ -119,17 +126,17 @@ export async function importCoversFromFolder() {
 
 				try {
 					const coverFile = await processCoverFile(file, { name: `${id}.jpg` });
-
-					await setIDBItem('covers', id, coverFile);
-
 					const thumbFile = await processCoverFile(file, { referenceWidth: THUMB_WIDTH, name: `${id}.jpg` });
 
-					await setIDBItem('thumbs', id, thumbFile);
+					// eslint-disable-next-line max-depth
+					if (coverFile && thumbFile) {
+						await setIDBItem('covers', id, coverFile);
+						await setIDBItem('thumbs', id, thumbFile);
+					}
 				} catch (err) {
 					console.error(`Failed to import cover "${id}" from file.`, err);
 				}
 			}
-			/* eslint-enable no-await-in-loop */
 		}
 	} catch (err) {
 		console.error('Failed to import covers from folder.', err);

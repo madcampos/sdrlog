@@ -1,10 +1,10 @@
 import { type DBSchema, type IndexKey, type IndexNames, openDB, type StoreNames } from 'idb';
-import type { FileForMaterial, Material } from '../../data/data';
+import type { FileSystemEntryForMaterial, Material, MaterialCover } from '../../data/data';
 
 interface DatabaseSchema extends DBSchema {
 	items: {
 		key: string,
-		value: Material,
+		value: Omit<Material, 'cover'>,
 		indexes: {
 			sku: string[],
 			name: string,
@@ -14,16 +14,16 @@ interface DatabaseSchema extends DBSchema {
 	};
 	files: {
 		key: string,
-		value: FileForMaterial,
+		value: FileSystemEntryForMaterial,
 		indexes: { fileName: string, filePath: string, itemId: string, hash: string }
 	};
 	covers: {
 		key: string,
-		value: File
+		value: MaterialCover
 	};
 	thumbs: {
 		key: string,
-		value: File
+		value: MaterialCover
 	};
 	emulator: {
 		key: string,
@@ -114,7 +114,7 @@ export async function setIDBItems<T extends Collections>(collection: T, items: [
 
 	try {
 		for (const [key, value] of items) {
-			// eslint-disable-next-line no-await-in-loop
+			 
 			await transaction.store.put(value, key);
 		}
 
