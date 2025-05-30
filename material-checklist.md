@@ -32,6 +32,12 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 - https://store.catalystgamelabs.com/collections/shadowrun
 - https://store.catalystgamelabs.com/products/shadowrun-rude-awakening-by-bryan-cp-steele
 - https://books2read.com/ShadowrunBackOfBeyond
+- https://store.catalystgamelabs.com/products/shadowrun-slappys-day-out-by-sean-holland
+- https://www.amazon.ca/gp/product/B0F4LWBY52
+- https://store.catalystgamelabs.com/products/shadowrun-missions-2081-04-trailblazers
+- https://store.catalystgamelabs.com/products/shadowrun-margin-calls
+- https://www.amazon.ca/gp/product/B0F55NWX6V
+- https://store.catalystgamelabs.com/products/shadowrun-deadly-arts
 
 # Archive
 
