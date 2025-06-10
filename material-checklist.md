@@ -38,6 +38,7 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 - https://store.catalystgamelabs.com/products/shadowrun-margin-calls
 - https://www.amazon.ca/gp/product/B0F55NWX6V
 - https://store.catalystgamelabs.com/products/shadowrun-deadly-arts
+- https://store.catalystgamelabs.com/products/shadowrun-fine-art-risk-it-all
 
 # Archive
 
