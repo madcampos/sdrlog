@@ -39,6 +39,8 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 - https://www.amazon.ca/gp/product/B0F55NWX6V
 - https://store.catalystgamelabs.com/products/shadowrun-deadly-arts
 - https://store.catalystgamelabs.com/products/shadowrun-fine-art-risk-it-all
+- https://www.amazon.ca/gp/product/B0FB5CG4JF
+- https://store.catalystgamelabs.com/products/shadowrun-cant-always-run-a-top-drek-story-by-marie-bilodeau
 
 # Archive
 
