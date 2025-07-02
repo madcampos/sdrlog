@@ -803,6 +803,16 @@
 			"status": "ok"
 		},
 		{
+			"sku": "27838",
+			"name": "Secrets of Power Box Set",
+			"link": "./27838/index.json",
+			"cover": "./27838/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 2,
+			"status": "missing"
+		},
+		{
 			"sku": "5143",
 			"name": "Into the Shadows",
 			"link": "./5143/index.json",
@@ -6213,6 +6223,16 @@
 			"status": "ok"
 		},
 		{
+			"sku": "26867",
+			"name": "The Complete Frame Job",
+			"link": "./26867/index.json",
+			"cover": "./26867/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
 			"sku": "2690ANV",
 			"name": "Between a Corp and a Hard Place",
 			"link": "./2690ANV/index.json",
@@ -7180,7 +7200,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46134",
@@ -7247,7 +7267,7 @@
 			"name": "Shadowrun: Edgezone",
 			"link": "./28901/index.json",
 			"cover": "./28901/cover.jpg",
-			"category": "boardgame",
+			"category": "tcg",
 			"type": "physical",
 			"edition": 6,
 			"status": "ok"
@@ -7480,7 +7500,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28955",
@@ -7590,7 +7610,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM10-01",
@@ -7600,7 +7620,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM10-02",
@@ -7610,7 +7630,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28800S",
@@ -7620,7 +7640,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28452",
@@ -7630,7 +7650,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26883",
@@ -7640,7 +7660,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26873",
@@ -7650,7 +7670,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26005NV",
@@ -7680,7 +7700,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28404",
@@ -7690,7 +7710,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM10-03",
@@ -7808,6 +7828,506 @@
 			"link": "./R20-001/index.json",
 			"cover": "./R20-001/cover.jpg",
 			"category": "misc",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM10-04",
+			"name": "Get Bento",
+			"link": "./SRM10-04/index.json",
+			"cover": "./SRM10-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM10-05",
+			"name": "The Out of Body Experience",
+			"link": "./SRM10-05/index.json",
+			"cover": "./SRM10-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM10-06",
+			"name": "The No Body Problem",
+			"link": "./SRM10-06/index.json",
+			"cover": "./SRM10-06/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28007",
+			"name": "Body Shop",
+			"link": "./28007/index.json",
+			"cover": "./28007/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28008",
+			"name": "Wild Life",
+			"link": "./28008/index.json",
+			"cover": "./28008/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28303",
+			"name": "Scotophobia",
+			"link": "./28303/index.json",
+			"cover": "./28303/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28453",
+			"name": "Falling Point",
+			"link": "./28453/index.json",
+			"cover": "./28453/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28513",
+			"name": "Shoot Straight",
+			"link": "./28513/index.json",
+			"cover": "./28513/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28801S",
+			"name": "Bestial Nature",
+			"link": "./28801S/index.json",
+			"cover": "./28801S/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28802S",
+			"name": "Shadows in Focus: New Orleans: Easy Come, Easy Go",
+			"link": "./28802S/index.json",
+			"cover": "./28802S/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28011",
+			"name": "Deadly Arts",
+			"link": "./28011/index.json",
+			"cover": "./28011/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26888",
+			"name": "Auditions",
+			"link": "./26888/index.json",
+			"cover": "./26888/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26889",
+			"name": "The Mosaic Run",
+			"link": "./26889/index.json",
+			"cover": "./26889/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26091",
+			"name": "Shadow Borders (Sprawl Stories, Volume Three)",
+			"link": "./26091/index.json",
+			"cover": "./26091/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26023",
+			"name": "Rules of the Kaidō Club",
+			"link": "./26023/index.json",
+			"cover": "./26023/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26892",
+			"name": "Dark Synergy",
+			"link": "./26892/index.json",
+			"cover": "./26892/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26950",
+			"name": "Magic, Machines, and Mayhem",
+			"link": "./26950/index.json",
+			"cover": "./26950/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "26026",
+			"name": "Off Beat",
+			"link": "./26026/index.json",
+			"cover": "./26026/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26951",
+			"name": "Through the Decades",
+			"link": "./26951/index.json",
+			"cover": "./26951/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26882",
+			"name": "Basecrackers",
+			"link": "./26882/index.json",
+			"cover": "./26882/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26024",
+			"name": "Stolen Thoughts",
+			"link": "./26024/index.json",
+			"cover": "./26024/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "AUG001",
+			"name": "Augment, Issue 1",
+			"link": "./AUG001/index.json",
+			"cover": "./AUG001/cover.jpg",
+			"category": "magazine",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "9781638612360",
+			"name": "Bad Faith",
+			"link": "./9781638612360/index.json",
+			"cover": "./9781638612360/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26027",
+			"name": "Back of Beyond",
+			"link": "./26027/index.json",
+			"cover": "./26027/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "AUG002",
+			"name": "Augment, Issue 2",
+			"link": "./AUG002/index.json",
+			"cover": "./AUG002/cover.jpg",
+			"category": "magazine",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26882",
+			"name": "Knight Court",
+			"link": "./26882/index.json",
+			"cover": "./26882/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26011NV",
+			"name": "Kings of the Street",
+			"link": "./26011NV/index.json",
+			"cover": "./26011NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "26020NV",
+			"name": "The Kilimanjaro Run",
+			"link": "./26020NV/index.json",
+			"cover": "./26020NV/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28805S",
+			"name": "Dealers of Death",
+			"link": "./28805S/index.json",
+			"cover": "./28805S/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM2081-01",
+			"name": "Death of a Fixer",
+			"link": "./SRM2081-01/index.json",
+			"cover": "./SRM2081-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM2081-02",
+			"name": "Urgent Care",
+			"link": "./SRM2081-02/index.json",
+			"cover": "./SRM2081-02/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM2081-03",
+			"name": "Johnson and Johnson",
+			"link": "./SRM2081-03/index.json",
+			"cover": "./SRM2081-03/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM2081-04",
+			"name": "Trailblazers",
+			"link": "./SRM2081-04/index.json",
+			"cover": "./SRM2081-04/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM2081-05",
+			"name": "This is Renton",
+			"link": "./SRM2081-05/index.json",
+			"cover": "./SRM2081-05/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28306",
+			"name": "Margin Calls",
+			"link": "./28306/index.json",
+			"cover": "./28306/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28305",
+			"name": "Lethal Harvest",
+			"link": "./28305/index.json",
+			"cover": "./28305/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28516",
+			"name": "Tarnished Star",
+			"link": "./28516/index.json",
+			"cover": "./28516/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28009",
+			"name": "Smooth Operations",
+			"link": "./28009/index.json",
+			"cover": "./28009/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28MCR01",
+			"name": "Legends of the Shadows: Colloton's Revenge",
+			"link": "./28MCR01/index.json",
+			"cover": "./28MCR01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28405",
+			"name": "Final Bets",
+			"link": "./28405/index.json",
+			"cover": "./28405/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28803S",
+			"name": "Shadows in Focus: That Old Voodoo",
+			"link": "./28803S/index.json",
+			"cover": "./28803S/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28304",
+			"name": "The Needle's Eye",
+			"link": "./28304/index.json",
+			"cover": "./28304/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "FN2501",
+			"name": "On-Call Hero",
+			"link": "./FN2501/index.json",
+			"cover": "./FN2501/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "FN2502",
+			"name": "Shadowbytes",
+			"link": "./FN2502/index.json",
+			"cover": "./FN2502/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "FN2503",
+			"name": "Rude Awakening",
+			"link": "./FN2503/index.json",
+			"cover": "./FN2503/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "FN2504",
+			"name": "Slappy's Day Out",
+			"link": "./FN2504/index.json",
+			"cover": "./FN2504/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "FN2505",
+			"name": "Can't Always Run",
+			"link": "./FN2505/index.json",
+			"cover": "./FN2505/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "FN2506",
+			"name": "Surviving the Solstice Showdown",
+			"link": "./FN2506/index.json",
+			"cover": "./FN2506/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "SRM2083-01",
+			"name": "Legends 2083-01: White Takes Red",
+			"link": "./SRM2083-01/index.json",
+			"cover": "./SRM2083-01/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "SRM2083-02",
+			"name": "Legends 2083-02: Captured Pawns, Fractured",
+			"link": "./SRM2083-02/index.json",
+			"cover": "./SRM2083-02/cover.jpg",
+			"category": "mission",
 			"type": "digital",
 			"edition": 6,
 			"status": "missing"

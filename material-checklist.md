@@ -7,6 +7,7 @@
 - https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
 - https://www.shadowrun6.de/index.php/produkte-2.html
 - https://www.shadowrunsixthworld.com/
+- https://store.catalystgamelabs.com/collections/shadowrun
 
 # Materials to add
 
@@ -14,32 +15,14 @@ https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_i
 https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
 
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
-- [Stolen Thoughts](https://www.amazon.ca/gp/product/B0DV768GTP)
-- [Lethal Harvest](https://store.catalystgamelabs.com/products/shadowrun-lethal-harvest)
-- [On-call Hero](https://store.catalystgamelabs.com/products/shadowrun-on-call-hero-by-russell-zimmerman)
-- [Augment Magazine](https://www.amazon.ca/gp/product/B0DTR83QMH)
-- [Basecrackers](https://www.amazon.ca/gp/product/B0DS54TLWF)
 - The chimera complex
-- Edge Zone
-- https://www.amazon.ca/gp/product/B0DTR83QMH
 - https://store.catalystgamelabs.com/products/shadowrun-mug-35th-anniversary
 - https://store.catalystgamelabs.com/products/shadowrun-35th-anniversary-hoodie
-- https://books2read.com/ShadowrunBadFaith
 - https://store.catalystgamelabs.com/products/shadowrun-uv-dice
 - https://store.catalystgamelabs.com/products/shadowrun-35th-anniversary-dice-tray
-- https://www.amazon.ca/gp/product/B0DV768GTP
 - https://store.catalystgamelabs.com/products/shadowrun-first-edition-t-shirt
-- https://store.catalystgamelabs.com/collections/shadowrun
-- https://store.catalystgamelabs.com/products/shadowrun-rude-awakening-by-bryan-cp-steele
-- https://books2read.com/ShadowrunBackOfBeyond
-- https://store.catalystgamelabs.com/products/shadowrun-slappys-day-out-by-sean-holland
-- https://www.amazon.ca/gp/product/B0F4LWBY52
-- https://store.catalystgamelabs.com/products/shadowrun-missions-2081-04-trailblazers
-- https://store.catalystgamelabs.com/products/shadowrun-margin-calls
-- https://www.amazon.ca/gp/product/B0F55NWX6V
-- https://store.catalystgamelabs.com/products/shadowrun-deadly-arts
 - https://store.catalystgamelabs.com/products/shadowrun-fine-art-risk-it-all
-- https://www.amazon.ca/gp/product/B0FB5CG4JF
+
 - https://store.catalystgamelabs.com/products/shadowrun-cant-always-run-a-top-drek-story-by-marie-bilodeau
 
 # Archive
