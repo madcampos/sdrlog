@@ -7680,7 +7680,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26010NV",
@@ -7690,7 +7690,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28101",
@@ -7800,7 +7800,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28511",
@@ -7970,7 +7970,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26023",
@@ -7980,7 +7980,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26892",
@@ -8010,7 +8010,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26951",
@@ -8020,7 +8020,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26882",
@@ -8030,7 +8030,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26024",
@@ -8040,17 +8040,17 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "AUG001",
-			"name": "Augment, Issue 1",
+			"name": "Augment 01 [Spring 2083]",
 			"link": "./AUG001/index.json",
 			"cover": "./AUG001/cover.jpg",
 			"category": "magazine",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "9781638612360",
@@ -8060,7 +8060,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26027",
@@ -8070,11 +8070,11 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "AUG002",
-			"name": "Augment, Issue 2",
+			"name": "Augment 02 [Summer 2083]",
 			"link": "./AUG002/index.json",
 			"cover": "./AUG002/cover.jpg",
 			"category": "magazine",
@@ -8090,7 +8090,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26011NV",
@@ -8100,7 +8100,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26020NV",
@@ -8110,7 +8110,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28805S",
@@ -8120,7 +8120,7 @@
 			"category": "rulebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM2081-01",
@@ -8130,7 +8130,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM2081-02",
@@ -8140,7 +8140,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM2081-03",
@@ -8150,7 +8150,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM2081-04",
@@ -8170,7 +8170,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28306",
@@ -8180,7 +8180,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28305",
@@ -8190,17 +8190,17 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28516",
 			"name": "Tarnished Star",
 			"link": "./28516/index.json",
 			"cover": "./28516/cover.jpg",
-			"category": "rulebook",
+			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28009",
@@ -8210,7 +8210,7 @@
 			"category": "rulebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28MCR01",
@@ -8230,7 +8230,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28803S",
@@ -8240,7 +8240,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28304",
@@ -8250,7 +8250,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "FN2501",
@@ -8320,7 +8320,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM2083-02",
@@ -8330,7 +8330,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		}
 	]
 }
