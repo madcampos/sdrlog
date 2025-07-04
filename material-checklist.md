@@ -1,13 +1,11 @@
 # Check as news feed
 
-- https://web.archive.org/web/20241103063641/https://shadowiki.de/Liste_der_Shadowrun_Romane
-- https://web.archive.org/web/20241103054834/https://shadowiki.de/Liste_der_Quellen-_und_Regelb%C3%BCcher
-- https://web.archive.org/web/20241105073050/https://www.shadowiki.de/Liste_der_Abenteuer-_und_Kampagnenb%C3%A4nde
 - https://www.shadowrun6.de/index.php/spielhilfen-2/schattenload.html
 - https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
 - https://www.shadowrun6.de/index.php/produkte-2.html
 - https://www.shadowrunsixthworld.com/
 - https://store.catalystgamelabs.com/collections/shadowrun
+- https://www.drivethrurpg.com/en/publisher/2216/catalyst-game-labs/category/44855/shadowrun-holostreets
 
 # Materials to add
 
@@ -22,25 +20,36 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 - https://store.catalystgamelabs.com/products/shadowrun-35th-anniversary-dice-tray
 - https://store.catalystgamelabs.com/products/shadowrun-first-edition-t-shirt
 - https://store.catalystgamelabs.com/products/shadowrun-fine-art-risk-it-all
+- https://www.youtube.com/watch?v=uJ1bdX_a9H8
 
-- https://store.catalystgamelabs.com/products/shadowrun-cant-always-run-a-top-drek-story-by-marie-bilodeau
+- [Feind und Helfer](https://shadowhelix.de/Quelle,_de:_Feind_und_Helfer)
+- [Geschmeidige Geschäfte](https://shadowhelix.de/Quelle,_de:_Geschmeidige_Gesch%C3%A4fte)
+- [Fürchte das Dunkel](https://shadowhelix.de/Quelle,_de:_F%C3%BCrchte_das_Dunkel)
 
 # Archive
 
 **TODO**: Scrap html and old pages and archive
 
 - https://shadowhelix.de/Quelle,_de:_Adventskalender_2019
-- https://www.shadowiki.de/Shadowrun_Adventskalender_2019
-- https://shadowhelix.de/Quelle,_de:_Resurrection
+- https://shadowhelix.de/Quelle,_de:_Adventskalender_2021
+- https://shadowhelix.de/Quelle,_de:_Adventskalender_2022
+- https://shadowhelix.de/Quelle,_de:_Shadowrun-Adventskalender_2023
+- https://shadowhelix.de/Quelle,_de:_Shadowrun-Adventskalender_2024
+- https://shadowhelix.de/Quelle,_de:_Adventskalender_2075
+- https://shadowhelix.de/Quelle,_de:_Drachenbrut_(Kurzgeschichten)
+- https://shadowhelix.de/Quelle,_en:_Shadowrun_Tumblr
+- https://shadowhelix.de/Quelle,_en:_Shadowrun_Returns_Anthology_Tumblr
+- https://shadowhelix.de/Quelle,_en:_Shadowrun_Promo_Sheet_1991
+- https://shadowhelix.de/Quelle,_en:_Shadowrun_Promo_Sheet_1990
+- https://shadowhelix.de/Quelle,_en:_Shadowrun_Promo_Sheet_1989
+- https://shadowhelix.de/Shadowrun_1992_Update_(Quelle)
+- https://shadowhelix.de/Quelle,_de:_Schrapnell
 - https://shadowhelix.de/Quelle,_de:_Promovisitenkarten
-- https://shadowhelix.de/Quelle,_de:_Poolitzers_NICHTTod
-- https://shadowhelix.de/Quelle,_de:_Untersch%C3%A4tzt
-- https://www.shadowiki.de/Conspiracy_Theories_Outtakes
-- https://www.shadowiki.de/Ein_Blick_in_den_Kreis
-- https://www.shadowiki.de/Schweiz_Outtake:_HELVETIA_-_Hardware
-- https://www.shadowiki.de/Geisterstunde
+- https://shadowhelix.de/Quelle,_en:_The_Family_Jewel
+
 - http://danvolodar.ru/ancientfiles/Spoorn/
 - http://danvolodar.ru/ancientfiles/index.html
+
 - http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
 
 ## Japanese materials
@@ -54,37 +63,3 @@ https://fondationdraco.fr/shadowrun-au-japon-partie-3/shadowrun-novel-first-run-
 https://fondationdraco.fr/shadowrun-au-japon-partie-5/
 https://shadowrun.fandom.com/wiki/Shadowrun_Manga
 https://mangadex.org/title/9d811b3e-9079-4ac3-a2e9-6a8f43956e29/shadowrun
-
-## short stories
-
-- https://www.shadowiki.de/Drachenbrut_(Kurzgeschichten)
-- https://www.shadowiki.de/Der_letzte_Flug_des_Greifen_(Kurzgeschichten)
-- https://www.shadowiki.de/Deckard_(Kurzgeschichten)
-- https://www.shadowiki.de/Poolitzers_NICHTTod
-- https://www.shadowiki.de/Kategorie:Quellen_(Online)
-
-## Sites to archive
-
-- http://shadowrunrpg.com/
-- http://shadowrun.fr/
-- http://shadowrun.com/
-- http://shadowrun.de/
-- http://shadowrun.co.uk/
-- http://shadowrun-archiv.de/
-- http://shadowrun-ring.de/
-- http://shadowrun.co/
-- http://dumpshock.com/
-- http://shadowrun4.com/
-- http://fondationdraco.free.fr/
-- http://shadowrun-online.de/
-- http://shadowrun.netroof.eu/
-- http://shadowrunberlin.de/
-- http://forums.shadowrun4.com/
-- http://webring.dumpshock.com/
-- http://shadowrun-universe.de/
-- http://old.shadowrun4.com/
-- http://shadowrun5.de/
-- http://shadowrun6.de/
-- http://shadowruntabletop.com/
-- http://forums.shadowruntabletop.com/
-- http://shadowrunsixthworld.com/

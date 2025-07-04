@@ -5147,17 +5147,17 @@
 			"name": "Runner's Black Book",
 			"link": "./26104/index.json",
 			"cover": "./26104/cover.jpg",
-			"category": "sourcebook",
+			"category": "rulebook",
 			"type": "digital",
 			"edition": 4,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26105",
 			"name": "Runner's Black Book 2074",
 			"link": "./26105/index.json",
 			"cover": "./26105/cover.jpg",
-			"category": "sourcebook",
+			"category": "rulebook",
 			"type": "digital",
 			"edition": 4,
 			"status": "ok"
@@ -5174,7 +5174,7 @@
 		},
 		{
 			"sku": "27050",
-			"name": "Shadowrun Game Master's Screen 5th Etidion",
+			"name": "Shadowrun Game Master's Screen 5th Edition",
 			"link": "./27050/index.json",
 			"cover": "./27050/cover.jpg",
 			"category": "rulebook",
@@ -6230,7 +6230,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "2690ANV",
@@ -6410,7 +6410,7 @@
 			"category": "magazine",
 			"type": "digital",
 			"edition": 5,
-			"status": "missing"
+			"status": "partially-missing"
 		},
 		{
 			"sku": "NVP",
@@ -6420,7 +6420,7 @@
 			"category": "magazine",
 			"type": "digital",
 			"edition": 4,
-			"status": "ok"
+			"status": "partially-missing"
 		},
 		{
 			"sku": "28002",
@@ -6584,7 +6584,7 @@
 		},
 		{
 			"sku": "28500",
-			"name": "Rogue's Gallery: An NPC Deck",
+			"name": "Rogues' Gallery: An NPC Deck",
 			"link": "./28500/index.json",
 			"cover": "./28500/cover.jpg",
 			"category": "misc",
@@ -6647,10 +6647,10 @@
 			"name": "Cheat Sheets SR6",
 			"link": "./461138/index.json",
 			"cover": "./461138/cover.jpg",
-			"category": "sourcebook",
+			"category": "rulebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46117",
@@ -6670,7 +6670,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "45015",
@@ -6684,7 +6684,7 @@
 		},
 		{
 			"sku": "28504",
-			"name": "Gun Rack (Weapon Cards)",
+			"name": "Gun Rack",
 			"link": "./28504/index.json",
 			"cover": "./28504/cover.jpg",
 			"category": "rulebook",
@@ -6698,9 +6698,9 @@
 			"link": "./28501/index.json",
 			"cover": "./28501/cover.jpg",
 			"category": "misc",
-			"type": "digital",
+			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "missing"
 		},
 		{
 			"sku": "28505",
@@ -6708,19 +6708,19 @@
 			"link": "./28505/index.json",
 			"cover": "./28505/cover.jpg",
 			"category": "misc",
-			"type": "digital",
+			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "missing"
 		},
 		{
 			"sku": "28506",
-			"name": "Mobile Grimoire Spell Cards",
+			"name": "Mobile Grimoire",
 			"link": "./28506/index.json",
 			"cover": "./28506/cover.jpg",
 			"category": "misc",
-			"type": "digital",
+			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "missing"
 		},
 		{
 			"sku": "SRM09-01",
@@ -6903,6 +6903,16 @@
 			"status": "ok"
 		},
 		{
+			"sku": "45029",
+			"name": "Im Fadenkreuz",
+			"link": "./45029/index.json",
+			"cover": "./45029/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 5,
+			"status": "ok"
+		},
+		{
 			"sku": "28F001",
 			"name": "BattleRun II: The Quest for the Thing",
 			"link": "./28F001/index.json",
@@ -7000,7 +7010,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28053",
@@ -7320,7 +7330,7 @@
 			"category": "novel",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26011NV",
@@ -7390,7 +7400,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46139I",
@@ -7400,7 +7410,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46139H",
@@ -7410,7 +7420,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46139G",
@@ -7420,7 +7430,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46139F",
@@ -7430,7 +7440,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46139E",
@@ -7440,7 +7450,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "46139D",
@@ -7493,6 +7503,16 @@
 			"status": "missing"
 		},
 		{
+			"sku": "46145",
+			"name": "Blutige Anfänge",
+			"link": "./46145/index.json",
+			"cover": "./46145/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
 			"sku": "26015",
 			"name": "Mercy Street",
 			"link": "./26015/index.json",
@@ -7520,7 +7540,7 @@
 			"category": "misc",
 			"type": "print",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "28510",
@@ -7540,7 +7560,7 @@
 			"category": "misc",
 			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "missing"
 		},
 		{
 			"sku": "28006",
@@ -7720,7 +7740,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "482D6",
@@ -7730,7 +7750,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "482D7",
@@ -7750,7 +7770,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "482D9",
@@ -7760,7 +7780,7 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "482D10",
@@ -7777,6 +7797,16 @@
 			"name": "Schattendossier 4",
 			"link": "./46143/index.json",
 			"cover": "./46143/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46155",
+			"name": "Schattendossier 5",
+			"link": "./46155/index.json",
+			"cover": "./46155/cover.jpg",
 			"category": "sourcebook",
 			"type": "digital",
 			"edition": 6,
@@ -7817,6 +7847,16 @@
 			"name": "Program Deck",
 			"link": "./28512/index.json",
 			"cover": "./28512/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "28514",
+			"name": "Cyber Deck",
+			"link": "./28514/index.json",
+			"cover": "./28514/cover.jpg",
 			"category": "misc",
 			"type": "physical",
 			"edition": 6,
@@ -8080,7 +8120,7 @@
 			"category": "magazine",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "26882",
@@ -8160,7 +8200,7 @@
 			"category": "mission",
 			"type": "digital",
 			"edition": 6,
-			"status": "missing"
+			"status": "ok"
 		},
 		{
 			"sku": "SRM2081-05",
@@ -8331,6 +8371,316 @@
 			"type": "digital",
 			"edition": 6,
 			"status": "ok"
+		},
+		{
+			"sku": "CM2024",
+			"name": "Christmas in the Shadows",
+			"link": "./CM2024/index.json",
+			"cover": "./CM2024/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46150",
+			"name": "Neo-Asphaltdschungel",
+			"link": "./46150/index.json",
+			"cover": "./46150/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46139",
+			"name": "Kaleidoskope",
+			"link": "./46139/index.json",
+			"cover": "./46139/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "46151",
+			"name": "Kaleidoskope 2",
+			"link": "./46151/index.json",
+			"cover": "./46151/cover.jpg",
+			"category": "sourcebook",
+			"type": "print",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "K202501",
+			"name": "Kaleidoskope: Live 2 Ride",
+			"link": "./K202501/index.json",
+			"cover": "./K202501/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "K202401",
+			"name": "Kaleidoskope: Schmutzige Tricks",
+			"link": "./K202401/index.json",
+			"cover": "./K202401/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "K202402",
+			"name": "Kaleidoskope: Disfunctional",
+			"link": "./K202402/index.json",
+			"cover": "./K202402/cover.jpg",
+			"category": "novel",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "K202403",
+			"name": "Kaleidoskope: Der Block",
+			"link": "./K202403/index.json",
+			"cover": "./K202403/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "K202404",
+			"name": "Kaleidoskope: Armes Deutschland",
+			"link": "./K202404/index.json",
+			"cover": "./K202404/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "K202405",
+			"name": "Kaleidoskope: Spielzeugkatalog 2082",
+			"link": "./K202405/index.json",
+			"cover": "./K202405/cover.jpg",
+			"category": "rulebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "K202301",
+			"name": "Kaleidoskope: Von Campern und Preppern",
+			"link": "./K202301/index.json",
+			"cover": "./K202301/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "K202302",
+			"name": "Kaleidoskop: Gute Fahrt",
+			"link": "./K202302/index.json",
+			"cover": "./K202302/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "PRO845",
+			"name": "Nebelkerzen",
+			"link": "./PRO845/index.json",
+			"cover": "./PRO845/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "PRO847",
+			"name": "Job-Roulette",
+			"link": "./PRO847/index.json",
+			"cover": "./PRO847/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "PRO866",
+			"name": "Jetzt oder nie",
+			"link": "./K202501/index.json",
+			"cover": "./K202501/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "483DA1",
+			"name": "Datapuls: Spezialeinheiten der ADL",
+			"link": "./483DA1/index.json",
+			"cover": "./483DA1/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "483DA2",
+			"name": "Datapuls: SOTA 2083",
+			"link": "./483DA2/index.json",
+			"cover": "./483DA2/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "483DA3",
+			"name": "Datapuls: Sachsen und Leipzig-Halle",
+			"link": "./483DA3/index.json",
+			"cover": "./483DA3/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "483DA4",
+			"name": "Datapuls: Bundeswehr",
+			"link": "./483DA4/index.json",
+			"cover": "./483DA4/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "483DA5",
+			"name": "Datapuls: 10 Strippenzieher",
+			"link": "./483DA5/index.json",
+			"cover": "./483DA5/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "483DX1",
+			"name": "Datapuls: Lifestyle 2083",
+			"link": "./483DX1/index.json",
+			"cover": "./483DX1/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "483DX2",
+			"name": "Datapuls: Bundesgrenzschutz",
+			"link": "./483DX2/index.json",
+			"cover": "./483DX2/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "483DX3",
+			"name": "Datapuls: Bayern und Franken",
+			"link": "./483DX3/index.json",
+			"cover": "./483DX3/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "483DX4",
+			"name": "Datapuls: Angebots-Arsenal",
+			"link": "./483DX4/index.json",
+			"cover": "./483DX4/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "483DX5",
+			"name": "Datapuls: 10 Zielobjekte",
+			"link": "./483DX5/index.json",
+			"cover": "./483DX5/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46156",
+			"name": "Domino-Effekte",
+			"link": "./46156/index.json",
+			"cover": "./46156/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "BBE2401",
+			"name": "Le bazar de l'Hexagone",
+			"link": "./BBE2401/index.json",
+			"cover": "./BBE2401/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28515",
+			"name": "Critter Deck",
+			"link": "./28515/index.json",
+			"cover": "./28515/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "46159",
+			"name": "Schrapnell",
+			"link": "./46159/index.json",
+			"cover": "./46159/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
+		},
+		{
+			"sku": "BBESR618",
+			"name": "La France des Ombres",
+			"link": "./BBESR618/index.json",
+			"cover": "./BBESR618/cover.jpg",
+			"category": "sourcebook",
+			"type": "digital",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "46160",
+			"name": "Herr der Nebel",
+			"link": "./46160/index.json",
+			"cover": "./46160/cover.jpg",
+			"category": "mission",
+			"type": "digital",
+			"edition": 6,
+			"status": "missing"
 		}
 	]
 }
