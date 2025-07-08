@@ -9,18 +9,8 @@
 
 # Materials to add
 
-https://www.drivethrurpg.com/product/376114/Shadowplans--Factory?manufacturers_id=9110
-https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Floors?manufacturers_id=9110
-
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
 - The chimera complex
-- https://store.catalystgamelabs.com/products/shadowrun-mug-35th-anniversary
-- https://store.catalystgamelabs.com/products/shadowrun-35th-anniversary-hoodie
-- https://store.catalystgamelabs.com/products/shadowrun-uv-dice
-- https://store.catalystgamelabs.com/products/shadowrun-35th-anniversary-dice-tray
-- https://store.catalystgamelabs.com/products/shadowrun-first-edition-t-shirt
-- https://store.catalystgamelabs.com/products/shadowrun-fine-art-risk-it-all
-- https://www.youtube.com/watch?v=uJ1bdX_a9H8
 
 - [Feind und Helfer](https://shadowhelix.de/Quelle,_de:_Feind_und_Helfer)
 - [Geschmeidige Geschäfte](https://shadowhelix.de/Quelle,_de:_Geschmeidige_Gesch%C3%A4fte)
@@ -46,9 +36,6 @@ https://www.drivethrurpg.com/product/402560/Shadowplans--Corporate-Office-2-4-Fl
 - https://shadowhelix.de/Quelle,_de:_Schrapnell
 - https://shadowhelix.de/Quelle,_de:_Promovisitenkarten
 - https://shadowhelix.de/Quelle,_en:_The_Family_Jewel
-
-- http://danvolodar.ru/ancientfiles/Spoorn/
-- http://danvolodar.ru/ancientfiles/index.html
 
 - http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
 

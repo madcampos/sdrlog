@@ -6490,7 +6490,7 @@
 			"category": "misc",
 			"type": "print",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "46114G",
@@ -8681,6 +8681,126 @@
 			"type": "digital",
 			"edition": 6,
 			"status": "missing"
+		},
+		{
+			"sku": "28T02",
+			"name": "Shadowrun 35th Anniversary Hoodie",
+			"link": "./28T02/index.json",
+			"cover": "./28T02/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28T03",
+			"name": "Shadowrun First Edition T-Shirt",
+			"link": "./28T03/index.json",
+			"cover": "./28T03/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28T04",
+			"name": "Shadowrun Anarchy Hoodie",
+			"link": "./28T04/index.json",
+			"cover": "./28T04/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28M00",
+			"name": "Mug: Shadowrun Totem",
+			"link": "./28M00/index.json",
+			"cover": "./28M00/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28M01",
+			"name": "Mug: 35th Aniversary",
+			"link": "./28M01/index.json",
+			"cover": "./28M01/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28M02",
+			"name": "Mug: Saeder-Krupp",
+			"link": "./28M02/index.json",
+			"cover": "./28M02/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28M03",
+			"name": "Mug: DocWagon",
+			"link": "./28M03/index.json",
+			"cover": "./28M03/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28M04",
+			"name": "Mug: Aztechnology",
+			"link": "./28M04/index.json",
+			"cover": "./28M04/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28M05",
+			"name": "Mug: Ares",
+			"link": "./28M05/index.json",
+			"cover": "./28M05/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "outofscope"
+		},
+		{
+			"sku": "28D01",
+			"name": "UV Dice with Flashlight",
+			"link": "./28D01/index.json",
+			"cover": "./28D01/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "28D02",
+			"name": "35th Aniversary Dice Tray",
+			"link": "./28D02/index.json",
+			"cover": "./28D02/cover.jpg",
+			"category": "misc",
+			"type": "physical",
+			"edition": 6,
+			"status": "ok"
+		},
+		{
+			"sku": "ART01",
+			"name": "Fine Art: Risk it All",
+			"link": "./ART01/index.json",
+			"cover": "./ART01/cover.jpg",
+			"category": "misc",
+			"type": "print",
+			"edition": 6,
+			"status": "outofscope"
 		}
 	]
 }
