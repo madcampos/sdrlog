@@ -4830,7 +4830,7 @@
 			"category": "misc",
 			"type": "print",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "26860",
@@ -4890,7 +4890,7 @@
 			"category": "boardgame",
 			"type": "physical",
 			"edition": 5,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "27700X",
@@ -5900,7 +5900,7 @@
 			"category": "boardgame",
 			"type": "physical",
 			"edition": 5,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "KS002",
@@ -6570,7 +6570,7 @@
 			"category": "misc",
 			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "DRA",
@@ -6940,7 +6940,7 @@
 			"category": "misc",
 			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "missing"
 		},
 		{
 			"sku": "28FM02",
@@ -6970,7 +6970,7 @@
 			"category": "misc",
 			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "28P01",
@@ -6980,7 +6980,7 @@
 			"category": "misc",
 			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "28T00",
@@ -6990,7 +6990,7 @@
 			"category": "misc",
 			"type": "physical",
 			"edition": 6,
-			"status": "outofscope"
+			"status": "ok"
 		},
 		{
 			"sku": "28T01",
