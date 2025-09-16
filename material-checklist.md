@@ -15,6 +15,9 @@
 - [Feind und Helfer](https://shadowhelix.de/Quelle,_de:_Feind_und_Helfer)
 - [Geschmeidige Geschäfte](https://shadowhelix.de/Quelle,_de:_Geschmeidige_Gesch%C3%A4fte)
 - [Fürchte das Dunkel](https://shadowhelix.de/Quelle,_de:_F%C3%BCrchte_das_Dunkel)
+- https://shop.black-book-editions.fr/produit/63741/0/shadowrun-anarchy/shadowrun-anarchy-anarchistes
+- https://store.401games.ca/products/munchkin-shadowrun-hack-the-future
+- https://store.401games.ca/products/munchkin-shadowrun
 
 # Archive
 
