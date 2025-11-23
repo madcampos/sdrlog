@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28009"],
+	"name": "Smooth Operations",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## FACE THE FACTS\n\nIt’s the extraction where the previously unwilling target leaves the building with you, arm in arm. It’s the Lone Star cop who starts as an arresting officer and ends as a contact. And it’s corp suit who always lets their old friend into the office for a drink and a chat.\n\nThat’s just a small sample of a face’s work. They can get into a top-secret lab with a badge someone lent them and persuade that tough troll bouncer to keep their gun holstered and fists unclenched. They can get you more pay, better accommodations, and more accurate information. If you don’t know all the things a face can do for your team, get ready—you’re about to learn.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-09-18"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

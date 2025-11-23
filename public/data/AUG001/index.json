@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["AUG001"],
+	"name": "Augment 01 [Spring 2083]",
+	"category": "magazine",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## AUGMENT YOUR LIFE WITH AUGMENT MAGAZINE!\n\nAugment is Shadowrun’s official magazine. This is a fully in-universe publication, and can be used in Shadowrun games as well as enjoyed by the casual reader.\n\nAugment, Spring 2083. Magic is in the air and within the pages of this issue. Learn words of wisdom in an exclusive one-on-one interview with VIP CEO Michael Bishop. Listen to DJ Smash and Will-o-Wisp as they share their insight into the combination of magic, machine, and music. Discover how runestorms are endangering the Caribbean. Enjoy reviews of new products, clothing, tech, and so much more!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-02-14"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46151"],
+	"name": "Kaleidoskope 2",
+	"category": "sourcebook",
+	"type": "print",
+	"originalLanguage": "de-DE",
+	"description": "Kaleidoskopartig springst du auch in der zweiten Ausgabe dieser Reihe von limitierten, handnummerierten Quellenbänden zwischen folgenden Beiträgen hin und her, die alle zuvor als PDFs auf Pegasus Digital erschienen sind:\n\n- Gute Fahrt (Kurzgeschichte)\n- Schattenleben: Berlin (Regelteile der SR6 Berlin City Edition)\n- Schattenleben: Seattle (Regelteile SR6 Seattle City Edition)\n- Schattenleben (Lifestyles of the Shadowy & Infamous)\n- Outdoor Leben (Camping, Glamping, Preperszene)\n- Wilde Seelen (Bestial Nature)\n- Armes Deutschland\n- Spielzeugkatalog 2082\n- Der Block",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-03-01"],
+	"gameDate": "2082-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

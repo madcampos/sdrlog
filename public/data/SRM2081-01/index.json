@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM2081-01"],
+	"name": "Death of a Fixer",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## Shady Business\n\nThe shifting shadows of Seattle need the skills of a talented team of shadowrunners in the new season of Shadowrun Missions. An up-and-coming fixer needs specialists to get some data concerning the death of a friend. The runners need to break into a new business, find some data chips, and get the paydata. On the way to the business, a member of one of the Seattle Triads calls the team to retrieve some stolen drugs and send an appropriate message. The night is young, and the scent of violence is in the air!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-02-05"],
+	"gameDate": "2081-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

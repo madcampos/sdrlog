@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["483DA3"],
+	"name": "Datapuls: Sachsen und Leipzig-Halle",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Deutschlands schwarze Seele\n\nVon Sachsens hochtrabenden königlichen Plänen bis zu den Abgründen, die davon übrig blieben: Dieser Datenpuls nimmt dich mit auf einen wilden Ritt. Adlige und Söldner, Umweltkatastrophen und Intrigen, protzige Bälle und ekstatische Feiern der blühenden Gothic-Industrial-Szene – Sachsen und Halle-Leipzig sind eine Region voller Widersprüche, mit jeder Menge Konflikte und Jobs für jene, welche die Dunkelheit nicht fürchten.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-03-28"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

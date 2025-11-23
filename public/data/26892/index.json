@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26892"],
+	"name": "Dark Synergy",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "INNOVATION, EXCELLENCE, INCLUSIVITY…INSANITY?!\n\nThe Evo Corporation emerged from the troubled 2060s as a new company with a new mindset: having the most diverse and creative workforce in the Sixth World! Evo has embraced the three-way ideals of innovative augmentation, consistent excellence in their products, and being a metahuman-friendly corporation that makes metahuman-friendly products. Innovation, Excellence, and Inclusivity are Evo’s three pillars, and are celebrated in everything it does.\n\nKenjiro Ishihara was fully brought up in that Evo mindset. Born into, raised, and educated by the most accepting megacorporation on Earth, he wants nothing more than to pay Evo back for the amazing life it has given him.\n\nBut now Kenji finds himself ensnared in the bloodiest of megacorporate politics. With a manipulative, ruthless boss making a violent power play in the Seattle shadows, with coworkers out to take his head and curry favor, and with a rival branch escalating the warfare, Ishihara can only hold on by the skin of his teeth…\n\n…until he learns he not only can’t trust his department, but perhaps not even his own mind!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-08-26"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

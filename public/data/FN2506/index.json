@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["FN2506"],
+	"name": "Surviving the Solstice Showdown",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## THE ULTIMATE COOKING COMPETITION…\n\nFox took to shadowrunning to escape the high-stakes, high-pressure world of being a chef. So what is she doing with three other runners in a wild-and-woolly cooking competition held in the Barrens and MC’ed by a troll drag queen?\n\nCompeting for the 250,000-nuyen grand prize, of course…and bragging rights to coming out on top of the annual Solstice Showdown.\n\nBut first they’ve got to survive the challenging cooking competition first, filled with cutthroat competitors, a hint of magic, and a most mercurial host whose palate could make—or break—Fox’s team’s day with each delectable bite.\n\nIn the end, will Fox’s NAN-based menu and her team’s fierce cooking skills come out on top…or will they leave the Barrens as empty-handed as they came?",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-07-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

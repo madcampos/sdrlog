@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["K202404"],
+	"name": "Kaleidoskope: Armes Deutschland",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Armes Deutschland\n\nIm Oktober 2082 bricht in der ADL der Winter ein – es wird speziell in den Alpengebieten einer der härtesten Winter des Jahrhunderts werden. Im November wird das Land und die ganze Welt von einer Terrorwelle getroffen, in deren Folge eine blinde Hetzjagd nach den Schuldigen beginnt, die in der linksanarchistichen Szene vermutet werden. Als Folge beider Ereignisse verschärft sich die Lage der Obdachlosen in der ADL dramatisch: Viele Suppenküchen und Kältestuben werden geschlossen, manche Aktivisten grundlos verhaftet. Dieses Kaleidoskop gibt einen Überblick über die Situation der Wohnungslosen im Deutschland der 2080er, über Hilfsangebote und wer dahintersteckt sowie über wichtige Überlebensstrategien der Unsichtbaren in den Megaplexen.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-01-16"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

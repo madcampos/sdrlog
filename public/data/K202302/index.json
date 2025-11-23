@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["K202302"],
+	"name": "Kaleidoskop: Gute Fahrt",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Gute Fahrt \n\nGute Fahrt ist die erste separat publizierte Kurzgeschichte des deutschen Shadowrun-Chefredakteurs Andreas „AAS“ Schroth (Schattentricks, Die letzte Fahrt der Roaring Sue). Begleite die Berliner Kampftaxi-Fahrerin Zoé bei einem „ganz normalen Job“, der sie von einer dubiosen Fabrikfestung im Berliner Außenbezirk Strausberg über den Schattenhafen am Urban bis zu einer Tiefgarage in Charlottenburg-Wilmersdorf führt und dabei Einiges über die Methoden offenbart, wie Shiawase nach dem großen Umweltskandal (siehe Gratis-Megapuls vom 16.06.2082 auf shadowrun6.de) seine Geschäfte in der Freistadt abwickelt. ",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2023-11-29"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

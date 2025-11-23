@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28516"],
+	"name": "Tarnished Star",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## PRESERVING DISORDER\n\nThe old law enforcement motto of “to serve and protect” is a long-dead joke in the Sixth World. The idea of due process is more of a suggestion, and rights are only afforded to those with nuyen, power, or both. Those who challenge the status quo, on the other hand, are crushed. This has tarnished the gleaming star that once symbolized justice and service. And yet, there are still some who try and clean that star off, even if only a little.\n\nThese situations are where the relationship between the law and the shadows becomes complicated. Normally, shadowrunners know that when they see the lights or hear the sirens, it’s time to go. But every so often, the shadows and the law find common ground and work toward a shared goal, or at least mutual benefit. That’s when things get interesting.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-11-25"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

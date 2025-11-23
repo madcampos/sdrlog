@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26029"],
+	"name": "Never Enough (A Top Drek Story, #4)",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## YOU CAN’T GO HOME AGAIN…\n\nAfter surviving the wilds—and dangers—of exotic Tunisia, the members of Top Drek are happy to be back on the familiar ground of Ottawa. But the peace they hope to find after the past chaotic year is shattered by shadowy figures from their past.\n\nCoerced into pulling a shadowrun at a high-level corporate event, the run quickly turns into something no one expected. Deep beneath the city, an underground laboratory holds a horror that, if unleashed, could wreak havoc throughout the city. And only the Top Drek band members can stop it…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-10-17"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

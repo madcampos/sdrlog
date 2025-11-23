@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28007"],
+	"name": "Body Shop",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## BUILD A BETTER YOU\n\nYou sculpt your body the same way you sculpt marble—cut away all the wrong parts until what you are left with is purely, utterly you. You, but faster. You, but stronger. You, but smarter.\n\nIf you’re going to take on the powers of the Sixth World, you will need to be every bit of yourself that you can muster. Cyberware, bioware, geneware, and more can help you build the self you need to rise to the occasion and be the person who can withstand whatever the world throws at you.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2023-06-28"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

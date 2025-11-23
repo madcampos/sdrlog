@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28306"],
+	"name": "Margin Calls",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## Cinders of War\n\nSixth World business goes way beyond “buy low, sell high.”\n\nIn the wake of a recent shadow war, the corporate landscape has been forever altered. There were winners, losers, and people who felt lucky just to break even. Giants fell, others rose from the ashes like a phoenix, while still others remained in the shadows because this game is never over; the rules simply shift.\n\nThe corporate landscape always holds opportunities for those with the guts to seize them. But opportunity always comes with risk, because sometimes the market is a boom, other times it’s a bust. And if at the end of the day, when the margins are called and it’s time to square up, there’d better be enough assets to cover … or it’s game over.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-04-28"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

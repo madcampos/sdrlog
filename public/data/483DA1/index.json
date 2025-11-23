@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["483DA1"],
+	"name": "Datapuls: Spezialeinheiten der ADL",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Spezielle Aktionen erfordern spezielle Reaktionen\n\nDie Runner deiner Gruppe zerlegen Straßenbullen und Konzernwachen ohne Probleme? Zeit, die großen Wummen rauszuholen! Dieser Datapuls präsentiert dir ausgewählte Spezialeinheiten der ADL, von den berüchtigten Kommando-Medics und dem Marinekommando Seeschlange über die Schwarzen Marshalls und die Soko Cleansweep bis zum pomoryanischen SK 11 („Elf“, get it?), der Tactical Assault Group der MET2000, den Leibwächtern des FBV und natürlich der GSG 9 der Polizei (und mehr!). Entdecke die tödliche Bedrohung typischer Vertreter aller Einheiten plus neue Ausrüstung, die nur den Besten der Besten (und jenen, die sie stehlen) zur Verfügung steht!",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-04-02"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

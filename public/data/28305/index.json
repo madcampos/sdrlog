@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28305"],
+	"name": "Lethal Harvest",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## THE MIDNIGHT HOUR\n\nThe Doomsday Clock is ticking, and most don’t even know it.\n\nThere’s a war raging within the shadows, metahumans against monsters.\n\nAnd this isn’t just a reckoning; this is the endgame …\n\nMost look the other way, but others have chosen to act. Some follow the enemy ever deeper into the shadows to uncover their darkest secrets. Others struggle to expose the conspiracies between them and their allies to a blind or apathetic world. A brave (or insane) few face the enemy head-on in brutal combat against deadly, nightmarish opponents from another metaplane. Make no mistake, this is not just another war; this is a battle for our survival. The Disians are looking to strip the Sixth World of its life-giving energies and kill us all. So that leaves only one question: do you cower, or do you FIGHT.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-01-20"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

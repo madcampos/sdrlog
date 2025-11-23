@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["FN2507"],
+	"name": "R.A.T.S. Tales",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## A LEGEND UNCOVERED…\n\nRoger Soaring Owl is just that, a legend among legends. Thought long dead, he was recently discovered commanding the Recon and Advance Tactical Strikeforce during the Shadow War against the Disian invasion. But when two enterprising hackers blow his cover, everyone wants him to join their side against the otherworldly incursion.\n\nThe only issue is, Roger isn’t all that keen to sign up again…with anyone. He prefers leading, not following. But the powers desperate to get him under their thumb aren’t the kind a person can say “no” to…even a warrior as renowned as Roger.\n\nNow he and his people have to spirit him out of Denver, one step ahead of the many, many corp and military faction looking to get their hands on him. It’s going to be a wild ride through the city streets…and Roger will need all of his skills and luck to escape in one piece…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-08-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

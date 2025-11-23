@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26020NV"],
+	"name": "The Kilimanjaro Run",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "**AN UNEXPECTED ADVENTURE…**\n\nCharlotte lives with her expatriate family in Dar es Salaam, Tanzania. While visiting her best friend Neema, a hippopotamus shaman, a commotion next door interrupts their weekend plans. Neema’s older cousin has been arrested, leaving her younger cousin Elijah responsible for a “job.” Charlotte insists on helping Elijah complete what seems like a simple task: drop off a car in a parking lot. Simple, easy, and doesn’t piss off the wrong people, right? Reluctantly, Neema agrees, and they set off.\n\nOn the road, they get a message from BlotterBabe, a known fixer, that they aren’t just delivering a car—they’re perpetrating a horrendous crime. Together, the trio must make a choice to do the job as they were told—and keep their cousin out of trouble with the worst of society—or do the right thing.\n\nIn the end, there is no choice. Charlotte, Neema, and Elijah do the only thing they can do: make a run for it…and hope they’re not too late to save a strange visitor to their world…not to mention themselves.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2023-08-14"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

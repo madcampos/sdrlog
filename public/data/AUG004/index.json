@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["AUG004"],
+	"name": "Augment 04 [Winter 2083]",
+	"category": "magazine",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "Augment is Shadowrun’s official magazine. This is a fully in-universe publication, and can be used in Shadowrun games as well as enjoyed by the casual reader.\n\nAugment, Winter 2083. In this issue about city life and vehicles, Leach tours around his hometown of Seattle to sample its delights. Marques Reille gets caught shopping in one of his favorite stores by none other than Gabrielle Spinrad! Yuta Nakata has a feisty interview with our cover artist, PR4NK-r, about art and life. Louise Sashey, new columnist of The Cutting Edge, spends time in Montreal and Kyoto, finding ways to experience city life in style. Enjoy these articles, reviews of new products, clothing, tech, and so much more!\n\nAugment your life with Augment magazine!",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-11-13"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

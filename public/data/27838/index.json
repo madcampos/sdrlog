@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["27838"],
+	"name": "Secrets of Power Box Set",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## THREE COMPLETE SHADOWRUN NOVELS IN ONE VOLUME!\n\nThe year is 2050. The power of magic and the creatures it brings have returned to the earth, and many of the ancient races have re-emerged. Elves, Orks, Mages, and lethal Dragons find a home in a world where technology and human flesh have melded into deadly urban predators. And the multinational megacorporations hoard the only thing of real value—information.\n\nFor Sam Verner, living in the womb of the Renraku conglomerate was easy, until his sister disappeared and the façade of the corporate reality began to disintegrate. Now Sam wants out, but to \"extract\" himself, he has to slide like a whisper through the deadly shadows of the corporations, into a completely different world where his first wrong move may be his last...the world of _Shadowrun_.",
+	"edition": 2,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2018-12-04"],
+	"gameDate": "2053-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

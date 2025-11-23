@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM2083-03"],
+	"name": "Legends 2083-03: Nile Gambit: City Under the Sand",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## A City Lost to Time\n\nBeneath the shifting dunes lies a forgotten city—its gates sealed, its secrets buried in time. When a mysterious artifact is discovered at a remote archaeological dig, rumors of the lost city stir old rivalries and awaken ancient ambitions. A team of runners is hired to help secure the retrieval of the artifact and must navigate treacherous terrain, and cryptic ruins as they chase legends and confront the consequences of unearthing the past.\n\nThis adventure blends exploration, deep magic, and danger in a setting where history refuses to stay buried. It offers rich lore, Big Ten ambitions, and an angry spirit to challenge the runners.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-09-29"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46156"],
+	"name": "Domino-Effekte",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Die Steine fallen\n\nIn der eng vernetzten Sechsten Welt können kleine Ursachen große Wirkung entfalten. Und um wie viel größer ist die Wirkung erst, wenn schon die Ursache fundamental ist? Ein Angriff auf einen voll besetzten Club, ein politisches Attentat in einem instabilen Metroplex, eine Detonation im tiefen Untergrund – zum fatalsten Zeitpunkt, am schlimmstmöglichen Ort? Ein paar Schattenläufer werden sich im Epizentrum schicksalhafter Ereignisse befinden und zusehen, wie alles um sie herum zusammenbricht.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-05-24"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["ART01"],
+	"name": "Fine Art: Risk it All",
+	"category": "misc",
+	"type": "print",
+	"originalLanguage": "en-US",
+	"description": "This 18x24 canvas print is limited in quantity and has a small print run, making it a perfect frame-able piece to add to your home.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-06-25"],
+	"gameDate": "2082-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

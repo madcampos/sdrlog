@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["K202501"],
+	"name": "Kaleidoskope: Live 2 Ride",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Über die staubigen Straßen der ADL\n\nGangs, Syndikate und andere Verbrecherorganisationen gibt es in der Sechsten Welt zuhauf – und doch ist wohl niemand von ihnen so stolz auf ihre Verbindung zur Straße wie diese: Motorradclubs.\n\n**Live 2 Ride** wirft einen genaueren Blick auf dieses Gangmilieu und ihren Einfluss auf die ADL. Hier erfahrt ihr, wer die Köpfe der Clubs sind, wofür sie stehen, gegen was oder wen sie kämpfen und natürlich auch, wie ihr sie in eure Abenteuer einbauen könnt – egal ob als feindliche Partei, oder als Connection.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-02-28"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

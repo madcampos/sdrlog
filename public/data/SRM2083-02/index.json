@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM2083-02"],
+	"name": "Legends 2083-02: Captured Pawns, Fractured",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "As the war with the Disians engulfs the world’s shadows, the Sixth World’s defenders are nearing their breaking point. As pieces are moved on the metaphorical chessboard, the Disians and their allies initiate their final gambit to end the conflict. But the defenders still have moves of their own left to play. One such operation is to send a group of elite shadowrunners into the twisted heart of the Disian’s home metaplane to conduct a high-stakes heist that could determine the war’s outcome and the Sixth World’s ultimate fate. This is an operation where one wrong move, one miscalculation, could mean the difference between ultimate victory, or complete destruction.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-01-20"],
+	"gameDate": "2083-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

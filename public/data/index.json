@@ -6903,16 +6903,6 @@
 			"status": "ok"
 		},
 		{
-			"sku": "45029",
-			"name": "Im Fadenkreuz",
-			"link": "./45029/index.json",
-			"cover": "./45029/cover.jpg",
-			"category": "mission",
-			"type": "digital",
-			"edition": 5,
-			"status": "ok"
-		},
-		{
 			"sku": "28F001",
 			"name": "BattleRun II: The Quest for the Thing",
 			"link": "./28F001/index.json",
@@ -8044,7 +8034,7 @@
 		},
 		{
 			"sku": "26026",
-			"name": "Off Beat",
+			"name": "Off Beat (A Top Drek Story, #1)",
 			"link": "./26026/index.json",
 			"cover": "./26026/cover.jpg",
 			"category": "novel",
@@ -8104,7 +8094,7 @@
 		},
 		{
 			"sku": "26027",
-			"name": "Back of Beyond",
+			"name": "Back of Beyond (A Top Drek Story, #2)",
 			"link": "./26027/index.json",
 			"cover": "./26027/cover.jpg",
 			"category": "novel",

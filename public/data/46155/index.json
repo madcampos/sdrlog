@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46155"],
+	"name": "Schattendossier 5",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Es ist 2083 – weißt du, wo dein Körper ist? Während du in der VR oder vor dem Trid deine begrenzte Zeit auf Erden vergeudet hast, steht die Sechste Welt am Rand der Vernichtung: Die globale Terrorwelle der „Woche des Todes“ [#megapuls 11/2023] hat auch Deutschland hart getroffen und mischt die Karten neu. Erfahre im Datapuls Sachsen und Halle-Leipzig alles über die hochtrabenden Pläne der Monarchisten und die giftigen Abgründe der Infiziertenszene, lerne aufstrebende Strippenzieher kennen, die nur zu bereit sind, auf den Leichen der Verstorbenen und Abgetauchten zu tanzen, lerne die neue Bundeswehr der Ära Beloit und die heftigsten Spezialeinheiten der ADL kennen und beeile dich, die neueste Tech des SOTA 2083 zu ordern, ehe es zu spät ist!",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-04-12"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

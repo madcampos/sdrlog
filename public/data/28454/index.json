@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28454"],
+	"name": "Risk & Rewards",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## Ancient Frontiers\n\nAncient and modern, war-torn but prosperous, Cairo is a place where ancient customs and traditions walk hand-in-hand with the modern realities of the Sixth World. It’s a place of mystical power, opportunities, and vast riches for those bold enough to claim them. Here, fortunes and lives are often won or lost based on a single decision. And in the wake of a devastating shadow war, several corporations are looking toward Cairo to fortify and further expand their newly won power and influence … or to halt their imminent demise.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-09-11"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

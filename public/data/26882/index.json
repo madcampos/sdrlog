@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26882"],
+	"name": "Basecrackers",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## GET IN, GET LOOT, GET OUT…\n\nDax, Tej, and Sam are one of the best small retrieval teams in the shadows. When they get an offer of a job retrieving a prisoner from an abandoned military base, the money offered by the megacorp is too good to pass up, despite the potential risks of infiltrating a former military base.\n\nSoon, they’re off to the island of Borinquen, in the Caribbean Ocean. But when their intel proves faulty, they realize that the base wasn’t a former prison, but a research facility. And when they reach the site itself, they find that the base isn’t as abandoned as they were led to believe…and what’s living inside might change the Sixth World forever…\n\nNow it’s a race against time and the denizens of the base to get out in one piece…before the base claims these shadowrunners for itself…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-01-07"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

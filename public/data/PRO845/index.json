@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["PRO845"],
+	"name": "Nebelkerzen",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Willkommen in der sechsten Welt!\n\nDieses Abenteuerset bietet einen spannenden Einstieg in die rasante Welt von Shadowrun und enthält Materialien für einen ersten Spielabend mit bis zu fünf Mitspielenden. Vorerfahrung mit Rollenspielen ist nicht nötig!\n\nDie Digitalversion des Sets beinhaltet das erstmals veröffentlichte Einstiegsabenteuer \"Nebelkerzen\", das Spielende und Spielleitung Stück für Stück an einem ersten Spielabend an die Welt von Shadowrun heranführt. Mit dabei sind außerdem eine Einführung in die sechste Welt sowie ein Glossar mit speziellen Shadowrun-Begriffen.\n\nAußerdem enthalten sind fünf vorgefertigte Charaktere, ein Bogen mit Edge-Tokens zum Ausdrucken und Ausschneiden, ein Handout der zum Abenteuer gehörigen Karte sowie die Schnellstartregeln von Shadowrun, Sechste Edition.\n\nUnd das alles komplett kostenlos!\n\nWir wünschen euch viel Spaß bei eurem ersten Lauf durch die Schatten!",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-01-07"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

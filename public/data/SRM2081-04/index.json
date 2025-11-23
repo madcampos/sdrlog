@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM2081-04"],
+	"name": "Trailblazers",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## Claws in the Dark\n\nThe Seattle Underground is a civilized place as long as you keep to the Mall. It’s also one of the best ways to smuggle goods into the city if you head into the unmapped regions. Mr. Johnson’s had a few smuggling teams go missing while hauling in some illicit goods. He needs a team of trailblazers to clear a path back up north. But those darker paths hold dangerous secrets. Secrets held by things that can suck your soul dry, corporations and creatures of the night.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-04-28"],
+	"gameDate": "2081-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

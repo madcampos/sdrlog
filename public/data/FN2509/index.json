@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["FN2509"],
+	"name": "Calaveras and Chrome",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## WHEN THE RUN IS TOO GOOD TO BE TRUE…\n\nThe decker known as Riposte lives by the rule of “trust, but verify.” And when a promising shadowrun with a big payday sends up a red flag, he does a little shadow snooping of his own to find out what the real deal is.\n\nHis investigation leads him down some dark streets, but there’s no concrete evidence he can find before the run goes down. Paired with an ork street samurai and an elven mage, Riposte will need all his skill to finish the run, get out alive…and get paid…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-10-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

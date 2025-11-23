@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["PRO847"],
+	"name": "Job-Roulette",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Katzen, Karren und Kir Royal\n\nFür die Kunden sind genetisch und biotechnisch modifizierte Haustiere nur eine nette Spielerei, aber in den kleinen oder großen Körpern steckt jede Menge Hightech und Grundlagenforschung, die jeden Wettbewerber im NuPet-Markt über Nacht an die Spitze der Verkaufscharts bringen könnte. Als die führende Entwicklerin eines NuPet-Unternehmens für einen Galaempfang in München ihren ebenso goldenen wie gut gesicherten Käfig verlassen muss, ist das die perfekte Gelegenheit, dieses Ausnahmetalent zu „rekrutieren“ – bevor es auf immer in einer Laborfestung verschwindet.\n\n**Job-Roulette** ist ein Abenteuer für Shadowrun 6 im München des Jahres 2082. Für das Abenteuer ist lediglich das Grundregelwerk für Shadowrun 6 notwendig. Der **Datapuls: München** liefert weiteren Hintergrund und Werkzeuge für Flair und Ambiente.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-10-18"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM2081-06"],
+	"name": "Cutting Strings",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## The Shadows are in a Fix\n\nIn the Seattle shadows, fixer Brynne Taggart is known as one of the best, the kind of fixer you want on your side rather than against you. But something has gone sideways and now she’s disappeared. Her mentor, the legendary fixer Saint James, needs a team to turn over every stone in the sprawl and if necessary crack some skulls (or spill some blood) in order to find out what happened … and why. \n\nWhat starts off as a simple investigation within the suburbs of Seattle quickly escalates into a royal cluster-frag as gangs, bikers, and other runners become major obstacles. So the question becomes: are you going to take this laying down or are you going to rise to the occasion?",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-04-29"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

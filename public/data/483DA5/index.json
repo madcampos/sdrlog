@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["483DA5"],
+	"name": "Datapuls: 10 Strippenzieher",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Aufsteigende Sterne in den Schatten\n\nDie globale Terrorwelle der \"Woche des Todes\" Anfang November 2082 und die folgenden, zum Teil hysterischen (Über-)Reaktionen von Staat und Konzernen gegen \"linksautonome Extremisten\" und \"Schatten-Netzwerke\" haben auch die ADL mit voller Wucht getroffen: Zahllose etablierte Runner, Schieber und Vermittler wurden ermordet, verhaftet, \"auf der Flucht erschossen\" oder sind einfach abgetaucht bzw. \"spurlos verschwunden\". Das schafft Raum für aufsteigende Mächte in den Schatten (und im organisierten Verbrechen, aber das ist ein anderes Thema, auf das wir noch zu sprechen kommen).",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-03-14"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

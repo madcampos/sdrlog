@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["FN2502"],
+	"name": "Shadowbytes",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "... More to Come ...",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-03-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

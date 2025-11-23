@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28011"],
+	"name": "Deadly Arts",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## A Fighting Chance\n\nCombat is no stranger in the shadows; someone’s always working on new ways to eliminate their opponents. Maybe it’s the adept martial artist who’s pushing their body and power the breaking point Maybe it’s the local street samurai who just got some upgraded ’ware and is looking to settle some long-overdue scores. Maybe the mercenary just got a new gun, and their trigger finger is itching. Or the rigger is in control of one of the most advanced military vehicles on the planet, complete with bleeding-edge control systems and weapons.\n\nWhatever the situation, there’s always a need for warriors to fight and die for a cause, or at least a paycheck. And they’ll need more than just the latest hardware—they’ll need to master the deadly art of combat itself. Otherwise, they’re just more cannon fodder.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-04-02"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

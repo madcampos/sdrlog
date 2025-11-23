@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28453"],
+	"name": "Falling Point",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "ON THE PRECIPICE\n\nThe Sixth World feels like it’s perpetually in the middle of slow-motion collapse, disaster after disaster threatening to bring parts or all of it down. So it’s critical to know what might push some of these disasters over the edge, turning slow motion into a full-on downward plunge.\n\nFalling Point profiles ten people and organizations standing on a precipice. Sometimes they’re the ones who might go over the edge; other times they’re looking at someone else they can push. Either way, they’re going to play a significant role in unfolding events, so runners better know about them before they run into them in the shadows.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-02-08"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

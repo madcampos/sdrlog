@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["CM2024"],
+	"name": "Christmas in the Shadows",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## CHRISTMAS IN THE SIXTH WORLD…\n\n’Twas the night before Christmas, and a blizzard blew through the neon streets of Seattle. When Shimura, the drunken troll of a street doc who runs the Mercy Street free clinic, finds a whole bunch of folks evicted from their homes, he’s none too happy about it. Does he stay out of the whole mess? Or does he revisit his old life as a shadowrunner and take matters into his own hands…? Well, that really depends on who’s been naughty and who’s been nice…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-12-24"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

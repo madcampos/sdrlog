@@ -4,25 +4,20 @@
 - https://www.shadowrun6.de/index.php/ingame-material-2/novapuls.html
 - https://www.shadowrun6.de/index.php/produkte-2.html
 - https://www.shadowrunsixthworld.com/
+- https://pegasus.de/search?search=shadowrun
 - https://store.catalystgamelabs.com/collections/shadowrun
 - https://www.drivethrurpg.com/en/publisher/2216/catalyst-game-labs/category/44855/shadowrun-holostreets
+- https://www.drivethrufiction.com/en/publisher/2216/catalyst-game-labs/category/21533/shadowrun
+- https://www.drivethrurpg.com/en/publisher/2216/catalyst-game-labs/category/34043/shadowrun-sixth-world
 
 # Materials to add
 
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
 - The chimera complex
-- [Never Enough](https://books2read.com/u/mYJ6EV)
-- [The Good, The Bad, and The Sinless](https://books2read.com/u/bzGJ6E)
-- [King of the Streets](https://www.audible.com/pd/Shadowrun-Kings-of-the-Street-Audiobook/B0FXY59HY5?qid=1761851347&sr=1-1&ref_pageloadid=not_applicable&plink=EIQCqPcp9UQQedBW&pageLoadId=EfNrVQNVQEWfyLKx&creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c&overrideBaseCountry=true&ipRedirectOverride=true&ref_pageloadid=not_applicable&pf_rd_p=c3b746b3-d756-4ac5-a89d-348db54ebc7b&pf_rd_r=DTBGQ0SYN6GCJXF73PAX&plink=5ePFe4tXtAwJlUVq&pageLoadId=ydegnKhY71yCFGST&creativeId=292d6343-f11b-4bbe-a8a5-d4b7272abf61)
-- [Feind und Helfer](https://shadowhelix.de/Quelle,_de:_Feind_und_Helfer)
-- [Geschmeidige Geschäfte](https://shadowhelix.de/Quelle,_de:_Geschmeidige_Gesch%C3%A4fte)
-- [Fürchte das Dunkel](https://shadowhelix.de/Quelle,_de:_F%C3%BCrchte_das_Dunkel)
+- [Kings of the Streets](https://www.audible.com/pd/Shadowrun-Kings-of-the-Street-Audiobook/B0FXY59HY5?qid=1761851347&sr=1-1&ref_pageloadid=not_applicable&plink=EIQCqPcp9UQQedBW&pageLoadId=EfNrVQNVQEWfyLKx&creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c&overrideBaseCountry=true&ipRedirectOverride=true&ref_pageloadid=not_applicable&pf_rd_p=c3b746b3-d756-4ac5-a89d-348db54ebc7b&pf_rd_r=DTBGQ0SYN6GCJXF73PAX&plink=5ePFe4tXtAwJlUVq&pageLoadId=ydegnKhY71yCFGST&creativeId=292d6343-f11b-4bbe-a8a5-d4b7272abf61)
 - https://shop.black-book-editions.fr/produit/63741/0/shadowrun-anarchy/shadowrun-anarchy-anarchistes
 - https://store.401games.ca/products/munchkin-shadowrun-hack-the-future
 - https://store.401games.ca/products/munchkin-shadowrun
-- https://store.catalystgamelabs.com/products/shadowrun-risks-rewards
-- https://store.catalystgamelabs.com/products/shadowrun-deus-ex-arcana
-- https://books2read.com/ShadowrunAugmentIssue4
 
 # Archive
 

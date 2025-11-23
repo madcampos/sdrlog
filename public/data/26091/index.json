@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26091"],
+	"name": "Shadow Borders (Sprawl Stories, Volume Three)",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## BETWEEN DARKNESS AND LIGHT…\n\nThis quartet of novellas travels around the Sixth World to places where the boundaries between good and evil, light and darkness can be…blurry, at best.\n\nIn the mysterious Caliphate of Arabia, a shaman makes the ultimate deal with one of the deadliest—and most treacherous—spirit totems to exact justice for her murdered family.  Everyone’s favorite down on his luck PI Jimmy Kincaid takes on a case of SURGE kids getting burned alive by someone—or something—with a deep hate for genemods. T’ing the troll shaman takes his posse down to Cuba to mix business with pleasure, and uncovers a deadly plot to wipe out most of the Caribbean if the shadowrunners don’t step in. And a shadowrunning team heads to the Sioux Nation to investigate several mysterious disappearances…and stumbles upon a secret cabal dedicated to preventing the destruction of much of the Nation…and a showdown with a megacorp that looking to seize that power for itself.\n\nFour stories of intrigue and danger from the gray world of Shadowrun. Check your ammo, prep your spells, and get ready to cross more than one kind of border in these pages…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-07-15"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

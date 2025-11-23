@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46145"],
+	"name": "Blutige Anfänge",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Der Weg jedes Teams legendärer Runner beginnt mit ersten Schritten: Das erste Treffen mit den anderen Runnern. Das erste Training. Der erste gemeinsame Auftrag für einen Schmidt. Der erste Erfolg und die erste Bezahlung. Aber auch: Der erste Fehlschlag. Die erste harte Entscheidung. Der erste Tote im Team. Der erste Verrat. Wie kurz oder lang der gemeinsame Weg des Teams auch ist: Diese ersten Schritte vergisst man nie.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2023-10-06"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

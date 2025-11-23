@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["FN2510"],
+	"name": "Strange Prey",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## WHEN THE HUNTER BECOMES THE HUNTED…\n\nMage-for-hire Vandyl does not look forward to the holiday season. The heightened emotions of people trying to celebrate whatever holiday they celebrated could often lead to elevated Awakened activity—and that’s where he comes in. An experienced mage capable of dispelling the peskiest poltergeist or spirit…for the right price.\n\nBut in the days before Christmas, Vandyl encounters a spirit unlike anything he’s ever seen before…and when he banishes it back to its native plane, he draws the attention of some other ancient spirits…ones who ride spectral horses with glowing red eyes…and once they select their prey, the hunt is on…\n\nAnd this year, they’ve chosen Vandyl…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-11-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

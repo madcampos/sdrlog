@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26028"],
+	"name": "Wasted (A Top Drek Story, #3)",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## HIDING OUT ON THE OTHER SIDE OF THE WORLD…\n\nWell, as much as a punk band that still needs to play gigs to survive can hide out. The members of Top Drek have landed in Tunisia, Africa, after fleeing UCAS due to some…local entanglements in Québec City. The band is now living in Tunis, the capital city, and playing local concerts thanks to their new manager.\n\nBut the shadows also reach around the globe, only this time they’re coming for Lance, the hard-drinking, blue-bearded technomancer keyboardist. Like the other band members, Lance is running from his own demons, but they seem to have tracked him to the desert city—and will do anything to put him in the ground for good.\n\nIt’s going to take every bit of skill and courage to defeat this relentless enemy…and before they’re through, the band must make a deal with yet another devil from their past to make it through this desert tour alive…",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-07-15"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

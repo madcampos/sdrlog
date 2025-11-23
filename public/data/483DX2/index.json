@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["483DX2"],
+	"name": "Datapuls: Bundesgrenzschutz",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Die letzte Verteidigung\n\nDenkt man an deutsches Militär, denken die Unwissenden an die Bundeswehr. Runner wissen aber, dass die Bundeswehr auf Masse aufgebaut ist. Die wahre Klasse – sowohl was Ausbildung als auch was Ausstattung betrifft – findet sich im Bundesgrenzschutz, der letzten Verteidigungslinie der ADL gegen Eindringlinge sowohl an der Außengrenze der Allianz Deutscher Länder als auch deren Innengrenzen gegen exterritoriale Konzern-Hochburgen und sogar metaphysische Grenzen zu anderen Welten.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-04-02"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

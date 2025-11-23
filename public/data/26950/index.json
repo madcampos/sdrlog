@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26950"],
+	"name": "Magic, Machines, and Mayhem",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## IT’S A WILD, WILD, WILD SIXTH WORLD…\n\nThere are a million stories in the dark, gritty world of Shadowrun, and this all-new volume brings sixteen of the best together for an in-depth look at this dark future of megacorps and the street warriors fighting against them.\n\nFeaturing established authors as well as brand-new voices, each tale is a vicious slice of life in the Sixth World. An injured street samurai whose call to DocWagon turns into the opportunity of a lifetime…if he can just live to collect it. A street-smart runner team confronts their most dangerous mission yet—hiding out in an isolated rural town. A corporate executive squares off against a ruthless vice-president in their own megacorp in a razor-sharp battle of wits and words. This collection also features stories about top runners such as Winterhawk, and a brand-new story featuring Wolf and Raven.\n\nFrom the highest floors of a megacorp’s global headquarters to the darkest streets of the dirtiest sprawl, every story here delivers that unique mix of magic, machines, and mayhem Shadowrun fans demand.\n\nFeaturing all new stories by:\n- Bryan CP Steele\n- R. L. King\n- Bryan Young\n- Jason Hardy\n- Marie Bilodeau\n- Andrew Peregrine\n- Jennifer Brozek\n- RJ Thomas\n- Ken’ Horner\n- Dylan Birtolo\n- Aaron Rosenberg\n- Crystal Frasier\n- Alina Pete\n- Jaym Gates\n- Michael A. Stackpole\n- Russell Zimmerman",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-08-23"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

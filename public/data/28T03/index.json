@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28T03"],
+	"name": "Shadowrun First Edition T-Shirt",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "A throwback to some of the first Logos and Artwork used for Shadowrun. Pick up this redone shirt for a limited time in Celebration of 35 Years of Shadowrun.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-10-07"],
+	"gameDate": "2082-01",
+	"status": "outofscope",
+	"cover": "./cover.jpg"
+}

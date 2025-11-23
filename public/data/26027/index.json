@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["26027"],
+	"name": "Back of Beyond (A Top Drek Story, #2)",
+	"category": "novel",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## YOU CAN’T GO HOME AGAIN…\n\nWhen things got a bit too hot for hard-charging rock-and-roll (and sometimes shadowrunning) band Top Drek after their latest doorbusting show in the UCAS, they decide to slip over the border into the Republic of Québec. But its capital, Québec City, is anything but a safe haven.\n\nThe moment they arrive, the band’s bus—and all of their instruments—is stolen. And even stranger, the thieves soon reach out to Bleeding Blossom, Top Drek’s drummer, a Québec native who left behind some very angry mates all those years ago.\n\nNow the band is caught in an impossible situation: do a very dangerous job for their faceless nemesis, or never see the bus and their gear again. But for Blossom, this job is much more—forced to confront the ghosts of her rebel past, will she stand with the other band members to take down the people blackmailing them…or sacrifice herself to save them?",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-04-16"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46159"],
+	"name": "Schrapnell",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Unverhofft kommt oft\n\nShadowrunner müssen schnell reagieren, wenn Unerwartetes geschieht: Ein Teammitglied taucht nicht am Treffpunkt auf, eine kritische Lieferung von Ausrüstung trifft nicht ein, alte Feinde sabotieren den Run oder die Polizei greift sich nicht ganz zufällig die Runner für eine Fahrzeug- und Personenkontrolle heraus – wer in solchen Situationen den Kopf verliert, bezahlt das schnell mit dem Leben.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-09-06"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

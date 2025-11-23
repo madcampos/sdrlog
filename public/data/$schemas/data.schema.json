@@ -11,6 +11,7 @@
 		"sku": { "type": "string", "pattern": "^[A-Z0-9](?:-?[A-Z0-9])+(?:-[A-Z])?$" },
 		"publisher": {
 			"enum": [
+				"Black Book Editions",
 				"Catalyst Game Labs",
 				"Cliffhanger Productions",
 				"FASA Corporation",

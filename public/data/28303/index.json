@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28303"],
+	"name": "Scotophobia",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## The Meaning of Fear\n\nAs a rule, shadowrunners aren’t afraid of things that go bump in the night—because usually, it’s them. They know, though, that they aren’t the only thing to worry about. The universe and the metaplanes have things they can’t imagine, things they shouldn’t imagine, because even thinking about them can drive you insane.\n\nSome of those things are coming.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2023-11-14"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

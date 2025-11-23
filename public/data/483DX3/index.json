@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["483DX3"],
+	"name": "Datapuls: Bayern und Franken",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Alles bleibt anders\n\nDie Länder südlich des Weißwurstäquators gelten als stabile Wacht gegen das Chaos im Rest der ADL und zuweilen dem Rest der Welt. Egal, wer in Berlin gerade herumzündelt oder welcher Ort im Norddeutschen Bund oder Hessen-Nassau gerade vom „Monster der Woche“ gefressen wurde: In München feiert die Welt beim Oktoberfest, in den Alpen trifft sich die Schickeria beim Après-Ski und alles, was an der Welt vor dem Erwachen fantastisch war, lebt in Schützen- und Heimatvereinen fort. So war es jedenfalls vor dem Chaos der „Woche des Todes“ im Herbst 2082, dem Jahrhundertwinter 2082/83 und den „nebulösen“ Plänen eines gewissen Drachens. Höchste Zeit für eine Bestandsaufnahme!",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-04-02"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

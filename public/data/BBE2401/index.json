@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["BBE2401"],
+	"name": "Le bazar de l'Hexagone",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "fr-FR",
+	"description": "Salut chummers !\n\nQuand Iz0bel75 et moi avons compilé le dossier France des Ombres, on a dû laisser de côté pas mal d’informations, utiles et intéressantes, mais qu’on ne savait pas comment faire rentrer… On s’est dit que finalement, ces données méritaient quand même de voir le jour. Les voici donc dans ce dossier spécial intitulé le Bazar de l’Hexagone !\n\nDe quoi ça cause ? D’un peu tout ! On va papoter du Mans, et de sa région, qui n’ont pas été évoqués dans France des Ombres, de la Prison des Femmes à Rennes, mais aussi de matos, parce que même dans l’Hexagone, les samouraïs des rues ne peuvent jamais avoir trop de flingues.\n\nY’a un dossier sur nos flics préférés, ceux de la Sternschultz à Lille, mais aussi nos petits potes de Neo-PD, parce que savoir comment bossent les enfoirés qui nous tirent dessus, c’est toujours bon à prendre. Ah, en parlant de machins qui peuvent nous ventiler façon puzzle, on va également bavarder de paracréatures des quatre coins de la France.\n\nBref, tout un menu n’est-ce pas ?\n\nSim-Eon",
+	"edition": 6,
+	"publisher": ["Black Book Editions"],
+	"releaseDate": ["2024-02-01"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

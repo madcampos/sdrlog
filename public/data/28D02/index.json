@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28D02"],
+	"name": "35th Aniversary Dice Tray",
+	"category": "misc",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "From our friends over at FanRoll comes a new 35th Anniversary edition of the Shadowrun Dice Tray. Featuring the 35th Anniversary logo against a 6th edition fuschia background. Celebrate an amazing 35 years of Shadowrun with us.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-10-26"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

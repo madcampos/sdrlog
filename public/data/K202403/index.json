@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["K202403"],
+	"name": "Kaleidoskope: Der Block",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Der Block\n\nAm Rande des Metroplex erhebt sich der Block: Eine vertikale Stadt mit 16.000 Einwohnern auf 60 Wohnebenen mit 95 x 95 m Grundfläche. im Standardgrundriss aus dem Hortbau-Katalog bestellt, durch Hochtief und andere Baukonzerne von S-K in Rekordzeit hochgezogen - und nach wenigen Jahren des Erfolges im Niedergang begriffen, seitdem im Umfeld verschiedene Fabriken und andere Arbeitgeber Tausende Angestellte entlassen haben. Der Block beschreibt diesen Block genau - Ebene für Ebene, mit Machtgruppen und Gangs, Intrigen und Strukturen, Geheimnissen und Missionsaufhängern. Außerdem lässt sich der Block als Blaupause für Gebäude derselben Bauweise überall auf der Welt verwenden. **Das Kaleidoskop umfasst 6 vollseitige, sehr detaillierte Grundrisse (Zugangsebene, Wohnebenen, Kommunalebene auf halber Höhe des Blocks, Technikebene, Dachebene) sowie einen Gebäudeaufriss plus Umgebungsplan.**",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2024-01-16"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

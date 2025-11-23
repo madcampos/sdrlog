@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28803S"],
+	"name": "Shadows in Focus: That Old Voodoo",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## Seeing the Invisible\n\nYou’ve heard of Voodoo—but do you really know what it is? That Old Voodoo brings this tradition fully into the Sixth World, providing information about how this set of beliefs finds a place in the ever-changing post-Awakening world. With background on this tradition, enchantments, rituals, critter stats, quality paths, and more, this book provides a grounding to help you use Voodoo in your Shadowrun game.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-06-12"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM2081-07"],
+	"name": "Bootleg Bliss",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## Cutting into the Profits\n\nPower-hungry criminal syndicates are clawing at each other in a mad scramble for control of the drug trade. The underworld is a battlefield, and every faction wants their piece of the pie. But where there’s chaos, there’s opportunity, and one reckless chemist is about to learn that the hard way. A cocky, independent drug manufacturer who thought he could play fast and loose with the underworld’s branding. After marketing his bootleg bliss under the Triad’s name, he landed himself in the middle of a four-way gang war between the Ancients, the Cutters, the Vory, and the Octagon Triad. Seeking protection, he knocked on the wrong doors and finally one right one, cooking drugs from the depths of an abandoned geothermal plant in Puyallup’s notorious “Hell’s Kitchen.”\n\nBut the Triad doesn’t forget. Ni Ni Xialou, a ruthless lieutenant of the Octagon, wants to send a message—one written in blood and fear. After a botched assassination attempt, she turns to the runners to finish the job. Their mission? Hunt Baxter down, tear apart his operation, and make sure the streets remember that the Triad’s name is never to be taken lightly.\n\nFrom the shadows of the Night Market to the wreckage of a failed safehouse hit, the chase leads deep into the Barrens. But the runners aren't just dealing with one desperate man—they're stepping into the powder keg of Seattle's underworld, where loyalty is fluid, alliances are temporary, and the price of failure is death.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-05-07"],
+	"gameDate": "2081-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

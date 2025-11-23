@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["28304"],
+	"name": "The Needle's Eye",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## FLY TO THE SUN\n\nCan you negotiate a multi-million-nuyen deal while calmly sipping a martini? Do you know how to make money on the stock market with just about any insider info you hear? Most importantly, can you maintain your poise while the most powerful people in the Sixth World stare you down?\n\nYou’re about the find out. The Grand Tour is underway, and Mr. Johnson is holding a spot on it for you. You’ll eat lots of good food and stay in many wonderful hotels, but you’ll be surrounded by people who could send dozens of assassins after you with one snap of their fingers. Walk carefully, find the paydata, and discover the secrets that people on the Tour would prefer to keep hidden. And don’t get caught.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2024-05-29"],
+	"gameDate": "2082-01",
+	"status": "ok",
+	"cover": "./cover.jpg"
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SRM2081-10"],
+	"name": "Keep Your Eye on the Lady",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "en-US",
+	"description": "## A Once In a Lifetime Event\n\nTartarus Group says it's a gas leak. But the streets say lockdown and one of the area fixers has a person on the inside that they need out. His pixie on lockdown knows about an upcoming event and you need to bust her free.\n\nBut a job is never really that simple. Turns out that the fixer’s other team has gone dark and you’re needed for rescue mission number two. This time you’ve got to cross the border and get into Salish territory. Torrential rains and a paramilitary organization stand between you and your goals. Maybe you can slip in and slip out before the group known as Tartarus find you or worse … when Salish military comes waltzing in.",
+	"edition": 6,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-09-11"],
+	"gameDate": "2081-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}
