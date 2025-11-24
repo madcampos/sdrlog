@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46162"],
+	"name": "Schattendossier 6",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Die Sechste Welt hält den Atem an: Während Kreaturen einer fremden Metaebene kurz davor sind, der Welt das gesamte Mana zu rauben, jagen Polizei, Sicherheitskräfte und der hochgerüstete Bundesgrenzschutz angebliche Terroristen wie dich durch die Schatten des drohenden Untergangs. Obwohl Manastürme über den Globus tosen und sich die Meldungen über alptraumhafte Monster häufen, vermag scheinbar niemand die Zeichen richtig zu deuten. Höchste Zeit also, sich im Schutz des eigenen Safehouses die neuesten Lifestyle-Artikel zu ziehen oder im Angebots-Arsenal der Waffenhändlerin MIA zu schmökern, ehe man sich die neuesten Infos über lohnende Zielobjekte holt – oder einen letzten Urlaub in Süddeutschland plant, solange es das noch gibt...",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-05-01"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

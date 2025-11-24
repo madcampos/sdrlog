@@ -10,7 +10,7 @@
 	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
 	"releaseDate": ["2022-05-13", "2022-05-19", "2022-06-01"],
 	"gameDate": "2082-01",
-	"names": { "de-DE": "Schattenkompendium" },
+	"names": { "de-DE": "Schattenkompendium", "fr-FR": "Le Compagnon du Sixième Monde" },
 	"notes": "The German edition includes 20 additional new metavariant illustrations and the karma creation system (which is missing in the English version).",
 	"status": "ok",
 	"cover": "./cover.jpg"

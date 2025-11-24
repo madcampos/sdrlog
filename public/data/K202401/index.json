@@ -1,11 +1,11 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["K202401"],
-	"name": "Kaleidoskope: Schmutzige Tricks",
+	"name": "Kaleidoskop: Schmutzige Tricks",
 	"category": "rulebook",
 	"type": "digital",
 	"originalLanguage": "de-DE",
-	"description": "Im Wettrüsten von Schattentechnologie gegen Konzernsicherheit gibt es einen Faktor, der den Runnern immer ein Edge gibt: Die eigene Kreativität. In diesem File sammelt die deutsche Schattencommunity die besten Tricks der Szene, wie man unscheinbare Putzmittel in Sprengsätze, Schmiermittel in glitschige Fallen, RFID-durchsetzte Aerosole als Menschentracker oder den Energydrink mit synthetischem Fleischgeschmack in die perfekte Ablenkung für Wachcritter verwandeln kann. Enthält 17 neue Artikel für die Zweckentfremdung, verschiedene Hinweise für Ge- und Missbrauch bekannter Artikel und die Neuauflage des Baumarkt-Katalogs mit den Lieblingsartikeln der Schattenszene aus dem SOTA:ADL.\n\nSchmutzige Tricks ist ein Kaleidoskop zur Verwendung mit Shadowrun, Sechste Edition. ",
+	"description": "Im Wettrüsten von Schattentechnologie gegen Konzernsicherheit gibt es einen Faktor, der den Runnern immer ein Edge gibt: Die eigene Kreativität. In diesem File sammelt die deutsche Schattencommunity die besten Tricks der Szene, wie man unscheinbare Putzmittel in Sprengsätze, Schmiermittel in glitschige Fallen, RFID-durchsetzte Aerosole als Menschentracker oder den Energydrink mit synthetischem Fleischgeschmack in die perfekte Ablenkung für Wachcritter verwandeln kann. Enthält 17 neue Artikel für die Zweckentfremdung, verschiedene Hinweise für Ge- und Missbrauch bekannter Artikel und die Neuauflage des Baumarkt-Katalogs mit den Lieblingsartikeln der Schattenszene aus dem SOTA:ADL.\n\nSchmutzige Tricks ist ein Kaleidoskop zur Verwendung mit Shadowrun, Sechste Edition.",
 	"edition": 6,
 	"publisher": ["Pegasus Spiele"],
 	"releaseDate": ["2024-10-30"],

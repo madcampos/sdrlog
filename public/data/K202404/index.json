@@ -1,7 +1,7 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["K202404"],
-	"name": "Kaleidoskope: Armes Deutschland",
+	"name": "Kaleidoskop: Armes Deutschland",
 	"category": "sourcebook",
 	"type": "digital",
 	"originalLanguage": "de-DE",

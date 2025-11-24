@@ -1,7 +1,7 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["K202402"],
-	"name": "Kaleidoskope: Disfunktional",
+	"name": "Kaleidoskop: Disfunktional",
 	"category": "novel",
 	"type": "digital",
 	"originalLanguage": "de-DE",

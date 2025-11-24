@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["PROX01"],
+	"name": "Streets of Fire (feat. Motorjesus)",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "## Die Straßen brennen!\n\nDonnernde Bässe, kreischende Gitarren und eine elektrisierte Menge: Willkommen in der Welt des Rock! Im flackernden Neonlicht entern Motorjesus die Bühne und begeistern ihre Fans auf ihrer Tour. Doch abseits der Scheinwerfer lauert eine finstere Bedrohung. Beunruhigende Ereignisse rufen die Runner auf den Plan. Denn das nächste Konzert könnte in einer\nKatastrophe enden ... The show must go on!\n\nStreets of Fire ist ein Abenteuer für Shadowrun 6 in Kooperation mit der Band Motorjesus. Für das Abenteuer ist lediglich das Grundregelwerk für Shadowrun 6 notwendig",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-10-07"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

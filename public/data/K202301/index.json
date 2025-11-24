@@ -1,11 +1,11 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["K202301"],
-	"name": "Kaleidoskope: Von Campern und Preppern",
+	"name": "Kaleidoskop: Von Campern und Preppern",
 	"category": "sourcebook",
 	"type": "digital",
 	"originalLanguage": "de-DE",
-	"description": "## Von Campern und Preppern\n\nAußerhalb der großen Plexe der Allianz Deutscher Länder treffen urdeutsche Überregulierungen erlaubter Grill- und Campingplätze auf blutrünstige Critter und Zivilisations-Aussteiger, die einen Dreck auf deutsche Bürokratie geben. In diesem PDF findest du einen Überblick über die deutsche Camping- und Prepper-Szene inklusive nützlichen Gimmicks wie den endlich wieder verfügbaren Funk-Briketts und dem enorm nützlichen Multitool (der \"Werkzeugkiste\" für die Hosentasche), aber auch das \"Glamping-Must-Have-Wohnmobil\" Mercedes Palazzo Urban und eine erweiterte Liste von Gefahrensymbolen für magische und (neu!) Nano-Gefahren auf dem aktuellen Stand des Jahres 2082. ",
+	"description": "## Von Campern und Preppern\n\nAußerhalb der großen Plexe der Allianz Deutscher Länder treffen urdeutsche Überregulierungen erlaubter Grill- und Campingplätze auf blutrünstige Critter und Zivilisations-Aussteiger, die einen Dreck auf deutsche Bürokratie geben. In diesem PDF findest du einen Überblick über die deutsche Camping- und Prepper-Szene inklusive nützlichen Gimmicks wie den endlich wieder verfügbaren Funk-Briketts und dem enorm nützlichen Multitool (der \"Werkzeugkiste\" für die Hosentasche), aber auch das \"Glamping-Must-Have-Wohnmobil\" Mercedes Palazzo Urban und eine erweiterte Liste von Gefahrensymbolen für magische und (neu!) Nano-Gefahren auf dem aktuellen Stand des Jahres 2082.",
 	"edition": 6,
 	"publisher": ["Pegasus Spiele"],
 	"releaseDate": ["2023-12-07"],

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["BBESR6X02"],
+	"name": "Ombres Portées",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "fr-FR",
+	"description": "Les hommes dans l'ombre.\n\nCet ouvrage souhaite leur rendre hommage à travers le nom du paradis numérique français, réseau d’échanges des runners aguerris, et la reprise de différents personnages qu’ils ont créés. Des éléments biographiques fournissent des clés de compréhension des différentes contributions et commentaires des membres.",
+	"edition": 6,
+	"publisher": ["Black Book Editions"],
+	"releaseDate": ["2024-06-05"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

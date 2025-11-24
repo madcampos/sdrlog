@@ -5,6 +5,7 @@
 	"category": "mission",
 	"type": "digital",
 	"originalLanguage": "en-US",
+	"names": { "de-DE": "Flüsternetze" },
 	"description": "# It's What You Know\n\nPowerful financiers have been sent to prison for sending inside information to investment bankers so they could trade based on things they weren’t supposed to know. Government officials have resigned because the answer to the question “What did they know and when did they know it” turned out to be bad for them.\n\nInformation is power, and lately the Sixth World has been full of juicy secrets. In this campaign, runners will be called to the corporate capital of Manhattan to uncover some hidden information and then see how to they can extract the most value out of them—without drawing too large of a target on their backs.",
 	"edition": 6,
 	"publisher": ["Catalyst Game Labs"],

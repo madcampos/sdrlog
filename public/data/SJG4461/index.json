@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["SJG4461"],
+	"name": "Munchkin Shadowrun",
+	"category": "boardgame",
+	"type": "physical",
+	"originalLanguage": "en-US",
+	"description": "Dodge the corp, kill the monsters, and hack the Matrix to win in a whole new way!\n\nThe world of Shadowrun is a perfect setting in which to be munchkins. Players can be Elves, Dwarves, Orks, or Trolls as they dodge the corps, kill the monsters, and stab their buddies.\n\nMunchkin Shadowrun is packed with 193 cards full of cyberpunk and magic.\nIn addition to all the great Door and Treasure cards you expect in Munchkin, this set introduces the Matrix, a series of cards with additional gameplay goals that can be used to win the game in a whole new way!\n\nWhat are you waiting for? Grab your Tactical Gladius, and show Lofwyr what you’re made of.",
+	"edition": 2,
+	"publisher": ["Catalyst Game Labs"],
+	"releaseDate": ["2025-03-01"],
+	"gameDate": "2083-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

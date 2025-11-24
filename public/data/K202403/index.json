@@ -1,7 +1,7 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["K202403"],
-	"name": "Kaleidoskope: Der Block",
+	"name": "Kaleidoskop: Der Block",
 	"category": "sourcebook",
 	"type": "digital",
 	"originalLanguage": "de-DE",

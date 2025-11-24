@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["BBESR6X03"],
+	"name": "Grimoire des sorts",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "fr-FR",
+	"description": "Le bon sort au bon moment\n\nLa magie du Sixième Monde, ce n'est pas des incantations complexes, des gestuelles alambiquées et de grands parchemins (sauf quand... ça l'est). Un lanceur de sorts doit frapper vite, frapper fort, et dégager.\n\nLe Grimoire de sorts compile et indexe l'ensemble des formules de sorts publiés dans Shadowrun, Sixième édition et son supplément Voies occultes. C'est une référence pratique pour retrouver, en un clin d'oeil et parmi des dizaines de sorts, celui qui permettra à votre magicien de déjouer l'adage des Ombres, « bute le mago en premier ». Chaque entrée comporte l'ensemble des caractéristiques et règles associées à ce sort.",
+	"edition": 6,
+	"publisher": ["Black Book Editions"],
+	"releaseDate": ["2022-09-01"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

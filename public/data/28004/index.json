@@ -10,7 +10,7 @@
 	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
 	"releaseDate": ["2021-10-04", "2021-09-23"],
 	"gameDate": "2080-01",
-	"names": { "de-DE": "Vollgas" },
+	"names": { "de-DE": "Vollgas", "fr-FR": "A Tombeau Ouvert" },
 	"status": "ok",
 	"cover": "./cover.jpg"
 }

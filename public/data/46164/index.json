@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["46164"],
+	"name": "Ernteschäden",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Sie haben [3] neue Jobs\n\nWahrscheinlich nutzen fast alle Runner die Shadowbot-App oder versteckte Chaträume wie F-JOBS445, um an frische Jobangebote zu kommen. Zugegeben: Die anonymisierten „Runner gesucht“-Anfragen, von denen es auch in fast jedem Novapuls (shadowrun6.de > Ingame-Material) welche gibt, sind mit Vorsicht zu genießen – immerhin stammen sie von Drache weiß woher und nicht etwa von einer zuverlässigen Connection der Gruppe. Aber wenn gerade wenig los ist, stellen diese Jobs eine willkommene Gelegenheit dar, die nächste Miete zu zahlen oder den Kühlschrank zu füllen.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-07-31"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

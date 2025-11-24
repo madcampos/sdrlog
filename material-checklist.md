@@ -13,11 +13,6 @@
 # Materials to add
 
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
-- The chimera complex
-- [Kings of the Streets](https://www.audible.com/pd/Shadowrun-Kings-of-the-Street-Audiobook/B0FXY59HY5?qid=1761851347&sr=1-1&ref_pageloadid=not_applicable&plink=EIQCqPcp9UQQedBW&pageLoadId=EfNrVQNVQEWfyLKx&creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c&overrideBaseCountry=true&ipRedirectOverride=true&ref_pageloadid=not_applicable&pf_rd_p=c3b746b3-d756-4ac5-a89d-348db54ebc7b&pf_rd_r=DTBGQ0SYN6GCJXF73PAX&plink=5ePFe4tXtAwJlUVq&pageLoadId=ydegnKhY71yCFGST&creativeId=292d6343-f11b-4bbe-a8a5-d4b7272abf61)
-- https://shop.black-book-editions.fr/produit/63741/0/shadowrun-anarchy/shadowrun-anarchy-anarchistes
-- https://store.401games.ca/products/munchkin-shadowrun-hack-the-future
-- https://store.401games.ca/products/munchkin-shadowrun
 
 # Archive
 

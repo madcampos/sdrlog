@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["PRO866"],
+	"name": "Jetzt oder nie",
+	"category": "mission",
+	"type": "digital",
+	"originalLanguage": "de-DE",
+	"description": "Einmalige Gelegenheit!\n\nAm Schwarzen Valentinstag 2083 verwüstet die Detonation von 235 unterirdischen Sprengladungen weite Teile des Rhein-Ruhr-Megaplexes. Zehntausende sind tot, Hunderttausende auf der Flucht vor dem Jahrhundertwinter 2082/83, Ordnung und Abläufe sind großflächig zusammengebrochen. Katastrophal für die einen – aber eine einmalige Gelegenheit für einen Konzerner, sein Einkommen \"ein wenig\" aufzubessern. Er hat die Ware, er hat kein Gewissen... und bislang noch kein Team, das ihm hilft, die heiße Fracht an einen zahlungskräftigen Kunden zu bringen. Vorzugsweise ohne zu sterben.",
+	"edition": 6,
+	"publisher": ["Pegasus Spiele"],
+	"releaseDate": ["2025-06-04"],
+	"gameDate": "2082-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

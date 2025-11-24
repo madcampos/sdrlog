@@ -5,6 +5,7 @@
 	"category": "sourcebook",
 	"type": "digital",
 	"originalLanguage": "en-US",
+	"names": { "de-DE": "Critter der Sechsten Welt" },
 	"description": "## Critters Call\n\nThe howl that cuts through the night. The bared fangs in a dark corridor. The talons piercing exposed flesh.\n\nAll these haunt shadowrunners’ nightmares. You can always try to reason with or buy off other people, but critters? Critters just come at you, relentless and hungry. Whether they’re used as corporate security or something you run into in the wild, they can be a tremendous threat. They can also, however, be a source of reagents or wealth if you know what you’re doing—and you know how to steer clear of tooth and claw.",
 	"edition": 6,
 	"publisher": ["Catalyst Game Labs"],
