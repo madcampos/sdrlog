@@ -4,8 +4,14 @@
 	"name": "Choose Your Enemies Carefully: Secrets of Power, Volume 2",
 	"category": "novel",
 	"type": "digital",
-	"names": { "de-DE": "Wähl deine Feinde mit Bedacht (Trilogie der Macht 2)" },
-	"originalLanguage": "en-US",
+	"names": {
+		"de": "Wähl deine Feinde mit Bedacht (Trilogie der Macht 2)",
+		"fr": "...Choisis bien tes ennemis...",
+		"es": "Escoge con cuidado a tus enemigos",
+		"pt-BR": "Escolha Seus Inimigos Com Cuidado",
+		"hu": "Jól Válaszd meg Ellenségeidet"
+	},
+	"originalLanguage": "en",
 	"description": "When magic returns, its power calls Sam Verner. As Sam searches for his sister through the slick and scary streets of 2050, his quest leads him across the ocean to England, where druids rule the streets... and the throne. But all is not what it seems, and Sam and his new shadow friends are plunged into a maze of madness on the trail of destruction. Only when Sam accepts his destiny as a shaman can he embrace the power he needs. But what waits for him in the final confrontation of technology and human flesh is a secret much darker than anything he knew waiting in the shadows...",
 	"edition": 2,
 	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],

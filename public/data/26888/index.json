@@ -1,10 +1,10 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["26888"],
-	"name": "Auditions",
+	"name": "Auditions (A Mosaic Run Collection)",
 	"category": "novel",
 	"type": "digital",
-	"originalLanguage": "en-US",
+	"originalLanguage": "en",
 	"description": "## FOUR SECRET AUDITIONS…\n\nFixer BlotterBabe must have exactly the right actors for a production that requires very specialized talent. The actors must not only be skilled, they need to have the right attitude and an ability to adapt to extraordinary circumstances.\n\n**A Kiss to Die For**: Kintsugi and Sartorial choose love over duty, but their respective families will do everything in their considerable power to stop them from being together.\n\n**See How She Runs**: Terrapin witnesses a murder and is handed a package destined for some important and lethal people. Now she is running for her life.\n\n**Unrepairable**: Landon and Liana love vexing megacorps for fun and profit with their Matrix show. Unfortunately, the megacorps always play dirty, and will do whatever’s required to shut them down for good.\n\n**The Kilimanjaro Run**: Charlotte, Neema, and Elijah embark on an unexpected adventure that turns into a nightmare when they discover nothing is what it seems. They are left with no choice at all when choosing between the abhorrent and the right thing to do.\n\n## FOR THE MOST DANGEROUS RUN OF ALL…\n\nHaving auditioned thousands, BlotterBabe is out of time. It’s come down to these few teenagers. Either they will save the day or lose it all…",
 	"edition": 6,
 	"publisher": ["Catalyst Game Labs"],

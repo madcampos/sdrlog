@@ -1,10 +1,10 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["FN2505"],
-	"name": "Can't Always Run",
+	"name": "Can't Allways Run",
 	"category": "novel",
 	"type": "digital",
-	"originalLanguage": "en-US",
+	"originalLanguage": "en",
 	"description": "## THE PAST IS ALWAYS ONE STEP BEHIND…\n\nThose who say you shouldn’t date your co-workers never met Ametheest. And when you’re in a rock band/shadowrunner team, what’s a little crush among fellow musicians? At least, that’s what lead guitarist Silver thinks when she makes a “not-date” to hang out with Top Drek’s lead singer at a Quebec street festival.\n\nBut every ’runner has a past, and Silver is no different. And when her former teammates show up looking for payment, it’s up to Silver and Ametheest to show them that messing with one member of Top Drek means messing with the rest of them…and when your lead singer is also a mage, well, that just means there’s going to be a different kind of firework show tonight…",
 	"edition": 6,
 	"publisher": ["Catalyst Game Labs"],

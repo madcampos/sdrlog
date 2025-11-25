@@ -1,10 +1,10 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["26859"],
-	"name": "Identity Crisis",
+	"name": "Identity: Crisis",
 	"category": "novel",
 	"type": "digital",
-	"originalLanguage": "en-US",
+	"originalLanguage": "en",
 	"description": "One morning, Oliver Martin wakes up to find he no longer exists, with no job, SIN, nuyen, or even a place to live. He's been completely wiped from the Matrix, with a new identity replacing his. Only this one's on Lone Star's Most Wanted List, and Oliver's usual morning turns into the first run of his life. Boston's mean streets hold the keys to Oliver's fight to reclaim himself and discover who's behind his redacted identity. Falling in with a shadowrun team, he uncovers a conspiracy within MIT&T that could bring down the corporate walls of the city before it's through and take him right along with it.",
 	"edition": 5,
 	"publisher": ["Catalyst Game Labs"],

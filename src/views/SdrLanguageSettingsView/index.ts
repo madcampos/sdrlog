@@ -75,8 +75,8 @@ class SdrViewLanguageSettings extends LitElement implements RouterView {
 				>
 					<span slot="label">App Language</span>
 
-					<option value="en-US">English</option>
-					<option value="fr-FR">French</option>
+					<option value="en">English</option>
+					<option value="fr">French</option>
 					<option value="pt-BR">Brazilian Portuguese</option>
 				</sdr-select>
 			</sdr-dialog>

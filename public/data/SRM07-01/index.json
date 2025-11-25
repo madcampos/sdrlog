@@ -4,7 +4,7 @@
 	"name": "The Deck Job",
 	"category": "mission",
 	"type": "digital",
-	"originalLanguage": "en-US",
+	"originalLanguage": "en",
 	"description": "The only shadowrunners who don't ask the above question are ones who have been dead so long that no one remembers their name. Which, for most runners, means two months. The point being, any runner knows that a job that can be described in a simple, straightforward sentence at the beginning of the day is going to become a tumbled, tangled mess by the end of the day, the simple sentence exploding into a story that you'll tell over a few drinks some night—unless the story got messy enough that you joined those forgotten shadowrunners in some shallow grave.\nThe simple sentence at the beginning of this job is this: \"Retrieve a stolen cyberdeck prototype.\" Sounds easy enough, but add \"in Chicago's Containment Zone\" to the end of the sentence, and already the complications have begun to mount. And they'll continue—by the time the runners are done, they'll see double-crosses, deceits, lies, and betrayals speeding past them, and they'll have to do their best to figure out what's really going on before they get overwhelmed and overran.",
 	"edition": 5,
 	"publisher": ["Catalyst Game Labs"],

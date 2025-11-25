@@ -4,7 +4,7 @@
 	"name": "Shadowland #1",
 	"category": "magazine",
 	"type": "ocr",
-	"originalLanguage": "en-US",
+	"originalLanguage": "en",
 	"description": "Although this is a magazine, the page numbering starts on the first page, excluding the covers.\nCover Art: Bottled Demon by John Zeleznik",
 	"edition": 2,
 	"publisher": ["Other"],

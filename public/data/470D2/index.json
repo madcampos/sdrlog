@@ -1,10 +1,10 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["470D2"],
-	"name": "Datapuls: Trollrepublik und Schwarzwald",
+	"name": "Datapuls: Trollrepublik & Schwarzwald",
 	"category": "sourcebook",
 	"type": "digital",
-	"originalLanguage": "de-DE",
+	"originalLanguage": "de",
 	"description": "Trolle und Erwachter Wald\n\nDer Schwarzwald, seit dem Erwachen der Sechsten Welt ein Ort voller Gefahren, Geister, wilder Magie und gefährlichen Crittern. Für manche ist es eine lebensfeindliche Umgebung, für andere ist es lukratives, aber tödliches Jagdrevier. Und für die Einwohner der Trollrepublik ist es schlicht ihre Heimat. Doch während die meisten Trolle, Orks und Riesen einfach nur Ruhe und Frieden suchen, braut sich im Inneren und an den Grenzen ein Sturm zusammen.\nDatapuls Trollrepublik und Schwarzwald beleuchtet das Land im Südwesten der ADL und seine hocherwachte Natur mit all ihren Mythen und arkanen Mysterien. Zudem liefert der Datapuls einen Einblick in politische Machtspiele, die Agenda des Trollthings, Unterweltorganisationen sowie verdächtige Konzernaktivitäten in der Republik. Und in die Möglichkeiten, die sich Shadowrunnern in den Schatten der dunklen Tannen bieten - sollten sie es lebend wieder herausschaffen.",
 	"edition": 5,
 	"publisher": ["Pegasus Spiele"],

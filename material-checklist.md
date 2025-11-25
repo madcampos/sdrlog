@@ -34,8 +34,36 @@
 - https://shadowhelix.de/Quelle,_de:_Schrapnell
 - https://shadowhelix.de/Quelle,_de:_Promovisitenkarten
 - https://shadowhelix.de/Quelle,_en:_The_Family_Jewel
-
+- https://shadowhelix.de/Kategorie:Quellen_(Gratis)
+- https://shadowhelix.de/Quelle,_en:_A_Night%27s_Work
+- https://shadowhelix.de/Quelle,_en:_And_So_It_Came_To_Pass
 - http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
+- https://shadowhelix.de/Quelle,_fr:_Aztlan_%2B_Denver
+- https://shadowhelix.de/Quelle,_ja:_%E3%83%93%E3%82%AE%E3%83%8A%E3%83%BC%E3%82%BA%E3%83%BB%E3%83%90%E3%83%83%E3%83%89%E3%83%A9%E3%83%83%E3%82%AF
+- https://shadowhelix.de/Quelle,_fr:_Cartes_d%27Actions
+- https://shadowhelix.de/Quelle,_fr:_Cartes_d%27armes_Run_%26_Gun
+- https://shadowhelix.de/Quelle,_fr:_Cartes_de_Sort
+- https://shadowhelix.de/Quelle,_de:_Chromscherben
+- https://shadowhelix.de/Quelle,_en:_Conspiracy_Theories_Outtakes
+- https://shadowhelix.de/Quelle,_en:_Convention_Mission_Pack_2011
+- https://shadowhelix.de/Quelle,_hu:_Cyberkommand%C3%B3
+- https://shadowhelix.de/Quelle,_de:_Deutschland_in_den_Schatten-Trilogie
+- https://shadowhelix.de/Quelle,_fr:_Dossier_de_personnage
+- https://shadowhelix.de/Quelle,_en:_Echo_Arcana
+- https://shadowhelix.de/Quelle,_en:_Echo_Recoil
+- https://shadowhelix.de/Quelle,_de:_Ein_Blick_in_den_Kreis
+- https://shadowhelix.de/Quelle,_de:_Ein_Scherbenhaufen_in_der_Entstehung
+- https://shadowhelix.de/Quelle,_ja:_%E5%B8%9D%E9%83%BD%E3%81%AE%E5%A4%A9%E4%BD%BF%E3%81%9F%E3%81%A1
+- https://shadowhelix.de/Quelle,_ja:_%E4%B9%9D%E9%BE%8D%E3%81%AE%E5%A4%A9%E4%BD%BF%E3%81%9F%E3%81%A1
+- https://shadowhelix.de/Quelle,_ja:_%E8%A3%8F%E5%88%87%E3%82%8A%E3%81%AE%E6%A7%8B%E5%9B%B3
+- https://shadowhelix.de/Quelle,_de:_FastFacts
+- https://shadowhelix.de/Quelle,_de:_Flug_in_die_Freiheit
+- https://ex.shadowrun.fr/cat%c3%a9gorie_shadowrun_-_suppl%c3%a9ment.html
+- https://shadowhelix.de/Quelle,_de:_Gefallene_Engel
+- https://shadowhelix.de/Quelle,_de:_Sprawl-Maps_Hamburg
+- https://shadowhelix.de/Quelle,_de:_Haus_der_Angst
+- https://shadowhelix.de/Quelle,_fr:_Insectes
+- https://shadowhelix.de/Quelle,_de:_Karteikarten_Hamburg
 
 ## Japanese materials
 

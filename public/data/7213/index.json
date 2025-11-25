@@ -1,10 +1,10 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["7213"],
-	"name": "Aztlán",
+	"name": "Aztlan",
 	"category": "sourcebook",
 	"type": "scan",
-	"originalLanguage": "en-US",
+	"originalLanguage": "en",
 	"description": "Secret Leaders\n\nCorporate Government\n\nTight Borders\n\nConstant War\n\nStrange Magic\n\nOnly one place has it all in 2056 -- Aztlan, the world's only corporate nation.\nBuilt on the drug trade, consolidated country by country through ruthless business deals, run by a powerful and mysterious corporation and sustained by a national faith in the Aztec gods, Aztlan can be a runner's greatest dream or his most chilling nightmare. For at the heart of war-torn Aztlan lies Aztechnology, a potential mother lode of paydata and newtech, and an almost certain source of death. Listen carefully to the rumors and judge for yourself which are true or false—Aztlan guards its secrets well, and Aztechnology will kill to keep it that way.",
 	"edition": 2,
 	"publisher": ["FASA Corporation", "Catalyst Game Labs"],
