@@ -1,7 +1,7 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["268804S"],
-	"name": "DSeoul Survivor (Republic of Korea Data Download)",
+	"name": "Seoul Survivor (Republic of Korea Data Download)",
 	"category": "sourcebook",
 	"type": "digital",
 	"originalLanguage": "en",

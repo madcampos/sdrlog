@@ -4,12 +4,19 @@
 	"name": "Never Deal with a Dragon: Secrets of Power, Volume 1",
 	"category": "novel",
 	"type": "digital",
-	"names": { "de": "Laß ab von Drachen (Trilogie der Macht 1)" },
+	"names": {
+		"de": "Laß ab von Drachen (Trilogie der Macht 1)",
+		"fr": "Méfie-toi des dragons...",
+		"pl": "Nigdy nie ufaj smokom",
+		"es": "Nunca pactes con un dragón",
+		"pt-BR": "Não Faça Acordos com o Dragão",
+		"fi": "Pysy erossa lohikäärmeistä"
+	},
 	"originalLanguage": "en",
 	"description": "The year is 2050. The power of magic and the creatures that accompany it have returned to Earth. For Sam Verner, living in the womb of the Renraku conglomerate was easy, until his sister disappeared and reality began to disintegrate. Now Sam wants out, but he must face the world of Shadowrun.",
 	"edition": 2,
 	"publisher": ["FASA Corporation", "Catalyst Game Labs", "Heyne Verlag"],
-	"releaseDate": ["1990-12-01", "2003-06-01"],
+	"releaseDate": ["1990-12-01", "2003-06-01", "1994-09-01"],
 	"gameDate": "2053-01",
 	"status": "ok",
 	"cover": "./cover.jpg"

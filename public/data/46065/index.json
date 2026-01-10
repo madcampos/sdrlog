@@ -1,7 +1,7 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["46065"],
-	"name": "Mission Sioux Nation",
+	"name": "Mission Sioux-Nation",
 	"category": "mission",
 	"type": "digital",
 	"originalLanguage": "de",

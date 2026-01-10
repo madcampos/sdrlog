@@ -30,10 +30,12 @@
 - https://shadowhelix.de/Quelle,_en:_Shadowrun_Promo_Sheet_1991
 - https://shadowhelix.de/Quelle,_en:_Shadowrun_Promo_Sheet_1990
 - https://shadowhelix.de/Quelle,_en:_Shadowrun_Promo_Sheet_1989
+- https://shadowhelix.de/Quelle,_de:_Shadowrun_Sechste_Edition_Schnellstartregeln
 - https://shadowhelix.de/Shadowrun_1992_Update_(Quelle)
 - https://shadowhelix.de/Quelle,_de:_Schrapnell
+- https://shadowhelix.de/Quelle,_en:_Shadowrun_Website_-_Jackpoint
+- https://shadowhelix.de/Quelle,_en:_Shadowrun_Website_-_Jackpoint
 - https://shadowhelix.de/Quelle,_de:_Promovisitenkarten
-- https://shadowhelix.de/Quelle,_en:_The_Family_Jewel
 - https://shadowhelix.de/Kategorie:Quellen_(Gratis)
 - https://shadowhelix.de/Quelle,_en:_A_Night%27s_Work
 - https://shadowhelix.de/Quelle,_en:_And_So_It_Came_To_Pass
@@ -43,7 +45,6 @@
 - https://shadowhelix.de/Quelle,_fr:_Cartes_d%27Actions
 - https://shadowhelix.de/Quelle,_fr:_Cartes_d%27armes_Run_%26_Gun
 - https://shadowhelix.de/Quelle,_fr:_Cartes_de_Sort
-- https://shadowhelix.de/Quelle,_de:_Chromscherben
 - https://shadowhelix.de/Quelle,_en:_Conspiracy_Theories_Outtakes
 - https://shadowhelix.de/Quelle,_en:_Convention_Mission_Pack_2011
 - https://shadowhelix.de/Quelle,_hu:_Cyberkommand%C3%B3
@@ -56,6 +57,9 @@
 - https://shadowhelix.de/Quelle,_ja:_%E5%B8%9D%E9%83%BD%E3%81%AE%E5%A4%A9%E4%BD%BF%E3%81%9F%E3%81%A1
 - https://shadowhelix.de/Quelle,_ja:_%E4%B9%9D%E9%BE%8D%E3%81%AE%E5%A4%A9%E4%BD%BF%E3%81%9F%E3%81%A1
 - https://shadowhelix.de/Quelle,_ja:_%E8%A3%8F%E5%88%87%E3%82%8A%E3%81%AE%E6%A7%8B%E5%9B%B3
+- https://shadowhelix.de/Quelle,_ja:_%E6%97%85%E3%81%99%E3%82%8B%E5%A4%A9%E4%BD%BF%E3%81%9F%E3%81%A1
+- https://shadowhelix.de/Quelle,_ja:_%E6%BC%86%E9%BB%92%E3%81%AE%E6%88%A6%E9%AC%BC_%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%E3%83%A9%E3%83%B3%E3%83%BB%E3%83%8E%E3%83%99%E3%83%AB_First_Run
+- https://shadowhelix.de/Quelle,_ja:_%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6%E3%83%A9%E3%83%B3_%E3%81%8C%E3%82%88%E3%81%8F%E3%82%8F%E3%81%8B%E3%82%8B%E6%9C%AC
 - https://shadowhelix.de/Quelle,_de:_FastFacts
 - https://shadowhelix.de/Quelle,_de:_Flug_in_die_Freiheit
 - https://ex.shadowrun.fr/cat%c3%a9gorie_shadowrun_-_suppl%c3%a9ment.html
@@ -64,6 +68,7 @@
 - https://shadowhelix.de/Quelle,_de:_Haus_der_Angst
 - https://shadowhelix.de/Quelle,_fr:_Insectes
 - https://shadowhelix.de/Quelle,_de:_Karteikarten_Hamburg
+- https://shadowhelix.de/Quelle,_de:_Poolitzers_NICHTTod
 
 ## Japanese materials
 

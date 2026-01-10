@@ -5,10 +5,11 @@
 	"category": "sourcebook",
 	"type": "scan",
 	"originalLanguage": "en",
+	"names": { "fr": "Shadowrun Héritage - Menaces" },
 	"description": "FACT?\nFICTION?\nPARANOIA?\nYOU MAKE THE CALL - AND PRAY YOU'RE RIGHT!\n\nThey're out there, chumlies. You know they're out there -- the puppeteers who pull the strings on everybody from CEO Damien Knight to the scroffiest born-yesterday street rat. I'm talking bug spirits you can't tell apart from human beings ... magical cabals who want to make us all slaves in their mage-o-cratic utopia ... hate groups so powerful they make the megacorps look like kiddie crooks ... artificial intelligences jerking our chains from so deep inside the Matrix that the hottest decker can't reach them. They're taking over the world -- and NO ONE CAN STOP THEM. In fact, you just might be working for them right now ...",
 	"edition": 2,
-	"publisher": ["FASA Corporation"],
-	"releaseDate": ["1996-06-01"],
+	"publisher": ["FASA Corporation", "Black Book Editions"],
+	"releaseDate": ["1996-06-01", "2021-04-07"],
 	"gameDate": "2057-01",
 	"status": "ok",
 	"cover": "./cover.jpg"

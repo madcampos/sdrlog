@@ -4,11 +4,16 @@
 	"name": "Shadowrun: Sixth World",
 	"category": "rulebook",
 	"type": "digital",
-	"names": { "de": "Shadowrun Grundregelwerk Sechste Edition", "fr": "Shadowrun Sixième Monde", "it": "Shadowrun, iI Sesto Mondo!" },
+	"names": {
+		"de": "Shadowrun Grundregelwerk Sechste Edition",
+		"fr": "Shadowrun Sixième Monde",
+		"it": "Shadowrun, iI Sesto Mondo!",
+		"pt-BR": "Livro Básico - Shadowrun Sexto Mundo"
+	},
 	"originalLanguage": "en",
 	"description": "RISK IT ALL!\n\nThe odds are against you. They always are. The other side has more people, more firepower, more money—more everything. What they don't have is you—your brains, your guts, and your willingness to put everything on the line to come out on top.\n\nShadowrun, Sixth World is the latest edition of one of the most popular role-playing games of all time. In 2080, the world is controlled by all-powerful megacorps that draw on vast hoards of technology and magic to keep rest of the population under their heels. But some people refuse the seductive lure of corporate safety. These rebels refuse to sell out, and they survive by doing the dirty work no one else will do. They are shadowrunners, and they're ready for you to join their ranks.\n\nBecome an elf shaman, an ork street samurai, a dwarf rigger, or any of hundreds of other possibilities. Find your skill set and unique expertise and use all of it on wild chances that will keep you alive, that give you one more chance at freedom. So you can survive until the next one.\n\nThe Shadowrun, Sixth World Core Rulebook contains everything you need to play besides six-sided dice. Launch into a dark, thrilling world of gaming fun as your shadowrunner sets out on the road to greatness!",
 	"edition": 6,
-	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
+	"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other", "Black Book Editions"],
 	"releaseDate": ["2019-08-26", "2019-10-01"],
 	"gameDate": "2080-01",
 	"status": "ok",

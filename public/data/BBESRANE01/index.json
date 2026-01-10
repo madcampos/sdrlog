@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["BBESRANE01"],
+	"name": "Ecran du MJ Anarchy",
+	"category": "rulebook",
+	"type": "digital",
+	"originalLanguage": "fr",
+	"description": "Contrôlez l'Anarchy avec cet écran pour le meneur de jeu, magnifiquement illustré par Benjamin Giletti spécialement pour la version française !\n\nRetrouvez également des fiches d'aides de jeu, pour le meneur et les joueurs, destinées à fluidifier encore plus vos parties.\n\nLe pack contient 8 fiches, donc 16 pages, dont certaines en double pour disposer de plusieurs exemplaires :\n\n- Pour le magicien :\n    - Une fiche d'aide contenant au recto les règles de magie et de points d'Anarchy, au verso les règles de base\n    - 3 fiches contenant les caractéristiques des esprits (une page par esprit avec toutes les puissances)\n- Pour le hacker / technomancien :\n    - Une fiche d'aide contenant au recto les règles de matrice et de points d'Anarchy, au verso les stats des sprites\n- Pour le rigger :\n    - Une fiche d'aide contenant au recto les règles de rigging + de points d'Anarchy, au verso les règles de base\n- Pour tout le monde :\n    - Une fiche contenant au recto les règles de base (pour le samouraï des rues et le hacker par exemple), au verso les règles de création de personnage\n    - Une fiche contenant au recto les règles optionnelles (pour le MJ), au verso les règles de création de personnage",
+	"edition": 5,
+	"publisher": ["Black Book Editions"],
+	"releaseDate": ["2020-03-17"],
+	"gameDate": "2080-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}
