@@ -1,7 +1,7 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["26S024"],
-	"name": "Sim Dreams and Nightmares",
+	"name": "Sim Dreams & Nightmares",
 	"category": "sourcebook",
 	"type": "digital",
 	"originalLanguage": "en",

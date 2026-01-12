@@ -1,7 +1,7 @@
 {
 	"$schema": "../$schemas/data.schema.json",
 	"sku": ["7900", "7901", "10700", "1273", "4829172398"],
-	"name": "Shadowrun Second",
+	"name": "Shadowrun: Second Edition",
 	"category": "rulebook",
 	"type": "scan",
 	"names": {

@@ -5,6 +5,7 @@
 	"category": "boardgame",
 	"type": "scan",
 	"originalLanguage": "en",
+	"names": { "es": "ZDM: Zona Densamente Militarizada" },
 	"description": "D.M.Z. is a game of urban comat in the near future. It is a future that may resemble your darkes nightmares or your deepest dreams. In the year of 2050, the integration of technology and the Human form has changed global society profoundly. It is a time of ultimate luxury for the rich and bottomless despair for the poor. Multinational corporations rule, their needs and desires overshadowing the wills of nations. In the streets, violence holds sway, with sybernetically enhanced wariors battling for control of buildings, blocks, and even cities. The police forces, now operated by corporate subcontractors, seek to maintain control. The slide towards anarchy see,s irrevocable.\nAt the same time, the very nature of the planet has changed, too. Magic has returned to the world in force, and with it, the rebirth of ancient races of Elves, Dwarfs, Orks and Trolls. But this is not one of the great civilizations of old; this is one of power and greed, of evil in the board room and anarchy in the streets. The animals of mithology have also returned to roam the Earth: Vampires, Ghouls, Gargoyles, Hell Hounds, and Dragons. With the return of magic, mankind once more remembers its ways and its uses. Magician flourish, exerting their influence equally in the corporate board rooms and on the streets.",
 	"edition": 1,
 	"publisher": ["FASA Corporation"],

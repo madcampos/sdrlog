@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["9639047627"],
+	"name": "Cyberkommandó",
+	"category": "novel",
+	"type": "print",
+	"originalLanguage": "hu",
+	"description": "2060. Mágia, high-tech és információ. A Felébredt Világ három mozgatórugója. Birtoklásukért élet-halálharc dúl, mind a csillogó, mamutcégek uralta felszínen, mind a mélyben, az árnyékok birodalmában. Ezt néha az olyan, aránylag nyugalmas életet élő átlagpolgárok is kénytelenek megtapasztalni, mint Frank Robins, aki a véletlenek összejátszása miatt, igen rövid idő alatt veszti el a Rendszerbe vetett hitét, egzisztenciáját, sőt, kis híján életét is, és tapasztalja meg a Felébredt Világ rideg valóságát a másik oldalról. A cukormázas felszín alatt lapuló árnyvilágban Frank villámgyorsan ráébred, hogy a valóság izgalmasabb, fordulatosabb, mi több, vérfagyasztóbb, mint amit egy hozzá hasonló trideó-forgatókönyvíró valaha is kitalálhat",
+	"edition": 3,
+	"publisher": ["Other"],
+	"releaseDate": ["2000-06-01"],
+	"gameDate": "2060-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -5,6 +5,7 @@
 	"category": "mission",
 	"type": "digital",
 	"originalLanguage": "en",
+	"names": { "fr": "La Rose du chevalier" },
 	"description": "Eight teams escorting eight Damien Knights. Will the real Damien Knight please stand up.",
 	"edition": 4,
 	"publisher": ["Catalyst Game Labs"],

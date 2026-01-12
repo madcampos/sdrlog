@@ -17,5 +17,6 @@
 	"releaseDate": ["2019-08-26", "2019-10-01"],
 	"gameDate": "2080-01",
 	"status": "ok",
-	"cover": "./cover.jpg"
+	"cover": "./cover.jpg",
+	"notes": "The \"City Editions\" of Berlin and Seattle include extra content for each city"
 }

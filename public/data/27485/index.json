@@ -4,14 +4,14 @@
 	"name": "Boundless Mercy",
 	"category": "mission",
 	"type": "digital",
-	"names": { "de": "Gnade ohne Grenzen" },
+	"names": { "de": "Gnade ohne Grenzen", "fr": "Shadowrun Héritage - Une Miséricorde infinie" },
 	"originalLanguage": "en",
 	"description": "Elizabeth Nunn, a delightful woman who happens to have an odd habit of hanging out in hospitals and abandoned churches, has a grudge. A deep grudge. The kind of grudge that requires professional help to work out, and we're not talking about a psychotherapist. She needs shadowrunners, and if they're willing to take on the job, they'll encounter fierce gangers, wild critters, and members of a secret magical society who fiercely guard their mysteries. If the runners can survive, they can find out just what Nunn is mad about—and how far she is willing to go for her revenge.",
 	"edition": 5,
 	"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
 	"releaseDate": ["2015-10-16", "2016-12-01"],
 	"gameDate": "2077-08",
-	"notes": "The German edition also has a summary of \"Montreal 2074\".",
+	"notes": "The German edition also has a summary of \"Montreal 2074\". The French edition includes a full version of \"Montreal 2074\".",
 	"status": "ok",
 	"cover": "./cover.jpg"
 }

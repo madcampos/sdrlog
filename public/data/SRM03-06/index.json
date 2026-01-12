@@ -5,6 +5,7 @@
 	"category": "mission",
 	"type": "digital",
 	"originalLanguage": "en",
+	"names": { "fr": "Dérapages" },
 	"description": "Defend a truck - What could possibly go wrong?",
 	"edition": 4,
 	"publisher": ["Catalyst Game Labs"],

@@ -1,0 +1,15 @@
+{
+	"$schema": "../$schemas/data.schema.json",
+	"sku": ["BBESRV03"],
+	"name": "Shadowrun 4 vintage : Aztlan + Denver",
+	"category": "sourcebook",
+	"type": "digital",
+	"originalLanguage": "fr",
+	"description": "**Les choses ne sont pas si simples, omae.**\n\nC’est à Denver qu’a été signée la paix entre les Anglos et les Amérindiens. Divisée mais devenue un carrefour majeur des Ombres et de la contrebande, abritant le plus célèbre des paradis numériques pour pirates informatiques, elle reste au confluent des cultures américaines, entre les anciens USA et les Nations des Américains d’origine.\n\nDont l’inquiétante nation d’Aztlan, avec ses sectes vouant un culte sanguinaire aux anciens dieux aztèques et son État noyauté par Aztechnology, mégacorporation édifiée grâce au trafic de drogue. Ce pays peut être l’eldorado du runner ambitieux. Ou son pire cauchemar.\n\nDenver décrit l’histoire de la ville, ses divers secteurs et le paradis numérique du Nexus, et les rumeurs et mystères qui entourent la cité avec, réservé au MJ, certains de ses secrets les mieux gardés. Aztlan décrit les habitants, l’histoire, l’économie et l’actualité de la nation d’Aztlan, notamment Aztechnology, la magie inhabituelle des Aztlans, et le conflit du Yucatan.",
+	"edition": 4,
+	"publisher": ["Black Book Editions"],
+	"releaseDate": ["2015-02-26"],
+	"gameDate": "2075-01",
+	"status": "missing",
+	"cover": "./cover.jpg"
+}

@@ -5,6 +5,7 @@
 	"category": "mission",
 	"type": "digital",
 	"originalLanguage": "en",
+	"names": { "fr": "Un autre style" },
 	"description": "As any artist will tell you, the art scene can be brutal, especially in a high-octane setting like Manhattan. There are plenty of horror stories to go around—but none of them can touch what's about to go down at the Guggenheim.\nIn this Mission, Shadowrun players will find themselves in the middle of an art opening unlike any other, with chaos and screaming and dancing statues. Unless they keep their wits about them, the latest masterpiece in the museum will be painted in blood—and to make things worse, if they can't defuse the situation, they might not get paid.",
 	"edition": 4,
 	"publisher": ["Catalyst Game Labs"],

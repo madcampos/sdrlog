@@ -5,6 +5,7 @@
 	"category": "mission",
 	"type": "digital",
 	"originalLanguage": "en",
+	"names": { "fr": "Firestorm" },
 	"description": "It's the Easy Ones that Get You.\nIf you've survived enough runs, you know that the ones that sound easy are the ones that get you. And what could be easier than recovering a runaway drone?\nAs it turns out, plenty. The drone is acting strangely--strange enough that two megacorporations are interested in its fate. And there are others, who are no fans of the megacorps, who have got the scent of what's going on as well. The chase for the drone is putting a lot of people on a crash course, and when they collide, guns are going to come out. Can you survive the crossfire?",
 	"edition": 4,
 	"publisher": ["Catalyst Game Labs"],

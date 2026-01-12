@@ -5,6 +5,7 @@
 	"category": "mission",
 	"type": "digital",
 	"originalLanguage": "en",
+	"names": { "fr": "Sojaplanning" },
 	"description": "People die every day. People without SINs die even more frequently. That's not news. But when people without SINs are being poisoned, when it looks like they're being targeted somehow—well, that's no good. If someone's going after people without SINs, that means the next target could be one of your contacts, or your fixer, or even you. \nThat would be incentive enough for most runners to look into this spate of poisoning, but Mr. Johnson's got some cash to throw around, and maybe some hints of where to start looking. In Food Poisoning, runners have the chance to trace the spate of poisonings to its source, and to uncover the double-crosses and machinations behind all the deaths.",
 	"edition": 4,
 	"publisher": ["Catalyst Game Labs"],

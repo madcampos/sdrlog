@@ -4,7 +4,10 @@
 	"name": "Dawn Of The Artifacts 4: New Dawn",
 	"category": "mission",
 	"type": "digital",
-	"names": { "de": "Morgengrauen - Vierter Teil der Artefaktjagd-Kampagne" },
+	"names": {
+		"de": "Morgengrauen - Vierter Teil der Artefaktjagd-Kampagne",
+		"pt-BR": "Um Novo Alvorecer - Alavora dos Artefatos 4"
+	},
 	"originalLanguage": "en",
 	"description": "One more artifact. One more chance for a big payday. One more run to distant lands and high seas, racing against time and the wealthy, ruthless powers who want the artifact for themselves. At the end of this, if you succeed, four powerful artifacts will be gathered together, and they will be poised to shake the world.\nTo finish the quest for the artifacts, runners will have to travel to Hong Kong, track down the mobile city of Karavan, penetrate the corp enclave of Neo-Tokyo, and survive an assault on the high seas. The final adventure in the Dawn of the Artifacts series, New Dawn brings the story of the gathering of the artifacts to a rollicking conclusion while setting the stage for the changes the Sixth World will experience once the true power of these artifacts is tapped and unleashed.",
 	"edition": 4,
