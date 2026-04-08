@@ -1,18 +1,9 @@
-import { registerSW } from 'virtual:pwa-register';
-import type { SdrLoadingScreen } from '../components/SdrLoadingScreen/index.ts';
-
-registerSW({
-	onOfflineReady() {
-		// TODO: add notification
-	},
-	onNeedRefresh() {
-		// TODO: invoke refresh updater
-	}
-});
+// TODO: re-add PWA handler
 
 window.addEventListener('DOMContentLoaded', async () => {
 	try {
-		const loadingScreen = document.querySelector('sdr-loading-screen') as SdrLoadingScreen;
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		const loadingScreen = document.querySelector('sdr-loading-screen')!;
 		loadingScreen.max = 3;
 
 		const { I18n } = await import('./intl/translations');

@@ -24,7 +24,7 @@ import { openFile } from '../../js/files/file-open';
 import { formatFullDate } from '../../js/intl/formatting';
 import { Router } from '../../router/router';
 
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-view-item-details')
 class SdrViewItemDetails extends LitElement implements RouterView {
@@ -82,7 +82,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 	#updateInputValue(evt: Event, prop: 'category' | 'description' | 'edition' | 'gameDate' | 'name' | 'notes' | 'originalLanguage' | 'status' | 'type') {
 		const target = evt.target as SdrEditBox | SdrSelect | SdrTextArea;
 
-		this.#material[prop] = (prop === 'edition' ? Number.parseInt(target.value) : target.value) as never;
+		this.#material[prop] = (prop === 'edition' ? Number.parseInt(target.value, 10) : target.value) as never;
 	}
 
 	#addItemToList(evt: CustomEvent, list: 'publisher' | 'releaseDate' | 'sku') {
@@ -491,14 +491,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 								<sdr-edit-list id="publisher" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'publisher')}">
 									<span slot="label">Publisher</span>
 									<sdr-select slot="input" required>
-										${
-			guard(MATERIAL_PUBLISHERS, () =>
-				MATERIAL_PUBLISHERS.map((publisher) =>
-					html`
-											<option>${publisher}</option>
-										`
-				))
-		}
+										${MATERIAL_PUBLISHERS.map((publisher) => html`<option>${publisher}</option>`)}
 									</sdr-select>
 
 									${

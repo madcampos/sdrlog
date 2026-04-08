@@ -3,7 +3,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { marked } from 'marked';
 
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-textarea')
 class SdrTextArea extends LitElement {

@@ -6,7 +6,7 @@ import { registerShortcut } from '../../js/util/keyboard';
 import { Router } from '../../router/router';
 import { SearchEngine } from './search-engine';
 
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-search-box')
 class SdrSearchBox extends LitElement {

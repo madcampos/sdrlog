@@ -1,7 +1,4 @@
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
-if (!('URLPattern' in globalThis)) {
-	await import('urlpattern-polyfill');
-}
 
 type IsParameter<Part> = Part extends `:${infer ParamName}` ? ParamName : never;
 

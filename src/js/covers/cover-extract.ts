@@ -40,6 +40,7 @@ export async function extractCover(file: File) {
 	canvas.width = coverViewport.width;
 
 	await page.render({
+		canvas,
 		canvasContext,
 		viewport: coverViewport
 	}).promise;
@@ -53,6 +54,7 @@ export async function extractCover(file: File) {
 	canvas.width = thumbViewport.width;
 
 	await page.render({
+		canvas,
 		canvasContext,
 		viewport: thumbViewport
 	}).promise;
@@ -71,7 +73,7 @@ export async function optimizeCover(cover: ImageData) {
 	optimize ??= (await import('./cover-optimizer')).optimize;
 
 	const { width: coverWidth, height: coverHeight, data: coverData } = cover;
-	const optimizedCover = await optimize(coverData.buffer as ArrayBuffer, { width: coverWidth, height: coverHeight });
+	const optimizedCover = await optimize(coverData.buffer, { width: coverWidth, height: coverHeight });
 
 	return optimizedCover;
 }

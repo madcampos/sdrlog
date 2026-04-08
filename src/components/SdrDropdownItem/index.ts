@@ -4,7 +4,7 @@ import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 
 import { GamepadHandler } from '../../js/gamepad/gamepad-events';
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-dropdown-item')
 class SdrDropdownItem extends LitElement {

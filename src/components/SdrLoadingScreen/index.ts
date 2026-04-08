@@ -51,7 +51,7 @@ class SdrLoadingScreen extends HTMLElement {
 	}
 
 	get max() {
-		return Number.parseInt(this.getAttribute('max') ?? '0');
+		return Number.parseInt(this.getAttribute('max') ?? '0', 10);
 	}
 
 	set max(newValue: number) {
@@ -76,7 +76,7 @@ class SdrLoadingScreen extends HTMLElement {
 		if (oldValue !== newValue) {
 			switch (name) {
 				case 'max':
-					this.max = Number.parseInt(newValue ?? '0');
+					this.max = Number.parseInt(newValue ?? '0', 10);
 					break;
 				default:
 			}

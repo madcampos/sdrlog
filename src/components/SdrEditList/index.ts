@@ -3,7 +3,7 @@ import type { SdrEditListItem } from '../SdrEditListItem';
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, queryAssignedElements } from 'lit/decorators.js';
 
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 declare global {
 	interface GlobalEventHandlersEventMap {

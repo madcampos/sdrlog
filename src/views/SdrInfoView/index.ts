@@ -6,7 +6,7 @@ import { customElement, state } from 'lit/decorators.js';
 import { registerShortcut } from '../../js/util/keyboard';
 import { Router } from '../../router/router';
 
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-view-app-info')
 class SdrViewAppInfo extends LitElement implements RouterView {

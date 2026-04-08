@@ -3,7 +3,7 @@ import type { SdrRadioItem } from '../SdrRadioItem';
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, query, queryAssignedElements } from 'lit/decorators.js';
 
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-radio-group')
 class SdrRadioGroup extends LitElement {

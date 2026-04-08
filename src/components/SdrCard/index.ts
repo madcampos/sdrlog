@@ -8,7 +8,7 @@ import { getIDBItem } from '../../js/data/idb-persistence';
 import { Router } from '../../router/router';
 
 import { MATERIAL_CATEGORY_INFO, MATERIAL_EDITION_INFO, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants.ts';
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 interface CreateCardOptions {
 	name: string;

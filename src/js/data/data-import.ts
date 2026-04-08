@@ -10,8 +10,8 @@ import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getFileHash } from '../files/file-import';
 import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
 
+import dataUrl from '../../../public/data/index.json?url';
 import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
-import dataUrl from '../../data/data.json?url';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extract';
 
 export async function fetchData() {
@@ -72,7 +72,7 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 		description: material.description?.toString() ?? '',
 		notes: material.notes?.toString() ?? '',
 
-		edition: Number.parseInt(material.edition?.toString() ?? '0') as Material['edition'],
+		edition: Number.parseInt(material.edition?.toString() ?? '0', 10) as Material['edition'],
 
 		gameDate: ((/^\d{4}-\d{2}$/iu).test(material.gameDate?.toString() ?? '') ? material.gameDate?.toString() : '') as Material['gameDate'],
 

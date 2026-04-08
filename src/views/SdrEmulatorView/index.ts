@@ -10,7 +10,7 @@ import { extractMetadataFromFileName } from '../../js/files/file-import';
 import { loadFile } from '../../js/files/file-open';
 import { Router } from '../../router/router';
 
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 interface EmulatorModule extends EmscriptenModule {
 	canvas: HTMLCanvasElement;
@@ -237,8 +237,8 @@ class SdrViewEmulator extends LitElement implements RouterView {
 
 		let dpadDirection: string | null = null;
 
-		dpad.on('move', (_, { direction }) => {
-			dpadDirection = direction?.angle ?? null;
+		dpad.on('move', (evt) => {
+			dpadDirection = evt.data.direction?.angle ?? null;
 
 			if (dpadDirection) {
 				this.#sendKeyEvent('keydown', dpadDirection);
@@ -271,7 +271,6 @@ class SdrViewEmulator extends LitElement implements RouterView {
 		this.#mkdirTree(folderPath);
 
 		for (const [path, file] of files) {
-			 
 			const buffer = await file.arrayBuffer();
 
 			if (file.type === 'application/x-directory') {
@@ -345,10 +344,10 @@ class SdrViewEmulator extends LitElement implements RouterView {
 			if (memoryStats.size > 0 && saveStats.size > 0) {
 				this.#emulator?.pauseMainLoop();
 
-				const stateBuffer = this.#emulator?.FS.readFile(statePath) ?? new Uint8Array();
+				const stateBuffer = new Uint8Array(this.#emulator?.FS.readFile(statePath) ?? new Uint8Array());
 				const stateFile = new File([stateBuffer], statePath);
 
-				const saveBuffer = this.#emulator?.FS.readFile(savePath) ?? new Uint8Array();
+				const saveBuffer = new Uint8Array(this.#emulator?.FS.readFile(savePath) ?? new Uint8Array());
 				const saveFile = new File([saveBuffer], savePath);
 
 				await setIDBItem('emulator', statePath, stateFile);

@@ -56,7 +56,7 @@ export async function openFile(fileInfo: FileSystemEntryForMaterial) {
 export async function loadFile(id: string) {
 	const { handler } = await getIDBItemByIndex('files', 'itemId', id) ?? {};
 
-	if (!handler || handler.kind !== 'file') {
+	if (handler?.kind !== 'file') {
 		throw new Error('File does not exist.');
 	}
 

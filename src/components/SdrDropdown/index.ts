@@ -5,7 +5,7 @@ import { customElement, property, query, queryAssignedElements } from 'lit/decor
 
 import { GamepadHandler } from '../../js/gamepad/gamepad-events';
 import { Router } from '../../router/router';
-import style from './style.css?inline' assert { type: 'css' };
+import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-dropdown')
 class SdrDropdown extends LitElement {

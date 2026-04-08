@@ -69,11 +69,11 @@ const database = openDB<DatabaseSchema>('SDRLog', IDB_VERSION, {
 });
 
 export async function getIDBItem<T extends Collections>(collection: T, key: DatabaseSchema[T]['key']) {
-	return (await database).get<T>(collection, key);
+	return (await database).get(collection, key);
 }
 
 export async function getAllIDBValues<T extends Collections>(collection: T) {
-	return (await database).getAll<T>(collection);
+	return (await database).getAll(collection);
 }
 
 export async function getAllIDBKeys<T extends Collections>(collection: T) {
