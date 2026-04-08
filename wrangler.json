@@ -1,0 +1,27 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "sdrlog",
+	"compatibility_date": "2026-04-07",
+	"compatibility_flags": ["nodejs_compat"],
+	"keep_vars": false,
+	"send_metrics": false,
+	"preserve_file_names": true,
+	"minify": true,
+	"workers_dev": false,
+	"preview_urls": false,
+	"route": { "pattern": "sdrlog.madcampos.dev", "custom_domain": true },
+	"dev": {
+		"ip": "localhost",
+		"port": 9090,
+		"local_protocol": "https",
+		"upstream_protocol": "https"
+	},
+	"assets": {
+		"directory": "./dist",
+		"binding": "Assets",
+		"run_worker_first": false,
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "404-page"
+	},
+	"vars": { "NODE_ENV": "production" }
+}

@@ -2,14 +2,7 @@
 // eslint-env node
 import { readFileSync } from 'node:fs';
 
-import { ModuleKind, ModuleResolutionKind, NewLineKind, ScriptTarget } from 'typescript';
-import { defineConfig, type UserConfig } from 'vite';
-import { type ManifestOptions, VitePWA as vitePWA } from 'vite-plugin-pwa';
-import { vitePluginTypescriptTranspile } from 'vite-plugin-typescript-transpile';
-import { assetsCache, coversCache, externalResourcesCache, pagesCache, scriptsCache, searchHandler, shareTarget, thumbsCache } from './src/sw-cache';
-
-import manifest from './src/manifest.json';
-import tsconfig from './tsconfig.json';
+import { type UserConfig, defineConfig } from 'vite';
 
 const IS_DEBUG = false;
 
@@ -27,52 +20,6 @@ export default defineConfig(({ mode }) => {
 	}
 
 	const config: UserConfig = {
-		plugins: [
-			vitePluginTypescriptTranspile({
-				compilerOverrides: {
-					...tsconfig.compilerOptions,
-					module: ModuleKind.ESNext,
-					moduleResolution: ModuleResolutionKind.Node16,
-					newLine: NewLineKind.LineFeed,
-					target: ScriptTarget.ES2023
-				}
-			}),
-			vitePWA({
-				registerType: 'prompt',
-				minify: true,
-				includeAssets: ['/icons/favicon.svg', '/index.html'],
-				manifest: {
-					...(manifest as Partial<ManifestOptions>),
-					scope: baseUrl
-				},
-				scope: baseUrl,
-				showMaximumFileSizeToCacheInBytesWarning: true,
-				workbox: {
-					cacheId: crypto.randomUUID(),
-					globPatterns: [],
-					navigateFallback: '/index.html',
-					cleanupOutdatedCaches: true,
-					clientsClaim: true,
-					navigationPreload: true,
-					directoryIndex: 'index.html',
-					maximumFileSizeToCacheInBytes: 1024 * 128,
-					skipWaiting: true,
-					runtimeCaching: [
-						thumbsCache,
-						coversCache,
-						assetsCache,
-						scriptsCache,
-						pagesCache,
-						externalResourcesCache,
-						shareTarget,
-						searchHandler
-					]
-				},
-				devOptions: {
-					enabled: false
-				}
-			})
-		],
 		esbuild: { target: 'esnext' },
 		base: baseUrl,
 		envPrefix: 'APP_',
@@ -90,9 +37,11 @@ export default defineConfig(({ mode }) => {
 		build: {
 			target: 'esnext',
 			emptyOutDir: true,
-			outDir: '../dist'
+			outDir: '../dist',
+			rolldownOptions: {
+				transform: { decorator: { legacy: true } }
+			}
 		},
-		optimizeDeps: { esbuildOptions: { target: 'esnext' } },
 		preview: {
 			https: sslOptions,
 			open: true,

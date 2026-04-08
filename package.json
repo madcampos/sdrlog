@@ -5,48 +5,44 @@
 	"license": "MIT",
 	"type": "module",
 	"engines": {
-		"node": ">=20.0.0"
-	},
-	"volta": {
-		"node": "22.14.0"
+		"node": ">=24.13.0",
+		"pnpm": ">=10.26.2"
 	},
 	"scripts": {
-		"prepare": "husky",
+		"bootstrap:certs": "mkdir certs && mkcert -key-file=certs/server.key -cert-file=certs/server.crt localhost",
 		"start": "vite",
 		"typecheck": "tsc --noEmit",
 		"lint:js": "eslint --fix",
-		"lint": "npm run typecheck && npm run lint:js",
+		"lint": "pnpm run typecheck && pnpm run lint:js",
 		"format": "dprint fmt",
 		"build": "vite build",
-		"prepreview": "npm run build",
-		"preview": "vite preview --port 3000"
+		"prepreview": "pnpm run build",
+		"preview": "vite preview --port 3000",
+		"predeploy": "pnpm run build",
+		"deploy": "wrangler deploy --minify"
 	},
 	"dependencies": {
 		"epubjs": "^0.3.93",
-		"idb": "^8.0.0",
+		"idb": "^8.0.3",
 		"jszip": "^3.10.1",
-		"lit": "^3.3.0",
-		"marked": "^17.0.0",
-		"nipplejs": "^0.10.2",
-		"open-props": "1.7.8",
-		"pdfjs-dist": "^5.4.54",
-		"urlpattern-polyfill": "^10.1.0"
+		"lit": "^3.3.2",
+		"marked": "^17.0.5",
+		"nipplejs": "^1.0.1",
+		"open-props": "1.7.23",
+		"pdfjs-dist": "^5.6.205",
+		"wrangler": "4.79.0"
 	},
 	"devDependencies": {
-		"@types/emscripten": "^1.41.2",
-		"@types/node": "25.2.2",
-		"@types/wicg-file-system-access": "^2023.10.5",
-		"@typescript-eslint/eslint-plugin": "^8.54.0",
-		"@typescript-eslint/parser": "^8.31.1",
-		"eslint": "^10.0.0",
-		"globals": "^17.3.0",
-		"husky": "^9.1.7",
-		"typed-query-selector": "^2.12.0",
-		"typescript": "^5.9.2",
-		"vite": "^7.3.1",
-		"vite-plugin-pwa": "^1.2.0",
-		"vite-plugin-typescript-transpile": "0.5.4",
-		"workbox-window": "^7.3.0"
+		"@types/emscripten": "^1.41.5",
+		"@types/node": "25.5.0",
+		"@types/wicg-file-system-access": "^2023.10.7",
+		"@typescript-eslint/eslint-plugin": "^8.58.0",
+		"@typescript-eslint/parser": "^8.58.0",
+		"eslint": "^10.1.0",
+		"globals": "^17.4.0",
+		"typed-query-selector": "^2.12.1",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.7"
 	},
 	"overrides": {
 		"has": "npm:@nolyfill/has@^1",

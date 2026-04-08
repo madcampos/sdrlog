@@ -1,0 +1,16 @@
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - "wrangler"
+  - "workerd"
+  - "miniflare"
+  - "@cloudflare/*"
+  - "vite"
+  - "rolldown"
+  - "@rolldown/*"
+trustPolicy: "no-downgrade"
+preferFrozenLockfile: true
+ignoreScripts: true
+ignoreDepScripts: true
+strictDepBuilds: true
+engineStrict: false
+ignorePnpmfile: true
