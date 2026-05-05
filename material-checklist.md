@@ -13,6 +13,15 @@
 # Materials to add
 
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
+- [Mean Streets](https://store.catalystgamelabs.com/products/shadowrun-mean-streets)
+- Asphalt Jungle
+- [Sixth World Snapshots](https://books2read.com/u/3J71Qg)
+- [Cortext Bomb](https://books2read.com/ShadowrunCortexBomb)
+- [Trial Under Fire](https://books2read.com/ShadowrunTrialUnderFire)
+- [Core Rule Book: City Edition: Hong Kong](https://www.catalystgamelabs.com/news/enter-hong-kong)
+- Sprawl Stories #4
+- Carrying Capacity (Transverse Noir #1, A Literary Roleplaying Game)
+- Chaos Tour: The Top Drek Omnibus
 
 # Archive
 
