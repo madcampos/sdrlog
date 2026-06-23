@@ -22,6 +22,12 @@
 - Sprawl Stories #4
 - Carrying Capacity (Transverse Noir #1, A Literary Roleplaying Game)
 - Chaos Tour: The Top Drek Omnibus
+- Shadowrun Missions: 2081-16: It Ends, It Begins
+- Shadowrun Missions: 2081-17: Framed In Blood
+- Imre Grey
+- Into the Cold (A Desert Wars Story)
+- Chaos Tour: The Top Drek Omnibus
+- Wizard Riders: Quick-Start Rules (Free RPG Day)
 
 # Archive
 
