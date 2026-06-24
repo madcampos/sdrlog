@@ -304,11 +304,11 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 			this.material = material as Material;
 
-			void getCoverUrl(material.sku[0] ?? '').then((coverUrl) => {
+			void getCoverUrl(material.sku[0]).then((coverUrl) => {
 				this.coverUrl = coverUrl;
 			});
 
-			void getIDBItemsByIndex('files', 'itemId', material.sku[0] ?? '').then((fileList) => {
+			void getIDBItemsByIndex('files', 'itemId', material.sku[0]).then((fileList) => {
 				for (const file of fileList) {
 					this.files.push(file);
 				}

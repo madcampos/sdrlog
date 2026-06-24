@@ -8,26 +8,25 @@ class SdrProgressOverlay extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true })
-	override accessor title: string;
+	override title: string;
 
 	@property({ type: String, reflect: true })
-	accessor info: string;
+	info: string;
 
 	@property({ type: Number, reflect: true })
-	accessor total: number;
+	total: number;
 
 	@property({ type: String, reflect: true })
-	accessor count: string;
+	count: string;
 
 	@property({ type: Number, reflect: true })
-	accessor value: number;
+	value: number;
 
 	@property({ type: Boolean, reflect: true })
-	accessor open: boolean;
+	open: boolean;
 
 	@query('dialog')
-	// @ts-expect-error
-	accessor #dialog: HTMLDialogElement;
+	private dialog!: HTMLDialogElement;
 
 	constructor() {
 		super();
@@ -85,12 +84,12 @@ class SdrProgressOverlay extends LitElement {
 
 		if (changedProperties.has('open')) {
 			if (this.open) {
-				this.#dialog.showModal();
-				this.#dialog.focus();
+				this.dialog.showModal();
+				this.dialog.focus();
 
 				this.dispatchEvent(new CustomEvent('open', { bubbles: true, composed: true, cancelable: true }));
 			} else {
-				this.#dialog.close();
+				this.dialog.close();
 
 				this.dispatchEvent(new CustomEvent('close', { bubbles: true, composed: true, cancelable: true }));
 			}

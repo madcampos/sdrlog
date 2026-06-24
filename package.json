@@ -10,10 +10,9 @@
 	},
 	"scripts": {
 		"bootstrap:certs": "mkdir certs && mkcert -key-file=certs/server.key -cert-file=certs/server.crt localhost",
-
 		"start": "vite",
 		"typecheck": "tsc --noEmit",
-		"lint:js": "eslint --fix",
+		"lint:js": "oxlint --fix",
 		"lint": "pnpm run typecheck && pnpm run lint:js",
 		"format": "dprint fmt",
 		"build": "vite build",

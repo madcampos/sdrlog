@@ -5,6 +5,7 @@ export function createComparer(options: Intl.CollatorOptions = {}, language: str
 
 	sorters[sorterKey] ??= new Intl.Collator(language, options);
 
+	// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 	return (x: string, y: string) => (sorters[sorterKey] as Intl.Collator).compare(x, y);
 }
 

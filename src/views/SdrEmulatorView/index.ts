@@ -24,6 +24,7 @@ interface EmulatorModule extends EmscriptenModule {
 	pauseMainLoop(): void;
 	resumeMainLoop(): void;
 	callMain(args: string[]): void;
+	// oxlint-disable-next-line id-length
 	FS: typeof FS;
 }
 

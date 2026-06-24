@@ -10,6 +10,7 @@ export class SearchEngine {
 		const { tag, value } = tagsRegex.exec(tagString)?.groups ?? { tag: 'name', value: tagString };
 
 		return {
+			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 			tag: tag as FilterTypes,
 			value
 		};
@@ -45,12 +46,16 @@ export class SearchEngine {
 		}
 
 		window.requestAnimationFrame(() => {
+			if (!filterElement) {
+				return;
+			}
+
 			if ((tag === 'category' && value === 'all') || (tag === 'name' && value === '')) {
-				(filterElement as HTMLElement).innerText = '';
+				filterElement.innerText = '';
 			} else if (tag === 'name') {
-				(filterElement as HTMLElement).innerText = `sdr-card:not([title*="${value}" i]){ display:none; }`;
+				filterElement.innerText = `sdr-card:not([title*="${value}" i]){ display:none; }`;
 			} else {
-				(filterElement as HTMLElement).innerText = `sdr-card:not([${tag}*="${value}" i]){ display:none; }`;
+				filterElement.innerText = `sdr-card:not([${tag}*="${value}" i]){ display:none; }`;
 			}
 		});
 	}

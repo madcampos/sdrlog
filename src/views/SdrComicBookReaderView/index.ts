@@ -37,25 +37,25 @@ class SdrViewCbzReader extends LitElement implements RouterView {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
 	@property({ type: Boolean, reflect: true })
-	accessor loaded: boolean;
+	loaded: boolean;
 
 	@state()
-	accessor open: boolean;
+	open: boolean;
 
 	@state()
-	accessor selectedPage: string;
+	selectedPage: string;
 
 	@state()
-	accessor pages: Page[];
+	pages: Page[];
 
 	@state()
-	accessor toc: string[];
+	toc: string[];
 
 	@state()
-	accessor nextPageVisibility: 'hidden' | 'visible';
+	nextPageVisibility: 'hidden' | 'visible';
 
 	@state()
-	accessor previousPageVisibility: 'hidden' | 'visible';
+	previousPageVisibility: 'hidden' | 'visible';
 
 	#currentVisibleImage: HTMLImageElement | undefined;
 

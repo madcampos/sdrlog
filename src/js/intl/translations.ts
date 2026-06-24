@@ -32,6 +32,7 @@ export class I18n {
 	}
 
 	static #untranslateMessage(message: string) {
+		// oxlint-disable-next-line typescript/no-misused-spread
 		return [...message].map((char) => {
 			const RANDOM_CONST = 2;
 			const repeatTimes = Math.floor(Math.random() * RANDOM_CONST);
@@ -108,14 +109,17 @@ export class I18n {
 		const translationLocale = I18n.getMatchingLocale(locale);
 		const translationLanguage = `${translationLocale.language}-${translationLocale.region}`;
 
-		(document.querySelector('html') as HTMLHtmlElement).lang = translationLanguage;
+		// oxlint-disable-next-line typescript/no-non-null-assertion
+		document.querySelector('html')!.lang = translationLanguage;
 		localStorage.setItem('app-language', translationLanguage);
 
 		try {
 			// @ts-expect-error
+			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 			const translation = I18n.availableTranslations[translationLanguage] as string;
 
 			const request = await fetch(translation);
+			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 			const translationJson = await request.json() as Record<string, string>;
 
 			loadedTranslations = new Map(Object.entries(translationJson));
@@ -139,6 +143,7 @@ export class I18n {
 			}
 
 			if (node.nodeType === Node.ELEMENT_NODE) {
+				// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 				const { attributes } = node as Element;
 
 				for (const attribute of [...attributes]) {
@@ -157,6 +162,7 @@ export class I18n {
 
 		translateChildren(translatedTemplate);
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		return translatedTemplate as DocumentFragment;
 	}
 }

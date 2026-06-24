@@ -19,6 +19,7 @@ export async function fetchData() {
 		const res = await fetch(dataUrl);
 
 		if (res.ok) {
+			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 			const parsedFile = await res.json() as SDRLogData;
 
 			return parsedFile.items;
@@ -37,11 +38,11 @@ export async function fetchItems() {
 
 	for (const material of currentData) {
 		// @ts-expect-error
-		mergedData.set(material.sku[0] ?? '', material);
+		mergedData.set(material.sku[0], material);
 	}
 
 	for (const material of onlineData) {
-		mergedData.set(material.sku[0] ?? '', material);
+		mergedData.set(material.sku[0], material);
 	}
 
 	await setIDBItems('items', [...mergedData.entries()]);
@@ -57,6 +58,7 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 		const ensureString = ensureNonEmpty.map((val) => val.toString());
 		const ensureUnique = [...new Set(ensureString)];
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		return ensureUnique as [T, ...T[]];
 	}
 
@@ -64,6 +66,7 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 		const ensureString = value?.toString() ?? '';
 		const ensureValid = Object.keys(enumValues).includes(ensureString) ? ensureString : fallback;
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		return ensureValid as T;
 	}
 
@@ -72,8 +75,10 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 		description: material.description?.toString() ?? '',
 		notes: material.notes?.toString() ?? '',
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		edition: Number.parseInt(material.edition?.toString() ?? '0', 10) as Material['edition'],
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		gameDate: ((/^\d{4}-\d{2}$/iu).test(material.gameDate?.toString() ?? '') ? material.gameDate?.toString() : '') as Material['gameDate'],
 
 		category: handleEnum<Material['category']>(material.category, MATERIAL_CATEGORY_INFO, ''),
@@ -102,6 +107,7 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 
 		for (const [url, title] of Object.entries(material.links)) {
 			if (typeof url === 'string' && typeof title === 'string') {
+				// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 				parsedMaterial.links[url as AbsoluteLink] = title;
 			}
 		}
@@ -132,6 +138,7 @@ export async function requestDataFileFromUser() {
 
 		const file = await fileHandle.getFile();
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		const parsedFile = JSON.parse(await file.text()) as Partial<SDRLogData>;
 
 		if (!parsedFile.items) {
@@ -140,7 +147,7 @@ export async function requestDataFileFromUser() {
 
 		const parsedItems = parsedFile.items.map((material) => parseMaterial(material));
 
-		await setIDBItems('items', parsedItems.map((material) => [material.sku[0] ?? '', material]));
+		await setIDBItems('items', parsedItems.map((material) => [material.sku[0], material]));
 	} catch (err) {
 		console.error('Failed to open data file.', err);
 	}

@@ -11,7 +11,7 @@ class SdrTab extends LitElement {
 	static override readonly styles = unsafeCSS(tabStyle);
 
 	@property({ type: String, reflect: true })
-	override accessor role: string;
+	override role: string;
 
 	declare ariaControls: string;
 
@@ -37,7 +37,7 @@ class SdrTabPanel extends LitElement {
 	static formAssociated = true;
 
 	@property({ type: String, reflect: true })
-	override accessor role: string;
+	override role: string;
 
 	declare ariaLabeledBy: string;
 
@@ -64,18 +64,16 @@ class SdrTabs extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true })
-	override accessor role: string;
+	override role: string;
 
 	@property({ type: Number })
-	accessor selectedTab: number;
+	selectedTab: number;
 
 	@queryAssignedElements({ selector: 'sdr-tab', slot: 'tab' })
-	// @ts-expect-error
-	accessor #tabList: SdrTab[];
+	private tabList!: SdrTab[];
 
 	@queryAssignedElements({ selector: 'sdr-tab-panel', slot: 'tabpanel' })
-	// @ts-expect-error
-	accessor #tabPanels: SdrTabPanel[];
+	private tabPanels!: SdrTabPanel[];
 
 	#internals: ElementInternals;
 
@@ -91,7 +89,7 @@ class SdrTabs extends LitElement {
 		this.selectedTab = 0;
 
 		document.addEventListener('focusin', () => {
-			const targetTabIndex = this.#tabList.findIndex((tab) => tab === document.activeElement);
+			const targetTabIndex = this.tabList.findIndex((tab) => tab === document.activeElement);
 
 			if (targetTabIndex !== -1) {
 				this.#isTabFocused = true;
@@ -110,36 +108,36 @@ class SdrTabs extends LitElement {
 					if (this.selectedTab > 0) {
 						this.selectedTab -= 1;
 					} else {
-						this.selectedTab = this.#tabList.length - 1;
+						this.selectedTab = this.tabList.length - 1;
 					}
 
-					this.#tabList[this.selectedTab]?.focus();
-					this.#tabList[this.selectedTab]?.click();
+					this.tabList[this.selectedTab]?.focus();
+					this.tabList[this.selectedTab]?.click();
 				} else if (evt.key === 'ArrowRight') {
 					evt.preventDefault();
 
-					if (this.selectedTab < this.#tabList.length - 1) {
+					if (this.selectedTab < this.tabList.length - 1) {
 						this.selectedTab += 1;
 					} else {
 						this.selectedTab = 0;
 					}
 
-					this.#tabList[this.selectedTab]?.focus();
-					this.#tabList[this.selectedTab]?.click();
+					this.tabList[this.selectedTab]?.focus();
+					this.tabList[this.selectedTab]?.click();
 				}
 			}
 		});
 	}
 
 	#updateTabs() {
-		this.#tabPanels.forEach((tabPanel, index) => {
+		this.tabPanels.forEach((tabPanel, index) => {
 			tabPanel.role = 'tabpanel';
 			tabPanel.id = `${this.id}-section-${index}`;
 			tabPanel.ariaLabeledBy = `${this.id}-tab-${index}`;
 			tabPanel.hidden = index !== this.selectedTab;
 		});
 
-		this.#tabList.forEach((tab, index) => {
+		this.tabList.forEach((tab, index) => {
 			tab.role = 'tab';
 			tab.id = `${this.id}-tab-${index}`;
 			tab.ariaSelected = index === this.selectedTab ? 'true' : 'false';
@@ -154,17 +152,18 @@ class SdrTabs extends LitElement {
 	}
 
 	#tabClick(evt: Event) {
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		const target = evt.target as SdrTab;
-		const tabPanel = this.#tabPanels.find((panel) => panel.id === target.ariaControls);
+		const tabPanel = this.tabPanels.find((panel) => panel.id === target.ariaControls);
 
 		if (tabPanel) {
-			this.selectedTab = this.#tabPanels.indexOf(tabPanel);
+			this.selectedTab = this.tabPanels.indexOf(tabPanel);
 
-			this.#tabPanels.forEach((panel, index) => {
+			this.tabPanels.forEach((panel, index) => {
 				panel.hidden = index !== this.selectedTab;
 			});
 
-			this.#tabList.forEach((tab, index) => {
+			this.tabList.forEach((tab, index) => {
 				tab.ariaSelected = index === this.selectedTab ? 'true' : 'false';
 
 				if (index !== this.selectedTab) {

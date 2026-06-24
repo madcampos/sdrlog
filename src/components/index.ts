@@ -1,12 +1,7 @@
 import 'iconify-icon';
 
-import './SdrButton/index.ts';
 import './SdrCard/index.ts';
-import './SdrDialog/index.ts';
 import './SdrDropArea/index.ts';
-import './SdrDropdown/index.ts';
-import './SdrDropdownItem/index.ts';
-import './SdrEditBox/index.ts';
 import './SdrEditList/index.ts';
 import './SdrEditListItem/index.ts';
 import './SdrGamepadBadge/index.ts';
@@ -17,7 +12,5 @@ import './SdrProgressOverlay/index.ts';
 import './SdrRadioGroup/index.ts';
 import './SdrRadioItem/index.ts';
 import './SdrSearchBox/index.ts';
-import './SdrSelect/index.ts';
 import './SdrTabs/index.ts';
-import './SdrTextArea/index.ts';
 import './SdrUpdateNotify/index.ts';

@@ -1,3 +1,4 @@
+// oxlint-disable no-await-in-loop
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues } from '../data/idb-persistence';
 
@@ -14,6 +15,7 @@ export async function saveCoversToFolder() {
 		progressOverlay.total = covers.length;
 
 		for (const cover of covers) {
+			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 			let { name, arrayBuffer } = cover as File;
 
 			if (cover instanceof FileSystemFileHandle) {
@@ -57,6 +59,7 @@ export async function saveThumbsToFolder() {
 		progressOverlay.total = thumbs.length;
 
 		for (const thumb of thumbs) {
+			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 			let { name, arrayBuffer } = thumb as File;
 
 			if (thumb instanceof FileSystemFileHandle) {

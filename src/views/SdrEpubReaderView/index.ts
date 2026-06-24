@@ -1,3 +1,4 @@
+// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 import type { RouteLocation, RouterView } from '../../router/router';
 
 import type { Book, Location as BookLocation, NavItem, Rendition } from 'epubjs';

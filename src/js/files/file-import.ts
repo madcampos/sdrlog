@@ -147,6 +147,7 @@ export async function readFiles() {
 		for (const { entry, path } of entries) {
 			progressOverlay.increment(entry.name);
 
+			// oxlint-disable-next-line no-await-in-loop
 			await saveFile(entry, path);
 		}
 	} catch (err) {

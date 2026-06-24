@@ -1,3 +1,4 @@
+// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion no-await-in-loop
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues, getIDBItem, setIDBItem } from '../data/idb-persistence';
 import { canExtractCover, canImportCover } from '../data/storage-conditions';

@@ -1,3 +1,4 @@
+// oxlint-disable no-await-in-loop
 import { getAllIDBEntries, setIDBItem } from '../data/idb-persistence';
 
 const mimeTypes = new Map([
@@ -15,7 +16,7 @@ export async function getEmulatorFiles() {
 		const zipFile = new File([fileBlob], 'bundle.zip', { type: 'application/zip' });
 
 		if (!('JSZip' in window)) {
-			// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+			// eslint-disable-next-line @typescript-eslint/consistent-type-imports typescript/consistent-type-assertions
 			(window as Window & { JSZip?: typeof import('jszip') }).JSZip = (await import('jszip')).default;
 		}
 

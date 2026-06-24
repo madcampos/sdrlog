@@ -9,11 +9,10 @@ class SdrUpdateNotify extends LitElement {
 	static override readonly styles = [unsafeCSS(style)];
 
 	@property({ type: String, reflect: true })
-	accessor message: string;
+	message: string;
 
 	@query('aside')
-	// @ts-expect-error
-	accessor #popup: HTMLElement;
+	private popup!: HTMLElement;
 
 	constructor() {
 		super();
@@ -26,12 +25,12 @@ class SdrUpdateNotify extends LitElement {
 	}
 
 	show(message: string) {
-		this.#popup.hidden = false;
+		this.popup.hidden = false;
 		this.message = message;
 	}
 
 	hide() {
-		this.#popup.hidden = true;
+		this.popup.hidden = true;
 	}
 
 	override render() {

@@ -6,7 +6,8 @@ export const MATERIAL_EDITION_INFO = {
 	3: '3rd',
 	4: '4th',
 	5: '5th',
-	6: '6th'
+	6: '6th',
+	0: '-'
 } as const;
 
 export const MATERIAL_LANGUAGES_INFO = {
@@ -21,7 +22,8 @@ export const MATERIAL_LANGUAGES_INFO = {
 	'he-IL': { icon: '🇮🇱', name: 'Hebrew' },
 	'pl-PL': { icon: '🇵🇱', name: 'Polish' },
 	'fi-FI': { icon: '🇫🇮', name: 'Finnish' },
-	'en-US': { icon: '🇺🇸', name: 'English' }
+	'en-US': { icon: '🇺🇸', name: 'English' },
+	'': { icon: '', name: '-' }
 } as const;
 
 export const MATERIAL_PUBLISHERS: readonly MaterialPublisher[] = [
@@ -38,24 +40,26 @@ export const MATERIAL_PUBLISHERS: readonly MaterialPublisher[] = [
 ] as const;
 
 export const MATERIAL_CATEGORY_INFO = {
-	novel: { icon: '📚', name: 'Novel' },
-	sourcebook: { icon: '📜', name: 'Sourcebook' },
-	mission: { icon: '🗺️', name: 'Mission' },
-	rulebook: { icon: '📝', name: 'Rulebook' },
-	misc: { icon: '🔣', name: 'Misc.' },
-	magazine: { icon: '📰', name: 'Magazine' },
-	boardgame: { icon: '♟️', name: 'Boardgame' },
-	videogame: { icon: '🎮', name: 'Videogame' },
-	tcg: { icon: '🃏', name: 'T.C.G.' },
-	unofficial: { icon: '📓', name: 'Unofficial' }
+	'novel': { icon: '📚', name: 'Novel' },
+	'sourcebook': { icon: '📜', name: 'Sourcebook' },
+	'mission': { icon: '🗺️', name: 'Mission' },
+	'rulebook': { icon: '📝', name: 'Rulebook' },
+	'misc': { icon: '🔣', name: 'Misc.' },
+	'magazine': { icon: '📰', name: 'Magazine' },
+	'boardgame': { icon: '♟️', name: 'Boardgame' },
+	'videogame': { icon: '🎮', name: 'Videogame' },
+	'tcg': { icon: '🃏', name: 'T.C.G.' },
+	'unofficial': { icon: '📓', name: 'Unofficial' },
+	'': { icon: '', name: '-' }
 } as const;
 
 export const MATERIAL_TYPE_INFO = {
-	digital: { icon: '💽', name: 'Digital' },
-	scan: { icon: '📠', name: 'Scan' },
-	ocr: { icon: '💾', name: 'OCR' },
-	print: { icon: '🖨️', name: 'Print' },
-	physical: { icon: '🎲', name: 'Physical' }
+	'digital': { icon: '💽', name: 'Digital' },
+	'scan': { icon: '📠', name: 'Scan' },
+	'ocr': { icon: '💾', name: 'OCR' },
+	'print': { icon: '🖨️', name: 'Print' },
+	'physical': { icon: '🎲', name: 'Physical' },
+	'': { icon: '', name: '-' }
 } as const;
 
 export const MATERIAL_STATUS_INFO = {
@@ -63,5 +67,6 @@ export const MATERIAL_STATUS_INFO = {
 	'missing': { icon: '❌', name: 'Missing' },
 	'outofscope': { icon: '⛔', name: 'Out of scope' },
 	'canceled': { icon: '🚫', name: 'Canceled' },
-	'partially-missing': { icon: '♻️', name: 'Partially Missing' }
+	'partially-missing': { icon: '♻️', name: 'Partially Missing' },
+	'': { icon: '', name: '-' }
 } as const;

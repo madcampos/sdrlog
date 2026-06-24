@@ -75,6 +75,7 @@ class SdrLoadingScreen extends HTMLElement {
 	attributeChangedCallback(name: typeof SdrLoadingScreen.observedAttributes[number], oldValue: string | null, newValue: string | null) {
 		if (oldValue !== newValue) {
 			switch (name) {
+				// oxlint-disable-next-line typescript/no-unnecessary-condition
 				case 'max':
 					this.max = Number.parseInt(newValue ?? '0', 10);
 					break;

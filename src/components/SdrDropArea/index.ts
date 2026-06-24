@@ -15,7 +15,7 @@ class SdrDropArea extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true })
-	accessor disabled: boolean;
+	disabled: boolean;
 
 	@query('overlay')
 	private overlay!: HTMLDivElement;

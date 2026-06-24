@@ -6,12 +6,14 @@ import { Router } from './router';
 @customElement('router-link')
 class RouterLink extends LitElement {
 	@property({ type: String, reflect: true, attribute: 'router-link' })
-	accessor to = '/';
+	// oxlint-disable-next-line id-length
+	to = '/';
 
 	#click(evt: MouseEvent) {
 		evt.preventDefault();
 		evt.stopPropagation();
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		const target = evt.target as HTMLAnchorElement;
 		const path = target.href;
 

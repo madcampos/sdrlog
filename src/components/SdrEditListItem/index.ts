@@ -15,10 +15,10 @@ class SdrEditListItem extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true })
-	accessor disabled: boolean;
+	disabled: boolean;
 
 	@property({ type: String, reflect: true })
-	accessor value: string;
+	value: string;
 
 	constructor() {
 		super();

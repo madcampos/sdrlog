@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 		});
 
 		document.addEventListener('apploaded', () => {
-			loadingScreen?.remove();
+			loadingScreen.remove();
 		});
 	} catch (err) {
 		console.error(err);

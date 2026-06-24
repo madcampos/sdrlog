@@ -41,7 +41,7 @@ class SdrViewMain extends LitElement implements RouterView {
 	static override shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
 	@property({ type: Array })
-	accessor cards: Pick<Material, 'category' | 'edition' | 'name' | 'sku' | 'status' | 'type'>[];
+	cards: Pick<Material, 'category' | 'edition' | 'name' | 'sku' | 'status' | 'type'>[];
 
 	@state()
 	private hasFileSystem: boolean;
@@ -214,7 +214,7 @@ class SdrViewMain extends LitElement implements RouterView {
 			this.cards.map(({ name, category, sku, type, edition, status }) =>
 				html`
 					<sdr-card
-						id="${sku[0] ?? ''}"
+						id="${sku[0]}"
 						.sku="${sku}"
 						name="${name}"
 						category="${category}"

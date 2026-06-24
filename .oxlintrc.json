@@ -1,6 +1,7 @@
 {
 	"$schema": "./node_modules/oxlint/configuration_schema.json",
 	"plugins": ["eslint", "typescript", "import"],
+	"ignorePatterns": ["dist/**", "coverage/**", "public/lib/**"],
 	"options": {
 		"typeAware": true,
 		"maxWarnings": 128,

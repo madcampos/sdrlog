@@ -1,4 +1,4 @@
-/* eslint-ignore */
+/* oxlint-ignore */
 // @ts-nocheck
 
 const BINARY_FILE_PATH = new URL('mozjpeg.wasm', import.meta.url).href;

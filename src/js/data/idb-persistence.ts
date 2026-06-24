@@ -93,6 +93,7 @@ export async function getAllIDBEntries<T extends Collections>(collection: T) {
 	return results;
 }
 
+// oxlint-disable-next-line id-length
 export async function getIDBItemsByIndex<T extends Collections, I extends IndexNames<DatabaseSchema, T>>(
 	collection: T,
 	index: I,
@@ -101,6 +102,7 @@ export async function getIDBItemsByIndex<T extends Collections, I extends IndexN
 	return (await database).getAllFromIndex(collection, index, value);
 }
 
+// oxlint-disable-next-line id-length
 export async function getIDBItemByIndex<T extends Collections, I extends IndexNames<DatabaseSchema, T>>(collection: T, index: I, value: IndexKey<DatabaseSchema, T, I>) {
 	return (await database).getFromIndex(collection, index, value);
 }
@@ -114,6 +116,7 @@ export async function setIDBItems<T extends Collections>(collection: T, items: [
 
 	try {
 		for (const [key, value] of items) {
+			// oxlint-disable-next-line no-await-in-loop
 			await transaction.store.put(value, key);
 		}
 

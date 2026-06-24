@@ -49,11 +49,7 @@ declare global {
 		'form-status': HTMLElement;
 
 		'sdr-card': SdrCard;
-		'sdr-dialog': SdrDialog;
 		'sdr-drop-area': SdrDropArea;
-		'sdr-dropdown': SdrDropdown;
-		'sdr-dropdown-item': SdrDropdownItem;
-		'sdr-edit-box': SdrEditBox;
 		'sdr-edit-list': SdrEditList;
 		'sdr-edit-list-item': SdrEditListItem;
 		'sdr-loader': SdrLoader;
@@ -62,9 +58,7 @@ declare global {
 		'sdr-radio-group': SdrRadioGroup;
 		'sdr-radio-item': SdrRadioItem;
 		'sdr-search-box': SdrSearchBox;
-		'sdr-select': SdrSelect;
 		'sdr-loading-screen': SdrLoadingScreen;
-		'sdr-textarea': SdrTextArea;
 		'sdr-update-notify': SdrUpdateNotify;
 
 		'sdr-view-main': SdrViewMain;

@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-
 const ColorSpaces = {
 	/* Error/unspecified */
 	JCS_UNKNOWN: 0,
@@ -94,6 +92,7 @@ export async function optimize(imageArray: BufferSource, { width, height }: { wi
 		return imageArray;
 	}
 
+	// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 	mozjpegModule ??= (await import(/* @vite-ignore */ import.meta.resolve('/lib/mozjpeg/mozjpeg.js'))).default as MozJPEGModuleImport;
 
 	const mozjpeg = await mozjpegModule();

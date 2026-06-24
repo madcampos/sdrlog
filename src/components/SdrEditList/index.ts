@@ -28,7 +28,7 @@ class SdrEditList extends LitElement {
 
 		this.#isDisabled = value;
 
-		this.#items.forEach((item) => {
+		this.items.forEach((item) => {
 			item.disabled = value;
 		});
 
@@ -36,11 +36,10 @@ class SdrEditList extends LitElement {
 	}
 
 	@property({ type: Boolean, reflect: true })
-	accessor open: boolean;
+	open: boolean;
 
 	@queryAssignedElements({ selector: 'sdr-edit-list-item' })
-	// @ts-expect-error
-	accessor #items: SdrEditListItem[];
+	private items!: SdrEditListItem[];
 
 	constructor() {
 		super();
@@ -49,13 +48,13 @@ class SdrEditList extends LitElement {
 	}
 
 	#updateSlots() {
-		this.#items.forEach((item) => {
+		this.items.forEach((item) => {
 			item.disabled = this.disabled;
 		});
 	}
 
 	resetValue() {
-		this.#items.forEach((item) => {
+		this.items.forEach((item) => {
 			item.remove();
 		});
 	}

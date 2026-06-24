@@ -8,7 +8,7 @@ class SdrLoader extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true })
-	accessor loaded: boolean;
+	loaded: boolean;
 
 	constructor() {
 		super();

@@ -55,6 +55,7 @@ export class Router {
 		return this.#selectorAttribute;
 	}
 
+	// oxlint-disable-next-line typescript/related-getter-setter-pairs
 	static get beforeEach(): RouteGuardHandler | undefined {
 		return Router.#beforeEach;
 	}
@@ -63,6 +64,7 @@ export class Router {
 		Router.#beforeEach = handler;
 	}
 
+	// oxlint-disable-next-line typescript/related-getter-setter-pairs
 	static get fallback(): RouterView | undefined {
 		return Router.#fallback;
 	}
@@ -71,11 +73,13 @@ export class Router {
 		Router.#fallback = view;
 	}
 
+	// oxlint-disable-next-line typescript/no-unnecessary-type-parameters
 	static add<T extends ViewImplementation>(path: string, ViewClass: T) {
 		const view = new ViewClass();
 
 		Router.#routes.push([new URLPattern({ pathname: path }), view]);
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		document.body.appendChild(view as unknown as Node);
 	}
 
@@ -170,6 +174,7 @@ export class Router {
 		});
 
 		window.addEventListener('click', async (evt) => {
+			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 			const element = evt.target as HTMLElement;
 
 			if (element.matches(`a[${Router.#selectorAttribute}]`)) {

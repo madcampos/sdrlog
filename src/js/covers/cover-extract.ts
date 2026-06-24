@@ -1,6 +1,8 @@
+// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 import type { default as PDFJS } from 'pdfjs-dist';
 import type { optimize as OptimizerType } from './cover-optimizer';
 
+// oxlint-disable-next-line import/default
 import pdfJsWorkerSource from 'pdfjs-dist/build/pdf.worker?url';
 import type { MaterialCover } from '../../data/data';
 
@@ -29,6 +31,7 @@ export async function extractCover(file: File) {
 		pdfjs.GlobalWorkerOptions.workerSrc = pdfJsWorkerSource;
 	}
 
+	// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 	const pdf = await (pdfjs as typeof PDFJS).getDocument({ url: fileURL }).promise;
 	const page = await pdf.getPage(1);
 	const originalViewport = page.getViewport({ scale: 1 });
@@ -61,6 +64,7 @@ export async function extractCover(file: File) {
 
 	const thumb = canvasContext.getImageData(0, 0, canvas.width, canvas.height);
 
+	// @ts-expect-error
 	void pdf.destroy();
 
 	return {
@@ -92,6 +96,7 @@ export async function processCoverFile(coverFile: MaterialCover, { referenceWidt
 
 	let processedCover = coverFile;
 
+	// oxlint-disable-next-line typescript/no-unnecessary-condition
 	const cover = await createImageBitmap((await (coverFile as FileSystemFileHandle)?.getFile()) ?? coverFile);
 	const coverScale = referenceWidth / cover.width;
 

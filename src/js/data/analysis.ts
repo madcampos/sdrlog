@@ -5,7 +5,7 @@ import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '
 
 async function findMissingCovers() {
 	const { missingCovers, missingThumbs } = (await Promise.all((await fetchItems()).map(async (item) => {
-		const [id = ''] = item.sku;
+		const [id] = item.sku;
 
 		let missingCover: string | undefined;
 		let missingThumb: string | undefined;
@@ -69,7 +69,7 @@ async function findDuplicateIds() {
 	const duplidateIds: string[] = [];
 
 	for (const material of data) {
-		const [id = ''] = material.sku;
+		const [id] = material.sku;
 		const exisitingMaterial = ids.get(id);
 
 		if (exisitingMaterial) {
@@ -86,7 +86,7 @@ async function findDuplicateIds() {
 
 async function findMissingFiles() {
 	const { materialsWithMissingFiles, materialsWithOkStatusButMissingFiles } = (await Promise.all((await fetchItems()).map(async (material) => {
-		const [id = ''] = material.sku;
+		const [id] = material.sku;
 
 		let missingFile: string | undefined;
 		let okButMissing: string | undefined;

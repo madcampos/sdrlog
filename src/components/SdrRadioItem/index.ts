@@ -8,10 +8,10 @@ class SdrRadioItem extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true })
-	accessor icon: string;
+	icon: string;
 
 	@property({ type: String, reflect: true })
-	accessor value: string;
+	value: string;
 
 	constructor() {
 		super();

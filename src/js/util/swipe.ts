@@ -14,7 +14,11 @@ declare global {
 }
 
 function handleTouchStart(evt: TouchEvent) {
-	const firstTouch = evt.touches[0] as Touch;
+	const firstTouch = evt.touches[0];
+
+	if (!firstTouch) {
+		return;
+	}
 
 	startX = firstTouch.clientX;
 	startY = firstTouch.clientY;
@@ -25,7 +29,12 @@ function handleTouchMove(evt: TouchEvent) {
 		return;
 	}
 
-	const firstTouch = evt.touches[0] as Touch;
+	const firstTouch = evt.touches[0];
+
+	if (!firstTouch) {
+		return;
+	}
+
 	const endX = firstTouch.clientX;
 	const endY = firstTouch.clientY;
 

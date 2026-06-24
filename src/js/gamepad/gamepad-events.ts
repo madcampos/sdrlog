@@ -158,10 +158,11 @@ export class GamepadHandler extends EventTarget {
 			GamepadHandler.#triggerStickEvents('left', leftX, leftY);
 			GamepadHandler.#triggerStickEvents('right', rightX, rightY);
 
-			(Object.keys(GamepadHandler.#buttonsPressed) as ButtonNames[]).forEach((buttonName, i) => {
+			Object.keys(GamepadHandler.#buttonsPressed).forEach((buttonName, i) => {
 				const isButtonDown = gamepad.buttons[i]?.pressed ?? false;
 
-				GamepadHandler.#triggerButtonEvents(buttonName, isButtonDown);
+				// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
+				GamepadHandler.#triggerButtonEvents(buttonName as ButtonNames, isButtonDown);
 			});
 		}
 	}
@@ -169,7 +170,7 @@ export class GamepadHandler extends EventTarget {
 	static vibrate(time = 100, weakIntensity = 0.4, strongIntentisy = 0) {
 		const [gamepad] = navigator.getGamepads();
 
-		void gamepad?.vibrationActuator?.playEffect('dual-rumble', {
+		void gamepad?.vibrationActuator.playEffect('dual-rumble', {
 			startDelay: 0,
 			duration: time,
 			weakMagnitude: weakIntensity,

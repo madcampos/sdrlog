@@ -15,11 +15,10 @@ class SdrSearchBox extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true })
-	accessor value: string;
+	value: string;
 
 	@query('input')
-	// @ts-expect-error
-	accessor #input: HTMLInputElement;
+	private input!: HTMLInputElement;
 
 	constructor() {
 		super();
@@ -40,7 +39,7 @@ class SdrSearchBox extends LitElement {
 			if (Router.currentPath === '/' && evt.detail.button === 'y') {
 				evt.stopPropagation();
 
-				this.#input.focus();
+				this.input.focus();
 				GamepadHandler.longVibration();
 			}
 
@@ -56,23 +55,24 @@ class SdrSearchBox extends LitElement {
 	}
 
 	#updateSuggestions() {
-		this.value = this.#input.value;
+		this.value = this.input.value;
 
 		window.requestAnimationFrame(() => {
-			const datalist = this.renderRoot.querySelector('datalist') as HTMLDataListElement;
+			// oxlint-disable-next-line typescript/no-non-null-assertion
+			const datalist = this.querySelector('datalist')!;
 
 			SearchEngine.updateSuggestions(this.value, datalist);
 		});
 	}
 
 	#updateFilter() {
-		this.value = this.#input.value;
+		this.value = this.input.value;
 
 		SearchEngine.updateSearchResults(this.value);
 	}
 
 	#searchClick() {
-		this.#input.dispatchEvent(new Event('change'));
+		this.input.dispatchEvent(new Event('change'));
 	}
 
 	override render() {

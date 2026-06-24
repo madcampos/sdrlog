@@ -11,18 +11,16 @@ class SdrRadioGroup extends LitElement {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: String, reflect: true })
-	accessor value: string;
+	value: string;
 
 	@property({ type: Array })
-	accessor values: string[];
+	values: string[];
 
 	@query('#radio-container')
-	// @ts-expect-error
-	accessor #container: HTMLElement;
+	container!: HTMLElement;
 
 	@queryAssignedElements({ selector: 'sdr-radio-item' })
-	// @ts-expect-error
-	accessor #items: SdrRadioItem[];
+	private items!: SdrRadioItem[];
 
 	#groupName = crypto.randomUUID();
 
@@ -34,8 +32,9 @@ class SdrRadioGroup extends LitElement {
 
 		window.addEventListener('gamepadbuttonpress', (evt) => {
 			if (evt.detail.button === 'left') {
-				const currentItem = this.renderRoot.querySelector(`input[value="${this.value}"]`) as HTMLInputElement;
-				const items = [...this.renderRoot.querySelectorAll('input')];
+				// oxlint-disable-next-line typescript/no-non-null-assertion
+				const currentItem = this.querySelector(`input[value="${this.value}"]`)!;
+				const items = [...this.querySelectorAll('input')];
 				const currentItemIndex = items.indexOf(currentItem);
 
 				if (currentItemIndex > 0) {
@@ -46,8 +45,9 @@ class SdrRadioGroup extends LitElement {
 			}
 
 			if (evt.detail.button === 'right') {
-				const currentItem = this.renderRoot.querySelector(`input[value="${this.value}"]`) as HTMLInputElement;
-				const items = [...this.renderRoot.querySelectorAll('input')];
+				// oxlint-disable-next-line typescript/no-non-null-assertion
+				const currentItem = this.querySelector(`input[value="${this.value}"]`)!;
+				const items = [...this.querySelectorAll('input')];
 				const currentItemIndex = items.indexOf(currentItem);
 
 				if (currentItemIndex < items.length - 1) {
@@ -64,7 +64,7 @@ class SdrRadioGroup extends LitElement {
 	}
 
 	#moveItems() {
-		this.#items.forEach((item) => {
+		this.items.forEach((item) => {
 			if (!this.values.includes(item.value)) {
 				const label = document.createElement('label');
 				const radio = document.createElement('input');
@@ -87,7 +87,7 @@ class SdrRadioGroup extends LitElement {
 				label.appendChild(item);
 				label.appendChild(badge);
 
-				this.#container.appendChild(label);
+				this.container.appendChild(label);
 
 				this.values.push(item.value);
 			}
@@ -98,6 +98,7 @@ class SdrRadioGroup extends LitElement {
 		evt.preventDefault();
 		evt.stopPropagation();
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		this.value = (evt.target as HTMLInputElement).value;
 
 		this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, cancelable: true }));

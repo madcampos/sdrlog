@@ -1,4 +1,4 @@
-/* eslint-ignore */
+/* oxlint-ignore */
 // @ts-nocheck
 
 const BINARY_FILE_PATH = new URL('snes9x_libretro.wasm', import.meta.url).href,
