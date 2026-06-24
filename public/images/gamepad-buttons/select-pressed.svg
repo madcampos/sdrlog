@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><defs><clipPath id="a"><path d="M0 0h120v120H0z"/></clipPath></defs><g clip-path="url(#a)"><g fill="#2a2a2a" stroke="#fff" stroke-width="4" data-name="Rectangle 57" transform="translate(28 28)"><rect width="64" height="64" stroke="none" rx="32"/><rect width="68" height="68" x="-2" y="-2" fill="none" rx="34"/></g><g fill="#404040" stroke="#5b5b5b" stroke-width="4" data-name="Rectangle 58" transform="translate(36 36)"><rect width="48" height="48" stroke="none" rx="24"/><rect width="52" height="52" x="-2" y="-2" fill="none" rx="26"/></g><rect width="48" height="52" fill="#404040" data-name="Rectangle 59" rx="24" transform="translate(36 32)"/><path fill="#fff" d="M49 63h-6V43h24v7h-4.173v-2.79H47.174v11.578H49v4.21Z" data-name="Subtraction 55"/><path fill="#fff" d="M77 74H53V54h24v20ZM57 58.21v11.579h16V58.21Z" data-name="Subtraction 53"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+	<defs><clipPath id="a"><path d="M0 0h120v120H0z" /></clipPath></defs>
+	<g clip-path="url(#a)">
+		<g fill="#2a2a2a" stroke="#fff" stroke-width="4" data-name="Rectangle 57" transform="translate(28 28)">
+			<rect width="64" height="64" stroke="none" rx="32" />
+			<rect width="68" height="68" x="-2" y="-2" fill="none" rx="34" />
+		</g>
+		<g fill="#404040" stroke="#5b5b5b" stroke-width="4" data-name="Rectangle 58" transform="translate(36 36)">
+			<rect width="48" height="48" stroke="none" rx="24" />
+			<rect width="52" height="52" x="-2" y="-2" fill="none" rx="26" />
+		</g>
+		<rect width="48" height="52" fill="#404040" data-name="Rectangle 59" rx="24" transform="translate(36 32)" />
+		<path fill="#fff" d="M49 63h-6V43h24v7h-4.173v-2.79H47.174v11.578H49v4.21Z" data-name="Subtraction 55" />
+		<path fill="#fff" d="M77 74H53V54h24v20ZM57 58.21v11.579h16V58.21Z" data-name="Subtraction 53" />
+	</g>
+</svg>

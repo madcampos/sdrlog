@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><defs><clipPath id="a"><path d="M0 0h120v120H0z" data-name="Rectangle 74"/></clipPath></defs><g clip-path="url(#a)" data-name="Button - XBOX X"><g fill="none" stroke="#fff" stroke-width="2" data-name="Border white - outer" transform="translate(14 14)"><circle cx="46" cy="46" r="46" stroke="none"/><circle cx="46" cy="46" r="45"/></g><g fill="none" stroke="#fff" stroke-width="4" data-name="Border white - inner" transform="translate(14 14)"><circle cx="46" cy="46" r="46" stroke="none"/><circle cx="46" cy="46" r="48"/></g><circle cx="46" cy="46" r="46" fill="#234385" data-name="Button - Base" transform="translate(14 14)"/><circle cx="38" cy="38" r="38" fill="#0569cc" data-name="Button - Top" transform="translate(22 22)"/><path fill="#fff" d="M78.009 78h-9.334L59.71 63.419 50.745 78h-8.754l12.788-19.881-11.97-18.668h9.018l8.305 13.869 8.147-13.869h8.807L64.983 58.567Z" data-name="Path 135"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+	<defs><clipPath id="a"><path d="M0 0h120v120H0z" data-name="Rectangle 74" /></clipPath></defs>
+	<g clip-path="url(#a)" data-name="Button - XBOX X">
+		<g fill="none" stroke="#fff" stroke-width="2" data-name="Border white - outer" transform="translate(14 14)">
+			<circle cx="46" cy="46" r="46" stroke="none" />
+			<circle cx="46" cy="46" r="45" />
+		</g>
+		<g fill="none" stroke="#fff" stroke-width="4" data-name="Border white - inner" transform="translate(14 14)">
+			<circle cx="46" cy="46" r="46" stroke="none" />
+			<circle cx="46" cy="46" r="48" />
+		</g>
+		<circle cx="46" cy="46" r="46" fill="#234385" data-name="Button - Base" transform="translate(14 14)" />
+		<circle cx="38" cy="38" r="38" fill="#0569cc" data-name="Button - Top" transform="translate(22 22)" />
+		<path
+			fill="#fff"
+			d="M78.009 78h-9.334L59.71 63.419 50.745 78h-8.754l12.788-19.881-11.97-18.668h9.018l8.305 13.869 8.147-13.869h8.807L64.983 58.567Z"
+			data-name="Path 135"
+		/>
+	</g>
+</svg>

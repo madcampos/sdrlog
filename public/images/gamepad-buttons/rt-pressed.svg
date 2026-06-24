@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><defs><clipPath id="a"><path d="M0 0h120v120H0z"/></clipPath></defs><g clip-path="url(#a)"><g fill="#2a2a2a" stroke="#fff" stroke-width="4" data-name="Rectangle 49"><path stroke="none" d="M30 85V23a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v62a20 20 0 0 1-20 20H50a20 20 0 0 1-20-20Z"/><path fill="none" d="M28 85V23a6 6 0 0 1 6-6h52a6 6 0 0 1 6 6v62a22 22 0 0 1-22 22H50a22 22 0 0 1-22-22Z"/></g><path fill="#404040" d="M34 81V23a4 4 0 0 1 4-4h48a4 4 0 0 1 4 4v58a20 20 0 0 1-20 20H54a20 20 0 0 1-20-20Z" data-name="Rectangle 50"/><path fill="#fff" d="m56.42 57-4.59-8.01h-1.17V57h-5.13V35.79h8.76a9.457 9.457 0 0 1 4.26.87 6.008 6.008 0 0 1 2.61 2.385 6.832 6.832 0 0 1 .87 3.465 6.159 6.159 0 0 1-1.275 3.93 6.517 6.517 0 0 1-3.7 2.22L62.09 57Zm-5.76-11.52h3.18a3.2 3.2 0 0 0 2.25-.68 2.605 2.605 0 0 0 .72-1.995 2.645 2.645 0 0 0-.735-1.98 3.08 3.08 0 0 0-2.235-.72h-3.18Zm29.19-9.69v4.08h-5.76V57h-5.16V39.87h-5.7v-4.08Z" data-name="Path 147" opacity=".5"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+	<defs><clipPath id="a"><path d="M0 0h120v120H0z" /></clipPath></defs>
+	<g clip-path="url(#a)">
+		<g fill="#2a2a2a" stroke="#fff" stroke-width="4" data-name="Rectangle 49">
+			<path stroke="none" d="M30 85V23a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v62a20 20 0 0 1-20 20H50a20 20 0 0 1-20-20Z" />
+			<path fill="none" d="M28 85V23a6 6 0 0 1 6-6h52a6 6 0 0 1 6 6v62a22 22 0 0 1-22 22H50a22 22 0 0 1-22-22Z" />
+		</g>
+		<path fill="#404040" d="M34 81V23a4 4 0 0 1 4-4h48a4 4 0 0 1 4 4v58a20 20 0 0 1-20 20H54a20 20 0 0 1-20-20Z" data-name="Rectangle 50" />
+		<path
+			fill="#fff"
+			d="m56.42 57-4.59-8.01h-1.17V57h-5.13V35.79h8.76a9.457 9.457 0 0 1 4.26.87 6.008 6.008 0 0 1 2.61 2.385 6.832 6.832 0 0 1 .87 3.465 6.159 6.159 0 0 1-1.275 3.93 6.517 6.517 0 0 1-3.7 2.22L62.09 57Zm-5.76-11.52h3.18a3.2 3.2 0 0 0 2.25-.68 2.605 2.605 0 0 0 .72-1.995 2.645 2.645 0 0 0-.735-1.98 3.08 3.08 0 0 0-2.235-.72h-3.18Zm29.19-9.69v4.08h-5.76V57h-5.16V39.87h-5.7v-4.08Z"
+			data-name="Path 147"
+			opacity=".5"
+		/>
+	</g>
+</svg>

@@ -1,1 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><defs><clipPath id="a"><path d="M0 0h120v120H0z" data-name="Rectangle 73"/></clipPath></defs><g clip-path="url(#a)" data-name="Button - XBOX B"><g fill="none" stroke="#fff" stroke-width="2" data-name="Border white - outer" transform="translate(14 14)"><circle cx="46" cy="46" r="46" stroke="none"/><circle cx="46" cy="46" r="45"/></g><g fill="none" stroke="#fff" stroke-width="4" data-name="Border white - inner" transform="translate(14 14)"><circle cx="46" cy="46" r="46" stroke="none"/><circle cx="46" cy="46" r="48"/></g><circle cx="46" cy="46" r="46" fill="#11704f" data-name="Button - Base" transform="translate(14 14)"/><g fill="#16d65d" stroke="#16d65d" stroke-width="6" data-name="Button - Top" transform="translate(18 14)"><circle cx="42" cy="42" r="42" stroke="none"/><circle cx="42" cy="42" r="39" fill="none"/></g><ellipse cx="42" cy="38" fill="#12ab40" data-name="Button - Top" rx="42" ry="38" transform="translate(18 22)"/><path fill="#fff" d="m69.822 74-2.795-9.176H52.973L50.178 74h-8.807l13.606-38.707h9.993L78.628 74Zm-4.746-16.031Q61.2 45.5 60.712 43.862t-.7-2.584q-.87 3.375-4.983 16.69Z" data-name="Path 128"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+	<defs><clipPath id="a"><path d="M0 0h120v120H0z" data-name="Rectangle 73" /></clipPath></defs>
+	<g clip-path="url(#a)" data-name="Button - XBOX B">
+		<g fill="none" stroke="#fff" stroke-width="2" data-name="Border white - outer" transform="translate(14 14)">
+			<circle cx="46" cy="46" r="46" stroke="none" />
+			<circle cx="46" cy="46" r="45" />
+		</g>
+		<g fill="none" stroke="#fff" stroke-width="4" data-name="Border white - inner" transform="translate(14 14)">
+			<circle cx="46" cy="46" r="46" stroke="none" />
+			<circle cx="46" cy="46" r="48" />
+		</g>
+		<circle cx="46" cy="46" r="46" fill="#11704f" data-name="Button - Base" transform="translate(14 14)" />
+		<g fill="#16d65d" stroke="#16d65d" stroke-width="6" data-name="Button - Top" transform="translate(18 14)">
+			<circle cx="42" cy="42" r="42" stroke="none" />
+			<circle cx="42" cy="42" r="39" fill="none" />
+		</g>
+		<ellipse cx="42" cy="38" fill="#12ab40" data-name="Button - Top" rx="42" ry="38" transform="translate(18 22)" />
+		<path
+			fill="#fff"
+			d="m69.822 74-2.795-9.176H52.973L50.178 74h-8.807l13.606-38.707h9.993L78.628 74Zm-4.746-16.031Q61.2 45.5 60.712 43.862t-.7-2.584q-.87 3.375-4.983 16.69Z"
+			data-name="Path 128"
+		/>
+	</g>
+</svg>

@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><defs><clipPath id="a"><path d="M0 0h120v120H0z" data-name="Rectangle 75"/></clipPath></defs><g data-name="button_xbox_digital_y_5"><g clip-path="url(#a)" data-name="Button - XBOX Y"><g fill="none" stroke="#fff" stroke-width="2" data-name="Border white - outer" transform="translate(14 14)"><circle cx="46" cy="46" r="46" stroke="none"/><circle cx="46" cy="46" r="45"/></g><g fill="none" stroke="#fff" stroke-width="4" data-name="Border white - inner" transform="translate(14 14)"><circle cx="46" cy="46" r="46" stroke="none"/><circle cx="46" cy="46" r="48"/></g><circle cx="46" cy="46" r="46" fill="#995700" data-name="Button - Base" transform="translate(14 14)"/><circle cx="38" cy="38" r="38" fill="#f9b003" data-name="Button - Top" transform="translate(22 22)"/><path fill="#fff" d="m60 55.324 8.042-15.873h8.807L64.061 63v15h-8.122V63.261l-12.788-23.81h8.859Z" data-name="Path 138"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+	<defs><clipPath id="a"><path d="M0 0h120v120H0z" data-name="Rectangle 75" /></clipPath></defs>
+	<g data-name="button_xbox_digital_y_5">
+		<g clip-path="url(#a)" data-name="Button - XBOX Y">
+			<g fill="none" stroke="#fff" stroke-width="2" data-name="Border white - outer" transform="translate(14 14)">
+				<circle cx="46" cy="46" r="46" stroke="none" />
+				<circle cx="46" cy="46" r="45" />
+			</g>
+			<g fill="none" stroke="#fff" stroke-width="4" data-name="Border white - inner" transform="translate(14 14)">
+				<circle cx="46" cy="46" r="46" stroke="none" />
+				<circle cx="46" cy="46" r="48" />
+			</g>
+			<circle cx="46" cy="46" r="46" fill="#995700" data-name="Button - Base" transform="translate(14 14)" />
+			<circle cx="38" cy="38" r="38" fill="#f9b003" data-name="Button - Top" transform="translate(22 22)" />
+			<path fill="#fff" d="m60 55.324 8.042-15.873h8.807L64.061 63v15h-8.122V63.261l-12.788-23.81h8.859Z" data-name="Path 138" />
+		</g>
+	</g>
+</svg>
