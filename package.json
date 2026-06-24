@@ -10,6 +10,7 @@
 	},
 	"scripts": {
 		"bootstrap:certs": "mkdir certs && mkcert -key-file=certs/server.key -cert-file=certs/server.crt localhost",
+
 		"start": "vite",
 		"typecheck": "tsc --noEmit",
 		"lint:js": "eslint --fix",
@@ -23,26 +24,29 @@
 	},
 	"dependencies": {
 		"epubjs": "^0.3.93",
+		"iconify-icon": "^3.0.2",
 		"idb": "^8.0.3",
 		"jszip": "^3.10.1",
-		"lit": "^3.3.2",
-		"marked": "^17.0.5",
-		"nipplejs": "^1.0.1",
+		"lit": "^3.3.3",
+		"marked": "^18.0.5",
+		"nipplejs": "^1.0.4",
 		"open-props": "1.7.23",
-		"pdfjs-dist": "^5.6.205",
-		"wrangler": "4.79.0"
+		"pdfjs-dist": "^6.0.227"
 	},
 	"devDependencies": {
 		"@types/emscripten": "^1.41.5",
-		"@types/node": "25.5.0",
+		"@types/node": "25.9.3",
 		"@types/wicg-file-system-access": "^2023.10.7",
-		"@typescript-eslint/eslint-plugin": "^8.58.0",
-		"@typescript-eslint/parser": "^8.58.0",
-		"eslint": "^10.1.0",
-		"globals": "^17.4.0",
-		"typed-query-selector": "^2.12.1",
-		"typescript": "^6.0.2",
-		"vite": "^8.0.7"
+		"@vitest/browser-playwright": "4.1.9",
+		"dprint": "^0.54.0",
+		"oxlint": "^1.70.0",
+		"oxlint-tsgolint": "^0.23.0",
+		"typed-query-selector": "^2.12.2",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16",
+		"vitest": "4.1.9",
+		"vitest-browser-lit": "1.0.1",
+		"wrangler": "4.101.0"
 	},
 	"overrides": {
 		"has": "npm:@nolyfill/has@^1",

@@ -1,27 +1,20 @@
-/* eslint-disable camelcase */
 // eslint-env node
+
+import { playwright } from '@vitest/browser-playwright';
 import { readFileSync } from 'node:fs';
+import type { UserConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
-import { type UserConfig, defineConfig } from 'vite';
-
-const IS_DEBUG = false;
-
+// oxlint-disable-next-line import/no-default-export
 export default defineConfig(({ mode }) => {
-	let baseUrl = 'https://sdrlog.madcampos.dev/';
-	let sslOptions = undefined;
-
-	if (mode !== 'production' || IS_DEBUG) {
-		baseUrl = 'https://localhost:3000/';
-
-		sslOptions = {
+	const sslOptions = mode === 'production'
+		? undefined
+		: {
 			cert: readFileSync('./certs/server.crt', 'utf-8'),
 			key: readFileSync('./certs/server.key', 'utf-8')
 		};
-	}
 
 	const config: UserConfig = {
-		esbuild: { target: 'esnext' },
-		base: baseUrl,
 		envPrefix: 'APP_',
 		envDir: '../',
 		root: 'src',
@@ -37,15 +30,22 @@ export default defineConfig(({ mode }) => {
 		build: {
 			target: 'esnext',
 			emptyOutDir: true,
-			outDir: '../dist',
-			rolldownOptions: {
-				transform: { decorator: { legacy: true } }
-			}
+			outDir: '../dist'
 		},
 		preview: {
 			https: sslOptions,
 			open: true,
 			cors: true
+		},
+		test: {
+			browser: {
+				enabled: true,
+				provider: playwright(),
+				// https://vitest.dev/config/browser/playwright
+				instances: [
+					{ browser: 'chromium' }
+				]
+			}
 		}
 	};
 
