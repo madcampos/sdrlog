@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/naming-convention, no-underscore-dangle */
+/* eslint-disable no-underscore-dangle */
 import type { RouteLocation, RouterView } from '../../router/router';
 
 import { html, LitElement, unsafeCSS } from 'lit';
@@ -61,22 +61,19 @@ class SdrViewEmulator extends LitElement implements RouterView {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true })
-	accessor loaded: boolean;
+	loaded: boolean;
 
 	@query('#game-canvas')
-	// @ts-expect-error
-	accessor #canvas: HTMLCanvasElement;
+	private canvas!: HTMLCanvasElement;
 
 	@query('#game-wrapper')
-	// @ts-expect-error
-	accessor #gameWrapper: HTMLDivElement;
+	private gameWrapper!: HTMLDivElement;
 
 	@query('#dpad')
-	// @ts-expect-error
-	accessor #dpad: HTMLDivElement;
+	private dpad!: HTMLDivElement;
 
 	@state()
-	accessor #open: boolean;
+	private open: boolean;
 
 	@state()
 	set paused(newValue: boolean) {
@@ -100,7 +97,7 @@ class SdrViewEmulator extends LitElement implements RouterView {
 		super();
 
 		this.loaded = false;
-		this.#open = false;
+		this.open = false;
 
 		this.#resetEmulator();
 
@@ -198,13 +195,13 @@ class SdrViewEmulator extends LitElement implements RouterView {
 	}
 
 	#close() {
-		this.#open = false;
+		this.open = false;
 
 		void Router.navigate('/');
 	}
 
 	#sendKeyEvent(type: 'keydown' | 'keyup', key: keyof typeof keyMap) {
-		this.#canvas.dispatchEvent(
+		this.canvas.dispatchEvent(
 			new KeyboardEvent(type, {
 				bubbles: true,
 				cancelable: false,
@@ -219,7 +216,7 @@ class SdrViewEmulator extends LitElement implements RouterView {
 
 	async #addDPadButtons() {
 		const nipplejs = (await import('nipplejs')).default;
-		const dpadElement = this.#dpad;
+		const dpadElement = this.dpad;
 		const { width, height } = dpadElement.getBoundingClientRect();
 
 		const dpad = nipplejs.create({
@@ -253,7 +250,7 @@ class SdrViewEmulator extends LitElement implements RouterView {
 	}
 
 	#adjustCanvasSize() {
-		const { width, height } = this.#gameWrapper.getBoundingClientRect();
+		const { width, height } = this.gameWrapper.getBoundingClientRect();
 
 		this.#emulator?.setCanvasSize(width, height);
 	}
@@ -271,6 +268,7 @@ class SdrViewEmulator extends LitElement implements RouterView {
 		this.#mkdirTree(folderPath);
 
 		for (const [path, file] of files) {
+			// oxlint-disable-next-line no-await-in-loop
 			const buffer = await file.arrayBuffer();
 
 			if (file.type === 'application/x-directory') {
@@ -295,10 +293,11 @@ class SdrViewEmulator extends LitElement implements RouterView {
 		const emulator = materialsFilter.get(id ?? '') ?? '';
 
 		const emulatorImport = await import(/* @vite-ignore */ import.meta.resolve(`/lib/webretro/${emulator}_libretro.js`));
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		const emulatorInit = emulatorImport.default as EmulatorInitializerFunction;
 
 		this.#emulator = emulatorInit({
-			canvas: this.#canvas,
+			canvas: this.canvas,
 			onRuntimeInitialized: async () => {
 				this.#adjustCanvasSize();
 
@@ -371,7 +370,7 @@ class SdrViewEmulator extends LitElement implements RouterView {
 		}
 
 		await this.#loadGame(destination.params.id);
-		this.#open = true;
+		this.open = true;
 
 		return 'Emulator';
 	}
@@ -388,20 +387,21 @@ class SdrViewEmulator extends LitElement implements RouterView {
 
 	override render() {
 		return html`
-			<style>${SdrViewEmulator.styles}</style>
-			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
-				<sdr-button icon-button slot="title" @click="${() => this.#emulator?._cmd_toggle_menu()}">⚙️</sdr-button>
-				<hr slot="title">
-				<sdr-button icon-button slot="title" @click="${() => {
+			<dialog ?open="${this.open}" @close="${() => this.#close()}">
+				<header>
+					<button @click="${() => this.#emulator?._cmd_toggle_menu()}">⚙️</button>
+					<hr>
+					<button @click="${() => {
 			this.paused = true;
-		}}">⏸️</sdr-button>
-				<hr slot="title">
-				<sdr-button icon-button slot="title" @click="${() => this.#loadState()}">⏮️</sdr-button>
-				<sdr-button icon-button slot="title" @click="${() => this.#saveState()}">⏭️</sdr-button>
-				<hr slot="title">
-				<sdr-button icon-button slot="title" @click="${async () => this.#toggleFullScreen()}">🖥️</sdr-button>
+		}}">⏸️</button>
+					<hr>
+					<button @click="${() => this.#loadState()}">⏮️</button>
+					<button @click="${() => this.#saveState()}">⏭️</button>
+					<hr>
+					<button @click="${async () => this.#toggleFullScreen()}">🖥️</button>
+				</header>
 
-				<div id="emulator-wrapper">
+				<dialog-content id="emulator-wrapper">
 					<aside class="controller" id="left-controller">
 						<button
 							id="button-select"
@@ -468,8 +468,8 @@ class SdrViewEmulator extends LitElement implements RouterView {
 							@pointerdown="${() => this.#sendKeyEvent('keydown', 'b')}"
 						>B</button>
 					</aside>
-				</div>
-			</sdr-dialog>
+				</dialog-content>
+			</dialog>
 		`;
 	}
 }

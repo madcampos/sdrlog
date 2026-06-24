@@ -75,13 +75,16 @@ class SdrEditList extends LitElement {
 
 				<div id="input-container" hidden>
 					<slot name="input"></slot>
-					<sdr-button
+					<button
 						icon-button
 						id="add-button"
 						title="Add item"
 
 						@click="${() => this.#addItem()}"
-					>➕</sdr-button>
+					>
+						<sr-only>Add item</sr-only>
+
+					</button>
 				</div>
 
 				<article id="items-container">

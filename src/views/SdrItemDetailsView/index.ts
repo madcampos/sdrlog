@@ -1,19 +1,13 @@
+// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 /* eslint-disable max-lines */
-
-import type { RouteLocation, RouterView } from '../../router/router';
-
-import type { SdrEditBox } from '../../components/SdrEditBox';
-import type { SdrEditList } from '../../components/SdrEditList';
-import type { SdrSelect } from '../../components/SdrSelect';
-import type { SdrTextArea } from '../../components/SdrTextArea';
-import type { FileSystemEntryForMaterial, KnownLocaleCodes, Material } from '../../data/data';
 
 import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { guard } from 'lit/directives/guard.js';
-
 import { SdrCard } from '../../components/SdrCard';
+import type { SdrEditList } from '../../components/SdrEditList';
 import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
+import type { FileSystemEntryForMaterial, KnownLocaleCodes, Material } from '../../data/data';
 import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
 import { copyItemToClipboard, exportDataItem } from '../../js/data/data-export';
 import { parseMaterial, saveNewMaterialInfo } from '../../js/data/data-import';
@@ -22,8 +16,8 @@ import { getIconForFile } from '../../js/files/file-icons';
 import { saveFile } from '../../js/files/file-import';
 import { openFile } from '../../js/files/file-open';
 import { formatFullDate } from '../../js/intl/formatting';
+import type { RouteLocation, RouterView } from '../../router/router';
 import { Router } from '../../router/router';
-
 import style from './style.css?inline' with { type: 'css' };
 
 @customElement('sdr-view-item-details')
@@ -32,19 +26,19 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 	static override readonly styles = unsafeCSS(style);
 
 	@property({ type: Boolean, reflect: true, attribute: 'disabled' })
-	accessor isDisplaying: boolean;
+	isDisplaying: boolean;
 
 	@state()
-	accessor #open: boolean;
+	private open: boolean;
 
 	@state({ hasChanged: (value, oldValue) => JSON.stringify(oldValue) !== JSON.stringify(value) })
-	accessor #material: Material;
+	private material: Material;
 
 	@state()
-	accessor #files: FileSystemEntryForMaterial[];
+	private files: FileSystemEntryForMaterial[];
 
 	@state()
-	accessor #coverUrl: string;
+	private coverUrl: string;
 
 	#coverFile: File | undefined;
 
@@ -52,10 +46,9 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		super();
 
 		this.isDisplaying = false;
-		this.#open = false;
+		this.open = false;
 
-		// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-		this.#material = {
+		this.material = {
 			category: '' as Material['category'],
 			type: '' as Material['type'],
 			sku: [] as unknown as Material['sku'],
@@ -72,37 +65,37 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 			links: {}
 		} as Material;
 
-		this.#files = [];
+		this.files = [];
 
-		this.#coverUrl = LOADING_COVER;
+		this.coverUrl = LOADING_COVER;
 	}
 
 	// TODO: add gamepad navigation on constructor
 
 	#updateInputValue(evt: Event, prop: 'category' | 'description' | 'edition' | 'gameDate' | 'name' | 'notes' | 'originalLanguage' | 'status' | 'type') {
-		const target = evt.target as SdrEditBox | SdrSelect | SdrTextArea;
+		const target = evt.target as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
-		this.#material[prop] = (prop === 'edition' ? Number.parseInt(target.value, 10) : target.value) as never;
+		this.material[prop] = (prop === 'edition' ? Number.parseInt(target.value, 10) : target.value) as never;
 	}
 
 	#addItemToList(evt: CustomEvent, list: 'publisher' | 'releaseDate' | 'sku') {
 		const target = evt.target as SdrEditList;
-		const input = target.querySelector('sdr-edit-box, sdr-select') as SdrEditBox | SdrSelect;
+		const input = target.querySelector('input, select');
 
 		let validationMessage = '';
 
-		if (this.#material[list]?.includes(input.value as never)) {
+		if (this.material[list]?.includes(input?.value as never)) {
 			validationMessage = 'Item already exists in the list.';
-		} else if (input.value === '') {
+		} else if (input?.value === '') {
 			validationMessage = 'Please fill the field.';
 		}
 
-		input.setCustomValidity(validationMessage);
+		input?.setCustomValidity(validationMessage);
 
-		const isValid = input.reportValidity();
+		const isValid = input?.reportValidity();
 
 		if (isValid) {
-			this.#material[list]?.push(input.value as never);
+			this.material[list]?.push(input?.value as never);
 
 			this.requestUpdate('material');
 		}
@@ -110,10 +103,10 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 	#addItemToMap(evt: CustomEvent, map: 'links' | 'names') {
 		const target = evt.target as SdrEditList;
-		const [key, input] = target.querySelectorAll('sdr-edit-box, sdr-select');
+		const [key, input] = target.querySelectorAll('input, select');
 
 		// @ts-expect-error
-		const mapToAddItems = this.#material[map]?.[key.value];
+		const mapToAddItems = this.material[map]?.[key.value];
 
 		if (mapToAddItems !== undefined) {
 			key?.setCustomValidity('Item already exists in the list.');
@@ -128,8 +121,8 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		const isValid = (key?.reportValidity() && input?.reportValidity()) ?? true;
 
 		if (isValid) {
-			this.#material[map] = {
-				...(this.#material[map] ?? {}),
+			this.material[map] = {
+				...(this.material[map] ?? {}),
 				[key?.value ?? '']: input?.value ?? ''
 			};
 
@@ -146,13 +139,13 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		}
 
 		// @ts-expect-error
-		const list = this.#material[target.id] as Record<string, string> | string[];
+		const list = this.material[target.id] as Record<string, string> | string[];
 
 		if (Array.isArray(list)) {
 			list.splice(list.indexOf(removedItem), 1);
 		} else {
 			// @ts-expect-error
-			this.#material[target.id] = Object.fromEntries(Object.entries(list).filter(([key]) => key !== removedItem));
+			this.material[target.id] = Object.fromEntries(Object.entries(list).filter(([key]) => key !== removedItem));
 		}
 
 		this.requestUpdate('material');
@@ -161,13 +154,13 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 	#addCover(evt: CustomEvent) {
 		const file = evt.detail.file as File;
 
-		this.#coverUrl = LOADING_COVER;
-		this.#coverUrl = URL.createObjectURL(file);
+		this.coverUrl = LOADING_COVER;
+		this.coverUrl = URL.createObjectURL(file);
 		this.#coverFile = file;
 	}
 
 	async #addFile() {
-		if (this.#material.sku.length > 0) {
+		if (this.material.sku.length > 0) {
 			const [handler] = await window.showOpenFilePicker({
 				id: 'newMaterialFile',
 				startIn: 'downloads',
@@ -176,7 +169,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 			const fileForMaterial = await saveFile(handler);
 
-			this.#files.push(fileForMaterial);
+			this.files.push(fileForMaterial);
 
 			this.requestUpdate('files');
 		}
@@ -194,28 +187,30 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 	}
 
 	async #saveItem() {
-		const [id] = this.#material.sku;
+		const [id] = this.material.sku;
 
 		if (id) {
 			this.isDisplaying = true;
 
 			await saveNewMaterialInfo(id, {
-				...this.#material,
+				...this.material,
 				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				cover: this.#coverFile!,
-				files: this.#files
+				files: this.files
 			});
 
 			if (!document.querySelector(`sdr-card[id="${id}"]`)) {
-				const card = new SdrCard({
-					name: this.#material.name,
+				const card = new SdrCard(
+					/* {
+					name: this.material.name,
 					id,
-					sku: this.#material.sku,
-					edition: this.#material.edition,
-					category: this.#material.category,
-					type: this.#material.type,
-					status: this.#material.status
-				});
+					sku: this.material.sku,
+					edition: this.material.edition,
+					category: this.material.category,
+					type: this.material.type,
+					status: this.material.status
+				} */
+				);
 
 				document.querySelector('main')?.append(card);
 			}
@@ -226,7 +221,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 	}
 
 	#close() {
-		this.#open = false;
+		this.open = false;
 
 		void Router.navigate('/');
 	}
@@ -242,7 +237,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 			this.resetMaterial();
 			await this.setMaterial(destination.params.id);
 
-			title = this.#material.name;
+			title = this.material.name;
 		}
 
 		// TODO: move this handler elsewhere
@@ -253,11 +248,13 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 				for (const fileReference of launchParams.files) {
 					if (fileReference.kind === 'file') {
 						try {
+							// oxlint-disable-next-line no-await-in-loop
 							const file = await (fileReference as FileSystemFileHandle).getFile();
+							// oxlint-disable-next-line no-await-in-loop
 							const textContent = await file.text();
 							const jsonContent = JSON.parse(textContent) as Partial<Material>;
 
-							this.#material = parseMaterial(jsonContent);
+							this.material = parseMaterial(jsonContent);
 
 							break;
 						} catch (error) {
@@ -268,7 +265,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 			});
 		}
 
-		this.#open = true;
+		this.open = true;
 
 		return title;
 	}
@@ -277,7 +274,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		this.isDisplaying = false;
 
 		// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-		this.#material = {
+		this.material = {
 			category: '' as Material['category'],
 			type: '' as Material['type'],
 			sku: [] as unknown as Material['sku'],
@@ -294,9 +291,9 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 			links: {}
 		} as Material;
 
-		this.#files = [];
+		this.files = [];
 
-		this.#coverUrl = LOADING_COVER;
+		this.coverUrl = LOADING_COVER;
 	}
 
 	async setMaterial(id: string) {
@@ -305,15 +302,15 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		if (material) {
 			this.isDisplaying = true;
 
-			this.#material = material as Material;
+			this.material = material as Material;
 
 			void getCoverUrl(material.sku[0] ?? '').then((coverUrl) => {
-				this.#coverUrl = coverUrl;
+				this.coverUrl = coverUrl;
 			});
 
 			void getIDBItemsByIndex('files', 'itemId', material.sku[0] ?? '').then((fileList) => {
 				for (const file of fileList) {
-					this.#files.push(file);
+					this.files.push(file);
 				}
 			});
 		}
@@ -335,31 +332,36 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 	override render() {
 		return html`
-			<!-- <style>${SdrViewItemDetails.styles}</style> -->
-			<sdr-dialog ?open="${this.#open}" @close="${() => this.#close()}">
-				<sdr-edit-box slot="title" ?disabled="${this.isDisplaying}" value="${this.#material.name}" @input="${(evt: Event) =>
-			this.#updateInputValue(evt, 'name')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'name')}"></sdr-edit-box>
+			<dialog ?open="${this.open}" @close="${() => this.#close()}">
+				<header>
+					<input
+						?disabled="${this.isDisplaying}"
+						value="${this.material.name}"
+						@input="${(evt: Event) => this.#updateInputValue(evt, 'name')}"
+						@change="${(evt: Event) => this.#updateInputValue(evt, 'name')}"
+					/>
+				</header>
 
-				<div id="item-content">
+				<dialog-content id="item-content">
 					<sdr-drop-area id="cover-drop-area" ?disabled="${this.isDisplaying}" @dropfile="${(evt: CustomEvent) => this.#addCover(evt)}">
 						<figure>
-							<img width="100" height="160" id="cover" decoding="async" loading="lazy" role="presentation" src="${this.#coverUrl}" />
+							<img width="100" height="160" id="cover" decoding="async" loading="lazy" role="presentation" src="${this.coverUrl}" />
 						</figure>
 					</sdr-drop-area>
 
 					<sdr-tabs id="item-details-tabs">
 						<sdr-tab slot="tab">Description</sdr-tab>
 						<sdr-tab-panel slot="tabpanel">
-							<sdr-textarea id="notes" ?disabled="${this.isDisplaying}" ?hidden="${!this.#material.notes}" value="${this.#material.notes ?? ''}" @input="${(
+							<textarea id="notes" ?disabled="${this.isDisplaying}" ?hidden="${!this.material.notes}" value="${this.material.notes ?? ''}" @input="${(
 			evt: Event
 		) => this.#updateInputValue(evt, 'notes')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'notes')}">
 								<span slot="label">Notes</span>
-							</sdr-textarea>
+							</textarea>
 
-							<sdr-textarea id="description" required ?disabled="${this.isDisplaying}" value="${this.#material.description}" @input="${(evt: Event) =>
+							<textarea id="description" required ?disabled="${this.isDisplaying}" value="${this.material.description}" @input="${(evt: Event) =>
 			this.#updateInputValue(evt, 'description')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'description')}">
 								<span slot="label">Description</span>
-							</sdr-textarea>
+							</textarea>
 						</sdr-tab-panel>
 
 						<sdr-tab slot="tab">Info</sdr-tab>
@@ -367,10 +369,10 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 							<div id="item-info">
 								<sdr-edit-list id="sku" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'sku')}">
 									<span slot="label">SKU</span>
-									<sdr-edit-box slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required></sdr-edit-box>
+									<input slot="input" pattern="^[A-Z0-9](?:-?[A-Z0-9])+$" required />
 
 									${
-			this.#material.sku.map((sku) =>
+			this.material.sku.map((sku) =>
 				html`
 										<sdr-edit-list-item value="${sku}">${sku}</sdr-edit-list-item>
 									`
@@ -378,13 +380,11 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		}
 								</sdr-edit-list>
 
-								<sdr-edit-box type="number" min="1" max="6" step="1" required ?disabled="${this.isDisplaying}" value="${this.#material.edition}" @input="${(
+								<input type="number" min="1" max="6" step="1" required ?disabled="${this.isDisplaying}" value="${this.material.edition}" @input="${(
 			evt: Event
-		) => this.#updateInputValue(evt, 'edition')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'edition')}">
-									<span slot="label">Edition</span>
-								</sdr-edit-box>
+		) => this.#updateInputValue(evt, 'edition')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'edition')}" />
 
-								<sdr-select id="category" required ?disabled="${this.isDisplaying}" value="${this.#material.category}" @input="${(evt: Event) =>
+								<select id="category" required ?disabled="${this.isDisplaying}" value="${this.material.category}" @input="${(evt: Event) =>
 			this.#updateInputValue(evt, 'category')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'category')}">
 									<span slot="label">Category</span>
 
@@ -396,9 +396,9 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									`
 				))
 		}
-								</sdr-select>
+								</select>
 
-								<sdr-select id="type" required ?disabled="${this.isDisplaying}" value="${this.#material.type}" @input="${(evt: Event) =>
+								<select id="type" required ?disabled="${this.isDisplaying}" value="${this.material.type}" @input="${(evt: Event) =>
 			this.#updateInputValue(evt, 'type')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'type')}">
 									<span slot="label">Type</span>
 
@@ -410,9 +410,9 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									`
 				))
 		}
-								</sdr-select>
+								</select>
 
-								<sdr-select id="originalLanguage" required ?disabled="${this.isDisplaying}" value="${this.#material.originalLanguage}" @input="${(evt: Event) =>
+								<select id="originalLanguage" required ?disabled="${this.isDisplaying}" value="${this.material.originalLanguage}" @input="${(evt: Event) =>
 			this.#updateInputValue(evt, 'originalLanguage')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'originalLanguage')}">
 									<span slot="label">Original Language</span>
 
@@ -424,14 +424,14 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									`
 				))
 		}
-								</sdr-select>
+								</select>
 
 								<sdr-edit-list id="releaseDate" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'releaseDate')}">
 									<span slot="label">Release date</span>
-									<sdr-edit-box slot="input" type="date" required></sdr-edit-box>
+									<input slot="input" type="date" required />
 
 									${
-			this.#material.releaseDate?.map((releaseDate) =>
+			this.material.releaseDate?.map((releaseDate) =>
 				html`
 										<sdr-edit-list-item value="${releaseDate}">${formatFullDate(new Date(releaseDate))}</sdr-edit-list-item>
 									`
@@ -439,7 +439,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 		}
 								</sdr-edit-list>
 
-								<sdr-select id="status" required ?disabled="${this.isDisplaying}" value="${this.#material.status}" @input="${(evt: Event) =>
+								<select id="status" required ?disabled="${this.isDisplaying}" value="${this.material.status}" @input="${(evt: Event) =>
 			this.#updateInputValue(evt, 'status')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'status')}">
 									<span slot="label">Status</span>
 
@@ -451,17 +451,15 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									`
 				))
 		}
-								</sdr-select>
+								</select>
 
-								<sdr-edit-box id="gameDate" type="month" required ?disabled="${this.isDisplaying}" value="${this.#material.gameDate}" @input="${(evt: Event) =>
-			this.#updateInputValue(evt, 'gameDate')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'gameDate')}">
-									<span slot="label">Game date</span>
-								</sdr-edit-box>
+								<input id="gameDate" type="month" required ?disabled="${this.isDisplaying}" value="${this.material.gameDate}" @input="${(evt: Event) =>
+			this.#updateInputValue(evt, 'gameDate')}" @change="${(evt: Event) => this.#updateInputValue(evt, 'gameDate')}" />
 
 								<sdr-edit-list id="names" ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToMap(evt, 'names')}">
 									<span slot="label">Names published</span>
 
-									<sdr-select slot="input" required>
+									<select slot="input" required>
 										${
 			guard(Object.keys(MATERIAL_LANGUAGES_INFO), () =>
 				Object.entries(MATERIAL_LANGUAGES_INFO).map(([key, value]) =>
@@ -470,11 +468,11 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 										`
 				))
 		}
-									</sdr-select>
-									<sdr-edit-box slot="input" required placeholder="Name"></sdr-edit-box>
+									</select>
+									<input slot="input" required placeholder="Name" />
 
 									${
-			Object.entries(this.#material.names ?? {}).map(([language, name]) => {
+			Object.entries(this.material.names ?? {}).map(([language, name]) => {
 				// @ts-expect-error
 				const { name: languageName, icon } = MATERIAL_LANGUAGES_INFO[language];
 
@@ -490,12 +488,12 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 								<sdr-edit-list id="publisher" open ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToList(evt, 'publisher')}">
 									<span slot="label">Publisher</span>
-									<sdr-select slot="input" required>
+									<select slot="input" required>
 										${MATERIAL_PUBLISHERS.map((publisher) => html`<option>${publisher}</option>`)}
-									</sdr-select>
+									</select>
 
 									${
-			this.#material.publisher.map((publisher) =>
+			this.material.publisher.map((publisher) =>
 				html`
 										<sdr-edit-list-item value="${publisher}">
 											<abbr title="${publisher}">
@@ -516,7 +514,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 								<label slot="input">Add a file</label>
 
 								${
-			this.#files.map((file) =>
+			this.files.map((file) =>
 				html`
 									<sdr-edit-list-item stretch value="${file.itemId ?? ''}">
 										<a href="#" rel="noopener noreferrer" @click="${async (evt: Event) => this.#openFile(evt, file.hash)}">
@@ -530,11 +528,11 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 							<sdr-edit-list id="links" ?disabled="${this.isDisplaying}" @itemadded="${(evt: CustomEvent) => this.#addItemToMap(evt, 'links')}">
 								<span slot="label">Online links</span>
-								<sdr-edit-box slot="input" type="url" id="link-url" placeholder="URL" required></sdr-edit-box>
-								<sdr-edit-box slot="input" type="text" id="link-title" placeholder="Name" required></sdr-edit-box>
+								<input slot="input" type="url" id="link-url" placeholder="URL" required />
+								<input slot="input" type="text" id="link-title" placeholder="Name" required />
 
 								${
-			Object.entries(this.#material.links ?? {}).map(([url, title]) =>
+			Object.entries(this.material.links ?? {}).map(([url, title]) =>
 				html`
 									<sdr-edit-list-item stretch value=${url}>
 										<a href="${url}" rel="noopener noreferrer" target="_blank">${title}</a>
@@ -545,28 +543,30 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 							</sdr-edit-list>
 						</sdr-tab-panel>
 					</sdr-tabs>
-				</div>
+				</dialog-content>
 
-				<sdr-button class="edit-button" slot="footer" icon="❌" @click="${() => {
+				<footer>
+					<button class="edit-button" slot="footer" icon="❌" @click="${() => {
 			this.isDisplaying = !this.isDisplaying;
 		}}">
-					Cancel
-				</sdr-button>
-				<sdr-button class="display-button" slot="footer" icon="✏️" @click="${() => {
+						Cancel
+					</button>
+					<button class="display-button" slot="footer" icon="✏️" @click="${() => {
 			this.isDisplaying = !this.isDisplaying;
 		}}">
-					Edit
-				</sdr-button>
-				<sdr-button class="edit-button" slot="footer" icon="💾" @click="${async () => this.#saveItem()}">
-					Save
-				</sdr-button>
-				<sdr-button class="display-button" slot="footer" icon="📥" @click="${async () => exportDataItem(this.#material)}">
-					Export
-				</sdr-button>
-				<sdr-button class="display-button" slot="footer" icon="📋" @click="${async () => copyItemToClipboard(this.#material)}">
-					Copy to clipboard
-				</sdr-button>
-			</sdr-dialog>
+						Edit
+					</button>
+					<button class="edit-button" slot="footer" icon="💾" @click="${async () => this.#saveItem()}">
+						Save
+					</button>
+					<button class="display-button" slot="footer" icon="📥" @click="${async () => exportDataItem(this.material)}">
+						Export
+					</button>
+					<button class="display-button" slot="footer" icon="📋" @click="${async () => copyItemToClipboard(this.material)}">
+						Copy to clipboard
+					</button>
+				</footer>
+			</dialog>
 		`;
 	}
 }

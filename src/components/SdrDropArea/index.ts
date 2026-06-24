@@ -18,8 +18,7 @@ class SdrDropArea extends LitElement {
 	accessor disabled: boolean;
 
 	@query('overlay')
-	// @ts-expect-error
-	accessor #overlay: HTMLDivElement;
+	private overlay!: HTMLDivElement;
 
 	constructor() {
 		super();
@@ -60,7 +59,7 @@ class SdrDropArea extends LitElement {
 
 		const [file] = Array.from(evt.dataTransfer?.files ?? []);
 		const fileType = file?.type ?? 'application/octet-stream';
-		const mimes = Object.keys(this.#accepts.accept as Record<string, string[]>);
+		const mimes = Object.keys(this.#accepts.accept ?? {});
 
 		if (mimes.includes(fileType)) {
 			this.#file = file;
@@ -68,7 +67,7 @@ class SdrDropArea extends LitElement {
 			this.dispatchEvent(new CustomEvent('dropfile', { bubbles: true, composed: true, cancelable: true, detail: { file: this.#file } }));
 		}
 
-		this.#overlay.classList.remove('drop');
+		this.overlay.classList.remove('drop');
 	}
 
 	get file() {
@@ -80,11 +79,11 @@ class SdrDropArea extends LitElement {
 
 		this.addEventListener('dragover', (evt) => {
 			evt.preventDefault();
-			this.#overlay.classList.add('drop');
+			this.overlay.classList.add('drop');
 		});
 
 		this.addEventListener('dragleave', () => {
-			this.#overlay.classList.remove('drop');
+			this.overlay.classList.remove('drop');
 		});
 
 		document.addEventListener('paste', (evt) => {
@@ -92,9 +91,9 @@ class SdrDropArea extends LitElement {
 				return;
 			}
 
-			const clipboardData = evt.clipboardData as DataTransfer;
-			const { files } = clipboardData;
-			const mimes = Object.keys(this.#accepts.accept as Record<string, string[]>);
+			const clipboardData = evt.clipboardData;
+			const { files = [] } = clipboardData ?? {};
+			const mimes = Object.keys(this.#accepts.accept ?? {});
 			const file = [...files].find((potentialFile) => mimes.includes(potentialFile.type));
 
 			if (file) {

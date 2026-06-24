@@ -114,6 +114,7 @@ class SdrViewCbzReader extends LitElement implements RouterView {
 			return;
 		}
 
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		this.#currentVisibleImage = entry.target as HTMLImageElement;
 
 		if (!this.#currentVisibleImage.previousElementSibling) {
@@ -128,7 +129,7 @@ class SdrViewCbzReader extends LitElement implements RouterView {
 			this.nextPageVisibility = 'visible';
 		}
 
-		this.selectedPage = this.#currentVisibleImage.dataset?.['folder'] ?? '';
+		this.selectedPage = this.#currentVisibleImage.dataset['folder'] ?? '';
 	}
 
 	async #unzipImages(file?: File) {
@@ -145,6 +146,7 @@ class SdrViewCbzReader extends LitElement implements RouterView {
 
 		for (const zipObject of Object.values(zip.files)) {
 			if (!zipObject.dir) {
+				// oxlint-disable-next-line no-await-in-loop
 				const blob = await zipObject.async('blob');
 				const [name = '', folder = DEFAULT_FOLDER_NAME] = zipObject.name.split('/').reverse();
 				const testRegex = /(?<extension>\.[a-z0-9]{3,})$/u;
@@ -237,32 +239,29 @@ class SdrViewCbzReader extends LitElement implements RouterView {
 
 	override render() {
 		return html`
-			<sdr-dialog ?open="${this.open}" @close="${() => this.#close()}">
-				<sdr-button
-					icon-button
-					slot="title"
-					class="title-menu"
-					style="visibility: ${this.previousPageVisibility}"
-					@click="${() => this.showPreviousPage()}"
-				>⏮️</sdr-button>
-				<sdr-select
-					id="toc"
-					slot="title"
-					class="title-menu"
-					.value="${this.selectedPage}"
-					@change="${() => this.renderRoot.querySelector(`[data-folder="${this.selectedPage}"]`)?.scrollIntoView()}"
-				>
-					${this.toc.map((folder) => html`<option>${folder}</option>`)}
-				</sdr-select>
-				<sdr-button
-					icon-button
-					slot="title"
-					class="title-menu"
-					style="visibility: ${this.nextPageVisibility}"
-					@click="${() => this.showNextPage()}"
-				>⏭️</sdr-button>
+			<dialog ?open="${this.open}" @close="${() => this.#close()}">
+				<header>
+					<button
+						class="title-menu"
+						style="visibility: ${this.previousPageVisibility}"
+						@click="${() => this.showPreviousPage()}"
+					>⏮️</button>
+					<select
+						id="toc"
+						class="title-menu"
+						.value="${this.selectedPage}"
+						@change="${() => this.renderRoot.querySelector(`[data-folder="${this.selectedPage}"]`)?.scrollIntoView()}"
+					>
+						${this.toc.map((folder) => html`<option>${folder}</option>`)}
+					</select>
+					<button
+						class="title-menu"
+						style="visibility: ${this.nextPageVisibility}"
+						@click="${() => this.showNextPage()}"
+					>⏭️</button>
+				</header>
 
-				<article id="comic">
+				<dialog-content id="comic">
 					${
 			this.pages.map((page) =>
 				html`
@@ -270,12 +269,12 @@ class SdrViewCbzReader extends LitElement implements RouterView {
 					`
 			)
 		}
-				</article>
+				</dialog-content>
 
 				<div id="comic-book-overlay">
 					<progress></progress>
 				</div>
-			</sdr-dialog>
+			</dialog>
 		`;
 	}
 }

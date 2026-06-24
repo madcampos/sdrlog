@@ -15,37 +15,36 @@ import { Router } from '../../router/router';
 class SdrViewEpubReader extends LitElement implements RouterView {
 	#rendition: Rendition | undefined;
 
-	@property({ type: Boolean, attribute: 'loaded' })
-	accessor loaded: boolean;
+	@property({ type: Boolean })
+	loaded: boolean;
 
 	@state()
-	accessor open: boolean;
+	private open: boolean;
 
 	@state()
-	accessor #toc: NavItem[];
+	private toc: NavItem[];
 
 	@state()
-	accessor #selectedPage: string;
+	private selectedPage: string;
 
 	@state()
-	accessor #nextPageVisibility: 'hidden' | 'visible';
+	private nextPageVisibility: 'hidden' | 'visible';
 
 	@state()
-	accessor #previousPageVisibility: 'hidden' | 'visible';
+	private previousPageVisibility: 'hidden' | 'visible';
 
 	@query('#book')
-	// @ts-expect-error
-	accessor #renderArea: HTMLElement;
+	private renderArea!: HTMLElement;
 
 	constructor() {
 		super();
 
 		this.open = false;
 		this.loaded = false;
-		this.#toc = [];
-		this.#selectedPage = '';
-		this.#nextPageVisibility = 'hidden';
-		this.#previousPageVisibility = 'hidden';
+		this.toc = [];
+		this.selectedPage = '';
+		this.nextPageVisibility = 'hidden';
+		this.previousPageVisibility = 'hidden';
 
 		this.#resetBook();
 
@@ -87,34 +86,35 @@ class SdrViewEpubReader extends LitElement implements RouterView {
 		}
 
 		// @ts-expect-error - ePub should be available in the window object
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		const book = ePub(await file.arrayBuffer()) as Book;
 		const { toc } = await book.loaded.navigation;
 
-		this.#rendition = book.renderTo(this.#renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
+		this.#rendition = book.renderTo(this.renderArea, { width: '100%', height: '100%', flow: 'scrolled-doc' });
 
 		this.#rendition.themes.register('dark', darkTheme);
 		this.#rendition.themes.select('dark');
 
-		this.#toc = toc;
+		this.toc = toc;
 
 		this.#rendition.on('keyup', (evt: KeyboardEvent) => this.#keyboardNavigation(evt));
 		document.addEventListener('keyup', (evt) => this.#keyboardNavigation(evt));
 
 		this.#rendition.on('rendered', (section: Section) => {
-			this.#selectedPage = section.href;
+			this.selectedPage = section.href;
 		});
 
 		this.#rendition.on('relocated', (bookLocation: BookLocation) => {
 			if (bookLocation.atEnd) {
-				this.#nextPageVisibility = 'hidden';
+				this.nextPageVisibility = 'hidden';
 			} else {
-				this.#nextPageVisibility = 'visible';
+				this.nextPageVisibility = 'visible';
 			}
 
 			if (bookLocation.atStart) {
-				this.#previousPageVisibility = 'hidden';
+				this.previousPageVisibility = 'hidden';
 			} else {
-				this.#previousPageVisibility = 'visible';
+				this.previousPageVisibility = 'visible';
 			}
 		});
 
@@ -126,10 +126,10 @@ class SdrViewEpubReader extends LitElement implements RouterView {
 	#resetBook() {
 		this.loaded = false;
 
-		this.#toc = [];
-		this.#selectedPage = '';
-		this.#nextPageVisibility = 'hidden';
-		this.#previousPageVisibility = 'hidden';
+		this.toc = [];
+		this.selectedPage = '';
+		this.nextPageVisibility = 'hidden';
+		this.previousPageVisibility = 'hidden';
 
 		this.#rendition?.destroy();
 		this.#rendition = undefined;
@@ -145,7 +145,7 @@ class SdrViewEpubReader extends LitElement implements RouterView {
 
 	async navigate(destination: RouteLocation<'/epub/:id'>) {
 		this.#resetBook();
-		this.#renderArea.innerHTML = '';
+		this.renderArea.innerHTML = '';
 
 		if (!destination.params.id) {
 			return;
@@ -163,48 +163,48 @@ class SdrViewEpubReader extends LitElement implements RouterView {
 
 	override render() {
 		return html`
-			<sdr-dialog ?open=${this.open} @close=${() => this.#close()}>
-				<sdr-button
-					icon-button
-					slot="title"
-					class="title-menu"
-					style="visibility: ${this.#previousPageVisibility}"
-					@click="${async () => this.showPreviousPage()}"
-				>⏮️</sdr-button>
-				<sdr-select
-					id="toc"
-					slot="title"
-					class="title-menu"
-					.value="${this.#selectedPage}"
-					@change="${async (evt: InputEvent) => this.#rendition?.display((evt.target as HTMLSelectElement).value)}"
-				>
-					${
-			this.#toc.map((chapter) => {
+			<dialog ?open=${this.open} @close=${() => this.#close()}>
+				<header>
+					<button
+						slot="title"
+						class="title-menu"
+						style="visibility: ${this.previousPageVisibility}"
+						@click="${async () => this.showPreviousPage()}"
+					>⏮️</button>
+					<select
+						id="toc"
+						slot="title"
+						class="title-menu"
+						.value="${this.selectedPage}"
+						@change="${async (evt: InputEvent) => this.#rendition?.display((evt.target as HTMLSelectElement).value)}"
+					>
+						${
+			this.toc.map((chapter) => {
 				if (chapter.subitems) {
 					return html`
-								<optgroup label="${chapter.label}">
-									${chapter.subitems.map((subChapter) => html`<option value="${subChapter.href}">${subChapter.label}</option>`)}
-								</optgroup>
-							`;
+									<optgroup label="${chapter.label}">
+										${chapter.subitems.map((subChapter) => html`<option value="${subChapter.href}">${subChapter.label}</option>`)}
+									</optgroup>
+								`;
 				}
 
 				return html`<option value="${chapter.href}">${chapter.label}</option>`;
 			})
 		}
-				</sdr-select>
-				<sdr-button
-					icon-button
-					slot="title"
-					class="title-menu"
-					style="visibility: ${this.#nextPageVisibility}"
-					@click="${async () => this.showNextPage()}"
-				>⏭️</sdr-button>
-				<article id="book">
-				</article>
+					</select>
+					<button
+						slot="title"
+						class="title-menu"
+						style="visibility: ${this.nextPageVisibility}"
+						@click="${async () => this.showNextPage()}"
+					>⏭️</button>
+				</header>
+				<dialog-content id="book">
+				</dialog-content>
 				<div id="load-overlay">
 					<progress></progress>
 				</div>
-			</sdr-dialog>
+			</dialog>
 		`;
 	}
 }

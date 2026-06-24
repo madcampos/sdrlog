@@ -38,11 +38,11 @@ class SdrUpdateNotify extends LitElement {
 		return html`
 			<aside role="status" aria-live="polite" hidden>
 				<p>${this.message}</p>
-				<sdr-button
-					icon="♻️"
-					icon-button
+				<button
 					@click="${() => this.#update()}"
-				></sdr-button>
+				>
+					<!-- TODO: icon and label -->
+				</button>
 			</aside>
 		`;
 	}

@@ -34,14 +34,14 @@ class SdrEditListItem extends LitElement {
 	override render() {
 		return html`
 			<slot></slot>
-			<sdr-button
-				icon-button
-				small
-				title="Remove item"
+			<button
 				id="remove-button"
 
 				@click="${() => this.#removeItem()}"
-			>❌</sdr-button>
+			>
+				<sr-only>Remove Item</sr-only>
+				<iconify-icon icon="mdi:close" aria-hidden="true"></iconify-icon>
+			</button>
 		`;
 	}
 }

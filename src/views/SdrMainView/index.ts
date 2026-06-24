@@ -44,22 +44,22 @@ class SdrViewMain extends LitElement implements RouterView {
 	accessor cards: Pick<Material, 'category' | 'edition' | 'name' | 'sku' | 'status' | 'type'>[];
 
 	@state()
-	accessor #hasFileSystem: boolean;
+	private hasFileSystem: boolean;
 
 	@state()
-	accessor #isDevMode: boolean;
+	private isDevMode: boolean;
 
 	@state()
-	accessor #filters: (FilterItem | null)[];
+	private filters: (FilterItem | null)[];
 
 	@state()
-	accessor #appMenuItems: (MenuItem | null)[];
+	private appMenuItems: (MenuItem | null)[];
 
 	@state()
-	accessor #fileMenuItems: (MenuItem | null)[];
+	private fileMenuItems: (MenuItem | null)[];
 
 	@state()
-	accessor #devMenuItems: (MenuItem | null)[];
+	private devMenuItems: (MenuItem | null)[];
 
 	#hasLoadedData = false;
 
@@ -69,10 +69,10 @@ class SdrViewMain extends LitElement implements RouterView {
 		this.hidden = false;
 		this.cards = [];
 
-		this.#isDevMode = false;
-		this.#hasFileSystem = false;
+		this.isDevMode = false;
+		this.hasFileSystem = false;
 
-		this.#filters = [
+		this.filters = [
 			{ icon: '📜', label: 'Sourcebooks', filter: 'category: sourcebook' },
 			{ icon: '📝', label: 'Rulebooks', filter: 'category: rulebook' },
 			{ icon: '🗺️', label: 'Adventures & Campaigns', filter: 'category: mission' },
@@ -87,13 +87,13 @@ class SdrViewMain extends LitElement implements RouterView {
 			{ icon: '📚', label: 'All', filter: 'category: all' }
 		];
 
-		this.#appMenuItems = [
+		this.appMenuItems = [
 			{ icon: 'ℹ️', label: 'Tool Information', action: async () => Router.navigate('/info') },
 			// { icon: '💬', label: 'Language Settings', action: async () => Router.navigate('/settings/language') },
 			{ icon: '🌓', label: 'Theme Settings', action: async () => Router.navigate('/settings/theme') }
 		];
 
-		this.#fileMenuItems = [
+		this.fileMenuItems = [
 			null,
 			{ icon: '📥', label: 'Import Files', action: readFiles },
 			{ icon: '📦', label: 'Import Data', action: requestDataFileFromUser },
@@ -106,7 +106,7 @@ class SdrViewMain extends LitElement implements RouterView {
 			{ icon: '🖼️', label: 'Export Covers', action: saveCoversToFolder }
 		];
 
-		this.#devMenuItems = [
+		this.devMenuItems = [
 			null,
 			{ icon: '⛔️', label: 'Report Data Inconsistencies', action: reportInconsistencies },
 			{ icon: '💬', label: 'Open CBZ reader', action: async () => Router.navigate('/cbz/test') },
@@ -115,11 +115,11 @@ class SdrViewMain extends LitElement implements RouterView {
 		];
 
 		if ('showOpenFilePicker' in window) {
-			this.#hasFileSystem = true;
+			this.hasFileSystem = true;
 		}
 
 		if (import.meta.env.DEV) {
-			this.#isDevMode = true;
+			this.isDevMode = true;
 		}
 	}
 
@@ -138,67 +138,75 @@ class SdrViewMain extends LitElement implements RouterView {
 	override render() {
 		return html`
 			<sdr-title-bar>
-				<sdr-dropdown id="filters" icon="︙" trigger-button="x">
+				<!-- TODO: custom select -->
+				<select id="filters" icon="︙" trigger-button="x">
+					<button>
+						<selectedcontent></selectedcontent>
+					</button>
 					${
-			this.#filters.map((filter) => {
+			this.filters.map((filter) => {
 				if (filter === null) {
-					return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
+					return html`<hr />`;
 				}
 
 				return html`
-							<sdr-dropdown-item
+							<option
 								icon="${filter.icon}"
 								@click="${() => SearchEngine.updateSearchResults(filter.filter)}"
 							>
 								${filter.label}
-							</sdr-dropdown-item>
+							</option>
 						`;
 			})
 		}
-				</sdr-dropdown>
+				</select>
 
-				<sdr-button id="add-material" @click="${async () => Router.navigate('/item')}" icon="➕"></sdr-button>
+				<button id="add-material" @click="${async () => Router.navigate('/item')}" icon="➕"></button>
 
 				<sdr-search-box></sdr-search-box>
 
-				<sdr-dropdown id="app-menu" icon="⚙️" align-right trigger-button="start">
+				<!-- TODO: custom select -->
+				<select id="app-menu" icon="⚙️" align-right trigger-button="start">
+					<button>
+						<selectedcontent></selectedcontent>
+					</button>
 					${
-			this.#appMenuItems.map((item) => {
+			this.appMenuItems.map((item) => {
 				if (item === null) {
-					return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
+					return html`<hr />`;
 				}
 
 				return html`
-							<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
+							<option icon="${item.icon}" @click="${() => item.action()}">${item.label}</option>`;
 			})
 		}
 
 					${
-			this.#hasFileSystem
-				? this.#fileMenuItems.map((item) => {
+			this.hasFileSystem
+				? this.fileMenuItems.map((item) => {
 					if (item === null) {
-						return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
+						return html`<hr />`;
 					}
 
 					return html`
-								<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
+								<option icon="${item.icon}" @click="${() => item.action()}">${item.label}</option>`;
 				})
 				: ''
 		}
 
 					${
-			this.#isDevMode
-				? this.#devMenuItems.map((item) => {
+			this.isDevMode
+				? this.devMenuItems.map((item) => {
 					if (item === null) {
-						return html`<sdr-dropdown-item separator></sdr-dropdown-item>`;
+						return html`<hr />`;
 					}
 
 					return html`
-								<sdr-dropdown-item icon="${item.icon}" @click="${() => item.action()}">${item.label}</sdr-dropdown-item>`;
+								<option icon="${item.icon}" @click="${() => item.action()}">${item.label}</option>`;
 				})
 				: ''
 		}
-				</sdr-dropdown>
+				</select>
 			</sdr-title-bar>
 
 			<main role="list">

@@ -97,7 +97,10 @@ class SdrSearchBox extends LitElement {
 				<span id="icon-container">
 					<sdr-gamepad-badge button="y"></sdr-gamepad-badge>
 				</span>
-				<sdr-button icon="🔍" @click="${() => this.#searchClick()}"></sdr-button>
+				<button @click="${() => this.#searchClick()}">
+					<sr-only>Search</sr-only>
+					<iconify-icon icon="mdi:search" aria-hidden="true"></iconify-icon>
+				</button>
 			</label>
 		`;
 	}
