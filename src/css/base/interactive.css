@@ -1,0 +1,70 @@
+@layer base {
+	summary {
+		align-items: center;
+		display: flex;
+		gap: var(--size-1);
+
+		& > :where(h1, h2, h3, h4, h5, h6) { margin: 0; }
+
+		&:focus-visible {
+			background-color: var(--surface-1);
+			outline: var(--focus-outline);
+			outline-offset: var(--size-1);
+		}
+	}
+
+	dialog {
+		align-items: start;
+		background-color: var(--surface-2);
+		block-size: clamp(var(--size-content-0), 70vh, var(--size-content-3));
+		flex-direction: column;
+		font-size: var(--font-size-1);
+		gap: var(--size-2);
+		inline-size: clamp(var(--size-content-0), 70vw, var(--size-content-3));
+		justify-content: center;
+		overscroll-behavior: contain;
+		padding: var(--size-3);
+
+		&:where([open], :popover-open) { display: flex; }
+
+		&::backdrop {
+			backdrop-filter: blur(var(--size-3));
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		& > form { display: contents; }
+
+		& > header, & > form > header {
+			align-items: center;
+			display: flex;
+			inline-size: 100%;
+
+			button { flex-shrink: 0; }
+			:is(h1, h2, h3, h4, h5, h6) {
+				flex-grow: 1;
+				margin: 0;
+			}
+		}
+
+		& > footer, & > form > footer {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--size-2);
+			inline-size: 100%;
+
+			button { flex-shrink: 0; }
+		}
+
+		& > dialog-content, & > form > dialog-content {
+			flex-grow: 1;
+			inline-size: 100%;
+			overflow: auto;
+		}
+
+		@media (max-width: 40rem) {
+			block-size: 100dvb;
+			inline-size: 100dvi;
+		}
+	}
+}

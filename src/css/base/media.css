@@ -1,0 +1,29 @@
+@layer base {
+	:is(audio, img, video) {
+		block-size: auto;
+		border-style: none;
+		color: var(--accent-color);
+		display: block;
+		font-style: italic;
+		inline-size: 100%;
+		margin-inline: auto;
+		max-block-size: var(--size-content-3);
+		max-inline-size: var(--size-content-3);
+		min-block-size: var(--size-content-0);
+		min-inline-size: var(--size-content-0);
+		object-fit: contain;
+		object-position: center;
+		text-wrap: balance;
+	}
+
+	audio {
+		inline-size: 100%;
+		min-block-size: var(--size-8);
+	}
+
+	:is(audio, video):focus-visible {
+		background-color: var(--surface-1);
+		outline: var(--focus-outline);
+		outline-offset: var(--size-1);
+	}
+}

@@ -1,0 +1,48 @@
+@layer base {
+	:root {
+		accent-color: var(--theme-color);
+		color-scheme: light dark;
+		font-family: var(--font-industrial);
+		font-size: var(--base-font-size);
+		hanging-punctuation: first allow-end last;
+		interpolate-size: allow-keywords;
+		line-height: var(--font-lineheight-2);
+		scrollbar-color: var(--theme-color) var(--surface-2);
+		scrollbar-gutter: stable;
+		scrollbar-width: thin;
+		tab-size: 4;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+		word-break: break-word;
+	}
+
+	:where(*, *::after, *::before) {
+		box-sizing: border-box;
+		font-family: inherit;
+	}
+
+	html {
+		block-size: 100%;
+		inline-size: 100%;
+	}
+
+	body {
+		block-size: 100%;
+		inline-size: 100%;
+		margin: 0;
+		min-block-size: fit-content;
+	}
+
+	:target {
+		scroll-margin: var(--size-3);
+		scroll-snap-align: start;
+	}
+
+	::selection {
+		background-color: var(--theme-color);
+		color: var(--surface-1);
+	}
+
+	:not(sdr-loading-screen):not(:defined) { display: none; }
+}

@@ -1,0 +1,37 @@
+@layer base {
+	a {
+		color: var(--link-color);
+		overflow-wrap: break-word;
+		text-decoration-skip-ink: auto;
+		text-decoration-style: solid;
+		text-decoration-thickness: 0.11em;
+		text-underline-offset: 0.2em;
+		word-break: break-word;
+
+		&:visited { color: var(--link-visited-color); }
+		&:focus-visible {
+			background-color: var(--surface-1);
+			color: var(--text-1);
+			outline: var(--focus-outline);
+			outline-offset: var(--size-1);
+		}
+
+		&:hover {
+			color: var(--link-hover-color);
+			outline-color: var(--link-hover-color);
+		}
+
+		&:active {
+			color: var(--link-active-color);
+			outline-color: var(--link-active-color);
+		}
+
+		&:has(img) {
+			display: inline-flex;
+
+			&:focus-visible { background-color: var(--surface-1); }
+		}
+	}
+
+	small { font-size: var(--font-size-0); }
+}

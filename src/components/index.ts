@@ -1,3 +1,5 @@
+import 'iconify-icon';
+
 import './SdrButton/index.ts';
 import './SdrCard/index.ts';
 import './SdrDialog/index.ts';

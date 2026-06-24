@@ -1,0 +1,10 @@
+@layer base {
+	:is(svg, math) { max-inline-size: 100%; }
+
+	/* TODO: review icon */
+	:where(svg[data-icon]) {
+		min-block-size: 1.3em;
+		min-inline-size: 1.3em;
+		vertical-align: -0.32em;
+	}
+}

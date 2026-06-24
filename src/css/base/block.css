@@ -1,0 +1,22 @@
+@layer base {
+	dl {
+		dt { font-weight: bold; }
+		dd { margin-inline-start: var(--size-3); }
+	}
+
+	figure {
+		inline-size: fit-content;
+		margin-inline: auto;
+		min-inline-size: var(--size-content-0);
+
+		figcaption {
+			contain: inline-size;
+			font-size: var(--font-size-0);
+			text-align: center;
+		}
+	}
+
+	:is(p, li, dd) { text-wrap: pretty; }
+
+	pre { white-space: pre-wrap; }
+}

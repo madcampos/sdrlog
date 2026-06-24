@@ -35,7 +35,19 @@ declare global {
 	interface HTMLElementTagNameMap {
 		'router-link': RouterLink;
 
-		'sdr-button': SdrButton;
+		'dialog-content': HTMLElement;
+		'rendered-content': HTMLElement;
+		'sr-only': HTMLElement;
+		'svg-defs': HTMLElement;
+
+		'input-wrapper': HTMLElement;
+		'input-error': HTMLElement;
+		'input-hint': HTMLElement;
+		'input-infix': HTMLElement;
+		'input-required': HTMLElement;
+		'input-success': HTMLElement;
+		'form-status': HTMLElement;
+
 		'sdr-card': SdrCard;
 		'sdr-dialog': SdrDialog;
 		'sdr-drop-area': SdrDropArea;
