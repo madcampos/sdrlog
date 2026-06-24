@@ -22,6 +22,10 @@
 		"deploy": "wrangler deploy --minify"
 	},
 	"dependencies": {
+		"@emulatorjs/core-genesis_plus_gx": "^4.2.3",
+		"@emulatorjs/core-snes9x": "^4.2.3",
+		"@emulatorjs/emulatorjs": "^4.2.3",
+		"@lit-labs/router": "^0.1.4",
 		"epubjs": "^0.3.93",
 		"iconify-icon": "^3.0.2",
 		"idb": "^8.0.3",
