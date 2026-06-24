@@ -1,4 +1,4 @@
-import { type DBSchema, type IndexKey, type IndexNames, openDB, type StoreNames } from 'idb';
+import { type DBSchema, type IndexKey, type IndexNames, type StoreNames, openDB } from 'idb';
 import type { FileSystemEntryForMaterial, Material, MaterialCover } from '../../data/data';
 
 interface DatabaseSchema extends DBSchema {
@@ -114,7 +114,6 @@ export async function setIDBItems<T extends Collections>(collection: T, items: [
 
 	try {
 		for (const [key, value] of items) {
-			 
 			await transaction.store.put(value, key);
 		}
 

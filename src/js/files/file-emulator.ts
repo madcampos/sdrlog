@@ -22,7 +22,6 @@ export async function getEmulatorFiles() {
 		const zip = await JSZip.loadAsync(zipFile);
 
 		for (const zipObject of Object.values(zip.files)) {
-			 
 			if (!zipObject.dir) {
 				const blob = await zipObject.async('blob');
 				const name = zipObject.name.split('/').pop() ?? '';
@@ -36,7 +35,6 @@ export async function getEmulatorFiles() {
 
 				await setIDBItem('emulator', zipObject.name, file);
 			}
-			 
 		}
 
 		files = await getAllIDBEntries('emulator');

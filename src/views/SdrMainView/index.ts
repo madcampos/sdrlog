@@ -1,5 +1,5 @@
 import type { Material } from '../../data/data';
-import { Router, type RouterView } from '../../router/router';
+import { type RouterView, Router } from '../../router/router';
 
 import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
