@@ -1,6 +1,6 @@
 @keyframes indeterminate {
-	from { background-position: 0; }
-	to { background-position: 100%; }
+	0% { background-position: 0; }
+	100% { background-position: 100%; }
 }
 
 @layer base {
@@ -123,14 +123,17 @@
 	/* Buttons */
 
 	:is(button, input:is([type='submit'], [type='reset'], [type='button'])) {
+		display: flex;
 		align-items: center;
+		justify-content: center;
+
 		background: var(--button-bg);
 		border: var(--button-border);
 		border-radius: var(--radius-round);
 		color: var(--button-color);
+
 		cursor: pointer;
-		display: flex;
-		justify-content: center;
+
 		margin: var(--size-2);
 		padding: var(--size-1) var(--size-2);
 
@@ -170,6 +173,11 @@
 			block-size: 100%;
 			inline-size: 100%;
 			pointer-events: none;
+		}
+
+		&[data-icon-button] {
+			aspect-ratio: 1 / 1;
+			padding: var(--size-2);
 		}
 	}
 

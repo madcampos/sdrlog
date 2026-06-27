@@ -29,6 +29,8 @@
 
 	body {
 		block-size: 100%;
+		display: flex;
+		flex-direction: column;
 		inline-size: 100%;
 		margin: 0;
 		min-block-size: fit-content;
@@ -43,6 +45,4 @@
 		background-color: var(--theme-color);
 		color: var(--surface-1);
 	}
-
-	:not(sdr-loading-screen):not(:defined) { display: none; }
 }
