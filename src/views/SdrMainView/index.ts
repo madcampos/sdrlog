@@ -4,7 +4,6 @@ import { type RouterView, Router } from '../../router/router';
 import { html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
-import { SearchEngine } from '../../components/SdrSearchBox/search-engine';
 import { saveCoversToFolder, saveThumbsToFolder } from '../../js/covers/cover-export';
 import { extractCoversFromFiles, importCoversFromFolder } from '../../js/covers/cover-fetch';
 import { reportInconsistencies } from '../../js/data/analysis';
@@ -12,6 +11,7 @@ import { exportDataFile } from '../../js/data/data-export';
 import { fetchItems, requestDataFileFromUser } from '../../js/data/data-import';
 import { readFiles } from '../../js/files/file-import';
 import { createComparer } from '../../js/intl/formatting';
+import { SearchEngine } from '../../js/search-engine';
 
 declare global {
 	interface GlobalEventHandlersEventMap {
