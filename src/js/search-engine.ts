@@ -206,7 +206,7 @@ export class SearchEngine {
 			return [];
 		}
 
-		const suggestionList: SearchSuggestion[] = [];
+		const suggestionList: string[] = [];
 
 		if (searchTags.some((tag) => input.startsWith(`${tag}:`))) {
 			const [tag = '', value = ''] = input.split(':');
@@ -215,65 +215,49 @@ export class SearchEngine {
 			switch (tag as SearchTag) {
 				case 'sku':
 					document.querySelectorAll<HTMLElement>(`${SearchEngine.#cardElement}[data-sku*="${value}" i]`).forEach((card) => {
-						// oxlint-disable-next-line typescript/no-non-null-assertion
-						const sku = card.dataset['sku']!;
-						const title = card.dataset['name'] ?? '';
+						const sku = card.dataset['sku'] ?? '';
 
-						suggestionList.push({
-							value: `sku: ${sku}`,
-							text: title
-						});
+						if (sku) {
+							suggestionList.push(`sku: ${sku}`);
+						}
 					});
 					break;
-				case 'name':
 				case 'category':
-					Object.entries(MATERIAL_CATEGORY_INFO)
-						.filter(([suggestion]) => suggestion.startsWith(value))
-						.forEach(([suggestion, { name }]) => {
-							suggestionList.push({
-								value: suggestion,
-								text: name
-							});
+					Object.keys(MATERIAL_CATEGORY_INFO)
+						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
+						.forEach((suggestion) => {
+							suggestionList.push(`category: ${suggestion}`);
 						});
 					break;
 				case 'edition':
-					Object.entries(MATERIAL_EDITION_INFO)
-						.filter(([suggestion]) => suggestion.startsWith(value))
-						.forEach(([suggestion, name]) => {
-							suggestionList.push({
-								value: suggestion,
-								text: name
-							});
+					Object.keys(MATERIAL_EDITION_INFO)
+						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
+						.forEach((suggestion) => {
+							suggestionList.push(`edition: ${suggestion}`);
 						});
 					break;
 				case 'status':
-					Object.entries(MATERIAL_STATUS_INFO)
-						.filter(([suggestion]) => suggestion.startsWith(value))
-						.forEach(([suggestion, { name }]) => {
-							suggestionList.push({
-								value: suggestion,
-								text: name
-							});
+					Object.keys(MATERIAL_STATUS_INFO)
+						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
+						.forEach((suggestion) => {
+							suggestionList.push(`status: ${suggestion}`);
 						});
 					break;
 				case 'type':
-					Object.entries(MATERIAL_TYPE_INFO)
-						.filter(([suggestion]) => suggestion.startsWith(value))
-						.forEach(([suggestion, { name }]) => {
-							suggestionList.push({
-								value: suggestion,
-								text: name
-							});
+					Object.keys(MATERIAL_TYPE_INFO)
+						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
+						.forEach((suggestion) => {
+							suggestionList.push(`type: ${suggestion}`);
 						});
 					break;
+				case 'name':
 				default:
 					document.querySelectorAll<HTMLElement>(`${SearchEngine.#cardElement}[data-name*="${value}" i]`).forEach((card) => {
 						const name = card.dataset['name'] ?? '';
 
-						suggestionList.push({
-							value: `name: ${name}`,
-							text: name
-						});
+						if (name) {
+							suggestionList.push(`name: ${name}`);
+						}
 					});
 					break;
 			}
@@ -281,10 +265,9 @@ export class SearchEngine {
 			document.querySelectorAll<HTMLElement>(`${SearchEngine.#cardElement}[data-name*="${input}" i]`).forEach((card) => {
 				const name = card.dataset['name'] ?? '';
 
-				suggestionList.push({
-					value: `name: ${name}`,
-					text: name
-				});
+				if (name) {
+					suggestionList.push(`name: ${name}`);
+				}
 			});
 		}
 
