@@ -1,33 +1,75 @@
-:host {
-	app-region: drag;
-	-webkit-app-region: drag;
-	background-color: var(--theme-color);
-	box-shadow: var(--shadow-5);
-	box-sizing: border-box;
-	display: block;
-	height: var(--menubar-height);
-	position: absolute;
-	top: var(--menubar-top);
-	width: 100%;
-	z-index: 1;
+@layer components {
+	top-bar:defined {
+		app-region: drag;
+		-webkit-app-region: drag;
+		background-color: var(--theme-color);
+		box-shadow: var(--shadow-2);
+		display: block;
+		height: var(--topbar-height);
+		position: absolute;
+		top: var(--menubar-top);
+		width: 100%;
+		z-index: 1;
+
+		nav {
+			position: absolute;
+			inset-block: 0;
+			left: var(--topbar-left);
+			width: var(--topbar-width);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: var(--size-1) var(--size-2);
+			gap: var(--size-3);
+
+			& > :is(button, search) {
+				app-region: no-drag;
+				-wbkit-app-region: no-drag;
+				margin: 0;
+			}
+
+			search {
+				display: flex;
+				align-items: center;
+				gap: var(--size-2);
+
+				form { display: contents; }
+
+				input-wrapper {
+					margin: 0;
+					display: block;
+				}
+			}
+
+			dialog {
+				margin-inline-end: 0;
+				border: none;
+				border-inline-start: solid var(--border-size-2) var(--theme-color);
+				block-size: 100%;
+				inline-size: fit-content;
+
+				menu {
+					display: flex;
+					flex-direction: column;
+					gap: var(--size-2);
+					align-items: center;
+					inline-size: fit-content;
+					margin-inline: auto;
+					padding-inline: var(--size-6);
+
+					button {
+						min-inline-size: fit-content;
+						inline-size: 100%;
+					}
+
+					div:not([hidden]) { display: contents; }
+				}
+
+				@media (max-width: 40rem) { border: none; }
+				@media (display-mode: window-controls-overlay) { margin-top: var(--topbar-height); }
+			}
+		}
+	}
+
+	:host([no-file-system]) .file-system { display: none; }
 }
-
-nav {
-	align-items: center;
-	box-sizing: inherit;
-	display: flex;
-	height: 100%;
-	justify-content: center;
-	left: var(--menubar-left);
-	padding: var(--size-1) var(--size-2);
-	position: absolute;
-	top: 0;
-	user-select: none;
-	width: var(--menubar-width);
-}
-
-nav ::slotted(*) { margin: var(--size-1); }
-
-:host([no-file-system]) .file-system { display: none; }
-
-@media (display-mode: window-controls-overlay) { /* TODO: add logic to display title bar with window overlays */ }

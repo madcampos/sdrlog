@@ -2,6 +2,17 @@
 	/* Default size for body text */
 	/* INFO: set as a percentage to allow for OS level sizing */
 	--base-font-size: 112.5%;
+
+	/* Insets and safe areas */
+	--inset-top: calc(env(titlebar-area-y, 0px) + env(safe-area-inset-top, 0px));
+	--inset-right: env(safe-area-inset-right, 0px);
+	--inset-bottom: env(safe-area-inset-bottom, 0px);
+	--inset-left: env(safe-area-inset-left, 0px);
+
+	--topbar-height: env(titlebar-area-height, 3rem);
+	--topbar-left: calc(env(titlebar-area-x, 0px) + var(--inset-left));
+	--topbar-width: calc(env(titlebar-area-width, 100vw) - var(--inset-right));
+
 	/* Size overrides */
 	--size-content-0: 10ch;
 	--size-content-1: 20ch;
@@ -13,8 +24,10 @@
 	--size-header-2: 30ch;
 	--size-header-3: 45ch;
 	--size-header-4: 96ch;
+
 	/* Focus outline */
-	--focus-outline: var(--theme-color) var(--border-style) var(--border-size);
+	--focus-outline: var(--theme-color) solid var(--border-size-2);
+
 	/* Filters */
 	--filter-pixelate: url('#pixelate-filter');
 	--filter-small-pixelate: url('#small-pixelate-filter');
@@ -24,6 +37,7 @@
 	--theme-color: darkviolet;
 	--accent-color: deeppink;
 	--secondary-color: hotpink;
+
 	/* Theme colors */
 	--theme-0: hsl(from var(--theme-color) h s 07.6%);
 	--theme-1: hsl(from var(--theme-color) h s 15.2%);
@@ -64,6 +78,7 @@
 	--secondary-10: hsl(from var(--secondary-color) h s 83.6%);
 	--secondary-11: hsl(from var(--secondary-color) h s 91.2%);
 	--secondary-12: hsl(from var(--secondary-color) h s 98.8%);
+
 	/* Base colors */
 	--text-1: var(--gray-12);
 	--text-2: var(--gray-8);
@@ -71,11 +86,13 @@
 	--surface-2: color-mix(in oklch increasing hue, var(--gray-2) 80%, var(--theme-2));
 	--surface-3: color-mix(in oklch increasing hue, var(--gray-4) 80%, var(--theme-4));
 	--surface-4: color-mix(in oklch increasing hue, var(--gray-6) 80%, var(--theme-6));
+
 	/* Link colors */
 	--link-color: var(--theme-12);
 	--link-visited-color: var(--theme-10);
 	--link-hover-color: var(--accent-9);
 	--link-active-color: var(--accent-12);
+
 	/* Input styles */
 	--input-bg: var(--surface-2);
 	--input-color: var(--text-2);
@@ -102,6 +119,7 @@
 	--select-option-selected-bg: var(--surface-2);
 	--select-option-selected-color: var(--text-2);
 	--fieldset-border: solid var(--border-size-2) var(--theme-color);
+
 	/* Button styles */
 	--button-bg: white;
 	--button-color: var(--theme-8);
@@ -124,6 +142,7 @@
 	--button-secondary-bg: var(--surface-2);
 	--button-secondary-color: var(--secondary-color);
 	--button-secondary-border-color: var(--secondary-color);
+
 	/* Progress styles */
 	--progress-bg: var(--surface-2);
 	--progress-color: var(--theme-color);
@@ -131,6 +150,7 @@
 	--progress-hover-bg: var(--surface-1);
 	--progress-hover-color: var(--accent-color);
 	--progress-hover-border-color: var(--accent-color);
+
 	/* Meter styles */
 	--meter-background: var(--surface-2);
 	--meter-optimal-color: var(--green-6);
@@ -138,19 +158,6 @@
 	--meter-subsuboptimal-color: var(--red-6);
 	--meter-size-adjust: calc(var(--border-size-2) * 2);
 	--meter-border: var(--border-size-2) solid var(--theme-color);
-
-	/* TODO: insets and safe areas */
-	/* --bound-top: env(safe-area-inset-top, 0px);
-	--bound-right: env(safe-area-inset-right, 0px);
-	--bound-bottom: env(safe-area-inset-bottom, 0px);
-	--bound-left: env(safe-area-inset-left, 0px);
-	--titlebar-height: env(titlebar-area-height, 3rem);
-	--titlebar-top: calc(env(titlebar-area-y, 0px) + var(--bound-top));
-	--menubar-top: calc(env(titlebar-area-y, 0px) + var(--bound-top));
-	--menubar-left: calc(env(titlebar-area-x, 0px) + var(--bound-left));
-	--menubar-width: calc(env(titlebar-area-width, 100vw) - var(--bound-right));
-	--menubar-height: max(3rem, var(--titlebar-height));
-	--button-size: calc(var(--menubar-height) * 0.8); */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -162,11 +169,13 @@
 		--surface-2: color-mix(in oklch increasing hue, var(--gray-10) 80%, var(--theme-10));
 		--surface-3: color-mix(in oklch increasing hue, var(--gray-8) 80%, var(--theme-8));
 		--surface-4: color-mix(in oklch increasing hue, var(--gray-6) 80%, var(--theme-6));
+
 		/* Link colors */
 		--link-color: var(--theme-2);
 		--link-visited-color: var(--theme-4);
 		--link-hover-color: var(--accent-3);
 		--link-active-color: var(--accent-0);
+
 		/* Button styles */
 		--button-bg: var(--gray-10);
 		--button-color: var(--theme-color);
@@ -180,6 +189,7 @@
 		--button-secondary-bg: var(--surface-2);
 		--button-secondary-color: var(--secondary-color);
 		--button-secondary-border-color: var(--secondary-color);
+
 		/* Input styles */
 		--input-valid-bg: var(--lime-12);
 		--input-valid-color: var(--green-2);

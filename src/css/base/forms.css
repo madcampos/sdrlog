@@ -285,7 +285,7 @@
 		appearance: none;
 		background-color: var(--input-bg);
 		border: var(--input-border);
-		border-radius: var(--border-radius);
+		border-radius: var(--radius-3);
 		box-sizing: border-box;
 		color: var(--input-color);
 		inline-size: 100%;
@@ -296,10 +296,9 @@
 
 		&:focus-visible {
 			background-color: var(--input-focus-bg);
-			border-radius: var(--border-radius);
 			color: var(--input-focus-color);
 			outline: var(--focus-outline);
-			outline-offset: var(--size-1);
+			outline-offset: var(--border-size-2);
 		}
 
 		&:hover {
