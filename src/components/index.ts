@@ -1,7 +1,9 @@
+import type { IconifyIconHTMLElement } from 'iconify-icon';
 import 'iconify-icon';
+
 import './TopBar/TopBar.ts';
 import './AppRouter/AppRouter.ts';
-import type { IconifyIconHTMLElement } from 'iconify-icon';
+import './SvgDefs/SvgDefs.ts';
 
 // #region HTML only elements
 declare global {
