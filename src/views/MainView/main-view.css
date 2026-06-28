@@ -1,0 +1,14 @@
+@layer views {
+	main-view {
+		display: contents;
+
+		main {
+			margin-top: var(--topbar-height);
+			margin-left: var(--inset-left);
+			margin-right: var(--inset-right);
+			margin-bottom: var(--inset-bottom);
+
+			padding: var(--size-2);
+		}
+	}
+}
