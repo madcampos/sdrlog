@@ -1,0 +1,31 @@
+@layer components {
+	loading-screen {
+		--logo-size: 30vmin;
+
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		display: grid;
+		align-content: center;
+		place-items: center;
+
+		accent-color: var(--theme-color);
+		background: var(--surface-1);
+
+		img {
+			inline-size: var(--logo-size);
+			aspect-ratio: 1 / 1;
+			margin-block-end: var(--size-7);
+		}
+
+		#load-progress { width: var(--logo-size); }
+
+		#load-text {
+			font-size: var(--font-size-3);
+			hyphens: auto;
+			margin: var(--size-1) 0 0;
+			overflow: auto;
+			word-wrap: break-word;
+		}
+	}
+}
