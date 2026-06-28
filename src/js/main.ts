@@ -1,30 +1,46 @@
-import '../components/index.js';
 import { SearchEngine } from './search-engine.js';
+
+function updateLoader(text: string, maxItems?: number) {
+	const progress = document.querySelector('loading-screen progress');
+	const paragraph = document.querySelector('loading-screen p');
+
+	if (!paragraph || !progress) {
+		return;
+	}
+
+	if (maxItems !== undefined) {
+		progress.max = maxItems;
+	}
+
+	progress.value += 1;
+	paragraph.textContent = text;
+}
 
 window.addEventListener('DOMContentLoaded', async () => {
 	try {
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		const loadingScreen = document.querySelector('sdr-loading-screen')!;
-		// loadingScreen.max = 3;
+		// oxlint-disable-next-line no-magic-numbers
+		updateLoader('Starting app', 6);
 
+		updateLoader('Loading search engine');
 		SearchEngine.init();
 
+		updateLoader('Loading components');
+		await import('../components/index.js');
+		await import('../views/index.js');
+
+		updateLoader('Loading translations');
 		// const { I18n } = await import('./intl/translations');
 
 		// await I18n.setLanguage(I18n.getLanguage());
 
-		// loadingScreen.update('Loading components...');
-		// await import('../components/index.js');
+		updateLoader('Adding gamepad support');
 		// const { GamepadHandler } = await import('./gamepad/gamepad-events');
 
 		// GamepadHandler.init(() => {
 		// 	document.querySelector('sdr-card')?.focus();
 		// });
 
-		// loadingScreen.update('Loading router...');
-		// await import('../router');
-
-		// loadingScreen.update('Loading data...');
+		updateLoader('Loading data');
 		// document.addEventListener('itemloaded', (evt) => {
 		// 	loadingScreen.max = evt.detail.total;
 
@@ -32,7 +48,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 		// });
 
 		// document.addEventListener('apploaded', () => {
-		loadingScreen.remove();
+		document.querySelector('loading-screen')?.remove();
 		// });
 	} catch (err) {
 		console.error(err);
