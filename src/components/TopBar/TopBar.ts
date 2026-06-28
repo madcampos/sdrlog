@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { type SearchSuggestion, SearchEngine, SearchUpdateEvent } from '../../js/search-engine.ts';
+import { SearchEngine, SearchUpdateEvent } from '../../js/search-engine.ts';
 import { RouterGoToEvent } from '../AppRouter/AppRouter.ts';
 
 @customElement('top-bar')
@@ -9,7 +9,7 @@ export class TopBar extends LitElement {
 	private accessor value = SearchEngine.toString();
 
 	@state()
-	private accessor suggestions: SearchSuggestion[] = [];
+	private accessor suggestions: string[] = [];
 
 	#isDevMode = import.meta.env.DEV;
 
@@ -107,6 +107,7 @@ export class TopBar extends LitElement {
 						method="get"
 						@submit=${this.#handleSearch}
 					>
+						<!-- TODO: use custom selet instead -->
 						<button
 							type="button"
 							data-icon-button
@@ -242,7 +243,7 @@ export class TopBar extends LitElement {
 								@change=${this.#updateSuggestions}
 							/>
 							<datalist id="search-suggestions">
-								${this.suggestions.map(({ value, text }) => html`<option value="${value}">${text}</option>`)}
+								${this.suggestions.map((suggestion) => html`<option>${suggestion}</option>`)}
 							</datalist>
 						</input-wrapper>
 						<button
