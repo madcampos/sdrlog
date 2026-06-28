@@ -1,0 +1,1 @@
+import './MainView/MainView.ts';
