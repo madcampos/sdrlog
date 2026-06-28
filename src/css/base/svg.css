@@ -1,10 +1,29 @@
 @layer base {
 	:is(svg, math) { max-inline-size: 100%; }
 
-	/* TODO: review icon */
-	:where(svg[data-icon]) {
-		min-block-size: 1.3em;
-		min-inline-size: 1.3em;
-		vertical-align: -0.32em;
+	:where(iconify-icon) {
+		block-size: 1em;
+		inline-size: 1em;
+	}
+
+	icon-wrapper {
+		display: inline-grid;
+		place-items: center;
+
+		& > * { grid-area: 1 / 1; }
+
+		iconify-icon:has(~ iconify-icon[data-subicon]) {
+			mask-image: radial-gradient(
+				circle at calc(100% - 0.15em) calc(100% - 0.15em),
+				transparent 0.3em,
+				black 0.3em
+			);
+
+			& ~ iconify-icon[data-subicon] {
+				align-self: end;
+				justify-self: end;
+				font-size: 0.38em;
+			}
+		}
 	}
 }

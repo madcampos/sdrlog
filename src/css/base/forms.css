@@ -126,6 +126,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		gap: var(--size-1);
 
 		background: var(--button-bg);
 		border: var(--button-border);

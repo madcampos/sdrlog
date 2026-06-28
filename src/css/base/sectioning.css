@@ -31,4 +31,11 @@
 
 		p { font-style: italic; }
 	}
+
+	hr {
+		border: none;
+		border-block-start: solid var(--border-size-2) var(--theme-color);
+		width: 80%;
+		margin-block: var(--size-3);
+	}
 }

@@ -24,6 +24,7 @@
 		justify-content: center;
 		overscroll-behavior: contain;
 		padding: var(--size-3);
+		border: solid var(--border-size-2) var(--theme-color);
 
 		&:where([open], :popover-open) { display: flex; }
 
