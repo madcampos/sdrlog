@@ -30,6 +30,7 @@ export class MainView extends LitElement {
 		return html`
 			<main>
 				<h1>Main view</h1>
+				<!-- TODO: load items -->
 			</main>
 		`;
 	}
