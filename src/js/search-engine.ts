@@ -1,23 +1,6 @@
 import { MATERIAL_CATEGORY_INFO, MATERIAL_EDITION_INFO, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../data/constants.ts';
 
-const MIN_LENGTH_FOR_SUGGESTION = 3;
-
-const searchTags = [
-	'category',
-	'edition',
-	'name',
-	'sku',
-	'status',
-	'type'
-] as const;
-
-export type SearchTag = typeof searchTags[number];
-
-export interface SearchSuggestion {
-	value: string;
-	text: string;
-}
-
+// #region Glogal Events
 export class SearchEvent extends Event {
 	searchString: string;
 
@@ -43,6 +26,36 @@ export class SearchUpdateEvent extends Event {
 	}
 }
 
+declare global {
+	interface DocumentEventMap {
+		'--search': SearchEvent;
+		'--search-reset': SearchResetEvent;
+		'--search-update': SearchUpdateEvent;
+	}
+}
+// #endregion
+
+// #region Constants and types
+const MIN_LENGTH_FOR_SUGGESTION = 3;
+
+const searchTags = [
+	'category',
+	'edition',
+	'name',
+	'sku',
+	'status',
+	'type'
+] as const;
+
+export type SearchTag = typeof searchTags[number];
+
+export interface SearchSuggestion {
+	value: string;
+	text: string;
+}
+// #endregion
+
+// #region Search Engine
 export class SearchEngine {
 	static #cardElement = 'sdr-card';
 	static #stylesheet = new CSSStyleSheet();
@@ -316,3 +329,4 @@ export class SearchEngine {
 		return string;
 	}
 }
+// #endregion
