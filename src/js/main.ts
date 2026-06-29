@@ -21,12 +21,12 @@ window.addEventListener('DOMContentLoaded', async () => {
 		// oxlint-disable-next-line no-magic-numbers
 		updateLoader('Starting app', 6);
 
-		updateLoader('Loading search engine');
-		SearchEngine.init();
-
 		updateLoader('Loading components');
 		await import('../components/index.js');
 		await import('../views/index.js');
+
+		updateLoader('Loading search engine');
+		SearchEngine.init();
 
 		updateLoader('Loading translations');
 		// const { I18n } = await import('./intl/translations');

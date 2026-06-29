@@ -63,11 +63,15 @@ export class SearchEngine {
 	static #resetState() {
 		const url = new URL(window.location.href);
 
+		if (!url.search) {
+			return;
+		}
+
 		searchTags.forEach((tag) => {
 			url.searchParams.delete(tag);
 		});
 
-		window.history.replaceState({}, '', url);
+		window.navigation.navigate(url, { history: 'replace' });
 	}
 
 	static #appendState(tag: SearchTag, value: string | undefined | null) {
@@ -76,7 +80,7 @@ export class SearchEngine {
 
 		if (newValue && !url.searchParams.has(tag, newValue)) {
 			url.searchParams.append(tag, newValue);
-			window.history.replaceState({}, '', url);
+			window.navigation.navigate(url, { history: 'replace' });
 		}
 	}
 

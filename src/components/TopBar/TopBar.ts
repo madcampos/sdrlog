@@ -1,7 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { SearchEngine, SearchUpdateEvent } from '../../js/search-engine.ts';
-import { RouterGoToEvent } from '../AppRouter/AppRouter.ts';
 
 @customElement('top-bar')
 export class TopBar extends LitElement {
@@ -52,13 +51,13 @@ export class TopBar extends LitElement {
 
 		switch (evt.target.command) {
 			case '--new-item':
-				window.dispatchEvent(new RouterGoToEvent('/new'));
+				window.navigation.navigate('/new');
 				break;
 			case '--info':
-				window.dispatchEvent(new RouterGoToEvent('/info'));
+				window.navigation.navigate('/info');
 				break;
 			case '--settings':
-				window.dispatchEvent(new RouterGoToEvent('/settings'));
+				window.navigation.navigate('/settings');
 				break;
 			case '--import-files':
 				break;
@@ -77,13 +76,13 @@ export class TopBar extends LitElement {
 			case '--dev-issues':
 				break;
 			case '--dev-cbz':
-				window.dispatchEvent(new RouterGoToEvent('/comic-reader'));
+				window.navigation.navigate('/comic-reader');
 				break;
 			case '--dev-emulator':
-				window.dispatchEvent(new RouterGoToEvent('/emulator'));
+				window.navigation.navigate('/emulator');
 				break;
 			case '--dev-epub':
-				window.dispatchEvent(new RouterGoToEvent('/epub-reader'));
+				window.navigation.navigate('/epub-reader');
 				break;
 			default:
 		}

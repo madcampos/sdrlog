@@ -2,24 +2,6 @@ import { Router } from '@lit-labs/router';
 import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-// #region Global events
-export class RouterGoToEvent extends Event {
-	route: string;
-	constructor(path: string, init?: EventInit) {
-		super('--router-goto', init);
-
-		this.route = path;
-	}
-}
-
-declare global {
-	interface WindowEventMap {
-		'--router-goto': RouterGoToEvent;
-	}
-}
-
-// #endregion
-
 @customElement('app-router')
 export class AppRouter extends LitElement {
 	private router = new Router(this, [
@@ -34,21 +16,37 @@ export class AppRouter extends LitElement {
 		return this.router.outlet();
 	}
 
-	async handleEvent(evt: Event) {
-		if (evt instanceof RouterGoToEvent) {
-			await this.router.goto(evt.route);
+	handleEvent(evt: Event) {
+		if (evt instanceof NavigateEvent) {
+			if (!evt.canIntercept) {
+				return;
+			}
+
+			if (evt.hashChange || evt.downloadRequest !== null) {
+				return;
+			}
+
+			const sourceUrl = new URL(window.location.href);
+			const destUrl = new URL(evt.destination.url);
+			if (sourceUrl.pathname !== destUrl.pathname) {
+				evt.intercept({
+					handler: async () => {
+						await this.router.goto(destUrl.href);
+					}
+				});
+			}
 		}
 	}
 
 	override connectedCallback() {
 		super.connectedCallback();
 
-		window.addEventListener('--router-goto', this);
+		window.navigation.addEventListener('navigate', this);
 	}
 
 	override disconnectedCallback() {
 		super.disconnectedCallback();
 
-		window.removeEventListener('--router-goto', this);
+		window.navigation.removeEventListener('navigate', this);
 	}
 }
