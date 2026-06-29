@@ -104,128 +104,75 @@ export class TopBar extends LitElement {
 					<form
 						action=""
 						method="get"
+						novalidate
 						@submit=${this.#handleSearch}
 					>
-						<!-- TODO: use custom selet instead -->
-						<button
-							type="button"
-							data-icon-button
-							commandfor="search-filter-list"
-							command="show-popover"
-							data-dropdown-anchor
-						>
+						<label for="search-filter">
 							<sr-only>Filter Materials</sr-only>
-							<iconify-icon icon="mdi:filter-variant" aria-hidden="true"></iconify-icon>
-						</button>
-						<dropdown-menu
-							popover
-							id="search-filter-list"
+						</label>
+						<select
+							id="search-filter"
 						>
-							<menu>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: sourcebook"
-								>
-									<iconify-icon icon="mdi:scroll-text" aria-hidden="true"></iconify-icon>
-									<span>Sourcebook</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: rulebook"
-								>
-									<iconify-icon icon="mdi:pencil-ruler" aria-hidden="true"></iconify-icon>
-									<span>Rulebook</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: mission"
-								>
-									<iconify-icon icon="mdi:map" aria-hidden="true"></iconify-icon>
-									<span>Adventures & Campaigns</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: novel"
-								>
-									<iconify-icon icon="mdi:bookshelf" aria-hidden="true"></iconify-icon>
-									<span>Novel</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: magazine"
-								>
-									<iconify-icon icon="mdi:book-open-variant" aria-hidden="true"></iconify-icon>
-									<span>Magazines</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: boardgame"
-								>
-									<iconify-icon icon="mdi:dice-multiple" aria-hidden="true"></iconify-icon>
-									<span>Boardgame/Tabletop</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: tcg"
-								>
-									<iconify-icon icon="mdi:cards-playing" aria-hidden="true"></iconify-icon>
-									<span>Trading Card Game</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: videogame"
-								>
-									<iconify-icon icon="mdi:gamepad-classic" aria-hidden="true"></iconify-icon>
-									<span>Video Game</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: unofficial"
-								>
-									<iconify-icon icon="mdi:flask" aria-hidden="true"></iconify-icon>
-									<span>Unofficial</span>
-								</button>
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter="category: misc"
-								>
-									<iconify-icon icon="mdi:puzzle" aria-hidden="true"></iconify-icon>
-									<span>Misc.</span>
-								</button>
+							<button
+								type="button"
+								data-icon-button
+							>
+								<selectedcontent>
+								</selectedcontent>
+							</button>
 
-								<hr />
+							<option value="" selected>
+								<sr-only>No filter applied</sr-only>
+								<iconify-icon icon="mdi:filter-variant" aria-hidden="true"></iconify-icon>
+							</option>
+							<option value="category: sourcebook">
+								<iconify-icon icon="mdi:scroll-text" aria-hidden="true"></iconify-icon>
+								<span>Sourcebook</span>
+							</option>
+							<option value="category: rulebook">
+								<iconify-icon icon="mdi:pencil-ruler" aria-hidden="true"></iconify-icon>
+								<span>Rulebook</span>
+							</option>
+							<option value="category: mission">
+								<iconify-icon icon="mdi:map" aria-hidden="true"></iconify-icon>
+								<span>Adventures & Campaigns</span>
+							</option>
+							<option value="category: novel">
+								<iconify-icon icon="mdi:bookshelf" aria-hidden="true"></iconify-icon>
+								<span>Novel</span>
+							</option>
+							<option value="category: magazine">
+								<iconify-icon icon="mdi:book-open-variant" aria-hidden="true"></iconify-icon>
+								<span>Magazines</span>
+							</option>
+							<option value="category: boardgame">
+								<iconify-icon icon="mdi:dice-multiple" aria-hidden="true"></iconify-icon>
+								<span>Boardgame/Tabletop</span>
+							</option>
+							<option value="category: tcg">
+								<iconify-icon icon="mdi:cards-playing" aria-hidden="true"></iconify-icon>
+								<span>Trading Card Game</span>
+							</option>
+							<option value="category: videogame">
+								<iconify-icon icon="mdi:gamepad-classic" aria-hidden="true"></iconify-icon>
+								<span>Video Game</span>
+							</option>
+							<option value="category: unofficial">
+								<iconify-icon icon="mdi:flask" aria-hidden="true"></iconify-icon>
+								<span>Unofficial</span>
+							</option>
+							<option value="category: misc">
+								<iconify-icon icon="mdi:puzzle" aria-hidden="true"></iconify-icon>
+								<span>Misc.</span>
+							</option>
 
-								<button
-									type="button"
-									commandfor="search-filter-list"
-									command="hide-popover"
-									data-filter=""
-								>
-									<iconify-icon icon="mdi:star" aria-hidden="true"></iconify-icon>
-									<span>All</span>
-								</button>
-							</menu>
-						</dropdown-menu>
+							<hr />
+
+							<option value="">
+								<iconify-icon icon="mdi:star" aria-hidden="true"></iconify-icon>
+								<span>All</span>
+							</option>
+						</select>
 
 						<input-wrapper>
 							<label for="search-input">

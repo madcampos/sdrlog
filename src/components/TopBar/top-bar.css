@@ -39,6 +39,46 @@
 					margin: 0;
 					display: block;
 				}
+
+				select {
+					appearance: base-select;
+					background: none;
+					border: none;
+					padding: 0;
+					margin: 0;
+					min-inline-size: fit-content;
+					inline-size: fit-content;
+					align-items: center;
+					justify-content: center;
+					display: block;
+
+					&::picker-icon { display: none; }
+					button { margin: 0; }
+					selectedcontent { display: contents; }
+
+					option {
+						background: transparent;
+						color: var(--text-1);
+
+						&::checkmark { display: none; }
+
+						/* TODO */
+						&:checked {}
+						&:hover {}
+						&:focus {}
+						&:active {}
+
+						&:first-of-type { display: none; }
+					}
+
+					&::picker(select) {
+						appearance: base-select;
+						background: var(--surface-2);
+						padding: var(--size-1);
+						border: solid var(--border-size-2) var(--theme-color);
+						border-radius: var(--radius-2);
+					}
+				}
 			}
 
 			dialog {
