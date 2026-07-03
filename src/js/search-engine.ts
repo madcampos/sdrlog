@@ -313,5 +313,20 @@ export class SearchEngine {
 
 		return string;
 	}
+
+	static toJSON() {
+		const searchParams = new URLSearchParams(window.location.search);
+		const tags: Partial<Record<SearchTag, string[]>> = {};
+
+		searchTags.forEach((tag) => {
+			tags[tag] = [];
+
+			searchParams.getAll(tag).forEach((value) => {
+				tags[tag]?.push(value);
+			});
+		});
+
+		return tags;
+	}
 }
 // #endregion

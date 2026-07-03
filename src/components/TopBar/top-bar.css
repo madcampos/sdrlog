@@ -53,8 +53,33 @@
 					display: block;
 
 					&::picker-icon { display: none; }
-					button { margin: 0; }
-					selectedcontent { display: contents; }
+
+					button {
+						margin: 0;
+						min-inline-size: calc(1em + var(--size-2) * 2);
+						min-block-size: calc(1em + var(--size-2) * 2);
+					}
+
+					selectedcontent {
+						display: contents;
+
+						span {
+							block-size: 1px;
+							border: 0;
+							clip: rect(0, 0, 0, 0);
+							inline-size: 1px;
+							margin: 0;
+							opacity: 0.00001;
+							overflow: hidden;
+							padding: 0;
+							pointer-events: none;
+							position: absolute;
+							user-select: none;
+							z-index: -1;
+						}
+
+						& > iconify-icon:nth-of-type(1) { display: none; }
+					}
 
 					option {
 						background: transparent;
@@ -62,13 +87,17 @@
 
 						&::checkmark { display: none; }
 
-						/* TODO */
-						&:checked {}
-						&:hover {}
-						&:focus {}
-						&:active {}
+						&:checked { background: var(--theme-color); }
+						&:hover { background: var(--accent-color); }
+						&:focus { background: var(--accent-color); }
+						&:active { background: var(--secondary-color); }
 
-						&:first-of-type { display: none; }
+						icon-wrapper {
+							iconify-icon { mask-image: none; }
+							iconify-icon[data-subicon] { display: none; }
+						}
+
+						& > iconify-icon:nth-of-type(2) { display: none; }
 					}
 
 					&::picker(select) {

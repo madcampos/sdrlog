@@ -88,7 +88,36 @@ export class TopBar extends LitElement {
 		}
 	}
 
+	#handleFilterChange(evt: InputEvent) {
+		if (!(evt.target instanceof HTMLSelectElement)) {
+			return;
+		}
+
+		const searchInput = this.querySelector('input[type="search"]');
+
+		if (!searchInput) {
+			return;
+		}
+
+		if (!evt.target.value) {
+			searchInput.value = '';
+			SearchEngine.resetSearch();
+			return;
+		}
+
+		searchInput.value = searchInput.value.replace(/category:\s?".+?"/iu, '');
+
+		if (searchInput.value) {
+			searchInput.value += ' ';
+		}
+
+		searchInput.value += evt.target.value;
+		searchInput.form?.requestSubmit();
+	}
+
 	override render() {
+		const categories = SearchEngine.toJSON().category ?? [];
+
 		return html`
 			<nav>
 				<button
@@ -112,64 +141,91 @@ export class TopBar extends LitElement {
 						</label>
 						<select
 							id="search-filter"
+							@change=${this.#handleFilterChange}
 						>
 							<button
 								type="button"
 								data-icon-button
 							>
-								<selectedcontent>
-								</selectedcontent>
+								<selectedcontent></selectedcontent>
 							</button>
 
-							<option value="" selected>
-								<sr-only>No filter applied</sr-only>
-								<iconify-icon icon="mdi:filter-variant" aria-hidden="true"></iconify-icon>
-							</option>
-							<option value="category: sourcebook">
-								<iconify-icon icon="mdi:scroll-text" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;sourcebook&quot;" ?selected=${categories.includes('sourcebook')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:scroll-text" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Sourcebook</span>
 							</option>
-							<option value="category: rulebook">
-								<iconify-icon icon="mdi:pencil-ruler" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;rulebook&quot;" ?selected=${categories.includes('rulebook')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:pencil-ruler" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Rulebook</span>
 							</option>
-							<option value="category: mission">
-								<iconify-icon icon="mdi:map" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;mission&quot;" ?selected=${categories.includes('mission')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:map" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Adventures & Campaigns</span>
 							</option>
-							<option value="category: novel">
-								<iconify-icon icon="mdi:bookshelf" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;novel&quot;" ?selected=${categories.includes('novel')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:bookshelf" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Novel</span>
 							</option>
-							<option value="category: magazine">
-								<iconify-icon icon="mdi:book-open-variant" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;magazine&quot;" ?selected=${categories.includes('magazine')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:book-open-variant" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Magazines</span>
 							</option>
-							<option value="category: boardgame">
-								<iconify-icon icon="mdi:dice-multiple" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;boardgame&quot;" ?selected=${categories.includes('boardgame')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:dice-multiple" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Boardgame/Tabletop</span>
 							</option>
-							<option value="category: tcg">
-								<iconify-icon icon="mdi:cards-playing" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;tcg&quot;" ?selected=${categories.includes('tcg')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:cards-playing" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Trading Card Game</span>
 							</option>
-							<option value="category: videogame">
-								<iconify-icon icon="mdi:gamepad-classic" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;videogame&quot;" ?selected=${categories.includes('videogame')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:gamepad-classic" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Video Game</span>
 							</option>
-							<option value="category: unofficial">
-								<iconify-icon icon="mdi:flask" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;unofficial&quot;" ?selected=${categories.includes('unofficial')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:flask" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Unofficial</span>
 							</option>
-							<option value="category: misc">
-								<iconify-icon icon="mdi:puzzle" aria-hidden="true"></iconify-icon>
+							<option value="category: &quot;misc&quot;" ?selected=${categories.includes('misc')}>
+								<icon-wrapper>
+									<iconify-icon icon="mdi:puzzle" aria-hidden="true"></iconify-icon>
+									<iconify-icon icon="mdi:filter-variant" aria-hidden="true" data-subicon></iconify-icon>
+								</icon-wrapper>
 								<span>Misc.</span>
 							</option>
 
 							<hr />
 
-							<option value="">
+							<option value="" ?selected=${categories.length === 0}>
 								<iconify-icon icon="mdi:star" aria-hidden="true"></iconify-icon>
+								<iconify-icon icon="mdi:filter-variant" aria-hidden="true"></iconify-icon>
 								<span>All</span>
 							</option>
 						</select>
