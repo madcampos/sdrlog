@@ -41,15 +41,13 @@ window.addEventListener('DOMContentLoaded', async () => {
 		// });
 
 		updateLoader('Loading data');
-		// document.addEventListener('itemloaded', (evt) => {
-		// 	loadingScreen.max = evt.detail.total;
+		document.addEventListener('--itemloaded', (evt) => {
+			updateLoader(evt.name, evt.total);
+		});
 
-		// 	loadingScreen.update(evt.detail.name);
-		// });
-
-		// document.addEventListener('apploaded', () => {
-		document.querySelector('loading-screen')?.remove();
-		// });
+		document.addEventListener('--apploaded', () => {
+			document.querySelector('loading-screen')?.remove();
+		});
 	} catch (err) {
 		console.error(err);
 	}
