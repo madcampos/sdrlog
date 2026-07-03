@@ -26,6 +26,10 @@ export class AppRouter extends LitElement {
 				return;
 			}
 
+			if (evt.navigationType === 'reload') {
+				return;
+			}
+
 			const destUrl = new URL(evt.destination.url);
 			evt.intercept({
 				handler: async () => {
