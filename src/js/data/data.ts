@@ -68,7 +68,7 @@ export const MATERIAL_CATEGORY = {
 	magazine: 'Magazine',
 	boardgame: 'Boardgame',
 	videogame: 'Videogame',
-	tcg: 'T.C.G.',
+	tcg: 'Trading Card Game',
 	unofficial: 'Unofficial'
 } as const;
 
@@ -80,7 +80,7 @@ export const MATERIAL_CATEGORY_ICONS = {
 	mission: 'mdi:map',
 	rulebook: 'mdi:pencil-ruler',
 	misc: 'mdi:puzzle',
-	magazine: 'mdi:book-open-variant"',
+	magazine: 'mdi:book-open-variant',
 	boardgame: 'mdi:dice-multiple',
 	videogame: 'mdi:gamepad-classic',
 	tcg: 'mdi:cards-playing',
