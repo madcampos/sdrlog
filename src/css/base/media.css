@@ -5,15 +5,18 @@
 		color: var(--accent-color);
 		display: block;
 		font-style: italic;
-		inline-size: 100%;
 		margin-inline: auto;
+		object-fit: contain;
+		object-position: center;
+		text-wrap: balance;
+	}
+
+	:is(audio, video) {
+		inline-size: 100%;
 		max-block-size: var(--size-content-3);
 		max-inline-size: var(--size-content-3);
 		min-block-size: var(--size-content-0);
 		min-inline-size: var(--size-content-0);
-		object-fit: contain;
-		object-position: center;
-		text-wrap: balance;
 	}
 
 	audio {

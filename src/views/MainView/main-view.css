@@ -2,6 +2,8 @@
 	main-view {
 		display: contents;
 
+		h1 { margin: 0; }
+
 		main {
 			margin-top: var(--topbar-height);
 			margin-left: var(--inset-left);
@@ -9,6 +11,9 @@
 			margin-bottom: var(--inset-bottom);
 
 			padding: var(--size-2);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 }

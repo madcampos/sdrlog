@@ -20,6 +20,7 @@ declare global {
 		'input-required': HTMLElement;
 		'input-success': HTMLElement;
 		'input-wrapper': HTMLElement;
+		'material-card': HTMLElement;
 		'rendered-content': HTMLElement;
 		'sr-only': HTMLElement;
 		'svg-defs': HTMLElement;
