@@ -26,15 +26,12 @@ export class AppRouter extends LitElement {
 				return;
 			}
 
-			const sourceUrl = new URL(window.location.href);
 			const destUrl = new URL(evt.destination.url);
-			if (sourceUrl.pathname !== destUrl.pathname) {
-				evt.intercept({
-					handler: async () => {
-						await this.router.goto(destUrl.href);
-					}
-				});
-			}
+			evt.intercept({
+				handler: async () => {
+					await this.router.goto(destUrl.href);
+				}
+			});
 		}
 	}
 

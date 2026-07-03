@@ -85,8 +85,6 @@ export class SearchEngine {
 	}
 
 	static #resolveSearchParams() {
-		SearchEngine.#resetState();
-
 		const searchParams = new URLSearchParams(window.location.search);
 
 		searchTags.forEach((tag) => {
