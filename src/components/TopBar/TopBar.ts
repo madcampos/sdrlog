@@ -52,13 +52,9 @@ export class TopBar extends LitElement {
 
 		switch (evt.target.command) {
 			case '--new-item':
-				window.navigation.navigate('/new');
-				break;
 			case '--info':
-				window.navigation.navigate('/info');
-				break;
 			case '--settings':
-				window.navigation.navigate('/settings');
+				evt.target.closest('dialog')?.hidePopover();
 				break;
 			case '--import-files':
 				break;
@@ -289,7 +285,12 @@ export class TopBar extends LitElement {
 					</header>
 					<dialog-content>
 						<menu @click=${this.#handleButtonClick}>
-							<button type="button" command="--info">
+							<button
+								type="button"
+								command="--info"
+								popovertarget="app-info"
+								popovertargetaction="show"
+							>
 								<iconify-icon icon="mdi:information" aria-hidden="true"></iconify-icon>
 								<span>App Info</span>
 							</button>
@@ -372,6 +373,7 @@ export class TopBar extends LitElement {
 					</dialog-content>
 				</dialog>
 			</nav>
+			<app-info></app-info>
 		`;
 	}
 

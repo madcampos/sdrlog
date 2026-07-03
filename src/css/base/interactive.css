@@ -1,10 +1,9 @@
 @layer base {
 	summary {
-		align-items: center;
-		display: flex;
-		gap: var(--size-1);
-
-		& > :where(h1, h2, h3, h4, h5, h6) { margin: 0; }
+		& > :where(h1, h2, h3, h4, h5, h6) {
+			display: inline-block;
+			margin: 0;
+		}
 
 		&:focus-visible {
 			background-color: var(--surface-1);
@@ -31,6 +30,7 @@
 		&::backdrop {
 			backdrop-filter: blur(var(--size-3));
 			background-color: rgba(0, 0, 0, 0.5);
+			pointer-events: all;
 		}
 
 		& > form { display: contents; }

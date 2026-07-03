@@ -4,4 +4,5 @@
 @import url('./SrOnly/sr-only.css');
 @import url('./SvgDefs/svg-defs.css');
 
+@import url('./AppInfo/app-info.css');
 @import url('./TopBar/top-bar.css');

@@ -1,53 +1,32 @@
-import type { RouterView } from '../../router/router';
+import { html, LitElement } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
-import { html, LitElement, unsafeCSS } from 'lit';
-import { customElement, state } from 'lit/decorators.js';
+// TODO: add gamepad navigation
+// TODO: register keyboard shortcut (Ctrl + i)
 
-import { registerShortcut } from '../../js/util/keyboard';
-import { Router } from '../../router/router';
-
-import style from './style.css?inline' with { type: 'css' };
-
-@customElement('sdr-view-app-info')
-class SdrViewAppInfo extends LitElement implements RouterView {
-	static override readonly styles = unsafeCSS(style);
-
-	@state()
-	private open: boolean;
-
-	constructor() {
-		super();
-
-		this.open = false;
-
-		registerShortcut('i', () => {
-			this.open = !this.open;
-		});
-
-		// TODO: add gamepad navigation
-	}
-
-	#close() {
-		this.open = false;
-
-		void Router.navigate('/');
-	}
-
-	navigate() {
-		this.open = true;
-
-		return 'Information';
-	}
-
-	override createRenderRoot() {
+@customElement('app-info')
+export class AppInfo extends LitElement {
+	protected override createRenderRoot() {
 		return this;
 	}
 
-	override render() {
+	protected override render() {
 		return html`
-			<dialog ?open="${this.open}" @close="${() => this.#close()}">
+			<dialog
+				id="app-info"
+				popover="manual"
+			>
 				<header>
 					<h2>Information</h2>
+						<button
+							data-icon-button
+							type="button"
+							popovertarget="app-info"
+							popovertargetaction="hide"
+						>
+							<sr-only>Close Info</sr-only>
+							<iconify-icon icon="mdi:close" aria-hidden="true"></iconify-icon>
+						</button>
 				</header>
 
 				<dialog-content>
@@ -171,5 +150,3 @@ class SdrViewAppInfo extends LitElement implements RouterView {
 		`;
 	}
 }
-
-export { SdrViewAppInfo };

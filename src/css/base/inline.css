@@ -34,4 +34,13 @@
 	}
 
 	small { font-size: var(--font-size-0); }
+
+	code {
+		font-family: var(--font-monospace-code);
+		font-size: 0.9em;
+		background: var(--surface-1);
+		display: inline-block;
+		padding: 0.1em 0.2em;
+		border-radius: var(--radius-2);
+	}
 }

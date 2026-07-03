@@ -138,6 +138,8 @@
 		margin: var(--size-2);
 		padding: var(--size-1) var(--size-2);
 
+		* { pointer-events: none; }
+
 		&:focus-visible {
 			background-color: var(--button-focus-bg);
 			border-color: var(--button-focus-border-color);

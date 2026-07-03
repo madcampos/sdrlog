@@ -2,6 +2,7 @@ import type { IconifyIconHTMLElement } from 'iconify-icon';
 import 'iconify-icon';
 
 import './TopBar/TopBar.ts';
+import './AppInfo/AppInfo.ts';
 import './AppRouter/AppRouter.ts';
 import './SvgDefs/SvgDefs.ts';
 
