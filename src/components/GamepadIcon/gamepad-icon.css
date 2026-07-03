@@ -1,0 +1,8 @@
+@layer components {
+	body[data-gamepad] :where(gamepad-icon:not([data-focus])) { display: block; }
+
+	*:has(gamepad-icon[data-focus]):focus {
+		gamepad-icon { display: none; }
+		gamepad-icon[data-focus] { display: block; }
+	}
+}
