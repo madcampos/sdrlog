@@ -1,4 +1,4 @@
-import type { FileSystemEntryForMaterial } from '../../data/data';
+import type { FileSystemEntryForMaterial } from '../data/data';
 
 import { Router } from '../../router/router';
 import { getIDBItemByIndex } from '../data/idb-persistence';

@@ -1,5 +1,17 @@
 import { type DBSchema, type IndexKey, type IndexNames, type StoreNames, openDB } from 'idb';
-import type { FileSystemEntryForMaterial, Material, MaterialCover } from '../../data/data';
+import type { Material, MaterialSku } from './data';
+
+export interface SavedMaterialFile {
+	itemId?: MaterialSku;
+	fileName?: string;
+	filePath: string;
+	mimeType?: string;
+	fileExtension?: string;
+	handler: FileSystemDirectoryHandle | FileSystemFileHandle;
+	hash: string;
+}
+
+export type SavedMaterialCover = FileSystemFileHandle | File;
 
 interface DatabaseSchema extends DBSchema {
 	items: {
@@ -14,16 +26,16 @@ interface DatabaseSchema extends DBSchema {
 	};
 	files: {
 		key: string,
-		value: FileSystemEntryForMaterial,
+		value: SavedMaterialFile,
 		indexes: { fileName: string, filePath: string, itemId: string, hash: string }
 	};
 	covers: {
 		key: string,
-		value: MaterialCover
+		value: SavedMaterialCover
 	};
 	thumbs: {
 		key: string,
-		value: MaterialCover
+		value: SavedMaterialCover
 	};
 	emulator: {
 		key: string,

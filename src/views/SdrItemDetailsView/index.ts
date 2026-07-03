@@ -6,9 +6,9 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { guard } from 'lit/directives/guard.js';
 import { SdrCard } from '../../components/SdrCard';
 import type { SdrEditList } from '../../components/SdrEditList';
-import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
-import type { FileSystemEntryForMaterial, KnownLocaleCodes, Material } from '../../data/data';
 import { getCoverUrl, LOADING_COVER } from '../../js/covers/cover-fetch';
+import { MATERIAL_CATEGORY, MATERIAL_LANGUAGES, MATERIAL_PUBLISHERS, MATERIAL_STATUS, MATERIAL_TYPE } from '../../js/data/data';
+import type { FileSystemEntryForMaterial, KnownLocaleCodes, Material } from '../../js/data/data';
 import { copyItemToClipboard, exportDataItem } from '../../js/data/data-export';
 import { parseMaterial, saveNewMaterialInfo } from '../../js/data/data-import';
 import { getIDBItem, getIDBItemByIndex, getIDBItemsByIndex } from '../../js/data/idb-persistence';
@@ -389,8 +389,8 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									<span slot="label">Category</span>
 
 									${
-			guard(Object.keys(MATERIAL_CATEGORY_INFO), () =>
-				Object.entries(MATERIAL_CATEGORY_INFO).map(([key, value]) =>
+			guard(Object.keys(MATERIAL_CATEGORY), () =>
+				Object.entries(MATERIAL_CATEGORY).map(([key, value]) =>
 					html`
 										<option value="${key}">${value.icon} ${value.name}</option>
 									`
@@ -403,8 +403,8 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									<span slot="label">Type</span>
 
 									${
-			guard(Object.keys(MATERIAL_TYPE_INFO), () =>
-				Object.entries(MATERIAL_TYPE_INFO).map(([key, value]) =>
+			guard(Object.keys(MATERIAL_TYPE), () =>
+				Object.entries(MATERIAL_TYPE).map(([key, value]) =>
 					html`
 										<option value="${key}">${value.icon} ${value.name}</option>
 									`
@@ -417,8 +417,8 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									<span slot="label">Original Language</span>
 
 									${
-			guard(Object.keys(MATERIAL_LANGUAGES_INFO), () =>
-				Object.entries(MATERIAL_LANGUAGES_INFO).map(([key, value]) =>
+			guard(Object.keys(MATERIAL_LANGUAGES), () =>
+				Object.entries(MATERIAL_LANGUAGES).map(([key, value]) =>
 					html`
 										<option value="${key}">${value.icon} ${value.name}</option>
 									`
@@ -444,8 +444,8 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									<span slot="label">Status</span>
 
 									${
-			guard(Object.keys(MATERIAL_STATUS_INFO), () =>
-				Object.entries(MATERIAL_STATUS_INFO).map(([key, value]) =>
+			guard(Object.keys(MATERIAL_STATUS), () =>
+				Object.entries(MATERIAL_STATUS).map(([key, value]) =>
 					html`
 										<option value="${key}">${value.icon} ${value.name}</option>
 									`
@@ -461,8 +461,8 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 
 									<select slot="input" required>
 										${
-			guard(Object.keys(MATERIAL_LANGUAGES_INFO), () =>
-				Object.entries(MATERIAL_LANGUAGES_INFO).map(([key, value]) =>
+			guard(Object.keys(MATERIAL_LANGUAGES), () =>
+				Object.entries(MATERIAL_LANGUAGES).map(([key, value]) =>
 					html`
 											<option value="${key}">${value.icon} ${value.name}</option>
 										`
@@ -474,7 +474,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 									${
 			Object.entries(this.material.names ?? {}).map(([language, name]) => {
 				// @ts-expect-error
-				const { name: languageName, icon } = MATERIAL_LANGUAGES_INFO[language];
+				const { name: languageName, icon } = MATERIAL_LANGUAGES[language];
 
 				return html`
 											<sdr-edit-list-item value="${language}">

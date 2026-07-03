@@ -1,5 +1,5 @@
-import type { Material } from '../../data/data';
 import { extractMetadataFromFileName } from '../files/file-import';
+import type { Material } from './data';
 import { fetchData, fetchItems } from './data-import';
 import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from './idb-persistence';
 

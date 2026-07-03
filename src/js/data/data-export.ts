@@ -1,4 +1,4 @@
-import type { Material } from '../../data/data';
+import type { Material } from './data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues } from './idb-persistence';

@@ -1,4 +1,4 @@
-import type { FileSystemEntryForMaterial } from '../../data/data';
+import type { FileSystemEntryForMaterial } from '../data/data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getIDBItem, getIDBItemByIndex, setIDBItem } from '../data/idb-persistence';

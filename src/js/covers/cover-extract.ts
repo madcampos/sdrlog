@@ -4,7 +4,7 @@ import type { optimize as OptimizerType } from './cover-optimizer';
 
 // oxlint-disable-next-line import/default
 import pdfJsWorkerSource from 'pdfjs-dist/build/pdf.worker?url';
-import type { MaterialCover } from '../../data/data';
+import type { MaterialCover } from '../data/data';
 
 let optimize: typeof OptimizerType | undefined;
 let pdfjs: typeof PDFJS | undefined;

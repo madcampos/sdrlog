@@ -1,4 +1,4 @@
-import { MATERIAL_CATEGORY_INFO, MATERIAL_EDITION_INFO, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../data/constants.ts';
+import { MATERIAL_CATEGORY, MATERIAL_EDITION, MATERIAL_STATUS, MATERIAL_TYPE } from './data/data.ts';
 
 // #region Glogal Events
 export class SearchEvent extends Event {
@@ -57,7 +57,7 @@ export interface SearchSuggestion {
 
 // #region Search Engine
 export class SearchEngine {
-	static #cardElement = 'sdr-card';
+	static #cardElement = 'material-card';
 	static #stylesheet = new CSSStyleSheet();
 
 	static #resetState() {
@@ -132,12 +132,12 @@ export class SearchEngine {
 
 		switch (tag) {
 			case 'category':
-				if (Object.keys(MATERIAL_CATEGORY_INFO).includes(trimmedValue)) {
+				if (Object.keys(MATERIAL_CATEGORY).includes(trimmedValue)) {
 					normalizedValue = trimmedValue;
 				}
 				break;
 			case 'edition':
-				if (Object.keys(MATERIAL_EDITION_INFO).includes(trimmedValue)) {
+				if (Object.keys(MATERIAL_EDITION).includes(trimmedValue)) {
 					normalizedValue = trimmedValue;
 				}
 				break;
@@ -150,12 +150,12 @@ export class SearchEngine {
 				}
 				break;
 			case 'status':
-				if (Object.keys(MATERIAL_STATUS_INFO).includes(trimmedValue)) {
+				if (Object.keys(MATERIAL_STATUS).includes(trimmedValue)) {
 					normalizedValue = trimmedValue;
 				}
 				break;
 			case 'type':
-				if (Object.keys(MATERIAL_TYPE_INFO).includes(trimmedValue)) {
+				if (Object.keys(MATERIAL_TYPE).includes(trimmedValue)) {
 					normalizedValue = trimmedValue;
 				}
 				break;
@@ -225,28 +225,28 @@ export class SearchEngine {
 					});
 					break;
 				case 'category':
-					Object.keys(MATERIAL_CATEGORY_INFO)
+					Object.keys(MATERIAL_CATEGORY)
 						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
 						.forEach((suggestion) => {
 							suggestionList.push(`category: ${suggestion}`);
 						});
 					break;
 				case 'edition':
-					Object.keys(MATERIAL_EDITION_INFO)
+					Object.keys(MATERIAL_EDITION)
 						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
 						.forEach((suggestion) => {
 							suggestionList.push(`edition: ${suggestion}`);
 						});
 					break;
 				case 'status':
-					Object.keys(MATERIAL_STATUS_INFO)
+					Object.keys(MATERIAL_STATUS)
 						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
 						.forEach((suggestion) => {
 							suggestionList.push(`status: ${suggestion}`);
 						});
 					break;
 				case 'type':
-					Object.keys(MATERIAL_TYPE_INFO)
+					Object.keys(MATERIAL_TYPE)
 						.filter((suggestion) => !suggestion || suggestion.startsWith(value))
 						.forEach((suggestion) => {
 							suggestionList.push(`type: ${suggestion}`);

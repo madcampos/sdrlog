@@ -1,26 +1,31 @@
 import type {
 	AbsoluteLink,
+	ISODate,
 	KnownLocaleCodes,
 	Material,
-	MaterialPublisher,
-	SDRLogData
-} from '../../data/data';
+	MaterialPublisher
+} from './data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getFileHash } from '../files/file-import';
 import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
 
 import dataUrl from '../../../public/data/index.json?url';
-import { MATERIAL_CATEGORY_INFO, MATERIAL_LANGUAGES_INFO, MATERIAL_PUBLISHERS, MATERIAL_STATUS_INFO, MATERIAL_TYPE_INFO } from '../../data/constants';
 import { processCoverFile, THUMB_WIDTH } from '../covers/cover-extract';
+import { MATERIAL_CATEGORY, MATERIAL_LANGUAGES, MATERIAL_PUBLISHERS, MATERIAL_STATUS, MATERIAL_TYPE } from './data';
+
+export interface SDRLogData {
+	$schema: string;
+	lastUpdated: ISODate;
+	items: Material[];
+}
 
 export async function fetchData() {
 	try {
 		const res = await fetch(dataUrl);
 
 		if (res.ok) {
-			// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
-			const parsedFile = await res.json() as SDRLogData;
+			const parsedFile: SDRLogData = await res.json();
 
 			return parsedFile.items;
 		}
@@ -37,8 +42,8 @@ export async function fetchItems() {
 	const mergedData = new Map<string, Material>();
 
 	for (const material of currentData) {
-		// @ts-expect-error
-		mergedData.set(material.sku[0], material);
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
+		mergedData.set(material.sku[0], material as Material);
 	}
 
 	for (const material of onlineData) {
@@ -81,13 +86,13 @@ export function parseMaterial(material: Partial<Material | Record<string, unknow
 		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		gameDate: ((/^\d{4}-\d{2}$/iu).test(material.gameDate?.toString() ?? '') ? material.gameDate?.toString() : '') as Material['gameDate'],
 
-		category: handleEnum<Material['category']>(material.category, MATERIAL_CATEGORY_INFO, ''),
-		status: handleEnum<Material['status']>(material.status, MATERIAL_STATUS_INFO, 'missing'),
-		type: handleEnum<Material['type']>(material.type, MATERIAL_TYPE_INFO, ''),
+		category: handleEnum<Material['category']>(material.category, MATERIAL_CATEGORY, ''),
+		status: handleEnum<Material['status']>(material.status, MATERIAL_STATUS, 'missing'),
+		type: handleEnum<Material['type']>(material.type, MATERIAL_TYPE, ''),
 		// @ts-expect-error
 		publisher: handleArray<MaterialPublisher>(material.publisher).filter((pub) => MATERIAL_PUBLISHERS.includes(pub)),
 		sku: handleArray<string>(material.sku),
-		originalLanguage: handleEnum<KnownLocaleCodes>(material.originalLanguage, MATERIAL_LANGUAGES_INFO, ''),
+		originalLanguage: handleEnum<KnownLocaleCodes>(material.originalLanguage, MATERIAL_LANGUAGES, ''),
 		releaseDate: handleArray(material.releaseDate)
 	};
 
