@@ -3,6 +3,7 @@ import 'iconify-icon';
 
 import './AppInfo/AppInfo.ts';
 import './AppRouter/AppRouter.ts';
+import './FileOperationOverlay/FileOperationOverlay.ts';
 import './StatsReport/StatsReport.ts';
 import './SvgDefs/SvgDefs.ts';
 import './TopBar/TopBar.ts';
