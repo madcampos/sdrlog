@@ -51,7 +51,7 @@
 			"min": 3,
 			"max": 50,
 			"properties": "never",
-			"exceptions": ["i", "j", "n", "w", "x", "y", "z", "id", "fs", "up", "_", "t", "T", "U"]
+			"exceptions": ["i", "j", "n", "w", "x", "y", "z", "id", "fs", "up", "_", "t", "v", "T", "U"]
 		}],
 		"init-declarations": "off",
 		"logical-assignment-operators": ["error", "always", { "enforceForIfStatements": true }],

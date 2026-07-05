@@ -35,7 +35,8 @@
 		"marked": "^18.0.5",
 		"nipplejs": "^1.0.4",
 		"open-props": "1.7.23",
-		"pdfjs-dist": "^6.1.200"
+		"pdfjs-dist": "^6.1.200",
+		"valibot": "^1.4.1"
 	},
 	"devDependencies": {
 		"@types/emscripten": "^1.41.5",
