@@ -1,10 +1,12 @@
 import { listDirEntries, resolveParentHandle } from '@mad-c/file-system-helpers';
-import { getUserDirHandle, saveHandle } from '@mad-c/file-system-helpers/access';
+import { getUserDirHandle, getUserOpenFileHandle, saveHandle } from '@mad-c/file-system-helpers/access';
 import { basename, extname, resolve } from '@mad-c/file-system-helpers/path';
 import { requestHandlePermissions } from '@mad-c/file-system-helpers/permissions';
+import { parse } from 'valibot';
+import dataFileUrl from '../../../public/data/index.json?url';
 import { FileOperationOverlay } from '../../components/FileOperationOverlay/FileOperationOverlay.ts';
-import type { MaterialSku } from '../data/data.ts';
-import { type SavedFileMetadata, getIDBItem, setIDBItem } from '../data/idb-persistence';
+import { type Material, type MaterialSku, type NewMaterial, type SavedFileMetadata, type SDRLogData, MaterialSchema } from '../data/data.ts';
+import { getAllIDBValues, getIDBItem, setIDBItem, setIDBItems } from '../data/idb-persistence';
 
 export async function getFileHash(dataToHash: BufferSource | string) {
 	const encoder = new TextEncoder();
@@ -34,44 +36,45 @@ export function extractMetadataFromFileName(fileName: string) {
 	return {
 		name: name ?? basename(fileName),
 		modifier: modifierMap.get(modifier ?? ''),
-		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
-		id: id as MaterialSku,
+		// oxlint-disable-next-line typescript/consistent-type-assertions
+		id: id as MaterialSku | undefined,
 		extension: extension ?? extname(fileName)
 	};
 }
 
-export async function saveFile(handle: FileSystemDirectoryHandle | FileSystemFileHandle | FileSystemHandle, path: string) {
+export async function saveMaterialHandle(handle: FileSystemDirectoryHandle | FileSystemFileHandle | FileSystemHandle, path: string, metadata: Partial<SavedFileMetadata> = {}) {
 	const { name, id, extension } = extractMetadataFromFileName(handle.name);
-	const metadata: SavedFileMetadata = {
+	const mergedMetadata: SavedFileMetadata = {
 		itemId: id,
+		path,
+		mimeType: 'application/x-directory',
 		fileName: name,
-		filePath: path,
-		mimeType: 'text/directory',
-		fileExtension: extension,
-		hash: await getFileHash(path)
+		extension,
+		hash: metadata.hash ?? await getFileHash(path),
+		...metadata
 	};
 
 	if (handle instanceof FileSystemFileHandle) {
 		const file = await handle.getFile();
 
-		metadata.hash = await getFileHash(await file.arrayBuffer());
-		metadata.mimeType = file.type;
+		mergedMetadata.hash = await getFileHash(await file.arrayBuffer());
+		mergedMetadata.mimeType = file.type;
 
-		if (metadata.itemId) {
-			const material = await getIDBItem('items', metadata.itemId);
+		if (mergedMetadata.itemId) {
+			const material = await getIDBItem('items', mergedMetadata.itemId);
 
 			if (material) {
 				material.status = 'ok';
 
-				await setIDBItem('items', metadata.itemId, material);
+				await setIDBItem('items', mergedMetadata.itemId, material);
 			}
 		}
 	}
 
-	await saveHandle(metadata.hash, handle, metadata);
-	await setIDBItem('files', undefined, metadata);
+	await saveHandle(mergedMetadata.hash, handle);
+	await setIDBItem('files', undefined, mergedMetadata);
 
-	return metadata;
+	return mergedMetadata;
 }
 
 export async function importFiles() {
@@ -91,14 +94,9 @@ export async function importFiles() {
 
 		await requestHandlePermissions(dirHandle, 'read');
 
-		const dirHash = await getFileHash(`(root) ${dirHandle.name}`);
-		await saveHandle(dirHash, dirHandle);
-		await setIDBItem('files', undefined, {
-			fileName: '/',
-			filePath: '/',
-			mimeType: 'text/directory',
-			fileExtension: '',
-			hash: dirHash
+		const hash = await getFileHash(`(root) ${dirHandle.name}`);
+		await saveMaterialHandle(dirHandle, '/', {
+			hash
 		});
 
 		const entryStack = await listDirEntries(dirHandle);
@@ -119,7 +117,7 @@ export async function importFiles() {
 			const { parentPath } = await resolveParentHandle(handle, { rootDir: dirHandle });
 			const handlePath = resolve(parentPath, name);
 
-			await saveFile(handle, handlePath);
+			await saveMaterialHandle(handle, handlePath);
 
 			if (children?.length) {
 				overlay.max += children.length;
@@ -133,4 +131,93 @@ export async function importFiles() {
 	} finally {
 		overlay.remove();
 	}
+}
+
+export async function fetchOnlineItems() {
+	try {
+		const res = await fetch(dataFileUrl);
+
+		if (res.ok) {
+			const parsedFile: SDRLogData = await res.json();
+
+			return parsedFile.items;
+		}
+	} catch (err) {
+		console.error('Failed to load data.', err);
+	}
+
+	return [];
+}
+
+export async function saveItems(newItems: Material[]) {
+	const currentItems = await getAllIDBValues('items');
+	const mergedItems = new Map<string, Material>();
+
+	for (const material of currentItems) {
+		mergedItems.set(material.sku[0] ?? '', material);
+	}
+
+	for (const material of newItems) {
+		const [sku = ''] = material.sku;
+		const existingMaterial = mergedItems.get(sku);
+
+		mergedItems.set(sku, {
+			...existingMaterial,
+			...material
+		});
+	}
+
+	await setIDBItems('items', [...mergedItems.entries()]);
+
+	return [...mergedItems.values()];
+}
+
+export async function openDataFile() {
+	const overlay = document.querySelector<FileOperationOverlay>('file-operation-overlay') ?? new FileOperationOverlay();
+
+	document.body.insertAdjacentElement('beforeend', overlay);
+
+	try {
+		const handle = await getUserOpenFileHandle({
+			id: 'dataFile',
+			startIn: 'downloads',
+			excludeAcceptAllOption: false,
+			types: [{ description: 'JSON Files', accept: { 'text/json': ['.json'] } }]
+		});
+
+		if (!handle) {
+			throw new Error('No file selected');
+		}
+
+		await requestHandlePermissions(handle, 'read');
+		await saveMaterialHandle(handle, '/data.json');
+
+		const file = await handle.getFile();
+		const parsedFile: Partial<SDRLogData> = JSON.parse(await file.text());
+
+		if (!parsedFile.items) {
+			throw new Error('No items found in data file.');
+		}
+
+		const parsedItems = parsedFile.items.map((material) => parse(MaterialSchema, material));
+
+		await saveItems(parsedItems);
+	} catch (err) {
+		console.error('Failed to open data file.', err);
+	} finally {
+		overlay.remove();
+	}
+}
+
+export async function saveNewMaterial(newMaterial: NewMaterial) {
+	// TODO: validate material
+	const { files, cover, thumbnail, ...materialToSave } = newMaterial;
+
+	// TODO: handle cover and thumbnail
+
+	await setIDBItem('items', materialToSave.sku[0], materialToSave);
+
+	await Promise.all((files ?? []).map(async (file) => {
+		// TODO: save handle
+	}));
 }

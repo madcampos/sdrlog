@@ -1,24 +1,10 @@
 import { type DBSchema, type IndexKey, type IndexNames, type StoreNames, openDB } from 'idb';
-import * as v from 'valibot';
-import { type Material, MaterialSkuSchema } from './data';
-
-export const SavedFileMetadataSchema = v.object({
-	itemId: v.optional(MaterialSkuSchema),
-	fileName: v.string(),
-	filePath: v.string(),
-	mimeType: v.string(),
-	fileExtension: v.string(),
-	hash: v.string()
-});
-
-export type SavedFileMetadata = v.InferInput<typeof SavedFileMetadataSchema>;
-
-export type SavedMaterialCover = string | File;
+import type { Material, SavedFileMetadata } from './data';
 
 interface DatabaseSchema extends DBSchema {
 	items: {
 		key: string,
-		value: Omit<Material, 'cover'>,
+		value: Material,
 		indexes: {
 			sku: string[],
 			name: string,
@@ -33,11 +19,11 @@ interface DatabaseSchema extends DBSchema {
 	};
 	covers: {
 		key: string,
-		value: SavedMaterialCover
+		value: string
 	};
 	thumbs: {
 		key: string,
-		value: SavedMaterialCover
+		value: string
 	};
 	emulator: {
 		key: string,

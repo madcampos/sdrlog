@@ -1,7 +1,9 @@
+// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import {
 	type Material,
+	type MaterialEdition,
 	MATERIAL_CATEGORY,
 	MATERIAL_CATEGORY_ICONS,
 	MATERIAL_EDITION,
@@ -11,7 +13,7 @@ import {
 	MATERIAL_TYPE,
 	MATERIAL_TYPE_ICONS
 } from '../../js/data/data';
-import { fetchItems } from '../../js/data/data-import';
+import { fetchOnlineItems, saveItems } from '../../js/files/import.ts';
 
 const listFormatter = new Intl.ListFormat('en-US', { style: 'short', type: 'conjunction' });
 
@@ -118,9 +120,9 @@ export class MainView extends LitElement {
 								decoding="async"
 								alt=""
 								aria-hidden="true"
-								src="${MATERIAL_EDITION_ICONS[material.edition]}"
+								src="${MATERIAL_EDITION_ICONS[material.edition as MaterialEdition]}"
 							/>
-							<span>${MATERIAL_EDITION[material.edition]}</span>
+							<span>${MATERIAL_EDITION[material.edition as MaterialEdition]}</span>
 						</dd>
 
 						<dt>Status</dt>
@@ -152,8 +154,8 @@ export class MainView extends LitElement {
 
 	override async connectedCallback() {
 		super.connectedCallback();
-
-		const materials = await fetchItems();
+		const onlineItems = await fetchOnlineItems();
+		const materials = await saveItems(onlineItems);
 
 		const sorter = new Intl.Collator(navigator.language).compare;
 		const sortedMaterials = materials.sort(({ name: nameA }, { name: nameB }) => sorter(nameA, nameB));

@@ -14,7 +14,7 @@ import { parseMaterial, saveNewMaterialInfo } from '../../js/data/data-import';
 import { getIDBItem, getIDBItemByIndex, getIDBItemsByIndex } from '../../js/data/idb-persistence';
 import { getIconForFile } from '../../js/files/file-icons';
 import { openFile } from '../../js/files/file-open';
-import { saveFile } from '../../js/files/import';
+import { saveMaterialHandle } from '../../js/files/import';
 import { formatFullDate } from '../../js/intl/formatting';
 import type { RouteLocation, RouterView } from '../../router/router';
 import { Router } from '../../router/router';
@@ -167,7 +167,7 @@ class SdrViewItemDetails extends LitElement implements RouterView {
 				excludeAcceptAllOption: false
 			});
 
-			const fileForMaterial = await saveFile(handler);
+			const fileForMaterial = await saveMaterialHandle(handler);
 
 			this.files.push(fileForMaterial);
 

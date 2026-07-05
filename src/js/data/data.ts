@@ -6,7 +6,6 @@ import logo3rd from '../../assets/logos/3rd-ed.png?url';
 import logo4th from '../../assets/logos/4th-ed.png?url';
 import logo5th from '../../assets/logos/5th-ed.png?url';
 import logo6th from '../../assets/logos/6th-ed.png?url';
-import { SavedFileMetadataSchema } from './idb-persistence.ts';
 
 export const MATERIAL_EDITION = {
 	1: '1st',
@@ -165,6 +164,17 @@ export type MaterialCover = AbsoluteLink | RelativeLink;
 export const MaterialSkuSchema = v.pipe(v.string(), v.regex(/^[A-Z0-9](?:-?[A-Z0-9])+(?:-[A-Z])?$/u), v.brand('sku'));
 export type MaterialSku = v.InferInput<typeof MaterialSkuSchema>;
 
+export const SavedFileMetadataSchema = v.object({
+	itemId: v.optional(MaterialSkuSchema),
+	path: v.string(),
+	mimeType: v.string(),
+	fileName: v.string(),
+	extension: v.string(),
+	hash: v.string()
+});
+
+export type SavedFileMetadata = v.InferInput<typeof SavedFileMetadataSchema>;
+
 export const MaterialSubItemSchema = v.object({
 	sku: MaterialSkuSchema,
 	name: v.pipe(v.string(), v.nonEmpty()),
@@ -178,9 +188,9 @@ export const MaterialSubItemSchema = v.object({
 });
 export type MaterialSubItem = v.InferInput<typeof MaterialSubItemSchema>;
 
-export const MaterialSchema = v.object({
+const BaseMaterialSchema = v.object({
 	sku: v.pipe(v.array(MaterialSkuSchema), v.nonEmpty()),
-	categories: MaterialCategorySchema,
+	category: MaterialCategorySchema,
 	type: MaterialTypeSchema,
 	name: v.pipe(v.string(), v.nonEmpty()),
 	names: v.optional(MaterialNamesSchema),
@@ -194,8 +204,26 @@ export const MaterialSchema = v.object({
 	notes: v.optional(v.string()),
 	links: v.optional(MaterialLinksSchema),
 	subItems: v.optional(MaterialSubItemSchema),
-	cover: MaterialCoverSchema,
-	thumbnail: MaterialCoverSchema,
 	files: v.optional(v.array(SavedFileMetadataSchema))
 });
+
+export const MaterialSchema = v.object({
+	...BaseMaterialSchema.entries,
+	cover: v.optional(MaterialCoverSchema),
+	thumbnail: v.optional(MaterialCoverSchema)
+});
 export type Material = v.InferInput<typeof MaterialSchema>;
+
+export const NewMaterialSchema = v.object({
+	...BaseMaterialSchema.entries,
+	cover: v.instance(FileSystemFileHandle),
+	thumbnail: v.instance(FileSystemFileHandle)
+});
+
+export type NewMaterial = v.InferInput<typeof NewMaterialSchema>;
+
+export interface SDRLogData {
+	$schema: string;
+	lastUpdated: ISODate;
+	items: Material[];
+}

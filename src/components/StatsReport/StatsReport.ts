@@ -1,9 +1,9 @@
 import { type TemplateResult, html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { fetchData, fetchItems } from '../../js/data/data-import.ts';
-import type { Material } from '../../js/data/data.ts';
-import { type SavedMaterialFile, getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '../../js/data/idb-persistence.ts';
-import { extractMetadataFromFileName } from '../../js/files/import.ts';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import type { Material, SavedFileMetadata } from '../../js/data/data.ts';
+import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '../../js/data/idb-persistence.ts';
+import { extractMetadataFromFileName, fetchOnlineItems } from '../../js/files/import.ts';
 
 @customElement('stats-report')
 export class StatsReport extends LitElement {
@@ -45,10 +45,10 @@ export class StatsReport extends LitElement {
 		const missingCoversHtml: TemplateResult[] = [];
 		const missingThumbsHtml: TemplateResult[] = [];
 
-		const materials = await fetchItems();
+		const materials = await fetchOnlineItems();
 
 		await Promise.all(materials.map(async (material) => {
-			const [id] = material.sku;
+			const [id = ''] = material.sku;
 
 			const coverFromStorage = await getIDBItem('covers', id);
 			const thumbFromStorage = await getIDBItem('thumbs', id);
@@ -72,7 +72,7 @@ export class StatsReport extends LitElement {
 										<em>${material.name}</em>
 									</header>
 									<card-content>
-										<a href="${material.cover}">${material.cover}</a>
+										<a href="${ifDefined(material.cover)}">${material.cover ?? ''}</a>
 									</card-content>
 								</inline-card>
 							</li>
@@ -88,7 +88,7 @@ export class StatsReport extends LitElement {
 									<em>${material.name}</em>
 								</header>
 								<card-content>
-									<a href="${material.cover}">${material.cover}</a>
+									<a href="${ifDefined(material.cover)}">${material.cover ?? ''}</a>
 								</card-content>
 							</inline-card>
 						</li>
@@ -115,7 +115,7 @@ export class StatsReport extends LitElement {
 										<em>${material.name}</em>
 									</header>
 									<card-content>
-										<a href="${material.thumbnail}">${material.thumbnail}</a>
+										<a href="${ifDefined(material.thumbnail)}">${material.thumbnail ?? ''}</a>
 									</card-content>
 								</inline-card>
 							</li>
@@ -131,7 +131,7 @@ export class StatsReport extends LitElement {
 									<em>${material.name}</em>
 								</header>
 								<card-content>
-									<a href="${material.thumbnail}">${material.thumbnail}</a>
+									<a href="${ifDefined(material.thumbnail)}">${material.thumbnail ?? ''}</a>
 								</card-content>
 							</inline-card>
 						</li>
@@ -157,11 +157,11 @@ export class StatsReport extends LitElement {
 	}
 
 	async #findDuplicateIds() {
-		const data = await fetchData();
+		const data = await fetchOnlineItems();
 		const ids = new Map<string, Material[]>();
 
 		for (const material of data) {
-			const [id] = material.sku;
+			const [id = ''] = material.sku;
 
 			if (!ids.has(id)) {
 				ids.set(id, []);
@@ -201,12 +201,12 @@ export class StatsReport extends LitElement {
 	}
 
 	async #findMissingFiles() {
-		const data = await fetchData();
+		const data = await fetchOnlineItems();
 		const missingFilesHtml: TemplateResult[] = [];
 		const markedOkButMissingfilesHtml: TemplateResult[] = [];
 
 		await Promise.all(data.map(async (material) => {
-			const [id] = material.sku;
+			const [id = ''] = material.sku;
 			const filesForMaterial = await getIDBItemsByIndex('files', 'itemId', id);
 
 			if (filesForMaterial.length === 0 && material.status !== 'canceled') {
@@ -262,7 +262,7 @@ export class StatsReport extends LitElement {
 		const extraFiles: TemplateResult[] = [];
 
 		for (const file of files) {
-			if (file.handler.kind !== 'file') {
+			if (file.mimeType === 'application/x-directory') {
 				continue;
 			}
 
@@ -275,10 +275,10 @@ export class StatsReport extends LitElement {
 							<header>
 								<strong>${file.itemId ?? ''}</strong>
 								&bull;
-								<em>${file.fileName ?? ''}</em>
+								<em>${file.fileName}</em>
 							</header>
 							<card-content>
-								<span>${file.filePath}</span>
+								<span>${file.path}</span>
 							</card-content>
 						</inline-card>
 					</li>
@@ -295,7 +295,7 @@ export class StatsReport extends LitElement {
 
 	async #findDuplicateFiles() {
 		const items = await getAllIDBValues('files');
-		const duplicateFiles = new Map<string, SavedMaterialFile[]>();
+		const duplicateFiles = new Map<string, SavedFileMetadata[]>();
 
 		for (const item of items) {
 			if (!duplicateFiles.has(item.hash)) {
@@ -319,7 +319,7 @@ export class StatsReport extends LitElement {
 							</header>
 							<card-content>
 								<ul>
-									${files.map(({ filePath }) => html`<li>${filePath}</li>`)}
+									${files.map(({ path: filePath }) => html`<li>${filePath}</li>`)}
 								</ul>
 							</card-content>
 						</inline-card>
@@ -337,7 +337,7 @@ export class StatsReport extends LitElement {
 
 	async #findFilesWithDuplicateIds() {
 		const items = await getAllIDBValues('files');
-		const duplicateIdFiles = new Map<string, SavedMaterialFile[]>();
+		const duplicateIdFiles = new Map<string, SavedFileMetadata[]>();
 		const filesWithoutId: TemplateResult[] = [];
 
 		for (const item of items) {
@@ -348,10 +348,10 @@ export class StatsReport extends LitElement {
 					<li>
 						<inline-card>
 							<header>
-								<strong>${item.fileName ?? ''}</strong>
+								<strong>${item.fileName}</strong>
 							</header>
 							<card-content>
-								<span>${item.filePath}</span>
+								<span>${item.path}</span>
 							</card-content>
 						</inline-card>
 					</li>
@@ -359,20 +359,19 @@ export class StatsReport extends LitElement {
 				continue;
 			}
 
-			const fileName = item.fileName ?? item.filePath.split('/').pop() ?? '';
-			const fileMetadata = extractMetadataFromFileName(fileName);
+			const fileMetadata = extractMetadataFromFileName(item.fileName);
 
 			if (!fileMetadata.id) {
 				filesWithoutId.push(html`
 					<li>
 						<inline-card>
 							<header>
-								<strong>${item.fileName ?? ''}</strong>
+								<strong>${item.fileName}</strong>
 								&bull;
 								<em>(Failed to parse ID)</em>
 							</header>
 							<card-content>
-								<span>${item.filePath}</span>
+								<span>${item.path}</span>
 							</card-content>
 						</inline-card>
 					</li>
@@ -401,7 +400,7 @@ export class StatsReport extends LitElement {
 							</header>
 							<card-content>
 								<ul>
-									${files.map(({ filePath }) => html`<li>${filePath}</li>`)}
+									${files.map(({ path: filePath }) => html`<li>${filePath}</li>`)}
 								</ul>
 							</card-content>
 						</inline-card>
