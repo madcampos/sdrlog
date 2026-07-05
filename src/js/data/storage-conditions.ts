@@ -1,4 +1,4 @@
-import { extractMetadataFromFileName } from '../files/file-import';
+import { extractMetadataFromFileName } from '../files/import';
 import { getIDBItem } from './idb-persistence';
 
 const ONE_MB_IN_BYTES = 1048576;

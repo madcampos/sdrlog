@@ -7,7 +7,7 @@ import type {
 } from './data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getFileHash } from '../files/file-import';
+import { getFileHash } from '../files/import';
 import { getAllIDBValues, getIDBItemByIndex, setIDBItem, setIDBItems } from './idb-persistence';
 
 import dataUrl from '../../../public/data/index.json?url';

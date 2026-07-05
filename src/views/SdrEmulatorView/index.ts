@@ -6,8 +6,8 @@ import { customElement, property, query, state } from 'lit/decorators.js';
 
 import { setIDBItem } from '../../js/data/idb-persistence';
 import { getEmulatorFiles } from '../../js/files/file-emulator';
-import { extractMetadataFromFileName } from '../../js/files/file-import';
 import { loadFile } from '../../js/files/file-open';
+import { extractMetadataFromFileName } from '../../js/files/import';
 import { Router } from '../../router/router';
 
 import style from './style.css?inline' with { type: 'css' };

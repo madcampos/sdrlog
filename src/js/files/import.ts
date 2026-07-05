@@ -1,7 +1,9 @@
-import type { FileSystemEntryForMaterial } from '../data/data';
-
-import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
+import { requestHandlePermissions } from '@mad-c/file-system-helpers/permissions';
+import type { MaterialSku } from '../data/data.ts';
 import { getIDBItem, getIDBItemByIndex, setIDBItem } from '../data/idb-persistence';
+
+import { listDirEntries } from '@mad-c/file-system-helpers';
+import { saveHandle } from '@mad-c/file-system-helpers/access';
 
 export async function getFileHash(dataToHash: BufferSource | string) {
 	const encoder = new TextEncoder();
@@ -14,8 +16,7 @@ export async function getFileHash(dataToHash: BufferSource | string) {
 
 	const hash = await crypto.subtle.digest('SHA-1', data);
 
-	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-	return [...new Uint8Array(hash)].map((char) => char.toString(16).padStart(2, '0')).join('');
+	return new Uint8Array(hash).toBase64();
 }
 
 export function extractMetadataFromFileName(fileName: string) {
@@ -32,65 +33,51 @@ export function extractMetadataFromFileName(fileName: string) {
 	return {
 		name,
 		modifier: modifierMap.get(modifier ?? ''),
-		id,
+		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
+		id: id as MaterialSku,
 		extension
 	};
 }
 
-export async function saveFile(handler: FileSystemDirectoryHandle | FileSystemFileHandle, path?: string) {
-	const filePath = path ?? `/${new Date().toISOString()}/${handler.name}`;
-	const { name, id, extension } = extractMetadataFromFileName(handler.name);
-	const fileForMaterial: FileSystemEntryForMaterial = {
+export async function saveFile(handle: FileSystemDirectoryHandle | FileSystemFileHandle, path?: string) {
+	const filePath = path ?? `/${new Date().toISOString()}/${handle.name}`;
+	const { name, id, extension } = extractMetadataFromFileName(handle.name);
+	const metadata = {
 		fileName: name,
 		fileExtension: extension,
 		mimeType: 'text/directory',
 		itemId: id,
 		filePath,
-		hash: await getFileHash(filePath),
-		handler
+		hash: await getFileHash(filePath)
 	};
 
-	if (handler.kind === 'file') {
-		const file = await handler.getFile();
+	if (handle.kind === 'file') {
+		const file = await handle.getFile();
 
-		fileForMaterial.hash = await getFileHash(await file.arrayBuffer());
-		fileForMaterial.mimeType = file.type;
+		metadata.hash = await getFileHash(await file.arrayBuffer());
+		metadata.mimeType = file.type;
 
-		if (fileForMaterial.itemId) {
-			const material = await getIDBItem('items', fileForMaterial.itemId);
+		if (metadata.itemId) {
+			const material = await getIDBItem('items', metadata.itemId);
 
 			if (material) {
 				material.status = 'ok';
 
-				await setIDBItem('items', fileForMaterial.itemId, material);
+				await setIDBItem('items', metadata.itemId, material);
 			}
 		}
 	}
 
-	const existingFile = await getIDBItemByIndex('files', 'hash', fileForMaterial.hash);
+	await saveHandle(metadata.hash, handle, metadata);
 
-	if (!existingFile) {
-		await setIDBItem('files', undefined, fileForMaterial);
-	}
-
-	return fileForMaterial;
+	return metadata;
 }
 
-export async function getFilePermission(file: FileSystemHandle, mode: 'read' | 'readwrite' = 'read') {
-	const isPermissionGranted = await file.queryPermission({ mode }) === 'granted';
-
-	if (isPermissionGranted) {
-		return true;
-	}
-
-	return await file.requestPermission({ mode }) === 'granted';
-}
-
-async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
+async function _readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
 	const entries: { path: string, entry: FileSystemDirectoryHandle | FileSystemFileHandle }[] = [];
 
 	for await (const entry of dirHandle.values()) {
-		// Ignore useless mac os files
+		// INFO: Ignore mac os annoying files
 		if (entry.name.startsWith('.DS_Store')) {
 			continue;
 		}
@@ -100,7 +87,7 @@ async function readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string)
 		if (entry.kind === 'directory') {
 			entries.push(...await readDir(entry, entryPath));
 		} else {
-			await getFilePermission(entry);
+			await requestHandlePermissions(entry, 'read');
 		}
 
 		entries.push({
@@ -141,7 +128,7 @@ export async function readFiles() {
 			});
 		}
 
-		const entries = await readDir(dir, '');
+		const entries = await listDirEntries(dir);
 
 		progressOverlay.total = entries.length;
 		for (const { entry, path } of entries) {

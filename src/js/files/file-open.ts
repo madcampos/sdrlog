@@ -2,7 +2,7 @@ import type { FileSystemEntryForMaterial } from '../data/data';
 
 import { Router } from '../../router/router';
 import { getIDBItemByIndex } from '../data/idb-persistence';
-import { getFilePermission } from './file-import';
+import { getFilePermission } from './import';
 
 const mimeAllowed = [
 	'image',

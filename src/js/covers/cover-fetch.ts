@@ -2,7 +2,7 @@
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues, getIDBItem, setIDBItem } from '../data/idb-persistence';
 import { canExtractCover, canImportCover } from '../data/storage-conditions';
-import { extractMetadataFromFileName, getFilePermission } from '../files/file-import';
+import { extractMetadataFromFileName, getFilePermission } from '../files/import';
 import { extractCover, optimizeCover, processCoverFile, THUMB_WIDTH } from './cover-extract';
 
 const TIMEOUT_BEFORE_RELOAD = 500;
