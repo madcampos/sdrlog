@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
 			host: 'localhost',
 			open: false,
 			cors: true,
-			port: 3000
+			port: 3030
 		},
 		build: {
 			target: 'esnext',
