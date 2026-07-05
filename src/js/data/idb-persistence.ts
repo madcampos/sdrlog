@@ -1,17 +1,19 @@
 import { type DBSchema, type IndexKey, type IndexNames, type StoreNames, openDB } from 'idb';
-import type { Material, MaterialSku } from './data';
+import * as v from 'valibot';
+import { type Material, MaterialSkuSchema } from './data';
 
-export interface SavedMaterialFile {
-	itemId?: MaterialSku;
-	fileName?: string;
-	filePath: string;
-	mimeType?: string;
-	fileExtension?: string;
-	handler: FileSystemDirectoryHandle | FileSystemFileHandle;
-	hash: string;
-}
+export const SavedFileMetadataSchema = v.object({
+	itemId: v.optional(MaterialSkuSchema),
+	fileName: v.string(),
+	filePath: v.string(),
+	mimeType: v.string(),
+	fileExtension: v.string(),
+	hash: v.string()
+});
 
-export type SavedMaterialCover = FileSystemFileHandle | File;
+export type SavedFileMetadata = v.InferInput<typeof SavedFileMetadataSchema>;
+
+export type SavedMaterialCover = string | File;
 
 interface DatabaseSchema extends DBSchema {
 	items: {
@@ -26,7 +28,7 @@ interface DatabaseSchema extends DBSchema {
 	};
 	files: {
 		key: string,
-		value: SavedMaterialFile,
+		value: SavedFileMetadata,
 		indexes: { fileName: string, filePath: string, itemId: string, hash: string }
 	};
 	covers: {

@@ -1,9 +1,10 @@
+import { listDirEntries, resolveParentHandle } from '@mad-c/file-system-helpers';
+import { getUserDirHandle, saveHandle } from '@mad-c/file-system-helpers/access';
+import { basename, extname, resolve } from '@mad-c/file-system-helpers/path';
 import { requestHandlePermissions } from '@mad-c/file-system-helpers/permissions';
+import { FileOperationOverlay } from '../../components/FileOperationOverlay/FileOperationOverlay.ts';
 import type { MaterialSku } from '../data/data.ts';
-import { getIDBItem, getIDBItemByIndex, setIDBItem } from '../data/idb-persistence';
-
-import { listDirEntries } from '@mad-c/file-system-helpers';
-import { saveHandle } from '@mad-c/file-system-helpers/access';
+import { type SavedFileMetadata, getIDBItem, setIDBItem } from '../data/idb-persistence';
 
 export async function getFileHash(dataToHash: BufferSource | string) {
 	const encoder = new TextEncoder();
@@ -21,7 +22,7 @@ export async function getFileHash(dataToHash: BufferSource | string) {
 
 export function extractMetadataFromFileName(fileName: string) {
 	const testRegex = /^(?:(?<id>[A-Z0-9](?:-?[A-Z0-9])+)(?: \((?<modifier>[ADETX])\))? - )?(?<name>.*?)?(?<extension>\.\w+)$/u;
-	const { name, modifier, id, extension } = testRegex.exec(fileName)?.groups ?? { name: fileName, id: undefined, extension: undefined, modifier: undefined };
+	const { name, modifier, id, extension } = testRegex.exec(fileName)?.groups ?? {};
 	const modifierMap = new Map([
 		['A', 'attachement'],
 		['D', 'draft'],
@@ -31,27 +32,26 @@ export function extractMetadataFromFileName(fileName: string) {
 	]);
 
 	return {
-		name,
+		name: name ?? basename(fileName),
 		modifier: modifierMap.get(modifier ?? ''),
 		// oxlint-disable-next-line typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
 		id: id as MaterialSku,
-		extension
+		extension: extension ?? extname(fileName)
 	};
 }
 
-export async function saveFile(handle: FileSystemDirectoryHandle | FileSystemFileHandle, path?: string) {
-	const filePath = path ?? `/${new Date().toISOString()}/${handle.name}`;
+export async function saveFile(handle: FileSystemDirectoryHandle | FileSystemFileHandle | FileSystemHandle, path: string) {
 	const { name, id, extension } = extractMetadataFromFileName(handle.name);
-	const metadata = {
-		fileName: name,
-		fileExtension: extension,
-		mimeType: 'text/directory',
+	const metadata: SavedFileMetadata = {
 		itemId: id,
-		filePath,
-		hash: await getFileHash(filePath)
+		fileName: name,
+		filePath: path,
+		mimeType: 'text/directory',
+		fileExtension: extension,
+		hash: await getFileHash(path)
 	};
 
-	if (handle.kind === 'file') {
+	if (handle instanceof FileSystemFileHandle) {
 		const file = await handle.getFile();
 
 		metadata.hash = await getFileHash(await file.arrayBuffer());
@@ -69,77 +69,68 @@ export async function saveFile(handle: FileSystemDirectoryHandle | FileSystemFil
 	}
 
 	await saveHandle(metadata.hash, handle, metadata);
+	await setIDBItem('files', undefined, metadata);
 
 	return metadata;
 }
 
-async function _readDir(dirHandle: FileSystemDirectoryHandle, parentPath: string) {
-	const entries: { path: string, entry: FileSystemDirectoryHandle | FileSystemFileHandle }[] = [];
+export async function importFiles() {
+	const overlay = document.querySelector<FileOperationOverlay>('file-operation-overlay') ?? new FileOperationOverlay();
 
-	for await (const entry of dirHandle.values()) {
-		// INFO: Ignore mac os annoying files
-		if (entry.name.startsWith('.DS_Store')) {
-			continue;
-		}
-
-		const entryPath = `${parentPath}/${entry.name}`;
-
-		if (entry.kind === 'directory') {
-			entries.push(...await readDir(entry, entryPath));
-		} else {
-			await requestHandlePermissions(entry, 'read');
-		}
-
-		entries.push({
-			path: entryPath,
-			entry
-		});
-	}
-
-	return entries;
-}
-
-export async function readFiles() {
-	const progressOverlay = SdrProgressOverlay.createOverlay({ title: 'Read materials' });
+	document.body.insertAdjacentElement('beforeend', overlay);
 
 	try {
-		const dir = await window.showDirectoryPicker({
+		const dirHandle = await getUserDirHandle({
 			id: 'filesFolder',
 			startIn: 'downloads'
+		}, 'read');
+
+		if (!dirHandle) {
+			throw new Error('No dir handle selected');
+		}
+
+		await requestHandlePermissions(dirHandle, 'read');
+
+		const dirHash = await getFileHash(`(root) ${dirHandle.name}`);
+		await saveHandle(dirHash, dirHandle);
+		await setIDBItem('files', undefined, {
+			fileName: '/',
+			filePath: '/',
+			mimeType: 'text/directory',
+			fileExtension: '',
+			hash: dirHash
 		});
 
-		const isPermissionGranted = await getFilePermission(dir);
+		const entryStack = await listDirEntries(dirHandle);
+		overlay.max = entryStack.length;
 
-		if (!isPermissionGranted) {
-			throw new Error('Permission denied.');
-		}
+		while (entryStack.length) {
+			// oxlint-disable no-await-in-loop
+			const { handle, name = '', children } = entryStack.pop() ?? {};
 
-		const existingDir = await getIDBItemByIndex('files', 'filePath', '/');
+			if (!handle) {
+				continue;
+			}
 
-		if (!existingDir) {
-			const dirHash = await getFileHash('/');
+			overlay.increment(name);
 
-			await setIDBItem('files', undefined, {
-				fileName: '/',
-				filePath: '/',
-				handler: dir,
-				hash: dirHash,
-				mimeType: 'text/directory'
-			});
-		}
+			await requestHandlePermissions(handle, 'read');
 
-		const entries = await listDirEntries(dir);
+			const { parentPath } = await resolveParentHandle(handle, { rootDir: dirHandle });
+			const handlePath = resolve(parentPath, name);
 
-		progressOverlay.total = entries.length;
-		for (const { entry, path } of entries) {
-			progressOverlay.increment(entry.name);
+			await saveFile(handle, handlePath);
 
-			// oxlint-disable-next-line no-await-in-loop
-			await saveFile(entry, path);
+			if (children?.length) {
+				overlay.max += children.length;
+
+				entryStack.push(...children);
+			}
+			// oxlint-enable no-await-in-loop
 		}
 	} catch (err) {
 		console.error('Failed to read materials.', err);
+	} finally {
+		overlay.remove();
 	}
-
-	progressOverlay.remove();
 }

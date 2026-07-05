@@ -1,10 +1,12 @@
+// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion no-use-before-define
+import * as v from 'valibot';
 import logo1st from '../../assets/logos/1st-ed.png?url';
 import logo2nd from '../../assets/logos/2nd-ed.png?url';
 import logo3rd from '../../assets/logos/3rd-ed.png?url';
 import logo4th from '../../assets/logos/4th-ed.png?url';
 import logo5th from '../../assets/logos/5th-ed.png?url';
 import logo6th from '../../assets/logos/6th-ed.png?url';
-import type { SavedMaterialFile } from './idb-persistence.ts';
+import { SavedFileMetadataSchema } from './idb-persistence.ts';
 
 export const MATERIAL_EDITION = {
 	1: '1st',
@@ -15,6 +17,8 @@ export const MATERIAL_EDITION = {
 	6: '6th'
 } as const;
 
+// oxlint-disable-next-line no-magic-numbers
+export const MaterialEditionSchema = v.pipe(v.number(), v.minValue(1), v.maxValue(6));
 export type MaterialEdition = keyof typeof MATERIAL_EDITION;
 
 export const MATERIAL_EDITION_ICONS = {
@@ -41,6 +45,11 @@ export const MATERIAL_LANGUAGES = {
 	'en-US': 'English'
 } as const;
 
+export const MaterialLanguageSchema = v.picklist(Object.keys(MATERIAL_LANGUAGES) as KnownLocaleCodes[]);
+export const MaterialNamesSchema = v.record(
+	MaterialLanguageSchema,
+	v.string()
+);
 export type LocaleCode = `${string}-${string}`;
 export type KnownLocaleCodes = keyof typeof MATERIAL_LANGUAGES;
 
@@ -57,6 +66,7 @@ export const MATERIAL_PUBLISHERS = [
 	'Unofficial'
 ] as const;
 
+export const MaterialPublisherSchema = v.picklist(MATERIAL_PUBLISHERS);
 export type MaterialPublisher = typeof MATERIAL_PUBLISHERS[number];
 
 export const MATERIAL_CATEGORY = {
@@ -72,6 +82,7 @@ export const MATERIAL_CATEGORY = {
 	unofficial: 'Unofficial'
 } as const;
 
+export const MaterialCategorySchema = v.picklist(Object.keys(MATERIAL_CATEGORY) as MaterialCategory[]);
 export type MaterialCategory = keyof typeof MATERIAL_CATEGORY;
 
 export const MATERIAL_CATEGORY_ICONS = {
@@ -95,6 +106,7 @@ export const MATERIAL_TYPE = {
 	physical: 'Physical'
 } as const;
 
+export const MaterialTypeSchema = v.picklist(Object.keys(MATERIAL_TYPE) as MaterialType[]);
 export type MaterialType = keyof typeof MATERIAL_TYPE;
 
 export const MATERIAL_TYPE_ICONS = {
@@ -113,6 +125,7 @@ export const MATERIAL_STATUS = {
 	'partially-missing': 'Partially Missing'
 } as const;
 
+export const MaterialStatusSchema = v.picklist(Object.keys(MATERIAL_STATUS) as MaterialStatus[]);
 export type MaterialStatus = keyof typeof MATERIAL_STATUS;
 
 export const MATERIAL_STATUS_ICONS = {
@@ -123,49 +136,66 @@ export const MATERIAL_STATUS_ICONS = {
 	'partially-missing': 'mdi:warning-octagon-outline'
 } as const;
 
-declare const IsoDateBrand: unique symbol;
-export type ISODate = string & { [IsoDateBrand]: 'iso-date' };
+export const IsoDateSchema = v.pipe(v.string(), v.isoDate(), v.brand('iso-date'));
+export type ISODate = v.InferInput<typeof IsoDateSchema>;
 
+export const IsoTimestampSchema = v.pipe(v.string(), v.isoTimestamp(), v.brand('iso-timestamp'));
+export type ISOTimestamp = v.InferInput<typeof IsoTimestampSchema>;
+
+export const AbsoluteLinkSchema = v.pipe(
+	v.union([
+		v.pipe(v.string(), v.regex(/^data:.+;base64,.+$/iu)),
+		v.pipe(v.string(), v.regex(/^file:\/\/\/.+$/iu)),
+		v.pipe(v.string(), v.regex(/^http:\/\/.+$/iu)),
+		v.pipe(v.string(), v.regex(/^https:\/\/.+$/iu))
+	]),
+	v.brand('absolute-link')
+);
 export type AbsoluteLink = `data:${string};base64,${string}` | `file:///${string}` | `http://${string}` | `https://${string}`;
 
+export const RelativeLinkSchema = v.pipe(v.string(), v.regex(/^\.{1,2}\/.+$/iu), v.brand('relative-link'));
 export type RelativeLink = `../${string}` | `./${string}`;
 
-export type Links = Record<AbsoluteLink, string>;
+export const MaterialLinksSchema = v.record(AbsoluteLinkSchema, v.string());
+export type MaterialLinks = Record<AbsoluteLink, string>;
 
+export const MaterialCoverSchema = v.union([AbsoluteLinkSchema, RelativeLinkSchema]);
 export type MaterialCover = AbsoluteLink | RelativeLink;
 
-declare const SkuBrand: unique symbol;
-export type MaterialSku = string & { [SkuBrand]: 'sku' };
+export const MaterialSkuSchema = v.pipe(v.string(), v.regex(/^[A-Z0-9](?:-?[A-Z0-9])+(?:-[A-Z])?$/u), v.brand('sku'));
+export type MaterialSku = v.InferInput<typeof MaterialSkuSchema>;
 
-export interface MaterialSubItem {
-	sku?: MaterialSku;
-	name: string;
-	status: MaterialStatus;
-	description: string;
-	notes?: string;
-	links?: Links;
-	cover?: MaterialCover;
-	thumbnail?: MaterialCover;
-	files?: SavedMaterialFile[];
-}
+export const MaterialSubItemSchema = v.object({
+	sku: MaterialSkuSchema,
+	name: v.pipe(v.string(), v.nonEmpty()),
+	status: MaterialStatusSchema,
+	description: v.optional(v.string()),
+	notes: v.optional(v.string()),
+	links: v.optional(MaterialLinksSchema),
+	cover: v.optional(MaterialCoverSchema),
+	thumbnail: v.optional(MaterialCoverSchema),
+	files: v.optional(v.array(SavedFileMetadataSchema))
+});
+export type MaterialSubItem = v.InferInput<typeof MaterialSubItemSchema>;
 
-export interface Material {
-	category: MaterialCategory;
-	type: MaterialType;
-	sku: [MaterialSku, ...MaterialSku[]];
-	name: string;
-	names?: Partial<Record<KnownLocaleCodes, string>>;
-	description: string;
-	edition: MaterialEdition;
-	publisher: [MaterialPublisher, ...(MaterialPublisher)[]];
-	gameDate: `${number}-${number}`;
-	releaseDate?: [ISODate, ...ISODate[]];
-	status: MaterialStatus;
-	originalLanguage: KnownLocaleCodes;
-	notes?: string;
-	links?: Links;
-	subItems?: MaterialSubItem[];
-	cover: MaterialCover;
-	thumbnail: MaterialCover;
-	files?: SavedMaterialFile[];
-}
+export const MaterialSchema = v.object({
+	sku: v.pipe(v.array(MaterialSkuSchema), v.nonEmpty()),
+	categories: MaterialCategorySchema,
+	type: MaterialTypeSchema,
+	name: v.pipe(v.string(), v.nonEmpty()),
+	names: v.optional(MaterialNamesSchema),
+	description: v.string(),
+	edition: MaterialEditionSchema,
+	publisher: v.pipe(v.array(MaterialPublisherSchema), v.nonEmpty()),
+	gameDate: IsoDateSchema,
+	releaseDate: v.optional(v.pipe(v.array(IsoTimestampSchema), v.nonEmpty())),
+	status: MaterialStatusSchema,
+	originalLanguage: MaterialLanguageSchema,
+	notes: v.optional(v.string()),
+	links: v.optional(MaterialLinksSchema),
+	subItems: v.optional(MaterialSubItemSchema),
+	cover: MaterialCoverSchema,
+	thumbnail: MaterialCoverSchema,
+	files: v.optional(v.array(SavedFileMetadataSchema))
+});
+export type Material = v.InferInput<typeof MaterialSchema>;
