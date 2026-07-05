@@ -1,0 +1,13 @@
+@layer components {
+	stats-report {
+		display: contents;
+
+		ul {
+			padding: 0;
+
+			li { list-style: none; }
+		}
+
+		details:has(div)::details-content { display: flex; }
+	}
+}

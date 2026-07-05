@@ -51,6 +51,7 @@ export class TopBar extends LitElement {
 		}
 
 		switch (evt.target.command) {
+			case '--dev-issues':
 			case '--new-item':
 			case '--info':
 			case '--settings':
@@ -69,8 +70,6 @@ export class TopBar extends LitElement {
 			case '--export-thumbs':
 				break;
 			case '--export-covers':
-				break;
-			case '--dev-issues':
 				break;
 			case '--dev-cbz':
 				window.navigation.navigate('/comic-reader');
@@ -352,7 +351,12 @@ export class TopBar extends LitElement {
 
 							<div ?hidden=${!this.#isDevMode}>
 								<hr />
-								<button type="button" command="--dev-issues">
+								<button
+									type="button"
+									command="--dev-issues"
+									popovertarget="stats-report"
+									popovertargetaction="show"
+								>
 									<iconify-icon icon="mdi:alert" aria-hidden="true"></iconify-icon>
 									<span>Report Data Issues</span>
 								</button>
@@ -374,6 +378,7 @@ export class TopBar extends LitElement {
 				</dialog>
 			</nav>
 			<app-info></app-info>
+			<stats-report></stats-report>
 		`;
 	}
 

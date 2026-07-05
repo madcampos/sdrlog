@@ -1,9 +1,9 @@
-import { html, LitElement } from 'lit';
+import { type TemplateResult, html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { fetchData, fetchItems } from '../../js/data/data-import.ts';
 import type { Material } from '../../js/data/data.ts';
-import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '../../js/data/idb-persistence.ts';
-import { extractMetadataFromFileName } from '../../js/files/file-import.ts';
+import { type SavedMaterialFile, getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '../../js/data/idb-persistence.ts';
+import { extractMetadataFromFileName } from '../../js/files/import.ts';
 
 @customElement('stats-report')
 export class StatsReport extends LitElement {
@@ -33,7 +33,7 @@ export class StatsReport extends LitElement {
 	`;
 
 	@state()
-	private accessor fileswithDuplicateIdsHtml = html`
+	private accessor duplicateIdFilesHtml = html`
 		<progress></progress>
 	`;
 
@@ -42,136 +42,224 @@ export class StatsReport extends LitElement {
 	}
 
 	async #findMissingCovers() {
-		const missingCovers: string[] = [];
-		const missingThumbs: string[] = [];
+		const missingCoversHtml: TemplateResult[] = [];
+		const missingThumbsHtml: TemplateResult[] = [];
 
 		const materials = await fetchItems();
 
-		await Promise.all(materials.map(async (item) => {
-			const [id] = item.sku;
+		await Promise.all(materials.map(async (material) => {
+			const [id] = material.sku;
 
 			const coverFromStorage = await getIDBItem('covers', id);
 			const thumbFromStorage = await getIDBItem('thumbs', id);
 
 			if (!coverFromStorage) {
 				try {
-					const response = await fetch(import.meta.resolve(item.cover), {
-						method: 'HEAD'
+					const response = await fetch(import.meta.resolve(material.cover), {
+						method: 'HEAD',
+						headers: {
+							Accept: 'image/*'
+						}
 					});
 
 					if (!response.ok) {
-						missingCovers.push(item.cover);
+						missingCoversHtml.push(html`
+							<li>
+								<inline-card>
+									<header>
+										<strong>${id}</strong>
+										&bull;
+										<em>${material.name}</em>
+									</header>
+									<card-content>
+										<a href="${material.cover}">${material.cover}</a>
+									</card-content>
+								</inline-card>
+							</li>
+						`);
 					}
 				} catch {
-					missingCovers.push(item.cover);
+					missingCoversHtml.push(html`
+						<li>
+							<inline-card>
+								<header>
+									<strong>${id}</strong>
+									&bull;
+									<em>${material.name}</em>
+								</header>
+								<card-content>
+									<a href="${material.cover}">${material.cover}</a>
+								</card-content>
+							</inline-card>
+						</li>
+					`);
 				}
 			}
 
 			if (!thumbFromStorage) {
 				try {
-					const response = await fetch(import.meta.resolve(item.thumbnail), {
-						method: 'HEAD'
+					const response = await fetch(import.meta.resolve(material.thumbnail), {
+						method: 'HEAD',
+						headers: {
+							Accept: 'image/*'
+						}
 					});
 
 					if (!response.ok) {
-						missingThumbs.push(item.thumbnail);
+						missingThumbsHtml.push(html`
+							<li>
+								<inline-card>
+									<header>
+										<strong>${id}</strong>
+										&bull;
+										<em>${material.name}</em>
+									</header>
+									<card-content>
+										<a href="${material.thumbnail}">${material.thumbnail}</a>
+									</card-content>
+								</inline-card>
+							</li>
+						`);
 					}
 				} catch {
-					missingThumbs.push(item.thumbnail);
+					missingThumbsHtml.push(html`
+						<li>
+							<inline-card>
+								<header>
+									<strong>${id}</strong>
+									&bull;
+									<em>${material.name}</em>
+								</header>
+								<card-content>
+									<a href="${material.thumbnail}">${material.thumbnail}</a>
+								</card-content>
+							</inline-card>
+						</li>
+					`);
 				}
 			}
 		}));
 
-		const sorter = new Intl.Collator('en', { usage: 'sort' });
-		missingCovers.sort(sorter.compare);
-		missingThumbs.sort(sorter.compare);
-
 		this.missingCoversHtml = html`
-			<dl>
-				<div>
-					<dt>Missing Thumbs</dt>
-					<dd>
-						<ol>
-							${missingThumbs.map((thumb) => html`<a href="${thumb}">${thumb}</a>`)}
-						</ol>
-					</dd>
-				</div>
-				<div>
-					<dt>Missing Covers</dt>
-					<dd>
-						<ol>
-							${missingCovers.map((cover) => html`<a href="${cover}">${cover}</a>`)}
-						</ol>
-					</dd>
-				</div>
-			</dl>
+			<div>
+				<h3>Missing Thumbs</h3>
+				<ul>
+					${missingThumbsHtml}
+				</ul>
+			</div>
+			<div>
+				<h3>Missing Covers</h3>
+				<ul>
+					${missingCoversHtml}
+				</ul>
+			</div>
 		`;
 	}
 
 	async #findDuplicateIds() {
 		const data = await fetchData();
-		const ids = new Map<string, Material>();
-		const duplidateIds: string[] = [];
+		const ids = new Map<string, Material[]>();
 
 		for (const material of data) {
 			const [id] = material.sku;
-			const exisitingMaterial = ids.get(id);
 
-			if (exisitingMaterial) {
-				duplidateIds.push(id);
-
-				continue;
+			if (!ids.has(id)) {
+				ids.set(id, []);
 			}
 
-			ids.set(id, material);
+			ids.get(id)?.push(material);
 		}
 
-		return duplidateIds.sort();
+		const duplicateIdsListHtml = [...ids.entries()]
+			.map(([id, materials]) => {
+				if (materials.length === 1) {
+					return undefined;
+				}
+
+				return html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${id}</strong>
+							</header>
+							<card-content>
+								<ul>
+									${materials.map(({ name }) => html`<li>${name}</li>`)}
+								</ul>
+							</card-content>
+						</inline-card>
+					</li>
+				`;
+			})
+			.filter((item) => item !== undefined);
+
+		this.duplicateIdsHtml = html`
+			<ul>
+				${duplicateIdsListHtml}
+			</ul>
+		`;
 	}
 
 	async #findMissingFiles() {
-		const { materialsWithMissingFiles, materialsWithOkStatusButMissingFiles } = (await Promise.all((await fetchItems()).map(async (material) => {
+		const data = await fetchData();
+		const missingFilesHtml: TemplateResult[] = [];
+		const markedOkButMissingfilesHtml: TemplateResult[] = [];
+
+		await Promise.all(data.map(async (material) => {
 			const [id] = material.sku;
-
-			let missingFile: string | undefined;
-			let okButMissing: string | undefined;
-
 			const filesForMaterial = await getIDBItemsByIndex('files', 'itemId', id);
 
 			if (filesForMaterial.length === 0 && material.status !== 'canceled') {
-				missingFile = id;
+				missingFilesHtml.push(html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${id}</strong>
+							</header>
+							<card-content>
+								<em>${material.name}</em>
+							</card-content>
+						</inline-card>
+					</li>
+				`);
 			}
 
 			if (filesForMaterial.length === 0 && material.status === 'ok') {
-				okButMissing = id;
+				markedOkButMissingfilesHtml.push(html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${id}</strong>
+							</header>
+							<card-content>
+								<em>${material.name}</em>
+							</card-content>
+						</inline-card>
+					</li>
+				`);
 			}
+		}));
 
-			return {
-				missingFile,
-				okButMissing
-			};
-		}))).reduce<{ materialsWithMissingFiles: string[], materialsWithOkStatusButMissingFiles: string[] }>((results, { missingFile, okButMissing }) => {
-			if (missingFile) {
-				results.materialsWithMissingFiles.push(missingFile);
-			}
-
-			if (okButMissing) {
-				results.materialsWithOkStatusButMissingFiles.push(okButMissing);
-			}
-
-			return results;
-		}, { materialsWithMissingFiles: [], materialsWithOkStatusButMissingFiles: [] });
-
-		return {
-			materialsWithMissingFiles: materialsWithMissingFiles.sort(),
-			materialsWithOkStatusButMissingFiles: materialsWithOkStatusButMissingFiles.sort()
-		};
+		this.missingFilesHtml = html`
+			<div>
+				<h3>Missing Files</h3>
+				<ul>
+					${missingFilesHtml}
+				</ul>
+			</div>
+			<div>
+				<h3>Marked "OK" but missing</h3>
+				<ul>
+					${markedOkButMissingfilesHtml}
+				</ul>
+			</div>
+		`;
 	}
 
 	async #findExtraFiles() {
 		const data = await getAllIDBKeys('items');
 		const files = await getAllIDBValues('files');
-		const extraFiles: string[] = [];
+		const extraFiles: TemplateResult[] = [];
 
 		for (const file of files) {
 			if (file.handler.kind !== 'file') {
@@ -181,68 +269,161 @@ export class StatsReport extends LitElement {
 			const id = file.itemId;
 
 			if (!id || !data.includes(id)) {
-				extraFiles.push(file.filePath);
+				extraFiles.push(html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${file.itemId ?? ''}</strong>
+								&bull;
+								<em>${file.fileName ?? ''}</em>
+							</header>
+							<card-content>
+								<span>${file.filePath}</span>
+							</card-content>
+						</inline-card>
+					</li>
+				`);
 			}
 		}
 
-		return extraFiles;
+		this.extraFilesHtml = html`
+			<ul>
+				${extraFiles}
+			</ul>
+		`;
 	}
 
 	async #findDuplicateFiles() {
 		const items = await getAllIDBValues('files');
-		const hashes = items.map((item) => item.hash);
-		const duplicateFiles: string[][] = [];
-		const duplicateHashes: string[] = [];
+		const duplicateFiles = new Map<string, SavedMaterialFile[]>();
 
-		for (const [i, hash] of hashes.entries()) {
-			if (duplicateHashes.includes(hash)) {
-				continue;
+		for (const item of items) {
+			if (!duplicateFiles.has(item.hash)) {
+				duplicateFiles.set(item.hash, []);
 			}
 
-			if (hashes.indexOf(hash) !== i) {
-				const duplicatesForItem = items.filter((item) => item.hash === hash);
-				const duplicateFilePaths = duplicatesForItem.map((item) => item.filePath);
-
-				duplicateFiles.push(duplicateFilePaths);
-				duplicateHashes.push(hash);
-			}
+			duplicateFiles.get(item.hash)?.push(item);
 		}
 
-		return duplicateFiles;
+		const duplicateFilesListHtml = [...duplicateFiles.entries()]
+			.map(([hash, files]) => {
+				if (files.length === 1) {
+					return undefined;
+				}
+
+				return html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${hash}</strong>
+							</header>
+							<card-content>
+								<ul>
+									${files.map(({ filePath }) => html`<li>${filePath}</li>`)}
+								</ul>
+							</card-content>
+						</inline-card>
+					</li>
+				`;
+			})
+			.filter((item) => item !== undefined);
+
+		this.duplicateFilesHtml = html`
+			<ul>
+				${duplicateFilesListHtml}
+			</ul>
+		`;
 	}
 
 	async #findFilesWithDuplicateIds() {
 		const items = await getAllIDBValues('files');
-		const duplicateIdFiles: string[][] = [];
-		const duplicateIds: string[] = [];
+		const duplicateIdFiles = new Map<string, SavedMaterialFile[]>();
+		const filesWithoutId: TemplateResult[] = [];
 
 		for (const item of items) {
 			const id = item.itemId;
 
 			if (!id) {
+				filesWithoutId.push(html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${item.fileName ?? ''}</strong>
+							</header>
+							<card-content>
+								<span>${item.filePath}</span>
+							</card-content>
+						</inline-card>
+					</li>
+				`);
 				continue;
 			}
 
-			if (duplicateIds.includes(id)) {
+			const fileName = item.fileName ?? item.filePath.split('/').pop() ?? '';
+			const fileMetadata = extractMetadataFromFileName(fileName);
+
+			if (!fileMetadata.id) {
+				filesWithoutId.push(html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${item.fileName ?? ''}</strong>
+								&bull;
+								<em>(Failed to parse ID)</em>
+							</header>
+							<card-content>
+								<span>${item.filePath}</span>
+							</card-content>
+						</inline-card>
+					</li>
+				`);
 				continue;
 			}
 
-			const filesWithSameId = items.filter((i) => i.itemId === id);
-			const filesWithNameMetadata = filesWithSameId.map((i) => ({
-				filePath: i.filePath,
-				...extractMetadataFromFileName(i.filePath.split('/').pop() ?? '')
-			}));
-			const duplicatesForItem = filesWithNameMetadata.filter((i) => !i.modifier);
-
-			if (duplicatesForItem.length > 1) {
-				const duplicateFilePaths = duplicatesForItem.map((i) => i.filePath);
-
-				duplicateIdFiles.push(duplicateFilePaths);
-				duplicateIds.push(id);
+			if (!duplicateIdFiles.has(fileMetadata.id)) {
+				duplicateIdFiles.set(fileMetadata.id, []);
 			}
+
+			duplicateIdFiles.get(fileMetadata.id)?.push(item);
 		}
 
-		return duplicateIdFiles;
+		const duplicateIdFilesListHtml = [...duplicateIdFiles.entries()]
+			.map(([hash, files]) => {
+				if (files.length === 1) {
+					return undefined;
+				}
+
+				return html`
+					<li>
+						<inline-card>
+							<header>
+								<strong>${hash}</strong>
+							</header>
+							<card-content>
+								<ul>
+									${files.map(({ filePath }) => html`<li>${filePath}</li>`)}
+								</ul>
+							</card-content>
+						</inline-card>
+					</li>
+				`;
+			})
+			.filter((item) => item !== undefined);
+
+		this.duplicateIdFilesHtml = html`
+			<div>
+				<h3>Duplicate ID Files</h3>
+				<ul>
+					${duplicateIdFilesListHtml}
+				</ul>
+			</div>
+			<div>
+				<h3>Files Without ID</h3>
+				<ul>
+					${filesWithoutId}
+				</ul>
+			</div>
+		`;
 	}
 
 	async #handleOpenDialog(evt: ToggleEvent) {
@@ -251,14 +432,19 @@ export class StatsReport extends LitElement {
 		}
 
 		await Promise.all([
-			this.#findMissingCovers()
+			this.#findMissingCovers(),
+			this.#findDuplicateIds(),
+			this.#findMissingFiles(),
+			this.#findExtraFiles(),
+			this.#findDuplicateFiles(),
+			this.#findFilesWithDuplicateIds()
 		]);
 	}
 
 	protected override render() {
 		return html`
 			<dialog
-				id="stats-report-dialog"
+				id="stats-report"
 				popover="manual"
 				@toggle=${this.#handleOpenDialog}
 			>
@@ -267,7 +453,7 @@ export class StatsReport extends LitElement {
 					<button
 						data-icon-button
 						type="button"
-						popovertarget="stats-report-dialog"
+						popovertarget="stats-report"
 						popovertargetaction="hide"
 					>
 						<sr-only>Close Report</sr-only>
@@ -275,7 +461,35 @@ export class StatsReport extends LitElement {
 					</button>
 				</header>
 				<dialog-content>
-					<h3></h3>
+					<details open>
+						<summary>Missing Covers</summary>
+						${this.missingCoversHtml}
+					</details>
+
+					<details open>
+						<summary>Duplicate IDs</summary>
+						${this.duplicateIdsHtml}
+					</details>
+
+					<details open>
+						<summary>Missing Files</summary>
+						${this.missingFilesHtml}
+					</details>
+
+					<details open>
+						<summary>Extra Files</summary>
+						${this.extraFilesHtml}
+					</details>
+
+					<details open>
+						<summary>Duplicate Files</summary>
+						${this.duplicateFilesHtml}
+					</details>
+
+					<details open>
+						<summary>Files with Duplicate IDs</summary>
+						${this.duplicateIdFilesHtml}
+					</details>
 				</dialog-content>
 			</dialog>
 		`;

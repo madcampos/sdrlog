@@ -1,0 +1,49 @@
+@layer components {
+	inline-card {
+		display: grid;
+		grid-template-areas:
+			'picture header footer'
+			'picture content footer';
+
+		grid-template-columns: var(--size-content-0) 1fr var(--size-8);
+		grid-template-rows: repeat(2, auto);
+
+		header { grid-area: header; }
+
+		picture {
+			grid-area: picture;
+			aspect-ratio: 1 / 1;
+			inline-size: 100%;
+		}
+
+		card-content { grid-area: content; }
+		footer { grid-area: footer; }
+
+		&:not(:has(> picture)) {
+			grid-template-areas:
+				'header footer'
+				'content footer';
+
+			grid-template-columns: 1fr var(--size-8);
+			grid-template-rows: repeat(2, auto);
+		}
+
+		&:not(:has(> footer)) {
+			grid-template-areas:
+				'picture header'
+				'picture content';
+
+			grid-template-columns: var(--size-content-0) 1fr;
+			grid-template-rows: repeat(2, auto);
+		}
+
+		&:not(:has(> picture)):not(:has(> footer)) {
+			grid-template-areas:
+				'header'
+				'content';
+
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, auto);
+		}
+	}
+}

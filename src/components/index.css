@@ -1,8 +1,12 @@
+/* HTML Only */
 @import url('./DropdownMenu/dropdown-menu.css');
+@import url('./InlineCard/inline-card.css');
 @import url('./LoadingScreen/loading-screen.css');
 @import url('./MaterialCard/material-card.css');
 @import url('./SrOnly/sr-only.css');
 @import url('./SvgDefs/svg-defs.css');
 
+/* Components */
 @import url('./AppInfo/app-info.css');
 @import url('./TopBar/top-bar.css');
+@import url('./StatsReport/stats-report.css');
