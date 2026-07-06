@@ -27,6 +27,7 @@
 		"@emulatorjs/emulatorjs": "^4.2.3",
 		"@lit-labs/router": "^0.1.4",
 		"@mad-c/file-system-helpers": "^1.1.0",
+		"@squoosh-kit/mozjpeg": "^0.2.4",
 		"epubjs": "^0.3.93",
 		"iconify-icon": "^3.0.2",
 		"idb": "^8.0.3",
@@ -36,7 +37,7 @@
 		"nipplejs": "^1.0.4",
 		"open-props": "1.7.23",
 		"pdfjs-dist": "^6.1.200",
-		"valibot": "^1.4.1"
+		"valibot": "^1.4.2"
 	},
 	"devDependencies": {
 		"@types/emscripten": "^1.41.5",
