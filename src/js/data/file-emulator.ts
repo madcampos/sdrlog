@@ -1,5 +1,5 @@
 // oxlint-disable no-await-in-loop
-import { getAllIDBEntries, setIDBItem } from '../data/idb-persistence';
+import { getAllIDBEntries, setIDBItem } from './idb-helpers';
 
 const mimeTypes = new Map([
 	['png', 'image/png'],

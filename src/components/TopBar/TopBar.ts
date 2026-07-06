@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { MATERIAL_CATEGORY, MATERIAL_CATEGORY_ICONS } from '../../js/data/data.ts';
+import { importFiles, importMaterialsFromFile } from '../../js/data/import.ts';
 import { SearchEngine, SearchUpdateEvent } from '../../js/search-engine.ts';
 
 @customElement('top-bar')
@@ -10,6 +11,9 @@ export class TopBar extends LitElement {
 
 	@state()
 	private accessor suggestions: string[] = [];
+
+	@state()
+	private accessor areActionsDisabled = false;
 
 	#isDevMode = import.meta.env.DEV;
 
@@ -45,7 +49,7 @@ export class TopBar extends LitElement {
 		});
 	}
 
-	#handleButtonClick(evt: MouseEvent) {
+	async #handleButtonClick(evt: MouseEvent) {
 		if (!(evt.target instanceof HTMLButtonElement)) {
 			return;
 		}
@@ -58,8 +62,14 @@ export class TopBar extends LitElement {
 				evt.target.closest('dialog')?.hidePopover();
 				break;
 			case '--import-files':
+				this.areActionsDisabled = true;
+				await importFiles();
+				this.areActionsDisabled = false;
 				break;
 			case '--import-data':
+				this.areActionsDisabled = true;
+				await importMaterialsFromFile();
+				this.areActionsDisabled = false;
 				break;
 			case '--import-covers':
 				break;
@@ -289,58 +299,91 @@ export class TopBar extends LitElement {
 								command="--info"
 								popovertarget="app-info"
 								popovertargetaction="show"
+								?disabled=${this.areActionsDisabled}
 							>
 								<iconify-icon icon="mdi:information" aria-hidden="true"></iconify-icon>
 								<span>App Info</span>
 							</button>
-							<button type="button" command="--settings">
+							<button
+								type="button"
+								command="--settings"
+								?disabled=${this.areActionsDisabled}
+							>
 								<iconify-icon icon="mdi:settings" aria-hidden="true"></iconify-icon>
 								<span>Settings</span>
 							</button>
 
 							<div ?hidden=${!this.#hasFileSystem}>
 								<hr />
-								<button type="button" command="--import-files">
+								<button
+									type="button"
+									command="--import-files"
+									?disabled=${this.areActionsDisabled}
+								>
 									<icon-wrapper>
 										<iconify-icon icon="mdi:folder" aria-hidden="true"></iconify-icon>
 										<iconify-icon icon="mdi:arrow-up-bold" aria-hidden="true" data-subicon></iconify-icon>
 									</icon-wrapper>
 									<span>Import Files</span>
 								</button>
-								<button type="button" command="--import-data">
+								<button
+									type="button"
+									command="--import-data"
+									?disabled=${this.areActionsDisabled}
+								>
 									<icon-wrapper>
 										<iconify-icon icon="mdi:database" aria-hidden="true"></iconify-icon>
 										<iconify-icon icon="mdi:arrow-up-bold" aria-hidden="true" data-subicon></iconify-icon>
 									</icon-wrapper>
 									<span>Import Data</span>
 								</button>
-								<button type="button" command="--import-covers">
+								<button
+									type="button"
+									command="--import-covers"
+									?disabled=${this.areActionsDisabled}
+								>
 									<icon-wrapper>
 										<iconify-icon icon="mdi:folder-image" aria-hidden="true"></iconify-icon>
 										<iconify-icon icon="mdi:arrow-up-bold" aria-hidden="true" data-subicon></iconify-icon>
 									</icon-wrapper>
 									<span>Import Covers</span>
 								</button>
-								<button type="button" command="--extract-covers">
+								<button
+									type="button"
+									command="--extract-covers"
+									?disabled=${this.areActionsDisabled}
+								>
 									<iconify-icon icon="mdi:image-auto-adjust" aria-hidden="true"></iconify-icon>
 									<span>Extract Covers</span>
 								</button>
 								<hr />
-								<button type="button" command="--export-data">
+								<button
+									type="button"
+									command="--export-data"
+									?disabled=${this.areActionsDisabled}
+								>
 									<icon-wrapper>
 										<iconify-icon icon="mdi:database" aria-hidden="true"></iconify-icon>
 										<iconify-icon icon="mdi:arrow-down-bold" aria-hidden="true" data-subicon></iconify-icon>
 									</icon-wrapper>
 									<span>Export Data</span>
 								</button>
-								<button type="button" command="--export-thumbs">
+								<button
+									type="button"
+									command="--export-thumbs"
+									?disabled=${this.areActionsDisabled}
+								>
 									<icon-wrapper>
 										<iconify-icon icon="mdi:folder-image" aria-hidden="true"></iconify-icon>
 										<iconify-icon icon="mdi:arrow-down-bold" aria-hidden="true" data-subicon></iconify-icon>
 									</icon-wrapper>
 									<span>Export Thumbnails</span>
 								</button>
-								<button type="button" command="--export-covers">
+								<button
+									type="button"
+									command="--export-covers"
+									?disabled=${this.areActionsDisabled}
+								>
 									<icon-wrapper>
 										<iconify-icon icon="mdi:folder-image" aria-hidden="true"></iconify-icon>
 										<iconify-icon icon="mdi:arrow-down-bold" aria-hidden="true" data-subicon></iconify-icon>
@@ -360,15 +403,27 @@ export class TopBar extends LitElement {
 									<iconify-icon icon="mdi:alert" aria-hidden="true"></iconify-icon>
 									<span>Report Data Issues</span>
 								</button>
-								<button type="button" command="--dev-cbz">
+								<button
+									type="button"
+									command="--dev-cbz"
+									?disabled=${this.areActionsDisabled}
+								>
 									<iconify-icon icon="mdi:comic-bubble" aria-hidden="true"></iconify-icon>
 									<span>Open CBZ Reader</span>
 								</button>
-								<button type="button" command="--dev-emulator">
+								<button
+									type="button"
+									command="--dev-emulator"
+									?disabled=${this.areActionsDisabled}
+								>
 									<iconify-icon icon="mdi:gamepad-classic" aria-hidden="true"></iconify-icon>
 									<span>Open Emulator</span>
 								</button>
-								<button type="button" command="--dev-epub">
+								<button
+									type="button"
+									command="--dev-epub"
+									?disabled=${this.areActionsDisabled}
+								>
 									<iconify-icon icon="mdi:book" aria-hidden="true"></iconify-icon>
 									<span>Open EPUB Reader</span>
 								</button>

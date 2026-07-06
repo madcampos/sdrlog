@@ -1,7 +1,7 @@
-import type { FileSystemEntryForMaterial } from '../data/data';
+import type { FileSystemEntryForMaterial } from './data';
 
 import { Router } from '../../router/router';
-import { getIDBItemByIndex } from '../data/idb-persistence';
+import { getIDBItemByIndex } from './idb-helpers';
 import { getFilePermission } from './import';
 
 const mimeAllowed = [

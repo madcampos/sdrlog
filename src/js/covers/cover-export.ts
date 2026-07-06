@@ -1,6 +1,6 @@
 // oxlint-disable no-await-in-loop
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllIDBValues } from '../data/idb-persistence';
+import { getAllIDBValues } from '../data/idb-helpers';
 
 export async function saveCoversToFolder() {
 	const progressOverlay = SdrProgressOverlay.createOverlay({ title: 'Export Covers' });

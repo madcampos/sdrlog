@@ -1,29 +1,34 @@
 import { type DBSchema, type IndexKey, type IndexNames, type StoreNames, openDB } from 'idb';
-import type { Material, SavedFileMetadata } from './data';
+import type { FileHash, Material, MaterialCategory, MaterialSku, MaterialType, SavedFileMetadata } from './data.ts';
 
 interface DatabaseSchema extends DBSchema {
 	items: {
-		key: string,
+		key: MaterialSku,
 		value: Material,
 		indexes: {
-			sku: string[],
+			sku: MaterialSku[],
 			name: string,
-			category: string,
-			type: string
+			category: MaterialCategory,
+			type: MaterialType
 		}
 	};
 	files: {
-		key: string,
+		key: FileHash,
 		value: SavedFileMetadata,
-		indexes: { fileName: string, filePath: string, itemId: string, hash: string }
+		indexes: {
+			fileName: string,
+			filePath: string,
+			itemId: MaterialSku,
+			hash: FileHash
+		}
 	};
 	covers: {
-		key: string,
-		value: string
+		key: MaterialSku,
+		value: FileHash
 	};
 	thumbs: {
-		key: string,
-		value: string
+		key: MaterialSku,
+		value: FileHash
 	};
 	emulator: {
 		key: string,
@@ -33,7 +38,7 @@ interface DatabaseSchema extends DBSchema {
 
 type Collections = StoreNames<DatabaseSchema>;
 
-const IDB_VERSION = 102;
+const IDB_VERSION = 103;
 const database = openDB<DatabaseSchema>('SDRLog', IDB_VERSION, {
 	upgrade(store) {
 		if (!store.objectStoreNames.contains('items')) {

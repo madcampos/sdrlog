@@ -2,8 +2,9 @@ import { type TemplateResult, html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import type { Material, SavedFileMetadata } from '../../js/data/data.ts';
-import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '../../js/data/idb-persistence.ts';
-import { extractMetadataFromFileName, fetchOnlineItems } from '../../js/files/import.ts';
+import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '../../js/data/idb-helpers.ts';
+import { extractMetadataFromFileName } from '../../js/data/import.ts';
+import { fetchMaterials } from '../../js/data/material.ts';
 
 @customElement('stats-report')
 export class StatsReport extends LitElement {
@@ -45,10 +46,14 @@ export class StatsReport extends LitElement {
 		const missingCoversHtml: TemplateResult[] = [];
 		const missingThumbsHtml: TemplateResult[] = [];
 
-		const materials = await fetchOnlineItems();
+		const materials = await fetchMaterials();
 
 		await Promise.all(materials.map(async (material) => {
-			const [id = ''] = material.sku;
+			const [id] = material.sku;
+
+			if (!id) {
+				return;
+			}
 
 			const coverFromStorage = await getIDBItem('covers', id);
 			const thumbFromStorage = await getIDBItem('thumbs', id);
@@ -157,11 +162,15 @@ export class StatsReport extends LitElement {
 	}
 
 	async #findDuplicateIds() {
-		const data = await fetchOnlineItems();
+		const data = await fetchMaterials();
 		const ids = new Map<string, Material[]>();
 
 		for (const material of data) {
-			const [id = ''] = material.sku;
+			const [id] = material.sku;
+
+			if (!id) {
+				continue;
+			}
 
 			if (!ids.has(id)) {
 				ids.set(id, []);
@@ -201,12 +210,17 @@ export class StatsReport extends LitElement {
 	}
 
 	async #findMissingFiles() {
-		const data = await fetchOnlineItems();
+		const data = await fetchMaterials();
 		const missingFilesHtml: TemplateResult[] = [];
 		const markedOkButMissingfilesHtml: TemplateResult[] = [];
 
 		await Promise.all(data.map(async (material) => {
-			const [id = ''] = material.sku;
+			const [id] = material.sku;
+
+			if (!id) {
+				return;
+			}
+
 			const filesForMaterial = await getIDBItemsByIndex('files', 'itemId', id);
 
 			if (filesForMaterial.length === 0 && material.status !== 'canceled') {

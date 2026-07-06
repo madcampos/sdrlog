@@ -1,7 +1,7 @@
 import type { Material } from './data';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
-import { getAllIDBValues } from './idb-persistence';
+import { getAllIDBValues } from './idb-helpers';
 
 function formatDataToExport(data: Material) {
 	const formattedData: Material = {

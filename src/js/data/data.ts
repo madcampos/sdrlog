@@ -1,5 +1,5 @@
-// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion no-use-before-define
-import * as v from 'valibot';
+// oxlint-disable typescript/consistent-type-assertions typescript/no-unsafe-type-assertion
+import * as zod from 'zod/mini';
 import logo1st from '../../assets/logos/1st-ed.png?url';
 import logo2nd from '../../assets/logos/2nd-ed.png?url';
 import logo3rd from '../../assets/logos/3rd-ed.png?url';
@@ -17,7 +17,7 @@ export const MATERIAL_EDITION = {
 } as const;
 
 // oxlint-disable-next-line no-magic-numbers
-export const MaterialEditionSchema = v.pipe(v.number(), v.minValue(1), v.maxValue(6));
+export const MaterialEditionSchema = zod.number().check(zod.gte(1), zod.lte(6));
 export type MaterialEdition = keyof typeof MATERIAL_EDITION;
 
 export const MATERIAL_EDITION_ICONS = {
@@ -44,13 +44,12 @@ export const MATERIAL_LANGUAGES = {
 	'en-US': 'English'
 } as const;
 
-export const MaterialLanguageSchema = v.picklist(Object.keys(MATERIAL_LANGUAGES) as KnownLocaleCodes[]);
-export const MaterialNamesSchema = v.record(
+export const MaterialLanguageSchema = zod.union(Object.keys(MATERIAL_LANGUAGES).map((key) => zod.literal(key as keyof typeof MATERIAL_LANGUAGES)));
+export const MaterialNamesSchema = zod.record(
 	MaterialLanguageSchema,
-	v.string()
+	zod.string()
 );
-export type LocaleCode = `${string}-${string}`;
-export type KnownLocaleCodes = keyof typeof MATERIAL_LANGUAGES;
+export type KnownLocaleCodes = zod.infer<typeof MaterialLanguageSchema>;
 
 export const MATERIAL_PUBLISHERS = [
 	'Catalyst Game Labs',
@@ -65,8 +64,8 @@ export const MATERIAL_PUBLISHERS = [
 	'Unofficial'
 ] as const;
 
-export const MaterialPublisherSchema = v.picklist(MATERIAL_PUBLISHERS);
-export type MaterialPublisher = typeof MATERIAL_PUBLISHERS[number];
+export const MaterialPublisherSchema = zod.union(MATERIAL_PUBLISHERS.map((item) => zod.literal(item)));
+export type MaterialPublisher = zod.infer<typeof MaterialPublisherSchema>;
 
 export const MATERIAL_CATEGORY = {
 	novel: 'Novel',
@@ -81,8 +80,8 @@ export const MATERIAL_CATEGORY = {
 	unofficial: 'Unofficial'
 } as const;
 
-export const MaterialCategorySchema = v.picklist(Object.keys(MATERIAL_CATEGORY) as MaterialCategory[]);
-export type MaterialCategory = keyof typeof MATERIAL_CATEGORY;
+export const MaterialCategorySchema = zod.union(Object.keys(MATERIAL_CATEGORY).map((key) => zod.literal(key as keyof typeof MATERIAL_CATEGORY)));
+export type MaterialCategory = zod.infer<typeof MaterialCategorySchema>;
 
 export const MATERIAL_CATEGORY_ICONS = {
 	novel: 'mdi:bookshelf',
@@ -105,8 +104,8 @@ export const MATERIAL_TYPE = {
 	physical: 'Physical'
 } as const;
 
-export const MaterialTypeSchema = v.picklist(Object.keys(MATERIAL_TYPE) as MaterialType[]);
-export type MaterialType = keyof typeof MATERIAL_TYPE;
+export const MaterialTypeSchema = zod.union(Object.keys(MATERIAL_TYPE).map((key) => zod.literal(key as keyof typeof MATERIAL_TYPE)));
+export type MaterialType = zod.infer<typeof MaterialTypeSchema>;
 
 export const MATERIAL_TYPE_ICONS = {
 	digital: 'mdi:desktop-classic',
@@ -124,8 +123,8 @@ export const MATERIAL_STATUS = {
 	'partially-missing': 'Partially Missing'
 } as const;
 
-export const MaterialStatusSchema = v.picklist(Object.keys(MATERIAL_STATUS) as MaterialStatus[]);
-export type MaterialStatus = keyof typeof MATERIAL_STATUS;
+export const MaterialStatusSchema = zod.union(Object.keys(MATERIAL_STATUS).map((key) => zod.literal(key as keyof typeof MATERIAL_STATUS)));
+export type MaterialStatus = zod.infer<typeof MaterialStatusSchema>;
 
 export const MATERIAL_STATUS_ICONS = {
 	'ok': 'mdi:check-bold',
@@ -135,92 +134,90 @@ export const MATERIAL_STATUS_ICONS = {
 	'partially-missing': 'mdi:warning-octagon-outline'
 } as const;
 
-export const IsoDateSchema = v.pipe(v.string(), v.isoDate(), v.brand('iso-date'));
-export type ISODate = v.InferInput<typeof IsoDateSchema>;
+export const IsoDateSchema = zod.string().check(zod.iso.date()).brand<'iso-date'>();
+export type ISODate = zod.infer<typeof IsoDateSchema>;
 
-export const IsoTimestampSchema = v.pipe(v.string(), v.isoTimestamp(), v.brand('iso-timestamp'));
-export type ISOTimestamp = v.InferInput<typeof IsoTimestampSchema>;
+export const IsoTimestampSchema = zod.string().check(zod.iso.datetime()).brand<'iso-timestamp'>();
+export type ISOTimestamp = zod.infer<typeof IsoTimestampSchema>;
 
-export const AbsoluteLinkSchema = v.pipe(
-	v.union([
-		v.pipe(v.string(), v.regex(/^data:.+;base64,.+$/iu)),
-		v.pipe(v.string(), v.regex(/^file:\/\/\/.+$/iu)),
-		v.pipe(v.string(), v.regex(/^http:\/\/.+$/iu)),
-		v.pipe(v.string(), v.regex(/^https:\/\/.+$/iu))
-	]),
-	v.brand('absolute-link')
-);
-export type AbsoluteLink = `data:${string};base64,${string}` | `file:///${string}` | `http://${string}` | `https://${string}`;
+export const AbsoluteLinkSchema = zod.union([
+	zod.string().check(zod.regex(/^data:.+;base64,.+$/iu)),
+	zod.string().check(zod.regex(/^file:\/\/\/.+$/iu)),
+	zod.string().check(zod.regex(/^http:\/\/.+$/iu)),
+	zod.string().check(zod.regex(/^https:\/\/.+$/iu))
+]).brand<'absolute-link'>();
+export type AbsoluteLink = zod.infer<typeof AbsoluteLinkSchema>;
 
-export const RelativeLinkSchema = v.pipe(v.string(), v.regex(/^\.{1,2}\/.+$/iu), v.brand('relative-link'));
-export type RelativeLink = `../${string}` | `./${string}`;
+export const RelativeLinkSchema = zod.string().check(zod.regex(/^\.{1,2}\/.+$/iu)).brand<'relative-link'>();
+export type RelativeLink = zod.infer<typeof RelativeLinkSchema>;
 
-export const MaterialLinksSchema = v.record(AbsoluteLinkSchema, v.string());
-export type MaterialLinks = Record<AbsoluteLink, string>;
+export const MaterialLinksSchema = zod.record(AbsoluteLinkSchema, zod.string());
+export type MaterialLinks = zod.infer<typeof MaterialLinksSchema>;
 
-export const MaterialCoverSchema = v.union([AbsoluteLinkSchema, RelativeLinkSchema]);
-export type MaterialCover = AbsoluteLink | RelativeLink;
+export const MaterialCoverSchema = zod.union([AbsoluteLinkSchema, RelativeLinkSchema]);
+export type MaterialCover = zod.infer<typeof MaterialCoverSchema>;
 
-export const MaterialSkuSchema = v.pipe(v.string(), v.regex(/^[A-Z0-9](?:-?[A-Z0-9])+(?:-[A-Z])?$/u), v.brand('sku'));
-export type MaterialSku = v.InferInput<typeof MaterialSkuSchema>;
+export const MaterialSkuSchema = zod.string().check(zod.regex(/^[A-Z0-9](?:-?[A-Z0-9])+(?:-[A-Z])?$/u)).brand<'sku'>();
+export type MaterialSku = zod.infer<typeof MaterialSkuSchema>;
 
-export const SavedFileMetadataSchema = v.object({
-	itemId: v.optional(MaterialSkuSchema),
-	path: v.string(),
-	mimeType: v.string(),
-	fileName: v.string(),
-	extension: v.string(),
-	hash: v.string()
+export const FileHashSchema = zod.string().check(zod.base64()).brand<'file-hash'>();
+export type FileHash = zod.infer<typeof FileHashSchema>;
+
+export const SavedFileMetadataSchema = zod.object({
+	itemId: zod.optional(MaterialSkuSchema),
+	path: zod.string(),
+	mimeType: zod.string(),
+	fileName: zod.string(),
+	extension: zod.string(),
+	hash: FileHashSchema
 });
 
-export type SavedFileMetadata = v.InferInput<typeof SavedFileMetadataSchema>;
+export type SavedFileMetadata = zod.infer<typeof SavedFileMetadataSchema>;
 
-export const MaterialSubItemSchema = v.object({
+export const MaterialSubItemSchema = zod.object({
 	sku: MaterialSkuSchema,
-	name: v.pipe(v.string(), v.nonEmpty()),
+	name: zod.string().check(zod.trim(), zod.normalize('NFC'), zod.minLength(1)),
 	status: MaterialStatusSchema,
-	description: v.optional(v.string()),
-	notes: v.optional(v.string()),
-	links: v.optional(MaterialLinksSchema),
-	cover: v.optional(MaterialCoverSchema),
-	thumbnail: v.optional(MaterialCoverSchema),
-	files: v.optional(v.array(SavedFileMetadataSchema))
+	description: zod.optional(zod.string()),
+	notes: zod.optional(zod.string()),
+	links: zod.optional(MaterialLinksSchema),
+	cover: zod.optional(MaterialCoverSchema),
+	thumbnail: zod.optional(MaterialCoverSchema),
+	files: zod.optional(zod.array(SavedFileMetadataSchema))
 });
-export type MaterialSubItem = v.InferInput<typeof MaterialSubItemSchema>;
+export type MaterialSubItem = zod.infer<typeof MaterialSubItemSchema>;
 
-const BaseMaterialSchema = v.object({
-	sku: v.pipe(v.array(MaterialSkuSchema), v.nonEmpty()),
+const BaseMaterialSchema = zod.object({
+	sku: zod.array(MaterialSkuSchema).check(zod.minLength(1)),
 	category: MaterialCategorySchema,
 	type: MaterialTypeSchema,
-	name: v.pipe(v.string(), v.nonEmpty()),
-	names: v.optional(MaterialNamesSchema),
-	description: v.string(),
+	name: zod.string().check(zod.trim(), zod.normalize('NFC'), zod.minLength(1)),
+	names: zod.optional(MaterialNamesSchema),
+	description: zod.string(),
 	edition: MaterialEditionSchema,
-	publisher: v.pipe(v.array(MaterialPublisherSchema), v.nonEmpty()),
+	publisher: zod.array(MaterialPublisherSchema).check(zod.minLength(1)),
 	gameDate: IsoDateSchema,
-	releaseDate: v.optional(v.pipe(v.array(IsoTimestampSchema), v.nonEmpty())),
+	releaseDate: zod.optional(zod.array(IsoTimestampSchema).check(zod.minLength(1))),
 	status: MaterialStatusSchema,
 	originalLanguage: MaterialLanguageSchema,
-	notes: v.optional(v.string()),
-	links: v.optional(MaterialLinksSchema),
-	subItems: v.optional(MaterialSubItemSchema),
-	files: v.optional(v.array(SavedFileMetadataSchema))
+	notes: zod.optional(zod.string()),
+	links: zod.optional(MaterialLinksSchema),
+	subItems: zod.optional(MaterialSubItemSchema),
+	files: zod.optional(zod.array(SavedFileMetadataSchema))
 });
 
-export const MaterialSchema = v.object({
-	...BaseMaterialSchema.entries,
-	cover: v.optional(MaterialCoverSchema),
-	thumbnail: v.optional(MaterialCoverSchema)
+export const MaterialSchema = zod.extend(BaseMaterialSchema, {
+	cover: zod.optional(MaterialCoverSchema),
+	thumbnail: zod.optional(MaterialCoverSchema)
 });
-export type Material = v.InferInput<typeof MaterialSchema>;
+export type Material = zod.infer<typeof MaterialSchema>;
 
-export const NewMaterialSchema = v.object({
-	...BaseMaterialSchema.entries,
-	cover: v.instance(FileSystemFileHandle),
-	thumbnail: v.instance(FileSystemFileHandle)
+export const NewMaterialSchema = zod.extend(BaseMaterialSchema, {
+	cover: zod.instanceof(FileSystemFileHandle),
+	thumbnail: zod.instanceof(FileSystemFileHandle)
 });
 
-export type NewMaterial = v.InferInput<typeof NewMaterialSchema>;
+export type NewMaterial = zod.infer<typeof NewMaterialSchema>;
 
 export interface SDRLogData {
 	$schema: string;
