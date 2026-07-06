@@ -1,6 +1,9 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
+// oxlint-disable-next-line no-magic-numbers
+const OVERLAY_DISMISS_TIMEOUT_MS = 2 * 1000;
+
 @customElement('file-operation-overlay')
 export class FileOperationOverlay extends LitElement {
 	@property({ type: Number, reflect: true })
@@ -23,8 +26,11 @@ export class FileOperationOverlay extends LitElement {
 		this.querySelector('dialog')?.showModal();
 	}
 
-	hide() {
-		this.querySelector('dialog')?.close();
+	hideAndRemove() {
+		setTimeout(() => {
+			this.querySelector('dialog')?.close();
+			this.remove();
+		}, OVERLAY_DISMISS_TIMEOUT_MS);
 	}
 
 	increment(text: string) {
@@ -44,16 +50,28 @@ export class FileOperationOverlay extends LitElement {
 				<dialog-content>
 					<img
 						src="/images/base-covers/loading-anim.svg"
-						width="189"
-						height="189"
+						width="256"
+						height="256"
 						alt="Animation of the Shadowrun logo. Showing a profile of a serpent forming the letter &quot;S&quot; in the purple color."
 					/>
-					<progress
-						min="0"
-						max="${this.max}"
-						.value=${this.value}
-						aria-labelledby="file-operation-text-${this.#id}"
-					></progress>
+					<input-wrapper>
+						<progress
+							min="0"
+							max="${this.max}"
+							.value=${this.value}
+							aria-labelledby="file-operation-text-${this.#id}"
+							aria-describedby="file-operation-counter-${this.#id}"
+						></progress>
+						<input-infix>
+							<output aria-live="polite" id="file-operation-counter-${this.#id}">
+								<span>${this.value}</span>
+								<sr-only>Items</sr-only>
+								<span aria-hidden="true">/</span>
+								<sr-only>of</sr-only>
+								<span>${this.max}</span>
+							</output>
+						</input-infix>
+					</input-wrapper>
 					<p id="file-operation-text-${this.#id}"></p>
 				</dialog-content>
 			</dialog>

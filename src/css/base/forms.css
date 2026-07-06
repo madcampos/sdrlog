@@ -73,8 +73,9 @@
 
 		&:has(input-infix) {
 			flex-wrap: nowrap;
+			flex-direction: row;
 
-			input { flex-shrink: 1; }
+			:is(input, progress, meter, textarea, select) { flex-shrink: 1; }
 			input-infix { flex-shrink: 0; }
 		}
 

@@ -1,10 +1,24 @@
 @layer components {
 	file-operation-overlay {
+		header {
+			justify-content: center;
+			text-align: center;
+		}
+
 		dialog-content {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			gap: var(--size-3);
+
+			input-wrapper {
+				margin: 0;
+				inline-size: 100%;
+				justify-content: center;
+			}
+
+			progress { inline-size: clamp(var(--size-content-0), 100%, var(--size-content-3)); }
 		}
 	}
 }
