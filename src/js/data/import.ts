@@ -101,11 +101,11 @@ export async function importFiles() {
 
 		await requestHandlePermissions(dirHandle, 'read');
 
-		const hash = await getFileHash(`[root] ${dirHandle.name}`);
+		const rootDirHash = await getFileHash(`[root] ${dirHandle.name}`);
 		await saveFileMetadata(dirHandle, '/', {
-			hash
+			hash: rootDirHash
 		});
-		await saveHandle(hash, dirHandle);
+		await saveHandle(rootDirHash, dirHandle);
 
 		const entryStack = await listDirEntries(dirHandle, { depth: Infinity, rootDir: dirHandle });
 		overlay.max = entryStack.length;
@@ -211,11 +211,11 @@ export async function importCoversFromFolder() {
 
 		await requestHandlePermissions(dirHandle, 'readwrite');
 
-		const hash = await getFileHash(`[covers] ${dirHandle.name}`);
+		const coversDirHash = await getFileHash(`[covers] ${dirHandle.name}`);
 		await saveFileMetadata(dirHandle, '/covers', {
-			hash
+			hash: coversDirHash
 		});
-		await saveHandle(hash, dirHandle);
+		await saveHandle(coversDirHash, dirHandle);
 
 		const entryStack = await listDirEntries(dirHandle, { depth: Infinity, rootDir: dirHandle });
 		overlay.max = entryStack.length;
@@ -249,8 +249,8 @@ export async function importCoversFromFolder() {
 				}
 
 				if (coverFile) {
-					const optimizedPath = resolve('/_optimized/covers', handle.name);
-					const optimizedHandle = await getFileHandle(optimizedPath, { recursive: true, touch: true, rootDir: dirHandle });
+					const optimizedPath = resolve('/optimized/covers', handle.name);
+					const optimizedHandle = await getFileHandle(optimizedPath, { recursive: true, touch: true });
 					const writableStream = await optimizedHandle.createWritable();
 
 					await writableStream.truncate(0);
@@ -259,12 +259,12 @@ export async function importCoversFromFolder() {
 
 					const optimizedHash = await getFileHash(await coverFile.arrayBuffer());
 					await saveHandle(optimizedHash, optimizedHandle);
-					await setIDBItem('covers', id, hash);
+					await setIDBItem('covers', id, optimizedHash);
 				}
 
 				if (thumbFile) {
-					const optimizedPath = resolve('/_optimized/thumbs', handle.name);
-					const optimizedHandle = await getFileHandle(optimizedPath, { recursive: true, touch: true, rootDir: dirHandle });
+					const optimizedPath = resolve('/optimized/thumbs', handle.name);
+					const optimizedHandle = await getFileHandle(optimizedPath, { recursive: true, touch: true });
 					const writableStream = await optimizedHandle.createWritable();
 
 					await writableStream.truncate(0);
@@ -273,7 +273,7 @@ export async function importCoversFromFolder() {
 
 					const optimizedHash = await getFileHash(await thumbFile.arrayBuffer());
 					await saveHandle(optimizedHash, optimizedHandle);
-					await setIDBItem('covers', id, hash);
+					await setIDBItem('covers', id, optimizedHash);
 				}
 			}
 
