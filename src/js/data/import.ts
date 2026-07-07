@@ -50,7 +50,7 @@ export function extractMetadataFromFileName(fileName: string) {
 	};
 }
 
-export async function saveFileMetadata(handle: FileSystemDirectoryHandle | FileSystemFileHandle | FileSystemHandle, path: string, metadata: Partial<SavedFileMetadata> = {}) {
+async function saveFileMetadata(handle: FileSystemDirectoryHandle | FileSystemFileHandle | FileSystemHandle, path: string, metadata: Partial<SavedFileMetadata> = {}) {
 	const { name, id, extension } = extractMetadataFromFileName(handle.name);
 	const mergedMetadata: SavedFileMetadata = {
 		itemId: id,

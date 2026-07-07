@@ -1,7 +1,8 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { MATERIAL_CATEGORY, MATERIAL_CATEGORY_ICONS } from '../../js/data/data.ts';
-import { importFiles, importMaterialsFromFile } from '../../js/data/import.ts';
+import { importCoversFromFolder, importFiles, importMaterialsFromFile } from '../../js/data/import.ts';
+import { extractCoversFromFiles } from '../../js/data/pdf-extract-cover.ts';
 import { SearchEngine, SearchUpdateEvent } from '../../js/search-engine.ts';
 
 @customElement('top-bar')
@@ -72,8 +73,14 @@ export class TopBar extends LitElement {
 				this.areActionsDisabled = false;
 				break;
 			case '--import-covers':
+				this.areActionsDisabled = true;
+				await importCoversFromFolder();
+				this.areActionsDisabled = false;
 				break;
 			case '--extract-covers':
+				this.areActionsDisabled = true;
+				await extractCoversFromFiles();
+				this.areActionsDisabled = false;
 				break;
 			case '--export-data':
 				break;

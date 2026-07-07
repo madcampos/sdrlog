@@ -3,8 +3,8 @@ import { type MozjpegEncoderFactory, createMozjpegEncoder } from '@squoosh-kit/m
 import { MaterialSkuSchema } from './data.ts';
 import { getIDBItem } from './idb-helpers.ts';
 
-const THUMB_WIDTH = 256;
-const COVER_WIDTH = 1024;
+export const THUMB_WIDTH = 256;
+export const COVER_WIDTH = 1024;
 const MAX_UPSCALE_FACTOR = 1.5;
 
 const ONE_MB_IN_BYTES = 1048576;
