@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit';
+import { html, LitElement, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 // oxlint-disable-next-line no-magic-numbers
@@ -11,7 +11,7 @@ export class FileOperationOverlay extends LitElement {
 	accessor max = 100;
 
 	@property({ type: Number, reflect: true })
-	accessor value = 0;
+	accessor value: number | undefined = undefined;
 
 	@property({ type: String, reflect: true })
 	accessor name = 'File Operation';
@@ -34,6 +34,7 @@ export class FileOperationOverlay extends LitElement {
 	}
 
 	increment(text: string) {
+		this.value ??= 0;
 		this.value += 1;
 
 		// oxlint-disable-next-line typescript/no-non-null-assertion
@@ -58,11 +59,11 @@ export class FileOperationOverlay extends LitElement {
 						<progress
 							min="0"
 							max="${this.max}"
-							.value=${this.value}
+							.value=${this.value ?? nothing}
 							aria-labelledby="file-operation-text-${this.#id}"
 							aria-describedby="file-operation-counter-${this.#id}"
 						></progress>
-						<input-infix>
+						<input-infix ?hidden=${this.value === undefined}>
 							<output aria-live="polite" id="file-operation-counter-${this.#id}">
 								<span>${this.value}</span>
 								<sr-only>Items</sr-only>

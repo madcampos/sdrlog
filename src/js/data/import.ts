@@ -2,11 +2,12 @@ import { getFileHandle, listDirEntries, resolveParentHandle } from '@mad-c/file-
 import { getUserDirHandle, getUserOpenFileHandle, saveHandle } from '@mad-c/file-system-helpers/access';
 import { basename, extname, resolve } from '@mad-c/file-system-helpers/path';
 import { requestHandlePermissions } from '@mad-c/file-system-helpers/permissions';
+import { decode, parse } from 'zod';
 import { FileOperationOverlay } from '../../components/FileOperationOverlay/FileOperationOverlay.ts';
 import { processCoverFile } from './cover.ts';
 import { getIDBItem, setIDBItem } from './idb-helpers.ts';
 import { saveMaterials } from './material.ts';
-import { type MaterialSku, type SavedFileMetadata, type SDRLogData, FileHashSchema, MaterialSchema, MaterialSkuSchema } from './schema.ts';
+import { type MaterialSku, type SavedFileMetadata, FileHashSchema, JSONToSDRLogData, MaterialSkuSchema } from './schema.ts';
 
 // oxlint-disable-next-line no-magic-numbers
 const COVER_IMPORT_RELOAD_TIMEOUT = 3 * 1000;
@@ -25,7 +26,7 @@ export async function getFileHash(dataToHash: BufferSource | string) {
 	}
 
 	const hash = await crypto.subtle.digest('SHA-1', data);
-	const parsedHash = FileHashSchema.parse(new Uint8Array(hash).toBase64());
+	const parsedHash = parse(FileHashSchema, new Uint8Array(hash).toBase64());
 
 	return parsedHash;
 }
@@ -163,34 +164,21 @@ export async function importMaterialsFromFile() {
 			throw new Error('No file selected');
 		}
 
+		overlay.name = 'Material Import';
+		overlay.show();
+
 		await requestHandlePermissions(handle, 'read');
 		const hash = await saveFileMetadata(handle, '/data.json');
 		await saveHandle(hash, handle);
 
 		const file = await handle.getFile();
-		const parsedFile: Partial<SDRLogData> = JSON.parse(await file.text());
+		const parsedFile = decode(JSONToSDRLogData, await file.text());
 
-		if (!parsedFile.items) {
-			throw new Error('No items found in data file.');
-		}
-
-		const parsedItems = parsedFile.items.map((material) => {
-			try {
-				const newMaterial = MaterialSchema.parse(material);
-
-				return newMaterial;
-			} catch (err) {
-				console.error(err);
-			}
-
-			return undefined;
-		}).filter((material) => material !== undefined);
-
-		await saveMaterials(parsedItems);
+		await saveMaterials(parsedFile.items);
 	} catch (err) {
 		console.error('Failed to open data file.', err);
 	} finally {
-		overlay.remove();
+		overlay.hideAndRemove();
 	}
 }
 

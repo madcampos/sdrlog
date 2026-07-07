@@ -212,6 +212,30 @@ export const MaterialSchema = zod.extend(BaseMaterialSchema, {
 });
 export type Material = zod.infer<typeof MaterialSchema>;
 
+export const JSONToMaterial = zod.codec(zod.string(), MaterialSchema, {
+	decode: (jsonString, ctx) => {
+		try {
+			const jsonObject = JSON.parse(jsonString);
+
+			return zod.parse(MaterialSchema, jsonObject);
+		} catch (err) {
+			if (!(err instanceof SyntaxError)) {
+				throw err;
+			}
+
+			ctx.issues.push({
+				code: 'invalid_format',
+				format: 'json',
+				input: jsonString,
+				message: err.message
+			});
+
+			return zod.NEVER;
+		}
+	},
+	encode: (value) => JSON.stringify(value, null, '\t')
+});
+
 export const NewMaterialSchema = zod.extend(BaseMaterialSchema, {
 	cover: zod.instanceof(FileSystemFileHandle),
 	thumbnail: zod.instanceof(FileSystemFileHandle)
@@ -219,8 +243,34 @@ export const NewMaterialSchema = zod.extend(BaseMaterialSchema, {
 
 export type NewMaterial = zod.infer<typeof NewMaterialSchema>;
 
-export interface SDRLogData {
-	$schema: string;
-	lastUpdated: ISODate;
-	items: Material[];
-}
+export const SDRLogDataSchema = zod.object({
+	$schema: zod.string(),
+	lastUpdated: IsoTimestampSchema,
+	items: zod.array(MaterialSchema)
+});
+
+export type SDRLogData = zod.infer<typeof SDRLogDataSchema>;
+
+export const JSONToSDRLogData = zod.codec(zod.string(), SDRLogDataSchema, {
+	decode: (jsonString, ctx) => {
+		try {
+			const jsonObject = JSON.parse(jsonString);
+
+			return zod.parse(SDRLogDataSchema, jsonObject);
+		} catch (err) {
+			if (!(err instanceof SyntaxError)) {
+				throw err;
+			}
+
+			ctx.issues.push({
+				code: 'invalid_format',
+				format: 'json',
+				input: jsonString,
+				message: err.message
+			});
+
+			return zod.NEVER;
+		}
+	},
+	encode: (value) => JSON.stringify(value, null, '\t')
+});

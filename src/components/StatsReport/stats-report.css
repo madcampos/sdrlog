@@ -8,6 +8,9 @@
 			li { list-style: none; }
 		}
 
-		details:has(div)::details-content { display: flex; }
+		details:has(div)::details-content {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }

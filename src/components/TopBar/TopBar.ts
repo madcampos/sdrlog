@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
+import { exportCoversToFolder, exportDataToFile, exportThumbsToFolder } from '../../js/data/export.ts';
 import { importCoversFromFolder, importFiles, importMaterialsFromFile } from '../../js/data/import.ts';
 import { extractCoversFromFiles } from '../../js/data/pdf-extract-cover.ts';
 import { MATERIAL_CATEGORY, MATERIAL_CATEGORY_ICONS } from '../../js/data/schema.ts';
@@ -83,10 +84,19 @@ export class TopBar extends LitElement {
 				this.areActionsDisabled = false;
 				break;
 			case '--export-data':
+				this.areActionsDisabled = true;
+				await exportDataToFile();
+				this.areActionsDisabled = false;
 				break;
 			case '--export-thumbs':
+				this.areActionsDisabled = true;
+				await exportThumbsToFolder();
+				this.areActionsDisabled = false;
 				break;
 			case '--export-covers':
+				this.areActionsDisabled = true;
+				await exportCoversToFolder();
+				this.areActionsDisabled = false;
 				break;
 			case '--dev-cbz':
 				window.navigation.navigate('/comic-reader');
