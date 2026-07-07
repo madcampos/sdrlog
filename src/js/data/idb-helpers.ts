@@ -116,7 +116,7 @@ export async function setIDBItem<T extends Collections>(collection: T, key: Data
 	return (await database).put(collection, value, key);
 }
 
-export async function setIDBItems<T extends Collections>(collection: T, items: [DatabaseSchema[T]['key'], DatabaseSchema[T]['value']][]) {
+export async function setIDBItems<T extends Collections>(collection: T, items: Iterable<[DatabaseSchema[T]['key'], DatabaseSchema[T]['value']]>) {
 	const transaction = (await database).transaction(collection, 'readwrite');
 
 	try {

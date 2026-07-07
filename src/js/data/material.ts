@@ -1,5 +1,5 @@
 import dataFileUrl from '../../../public/data/index.json?url';
-import type { Material, NewMaterial, SDRLogData } from './data.ts';
+import type { Material, MaterialSku, NewMaterial, SDRLogData } from './data.ts';
 import { getAllIDBValues, setIDBItem, setIDBItems } from './idb-helpers.ts';
 
 export async function fetchMaterials() {
@@ -20,14 +20,25 @@ export async function fetchMaterials() {
 
 export async function saveMaterials(newItems: Material[]) {
 	const currentItems = await getAllIDBValues('items');
-	const mergedItems = new Map<string, Material>();
+	const mergedItems = new Map<MaterialSku, Material>();
 
 	for (const material of currentItems) {
-		mergedItems.set(material.sku[0] ?? '', material);
+		const [sku] = material.sku;
+
+		if (!sku) {
+			continue;
+		}
+
+		mergedItems.set(sku, material);
 	}
 
 	for (const material of newItems) {
-		const [sku = ''] = material.sku;
+		const [sku] = material.sku;
+
+		if (!sku) {
+			continue;
+		}
+
 		const existingMaterial = mergedItems.get(sku);
 
 		mergedItems.set(sku, {
@@ -36,7 +47,7 @@ export async function saveMaterials(newItems: Material[]) {
 		});
 	}
 
-	await setIDBItems('items', [...mergedItems.entries()]);
+	await setIDBItems('items', mergedItems);
 
 	return [...mergedItems.values()];
 }
