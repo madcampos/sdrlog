@@ -1,4 +1,4 @@
-import type { Material } from './data';
+import type { Material } from './schema';
 
 import { SdrProgressOverlay } from '../../components/SdrProgressOverlay';
 import { getAllIDBValues } from './idb-helpers';
