@@ -1,8 +1,8 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { MATERIAL_CATEGORY, MATERIAL_CATEGORY_ICONS } from '../../js/data/data.ts';
 import { importCoversFromFolder, importFiles, importMaterialsFromFile } from '../../js/data/import.ts';
 import { extractCoversFromFiles } from '../../js/data/pdf-extract-cover.ts';
+import { MATERIAL_CATEGORY, MATERIAL_CATEGORY_ICONS } from '../../js/data/schema.ts';
 import { SearchEngine, SearchUpdateEvent } from '../../js/search-engine.ts';
 
 @customElement('top-bar')

@@ -1,4 +1,4 @@
-import { MATERIAL_CATEGORY, MATERIAL_EDITION, MATERIAL_STATUS, MATERIAL_TYPE } from './data/data.ts';
+import { MATERIAL_CATEGORY, MATERIAL_EDITION, MATERIAL_STATUS, MATERIAL_TYPE } from './data/schema.ts';
 
 // #region Glogal Events
 export class SearchEvent extends Event {

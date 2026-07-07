@@ -3,6 +3,8 @@ import { getHandle } from '@mad-c/file-system-helpers/access';
 import { type TemplateResult, html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { FALLBACK_COVER } from '../../js/data/cover.ts';
+import { getIDBItem } from '../../js/data/idb-helpers.ts';
+import { fetchMaterials, saveMaterials } from '../../js/data/material.ts';
 import {
 	type MaterialEdition,
 	type MaterialSku,
@@ -14,9 +16,7 @@ import {
 	MATERIAL_STATUS_ICONS,
 	MATERIAL_TYPE,
 	MATERIAL_TYPE_ICONS
-} from '../../js/data/data';
-import { getIDBItem } from '../../js/data/idb-helpers.ts';
-import { fetchMaterials, saveMaterials } from '../../js/data/material.ts';
+} from '../../js/data/schema.ts';
 
 const listFormatter = new Intl.ListFormat('en-US', { style: 'short', type: 'conjunction' });
 

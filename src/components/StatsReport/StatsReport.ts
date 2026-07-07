@@ -1,10 +1,10 @@
 import { type TemplateResult, html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import type { Material, SavedFileMetadata } from '../../js/data/data.ts';
 import { getAllIDBKeys, getAllIDBValues, getIDBItem, getIDBItemsByIndex } from '../../js/data/idb-helpers.ts';
 import { extractMetadataFromFileName } from '../../js/data/import.ts';
 import { fetchMaterials } from '../../js/data/material.ts';
+import type { Material, SavedFileMetadata } from '../../js/data/schema.ts';
 
 @customElement('stats-report')
 export class StatsReport extends LitElement {

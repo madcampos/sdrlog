@@ -1,6 +1,6 @@
 import dataFileUrl from '../../../public/data/index.json?url';
-import type { Material, MaterialSku, NewMaterial, SDRLogData } from './data.ts';
 import { getAllIDBValues, setIDBItem, setIDBItems } from './idb-helpers.ts';
+import type { Material, MaterialSku, NewMaterial, SDRLogData } from './schema.ts';
 
 export async function fetchMaterials() {
 	try {

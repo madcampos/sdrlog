@@ -4,9 +4,9 @@ import { basename, extname, resolve } from '@mad-c/file-system-helpers/path';
 import { requestHandlePermissions } from '@mad-c/file-system-helpers/permissions';
 import { FileOperationOverlay } from '../../components/FileOperationOverlay/FileOperationOverlay.ts';
 import { processCoverFile } from './cover.ts';
-import { type MaterialSku, type SavedFileMetadata, type SDRLogData, FileHashSchema, MaterialSchema, MaterialSkuSchema } from './data.ts';
 import { getIDBItem, setIDBItem } from './idb-helpers.ts';
 import { saveMaterials } from './material.ts';
+import { type MaterialSku, type SavedFileMetadata, type SDRLogData, FileHashSchema, MaterialSchema, MaterialSkuSchema } from './schema.ts';
 
 // oxlint-disable-next-line no-magic-numbers
 const COVER_IMPORT_RELOAD_TIMEOUT = 3 * 1000;

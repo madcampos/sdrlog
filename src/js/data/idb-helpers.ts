@@ -1,5 +1,5 @@
 import { type DBSchema, type IndexKey, type IndexNames, type StoreNames, openDB } from 'idb';
-import type { FileHash, Material, MaterialCategory, MaterialSku, MaterialType, SavedFileMetadata } from './data.ts';
+import type { FileHash, Material, MaterialCategory, MaterialSku, MaterialType, SavedFileMetadata } from './schema.ts';
 
 interface DatabaseSchema extends DBSchema {
 	items: {

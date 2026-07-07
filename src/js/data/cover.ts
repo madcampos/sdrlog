@@ -1,7 +1,7 @@
 import { basename } from '@mad-c/file-system-helpers/path';
 import { type MozjpegEncoderFactory, createMozjpegEncoder } from '@squoosh-kit/mozjpeg';
-import { MaterialSkuSchema } from './data.ts';
 import { getIDBItem } from './idb-helpers.ts';
+import { MaterialSkuSchema } from './schema.ts';
 
 export const THUMB_WIDTH = 256;
 export const COVER_WIDTH = 1024;
