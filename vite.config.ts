@@ -1,5 +1,7 @@
 // eslint-env node
 
+/// <reference types="vite/client" />
+
 import { playwright } from '@vitest/browser-playwright';
 import { readFileSync } from 'node:fs';
 import type { UserConfig } from 'vite';
