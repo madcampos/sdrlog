@@ -1,34 +1,53 @@
-# Macos file
-.DS_Store
-
 # Logs
 logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# Dependency directories
-node_modules/
-
-# dotenv environment variables file
-.env
-.env.*
-!.env.example
-
-# VS Code
-.vscode/
+# MacOS annoying files
+.DS_Store
 
 # Build artifacts
 dist
 dev-dist
 dist-ssr
-coverage
+*.local
+*.tsbuildinfo
+*.tgz
 
-# Server certificates
+# Dependencies
+node_modules
+.tsbuildinfo
+
+# Wrangler local files
+.wrangler
+env.d.ts
+
+# Test files
+coverage
+.vitest-attachments/
+__screenshots__/
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# dotenv environment variables file
+.env
+
+# server certificates
 certs
 *.pem
 *.crt
 *.key
-
-# Typescript build info
-*.tsbuildinfo

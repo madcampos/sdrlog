@@ -1,11 +1,9 @@
 // eslint-env node
 
-/// <reference types="vite/client" />
+/// <reference types="@types/node" />
 
-import { playwright } from '@vitest/browser-playwright';
 import { readFileSync } from 'node:fs';
-import type { UserConfig } from 'vite';
-import { defineConfig } from 'vitest/config';
+import { type UserConfig, defineConfig } from 'vite';
 
 // oxlint-disable-next-line import/no-default-export
 export default defineConfig(({ mode }) => {
@@ -16,6 +14,14 @@ export default defineConfig(({ mode }) => {
 			key: readFileSync('./certs/server.key', 'utf-8')
 		};
 
+	const serverOptions = {
+		https: sslOptions,
+		host: 'localhost',
+		cors: true,
+		port: 3030,
+		strictPort: true
+	};
+
 	const config: UserConfig = {
 		envPrefix: 'APP_',
 		envDir: '../',
@@ -23,31 +29,22 @@ export default defineConfig(({ mode }) => {
 		publicDir: '../public',
 		clearScreen: false,
 		server: {
-			https: sslOptions,
-			host: 'localhost',
+			...serverOptions,
 			open: false,
-			cors: true,
-			port: 3030
+			forwardConsole: {
+				unhandledErrors: true,
+				logLevels: ['warn', 'error']
+			}
 		},
 		build: {
 			target: 'esnext',
 			emptyOutDir: true,
-			outDir: '../dist'
+			outDir: '../dist',
+			reportCompressedSize: false
 		},
 		preview: {
-			https: sslOptions,
-			open: true,
-			cors: true
-		},
-		test: {
-			browser: {
-				enabled: true,
-				provider: playwright(),
-				// https://vitest.dev/config/browser/playwright
-				instances: [
-					{ browser: 'chromium' }
-				]
-			}
+			...serverOptions,
+			open: true
 		}
 	};
 
