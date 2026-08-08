@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@emulatorjs/core-genesis_plus_gx':
         specifier: ^4.2.3
-        version: 4.2.3
+        version: 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       '@emulatorjs/core-snes9x':
         specifier: ^4.2.3
-        version: 4.2.3
+        version: 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       '@emulatorjs/emulatorjs':
         specifier: ^4.2.3
-        version: 4.2.3
+        version: 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       '@lit-labs/router':
         specifier: ^0.1.4
         version: 0.1.4
@@ -51,8 +51,8 @@ importers:
         specifier: 1.7.23
         version: 1.7.23
       pdfjs-dist:
-        specifier: ^6.1.200
-        version: 6.1.200
+        specifier: ^6.2.108
+        version: 6.2.108
       zod:
         specifier: ^4.4.3
         version: 4.4.3
@@ -770,79 +770,79 @@ packages:
   '@mad-c/file-system-helpers@1.1.0':
     resolution: {integrity: sha512-BQe081Snvxn6vn3PDcVyPTMSnPnMo+wd3UWjVBZfNoEjt3OFmRue9nYdlsxbmVU5hbFPDn6ESzRu/cOGlgJfjQ==}
 
-  '@napi-rs/canvas-android-arm64@1.0.2':
-    resolution: {integrity: sha512-IMXKVQod0ol4vt3gmClUfXz4JAgHYESGPCUqmH3lQxBoL0K/2greJaQE1HVBVxWWFKfLc4OLZVdxg7kXVyXv+g==}
+  '@napi-rs/canvas-android-arm64@1.0.3':
+    resolution: {integrity: sha512-7kSCdUhoXiO+AaIMXdBGdtp6EctZNkmF62Rea/BmVQlwKaM3bBhOzyGUzxyxz9dv5vdBfpyAaxhSRSJF4kqK4A==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [android]
 
-  '@napi-rs/canvas-darwin-arm64@1.0.2':
-    resolution: {integrity: sha512-Sc8tPi6cF+5lqOzCCKFALJHhDiRwyMzTPYm3bbhdXsOunU0lQO5f05ucyOzN2r55I23Hg5bsjH63uSCvWp3EgQ==}
+  '@napi-rs/canvas-darwin-arm64@1.0.3':
+    resolution: {integrity: sha512-ds14V1BPagLszQyaDTeggny5fNeTCqsUQ5QhFj9VDxSEfzrVxXtdbR0LoFyKa0Siaaw8KvqSk4t7k/WoZJwvbg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@napi-rs/canvas-darwin-x64@1.0.2':
-    resolution: {integrity: sha512-niDXZ9LhKB1zLrUdYB64RHQFDGz9rr0eGx061qtJJU3U20EMMIx28ADF5fVYbhtOgkWQrBjFicfaye1yM0U62A==}
+  '@napi-rs/canvas-darwin-x64@1.0.3':
+    resolution: {integrity: sha512-qof3LRAAycmkV2I1izZo9RoSHF8kCQr5O05sFwv0jK8rSdYV6KHVwimo6Qb7RxZj40WHKbLHm5JDaUF0o5XUAA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@napi-rs/canvas-linux-arm-gnueabihf@1.0.2':
-    resolution: {integrity: sha512-sgatQL9JxGRH/Amzcvu0P3t8Am3duou74CisfuJ41Dwt8cWy723z/9KZ8LlgmxfypEwEZxSTNFJtU8d281lmhQ==}
+  '@napi-rs/canvas-linux-arm-gnueabihf@1.0.3':
+    resolution: {integrity: sha512-FU2kKZLmolHA9+KcUA+l1+xH3WTLUUTQDU/kLv9SEUr2TrRPu94aytOeizFJDHPs/QBcw4QL1mCQhetQXYBbag==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
 
-  '@napi-rs/canvas-linux-arm64-gnu@1.0.2':
-    resolution: {integrity: sha512-dgKuX0peF3xwY6ZF5QxGS4wbfDqpoFAJYXiLSp+guZKARQUKMkRqZSDrXKj7nfrec3UCMzC0PFCPte0ES98AiA==}
+  '@napi-rs/canvas-linux-arm64-gnu@1.0.3':
+    resolution: {integrity: sha512-GVSjntxKeA+/y/ZKf1F+cmUw1WeIkE5aMRPqnZUlBTBvBcrvgWccJAWuYCKPX4QJQwZILIIwhgdAbl51yj6fpA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@napi-rs/canvas-linux-arm64-musl@1.0.2':
-    resolution: {integrity: sha512-qwROoDIC9upfvDoRLuPn2aNg9CGW1x0Ygr4k2Or+8paA9d0qBLwk87U+g8KQpoOviKoPoiwl97kvBYuYD7qZoA==}
+  '@napi-rs/canvas-linux-arm64-musl@1.0.3':
+    resolution: {integrity: sha512-J51oK/axyZ13kxycumSMfLiDZMdWdOVvqDFI28BpuViZHE3A0bQfr8B5vg8YnPEnqLD3BSn1hkdlh2buspEcNQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@napi-rs/canvas-linux-riscv64-gnu@1.0.2':
-    resolution: {integrity: sha512-fXRjnPihdnbO6qy1QQOgxAonb68A0TCEG7rj1x7v7rxNElsE8EVIKIEUTvyDtU+sthYSbX+8e7g3oZiLGnOmxw==}
+  '@napi-rs/canvas-linux-riscv64-gnu@1.0.3':
+    resolution: {integrity: sha512-CtQgQjoVTX67jS9XuCTtJ40Sl7wRLMguoFnnGnfDmCWf7kzKFZVwj5ynqUOIGKFMSB61ZCuQlwPvVNxYTTseaw==}
     engines: {node: '>= 10'}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
-  '@napi-rs/canvas-linux-x64-gnu@1.0.2':
-    resolution: {integrity: sha512-nPR97DXhbWIAy7yazF3jc06kEPMqYMLmPzFOVNlwKPfIoSChnI+x7dc0hTLaihz3jxrjL6j4BbA7earxfx4X3g==}
+  '@napi-rs/canvas-linux-x64-gnu@1.0.3':
+    resolution: {integrity: sha512-jtfzAHFp+FRaR7zGT4jyCe6wUgAG/dVb5A4Apd8FY9jKarntDfUAlJXscugiH7ZF5kKnu7/lHFk9LaDPcrGEVQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@napi-rs/canvas-linux-x64-musl@1.0.2':
-    resolution: {integrity: sha512-l7zZY5+jL5qnBZtDz7CoBtY6p7EkHu422g/0zWwrOrzIwWyWxZFRfZZORY1UG7YApymPLx+UbOkN206xXn/c1Q==}
+  '@napi-rs/canvas-linux-x64-musl@1.0.3':
+    resolution: {integrity: sha512-xTzaUCKUHTY4bCGadeeRZggbRVbGUT1petg7Z8r9AJR2+D9Bqu6nQAgqBGC6D47tA70LjaaaLTrJ7wNY1T74dg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@napi-rs/canvas-win32-arm64-msvc@1.0.2':
-    resolution: {integrity: sha512-yE0koHCFF4PIbMc2o2SEALhnipz7WBISh5glLvQiomtIoCcW0np3H4Lw93ceJAfJttTTeIIWFbwH84F7EVzjMQ==}
+  '@napi-rs/canvas-win32-arm64-msvc@1.0.3':
+    resolution: {integrity: sha512-ktVLuBkI6QVOm5BwO/WbdGwxgeetAMJa7TTmR8qBarXF0OU2NKjvjUtPJAl2y8t+zBRczJl/1VOl9gua6WcK2g==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@napi-rs/canvas-win32-x64-msvc@1.0.2':
-    resolution: {integrity: sha512-okU8/t2foV6C31n0GtvEMbfD5rOFc70+/6xUNME9Guld29sgSOIGUEDScAWFlcP3k5TYQRl9TNkwJEEjh15w8A==}
+  '@napi-rs/canvas-win32-x64-msvc@1.0.3':
+    resolution: {integrity: sha512-SGhlQ8bDjL1Cz2KnsKMasr/5sTcwG/SZkB6WCJxLsmSm/3aS2C+3p39bA7iZ2/94+NkVDySZfbiGoaSZSFHYxA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
 
-  '@napi-rs/canvas@1.0.2':
-    resolution: {integrity: sha512-EYEqlMYaCbpZDz+IgDH5xp9MTd3ui4dmGqbQYryhMLnSRxrhHKq5KQWHHKxFUcEP4Hp8/BWgvqXocX4j7iSbOQ==}
+  '@napi-rs/canvas@1.0.3':
+    resolution: {integrity: sha512-OlI657a5XXvKGFX7kNeIzJ8rO7IXt87Mqu2H8rXE46viAuOfum/JA7ysX7+eBhxNKznT+RCZh418mndlcFX3+w==}
     engines: {node: '>= 10'}
 
   '@napi-rs/wasm-runtime@1.1.6':
@@ -1885,8 +1885,8 @@ packages:
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
 
-  pdfjs-dist@6.1.200:
-    resolution: {integrity: sha512-o8MolyzirkkLrcdsae/HEOiIcXWI7DS5zGpvqW8xTC2YUsW30rltFw2bDGvw/fskUdEMrQm2br68jzDS5BH2vw==}
+  pdfjs-dist@6.2.108:
+    resolution: {integrity: sha512-YxFb+SQcodN2rnX9Tn3dHYlqfb7NjlzzfONPpJd+AKoKtUjEdevTfbC07d5TcczzOK6261auRkP/M8OBHs9vFQ==}
     engines: {node: '>=22.13.0 || >=24'}
 
   picocolors@1.1.1:
@@ -2373,9 +2373,9 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@emulatorjs/core-81@4.2.3':
+  '@emulatorjs/core-81@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2383,9 +2383,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-a5200@4.2.3':
+  '@emulatorjs/core-a5200@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2393,9 +2393,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-beetle_vb@4.2.3':
+  '@emulatorjs/core-beetle_vb@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2403,9 +2403,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-cap32@4.2.3':
+  '@emulatorjs/core-cap32@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2413,9 +2413,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-crocods@4.2.3':
+  '@emulatorjs/core-crocods@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2423,9 +2423,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-desmume2015@4.2.3':
+  '@emulatorjs/core-desmume2015@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2433,9 +2433,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-desmume@4.2.3':
+  '@emulatorjs/core-desmume@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2443,9 +2443,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-dosbox_pure@4.2.3':
+  '@emulatorjs/core-dosbox_pure@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2453,9 +2453,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-fbalpha2012_cps1@4.2.3':
+  '@emulatorjs/core-fbalpha2012_cps1@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2463,9 +2463,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-fbalpha2012_cps2@4.2.3':
+  '@emulatorjs/core-fbalpha2012_cps2@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2473,9 +2473,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-fbneo@4.2.3':
+  '@emulatorjs/core-fbneo@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2483,9 +2483,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-fceumm@4.2.3':
+  '@emulatorjs/core-fceumm@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2493,9 +2493,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-fuse@4.2.3':
+  '@emulatorjs/core-fuse@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2503,9 +2503,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-gambatte@4.2.3':
+  '@emulatorjs/core-gambatte@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2513,9 +2513,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-gearcoleco@4.2.3':
+  '@emulatorjs/core-gearcoleco@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2523,28 +2523,18 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-genesis_plus_gx@4.2.3':
+  '@emulatorjs/core-genesis_plus_gx@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
       - supports-color
       - utf-8-validate
 
-  '@emulatorjs/core-handy@4.2.3':
+  '@emulatorjs/core-handy@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - supports-color
-      - utf-8-validate
-    optional: true
-
-  '@emulatorjs/core-mame2003@4.2.3':
-    dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2552,9 +2542,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mame2003_plus@4.2.3':
+  '@emulatorjs/core-mame2003@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2562,9 +2552,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mednafen_ngp@4.2.3':
+  '@emulatorjs/core-mame2003_plus@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2572,9 +2562,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mednafen_pce@4.2.3':
+  '@emulatorjs/core-mednafen_ngp@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2582,9 +2572,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mednafen_pcfx@4.2.3':
+  '@emulatorjs/core-mednafen_pce@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2592,9 +2582,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mednafen_psx_hw@4.2.3':
+  '@emulatorjs/core-mednafen_pcfx@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2602,9 +2592,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mednafen_wswan@4.2.3':
+  '@emulatorjs/core-mednafen_psx_hw@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2612,9 +2602,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-melonds@4.2.3':
+  '@emulatorjs/core-mednafen_wswan@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2622,9 +2612,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mgba@4.2.3':
+  '@emulatorjs/core-melonds@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2632,9 +2622,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-mupen64plus_next@4.2.3':
+  '@emulatorjs/core-mgba@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2642,9 +2632,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-nestopia@4.2.3':
+  '@emulatorjs/core-mupen64plus_next@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2652,9 +2642,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-opera@4.2.3':
+  '@emulatorjs/core-nestopia@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2662,9 +2652,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-parallel_n64@4.2.3':
+  '@emulatorjs/core-opera@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2672,9 +2662,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-pcsx_rearmed@4.2.3':
+  '@emulatorjs/core-parallel_n64@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2682,9 +2672,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-picodrive@4.2.3':
+  '@emulatorjs/core-pcsx_rearmed@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2692,9 +2682,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-ppsspp@4.2.3':
+  '@emulatorjs/core-picodrive@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2702,9 +2692,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-prboom@4.2.3':
+  '@emulatorjs/core-ppsspp@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2712,9 +2702,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-prosystem@4.2.3':
+  '@emulatorjs/core-prboom@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2722,9 +2712,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-puae@4.2.3':
+  '@emulatorjs/core-prosystem@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2732,9 +2722,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-same_cdi@4.2.3':
+  '@emulatorjs/core-puae@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2742,9 +2732,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-smsplus@4.2.3':
+  '@emulatorjs/core-same_cdi@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2752,18 +2742,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-snes9x@4.2.3':
+  '@emulatorjs/core-smsplus@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - supports-color
-      - utf-8-validate
-
-  '@emulatorjs/core-stella2014@4.2.3':
-    dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2771,9 +2752,18 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-vice_x128@4.2.3':
+  '@emulatorjs/core-snes9x@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+
+  '@emulatorjs/core-stella2014@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
+    dependencies:
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2781,9 +2771,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-vice_x64@4.2.3':
+  '@emulatorjs/core-vice_x128@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2791,9 +2781,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-vice_x64sc@4.2.3':
+  '@emulatorjs/core-vice_x64@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2801,9 +2791,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-vice_xpet@4.2.3':
+  '@emulatorjs/core-vice_x64sc@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2811,9 +2801,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-vice_xplus4@4.2.3':
+  '@emulatorjs/core-vice_xpet@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2821,9 +2811,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-vice_xvic@4.2.3':
+  '@emulatorjs/core-vice_xplus4@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2831,9 +2821,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-virtualjaguar@4.2.3':
+  '@emulatorjs/core-vice_xvic@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2841,9 +2831,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/core-yabause@4.2.3':
+  '@emulatorjs/core-virtualjaguar@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2851,57 +2841,9 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/cores@4.2.3':
+  '@emulatorjs/core-yabause@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@emulatorjs/core-81': 4.2.3
-      '@emulatorjs/core-a5200': 4.2.3
-      '@emulatorjs/core-beetle_vb': 4.2.3
-      '@emulatorjs/core-cap32': 4.2.3
-      '@emulatorjs/core-crocods': 4.2.3
-      '@emulatorjs/core-desmume': 4.2.3
-      '@emulatorjs/core-desmume2015': 4.2.3
-      '@emulatorjs/core-dosbox_pure': 4.2.3
-      '@emulatorjs/core-fbalpha2012_cps1': 4.2.3
-      '@emulatorjs/core-fbalpha2012_cps2': 4.2.3
-      '@emulatorjs/core-fbneo': 4.2.3
-      '@emulatorjs/core-fceumm': 4.2.3
-      '@emulatorjs/core-fuse': 4.2.3
-      '@emulatorjs/core-gambatte': 4.2.3
-      '@emulatorjs/core-gearcoleco': 4.2.3
-      '@emulatorjs/core-genesis_plus_gx': 4.2.3
-      '@emulatorjs/core-handy': 4.2.3
-      '@emulatorjs/core-mame2003': 4.2.3
-      '@emulatorjs/core-mame2003_plus': 4.2.3
-      '@emulatorjs/core-mednafen_ngp': 4.2.3
-      '@emulatorjs/core-mednafen_pce': 4.2.3
-      '@emulatorjs/core-mednafen_pcfx': 4.2.3
-      '@emulatorjs/core-mednafen_psx_hw': 4.2.3
-      '@emulatorjs/core-mednafen_wswan': 4.2.3
-      '@emulatorjs/core-melonds': 4.2.3
-      '@emulatorjs/core-mgba': 4.2.3
-      '@emulatorjs/core-mupen64plus_next': 4.2.3
-      '@emulatorjs/core-nestopia': 4.2.3
-      '@emulatorjs/core-opera': 4.2.3
-      '@emulatorjs/core-parallel_n64': 4.2.3
-      '@emulatorjs/core-pcsx_rearmed': 4.2.3
-      '@emulatorjs/core-picodrive': 4.2.3
-      '@emulatorjs/core-ppsspp': 4.2.3
-      '@emulatorjs/core-prboom': 4.2.3
-      '@emulatorjs/core-prosystem': 4.2.3
-      '@emulatorjs/core-puae': 4.2.3
-      '@emulatorjs/core-same_cdi': 4.2.3
-      '@emulatorjs/core-smsplus': 4.2.3
-      '@emulatorjs/core-snes9x': 4.2.3
-      '@emulatorjs/core-stella2014': 4.2.3
-      '@emulatorjs/core-vice_x128': 4.2.3
-      '@emulatorjs/core-vice_x64': 4.2.3
-      '@emulatorjs/core-vice_x64sc': 4.2.3
-      '@emulatorjs/core-vice_xpet': 4.2.3
-      '@emulatorjs/core-vice_xplus4': 4.2.3
-      '@emulatorjs/core-vice_xvic': 4.2.3
-      '@emulatorjs/core-virtualjaguar': 4.2.3
-      '@emulatorjs/core-yabause': 4.2.3
-      '@emulatorjs/emulatorjs': 4.2.3
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -2909,18 +2851,76 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  '@emulatorjs/emulatorjs@4.2.3':
+  '@emulatorjs/cores@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
+    dependencies:
+      '@emulatorjs/core-81': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-a5200': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-beetle_vb': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-cap32': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-crocods': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-desmume': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-desmume2015': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-dosbox_pure': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-fbalpha2012_cps1': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-fbalpha2012_cps2': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-fbneo': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-fceumm': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-fuse': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-gambatte': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-gearcoleco': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-genesis_plus_gx': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-handy': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mame2003': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mame2003_plus': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mednafen_ngp': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mednafen_pce': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mednafen_pcfx': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mednafen_psx_hw': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mednafen_wswan': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-melonds': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mgba': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-mupen64plus_next': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-nestopia': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-opera': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-parallel_n64': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-pcsx_rearmed': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-picodrive': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-ppsspp': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-prboom': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-prosystem': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-puae': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-same_cdi': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-smsplus': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-snes9x': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-stella2014': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-vice_x128': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-vice_x64': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-vice_x64sc': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-vice_xpet': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-vice_xplus4': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-vice_xvic': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-virtualjaguar': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/core-yabause': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      '@emulatorjs/emulatorjs': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+    optional: true
+
+  '@emulatorjs/emulatorjs@4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
       '@node-minify/clean-css': 9.0.1
       '@node-minify/core': 9.0.2
       '@node-minify/terser': 9.0.1
-      http-server: 14.1.1
+      http-server: 14.1.1(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       nipplejs: 0.10.2
-      node-7z: 3.0.0
+      node-7z: 3.0.0(supports-color@10.2.2)
       node-fetch: 3.3.2
-      socket.io: 4.8.3
+      socket.io: 4.8.3(supports-color@10.2.2)
     optionalDependencies:
-      '@emulatorjs/cores': 4.2.3
+      '@emulatorjs/cores': 4.2.3(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -3150,52 +3150,52 @@ snapshots:
 
   '@mad-c/file-system-helpers@1.1.0': {}
 
-  '@napi-rs/canvas-android-arm64@1.0.2':
+  '@napi-rs/canvas-android-arm64@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-darwin-arm64@1.0.2':
+  '@napi-rs/canvas-darwin-arm64@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-darwin-x64@1.0.2':
+  '@napi-rs/canvas-darwin-x64@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-linux-arm-gnueabihf@1.0.2':
+  '@napi-rs/canvas-linux-arm-gnueabihf@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-linux-arm64-gnu@1.0.2':
+  '@napi-rs/canvas-linux-arm64-gnu@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-linux-arm64-musl@1.0.2':
+  '@napi-rs/canvas-linux-arm64-musl@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-linux-riscv64-gnu@1.0.2':
+  '@napi-rs/canvas-linux-riscv64-gnu@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-linux-x64-gnu@1.0.2':
+  '@napi-rs/canvas-linux-x64-gnu@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-linux-x64-musl@1.0.2':
+  '@napi-rs/canvas-linux-x64-musl@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-win32-arm64-msvc@1.0.2':
+  '@napi-rs/canvas-win32-arm64-msvc@1.0.3':
     optional: true
 
-  '@napi-rs/canvas-win32-x64-msvc@1.0.2':
+  '@napi-rs/canvas-win32-x64-msvc@1.0.3':
     optional: true
 
-  '@napi-rs/canvas@1.0.2':
+  '@napi-rs/canvas@1.0.3':
     optionalDependencies:
-      '@napi-rs/canvas-android-arm64': 1.0.2
-      '@napi-rs/canvas-darwin-arm64': 1.0.2
-      '@napi-rs/canvas-darwin-x64': 1.0.2
-      '@napi-rs/canvas-linux-arm-gnueabihf': 1.0.2
-      '@napi-rs/canvas-linux-arm64-gnu': 1.0.2
-      '@napi-rs/canvas-linux-arm64-musl': 1.0.2
-      '@napi-rs/canvas-linux-riscv64-gnu': 1.0.2
-      '@napi-rs/canvas-linux-x64-gnu': 1.0.2
-      '@napi-rs/canvas-linux-x64-musl': 1.0.2
-      '@napi-rs/canvas-win32-arm64-msvc': 1.0.2
-      '@napi-rs/canvas-win32-x64-msvc': 1.0.2
+      '@napi-rs/canvas-android-arm64': 1.0.3
+      '@napi-rs/canvas-darwin-arm64': 1.0.3
+      '@napi-rs/canvas-darwin-x64': 1.0.3
+      '@napi-rs/canvas-linux-arm-gnueabihf': 1.0.3
+      '@napi-rs/canvas-linux-arm64-gnu': 1.0.3
+      '@napi-rs/canvas-linux-arm64-musl': 1.0.3
+      '@napi-rs/canvas-linux-riscv64-gnu': 1.0.3
+      '@napi-rs/canvas-linux-x64-gnu': 1.0.3
+      '@napi-rs/canvas-linux-x64-musl': 1.0.3
+      '@napi-rs/canvas-win32-arm64-msvc': 1.0.3
+      '@napi-rs/canvas-win32-x64-msvc': 1.0.3
     optional: true
 
   '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
@@ -3621,9 +3621,11 @@ snapshots:
 
   data-uri-to-buffer@4.0.1: {}
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@10.2.2):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 10.2.2
 
   detect-libc@2.1.2: {}
 
@@ -3661,7 +3663,7 @@ snapshots:
 
   engine.io-parser@5.2.3: {}
 
-  engine.io@6.6.9:
+  engine.io@6.6.9(supports-color@10.2.2):
     dependencies:
       '@types/cors': 2.8.19
       '@types/node': 26.1.0
@@ -3670,7 +3672,7 @@ snapshots:
       base64id: 2.0.0
       cookie: 0.7.2
       cors: 2.8.6
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@10.2.2)
       engine.io-parser: 5.2.3
       ws: 8.21.0
     transitivePeerDependencies:
@@ -3782,7 +3784,9 @@ snapshots:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.3.3
 
-  follow-redirects@1.16.0: {}
+  follow-redirects@1.16.0(debug@4.4.3(supports-color@10.2.2)):
+    optionalDependencies:
+      debug: 4.4.3(supports-color@10.2.2)
 
   foreground-child@3.3.1:
     dependencies:
@@ -3849,26 +3853,26 @@ snapshots:
 
   html-escaper@2.0.2: {}
 
-  http-proxy@1.18.1:
+  http-proxy@1.18.1(debug@4.4.3(supports-color@10.2.2)):
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.16.0
+      follow-redirects: 1.16.0(debug@4.4.3(supports-color@10.2.2))
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
 
-  http-server@14.1.1:
+  http-server@14.1.1(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2):
     dependencies:
       basic-auth: 2.0.1
       chalk: 4.1.2
       corser: 2.0.1
       he: 1.2.0
       html-encoding-sniffer: 3.0.0
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.4.3(supports-color@10.2.2))
       mime: 1.6.0
       minimist: 1.2.8
       opener: 1.5.2
-      portfinder: 1.0.38
+      portfinder: 1.0.38(supports-color@10.2.2)
       secure-compare: 3.0.1
       union: 0.5.0
       url-join: 4.0.1
@@ -4081,9 +4085,9 @@ snapshots:
 
   nipplejs@1.0.4: {}
 
-  node-7z@3.0.0:
+  node-7z@3.0.0(supports-color@10.2.2):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@10.2.2)
       lodash.defaultsdeep: 4.6.1
       lodash.defaultto: 4.14.0
       lodash.flattendeep: 4.4.0
@@ -4160,9 +4164,9 @@ snapshots:
 
   pathe@2.0.3: {}
 
-  pdfjs-dist@6.1.200:
+  pdfjs-dist@6.2.108:
     optionalDependencies:
-      '@napi-rs/canvas': 1.0.2
+      '@napi-rs/canvas': 1.0.3
 
   picocolors@1.1.1: {}
 
@@ -4178,10 +4182,10 @@ snapshots:
 
   pngjs@7.0.0: {}
 
-  portfinder@1.0.38:
+  portfinder@1.0.38(supports-color@10.2.2):
     dependencies:
       async: 3.2.6
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -4316,31 +4320,31 @@ snapshots:
       mrmime: 2.0.1
       totalist: 3.0.1
 
-  socket.io-adapter@2.5.8:
+  socket.io-adapter@2.5.8(supports-color@10.2.2):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@10.2.2)
       ws: 8.21.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  socket.io-parser@4.2.6:
+  socket.io-parser@4.2.6(supports-color@10.2.2):
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
-  socket.io@4.8.3:
+  socket.io@4.8.3(supports-color@10.2.2):
     dependencies:
       accepts: 1.3.8
       base64id: 2.0.0
       cors: 2.8.6
-      debug: 4.4.3
-      engine.io: 6.6.9
-      socket.io-adapter: 2.5.8
-      socket.io-parser: 4.2.6
+      debug: 4.4.3(supports-color@10.2.2)
+      engine.io: 6.6.9(supports-color@10.2.2)
+      socket.io-adapter: 2.5.8(supports-color@10.2.2)
+      socket.io-parser: 4.2.6(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
