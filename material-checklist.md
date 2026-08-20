@@ -28,6 +28,19 @@
 - Into the Cold (A Desert Wars Story)
 - Chaos Tour: The Top Drek Omnibus
 - Wizard Riders: Quick-Start Rules (Free RPG Day)
+- Controlled Chaos Miniatures
+- Corporate Threats Miniatures
+- Savage Threats Miniatures
+- Sprawl Runners Miniatures
+- Takedown Dice Set
+- Takedown Coin
+- Mr. Johnson's Briefcase
+- Explosive Decompression
+- Shadowrun Missions: 2081-18: Friendships Never Grow Rust
+- Price to Pay (Sprawl Stories #4)
+- Respec the Blade (Transverse Noir #2, A LitRPG Story)
+- Shadowrun: Takedown
+- The Runner Effect (Desert Wars #2)
 
 # Archive
 
