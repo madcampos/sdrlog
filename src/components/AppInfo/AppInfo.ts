@@ -46,7 +46,7 @@ export class AppInfo extends LitElement {
 							<dt>Novels</dt>
 							<dd>The romances written with the Sixth World as a base.</dd>
 
-							<dt>$Magazines</dt>
+							<dt>Magazines</dt>
 							<dd>Official (or semi-official) magazines published about the Shadowrun Universe.</dd>
 
 							<dt>Tabletop</dt>
@@ -130,11 +130,11 @@ export class AppInfo extends LitElement {
 								<p>One optional modifier to diferentiate this file from the "main" file(s) for this item.</p>
 								<p>May be one of the following</p>
 								<ul>
-									<li><strong>A (attechement)</strong>: An attachement like a map, handout or sound file.</li>
+									<li><strong>A (attachment)</strong>: An attachment like a map, handout or sound file.</li>
 									<li><strong>D (draft)</strong>: An extra draft that is (semi-)official and add content to the main material.</li>
 									<li><strong>E (errata)</strong>: An simple errata or revision of the material.</li>
 									<li><strong>T (translation)</strong>: An important translation with additional content or with significant differences from the main item.</li>
-									<li><strong>X (extra)</strong>: A miscelanious extra to the main item.</li>
+									<li><strong>X (extra)</strong>: A miscellaneous extra to the main item.</li>
 								</ul>
 							</dd>
 
