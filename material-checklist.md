@@ -23,7 +23,6 @@
 - Shadowrun: Takedown
 - [Anarchy 2.0](https://www.kickstarter.com/projects/blackbook/shadowrun-anarchy-20)
 - https://www.drivethrurpg.com/en/product/548248/shadowrun-anarchy-2-0-livre-de-base?src=newest_recent
-- https://www.drivethrurpg.com/en/product/305652/ecran-du-mj-anarchy?src=newest_recent
 - https://www.drivethrufiction.com/en/product/549482/shadowrun-shadowrun-returns-a-shadowrun-anthology?src=newest_recent
 - https://www.drivethrurpg.com/en/product/563448/songbird-the-awakening-onmibus-edition-1-7?src=newest_community
 - https://shop.black-book-editions.fr/produit/63921/0/shadowrun-anarchy/shadowrun-anarchy-aides-de-jeu-anarchistes
@@ -32,8 +31,8 @@
 - https://shop.black-book-editions.fr/produit/6547/0/shadowrun-anarchy/shadowrun-anarchy-lithographie
 - https://shop.black-book-editions.fr/produit/505638PHY/0/shadowrun-anarchy-v2/bloc-de-feuilles-de-personnages-shadowrun-anarchy-v2
 - https://shop.black-book-editions.fr/produit/8274PDF/0/shadowrun-6/shadowrun-6-fiches-daides-de-jeu
-- https://shop.black-book-editions.fr/produit/13560/0/shadowrun-6/shadowrun-6-cartes-detat
 - https://www.legrog.org/jeux/shadowrun#6e+%C3%89dition+%282080%2B%29
+- https://pegasus.de/en/Products/Roleplaying-Games-Books/?order=ReleaseDateDown&p=1&properties=0194b6cb936e73fc947a1c6b7648fdca
 
 # Archive
 

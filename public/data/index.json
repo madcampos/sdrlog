@@ -6945,7 +6945,7 @@
 			"publisher": ["Catalyst Game Labs", "Pegasus Spiele"],
 			"releaseDate": ["2013-11-01"],
 			"gameDate": "2075-01",
-			"status": "missing",
+			"status": "ok",
 			"notes": "Print only.",
 			"cover": "/covers/27050.jpg",
 			"thumbnail": "/thumbs/27050.jpg"
@@ -10680,7 +10680,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2020-10-15"],
 			"gameDate": "2080-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46121.jpg",
 			"thumbnail": "/thumbs/46121.jpg"
 		},
@@ -10801,8 +10801,8 @@
 			"type": "digital",
 			"originalLanguage": "fr",
 			"publisher": ["Black Book Editions"],
-			"status": "missing",
-			"notes": "This is a French mission based on the \"Neo Revolution\" scenario.",
+			"status": "ok",
+			"notes": "This is a French mission based on the \"Néo-Révolution\" scenario.",
 			"description": "En plein cœur de Paris, des terroristes du Nouveau Jihad Islamique préparent un attentat pour frapper au cœur de la communauté musulmane de Paris, à l'Institut du monde arabe. Les runners sont plongés dans une course contre la montre pour contrecarrer l'attaque, mais comme toujours, rien n'est ce qui paraît dans les Ombres et derrière cet acte de violence gratuit se cache les fils d'une intrigue tout aussi sordide…\n\nCe scénario est une extension naturelle au supplément Néo-Révolution. Il donne l'occasion de donner un état des lieux de l'Islam dans l'Hexagone dystopique du monde de Shadowrun, mais aussi découvrir deux de ses lieux emblématiques à la capitale : l'Institut du Monde Arabe et la Mosquée de Paris. On y parle aussi « barbouze », évoquant les difficultés des services de renseignements français à l'aube de cette nouvelle et étrange cyber-république, mais aussi des machinations de la nouvelle mégacorporation, GlobalSpin, qui a bien sûr ses vues sur la France…",
 			"cover": "/covers/BBESR6G03.jpg",
 			"thumbnail": "/thumbs/BBESR6G03.jpg"
@@ -11053,22 +11053,6 @@
 			"thumbnail": "/thumbs/26007NV.jpg"
 		},
 		{
-			"sku": ["46127"],
-			"name": "Schattendossier 2",
-			"category": "sourcebook",
-			"type": "digital",
-			"originalLanguage": "de",
-			"description": "Wissen ist Macht - kaum ein Sprichwort trifft im Leben von Shadowrunnern mehr zu. Denn wenn du dich in Gefahr begibst, bist du mit dem richtigen Wissen immer im Vorteil. Du möchtest in den kampfgebeutelten Schatten von Marienbad aktiv werden? Dein nächster Auftrag führt dich in die Konzernwelt des Frankfurter Bankenvereins? Herr Schmidt will etwas für seine private Gemäldesammlung haben, und nun steckst du in den Tiefen des illegalen Kunsthandels? Du unternimmst eine Reise zu den mysteriösesten, magischen Orten der ADL und angrenzenden Ländern? Oder du wolltest schon immer mal zur Feuerwehr? Wissen ist Macht. Oder verlängert zumindest dein Leben.\n\nDas Schattendossier II ist der zweite Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Feuerwehr, magische Orte, Kunstraub, den Frankfurter Bankenverein und Marienbad zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Norddeutschen Seenot-Rettungsgesellschaft. Das Schattendossier II ist streng limitiert und die einzelnen Bücher durchnummeriert.",
-			"edition": 6,
-			"publisher": ["Pegasus Spiele"],
-			"releaseDate": ["2021-06-01"],
-			"gameDate": "2080-01",
-			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerläufer\"",
-			"status": "missing",
-			"cover": "/covers/46127.jpg",
-			"thumbnail": "/thumbs/46127.jpg"
-		},
-		{
 			"sku": ["46115"],
 			"name": "Schattendossier 1",
 			"category": "sourcebook",
@@ -11077,12 +11061,28 @@
 			"description": "Schatten sind alle schwarz? Das stimmt nicht, Chummer. Ihnen mag das Licht fehlen, aber wer in den Schatten der ADL sein Geld verdienen will, der sollte sich gut auskennen. In Westphalen, wo die Kirche regiert und erwachte Theurgen dich jagen. In Pomorya, dem Elfenstaat an der Ostsee mit seinen Adelsgeschlechtern und seiner modernen Öko-Industrie. In München, dem Megaplex der Schwarzen Sheriffs und der Schickeria. An der Nordseeküste, wo Piraten von verlassenen Ölplattformen und im toxischen Watt gegen Giftgeister und Konzerne kämpfen. Und du solltest dabei schauen, dass deine Ausrüstung immer auf dem neuesten Stand bleibt … sonst wird die Dunkelheit der Schatten dich irgendwann verschlingen.\n\nDas Schattendossier I ist der erste Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Westphalen, München, Pomorya, Piraten der Deutschen Bucht und das SOTA 2081 zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Seucheninsel in der Ostsee. Das Schattendossier I ist streng limitiert und die einzelnen Bücher durchnummeriert.",
 			"edition": 6,
 			"publisher": ["Pegasus Spiele"],
-			"releaseDate": ["2021-06-15"],
+			"releaseDate": ["2021-06-01"],
 			"gameDate": "2080-01",
 			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: München\", \"Datapuls: Pomorya\", \"Datapuls: SOTA 2081\", \"Datapuls: Westphalen\" und \"Datapuls: Piraten der Deutschen Bucht\"",
 			"status": "missing",
 			"cover": "/covers/46115.jpg",
 			"thumbnail": "/thumbs/46115.jpg"
+		},
+		{
+			"sku": ["46127"],
+			"name": "Schattendossier 2",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de",
+			"description": "Wissen ist Macht - kaum ein Sprichwort trifft im Leben von Shadowrunnern mehr zu. Denn wenn du dich in Gefahr begibst, bist du mit dem richtigen Wissen immer im Vorteil. Du möchtest in den kampfgebeutelten Schatten von Marienbad aktiv werden? Dein nächster Auftrag führt dich in die Konzernwelt des Frankfurter Bankenvereins? Herr Schmidt will etwas für seine private Gemäldesammlung haben, und nun steckst du in den Tiefen des illegalen Kunsthandels? Du unternimmst eine Reise zu den mysteriösesten, magischen Orten der ADL und angrenzenden Ländern? Oder du wolltest schon immer mal zur Feuerwehr? Wissen ist Macht. Oder verlängert zumindest dein Leben.\n\nDas Schattendossier II ist der zweite Sammelband der bisher erschienenen PDFs für die ADL für Shadowrun 6. In ihm sind die Datapulse für Feuerwehr, magische Orte, Kunstraub, den Frankfurter Bankenverein und Marienbad zusammengefasst, inklusive einer kleinen, exklusiven Erweiterung zur Norddeutschen Seenot-Rettungsgesellschaft. Das Schattendossier II ist streng limitiert und die einzelnen Bücher durchnummeriert.",
+			"edition": 6,
+			"publisher": ["Pegasus Spiele"],
+			"releaseDate": ["2021-06-15"],
+			"gameDate": "2080-01",
+			"notes": "This book is a compilation of other books with few added material. It contains: \"Datapuls: Kunstraub\", \"Datapuls: Magische Orte\", \"Datapuls: Frankfurter Bankenverein\", \"Datapuls: Marienbad\" und \"Datapuls: Feuerläufer\"",
+			"status": "missing",
+			"cover": "/covers/46127.jpg",
+			"thumbnail": "/thumbs/46127.jpg"
 		},
 		{
 			"name": "For a Few Nuyen More",
@@ -11583,7 +11583,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2022-07-05"],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM09-05.jpg",
 			"thumbnail": "/thumbs/SRM09-05.jpg"
 		},
@@ -11733,7 +11733,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2022-08-26"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46139E.jpg",
 			"thumbnail": "/thumbs/46139E.jpg"
 		},
@@ -11748,7 +11748,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2022-08-26"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46139F.jpg",
 			"thumbnail": "/thumbs/46139F.jpg"
 		},
@@ -11763,7 +11763,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2022-08-26"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46139G.jpg",
 			"thumbnail": "/thumbs/46139G.jpg"
 		},
@@ -11778,7 +11778,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2022-08-26"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46139H.jpg",
 			"thumbnail": "/thumbs/46139H.jpg"
 		},
@@ -11824,7 +11824,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2022-09-02"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46139I.jpg",
 			"thumbnail": "/thumbs/46139I.jpg"
 		},
@@ -11839,7 +11839,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2022-09-02"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46139J.jpg",
 			"thumbnail": "/thumbs/46139J.jpg"
 		},
@@ -11854,7 +11854,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2022-09-16"],
 			"gameDate": "2080-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM09-06.jpg",
 			"thumbnail": "/thumbs/SRM09-06.jpg"
 		},
@@ -11884,7 +11884,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2022-10-19"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28902.jpg",
 			"thumbnail": "/thumbs/28902.jpg"
 		},
@@ -11961,7 +11961,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2022-11-02"],
 			"gameDate": "2080-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM10-01.jpg",
 			"thumbnail": "/thumbs/SRM10-01.jpg"
 		},
@@ -11976,7 +11976,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2022-12-01"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26015.jpg",
 			"thumbnail": "/thumbs/26015.jpg"
 		},
@@ -11991,7 +11991,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2022-12-17"],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26019.jpg",
 			"thumbnail": "/thumbs/26019.jpg"
 		},
@@ -12023,7 +12023,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-01-26"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28452.jpg",
 			"thumbnail": "/thumbs/28452.jpg"
 		},
@@ -12039,7 +12039,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-01-26"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28800S.jpg",
 			"thumbnail": "/thumbs/28800S.jpg"
 		},
@@ -12054,7 +12054,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-01-26"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM10-02.jpg",
 			"thumbnail": "/thumbs/SRM10-02.jpg"
 		},
@@ -12069,7 +12069,7 @@
 			"publisher": ["Black Book Editions"],
 			"releaseDate": ["2023-02-01"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/BBESR6G10.jpg",
 			"thumbnail": "/thumbs/BBESR6G10.jpg"
 		},
@@ -12085,7 +12085,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-02-22"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28101.jpg",
 			"thumbnail": "/thumbs/28101.jpg"
 		},
@@ -12100,7 +12100,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-02-23"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26873.jpg",
 			"thumbnail": "/thumbs/26873.jpg"
 		},
@@ -12115,7 +12115,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-02-25"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM10-03.jpg",
 			"thumbnail": "/thumbs/SRM10-03.jpg"
 		},
@@ -12145,7 +12145,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-04-05"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26010NV.jpg",
 			"thumbnail": "/thumbs/26010NV.jpg"
 		},
@@ -12175,7 +12175,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2023-04-13"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/482D8.jpg",
 			"thumbnail": "/thumbs/482D8.jpg"
 		},
@@ -12190,7 +12190,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2023-04-20"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/482D9.jpg",
 			"thumbnail": "/thumbs/482D9.jpg"
 		},
@@ -12220,7 +12220,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-05-01"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26005NV.jpg",
 			"thumbnail": "/thumbs/26005NV.jpg"
 		},
@@ -12298,7 +12298,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-05-23"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26883.jpg",
 			"thumbnail": "/thumbs/26883.jpg"
 		},
@@ -12314,7 +12314,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2023-05-29"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28404.jpg",
 			"thumbnail": "/thumbs/28404.jpg"
 		},
@@ -12329,7 +12329,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2023-05-30"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/482D6.jpg",
 			"thumbnail": "/thumbs/482D6.jpg"
 		},
