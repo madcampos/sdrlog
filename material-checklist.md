@@ -41,6 +41,9 @@
 - Respec the Blade (Transverse Noir #2, A LitRPG Story)
 - Shadowrun: Takedown
 - The Runner Effect (Desert Wars #2)
+- State of the Art 2084
+- Staffing Issues (Transverse Noir #3, A LitRPG Story)
+- [Anarchy 2.0](https://www.kickstarter.com/projects/blackbook/shadowrun-anarchy-20)
 
 # Archive
 
