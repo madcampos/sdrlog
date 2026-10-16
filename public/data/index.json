@@ -2183,7 +2183,7 @@
 			"publisher": ["FASA Corporation"],
 			"releaseDate": ["1997-01-01"],
 			"gameDate": "2050-01",
-			"status": "ok",
+			"status": "missing",
 			"cover": "/covers/TCG01.jpg",
 			"thumbnail": "/thumbs/TCG01.jpg"
 		},
@@ -2198,7 +2198,7 @@
 			"publisher": ["FASA Corporation"],
 			"releaseDate": ["1997-01-01"],
 			"gameDate": "2050-01",
-			"status": "ok",
+			"status": "missing",
 			"cover": "/covers/TCG02.jpg",
 			"thumbnail": "/thumbs/TCG02.jpg"
 		},
@@ -3313,7 +3313,7 @@
 			"publisher": ["WizKids Games"],
 			"releaseDate": ["2003-06-01"],
 			"gameDate": "2060-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/WZK640X.jpg",
 			"thumbnail": "/thumbs/WZK640X.jpg"
 		},
@@ -7072,7 +7072,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2014-01-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "ok",
 			"cover": "/covers/27700.jpg",
 			"thumbnail": "/thumbs/27700.jpg"
 		},
@@ -7087,7 +7087,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2014-01-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/27700-G14.jpg",
 			"thumbnail": "/thumbs/27700-G14.jpg"
 		},
@@ -7102,7 +7102,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2014-01-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/27700A.jpg",
 			"thumbnail": "/thumbs/27700A.jpg"
 		},
@@ -7132,7 +7132,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2014-01-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/27701.jpg",
 			"thumbnail": "/thumbs/27701.jpg"
 		},
@@ -7591,7 +7591,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2015-01-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "ok",
 			"cover": "/covers/27703.jpg",
 			"thumbnail": "/thumbs/27703.jpg"
 		},
@@ -8145,7 +8145,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2016-01-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/27700-G16.jpg",
 			"thumbnail": "/thumbs/27700-G16.jpg"
 		},
@@ -8160,7 +8160,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2016-01-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/27704.jpg",
 			"thumbnail": "/thumbs/27704.jpg"
 		},
@@ -9310,7 +9310,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2018-08-02"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "missing",
 			"notes": "Announced at GenCon 2018.",
 			"cover": "/covers/27706.jpg",
 			"thumbnail": "/thumbs/27706.jpg"
@@ -9456,7 +9456,7 @@
 			"sku": ["28505"],
 			"name": "High Rollers Dice Set",
 			"category": "misc",
-			"type": "digital",
+			"type": "physical",
 			"originalLanguage": "en",
 			"description": "Custom dice put all the power you need in your hands to roll and make Shadowrun action happen! Includes Ares, Aztechnology, Mitsuhama, Saeder-Krupp, and Spinrad Global designs.",
 			"edition": 6,
@@ -9471,7 +9471,7 @@
 			"sku": ["28506"],
 			"name": "Mobile Grimoire Spell Cards",
 			"category": "misc",
-			"type": "digital",
+			"type": "physical",
 			"originalLanguage": "en",
 			"description": "Pocket Magic\n\nMagic in the Sixth World is not about complex incantations, detailed hand movements, and long scrolls (except when it is). It's about hitting fast, hitting hard, and moving on.\n\nMobile Grimoire provides references to dozens of spells, with game stats and rules, so you can select, cast, and go.",
 			"edition": 6,
@@ -9752,7 +9752,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2019-06-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "ok",
 			"notes": "Announced as a kickstarter campaign. Possible a retake on Hostile Takeover.",
 			"cover": "/covers/KS001.jpg",
 			"thumbnail": "/thumbs/KS001.jpg"
@@ -9798,7 +9798,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2019-06-01"],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "ok",
 			"cover": "/covers/KS004.jpg",
 			"thumbnail": "/thumbs/KS004.jpg"
 		},
@@ -10465,7 +10465,7 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2020-06-01"],
 			"gameDate": "2080-01",
-			"status": "outofscope",
+			"status": "ok",
 			"cover": "/covers/28880.jpg",
 			"thumbnail": "/thumbs/28880.jpg"
 		},
@@ -10710,7 +10710,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2020-12-15"],
 			"gameDate": "2080-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/45015.jpg",
 			"thumbnail": "/thumbs/45015.jpg"
 		},
@@ -10739,7 +10739,7 @@
 			"originalLanguage": "en",
 			"releaseDate": ["2021-01-01"],
 			"publisher": ["Catalyst Game Labs"],
-			"status": "outofscope",
+			"status": "ok",
 			"notes": "This item is a limited time only sale.",
 			"description": "# ACCESSORIZE THIS!\n\nTo celebrate thirty years of Awakened Roleplaying, we commissioned a Shadowrun 30th Anniversary logo that will show up on certain products throughout the year, including this high-quality lapel pin which is good for one free Edge Point! (At participating GMs only!)\n\nEven without the extra Edge, it is a nice lapel pin, and will look good on your jacket, your 30th Anniversary Hoodie, or just set it pin-side-up on the chair being used by your mage. Probably had it coming anyway.\n\nEach lapel pin comes in an acrylic case, and can only be bought online, or as part of one of our special 30th Anniversary promotions throughout the year.",
 			"cover": "/covers/28P00.jpg",
@@ -10755,7 +10755,7 @@
 			"originalLanguage": "en",
 			"releaseDate": ["2021-01-01"],
 			"publisher": ["Catalyst Game Labs"],
-			"status": "outofscope",
+			"status": "ok",
 			"description": "# ACCESSORIZE THIS!\n\nTo celebrate the release of Shadowrun Sixth World RPG, we commissioned a Totem \"S\" lapel pin which is also good for admission to Tuesday \"Troll Night\" at Dante's Inferno.\n\nEach lapel pin comes in an acrylic case, and currently can only be bought online.",
 			"cover": "/covers/28P01.jpg",
 			"thumbnail": "/thumbs/28P01.jpg"
@@ -10770,7 +10770,7 @@
 			"originalLanguage": "en",
 			"releaseDate": ["2021-01-01"],
 			"publisher": ["Catalyst Game Labs"],
-			"status": "outofscope",
+			"status": "ok",
 			"notes": "This was a limited time only item.",
 			"description": "# Clothes Make the Meta-Human!\n\nWhether you are on a 'run or just out for ladies night at Dante's Inferno, you should always dress for success. And nothing screams \"SHADOWRUN\" better than our new 30th Anniversary logo! This will appear on select product throughout the anniversary year of 2019, starting right here with a fashion-fit T or warm, athletic hoodie.",
 			"cover": "/covers/28T00.jpg",
