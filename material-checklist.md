@@ -13,21 +13,6 @@
 # Materials to add
 
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
-- [Mean Streets](https://store.catalystgamelabs.com/products/shadowrun-mean-streets)
-- Asphalt Jungle
-- [Sixth World Snapshots](https://books2read.com/u/3J71Qg)
-- [Cortext Bomb](https://books2read.com/ShadowrunCortexBomb)
-- [Trial Under Fire](https://books2read.com/ShadowrunTrialUnderFire)
-- [Core Rule Book: City Edition: Hong Kong](https://www.catalystgamelabs.com/news/enter-hong-kong)
-- Sprawl Stories #4
-- Carrying Capacity (Transverse Noir #1, A Literary Roleplaying Game)
-- Chaos Tour: The Top Drek Omnibus
-- Shadowrun Missions: 2081-16: It Ends, It Begins
-- Shadowrun Missions: 2081-17: Framed In Blood
-- Imre Grey
-- Into the Cold (A Desert Wars Story)
-- Chaos Tour: The Top Drek Omnibus
-- Wizard Riders: Quick-Start Rules (Free RPG Day)
 - Controlled Chaos Miniatures
 - Corporate Threats Miniatures
 - Savage Threats Miniatures
@@ -35,15 +20,20 @@
 - Takedown Dice Set
 - Takedown Coin
 - Mr. Johnson's Briefcase
-- Explosive Decompression
-- Shadowrun Missions: 2081-18: Friendships Never Grow Rust
-- Price to Pay (Sprawl Stories #4)
-- Respec the Blade (Transverse Noir #2, A LitRPG Story)
 - Shadowrun: Takedown
-- The Runner Effect (Desert Wars #2)
-- State of the Art 2084
-- Staffing Issues (Transverse Noir #3, A LitRPG Story)
 - [Anarchy 2.0](https://www.kickstarter.com/projects/blackbook/shadowrun-anarchy-20)
+- https://www.drivethrurpg.com/en/product/548248/shadowrun-anarchy-2-0-livre-de-base?src=newest_recent
+- https://www.drivethrurpg.com/en/product/305652/ecran-du-mj-anarchy?src=newest_recent
+- https://www.drivethrufiction.com/en/product/549482/shadowrun-shadowrun-returns-a-shadowrun-anthology?src=newest_recent
+- https://www.drivethrurpg.com/en/product/563448/songbird-the-awakening-onmibus-edition-1-7?src=newest_community
+- https://shop.black-book-editions.fr/produit/63921/0/shadowrun-anarchy/shadowrun-anarchy-aides-de-jeu-anarchistes
+- https://shop.black-book-editions.fr/produit/63971/0/shadowrun-6/shadowrun-6-tirage-dart-esprit-des-plantes-de-simon-labrousse
+- https://shop.black-book-editions.fr/produit/63951/0/shadowrun-6/shadowrun-6-carte-de-la-france-des-ombres-poster-a2
+- https://shop.black-book-editions.fr/produit/6547/0/shadowrun-anarchy/shadowrun-anarchy-lithographie
+- https://shop.black-book-editions.fr/produit/505638PHY/0/shadowrun-anarchy-v2/bloc-de-feuilles-de-personnages-shadowrun-anarchy-v2
+- https://shop.black-book-editions.fr/produit/8274PDF/0/shadowrun-6/shadowrun-6-fiches-daides-de-jeu
+- https://shop.black-book-editions.fr/produit/13560/0/shadowrun-6/shadowrun-6-cartes-detat
+- https://www.legrog.org/jeux/shadowrun#6e+%C3%89dition+%282080%2B%29
 
 # Archive
 
