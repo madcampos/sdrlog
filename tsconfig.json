@@ -1,6 +1,6 @@
 {
 	"extends": "./node_modules/@mad-c/config/src/tsconfig.json",
-	"include": ["src/**/*", "src/**/*.json", "vite.config.ts"],
+	"include": ["src/**/*", "src/**/*.json", "scripts/**/*", "public/data/**/*", "public/data/**/*.json", "vite.config.ts"],
 	"exclude": ["node_modules/**/*", "dist/**/*", "public/lib/**/*"],
 	"compilerOptions": {
 		"lib": ["ESNext", "DOM", "DOM.Iterable", "DOM.AsyncIterable"],

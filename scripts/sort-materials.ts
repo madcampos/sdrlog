@@ -2,7 +2,7 @@
 /// <reference types="@types/node" />
 
 import { readFile, writeFile } from 'node:fs/promises';
-import type { ISOTimestamp, SDRLogData } from '../src/js/data/schema.ts';
+import type { ISOTimestamp, RelativeLink, SDRLogData } from '../src/js/data/schema.ts';
 
 const dataPath = 'public/data/index.json';
 
@@ -70,9 +70,7 @@ function sortMaterials(items: SDRLogData['items']) {
 			gameDate,
 			status,
 			notes,
-			links,
-			cover,
-			thumbnail
+			links
 		}) => ({
 			sku,
 			name,
@@ -88,8 +86,8 @@ function sortMaterials(items: SDRLogData['items']) {
 			status,
 			notes,
 			links,
-			cover,
-			thumbnail
+			cover: `/covers/${sku[0]}.webp` as RelativeLink,
+			thumbnail: `/thumbs/${sku[0]}.webp` as RelativeLink
 		}));
 }
 
