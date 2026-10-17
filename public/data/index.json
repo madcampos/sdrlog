@@ -1,6 +1,6 @@
 {
 	"$schema": "./data.schema.json",
-	"lastUpdated": "2026-07-02T10:06:03+05:00",
+	"lastUpdated": "2026-10-17T03:46:53.158Z",
 	"items": [
 		{
 			"sku": ["10674", "25005"],
@@ -488,7 +488,8 @@
 				"pt-BR": "Escolha Seus Inimigos Com Cuidado",
 				"hu": "Jól Válaszd meg Ellenségeidet",
 				"pl": "Wybieraj swych wrogów z rozwagą",
-				"ru": "Тщательно выбирай врагов"
+				"ru": "Тщательно выбирай врагов",
+				"it": "Scegli il tuo Nemico"
 			},
 			"originalLanguage": "en",
 			"description": "When magic returns, its power calls Sam Verner. As Sam searches for his sister through the slick and scary streets of 2050, his quest leads him across the ocean to England, where druids rule the streets... and the throne. But all is not what it seems, and Sam and his new shadow friends are plunged into a maze of madness on the trail of destruction. Only when Sam accepts his destiny as a shaman can he embrace the power he needs. But what waits for him in the final confrontation of technology and human flesh is a secret much darker than anything he knew waiting in the shadows...",
@@ -2183,7 +2184,8 @@
 			"publisher": ["FASA Corporation"],
 			"releaseDate": ["1997-01-01"],
 			"gameDate": "2050-01",
-			"status": "missing",
+			"status": "ok",
+			"notes": "Scans of the cards are avaiable. The cards were also re-released as \"Shadowrun: Edgezone\".",
 			"cover": "/covers/TCG01.jpg",
 			"thumbnail": "/thumbs/TCG01.jpg"
 		},
@@ -2198,7 +2200,8 @@
 			"publisher": ["FASA Corporation"],
 			"releaseDate": ["1997-01-01"],
 			"gameDate": "2050-01",
-			"status": "missing",
+			"status": "ok",
+			"notes": "Scans of the cards are avaiable. The cards were also re-released as \"Shadowrun: Edgezone\".",
 			"cover": "/covers/TCG02.jpg",
 			"thumbnail": "/thumbs/TCG02.jpg"
 		},
@@ -5864,7 +5867,7 @@
 			"publisher": ["Catalyst Game Labs", "Pegasus Spiele", "Other"],
 			"releaseDate": ["2011-09-14", "2011-09-28", "2012-05-01", "2012-10-30", "2016-01-12"],
 			"gameDate": "2072-01",
-			"status": "missing",
+			"status": "partially-missing",
 			"notes": "Originally print only, this book is a compilation of other books with few added material.\nThe German edition has a few items from Germany and the French edition has the items from \"Used Car Lot\" and \"Gun Haven 2\".",
 			"cover": "/covers/26104.jpg",
 			"thumbnail": "/thumbs/26104.jpg"
@@ -6935,7 +6938,7 @@
 		},
 		{
 			"sku": ["27050"],
-			"name": "Shadowrun Game Master's Screen 5th Etidion",
+			"name": "Shadowrun Game Master's Screen 5th Edition",
 			"category": "rulebook",
 			"type": "print",
 			"names": { "de": "Spielleiterschirm Fünfte Edition" },
@@ -9556,8 +9559,8 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2019-01-27"],
 			"gameDate": "2076-01",
-			"status": "missing",
-			"notes": "As it is released monthly, some itens are missing.",
+			"status": "partially-missing",
+			"notes": "As it is released monthly, some itens may be missing.",
 			"cover": "/covers/STLD.jpg",
 			"thumbnail": "/thumbs/STLD.jpg"
 		},
@@ -10368,12 +10371,14 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"originalLanguage": "de",
+			"names": { "fr": "Fiches d'aides de jeu" },
 			"description": "Übersicht ist alles\n\nHier kommen sie - die Cheat Sheets für die 6. Edition. Um den Überblick in jeder Situation zu behalten, können Spielleiter und Spieler mit diesen Cheat Sheets arbeiten, die für ein noch flüssigeres Spielerlebnis sorgen. Ob im Kampf, bei Beschwörungen oder wenn mal wieder IC das Blut des Deckers in seinen Adern gefrieren lässt - die Cheat Sheets liegen stets zur Seite.\n\nCheat Sheets SR6 sind Übersichtsblätter für Shadowrun 6 für die Bereiche Kampf, Rigging, Matrix, Magie und allgemeine Regeln. Diese Cheat Sheets sind Bestandteil des Spielschirm-Bundles, das es in analoger Form zu kaufen gibt. Dies ist die digitale Version (nur der Cheat Sheets).",
 			"edition": 6,
-			"publisher": ["Pegasus Spiele"],
+			"publisher": ["Pegasus Spiele", "Black Book Editions"],
 			"releaseDate": ["2020-05-18"],
 			"gameDate": "2080-01",
-			"status": "missing",
+			"status": "ok",
+			"notes": "These cheat sheets are included with the Game Master Screen in the English version.",
 			"cover": "/covers/461138.jpg",
 			"thumbnail": "/thumbs/461138.jpg"
 		},
@@ -10480,7 +10485,8 @@
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2020-06-01"],
 			"gameDate": "2080-01",
-			"status": "outofscope",
+			"status": "ok",
+			"notes": "A 3D model of the statue is available.",
 			"cover": "/covers/SLEDGE.jpg",
 			"thumbnail": "/thumbs/SLEDGE.jpg"
 		},
@@ -13461,6 +13467,21 @@
 			"thumbnail": "/thumbs/AUG001.jpg"
 		},
 		{
+			"sku": ["28807S"],
+			"name": "Desert Wars 01: Para Bellum",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## Lights, Camera, WARFARE!\n\nSince it's creation the 2040's, Desert Wars has since become a media institution in the Sixth World. Fought in the tradition of gladiatorial combat but employing modern weapons and tactics, it's a showcase of military prowess as well as one of the biggest entertainment spectacles in the world. Every season, warfighters of every caliber journey to the scorched desert battlegrounds to compete in this ratings juggernaut. Some seek fortune and glory while others are desperate for a simple paycheck.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2025-02-21"],
+			"gameDate": "2083-01",
+			"status": "missing",
+			"cover": "/covers/28807S.jpg",
+			"thumbnail": "/thumbs/28807S.jpg"
+		},
+		{
 			"sku": ["K202501"],
 			"name": "Kaleidoskope: Live 2 Ride",
 			"category": "sourcebook",
@@ -13481,7 +13502,7 @@
 			"category": "boardgame",
 			"type": "physical",
 			"originalLanguage": "en",
-			"description": "Analog is the past. The Matrix is the future. Now you just need some munchkins to come along and hack it!\n\nIn the world of Shadowrun, magic and technology mix. Why not add more of both to your Munchkin game? Bring your Impenetrable Logic and your BOOMstick while you wander the Endless Archive, but it is dark in there . . . you just might get eaten by a Grue.\n\nMore guns, more magic, and more digital monsters than you can shake a credstick at – what are you waiting for? Hack the Future today!",
+			"description": "Analog is the past. The Matrix is the future. Now you just need some munchkins to come along and hack it!\n\nIn the world of Shadowrun, magic and technology mix. Why not add more of both to your Munchkin game? Bring your Impenetrable Logic and your BOOMstick while you wander the Endless Archive, but it is dark in there... you just might get eaten by a Grue.\n\nMore guns, more magic, and more digital monsters than you can shake a credstick at – what are you waiting for? Hack the Future today!",
 			"edition": 2,
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2025-03-01"],
@@ -13519,6 +13540,21 @@
 			"status": "ok",
 			"cover": "/covers/FN2502.jpg",
 			"thumbnail": "/thumbs/FN2502.jpg"
+		},
+		{
+			"sku": ["28517"],
+			"name": "Mean Streets",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## Street rules\n\nEven the streets have rules. Learn and follow them, and you might just survive long enough to make some nuyen. Don’t … well, then you’re just another piece of meat laying cold in the gutter.\n\nThe neon-soaked, cracked asphalt streets of the Sixth World can be brutal, harsh, uncaring, unforgiving, lethal, and even beautiful in their own way. And despite what the drones working all safe and sound in their cubicles think and what the corps want them to believe, the streets have always been the heart of the Sixth World. The streets are a special ecosystem where entire lives start and end, fortunes made and lost, and power earned … or stripped violently away at the end of a blade, the flash of a spell, or the barrel of a gun. They contain gangs, criminal enterprises, conflicts between shadowrunners, and even a few people trying to make things a little better. A good runner knows the streets, and this book is your guide.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2025-03-04"],
+			"gameDate": "2083-01",
+			"status": "missing",
+			"cover": "/covers/28517.jpg",
+			"thumbnail": "/thumbs/28517.jpg"
 		},
 		{
 			"sku": ["SRM2081-02"],
@@ -13586,12 +13622,14 @@
 			"category": "rulebook",
 			"type": "digital",
 			"originalLanguage": "en",
+			"names": { "de": "Die Kunst zu töten" },
 			"description": "## A Fighting Chance\n\nCombat is no stranger in the shadows; someone’s always working on new ways to eliminate their opponents. Maybe it’s the adept martial artist who’s pushing their body and power the breaking point Maybe it’s the local street samurai who just got some upgraded ’ware and is looking to settle some long-overdue scores. Maybe the mercenary just got a new gun, and their trigger finger is itching. Or the rigger is in control of one of the most advanced military vehicles on the planet, complete with bleeding-edge control systems and weapons.\n\nWhatever the situation, there’s always a need for warriors to fight and die for a cause, or at least a paycheck. And they’ll need more than just the latest hardware—they’ll need to master the deadly art of combat itself. Otherwise, they’re just more cannon fodder.",
 			"edition": 6,
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2025-04-02"],
 			"gameDate": "2083-01",
 			"status": "ok",
+			"notes": "The German edition has extra illustrations compared to the English one.",
 			"cover": "/covers/28011.jpg",
 			"thumbnail": "/thumbs/28011.jpg"
 		},
@@ -13654,6 +13692,21 @@
 			"status": "missing",
 			"cover": "/covers/BBESR6A02.jpg",
 			"thumbnail": "/thumbs/BBESR6A02.jpg"
+		},
+		{
+			"sku": ["28808S"],
+			"name": "Desert Wars 02: Cry Havoc",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## Dogs of War\n\nThere are a lot of sayings about war. War is Hell, war isn't good for anything, and make love not war. But in the Sixth World, war is simply another business, and business is booming; espeically when it's being broadcast LIVE. Some rise to become heroes with all the fortune and glory that goes along with it, while others are nothing more than background cannon fodder.\n\n**Cry Havoc** is the second e-book of **Shadowrun Sixth World's Desert Wars** series. Here the spotlight is squarely focused on the mercenaries, the reality of their lives, and what sacrifices they accept in order to make warfare and warfare entertainment of Desert Wars so profitable.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2025-04-09"],
+			"gameDate": "2083-01",
+			"status": "missing",
+			"cover": "/covers/28808S.jpg",
+			"thumbnail": "/thumbs/28808S.jpg"
 		},
 		{
 			"sku": ["483DX1"],
@@ -13721,11 +13774,13 @@
 			"category": "sourcebook",
 			"type": "digital",
 			"originalLanguage": "en",
+			"names": { "de": "Verlustsicherung" },
 			"description": "## Cinders of War\n\nSixth World business goes way beyond “buy low, sell high.”\n\nIn the wake of a recent shadow war, the corporate landscape has been forever altered. There were winners, losers, and people who felt lucky just to break even. Giants fell, others rose from the ashes like a phoenix, while still others remained in the shadows because this game is never over; the rules simply shift.\n\nThe corporate landscape always holds opportunities for those with the guts to seize them. But opportunity always comes with risk, because sometimes the market is a boom, other times it’s a bust. And if at the end of the day, when the margins are called and it’s time to square up, there’d better be enough assets to cover … or it’s game over.",
 			"edition": 6,
 			"publisher": ["Catalyst Game Labs"],
 			"releaseDate": ["2025-04-28"],
 			"gameDate": "2083-01",
+			"notes": "The German version has some extra parts regarding the ADL.",
 			"status": "ok",
 			"cover": "/covers/28306.jpg",
 			"thumbnail": "/thumbs/28306.jpg"
@@ -13789,6 +13844,21 @@
 			"status": "missing",
 			"cover": "/covers/46162.jpg",
 			"thumbnail": "/thumbs/46162.jpg"
+		},
+		{
+			"sku": ["46197"],
+			"name": "Schattendossier 7",
+			"category": "sourcebook",
+			"type": "digital",
+			"originalLanguage": "de",
+			"description": "## Die ADL im Umbruch\n\nDeutschland Anfang 2084. Noch immer weiß niemand, wie viele Tote der Kollaps von Teilen des Rhein-Ruhr-Plexes gefordert hat, oder wer die Attentäter waren, die mit einer schmutzigen Bombe den größten Teil des Hamburger Senats und das Leben des letzten Bundespräsidenten ausgelöscht haben. Deutschland hat Angst and spürt gleichzeitig Erleichterung: Die hohe Zahl der Manastürme im Sommer 2083 ist auf „Normalniveau“ zurückgefallen, Schreckensmeldungen über Albtraumkreaturen sind beinahe verschwunden, die unmenschlichen Verbrechen des „Un-Erwachens“, als rund 10 Tage lang keine Magie auf Erden funktionierte und Erwachte zu Gejagten wurden, sollen möglichst schnell beerdigt und vergessen werden, und selbst die Schrecken des Loreleyputsches, als die ADL-Regierung gegen die Konzerne und vor allem S-K losschlug, scheinen überwunden.\n\nMedienkonzerne und PR-Spots beschreien die kommende, „schöne neue Welt“ rund um die Uhr – und die ADL-Bevölkerung glaubt es nur zu gerne, bis zum Grunde ihrer Seele erschöpft durch den Schrecken eines drohenden Weltuntergangs, der – dieses Mal – noch mal ausgefallen ist. Was sich wirklich abgespielt hat, ist den Wenigsten bewusst – und sie wollen es auch nicht wissen. Runner können sich den Luxus der Ignoranz allerdings nicht leisten.",
+			"edition": 6,
+			"publisher": ["Pegasus Spiele"],
+			"releaseDate": ["2026-10-10"],
+			"gameDate": "2084-01",
+			"status": "missing",
+			"cover": "/covers/46197.jpg",
+			"thumbnail": "/thumbs/46197.jpg"
 		},
 		{
 			"sku": ["FN2504"],
@@ -13891,7 +13961,7 @@
 			"publisher": ["Pegasus Spiele"],
 			"releaseDate": ["2025-06-04"],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/PRO866.jpg",
 			"thumbnail": "/thumbs/PRO866.jpg"
 		},
@@ -14066,6 +14136,7 @@
 			"category": "rulebook",
 			"type": "digital",
 			"originalLanguage": "en",
+			"names": { "de": "Deus ex Arcana" },
 			"description": "## POWER SHIFT\n\nThe only constant when it comes to magic is change. Since the Awakening, those who can access the powers of magic have attempted to tame it and bend it to their will. And for a time, magicians thought they’d mastered the arcana. But like a true force of nature, magic suddenly changed the rules.\n\nThe upheaval of the manasphere following the the Disian Shadow War has brought significant changes to magic, changes that aren’t quite yet understood but already being seen and felt. Magic is both familiar and different.\n\nCurrent methodologies aren’t always working, forcing some magicians to return to older ways in order to move into the future. Can the Awakened adapt to these changes, or will they simply fade into history?",
 			"edition": 6,
 			"publisher": ["Catalyst Game Labs"],
@@ -14257,6 +14328,36 @@
 			"thumbnail": "/thumbs/AUG004.jpg"
 		},
 		{
+			"sku": ["FN2511"],
+			"name": "The Resonance Script",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## FAMILY OR FOE…\n\nChar hadn’t wanted to come back. She had left everything in Tír Tairngire—her family, her old life—behind. But when she receives news that her grandfather has died, she knows she must go back home one last time.\n\nBut home is a trap. A brother who wants what she has. A grandmother who may be pulling all of their strings. And her fiancé, who might not make it back out of Tir Tairngire alive.\n\nIn the end all Char can rely on is her wits and her blade…and those will have to be enough to survive this Christmas Eve…",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2025-12-01"],
+			"gameDate": "2083-01",
+			"status": "ok",
+			"cover": "/covers/FN2511.jpg",
+			"thumbnail": "/thumbs/FN2511.jpg"
+		},
+		{
+			"sku": ["FN2512"],
+			"name": "Holiday Heist",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## THERE’S NO PLACE LIKE THE MALL FOR THE HOLIDAYS…\n\nEven in the Sixth World, Christmas is a time for joy and peace for all metahumanity. Of course, it’s also a great time for the megacorps to roll out their latest and greatest releases…such as the latest hovercar model…tricked out as Santa’s sleigh.\n\nAnd of course, such a tempting target brings out the strangest people…Like a troll with more money than he knows what to do with. So what does he do? Hire a shadowrunning team to help him steal the sleigh.\n\nWhich is how Frostbyte, Rook, and the rest of their team find themselves scoping out mall security one fine evening, preparing to assist their employer pull off the most ridiculous heist of the year…",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2025-12-05"],
+			"gameDate": "2083-01",
+			"status": "ok",
+			"cover": "/covers/FN2512.jpg",
+			"thumbnail": "/thumbs/FN2512.jpg"
+		},
+		{
 			"sku": ["SRM2081-12"],
 			"name": "The Red Pill",
 			"category": "mission",
@@ -14270,6 +14371,21 @@
 			"status": "missing",
 			"cover": "/covers/SRM2081-12.jpg",
 			"thumbnail": "/thumbs/SRM2081-12.jpg"
+		},
+		{
+			"sku": ["SRM2081-13"],
+			"name": "A Cookie from Uncle Lung",
+			"category": "mission",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## One Heist to Become a Legend\n\nWhen the Octagon Triad learns that the prized statue Shen Wei Lau is being moved to the Wealthy Sasquatch, the Shark smells blood in the water. The rival Triad, the 88s, would be knocked down a peg and embarrass Lone Star all in one stroke. Her lieutenant Teddy Chin assembles a team of runners, each gifted a custom mask, a cryptic message, and a single phrase: Order a cookie from Uncle Lung.\n\nWhat follows is a high-stakes heist in broad daylight. The target: a rolling fortress, the 2066 Herkimer Schützenpanzer. The window: one stoplight, one moment of vulnerability. The tools: a hydraulic drill, a souped-up getaway car, and a handful of magical slap patches. The twist? Every runner plays a role in a live-action myth, their masked identities broadcast to unseen eyes.\n\nFrom the sepia haze of Mr. Jing’s Turkish Coffee to the chaotic showdown at the Ravine, this mission blends theatrical flair, tactical planning, and street-level grit. Will your crew become legends—or just another tale whispered in the shadows?",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2025-12-24"],
+			"gameDate": "2081-01",
+			"status": "missing",
+			"cover": "/covers/SRM2081-13.jpg",
+			"thumbnail": "/thumbs/SRM2081-13.jpg"
 		},
 		{
 			"sku": ["26884"],
@@ -14302,7 +14418,7 @@
 			"thumbnail": "/thumbs/26952.jpg"
 		},
 		{
-			"sku": ["26952"],
+			"sku": ["26030"],
 			"name": "Cortex Bomb",
 			"category": "novel",
 			"type": "digital",
@@ -14313,8 +14429,23 @@
 			"releaseDate": ["2025-12-30"],
 			"gameDate": "2083-01",
 			"status": "missing",
-			"cover": "/covers/26952.jpg",
-			"thumbnail": "/thumbs/26952.jpg"
+			"cover": "/covers/26030.jpg",
+			"thumbnail": "/thumbs/26030.jpg"
+		},
+		{
+			"sku": ["FN2601"],
+			"name": "Cold Front",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## THE SEATTLE STREETS ARE DARK AND DEEP…\n\nShadowrunner-wannabe Lia has just scored what should be an easy job: fetch spring rolls for her rich roommate and sneak them back inside the “boarding school”—detention facility—they’re both stuck in.\n\nEven though it should be a simple run, it’s winter in Seattle—with real snow coming down on the dark streets—and Lia knows backup is always a good idea. So she enlists Elfy, a street-smart thief, and Ackler, an orc decker, to assist her on the food heist.\n\nBut when they stumble on a corp conspiracy practically in their backyard, with the three junior ’runners make it out in one piece…or become the next victims of a megacorps machinations?",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-01-01"],
+			"gameDate": "2083-01",
+			"status": "missing",
+			"cover": "/covers/FN2601.jpg",
+			"thumbnail": "/thumbs/FN2601.jpg"
 		},
 		{
 			"sku": ["28819S12"],
@@ -14332,34 +14463,19 @@
 			"thumbnail": "/thumbs/28819S.jpg"
 		},
 		{
-			"sku": ["SRM2081-13"],
-			"name": "A Cookie from Uncle Lung",
-			"category": "mission",
+			"sku": ["FN2602"],
+			"name": "I ♥ You Shadowrunner",
+			"category": "novel",
 			"type": "digital",
 			"originalLanguage": "en",
-			"description": "## One Heist to Become a Legend\n\nWhen the Octagon Triad learns that the prized statue Shen Wei Lau is being moved to the Wealthy Sasquatch, the Shark smells blood in the water. The rival Triad, the 88s, would be knocked down a peg and embarrass Lone Star all in one stroke. Her lieutenant Teddy Chin assembles a team of runners, each gifted a custom mask, a cryptic message, and a single phrase: Order a cookie from Uncle Lung.\n\nWhat follows is a high-stakes heist in broad daylight. The target: a rolling fortress, the 2066 Herkimer Schützenpanzer. The window: one stoplight, one moment of vulnerability. The tools: a hydraulic drill, a souped-up getaway car, and a handful of magical slap patches. The twist? Every runner plays a role in a live-action myth, their masked identities broadcast to unseen eyes.\n\nFrom the sepia haze of Mr. Jing’s Turkish Coffee to the chaotic showdown at the Ravine, this mission blends theatrical flair, tactical planning, and street-level grit. Will your crew become legends—or just another tale whispered in the shadows?",
+			"description": "## ROMANCE IN THE SHADOWS?\n\nOnline relationship influencer Tawni Tigress is going through a bit of a rough patch lately. Split from her ex-boyfriend and with her online numbers declining, she heads to her favorite nightclub for a drink and to plan her next move. That’s when she stumbles across Kyle, the replacement bartender who is definitely more than he seems.\n\nAfter recording footage of Kyle’s shadowrun, Tawni uses selected shots—carefull edited, of course—to boost her online presence. But instead of getting angry shadowrunners busting down her door, Kyle contacts her with a very different offer—help him execute his next run.\n\nThat’s how Tawni finds herself dressed to the nines at an exclusive corporate party. But will they pull the job off, or will Tawni find out watching a shadowrun and participating in one are two very different things?",
 			"edition": 6,
 			"publisher": ["Catalyst Game Labs"],
-			"releaseDate": ["2025-12-24"],
-			"gameDate": "2081-01",
-			"status": "missing",
-			"cover": "/covers/SRM2081-13.jpg",
-			"thumbnail": "/thumbs/SRM2081-13.jpg"
-		},
-		{
-			"sku": ["28807S"],
-			"name": "Desert Wars 01: Para Bellum",
-			"category": "sourcebook",
-			"type": "digital",
-			"originalLanguage": "en",
-			"description": "## Lights, Camera, WARFARE!\n\nSince it's creation the 2040's, Desert Wars has since become a media institution in the Sixth World. Fought in the tradition of gladiatorial combat but employing modern weapons and tactics, it's a showcase of military prowess as well as one of the biggest entertainment spectacles in the world. Every season, warfighters of every caliber journey to the scorched desert battlegrounds to compete in this ratings juggernaut. Some seek fortune and glory while others are desperate for a simple paycheck.",
-			"edition": 6,
-			"publisher": ["Catalyst Game Labs"],
-			"releaseDate": ["2025-02-21"],
+			"releaseDate": ["2026-02-06"],
 			"gameDate": "2083-01",
 			"status": "missing",
-			"cover": "/covers/28807S.jpg",
-			"thumbnail": "/thumbs/28807S.jpg"
+			"cover": "/covers/FN2602.jpg",
+			"thumbnail": "/thumbs/FN2602.jpg"
 		},
 		{
 			"sku": ["26053"],
@@ -14377,19 +14493,19 @@
 			"thumbnail": "/thumbs/26053.jpg"
 		},
 		{
-			"sku": ["28517"],
-			"name": "Mean Streets",
-			"category": "sourcebook",
+			"sku": ["FN2603"],
+			"name": "The Big Spill",
+			"category": "novel",
 			"type": "digital",
 			"originalLanguage": "en",
-			"description": "## Street rules\n\nEven the streets have rules. Learn and follow them, and you might just survive long enough to make some nuyen. Don’t … well, then you’re just another piece of meat laying cold in the gutter.\n\nThe neon-soaked, cracked asphalt streets of the Sixth World can be brutal, harsh, uncaring, unforgiving, lethal, and even beautiful in their own way. And despite what the drones working all safe and sound in their cubicles think and what the corps want them to believe, the streets have always been the heart of the Sixth World. The streets are a special ecosystem where entire lives start and end, fortunes made and lost, and power earned … or stripped violently away at the end of a blade, the flash of a spell, or the barrel of a gun. They contain gangs, criminal enterprises, conflicts between shadowrunners, and even a few people trying to make things a little better. A good runner knows the streets, and this book is your guide.",
+			"description": "## UNLIKELY ALLIES MAKE THE BEST SHADOWRUNNERS…\n\nDr. Shara Nasreddin is working in a high-security laboratory for Aztechnology, on cutting-edge bioware. But she’s not just a medical researcher, she’s also a shadowrunner, intent on stealing the lab’s new breakthrough truth serum.\n\nBut when another technician stumbles on her secret, they promise to keep it quiet if the good doctor helps them escape their job at the megacorporation before it discovers what they are. Now Shara has not one, but two high-risk missions to pull off at the same time…and the slightest hesitation means neither of them leaves the lab alive…",
 			"edition": 6,
 			"publisher": ["Catalyst Game Labs"],
-			"releaseDate": ["2025-03-04"],
+			"releaseDate": ["2026-03-01"],
 			"gameDate": "2083-01",
 			"status": "missing",
-			"cover": "/covers/28517.jpg",
-			"thumbnail": "/thumbs/28517.jpg"
+			"cover": "/covers/FN2603.jpg",
+			"thumbnail": "/thumbs/FN2603.jpg"
 		},
 		{
 			"sku": ["SRM2081-14"],
@@ -14422,6 +14538,21 @@
 			"thumbnail": "/thumbs/28APRAI.jpg"
 		},
 		{
+			"sku": ["FN2604"],
+			"name": "A Meaningful Investment (A Maria Price Story)",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## WILL SHE DARE TO BITE THE HAND THAT FEEDS HER?\n\nMaria Price is a corporate black-ops specialist, the best there is. She gets called when there’s no other choice, and handles the jobs too dangerous or sensitive for other departments. But that doesn’t mean she’s always working for her employer…\n\nWhen a fellow employee is killed in the line of duty, and his family’s house is seized by the corporation as “compensation” for their investment in him, Maria goes to work for a very different client. And how does an infiltration and wetwork specialist go up against a megacorporation to get what she wants. By employing her very special set of skills against the very people she technically works for, of course…",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-04-01"],
+			"gameDate": "2083-01",
+			"status": "missing",
+			"cover": "/covers/FN2604.jpg",
+			"thumbnail": "/thumbs/FN2604.jpg"
+		},
+		{
 			"sku": ["SRM2081-15"],
 			"name": "A Bunch of Corporate Drek",
 			"category": "mission",
@@ -14437,19 +14568,19 @@
 			"thumbnail": "/thumbs/SRM2081-15.jpg"
 		},
 		{
-			"sku": ["28808S"],
-			"name": "Desert Wars 02: Cry Havoc",
-			"category": "sourcebook",
+			"sku": ["FN2605"],
+			"name": "Little Sunshine Bearhead",
+			"category": "novel",
 			"type": "digital",
 			"originalLanguage": "en",
-			"description": "## Dogs of War\n\nThere are a lot of sayings about war. War is Hell, war isn't good for anything, and make love not war. But in the Sixth World, war is simply another business, and business is booming; espeically when it's being broadcast LIVE. Some rise to become heroes with all the fortune and glory that goes along with it, while others are nothing more than background cannon fodder.\n\n**Cry Havoc** is the second e-book of **Shadowrun Sixth World's Desert Wars** series. Here the spotlight is squarely focused on the mercenaries, the reality of their lives, and what sacrifices they accept in order to make warfare and warfare entertainment of Desert Wars so profitable.",
+			"description": "## WHAT HAPPENS WHEN YOU ACCIDENTALLY CREATE A GOD?\n\nThe “cult” was supposed to be a one-off. Desperate times called for desperate measures, right—and with the right ’runner mage on call, a bolt from the heavens can be summoned a lot faster than one might think.\n\nBut then the whole cult thing started gaining momentum…and followers. For while, having a created god backing us up made our jobs a whole lot easier…until it didn’t. And when we were doing an extraction in Munich, and ran into the local mafia on the same run…well, let’s just say things started weird, and got a whole lot weirder from there…",
 			"edition": 6,
 			"publisher": ["Catalyst Game Labs"],
-			"releaseDate": ["2025-04-09"],
+			"releaseDate": ["2026-05-01"],
 			"gameDate": "2083-01",
-			"status": "missing",
-			"cover": "/covers/28808S.jpg",
-			"thumbnail": "/thumbs/28808S.jpg"
+			"status": "ok",
+			"cover": "/covers/FN2605.jpg",
+			"thumbnail": "/thumbs/FN2605.jpg"
 		},
 		{
 			"sku": ["SRM2081-16"],
@@ -14482,7 +14613,7 @@
 			"thumbnail": "/thumbs/28455.jpg"
 		},
 		{
-			"sku": ["26053"],
+			"sku": ["26036"],
 			"name": "Carrying Capacity (Transverse Noir #1)",
 			"category": "novel",
 			"type": "digital",
@@ -14493,8 +14624,23 @@
 			"releaseDate": ["2026-05-29"],
 			"gameDate": "2083-01",
 			"status": "missing",
-			"cover": "/covers/26053.jpg",
-			"thumbnail": "/thumbs/26053.jpg"
+			"cover": "/covers/26036.jpg",
+			"thumbnail": "/thumbs/26036.jpg"
+		},
+		{
+			"sku": ["FN2606"],
+			"name": "Bottleneck",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "What should have been a nice and easy job was too good to be true. When Cassandra's employer hired her to check out an old bottle, it should have only taken 15 minutes of work, but then the client pops the cork, all hell breaks loose...",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-06-01"],
+			"gameDate": "2083-01",
+			"status": "ok",
+			"cover": "/covers/FN2606.jpg",
+			"thumbnail": "/thumbs/FN2606.jpg"
 		},
 		{
 			"sku": ["SRM2081-17"],
@@ -14572,6 +14718,21 @@
 			"thumbnail": "/thumbs/26890.jpg"
 		},
 		{
+			"sku": ["FN2607"],
+			"name": "Six Seconds Later",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## IN THE SHADOWS, SIX SECONDS CAN BE A LIFETIME…\n\nIn the Sixth World, lethal threats can come from anywhere. It takes a certain kind of person to provide effective protection for another person. The shadowrunner in this story is just that sort of person. Come along on a harrowing six seconds of mortal danger where he matches skill and speed against an assassin in the crowd…and the only prize for second place is death…",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-07-01"],
+			"gameDate": "2083-01",
+			"status": "ok",
+			"cover": "/covers/FN2607.jpg",
+			"thumbnail": "/thumbs/FN2607.jpg"
+		},
+		{
 			"sku": ["SRM2081-18"],
 			"name": "Friendships Never Grow Rust",
 			"category": "mission",
@@ -14585,6 +14746,55 @@
 			"status": "missing",
 			"cover": "/covers/SRM2081-18.jpg",
 			"thumbnail": "/thumbs/SRM2081-18.jpg"
+		},
+		{
+			"sku": ["9782386781070", "SRAN2VA01"],
+			"name": "Shadowrun Anarchy 2.0",
+			"category": "rulebook",
+			"type": "digital",
+			"originalLanguage": "fr",
+			"names": { "en": "Shadowrun Anarchy 2.0" },
+			"description": "Nous sommes en 2084. Les États-nations ne sont plus que des pantins entre les mains de mégacorporations. Les implants cybernétiques les plus avancés et une Matrice omniprésente côtoient la magie, revenue des âges anciens après l’Éveil, et avec elle les dragons. Dans des métropoles tentaculaires, où de riches privilégiés vivent au sein d’enclaves high-tech cernées par des océans de misère, humains, orks, elfes, trolls et nains affrontent la violence de la société.\n\nVous incarnez des shadowrunners : des agents indépendants sacrifiables, effectuant clandestinement le sale boulot dans la guerre que se mènent les corpos. Si beaucoup ne sont attirés que par l’appât du gain, d’autres, plus idéalistes, rêvent encore de pouvoir renverser le système.\n\nSerez-vous une machine à tuer cybernétisée suivant le code d’honneur des samouraïs des rues ? Manipulerez-vous les flots de mana dans la peau d’un magicien ? Écumerez-vous la Matrice en tant que decker ? Ou fournirez-vous surveillance et soutien tactique grâce à vos nuées de drones comme tout bon rigger ?\n\nLes shadowrunners vivent sur la brèche. Mais pour survivre aux corpos et devenir une légende, il faudra se montrer audacieux, prendre des risques… et en accepter les conséquences.\n\nBienvenue dans les Ombres, omae, et que les esprits vous soient favorables.",
+			"edition": 6,
+			"publisher": ["Black Book Editions", "Catalyst Game Labs"],
+			"releaseDate": ["2026-07-03"],
+			"gameDate": "2084-01",
+			"status": "ok",
+			"notes": "As an early bird Kickstarter bonus includes an art print of the book cover.",
+			"cover": "/covers/9782386781070.jpg",
+			"thumbnail": "/thumbs/9782386781070.jpg"
+		},
+		{
+			"sku": ["SRAN2VA02"],
+			"name": "Shadowrun Anarchy 2.0: Ecran de MJ",
+			"category": "rulebook",
+			"type": "digital",
+			"originalLanguage": "fr",
+			"names": { "en": "Shadowrun Anarchy 2.0: Game Master's Screen" },
+			"description": "Répandez l’Anarchy !\n\nL’écran du meneur de jeu pour Shadowrun Anarchy 2.0, l’édition aux règles simplifiées du jeu cyberpunk-fantasy de réféfence.\n\nFacilitez-vous la vie avec ce pack qui comprend :\n\n- un **solide écran de jeu rigide** en 3 volets (format paysage) illustré côté joueurs d’une magnifique **vue de Seattle** par Benjamin Giletti, et côté MJ des tables les plus utiles en jeu, avec des références au livre de base\n- **8 fiches d’aide** conçues pour un usage facile, couvrant : la création de personnage, les différents rôles des personnages joueurs, des aides pour le MJ\n- **8 fiches de PNJ** regroupant les caractéristiques de 34 PNJ et créatures\n- **12 fiches de prétirés** issus du livre de base\n- **une carte poster du métroplexe de Seattle**, la ville emblématique du jeu\n- un **plan poster de la Raffinerie**, lieu central de la campagne du livre de base",
+			"edition": 6,
+			"publisher": ["Black Book Editions", "Catalyst Game Labs"],
+			"releaseDate": ["2026-07-03"],
+			"gameDate": "2084-01",
+			"status": "ok",
+			"cover": "/covers/SRAN2VA02.jpg",
+			"thumbnail": "/thumbs/SRAN2VA02.jpg"
+		},
+		{
+			"sku": ["SRAN2VA03"],
+			"name": "Shadowrun Anarchy 2.0: Bloc de feuilles de personnages",
+			"category": "rulebook",
+			"type": "digital",
+			"originalLanguage": "fr",
+			"names": { "en": "Shadowrun Anarchy 2.0: Character Sheet Pad" },
+			"description": "Ce bloc de 20 fiches de personnage pour Shadowrun Anarchy 2.0, la nouvelle édition aux règles simplifiées du jeu de rôle cyberpunk-fantasy de référence, vous permet de noter toutes les infos utiles de votre shadowrunner.\n\nInspiré de la fiche de personnage du livre de base, elle offre plus d’espace en occupant 2 pages recto-verso.",
+			"edition": 6,
+			"publisher": ["Black Book Editions", "Catalyst Game Labs"],
+			"releaseDate": ["2026-07-03"],
+			"gameDate": "2084-01",
+			"status": "ok",
+			"cover": "/covers/SRAN2VA03.jpg",
+			"thumbnail": "/thumbs/SRAN2VA03.jpg"
 		},
 		{
 			"sku": ["26092"],
@@ -14647,6 +14857,96 @@
 			"thumbnail": "/thumbs/28816S.jpg"
 		},
 		{
+			"sku": ["FN2608"],
+			"name": "Emergency Exit",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## TWENTY-FIVE METERS TO SAFETY…\n\nIt sounds like a simple job: escort a corp doctor and her intern down a corridor to the elevator that will take them out of a wrecked megacorp level. Except for the three vicious hellhounds standing in their way. Now rigger Braddock and ork street sam Daigo have to contend the fire-breathing pack, but also try to save a couple innocent bystanders….before they all go up in flames…",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-08-01"],
+			"gameDate": "2083-01",
+			"status": "ok",
+			"cover": "/covers/FN2608.jpg",
+			"thumbnail": "/thumbs/FN2608.jpg"
+		},
+		{
+			"sku": ["28700"],
+			"name": "Shadowrun: Takedown",
+			"category": "boardgame",
+			"type": "physical",
+			"originalLanguage": "en",
+			"description": "**Shadowrun: Takedown** puts the tense, team-based Shadowrun experience into a fast-moving board game format. In this cooperative game, players take on the roles of members of a runner team and embark on a series of missions that build to form an exciting story in the Sixth World. Players have to think fast and beat the clock to carry out their objectives, and their teamwork and employment of their individual skills will determine their success. Fans of Shadowrun and fans of tense, cooperative board games alike will have fun with this game!",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-08-03"],
+			"gameDate": "2081-01",
+			"status": "ok",
+			"cover": "/covers/28700.jpg",
+			"thumbnail": "/thumbs/28700.jpg"
+		},
+		{
+			"sku": ["28802"],
+			"name": "Shadowrun: Controlled Chaos Miniatures",
+			"category": "boardgame",
+			"type": "physical",
+			"originalLanguage": "en",
+			"description": "**Shadowrun: Controlled Chaos** expands your games of Shadowrun with five all-new minis. Featuring five famous runners found in livestreams and sourcebooks, this set of minis is great for use with Shadowrun Sixth World and the Shadowrun: Takedown board game.\n\nFeatures Khronostatic (Human Face), Happy (Ork Street Sam), L33roy (Dwarf Decker), Hell Hunt (Elf Mage), and Tailwind (Troll Adept Brawler) Miniatures.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-08-03"],
+			"gameDate": "2081-01",
+			"status": "ok",
+			"cover": "/covers/28802.jpg",
+			"thumbnail": "/thumbs/28802.jpg"
+		},
+		{
+			"sku": ["28803"],
+			"name": "Shadowrun: Corporate Threats Miniatures",
+			"category": "boardgame",
+			"type": "physical",
+			"originalLanguage": "en",
+			"description": "**Shadowrun: Corporate Threats** expands your games of Shadowrun with five all-new minis. Featuring security officers, a drone, and a bounty hunter, this set of minis is great for use with Shadowrun Sixth World and the Shadowrun: Takedown board game.\n\nFeatures Corp Security, Augmented Bounty Hunter, Security Captain, Riot Control, and Centrifugal Drone Miniatures.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-08-03"],
+			"gameDate": "2081-01",
+			"status": "ok",
+			"cover": "/covers/28803.jpg",
+			"thumbnail": "/thumbs/28803.jpg"
+		},
+		{
+			"sku": ["28804"],
+			"name": "Shadowrun: Savage Threats Miniatures",
+			"category": "boardgame",
+			"type": "physical",
+			"originalLanguage": "en",
+			"description": "**Shadowrun: Savage Threats** expands your games of Shadowrun with five all-new minis. Featuring a pair of monsters, a pair of runners, and a ghoul, this set of minis is great for use with Shadowrun Sixth World and the Shadowrun: Takedown board game.\n\nFeatures Oni Assassin, Cerberus Hound, Illusionist, The Unseen (Dwarf Ghoul), and Stalker Chimera Miniatures.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-08-03"],
+			"gameDate": "2081-01",
+			"status": "ok",
+			"cover": "/covers/28804.jpg",
+			"thumbnail": "/thumbs/28804.jpg"
+		},
+		{
+			"sku": ["28805"],
+			"name": "Shadowrun: Sprawl Runners Miniatures",
+			"category": "boardgame",
+			"type": "physical",
+			"originalLanguage": "en",
+			"description": "**Shadowrun: Sprawl Runners** expands your games of Shadowrun with five all-new minis. Featuring an array of runner options for any Shadowrun player, this set of minis is great for use with Shadowrun Sixth World and the Shadowrun: Takedown board game.\n\nFeatures Flywheel (Troll Mage), Boris (Human Street Sam), Bom Bom (Elf Decker), Koko (Ork Technomancer), and Legs (Dwarf Face/Rigger) Miniatures.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-08-03"],
+			"gameDate": "2081-01",
+			"status": "ok",
+			"cover": "/covers/28805.jpg",
+			"thumbnail": "/thumbs/28805.jpg"
+		},
+		{
 			"sku": ["SRM2081-19"],
 			"name": "False Flag, Pink Mohawk",
 			"category": "mission",
@@ -14675,6 +14975,21 @@
 			"status": "missing",
 			"cover": "/covers/26054.jpg",
 			"thumbnail": "/thumbs/26054.jpg"
+		},
+		{
+			"sku": ["FN2609"],
+			"name": "The Orphanage",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## NOWHERE TO RUN…\n\nFräulein Margarete’s Home for Metahuman Children is not a happy place to live. The metahuman children sent to this home are waiting to see if they Awaken, and then will be shuffled off to the megacorps to become wagemages…if they’re lucky.\n\nBut when a strange event strips magical abilities from everyone, the kids have no idea what will come next…until armed men invade the orphanage, looking for fresh meat to sell. Now, they have to take matters into their own hands…and turn the hunters into the hunted.",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-09-01"],
+			"gameDate": "2083-01",
+			"status": "ok",
+			"cover": "/covers/FN2609.jpg",
+			"thumbnail": "/thumbs/FN2609.jpg"
 		},
 		{
 			"sku": ["SRM2081-20"],
@@ -14720,6 +15035,21 @@
 			"status": "missing",
 			"cover": "/covers/28519.jpg",
 			"thumbnail": "/thumbs/28519.jpg"
+		},
+		{
+			"sku": ["FN2610"],
+			"name": "Brewed for Trouble",
+			"category": "novel",
+			"type": "digital",
+			"originalLanguage": "en",
+			"description": "## THE ULTIMATE BEER RUN…\n\nShadowrun, that is. Sunny and his ’runner group have scored a run to pull off some corporate shenanigans between rival brewers. And what better place to execute said run than at the biggest beerfest in the world—Oktoberfest!\n\nAll they have to do is infiltrate the raucous festival, spike the host brewery’s new offering, and get out. But when one of the team is tapped to serve the national Urban Brawl team the tainted brew, it’s a sure bet all hell’s gonna break loose…and now the team has to get out of the festival before they catch a permanent hangover…",
+			"edition": 6,
+			"publisher": ["Catalyst Game Labs"],
+			"releaseDate": ["2026-10-01"],
+			"gameDate": "2084-01",
+			"status": "ok",
+			"cover": "/covers/FN2610.jpg",
+			"thumbnail": "/thumbs/FN2610.jpg"
 		},
 		{
 			"sku": ["SRM2081-21"],
