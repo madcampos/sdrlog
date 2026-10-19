@@ -1,8 +1,8 @@
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
-  - "@mad-c/file-system-helpers@1.1.0"
-  - "@mad-c/config"
 trustPolicy: "no-downgrade"
+trustPolicyExclude:
+  - "@mad-c/file-system-helpers@3.1.0"
 preferFrozenLockfile: true
 ignoreScripts: true
 ignoreDepScripts: true
