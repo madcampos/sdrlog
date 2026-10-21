@@ -28,7 +28,7 @@
 			],
 			"name": "Private Agenda",
 			"category": "novel",
-			"type": "physical",
+			"type": "print",
 			"originalLanguage": "en",
 			"description": "The last FASA novel, announced in Europe, but never released.",
 			"edition": 3,
@@ -47,7 +47,7 @@
 			],
 			"name": "Running Short",
 			"category": "mission",
-			"type": "physical",
+			"type": "print",
 			"originalLanguage": "en",
 			"description": "A unreleased adventure announced by FASA.",
 			"edition": 3,
@@ -66,7 +66,7 @@
 			],
 			"name": "Hunters Hunted",
 			"category": "mission",
-			"type": "physical",
+			"type": "print",
 			"originalLanguage": "en",
 			"description": "A strange package given into the care of the runners leads them in a high stakes fight through Manhattan as supernatural forces try to recover it. Who can the runners trust? Where can they turn?",
 			"edition": 4,
@@ -85,7 +85,7 @@
 			],
 			"name": "Well Preserved",
 			"category": "mission",
-			"type": "physical",
+			"type": "print",
 			"originalLanguage": "en",
 			"description": "A missing persons case, ritual magic, and corporate intrigue come together in Denver, with the runners stuck in the middle. Can you get out in one piece?",
 			"edition": 4,
@@ -726,7 +726,7 @@
 			],
 			"name": "KA•GE: Issue 0",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n0 Front page\n1 Introduction\n2 Sysop's Notes (Editorial)\n3 KA*GE Fiction (Squasher and Squeeker - George Pace)\n8 Contacts: Fetish Monger & Limo Driver\n9 Location Archetype: High Security Warehouse\n11 KA*GE scenario: Go Fish!\n13 Profile: Danté: Inside the Black Box\n16 Archetype: Investigative Reporter (Free-lance Reporter)\n17 Q & A\n18 Vehicle Stats: Grumman Cargomaster Van\n19 Off the shelf: New gear\n22 On the Street: Rumors from the sprawl (Writing on the Wall: News from the Shadowrun Universe)\n23 Rear page",
 			"edition": 2,
@@ -747,7 +747,7 @@
 			],
 			"name": "KA•GE: Issue 1",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n0 Front page\n1 Net Notes: Welcome To The Shadows (Editorial - Jim Long)\n2 KA*GE Fiction (Lucy - James D. Long)\n11 KA*GE Credits\n12 KA*GE Author and Artist Guidelines\n14 CYCO Circuits (corporation description)\n15 Scenario: No Free Parking (adventure)\n17 CYCO Circuits (continued)\n19 Archetype: Former Company Decker\n20 Contacts: Hairstylist & E-Wizzard\n21 CYCO Circuits: Matrix Map\n23 Off The Shelf: Cyberdeck Utilities, Cyberdeck Gear & CYCO Cyberdecks\n26 Q&A: FASA explains it all to you\n27 Up and comming from FASA\n28 Reviews: London Sourcebook, Native American Nations: Volume One & Virtual Realities \n31 Rear page",
 			"edition": 2,
@@ -768,7 +768,7 @@
 			],
 			"name": "KA•GE: Issue 2",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n0 Front page (Sean Parrack)\n1 Net notes (Editorial - Jim Long)\n2 KA*GE Fiction (Just Another Night... - George Pace)\n9 Corporate profile (Turring's Annoted Guide to Modern Organizations: Advanced Weapons and Systems, Incorporated - AWS Inc.)\n12 Contacts (Body Shop Tech, Independent Hauler)\n14 Archetype (Former DocWagon TM Paramedic)\n15 Scenario (A Night in the Sound)\n17 Personalities (AWS NPC's)\n18 Upcoming from FASA\n19 Run for it (Scenario Ideas)\n23 Q&A (FASA explains it all to you)\n24 Off the Shelf (New gear)\n27 Reviews (Total Eclipse, Native American Nations Volume 2, 20-500 Shadowrunners, 20-501 Deckers, 20-502 Human Street Samurai, 20-503 Mages, 20-504 Meta-Human Street Samurai, 20-505 Elves)\n30 Writing on the Wall (News from the Shadowrun Universe)\n31 Rear page",
 			"edition": 2,
@@ -1233,7 +1233,7 @@
 			],
 			"name": "KA•GE: Issue 3",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Articles & Authors (where known):\n* Net Notes (editorial & letters, James D. Long),\n* Ragfeather (short story, GB Pace),\n* Privat Investigator (archetype),\n* Contacts\n* The Dwarven Technical Guild (corporation description),\n* A Short In The Dark (adventure),\n* Stranges In The Night (scenario ideas),\n* The Torque Wrench (location description),\n* Off The Shelf (equipment),\n* Sprawl Survival (tips for characters),\n* Paydata (reviews),\n* Writing On The Wall (world background)",
 			"edition": 2,
@@ -1254,7 +1254,7 @@
 			],
 			"name": "KA•GE: Issue 4",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Articles & Authors (where known):\n* Notes From The Net (editorial & letters, James D. Long),\n* Paterson's Guide To Paranormal Animals (critters),\n* Lone Star File (gang description),\n* Shadows (archetype & contacts),\n* The Awakened Citizen (2050s legal hassle),\n* The Retching Rat (adventure),\n* Off The Shelf (equipment),\n* Neo-Anarchists Guide (Boston city description, Stephen Kenson),\n* AWOL Release Form (1992 legal hassle),\n* Paydata (reviews, James D. Long),\n* Graffiti (classifieds),\n* Writing on the Wall (world background)",
 			"edition": 2,
@@ -1275,7 +1275,7 @@
 			],
 			"name": "KA•GE: Issue 5",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n1 Front page (Sean Parrack)\n2 Notes from the Net (Editorial, Letters, Index, Credits - Jim Long)\n4 Paterson's Guide to Paranormal Animals (Sewer Gator)\n6 KA*GE Fiction (Vengeance - Brantley Bryant)\n10 Lone Star File\n11 Scenario Ideas (Night Encounters)\n13 Shadows (NPC: Niedertracht)\n14 Shadows (Paranaturalist Archetype, Medical Examiner Contact, Hospital Orderly Contact)\n16 The Awakened Citizen (Legal systems of 2053 - Terry Reinsch)\n18 The Awakened Citizen (Lawyer contacts: Judge, Bail Bondsman - Terry Reinsch)\n19 Turring's Guide to Organizations (Major corporations of Minneapolis-St. Paul, Timeline of MSP - Michael W. Harris)\n25 Neo-Anarchist Guide (Minneapolis-St. Paul metroplex - Michael W. Harris)\n31 FASA Product list\n32 AWOL Product list\n33 AWOL Order Form\n34 Off the Shelf (Gear - James Buchanan)\n40 Paydata (Reviews: Shadowland, 10-860 Corporat Dragon, 20-507 Go-Gangers, 20-516 Mercs and Bouncers, 20-517\nShapeshifters, 20-518 Shadowbeat, 20-519 Tribals)\n43 Combat Laws (Myrphy's Laws of Combat)\n44 Upcoming from Ral Parthe, Upcoming from FASA\n45 Shadowrun Network membership form\n46 Network Member Grafitti\n47 Writing on the Wall (News from the Shadwrun Universe)\n48 Rear Page",
 			"edition": 2,
@@ -1296,7 +1296,7 @@
 			],
 			"name": "KA•GE: Issue 6",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n1 Front Page (Sean Parrack)\n2 Notes from the Net (Editorial, Index, Credits - Jim Long)\n3 Notes from the Net (Letters)\n4 Paterson's Guide to Paranormal Animals (Carrion Crow, Cooper's Fox, Fenris Wolf - Michael W. Harris)\n10 KA*GE Fiction (The Night's Change of Plans - Chad Olson)\n16 Shadows (Archetypes: Former Electronic Warfare Specialist, Former Combat Engineer - James Buchanan)\n18 Shadows (Contacts: Sporting Goods Salesman, Arcade Owner)\n19 Neo-Anarchists Guide (Minneapolis-St. Paul metroplex - Michael W. Harris)\n23 Turring's Guide to Organizations (MSP Corporations - Michael W. Harris)\n27 KA*GE Fiction (Jolly Ol' Elf - Victoria Kirchoff & Curtis Martin)\n32 Off the Shelf (Spells and Plasma Shock Weapons - Michael W. Harris, Dentalware - James Rommell, Bomb Sniffer - Jeff Hosty)\n37 AWOL Product List\n38 AWOL Order Form\n39 Paydata (Questions and Answers)\n41 Paydata (Upcoming from FASA, Upcoming from Ral Partha)\n42 Paydata (Reviews: The Grimoire II, Paranormal Animals of Europe, Tir Tairngire, Total Eclipse, One Stage Before)\n45 Shadowrun Network Membership Form\n46 Network Member Grafitti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear Page",
 			"edition": 2,
@@ -1624,7 +1624,7 @@
 			],
 			"name": "Schlagschatten",
 			"category": "mission",
-			"type": "print",
+			"type": "scan",
 			"originalLanguage": "de",
 			"description": "SCHLAGSCHATTEN\n\nErleben Sie die Schattenseiten des zukünftigen Deutschland in drei packenden SHADOWRUN-Abenteuern:\n\t- MurderMedia: Ein Privatsender im Ruhrplex, eine perverse Show, die Yakuza und ein internationaler Medienkonzern - und die Runner wie üblich mittendrin! von Björn Lippold\n\t- Lösegeld für eine Leiche: Wenn der Chef einer renommierten Sicherheitsfirma seinen Sohn bei einem mysteriösen Attentat verliert und die Polizei den Fall zu den Akten legt, ist es Zeit, die Schatten zu kontaktieren. von Stefan Willkofer\n\t- Proemtheus: Hamburg 2053: Was bezweckt der verrückte Wissenschaftler Dr. Surgental mit seiner bizarren Kreuzung aus einem erwachten Wesen und einer Wagenladung Cyberware? von Armin Schmiege!\nEnthält Datenanhänge für alle wichtigen Waffen und Fahrzeuge! Voll kompatibel zu SHADOWRUN 2.01D",
 			"edition": 2,
@@ -1688,7 +1688,7 @@
 			],
 			"name": "KA•GE: Issue 7",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n1 Front page (Sean Parrack)\n2 Notes from the Net (Editorial, Credits and Index - Jim Long)\n3 Notes from the Net (Letters - Steve Scott)\n4 Paterson's Guide to Paranormal Animals (Gaki, Goblin Spider, Greater Carp - Stephen Kenson)\n10 KA*GE Fiction (A Closer Look - Chad Olson)\n16 Shadows (Former KE Guard, Former KE Decker, Former KE Security Mage archetypes - Brian Walker)\n19 Neo-Anarchist Guide (Australiasia History, Brisbane Sprawl - Craig Gaffney)\n25 Turring's Guide to Organizations (ANZAC - Craig Gaffney)\n27 The Awakened Citizen (Life in Australiasia - Craig Gaffney)\n30 KA*GE Fiction (An Ounce of Prevention - Robert Frager)\n36 Questions and Answers\n40 Paydata\n46 Network Member Graffiti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear Page",
 			"edition": 2,
@@ -1709,7 +1709,7 @@
 			],
 			"name": "KA•GE: Issue 8",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n1 Front page (Corey Gulley)\n2 Notes from the Net (Editorial, Credits and Index - Jim Long)\n3 Notes from the Net (Letters)\n4 Paterson's Guide to Paranormal Animals (The Greater Toad, Hengeyokai, Hsing-sing - Stephen Kenson)\n10 KA*GE Fiction (First Contact - Chad Olson)\n16 Shadows (Dwarven Stoic Physical Adept archetype - Brian Walker)\n17 Neo-Anarchist Guide (Boston Sprawl - Stephen Kenson)\n24 Turring's Guide to Organizations (The Black Lotus - Stephen Kenson)\n30 KA*GE Fiction (Instructions Takes A Turn - Simon Foster)\n34 FASA Product list\n35 AWOL Product list\n36 AWOL Order Form\n37 Paydata (Upcoming from FASA and Ral Partha)\n38 Paydata (Official errata for Shadowrun II)\n40 Paydata (Official errata for Grimoire II)\n41 Paydata (Reviews: 20-508 Riggers and Rockers, 20-520 Yakuza, 20-521 Ork Biker, 20-522 Meta-Human Tribal, 20-528 Black ICE Icons, 20-529 Wasp Male Spirits, 20-530 Wasp Queen Human Host, 20-531 Combat Mages)\n44 Calendar of Events\n45 Shadowrun Network membership form\n46 Network Member Graffiti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear page",
 			"edition": 2,
@@ -1730,7 +1730,7 @@
 			],
 			"name": "KA•GE: Issue 9",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n1 Front page (Sean Parrack)\n2 Notes from the Net (Index, Editorial - Jim Long)\n3 Notes from the Net (Letters)\n4 Paterson's Guide to Paranormal Animals (Alicanto, Calchuna, Onaqui - Stephen Kenson)\n10 KA*GE Fiction (Wonderland - Chad Olson)\n17 Shadows (Troll Ranger archetype - Bryan Walker)\n18 Turing's Guide to Organizations (Armour International, part 1 - Chad Olson)\n23 KA*GE Fiction (Business Unusual - Vicki Kirchhoff)\n28 Off the shelf (16 new pieces of gear - Stephen Kenson)\n38 FASA Product list\n39 AWOL Product list\n40 AWOL order form\n41 Paydata (Upcoming from FASA and Ral Partha)\n42 Paydata (Reviews: Corporate Shadowfiles, A Killing Glare, Tir Tairngire)\n44 Calendar of Events\n45 Shadowrun Network membership form\n46 Network Member Graffiti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear Page",
 			"edition": 2,
@@ -1751,7 +1751,7 @@
 			],
 			"name": "KA•GE: Issue 10",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n1 Frontpage (Sean Parrack)\n2 Notes from the Net (Index, Editorial - Jim Long)\n3 Statmet of Ownership (James D. Long)\n4 Patterson's Guide to Paranormal Animals (Hide, Tzitsimne)\n8 KA*GE Fiction (Chasing Ghosts, part 2 - Chad Olson)\n15 Shadows (Contacts: Model, Hustler, Stock Analyst, Stock Broker, Archetype: Hermetic Hitman - Sean Parrack)\n18 Turring's Guide to Organizations (Armor International, part 2 - Chad Olson)\n31 KA*GE Fiction (Who Your Friends Are - Vicki Kirchhoff)\n37 FASA Product list\n38 AWOL Product list\n39 AWOL Order Form\n40 Paydata (Upcoming from FASA & Ral Partha)\n41 Paydata (Reviews: Tir na nOg Sourcebook, Celtic Double Cross, 20-534 Spirit of Man, 20-535 Spirit of Water, 20-532 Piasma, 20-533 Dzoo-Noo-Qua, 10-861 Feathered Serpent)\n44 Calendar of Events\n45 Shadowrun Network membership form\n46 Network Member Grafitti\n47 Writing on the Wall (News from the Shadowrun Universe)\n48 Rear page",
 			"edition": 2,
@@ -2153,7 +2153,7 @@
 			],
 			"name": "KA•GE: Issue 11",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "Index:\n1 Front page (Eric von Haas)\n2 Notes from the net (Editorial, Staff and Index)\n3 Notes from the net (Letters)\n4 Patterson's Guide to Paranormal Animals (Mist Viper, Arachnis - Peter Williams, Sean Parrack & Corey Gulley)\n8 Ka*ge Fiction (If As Beast You Don't Succeed, Part One - Michael A. Stackpole)\n20 Shadows (Two Archetypes: Former Combat Medic, Ex-Brawler, Two Contacts: Foreign Dignitary, Social Worker - Sean Parrack, J.B. Buchanan)\n23 Corporate Shadow Files (European Business Machines and Magic - Stephen Kenson)\n27 Ka*ge Fiction (There Are Shadowruns, And Then There is... - Chris Hussey)\n33 Paydata (FASA Products, AWOL Products, Order Form, Upcoming from FASA, Reviews: Lone Wolf, The Germany Sourcebook, Eye Witness)\n39 Calendar of Events (Cons)\n40 Turring's Guide to Organizations (Coven of the Crimson Moon - Stephen Kenson)\n44 New Gear (8 new pieces of gear - Teras Cassidy & Michael Morris)\n48 Network Member Graffiti\n49 Writing on the Wall (News from the Shadowrun Universe)\n51 Shadowrun Network application form\n52 Rear page",
 			"edition": 2,
@@ -2174,7 +2174,7 @@
 			],
 			"name": "KA•GE: Issue 12",
 			"category": "magazine",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "This was the last issue of KA*GE before the publisher went AWOL. The issue was published late, and the was promises of further issues being on time.\nThe issue contains:\nLetters, errata, paranormal critter, fiction, archetypes, contacts, magic theory, new gear, new organizations, scenario ideas, new spells, merchandizing, slang, event calender and newsnet downloads. --user description",
 			"edition": 2,
@@ -2705,7 +2705,7 @@
 			],
 			"name": "Alerte Rouge",
 			"category": "mission",
-			"type": "print",
+			"type": "scan",
 			"originalLanguage": "fr",
 			"description": "Voilà trente ans, la naissance tumultueuse des Nations des Américan d'Origine ébranlait les États-Unis d'Amérique et bouleversait les frontières géo-politiques de l'Amérique du Nord. Aujourd'hui, quelqu'un qui n'apprécie pas cette tournure des événements travaille à un nouveau bouleversement de son cru. Est-ce une venegeance? Ou quelque chose de plus profond? Quoiqu'il en soit, cette sombre histoire vous entraîne dans une longue traque à travers les nations tribales. Mais si vous êtes les chasseurs, pourquoi cette impression que les mâchoires du piège se referment sur vous?",
 			"edition": 2,
@@ -2892,7 +2892,7 @@
 			],
 			"name": "TOKYOソースブック",
 			"category": "sourcebook",
-			"type": "print",
+			"type": "scan",
 			"originalLanguage": "ja",
 			"description": "Everything about Tokyo in 2054\nFrom the detailed descriptions of each districts, to the Japanese magic and critters.",
 			"edition": 2,
@@ -2971,7 +2971,7 @@
 			],
 			"name": "ÁrnyékMagyarország",
 			"category": "sourcebook",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "hu",
 			"description": "…Mindezek mellett igaz, hogy az ország a korlátlan lehetőségek hazája. Nem sok különbség van az árnyvadászok és az egyszeri emberek között. Mindenki fegyverrel, lehetőleg páncélozott autókban jár. A megvesztegetés nem különlegesség, az élet része. A hirtelen meggazdagodás könnyű, de nagyon veszélyes. …\" - Részlet egy Magyarországról szóló dekás tájékoztatóból - Shadowland, 2056.\n\nKell egy hely, ahol a cégek nem lépnek folyton a nyakadra? Kell egy hely, ahol virágzik az árnyvadász szakma? Ahol el lehet tűnni a balhé után, és ahol nem kérik a RASSZ-odat? Nos, cimbora, ez esetben azt tanácsoljuk, tedd át a székhelyed Magyarországra. Persze, ha idejössz, nem árt, ha néhány dolgot észben tartasz. Tudd, hogy itt csak magadra számíthatsz. Magyarországon tiéd ugyan a pálya - de ugyanez igaz nálad sokkal nagyobb halakra is, akik nem tétováznak, ha félre kell tenni valakit az útból. Ha életben akarsz maradni, tartsd be az utca íratlan játékszabályait. Ja, és még valami: ügyelj rá, hogy ne menj a Fertőzött zónák közelébe.\n\nA Shadowrun szerepjáték a közeli jövőben játszódik, amikor a világot óriási mamutcégek, mindenhová elérő számítógépes hálózat, és mágikusan aktív, „felébredt\" teremtmények uralják. Ennek az amerikai játéktervezők által megálmodott világnak a mintájára képzeltük el, milyen lenne Magyarország a Shadowrun fantasztikus utópiája szerint. Az ÁrnyékMagyarország önállóan is élvezhető olvasmány, ha azonban ismered a magyarul is kiadott Shadowrun szerepjátékot, akkor az ÁrnyékMagyarország egyben egy szerepjáték kiegészítő is, amely lehetővé teszi, hogy árnyvadászaitok a jövő Magyarországán kalandozzanak.",
 			"edition": 2,
@@ -3344,7 +3344,7 @@
 			],
 			"name": "Schattenlichter",
 			"category": "mission",
-			"type": "print",
+			"type": "scan",
 			"originalLanguage": "de",
 			"description": "Langeweile? Keine Kohle mehr? Leerlauf? Arbeitslos? Dann wird's mal wieder Zeit, in die Schatten abzutauchen und für Abwechslung zu sorgen! Euer Schieber kann euch zur Zeit vier nette Jobs in Deutschland und der Schweiz anbieten:\nDas Buch der Hölle fängt scheinbar harmlos an, entwickelt sich aber nach einigen Tagen zu einem echten Höllentrip. Wer da magisch nichts drauf hat, kann sich direkt ein sonniges Plätzchen am Styx reservieren lassen!\nUmcir führt (genauso harmlos) in die Schweiz, um eine Person ausfindig zu machen. Falls ihr jetzt an ruhige Klettertouren in den Alpen und gemütliche Tage in einem schweizer Kurhotel denkt, solltet ihr euch ernsthaft Gedanken über euren Ruhestand machen...\n12 Stunden Zeit habt ihr, um einen Kurierjob zu erledigen. Runner, die es mit der Pünktlichkeit nicht so genau nehmen, könnten dabei schon mal den Kopf verlieren. Oder wisst ihr etwa nicht, wie Cortexbomen funktionieren?\nFestlichkeiten sind ja eigentlich etwas schönes - vorausgesetzt, der Anlass zum Feiern geht einem nicht gegen den Strich. Dann ist Ärger vorprogrammiert!\nSchattenlichter ist ein Abenteuerband zu Deutschland in den Schatten und Chrom und Dioxin, den Shadowrun-Quellenbänden zu Deutschland und der Schweiz in den 2050ern. Beide genannten Bände sind zum Durchspielen und Leiten der Abenteuer nicht unbedingt nötig, aber ausgesprochen empfehlenswert.",
 			"edition": 2,
@@ -3478,7 +3478,7 @@
 			],
 			"name": "France",
 			"category": "sourcebook",
-			"type": "print",
+			"type": "ocr",
 			"originalLanguage": "fr",
 			"description": "Découvrez la France de 'an 2057!\n\nUn Pays moderne fortement bouleversé par de puissants conflicts ayant conduit à l'instauration de la domination de quatre grandes familles siégeant au Conseil Oligarchique aux côte d'un cardinal, d'un rand druide et d'un représentant de la famille Villiers.\n\nVisitez les nouvelles régions françaises!\n\nParmi toutes les provinces présentées, n'hésitez pas à aller explorer la Bretagne dont une partie est restée prisonnière de la Brume, un étrange phénomène inexpliqué ayant ouvert le passage à des Ankous, des êtres humanoïdes cadavériques aux longs cheveux blancs animés des pires intentions. Mais attendez-vous à bien des surprises dans les autres régions et duchés.\n\nAllez faire une virée à Paris!\n\nMais il faut être solide survivre dans une mégalopole d'un diamètre d'environ 90 km où sévissent les gangs les plus sauvages, où tant de choses ont changé sous la pression de l'affluence de populations pas toujours avide d'honnêteté. Quartier par quartier, secteur par secteur, et même par sous-sol, explorez une ville où toutes les bonnes affaires (et les autres) sont possibles.\n\nSHADOWRUN FRANCE est un supplément pour le jeu de rôle Shadowrun conçu pour permettre la mise en place de véritables campagnes dans la France de années 2057. Bien qu'il soit plus praticulièrement destiné aux maîtres de jeu, les joueurs peuvent aussi y trouver une foule d'informations susceptibles de les intéresser directement tant elle seront utiles à leurs shadowrunners. En dehors d'une description détaillée du fonctionnement économique et politique du pays, d'une pésentation complète des événements historiques qui ont permis l'avènement du régime actuel, une foule de renseignements pratiques touchant tous les domaines d'activité et des règles particulières à la magie de Bretagne accompagnent la description de nouveaux équipments et de métacréatures inédites. Des cartes géographiques originales, la descrition approfondie des plus grandes villes françaises et des illustrations de qualité font de ce supplément une source de renseignements indispensable.",
 			"edition": 2,
@@ -6463,7 +6463,7 @@
 			],
 			"name": "München Noir",
 			"category": "sourcebook",
-			"type": "print",
+			"type": "scan",
 			"originalLanguage": "de",
 			"description": "München Noir is a Shadowrun sourcebook detailing the city and region of Munich, Germany. It also contains a 60-page adventure campaign set in Munich.\nThe book covers the following topics:\n\t- Overview over the city districts\n\t- Bavarian economy\n\t- Media in Munich\n\t- Munich's upper class\n\t- Organised Crime\n\t- Important characters of the Munich runner scene\n\nThe campaign (also titled München Noir) throws the player characters into a struggle between a manager of the Bavaria Movie Studios and a dangerous neo anarchist terrorist. It consists of six adventures that lead the characters through different parts of Munich. The finale takes place on the Oktoberfest.",
 			"edition": 4,
@@ -11321,7 +11321,7 @@
 			],
 			"gameDate": "2075-01",
 			"status": "outofscope",
-			"notes": "Shadowrun Wummen Quartett is a set of 32 cards depicting various weapons of the Shadowrun universe with Shadowrun5 game stats. It also includes an activation code for Shadowrun Online.",
+			"notes": "Shadowrun Wummen Quartett is a set of 32 cards depicting various weapons of the Shadowrun universe with Shadowrun 5th edition game stats. It also includes an activation code for Shadowrun Online.",
 			"cover": "/covers/45020.webp",
 			"thumbnail": "/thumbs/45020.webp"
 		},
@@ -12812,7 +12812,7 @@
 			],
 			"name": "Sixth World Tarot",
 			"category": "misc",
-			"type": "print",
+			"type": "scan",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Tarot der Sechsten Welt"
@@ -12827,7 +12827,7 @@
 				"2016-01-01"
 			],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "ok",
 			"cover": "/covers/27511.webp",
 			"thumbnail": "/thumbs/27511.webp"
 		},
@@ -13703,7 +13703,7 @@
 			],
 			"name": "Auf dunklen Pfaden",
 			"category": "mission",
-			"type": "print",
+			"type": "digital",
 			"originalLanguage": "de",
 			"description": "Die Gefahr lauert hinter vielen Ecken, auch in Deutschland. Für Runner bietet das Land in seiner ganzen Variabilität einen Hort der Möglichkeiten: um entweder reich und berühmt in den Schatten zu werden oder dort für immer zu verschwinden. Manchmal etwa lassen sich Studenten in dunkle Geheimnisse aus finsteren Kapiteln der Geschichte hineinziehen. Ein anderes Mal zieht das organisierte Verbrechen die Strippen hinter einem eigentlich vergnüglichen Event. Oder es verschlägt die Runner ins Venedig an der Elbe, um im wahrsten Sinne des Wortes im Trüben zu fischen. So oder so wer überlebt, darf die Beute behalten.\nAuf dunklen Pfaden ist der erste Abenteuerband für Shadowrun 5, der komplett in der Allianz Deutscher Länder spielt. Er präsentiert drei komplett ausformulierte Abenteuer inklusive aller Werte und detaillierter Grundrisse der Locations.",
 			"edition": 5,
@@ -14717,7 +14717,7 @@
 				"2018-12-04"
 			],
 			"gameDate": "2053-01",
-			"status": "missing",
+			"status": "outofscope",
 			"cover": "/covers/27838.webp",
 			"thumbnail": "/thumbs/27838.webp"
 		},
@@ -14811,7 +14811,7 @@
 			],
 			"name": "Sprawl Stories Vol. 1",
 			"category": "novel",
-			"type": "print",
+			"type": "digital",
 			"originalLanguage": "en",
 			"description": "MEAN STREETS? YOU HAVE NO IDEA...\n\nThe Sixth World is a dangerous place, and nowhere is that more obvious than in Seattle, the so-called Emerald City. Surrounding its neon-drenched heart is kilometer after kilometer of Sprawl, where millions of people scratch out a living among hazardous, slowly decaying neighborhoods and even more dangerous neighbors.\nSprawl Stories contains four Shadowrun novellas that explore Seattle through the eyes of the people who live there every day. A burned-out mage detective tackles a missing person case that quickly threatens to spiral out of control. A reporter goes on the ride-along of her life with a high-octane DocWagon team, and uncovers a conspiracy on live triedeo. A young ex-wagesalve is caught between powerful forces while investigating his uncle's death. And a shaman must deal with a serious injury that threatens his very way of life-but not before taking vengeance on those who double-crossed him.\nSo take a walk on the true wild side of the Seattle Sprawl If you're good-and lucky-you might even come back out in one piece...\n\nSprawl Stories contains the following novellas:\n\t\"Neat\" by Russell Zimmerman\n\t\"DocWagon 19\" by Jennifer Brozek\n\t\"Big Dreams\" by R. L. King\n\t\"Blind Magic\" by Dylan Birtolo",
 			"edition": 5,
@@ -15800,7 +15800,7 @@
 				"2020-03-17"
 			],
 			"gameDate": "2080-01",
-			"status": "missing",
+			"status": "outofscope",
 			"notes": "This is a translation of both the 5th edition Game Master Screen and the adventure \"Splintered State\".",
 			"cover": "/covers/BBESR502.webp",
 			"thumbnail": "/thumbs/BBESR502.webp"
@@ -16261,7 +16261,7 @@
 				"2020-06-12"
 			],
 			"gameDate": "2080-01",
-			"status": "outofscope",
+			"status": "ok",
 			"notes": "Print only puzzles and folios of the game.",
 			"cover": "/covers/FOIL.webp",
 			"thumbnail": "/thumbs/FOIL.webp"
@@ -16849,7 +16849,7 @@
 			],
 			"name": "Sixth World Tarot (Arcanist Edition)",
 			"category": "misc",
-			"type": "print",
+			"type": "physical",
 			"originalLanguage": "en",
 			"description": "The Sixth World Tarot (Arcanist Edition) is a stunning collection of Shadowrun art by Echo Chernik, and it now comes in a larger size!\n\nThis deck gives the gorgeous art the spotlight it deserves, letting users take in the full details of these images. Whether you're using them as a game aid, art collection, or functioning tarot deck, these cards do their job beautifully!\n\nThis product also comes with a FREE anthology of fiction, based on the card art.",
 			"edition": 6,
@@ -16860,7 +16860,7 @@
 				"2021-03-10"
 			],
 			"gameDate": "2080-01",
-			"status": "outofscope",
+			"status": "ok",
 			"cover": "/covers/27512.webp",
 			"thumbnail": "/thumbs/27512.webp"
 		},
@@ -18043,7 +18043,7 @@
 			"sku": [
 				"46139F"
 			],
-			"name": "Kaleidoskop: Deister-Tierwelt",
+			"name": "Kaleidoskope: Deister-Tierwelt",
 			"category": "sourcebook",
 			"type": "digital",
 			"originalLanguage": "de",
@@ -19503,7 +19503,7 @@
 				"2024-03-28"
 			],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/483DA2.webp",
 			"thumbnail": "/thumbs/483DA2.webp"
 		},
@@ -19608,7 +19608,7 @@
 				"2024-05-24"
 			],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/46156.webp",
 			"thumbnail": "/thumbs/46156.webp"
 		},
@@ -19674,7 +19674,7 @@
 				"2024-06-05"
 			],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/BBESR6X02.webp",
 			"thumbnail": "/thumbs/BBESR6X02.webp"
 		},
@@ -19729,7 +19729,7 @@
 			],
 			"name": "Fine Art: Risk it All",
 			"category": "misc",
-			"type": "print",
+			"type": "physical",
 			"originalLanguage": "en",
 			"description": "This 18x24 canvas print is limited in quantity and has a small print run, making it a perfect frame-able piece to add to your home.",
 			"edition": 6,
@@ -20512,7 +20512,7 @@
 				"2025-02-21"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28807S.webp",
 			"thumbnail": "/thumbs/28807S.webp"
 		},
@@ -20617,7 +20617,7 @@
 				"2025-03-04"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28517.webp",
 			"thumbnail": "/thumbs/28517.webp"
 		},
@@ -20789,7 +20789,7 @@
 				"2025-04-03"
 			],
 			"gameDate": "2082-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/483DX4.webp",
 			"thumbnail": "/thumbs/483DX4.webp"
 		},
@@ -20831,7 +20831,7 @@
 				"2025-04-09"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28808S.webp",
 			"thumbnail": "/thumbs/28808S.webp"
 		},
@@ -21003,7 +21003,7 @@
 				"2025-04-29"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-06.webp",
 			"thumbnail": "/thumbs/SRM2081-06.webp"
 		},
@@ -21066,7 +21066,7 @@
 				"2025-05-07"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-07.webp",
 			"thumbnail": "/thumbs/SRM2081-07.webp"
 		},
@@ -21108,7 +21108,7 @@
 				"2025-05-07"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-09.webp",
 			"thumbnail": "/thumbs/SRM2081-09.webp"
 		},
@@ -21137,7 +21137,7 @@
 			"sku": [
 				"FN2505"
 			],
-			"name": "Can't Allways Run",
+			"name": "Can't Always Run (A Top Drek Story)",
 			"category": "novel",
 			"type": "digital",
 			"originalLanguage": "en",
@@ -21150,7 +21150,7 @@
 				"2025-06-01"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/FN2505.webp",
 			"thumbnail": "/thumbs/FN2505.webp"
 		},
@@ -21177,7 +21177,7 @@
 		},
 		{
 			"sku": [
-				"268804S"
+				"28804S"
 			],
 			"name": "Seoul Survivor (Republic of Korea Data Download)",
 			"category": "sourcebook",
@@ -21192,9 +21192,9 @@
 				"2025-06-10"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
-			"cover": "/covers/268804S.webp",
-			"thumbnail": "/thumbs/268804S.webp"
+			"status": "ok",
+			"cover": "/covers/28804S.webp",
+			"thumbnail": "/thumbs/28804S.webp"
 		},
 		{
 			"sku": [
@@ -21297,7 +21297,7 @@
 				"2025-07-15"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26028.webp",
 			"thumbnail": "/thumbs/26028.webp"
 		},
@@ -21426,7 +21426,7 @@
 				"2025-09-11"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28012.webp",
 			"thumbnail": "/thumbs/28012.webp"
 		},
@@ -21434,7 +21434,7 @@
 			"sku": [
 				"28454"
 			],
-			"name": "Risk & Rewards",
+			"name": "Risks & Rewards",
 			"category": "mission",
 			"type": "digital",
 			"originalLanguage": "en",
@@ -21447,7 +21447,7 @@
 				"2025-09-11"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28454.webp",
 			"thumbnail": "/thumbs/28454.webp"
 		},
@@ -21468,7 +21468,7 @@
 				"2025-09-11"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-10.webp",
 			"thumbnail": "/thumbs/SRM2081-10.webp"
 		},
@@ -21489,7 +21489,7 @@
 				"2025-09-19"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26885.webp",
 			"thumbnail": "/thumbs/26885.webp"
 		},
@@ -21534,7 +21534,7 @@
 				"2025-09-29"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2083-03.webp",
 			"thumbnail": "/thumbs/SRM2083-03.webp"
 		},
@@ -21555,7 +21555,7 @@
 				"2025-09-29"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2083-04.webp",
 			"thumbnail": "/thumbs/SRM2083-04.webp"
 		},
@@ -21618,7 +21618,7 @@
 				"2025-10-17"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26029.webp",
 			"thumbnail": "/thumbs/26029.webp"
 		},
@@ -21639,7 +21639,7 @@
 				"2025-10-23"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-11.webp",
 			"thumbnail": "/thumbs/SRM2081-11.webp"
 		},
@@ -21744,7 +21744,7 @@
 				"2025-12-24"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-12.webp",
 			"thumbnail": "/thumbs/SRM2081-12.webp"
 		},
@@ -21765,7 +21765,7 @@
 				"2025-12-24"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-13.webp",
 			"thumbnail": "/thumbs/SRM2081-13.webp"
 		},
@@ -21786,7 +21786,7 @@
 				"2025-12-26"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26884.webp",
 			"thumbnail": "/thumbs/26884.webp"
 		},
@@ -21807,7 +21807,7 @@
 				"2025-12-26"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26952.webp",
 			"thumbnail": "/thumbs/26952.webp"
 		},
@@ -21828,7 +21828,7 @@
 				"2025-12-30"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26030.webp",
 			"thumbnail": "/thumbs/26030.webp"
 		},
@@ -21849,7 +21849,7 @@
 				"2026-01-01"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/FN2601.webp",
 			"thumbnail": "/thumbs/FN2601.webp"
 		},
@@ -21870,7 +21870,7 @@
 				"2026-02-05"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28819S.webp",
 			"thumbnail": "/thumbs/28819S.webp"
 		},
@@ -21891,7 +21891,7 @@
 				"2026-02-06"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/FN2602.webp",
 			"thumbnail": "/thumbs/FN2602.webp"
 		},
@@ -21912,7 +21912,7 @@
 				"2026-03-01"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26053.webp",
 			"thumbnail": "/thumbs/26053.webp"
 		},
@@ -21954,7 +21954,7 @@
 				"2026-03-05"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-14.webp",
 			"thumbnail": "/thumbs/SRM2081-14.webp"
 		},
@@ -21975,7 +21975,7 @@
 				"2026-04-01"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28APRAI.webp",
 			"thumbnail": "/thumbs/28APRAI.webp"
 		},
@@ -21996,7 +21996,7 @@
 				"2026-04-01"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/FN2604.webp",
 			"thumbnail": "/thumbs/FN2604.webp"
 		},
@@ -22017,7 +22017,7 @@
 				"2026-04-02"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-15.webp",
 			"thumbnail": "/thumbs/SRM2081-15.webp"
 		},
@@ -22059,7 +22059,7 @@
 				"2026-05-07"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-16.webp",
 			"thumbnail": "/thumbs/SRM2081-16.webp"
 		},
@@ -22080,7 +22080,7 @@
 				"2026-05-16"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28455.webp",
 			"thumbnail": "/thumbs/28455.webp"
 		},
@@ -22101,7 +22101,7 @@
 				"2026-05-29"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26036.webp",
 			"thumbnail": "/thumbs/26036.webp"
 		},
@@ -22143,7 +22143,7 @@
 				"2026-06-04"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-17.webp",
 			"thumbnail": "/thumbs/SRM2081-17.webp"
 		},
@@ -22164,7 +22164,7 @@
 				"2026-06-18"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/288123.webp",
 			"thumbnail": "/thumbs/288123.webp"
 		},
@@ -22185,7 +22185,7 @@
 				"2026-06-19"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26045.webp",
 			"thumbnail": "/thumbs/26045.webp"
 		},
@@ -22206,7 +22206,7 @@
 				"2026-06-19"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26895.webp",
 			"thumbnail": "/thumbs/26895.webp"
 		},
@@ -22227,7 +22227,7 @@
 				"2026-06-25"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26890.webp",
 			"thumbnail": "/thumbs/26890.webp"
 		},
@@ -22269,14 +22269,14 @@
 				"2026-07-02"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-18.webp",
 			"thumbnail": "/thumbs/SRM2081-18.webp"
 		},
 		{
 			"sku": [
-				"9782386781070",
-				"SRAN2VA01"
+				"SRAN2VA01",
+				"9782386781070"
 			],
 			"name": "Shadowrun Anarchy 2.0",
 			"category": "rulebook",
@@ -22297,8 +22297,8 @@
 			"gameDate": "2084-01",
 			"status": "ok",
 			"notes": "As an early bird Kickstarter bonus includes an art print of the book cover.",
-			"cover": "/covers/9782386781070.webp",
-			"thumbnail": "/thumbs/9782386781070.webp"
+			"cover": "/covers/SRAN2VA01.webp",
+			"thumbnail": "/thumbs/SRAN2VA01.webp"
 		},
 		{
 			"sku": [
@@ -22367,7 +22367,7 @@
 				"2026-07-13"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26092.webp",
 			"thumbnail": "/thumbs/26092.webp"
 		},
@@ -22388,7 +22388,7 @@
 				"2026-07-17"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26037.webp",
 			"thumbnail": "/thumbs/26037.webp"
 		},
@@ -22409,7 +22409,7 @@
 				"2026-07-22"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28518.webp",
 			"thumbnail": "/thumbs/28518.webp"
 		},
@@ -22430,7 +22430,7 @@
 				"2026-07-30"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28816S.webp",
 			"thumbnail": "/thumbs/28816S.webp"
 		},
@@ -22577,7 +22577,7 @@
 				"2026-08-06"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-19.webp",
 			"thumbnail": "/thumbs/SRM2081-19.webp"
 		},
@@ -22598,7 +22598,7 @@
 				"2026-08-21"
 			],
 			"gameDate": "2083-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/26054.webp",
 			"thumbnail": "/thumbs/26054.webp"
 		},
@@ -22640,7 +22640,7 @@
 				"2026-09-03"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-20.webp",
 			"thumbnail": "/thumbs/SRM2081-20.webp"
 		},
@@ -22682,7 +22682,7 @@
 				"2026-09-30"
 			],
 			"gameDate": "2084-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/28519.webp",
 			"thumbnail": "/thumbs/28519.webp"
 		},
@@ -22724,7 +22724,7 @@
 				"2026-10-01"
 			],
 			"gameDate": "2081-01",
-			"status": "missing",
+			"status": "ok",
 			"cover": "/covers/SRM2081-21.webp",
 			"thumbnail": "/thumbs/SRM2081-21.webp"
 		},

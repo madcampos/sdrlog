@@ -15,6 +15,11 @@
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
 - https://www.legrog.org/jeux/shadowrun#6e+%C3%89dition+%282080%2B%29
 - https://www.kickstarter.com/projects/blackbook/shadowrun-anarchy-20-over-the-edge
+- https://shop.black-book-editions.fr/produit/63921/0/shadowrun-anarchy/shadowrun-anarchy-aides-de-jeu-anarchistes
+- https://pegasus.de/en/Shadowrun-Die-Kunst-zu-toeten-Hardcover/46168G
+- https://pegasus.de/en/Shadowrun-Verlustsicherung-Hardcover/46169G
+- https://pegasus.de/en/Shadowrun-Schattendossier-7-Hardcover-limitiert/46197G
+- https://shadowikideutsch.fandom.com/de/wiki/Quelle,_de:_Schattendossier_7
 
 # Archive
 
