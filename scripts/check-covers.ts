@@ -8,7 +8,7 @@ import { styleText } from 'node:util';
 import { default as data } from '../public/data/index.json' with { type: 'json' };
 
 const coversDir = 'public/covers';
-const thumbsDir = 'public/images/thumbs';
+const thumbsDir = 'public/thumbs';
 
 const covers = (await readdir(coversDir, { encoding: 'utf-8', recursive: true })).map((item) => basename(item));
 const thumbs = (await readdir(thumbsDir, { encoding: 'utf-8', recursive: true })).map((item) => basename(item));
