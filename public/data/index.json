@@ -145,7 +145,7 @@
 			],
 			"name": "Shadowrun: Where Man Meets Magic and Machine",
 			"category": "rulebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Shadowrun - Das Cyberpunk Rollenspie",
@@ -235,7 +235,7 @@
 			],
 			"name": "Street Samurai Catalog",
 			"category": "rulebook",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Strassensamurai-Katalog",
@@ -265,7 +265,7 @@
 			],
 			"name": "Street Samurai Catalog (Revised)",
 			"category": "rulebook",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Strassensamurai-Katalog Ausgabe 2053",
@@ -544,7 +544,7 @@
 			],
 			"name": "Queen Euphoria",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Königin Euphoria",
@@ -573,7 +573,7 @@
 			],
 			"name": "D.M.Z.: Downtown Militarized Zone",
 			"category": "boardgame",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"es": "ZDM: Zona Densamente Militarizada"
@@ -628,7 +628,7 @@
 			],
 			"name": "Mercurial",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Mercurial",
@@ -695,7 +695,7 @@
 			],
 			"name": "Harlequin",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Harlekin",
@@ -826,7 +826,7 @@
 			],
 			"name": "Dragon Hunt",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Drachenjagd",
@@ -1090,7 +1090,7 @@
 			],
 			"name": "Elven Fire",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"fr": "Elven Fire"
@@ -1509,7 +1509,7 @@
 			],
 			"name": "Shadowbeat",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "The beat's on the street, and that's where you have to be if you wanna be in on what's happenin'.\nShadowbeat makes it easy by dishing out the scoop on music, media, sports and entertainment in the 2050s. Discover the best way to stardom in the sims.\nLearn how to get the dirt on the stars. Get down and dirty as an Urban Brawler. All this, and the toys that make it happen, are included in…Shadowbeat!",
 			"edition": 1,
@@ -1646,7 +1646,7 @@
 			],
 			"name": "A Killing Glare",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"description": "URBAN BRAWL\n\n\"TWO BALLS, TWO GOALS, AND ABOUT THREE THOUSAND ROUNDS OF ARMOR-PIERCING AMMUNITION!\"\n\nSome call it the ultimate game, the supreme test of cunning and strength. Others find it a barbaric blood sport, nothing more than barely contained mayhem that appeals to the most primitive blood lust lurking in the human psyche. For the shadowrunner, the world of Urban Brawl holds a Byzantine maze of betrayal, buried secrets, and sudden violence. So how about it are you ready to rock and roll with the big boys?",
 			"edition": 2,
@@ -1667,7 +1667,7 @@
 			],
 			"name": "Celtic Double-Cross",
 			"category": "mission",
-			"type": "ocr",
+			"type": "scan",
 			"originalLanguage": "en",
 			"description": "Renowned as a land of wonders, Tir Na Nog brims with ancient elven art and sophisticated elven nobles, powerful magic and cutting-edge technologies. But beneath this cultured facade lies a dark mix of long-simmering feuds and Machiavellian plots. Now add a dash of good old UCAS politics, and you have a Byzantine brew of betrayal and bloodshed, a Mickey Finn with a lethal kick.",
 			"edition": 2,
@@ -1857,7 +1857,7 @@
 			],
 			"name": "Tir Tairngire: The Land of Promise",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"fr": "Tír Tairngire"
@@ -2038,7 +2038,7 @@
 			],
 			"name": "Eye Witness",
 			"category": "mission",
-			"type": "ocr",
+			"type": "scan",
 			"originalLanguage": "en",
 			"names": {
 				"fr": "Témoin Oculaire"
@@ -2063,7 +2063,7 @@
 			],
 			"name": "Paradise Lost",
 			"category": "mission",
-			"type": "ocr",
+			"type": "scan",
 			"originalLanguage": "en",
 			"description": "A run in Hawai'i, paradise of sun and surf, should be the answer to every shadowrunner's dream. But when runners need to track down a piece of valuable, stolen tech in the island kingdom, they find that bright, cheerful Hawai'i hides dark intrigues and darker dangers.",
 			"edition": 2,
@@ -2278,7 +2278,7 @@
 			],
 			"name": "Fields of Fire",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Kreuzfeuer",
@@ -2683,7 +2683,7 @@
 			],
 			"name": "Aztlan",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"description": "Secret Leaders\n\nCorporate Government\n\nTight Borders\n\nConstant War\n\nStrange Magic\n\nOnly one place has it all in 2056 -- Aztlan, the world's only corporate nation.\nBuilt on the drug trade, consolidated country by country through ruthless business deals, run by a powerful and mysterious corporation and sustained by a national faith in the Aztec gods, Aztlan can be a runner's greatest dream or his most chilling nightmare. For at the heart of war-torn Aztlan lies Aztechnology, a potential mother lode of paydata and newtech, and an almost certain source of death. Listen carefully to the rumors and judge for yourself which are true or false—Aztlan guards its secrets well, and Aztechnology will kill to keep it that way.",
 			"edition": 2,
@@ -3210,7 +3210,7 @@
 			],
 			"name": "Portfolio of a Dragon: Dunkelzahn's Secrets",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Portfolio eines Drachen: Dunkelzahns Geheimnisse",
@@ -3242,7 +3242,7 @@
 			],
 			"name": "Super Tuesday!",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"fr": "Shadowrun Héritage - Super Tuesday"
@@ -3602,7 +3602,7 @@
 			],
 			"name": "Underworld Sourcebook",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Unterwelt Quellenbuch"
@@ -3885,7 +3885,7 @@
 			],
 			"name": "Blood in the Boardroom",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Konzernkrieg"
@@ -3941,7 +3941,7 @@
 			],
 			"name": "Predator and Prey",
 			"category": "mission",
-			"type": "ocr",
+			"type": "scan",
 			"originalLanguage": "en",
 			"description": "It used to be simple, right? When you went out into the wild, if you ran into something that didn't like you much, you mainly worked to steer clear of the business end of their claws and teeth. Maybe there were a few spitters or stingers out there, but not many, and a lot of them weren't too nasty. But that was then, before the Awakening.\nNow, there are critters out there that can mess with your mind, that can breathe fire, and that can freeze you with their gaze or hurt you with their scream. And you might come after them with fire, ice, or good, old-fashioned bullets, and they might shrug your attack right off. Maybe you think you can avoid them—stay in the city and out of the wild. Nope, because in a lot of places, the city is the wild. The critters are there, and they're waiting for you.",
 			"edition": 3,
@@ -4081,7 +4081,7 @@
 			],
 			"name": "Shadowrun Third",
 			"category": "rulebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Shadowrun 3.01D",
@@ -4146,7 +4146,7 @@
 			],
 			"name": "Renraku Arcology: Shutdown",
 			"category": "mission",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Renraku Arkologie: Shutdown",
@@ -4178,7 +4178,7 @@
 			],
 			"name": "Game Master's Screen 3rd Edition",
 			"category": "rulebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"description": "This gamemaster's aid contains all the charts and tables needed to run Shadowrun in a convenient, easy-to-use format. For use with Shadowrun Third Edition.",
 			"edition": 3,
@@ -4321,7 +4321,7 @@
 			],
 			"name": "First Run",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"de": "First Run",
@@ -4528,7 +4528,7 @@
 			],
 			"name": "Corporate Download",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "en",
 			"names": {
 				"fr": "Corporate Download"
@@ -4741,7 +4741,7 @@
 			],
 			"name": "Cannon Companion",
 			"category": "rulebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Arsenal 2060",
@@ -4777,7 +4777,7 @@
 			],
 			"name": "Matrix",
 			"category": "rulebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Matrix",
@@ -4966,7 +4966,7 @@
 			"name": "Deutschland in den Schatten II",
 			"category": "sourcebook",
 			"type": "ocr",
-			"originalLanguage": "en",
+			"originalLanguage": "de",
 			"description": "Wir schreiben das Jahr 2062\n\nWer aber erwartet, die Schatten wären ruhiger geworden, der irrt sich gewaltig. Die rasante Entwicklung in der ADL ist nicht aufzuhalten, und gerade die letzten Jahre haben gezeigt, dass die Sechste Welt auch in Deutschland noch ein paar Überraschungen parat hat. Kämpfende Drachen über Frankfurt, Orichalkumfunde in vielen Gebieten, Hungersnöten in Berlin und ein spurlos verschwundener Herrscher sind nur ein paar der Ereignisse, über die ein Runner Bescheid wissen sollte, wenn er im Geschäft bleiben will.\nJede Region hat ihr ganz eigenes Gesicht und ihre eigenen Regeln, und wer diese Regeln nicht kennt, verlässt den Plex in einem Sarg. Information ist alles, wenn man Deutschlands Schatten weiterhin eine große Nummer bleiben will.\nDeutschland in den Schatten II liefert einen vollständigen Überblick über die Allianz Deutscher Länder im Jahr 2062. Hier finden Sie detaillierte Informationen zu sämtlichen Regionen und Plexen in deutschen Landen sowie Hintergründe, Fakten und Beschreibungen zum Leben als Runner in der ADL. Lifestyle, Recht und Gesetz und die Probleme des täglichen Lebens geben Ihnen die Möglichkeit, die Welt von Shadowrun noch besser mit Leben füllen. Dieses Buch liefert zum ersten Mal eine komplette Zusammenfassung und Überarbeitung über die bisherigen Publikationen und ist für Einsteiger gleichermaßen geeignet wie für die Veteranen in Deutschlands Schatten.",
 			"edition": 3,
 			"publisher": [
@@ -5199,7 +5199,7 @@
 			],
 			"name": "Shadows of North America",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "Nordamerika in den Schatten",
@@ -5911,7 +5911,7 @@
 			],
 			"name": "State of The Art: 2064",
 			"category": "sourcebook",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"names": {
 				"de": "State Of The Art 2064.01D"
@@ -7056,7 +7056,7 @@
 			],
 			"name": "SOX",
 			"category": "sourcebook",
-			"type": "ocr",
+			"type": "digital",
 			"originalLanguage": "de",
 			"names": {
 				"fr": "SOX - Ombres Radioactives d'Europe"
@@ -9165,7 +9165,7 @@
 			"category": "misc",
 			"type": "print",
 			"originalLanguage": "en",
-			"description": "More spells. More weapons. More augmentations. More gear. This deck has more of the things you need to survive the shadows and make your living on the streets. Selected from the gera, spells and weapons in Runner's Toolkit: Alphaware, these cards offer players more optins, with game stats for each item or spell. As in the Alphaware deck, gear items have color illustrations, and some common items are on multiple cards so that more than one player can have easy access to the game information.",
+			"description": "More spells. More weapons. More augmentations. More gear. This deck has more of the things you need to survive the shadows and make your living on the streets. Selected from the gear, spells and weapons in Runner's Toolkit: Alphaware, these cards offer players more optins, with game stats for each item or spell. As in the Alphaware deck, gear items have color illustrations, and some common items are on multiple cards so that more than one player can have easy access to the game information.",
 			"edition": 4,
 			"publisher": [
 				"Catalyst Game Labs"
@@ -9913,7 +9913,7 @@
 			],
 			"name": "Brothers United (Artifact Rush, Part 4)",
 			"category": "mission",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"description": "A girl is missing. Finding her would be a nobler mission than most shadowrunners normally pursue, which means there must be a catch. And there is. The runners' job starts at a talismongers and then brings them to a Barrens orphanage. If they're observant enough, they'll be launched on a journey that will take them through dark tunnels, past dangerous entities, and, eventually, to a supposedly abandoned building that holds at least two dark secrets. If they're lucky, they'll find Ruth alive. If they're unlucky, they'll find her alive and transformed.",
 			"edition": 4,
@@ -10077,7 +10077,7 @@
 			],
 			"name": "Assassin Nation (Buried Underground, Part 5)",
 			"category": "mission",
-			"type": "scan",
+			"type": "digital",
 			"originalLanguage": "en",
 			"description": "The debate over the future of the Ork Underground is heating up. Proposition 23, which will decide whether or not the Underground becomes an official district of the city of Seattle, is coming up for a vote, and people on all sides are getting desperate. There are those, though, who understand that desperation can breed opportunity, and they are hatching plots that can help them take advantage of the chaos that is sure to rain down on the city. And there are others for who chaos is an end in and of itself.",
 			"edition": 4,
@@ -12944,7 +12944,7 @@
 			],
 			"name": "Gefahr in Boston",
 			"category": "mission",
-			"type": "scan",
+			"type": "ocr",
 			"originalLanguage": "de",
 			"description": "People in Boston are going crazy! Even crazier than at a Sox game, apparently - in fact, the whole town has been sealed off! It's a Yanks fan's dream come true.",
 			"edition": 5,
@@ -15210,7 +15210,7 @@
 				"2019-06-01"
 			],
 			"gameDate": "2075-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/KS003.webp",
 			"thumbnail": "/thumbs/KS003.webp"
 		},
@@ -16250,7 +16250,7 @@
 			],
 			"name": "Foil and Puzzles",
 			"category": "misc",
-			"type": "print",
+			"type": "physical",
 			"originalLanguage": "en",
 			"description": "PICKING UP THE PIECES! Pre-order from our first-ever series of jigsaw puzzles for Shadowrun, printed right here in the USA! Five different images, done in high-quality foil and cut to a 500-standard piece puzzle. Each assembled puzzle is 18″ x 24″ and suitable for framing when complete. These puzzles are all limited to foiled print runs of 1000. Once they are gone, that's it. These are a \"while supplies last\" offer. If they appear again, they will be in standard paper, not foiled.",
 			"edition": 6,
@@ -17664,7 +17664,7 @@
 				"2022-03-17"
 			],
 			"gameDate": "2082-01",
-			"status": "outofscope",
+			"status": "missing",
 			"cover": "/covers/28503.webp",
 			"thumbnail": "/thumbs/28503.webp"
 		},
