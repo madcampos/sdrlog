@@ -3,7 +3,7 @@
 /// <reference types="@types/node" />
 
 import { readdir } from 'node:fs/promises';
-import { basename, extname, join, sep } from 'node:path';
+import { basename, extname, join } from 'node:path';
 import { parseArgs } from 'node:util';
 import { default as data } from '../public/data/index.json' with { type: 'json' };
 import type { MaterialSku, SDRLogData } from '../src/js/data/schema.ts';
@@ -27,7 +27,7 @@ const excludeDirs = [
 	'Adventures and Campaigns/Schnell und Dreckig',
 	'Magazines/Dragon Magazine',
 	'Magazines/Mephisto',
-	'Misc/27511 - Sixth World Tarot - Arcanist Edition',
+	'Misc/27511 - Sixth World Tarot',
 	'Misc/Fan kits',
 	'Misc/Promo/Advent Calendars',
 	'Misc/Promo/Business Cards',
