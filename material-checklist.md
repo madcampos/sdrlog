@@ -15,7 +15,6 @@
 - [Audiobooks](https://www.audible.ca/search?keywords=shadowrun&k=shadowrun&sprefix=%2Cna-audible-ca%2C253&i=na-audible-ca&url=search-alias%3Dna-audible-ca)
 - https://www.legrog.org/jeux/shadowrun#6e+%C3%89dition+%282080%2B%29
 - https://www.kickstarter.com/projects/blackbook/shadowrun-anarchy-20-over-the-edge
-- https://shop.black-book-editions.fr/produit/63921/0/shadowrun-anarchy/shadowrun-anarchy-aides-de-jeu-anarchistes
 - https://pegasus.de/en/Shadowrun-Die-Kunst-zu-toeten-Hardcover/46168G
 - https://pegasus.de/en/Shadowrun-Verlustsicherung-Hardcover/46169G
 - https://pegasus.de/en/Shadowrun-Schattendossier-7-Hardcover-limitiert/46197G
@@ -49,16 +48,10 @@
 - http://www.miniatures-workshop.com/lostminiswiki/index.php?title=Shadowrun
 - https://ex.shadowrun.fr/cat%c3%a9gorie_shadowrun_-_suppl%c3%a9ment.html
 
-- https://shadowhelix.de/Quelle,_de:_Shadowrun_Sechste_Edition_Schnellstartregeln
-- https://shadowhelix.de/Quelle,_fr:_Cartes_d%27Actions
-- https://shadowhelix.de/Quelle,_fr:_Cartes_d%27armes_Run_%26_Gun
-- https://shadowhelix.de/Quelle,_fr:_Cartes_de_Sort
 - https://shadowhelix.de/Quelle,_en:_Convention_Mission_Pack_2011
-- https://shadowhelix.de/Quelle,_fr:_Dossier_de_personnage
 - https://shadowhelix.de/Quelle,_en:_Echo_Arcana
 - https://shadowhelix.de/Quelle,_en:_Echo_Recoil
 - https://shadowhelix.de/Quelle,_de:_Sprawl-Maps_Hamburg
-- https://shadowhelix.de/Quelle,_fr:_Insectes
 - https://shadowhelix.de/Quelle,_de:_Karteikarten_Hamburg
 - https://shadowhelix.de/Quelle,_de:_Shadowrun-Poster:_Weltkarte
 - https://shadowhelix.de/Quelle,_de:_Strychwizzer%27s_Law_IV
