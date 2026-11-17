@@ -1,13 +1,6 @@
 import type { IconifyIconHTMLElement } from 'iconify-icon';
 import 'iconify-icon';
 
-import './AppInfo/AppInfo.ts';
-import './AppRouter/AppRouter.ts';
-import './FileOperationOverlay/FileOperationOverlay.ts';
-import './StatsReport/StatsReport.ts';
-import './SvgDefs/SvgDefs.ts';
-import './TopBar/TopBar.ts';
-
 // #region HTML only elements
 declare global {
 	interface HTMLElementTagNameMap {
@@ -32,3 +25,12 @@ declare global {
 	}
 }
 // #endregion
+
+await Promise.allSettled([
+	import('./AppInfo/AppInfo.ts'),
+	import('./AppRouter/AppRouter.ts'),
+	import('./FileOperationOverlay/FileOperationOverlay.ts'),
+	import('./StatsReport/StatsReport.ts'),
+	import('./SvgDefs/SvgDefs.ts'),
+	import('./TopBar/TopBar.ts')
+]);
