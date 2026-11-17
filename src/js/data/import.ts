@@ -1,4 +1,4 @@
-import { getFileHandle, listDirEntries, resolveParentHandle } from '@mad-c/file-system-helpers';
+import { getFileHandle, listDirEntries, resolveHandle } from '@mad-c/file-system-helpers';
 import { getUserDirHandle, getUserOpenFileHandle, saveHandle } from '@mad-c/file-system-helpers/access';
 import { basename, extname, resolve } from '@mad-c/file-system-helpers/path';
 import { requestHandlePermissions } from '@mad-c/file-system-helpers/permissions';
@@ -108,19 +108,13 @@ export async function importFiles() {
 		});
 		await saveHandle(rootDirHash, dirHandle);
 
-		const entryStack = await listDirEntries(dirHandle, { depth: Infinity, rootDir: dirHandle });
-		overlay.max = entryStack.length;
+		const entries = await listDirEntries(dirHandle, { depth: Infinity, rootDir: dirHandle });
+		overlay.max = entries.length;
 		overlay.name = 'File Import';
 		overlay.show();
 
-		while (entryStack.length) {
+		for (const { handle, name = '' } of entries) {
 			// oxlint-disable no-await-in-loop
-			const { handle, name = '', children } = entryStack.pop() ?? {};
-
-			if (!handle) {
-				continue;
-			}
-
 			overlay.increment(name);
 
 			await requestHandlePermissions(handle, 'read');
@@ -129,16 +123,10 @@ export async function importFiles() {
 				continue;
 			}
 
-			const { parentPath } = await resolveParentHandle(handle, { rootDir: dirHandle });
+			const { parentPath } = await resolveHandle(handle, { rootDir: dirHandle });
 			const handlePath = resolve(parentPath, name);
 
 			await saveFileMetadata(handle, handlePath);
-
-			if (children?.length) {
-				overlay.max += children.length;
-
-				entryStack.push(...children);
-			}
 			// oxlint-enable no-await-in-loop
 		}
 	} catch (err) {
@@ -205,19 +193,13 @@ export async function importCoversFromFolder() {
 		});
 		await saveHandle(coversDirHash, dirHandle);
 
-		const entryStack = await listDirEntries(dirHandle, { depth: Infinity, rootDir: dirHandle });
-		overlay.max = entryStack.length;
+		const entries = await listDirEntries(dirHandle, { depth: Infinity, rootDir: dirHandle });
+		overlay.max = entries.length;
 		overlay.name = 'Cover Import';
 		overlay.show();
 
-		while (entryStack.length) {
+		for (const { handle, name = '' } of entries) {
 			// oxlint-disable no-await-in-loop
-			const { handle, name = '', children } = entryStack.pop() ?? {};
-
-			if (!handle) {
-				continue;
-			}
-
 			overlay.increment(name);
 
 			await requestHandlePermissions(handle, 'read');
@@ -263,12 +245,6 @@ export async function importCoversFromFolder() {
 					await saveHandle(optimizedHash, optimizedHandle);
 					await setIDBItem('covers', id, optimizedHash);
 				}
-			}
-
-			if (children?.length) {
-				overlay.max += children.length;
-
-				entryStack.push(...children);
 			}
 			// oxlint-enable no-await-in-loop
 		}
